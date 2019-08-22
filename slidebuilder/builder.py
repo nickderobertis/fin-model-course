@@ -1,9 +1,11 @@
 from typing import Sequence
 import importlib.util
 import os
+from copy import deepcopy
 from pyexlatex.models.presentation.beamer.frame.frame import Frame
+from pyexlatex.models.presentation.beamer.templates.lists.dim_reveal_items import eliminate_dim_reveal
 from slidebuilder.base import FinancialModelingPresentation
-from slidebuilder.paths import BUILD_PATH, SLIDES_SOURCE_PATH, slides_source_path
+from slidebuilder.paths import SLIDES_BUILD_PATH, SLIDES_SOURCE_PATH, slides_source_path, HANDOUTS_BUILD_PATH
 
 IGNORED_SLIDES = [
     '__init__.py',
@@ -30,15 +32,27 @@ def create_presentation_by_file_name(file_name: str):
 
 def create_presentation(frames: Sequence[Frame], title: str, short_title: str, subtitle: str,
                         index: int = 1) -> FinancialModelingPresentation:
-    fmp = FinancialModelingPresentation(
-        frames,
+    out_name = f'{index} {title}'
+    kwargs = dict(
         title=title,
         short_title=short_title,
         subtitle=subtitle
     )
-    out_name = f'{index} {title}'
+    fmp = FinancialModelingPresentation(
+        frames,
+        **kwargs
+    )
     fmp.to_pdf(
-        BUILD_PATH,
+        SLIDES_BUILD_PATH,
+        out_name
+    )
+    fmp_handout = FinancialModelingPresentation(
+        frames,
+        handouts=True,
+        **kwargs
+    )
+    fmp_handout.to_pdf(
+        HANDOUTS_BUILD_PATH,
         out_name
     )
 
