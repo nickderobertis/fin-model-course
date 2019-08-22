@@ -23,6 +23,12 @@ from pyexlatex.models.graphics.tikz.node.node import Node
 from pyexlatex.models.graphics.flowcharts.linear import LinearFlowchart
 from pyexlatex.models.presentation.beamer.templates.frames.graphic import adjust_to_full_size
 from slidebuilder.templates.labblock import LabBlock
+from slidebuilder.templates.frames.model_flowchart import (
+    ModelFlowchartFrame,
+    real_world_style,
+    model_style,
+    in_out_style
+)
 
 
 TITLE = 'Financial Modeling with Python and Excel'
@@ -33,37 +39,11 @@ SUBTITLE = 'An Introduction'
 next_slide_ov = Overlay([NextWithIncrement()])
 next_until_end_ov = Overlay([UntilEnd(NextWithIncrement())])
 
-all_node_style = [
-    'rounded corners',
-    'inner sep=10pt'
-]
-
-in_out_style = [
-    'fill=orange!30',
-] + all_node_style
-real_world_style = [
-    'fill=blue!30',
-] + all_node_style
-model_style = [
-    'fill=green!40',
-]
-
 input_model_output_fc = TikZPicture(
     LinearFlowchart(
         [
             'Inputs',
             'Model',
-            'Outputs'
-        ],
-        node_options=in_out_style
-    )
-)
-
-input_output_fc = TikZPicture(
-    LinearFlowchart(
-        [
-            'Inputs',
-            'Process',
             'Outputs'
         ],
         node_options=in_out_style
@@ -93,98 +73,38 @@ def get_frames():
             input_model_output_fc,
             title='What is a Model?'
         ),
-        Frame(
+        ModelFlowchartFrame(
             [
-                Block(
-                    adjust_to_full_size(
-                        input_output_fc
-                    ),
-                    title='A General Structure',
-                    overlay=next_until_end_ov
-                ),
-                Block(
-                    adjust_to_full_size(
-                        TikZPicture(
-                            LinearFlowchart(
-                                [
-                                    'Wages, Savings',
-                                    'Investment',
-                                    Node('Cash in the bank, person retires',
-                                         options=real_world_style + ['text width=2.5cm'])
-                                ],
-                                node_options=real_world_style
-                            )
-                        )
-                    ),
-                    title='Real-world Problem',
-                    overlay=next_until_end_ov
-                ),
-                Block(
-                    adjust_to_full_size(
-                        TikZPicture(
-                            LinearFlowchart(
-                                [
-                                    Node('Cash Flows, Savings Rate, Interest Rates',
-                                         options=model_style + ['text width=3.5cm']),
-                                    'Model',
-                                    Node('FV of CF, time until retirement', options=model_style + ['text width=2.5cm'])
-                                ],
-                                node_options=model_style
-                            )
-                        )
-                    ),
-                    title='A Model of the Problem',
-                    overlay=next_until_end_ov
-                ),
-
+                [
+                    'Wages, Savings',
+                    'Investment',
+                    Node('Cash in the bank, person retires',
+                         options=real_world_style + ['text width=2.5cm'])
+                ],
+                [
+                    Node('Cash Flows, Savings Rate, Interest Rates',
+                         options=model_style + ['text width=3.5cm']),
+                    'Model',
+                    Node('FV of CF, time until retirement', options=model_style + ['text width=2.5cm'])
+                ]
             ],
             title='A Retirement Problem'
         ),
-        Frame(
+        ModelFlowchartFrame(
             [
-                Block(
-                    adjust_to_full_size(
-                        input_output_fc
-                    ),
-                    title='A General Structure',
-                    overlay=next_until_end_ov
-                ),
-                Block(
-                    adjust_to_full_size(
-                        TikZPicture(
-                            LinearFlowchart(
-                                [
-                                    Node('Microsoft creates software', options=real_world_style + ['text width=2cm']),
-                                    'Sells the software',
-                                    Node('Generates cash for investors, stock reaches a price',
-                                         options=real_world_style + ['text width=3cm'])
-                                ],
-                                node_options=real_world_style
-                            )
-                        )
-                    ),
-                    title='Real-world Problem',
-                    overlay=next_until_end_ov
-                ),
-                Block(
-                    adjust_to_full_size(
-                        TikZPicture(
-                            LinearFlowchart(
-                                [
-                                    Node('Revenue, COGS, SG&A, growth rates, costs of capital, etc.',
-                                         options=model_style + ['text width=3.5cm']),
-                                    'Model',
-                                    Node('Stock price, stock returns', options=model_style + ['text width=2.5cm'])
+                [
+                    Node('Microsoft creates software', options=real_world_style + ['text width=2cm']),
+                    'Sells the software',
+                    Node('Generates cash for investors, stock reaches a price',
+                         options=real_world_style + ['text width=3cm'])
+                ],
+                [
+                    Node('Revenue, COGS, SG&A, growth rates, costs of capital, etc.',
+                         options=model_style + ['text width=3.5cm']),
+                    'Model',
+                    Node('Stock price, stock returns', options=model_style + ['text width=2.5cm'])
 
-                                ],
-                                node_options=model_style
-                            )
-                        )
-                    ),
-                    title='A Model of the Problem',
-                    overlay=next_until_end_ov
-                ),
-
+                ]
             ],
             title='Valuing a Company (DCF Model)'
         ),
