@@ -1,7 +1,6 @@
 from typing import List, Optional
-from pyexlatex.models.package import Package
 from pyexlatex.typing import ItemOrListOfItems
-from pyexlatex.models.presentation.presentation import Presentation
+from pyexlatex.presentation import Presentation
 
 
 class FinancialModelingPresentation(Presentation):

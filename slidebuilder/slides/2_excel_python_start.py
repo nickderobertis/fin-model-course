@@ -1,39 +1,34 @@
-from pyexlatex.models.lists.item import ListItem
-from pyexlatex import OrderedList, UnorderedList
-from pyexlatex.models.format.monospace import Monospace
-from pyexlatex.models.layouts.multicol import MultiCol
-from pyexlatex.models.format.vfill import VFill
-from pyexlatex.models.format.code.python import Python
-
-from pyexlatex.models.presentation.beamer.overlay.overlay import Overlay
-from pyexlatex.models.presentation.beamer.overlay.range import Range
-from pyexlatex.models.presentation.beamer.overlay.next import NextWithIncrement, NextWithoutIncrement
-from pyexlatex.models.presentation.beamer.overlay.until_end import UntilEnd
-from pyexlatex.models.presentation.beamer.frame.frame import Frame
-from pyexlatex.models.presentation.beamer.block import Block, AlertBlock, ExamplesBlock
-from pyexlatex.models.presentation.presentation import Presentation
-from pyexlatex.models.presentation.beamer.templates.frames.grid import GridFrame
-from pyexlatex.models.format.textcolor import TextColor
-from pyexlatex.models.presentation.beamer.templates.lists.dim_reveal_items import DimAndRevealListItems
-from pyexlatex.figure.models.graphic import Graphic
-from pyexlatex.models.presentation.beamer.templates.frames.two_col import (
+from pyexlatex import (
+    OrderedList,
+    UnorderedList,
+    Hyperlink,
+    Monospace,
+    VFill,
+    Python,
+    Graphic,
+)
+from pyexlatex.layouts import MultiCol
+from pyexlatex.presentation import (
+    Overlay,
+    NextWithIncrement,
     TwoColumnGraphicDimRevealFrame,
     TwoColumnGraphicFrame,
-    BasicTwoColumnGraphicFrame,
     BasicTwoColumnFrame,
-    TwoColumnFrame
+    TwoColumnFrame,
+    UntilEnd,
+    Frame,
+    Block,
+    AlertBlock,
+    DimAndRevealListItems,
+    DimRevealListFrame,
+    GraphicFrame,
 )
-from pyexlatex.models.presentation.beamer.templates.frames.dim_reveal import DimRevealListFrame
-from pyexlatex.models.presentation.beamer.templates.frames.graphic import GraphicFrame, MultiGraphicFrame
 
-from pyexlatex.models.graphics.tikz.node.position.directions import Above, Right, Left, Below
-from pyexlatex.models.graphics.tikz.path import Path
-from pyexlatex.models.graphics.tikz.picture import TikZPicture
-from pyexlatex.models.graphics.tikz.node.node import Node
-from pyexlatex.models.graphics.arrow import Arrow
-from pyexlatex.models.graphics.flowcharts.linear import LinearFlowchart
-from pyexlatex.models.format.adjustbox import AdjustBox
-from pyexlatex.models.sizes.textwidth import TextWidth
+from pyexlatex.graphics import (
+    TikZPicture,
+    Node,
+    LinearFlowchart,
+)
 
 from slidebuilder.base import FinancialModelingPresentation
 from slidebuilder.paths import images_path

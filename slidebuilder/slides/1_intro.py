@@ -1,27 +1,31 @@
 from slidebuilder.paths import images_path
-from pyexlatex import OrderedList, UnorderedList
-from pyexlatex.models.hyperlinks import Hyperlink
-from pyexlatex.models.format.monospace import Monospace
-from pyexlatex.models.layouts.multicol import MultiCol
-from pyexlatex.models.format.vfill import VFill
-
-from pyexlatex.models.presentation.beamer.overlay.overlay import Overlay
-from pyexlatex.models.presentation.beamer.overlay.next import NextWithIncrement
-from pyexlatex.models.presentation.beamer.overlay.until_end import UntilEnd
-from pyexlatex.models.presentation.beamer.frame.frame import Frame
-from pyexlatex.models.presentation.beamer.block import Block, AlertBlock
-from pyexlatex.models.presentation.beamer.templates.lists.dim_reveal_items import DimAndRevealListItems
-from pyexlatex.models.presentation.beamer.templates.frames.two_col import (
-    TwoColumnGraphicDimRevealFrame,
-    TwoColumnGraphicFrame
+from pyexlatex import (
+    OrderedList,
+    UnorderedList,
+    Hyperlink,
+    Monospace,
+    VFill
 )
-from pyexlatex.models.presentation.beamer.templates.frames.dim_reveal import DimRevealListFrame
-from pyexlatex.models.presentation.beamer.templates.frames.graphic import GraphicFrame
+from pyexlatex.layouts import MultiCol
+from pyexlatex.presentation import (
+    Overlay,
+    NextWithIncrement,
+    TwoColumnGraphicDimRevealFrame,
+    TwoColumnGraphicFrame,
+    UntilEnd,
+    Frame,
+    Block,
+    AlertBlock,
+    DimAndRevealListItems,
+    DimRevealListFrame,
+    GraphicFrame,
+)
 
-from pyexlatex.models.graphics.tikz.picture import TikZPicture
-from pyexlatex.models.graphics.tikz.node.node import Node
-from pyexlatex.models.graphics.flowcharts.linear import LinearFlowchart
-from pyexlatex.models.presentation.beamer.templates.frames.graphic import adjust_to_full_size
+from pyexlatex.graphics import (
+    TikZPicture,
+    Node,
+    LinearFlowchart,
+)
 from slidebuilder.templates.labblock import LabBlock
 from slidebuilder.templates.frames.model_flowchart import (
     ModelFlowchartFrame,

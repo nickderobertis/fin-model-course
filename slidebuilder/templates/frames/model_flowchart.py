@@ -1,14 +1,18 @@
 from typing import Sequence, Union
+from pyexlatex.presentation import (
+    Overlay,
+    NextWithIncrement,
+    UntilEnd,
+    Frame,
+    Block,
+    adjust_to_full_size,
+)
+from pyexlatex.graphics import (
+    TikZPicture,
+    Node,
+    LinearFlowchart,
+)
 
-from pyexlatex.models.presentation.beamer.overlay.overlay import Overlay
-from pyexlatex.models.presentation.beamer.overlay.next import NextWithIncrement
-from pyexlatex.models.presentation.beamer.overlay.until_end import UntilEnd
-from pyexlatex.models.presentation.beamer.frame.frame import Frame
-from pyexlatex.models.presentation.beamer.block import Block
-from pyexlatex.models.graphics.tikz.picture import TikZPicture
-from pyexlatex.models.graphics.tikz.node.node import Node
-from pyexlatex.models.graphics.flowcharts.linear import LinearFlowchart
-from pyexlatex.models.presentation.beamer.templates.frames.graphic import adjust_to_full_size
 
 all_node_style = [
     'rounded corners',

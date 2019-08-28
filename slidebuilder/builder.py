@@ -2,8 +2,7 @@ from typing import Sequence
 import importlib.util
 import os
 from copy import deepcopy
-from pyexlatex.models.presentation.beamer.frame.frame import Frame
-from pyexlatex.models.presentation.beamer.templates.lists.dim_reveal_items import eliminate_dim_reveal
+from pyexlatex.presentation import Frame
 from slidebuilder.base import FinancialModelingPresentation
 from slidebuilder.paths import SLIDES_BUILD_PATH, SLIDES_SOURCE_PATH, slides_source_path, HANDOUTS_BUILD_PATH
 
