@@ -13,10 +13,22 @@ TITLE = 'The Depth of a Financial Model'
 SHORT_TITLE = 'TVM Deep Dive Excel'
 SUBTITLE = 'Extending a Simple Retirement Model in Excel'
 
-next_slide = lp.Overlay([lp.NextWithIncrement()])
-
 
 def get_frames():
+    next_slide = lp.Overlay([lp.NextWithIncrement()])
+
+    model_block_options = [
+        'fill=blue!50'
+    ]
+
+    model_sub_block_options = [
+        'fill=blue!90'
+    ]
+
+    text_options = [
+        'text=white'
+    ]
+
     return [
         lp.DimRevealListFrame(
             [
@@ -27,7 +39,18 @@ def get_frames():
             title='From Simple to Complex'
         ),
         lp.GraphicFrame(
-            images_path('model-assumptions-equations-logic.png'),
+            [
+                lg.TikZPicture([
+                    lg.Rectangle(5, 8, offset=(1.25, 4), contents=pl.Bold('Model'), content_position='bottom',
+                                 content_offset=0.2, shape_options=model_block_options, text_options=text_options),
+                    lg.Rectangle(4, 1.75, offset=(1.25, 1.75), contents='Assumptions',
+                                 shape_options=model_sub_block_options, text_options=text_options),
+                    lg.Rectangle(4, 1.75, offset=(1.25, 4.25), contents='Logic', shape_options=model_sub_block_options,
+                                 text_options=text_options),
+                    lg.Rectangle(4, 1.75, offset=(1.25, 6.75), contents='Equations',
+                                 shape_options=model_sub_block_options, text_options=text_options),
+                ])
+            ],
             title='The Conceptual Parts of a Model'
         ),
         lp.Frame(
