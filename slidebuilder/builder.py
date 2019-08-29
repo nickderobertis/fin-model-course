@@ -18,6 +18,7 @@ def create_all_presentations():
 
 
 def create_presentation_by_file_name(file_name: str):
+    print(f'Creating presentation for {file_name}')
     file_path = slides_source_path(file_name)
     mod = _module_from_file(file_path)
     create_presentation(
@@ -27,6 +28,18 @@ def create_presentation_by_file_name(file_name: str):
         subtitle=mod.SUBTITLE,
         index=int(file_name[0])
     )
+
+
+def create_presentation_by_number(num: int):
+    presentation_files = [file for file in next(os.walk(SLIDES_SOURCE_PATH))[2] if file not in IGNORED_SLIDES]
+    presentation_split_files = [file.split('_') for file in presentation_files]
+    for split_file in presentation_split_files:
+        num_str = split_file[0]
+        name = '_'.join(split_file[1:])
+        if int(num_str) == num:
+            file_name = '_'.join([num_str, name])
+            create_presentation_by_file_name(file_name)
+            break
 
 
 def create_presentation(frames: Sequence[Frame], title: str, short_title: str, subtitle: str,
