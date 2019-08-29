@@ -1,10 +1,16 @@
-from typing import Sequence
+from typing import Sequence, List
 import importlib.util
 import os
-from copy import deepcopy
+import shutil
 from pyexlatex.presentation import Frame
 from slidebuilder.base import FinancialModelingPresentation
-from slidebuilder.paths import SLIDES_BUILD_PATH, SLIDES_SOURCE_PATH, slides_source_path, HANDOUTS_BUILD_PATH
+from slidebuilder.paths import (
+    SLIDES_BUILD_PATH,
+    SLIDES_SOURCE_PATH,
+    slides_source_path,
+    HANDOUTS_BUILD_PATH,
+    SLIDE_TEMPLATE_PATH
+)
 
 IGNORED_SLIDES = [
     '__init__.py',
@@ -12,8 +18,41 @@ IGNORED_SLIDES = [
 ]
 
 
+def get_presentation_files() -> List[str]:
+    return [file for file in next(os.walk(SLIDES_SOURCE_PATH))[2] if file not in IGNORED_SLIDES]
+
+
+def get_max_presentation_number() -> int:
+    files = get_presentation_files()
+    presentation_split_files = [file.split('_') for file in files]
+    numbers = [int(split_file[0]) for split_file in presentation_split_files]
+    return max(numbers)
+
+
+def get_next_presentation_number() -> int:
+    current_num = get_max_presentation_number()
+    return current_num + 1
+
+
+def create_presentation_template(num: int, name: str):
+    base_file_name = get_presentation_file_name_from_display_name(name)
+    full_file_name = f'{num}_{base_file_name}.py'
+    file_path = os.path.join(SLIDES_SOURCE_PATH, full_file_name)
+    shutil.copy2(SLIDE_TEMPLATE_PATH, file_path)
+
+
+def get_presentation_file_name_from_display_name(name: str) -> str:
+    """
+    Converts name to snake case and lower case for use in file name
+
+    :param name: display name, can have spaces and capitalization
+    :return:
+    """
+    return name.replace(' ', '_').lower()
+
+
 def create_all_presentations():
-    presentation_files = [file for file in next(os.walk(SLIDES_SOURCE_PATH))[2] if file not in IGNORED_SLIDES]
+    presentation_files = get_presentation_files()
     [create_presentation_by_file_name(file) for file in presentation_files]
 
 
@@ -31,7 +70,7 @@ def create_presentation_by_file_name(file_name: str):
 
 
 def create_presentation_by_number(num: int):
-    presentation_files = [file for file in next(os.walk(SLIDES_SOURCE_PATH))[2] if file not in IGNORED_SLIDES]
+    presentation_files = get_presentation_files()
     presentation_split_files = [file.split('_') for file in presentation_files]
     for split_file in presentation_split_files:
         num_str = split_file[0]

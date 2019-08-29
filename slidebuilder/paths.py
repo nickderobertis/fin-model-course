@@ -19,3 +19,4 @@ HANDOUTS_BUILD_PATH = 'Handouts'
 handouts_build_path = path_func(HANDOUTS_BUILD_PATH)
 SLIDES_SOURCE_PATH = slidebuilder_path('slides')
 slides_source_path = path_func(SLIDES_SOURCE_PATH)
+SLIDE_TEMPLATE_PATH = slides_source_path('0_template.py')
