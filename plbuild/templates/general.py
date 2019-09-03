@@ -6,6 +6,7 @@ import pyexlatex.layouts as ll
 
 import plbuild
 from plbuild.paths import images_path
+from pltemplates.hyperlink import Hyperlink
 
 TITLE = ''
 SUBTITLE = ''

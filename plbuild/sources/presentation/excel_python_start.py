@@ -1,66 +1,75 @@
+import pyexlatex as pl
+import pyexlatex.table as lt
+import pyexlatex.presentation as lp
+import pyexlatex.graphics as lg
+import pyexlatex.layouts as ll
+
 from pyexlatex import (
     OrderedList,
     UnorderedList,
     Hyperlink,
     Monospace,
-    VFill,
     Python,
     Graphic,
 )
-from pyexlatex.layouts import MultiCol
 from pyexlatex.presentation import (
-    Overlay,
-    NextWithIncrement,
     TwoColumnGraphicDimRevealFrame,
     TwoColumnGraphicFrame,
     BasicTwoColumnFrame,
     TwoColumnFrame,
-    UntilEnd,
     Frame,
     Block,
     AlertBlock,
     DimAndRevealListItems,
     DimRevealListFrame,
-    GraphicFrame,
 )
 
 from pyexlatex.graphics import (
-    TikZPicture,
     Node,
-    LinearFlowchart,
 )
 
-from slidebuilder.base import FinancialModelingPresentation
-from slidebuilder.paths import images_path
-from slidebuilder.builder import create_all_presentations
-from slidebuilder.templates.labblock import LabBlock
-from slidebuilder.templates.frames.model_flowchart import (
+import plbuild
+from plbuild.paths import images_path
+from pltemplates.hyperlink import Hyperlink
+from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
     real_world_style,
     model_style,
     in_out_style
 )
-from slidebuilder.templates.hyperlink import Hyperlink
+from pltemplates.labblock import LabBlock
 
 TITLE = 'Getting Started with Python and Excel'
 SHORT_TITLE = 'Getting Started'
 SUBTITLE = 'Building a Basic Model in Both Excel and Python'
+ORDER = 2
 
-full_fix = Monospace('\$A\$2')
-col_fix = Monospace('\$A2')
-row_fix = Monospace('A\$2')
-notebook = Monospace('jupyter notebook')
-lab = Monospace('jupyter lab')
-list_ = Monospace('list')
-for_ = Monospace('for')
-append = Monospace('append')
-numpy = Monospace('numpy')
-cmd = Monospace('cmd')
-terminal = Monospace('terminal')
-in_block = Monospace('In [ ]:')
+AUTHOR = 'Nick DeRobertis'
+SHORT_AUTHOR = 'DeRobertis'
+INSTITUTIONS = [['University of Florida', 'Department of Finance, Insurance, and Real Estate']]
+SHORT_INSTITUTION = 'UF'
 
-example_python_iteration = Block(
-    Python("""
+DOCUMENT_CLASS = lp.Presentation
+OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
+HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
+
+
+def get_content():
+    full_fix = Monospace('\$A\$2')
+    col_fix = Monospace('\$A2')
+    row_fix = Monospace('A\$2')
+    notebook = Monospace('jupyter notebook')
+    lab = Monospace('jupyter lab')
+    list_ = Monospace('list')
+    for_ = Monospace('for')
+    append = Monospace('append')
+    numpy = Monospace('numpy')
+    cmd = Monospace('cmd')
+    terminal = Monospace('terminal')
+    in_block = Monospace('In [ ]:')
+
+    example_python_iteration = Block(
+        Python("""
 inputs = [5, 10, 15]
 for item in inputs:
     new_value = item + 2
@@ -69,12 +78,9 @@ for item in inputs:
 7
 12
 17
-    """),
-    title='Python Iteration'
-)
-
-
-def get_frames():
+        """),
+        title='Python Iteration'
+    )
     return [
         TwoColumnGraphicDimRevealFrame(
             [
@@ -165,9 +171,9 @@ def get_frames():
                 "In Python, all objects have types. They might also be a number or a string, or something else.",
                 f"Rather than using a cell reference like {full_fix}, we assign names to objects in Python",
                 Python("""
-                my_number = 6
-                my_string = 'ABC'
-                """)
+                    my_number = 6
+                    my_string = 'ABC'
+                    """)
             ],
             title='Some Python Basics'
         ),
@@ -279,3 +285,4 @@ def get_frames():
 
         )
     ]
+

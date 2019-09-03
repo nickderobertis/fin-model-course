@@ -1,4 +1,9 @@
-from slidebuilder.paths import images_path
+import pyexlatex as pl
+import pyexlatex.table as lt
+import pyexlatex.presentation as lp
+import pyexlatex.graphics as lg
+import pyexlatex.layouts as ll
+
 from pyexlatex import (
     OrderedList,
     UnorderedList,
@@ -26,40 +31,52 @@ from pyexlatex.graphics import (
     Node,
     LinearFlowchart,
 )
-from slidebuilder.templates.labblock import LabBlock
-from slidebuilder.templates.frames.model_flowchart import (
+
+import plbuild
+from plbuild.paths import images_path
+from pltemplates.hyperlink import Hyperlink
+from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
     real_world_style,
     model_style,
     in_out_style
 )
-
+from pltemplates.labblock import LabBlock
 
 TITLE = 'Financial Modeling with Python and Excel'
 SHORT_TITLE = 'Intro'
 SUBTITLE = 'An Introduction'
+ORDER = 1
+
+AUTHOR = 'Nick DeRobertis'
+SHORT_AUTHOR = 'DeRobertis'
+INSTITUTIONS = [['University of Florida', 'Department of Finance, Insurance, and Real Estate']]
+SHORT_INSTITUTION = 'UF'
+
+DOCUMENT_CLASS = lp.Presentation
+OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
+HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 
 
-next_slide_ov = Overlay([NextWithIncrement()])
-next_until_end_ov = Overlay([UntilEnd(NextWithIncrement())])
+def get_content():
+    next_slide_ov = Overlay([NextWithIncrement()])
+    next_until_end_ov = Overlay([UntilEnd(NextWithIncrement())])
 
-input_model_output_fc = TikZPicture(
-    LinearFlowchart(
-        [
-            'Inputs',
-            'Model',
-            'Outputs'
-        ],
-        node_options=in_out_style
+    input_model_output_fc = TikZPicture(
+        LinearFlowchart(
+            [
+                'Inputs',
+                'Model',
+                'Outputs'
+            ],
+            node_options=in_out_style
+        )
     )
-)
 
-anaconda_link = Hyperlink('https://www.anaconda.com/distribution/#download-section')
-mono_python = Monospace('python')
-interpreter_mono = Monospace('>>>')
+    anaconda_link = Hyperlink('https://www.anaconda.com/distribution/#download-section')
+    mono_python = Monospace('python')
+    interpreter_mono = Monospace('>>>')
 
-
-def get_frames():
     return [
         TwoColumnGraphicDimRevealFrame(
             [
@@ -236,7 +253,5 @@ def get_frames():
             ],
             title="Let's Get Python Set Up on your System"
         )
-
-
-
     ]
+

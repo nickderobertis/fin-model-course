@@ -3,18 +3,37 @@ import pyexlatex.table as lt
 import pyexlatex.presentation as lp
 import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
-
 from pyexlatex.models.format.breaks import OutputLineBreak
 
-from slidebuilder.paths import images_path
-from slidebuilder.templates.labblock import LabBlock
+import plbuild
+from plbuild.paths import images_path
+from pltemplates.hyperlink import Hyperlink
 
+from pltemplates.frames.model_flowchart import (
+    ModelFlowchartFrame,
+    real_world_style,
+    model_style,
+    in_out_style
+)
+from pltemplates.labblock import LabBlock
 
 TITLE = 'The Depth of a Financial Model, Continued'
 SHORT_TITLE = 'TVM Deep Dive Python'
 SUBTITLE = 'Extending a Simple Retirement Model in Python'
+ORDER = 4
 
-function_example = pl.Python(
+AUTHOR = 'Nick DeRobertis'
+SHORT_AUTHOR = 'DeRobertis'
+INSTITUTIONS = [['University of Florida', 'Department of Finance, Insurance, and Real Estate']]
+SHORT_INSTITUTION = 'UF'
+
+DOCUMENT_CLASS = lp.Presentation
+OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
+HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
+
+
+def get_content():
+    function_example = pl.Python(
 """
 def my_func(a, b, c=10):
     return a + b + c
@@ -23,7 +42,7 @@ def my_func(a, b, c=10):
 21
 """)
 
-class_example = pl.Python(
+    class_example = pl.Python(
 """
 class MyClass:
 
@@ -42,7 +61,7 @@ __main__.MyClass
 21
 """)
 
-if_example = [pl.Python(
+    if_example = [pl.Python(
 """
 >>> if 5 == 6:
 >>>     print('not true')
@@ -57,9 +76,9 @@ if_example = [pl.Python(
 >>> if this == 5:
 >>>     print('should not print')
 """
-), pl.Monospace('else clause'), OutputLineBreak(), pl.Monospace('yes, print me')]
+    ), pl.Monospace('else clause'), OutputLineBreak(), pl.Monospace('yes, print me')]
 
-build_list_example = pl.Python(
+    build_list_example = pl.Python(
 """
 >>> inputs = [1, 2, 3]
 >>> outputs = []
@@ -71,23 +90,23 @@ build_list_example = pl.Python(
 >>> print(outputs)
 ['a', 11, 12, 13]
 """
-)
+    )
 
-enumerate_example = [pl.Python(
+    enumerate_example = [pl.Python(
 """
 >>> inputs = ['a', 'b', 'c']
 >>> for i, inp in enumerate(inputs):
 >>>     print(f'input number {i}: {inp}')
 """
-),
-    pl.Monospace('input number 0: a'),
-    OutputLineBreak(),
-    pl.Monospace('input number 1: b'),
-    OutputLineBreak(),
-    pl.Monospace('input number 2: c')
-]
+    ),
+        pl.Monospace('input number 0: a'),
+        OutputLineBreak(),
+        pl.Monospace('input number 1: b'),
+        OutputLineBreak(),
+        pl.Monospace('input number 2: c')
+    ]
 
-list_indexing_example = pl.Python(
+    list_indexing_example = pl.Python(
 """
 >>> my_list = ['a', 'b', 'c', 'd']
 >>> my_list[0]  # first item
@@ -103,9 +122,7 @@ list_indexing_example = pl.Python(
 >>> my_list[1:3]  # from the second to the third item
 ['b', 'c']
 """
-)
-
-def get_frames():
+    )
     return [
         lp.TwoColumnGraphicDimRevealFrame(
             [
@@ -220,3 +237,4 @@ def get_frames():
             title='Relaxing the Static Desired Cash in Python'
         )
     ]
+

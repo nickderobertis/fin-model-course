@@ -3,18 +3,35 @@ import pyexlatex.table as lt
 import pyexlatex.presentation as lp
 import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
-
 from pyexlatex.models.sizes.textwidth import TextWidth
 
-from slidebuilder.paths import images_path
-from slidebuilder.templates.labblock import LabBlock
+import plbuild
+from plbuild.paths import images_path
+from pltemplates.hyperlink import Hyperlink
+from pltemplates.frames.model_flowchart import (
+    ModelFlowchartFrame,
+    real_world_style,
+    model_style,
+    in_out_style
+)
+from pltemplates.labblock import LabBlock
 
 TITLE = 'The Depth of a Financial Model'
 SHORT_TITLE = 'TVM Deep Dive Excel'
 SUBTITLE = 'Extending a Simple Retirement Model in Excel'
+ORDER = 3
+
+AUTHOR = 'Nick DeRobertis'
+SHORT_AUTHOR = 'DeRobertis'
+INSTITUTIONS = [['University of Florida', 'Department of Finance, Insurance, and Real Estate']]
+SHORT_INSTITUTION = 'UF'
+
+DOCUMENT_CLASS = lp.Presentation
+OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
+HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 
 
-def get_frames():
+def get_content():
     next_slide = lp.Overlay([lp.NextWithIncrement()])
 
     model_block_options = [
@@ -167,3 +184,5 @@ def get_frames():
             title='Relaxing the Static Desired Cash in Excel'
         )
     ]
+
+
