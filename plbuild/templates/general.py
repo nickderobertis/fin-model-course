@@ -1,6 +1,5 @@
 
 TITLE = ''
-SUBTITLE = ''
 ORDER = None
 
 

@@ -21,7 +21,7 @@ SHORT_TITLE = 'TVM Deep Dive Excel'
 SUBTITLE = 'Extending a Simple Retirement Model in Excel'
 ORDER = 3
 
-AUTHOR = 'Nick DeRobertis'
+AUTHORS = ['Nick DeRobertis']
 SHORT_AUTHOR = 'DeRobertis'
 INSTITUTIONS = [['University of Florida', 'Department of Finance, Insurance, and Real Estate']]
 SHORT_INSTITUTION = 'UF'

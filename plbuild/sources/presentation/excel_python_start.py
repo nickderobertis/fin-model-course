@@ -44,7 +44,7 @@ SHORT_TITLE = 'Getting Started'
 SUBTITLE = 'Building a Basic Model in Both Excel and Python'
 ORDER = 2
 
-AUTHOR = 'Nick DeRobertis'
+AUTHORS = ['Nick DeRobertis']
 SHORT_AUTHOR = 'DeRobertis'
 INSTITUTIONS = [['University of Florida', 'Department of Finance, Insurance, and Real Estate']]
 SHORT_INSTITUTION = 'UF'

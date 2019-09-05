@@ -22,7 +22,7 @@ SHORT_TITLE = 'TVM Deep Dive Python'
 SUBTITLE = 'Extending a Simple Retirement Model in Python'
 ORDER = 4
 
-AUTHOR = 'Nick DeRobertis'
+AUTHORS = ['Nick DeRobertis']
 SHORT_AUTHOR = 'DeRobertis'
 INSTITUTIONS = [['University of Florida', 'Department of Finance, Insurance, and Real Estate']]
 SHORT_INSTITUTION = 'UF'
