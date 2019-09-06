@@ -236,3 +236,5 @@ __main__.MyClass
         )
     ]
 
+DOCUMENT_CLASS_KWARGS = {}
+OUTPUT_NAME = TITLE

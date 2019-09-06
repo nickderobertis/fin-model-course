@@ -60,7 +60,15 @@ def get_content():
                 )
             ],
             title='Relaxing the Static Desired Cash in Python'
+        ),
+        lp.DimRevealListFrame(
+            [
+                "So far we've had one main output from our model, number of years"
+            ],
+            title='Why Visualize?'
         )
     ]
 
 
+DOCUMENT_CLASS_KWARGS = {}
+OUTPUT_NAME = TITLE

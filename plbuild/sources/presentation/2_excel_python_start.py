@@ -286,3 +286,5 @@ for item in inputs:
         )
     ]
 
+DOCUMENT_CLASS_KWARGS = {}
+OUTPUT_NAME = TITLE

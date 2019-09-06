@@ -137,3 +137,5 @@ def get_content():
     ]
 
 
+DOCUMENT_CLASS_KWARGS = {}
+OUTPUT_NAME = TITLE
