@@ -17,9 +17,9 @@ from pltemplates.frames.model_flowchart import (
 )
 from pltemplates.labblock import LabBlock
 
-TITLE = 'The Depth of a Financial Model, Continued'
-SHORT_TITLE = 'TVM Deep Dive Python'
-SUBTITLE = 'Extending a Simple Retirement Model in Python'
+TITLE = 'Going Beyond an Initial Python Script'
+SHORT_TITLE = 'Python Basics'
+SUBTITLE = 'How to Structure Python Code and Common Operations'
 ORDER = 4
 
 AUTHORS = ['Nick DeRobertis']
@@ -221,20 +221,18 @@ __main__.MyClass
         lp.Frame(
             [
                 pl.UnorderedList([
-                    'We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash'
+                    'We covered a lot today, so the lab session is straightforward.'
                 ]),
                 pl.VFill(),
                 LabBlock(
                     pl.UnorderedList([
-                        'Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"',
-                        'Calculate desired cash based on interest, cash spend, and years in retirement',
-                        'Use the calculated desired cash in the model to determine years to retirement',
-                        r'If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash'
+                        "Make sure that you're able to reproduce all the exercises we completed in class",
+                        "Also ensure that you understand what we're doing and why"
                     ]),
-                    title='Modeling Desired Cash'
+                    title='Getting the Basics'
                 )
             ],
-            title='Relaxing the Static Desired Cash in Python'
+            title="Let's Make Sure you Have the Basics Before Doing Something Hard"
         )
     ]
 

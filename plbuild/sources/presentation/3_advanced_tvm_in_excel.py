@@ -15,6 +15,7 @@ from pltemplates.frames.model_flowchart import (
     in_out_style
 )
 from pltemplates.labblock import LabBlock
+from pltemplates.frames.tvm.salary_eq import salary_block_content
 
 TITLE = 'The Depth of a Financial Model'
 SHORT_TITLE = 'TVM Deep Dive Excel'
@@ -109,18 +110,7 @@ def get_content():
         lp.Frame(
             [
                 lp.Block(
-                    [
-                        lp.adjust_to_full_size(pl.Equation(str_eq=r'W_t = W_0 (1 + r_l)^t (1 + r_p)^p')),
-                        pl.UnorderedList([
-                            f'{pl.Equation(str_eq="W_t")}:  Wealth at year {pl.Equation(str_eq="t")}',
-                            f'{pl.Equation(str_eq="W_0")}:  Starting wealth',
-                            f'{pl.Equation(str_eq="r_l")}:  Return for cost of living',
-                            f'{pl.Equation(str_eq="r_p")}:  Return for promotion',
-                            f'{pl.Equation(str_eq="t")}:  Number of years',
-                            f'{pl.Equation(str_eq="p")}:  Number of promotions',
-
-                        ])
-                    ],
+                    salary_block_content,
                     title='The Equation from the New Assumption'
                 )
             ],
