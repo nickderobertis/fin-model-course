@@ -78,6 +78,7 @@ def get_content():
                     lg.Arrow(wealth_node, retirement_node)
                 ])
             ],
+            title='The Structure of the Retirement Model',
             pre_env_contents=dark_green_def
         ),
         lp.Frame(
@@ -115,20 +116,23 @@ def get_content():
         lp.Frame(
             [
                 pl.UnorderedList([
-                    'We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash'
+                    "Now we've seem how to create model functionality, and make it organized and "
+                    "repeatable with functions"
                 ]),
                 pl.VFill(),
                 LabBlock(
                     pl.UnorderedList([
-                        'Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"',
-                        'Calculate desired cash based on interest, cash spend, and years in retirement',
-                        'Use the calculated desired cash in the model to determine years to retirement',
-                        r'If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash'
+                        'To wrap up the model, we should have a function which takes all the model inputs, '
+                        'and returns the model output.',
+                        'Create a function which takes starting salary, promotions every number of years, '
+                        'cost of living raise, promotion raise, investment return, savings rate, and desired cash '
+                        'as inputs',
+                        'The function should return the number of years until retirement'
                     ]),
-                    title='Modeling Desired Cash'
+                    title='Organizing a Model in Functions'
                 )
             ],
-            title='Relaxing the Static Desired Cash in Python'
+            title='One Organizational Pattern'
         )
     ]
 
