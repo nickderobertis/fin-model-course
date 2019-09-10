@@ -136,5 +136,7 @@ def get_content():
 
     ]
 
-DOCUMENT_CLASS_KWARGS = {}
+DOCUMENT_CLASS_KWARGS = dict(
+    remove_section_numbering=True
+)
 OUTPUT_NAME = TITLE
