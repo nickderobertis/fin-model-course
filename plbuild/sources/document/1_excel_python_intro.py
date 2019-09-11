@@ -9,6 +9,7 @@ from pyexlatex.models.format.centering import Center
 import plbuild
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
+from models.project_1 import PhoneManufacturingModel
 
 
 AUTHORS = ['Nick DeRobertis']
@@ -18,13 +19,28 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Project 1 - Excel and Python TVM'
-ORDER = None
+ORDER = 1
 
 
 def get_content():
     align_c = lt.ColumnAlignment('c')
     align_l = lt.ColumnAlignment('l')
     align = lt.ColumnsAlignment([align_l, align_c])
+
+    n_phones = 100000
+    price_scrap = 50000
+    price_phone = 500
+    n_life = 10
+    n_machines = 5
+    d_0 = 100000
+    g_d = 0.2
+    max_year = 20
+    interest = 0.05
+
+    pmm = PhoneManufacturingModel(
+        n_phones, price_scrap, price_phone, n_life, n_machines, d_0, g_d, max_year, interest
+    )
+
     return [
         pl.Section(
             [
@@ -133,6 +149,24 @@ def get_content():
             ],
             title='Grading'
         ),
+        pl.Section(
+            [
+                'If you pass the following inputs: ',
+                pl.UnorderedList([
+                    f'{pl.Equation(str_eq="n_{output}")}: {n_phones}',
+                    f'{pl.Equation(str_eq="p_{scrap}")}: {price_scrap}',
+                    f'{pl.Equation(str_eq="p_{phone}")}: {price_phone}',
+                    f'{pl.Equation(str_eq="n_{life}")}: {n_life}',
+                    f'{pl.Equation(str_eq="n_{machines}")}: {n_machines}',
+                    f'{pl.Equation(str_eq="d_0")}: {d_0}',
+                    f'{pl.Equation(str_eq="g_d")}: {g_d}',
+                    f'{pl.Equation(str_eq="r")}: {interest}',
+                ]),
+                'You should get the following result:',
+                pl.UnorderedList([line.replace('$', r'\$') for line in pmm.output_lines])
+            ],
+            title='Check your Work'
+        )
 
     ]
 
