@@ -67,7 +67,7 @@ class Demand:
     @property
     def quantities(self):
         return [self.d_0] * (self.begin_advertise_year - 1) + \
-               [self.d_0 * (1 + self.g_d) ** (i + 1) for i in range(self.max_year - self.begin_advertise_year)]
+               [self.d_0 * (1 + self.g_d) ** (i + 1) for i in range((self.max_year - self.begin_advertise_year) + 1)]
 
 
 class PhoneManufacturingModel:
