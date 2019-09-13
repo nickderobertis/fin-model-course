@@ -5,7 +5,7 @@ from pyexlatex.presentation import (
     UntilEnd,
     Frame,
     Block,
-    adjust_to_full_size,
+    adjust_to_full_size_and_center,
 )
 from pyexlatex.graphics import (
     TikZPicture,
@@ -54,7 +54,7 @@ class ModelFlowchartFrame(Frame):
         for i, content_list in enumerate(content):
             out_contents.append(
                 Block(
-                    adjust_to_full_size(
+                    adjust_to_full_size_and_center(
                         TikZPicture(
                             LinearFlowchart(content_list, node_options=self.node_styles[i])
                         )

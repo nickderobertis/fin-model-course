@@ -5,7 +5,7 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 salary_block_content = [
-    lp.adjust_to_full_size(pl.Equation(str_eq=r'S_t = S_0 (1 + r_l)^t (1 + r_p)^p')),
+    lp.adjust_to_full_size_and_center(pl.Equation(str_eq=r'S_t = S_0 (1 + r_l)^t (1 + r_p)^p')),
     pl.UnorderedList([
         f'{pl.Equation(str_eq="S_t")}:  Salary at year {pl.Equation(str_eq="t")}',
         f'{pl.Equation(str_eq="S_0")}:  Starting wealth',
