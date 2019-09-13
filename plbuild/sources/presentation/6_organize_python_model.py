@@ -14,6 +14,7 @@ from pltemplates.frames.model_flowchart import (
 )
 from pltemplates.labblock import LabBlock
 from pltemplates.frames.tvm.retirement_model_structure import get_retirement_model_overview_frame
+from pltemplates.frames.tvm.project_1_lab import get_project_1_lab_frame
 
 
 AUTHORS = ['Nick DeRobertis']
@@ -215,20 +216,7 @@ caught the error
             ],
             title='Applying Error Handling'
         ),
-        lp.Frame(
-            [
-                LabBlock(
-                    pl.UnorderedList([
-                        'Download and open the Project 1 document from Canvas',
-                        "It is up to you whether you want to attempt the Excel or Python model first",
-                        "If you feel comfortable with the Excel model, you may want to start with Python so I "
-                        "can give help on that today."
-                    ]),
-                    title='Project 1'
-                )
-            ],
-            title='Some Time to Work on the First Project'
-        )
+        get_project_1_lab_frame(),
     ]
 
 DOCUMENT_CLASS_KWARGS = {}
