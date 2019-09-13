@@ -56,7 +56,7 @@ def get_content():
                 pl.VFill(),
                 lp.Block(
                     [
-                        lp.adjust_to_full_size(pl.Equation(str_eq=r'W_t = W_{t-1}  (1 + r_i) + S_t  v')),
+                        lp.adjust_to_full_size_and_center(pl.Equation(str_eq=r'W_t = W_{t-1}  (1 + r_i) + S_t  v')),
                         pl.UnorderedList([
                             f'{pl.Equation(str_eq="S_t")}:  Salary at year {pl.Equation(str_eq="t")}',
                             f'{pl.Equation(str_eq="W_t")}:  Wealth at year {pl.Equation(str_eq="t")}',
