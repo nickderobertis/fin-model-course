@@ -10,6 +10,7 @@ import plbuild
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
 from models.project_1 import PhoneManufacturingModel
+from pyexlatex.texgen.packages.default import default_packages
 
 
 AUTHORS = ['Nick DeRobertis']
@@ -40,6 +41,19 @@ def get_content():
     pmm = PhoneManufacturingModel(
         n_phones, price_scrap, price_phone, n_life, n_machines, d_0, g_d, max_year, interest
     )
+
+    scipy_mono = pl.Monospace('scipy')
+    scipy_minimize_link = 'https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize_scalar.html#' \
+                          'scipy-optimize-minimize-scalar'
+    scipy_minimize_mono = pl.Monospace('scipy.optimize.minimize_scalar')
+
+    possible_elasticity_constants = [
+        (500, 900000),
+        (200, 500000),
+        (100, 300000),
+    ]
+    possible_elasicity_str = ', '.join([f'($E = {ec[0]}$, $d_c = {ec[1]}$)' for ec in possible_elasticity_constants])
+    possible_elasicity_str = '[' + possible_elasicity_str + ']'
 
     return [
         pl.Section(
@@ -100,7 +114,44 @@ def get_content():
                         )
                     ],
                     title='The Model'
-                )
+                ),
+                pl.SubSection(
+                    [
+                        "It is unrealistic to assume that price and demand are unrelated. To extend the model, "
+                        "we can introduce a relationship between price and demand, given by the following equation: ",
+                        pl.Equation(str_eq=r'd_1 = d_c - Ep_{phone}', inline=False),
+                        pl.UnorderedList([
+                            f'{pl.Equation(str_eq="E")}: Price elasticity of demand',
+                            f'{pl.Equation(str_eq="d_c")}: Demand constant'
+                        ]),
+                        [f"For elasticities and constants {possible_elasicity_str} "
+                         f"({len(possible_elasticity_constants)} total cases), and taking the other "
+                         "model inputs in the ", pl.NameRef('check-work'), ' section, determine the optimal price for each '
+                         'elasticity, that is the price which maximizes the NPV.'],
+                        pl.SubSubSection(
+                            [
+                                pl.UnorderedList([
+                                    '$d_1$ is no longer an input, but an output.',
+                                    'This bonus requires optimization, which we have not yet covered in class.',
+                                    'In Excel, you can use Solver.',
+                                    [f'In Python, the {scipy_mono} package provides optimization tools. You will '
+                                     f'probably want to use:',],
+                                    pl.UnorderedList([
+                                        Hyperlink(scipy_minimize_link, scipy_minimize_mono),
+                                        "You will need to write a function which accepts price and returns NPV, "
+                                        "with other model inputs fixed.",
+                                        "It will actually need to return negative NPV, as the optimizer only minimizes, "
+                                        "but we want maximum NPV.",
+                                        ['No answers to check your work are given for this bonus. The',
+                                         pl.NameRef('check-work'), 'section only applies to without the bonus.']
+                                    ])
+                                ])
+                            ],
+                            title='Notes'
+                        )
+                    ],
+                    title='Bonus Problem'
+                ),
             ],
             title='Overview'
         ),
@@ -138,9 +189,17 @@ def get_content():
                                 [
                                     ['Model Accuracy', '70%'],
                                     ['Model Readability', '20%'],
-                                    ['Model Formatting', '10%']
+                                    ['Model Formatting', '10%'],
+                                    ['Bonus', '5%']
                                 ]
                             ),
+                            lt.MidRule(),
+                            lt.ValuesTable.from_list_of_lists(
+                                [
+                                    ['Total Possible', '105%']
+                                ]
+                            ),
+                            # lt.MultiColumn('Total Possible: 105%', span=2),
                             lt.BottomRule()
 
                         ],
@@ -152,7 +211,7 @@ def get_content():
         ),
         pl.Section(
             [
-                'If you pass the following inputs: ',
+                'If you pass the following inputs (to the basic model, not bonus model): ',
                 pl.UnorderedList([
                     f'{pl.Equation(str_eq="n_{output}")}: {n_phones}',
                     f'{pl.Equation(str_eq="p_{scrap}")}: {price_scrap}',
@@ -166,12 +225,14 @@ def get_content():
                 'You should get the following result:',
                 pl.UnorderedList([line.replace('$', r'\$') for line in pmm.output_lines])
             ],
-            title='Check your Work'
+            title='Check your Work',
+            label='check-work'
         )
 
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(
-    remove_section_numbering=True
+    remove_section_numbering=True,
+    # packages=default_packages + [pl.Package('hyperref', modifier_str='colorlinks, linkcolor=blue')]
 )
 OUTPUT_NAME = TITLE

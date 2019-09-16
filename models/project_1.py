@@ -58,21 +58,39 @@ class MachineSet:
 
 class Demand:
 
-    def __init__(self, d_0, g_d, begin_advertise_year, max_year):
+    def __init__(self, d_0, g_d, begin_advertise_year, max_year, price, elasticity=20, demand_constant=300000,
+                 bonus_problem=False):
         self.d_0 = d_0
         self.g_d = g_d
         self.begin_advertise_year = begin_advertise_year
         self.max_year = max_year
+        self.elasticity = elasticity
+        self.demand_constant = demand_constant
+        self.bonus_problem = bonus_problem
+        self.price = price
 
     @property
     def quantities(self):
-        return [self.d_0] * (self.begin_advertise_year - 1) + \
-               [self.d_0 * (1 + self.g_d) ** (i + 1) for i in range((self.max_year - self.begin_advertise_year) + 1)]
+        possible_quantities = [self.initial_demand] * (self.begin_advertise_year - 1) + \
+               [self.initial_demand * (1 + self.g_d) ** (i + 1) for i in range((self.max_year - self.begin_advertise_year) + 1)]
+
+        # Quantities will become negative if initial demand is negative, should be zero instead
+        quantities = [max(0, q) for q in possible_quantities]
+
+        return quantities
+
+    @property
+    def initial_demand(self):
+        if not self.bonus_problem:
+            return self.d_0
+
+        return self.demand_constant - self.price * self.elasticity
 
 
 class PhoneManufacturingModel:
 
-    def __init__(self, n_phones, price_scrap, price_phone, n_life, n_machines, d_0, g_d, max_year, interest):
+    def __init__(self, n_phones, price_scrap, price_phone, n_life, n_machines, d_0, g_d, max_year, interest,
+                 elasticity=20, demand_constant=300000, bonus_problem=False):
         self.n_phones = n_phones
         self.price_scrap = price_scrap
         self.price_phone = price_phone
@@ -83,8 +101,20 @@ class PhoneManufacturingModel:
         self.begin_advertise_year = n_machines + 1
         self.max_year = max_year
         self.interest = interest
+        self.elasticity = elasticity
+        self.demand_constant = demand_constant
+        self.bonus_problem = bonus_problem
 
-        self.demand = Demand(d_0, g_d, self.begin_advertise_year, max_year)
+        self.demand = Demand(
+            d_0,
+            g_d,
+            self.begin_advertise_year,
+            max_year,
+            price_phone,
+            elasticity=elasticity,
+            demand_constant=demand_constant,
+            bonus_problem=bonus_problem
+        )
         machines = [Machine(n_phones, price_scrap, n_life, i + 1) for i in range(n_machines)]
         self.machines = MachineSet(machines)
 
