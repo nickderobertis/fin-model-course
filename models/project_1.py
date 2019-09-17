@@ -1,4 +1,12 @@
 import numpy as np
+from scipy.optimize import minimize_scalar
+
+# For bonus problem
+ELASTICITY_CONSTANT_CASES = [
+    (500, 900000),
+    (200, 500000),
+    (100, 300000),
+]
 
 
 class Machine:
@@ -89,7 +97,8 @@ class Demand:
 
 class PhoneManufacturingModel:
 
-    def __init__(self, n_phones, price_scrap, price_phone, n_life, n_machines, d_0, g_d, max_year, interest,
+    def __init__(self, n_phones=100000, price_scrap=50000, price_phone=2000, n_life=10, n_machines=5, d_0=100000,
+                 g_d=0.2, max_year=20, interest=0.05,
                  elasticity=20, demand_constant=300000, bonus_problem=False):
         self.n_phones = n_phones
         self.price_scrap = price_scrap
@@ -140,3 +149,22 @@ class PhoneManufacturingModel:
     def summary(self):
         return '\n'.join(self.output_lines)
 
+
+#### Below for bonus problem ########
+
+def get_neg_pv_for_price(price, elasticity, demand_constant):
+    pmm = PhoneManufacturingModel(
+        price_phone=price,
+        elasticity=elasticity,
+        demand_constant=demand_constant,
+        bonus_problem=True
+    )
+    return -pmm.pv
+
+
+def max_npv_setting_price_for_demand_params(elasticity_constant_tuples):
+    for elasticity, demand_constant in elasticity_constant_tuples:
+        res = minimize_scalar(get_neg_pv_for_price, args=(elasticity, demand_constant))
+        price = res.x
+        npv = -res.fun
+        print(f'For E = {elasticity}, d_c = {demand_constant}: Price ${price:,.2f} achieves max NPV of {npv:,.0f}')
