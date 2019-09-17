@@ -9,7 +9,7 @@ from pyexlatex.models.format.centering import Center
 import plbuild
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
-from models.project_1 import PhoneManufacturingModel
+from models.project_1 import PhoneManufacturingModel, ELASTICITY_CONSTANT_CASES
 from pyexlatex.texgen.packages.default import default_packages
 
 
@@ -47,12 +47,8 @@ def get_content():
                           'scipy-optimize-minimize-scalar'
     scipy_minimize_mono = pl.Monospace('scipy.optimize.minimize_scalar')
 
-    possible_elasticity_constants = [
-        (500, 900000),
-        (200, 500000),
-        (100, 300000),
-    ]
-    possible_elasicity_str = ', '.join([f'($E = {ec[0]}$, $d_c = {ec[1]}$)' for ec in possible_elasticity_constants])
+    possible_elasicity_str = ', '.join([f'($E = {ec[0]}$, $d_c = {ec[1]}$)' for ec in ELASTICITY_CONSTANT_CASES])
+    possible_elasicity_str = ', '.join([f'($E = {ec[0]}$, $d_c = {ec[1]}$)' for ec in ELASTICITY_CONSTANT_CASES])
     possible_elasicity_str = '[' + possible_elasicity_str + ']'
 
     return [
@@ -125,7 +121,7 @@ def get_content():
                             f'{pl.Equation(str_eq="d_c")}: Demand constant'
                         ]),
                         [f"For elasticities and constants {possible_elasicity_str} "
-                         f"({len(possible_elasticity_constants)} total cases), and taking the other "
+                         f"({len(ELASTICITY_CONSTANT_CASES)} total cases), and taking the other "
                          "model inputs in the ", pl.NameRef('check-work'), ' section, determine the optimal price for each '
                          'elasticity, that is the price which maximizes the NPV.'],
                         pl.SubSubSection(
