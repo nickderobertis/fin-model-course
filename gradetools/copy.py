@@ -1,11 +1,8 @@
 import os
 import shutil
 
-PYTHON_EXTENSIONS = ('ipynb', 'py')
-EXCEL_EXTENSIONS = ('xlsx', 'xls', 'xlsm')
+from gradetools.config import PYTHON_EXTENSIONS, EXCEL_EXTENSIONS, PYTHON_FOLDER, EXCEL_FOLDER
 
-PYTHON_FOLDER = 'Grading/Python'
-EXCEL_FOLDER = 'Grading/Excel'
 SOURCE_DIR = '/home/nick/Dropbox/UF/Teaching/Modeling/Me/Grading/Fall 2019/Project 1/submissions'
 
 
