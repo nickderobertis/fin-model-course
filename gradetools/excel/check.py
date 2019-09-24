@@ -18,7 +18,7 @@ def _check_value(value: Union[float, List[float]], correct_value: Union[float, L
 
     if isinstance(value, list):
         return [
-            _check_value(val, correct_val, value_name=f'{value_name}[{i}]', tolerance=tolerance)
+            _check_value(val, correct_val, value_name=f'{value_name}[{i}]', tolerance=tolerance, errors=errors)
             for i, (val, correct_val) in enumerate(zip(value, correct_value))
         ]
 
