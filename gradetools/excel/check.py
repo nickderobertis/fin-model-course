@@ -11,7 +11,10 @@ def _check_value(value: Union[float, List[float]], correct_value: Union[float, L
                  value_name: Optional[str] = None,
                  tolerance: float = 0.001):
     if isinstance(value, list):
-        return [_check_value(val, correct_val) for val, correct_val in zip(value, correct_value)]
+        return [
+            _check_value(val, correct_val, value_name=f'{value_name}[{i}]', tolerance=tolerance)
+            for i, (val, correct_val) in enumerate(zip(value, correct_value))
+        ]
 
     # Assumed to be float
     if abs(float(value) - correct_value) > tolerance:
