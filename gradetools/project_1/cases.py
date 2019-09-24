@@ -1,4 +1,4 @@
-
+from models.project_1 import PhoneManufacturingModel
 
 INPUT_CASES = [
     dict(
@@ -42,3 +42,13 @@ INPUT_CASES = [
         interest=0.1
     )
 ]
+
+def output_dict_from_input_dict(input_dict):
+    model = PhoneManufacturingModel(**input_dict)
+    correct_values = dict(
+        pv=model.pv,
+        cash_flows=model.cash_flows
+    )
+    return correct_values
+
+OUTPUT_CASES = [output_dict_from_input_dict(input_dict) for input_dict in INPUT_CASES]
