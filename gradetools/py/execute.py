@@ -1,4 +1,5 @@
 from typing import Optional
+import os
 import papermill
 from nbconvert import HTMLExporter
 from IPython.display import HTML
@@ -12,11 +13,12 @@ def execute_notebook_render_html(notebook_path: str,  parameters: dict, out_note
                                  ) -> HTML:
 
     if out_notebook_path is None:
-        f = tempfile.NamedTemporaryFile(mode='w', suffix='.ipynb')
+        f = tempfile.NamedTemporaryFile(mode='w', suffix='.ipynb', delete=False)
         out_notebook_path = f.name
-        close_file = True
+        f.close()
+        delete_file = True
     else:
-        close_file = False
+        delete_file = False
 
     nb_result = papermill.execute_notebook(
         notebook_path,
@@ -24,8 +26,8 @@ def execute_notebook_render_html(notebook_path: str,  parameters: dict, out_note
         parameters=parameters
     )
 
-    if close_file:
-        f.close()
+    if delete_file:
+        os.remove(out_notebook_path)
 
     # Extract a portion of the result if necessary
     if any([sl is not None for sl in (slice_from, slice_to, slice_by)]):
