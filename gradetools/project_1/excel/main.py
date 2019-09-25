@@ -13,5 +13,6 @@ if __name__ == '__main__':
         OUTPUT_CASES,
         INPUT_RANGE_DICT,
         OUTPUT_RANGE_DICT,
-        report_path=os.path.join(EXCEL_FOLDER, 'accuracy report.csv')
+        report_path=os.path.join(EXCEL_FOLDER, 'accuracy report.csv'),
+        full_error_path=os.path.join(EXCEL_FOLDER, 'full accuracy data.csv')
     )
