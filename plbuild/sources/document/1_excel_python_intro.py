@@ -33,13 +33,13 @@ def get_content():
     price_phone = 500
     n_life = 10
     n_machines = 5
-    d_0 = 100000
+    d_1 = 100000
     g_d = 0.2
     max_year = 20
     interest = 0.05
 
     pmm = PhoneManufacturingModel(
-        n_phones, price_scrap, price_phone, n_life, n_machines, d_0, g_d, max_year, interest
+        n_phones, price_scrap, price_phone, n_life, n_machines, d_1, g_d, max_year, interest
     )
 
     scipy_mono = pl.Monospace('scipy')
@@ -58,10 +58,10 @@ def get_content():
                     [
                         'You work for new startup that is trying to manufacture phones. You are tasked with building '
                         'a model which will help determine how many machines to invest in and how much to spend on '
-                        'marketing. Each machine produces $n_{output}$ chairs per year. Each phone sells '
+                        'marketing. Each machine produces $n_{output}$ phones per year. Each phone sells '
                         r'for \$$p_{phone}$. '
                         'After $n_{life}$ years, the machine can no longer produce output, but may be scrapped for '
-                        r'\$$p_{machine}$. The machine will not be replaced, so you may end up with zero total output '
+                        r'\$$p_{scrap}$. The machine will not be replaced, so you may end up with zero total output '
                         r'before your model time period ends. '
                         'Equity investment is limited, so in each year you can either buy a machine or buy '
                         'advertisements. In the first year you must buy a machine. Any other machine purchases must '
@@ -214,7 +214,7 @@ def get_content():
                     f'{pl.Equation(str_eq="p_{phone}")}: {price_phone}',
                     f'{pl.Equation(str_eq="n_{life}")}: {n_life}',
                     f'{pl.Equation(str_eq="n_{machines}")}: {n_machines}',
-                    f'{pl.Equation(str_eq="d_0")}: {d_0}',
+                    f'{pl.Equation(str_eq="d_1")}: {d_1}',
                     f'{pl.Equation(str_eq="g_d")}: {g_d}',
                     f'{pl.Equation(str_eq="r")}: {interest}',
                 ]),
