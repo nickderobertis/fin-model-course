@@ -1,15 +1,18 @@
-from typing import Optional
 import os
-import papermill
-from nbconvert import HTMLExporter
-from IPython.display import HTML
-from gradetools.py.extract import extract_cells_from_nb_node_return_nb_node
 import tempfile
+from typing import Optional
+
+import papermill
+from IPython.core.display import HTML
+from nbconvert import HTMLExporter
+
+from gradetools.py.extract import extract_cells_from_nb_node_return_nb_node
 
 
 def execute_notebook_render_html(notebook_path: str,  parameters: dict, out_notebook_path: Optional[str] = None,
                                  slice_from: Optional[int] = None,
-                                 slice_to: Optional[int] = None, slice_by: Optional[int] = None
+                                 slice_to: Optional[int] = None, slice_by: Optional[int] = None,
+                                 remove_input_cells: bool = False,
                                  ) -> HTML:
 
     if out_notebook_path is None:
@@ -35,7 +38,8 @@ def execute_notebook_render_html(notebook_path: str,  parameters: dict, out_note
             nb_result,
             slice_from=slice_from,
             slice_to=slice_to,
-            slice_by=slice_by
+            slice_by=slice_by,
+            remove_input_cells=remove_input_cells
         )
 
     html_exporter = HTMLExporter()
