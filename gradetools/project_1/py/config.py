@@ -107,3 +107,86 @@ POSSIBLE_INPUT_NAMES = dict(
         'rate',
     ]
 )
+
+NOTEBOOK_SLICES = {
+    "engjennifer_947898_45538184_Project 1 Using Functions Only Final.ipynb": [
+        -4,
+        None
+    ],
+    "babajaniandavid_958953_45496098_David Babajanian Project 1.ipynb": [
+        -3,
+        None
+    ],
+    "henscheljacob_947519_45510648_Project #1_VFF.ipynb": [
+        -1,
+        None
+    ],
+    "bloshinskygriffen_945900_45517860_Griffen - Project 1 Final.ipynb": [
+        -2,
+        None
+    ],
+    "buompadrenicolas_987667_45535268_PROJECT 1 COMMENT EDIT-1.ipynb": [
+        -2,
+        None
+    ],
+    "franteldane_958447_45497195_Dane Frantel Project 1.ipynb": [
+        -2,
+        None
+    ],
+    "perryscott_946836_45534781_Project1 Python-1.ipynb": [
+        -2,
+        None
+    ],
+    "hicksmaxon_948984_45519094_Project1python_maxhicks9.ipynb": [
+        -2,
+        None
+    ],
+    "ricejohn_946337_45538887_Project1-2.ipynb": [
+        -3,
+        None
+    ],
+    "pickrencody_920491_45538213_Model 1-checkpoint-1.ipynb": [
+        -2,
+        None
+    ],
+    "patelkevan_958463_45538857_Machine Project 1-Kevan Patel (2).ipynb": [
+        -3,
+        None
+    ],
+    "jacksonblake_947042_45514245_Project 1 (1).ipynb": [
+        -2,
+        None
+    ],
+    "jagnarinematthew_955999_45527360_Project 1-1.ipynb": [
+        -3,
+        None
+    ],
+    "patelshrey_958032_45537294_Shrey Patel_Project1_Python.ipynb": [
+        -1,
+        None
+    ],
+    "mokyan_1073455_45447033_project1.ipynb": [
+        -3,
+        None
+    ],
+    "garnerkatelyn_947106_45535958_KGarner TVM Project #1.ipynb": [
+        -1,
+        None
+    ],
+    "bogartmichael_958936_45522893_Financial Modeling Project 1-1.ipynb": [
+        -2,
+        None
+    ],
+    "britojuliette_961010_45538975_Project One Final - Juliette Brito.ipynb": [
+        -1,
+        None
+    ],
+    "petersonbradley_947787_45488315_SupplyDemand.ipynb": [
+        -3,
+        None
+    ],
+    "dohseisabella_947074_45530359_IsabellaDohse_Project1_FinancialModeling.ipynb": [
+        -3,
+        None
+    ]
+}
