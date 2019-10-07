@@ -13,7 +13,7 @@ from pltemplates.frames.model_flowchart import (
     model_style,
     in_out_style
 )
-from pltemplates.labblock import LabBlock
+from pltemplates.blocks import LabBlock
 from pltemplates.graphics.explore_params import explore_parameters_graphic
 from pltemplates.frames.sensitivity_example import get_sensitivity_analysis_example_frames
 

@@ -37,7 +37,7 @@ from pltemplates.frames.model_flowchart import (
     model_style,
     in_out_style
 )
-from pltemplates.labblock import LabBlock
+from pltemplates.blocks import LabBlock
 
 TITLE = 'Getting Started with Python and Excel'
 SHORT_TITLE = 'Getting Started'

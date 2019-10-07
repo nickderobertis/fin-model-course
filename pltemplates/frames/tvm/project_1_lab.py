@@ -1,6 +1,6 @@
 import pyexlatex as pl
 import pyexlatex.presentation as lp
-from pltemplates.labblock import LabBlock
+from pltemplates.blocks import LabBlock
 
 
 def get_project_1_lab_frame():
