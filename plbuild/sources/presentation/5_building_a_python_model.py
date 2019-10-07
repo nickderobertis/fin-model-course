@@ -12,7 +12,7 @@ from pltemplates.frames.model_flowchart import (
     model_style,
     in_out_style
 )
-from pltemplates.labblock import LabBlock
+from pltemplates.blocks import LabBlock
 from pltemplates.frames.tvm.salary_eq import salary_block_content
 from pltemplates.frames.tvm.retirement_model_structure import get_retirement_model_overview_frame
 

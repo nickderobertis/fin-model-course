@@ -12,7 +12,7 @@ from pltemplates.frames.model_flowchart import (
     model_style,
     in_out_style
 )
-from pltemplates.labblock import LabBlock
+from pltemplates.blocks import LabBlock
 from pltemplates.frames.tvm.project_1_lab import get_project_1_lab_frame
 from models.retirement import RetirementModel
 
