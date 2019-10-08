@@ -12,9 +12,12 @@ from pltemplates.frames.model_flowchart import (
     model_style,
     in_out_style
 )
-from pltemplates.blocks import LabBlock
+from pltemplates.blocks import LabBlock, InClassExampleBlock
 from pltemplates.eq_with_variable_defs import EquationWithVariableDefinitions
 from pltemplates.hyperlink import Hyperlink
+from pltemplates.exercises.read_write_excel_pandas import (
+    get_lab_exercise
+)
 
 xlwings_mono = pl.Monospace('xlwings')
 
@@ -52,6 +55,9 @@ def get_content():
     xw_func_decorator = pl.Monospace('@xw.func')
     random_choice_mono = pl.Monospace('random_choice')
     random_choice_py = pl.Monospace('random.choices')
+
+    pd_read_write_exercise = get_lab_exercise()
+
     return [
         pl.Section(
             [
@@ -124,6 +130,22 @@ def get_content():
                     ],
                     title=f'Reading and Writing to Excel Files with {pd_mono}'
                 ),
+                lp.Frame(
+                    [
+                        InClassExampleBlock(
+                            [
+                                pl.UnorderedList([
+                                    'Download the contents of the "Read Write Excel Pandas" folder in Examples',
+                                    'Ensure that you put the Excel file and notebook in the same folder for it to work',
+                                    'Follow along with the notebook'
+                                ])
+                            ],
+                            title=f'Read and Write to Excel using {pd_mono}'
+                        )
+                    ],
+                    title='Showcasing Reading and Writing to Excel Files'
+                ),
+                pd_read_write_exercise.presentation_frames(),
             ],
             title=f'To and From Excel with {pd_mono}',
             short_title=pd_mono
@@ -255,6 +277,11 @@ def get_content():
             title=f'Writing a First UDF in {xlwings_mono}',
             short_title='UDFs'
         ),
+        lp.Appendix(
+            [
+                pd_read_write_exercise.appendix_frames()
+            ]
+        )
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(
