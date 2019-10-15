@@ -25,6 +25,7 @@ def get_lab_exercise() -> LabExercise:
             ['Do this', pl.Underline('without'), 'writing the', to_excel_mono, 'command multiple times']
         ],
         [
+            'Note: this exercise uses the Advanced material covered in Examples -> Read Write Excel Pandas',
             ['Use the same "MSFT Financials.xls" from the first exercise on Slide',
              pl.Ref('lab:read-write-excel-pandas-1')],
             'Output to five separate sheets in the same workbook "My Data.xlsx". The sheets should '

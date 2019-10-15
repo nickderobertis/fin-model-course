@@ -18,6 +18,8 @@ from pltemplates.hyperlink import Hyperlink
 from pltemplates.exercises.read_write_excel_pandas import (
     get_lab_exercise
 )
+from pltemplates.exercises.intro_udf import get_lab_exercise as get_intro_udf_exercise
+from pltemplates.exercises.advanced_udf import get_lab_exercise as get_advanced_udf_exercise
 
 xlwings_mono = pl.Monospace('xlwings')
 
@@ -41,6 +43,7 @@ ORDER = 11
 def get_content():
     pd_mono = pl.Monospace('pandas')
     dfs_mono = pl.Monospace('DataFrames')
+    df_mono = pl.Monospace('DataFrame')
     next_slide = lp.Overlay([lp.UntilEnd(lp.NextWithIncrement())])
     df_to_excel_example = pl.Python("df.to_excel('data.xlsx', sheet_name='My Data', index=False)")
     df_from_excel_example = pl.Python("df = pd.read_excel('data.xlsx', sheet_name='My Data')")
@@ -53,10 +56,16 @@ def get_content():
     quickstart_project_mono = pl.Monospace('xlwings quickstart my_project_name')
     cd_mono = pl.Monospace('cd')
     xw_func_decorator = pl.Monospace('@xw.func')
+    xw_arg_decorator = pl.Monospace('@xw.arg')
+    xw_ret_decorator = pl.Monospace('@xw.ret')
+    x_mono = pl.Monospace('x')
+    expand_table_mono = pl.Monospace("expand='table'")
     random_choice_mono = pl.Monospace('random_choice')
     random_choice_py = pl.Monospace('random.choices')
 
     pd_read_write_exercise = get_lab_exercise()
+    intro_udf_exercise = get_intro_udf_exercise()
+    advanced_udf_exercise = get_advanced_udf_exercise()
 
     return [
         pl.Section(
@@ -202,12 +211,12 @@ def get_content():
                                     'Launch Excel and enable "Trust access to the VBA project object model" under '
                                     'File > Options > Trust Center > Trust Center Settings > Macro Settings',
                                     'After hitting OK, now close Excel. '
-                                    'Hit the Windows key, type cmd. Launch the command prompt.',
-                                    ['In the command prompt, type', addin_install_mono],
+                                    'Hit the Windows key, type anaconda. Launch the Anaconda Prompt.',
+                                    ['In the Anaconda Prompt, type', addin_install_mono],
                                     ['After a bit, you should see', addin_install_success],
                                     'Launch Excel and ensure that you now see an xlwings tab',
                                     ['Download', random_seed_py, 'and', random_seed_excel, 'from Canvas in the folder',
-                                     'Models > Random Seed. Put them both in the same folder.'],
+                                     'Examples > Random Seed. Put them both in the same folder.'],
                                     [
                                         f'Open {random_seed_excel}, and change some of the inputs. You should see the random',
                                         'numbers change and also the summary statistics.']
@@ -253,33 +262,117 @@ def get_content():
                 ),
                 lp.Frame(
                     [
-                        LabBlock(
+                        InClassExampleBlock(
                             [
-                                pl.OrderedList([
-                                    ['If you have not already created your', xlwings_mono,
-                                     'project, go back two slides',
-                                     'and follow those steps.'],
-                                    ['Edit the .py file to add a function', random_choice_mono, 'which will call',
-                                     random_choice_py],
-                                    'The function should accept the items to choose from, and the probabilities.',
-                                    'Write out a few possible items to choose from in your workbook. Put probabilities next '
-                                    'to them.',
-                                    ['Call your', random_choice_mono,
-                                     'function on these inputs, and see it pick a random item']
-                                ])
+                                pl.UnorderedList(
+                                    [
+                                        'I will now complete the steps from the previous slides.',
+                                        'There is also an example of this process on Canvas in Examples -> '
+                                        'xlwings UDFs -> First xlwings Project.ipynb',
+                                        'If you get lost along the way, just follow the steps on the prior slides',
+                                        'I will go through creating a project, and implementing the functions in '
+                                        'the random seed example from Canvas.'
+                                    ]
+                                ),
                             ],
-                            title=f'Write a Simple UDF'
+                            title=f'Starting an {xlwings_mono} Project'
                         )
                     ],
-                    title=f"Getting your Feet Wet with {xlwings_mono}"
+                    title=f'Example for Creating an {xlwings_mono} Project'
                 ),
+                intro_udf_exercise.presentation_frames(),
             ],
             title=f'Writing a First UDF in {xlwings_mono}',
             short_title='UDFs'
         ),
+        pl.Section(
+            [
+                lp.DimRevealListFrame(
+                    [
+                        "Now that we know how to write a UDF, let's explore some interesting additional power it adds "
+                        "to Excel",
+                        'Recall creating the project 1 model. We had to build as many rows for as many years we want '
+                        'to support in the model.',
+                        'What if the number of rows, columns, etc. in our model was dynamic, i.e. changing an input '
+                        'changes the shape of the output?',
+                        'Further, if we have input data coming into our model with different dimensions, that can be '
+                        'a challenge as well.'
+                    ],
+                    title='Motivating Advanced UDFs'
+                ),
+                lp.Frame(
+                    [
+                        pl.TextSize(-2),
+                        pl.UnorderedList([
+                            lp.DimAndRevealListItems([
+                                ['We can even work with', pd_mono, dfs_mono, 'when going back and forth between Excel '
+                                 'and Python with UDFs.', 'To do this, we just need to control how data is transferred',
+                                 'between Excel and Python with', xw_ret_decorator, 'and', xw_arg_decorator],
+                            ], dim_last_item=True)
+                        ]),
+                        pl.VSpace(-0.1),
+                        lp.Block(
+                            [
+                                pl.Python("@xw.arg('x', pd.DataFrame, expand='table')"),
+                                pl.VSpace(-0.3),
+                                pl.UnorderedList([
+                                    ['This means that argument', x_mono, 'will come into the function as a', df_mono],
+                                    ['The', expand_table_mono, 'portion means that a single cell can be selected as',
+                                     'an input, and it will expand the selection right and down until it hits blank',
+                                     'cells.'],
+                                    ['This', expand_table_mono, 'allows you to accept inputs of any size without',
+                                     'knowing their size in advance.']
+                                ])
+
+                            ],
+                            title=f"{xw_arg_decorator}: Modifying What's Coming Into Python from Excel",
+                            overlay=next_slide,
+                        ),
+                        lp.Block(
+                            [
+                                pl.Python("@xw.ret(index=False, header=False)"),
+                                pl.VSpace(-0.3),
+                                pl.UnorderedList([
+                                    ['This means that the', df_mono, 'returned from the function will have its',
+                                     'index and header stripped away before outputting to Excel']
+                                ])
+
+                            ],
+                            title=f"{xw_arg_decorator}: Modifying What's Coming Into Excel from Python",
+                            overlay=next_slide,
+                        ),
+                    ],
+                    title=f'Using {pd_mono} with {xlwings_mono}'
+                ),
+                lp.Frame(
+                    [
+                        InClassExampleBlock(
+                            [
+                                pl.UnorderedList(
+                                    [
+                                        'Now I will show how to implement Array and Dynamic UDFs',
+                                        'There are already examples of this in the random_seed example project',
+                                        'I will show how to create the random_normal_array and summary_stats functions '
+                                        'from the random_seed example.'
+                                    ]
+                                )
+                            ],
+                            title=f'Implementing Array and Dynamic UDFs'
+                        ),
+                    ],
+                    title='Example for Advanced UDFs',
+                ),
+                advanced_udf_exercise.presentation_frames(),
+            ],
+            title=f'Array and Dynamic UDFs in {xlwings_mono}',
+            short_title='Advanced UDFs'
+        ),
+
         lp.Appendix(
             [
-                pd_read_write_exercise.appendix_frames()
+                pd_read_write_exercise.appendix_frames(),
+                intro_udf_exercise.appendix_frames(),
+                advanced_udf_exercise.appendix_frames(),
             ]
         )
     ]
