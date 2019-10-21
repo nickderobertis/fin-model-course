@@ -32,7 +32,7 @@ def get_content():
         [f'{input_name}: {input_value}' for input_key, (input_name, input_value) in inputs.items()]
     )
 
-    initial_default_prob_cases = [0.1, 0.3, 0.4]
+    initial_default_prob_cases = [0.3]
     initial_default_prob_cases_str = ', '.join([str(case) for case in initial_default_prob_cases])
     bonus_initial_default_prob_mean = inputs['initial_default_prob'][1]
     bonus_initial_default_prob_std = 0.05
@@ -43,6 +43,18 @@ def get_content():
         default_prob_t=('$p_t^{default}$', 0),
         default_prob_t_minus_1=('$p_{t-1}^{default}$', 0),
     )
+
+    # tuple is (offered rate, default prob)
+    solutions = {
+        (0.2, 0.2): -0.03,
+        (0.2, 0.3): -0.09,
+        (0.4, 0.2): 0.13,
+        (0.4, 0.3): 0
+    }
+
+    solutions_list = [f'With ${outputs["interest_rate"][0].strip("$")} = {tup[0]}$, ' \
+                      f'${inputs["initial_default_prob"][0].strip("$")} = {tup[1]}$: {solution:.0%} IRR'
+                      for tup, solution in solutions.items()]
 
     align_c = lt.ColumnAlignment('c')
     align_l = lt.ColumnAlignment('l')
@@ -84,19 +96,35 @@ def get_content():
     You are the commercial loan analyst trying to decide if this loan makes sense for the bank. You want to give the
     lending officer all the information she would need to negotiate a rate for this loan.
     
-    Given the inputs, what
-    is the minimum interest rate the bank would be willing to offer on the loan? This would be the interest rate which
-    makes the NPV of the loan equal to 0, i.e. the IRR of the loan.
-    
-    Further, the lending officer needs some more information than just the minimum the bank is willing to accept.
-    She is hoping for a table of probabilities, and the rate the bank would have to set to have that probability of
-    making money, going from 10% to 90% in 10% increments. E.g. what rate does the bank have to set to have a 70% chance
-    of having a positive NPV?
+    Given the inputs, what is the expected IRR of the loan for a variety of interest rates on the loan? The lending
+    officer would like you to evaluate rates in 2% increments from 20% to 40%.
     
     The lending officer is also worried that she may have estimated {inputs["initial_default_prob"][0]} incorrectly. 
     She is hoping for the answers to the above questions considering that {inputs["initial_default_prob"][0]} may vary.
-    Evaluate the above questions for {pl.Equation(str_eq=default_prob_cases_eq_str)}.
+    Evaluate the above questions for {pl.Equation(str_eq=default_prob_cases_eq_str)} in addition to the base case 
+    of {inputs["initial_default_prob"][1]}.
     """
+
+    notes = [
+    f"""
+    Unlike the prior project, you cannot assume some maximum number of years. Your model should accept any possible
+    positive loan life.
+    """,
+    "Probably the easiest approach to building this model will use internal randomness. I have set up the project "
+    "template so to help you out with this. There is a button that will run your model repeatedly and collect the "
+    "outputs into a separate tab. Make sure you set Number of iterations to at least 100 to get a good estimate. "
+    "While you are testing things out, set it lower to have it run quicker.",
+    'Your "IRR (this run)" should change when the inputs change. You do not need to have your final answers changing '
+    'when the model changes, as you will have to use the button to get the output. So you can use the button to get '
+    'the result with the appropriate inputs, then hardcode that result into the output table.',
+    'Your answers may differ slightly from those in the Selected Solutions section. This is the nature of a random model. They '
+    'should not be far off, though.',
+    "Save often. Use Dropbox or save separate files as versions of your model as you go through. Occasionally there "
+    "can be some bugs which make your UDFs disappear. UDFs can also disable undo functionality at times.",
+    'Do not move any of the input or output cells. It will break the model.',
+    'There is some weird issue where cell formatting is not working correctly in the template. I will be looking into this, '
+    'but for the purposes of this assignment I will not be grading formatting.'
+    ]
 
     bonus_q_str = f"""
     Produce the same outputs as the main problem, but instead of evaluating 
@@ -105,15 +133,16 @@ def get_content():
     """
 
     submission_str = f"""
-    You may choose to use Excel, Python, or a combination of the two for this model. If you are submitting a standalone
-    Excel or Python project, your submission will be the workbook or the notebook, respectively. If you are submitting
-    an xlwings project combining the two, then submit both the macro-enabled XLSM workbook and the .py Python file.
-    
-    If there is an Excel component to your project, please work off the "project_2_template.xlsm" and 
-    "project_2_template.py" (if needed). 
-    
-    If submitting a standalone Python ipynb notebook, please use the names {list(inputs.keys())} for your inputs and
-    place them in the second cell, and put your outputs in the bottom cell. Your notebook should run end-to-end.
+    Work off of the "project2.xlsm" and "project2.py" files on Canvas. This is an
+    xlwings project with some setup for you already. 
+
+    Your submission should contain both the macro-enabled XLSM workbook and the .py Python file.
+    """
+
+    solutions_str = """
+    The below solutions are with the base case inputs provided. Your model will also need to be able to adjust for
+    different inputs. Try changing the inputs and verify that the model changes in the way it should respond. Do 
+    this for all the inputs.
     """
 
     return [
@@ -132,6 +161,12 @@ def get_content():
                         main_q_str
                     ],
                     title='Main Question'
+                ),
+                pl.SubSection(
+                    [
+                        pl.UnorderedList(notes)
+                    ],
+                    title='Notes'
                 ),
                 pl.SubSection(
                     [
@@ -158,6 +193,13 @@ def get_content():
                 ),
                 pl.SubSection(
                     [
+                        solutions_str,
+                        pl.UnorderedList(solutions_list),
+                    ],
+                    title='Selected Solutions'
+                ),
+                pl.SubSection(
+                    [
                         pl.Center(
                             lt.Tabular(
                                 [
@@ -172,9 +214,8 @@ def get_content():
                                     lt.TableLineSegment(0, 1),
                                     lt.ValuesTable.from_list_of_lists(
                                         [
-                                            ['Model Accuracy', '70%'],
+                                            ['Model Accuracy', '80%'],
                                             ['Model Readability', '20%'],
-                                            ['Model Formatting', '10%'],
                                             ['Bonus', '5%']
                                         ]
                                     ),
