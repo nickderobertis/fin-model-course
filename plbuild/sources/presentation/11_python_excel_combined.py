@@ -336,9 +336,8 @@ def get_content():
                                     ['This means that the', df_mono, 'returned from the function will have its',
                                      'index and header stripped away before outputting to Excel']
                                 ])
-
                             ],
-                            title=f"{xw_arg_decorator}: Modifying What's Coming Into Excel from Python",
+                            title=f"{xw_ret_decorator}: Modifying What's Coming Into Excel from Python",
                             overlay=next_slide,
                         ),
                     ],
@@ -351,9 +350,9 @@ def get_content():
                                 pl.UnorderedList(
                                     [
                                         'Now I will show how to implement Array and Dynamic UDFs',
-                                        'There are already examples of this in the random_seed example project',
-                                        'I will show how to create the random_normal_array and summary_stats functions '
-                                        'from the random_seed example.'
+                                        'Download the Dynamic UDFs example files from the Examples folder',
+                                        'Also download the random_seed example if you have not already',
+                                        'We will go through both examples.'
                                     ]
                                 )
                             ],
