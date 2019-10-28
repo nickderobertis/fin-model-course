@@ -56,6 +56,17 @@ def get_content():
                       f'${inputs["initial_default_prob"][0].strip("$")} = {tup[1]}$: {solution:.0%} IRR'
                       for tup, solution in solutions.items()]
 
+    case_solutions = {
+        'Default in $t=1$': -.2632,
+        'Default in $t=2$': -.1496,
+        'Default in $t=3$': -.0643,
+        'Default in $t=4$': 0,
+        'Default in $t=5$': 0.0482,
+        'No Default': .2
+    }
+
+    case_solutions_list = [f'{key}: {value:.2%}' for key, value in case_solutions.items()]
+
     align_c = lt.ColumnAlignment('c')
     align_l = lt.ColumnAlignment('l')
     align = lt.ColumnsAlignment([align_l, align_c])
@@ -142,7 +153,17 @@ def get_content():
     solutions_str = """
     The below solutions are with the base case inputs provided. Your model will also need to be able to adjust for
     different inputs. Try changing the inputs and verify that the model changes in the way it should respond. Do 
-    this for all the inputs.
+    this for all the inputs. Note that your solution may differ significantly from mine due to the random nature of the 
+    model. Run your model with 1,000 iterations to get a decent check (this will take about 10 minutes). Even then it may be 
+    off by up to a couple percentage points.
+    """
+
+    case_solutions_str = """
+    I am also providing the IRRs for each possible default situation in the model with base case inputs. This way you
+    can check your model without having to run lots of iterations. Make sure that your model can reproduce each of the
+    IRRs corresponding to each default case, and then you will only need the full solutions to check that the probabilities
+    are set correctly. Note that unlike the full solutions, you should be able to match these default case solutions 
+    exactly.
     """
 
     return [
@@ -195,6 +216,8 @@ def get_content():
                     [
                         solutions_str,
                         pl.UnorderedList(solutions_list),
+                        case_solutions_str,
+                        pl.UnorderedList(case_solutions_list),
                     ],
                     title='Selected Solutions'
                 ),
