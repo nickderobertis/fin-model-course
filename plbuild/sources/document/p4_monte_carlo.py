@@ -40,7 +40,8 @@ def get_content():
                         chance of a negative NPV? Which has the highest chance of a positive NPV? Visualize the range
                         of possible NPVs for each plane, as well as the probability of acheiving different NPV levels 
                         (probability table). For the mid-size plane, which has a larger impact on the NPV, an 
-                        additional plane sold or a decrease in the interest rate by 1%?
+                        additional plane sold or a decrease in the interest rate by 1%? In your opinion, which
+                        plane should the manufacturer create?
                         """
                     ],
                     title='Problem Definition'
@@ -57,9 +58,9 @@ def get_content():
                                     lt.MidRule(),
                                     lt.ValuesTable.from_list_of_lists(
                                         [
-                                            ['Super Size', r'\$100,000,000', r'\$10,000,000', r'\$20,000,000', '200', '40'],
-                                            ['Large', r'\$50,000,000', r'\$5,000,000', r'\$10,000,000', '400', '30'],
-                                            ['Mid-size', r'\$20,000,000', r'\$3,000,000', r'\$5,000,000', '600', '20'],
+                                            ['Super Size', r'\$100,000,000', r'\$10,000,000', r'\$11,500,000', '200', '120'],
+                                            ['Large', r'\$50,000,000', r'\$5,000,000', r'\$5,600,000', '400', '50'],
+                                            ['Mid-size', r'\$25,000,000', r'\$3,000,000', r'\$3,350,000', '500', '20'],
                                         ],
                                     ),
                                     lt.BottomRule(),
