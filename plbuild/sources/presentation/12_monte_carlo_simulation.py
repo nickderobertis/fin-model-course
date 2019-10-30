@@ -7,7 +7,7 @@ import pyexlatex.layouts as ll
 
 import plbuild
 from plbuild.paths import images_path
-from pltemplates.exercises.monte_carlo import get_monte_carlo_python_exercise
+from pltemplates.exercises.monte_carlo import get_monte_carlo_python_exercise, get_monte_carlo_excel_exercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
 from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
@@ -42,6 +42,22 @@ def get_content():
     ev_bet = (999999/1000000) * 1 + (1/1000000) * (-750001)
     xlwings_mono = pl.Monospace('xlwings')
     pd_mono = pl.Monospace('pandas')
+    quickstart_mono = pl.Monospace('quickstart')
+
+    read_from_excel_example = pl.Python("""
+my_value = xw.Range("G11").value  # single value
+# all values in cell range
+my_value = xw.Range("G11:F13").value  
+# expands cell range down and left getting all values
+my_values = xw.Range("G11").expand().value  
+    """)
+
+    write_to_excel_example = pl.Python("""
+xw.Range("G11").value = 10
+xw.Range("G11").value = [10, 11]  # horizontal
+xw.Range("G11").value = [[10], [11]]  # vertical
+xw.Range("G11").value = [[10, 11], [12, 13]]  # table
+    """)
 
     ball_options = [
         'fill',
@@ -72,6 +88,7 @@ def get_content():
     )
 
     mc_python_lab = get_monte_carlo_python_exercise()
+    mc_excel_lab = get_monte_carlo_excel_exercise()
 
     return [
         pl.Section(
@@ -354,9 +371,97 @@ def get_content():
             title='A More Formal Treatment of Monte Carlo Simulation',
             short_title='Formal MC',
         ),
+        pl.Section(
+            [
+                lp.DimRevealListFrame(
+                    [
+                        'In pure Excel, it is much more difficult to run a Monte Carlo Simulation',
+                        'Without going to VBA, typically the only way is to use a data table',
+                        'A data table can be used in situations where you only want to have one or two inputs '
+                        'varying at once. Just generate the random inputs and use them as the axes of the data table',
+                        'If you want to vary more than two inputs, VBA or Python would be required',
+                        'There are also add-ons that accomplish this but they are usually not free'
+                    ],
+                    title="How is it Different Running MC in Excel?"
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        'The process for Monte Carlo Simulation which works for any number of variables is '
+                        'very similar to what we were doing in Python.',
+                        'We are still just changing the inputs, running the model, and storing the outputs from each run',
+                        ['Using', xlwings_mono, 'from Python code we can change and retrieve the values of cells'],
+                        'This allows us to change inputs, run the model, and store outputs, just as in Python, but running our Excel model.',
+                        'We can either analyze the outputs in Python or output them back to Excel for analysis'
+                    ],
+                    title='Monte Carlo in Excel with More than Two Variables'
+                )
+            ],
+            title='Monte Carlo Simulation in Excel',
+            short_title='Excel MC'
+        ),
+        pl.Section(
+            [
+                lp.DimRevealListFrame(
+                    [
+                        ['We discussed previously that there are two main ways to use', xlwings_mono,
+                         pl.Bold('running Python from Excel'), 'and', pl.Bold('manipulating Excel from Python.')],
+                        ['We have already explored the former case with', pl.Underline('UDFs.')],
+                        'Now we will manipulate Excel from Python to run a Monte Carlo Simulation.',
+                        'We will change inputs, recalculate the workbook, and extract outputs, all from Python code. We can '
+                        'also write the outputs back to Excel if desired.'
+                    ],
+                    title=f'How does {xlwings_mono} Come into Play?'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        'There is actually substantially less setup to drive Excel from Python than to use UDFs',
+                        ['No', quickstart_mono, 'command or Python file is required for the Excel workbook. This all '
+                         'works with a plain Excel workbook. It does not even need macros enabled or the', xlwings_mono,
+                         'addin.'],
+                        ['Just have your Excel workbook open, pull up Jupyter, import', xlwings_mono, 'and start '
+                         'sending commands.']
+                    ],
+                    title=f'Get Started Using {xlwings_mono} to Drive Python'
+                ),
+                lp.Frame(
+                    [
+                        lp.Block(
+                            [
+                                read_from_excel_example
+                            ],
+                            title='Read Values from Excel'
+                        ),
+                        lp.Block(
+                            [
+                                write_to_excel_example
+                            ],
+                            title='Write Values to Excel'
+                        )
+                    ],
+                    title='Write and Read Values to and from Excel'
+                ),
+                InClassExampleFrame(
+                    [
+                        'Go to Canvas and download the "Excel with Salary.xlsx" retirement model from '
+                        'Models > Retirement',
+                        'Then go to Examples > Monte Carlo > xlwings and download "Excel Monte Carlo.ipynb"',
+                        'Open the "Excel with Salary.xlsx" workbook and keep it open. Ensure you have no other '
+                        'Excel workbooks open.',
+                        'Switch to the Wealth tab if it is not active.',
+                        'Open up the Jupyter notebook and follow along with me'
+                    ],
+                    title='Monte Carlo Excel Retirement Model',
+                    block_title=f'Using {xlwings_mono} to Run Monte Carlo Simulations'
+                ),
+                mc_excel_lab.presentation_frames(),
+            ],
+            title=f'Using {xlwings_mono} to Run Monte Carlo Simulations in Excel',
+            short_title=f'{xlwings_mono} MC'
+        ),
         lp.Appendix(
             [
                 mc_python_lab.appendix_frames(),
+                mc_excel_lab.appendix_frames(),
             ]
         )
     ]
