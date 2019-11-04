@@ -28,7 +28,7 @@ def get_dcf_overview_graphic() -> lg.TikZPicture:
 
     value_node = lg.Node('Enterprise Value', location=lg.Above(of=stock_value_node), options=output_node_options)
 
-    fcf_node = lg.Node('FCF', location=lg.Above(lg.Right(of=value_node, by=0.1)), options=model_node_options)
+    fcf_node = lg.Node('Free Cash Flows', location=lg.Above(lg.Right(of=value_node, by=0.1)), options=model_node_options)
     cost_of_capital_node = lg.Node('Cost of Capital', location=lg.Above(lg.Left(of=value_node, by=0.1)),
                                    options=model_node_options)
 
