@@ -9,8 +9,8 @@ import pyexlatex.layouts as ll
 
 class _LabBlock(lp.Block):
 
-    def __init__(self, content, **kwargs):
-        super().__init__(content, header_color='violet', **kwargs)
+    def __init__(self, content, color: str = 'violet', **kwargs):
+        super().__init__(content, header_color=color, **kwargs)
 
 
 class LabBlock(pl.Template):
