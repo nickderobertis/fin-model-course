@@ -6,6 +6,7 @@ import pyexlatex.layouts as ll
 
 import plbuild
 from plbuild.paths import images_path
+from pltemplates.exercises.dcf import get_dcf_enterprise_equity_value_exercise
 from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
     real_world_style,
@@ -14,7 +15,7 @@ from pltemplates.frames.model_flowchart import (
 )
 from pltemplates.blocks import LabBlock, InClassExampleBlock
 from pltemplates.eq_with_variable_defs import EquationWithVariableDefinitions
-from pltemplates.graphics.dcf import get_dcf_overview_graphic
+from pltemplates.graphics.dcf import get_dcf_graphic
 from pltemplates.hyperlink import Hyperlink
 
 
@@ -36,7 +37,10 @@ ORDER = 13
 
 
 def get_content():
-    dcf_overview_graphic = get_dcf_overview_graphic()
+    dcf_overview_graphic = get_dcf_graphic()
+    cc_graphic = get_dcf_graphic(include_output=False, include_fcf=False)
+    fcf_graphic = get_dcf_graphic(include_output=False, include_coc=False)
+    enterprise_equity_value_excercise = get_dcf_enterprise_equity_value_exercise()
 
     return [
         pl.Section(
@@ -62,7 +66,7 @@ def get_content():
                     [
                         lp.Block(
                             [
-                                pl.Equation(str_eq=r'V = \sum_{t=0}^T \frac{CF^t}{(1 + r)^t}')
+                                pl.Equation(str_eq=r'V = \sum_{t=0}^T \frac{CF^t}{(1 + r)^t}', inline=False)
                             ],
                             title='Financial Asset Value'
                         ),
@@ -71,7 +75,7 @@ def get_content():
                             'The cash flows for a stock are dividends. The dividend discount model takes the present '
                             'value of future dividends.',
                             'To find the value of a business, find the present value of its future free cash flows'
-                        ])]),
+                        ], vertical_fill=True)]),
                     ],
                     title='Motivating the DCF'
                 ),
@@ -87,13 +91,43 @@ def get_content():
                         'By determining the enterprise value, we can back into the equity value to get the stock price'
                     ],
                     title='Enterprise Value vs. Equity Value'
+                ),
+                enterprise_equity_value_excercise.presentation_frames(),
+                lp.TwoColumnGraphicDimRevealFrame(
+                    [
+                        pl.TextSize(-1),
+                        ['The goal of cost of capital estimation is to determine the',
+                         pl.Bold('weighted average cost of capital (WACC)')],
+                        ['This can broadly be broken down into two components: estimating the',
+                         pl.Underline('cost of equity'), 'and estimating the', pl.Underline('cost of debt')],
+                        'Cost of equity is typically estimated using the Capital Asset Pricing Model (CAPM)',
+                        'Cost of debt is usually estimated from the interest payments and book value of debt'
+                    ],
+                    graphics=[lp.adjust_to_full_size_and_center(cc_graphic)],
+                    title='Overview of Cost of Capital Estimation'
+                ),
+                lp.TwoColumnGraphicDimRevealFrame(
+                    [
+                        pl.TextSize(-1),
+                        'The goal of free cash flow estimation is to determine the historical and future '
+                        'free cash flows (FCF) for the company.',
+                        'Historical financial statements, including the income statement, balance sheet, and '
+                        'statement of cash flows are used to determine historical FCF',
+                        'It is the job of the analyst building the model to project those FCF into the future',
+                        'This is usually done by projecting the financial statements into the future'
+                    ],
+                    graphics=[lp.adjust_to_full_size_and_center(fcf_graphic)],
+                    title='Overview of Free Cash Flow Estimation'
                 )
             ],
             title='Introduction to Discounted Cash Flow (DCF) Valuation',
             short_title='DCF Intro'
-
+        ),
+        lp.Appendix(
+            [
+                enterprise_equity_value_excercise.appendix_frames(),
+            ]
         )
-
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(
