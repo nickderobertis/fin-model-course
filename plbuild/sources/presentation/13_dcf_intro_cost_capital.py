@@ -3,10 +3,15 @@ import pyexlatex.table as lt
 import pyexlatex.presentation as lp
 import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
+from pyexlatex.logic.format.sizing import adjust_to_size
 
 import plbuild
 from plbuild.paths import images_path
-from pltemplates.exercises.dcf import get_dcf_enterprise_equity_value_exercise, get_dcf_cost_equity_exercise
+from pltemplates.exercises.dcf import (
+    get_dcf_enterprise_equity_value_exercise,
+    get_dcf_cost_equity_exercise,
+    get_dcf_cost_debt_exercise
+)
 from pltemplates.frames.in_class_example import InClassExampleFrame
 from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
@@ -17,6 +22,7 @@ from pltemplates.frames.model_flowchart import (
 from pltemplates.blocks import LabBlock, InClassExampleBlock
 from pltemplates.eq_with_variable_defs import EquationWithVariableDefinitions
 from pltemplates.graphics.dcf import get_dcf_graphic
+from pltemplates.graphics.wacc import get_wacc_graphics
 from pltemplates.hyperlink import Hyperlink
 
 
@@ -43,6 +49,8 @@ def get_content():
     fcf_graphic = get_dcf_graphic(include_output=False, include_coc=False)
     enterprise_equity_value_excercise = get_dcf_enterprise_equity_value_exercise()
     cost_equity_exercise = get_dcf_cost_equity_exercise()
+    cost_debt_exercise = get_dcf_cost_debt_exercise()
+    wacc_graphics = get_wacc_graphics()
 
     return [
         pl.Section(
@@ -269,16 +277,110 @@ def get_content():
                         'still 1,000 so based on the financial statements approach the cost of debt would still be 10%.'
                     ],
                     title='Why Should we Care about the Market Value of Debt?'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        pl.TextSize(-1),
+                        ['Debt has an interesting feature in our tax system: debt is', pl.Underline('tax deductible.')],
+                        'The amount a company has to pay in income tax is taken as a percentage of net income.',
+                        'As interest is taken out while calculating net income, it lowers the tax payment.',
+                        'Think about two hypothetical companies with the exact same operations, revenues, costs, etc. '
+                        'One is financed completely with equity and the other with 50% debt. They will both have the '
+                        'same EBIT but the EBT will be lower for the debt firm and so the taxes will be lower for the '
+                        'debt firm, likely giving the debt firm a higher value than the equity firm.',
+                        'What this means for cost of capital estimation is that all our calculations will be based on '
+                        f'pre-tax numbers, then we multiply by $(1 - {pl.Text("tax rate")})$ to get the after-tax cost '
+                        f'of debt to use in the WACC.'
+                    ],
+                    title='After-Tax Cost of Debt'
+                ),
+                cost_debt_exercise.presentation_frames(),
+                lp.DimRevealListFrame(
+                    [
+                        'There are three main approaches to calculating the market value of debt for use in the '
+                        'WACC calculation, depending on what data you have available',
+                        ['If all you have is financial statements, you must just',
+                         pl.Underline('assume the book value of debt equals the market value of debt.')],
+                        ['If you also have an estimate of the current cost of debt obtained from the market as well '
+                         'as an average maturity of debt, you can use the', pl.Underline('hypothetical bond approach.')],
+                        ['Finally, if you have all the individual debt instruments, you can',
+                         pl.Underline('calculate the market value of individual instruments.')]
+                    ],
+                    title='Approaches to Calculating the Market Value of Debt'
+                ),
+                InClassExampleFrame(
+                    [
+                        'Go to Canvas and download "Market Value of Debt.ipynb" and "debt data.xlsx" from '
+                        'Examples > DCF > Cost of Debt',
+                        'Ensure you have the Jupyter notebook and the Excel spreadsheet in the same folder.',
+                        'We will go through the Jupyter notebook to show the three approaches to estimating '
+                        'the market value of debt.'
+                    ],
+                    title='Calculating the Market Value of Debt',
+                    block_title='MV Debt Example'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        "For the purposes of this class, we won't deal with seniority. But you should keep it in mind "
+                        "in the future when estimating the market value of debt.",
+                        'Seniority represents the payoff order during bankruptcy. The most senior loans will be paid '
+                        'first, and if there is still money left over, then the more junior loans will be paid.',
+                        'As there is a higher expected value in recovery, senior loans are less risky and so should '
+                        'have a lower rate associated with them.',
+                        'In the prior exercise, when valuing individual debt instruments, we assumed a single cost of '
+                        'debt, when in reality, it should be adjusted for the seniority.',
+                    ],
+                    title='Dealing with Seniority of Debt'
                 )
             ],
             title='Cost of Debt Estimation',
             short_title='Debt'
         ),
-
+        pl.Section(
+            [
+                lp.Frame(
+                    [
+                        lp.Block(
+                            [
+                                EquationWithVariableDefinitions(
+                                    f'{pl.Text("WACC")} = r_e w_e + r_d (1 - t) w_d',
+                                    [
+                                        '$r_e$: Cost of equity',
+                                        '$w_e$: Weight of equity',
+                                        '$r_d$: Pre-tax cost of debt',
+                                        '$t$: Tax rate',
+                                        '$w_d$: Weight of debt'
+                                    ],
+                                    space_adjustment=-0.4
+                                )
+                            ],
+                            title='Weighted Average Cost of Capital (WACC)'
+                        ),
+                        pl.UnorderedList([lp.DimAndRevealListItems([
+                            'So now from the prior sections we have the cost of equity, market value of equity, '
+                            'cost of debt, and market value of debt.',
+                            'The weights of debt and equity are found by dividing that market value by the sum of '
+                            'both market values.'
+                        ], vertical_fill=True)])
+                    ],
+                    title='Calculating WACC'
+                ),
+                lp.Frame(
+                    [
+                        pl.Center(adjust_to_size(wacc_graphics[0], 0.9, 0.35, keep_aspect_ratio=True)),
+                        pl.Center(adjust_to_size(wacc_graphics[1], 0.9, 0.35, keep_aspect_ratio=True)),
+                    ],
+                    title='What the Weighted Part of WACC Means'
+                )
+            ],
+            title='Putting it All Together: Calculating the WACC',
+            short_title='WACC'
+        ),
         lp.Appendix(
             [
                 enterprise_equity_value_excercise.appendix_frames(),
                 cost_equity_exercise.appendix_frames(),
+                cost_debt_exercise.appendix_frames(),
             ]
         )
     ]
