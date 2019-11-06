@@ -187,10 +187,94 @@ def get_content():
                     block_title='CAPM Estimation'
                 ),
                 cost_equity_exercise.presentation_frames(),
+                lp.DimRevealListFrame(
+                    [
+                        'As we will cover in more detail when we get to WACC, we need to have the market values of '
+                        'both equity and debt along with the costs to be able to caluclate the WACC.',
+                        'The market value of equity for a publicly traded company is straightforward. Just calculate '
+                        f'the {pl.Bold("market capitalization")} as the number of shares outstanding multiplied by the current '
+                        'share price.',
+                        'The market capitalization can be used directly as the market value of equity.'
+                    ],
+                    title='Market Value of Equity'
+                )
             ],
             title='Cost of Equity Estimation',
             short_title='Equity'
         ),
+        pl.Section(
+            [
+                lp.DimRevealListFrame(
+                    [
+                        'We want to estimate the cost of debt for the company, which more specifically should be '
+                        'the marginal interest cost of raising one additional dollar via debt.',
+                        ['There are two general approaches to estimating this: the',
+                         pl.Underline('financial statements approach'), 'and the',
+                         pl.Underline('market value of bonds approach')],
+                        'The market value of bonds approach is better able to capture the current rate when it has '
+                        'changed substantially over time, but it requires price, coupon, and maturity information on '
+                        'a bond.',
+                        'The financial statements approach uses only the income statement and balance sheet, and '
+                        'represents a weighted average historical cost of debt.'
+
+                    ],
+                    title='Overview of Estimating the Cost of Debt'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        'The financial statements approach uses interest expense from the income statement and '
+                        'total debt from the balance sheet to estimate the cost of debt',
+                        'With this approach, we can estimate the cost of debt by a very simple formula',
+                        pl.Equation(
+                            str_eq=rf'r_d = \frac{{{pl.Text("Interest Expense")}}}{{{pl.Text("Total Debt")}}}'
+                        ),
+                        'Calculate this for the most recent data available and use this as the cost of debt'
+                    ],
+                    title='The Financial Statements Approach to Cost of Debt'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        'The cost of debt is about raising new debt, so it is more accurate to look at the market to '
+                        'determine how much the company would have to pay for new debt.',
+                        "The yield to maturity (YTM) of the company's bonds can be calculated. A weighted average of "
+                        "the YTMs can be used as an estimate of the cost of debt.",
+                        'The YTM is representing the required rate of return on the bond for the investor, which is '
+                        'equivalent to the cost of the bond for the company',
+                        'The YTM is simply the IRR of the bond, considering the current market price of the bond'
+                    ],
+                    title='The Market Value of Bonds Approach to Cost of Debt'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        "If you have taken the debt course, you should be familiar with the fact that bonds' values "
+                        "change over time.",
+                        'The value of a bond can be determined (just like any financial asset) by taking the present value of '
+                        'future cash flows (here, interest and principal payments). ',
+                        "If the discount rate for the company changes, the value of the bonds change, as the interest "
+                        "payments are contracted and will remain the same",
+                        "The discount rate will change when the riskiness of the firm's debt changes, e.g. taking on "
+                        "additional debt, starting a new project, having a bad operating year, etc."
+                    ],
+                    title='What is the Market Value of Debt?'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        'Say a company issues a 3-year bond with a 10% coupon. When issued, the riskiness of the firm implies '
+                        'it should have a 10% discount rate. In other words, the true cost of debt is 10%. '
+                        'The bond is at par (value 1,000).',
+                        'One year later, the firm has a bad year, and now lenders are requiring a 15% rate to lend to the company',
+                        r'Due to this, the price of the existing bond has dropped to \$918.71.',
+                        r'If we calculate the IRR on this \$918.71 bond, it comes to 15%, which is the true YTM or cost of debt',
+                        'The coupon rate on the bond is still 10%, and the book value of debt on the balance sheet is '
+                        'still 1,000 so based on the financial statements approach the cost of debt would still be 10%.'
+                    ],
+                    title='Why Should we Care about the Market Value of Debt?'
+                )
+            ],
+            title='Cost of Debt Estimation',
+            short_title='Debt'
+        ),
+
         lp.Appendix(
             [
                 enterprise_equity_value_excercise.appendix_frames(),
