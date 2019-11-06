@@ -58,3 +58,33 @@ def get_dcf_enterprise_equity_value_exercise() -> LabExercise:
     )
 
 
+def get_dcf_cost_equity_exercise() -> LabExercise:
+
+    bullet_contents = [
+        [
+            'Go to Canvas and download "prices.xlsx" from Lab Exercises > DCF > Cost of Equity',
+            'Assume the risk free rate is 2%',
+            'What is the beta and the cost of equity for this company?',
+            'If you thought there was going to be a recession, such that the average market return would be '
+            '3% lower, then what would you expect the cost of equity to be?',
+            'Complete this exercise with the tool of your choice.'
+        ],
+    ]
+
+    answer_contents = [
+        [
+            r'The $\beta$ is 0.855',
+            r'The cost of equity is 6.71%',
+            r'The cost of equity in the recession is 4.15%'
+        ],
+    ]
+
+    return LabExercise(
+        bullet_contents,
+        'DCF Cost of Equity',
+        f"Finding Cost of Equity Given Historical Prices",
+        label='lab:dcf-cost-equity',
+        answers_content=answer_contents
+    )
+
+
