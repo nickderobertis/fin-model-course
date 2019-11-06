@@ -6,7 +6,8 @@ import pyexlatex.layouts as ll
 
 import plbuild
 from plbuild.paths import images_path
-from pltemplates.exercises.dcf import get_dcf_enterprise_equity_value_exercise
+from pltemplates.exercises.dcf import get_dcf_enterprise_equity_value_exercise, get_dcf_cost_equity_exercise
+from pltemplates.frames.in_class_example import InClassExampleFrame
 from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
     real_world_style,
@@ -41,6 +42,7 @@ def get_content():
     cc_graphic = get_dcf_graphic(include_output=False, include_fcf=False)
     fcf_graphic = get_dcf_graphic(include_output=False, include_coc=False)
     enterprise_equity_value_excercise = get_dcf_enterprise_equity_value_exercise()
+    cost_equity_exercise = get_dcf_cost_equity_exercise()
 
     return [
         pl.Section(
@@ -123,9 +125,76 @@ def get_content():
             title='Introduction to Discounted Cash Flow (DCF) Valuation',
             short_title='DCF Intro'
         ),
+        pl.Section(
+            [
+                lp.Frame(
+                    [
+                        pl.TextSize(-1),
+                        lp.Block(
+                            [
+                                EquationWithVariableDefinitions(
+                                    r'r_i = r_f + \beta (r_m - r_f) + \epsilon',
+                                    [
+                                        '$r_i$: Return on stock $i$',
+                                        '$r_f$: Return on risk free asset',
+                                        '$r_m$: Return on market portfolio',
+                                        r'$\beta$: Covariance of stock returns with market risk premium',
+                                        r'$\epsilon$: Idiosyncratic return, mean 0',
+                                    ]
+                                )
+                            ],
+                            title='Capital Asset Pricing Model (CAPM)'
+                        ),
+                        pl.UnorderedList([lp.DimAndRevealListItems([
+                            'We will use historical stock price data along with CAPM to produce an estimate of the '
+                            'cost of equity.',
+                            'Ultimately, $r_i$ is the estimate of the cost of equity',
+                        ], vertical_fill=True)])
+
+                    ],
+                    title='How Can CAPM be used for Estimating the Cost of Equity?'
+                ),
+                lp.Frame(
+                    [
+                        lp.Block(
+                            [
+                                pl.Equation(str_eq=r'r_i = r_f + \beta (r_m - r_f) + \epsilon')
+                            ],
+                            title='Capital Asset Pricing Model (CAPM)'
+                        ),
+                        pl.UnorderedList([lp.DimAndRevealListItems([
+                            r'The three returns can all be estimated from historical data. Therefore $\beta$ and '
+                            r'$\epsilon$ are the unknowns. But $\epsilon$ has mean zero so we can ignore it '
+                            r'for estimation.',
+                            'We will estimate the historical beta, then assume that the beta is still valid today to '
+                            'come up with the current $r_i$ as the cost of equity.',
+                            r'$\beta$ can be estimated by regressing the historical stock returns of the company on '
+                            r'the historical market risk premiums. The $\beta$ is then the coefficient of the market '
+                            r'risk premium in the regression.'
+                        ], vertical_fill=True)])
+                    ],
+                    title='Overview of Cost of Equity Estimation'
+                ),
+                InClassExampleFrame(
+                    [
+                        'Go to Canvas and download "Determining the Cost of Equity.ipynb" and "price data.xlsx" from '
+                        'Examples > DCF > Cost of Equity',
+                        'Make sure that you place these two in the same folder',
+                        'We are using historical prices to calculate the cost of equity using CAPM',
+                        'We will use a risk free rate of 3% for the exercise',
+                    ],
+                    title='Using Price Data to Estimate Cost of Equity',
+                    block_title='CAPM Estimation'
+                ),
+                cost_equity_exercise.presentation_frames(),
+            ],
+            title='Cost of Equity Estimation',
+            short_title='Equity'
+        ),
         lp.Appendix(
             [
                 enterprise_equity_value_excercise.appendix_frames(),
+                cost_equity_exercise.appendix_frames(),
             ]
         )
     ]
