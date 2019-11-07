@@ -1,0 +1,36 @@
+{% filter SubSection('Notes') %}
+
+{{ [
+'Be careful that the returns are daily. You will need to divide the risk free rate by 252 to get a daily rate. After '
+'you get an estimate from CAPM, you will need to multiply it by 252.',
+'You can feel free to modify any of the input files to make them easier to load. But keep in mind that if you did '
+'this on the job, and you needed to keep updating the model, you would have to do this every time. If you cleaned it '
+'up with code then it would be automated. At the end I will show my model which automates the cleanup process.',
+'If there is not a specific day associated with a debt maturity, only a year, assume it is December 31st.',
+'If there is not enough information to calculate a bond price, or the bond already expired, just use the principal '
+'as the market price of the bond.'
+] | UnorderedList }}
+
+{% endfilter %}
+
+{% filter SubSection('Inputs') %}
+
+Download the following files from Canvas in the Projects > Project 3 folder:
+{{ [
+'SP500 Prices.xlsx',
+'WMT Debt Details.xls',
+'WMT Prices.xlsx',
+'WMT Income Statement.xlsx',
+'WMT Balance Sheet.xlsx',
+]| UnorderedList }}
+
+In these files you will find the historical stock prices for Walmart, the historical index values for the S&P 500,
+the individual debt instruments for Walmart, and the income statement and balance sheet for Walmart.
+
+In addition to the information in the spreadsheets, also consider that Walmart currently has a {{ wmt_bond_years }}-year
+{{ wmt_bond_coupon_pct }} coupon bond trading at \${{ wmt_bond_price }} (par value \$100). The risk-free rate is
+{{ risk_free_pct }} and LIBOR is {{ libor_rate_pct }}.
+Walmart's stock currently has a price of \${{ wmt_price }} with {{ wmt_shrout_fmt }}
+shares outstanding.
+
+{% endfilter %}
