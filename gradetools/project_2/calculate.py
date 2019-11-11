@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Tuple
 import time
 
 from pythoncom import com_error
@@ -7,7 +7,7 @@ import xlwings as xw
 from gradetools.excel.values import get_non_none_range_value
 
 
-def calculate_app_extract_irrs(n_iter: int = 3, out_cell: str = 'B15') -> List[float]:
+def calculate_app_extract_irrs(n_iter: int = 3, out_cell: str = 'B15') -> Tuple[List[float], int]:
 
     app = list(xw.apps)[0]
     values = []
@@ -26,4 +26,4 @@ def calculate_app_extract_irrs(n_iter: int = 3, out_cell: str = 'B15') -> List[f
         value = get_non_none_range_value(out_cell)
         values.append(value)
 
-    return values
+    return values, iter_count
