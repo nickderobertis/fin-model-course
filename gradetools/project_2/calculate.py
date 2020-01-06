@@ -23,7 +23,7 @@ def calculate_app_extract_irrs(n_iter: int = 3, out_cell: str = 'B15') -> Tuple[
         except com_error:
             time.sleep(.1)
             continue
-        value = get_non_none_range_value(out_cell)
+        value = get_non_none_range_value(out_cell, retries=1000)
         values.append(value)
 
     return values, iter_count

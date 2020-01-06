@@ -9,7 +9,7 @@ from jinja2 import FileSystemLoader
 
 import plbuild
 from plbuild.paths import images_path
-
+from pltemplates.hyperlink import Hyperlink
 
 AUTHORS = ['Nick DeRobertis']
 
@@ -62,6 +62,7 @@ def get_content():
             [
                 Project3ProblemModel(template_path='prob_definition.j2', environment=jinja_env),
                 Project3ProblemModel(template_path='notes.j2', environment=jinja_env),
+                Project3ProblemModel(template_path='bonus.j2', environment=jinja_env),
                 pl.SubSection(
                     [
                         stdev_table
@@ -81,9 +82,9 @@ def get_content():
                         'Selected solutions with the baseline inputs:',
                         pl.UnorderedList(
                             [
-                                'WACC: 5.17%',
-                                r'MV Debt: \$86.3 billion',
-                                'Cost of Equity: 5.97%'
+                                'WACC: 5.19%',
+                                r'MV Debt: \$83 billion',
+                                'Cost of Equity: 5.96%'
                             ]
                         )
                     ],
@@ -145,8 +146,32 @@ class Project3ProblemModel(pl.Model):
     libor_rate = 0.0196
     libor_rate_pct = f'{libor_rate:.2%}'
 
-
-
+    bonus_resources_list = pl.UnorderedList([
+        Hyperlink(
+            'https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html',
+            'Advanced Read Excel (look at skiprows)'
+        ),
+        Hyperlink(
+            'https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html#selection',
+            'Selecting Values of a DataFrame'
+        ),
+        Hyperlink(
+            'https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html',
+            'Dropping missing values'
+        ),
+        Hyperlink(
+            'https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html',
+            'Marking Existing Values as Missing'
+        ),
+        Hyperlink(
+            'https://scotch.io/tutorials/an-introduction-to-regex-in-python',
+            'Intro to Regular Expressions (not necessarily required, but I used them)'
+        ),
+        Hyperlink(
+            'https://docs.python.org/3/library/re.html',
+            'Regular Expression Reference'
+        )
+    ])
 
 
 DOCUMENT_CLASS_KWARGS = dict(

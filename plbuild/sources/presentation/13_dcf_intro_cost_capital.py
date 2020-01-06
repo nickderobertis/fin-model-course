@@ -282,8 +282,8 @@ def get_content():
                     [
                         pl.TextSize(-1),
                         ['Debt has an interesting feature in our tax system: debt is', pl.Underline('tax deductible.')],
-                        'The amount a company has to pay in income tax is taken as a percentage of net income.',
-                        'As interest is taken out while calculating net income, it lowers the tax payment.',
+                        'The amount a company has to pay in income tax is taken as a percentage of earnings before tax (EBT).',
+                        'As interest is taken out while calculating EBT, it lowers the tax payment.',
                         'Think about two hypothetical companies with the exact same operations, revenues, costs, etc. '
                         'One is financed completely with equity and the other with 50% debt. They will both have the '
                         'same EBIT but the EBT will be lower for the debt firm and so the taxes will be lower for the '
@@ -384,6 +384,7 @@ def get_content():
             ]
         )
     ]
+
 
 DOCUMENT_CLASS_KWARGS = dict(
     nav_header=True,
