@@ -7,7 +7,7 @@ verify_ssl = true
 
 
 [packages]
-jupyter-client = "==5.3.1"
+jupyter-client = "*"
 jupyterlab = "*"
 pl-builder = "*"
 pandas = "*"
@@ -23,6 +23,10 @@ ipywidgets = "*"
 openpyxl = "*"
 xlrd = "*"
 statsmodels = "*"
+finstmt = "*"
+plotly = "*"
+pystan = "*"
+fbprophet = "*"
 
 [requires]
 python_version = "3.7"

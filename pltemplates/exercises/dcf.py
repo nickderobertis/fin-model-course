@@ -1,7 +1,10 @@
 import datetime
+import os
 import random
 
 import numpy as np
+import pandas as pd
+import statsmodels.api as sm
 import pyexlatex as pl
 import pyexlatex.table as lt
 import pyexlatex.presentation as lp
@@ -64,11 +67,24 @@ def get_dcf_enterprise_equity_value_exercise() -> LabExercise:
 
 
 def get_dcf_cost_equity_exercise() -> LabExercise:
+    risk_free = 0.02
+
+    data_path = os.path.sep.join(['Labs', 'DCF', 'Cost of Equity', 'prices.xlsx'])
+    df = pd.read_excel(data_path)
+    returns = df.pct_change().dropna()
+    returns['MRP'] = returns['Market'] - risk_free
+    model = sm.OLS(returns['Asset'], sm.add_constant(returns['MRP']), hasconst=True)
+    results = model.fit()
+    beta = results.params['MRP']
+    market_return = returns['Market'].mean()
+    cost_of_equity = risk_free + beta * (market_return - risk_free)
+    recession_cost_of_equity = risk_free + beta * ((market_return - 0.03) - risk_free)
+
 
     bullet_contents = [
         [
             'Go to Canvas and download "prices.xlsx" from Lab Exercises > DCF > Cost of Equity',
-            'Assume the risk free rate is 2%',
+            f'Assume the risk free rate is {risk_free:.0%}',
             'What is the beta and the cost of equity for this company?',
             'If you thought there was going to be a recession, such that the average market return would be '
             '3% lower, then what would you expect the cost of equity to be?',
@@ -78,9 +94,9 @@ def get_dcf_cost_equity_exercise() -> LabExercise:
 
     answer_contents = [
         [
-            r'The $\beta$ is 0.855',
-            r'The cost of equity is 6.71%',
-            r'The cost of equity in the recession is 4.15%'
+            rf'The $\beta$ is {beta:.3f}',
+            rf'The cost of equity is {cost_of_equity:.2%}',
+            rf'The cost of equity in the recession is {recession_cost_of_equity:.2%}'
         ],
     ]
 
@@ -104,7 +120,7 @@ def get_dcf_cost_debt_exercise() -> LabExercise:
 
     bullet_contents = [
         [
-            rf'A chemical manufacturer has a {coupon_rate:.1%} coupon, {par_value} par value bond outstanding, priced '
+            rf'A chemical manufacturer has a {coupon_rate:.1%} coupon, annual pay {par_value} par value bond outstanding, priced '
             rf'at \${bond_price} on {today}.',
             f'If the bond matures on {maturity_date}, what is the '
             rf'cost of debt for this company? The tax rate is {tax_rate:.0%}.',

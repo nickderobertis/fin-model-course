@@ -4,6 +4,7 @@ Canvas renames all the files upon submission.
 
 Move each students' files into their own folder and rename to project2
 """
+# TODO: refactor to use grsdetools.canvas.rename
 import os
 import re
 
