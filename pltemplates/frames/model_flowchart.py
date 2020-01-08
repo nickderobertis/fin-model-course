@@ -1,4 +1,6 @@
 from typing import Sequence, Union
+
+from pyexlatex import VSpace
 from pyexlatex.presentation import (
     Overlay,
     NextWithIncrement,
@@ -52,6 +54,7 @@ class ModelFlowchartFrame(Frame):
     def _get_contents(self, content):
         out_contents = []
         for i, content_list in enumerate(content):
+            out_contents.append(VSpace(-0.25))
             out_contents.append(
                 Block(
                     adjust_to_full_size_and_center(
@@ -63,6 +66,7 @@ class ModelFlowchartFrame(Frame):
                     overlay=next_until_end_ov
                 )
             )
+
         return out_contents
 
     def _validate(self):
