@@ -1,0 +1,94 @@
+
+name: Build and Push Docs
+
+on:
+  push:
+    paths:
+      - 'docsrc/**'
+    branches:
+      - master
+
+jobs:
+  # TODO [#2]: refactor docs workflow once Github Actions improves
+  #
+  # Entire jobs are getting copied between workflow files due to limitations in Github Actions
+  #
+  # Possible changes to Github Actions that would allow the docs workflow to be refactored:
+  # - reuse jobs
+  # - reuse steps
+  # - trigger workflow from within action/workflow
+  test:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Pipenv
+      uses: dschep/install-pipenv-action@v1
+    - name: Install dependencies
+      run: |
+        pipenv sync
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
+      run: |
+        pipenv run pytest --cov=./ --cov-report=xml
+    - name: Upload coverage to Codecov
+      if: github.ref == 'refs/heads/master'
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-pytest
+        yml: ./codecov.yml
+    - name: Static Typing Checks with mypy
+      run: |
+        pipenv run mypy $(python name.py)
+
+  deploy:
+    needs: test
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Pipenv
+      uses: dschep/install-pipenv-action@v1
+    - name: Install dependencies
+      run: |
+        pipenv sync
+        sudo apt-get install pandoc -y
+    - name: Build Documentation
+      run: |
+        cd docsrc
+        pipenv run make github
+        cd ..
+        echo "" > docs/.nojekyll
+    - name: Deploy Documentation
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.gh_token }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./docs
