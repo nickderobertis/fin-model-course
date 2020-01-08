@@ -1,0 +1,157 @@
+
+name: Test, Build and Push Python Package and Docs
+
+on:
+  push: {}
+  pull_request:
+    types: [closed]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: Exit Workflow if PR but not Merged
+      if: github.event.action == 'closed'
+      run: |
+        if [ !$GITHUB_PR_BASE == 'master' ]; then
+          echo "Not merging into master, exiting workflow";
+          exit 1;
+        fi;
+        if $GITHUB_PR_MERGED; then
+          echo "PR merged, can continue workflow"
+          exit 0;
+        fi;
+        echo "Got closed PR, not merged, exiting workflow";
+        exit 1;
+      env:
+        GITHUB_PR_MERGED: ${{ github.event.pull_request.merged }}
+        GITHUB_PR_BASE: ${{ github.event.pull_request.base.ref }}
+    - uses: actions/checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Pipenv
+      uses: dschep/install-pipenv-action@v1
+    - name: Install dependencies
+      run: |
+        pipenv sync
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Static Typing Checks with mypy
+      run: |
+        pipenv run mypy $(python name.py)
+    - name: Test with pytest
+      run: |
+        pipenv run pytest --cov=./ --cov-report=xml
+    - name: Upload coverage to Codecov
+      if: github.ref == 'refs/heads/master'
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-pytest
+        yml: ./codecov.yml
+
+
+  collectTODO:
+    if: github.ref == 'refs/heads/master'
+    needs: test
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: [3.7]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Collect TODO
+        uses: whoopnip/todo-actions@input-commit-branch
+        with:
+          commitBranch: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.gh_token }}
+          TODO_ACTIONS_MONGO_URL: ${{ secrets.TODO_ACTIONS_MONGO_URL }}
+
+
+  updateReleaseDraft:
+    if: github.ref == 'refs/heads/master'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: toolmantim/release-drafter@v5.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.gh_token }}
+
+
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    needs: test
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: [3.7]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Get package name
+        id: package_name
+        run: echo ::set-output name=package_name::$(python name.py)
+      - uses: whoopnip/pypi-latest-version-action@master
+        id: output_pypi_version
+        with:
+          package: ${{ steps.package_name.outputs.package_name }}
+      - name: Output build version
+        id: output_build_version
+        run: |
+          bash output-version.sh
+      - name: Install Pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Install dependencies
+        run: |
+          pipenv sync
+          sudo apt-get install pandoc -y
+      - name: Build Documentation
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        run: |
+          cd docsrc
+          pipenv run make github
+          cd ..
+          echo "" > docs/.nojekyll
+      - name: Deploy Documentation
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        continue-on-error: true
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.gh_token }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./docs
+      - name: Build PyPI Package
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        run: |
+          pipenv run python upload.py --build-only
+      - name: Upload PyPI Package
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: __token__
+          password: ${{ secrets.pypi_password }}
+

@@ -1,0 +1,32 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+
+[packages]
+jupyter-client = "*"
+jupyterlab = "*"
+pl-builder = "*"
+pandas = "*"
+holoviews = "*"
+bokeh = "*"
+matplotlib = "*"
+pscript = "*"
+fire = "*"
+scipy = "*"
+papermill = "*"
+nbconvert = "*"
+ipywidgets = "*"
+openpyxl = "*"
+xlrd = "*"
+statsmodels = "*"
+finstmt = "*"
+plotly = "*"
+pystan = "*"
+fbprophet = "*"
+
+[requires]
+python_version = "3.7"

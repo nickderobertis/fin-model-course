@@ -1,0 +1,28 @@
+
+name: Test PR Context
+
+on:
+  pull_request:
+    types: [closed, merged]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: Exit Workflow if PR but not Merged
+      if: github.action == 'closed'
+      run: |
+        if $GITHUB_PR_MERGED; then
+          echo "PR merged, can continue workflow"
+          exit 0;
+        fi;
+        echo "Got closed PR, not merged, exiting workflow";
+        exit 1;
+      env:
+        GITHUB_PR_MERGED: ${{ github.event.pull_request.merged }}
