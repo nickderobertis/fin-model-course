@@ -1,0 +1,180 @@
+
+name: automerge
+on:
+  pull_request:
+    types:
+      - labeled
+      - unlabeled
+      - synchronize
+      - opened
+      - edited
+      - ready_for_review
+      - reopened
+      - unlocked
+  pull_request_review:
+    types:
+      - submitted
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: [3.7]
+
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - uses: actions/checkout@v1
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Install dependencies
+        run: |
+          pipenv sync
+      - name: Lint with flake8
+        run: |
+          pip install flake8
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Test with pytest
+        run: |
+          pipenv run pytest --cov=./ --cov-report=xml
+      - name: Static Typing Checks with mypy
+        run: |
+          pipenv run mypy $(python name.py)
+  automerge:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Check if maintainer
+        env:
+          GITHUB_PR_USER: ${{ github.actor }}
+        run: |
+          python is_maintainer.py;
+          exit $?;
+      - name: Auto-merge PR
+        id: automerge
+        if: success()
+        uses: "whoopnip/automerge-action@merged-to-use-temporarily"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: "!no auto merge"
+          UPDATE_LABELS: "!no auto merge"
+      - name: Stop if Not Merged
+        run: |
+          if $PR_WAS_MERGED; then
+            echo "PR was merged, now need to deploy"
+            exit 0;
+          fi;
+          echo "PR was not merged, will not auto-deploy"
+          exit 1;
+        env:
+          PR_WAS_MERGED: ${{ steps.automerge.outputs.merged }}
+
+  # TODO [#48]: refactor auto-merge workflow once Github Actions improves
+  #
+  # Entire jobs are getting copied between workflow files due to limitations in Github Actions.
+  # The only difference in these jobs is that they checkout master instead of requiring master
+  #
+  # Possible changes to Github Actions that would allow the automerge workflow to be refactored:
+  # - reuse jobs
+  # - reuse steps
+  # - trigger workflow from within action/workflow
+  # - commit triggered by action triggers push event
+  collectTODO:
+    needs: automerge
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: [3.7]
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          ref: refs/heads/master
+      - name: Collect TODO
+        uses: whoopnip/todo-actions@input-commit-branch
+        with:
+          commitBranch: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.gh_token }}
+          TODO_ACTIONS_MONGO_URL: ${{ secrets.TODO_ACTIONS_MONGO_URL }}
+
+  updateReleaseDraft:
+    needs: automerge
+    runs-on: ubuntu-latest
+    steps:
+      - uses: toolmantim/release-drafter@v5.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.gh_token }}
+
+  deploy:
+    needs: automerge
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: [3.7]
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          ref: refs/heads/master
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Get package name
+        id: package_name
+        run: echo ::set-output name=package_name::$(python name.py)
+      - uses: whoopnip/pypi-latest-version-action@master
+        id: output_pypi_version
+        with:
+          package: ${{ steps.package_name.outputs.package_name }}
+      - name: Output build version
+        id: output_build_version
+        run: |
+          bash output-version.sh
+      - name: Install Pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Install dependencies
+        run: |
+          pipenv sync
+          sudo apt-get install pandoc -y
+      - name: Build Documentation
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        run: |
+          cd docsrc
+          pipenv run make github
+          cd ..
+          echo "" > docs/.nojekyll
+      - name: Deploy Documentation
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.gh_token }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./docs
+      - name: Build PyPI Package
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        run: |
+          pipenv run python upload.py --build-only
+      - name: Upload PyPI Package
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: __token__
+          password: ${{ secrets.pypi_password }}

@@ -1,0 +1,14 @@
+We have already seen how we can build a retirement model in Python. The purpose of this exercise is to extend the
+retirement model by making a more realistic assumption for the savings rate. To ease the complexity a bit and focus
+only on the new part of the model, let's assume that the salary grows at a constant rate
+{{ "Salary Growth" | Monospace }}, rather than working in promotions.
+
+Now assume that the savings rate is dependent on the salary. If the salary is lower than
+{{ 'Mid-Salary Cutoff' | Monospace }}, then the individual can only save at a rate of
+{{ 'Low Savings Rate' | Monospace }}. If the salary is above that but less than {{ 'High-Salary Cutoff' | Monospace }},
+then the individual can save at {{ 'Mid Savings Rate' | Monospace }}. If the salary is higher than
+{{ 'High-Salary Cutoff' | Monospace }}, the individual can save at {{ 'Mid Savings Rate' | Monospace }}.
+
+Determine the number of years to retirement for an individual with the default values of the inputs. Ensure that your
+model is able to adjust for different inputs.
+

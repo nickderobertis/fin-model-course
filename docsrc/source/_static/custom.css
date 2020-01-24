@@ -1,0 +1,27 @@
+/* Change background color of code blocks from yellow to light gray */
+.highlight  { background: #f8f8f8; }
+
+
+/* Make tables wrap text. Once it is impossible to wrap text, then scroll. */
+.wy-table-responsive table td {
+    white-space: unset;
+}
+
+/* Next three styles to set to green theme */
+.wy-side-nav-search {
+    background-color: #178033;
+}
+
+.wy-nav-top {
+    background: #178033;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    color: #3aa83e;
+}
+
+/* Make copy code to clipboard button bigger */
+a.copybtn {
+    width: 1.8em;
+    height: 1.8em;
+}
