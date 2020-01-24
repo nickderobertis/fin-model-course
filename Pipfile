@@ -5,28 +5,22 @@ verify_ssl = true
 
 [dev-packages]
 
-
 [packages]
-jupyter-client = "*"
-jupyterlab = "*"
-pl-builder = "*"
-pandas = "*"
-holoviews = "*"
-bokeh = "*"
-matplotlib = "*"
-pscript = "*"
-fire = "*"
-scipy = "*"
-papermill = "*"
-nbconvert = "*"
-ipywidgets = "*"
-openpyxl = "*"
-xlrd = "*"
-statsmodels = "*"
-finstmt = "*"
-plotly = "*"
-pystan = "*"
-fbprophet = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+sphinx-autodoc-typehints = "*"
+sphinxcontrib-fulltoc = "*"
+sphinx-paramlinks = "*"
+sphinx-rtd-theme = {editable = true,git = "https://github.com/readthedocs/sphinx_rtd_theme.git",ref = "ab7d388448258a24f8f4fa96dccb69d24f571736"}
+sphinx-gallery = "*"
+sphinx-copybutton = "*"
+sphinx-sitemap = "*"
+twine = "*"
+pytest = "*"
+pytest-cov = "*"
+mypy = "*"
+pypandoc = "*"
+cruft = "*"
 
 [requires]
 python_version = "3.7"
