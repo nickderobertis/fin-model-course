@@ -45,7 +45,7 @@ class LabExercise(pl.Template):
             refs = deepcopy(question_refs)
             refs.pop(i)  # remove reference to this item
             # Add answer ref specifically for this item
-            if answer_refs[i] is not None:
+            if answer_refs and answer_refs[i] is not None:
                 refs.append(answer_refs[i])
             disp_idx = i + 1
             level_str = f', Level {disp_idx}'
