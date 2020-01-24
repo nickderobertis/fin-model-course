@@ -82,7 +82,7 @@ def get_content():
                 pl.SubSection(
                     [
                         pl.UnorderedList([
-                            'Is the model organized into classes and functions?',
+                            'Is the model organized into functions and sections?',
                             'Are there docstrings, comments, or Jupyter markdown explaining things?',
                             'Does the submitted notebook or Python script have clear sections?'
                         ])
