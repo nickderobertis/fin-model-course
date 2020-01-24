@@ -1,5 +1,5 @@
 
-[![](https://codecov.io/gh/whoopnip/fin-model-course/branch/master/graph/badge.svg)](https://codecov.io/gh/whoopnip/fin-model-course)
+[![](https://codecov.io/gh/nickderobertis/fin-model-course/branch/master/graph/badge.svg)](https://codecov.io/gh/nickderobertis/fin-model-course)
 
 # fin-model-course
 
@@ -25,7 +25,7 @@ import fin_model_course
 
 ## Links
 
-See the 
+See the
 [documentation here.](
-https://whoopnip.github.io/fin-model-course/
+https://nickderobertis.github.io/fin-model-course/
 )

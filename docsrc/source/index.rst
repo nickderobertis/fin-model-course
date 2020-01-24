@@ -22,7 +22,7 @@ An overview
 Quick Links
 ------------
 
-Find the source code `on Github <https://github.com/whoopnip/fin-model-course>`_.
+Find the source code `on Github <https://github.com/nickderobertis/fin-model-course>`_.
 
 
 fin_model_course

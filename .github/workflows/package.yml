@@ -80,7 +80,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Collect TODO
-        uses: whoopnip/todo-actions@input-commit-branch
+        uses: nickderobertis/todo-actions@input-commit-branch
         with:
           commitBranch: master
         env:
@@ -115,7 +115,7 @@ jobs:
       - name: Get package name
         id: package_name
         run: echo ::set-output name=package_name::$(python name.py)
-      - uses: whoopnip/pypi-latest-version-action@master
+      - uses: nickderobertis/pypi-latest-version-action@master
         id: output_pypi_version
         with:
           package: ${{ steps.package_name.outputs.package_name }}

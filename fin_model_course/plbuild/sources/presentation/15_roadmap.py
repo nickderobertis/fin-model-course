@@ -344,7 +344,7 @@ def get_content():
                             'Direct PDF Output with Reportlab',
                         ),
                         Hyperlink(
-                            'https://whoopnip.github.io/py-ex-latex/',
+                            'https://nickderobertis.github.io/py-ex-latex/',
                             'Direct to LaTeX Using pyexlatex'
                         ),
                         Hyperlink(
