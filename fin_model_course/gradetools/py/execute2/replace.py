@@ -5,13 +5,14 @@ import astor
 """
 from gradetools.py.execute2.replace import replace_in_source
 from gradetools.py.execute2.nbsource import source_from_notebook_node
+from gradetools.py.execute2.gen_ast import create_ast_function_call_with_numeric_values
 import nbformat
 import ast
 
-
+value = create_ast_function_call_with_numeric_values('ModelInputs', n_phones=100, price_scrap=200)
 nb = nbformat.read(notebook_path, as_version=4)
 source = source_from_notebook_node(nb)
-new_source = replace_in_source(source, 'model_data', ast.Str('temp'))
+new_source = replace_in_source(source, 'model_data', value)
 print(new_source)
 """
 
@@ -30,9 +31,8 @@ class AstAssignReplacer(ast.NodeTransformer):
         self.replace_with = replace_with
 
     def visit_Assign(self, node: ast.Assign):
-        if node.targets[0] != self.target_assign_name:
+        if node.targets[0] == self.target_assign_name:
             # Got the targeted assign, replace
-            new_value = self.replace_with
             return ast.copy_location(
                 ast.Assign(
                     targets=[ast.Name(self.target_assign_name)],
