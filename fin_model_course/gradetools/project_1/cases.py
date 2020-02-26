@@ -58,9 +58,10 @@ def output_dict_from_input_dict(input_dict: Dict[str, Union[int, float]]):
     rc = ReplacementConfig('model_data', 'ModelInputs', kwargs=input_dict)
     globs = read_notebook_and_run_extracting_globals(PROJECT_1_NOTEBOOK_PATH, replacements=[rc], suppress_output=True)
     correct_values = dict(
-        pv=globs['npv'],
+        npv=globs['npv'],
         cash_flows=globs['cash_flows']
     )
     return correct_values
+
 
 OUTPUT_CASES = [output_dict_from_input_dict(input_dict) for input_dict in INPUT_CASES]

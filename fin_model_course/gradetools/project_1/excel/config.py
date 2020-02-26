@@ -12,7 +12,7 @@ INPUT_RANGE_DICT = dict(
 )
 
 OUTPUT_RANGE_DICT = dict(
-    pv='B22',
-    cash_flows='B24:B43'
+    npv='B24',
+    cash_flows='B26:B45'
 )
 
