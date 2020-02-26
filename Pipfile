@@ -21,6 +21,7 @@ pytest-cov = "*"
 mypy = "*"
 pypandoc = "*"
 cruft = "*"
+pywin32 = {version = "==224", sys_platform = "== 'win32'"}
 jupyter-client = "*"
 jupyterlab = "*"
 pl-builder = "*"
