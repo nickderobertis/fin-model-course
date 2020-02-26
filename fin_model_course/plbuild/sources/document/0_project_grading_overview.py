@@ -6,6 +6,7 @@ import pyexlatex.layouts as ll
 
 import plbuild
 from plbuild.paths import images_path
+from pltemplates.hyperlink import Hyperlink
 
 
 AUTHORS = ['Nick DeRobertis']
@@ -83,8 +84,15 @@ def get_content():
                     [
                         pl.UnorderedList([
                             'Is the model organized into functions and sections?',
+                            'Are all inputs at the top and main outputs at the bottom?',
                             'Are there docstrings, comments, or Jupyter markdown explaining things?',
-                            'Does the submitted notebook or Python script have clear sections?'
+                            'Does the submitted notebook or Python script have clear sections?',
+                            'Are the length of code lines limited to the size of Jupyter cells (no long lines)?',
+                            'Are the results of intermediate calculations shown? Should not be just one answer at end.',
+                            [
+                                'Do variable, function, and class names follow conventions? See',
+                                Hyperlink('https://realpython.com/python-pep8/#naming-conventions', 'Naming Conventions')
+                            ],
                         ])
                     ],
                     title='Python'
@@ -108,6 +116,13 @@ def get_content():
                     [
                         pl.UnorderedList([
                             'Are model outputs displayed with nice formatting?',
+                            pl.UnorderedList([
+                                'Number formatting (percentages are percentages, '
+                                'currency has dollar sign, commas, and two decimals, etc.)',
+                                'Sentence explaining results is printed',
+                                'Tables are used where appropriate and are well formatted',
+                                'Plots have axis names and are appropriately sized'
+                            ])
                         ])
                     ],
                     title='Python'

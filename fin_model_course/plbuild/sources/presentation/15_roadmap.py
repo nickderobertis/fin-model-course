@@ -494,6 +494,10 @@ def get_content():
                             'Get Started with Dunder Methods in Python'
                         ),
                         Hyperlink(
+                            'https://realpython.com/python-data-classes/',
+                            'Advanced Dataclasses'
+                        ),
+                        Hyperlink(
                             'https://ipython.readthedocs.io/en/stable/config/integrating.html',
                             'Rich Object Display in Jupyter'
                         ),

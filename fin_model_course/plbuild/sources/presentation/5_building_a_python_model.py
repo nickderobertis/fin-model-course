@@ -7,6 +7,7 @@ import pyexlatex.layouts as ll
 import plbuild
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
+from pltemplates.frames.in_class_example import InClassExampleFrame
 from pltemplates.frames.lab import LabFrame
 from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
@@ -15,6 +16,7 @@ from pltemplates.frames.model_flowchart import (
     in_out_style
 )
 from pltemplates.blocks import LabBlock
+from pltemplates.frames.tvm.project_1_lab import get_project_1_lab_frame
 from pltemplates.frames.tvm.salary_eq import salary_block_content
 from pltemplates.frames.tvm.retirement_model_structure import get_retirement_model_overview_frame
 from pltemplates.hyperlink import Hyperlink
@@ -38,6 +40,8 @@ HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 def get_content():
 
     next_until_end_ov = lp.Overlay([lp.UntilEnd(lp.NextWithIncrement())])
+    next_slide = lp.Overlay([lp.NextWithIncrement()])
+    numpy_mono = pl.Monospace('numpy')
 
 
     return [
@@ -89,6 +93,68 @@ def get_content():
         ),
         pl.Section(
             [
+                lp.DimRevealListFrame(
+                    [
+                        'The first project is aimed at approaching a new time value of money and cash flow model',
+                        'It covers the same concepts as the retirement model, but in a capital budgeting setting',
+                        'We need to introduce some economic equations to handle this model. You should have covered these in microeconomics.'
+                    ],
+                    title='Introducing Project 1'
+                ),
+                lp.GraphicFrame(
+                    images_path('supply-demand-graph.png'),
+                    title='A Quick Review of Supply and Demand'
+                ),
+                lp.Frame(
+                    [
+                        lp.Block(
+                            [
+                                "There are a couple of basic economic equations we haven't talked about that "
+                                "we'll need for this:",
+                                pl.Equation(str_eq='R = PQ', inline=False),
+                                pl.Equation(str_eq='Q = min(D, S)', inline=False),
+                                pl.UnorderedList([
+                                    f'{pl.Equation(str_eq="R")}: Revenue',
+                                    f'{pl.Equation(str_eq="Q")}: Quantity Purchased',
+                                    f'{pl.Equation(str_eq="D")}: Quantity Demanded',
+                                    f'{pl.Equation(str_eq="S")}: Quantity Supplied',
+                                ])
+                            ],
+                            title='New Required Equations'
+                        )
+                    ],
+                    title='Equations for Project 1'
+                ),
+                lp.Frame(
+                    [
+                        pl.UnorderedList([
+                            lp.DimAndRevealListItems([
+                                'We need to cover one more Python concept and one gotcha before you can complete the first project.',
+                                "On the next slide I'll introduce error handling, and show an example of how it's useful"
+                            ],
+                                vertical_fill=True)
+                        ]),
+                        lp.AlertBlock(
+                            [
+                                pl.UnorderedList([
+                                    f'The NPV function in {numpy_mono} works slightly differently than the NPV function in Excel.',
+                                    f'Excel treats the first cash flow as period 1, while {numpy_mono} treats the first cash flow as period 0.',
+                                    'If taking NPV where the first cash flow is period 1, pass directly to Excel, and for Python, pass 0 as the first cash flow, then the rest.',
+                                    'If taking NPV where the first cash flow is period 0, pass from period 1 to end to Excel and add period 0 separately, pass directly to Python.'
+                                ])
+                            ],
+                            title='NPV Gotcha',
+                            overlay=next_slide
+                        )
+                    ],
+                    title='A Couple More Things on the Python Side'
+                ),
+            ],
+            title='Project 1 Additional Material',
+            short_title='Project 1'
+        ),
+        pl.Section(
+            [
                 get_retirement_model_overview_frame(),
                 lp.Frame(
                     [
@@ -123,6 +189,35 @@ def get_content():
                     ],
                     title='Building the Wealth Model'
                 ),
+                InClassExampleFrame(
+                    [
+                        'I will now show the process I use to create a full model.',
+                        'I will be recreating the model in Examples > Intro > Python > Dynamic Salary Retirement Model.ipynb',
+                        'Go ahead and download that to follow along as you will also extend it in a lab exercise',
+                    ],
+                    title='Creating a Full Model in Python',
+                    block_title='Dynamic Salary Retirement Model in Python',
+                ),
+                lp.Frame(
+                    [
+                        pl.UnorderedList([
+                            'We want to relax the assumption that the amount needed in retirement is given by a fixed '
+                            'amount of desired cash'
+                        ]),
+                        pl.VFill(),
+                        LabBlock(
+                            pl.UnorderedList([
+                                'Start from the completed retirement model Dynamic Salary Retirement Model.ipynb ',
+                                'Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"',
+                                'Calculate desired cash based on interest, cash spend, and years in retirement',
+                                'Use the calculated desired cash in the model to determine years to retirement',
+                                r'If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash'
+                            ]),
+                            title='Modeling Desired Cash'
+                        )
+                    ],
+                    title='Relaxing the Static Desired Cash in Python'
+                ),
                 LabExercise(
                     [
                         [
@@ -139,7 +234,8 @@ def get_content():
                     block_title='Practice Building A Model',
                     frame_title='Extending the Simple Retirement Model in a Different Way',
                     label='lab:retire-model'
-                )
+                ),
+                get_project_1_lab_frame(),
             ],
             title='Building the Dynamic Salary Retirement Model',
             short_title='Build the Model'

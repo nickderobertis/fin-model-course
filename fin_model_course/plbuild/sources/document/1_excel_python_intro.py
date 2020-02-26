@@ -31,6 +31,8 @@ def get_content():
     n_phones = 100000
     price_scrap = 50000
     price_phone = 500
+    cogs_phone = 250
+    price_machine_adv = 1000000
     n_life = 10
     n_machines = 5
     d_1 = 100000
@@ -51,6 +53,7 @@ def get_content():
     possible_elasicity_str = ', '.join([f'($E = {ec[0]}$, $d_c = {ec[1]}$)' for ec in ELASTICITY_CONSTANT_CASES])
     possible_elasicity_str = '[' + possible_elasicity_str + ']'
 
+
     return [
         pl.Section(
             [
@@ -59,11 +62,11 @@ def get_content():
                         'You work for new startup that is trying to manufacture phones. You are tasked with building '
                         'a model which will help determine how many machines to invest in and how much to spend on '
                         'marketing. Each machine produces $n_{output}$ phones per year. Each phone sells '
-                        r'for \$$p_{phone}$. '
+                        r'for \$$p_{phone}$ and costs \$$c_{phone}$ in variable costs to produce. '
                         'After $n_{life}$ years, the machine can no longer produce output, but may be scrapped for '
                         r'\$$p_{scrap}$. The machine will not be replaced, so you may end up with zero total output '
                         r'before your model time period ends. '
-                        'Equity investment is limited, so in each year you can either buy a machine or buy '
+                        'Equity investment is limited, so in each year you can spend $c_{machine}$ to either buy a machine or buy '
                         'advertisements. In the first year you must buy a machine. Any other machine purchases must '
                         'be made one after another (advertising can only begin after machine buying is done). '
                         'Demand for your phones starts at '
@@ -75,7 +78,12 @@ def get_content():
                 pl.SubSection(
                     [
                         pl.UnorderedList([
-                            'You may limit your model to 20 years and a maximum of 5 machines if it is helpful.'
+                            'You may limit your model to 20 years and a maximum of 5 machines if it is helpful.',
+                            'For simplicity, assume that $c_{machine}$ is paid in every year, '
+                            'even after all machines have shut down.',
+                            'Ensure that you can change the inputs and the outputs change as expected.',
+                            'For simplicity, assume that fractional phones can be sold, you do not '
+                            'need to round the quantity transacted.'
                         ])
                     ],
                     title='Notes'
@@ -90,6 +98,8 @@ def get_content():
                                     '$n_{life}$: Number of years for which the machine produces phones',
                                     '$p_{phone}$: Price per phone',
                                     '$p_{scrap}$: Scrap value of machine',
+                                    '$c_{machine}$: Price per machine or advertising year',
+                                    '$c_{phone}$: Variable cost per phone',
                                     '$d_1$: Quantity of phones demanded in the first year',
                                     '$g_d$: Percentage growth in demand for each advertisement',
                                     '$r$: Interest rate earned on investments'
@@ -101,8 +111,8 @@ def get_content():
                         pl.SubSubSection(
                             [
                                 pl.UnorderedList([
-                                    'Revenue in each year, up to 20 years',
-                                    'PV of revenues, years 1 - 20',
+                                    'Cash flows in each year, up to 20 years',
+                                    'PV of cash flows, years 1 - 20',
 
                                 ])
                             ],
@@ -136,6 +146,14 @@ def get_content():
                                         Hyperlink(scipy_minimize_link, scipy_minimize_mono),
                                         "You will need to write a function which accepts price and returns NPV, "
                                         "with other model inputs fixed.",
+                                        pl.UnorderedList([
+                                            [
+                                                'Depending on how you set this up,',
+                                                Hyperlink('https://www.learnpython.org/en/Partial_functions',
+                                                          'functools.partial'),
+                                                'may be helpful for this.'
+                                            ]
+                                        ]),
                                         "It will actually need to return negative NPV, as the optimizer only minimizes, "
                                         "but we want maximum NPV.",
                                         ['No answers to check your work are given for this bonus. The',
@@ -155,15 +173,22 @@ def get_content():
             [
                 'You must start from "Project 1 Template.xlsx" on Canvas. Ensure that you reference all inputs from '
                 'the Inputs/Outputs tab. Also ensure that all outputs are referenced back to the Inputs/Outputs tab. '
+                'Do not change any locations of the inputs or outputs. '
                 'The final submission is your Excel workbook.'
             ],
             title='Excel Exercise'
         ),
         pl.Section(
             [
-                'You can submit your Jupyter notebook, but it should be cleaned up. I should be able to run all the '
-                'cells and get the output of your model at the bottom, then change the inputs and run again and get '
-                'the new output. You may also submit a Python script (plain text file with Python code).'
+                [
+                    'You must start from "Project 1 Template.ipynb" on Canvas. '
+                    'I should be able to run all the '
+                    'cells and get the output of your model at the bottom. '
+                    'You should not change the ModelInputs cell and the ModelInputs cell should be the fifth cell. '
+                    'You need to define', pl.Monospace('cash_flows'), 'as your output cash flows (numbers, '
+                    'not formatted), and ', pl.Monospace('npv'), 'as your NPV (number, not formatted). When you '
+                    'show your final outputs in the notebook, then they should be formatted.'
+                ]
             ],
             title='Python Exercise'
         ),
@@ -209,17 +234,66 @@ def get_content():
             [
                 'If you pass the following inputs (to the basic model, not bonus model): ',
                 pl.UnorderedList([
-                    f'{pl.Equation(str_eq="n_{output}")}: {n_phones}',
-                    f'{pl.Equation(str_eq="p_{scrap}")}: {price_scrap}',
-                    f'{pl.Equation(str_eq="p_{phone}")}: {price_phone}',
+                    f'{pl.Equation(str_eq="n_{output}")}: {n_phones:,.0f}',
+                    f'{pl.Equation(str_eq="p_{scrap}")}: \${price_scrap:,.0f}',
+                    f'{pl.Equation(str_eq="p_{phone}")}: \${price_phone:,.0f}',
+                    f'{pl.Equation(str_eq="c_{machine}")}: \${price_machine_adv:,.0f}',
+                    f'{pl.Equation(str_eq="c_{phone}")}: \${cogs_phone:,.0f}',
                     f'{pl.Equation(str_eq="n_{life}")}: {n_life}',
                     f'{pl.Equation(str_eq="n_{machines}")}: {n_machines}',
-                    f'{pl.Equation(str_eq="d_1")}: {d_1}',
-                    f'{pl.Equation(str_eq="g_d")}: {g_d}',
-                    f'{pl.Equation(str_eq="r")}: {interest}',
+                    f'{pl.Equation(str_eq="d_1")}: {d_1:,.0f}',
+                    f'{pl.Equation(str_eq="g_d")}: {g_d:.0%}',
+                    f'{pl.Equation(str_eq="r")}: {interest:.0%}',
                 ]),
                 'You should get the following result:',
-                pl.UnorderedList([line.replace('$', r'\$') for line in pmm.output_lines])
+                # TODO: replace project 1 result using notebook executor
+                """
+                Cash Flows:
+
+Year 1: \$24,000,000
+
+Year 2: \$24,000,000
+
+Year 3: \$24,000,000
+
+Year 4: \$24,000,000
+
+Year 5: \$24,000,000
+
+Year 6: \$29,000,000
+
+Year 7: \$35,000,000
+
+Year 8: \$42,200,000
+
+Year 9: \$50,840,000
+
+Year 10: \$61,208,000
+
+Year 11: \$73,699,600
+
+Year 12: \$74,050,000
+
+Year 13: \$49,050,000
+
+Year 14: \$24,050,000
+
+Year 15: \$-950,000
+
+Year 16: \$-1,000,000
+
+Year 17: \$-1,000,000
+
+Year 18: \$-1,000,000
+
+Year 19: \$-1,000,000
+
+Year 20: \$-1,000,000
+
+
+
+NPV: \$369,276,542
+                """
             ],
             title='Check your Work',
             label='check-work'

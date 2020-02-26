@@ -35,6 +35,7 @@ HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 
 
 def get_content():
+    next_slide = lp.Overlay([lp.NextWithIncrement()])
     function_example = pl.Python(
 """
 def my_func(a, b, c=10):
@@ -141,6 +142,49 @@ __main__.ModelInputs
 ['b', 'c']
 """
     )
+    f_string_example = pl.Python(
+"""
+>>> my_num = 5 / 6
+>>> print(my_num)
+0.8333333333333334
+>>> print(f'My number is {my_num:.2f}')
+'My number is 0.83'
+"""
+    )
+    f_string = pl.Monospace("f''")
+    f_mono = pl.Monospace('f')
+    try_except_example = pl.Python(
+"""
+>>> my_list = ['a', 'b']
+>>> try:
+>>>     my_value = my_list[10]
+>>> except IndexError:
+>>>     print('caught the error')
+caught the error
+"""
+    )
+    list_100_5 = pl.Monospace('[100] * 5')
+    next_slide = lp.Overlay([lp.NextWithIncrement()])
+    annuity_example = pl.Python(
+"""
+>>> annuity = [100] * 5
+>>> annuities = [
+>>>     annuity,
+>>>     [0, 0, 0] + annuity
+>>> ]
+>>> n_years = 10
+>>> output = [0] * n_years
+>>> for i in range(n_years):
+>>>     for ann in annuities:
+>>>         try:
+>>>             output[i] += ann[i]
+>>>         except IndexError:
+>>>             pass
+>>> print(output)   
+[100, 100, 100, 200, 200, 100, 100, 100, 0, 0]
+"""
+    )
+
     return [
         pl.Section(
             [
@@ -301,6 +345,25 @@ __main__.ModelInputs
                         'and the object'
                     ],
                     title='What are Types?'
+                ),
+                # TODO: add f-strings to Jupyter example
+                lp.Frame(
+                    [
+                        pl.UnorderedList([
+                            lp.DimAndRevealListItems([
+                                'You may have noticed that we can end up with a lot of decimals in Python output',
+                                'Further, you may want to include your results as part of a larger output, such as a sentence.',
+                                f'For these operations, we have {f_mono} strings: {f_string}'
+                            ],
+                                vertical_fill=True)
+                        ]),
+                        lp.Block(
+                            f_string_example,
+                            title='Example',
+                            overlay=next_slide
+                        )
+                    ],
+                    title='Formatting Python Strings'
                 ),
                 lp.DimRevealListFrame(
                     [
@@ -472,6 +535,50 @@ __main__.ModelInputs
             ],
             title='Classes and Dataclasses',
             short_title='Classes'
+        ),
+        pl.Section(
+            [
+                # TODO: add error handling to Jupyter example
+                lp.Frame(
+                    [
+                        pl.UnorderedList([
+                            lp.DimAndRevealListItems([
+                                "You have certainly already seen errors coming from your Python code. When they have come up, the code doesn't run.",
+                                'Sometimes you actually expect to get an error, and want to handle it in some way, rather than having your program fail.'
+                            ],
+                                vertical_fill=True)
+                        ]),
+                        lp.Block(
+                            try_except_example,
+                            title='Example',
+                            overlay=next_slide
+                        )
+                    ],
+                    title='Python Error Handling'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        "Let's say you're receiving annuities. There is a single annuity which produces \$100 for 5 years. You receive this annuity in year 0 and in year 3.",
+                        f"You might define the annuity cash flows as a list of 100, 5 times ({list_100_5})",
+                        'Then you want to come up with your overall cash flows, going out to 15 years'
+                    ],
+                    title='An Example where Error Handling is Useful'
+                ),
+                lp.Frame(
+                    [
+                        lp.Block(
+                            [
+                                pl.TextSize(-1),
+                                annuity_example,
+                            ],
+                            title='Calculating the Sum of Unaligned Annuity Cash-Flows'
+                        )
+                    ],
+                    title='Applying Error Handling'
+                ),
+            ],
+            title='Error Handling',
+            short_title='Errors'
         )
     ]
 
