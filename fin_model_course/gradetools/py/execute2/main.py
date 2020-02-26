@@ -38,6 +38,19 @@ def read_notebook_and_run_extracting_globals(
 def execute_notebooks_by_config(notebook_folder: str,
                                 all_params: Sequence[Dict[str, Any]], all_outputs: Sequence[Dict[str, Any]],
                                 report_out_path: Optional[str] = None) -> pd.DataFrame:
+    """
+
+    :Examples:
+        from gradetools.py.execute2.main import execute_notebooks_by_config
+        from gradetools.project_1.cases import OUTPUT_CASES, INPUT_CASES
+
+        execute_notebooks_by_config(
+            'Scratch',
+            INPUT_CASES,
+            OUTPUT_CASES,
+            'report.csv',
+        )
+    """
     notebooks = [file for file in next(os.walk(notebook_folder))[2] if file.casefold().endswith('ipynb')]
     noteboook_paths = [os.path.join(notebook_folder, nb) for nb in notebooks]
     out_cols = [
