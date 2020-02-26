@@ -89,9 +89,13 @@ def get_content():
             [7],
         ),  # 2/18/2020
         (
-            'Probability Modeling',
-            [8],
+            'Sensitivity Analysis, pt. 3',
+            [7],
         ),  # 2/20/2020
+        (
+            'Probability Modeling, pt. 1',
+            [8],
+        ),  # 2/25/2020
     ]
 
     return [
