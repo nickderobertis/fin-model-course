@@ -32,7 +32,7 @@ def get_content():
         [f'{input_name}: {input_value}' for input_key, (input_name, input_value) in inputs.items()]
     )
 
-    initial_default_prob_cases = [0.3]
+    initial_default_prob_cases = [0.1, 0.3]
     initial_default_prob_cases_str = ', '.join([str(case) for case in initial_default_prob_cases])
     bonus_initial_default_prob_mean = inputs['initial_default_prob'][1]
     bonus_initial_default_prob_std = 0.05
@@ -108,46 +108,58 @@ def get_content():
     lending officer all the information she would need to negotiate a rate for this loan.
     
     Given the inputs, what is the expected IRR of the loan for a variety of interest rates on the loan? The lending
-    officer would like you to evaluate rates in 2% increments from 20% to 40%.
+    officer would like you to evaluate rates in 5% increments from 20% to 40%.
     
     The lending officer is also worried that she may have estimated {inputs["initial_default_prob"][0]} incorrectly. 
     She is hoping for the answers to the above questions considering that {inputs["initial_default_prob"][0]} may vary.
     Evaluate the above questions for {pl.Equation(str_eq=default_prob_cases_eq_str)} in addition to the base case 
     of {inputs["initial_default_prob"][1]}.
+
+    Finally, the lending officer is unsure for how long she should extend the loan. So she would like to see all
+    of the previously mentioned results with loan lifes of 5, 10, and 20 years.
+
+    You should visualize the results of your model through graphs, conditional formatting, etc.
     """
 
     notes = [
     f"""
-    Unlike the prior project, you cannot assume some maximum number of years. Your model should accept any possible
-    positive loan life.
+    You may assume a maximum loan life of 20 years in your model, which would make up to 22 years of cash flows.
     """,
-    "Probably the easiest approach to building this model will use internal randomness. I have set up the project "
-    "template so to help you out with this. There is a button that will run your model repeatedly and collect the "
-    "outputs into a separate tab. Make sure you set Number of iterations to at least 100 to get a good estimate. "
-    "While you are testing things out, set it lower to have it run quicker.",
-    'Your "IRR (this run)" should change when the inputs change. You do not need to have your final answers changing '
-    'when the model changes, as you will have to use the button to get the output. So you can use the button to get '
-    'the result with the appropriate inputs, then hardcode that result into the output table.',
+    "Probably the easiest approach to building this model will use internal randomness. Though it certainly is "
+    "possible to build this model using only "
+    "expected values, I think that is generally more difficult.",
+    "With the internal randomness approach, make sure you set the number of "
+    "iterations to 1,000 per set of inputs to get a good estimate. ",
+    "While you are testing things out, set it lower, such as 100, to have it run quicker, but beware that the lower "
+    "your number of iterations, the less consistent the results will be.",
+    "You may choose to either submit a pure Python model, pure Excel model, or a combination of the two. If you use "
+    "both, then the Python model should be what I ultimately run and extract results from. The Python model would "
+    "be running the Excel model many times and extracting the results.",
+    "Upon reading the prior note, you may think to implement in pure Excel because of greater familiarity, but I think "
+    "you will find meeting the objective of running the model repeatedly with three changing inputs quite difficult. "
+    "You need to run your model 45,000 times in total with three inputs changing together.",
+
     'Your answers may differ slightly from those in the Selected Solutions section. This is the nature of a random model. They '
-    'should not be far off, though.',
-    "Save often. Use Dropbox or save separate files as versions of your model as you go through. Occasionally there "
-    "can be some bugs which make your UDFs disappear. UDFs can also disable undo functionality at times.",
-    'Do not move any of the input or output cells. It will break the model.',
-    'There is some weird issue where cell formatting is not working correctly in the template. I will be looking into this, '
-    'but for the purposes of this assignment I will not be grading formatting.'
+    'should be very close with 1,000 iterations, though.',
+    'Do not move any of the input or output cells. ',
     ]
 
     bonus_q_str = f"""
     Produce the same outputs as the main problem, but instead of evaluating 
     {pl.Equation(str_eq=default_prob_cases_eq_str)}, consider {inputs["initial_default_prob"][0]} as being normally
     distributed with mean {bonus_initial_default_prob_mean} and standard deviation {bonus_initial_default_prob_std}.
+
+    Also produce visualizations and summary statistics of the results from each random trial within a few selected
+    input cases, and describe your findings.
     """
 
     submission_str = f"""
-    Work off of the "project2.xlsm" and "project2.py" files on Canvas. This is an
-    xlwings project with some setup for you already. 
+    Work off of the "Project 2 Template.xlsx" and "Project 2 Template.ipynb" files on Canvas. 
 
-    Your submission should contain both the macro-enabled XLSM workbook and the .py Python file.
+    Again it is up to you whether you submit a pure Python, pure Excel, or combination model. For whichever tools
+    you use, you should use the templates, so those submitting a combination model will submit both a Jupyter notebook
+    and an Excel workbook, both based off the templates. With the combination model, your ultimate answer should be
+    in the Jupyter notebook.
     """
 
     solutions_str = """
@@ -214,10 +226,11 @@ def get_content():
                 ),
                 pl.SubSection(
                     [
-                        solutions_str,
-                        pl.UnorderedList(solutions_list),
-                        case_solutions_str,
-                        pl.UnorderedList(case_solutions_list),
+                        #solutions_str,
+                        #pl.UnorderedList(solutions_list),
+                        #case_solutions_str,
+                        #pl.UnorderedList(case_solutions_list),
+                        'Coming soon, I will announce when this is posted on Canvas.'
                     ],
                     title='Selected Solutions'
                 ),
@@ -227,7 +240,7 @@ def get_content():
                             lt.Tabular(
                                 [
 
-                                    lt.MultiColumn('Grading Breakdown', span=2),
+                                    lt.MultiColumnLabel('Grading Breakdown', span=2),
                                     lt.TopRule(),
                                     lt.ValuesTable.from_list_of_lists(
                                         [
@@ -237,8 +250,9 @@ def get_content():
                                     lt.TableLineSegment(0, 1),
                                     lt.ValuesTable.from_list_of_lists(
                                         [
-                                            ['Model Accuracy', '80%'],
+                                            ['Model Accuracy', '70%'],
                                             ['Model Readability', '20%'],
+                                            ['Model Formatting', '10%'],
                                             ['Bonus', '5%']
                                         ]
                                     ),
@@ -262,6 +276,7 @@ def get_content():
         )
 
     ]
+
 
 DOCUMENT_CLASS_KWARGS = dict(
     remove_section_numbering=True,
