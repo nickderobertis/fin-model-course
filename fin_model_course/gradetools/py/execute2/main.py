@@ -62,7 +62,9 @@ def execute_notebooks_by_config(notebook_folder: str,
     out_cols += list(all_outputs[0].keys())
     notebook_case_report_values = []
     for nb_path in noteboook_paths:
+        print(f'Evaluating notebook {nb_path}')
         for i, (inputs, outputs) in enumerate(zip(all_params, all_outputs)):
+            print(f'Running case {i}')
             rc = ReplacementConfig('model_data', 'ModelInputs', kwargs=inputs)
             successful_run = True
             exc = None
@@ -72,6 +74,7 @@ def execute_notebooks_by_config(notebook_folder: str,
                 exc = str(e)
                 successful_run = False
             if not successful_run:
+                print(f'Could not run case {i}')
                 report_values = (nb_path, i, successful_run, exc) + tuple([False for _ in outputs])
                 notebook_case_report_values.append(report_values)
                 continue

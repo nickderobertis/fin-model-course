@@ -3,7 +3,7 @@ import shutil
 
 from gradetools.config import PYTHON_EXTENSIONS, EXCEL_EXTENSIONS, PYTHON_FOLDER, EXCEL_FOLDER
 
-SOURCE_DIR = '/home/nick/Dropbox/UF/Teaching/Modeling/Me/Grading/Fall 2019/Project 1/submissions'
+SOURCE_DIR = r'D:\Dropbox (Personal)\UF\Teaching\Modeling\Me\Grading\Spring 2020\Project 1\submissions'
 
 
 def copy_for_grading(source_dir: str, python_folder: str, excel_folder: str):
