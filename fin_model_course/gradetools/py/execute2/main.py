@@ -5,6 +5,7 @@ from typing import Optional, Sequence, Union, Dict, Any
 import nbformat
 import pandas as pd
 
+from gradetools.case_config import CaseConfig
 from gradetools.py.execute2.gen_ast import create_ast_function_call_with_numeric_values
 from gradetools.py.execute2.nbsource import source_from_notebook_node
 from gradetools.py.execute2.replace import replace_in_source
@@ -35,18 +36,18 @@ def read_notebook_and_run_extracting_globals(
     return globs
 
 
-def execute_notebooks_by_config(notebook_folder: str,
-                                all_params: Sequence[Dict[str, Any]], all_outputs: Sequence[Dict[str, Any]],
+def execute_notebooks_by_config(notebook_folder: str, case_configs: Sequence[CaseConfig],
+                                all_outputs: Sequence[Dict[str, Any]],
                                 report_out_path: Optional[str] = None) -> pd.DataFrame:
     """
 
     :Examples:
         from gradetools.py.execute2.main import execute_notebooks_by_config
-        from gradetools.project_1.cases import OUTPUT_CASES, INPUT_CASES
+        from gradetools.project_1.cases import OUTPUT_CASES, INPUT_CASE_CONFIGS
 
         execute_notebooks_by_config(
             'Scratch',
-            INPUT_CASES,
+            INPUT_CASE_CONFIGS,
             OUTPUT_CASES,
             'report.csv',
         )
@@ -56,6 +57,7 @@ def execute_notebooks_by_config(notebook_folder: str,
     out_cols = [
         'Notebook Name',
         'Case Number',
+        'Case Name',
         'Successful Run',
         'Exception',
     ]
@@ -63,8 +65,11 @@ def execute_notebooks_by_config(notebook_folder: str,
     notebook_case_report_values = []
     for nb_path in noteboook_paths:
         print(f'Evaluating notebook {nb_path}')
-        for i, (inputs, outputs) in enumerate(zip(all_params, all_outputs)):
-            print(f'Running case {i}')
+        for i, (input_config, outputs) in enumerate(zip(case_configs, all_outputs)):
+            inputs = input_config.input_dict
+            name = input_config.case_name
+            case_num = i + 1
+            print(f'Running case {case_num}: {name}')
             rc = ReplacementConfig('model_data', 'ModelInputs', kwargs=inputs)
             successful_run = True
             exc = None
@@ -74,8 +79,8 @@ def execute_notebooks_by_config(notebook_folder: str,
                 exc = str(e)
                 successful_run = False
             if not successful_run:
-                print(f'Could not run case {i}')
-                report_values = (nb_path, i, successful_run, exc) + tuple([False for _ in outputs])
+                print(f'Could not run case {case_num}')
+                report_values = (nb_path, case_num, name, successful_run, exc) + tuple([False for _ in outputs])
                 notebook_case_report_values.append(report_values)
                 continue
 
@@ -84,7 +89,7 @@ def execute_notebooks_by_config(notebook_folder: str,
                 outputs_correct.append(
                     globs[out_name] == out_value
                 )
-            report_values = (nb_path, i, successful_run, exc) + tuple(outputs_correct)
+            report_values = (nb_path, case_num, name, successful_run, exc) + tuple(outputs_correct)
             notebook_case_report_values.append(report_values)
     df = pd.DataFrame(notebook_case_report_values, columns=out_cols)
     if report_out_path:
