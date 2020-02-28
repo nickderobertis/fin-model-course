@@ -2,13 +2,12 @@ import os
 from dataclasses import dataclass
 from typing import Optional, Sequence, Union, Dict, Any
 
-import nbformat
 import pandas as pd
 
 from gradetools.case_config import CaseConfig
 from gradetools.py.execute2.compare import values_are_same, CannotCompareOutputsException
 from gradetools.py.execute2.gen_ast import create_ast_function_call_with_numeric_values
-from gradetools.py.execute2.nbsource import source_from_notebook_node
+from gradetools.py.execute2.nbsource import source_from_notebook_path
 from gradetools.py.execute2.replace import replace_in_source
 from gradetools.py.execute2.run import run_source_extract_globals
 
@@ -28,8 +27,7 @@ def read_notebook_and_run_extracting_globals(
     replacements: Optional[Sequence[ReplacementConfig]] = None,
     suppress_output: bool = False
 ) -> Dict[str, Any]:
-    nb = nbformat.read(notebook_path, as_version=4)
-    source = source_from_notebook_node(nb)
+    source = source_from_notebook_path(notebook_path)
     if replacements is not None:
         for config in replacements:
             source = replace_in_source(source, config.assign_name, config.ast_call)

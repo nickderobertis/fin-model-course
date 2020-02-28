@@ -1,6 +1,13 @@
 from typing import List
 
 from nbformat.notebooknode import NotebookNode
+import nbformat
+
+
+def source_from_notebook_path(notebook_path: str) -> str:
+    nb = nbformat.read(notebook_path, as_version=4)
+    source = source_from_notebook_node(nb)
+    return source
 
 
 def _source_lines_from_notebook_node(nb_node: NotebookNode) -> List[str]:
