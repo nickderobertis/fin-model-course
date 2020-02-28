@@ -6,6 +6,7 @@ import nbformat
 import pandas as pd
 
 from gradetools.case_config import CaseConfig
+from gradetools.py.execute2.compare import values_are_same, CannotCompareOutputsException
 from gradetools.py.execute2.gen_ast import create_ast_function_call_with_numeric_values
 from gradetools.py.execute2.nbsource import source_from_notebook_node
 from gradetools.py.execute2.replace import replace_in_source
@@ -86,13 +87,17 @@ def execute_notebooks_by_config(notebook_folder: str, case_configs: Sequence[Cas
 
             outputs_correct = []
             for out_name, out_value in outputs.items():
-                outputs_correct.append(
-                    globs[out_name] == out_value
-                )
+                try:
+                    same = values_are_same(globs[out_name], out_value, input_config.tolerances[out_name])
+                except CannotCompareOutputsException as e:
+                    exc = str(e)
+                    same = False
+                outputs_correct.append(same)
             report_values = (nb_path, case_num, name, successful_run, exc) + tuple(outputs_correct)
             notebook_case_report_values.append(report_values)
     df = pd.DataFrame(notebook_case_report_values, columns=out_cols)
     if report_out_path:
         df.to_csv(report_out_path, index=False)
     return df
+
 
