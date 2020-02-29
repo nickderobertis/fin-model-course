@@ -108,7 +108,7 @@ def get_content():
     lending officer all the information she would need to negotiate a rate for this loan.
     
     Given the inputs, what is the expected IRR of the loan for a variety of interest rates on the loan? The lending
-    officer would like you to evaluate rates in 5% increments from 20% to 40%.
+    officer would like you to evaluate rates in 5% increments from 30% to 40%.
     
     The lending officer is also worried that she may have estimated {inputs["initial_default_prob"][0]} incorrectly. 
     She is hoping for the answers to the above questions considering that {inputs["initial_default_prob"][0]} may vary.
@@ -145,12 +145,15 @@ def get_content():
     ]
 
     bonus_q_str = f"""
-    Produce the same outputs as the main problem, but instead of evaluating 
+    Especially good visualization of the original problem will earn part of the bonus.
+    
+    Further, produce the same outputs as the main problem, but instead of evaluating 
     {pl.Equation(str_eq=default_prob_cases_eq_str)}, consider {inputs["initial_default_prob"][0]} as being normally
     distributed with mean {bonus_initial_default_prob_mean} and standard deviation {bonus_initial_default_prob_std}.
 
-    Also produce visualizations and summary statistics of the results from each random trial within a few selected
-    input cases, and describe your findings.
+    Also examine a single selected input case with different numbers of iterations, producing visualizations and 
+    summary statistics of the results with different numbers of iterations, to show how precise the expected IRR 
+    estimates are.
     """
 
     submission_str = f"""
