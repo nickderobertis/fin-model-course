@@ -130,8 +130,10 @@ def get_content():
     "expected values, I think that is generally more difficult.",
     "With the internal randomness approach, make sure you set the number of "
     "iterations to 1,000 per set of inputs to get a good estimate. ",
-    "While you are testing things out, set it lower, such as 100, to have it run quicker, but beware that the lower "
+    "While you are testing things out, set it lower, such as 10 or 100, to have it run quicker, but beware that the lower "
     "your number of iterations, the less consistent the results will be.",
+    'Also beware that with 1,000 iterations as required for the final submission, it may take over an hour to '
+    'run the model, so plan for that time.',
     "You may choose to either submit a pure Python model, pure Excel model, or a combination of the two. If you use "
     "both, then the Python model should be what I ultimately run and extract results from. The Python model would "
     "be running the Excel model many times and extracting the results.",
@@ -233,7 +235,9 @@ def get_content():
                         #pl.UnorderedList(solutions_list),
                         #case_solutions_str,
                         #pl.UnorderedList(case_solutions_list),
-                        'Coming soon, I will announce when this is posted on Canvas.'
+                        pl.Center(
+                            pl.Graphic(images_path('project-2-solutions.png'), width=0.5),
+                        ),
                     ],
                     title='Selected Solutions'
                 ),
