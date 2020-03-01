@@ -139,7 +139,7 @@ def get_content():
     "be running the Excel model many times and extracting the results.",
     "Upon reading the prior note, you may think to implement in pure Excel because of greater familiarity, but I think "
     "you will find meeting the objective of running the model repeatedly with three changing inputs quite difficult. "
-    "You need to run your model 45,000 times in total with three inputs changing together.",
+    "You need to run your model 27,000 times in total with three inputs changing together.",
 
     'Your answers may differ slightly from those in the Selected Solutions section. This is the nature of a random model. They '
     'should be very close with 1,000 iterations, though.',
