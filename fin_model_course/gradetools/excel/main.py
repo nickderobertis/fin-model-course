@@ -6,9 +6,11 @@ from gradetools.excel.check import check_output_dict, IncorrectModelOutputExcept
 from gradetools.excel.fileops import open_workbook_get_sheet, close_workbook
 from gradetools.excel.error_df import error_dict_to_df, single_workbook_report_df_from_full_workbook_df
 from gradetools.config import EXCEL_EXTENSIONS
+from gradetools.case_config import CaseConfig
 
 
-def open_all_workbooks_in_folder_check_sheet_create_df(folder_path: str, sheet_name: str, input_dict_list: List[dict],
+def open_all_workbooks_in_folder_check_sheet_create_df(folder_path: str, sheet_name: str,
+                                                       input_configs: List[CaseConfig],
                                                        output_dict_list: List[dict], input_range_dict: dict,
                                                        output_range_dict: dict, tolerance: float = 0.001,
                                                        report_path: Optional[str] = None,
@@ -26,7 +28,7 @@ def open_all_workbooks_in_folder_check_sheet_create_df(folder_path: str, sheet_n
         error_dict = open_workbook_check_sheet_close(
             file_path,
             sheet_name,
-            input_dict_list,
+            input_configs,
             output_dict_list,
             input_range_dict,
             output_range_dict,
@@ -51,27 +53,28 @@ def open_all_workbooks_in_folder_check_sheet_create_df(folder_path: str, sheet_n
     return report_df
 
 
-def open_workbook_check_sheet_close(file_path: str, sheet_name: str, input_dict_list: List[dict],
+def open_workbook_check_sheet_close(file_path: str, sheet_name: str, input_configs: List[CaseConfig],
                                     output_dict_list: List[dict], input_range_dict: dict,
                                     output_range_dict: dict, tolerance: float = 0.001):
     sheet = open_workbook_get_sheet(file_path, sheet_name)
-    errors_dict = check_workbook(sheet, input_dict_list, output_dict_list, input_range_dict,
+    errors_dict = check_workbook(sheet, input_configs, output_dict_list, input_range_dict,
                                  output_range_dict, tolerance=tolerance)
     close_workbook(sheet)
     return errors_dict
 
 
-def check_workbook(wb, input_dict_list: List[dict], output_dict_list: List[dict], input_range_dict: dict,
+def check_workbook(wb, input_configs: List[CaseConfig], output_dict_list: List[dict], input_range_dict: dict,
                    output_range_dict: dict, tolerance: float = 0.001):
     errors_dict = {}
-    for i, (input_case, output_case) in enumerate(zip(input_dict_list, output_dict_list)):
+    for i, (input_case, output_case) in enumerate(zip(input_configs, output_dict_list)):
         case_num = i + 1
-        print(f'Checking case {case_num}')
+        name = input_case.case_name
+        print(f'Checking case {case_num}: {name}')
         errors = _check_workbook_for_inputs(
-            wb, input_case, output_case, input_range_dict, output_range_dict, tolerance=tolerance
+            wb, input_case.input_dict, output_case, input_range_dict, output_range_dict, tolerance=tolerance
         )
         if errors:
-            errors_dict[case_num] = errors
+            errors_dict[name] = errors
     return errors_dict
 
 
