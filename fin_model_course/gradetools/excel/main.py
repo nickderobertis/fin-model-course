@@ -20,7 +20,8 @@ def open_all_workbooks_in_folder_check_sheet_create_df(folder_path: str, sheet_n
     full_df = pd.DataFrame()
     files = [
         file for file in next(os.walk(folder_path))[2]
-        if os.path.splitext(file)[1].strip('.').lower() in EXCEL_EXTENSIONS
+        if os.path.splitext(file)[1].strip('.').lower() in EXCEL_EXTENSIONS and
+        not file.startswith('~')
     ]
     for file in files:
         file_path = os.path.join(folder_path, file)
