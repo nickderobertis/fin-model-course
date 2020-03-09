@@ -35,7 +35,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Monte Carlo Simulation'
-ORDER = 12
+ORDER = 10
 
 
 def get_content():
@@ -253,7 +253,7 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
                         lt.Tabular(
                             [
 
-                                lt.MultiColumn('Probability Table', span=2),
+                                pl.MultiColumnLabel('Probability Table', span=2),
                                 lt.TopRule(),
                                 lt.ValuesTable.from_list_of_lists(
                                     [
@@ -458,7 +458,7 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
             title=f'Using {xlwings_mono} to Run Monte Carlo Simulations in Excel',
             short_title=f'{xlwings_mono} MC'
         ),
-        lp.Appendix(
+        pl.PresentationAppendix(
             [
                 mc_python_lab.appendix_frames(),
                 mc_excel_lab.appendix_frames(),
