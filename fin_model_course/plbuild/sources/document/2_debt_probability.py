@@ -176,7 +176,8 @@ def get_content():
     """
 
     case_solutions_str = """
-    I am also providing the IRRs for each possible default situation in the model with base case inputs. This way you
+    I am also providing the IRRs for each possible default situation in the model with base case inputs 
+    and a 20% interest rate. This way you
     can check your model without having to run lots of iterations. Make sure that your model can reproduce each of the
     IRRs corresponding to each default case, and then you will only need the full solutions to check that the probabilities
     are set correctly. Note that unlike the full solutions, you should be able to match these default case solutions 
@@ -231,13 +232,12 @@ def get_content():
                 ),
                 pl.SubSection(
                     [
-                        #solutions_str,
-                        #pl.UnorderedList(solutions_list),
-                        #case_solutions_str,
-                        #pl.UnorderedList(case_solutions_list),
+                        solutions_str,
                         pl.Center(
                             pl.Graphic(images_path('project-2-solutions.png'), width=0.5),
                         ),
+                        case_solutions_str,
+                        pl.UnorderedList(case_solutions_list),
                     ],
                     title='Selected Solutions'
                 ),
@@ -257,9 +257,10 @@ def get_content():
                                     lt.TableLineSegment(0, 1),
                                     lt.ValuesTable.from_list_of_lists(
                                         [
-                                            ['Model Accuracy', '70%'],
+                                            ['Model Accuracy', '60%'],
                                             ['Model Readability', '20%'],
                                             ['Model Formatting', '10%'],
+                                            ['Following the Template', '10%'],
                                             ['Bonus', '5%']
                                         ]
                                     ),
@@ -284,9 +285,7 @@ def get_content():
 
     ]
 
-
 DOCUMENT_CLASS_KWARGS = dict(
     remove_section_numbering=True,
 )
 OUTPUT_NAME = TITLE
-

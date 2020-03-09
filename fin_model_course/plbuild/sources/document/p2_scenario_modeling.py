@@ -15,7 +15,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Scenario Modeling Problems'
-ORDER = 'P1'
+ORDER = 'P2'
 
 
 def get_content():
