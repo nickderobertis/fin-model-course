@@ -6,6 +6,8 @@ import pyexlatex.layouts as ll
 
 import plbuild
 from plbuild.paths import images_path
+from pltemplates.exercises.xlwings import get_xlwings_exercise
+from pltemplates.frames.in_class_example import InClassExampleFrame
 from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
     real_world_style,
@@ -64,8 +66,23 @@ def get_content():
     random_choice_py = pl.Monospace('random.choices')
 
     pd_read_write_exercise = get_lab_exercise()
-    intro_udf_exercise = get_intro_udf_exercise()
-    advanced_udf_exercise = get_advanced_udf_exercise()
+    xlwings_exercise = get_xlwings_exercise()
+
+    read_from_excel_example = pl.Python("""
+my_value = sht.range("G11").value  # single value
+# all values in cell range
+my_value = sht.range("G11:F13").value  
+# expands cell range down and right getting all values
+my_values = sht.range("G11").expand().value  
+""")
+
+    write_to_excel_example = pl.Python("""
+sht.range("G11").value = 10
+sht.range("G11").value = [10, 11]  # horizontal
+sht.range("G11:G12").value = [10, 11]  # vertical
+# table, DataFrame from elsewhere
+sht.range("G11").value = df  
+""")
 
     return [
         pl.Section(
@@ -204,6 +221,33 @@ def get_content():
                     ],
                     title='Using Python to Drive Excel Models'
                 ),
+                lp.Frame(
+                    [
+                        lp.Block(
+                            [
+                                read_from_excel_example
+                            ],
+                            title='Read Values from Excel'
+                        ),
+                        lp.Block(
+                            [
+                                write_to_excel_example
+                            ],
+                            title='Write Values to Excel'
+                        )
+                    ],
+                    title='Write and Read Values to and from Excel'
+                ),
+                InClassExampleFrame(
+                    [
+                        'Download the contents of the "xlwings" folder in Examples',
+                        'Ensure that you put the Excel file and notebook in the same folder for it to work',
+                        'Follow along with the notebook'
+                    ],
+                    title=f'How to Use {xlwings_mono}',
+                    block_title=f'Trying out {xlwings_mono}'
+                ),
+                xlwings_exercise.presentation_frames(),
             ],
             title=f'Introducing Full Python-Excel Connection with {xlwings_mono}',
             short_title=f'{xlwings_mono}'
@@ -212,6 +256,7 @@ def get_content():
         pl.PresentationAppendix(
             [
                 pd_read_write_exercise.appendix_frames(),
+                xlwings_exercise.appendix_frames(),
             ]
         )
     ]
