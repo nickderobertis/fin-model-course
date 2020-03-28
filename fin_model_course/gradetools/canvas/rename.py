@@ -10,7 +10,7 @@ import shutil
 
 FILE_PATTERN = re.compile(r'([^\W\d_]+)(_LATE)?_\d+_\d+_([\w\-_^(). ]+.[^\W\d_]+)') # e.g. johnsmith_956227_46792176_project2.xlsm
 
-
+# TODO: handle , in file name
 def rename_submissions(submissions_folder: str, out_folder: str):
     for file in next(os.walk(submissions_folder))[2]:
         current_path = os.path.join(submissions_folder, file)
