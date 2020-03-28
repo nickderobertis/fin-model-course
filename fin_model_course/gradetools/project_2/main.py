@@ -1,6 +1,6 @@
-import datetime
 import os
 import timeit
+import datetime
 
 import xlwings as xw
 import pandas as pd
@@ -24,10 +24,11 @@ def run_all_models_in_folder_output_accuracy(grade_folder: str, xlwings_addin_pa
         if os.path.exists(out_path):
             print(f'Skipping {folder} as it already has results')
             continue
-        print(f'Processing {folder}')
+        print(f'Processing {folder}', end='')
         start_time = timeit.default_timer()
         xl_files = [file for file in next(os.walk(folder_path))[2] if file.lower().endswith('.xlsm')]
         if len(xl_files) > 1:
+            print('')  # cancel end=''
             raise ValueError(f'found more than one excel file in {folder}: {xl_files}')
         xl_file = xl_files[0]
         xl_path = os.path.join(folder_path, xl_file)
@@ -37,7 +38,7 @@ def run_all_models_in_folder_output_accuracy(grade_folder: str, xlwings_addin_pa
         book.close()
         df.to_csv(out_path, index=False)
         seconds_elapsed = timeit.default_timer() - start_time
-        print(f'Took {datetime.timedelta(seconds=seconds_elapsed)}')
+        print(f' took {datetime.timedelta(seconds=seconds_elapsed)}')
 
 
 def create_results_summary_from_grade_folder(grade_folder: str) -> pd.DataFrame:
