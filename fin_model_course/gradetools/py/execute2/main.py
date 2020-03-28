@@ -25,9 +25,10 @@ class ReplacementConfig:
 def read_notebook_and_run_extracting_globals(
     notebook_path: str,
     replacements: Optional[Sequence[ReplacementConfig]] = None,
-    suppress_output: bool = False
+    suppress_output: bool = False,
+    remove_magics: bool = True
 ) -> Dict[str, Any]:
-    source = source_from_notebook_path(notebook_path)
+    source = source_from_notebook_path(notebook_path, remove_magics=remove_magics)
     if replacements is not None:
         for config in replacements:
             source = replace_in_source(source, config.assign_name, config.ast_call)
