@@ -1,3 +1,7 @@
+import os
+
+ANSWERS_MODEL_FOLDER = os.path.sep.join(['Projects', 'Project 2', 'For Answers'])
+ANSWERS_OUTPUT_PATH = os.path.sep.join(['gradetools', 'project_2', 'answers.csv'])
 
 NUM_ITERATIONS = 1000
 
@@ -25,7 +29,7 @@ EXCEL_INPUT_LOCATIONS = {
     'recovery_rate': 'B7',
 }
 
-EXCEL_OUTPUT_TABLE_LOCATION = 'C5'
+EXCEL_OUTPUT_TABLE_LOCATION = 'D17'
 
 # List of lists where each inner list is one run of the model with 1000 iterations, then copy pasting df.IRR.tolist()
 MODEL_RUN_IRRS = [

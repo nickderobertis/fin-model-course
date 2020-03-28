@@ -8,15 +8,17 @@ import pandas as pd
 
 
 # TODO: iterate through all projects in folder, open project, run, check accuracy, output report
-from gradetools.model_type import detect_model_type_in_folder, get_model_file_path_from_folder
+from gradetools.model_type import detect_model_type_in_folder, get_model_file_paths_from_folder
 from gradetools.project_2.check import score_accuracy_of_result_df
-from gradetools.project_2.config import XLWINGS_ADDIN_PATH, TOLERANCE, INPUT_DICTS
+from gradetools.project_2.config import XLWINGS_ADDIN_PATH, TOLERANCE, INPUT_DICTS, ANSWERS_OUTPUT_PATH
 from gradetools.project_2.run import run_model_assemble_results_in_df
 
 
-def run_all_models_in_folder_output_accuracy(grade_folder: str, xlwings_addin_path: str = XLWINGS_ADDIN_PATH,
-                                             n_iter: int = 1000, tolerance: float = TOLERANCE,
-                                             input_dicts: List[Dict[str, float]] = INPUT_DICTS):
+def run_all_models_in_folder_output_accuracy(grade_folder: str, tolerance: float = TOLERANCE,
+                                             input_dicts: List[Dict[str, float]] = INPUT_DICTS,
+                                             answers_csv_path: str = ANSWERS_OUTPUT_PATH):
+    answers_df = pd.read_csv(answers_csv_path)
+    orig_path = os.getcwd()
     for folder in next(os.walk(grade_folder))[1]:
         folder_path = os.path.join(grade_folder, folder)
         out_path = os.path.join(folder_path, 'results.csv')
@@ -24,11 +26,13 @@ def run_all_models_in_folder_output_accuracy(grade_folder: str, xlwings_addin_pa
             print(f'Skipping {folder} as it already has results')
             continue
         model_type = detect_model_type_in_folder(folder_path)
-        model_file = get_model_file_path_from_folder(folder, model_type)
+        model_files = get_model_file_paths_from_folder(folder_path, model_type)
         print(f'Processing {folder} of type {model_type}', end='')
         start_time = timeit.default_timer()
-        df = run_model_assemble_results_in_df(n_iter, input_dicts, model_type, model_file)
-        score_accuracy_of_result_df(df, tolerance=tolerance)
+        os.chdir(folder_path)
+        df = run_model_assemble_results_in_df(input_dicts, model_type, model_files)
+        os.chdir(orig_path)
+        score_accuracy_of_result_df(df, answers_df, tolerance=tolerance)
         df.to_csv(out_path, index=False)
         seconds_elapsed = timeit.default_timer() - start_time
         print(f' took {datetime.timedelta(seconds=seconds_elapsed)}')
@@ -51,12 +55,9 @@ def create_results_summary_from_grade_folder(grade_folder: str) -> pd.DataFrame:
     return full_df
 
 
-def full_grade_process(grade_folder: str, xlwings_addin_path: str = XLWINGS_ADDIN_PATH,
-                       n_iter: int = 1000, tolerance: float = TOLERANCE):
+def full_grade_process(grade_folder: str, tolerance: float = TOLERANCE):
     run_all_models_in_folder_output_accuracy(
         grade_folder,
-        xlwings_addin_path=xlwings_addin_path,
-        n_iter=n_iter,
         tolerance=tolerance
     )
     create_results_summary_from_grade_folder(grade_folder)

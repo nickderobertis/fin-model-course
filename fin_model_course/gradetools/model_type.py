@@ -1,6 +1,7 @@
 import os
 import pathlib
 from enum import Enum
+from typing import List
 
 EXCEL_EXTENSIONS = ('xlsx', 'xls', 'xlsm')
 PYTHON_EXTENSIONS = ('py', 'ipynb')
@@ -31,23 +32,42 @@ def detect_model_type_in_folder(folder: str) -> ModelType:
         raise ValueError(f'did not detect any model in {folder}')
 
 
-def get_model_file_path_from_folder(folder: str, model_type: ModelType) -> str:
-    files = [file for file in next(os.walk(folder))[2]]
-    if model_type == ModelType.EXCEL:
-        excel_files = [file for file in files if _get_extension(file) in EXCEL_EXTENSIONS]
-        if len(excel_files) == 0:
-            raise ValueError(f'no Excel file found in {folder} even though model type is Excel')
-        elif len(excel_files) > 1:
-            raise ValueError(f'found more than one Excel file in {folder}, not clear which is model')
-        return excel_files[0]
+def get_model_file_paths_from_folder(folder: str, model_type: ModelType) -> List[str]:
+    if model_type == ModelType.COMBO:
+        python_file = _get_file_of_type_from_folder(folder, ModelType.PYTHON)
+        excel_file = _get_file_of_type_from_folder(folder, ModelType.EXCEL)
+        return [python_file, excel_file]
 
-    # Python or combination, Python runs model
-    python_files = [file for file in files if _get_extension(file) in PYTHON_EXTENSIONS]
-    if len(python_files) == 0:
-        raise ValueError(f'no Python file found in {folder} even though model type is Python')
-    elif len(python_files) > 1:
-        raise ValueError(f'found more than one Python file in {folder}, not clear which is model')
-    return python_files[0]
+    # Pure Python or pure Excel, return only that
+    return [_get_file_of_type_from_folder(folder, model_type)]
+
+
+def get_excel_file_from_model_files(model_files: List[str], model_type: ModelType) -> str:
+    if model_type == ModelType.PYTHON:
+        raise ValueError('trying to get Excel file from Python model')
+
+    if model_type == ModelType.EXCEL:
+        return model_files[0]
+    else:
+        # In combo, python model file comes first
+        return model_files[1]
+
+
+def _get_file_of_type_from_folder(folder: str, model_type: ModelType) -> str:
+    files = [file for file in next(os.walk(folder))[2]]
+    if model_type == model_type.EXCEL:
+        extensions = EXCEL_EXTENSIONS
+    elif model_type == model_type.PYTHON:
+        extensions = PYTHON_EXTENSIONS
+    else:
+        raise ValueError('must pass Excel or Python model type')
+
+    selected_files = [file for file in files if _get_extension(file) in extensions]
+    if len(selected_files) == 0:
+        raise ValueError(f'no {model_type} file found in {folder} even though model type is {model_type}')
+    elif len(selected_files) > 1:
+        raise ValueError(f'found more than one {model_type} file in {folder}, not clear which is model')
+    return selected_files[0]
 
 
 def _get_extension(file: str) -> str:

@@ -20,7 +20,13 @@ def run_model_extract_irr_df(model_file: str, model_type: ModelType, inputs_dict
 
 def _get_results_from_excel_model(model_file: str, table_location: str = EXCEL_OUTPUT_TABLE_LOCATION) -> pd.DataFrame:
     ws = get_inputs_outputs_sheet_from_file_path(model_file)
-    df = ws.range(table_location).expand().options(pd.DataFrame, index=False)
+    df = ws.range(table_location).expand().options(pd.DataFrame, index=False, header=False)
+    df.columns = [
+        'Interest Rate',
+        'Loan Life',
+        'Initial Default Probability',
+        'IRR'
+    ]
     return df
 
 
