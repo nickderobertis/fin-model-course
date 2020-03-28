@@ -34,7 +34,7 @@ def get_content():
         lt.Tabular(
             [
 
-                lt.MultiColumn('Standard Deviations', span=2),
+                pl.MultiColumnLabel('Standard Deviations', span=2),
                 lt.TopRule(),
                 lt.ValuesTable.from_list_of_lists(
                     [
@@ -96,7 +96,7 @@ def get_content():
                             lt.Tabular(
                                 [
 
-                                    lt.MultiColumn('Grading Breakdown', span=2),
+                                    pl.MultiColumnLabel('Grading Breakdown', span=2),
                                     lt.TopRule(),
                                     lt.ValuesTable.from_list_of_lists(
                                         [
