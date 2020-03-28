@@ -34,7 +34,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Free Cash Flow Estimation and Forecasting'
-ORDER = 14
+ORDER = 12
 
 
 def get_content():
@@ -551,7 +551,7 @@ def get_content():
             short_title='Valuation'
         ),
 
-        lp.Appendix(
+        pl.PresentationAppendix(
             [
                 fcf_exercise.appendix_frames(),
                 simple_ts_exercise.appendix_frames(),

@@ -40,7 +40,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Introduction to DCF Valuation and Cost of Capital Estimation'
-ORDER = 13
+ORDER = 11
 
 
 def get_content():
@@ -376,7 +376,7 @@ def get_content():
             title='Putting it All Together: Calculating the WACC',
             short_title='WACC'
         ),
-        lp.Appendix(
+        pl.PresentationAppendix(
             [
                 enterprise_equity_value_excercise.appendix_frames(),
                 cost_equity_exercise.appendix_frames(),
