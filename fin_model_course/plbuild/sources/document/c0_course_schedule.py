@@ -96,6 +96,38 @@ def get_content():
             'Probability Modeling, pt. 1',
             [8],
         ),  # 2/25/2020
+        (
+            'Probability Modeling, pt. 2',
+            [8],
+            [2],
+        ),  # 2/27/2020
+        (
+            'Probability Modeling, pt. 3',
+            [8],
+        ),  # 3/10/2020
+        (
+            'Probability Modeling, pt. 4',
+            [8],
+        ),  # 3/12/2020
+        (
+            'Combining Excel and Python, pt. 1',
+            [9],
+        ),  # 3/17/2020
+        (
+            'Combining Excel and Python, pt. 2 and Monte Carlo Simulation, pt. 1',
+            [9, 10],
+        ),  # 3/19/2020
+        (
+            'Monte Carlo Simulation, pt. 2',
+            [10],
+            None,
+            [2],
+        ),  # 3/24/2020
+        (
+            'Monte Carlo Simulation, pt. 3',
+            [10],
+        ),  # 3/26/2020
+        # NOTE: too far behind at this point, picking up the pace, need to speed up earlier
     ]
 
     return [
