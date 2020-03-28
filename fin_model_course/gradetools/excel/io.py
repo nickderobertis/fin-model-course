@@ -16,6 +16,14 @@ def get_output_dict_from_output_range_dict(wb, output_range_dict: Dict[str, str]
         output_dict[output_name] = value
     return output_dict
 
+
+def get_inputs_outputs_sheet_from_file_path(file_path: str):
+    import xlwings as xw
+    book = xw.Book(file_path)
+    ws = book.sheets['Inputs and Outputs']
+    return ws
+
+
 def _get_range(wb, cell_range: str):
     """
     Can be passed the xlwings module or a sheet object. Needs to use Range for xlwings module and range for sheet object

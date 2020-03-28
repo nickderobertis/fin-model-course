@@ -8,6 +8,7 @@ import pandas as pd
 
 
 # TODO: iterate through all projects in folder, open project, run, check accuracy, output report
+from gradetools.model_type import detect_model_type_in_folder, get_model_file_path_from_folder
 from gradetools.project_2.check import score_accuracy_of_result_df
 from gradetools.project_2.config import XLWINGS_ADDIN_PATH, TOLERANCE, INPUT_DICTS
 from gradetools.project_2.run import run_model_assemble_results_in_df
@@ -16,28 +17,18 @@ from gradetools.project_2.run import run_model_assemble_results_in_df
 def run_all_models_in_folder_output_accuracy(grade_folder: str, xlwings_addin_path: str = XLWINGS_ADDIN_PATH,
                                              n_iter: int = 1000, tolerance: float = TOLERANCE,
                                              input_dicts: List[Dict[str, float]] = INPUT_DICTS):
-    app = xw.App()
-    xl_app = app.api
-    xl_app.Workbooks.Open(xlwings_addin_path)
-
     for folder in next(os.walk(grade_folder))[1]:
         folder_path = os.path.join(grade_folder, folder)
         out_path = os.path.join(folder_path, 'results.csv')
         if os.path.exists(out_path):
             print(f'Skipping {folder} as it already has results')
             continue
-        print(f'Processing {folder}', end='')
+        model_type = detect_model_type_in_folder(folder_path)
+        model_file = get_model_file_path_from_folder(folder, model_type)
+        print(f'Processing {folder} of type {model_type}', end='')
         start_time = timeit.default_timer()
-        xl_files = [file for file in next(os.walk(folder_path))[2] if file.lower().endswith('.xlsm')]
-        if len(xl_files) > 1:
-            print('')  # cancel end=''
-            raise ValueError(f'found more than one excel file in {folder}: {xl_files}')
-        xl_file = xl_files[0]
-        xl_path = os.path.join(folder_path, xl_file)
-        book = xw.Book(xl_path)
-        df = run_model_assemble_results_in_df(n_iter, input_dicts)
+        df = run_model_assemble_results_in_df(n_iter, input_dicts, model_type, model_file)
         score_accuracy_of_result_df(df, tolerance=tolerance)
-        book.close()
         df.to_csv(out_path, index=False)
         seconds_elapsed = timeit.default_timer() - start_time
         print(f' took {datetime.timedelta(seconds=seconds_elapsed)}')

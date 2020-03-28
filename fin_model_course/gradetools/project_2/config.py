@@ -1,20 +1,31 @@
 
+NUM_ITERATIONS = 1000
+
 INPUT_DICTS = [
     dict(
-        p_machine=1000000,
-        loan_life=5,
-        decay_prob=0.9,
+        price_machine=1000000,
+        default_decay=0.9,
         final_default=0.4,
-        recovery=0.4,
+        recovery_rate=0.4,
     ),
     dict(
-        p_machine=2000000,
-        loan_life=10,
-        decay_prob=0.8,
+        price_machine=2000000,
+        default_decay=0.8,
         final_default=0.5,
-        recovery=0.3,
+        recovery_rate=0.3,
     )
 ]
+for inp_dict in INPUT_DICTS:
+    inp_dict['num_iterations'] = NUM_ITERATIONS
+
+EXCEL_INPUT_LOCATIONS = {
+    'price_machine': 'B2',
+    'default_decay': 'B5',
+    'final_default': 'B6',
+    'recovery_rate': 'B7',
+}
+
+EXCEL_OUTPUT_TABLE_LOCATION = 'C5'
 
 # List of lists where each inner list is one run of the model with 1000 iterations, then copy pasting df.IRR.tolist()
 MODEL_RUN_IRRS = [
