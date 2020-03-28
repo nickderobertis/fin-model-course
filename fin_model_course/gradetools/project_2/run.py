@@ -1,31 +1,18 @@
 import itertools
+from typing import Dict, List
+
 import pandas as pd
 
 from gradetools.project_2.calculate import calculate_app_extract_irrs
 from gradetools.project_2.inputs import set_inputs
 
 
-def run_model_assemble_results_in_df(n_iter: int) -> pd.DataFrame:
+def run_model_assemble_results_in_df(n_iter: int, input_dicts: List[Dict[str, float]]) -> pd.DataFrame:
 
     interest_rates = [i/100 for i in range(20, 41, 2)]
     init_default_probs = [0.2, 0.3]
 
-    input_dicts = [
-        dict(
-            p_machine=1000000,
-            loan_life=5,
-            decay_prob=0.9,
-            final_default=0.4,
-            recovery=0.4,
-        ),
-        dict(
-            p_machine=2000000,
-            loan_life=10,
-            decay_prob=0.8,
-            final_default=0.5,
-            recovery=0.3,
-        )
-    ]
+
 
     all_values = []
     for interest_rate, init_default in itertools.product(interest_rates, init_default_probs):

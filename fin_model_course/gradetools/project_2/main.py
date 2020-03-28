@@ -1,6 +1,7 @@
 import os
 import timeit
 import datetime
+from typing import Dict, List
 
 import xlwings as xw
 import pandas as pd
@@ -8,12 +9,13 @@ import pandas as pd
 
 # TODO: iterate through all projects in folder, open project, run, check accuracy, output report
 from gradetools.project_2.check import score_accuracy_of_result_df
-from gradetools.project_2.config import XLWINGS_ADDIN_PATH, TOLERANCE
+from gradetools.project_2.config import XLWINGS_ADDIN_PATH, TOLERANCE, INPUT_DICTS
 from gradetools.project_2.run import run_model_assemble_results_in_df
 
 
 def run_all_models_in_folder_output_accuracy(grade_folder: str, xlwings_addin_path: str = XLWINGS_ADDIN_PATH,
-                                             n_iter: int = 1000, tolerance: float = TOLERANCE):
+                                             n_iter: int = 1000, tolerance: float = TOLERANCE,
+                                             input_dicts: List[Dict[str, float]] = INPUT_DICTS):
     app = xw.App()
     xl_app = app.api
     xl_app.Workbooks.Open(xlwings_addin_path)
@@ -33,7 +35,7 @@ def run_all_models_in_folder_output_accuracy(grade_folder: str, xlwings_addin_pa
         xl_file = xl_files[0]
         xl_path = os.path.join(folder_path, xl_file)
         book = xw.Book(xl_path)
-        df = run_model_assemble_results_in_df(n_iter)
+        df = run_model_assemble_results_in_df(n_iter, input_dicts)
         score_accuracy_of_result_df(df, tolerance=tolerance)
         book.close()
         df.to_csv(out_path, index=False)

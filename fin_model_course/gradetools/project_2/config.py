@@ -1,4 +1,21 @@
 
+INPUT_DICTS = [
+    dict(
+        p_machine=1000000,
+        loan_life=5,
+        decay_prob=0.9,
+        final_default=0.4,
+        recovery=0.4,
+    ),
+    dict(
+        p_machine=2000000,
+        loan_life=10,
+        decay_prob=0.8,
+        final_default=0.5,
+        recovery=0.3,
+    )
+]
+
 # List of lists where each inner list is one run of the model with 1000 iterations, then copy pasting df.IRR.tolist()
 MODEL_RUN_IRRS = [
     [
