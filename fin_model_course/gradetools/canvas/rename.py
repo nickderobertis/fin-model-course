@@ -8,9 +8,9 @@ import re
 import pathlib
 import shutil
 
-FILE_PATTERN = re.compile(r'([^\W\d_]+)(_LATE)?_\d+_\d+_([\w\-_^ ]+.[^\W\d_]+)') # e.g. johnsmith_956227_46792176_project2.xlsm
+FILE_PATTERN = re.compile(r'([^\W\d_]+)(_LATE)?_\d+_\d+_([\w\-_^(). ]+.[^\W\d_]+)') # e.g. johnsmith_956227_46792176_project2.xlsm
 
-# TODO: in canvas rename, handle filepath with . and () in it such as johndoe_987122_46871556_Project 4.4 (1).ipynb
+
 def rename_submissions(submissions_folder: str, out_folder: str):
     for file in next(os.walk(submissions_folder))[2]:
         current_path = os.path.join(submissions_folder, file)
@@ -87,6 +87,6 @@ def _remove_dash_number_from_filename(name: str) -> str:
     return new_path
 
 if __name__ == '__main__':
-    in_folder = r'D:\Dropbox (Personal)\UF\Teaching\Modeling\Me\Grading\Fall 2019\Project 4\full submissions'
-    out_folder = r'D:\Dropbox (Personal)\UF\Teaching\Modeling\Me\repos\fin-model-course\Grading\Project 4\full submissions'
+    in_folder = r'C:\Users\Nick\Desktop\temp for modeling\Grading\orig\submissions'
+    out_folder = r'C:\Users\Nick\Desktop\temp for modeling\Grading\processed'
     rename_submissions(in_folder, out_folder)
