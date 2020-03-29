@@ -3,14 +3,13 @@ import timeit
 import datetime
 from typing import Dict, List
 
-import xlwings as xw
 import pandas as pd
 
 
 # TODO: iterate through all projects in folder, open project, run, check accuracy, output report
 from gradetools.model_type import detect_model_type_in_folder, get_model_file_paths_from_folder
 from gradetools.project_2.check import score_accuracy_of_result_df
-from gradetools.project_2.config import XLWINGS_ADDIN_PATH, TOLERANCE, INPUT_DICTS, ANSWERS_OUTPUT_PATH
+from gradetools.project_2.config import TOLERANCE, INPUT_DICTS, ANSWERS_OUTPUT_PATH
 from gradetools.project_2.run import run_model_assemble_results_in_df
 
 

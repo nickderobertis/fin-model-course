@@ -1,7 +1,5 @@
 import pandas as pd
 
-from gradetools.project_2.config import IRR_RESULTS
-
 
 def score_accuracy_of_result_df(df: pd.DataFrame, answers_df: pd.DataFrame, tolerance: float = 0.03):
     """
