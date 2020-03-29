@@ -44,4 +44,4 @@ def _standardize_df(df: pd.DataFrame) -> pd.DataFrame:
         'num_iterations'
     ]
 
-    return df.reset_index(drop=True).sort_values(col_order)[col_order + ['IRR']]
+    return df.sort_values(col_order)[col_order + ['IRR']].reset_index(drop=True)
