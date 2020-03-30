@@ -1,4 +1,5 @@
 import os
+import json
 
 import pyexlatex as pl
 import pyexlatex.table as lt
@@ -8,6 +9,7 @@ import pyexlatex.layouts as ll
 from jinja2 import FileSystemLoader
 
 import plbuild
+from gradetools.project_3.config import ANSWERS_OUTPUT_PATH
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
 
@@ -25,10 +27,53 @@ def get_content():
     jinja_templates_path = os.path.sep.join(['pltemplates', 'projects', 'p3'])
     jinja_env = pl.JinjaEnvironment(loader=FileSystemLoader(jinja_templates_path))
 
-    beta_std = 0.2
-    mkt_ret_std = 0.03
-    wmt_bond_price_std = 30
-    tax_rate_std = 0.05
+    with open(ANSWERS_OUTPUT_PATH, 'r') as f:
+        answers_json = json.load(f)
+    answers_dict = answers_json[0]
+
+    beta_std = answers_dict['beta_std']
+    mkt_ret_std = answers_dict['mkt_ret_std']
+    bond_price_std = answers_dict['bond_price_std']
+    tax_rate_std = answers_dict['tax_rate_std']
+    bond_years = answers_dict['bond_years']
+    bond_coupon = answers_dict['bond_coupon']
+    bond_price = answers_dict['bond_price']
+    bond_par = answers_dict['bond_par']
+    risk_free = answers_dict['risk_free']
+    price = answers_dict['price']
+    shares_outstanding = answers_dict['shares_outstanding']
+    libor_rate = answers_dict['libor_rate']
+
+    inputs_table = pl.Center(
+        lt.Tabular(
+            [
+
+                pl.MultiColumnLabel('Baseline Inputs', span=2),
+                lt.TopRule(),
+                lt.ValuesTable.from_list_of_lists(
+                    [
+                        ['Variable', 'Baseline Value']
+                    ]
+                ),
+                lt.TableLineSegment(0, 1),
+                lt.ValuesTable.from_list_of_lists(
+                    [
+                        ['Market Bond Maturity (Years)', f'{bond_years:.0f}'],
+                        ['Market Bond Coupon', f'{bond_coupon:.2%}'],
+                        ['Market Bond Price', rf'\${bond_price:.2f}'],
+                        ['Market Bond Par Value', rf'\${bond_par:.2f}'],
+                        ['Risk Free Rate', f'{risk_free:.2%}'],
+                        ['Stock Price', rf'\${price:.2f}'],
+                        ['Shares Outstanding', f'{shares_outstanding:,.0f}'],
+                        ['LIBOR Rate', f'{libor_rate:.2%}'],
+                    ]
+                ),
+                lt.BottomRule()
+
+            ],
+            align='l|c'
+        )
+    )
 
     stdev_table = pl.Center(
         lt.Tabular(
@@ -46,7 +91,7 @@ def get_content():
                     [
                         [r'$\beta$', beta_std],
                         ['Market Return', f'{mkt_ret_std:.0%}'],
-                        ['Walmart Bond Market Price', rf'\${wmt_bond_price_std}'],
+                        ['Walmart Bond Market Price', rf'\${bond_price_std}'],
                         ['Tax Rate', f'{tax_rate_std:.0%}'],
                     ]
                 ),
@@ -63,6 +108,13 @@ def get_content():
                 Project3ProblemModel(template_path='prob_definition.j2', environment=jinja_env),
                 Project3ProblemModel(template_path='notes.j2', environment=jinja_env),
                 Project3ProblemModel(template_path='bonus.j2', environment=jinja_env),
+                pl.SubSection(
+                    [
+                        inputs_table
+                    ],
+                    title='Baseline Model Inputs',
+                    label='baseline-inputs'
+                ),
                 pl.SubSection(
                     [
                         stdev_table
@@ -82,9 +134,10 @@ def get_content():
                         'Selected solutions with the baseline inputs:',
                         pl.UnorderedList(
                             [
-                                'WACC: 5.19%',
-                                r'MV Debt: \$83 billion',
-                                'Cost of Equity: 5.96%'
+                                f'WACC: {answers_dict["wacc"]:.2%}',
+                                rf'MV Debt: \${answers_dict["mv_debt"] / 1000000000:.1f} billion',
+                                f'Cost of Equity: {answers_dict["coe"]:.2%}',
+                                f'Pre-Tax Cost of Debt: {answers_dict["pretax_cost_of_debt"]:.2%}'
                             ]
                         )
                     ],
@@ -106,9 +159,10 @@ def get_content():
                                     lt.TableLineSegment(0, 1),
                                     lt.ValuesTable.from_list_of_lists(
                                         [
-                                            ['Model Accuracy', '70%'],
+                                            ['Model Accuracy', '60%'],
                                             ['Model Readability', '20%'],
                                             ['Model Formatting', '10%'],
+                                            ['Following the Template', '10%'],
                                             ['Bonus', '5%']
                                         ]
                                     ),
