@@ -7,6 +7,7 @@ import pandas as pd
 from gradetools.case_config import CaseConfig
 from gradetools.py.execute2.compare import values_are_same, CannotCompareOutputsException
 from gradetools.py.execute2.gen_ast import create_ast_function_call_with_numeric_values
+from gradetools.py.execute2.insert import insert_lines_in_source, InsertConfig
 from gradetools.py.execute2.nbsource import source_from_notebook_path
 from gradetools.py.execute2.replace import replace_in_source
 from gradetools.py.execute2.run import run_source_extract_globals
@@ -25,10 +26,13 @@ class ReplacementConfig:
 def read_notebook_and_run_extracting_globals(
     notebook_path: str,
     replacements: Optional[Sequence[ReplacementConfig]] = None,
+    inserts: Optional[Sequence[InsertConfig]] = None,
     suppress_output: bool = False,
     remove_magics: bool = True
 ) -> Dict[str, Any]:
     source = source_from_notebook_path(notebook_path, remove_magics=remove_magics)
+    if inserts is not None:
+        source = insert_lines_in_source(source, inserts)
     if replacements is not None:
         for config in replacements:
             source = replace_in_source(source, config.assign_name, config.ast_call)
