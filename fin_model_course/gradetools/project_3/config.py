@@ -66,15 +66,28 @@ for inp_dict in INPUT_DICTS:
 
 
 # TODO: set locations of excel inputs and outputs
-EXCEL_INPUT_LOCATIONS = {
-    'price_machine': 'B2',
-    'default_decay': 'B5',
-    'final_default': 'B6',
-    'recovery_rate': 'B7',
-}
+EXCEL_INPUT_LOCATIONS = dict(
+    bond_years='B3',
+    bond_coupon='B4',
+    bond_price='B5',
+    bond_par='B6',
+    risk_free='B7',
+    price='B8',
+    shares_outstanding='B9',
+    libor_rate='B10',
+    num_iter='B13',
+    beta_std='B15',
+    mkt_ret_std='B16',
+    bond_price_std='B17',
+    tax_rate_std='B18',
+)
 
 EXCEL_OUTPUT_LOCATIONS = {
-    'coe': 'C5',
-    'mv_equity': 'C6',
-    'mc_table': 'C7',
+    'wacc': 'B24',
+    'coe': 'B27',
+    'mv_equity': 'B28',
+    'pretax_cost_of_debt': 'B29',
+    'mv_debt': 'B30',
+    'aftertax_cost_of_debt': 'B31',
+    'mc_table': 'E26',
 }
