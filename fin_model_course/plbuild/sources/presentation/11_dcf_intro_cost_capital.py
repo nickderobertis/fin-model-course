@@ -186,13 +186,23 @@ def get_content():
                 InClassExampleFrame(
                     [
                         'Go to Canvas and download "Determining the Cost of Equity.ipynb" and "price data.xlsx" from '
-                        'Examples > DCF > Cost of Equity',
+                        'Examples > DCF > Cost of Equity > Python',
                         'Make sure that you place these two in the same folder',
                         'We are using historical prices to calculate the cost of equity using CAPM',
                         'We will use a risk free rate of 3% for the exercise',
                     ],
-                    title='Using Price Data to Estimate Cost of Equity',
-                    block_title='CAPM Estimation'
+                    title='Using Price Data to Estimate Cost of Equity in Python',
+                    block_title='Python CAPM Estimation'
+                ),
+                InClassExampleFrame(
+                    [
+                        'Go to Canvas and download "DCF Cost of Equity.xlsx" from '
+                        'Examples > DCF > Cost of Equity > Excel',
+                        'We are using historical prices to calculate the cost of equity using CAPM',
+                        'We will use a risk free rate of 3% for the exercise',
+                    ],
+                    title='Using Price Data to Estimate Cost of Equity in Excel',
+                    block_title='Excel CAPM Estimation'
                 ),
                 cost_equity_exercise.presentation_frames(),
                 lp.DimRevealListFrame(
