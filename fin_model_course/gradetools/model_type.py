@@ -1,7 +1,7 @@
 import os
 import pathlib
 from enum import Enum
-from typing import List
+from typing import List, Sequence, Optional
 
 EXCEL_EXTENSIONS = ('xlsx', 'xls', 'xlsm')
 PYTHON_EXTENSIONS = ('py', 'ipynb')
@@ -13,10 +13,12 @@ class ModelType(Enum):
     COMBO = 'combination'
 
 
-def detect_model_type_in_folder(folder: str) -> ModelType:
+def detect_model_type_in_folder(folder: str, exclude_files: Optional[Sequence[str]] = None) -> ModelType:
     has_excel = False
     has_python = False
     files = [file for file in next(os.walk(folder))[2]]
+    if exclude_files is not None:
+        files = [file for file in files if file not in exclude_files]
     extensions = set([_get_extension(file) for file in files])
     if any(ext in extensions for ext in EXCEL_EXTENSIONS):
         has_excel = True
@@ -32,14 +34,15 @@ def detect_model_type_in_folder(folder: str) -> ModelType:
         raise ValueError(f'did not detect any model in {folder}')
 
 
-def get_model_file_paths_from_folder(folder: str, model_type: ModelType) -> List[str]:
+def get_model_file_paths_from_folder(folder: str, model_type: ModelType,
+                                     exclude_files: Optional[Sequence[str]] = None) -> List[str]:
     if model_type == ModelType.COMBO:
-        python_file = _get_file_of_type_from_folder(folder, ModelType.PYTHON)
-        excel_file = _get_file_of_type_from_folder(folder, ModelType.EXCEL)
+        python_file = _get_file_of_type_from_folder(folder, ModelType.PYTHON, exclude_files=exclude_files)
+        excel_file = _get_file_of_type_from_folder(folder, ModelType.EXCEL, exclude_files=exclude_files)
         return [python_file, excel_file]
 
     # Pure Python or pure Excel, return only that
-    return [_get_file_of_type_from_folder(folder, model_type)]
+    return [_get_file_of_type_from_folder(folder, model_type, exclude_files=exclude_files)]
 
 
 def get_excel_file_from_model_files(model_files: List[str], model_type: ModelType) -> str:
@@ -53,8 +56,11 @@ def get_excel_file_from_model_files(model_files: List[str], model_type: ModelTyp
         return model_files[1]
 
 
-def _get_file_of_type_from_folder(folder: str, model_type: ModelType) -> str:
+def _get_file_of_type_from_folder(folder: str, model_type: ModelType,
+                                  exclude_files: Optional[Sequence[str]] = None) -> str:
     files = [file for file in next(os.walk(folder))[2]]
+    if exclude_files is not None:
+        files = [file for file in files if file not in exclude_files]
     if model_type == model_type.EXCEL:
         extensions = EXCEL_EXTENSIONS
     elif model_type == model_type.PYTHON:
