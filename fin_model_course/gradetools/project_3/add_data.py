@@ -6,15 +6,7 @@ Therefore need to copy in the original data files for wherever they are missing.
 import os
 import shutil
 
-DATA_DIR = os.path.sep.join(['Projects', 'Project 3'])
-DATA_FILE_NAMES = [
-    'WMT Balance Sheet.xlsx',
-    'WMT Debt Details.xls',
-    'WMT Income Statement.xlsx',
-    'WMT Prices.xlsx',
-    'SP500 Prices.xlsx'
-]
-DATA_FILES = [os.path.join(DATA_DIR, file) for file in DATA_FILE_NAMES]
+from gradetools.project_3.config import DATA_FILE_NAMES, DATA_DIR
 
 
 def copy_data_files_as_needed_for_all_folders_in_directory(dir: str) -> None:
