@@ -2,6 +2,7 @@ from typing import Dict
 
 import pandas as pd
 
+from gradetools.config import PYTHON_ALWAYS_INSERT_CONFIGS
 from gradetools.excel.io import get_inputs_outputs_sheet_from_file_path
 from gradetools.model_type import ModelType
 from gradetools.project_2.config import EXCEL_OUTPUT_TABLE_LOCATION
@@ -31,7 +32,12 @@ def _get_results_from_excel_model(model_file: str, table_location: str = EXCEL_O
 
 def _get_results_from_python_model(model_file: str, inputs_dict: Dict[str, float]) -> pd.DataFrame:
     rc = ReplacementConfig('model_data', 'ModelInputs', kwargs=inputs_dict)
-    globs = read_notebook_and_run_extracting_globals(model_file, [rc], suppress_output=True)
+    globs = read_notebook_and_run_extracting_globals(
+        model_file,
+        [rc],
+        inserts=PYTHON_ALWAYS_INSERT_CONFIGS,
+        suppress_output=True
+    )
     try:
         irr_df_or_styler = globs['irr_df']
     except KeyError:
