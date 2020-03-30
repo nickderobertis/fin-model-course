@@ -1,13 +1,12 @@
-from typing import List, Tuple, Dict, Union
+from typing import Dict
 
 import pandas as pd
-from pandas.io.formats.style import Styler
 
 from gradetools.excel.io import get_inputs_outputs_sheet_from_file_path
-from gradetools.excel.values import get_non_none_range_value
 from gradetools.model_type import ModelType
 from gradetools.project_2.config import EXCEL_OUTPUT_TABLE_LOCATION
 from gradetools.py.execute2.main import ReplacementConfig, read_notebook_and_run_extracting_globals
+from gradetools.py.strip_style import get_df_from_df_or_styler
 
 
 def run_model_extract_irr_df(model_file: str, model_type: ModelType, inputs_dict: Dict[str, float]) -> pd.DataFrame:
@@ -37,17 +36,8 @@ def _get_results_from_python_model(model_file: str, inputs_dict: Dict[str, float
         irr_df_or_styler = globs['irr_df']
     except KeyError:
         raise IRRDataFrameNotFoundException
-    irr_df = _get_irr_df_from_irr_df_or_styler(irr_df_or_styler)
+    irr_df = get_df_from_df_or_styler(irr_df_or_styler)
     return irr_df
-
-
-def _get_irr_df_from_irr_df_or_styler(df_or_sty: Union[pd.DataFrame, Styler]) -> pd.DataFrame:
-    if isinstance(df_or_sty, Styler):
-        return df_or_sty.data
-    if isinstance(df_or_sty, pd.DataFrame):
-        return df_or_sty
-
-    raise ValueError(f'got inproper type, should be DataFrame or Styler, got {type(df_or_sty)}')
 
 
 class IRRDataFrameNotFoundException(Exception):
