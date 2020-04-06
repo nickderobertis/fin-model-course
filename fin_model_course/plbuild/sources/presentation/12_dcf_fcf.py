@@ -471,6 +471,16 @@ def get_content():
                         'a check on your valuation.'
                     ],
                     title='What to Forecast?'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        'Assuming you are going with forecasting financial statements, you should '
+                        'forecast only line items which cannot be calculated from other line items',
+                        'For example, sales, COGS, SG&A should be forecasted, not operating profit',
+                        'You should set your model up so that these calculatable items are calculated '
+                        'in the historicals, then carry that through to the forecasted'
+                    ],
+                    title='Which Line Items to Forecast?'
                 )
             ],
             title='Forecasting Free Cash Flows',
