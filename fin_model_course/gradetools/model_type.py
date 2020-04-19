@@ -19,6 +19,21 @@ def detect_model_type_in_folder(folder: str, exclude_files: Optional[Sequence[st
     files = [file for file in next(os.walk(folder))[2]]
     if exclude_files is not None:
         files = [file for file in files if file not in exclude_files]
+
+    # Handle override of model type
+    manual_model_type_file = os.path.join(folder, 'model type.txt')
+    if os.path.exists(manual_model_type_file):
+        with open(manual_model_type_file, 'r') as f:
+            contents = f.read()
+        selection = contents.strip().casefold()
+        if selection == 'excel':
+            return ModelType.EXCEL
+        if selection == 'python':
+            return ModelType.PYTHON
+        if selection == 'combo':
+            return ModelType.COMBO
+        raise ValueError(f'got unknown manual model type {selection}')
+
     extensions = set([_get_extension(file) for file in files])
     if any(ext in extensions for ext in EXCEL_EXTENSIONS):
         has_excel = True
