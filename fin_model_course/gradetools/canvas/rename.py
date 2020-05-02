@@ -8,7 +8,8 @@ import re
 import pathlib
 import shutil
 
-FILE_PATTERN = re.compile(r'([^\W\d_]+)(_LATE)?_\d+_\d+_([\w\-_^(). ]+.[^\W\d_]+)') # e.g. johnsmith_956227_46792176_project2.xlsm
+# e.g. johnsmith_956227_46792176_project2.xlsm or johnsmith_LATE_956227_46792176_project2.xlsm
+FILE_PATTERN = re.compile(r'([^\W\d_]+)(_LATE)?_\d+_\d+_(.+)')
 
 # TODO: handle , in file name
 def rename_submissions(submissions_folder: str, out_folder: str):
