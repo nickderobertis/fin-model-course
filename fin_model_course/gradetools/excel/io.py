@@ -34,3 +34,14 @@ def _get_range(wb, cell_range: str):
         attr = 'range'
 
     return getattr(wb, attr)(cell_range)
+
+
+def close_excel_if_open():
+    import xlwings as xw
+    try:
+        app = list(xw.apps)[0]
+    except IndexError:
+        # Excel not open
+        return
+
+    app.quit()
