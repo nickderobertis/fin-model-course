@@ -183,7 +183,7 @@ def get_dcf_fcf_tv_exercise() -> LabExercise:
     ev_from_pe = tv_p_from_pe * shrout
     p_from_pe = p_from_ev(ev_from_pe)
 
-    ev_from_perp = (fcf * (1 + growth))/(wacc + growth)
+    ev_from_perp = (fcf * (1 + growth))/(wacc - growth)
     p_from_perp = p_from_ev(ev_from_perp)
 
     bullet_contents = [
