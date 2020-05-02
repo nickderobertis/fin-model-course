@@ -84,6 +84,10 @@ def _get_file_of_type_from_folder(folder: str, model_type: ModelType,
     else:
         raise ValueError('must pass Excel or Python model type')
 
+    manual_selection = _get_manual_file_selection(folder, model_type)
+    if manual_selection is not None:
+        return manual_selection
+
     selected_files = [file for file in files if _get_extension(file) in extensions]
     if len(selected_files) == 0:
         raise ValueError(f'no {model_type} file found in {folder} even though model type is {model_type}')
@@ -95,3 +99,14 @@ def _get_file_of_type_from_folder(folder: str, model_type: ModelType,
 def _get_extension(file: str) -> str:
     plib_file = pathlib.Path(file)
     return plib_file.suffix.strip('.').casefold()
+
+
+def _get_manual_file_selection(folder: str, model_type: ModelType) -> Optional[str]:
+    file_path = os.path.join(folder, f'{model_type.value} file.txt')
+    if not os.path.exists(file_path):
+        return None
+
+    # Got a manual file selection
+    with open(file_path, 'r') as f:
+        contents = f.read()
+    return contents.strip()
