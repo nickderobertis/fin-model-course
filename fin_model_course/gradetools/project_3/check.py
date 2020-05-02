@@ -14,7 +14,7 @@ def score_accuracy_of_result_dicts(results: List[Dict[str, float]], answers: Lis
         for item_key, result in case_results.items():
             tolerance = _get_tolerance(item_key, tolerances)
             answer = answer_results[item_key]
-            if abs(result - answer) < tolerance:
+            if abs(float(result) - answer) < tolerance:
                 case_valid[item_key] = True
             else:
                 case_valid[item_key] = False

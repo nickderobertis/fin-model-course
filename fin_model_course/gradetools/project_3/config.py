@@ -6,7 +6,7 @@ ANSWERS_OUTPUT_PATH = os.path.sep.join(['gradetools', 'project_3', 'answers.json
 NUM_ITERATIONS = 10000
 
 TOLERANCES = dict(
-    mv_debt=500000000,
+    mv_debt=800000000,
     mv_equity=1,
     wacc_mean=0.005,
     wacc_std=0.002,
@@ -87,7 +87,7 @@ EXCEL_OUTPUT_LOCATIONS = {
     'coe': 'B27',
     'mv_equity': 'B28',
     'pretax_cost_of_debt': 'B29',
-    'mv_debt': 'B30',
-    'aftertax_cost_of_debt': 'B31',
+    'mv_debt': 'B31',
+    'aftertax_cost_of_debt': 'B30',
     'mc_table': 'E26',
 }

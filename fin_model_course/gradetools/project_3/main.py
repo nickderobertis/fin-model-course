@@ -7,6 +7,7 @@ import pandas as pd
 
 
 # TODO: iterate through all projects in folder, open project, run, check accuracy, output report
+from gradetools.excel.io import close_excel_if_open
 from gradetools.model_type import detect_model_type_in_folder, get_model_file_paths_from_folder
 from gradetools.project_3.check import score_accuracy_of_result_dicts, load_answers
 from gradetools.project_3.config import TOLERANCES, INPUT_DICTS, ANSWERS_OUTPUT_PATH, EXCEL_INPUT_LOCATIONS, \
@@ -37,9 +38,10 @@ def run_all_models_in_folder_output_accuracy(grade_folder: str, tolerances: Dict
         finally:
             os.chdir(orig_path)
         df = score_accuracy_of_result_dicts(results, answers, tolerances=tolerances)
-        df.to_csv(out_path, index=False)
+        df.to_csv(out_path)
         seconds_elapsed = timeit.default_timer() - start_time
         print(f' took {datetime.timedelta(seconds=seconds_elapsed)}')
+        close_excel_if_open()
 
 
 def create_results_summary_from_grade_folder(grade_folder: str) -> pd.DataFrame:
@@ -48,7 +50,7 @@ def create_results_summary_from_grade_folder(grade_folder: str) -> pd.DataFrame:
     for folder in next(os.walk(grade_folder))[1]:
         folder_path = os.path.join(grade_folder, folder)
         in_path = os.path.join(folder_path, 'results.csv')
-        df = pd.read_csv(in_path)
+        df = pd.read_csv(in_path, index_col=0)
         valid_cols = [col for col in df.columns if 'Valid' in col]
         total_answers = len(valid_cols) * len(df)
         accuracy_pct = df[valid_cols].sum().sum() / total_answers
