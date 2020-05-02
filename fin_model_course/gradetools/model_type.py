@@ -5,6 +5,7 @@ from typing import List, Sequence, Optional
 
 EXCEL_EXTENSIONS = ('xlsx', 'xls', 'xlsm')
 PYTHON_EXTENSIONS = ('py', 'ipynb')
+HIDDEN_FILE_CHARACTERS = ('~', '.')
 
 
 class ModelType(Enum):
@@ -16,7 +17,7 @@ class ModelType(Enum):
 def detect_model_type_in_folder(folder: str, exclude_files: Optional[Sequence[str]] = None) -> ModelType:
     has_excel = False
     has_python = False
-    files = [file for file in next(os.walk(folder))[2]]
+    files = [file for file in next(os.walk(folder))[2] if not file[0] in HIDDEN_FILE_CHARACTERS]
     if exclude_files is not None:
         files = [file for file in files if file not in exclude_files]
 
@@ -73,7 +74,7 @@ def get_excel_file_from_model_files(model_files: List[str], model_type: ModelTyp
 
 def _get_file_of_type_from_folder(folder: str, model_type: ModelType,
                                   exclude_files: Optional[Sequence[str]] = None) -> str:
-    files = [file for file in next(os.walk(folder))[2]]
+    files = [file for file in next(os.walk(folder))[2] if not file[0] in HIDDEN_FILE_CHARACTERS]
     if exclude_files is not None:
         files = [file for file in files if file not in exclude_files]
     if model_type == model_type.EXCEL:
