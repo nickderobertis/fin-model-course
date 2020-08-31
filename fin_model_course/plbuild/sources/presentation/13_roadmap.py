@@ -31,7 +31,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Advanced Financial Modeling'
-ORDER = 15
+ORDER = 13
 
 
 def get_content():
@@ -98,13 +98,19 @@ def get_content():
                 lp.DimRevealListFrame(
                     [
                         'Here are some links with free resources to learn more about types of models',
-                        'Please note that all the examples will be using Excel only',
+                        'The following examples will be using Excel only',
                         Hyperlink('http://macabacus.com/learn', 'Macabacus'),
                         Hyperlink(
                             'https://corporatefinanceinstitute.com/resources/knowledge/modeling/',
                             'Corporate Finance Institute'
                         ),
-                        Hyperlink('https://fminstitute.com/learning/', 'Financial Modeling Institute')
+                        Hyperlink('https://fminstitute.com/learning/', 'Financial Modeling Institute'),
+                        'And I found a couple Python resources, though the coding standards are not great:',
+                        Hyperlink('http://www.financeandpython.com/Finance.html', 'Finance and Python'),
+                        Hyperlink(
+                            'https://www.datacamp.com/community/tutorials/finance-python-trading',
+                            'Build a Trading Algorithm in Python',
+                        )
                     ],
                     title='Financial Model Resources'
                 )
@@ -256,7 +262,19 @@ def get_content():
                         Hyperlink(
                             'https://docs.scipy.org/doc/scipy/reference/stats.html',
                             'More Statistical Tools in Scipy'
-                        )
+                        ),
+                        Hyperlink(
+                            'https://machinelearningmastery.com/machine-learning-in-python-step-by-step/',
+                            'Getting Started with Machine Learning in Python'
+                        ),
+                        Hyperlink(
+                            'https://machinelearningmastery.com/start-here/',
+                            'General Introduction to Machine Learning'
+                        ),
+                        Hyperlink(
+                            'datacamp.com/community/tutorials/deep-learning-python',
+                            'Deep Learning (AI) in Python using Keras'
+                        ),
                     ],
                     title='Mathematical Tools Resources'
                 )
