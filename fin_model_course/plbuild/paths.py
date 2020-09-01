@@ -28,3 +28,12 @@ DOCUMENTS_SOURCE_PATH = source_path('document')
 documents_source_path = path_func(DOCUMENTS_SOURCE_PATH)
 TEMPLATES_PATH = plbuilder_path('templates')
 templates_path_func = path_func(TEMPLATES_PATH)
+
+create_dirs = [
+    HANDOUTS_BUILD_PATH,
+    DOCUMENTS_BUILD_PATH,
+    SLIDES_BUILD_PATH,
+]
+for cd in create_dirs:
+    if not os.path.exists(cd):
+        os.makedirs(cd)
