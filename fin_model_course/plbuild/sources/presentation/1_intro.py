@@ -73,7 +73,7 @@ def get_content():
         )
     )
 
-    anaconda_link = Hyperlink('https://www.anaconda.com/distribution/#download-section')
+    anaconda_link = Hyperlink('https://www.anaconda.com/products/individual')
     mono_python = Monospace('python')
     interpreter_mono = Monospace('>>>')
 
@@ -246,20 +246,20 @@ def get_content():
                                 pl.TextSize(-1),
                                 OrderedList(
                                     [
-                                        f'Go to {anaconda_link} to download Python 3.7',
+                                        f'Go to {anaconda_link} to download Python 3.8',
                                         'Follow the steps in the installer',
                                         'You will hit "Advanced Installation Options". It is very important that you select "Add '
                                         'Anaconda to my PATH environment variable". It says it is not recommended, and will '
                                         'highlight it in red when checked, but we will need it later in the course.',
                                         'Open CMD (windows key, search cmd)',
-                                        f'Type {mono_python} and hit enter. You should see Python 3.7 and a {interpreter_mono} come up.'
+                                        f'Type {mono_python} and hit enter. You should see Python 3.8 and a {interpreter_mono} come up.'
                                     ]
                                 )
                             ],
                             title='Install Steps',
                         ),
                         AlertBlock(
-                            'Make sure you have selected Python 3.7 and not 2.7'
+                            'Make sure you have selected Python 3.8 and not 2.7'
                         )
                     ],
                     title="Let's Get Python Set Up on your System"
