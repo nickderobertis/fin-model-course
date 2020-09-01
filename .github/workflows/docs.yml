@@ -79,7 +79,7 @@ jobs:
     - name: Install dependencies
       run: |
         pipenv sync
-        sudo apt-get install pandoc -y
+        sudo apt-get install pandoc texlive texlive-luatex texlive-science texlive-latex-extra -y
     - name: Build Documentation
       run: |
         cd docsrc
