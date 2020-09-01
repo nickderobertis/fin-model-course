@@ -346,7 +346,7 @@ caught the error
                     ],
                     title='What are Types?'
                 ),
-                # TODO: add f-strings to Jupyter example
+                # TODO [$5f4e772ad2d6170007fe2fe4]: add f-strings to Jupyter example
                 lp.Frame(
                     [
                         pl.UnorderedList([
@@ -538,7 +538,7 @@ caught the error
         ),
         pl.Section(
             [
-                # TODO: add error handling to Jupyter example
+                # TODO [$5f4e772ad2d6170007fe2fe5]: add error handling to Jupyter example
                 lp.Frame(
                     [
                         pl.UnorderedList([

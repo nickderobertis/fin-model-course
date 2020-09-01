@@ -11,7 +11,7 @@ import shutil
 # e.g. johnsmith_956227_46792176_project2.xlsm or johnsmith_LATE_956227_46792176_project2.xlsm
 FILE_PATTERN = re.compile(r'([^\W\d_]+)(_LATE)?_\d+_\d+_(.+)')
 
-# TODO: handle , in file name
+# TODO [$5f4e772ad2d6170007fe2fdb]: handle , in file name
 def rename_submissions(submissions_folder: str, out_folder: str):
     for file in next(os.walk(submissions_folder))[2]:
         current_path = os.path.join(submissions_folder, file)
@@ -72,7 +72,7 @@ def _remove_dash_number_from_filename(name: str) -> str:
     base_name = path.stem
     suffix = path.suffix
 
-    # TODO: come up with a solution that will work for 2+ digit numbers
+    # TODO [$5f4e772ad2d6170007fe2fdc]: come up with a solution that will work for 2+ digit numbers
 
     if not base_name[-1].isdigit():
         # Doesn't end in number, no need to strip
