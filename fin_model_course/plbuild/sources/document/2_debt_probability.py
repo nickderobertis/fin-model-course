@@ -37,7 +37,7 @@ def get_content():
     bonus_initial_default_prob_mean = inputs['initial_default_prob'][1]
     bonus_initial_default_prob_std = 0.05
 
-    # TODO [$5f4e772ad2d6170007fe2fe3]: update output values
+    # TODO [#11]: update output values
     outputs = dict(
         interest_rate=('$r_{interest}$', 0.1),
         default_prob_t=('$p_t^{default}$', 0),

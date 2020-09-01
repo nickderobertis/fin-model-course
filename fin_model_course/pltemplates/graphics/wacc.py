@@ -30,10 +30,10 @@ def get_wacc_graphics():
         seventy_five_percent_equity_graphic
     ]
 
-# TODO [$5f4e772ad2d6170007fe2fe7]: this whole thing is a mess. Tried to make one reusable class for creating this graphic, but was having issues
-# TODO [$5f4e772ad2d6170007fe2fe8]: actually getting it to work. It seems the graphics sizes are not working as expected. Therefore I made a
-# TODO [$5f4e772ad2d6170007fe2fe9]: separate class for each version of the graphic, with some values hard-coded, and these classes are not
-# TODO [$5f4e772ad2d6170007fe2fea]: reusable at all.
+# TODO [#15]: this whole thing is a mess. Tried to make one reusable class for creating this graphic, but was having issues
+# TODO [#16]: actually getting it to work. It seems the graphics sizes are not working as expected. Therefore I made a
+# TODO [#17]: separate class for each version of the graphic, with some values hard-coded, and these classes are not
+# TODO [#18]: reusable at all.
 
 class EquityDebtWACCGraphicForSeventyFivePercentEquity(pl.Template):
 

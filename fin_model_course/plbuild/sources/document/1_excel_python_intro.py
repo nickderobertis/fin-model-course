@@ -246,7 +246,7 @@ def get_content():
                     f'{pl.Equation(str_eq="r")}: {interest:.0%}',
                 ]),
                 'You should get the following result:',
-                # TODO [$5f4e772ad2d6170007fe2fe2]: replace project 1 result using notebook executor
+                # TODO [#10]: replace project 1 result using notebook executor
                 """
                 Cash Flows:
 

@@ -365,7 +365,7 @@ def get_content():
                                             ['Original model is now an old version',
                                              'Original model can still be used normally'],
                                         ]),
-                                        # TODO [$5f4e772ad2d6170007fe2fe6]: each row should come one per slide, but need to allow overlays in lt items
+                                        # TODO [#14]: each row should come one per slide, but need to allow overlays in lt items
                                         lt.MidRule(),
                                         lt.ValuesTable.from_list_of_lists([
                                             ['Model runs exactly as before',

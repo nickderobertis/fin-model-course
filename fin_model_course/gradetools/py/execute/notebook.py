@@ -44,5 +44,5 @@ def execute_notebook_render_html(notebook_path: str,  parameters: dict, out_note
 
     html_exporter = HTMLExporter()
     (body, resources) = html_exporter.from_notebook_node(nb_result)
-    # TODO [$5f4e772ad2d6170007fe2fe1]: what to do with resources? maybe HTML(body, metadata=resources)
+    # TODO [#9]: what to do with resources? maybe HTML(body, metadata=resources)
     return HTML(body)
