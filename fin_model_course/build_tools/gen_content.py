@@ -19,6 +19,11 @@ CONTENT_ROOTS = [
 ]
 
 DOCUMENTS_OUT_PATH = pathlib.Path('Documents')
+HANDOUTS_OUT_PATH = pathlib.Path('Handouts')
+OUT_PATHS = [
+    DOCUMENTS_OUT_PATH,
+    HANDOUTS_OUT_PATH,
+]
 DOCUMENTS_MOVE_TO = PROJECT_ROOT / 'docsrc' / 'source' / '_static' / 'generated' / 'pdfs'
 
 
@@ -39,10 +44,11 @@ def _build_pdfs():
 def _move_pdfs():
     if not os.path.exists(DOCUMENTS_MOVE_TO):
         os.makedirs(DOCUMENTS_MOVE_TO)
-    pdfs = [file for file in next(os.walk(DOCUMENTS_OUT_PATH))[2] if file.endswith('pdf')]
-    for file in pdfs:
-        file_path = DOCUMENTS_OUT_PATH / file
-        shutil.copy(file_path, DOCUMENTS_MOVE_TO)
+    for out_path in OUT_PATHS:
+        pdfs = [file for file in next(os.walk(out_path))[2] if file.endswith('pdf')]
+        for file in pdfs:
+            file_path = out_path / file
+            shutil.copy(file_path, DOCUMENTS_MOVE_TO)
 
 
 if __name__ == '__main__':
