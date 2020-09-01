@@ -52,9 +52,18 @@ class Lecture:
 
 
 @dataclass
+class LectureResource:
+    name: str
+    generated_url: Optional[str] = None
+    external_url: Optional[str] = None
+
+
+@dataclass
 class LectureGroup:
     title: str
+    description: str
     lectures: Sequence[Lecture]
+    resources: Sequence[LectureResource] = tuple()
 
     def __getitem__(self, item):
         return self.lectures[item]
