@@ -36,28 +36,6 @@ jobs:
     - name: Install dependencies
       run: |
         pipenv sync
-    - name: Lint with flake8
-      run: |
-        pip install flake8
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        pipenv run pytest --cov=./ --cov-report=xml
-    - name: Upload coverage to Codecov
-      if: github.ref == 'refs/heads/master'
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./coverage.xml
-        flags: unittests
-        name: codecov-pytest
-        yml: ./codecov.yml
-    - name: Static Typing Checks with mypy
-      run: |
-        pipenv run mypy $(python name.py)
 
   deploy:
     needs: test
