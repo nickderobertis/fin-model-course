@@ -1,4 +1,4 @@
-This is my gallery
+Python Examples
 ==================
 
-Below is a gallery of examples
+Soon I will be adding Python examples here.
