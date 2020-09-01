@@ -43,6 +43,9 @@ class LectureNotes:
 
         return top_model(final_items, title=self.title)
 
+    def to_rst(self) -> str:
+        return '\n' + '\n'.join([f'- {note}' for note in self]) + '\n'
+
 
 @dataclass
 class Lecture:
@@ -50,12 +53,42 @@ class Lecture:
     notes: LectureNotes
     youtube_id: Optional[str] = None
 
+    def to_rst(self) -> str:
+        out_str = f"""
+{self.title}
+============================================================================================================
+        """
+        if self.youtube_id is not None:
+            out_str += f"""
+.. youtube:: {self.youtube_id}
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+"""
+        out_str += self.notes.to_rst()
+        return out_str
+
 
 @dataclass
 class LectureResource:
     name: str
     generated_url: Optional[str] = None
     external_url: Optional[str] = None
+
+    @property
+    def url(self) -> Optional[str]:
+        if self.generated_url is not None:
+            return f'_static/generated/{self.generated_url}'
+        if self.external_url is not None:
+            return self.external_url
+        return None
+
+    def to_rst(self) -> str:
+        return f"""
+- :download:`{self.name} <{self.url}>`
+        """
 
 
 @dataclass
@@ -68,7 +101,29 @@ class LectureGroup:
     def __getitem__(self, item):
         return self.lectures[item]
 
+    @property
+    def stub(self) -> str:
+        lower = self.title.casefold()
+        parts = lower.split()
+        return '-'.join(parts)
+
     def to_models(
             self, top_model: Type[T] = pl.Section, sub_model: Type = pl.UnorderedList
     ) -> T:
         return [mod.notes.to_models(top_model=top_model, sub_model=sub_model) for mod in self]
+
+    def to_rst(self) -> str:
+        out_str = f"""
+{self.title}
+*************************************************************************************************************
+
+{self.description}
+        """
+        if self.resources:
+            out_str += f"""
+Resources
+=================
+            """ + '\n' + '\n'.join([res.to_rst() for res in self.resources]) + '\n'
+        for lecture in self:
+            out_str += lecture.to_rst()
+        return out_str

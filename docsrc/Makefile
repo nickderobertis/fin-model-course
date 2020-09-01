@@ -25,12 +25,14 @@ cleandoc:
 	@rm -rf ../_examples
 	@rm -rf ./source/binder/requirements.txt
 	@rm -rf ./source/_static/generated
+	@rm -rf ./source/lectures
 
 github:
 	@make cleandoc
 	@./binder_requirements.sh
 	@./nb-examples.sh
 	@./gen-pdfs.sh
+	@./gen-lectures.sh
 	@make doctest
 	@make autodoc
 	@make html
