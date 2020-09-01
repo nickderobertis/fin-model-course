@@ -23,12 +23,12 @@ import datetime
 import warnings
 import sphinx_rtd_theme
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '..')))
-from docsrc.directives.youtube import Youtube
 
 sys.path.insert(0, os.path.abspath('../..'))
 import conf
 import version as vs
 from docsrc.directives.auto_summary import AutoSummaryNameOnly
+from docsrc.directives.youtube import Youtube
 
 # -- General configuration ------------------------------------------------
 
