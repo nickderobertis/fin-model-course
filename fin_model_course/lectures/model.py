@@ -48,7 +48,7 @@ class LectureNotes:
 class Lecture:
     title: str
     notes: LectureNotes
-    video_url: Optional[str] = None
+    youtube_id: Optional[str] = None
 
 
 @dataclass

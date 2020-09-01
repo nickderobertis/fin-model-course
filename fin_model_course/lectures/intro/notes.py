@@ -3,7 +3,7 @@ from lectures.model import LectureNotes, Lecture
 
 def get_about_me_lecture() -> Lecture:
     title = 'About Me'
-    video_url = 'https://www.youtube.com/watch?v=xL0Wo14Hqbk'
+    youtube_id = 'xL0Wo14Hqbk'
     notes = LectureNotes([
         'I am currently a Finance Ph.D. student at UF focusing on market intervention, alternative assets, '
         'and behavioral finance',
@@ -16,12 +16,12 @@ def get_about_me_lecture() -> Lecture:
         'I am a strong supporter of open-source software. I develop packages as part of my research and '
         'also as part of this class.'
     ], title=title)
-    return Lecture(title, notes, video_url=video_url)
+    return Lecture(title, notes, youtube_id=youtube_id)
 
 
 def get_syllabus_lecture() -> Lecture:
     title = 'Syllabus'
-    video_url = 'https://www.youtube.com/watch?v=k5KxoG-Oi-A'
+    youtube_id = 'k5KxoG-Oi-A'
     notes = LectureNotes([
         "Get the textbook if you're someone who learns well from reading, and doesn't have a "
         "lot of Excel experience. Otherwise it probably won't be very helpful",
@@ -42,12 +42,12 @@ def get_syllabus_lecture() -> Lecture:
         "models rather than struggling with programming basics.",
         "Please review the syllabus document for the grading structure",
     ], title=title)
-    return Lecture(title, notes, video_url=video_url)
+    return Lecture(title, notes, youtube_id=youtube_id)
 
 
 def get_what_is_financial_modeling_lecture() -> Lecture:
     title = 'What is a Financial Model?'
-    video_url = 'https://www.youtube.com/watch?v=oF5M2JjF1ZQ'
+    youtube_id = 'oF5M2JjF1ZQ'
     notes = LectureNotes([
         'A model is simply a repeatable process which converts inputs to outputs',
         'The process might be as simple as a single calculation or as complicated as trying to value a '
@@ -56,12 +56,12 @@ def get_what_is_financial_modeling_lecture() -> Lecture:
         'A model is a logical and mathematical construct, it has nothing to do with Excel or Python. These '
         'are just tools we can use to implement the model',
     ], title=title)
-    return Lecture(title, notes, video_url=video_url)
+    return Lecture(title, notes, youtube_id=youtube_id)
 
 
 def get_tools_and_skills_lecture() -> Lecture:
     title = 'Tools and Skills'
-    video_url = 'https://www.youtube.com/watch?v=D-G7DekFIvg'
+    youtube_id = 'D-G7DekFIvg'
     notes = LectureNotes([
         'We will implement models in both Excel and Python in this class',
         'It is necessary to learn programming to build real-world custom models',
@@ -76,12 +76,12 @@ def get_tools_and_skills_lecture() -> Lecture:
         "and people are used to dealing with these problems"
 
     ], title=title)
-    return Lecture(title, notes, video_url=video_url)
+    return Lecture(title, notes, youtube_id=youtube_id)
 
 
 def get_install_python_lecture() -> Lecture:
     title = 'Installing Python'
-    video_url = 'https://www.youtube.com/watch?v=Y3xQrT0oSO0'
+    youtube_id = 'Y3xQrT0oSO0'
     notes = LectureNotes([
         'Watch this process to learn how to install Python',
         'You will only need to complete this once on a given computer',
@@ -90,13 +90,13 @@ def get_install_python_lecture() -> Lecture:
         "may have to reinstall Python later in the course",
         'Be sure to test your installation is working',
     ], title=title)
-    return Lecture(title, notes, video_url=video_url)
+    return Lecture(title, notes, youtube_id=youtube_id)
 
 
 def get_lecture() -> Lecture:
     title = ''
-    video_url = ''
+    youtube_id = ''
     notes = LectureNotes([
 
     ], title=title)
-    return Lecture(title, notes, video_url=video_url)
+    return Lecture(title, notes, youtube_id=youtube_id)
