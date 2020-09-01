@@ -80,7 +80,7 @@ class LectureResource:
     @property
     def url(self) -> Optional[str]:
         if self.generated_url is not None:
-            return f'_static/generated/{self.generated_url}'
+            return f'/_static/generated/{self.generated_url}'
         if self.external_url is not None:
             return self.external_url
         return None
