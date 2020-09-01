@@ -23,6 +23,7 @@ import datetime
 import warnings
 import sphinx_rtd_theme
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '..')))
+from docsrc.directives.youtube import Youtube
 
 sys.path.insert(0, os.path.abspath('../..'))
 import conf
@@ -244,4 +245,5 @@ def skip(app, what, name, obj, would_skip, options):
 def setup(app):
     app.connect("autodoc-skip-member", skip)
     app.add_directive('autosummarynameonly', AutoSummaryNameOnly)
+    app.add_directive('youtube', Youtube)
     app.add_css_file('custom.css')
