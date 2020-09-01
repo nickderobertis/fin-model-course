@@ -1,3 +1,4 @@
+import pathlib
 from typing import Callable
 import functools
 import os
@@ -7,7 +8,7 @@ def path_func(root_path: str) -> Callable:
     partial = functools.partial(os.path.join, root_path)
     return partial
 
-PLBUILDER_PATH = 'plbuild'
+PLBUILDER_PATH = str(pathlib.Path(__file__).parent)
 plbuilder_path = path_func(PLBUILDER_PATH)
 ASSETS_PATH = plbuilder_path('assets')
 assets_path = path_func(ASSETS_PATH)

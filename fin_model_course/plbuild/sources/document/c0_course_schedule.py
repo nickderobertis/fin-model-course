@@ -17,7 +17,7 @@ DOCUMENT_CLASS = pl.Document
 OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
-TITLE = ''
+TITLE = 'Course Schedule'
 ORDER = None
 
 

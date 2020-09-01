@@ -198,7 +198,7 @@ def get_content():
                     lt.Tabular(
                         [
 
-                            lt.MultiColumn('Grading Breakdown', span=2),
+                            lt.MultiColumnLabel('Grading Breakdown', span=2),
                             lt.TopRule(),
                             lt.ValuesTable.from_list_of_lists(
                                 [
