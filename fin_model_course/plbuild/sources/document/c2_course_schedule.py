@@ -31,104 +31,59 @@ class ClassContent:
 
 
 def get_content():
-
-    covered_in_each_class_tuples = [
-        (
-            'Introduction - What is this Class?',
+    weeks = [
+        ClassContent(  # week 1
+            'Introduction to the Class, Modeling, Python, and Excel',
+            [1, 2],
+        ),
+        ClassContent(  # week 2
+            'Building a Full Excel Model and Python Basics',
+            [3, 4],
+        ),
+        ClassContent(  # week 3
+            'Python Basics, Continued',
+            [4],
+            [1],
+        ),
+        ClassContent(  # week 4
+            'Wrapping up Python Basics, and Building a Full Python Model',
+            [4, 5]
+        ),
+        ClassContent(  # week 5
+            'Building a Full Python Model and Visualization',
+            [5, 6]
+        ),
+        ClassContent(  # week 6
+            'Visualization and Sensitivity Analysis',
+            [6, 7],
+            None,
             [1]
         ),
-        (
-            'Intro to Modeling, Python, and Excel',
+        ClassContent(  # week 7
+            'Sensitivity Analysis',
+            [7]
+        ),
+        ClassContent(  # week 8
+            'Probability Modeling',
+            [8],
             [2]
         ),
-        (
-            'Bulding a Full Excel Model',
-            [3]
+        ClassContent(  # week 9
+            'Probability Modeling, continued',
+            [8]
         ),
-        (
-            'Bulding a Basic Python Model and Python Basics, pt. 1',
-            [3, 4]
+        ClassContent(  # week 10
+            'Combining Excel and Python and Monte Carlo Simulation',
+            [9, 10]
         ),
-        (
-            'Python Basics, pt. 2',
-            [4]
-        ),
-        (
-            'Python Basics, pt. 3',
-            [4]
-        ),
-        (
-            'Python Basics, pt. 4',
-            [4],
-            [1]
-        ),
-        (
-            'Bulding a Full Python Model, pt. 1',
-            [5]
-        ),
-        (
-            'Bulding a Full Python Model, pt. 2',
-            [5]
-        ),  # 2/4/2020
-        (
-            'Visualization, pt. 1',
-            [6]
-        ),  # 2/6/2020
-        (
-            'Visualization, pt. 2',
-            [6],
-            None,
-            [1]
-        ),  # 2/11/2020
-        (
-            'Visualization, pt. 3 and Sensitivity Analysis, pt. 1',
-            [6, 7],
-        ),  # 2/13/2020
-        (
-            'Sensitivity Analysis, pt. 2',
-            [7],
-        ),  # 2/18/2020
-        (
-            'Sensitivity Analysis, pt. 3',
-            [7],
-        ),  # 2/20/2020
-        (
-            'Probability Modeling, pt. 1',
-            [8],
-        ),  # 2/25/2020
-        (
-            'Probability Modeling, pt. 2',
-            [8],
-            [2],
-        ),  # 2/27/2020
-        (
-            'Probability Modeling, pt. 3',
-            [8],
-        ),  # 3/10/2020
-        (
-            'Probability Modeling, pt. 4',
-            [8],
-        ),  # 3/12/2020
-        (
-            'Combining Excel and Python, pt. 1',
-            [9],
-        ),  # 3/17/2020
-        (
-            'Combining Excel and Python, pt. 2 and Monte Carlo Simulation, pt. 1',
-            [9, 10],
-        ),  # 3/19/2020
-        (
-            'Monte Carlo Simulation, pt. 2',
+        ClassContent(  # week 11
+            'Monte Carlo Simulation',
             [10],
             None,
-            [2],
-        ),  # 3/24/2020
-        (
-            'Monte Carlo Simulation, pt. 3',
-            [10],
-        ),  # 3/26/2020
-        # NOTE: too far behind at this point, picking up the pace, need to speed up earlier
+            [2]
+        )
     ]
+
 
     return [
 
