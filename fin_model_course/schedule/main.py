@@ -1,4 +1,9 @@
+import datetime
+
 from schedule.models import CourseSchedule, ClassContent, ScheduleProject, ScheduleLecture
+
+COURSE_BEGIN_DATE = datetime.date(2020, 8, 31)
+COURSE_END_DATE = datetime.date(2020, 12, 17)
 
 PROJECT_1_NAME = 'Excel and Python TVM'
 PROJECT_2_NAME = 'Probabilistic Loan Pricing'
@@ -104,7 +109,12 @@ def get_course_schedule() -> CourseSchedule:
             summary='Advanced Financial Modeling Roadmap',
             lectures=[lecture_13],
         ),
+        ClassContent(  # finals week
+            summary='Final Project Time',
+            lectures=[],
+            projects_due=[project_4]
+        )
     ]
 
-    schedule = CourseSchedule(weeks=weeks)
+    schedule = CourseSchedule(weeks=weeks, start_date=COURSE_BEGIN_DATE, end_date=COURSE_END_DATE)
     return schedule
