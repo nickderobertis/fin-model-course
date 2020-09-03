@@ -123,6 +123,16 @@ jobs:
           pipenv run make github
           cd ..
           echo "" > docs/.nojekyll
+      - name: Commit generated content metadata
+        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
+        uses: EndBug/add-and-commit@v4
+        with:
+          add: 'fin_model_course/build_tools/generated-content-metadata.json'
+          author_name: Nick DeRobertis
+          author_email: whoopnip@gmail.com
+          message: 'Update metadata for changes in generated content'
+        env:
+          GITHUB_TOKEN: ${{ secrets.gh_token }}
       - name: Deploy Documentation
         if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
         continue-on-error: true

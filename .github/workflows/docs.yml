@@ -64,6 +64,15 @@ jobs:
         pipenv run make github
         cd ..
         echo "" > docs/.nojekyll
+    - name: Commit generated content metadata
+      uses: EndBug/add-and-commit@v4
+      with:
+        add: 'fin_model_course/build_tools/generated-content-metadata.json'
+        author_name: Nick DeRobertis
+        author_email: whoopnip@gmail.com
+        message: 'Update metadata for changes in generated content'
+      env:
+        GITHUB_TOKEN: ${{ secrets.gh_token }}
     - name: Deploy Documentation
       uses: peaceiris/actions-gh-pages@v2.5.0
       env:
