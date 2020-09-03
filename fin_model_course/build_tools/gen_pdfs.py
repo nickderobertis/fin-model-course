@@ -32,7 +32,7 @@ def build_pdfs():
 def _build_pdfs():
     for root in CONTENT_ROOTS:
         for file in next(os.walk(root))[2]:
-            if file in ('__init__.py', 'professional_cv.py'):
+            if file in ('__init__.py', 'academic_cv.py', 'professional_cv.py'):
                 continue
             file_path = (root / file).resolve()
             build_by_file_path(file_path)
@@ -44,8 +44,18 @@ def _move_pdfs():
     for out_path in OUT_PATHS:
         pdfs = [file for file in next(os.walk(out_path))[2] if file.endswith('pdf')]
         for file in pdfs:
+            if 'conflicted copy' in file:
+                # skip Dropbox conflicts
+                continue
             file_path = out_path / file
+            if file == 'Financial Modeling Syllabus.pdf':
+                # Generated from derobertis_cv, need to add naming convention
+                new_file = f'C1 {file}'
+                new_file_path = out_path / new_file
+                shutil.move(file_path, new_file_path)
+                file_path = new_file_path
             shutil.copy(file_path, GENERATED_PDFS_OUT_PATH)
+
 
 
 if __name__ == '__main__':
