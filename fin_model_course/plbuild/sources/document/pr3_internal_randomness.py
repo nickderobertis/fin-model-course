@@ -15,7 +15,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Internal Randomness Problems'
-ORDER = 'P3'
+ORDER = 'PR3'
 
 
 def get_content():

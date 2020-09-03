@@ -15,7 +15,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Monte Carlo Simulation Problems'
-ORDER = 'P4'
+ORDER = 'PR5'
 
 
 def get_content():

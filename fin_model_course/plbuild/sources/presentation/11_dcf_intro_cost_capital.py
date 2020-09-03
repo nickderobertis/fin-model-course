@@ -40,7 +40,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Introduction to DCF Valuation and Cost of Capital Estimation'
-ORDER = 11
+ORDER = 'S11'
 
 
 def get_content():

@@ -15,7 +15,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Probabilistic Loan Pricing'
-ORDER = 2
+ORDER = 'PJ2'
 
 
 def get_content():

@@ -46,7 +46,7 @@ from pltemplates.blocks import LabBlock
 TITLE = 'Financial Modeling with Python and Excel'
 SHORT_TITLE = 'Intro'
 SUBTITLE = 'An Introduction'
-ORDER = 1
+ORDER = 'S1'
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_AUTHOR = 'DeRobertis'

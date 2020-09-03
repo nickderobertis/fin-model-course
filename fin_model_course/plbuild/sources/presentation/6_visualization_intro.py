@@ -34,7 +34,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Understanding Complex Results'
-ORDER = 6
+ORDER = 'S6'
 
 
 def get_content():

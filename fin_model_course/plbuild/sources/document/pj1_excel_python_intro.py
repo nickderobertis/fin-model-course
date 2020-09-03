@@ -20,7 +20,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Project 1 - Excel and Python TVM'
-ORDER = 1
+ORDER = 'PJ1'
 
 
 def get_content():

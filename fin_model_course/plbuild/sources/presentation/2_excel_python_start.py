@@ -44,7 +44,7 @@ from pltemplates.frames.in_class_example import InClassExampleFrame
 TITLE = 'Getting Started with Python and Excel'
 SHORT_TITLE = 'Getting Started'
 SUBTITLE = 'Building a Basic Model in Both Excel and Python'
-ORDER = 2
+ORDER = 'S2'
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_AUTHOR = 'DeRobertis'

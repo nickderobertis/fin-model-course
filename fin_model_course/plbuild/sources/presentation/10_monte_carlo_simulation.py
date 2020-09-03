@@ -36,7 +36,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Monte Carlo Simulation'
-ORDER = 10
+ORDER = 'S10'
 
 
 def get_content():

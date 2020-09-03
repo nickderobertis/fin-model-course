@@ -17,7 +17,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Python Retirement Savings Rate Problem'
-ORDER = 'P1'
+ORDER = 'PR1'
 
 
 def get_content():

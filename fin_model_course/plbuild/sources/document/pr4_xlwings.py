@@ -15,7 +15,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'xlwings Problems'
-ORDER = 'P3'
+ORDER = 'PR4'
 
 
 def get_content():

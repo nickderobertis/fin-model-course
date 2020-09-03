@@ -24,7 +24,7 @@ from pltemplates.hyperlink import Hyperlink
 TITLE = 'The Depth of a Financial Model, Continued'
 SHORT_TITLE = 'TVM Deep Dive Python'
 SUBTITLE = 'Extending a Simple Retirement Model in Python'
-ORDER = 5
+ORDER = 'S5'
 
 
 AUTHORS = ['Nick DeRobertis']

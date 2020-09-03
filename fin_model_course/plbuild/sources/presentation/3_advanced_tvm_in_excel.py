@@ -21,7 +21,7 @@ from pltemplates.frames.tvm.salary_eq import salary_block_content
 TITLE = 'The Depth of a Financial Model'
 SHORT_TITLE = 'TVM Deep Dive Excel'
 SUBTITLE = 'Extending a Simple Retirement Model in Excel'
-ORDER = 3
+ORDER = 'S3'
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_AUTHOR = 'DeRobertis'

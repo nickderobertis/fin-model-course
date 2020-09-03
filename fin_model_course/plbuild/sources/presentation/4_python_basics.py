@@ -22,7 +22,7 @@ from pltemplates.blocks import LabBlock
 TITLE = 'Going Beyond an Initial Python Script'
 SHORT_TITLE = 'Python Basics'
 SUBTITLE = 'How to Structure Python Code and Common Operations'
-ORDER = 4
+ORDER = 'S4'
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_AUTHOR = 'DeRobertis'

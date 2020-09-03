@@ -39,7 +39,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Combining Excel and Python'
-ORDER = 9
+ORDER = 'S9'
 
 
 def get_content():

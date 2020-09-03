@@ -20,7 +20,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Monte Carlo Cost of Capital'
-ORDER = 3
+ORDER = 'PJ3'
 
 
 def get_content():

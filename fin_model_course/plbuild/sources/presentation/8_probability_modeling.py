@@ -33,7 +33,7 @@ DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 TITLE = 'Probabilistic Modeling'
-ORDER = 8
+ORDER = 'S8'
 
 
 def get_content():

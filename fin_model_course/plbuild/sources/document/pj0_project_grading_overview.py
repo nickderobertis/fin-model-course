@@ -16,7 +16,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Project Grading Overview'
-ORDER = 0
+ORDER = 'PJ0'
 
 
 def get_content():

@@ -18,7 +18,7 @@ OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
 TITLE = 'Full DCF Valuation'
-ORDER = 4
+ORDER = 'PJ4'
 
 
 def get_content():
