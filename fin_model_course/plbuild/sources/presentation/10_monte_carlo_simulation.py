@@ -20,7 +20,7 @@ from pltemplates.blocks import LabBlock, InClassExampleBlock
 from pltemplates.eq_with_variable_defs import EquationWithVariableDefinitions
 from pltemplates.graphics.explore_params import explore_parameters_graphic
 from pltemplates.hyperlink import Hyperlink
-
+from schedule.main import LECTURE_10_NAME
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_TITLE = 'MC Sim'
@@ -35,7 +35,7 @@ SHORT_INSTITUTION = 'UF'
 DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
-TITLE = 'Monte Carlo Simulation'
+TITLE = LECTURE_10_NAME
 ORDER = 'S10'
 
 

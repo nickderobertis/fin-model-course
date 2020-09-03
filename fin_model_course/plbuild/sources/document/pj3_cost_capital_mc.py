@@ -12,6 +12,7 @@ import plbuild
 from gradetools.project_3.config import ANSWERS_OUTPUT_PATH
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
+from schedule.main import PROJECT_3_NAME
 
 AUTHORS = ['Nick DeRobertis']
 
@@ -19,7 +20,7 @@ DOCUMENT_CLASS = pl.Document
 OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
-TITLE = 'Monte Carlo Cost of Capital'
+TITLE = PROJECT_3_NAME
 ORDER = 'PJ3'
 
 

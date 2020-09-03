@@ -19,8 +19,9 @@ from pltemplates.frames.model_flowchart import (
 )
 from pltemplates.blocks import LabBlock
 from pltemplates.frames.tvm.salary_eq import salary_block_content
+from schedule.main import LECTURE_3_NAME
 
-TITLE = 'The Depth of a Financial Model'
+TITLE = LECTURE_3_NAME
 SHORT_TITLE = 'TVM Deep Dive Excel'
 SUBTITLE = 'Extending a Simple Retirement Model in Excel'
 ORDER = 'S3'

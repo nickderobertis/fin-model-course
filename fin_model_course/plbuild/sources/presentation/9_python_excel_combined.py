@@ -22,6 +22,7 @@ from pltemplates.exercises.read_write_excel_pandas import (
 )
 from pltemplates.exercises.intro_udf import get_lab_exercise as get_intro_udf_exercise
 from pltemplates.exercises.advanced_udf import get_lab_exercise as get_advanced_udf_exercise
+from schedule.main import LECTURE_9_NAME
 
 xlwings_mono = pl.Monospace('xlwings')
 
@@ -38,7 +39,7 @@ SHORT_INSTITUTION = 'UF'
 DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
-TITLE = 'Combining Excel and Python'
+TITLE = LECTURE_9_NAME
 ORDER = 'S9'
 
 

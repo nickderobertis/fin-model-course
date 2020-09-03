@@ -3,12 +3,25 @@ from typing import Sequence, Optional
 from pydantic import BaseModel
 
 
+class ScheduleProject(BaseModel):
+    name: str
+    index: int
+
+    @property
+    def display_name(self) -> str:
+        return f'{self.index}: {self.name}'
+
+
+class ScheduleLecture(ScheduleProject):
+    pass
+
+
 class ClassContent(BaseModel):
     summary: str
-    lectures: Sequence[int]
+    lectures: Sequence[ScheduleLecture]
 
-    assigned_projects: Optional[Sequence[int]] = None
-    projects_due: Optional[Sequence[int]] = None
+    assigned_projects: Optional[Sequence[ScheduleProject]] = None
+    projects_due: Optional[Sequence[ScheduleProject]] = None
 
 
 class CourseSchedule(BaseModel):

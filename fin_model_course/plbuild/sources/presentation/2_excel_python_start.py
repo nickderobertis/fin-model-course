@@ -42,8 +42,9 @@ from pltemplates.frames.model_flowchart import (
 from pltemplates.blocks import LabBlock
 
 from pltemplates.frames.in_class_example import InClassExampleFrame
+from schedule.main import LECTURE_2_NAME
 
-TITLE = 'Getting Started with Python and Excel'
+TITLE = LECTURE_2_NAME
 SHORT_TITLE = 'Getting Started'
 SUBTITLE = 'Building a Basic Model in Both Excel and Python'
 ORDER = 'S2'

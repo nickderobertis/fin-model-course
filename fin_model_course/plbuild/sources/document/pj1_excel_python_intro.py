@@ -12,6 +12,7 @@ from pltemplates.hyperlink import Hyperlink
 from models.project_1 import PhoneManufacturingModel, ELASTICITY_CONSTANT_CASES
 from pyexlatex.texgen.packages.default import default_packages
 
+from schedule.main import PROJECT_1_NAME
 
 AUTHORS = ['Nick DeRobertis']
 
@@ -19,7 +20,7 @@ DOCUMENT_CLASS = pl.Document
 OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
-TITLE = 'Project 1 - Excel and Python TVM'
+TITLE = PROJECT_1_NAME
 ORDER = 'PJ1'
 
 

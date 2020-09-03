@@ -19,6 +19,7 @@ from pltemplates.frames.model_flowchart import (
 from pltemplates.blocks import LabBlock
 from pltemplates.frames.tvm.project_1_lab import get_project_1_lab_frame
 from models.retirement import RetirementModel
+from schedule.main import LECTURE_6_NAME
 
 pd_mono = pl.Monospace('pandas')
 
@@ -35,7 +36,7 @@ SHORT_INSTITUTION = 'UF'
 DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
-TITLE = 'Understanding Complex Results'
+TITLE = LECTURE_6_NAME
 ORDER = 'S6'
 
 

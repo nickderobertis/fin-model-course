@@ -20,6 +20,7 @@ from pltemplates.frames.model_flowchart import (
 from pltemplates.blocks import LabBlock
 from pltemplates.graphics.explore_params import explore_parameters_graphic
 from pltemplates.frames.sensitivity_example import get_sensitivity_analysis_example_frames
+from schedule.main import LECTURE_7_NAME
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_TITLE = 'Sensitivity Analysis'
@@ -34,7 +35,7 @@ SHORT_INSTITUTION = 'UF'
 DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
-TITLE = 'Exploring the Parameter Space'
+TITLE = LECTURE_7_NAME
 ORDER = 'S7'
 
 

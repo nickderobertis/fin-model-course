@@ -44,8 +44,9 @@ from pltemplates.frames.model_flowchart import (
     in_out_style
 )
 from pltemplates.blocks import LabBlock
+from schedule.main import LECTURE_1_NAME
 
-TITLE = 'Financial Modeling with Python and Excel'
+TITLE = LECTURE_1_NAME
 SHORT_TITLE = 'Intro'
 SUBTITLE = 'An Introduction'
 ORDER = 'S1'

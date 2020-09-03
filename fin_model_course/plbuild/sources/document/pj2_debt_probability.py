@@ -6,7 +6,7 @@ import pyexlatex.layouts as ll
 
 import plbuild
 from plbuild.paths import images_path
-
+from schedule.main import PROJECT_2_NAME
 
 AUTHORS = ['Nick DeRobertis']
 
@@ -14,7 +14,7 @@ DOCUMENT_CLASS = pl.Document
 OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
-TITLE = 'Probabilistic Loan Pricing'
+TITLE = PROJECT_2_NAME
 ORDER = 'PJ2'
 
 

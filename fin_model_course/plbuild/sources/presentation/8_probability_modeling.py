@@ -20,6 +20,7 @@ from pltemplates.blocks import LabBlock
 from pltemplates.eq_with_variable_defs import EquationWithVariableDefinitions
 from pltemplates.graphics.internal_randomness import internal_randomness_graphic
 from pltemplates.hyperlink import Hyperlink
+from schedule.main import LECTURE_8_NAME
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_TITLE = 'Probability'
@@ -34,7 +35,7 @@ SHORT_INSTITUTION = 'UF'
 DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
-TITLE = 'Probabilistic Modeling'
+TITLE = LECTURE_8_NAME
 ORDER = 'S8'
 
 

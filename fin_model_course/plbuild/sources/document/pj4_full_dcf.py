@@ -9,7 +9,7 @@ from jinja2 import FileSystemLoader
 
 import plbuild
 from plbuild.paths import images_path
-
+from schedule.main import PROJECT_4_NAME
 
 AUTHORS = ['Nick DeRobertis']
 
@@ -17,7 +17,7 @@ DOCUMENT_CLASS = pl.Document
 OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
-TITLE = 'Full DCF Valuation'
+TITLE = PROJECT_4_NAME
 ORDER = 'PJ4'
 
 

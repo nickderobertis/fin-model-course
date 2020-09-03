@@ -26,7 +26,7 @@ from pltemplates.eq_with_variable_defs import EquationWithVariableDefinitions
 from pltemplates.graphics.dcf import get_dcf_graphic
 from pltemplates.graphics.wacc import get_wacc_graphics
 from pltemplates.hyperlink import Hyperlink
-
+from schedule.main import LECTURE_11_NAME
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_TITLE = 'Intro DCF and Cost of Capital'
@@ -41,7 +41,7 @@ SHORT_INSTITUTION = 'UF'
 DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
-TITLE = 'Introduction to DCF Valuation and Cost of Capital Estimation'
+TITLE = LECTURE_11_NAME
 ORDER = 'S11'
 
 

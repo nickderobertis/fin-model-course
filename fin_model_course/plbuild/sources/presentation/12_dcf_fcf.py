@@ -19,6 +19,7 @@ from pltemplates.hyperlink import Hyperlink
 from pltemplates.frames.single_block import SingleBlockDimRevealListFrame
 from pltemplates.exercises.dcf_fcf import get_dcf_fcf_calculation_exercise, get_dcf_fcf_simple_forecast_exercise, \
     get_dcf_fcf_complex_forecast_exercise, get_dcf_fcf_tv_exercise
+from schedule.main import LECTURE_12_NAME
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_TITLE = 'FCF'
@@ -33,7 +34,7 @@ SHORT_INSTITUTION = 'UF'
 DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
-TITLE = 'Free Cash Flow Estimation and Forecasting'
+TITLE = LECTURE_12_NAME
 ORDER = 'S12'
 
 

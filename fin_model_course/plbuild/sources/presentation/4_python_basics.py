@@ -18,8 +18,9 @@ from pltemplates.frames.model_flowchart import (
     in_out_style
 )
 from pltemplates.blocks import LabBlock
+from schedule.main import LECTURE_1_NAME
 
-TITLE = 'Going Beyond an Initial Python Script'
+TITLE = LECTURE_4_NAME
 SHORT_TITLE = 'Python Basics'
 SUBTITLE = 'How to Structure Python Code and Common Operations'
 ORDER = 'S4'

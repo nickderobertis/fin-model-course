@@ -22,8 +22,9 @@ from pltemplates.frames.tvm.project_1_lab import get_project_1_lab_frame
 from pltemplates.frames.tvm.salary_eq import salary_block_content
 from pltemplates.frames.tvm.retirement_model_structure import get_retirement_model_overview_frame
 from pltemplates.hyperlink import Hyperlink
+from schedule.main import LECTURE_5_NAME
 
-TITLE = 'The Depth of a Financial Model, Continued'
+TITLE = LECTURE_5_NAME
 SHORT_TITLE = 'TVM Deep Dive Python'
 SUBTITLE = 'Extending a Simple Retirement Model in Python'
 ORDER = 'S5'
