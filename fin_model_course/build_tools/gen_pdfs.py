@@ -42,13 +42,16 @@ def _move_pdfs():
     if not os.path.exists(GENERATED_PDFS_OUT_PATH):
         os.makedirs(GENERATED_PDFS_OUT_PATH)
     for out_path in OUT_PATHS:
-        pdfs = [file for file in next(os.walk(out_path))[2] if file.endswith('pdf')]
+        pdfs = [file for file in next(os.walk(out_path))[2] if file.endswith('pdf') or file.endswith('tex')]
         for file in pdfs:
             if 'conflicted copy' in file:
                 # skip Dropbox conflicts
                 continue
             file_path = out_path / file
-            if file == 'Financial Modeling Syllabus.pdf':
+            if 'Financial Modeling Syllabus' in file:
+                if 'C1' in file:
+                    # Modified from a previous run, skip
+                    continue
                 # Generated from derobertis_cv, need to add naming convention
                 new_file = f'C1 {file}'
                 new_file_path = out_path / new_file

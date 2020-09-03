@@ -85,12 +85,12 @@ class LectureResource:
     external_url: Optional[str] = None
     updated: Optional[datetime.datetime] = None
     index: Optional[int] = None
-    datetime_fmt: str = "%B %e, %l:%M %p"
+    datetime_fmt: str = "%B%e,%l:%M %p"
 
     @classmethod
     def from_metadata(cls, md: "ContentMetadata") -> "LectureResource":
-        generated_content_subfolder = md.hashed_extension + "s"
-        url = f"{generated_content_subfolder}/{md.content_type_code}{md.content_index} {md.name}.{md.hashed_extension}"
+        generated_content_subfolder = md.output_extension + "s"
+        url = f"{generated_content_subfolder}/{md.content_type_code}{md.content_index} {md.name}.{md.output_extension}"
         resource = cls(
             name=md.name,
             generated_url=url,

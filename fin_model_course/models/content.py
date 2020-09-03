@@ -19,7 +19,8 @@ CONTENT_TYPE_CODES_TO_NAMES = {
 class ContentMetadata(BaseModel):
     name: str
     file_hash: str
-    hashed_extension: str = "pdf"
+    hashed_extension: str = "tex"
+    output_extension: str = "pdf"
     last_modified: datetime.datetime = Field(
         default_factory=lambda: datetime.datetime.now()
     )
@@ -41,7 +42,11 @@ class ContentMetadata(BaseModel):
 
     @classmethod
     def generate_from_file(
-        cls, folder: pathlib.Path, file_name: str, extension: str = "pdf",
+        cls,
+        folder: pathlib.Path,
+        file_name: str,
+        hashed_extension: str = "tex",
+        output_extension: str = "pdf",
     ) -> "ContentMetadata":
         name_parts = str(file_name).split()
         content_type_code_and_index = name_parts[0]
@@ -56,14 +61,15 @@ class ContentMetadata(BaseModel):
 
         name = " ".join(name_parts[1:])
 
-        full_file_name = f"{file_name}.{extension}"
+        full_file_name = f"{file_name}.{hashed_extension}"
         path = folder / full_file_name
         contents = path.read_bytes()
         hashed = hashlib.md5(contents).hexdigest()
         return cls(
             name=name,
             file_hash=hashed,
-            hashed_extension=extension,
+            hashed_extension=hashed_extension,
+            output_extension=output_extension,
             content_type_code=content_type,
             content_index=content_index,
         )
@@ -74,16 +80,22 @@ class CollectionMetadata(BaseModel):
 
     @classmethod
     def generate_from_folder(
-        cls, folder: pathlib.Path, extension: str = "pdf"
+        cls,
+        folder: pathlib.Path,
+        hashed_extension: str = "tex",
+        output_extension: str = "pdf",
     ) -> "CollectionMetadata":
         items: Dict[str, ContentMetadata] = {}
-        for file in folder.glob(f"*.{extension}"):
+        for file in folder.glob(f"*.{hashed_extension}"):
             file_path = folder / file
             file_name = file_path.stem
             metadata = ContentMetadata.generate_from_file(
-                folder, file_name, extension=extension,
+                folder,
+                file_name,
+                hashed_extension=hashed_extension,
+                output_extension=output_extension,
             )
-            items[f"{file_name}.{extension}"] = metadata
+            items[f"{file_name}.{hashed_extension}"] = metadata
         return cls(items=items)
 
     def merge(self, other: "CollectionMetadata") -> "CollectionMetadata":
