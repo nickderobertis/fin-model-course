@@ -1,9 +1,10 @@
 import os
 import pathlib
 
+from build_tools.config import DOCSRC_SOURCE_PATH
 from lectures.config import get_lecture_groups
 
-OUT_FOLDER = pathlib.Path(__file__).parent.parent.parent / "docsrc" / "source" / "lectures"
+OUT_FOLDER = DOCSRC_SOURCE_PATH / "lectures"
 
 
 def build_lecture_pages():
