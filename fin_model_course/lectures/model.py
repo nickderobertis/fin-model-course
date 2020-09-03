@@ -85,7 +85,7 @@ class LectureResource:
     external_url: Optional[str] = None
     updated: Optional[datetime.datetime] = None
     index: Optional[int] = None
-    datetime_fmt: str = "%B%e,%l:%M %p"
+    datetime_fmt: str = "%B%e, %l:%M %p"
 
     @classmethod
     def from_metadata(cls, md: "ContentMetadata") -> "LectureResource":
