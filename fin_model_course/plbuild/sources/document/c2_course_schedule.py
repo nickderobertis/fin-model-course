@@ -39,11 +39,11 @@ def get_content():
         ClassContent(  # week 2
             'Building a Full Excel Model and Python Basics',
             [3, 4],
+            [1],
         ),
         ClassContent(  # week 3
             'Python Basics, Continued',
             [4],
-            [1],
         ),
         ClassContent(  # week 4
             'Wrapping up Python Basics, and Building a Full Python Model',
@@ -61,26 +61,40 @@ def get_content():
         ),
         ClassContent(  # week 7
             'Sensitivity Analysis',
-            [7]
+            [7],
+            [2]
         ),
         ClassContent(  # week 8
             'Probability Modeling',
             [8],
-            [2]
         ),
         ClassContent(  # week 9
-            'Probability Modeling, continued',
-            [8]
+            'Probability Modeling and Combining Excel and Python',
+            [8, 9]
         ),
         ClassContent(  # week 10
-            'Combining Excel and Python and Monte Carlo Simulation',
-            [9, 10]
-        ),
-        ClassContent(  # week 11
             'Monte Carlo Simulation',
             [10],
-            None,
+            [3],
             [2]
+        ),
+        ClassContent(  # week 11
+            'Introduction to DCF Valuation and Cost of Capital Estimation',
+            [11],
+        ),
+        ClassContent(  # week 12
+            'Cost of Capital Estimation and Free Cash Flow Estimation',
+            [11, 12],
+            [4],
+            [3],
+        ),
+        ClassContent(  # week 13
+            'Forecasting Free Cash Flows',
+            [12],
+        ),
+        ClassContent(  # week 14
+            'Advanced Financial Modeling Roadmap',
+            [13],
         )
     ]
 
