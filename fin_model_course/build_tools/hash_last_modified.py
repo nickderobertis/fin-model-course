@@ -5,11 +5,11 @@ has changed to update a JSON file with modified times
 import pathlib
 from typing import Optional
 
-from build_tools.config import GENERATED_PDFS_OUT_PATH, BUILD_TOOLS_ROOT
+from build_tools.config import GENERATED_PDFS_OUT_PATH, GENERATED_CONTENT_METADATA_PATH
 from models.content import CollectionMetadata
 
 IN_FOLDER = GENERATED_PDFS_OUT_PATH
-OUT_PATH = BUILD_TOOLS_ROOT / "generated-content-metadata.json"
+OUT_PATH = GENERATED_CONTENT_METADATA_PATH
 
 
 def generate_content_metadata_json(

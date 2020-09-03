@@ -12,3 +12,4 @@ A Python and Excel Financial Modeling Course
    :caption: Course Content
 
    lectures/introduction
+   downloads

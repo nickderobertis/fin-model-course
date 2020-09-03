@@ -10,6 +10,7 @@ from lectures.model import LectureResource
 CONTENT_TYPE_CODES_TO_NAMES = {
     "C": "Course Materials",
     "S": "Slides",
+    "LN": "Lecture Notes",
     "PJ": "Project Descriptions",
     "PR": "Practice Problems",
 }
@@ -82,7 +83,7 @@ class CollectionMetadata(BaseModel):
             metadata = ContentMetadata.generate_from_file(
                 folder, file_name, extension=extension,
             )
-            items[f'{file_name}.{extension}'] = metadata
+            items[f"{file_name}.{extension}"] = metadata
         return cls(items=items)
 
     def merge(self, other: "CollectionMetadata") -> "CollectionMetadata":
@@ -116,7 +117,7 @@ Downloads
                 category = "Other"
             items_categories[category].append(resource)
         for items in items_categories.values():
-            items.sort(key=lambda md: md.content_index)
+            items.sort(key=lambda res: res.index if res.index is not None else -1)
         for category, items in items_categories.items():
             if not items:
                 continue

@@ -7,9 +7,9 @@ def get_intro_lecture() -> LectureGroup:
     description = 'Introduces myself, the course structure, financial modeling, the tools we will use, ' \
                   'and how to set up Python.'
     resources = [
-        LectureResource(f'Syllabus', generated_url='pdfs/Financial Modeling Syllabus.pdf'),
+        LectureResource(f'Syllabus', generated_url='pdfs/C1 Financial Modeling Syllabus.pdf'),
         LectureResource(f'Lecture Notes - {title}', generated_url='pdfs/LN1 Introduction.pdf'),
-        LectureResource(f'Slides - {title}', generated_url='pdfs/1 Financial Modeling with Python and Excel.pdf'),
+        LectureResource(f'Slides - {title}', generated_url='pdfs/S1 Financial Modeling with Python and Excel.pdf'),
     ]
     lectures = [
         notes.get_about_me_lecture(),

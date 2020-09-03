@@ -8,3 +8,5 @@ BUILD_TOOLS_ROOT = PACKAGE_ROOT / 'build_tools'
 DOCSRC_SOURCE_PATH = PROJECT_ROOT / 'docsrc' / 'source'
 GENERATED_OUT_PATH = DOCSRC_SOURCE_PATH / '_static' / 'generated'
 GENERATED_PDFS_OUT_PATH = GENERATED_OUT_PATH / 'pdfs'
+
+GENERATED_CONTENT_METADATA_PATH = BUILD_TOOLS_ROOT / "generated-content-metadata.json"
