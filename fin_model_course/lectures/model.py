@@ -1,7 +1,14 @@
+import datetime
 from dataclasses import dataclass
-from typing import Union, Sequence, Type, T, Optional
+from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar
+
+if TYPE_CHECKING:
+    from models.content import ContentMetadata
 
 import pyexlatex as pl
+
+
+T = TypeVar("T")
 
 
 @dataclass
@@ -44,7 +51,7 @@ class LectureNotes:
         return top_model(final_items, title=self.title)
 
     def to_rst(self) -> str:
-        return '\n' + '\n'.join([f'- {note}' for note in self]) + '\n'
+        return "\n" + "\n".join([f"- {note}" for note in self]) + "\n"
 
 
 @dataclass
@@ -76,18 +83,43 @@ class LectureResource:
     name: str
     generated_url: Optional[str] = None
     external_url: Optional[str] = None
+    updated: Optional[datetime.datetime] = None
+    index: Optional[int] = None
+    datetime_fmt: str = "%B %e, %l:%M %p"
+
+    @classmethod
+    def from_metadata(cls, md: "ContentMetadata") -> "LectureResource":
+        generated_content_subfolder = md.hashed_extension + "s"
+        url = f"{generated_content_subfolder}/{md.content_type_code}{md.content_index} {md.name}.{md.hashed_extension}"
+        resource = cls(
+            name=md.name,
+            generated_url=url,
+            index=md.content_index,
+            updated=md.last_modified,
+        )
+        return resource
 
     @property
     def url(self) -> Optional[str]:
         if self.generated_url is not None:
-            return f'/_static/generated/{self.generated_url}'
+            return f"/_static/generated/{self.generated_url}"
         if self.external_url is not None:
             return self.external_url
         return None
 
+    @property
+    def display_name(self) -> str:
+        name = ""
+        if self.index is not None:
+            name += f"{self.index} "
+        name += self.name
+        if self.updated is not None:
+            name += f" (updated {self.updated.strftime(self.datetime_fmt)})"
+        return name
+
     def to_rst(self) -> str:
         return f"""
-- :download:`{self.name} <{self.url}>`
+- :download:`{self.display_name} <{self.url}>`
         """
 
 
@@ -105,12 +137,15 @@ class LectureGroup:
     def stub(self) -> str:
         lower = self.title.casefold()
         parts = lower.split()
-        return '-'.join(parts)
+        return "-".join(parts)
 
     def to_models(
-            self, top_model: Type[T] = pl.Section, sub_model: Type = pl.UnorderedList
+        self, top_model: Type[T] = pl.Section, sub_model: Type = pl.UnorderedList
     ) -> T:
-        return [mod.notes.to_models(top_model=top_model, sub_model=sub_model) for mod in self]
+        return [
+            mod.notes.to_models(top_model=top_model, sub_model=sub_model)
+            for mod in self
+        ]
 
     def to_rst(self) -> str:
         out_str = f"""
@@ -120,10 +155,15 @@ class LectureGroup:
 {self.description}
         """
         if self.resources:
-            out_str += f"""
+            out_str += (
+                f"""
 Resources
 =================
-            """ + '\n' + '\n'.join([res.to_rst() for res in self.resources]) + '\n'
+            """
+                + "\n"
+                + "\n".join([res.to_rst() for res in self.resources])
+                + "\n"
+            )
         for lecture in self:
             out_str += lecture.to_rst()
         return out_str
