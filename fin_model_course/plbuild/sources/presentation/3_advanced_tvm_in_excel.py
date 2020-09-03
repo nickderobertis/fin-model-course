@@ -1,3 +1,5 @@
+import random
+
 import pyexlatex as pl
 import pyexlatex.table as lt
 import pyexlatex.presentation as lp
@@ -34,6 +36,7 @@ HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 
 
 def get_content():
+    random.seed(1000)
     next_slide = lp.Overlay([lp.NextWithIncrement()])
 
     model_block_options = [

@@ -1,4 +1,6 @@
 import itertools
+import random
+
 import pyexlatex as pl
 import pyexlatex.table as lt
 import pyexlatex.presentation as lp
@@ -37,6 +39,7 @@ ORDER = 'S7'
 
 
 def get_content():
+    random.seed(1000)
     pd_mono = pl.Monospace('pandas')
     series_mono = pl.Monospace('Series')
     df_mono = pl.Monospace('DataFrame')

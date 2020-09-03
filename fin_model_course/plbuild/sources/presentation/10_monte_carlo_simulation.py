@@ -40,6 +40,7 @@ ORDER = 'S10'
 
 
 def get_content():
+    random.seed(1000)
     ev_bet = (999999/1000000) * 1 + (1/1000000) * (-750001)
     xlwings_mono = pl.Monospace('xlwings')
     pd_mono = pl.Monospace('pandas')

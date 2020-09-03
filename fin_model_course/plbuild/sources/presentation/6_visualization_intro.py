@@ -1,3 +1,5 @@
+import random
+
 import pyexlatex as pl
 import pyexlatex.table as lt
 import pyexlatex.presentation as lp
@@ -38,6 +40,7 @@ ORDER = 'S6'
 
 
 def get_content():
+    random.seed(1000)
     ret_model = RetirementModel()
     ret_df = ret_model.get_formatted_df(num_years=12)
     ret_table = lt.Tabular.from_df(ret_df, extra_header=pl.Bold('Retirement Info'))

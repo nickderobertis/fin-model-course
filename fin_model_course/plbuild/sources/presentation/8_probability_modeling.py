@@ -1,3 +1,5 @@
+import random
+
 import pyexlatex as pl
 import pyexlatex.table as lt
 import pyexlatex.presentation as lp
@@ -37,6 +39,7 @@ ORDER = 'S8'
 
 
 def get_content():
+    random.seed(1000)
     df_mono = pl.Monospace('DataFrame')
     next_slide = lp.Overlay([lp.NextWithIncrement()])
     with_previous = lp.Overlay([lp.NextWithoutIncrement()])

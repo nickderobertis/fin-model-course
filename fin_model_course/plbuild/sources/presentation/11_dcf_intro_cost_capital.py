@@ -1,3 +1,5 @@
+import random
+
 import pyexlatex as pl
 import pyexlatex.table as lt
 import pyexlatex.presentation as lp
@@ -44,6 +46,7 @@ ORDER = 'S11'
 
 
 def get_content():
+    random.seed(1000)
     dcf_overview_graphic = get_dcf_graphic()
     cc_graphic = get_dcf_graphic(include_output=False, include_fcf=False)
     fcf_graphic = get_dcf_graphic(include_output=False, include_coc=False)
