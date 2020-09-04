@@ -55,30 +55,6 @@ class LectureNotes:
 
 
 @dataclass
-class Lecture:
-    title: str
-    notes: LectureNotes
-    youtube_id: Optional[str] = None
-
-    def to_rst(self) -> str:
-        out_str = f"""
-{self.title}
-============================================================================================================
-        """
-        if self.youtube_id is not None:
-            out_str += f"""
-.. youtube:: {self.youtube_id}
-    :height: 315
-    :width: 560
-    :align: center
-
-|
-"""
-        out_str += self.notes.to_rst()
-        return out_str
-
-
-@dataclass
 class LectureResource:
     name: str
     static_url: Optional[str] = None
@@ -127,6 +103,29 @@ class LectureResource:
 - :download:`{self.display_name} <{self.url}>`
         """
 
+
+@dataclass
+class Lecture:
+    title: str
+    notes: LectureNotes
+    youtube_id: Optional[str] = None
+
+    def to_rst(self) -> str:
+        out_str = f"""
+{self.title}
+============================================================================================================
+        """
+        if self.youtube_id is not None:
+            out_str += f"""
+.. youtube:: {self.youtube_id}
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+"""
+        out_str += self.notes.to_rst()
+        return out_str
 
 @dataclass
 class LectureGroup:
