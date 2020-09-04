@@ -225,7 +225,7 @@ class StaticCollectionMetadata(CollectionMetadata):
                 this_section_dict['_description'] = (DOCSRC_STATIC_PATH / file_path).read_text()
             else:
                 this_section_dict["_items"].append(resource)
-            # TODO [$5f52888ddb22e40007b3379b]: static resource sorting would be more efficient in a separate loop after all items are created
+            # TODO [#20]: static resource sorting would be more efficient in a separate loop after all items are created
             this_section_dict["_items"].sort(
                 key=lambda res: res.index if res.index is not None else -1
             )
