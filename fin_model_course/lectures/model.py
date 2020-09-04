@@ -1,6 +1,8 @@
 import datetime
 from dataclasses import dataclass
-from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar
+from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List
+
+from build_tools.ext_rst import header_rst
 
 if TYPE_CHECKING:
     from models.content import ContentMetadata
@@ -109,22 +111,26 @@ class Lecture:
     title: str
     notes: LectureNotes
     youtube_id: Optional[str] = None
+    resources: Optional[Sequence[LectureResource]] = None
 
     def to_rst(self) -> str:
-        out_str = f"""
-{self.title}
-============================================================================================================
-        """
+        out_str = header_rst(self.title, 3)
         if self.youtube_id is not None:
             out_str += f"""
 .. youtube:: {self.youtube_id}
     :height: 315
     :width: 560
     :align: center
-
-|
 """
+        out_str += header_rst('Notes', 4)
         out_str += self.notes.to_rst()
+        if self.resources:
+            out_str += (
+                header_rst('Resources', 4)
+                + "\n"
+                + "\n".join([res.to_rst() for res in self.resources])
+                + "\n"
+            )
         return out_str
 
 @dataclass
@@ -132,7 +138,7 @@ class LectureGroup:
     title: str
     description: str
     lectures: Sequence[Lecture]
-    resources: Sequence[LectureResource] = tuple()
+    global_resources: Sequence[LectureResource] = tuple()
 
     def __getitem__(self, item):
         return self.lectures[item]
@@ -143,6 +149,14 @@ class LectureGroup:
         parts = lower.split()
         return "-".join(parts)
 
+    @property
+    def resources(self) -> List[LectureResource]:
+        resources = list(self.global_resources)
+        for lecture in self:
+            if lecture.resources:
+                resources.extend(lecture.resources)
+        return resources
+
     def to_models(
         self, top_model: Type[T] = pl.Section, sub_model: Type = pl.UnorderedList
     ) -> T:
@@ -152,18 +166,11 @@ class LectureGroup:
         ]
 
     def to_rst(self) -> str:
-        out_str = f"""
-{self.title}
-*************************************************************************************************************
-
-{self.description}
-        """
+        out_str = header_rst(self.title, 2)
+        out_str += f'\n{self.description}\n'
         if self.resources:
             out_str += (
-                f"""
-Resources
-=================
-            """
+                header_rst('Resources', 3)
                 + "\n"
                 + "\n".join([res.to_rst() for res in self.resources])
                 + "\n"

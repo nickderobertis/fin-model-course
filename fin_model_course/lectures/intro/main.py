@@ -19,4 +19,4 @@ def get_intro_lecture() -> LectureGroup:
         notes.get_tools_and_skills_lecture(),
         notes.get_install_python_lecture(),
     ]
-    return LectureGroup(title, description, lectures, resources=resources)
+    return LectureGroup(title, description, lectures, global_resources=resources)

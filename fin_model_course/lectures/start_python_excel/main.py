@@ -21,4 +21,4 @@ def get_getting_started_with_python_and_excel_lecture() -> LectureGroup:
         notes.get_python_extending_lecture(),
         notes.get_lab_exercise_lecture(),
     ]
-    return LectureGroup(title, description, lectures, resources=resources)
+    return LectureGroup(title, description, lectures, global_resources=resources)

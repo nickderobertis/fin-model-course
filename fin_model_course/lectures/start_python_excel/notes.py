@@ -1,4 +1,4 @@
-from lectures.model import LectureNotes, Lecture
+from lectures.model import LectureNotes, Lecture, LectureResource
 
 
 def get_intro_and_problem_lecture() -> Lecture:
@@ -34,7 +34,13 @@ def get_excel_solution_lecture() -> Lecture:
         'For small models, intermediate outputs/calculations may be kept in the outputs section, while '
         'for larger models it makes sense to have separate calculation sections'
     ], title=title)
-    return Lecture(title, notes, youtube_id=youtube_id)
+    resources = [
+        LectureResource(
+            'Simple Retirement Model Excel',
+            static_url='Examples/Introduction/Excel/Simple Retirement Model.xlsx'
+        ),
+    ]
+    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_python_solution_lecture() -> Lecture:
@@ -52,7 +58,13 @@ def get_python_solution_lecture() -> Lecture:
         'More complex models should be broken into sections and subsections with sections dedicated to a concept or '
         'calculation',
     ], title=title)
-    return Lecture(title, notes, youtube_id=youtube_id)
+    resources = [
+        LectureResource(
+            'Simple Retirement Model Python',
+            static_url='Examples/Introduction/Python/Simple Retirement Model.ipynb'
+        ),
+    ]
+    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_basic_iteration_lecture() -> Lecture:
@@ -114,4 +126,5 @@ def get_lecture() -> Lecture:
     notes = LectureNotes([
 
     ], title=title)
-    return Lecture(title, notes, youtube_id=youtube_id)
+    resources = []
+    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
