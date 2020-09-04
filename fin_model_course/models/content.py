@@ -182,7 +182,7 @@ class GeneratedCollectionMetadata(CollectionMetadata):
     _metadata_cls: Type[ContentMetadata] = GeneratedContentMetadata
 
     def to_rst(self) -> str:
-        out_str = header_rst("Downloads", 2)
+        out_str = ''
         items_categories: Dict[str, List[LectureResource]] = {
             name: [] for name in CONTENT_TYPE_CODES_TO_NAMES.values()
         }
