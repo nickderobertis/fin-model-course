@@ -8,7 +8,7 @@ from typing import Optional, Type
 from build_tools.config import (
     GENERATED_PDFS_OUT_PATH,
     GENERATED_CONTENT_METADATA_PATH,
-    EXAMPLES_PATH,
+    EXAMPLE_PATHS,
     STATIC_CONTENT_METADATA_PATH,
 )
 from models.content import (
@@ -24,6 +24,7 @@ def generate_content_metadata_json(
     collection_cls: Type[CollectionMetadata] = GeneratedCollectionMetadata,
     hashed_extension: str = "tex",
     output_extension: str = "pdf",
+    drop_unique_old: bool = False,
 ):
     print(f"Analyzing metadata for folder {in_folder}")
     current_metadata: Optional[collection_cls] = None
@@ -36,24 +37,25 @@ def generate_content_metadata_json(
     )
     if current_metadata is not None:
         print(f"Merging metadata")
-        metadata = current_metadata.merge(metadata)
+        metadata = current_metadata.merge(metadata, drop_unique_old=drop_unique_old)
     print(f"Writing content metadata to {out_path}")
     out_path.write_text(metadata.json(indent=2))
 
 
 if __name__ == "__main__":
-    generate_content_metadata_json()
-    generate_content_metadata_json(
-        EXAMPLES_PATH,
-        STATIC_CONTENT_METADATA_PATH,
-        StaticCollectionMetadata,
-        hashed_extension="xlsx",
-        output_extension="xlsx",
-    )
-    generate_content_metadata_json(
-        EXAMPLES_PATH,
-        STATIC_CONTENT_METADATA_PATH,
-        StaticCollectionMetadata,
-        hashed_extension="ipynb",
-        output_extension="ipynb",
-    )
+    generate_content_metadata_json(drop_unique_old=True)
+    for path in EXAMPLE_PATHS:
+        generate_content_metadata_json(
+            path,
+            STATIC_CONTENT_METADATA_PATH,
+            StaticCollectionMetadata,
+            hashed_extension="xlsx",
+            output_extension="xlsx",
+        )
+        generate_content_metadata_json(
+            path,
+            STATIC_CONTENT_METADATA_PATH,
+            StaticCollectionMetadata,
+            hashed_extension="ipynb",
+            output_extension="ipynb",
+        )

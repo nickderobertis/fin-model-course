@@ -18,6 +18,17 @@ CONTENT_TYPE_CODES_TO_NAMES = {
     "PR": "Practice Problems",
 }
 
+EXAMPLE_SECTION_ORDER = [
+    "Introduction",
+    "Visualization",
+    "Sensitivity Analysis",
+    "Scenario Analysis",
+    "Internal Randomness",
+    "Connecting Python and Excel",
+    "Monte Carlo",
+    "DCF",
+]
+
 CONTENT_BASE_PATH = DOCSRC_STATIC_PATH
 
 
@@ -32,12 +43,7 @@ class ContentMetadata(BaseModel):
 
     def __eq__(self, other):
         try:
-            return all(
-                [
-                    self.file_hash == other.file_hash,
-                    self.name == other.name,
-                ]
-            )
+            return all([self.file_hash == other.file_hash, self.name == other.name,])
         except AttributeError:
             return False
 
@@ -103,7 +109,6 @@ class GeneratedContentMetadata(ContentMetadata):
 
 
 class StaticContentMetadata(ContentMetadata):
-
     @classmethod
     def generate_from_file(
         cls,
@@ -137,7 +142,7 @@ class CollectionMetadata(BaseModel):
     ) -> "CollectionMetadata":
         items: Dict[str, ContentMetadata] = {}
         for file in folder.rglob(f"*.{hashed_extension}"):
-            if '.ipynb_checkpoints' in str(file):
+            if ".ipynb_checkpoints" in str(file):
                 continue
             file_name = file.stem
             metadata = cls._metadata_cls.generate_from_file(
@@ -150,16 +155,20 @@ class CollectionMetadata(BaseModel):
             items[str(relative_path)] = metadata
         return cls(items=items)
 
-    def merge(self, other: "CollectionMetadata") -> "CollectionMetadata":
-        items: Dict[str, ContentMetadata] = {**self.items}
+    def merge(self, other: "CollectionMetadata", drop_unique_old: bool = False) -> "CollectionMetadata":
+        items: Dict[str, ContentMetadata] = {}
+        if not drop_unique_old:
+            items = {**self.items}
+
         for name, md in other.items.items():
-            if name not in items:
+            if name not in self.items:
                 items[name] = md
                 continue
             # Metadata is in both collections. If hash and details are the same,
             # keep the old metadata, otherwise take the new metadata
-            current_md = items[name]
+            current_md = self.items[name]
             if current_md == md:
+                items[name] = current_md
                 continue
             items[name] = md
         return self.__class__(items=items)
@@ -173,7 +182,7 @@ class GeneratedCollectionMetadata(CollectionMetadata):
     _metadata_cls: Type[ContentMetadata] = GeneratedContentMetadata
 
     def to_rst(self) -> str:
-        out_str = header_rst('Downloads', 2)
+        out_str = header_rst("Downloads", 2)
         items_categories: Dict[str, List[LectureResource]] = {
             name: [] for name in CONTENT_TYPE_CODES_TO_NAMES.values()
         }
@@ -201,7 +210,7 @@ class StaticCollectionMetadata(CollectionMetadata):
     _metadata_cls: Type[ContentMetadata] = StaticContentMetadata
 
     def to_rst(self) -> str:
-        sections_dict = {'_items': []}
+        sections_dict = {"_items": []}
         for file_path, md in self.items.items():
             file_parts = file_path.split(os.path.sep)
             folders = file_parts[:-1]
@@ -209,21 +218,36 @@ class StaticCollectionMetadata(CollectionMetadata):
             this_section_dict = sections_dict
             for folder in folders:
                 if folder not in this_section_dict:
-                    this_section_dict[folder] = {'_items': []}
+                    this_section_dict[folder] = {"_items": []}
                 this_section_dict = this_section_dict[folder]
-            this_section_dict['_items'].append(resource)
+            this_section_dict["_items"].append(resource)
             # TODO: static resource sorting would be more efficient in a separate loop after all items are created
-            this_section_dict['_items'].sort(key=lambda res: res.index if res.index is not None else -1)
+            this_section_dict["_items"].sort(
+                key=lambda res: res.index if res.index is not None else -1
+            )
 
-        out_str = _static_sections_rst(sections_dict, 2)
+        for section_name, section in sections_dict.items():
+            if section_name == '_items':
+                continue
+            sorted_section = dict(
+                sorted(
+                    section.items(),
+                    key=lambda tup: f"aaa{EXAMPLE_SECTION_ORDER.index(tup[0])}"
+                    if tup[0] in EXAMPLE_SECTION_ORDER
+                    else tup[0],
+                )
+            )
+            sections_dict[section_name] = sorted_section
+
+        out_str = _static_sections_rst(sections_dict, 3)
         return out_str
 
 
 def _static_sections_rst(sections_dict: dict, level: int) -> str:
-    this_section_contents = ''
-    sub_section_contents = ''
+    this_section_contents = ""
+    sub_section_contents = ""
     for section_name, section_content in sections_dict.items():
-        if section_name == '_items':
+        if section_name == "_items":
             # Content for this section, not another subsection
             section_content = cast(List[LectureResource], section_content)
             for res in section_content:
