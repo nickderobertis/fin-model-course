@@ -1,0 +1,181 @@
+\documentclass[]{article}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Probabilistic Loan Pricing}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Overview}
+\begin{subsection}{Problem Definition}
+
+    You work for a bank who is considering loaning funds to a small manufacturing business. The business needs 
+    $price_{machine}$ to buy machinery. The business would like to borrow the funds for 
+    $n_{life}$, and at that time it will repay $price_{machine}$ in full. Interest is 
+    paid annually at a rate of $r_{interest}$ (in the final period, both 
+    $price_{machine}$ and interest at the rate of $r_{interest}$ will be paid). As this is a small 
+    business, there is significant default risk, but that default risk decreases over time as the business 
+    matures. The probability of default in the first year is $p_1^{default}$, and then each 
+    year thereafter it is:
+    
+\begin{equation}
+	p_t^{default} = p_{t-1}^{default} Decay_{default}
+\end{equation}
+
+    Finally, the default probability is different in the final year, as it is the repayment year. The business has to
+    pay a lot more in this period so there is a greater likelihood it can't come up with the funds. In the final year,
+    (at year $n_{life}$), the default probability is $p_n^{default}$. 
+    
+    When the business defaults, then the default
+    covenants of the loan trigger bankruptcy for the borrower, and the borrower must pay as much as it can on the loan 
+    in the bankruptcy process. The bankruptcy process takes two years, and then once it is resolved, the lender will 
+    collect $r_{recovery}$\% of $price_{machine}$. For the year of default and the year after,
+    the lender will not collect any cash flows, and then two years after default, the lender will collect 
+    $r_{recovery}price_{machine}$. Note that this means the number of years of cash flows may be up to two
+    years greater than the life of the loan.
+    
+\end{subsection}
+\begin{subsection}{Main Question}
+
+    You are the commercial loan analyst trying to decide if this loan makes sense for the bank. You want to give the
+    lending officer all the information she would need to negotiate a rate for this loan.
+    
+    Given the inputs, what is the expected IRR of the loan for a variety of interest rates on the loan? The lending
+    officer would like you to evaluate rates in 5\% increments from 30\% to 40\%.
+    
+    The lending officer is also worried that she may have estimated $p_1^{default}$ incorrectly. 
+    She is hoping for the answers to the above questions considering that $p_1^{default}$ may vary.
+    Evaluate the above questions for $p_1^{default} = 0.1, 0.3$ in addition to the base case 
+    of 0.2.
+
+    Finally, the lending officer is unsure for how long she should extend the loan. So she would like to see all
+    of the previously mentioned results with loan lifes of 5, 10, and 20 years.
+
+    You should visualize the results of your model through graphs, conditional formatting, etc.
+    
+\end{subsection}
+\begin{subsection}{Notes}
+\begin{itemize}
+\item 
+    You may assume a maximum loan life of 20 years in your model, which would make up to 22 years of cash flows.
+    
+\item Probably the easiest approach to building this model will use internal randomness. Though it certainly is possible to build this model using only expected values, I think that is generally more difficult.
+\item With the internal randomness approach, make sure you set the number of iterations to 1,000 per set of inputs to get a good estimate. 
+\item While you are testing things out, set it lower, such as 10 or 100, to have it run quicker, but beware that the lower your number of iterations, the less consistent the results will be.
+\item Also beware that with 1,000 iterations as required for the final submission, it may take over an hour to run the model, so plan for that time.
+\item You may choose to either submit a pure Python model, pure Excel model, or a combination of the two. If you use both, then the Python model should be what I ultimately run and extract results from. The Python model would be running the Excel model many times and extracting the results.
+\item Upon reading the prior note, you may think to implement in pure Excel because of greater familiarity, but I think you will find meeting the objective of running the model repeatedly with three changing inputs quite difficult. You need to run your model 27,000 times in total with three inputs changing together.
+\item Your answers may differ slightly from those in the Selected Solutions section. This is the nature of a random model. They should be very close with 1,000 iterations, though.
+\item Do not move any of the input or output cells. 
+\end{itemize}
+\end{subsection}
+\begin{subsection}{Inputs}
+\begin{enumerate}
+\item $price_{machine}$: 1000000
+\item $n_{life}$: 5
+\item $p_1^{default}$: 0.2
+\item $Decay_{default}$: 0.9
+\item $p_n^{default}$: 0.4
+\item $r_{recovery}$: 0.4
+\end{enumerate}
+\end{subsection}
+\begin{subsection}{Bonus Question}
+
+    Especially good visualization of the original problem will earn part of the bonus.
+    
+    Further, produce the same outputs as the main problem, but instead of evaluating 
+    $p_1^{default} = 0.1, 0.3$, consider $p_1^{default}$ as being normally
+    distributed with mean 0.2 and standard deviation 0.05.
+
+    Also examine a single selected input case with different numbers of iterations, producing visualizations and 
+    summary statistics of the results with different numbers of iterations, to show how precise the expected IRR 
+    estimates are.
+    
+\end{subsection}
+\end{section}
+\begin{section}{Submission \& Grading}
+\begin{subsection}{Submission}
+
+    Work off of the "Project 2 Template.xlsx" and "Project 2 Template.ipynb" files on Canvas. 
+
+    Again it is up to you whether you submit a pure Python, pure Excel, or combination model. For whichever tools
+    you use, you should use the templates, so those submitting a combination model will submit both a Jupyter notebook
+    and an Excel workbook, both based off the templates. With the combination model, your ultimate answer should be
+    in the Jupyter notebook.
+    
+\end{subsection}
+\begin{subsection}{Selected Solutions}
+
+    The below solutions are with the base case inputs provided. Your model will also need to be able to adjust for
+    different inputs. Try changing the inputs and verify that the model changes in the way it should respond. Do 
+    this for all the inputs. Note that your solution may differ significantly from mine due to the random nature of the 
+    model. Run your model with 1,000 iterations to get a decent check (this will take about 10 minutes). Even then it may be 
+    off by up to a couple percentage points.
+    
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Sources/project-2-solutions.png}
+\end{center}
+
+    I am also providing the IRRs for each possible default situation in the model with base case inputs 
+    and a 20\% interest rate. This way you
+    can check your model without having to run lots of iterations. Make sure that your model can reproduce each of the
+    IRRs corresponding to each default case, and then you will only need the full solutions to check that the probabilities
+    are set correctly. Note that unlike the full solutions, you should be able to match these default case solutions 
+    exactly.
+    
+\begin{itemize}
+\item Default in $t=1$: -26.32\%
+\item Default in $t=2$: -14.96\%
+\item Default in $t=3$: -6.43\%
+\item Default in $t=4$: 0.00\%
+\item Default in $t=5$: 4.82\%
+\item No Default: 20.00\%
+\end{itemize}
+\end{subsection}
+\begin{subsection}{Grading}
+\begin{center}
+\begin{tabular}{lc}
+\multicolumn{2}{c}{Grading Breakdown}\\
+
+\toprule
+Category & Percentage\\
+
+\cmidrule(lr){1-2}
+Model Accuracy & 60\%\\
+Model Readability & 20\%\\
+Model Formatting & 10\%\\
+Following the Template & 10\%\\
+Bonus & 5\%\\
+
+\midrule
+Total Possible & 105\%\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\end{subsection}
+\end{section}
+\end{document}

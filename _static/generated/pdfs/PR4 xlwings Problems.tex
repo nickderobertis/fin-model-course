@@ -1,0 +1,67 @@
+\documentclass[]{article}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{xlwings Problems}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Generating Asset Returns using CAPM}
+\begin{subsection}{Problem Definition}
+Create a model of stock returns and correlations. The asset returns should be based on the capital asset pricing model (CAPM), which states:
+\begin{equation}
+	r_s = r_f + \beta (r_m - r_f) + \epsilon
+\end{equation}
+\begin{itemize}
+\item $r_e$: Return on stock
+\item $r_f$: Return on risk free asset
+\item $r_m$: Return on the market portfolio
+\item $\beta$: Covariance between the market portfolio and the stock
+\item $\epsilon$: Idiosyncratic return, (random, normally distributed with mean 0)
+\end{itemize}
+Your model should accept the number of assets, the average idiosyncratic standard deviation across the assets, the standard deviation of the idiosyncratic standard deviation across the assets, the market average return, the market standard deviation, the risk-free rate, and the number of periods as the inputs. You should randomly draw each asset's standard deviation of idiosyncratic returns from a normal distribution based on the inputs. You should also randomly draw the stock's beta from a uniform distribution between 0 and 2. Then draw the market returns from a normal distribution with its mean and standard deviation. Then the return for each asset in each time period will be determined by drawing its idiosyncratic return for that period from its normal distribution, then calculating the CAPM formula. After all the assets returns are generated, calculate the correlation between all the assets. Your model should be updating the number of assets and number of periods merely by changing the inputs.
+\end{subsection}
+\begin{subsection}{Model Inputs}
+\begin{center}
+\begin{tabular}{l|c}
+\toprule
+Input & Default Value\\
+
+\midrule
+Number of Assets & 3\\
+Number of Periods & 20\\
+Average Idiosyncratic Standard Deviation & 20\%\\
+Standard Deviation of Idiosyncratic Return Standard Deviation & 10\%\\
+Market Average Return & 7\%\\
+Market Standard Deviation & 15\%\\
+Risk-Free Rate & 2\%\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\end{subsection}
+\end{section}
+\end{document}

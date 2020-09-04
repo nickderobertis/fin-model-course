@@ -1,0 +1,53 @@
+\documentclass[]{article}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Internal Randomness Problems}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Stock Portfolio}
+\begin{subsection}{Problem Statement}
+Create a model with two stocks, A and B. Both start at price 100. Generate stock prices for 100 periods. Do this by drawing returns from normal distributions defined with the inputs below. Then apply the returns to the prior prices to get the price in each period. Create a portfolio of the two stocks, by taking the weighted-average of the stock's returns, then applying that return to a third Portfolio series starting at 100. Graph the two stocks and porfolio performance over time. Calculate the mean and standard deviation of the generated returns for the two stocks and the portfolio.
+\end{subsection}
+\begin{subsection}{Inputs}
+\begin{center}
+\begin{tabular}{l|c}
+\toprule
+Input & Default Value\\
+
+\midrule
+Stock A Weight & 60\%\\
+Stock A Mean Return & 10\%\\
+Stock A Return Standard Deviation & 30\%\\
+Stock B Mean Return & 5\%\\
+Stock B Return Standard Deviation & 10\%\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\end{subsection}
+\end{section}
+\end{document}

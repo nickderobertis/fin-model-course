@@ -1,0 +1,215 @@
+\documentclass[]{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Monte Carlo Cost of Capital}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Overview}
+\begin{subsection}{Problem Definition}
+
+
+You are an analyst at an investment fund. The fund is considering an investment in Walmart. As part of the
+decision-making process, your team is building a DCF model to value the stock. Another analyst is working on
+getting the free cash flows. Your job is to determine the cost of capital for Walmart.
+
+
+\end{subsection}
+
+\begin{subsection}{Main Question}
+
+
+Determine the WACC for Walmart. Ensure that you estimate the market value of debt by valuing the individual
+debt instruments.
+Once you have a baseline estimate, you want to figure out the variability of that
+estimate. Given the standard deviations in the Monte Carlo Inputs section,
+and assuming these variables all follow normal distributions,
+visualize the probability distribution of the WACC via a histogram and a probability table. Which of the variables
+has the greatest contribution to the WACC? Use at least 10,000 simulations.
+
+
+\end{subsection}
+
+
+
+\begin{subsection}{Notes}
+
+
+\begin{itemize}
+\item Be careful that the returns are daily. You will need to divide the risk free rate by 252 to get a daily rate. After you get an estimate from CAPM, you will need to multiply it by 252.
+\item You can feel free to modify any of the input files to make them easier to load. But keep in mind that if you did this on the job, and you needed to keep updating the model, you would have to do this every time. If you cleaned it up with code then it would be automated. At the end I will show my model which automates the cleanup process.
+\item If there is not a specific day associated with a debt maturity, only a year, assume it is December 31st.
+\item If there is a range of coupons given, you can assume the midpoint of the range is the coupon.
+\item If there is not enough information to calculate a bond price, or the bond already expired, just use the principal as the market price of the bond.
+\end{itemize}
+
+
+\end{subsection}
+
+\begin{subsection}{Inputs}
+
+
+Download the following files from Canvas in the Projects > Project 3 folder:
+\begin{itemize}
+\item SP500 Prices.xlsx
+\item WMT Debt Details.xls
+\item WMT Prices.xlsx
+\item WMT Income Statement.xlsx
+\item WMT Balance Sheet.xlsx
+\end{itemize}
+
+In these files you will find the historical stock prices for Walmart, the historical index values for the S\&P 500,
+the individual debt instruments for Walmart, and the income statement and balance sheet for Walmart.
+
+In addition to the information in the spreadsheets, also consider that Walmart currently has a
+coupon bond trading in the market (details below). The risk-free rate
+and LIBOR rates are also given in the inputs table.
+Also reference Walmart's stock information in the inputs table.
+
+
+\end{subsection}
+\begin{subsection}{Bonus}
+
+The bonus for this problem is to complete it without doing any manual data cleanup. That is to say that your code should
+be doing all of the clean up of the data, and your model should run end-to-end from the source files as given. If you 
+submit without adding any cleaned up data files, then I will know you are attempting the bonus.
+
+Please note that in a regular workflow, you would do this part first, then have the cleaned up data to work with for the 
+main model. But because this is probably new to most people, I would recommend saving this for last. Clean the data up 
+manually, complete the project, then come back and make it work with the original data files by automating the
+clean up. To make this a bit easier, I would recommend taking notes of everything that you're doing to manually 
+clean up the data, so that when you go to write the code, you know exactly what it needs to do.
+
+Also note that we have not covered everything you will need for the bonus. Here are some additional resources to help:
+\begin{itemize}
+\item \textcolor{blue}{\underline{\href{https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read\_excel.html}{Advanced Read Excel (look at skiprows)}}}
+\item \textcolor{blue}{\underline{\href{https://pandas.pydata.org/pandas-docs/stable/getting\_started/10min.html\#selection}{Selecting Values of a DataFrame}}}
+\item \textcolor{blue}{\underline{\href{https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html}{Dropping missing values}}}
+\item \textcolor{blue}{\underline{\href{https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html}{Marking Existing Values as Missing}}}
+\item \textcolor{blue}{\underline{\href{https://scotch.io/tutorials/an-introduction-to-regex-in-python}{Intro to Regular Expressions (not necessarily required, but I used them)}}}
+\item \textcolor{blue}{\underline{\href{https://docs.python.org/3/library/re.html}{Regular Expression Reference}}}
+\end{itemize}
+
+\end{subsection}
+\begin{subsection}{Baseline Model Inputs}
+\begin{center}
+\begin{tabular}{l|c}
+\multicolumn{2}{c}{Baseline Inputs}\\
+
+\toprule
+Variable & Baseline Value\\
+
+\cmidrule(lr){1-2}
+Market Bond Maturity (Years) & 15\\
+Market Bond Coupon & 5.25\%\\
+Market Bond Price & \$130.58\\
+Market Bond Par Value & \$100.00\\
+Risk Free Rate & 0.50\%\\
+Stock Price & \$119.51\\
+Shares Outstanding & 2,850,000,000\\
+LIBOR Rate & 1.96\%\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\label{baseline-inputs}
+\end{subsection}
+\begin{subsection}{Monte Carlo Inputs}
+\begin{center}
+\begin{tabular}{l|c}
+\multicolumn{2}{c}{Standard Deviations}\\
+
+\toprule
+Variable & Standard Deviation\\
+
+\cmidrule(lr){1-2}
+$\beta$ & 0.2\\
+Market Return & 3\%\\
+Walmart Bond Market Price & \$30\\
+Tax Rate & 5\%\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\label{mc-inputs}
+\end{subsection}
+\end{section}
+\begin{section}{Submission \& Grading}
+\begin{subsection}{Submission}
+
+Work off of the "Project 3 Template.xlsx" and "Project 3 Template.ipynb" files on Canvas.
+
+It is up to you whether you submit a pure Python, pure Excel, or combination model. For whichever tools
+you use, you should use the templates, so those submitting a combination model will submit both a Jupyter notebook
+and an Excel workbook, both based off the templates. With the combination model, your ultimate answer should be
+in the Jupyter notebook.
+
+Regardless of the tools you use, running the model should run the full Monte Carlo simulation based off the
+model and simulation inputs. It is not acceptable to hard-code the simulations.
+
+If you modify any of the data files, then submit them to Canvas along with your model. Ensure that the names of
+the files are the same as the original names. If you do not submit a data file, then I will assume your model
+works off the original and copy in the original file. Your bonus score will be based off of which files you submit.
+If you do not submit any data files (you're using the original for all), then you will get the full bonus points,
+assuming the information from the data files was correctly incorporated into the model.
+
+\end{subsection}
+\begin{subsection}{Solutions}
+Selected solutions with the baseline inputs:
+\begin{itemize}
+\item WACC: 5.19\%
+\item MV Debt: \$82.9 billion
+\item Cost of Equity: 5.96\%
+\item Pre-Tax Cost of Debt: 2.74\%
+\end{itemize}
+\end{subsection}
+\begin{subsection}{Grading}
+\begin{center}
+\begin{tabular}{l|c}
+\multicolumn{2}{c}{Grading Breakdown}\\
+
+\toprule
+Category & Percentage\\
+
+\cmidrule(lr){1-2}
+Model Accuracy & 60\%\\
+Model Readability & 20\%\\
+Model Formatting & 10\%\\
+Following the Template & 10\%\\
+Bonus & 5\%\\
+
+\midrule
+Total Possible & 105\%\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\end{subsection}
+\end{section}
+\end{document}

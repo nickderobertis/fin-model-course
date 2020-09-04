@@ -1,0 +1,88 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Getting Started with Python and Excel}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Introduction and an Example Model}
+\begin{itemize}
+\item In the beginning of the course, we will do everything with both Excel and Python to understand the differences. Later we will focus on choosing the best tool for the task at hand and the ability to combine the two tools.
+\item Everyone should know how to solve this simple time-value of money investment problem
+\item Many would think to reach for a financial calculator and use the five keys
+\item Or to directly type some values into the =NPER function in Excel
+\item With either of these approaches, you are doing a calculation rather than building a model
+\item If you realize you need to adjust the inputs, you need to do the calculation again
+\item With a model, the calculations are linked from the inputs to the outputs, so changing the inputs changes the outputs. This increases reproducibility and efficiency.
+\end{itemize}
+\end{section}
+\begin{section}{Building a Simple Excel Model}
+\begin{itemize}
+\item It is crucial that all your Excel calculations are linked together by cell references. If you hard-code values in your calculations you are just using Excel as a calculator.
+\item It is important to visually separate the inputs from the outputs. This makes it much more clear for the consumer of your model, especially in more complex models
+\item More complex models should be broken into multiple sheets with each sheet dedicated to a concept or calculation
+\item Cell formatting can be used in combination with the layout to separate them
+\item For small models, intermediate outputs/calculations may be kept in the outputs section, while for larger models it makes sense to have separate calculation sections
+\end{itemize}
+\end{section}
+\begin{section}{Building a Simple Python Model}
+\begin{itemize}
+\item In Python, we keep things linked together by using variables. If you hard-code values in your calculations, you are just using Python as a calculator
+\item Basic math in Python is mostly what you might expect, it is the same as Excel only exponents are specified by ** and not \^{}
+\item Jupyter allows us to create an interactive model complete with nicely formatted text, equations, tables, graphs, etc. with relative ease
+\item Inputs should be kept at the top in a separate section, the main outputs should be kept at the bottom in a separate section. 
+\item More complex models should be broken into sections and subsections with sections dedicated to a concept or calculation
+\end{itemize}
+\end{section}
+\begin{section}{Basic Iteration}
+\begin{itemize}
+\item Iteration is a key concept in financial modeling (as well as programming)
+\item Using iteration, we can complete the same process for multiple inputs to yield multiple outputs
+\item As the same process is applied to each input, the process only needs to be created once and any updates to the process can flow through all the inputsIteration can be internal or external to the main model. You can use iteration within your model, or you can iterate the model itself
+\item To iterate in Excel, drag formulas. To iterate in Python and other programming languages, use loops.
+\end{itemize}
+\end{section}
+\begin{section}{Extending a Simple Excel Model}
+\begin{itemize}
+\item Essentially the model with iteration is the same, we just drag the formula to cover multiple inputs
+\item It is crucial to set up fixed and relative cell references appropriately before you drag formulas
+\end{itemize}
+\end{section}
+\begin{section}{Extending a Simple Python Model}
+\begin{itemize}
+\item To add iteration to the Python model, just wrap the existing code in a loop
+\item We must also collect or show the output in some way, as we can no longer take advantage of the Jupyter shortcut to show the output without printing.
+\end{itemize}
+\end{section}
+\begin{section}{Getting Started with Python and Excel Labs}
+\begin{itemize}
+\item This is our first real lab exercise (must be submitted). Be sure to complete the same exercise in both Python and Excel
+\item We often want to iterate over more than one input. Here we want to look at the pairwise combinations of the savings rate and interest rate possibilities.
+\item Excel hint: there is a nice way to lay this out so you only need to type the formula a single time
+\item Python hint: It is possible to nest loops to loop over the combination of two different inputs
+\end{itemize}
+\end{section}
+\end{document}

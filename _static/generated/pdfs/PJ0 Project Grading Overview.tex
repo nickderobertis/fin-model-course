@@ -1,0 +1,99 @@
+\documentclass[]{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Project Grading Overview}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{The Grading Categories}
+You will be graded across several dimensions in completing projects. These dimensions include, but are not limited to: 
+\begin{itemize}
+\item Model Accuracy
+\item Model Readability
+\item Model Formatting
+\end{itemize}
+Some projects may have their own specific categories. If so, the criteria for that category will be defined in that project's description.
+\end{section}
+\begin{section}{The Score in a Category}
+I will first look at all the models before grading any of them. This is how I will establish what to expect. The grading is somewhat absolute and somewhat relative. For example, if your model is completely accurate, you will receive a 100\% for model accuracy. But, you could also receive a high grade for model accuracy even if there are errors, if the rest of the class made similar errors. Partial credit will be given in every category. The amount of points given will be proportional to how well you completed the category, on an absolute basis if applicable and also relative to other students.
+\end{section}
+\begin{section}{The Grading Weights of the Categories}
+The weights of each category will be specific to the project. Generally, Model Accuracy will carry the highest weight, and Model Formatting will carry the lowest weight. Look to the project description for a breakdown of the weights.
+\end{section}
+\begin{section}{Model Accuracy}
+\begin{itemize}
+\item Does the model obtain the correct results?
+\item When inputs are changed, does the output change appropriately?
+\item Can the model handle the full range of possible values?
+\end{itemize}
+\end{section}
+\begin{section}{Model Readability}
+Model readability is all about how easily can I understand what you're doing in the model, and how easily I can navigate through it.
+\begin{subsection}{Excel}
+\begin{itemize}
+\item Is the model organized into sections using tabs?
+\item Are there clear names for inputs, outputs, and table headers?
+\item Is each tab organized to separate inputs, outputs, and calculation?
+\item Are there any comments explaining complex parts of the model?
+\end{itemize}
+\end{subsection}
+\begin{subsection}{Python}
+\begin{itemize}
+\item Is the model organized into functions and sections?
+\item Are all inputs at the top and main outputs at the bottom?
+\item Are there docstrings, comments, or Jupyter markdown explaining things?
+\item Does the submitted notebook or Python script have clear sections?
+\item Are the length of code lines limited to the size of Jupyter cells (no long lines)?
+\item Are the results of intermediate calculations shown? Should not be just one answer at end.
+\item Do variable, function, and class names follow conventions? See
+\textcolor{blue}{\underline{\href{https://realpython.com/python-pep8/\#naming-conventions}{Naming Conventions}}}
+\end{itemize}
+\end{subsection}
+\end{section}
+\begin{section}{Model Formatting}
+Model formatting is about the visual representation of the model.
+\begin{subsection}{Excel}
+\begin{itemize}
+\item Are tables formatted nicely?
+\item Are inputs and outputs sections formatted to separate them from calculations?
+\end{itemize}
+\end{subsection}
+\begin{subsection}{Python}
+\begin{itemize}
+\item Are model outputs displayed with nice formatting?
+\begin{itemize}
+\item Number formatting (percentages are percentages, currency has dollar sign, commas, and two decimals, etc.)
+\item Sentence explaining results is printed
+\item Tables are used where appropriate and are well formatted
+\item Plots have axis names and are appropriately sized
+\end{itemize}
+\end{itemize}
+\end{subsection}
+\end{section}
+\end{document}

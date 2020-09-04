@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started with Python and Excel &mdash; fin_model_course 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Downloads" href="../downloads.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fin_model_course
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started with Python and Excel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-and-an-example-model">Introduction and an Example Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-a-simple-excel-model">Building a Simple Excel Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-a-simple-python-model">Building a Simple Python Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-iteration">Basic Iteration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-a-simple-excel-model">Extending a Simple Excel Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-a-simple-python-model">Extending a Simple Python Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-with-python-and-excel-labs">Getting Started with Python and Excel Labs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fin_model_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Getting Started with Python and Excel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/lectures/getting-started-with-python-and-excel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started-with-python-and-excel">
+<h1>Getting Started with Python and Excel<a class="headerlink" href="#getting-started-with-python-and-excel" title="Permalink to this headline">¶</a></h1>
+<p>Discusses the basics of financial modeling in both Python and Excel. Explores a simple time-value of money problem and how to build a model for it in both Python and Excel.</p>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2c8f88052d4008b44004fafce871a080/LN2 Getting Started with Python and Excel.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Lecture</span> <span class="pre">Notes</span> <span class="pre">-</span> <span class="pre">Getting</span> <span class="pre">Started</span> <span class="pre">with</span> <span class="pre">Python</span> <span class="pre">and</span> <span class="pre">Excel</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/9bdda6a9a02d30df00d65b854bdc3893/S2 Getting Started with Python and Excel.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Getting</span> <span class="pre">Started</span> <span class="pre">with</span> <span class="pre">Python</span> <span class="pre">and</span> <span class="pre">Excel</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/854f8d4f93b859f92b61100924b3c588/Simple Retirement Model.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Simple</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Excel</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/098e9b5998e7883293461d44adef51d0/Simple Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Simple</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="introduction-and-an-example-model">
+<h2>Introduction and an Example Model<a class="headerlink" href="#introduction-and-an-example-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/KL48T_XGbzI"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>In the beginning of the course, we will do everything with both Excel and Python to understand the differences. Later we will focus on choosing the best tool for the task at hand and the ability to combine the two tools.</p></li>
+<li><p>Everyone should know how to solve this simple time-value of money investment problem</p></li>
+<li><p>Many would think to reach for a financial calculator and use the five keys</p></li>
+<li><p>Or to directly type some values into the =NPER function in Excel</p></li>
+<li><p>With either of these approaches, you are doing a calculation rather than building a model</p></li>
+<li><p>If you realize you need to adjust the inputs, you need to do the calculation again</p></li>
+<li><p>With a model, the calculations are linked from the inputs to the outputs, so changing the inputs changes the outputs. This increases reproducibility and efficiency.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="building-a-simple-excel-model">
+<h2>Building a Simple Excel Model<a class="headerlink" href="#building-a-simple-excel-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/hySE7wOAlfc"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id1">
+<h3>Notes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>It is crucial that all your Excel calculations are linked together by cell references. If you hard-code values in your calculations you are just using Excel as a calculator.</p></li>
+<li><p>It is important to visually separate the inputs from the outputs. This makes it much more clear for the consumer of your model, especially in more complex models</p></li>
+<li><p>More complex models should be broken into multiple sheets with each sheet dedicated to a concept or calculation</p></li>
+<li><p>Cell formatting can be used in combination with the layout to separate them</p></li>
+<li><p>For small models, intermediate outputs/calculations may be kept in the outputs section, while for larger models it makes sense to have separate calculation sections</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Resources<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/854f8d4f93b859f92b61100924b3c588/Simple Retirement Model.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Simple</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Excel</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="building-a-simple-python-model">
+<h2>Building a Simple Python Model<a class="headerlink" href="#building-a-simple-python-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/syrwXU1wqps"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id3">
+<h3>Notes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>In Python, we keep things linked together by using variables. If you hard-code values in your calculations, you are just using Python as a calculator</p></li>
+<li><p>Basic math in Python is mostly what you might expect, it is the same as Excel only exponents are specified by ** and not ^</p></li>
+<li><p>Jupyter allows us to create an interactive model complete with nicely formatted text, equations, tables, graphs, etc. with relative ease</p></li>
+<li><p>Inputs should be kept at the top in a separate section, the main outputs should be kept at the bottom in a separate section.</p></li>
+<li><p>More complex models should be broken into sections and subsections with sections dedicated to a concept or calculation</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Resources<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/098e9b5998e7883293461d44adef51d0/Simple Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Simple</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="basic-iteration">
+<h2>Basic Iteration<a class="headerlink" href="#basic-iteration" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/vAOrxaKnXaQ"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id5">
+<h3>Notes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Iteration is a key concept in financial modeling (as well as programming)</p></li>
+<li><p>Using iteration, we can complete the same process for multiple inputs to yield multiple outputs</p></li>
+<li><p>As the same process is applied to each input, the process only needs to be created once and any updates to the process can flow through all the inputsIteration can be internal or external to the main model. You can use iteration within your model, or you can iterate the model itself</p></li>
+<li><p>To iterate in Excel, drag formulas. To iterate in Python and other programming languages, use loops.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="extending-a-simple-excel-model">
+<h2>Extending a Simple Excel Model<a class="headerlink" href="#extending-a-simple-excel-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/GD34LyjvMaE"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id6">
+<h3>Notes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Essentially the model with iteration is the same, we just drag the formula to cover multiple inputs</p></li>
+<li><p>It is crucial to set up fixed and relative cell references appropriately before you drag formulas</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="extending-a-simple-python-model">
+<h2>Extending a Simple Python Model<a class="headerlink" href="#extending-a-simple-python-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/Ejk6ektd21I"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id7">
+<h3>Notes<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>To add iteration to the Python model, just wrap the existing code in a loop</p></li>
+<li><p>We must also collect or show the output in some way, as we can no longer take advantage of the Jupyter shortcut to show the output without printing.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="getting-started-with-python-and-excel-labs">
+<h2>Getting Started with Python and Excel Labs<a class="headerlink" href="#getting-started-with-python-and-excel-labs" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/2J-GCwSNGBw"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id8">
+<h3>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>This is our first real lab exercise (must be submitted). Be sure to complete the same exercise in both Python and Excel</p></li>
+<li><p>We often want to iterate over more than one input. Here we want to look at the pairwise combinations of the savings rate and interest rate possibilities.</p></li>
+<li><p>Excel hint: there is a nice way to lay this out so you only need to type the formula a single time</p></li>
+<li><p>Python hint: It is possible to nest loops to loop over the combination of two different inputs</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../downloads.html" class="btn btn-neutral float-right" title="Downloads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-155751319-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

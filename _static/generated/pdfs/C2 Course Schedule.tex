@@ -1,0 +1,90 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.3in, bottom=0.9in]{geometry}
+\usepackage[page]{appendix}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\begin{landscape}
+\begin{tabular}{L{1.3cm}lL{5cm}L{9cm}L{2.5cm}L{2.5cm}}
+\multicolumn{6}{c}{\textbf{Financial Modeling Schedule}}\\
+
+\toprule
+Week & Dates & Topic & Lectures & Projects Assigned & Projects Due\\
+
+\midrule
+Week 1 & 08/31-09/07 & Introduction to the Class, Modeling, Python, and Excel & 1: Financial Modeling with Python and Excel &  & \\
+ &  &  & 2: Getting Started with Python and Excel &  & \\
+
+\hline
+Week 2 & 09/07-09/14 & Building a Full Excel Model and Python Basics & 3: The Depth of a Financial Model & 1: Excel and Python TVM & \\
+ &  &  & 4: Going Beyond an Initial Python Script &  & \\
+
+\hline
+Week 3 & 09/14-09/21 & Python Basics, Continued & 4: Going Beyond an Initial Python Script &  & \\
+
+\hline
+Week 4 & 09/21-09/28 & Wrapping up Python Basics, and Building a Full Python Model & 4: Going Beyond an Initial Python Script &  & \\
+ &  &  & 5: The Depth of a Financial Model, Continued &  & \\
+
+\hline
+Week 5 & 09/28-10/05 & Building a Full Python Model and Visualization & 5: The Depth of a Financial Model, Continued &  & \\
+ &  &  & 6: Understanding Complex Results &  & \\
+
+\hline
+Week 6 & 10/05-10/12 & Visualization and Sensitivity Analysis & 6: Understanding Complex Results &  & 1: Excel and Python TVM\\
+ &  &  & 7: Exploring the Parameter Space &  & \\
+
+\hline
+Week 7 & 10/12-10/19 & Sensitivity Analysis & 7: Exploring the Parameter Space & 2: Probabilistic Loan Pricing & \\
+
+\hline
+Week 8 & 10/19-10/26 & Probability Modeling & 8: Probabilistic Modeling &  & \\
+
+\hline
+Week 9 & 10/26-11/02 & Probability Modeling and Combining Excel and Python & 8: Probabilistic Modeling &  & \\
+ &  &  & 9: Combining Excel and Python &  & \\
+
+\hline
+Week 10 & 11/02-11/09 & Monte Carlo Simulation & 10: Monte Carlo Simulation & 3: Monte Carlo Cost of Capital & 2: Probabilistic Loan Pricing\\
+
+\hline
+Week 11 & 11/09-11/16 & Introduction to DCF Valuation and Cost of Capital Estimation & 11: Introduction to DCF Valuation and Cost of Capital Estimation &  & \\
+
+\hline
+Week 12 & 11/16-11/23 & Cost of Capital Estimation and Free Cash Flow Estimation & 11: Introduction to DCF Valuation and Cost of Capital Estimation & 4: Full DCF Valuation & 3: Monte Carlo Cost of Capital\\
+ &  &  & 12: Free Cash Flow Estimation and Forecasting &  & \\
+
+\hline
+Week 13 & 11/23-11/30 & Forecasting Free Cash Flows & 12: Free Cash Flow Estimation and Forecasting &  & \\
+
+\hline
+Week 14 & 11/30-12/07 & Advanced Financial Modeling Roadmap & 13: Advanced Financial Modeling &  & \\
+
+\hline
+Week 15 & 12/07-12/17 & Final Project Time &  &  & 4: Full DCF Valuation\\
+
+\bottomrule
+\end{tabular}
+\end{landscape}
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Introduction}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{About Me}
+\begin{itemize}
+\item I am currently a Finance Ph.D. student at UF focusing on market intervention, alternative assets, and behavioral finance
+\item This is my third time teaching Financial Modeling and I taught Debt and Money Markets twice previously
+\item Undergraduate and master's degrees in Finance from Virginia Commonwealth University (VCU)
+\item Worked as the only commercial loan portfolio analyst at a small bank (about \$1B in assets, 15 branches). During my time there, saved the bank \$4.5 million dollars
+\item Represented VCU in the Chartered Financial Analyst (CFA) Equity Research Challenge, our team got in the top 12 out of ~800 university teams from around the world
+\item I am a strong supporter of open-source software. I develop packages as part of my research and also as part of this class.
+\end{itemize}
+\end{section}
+\begin{section}{Syllabus}
+\begin{itemize}
+\item Get the textbook if you're someone who learns well from reading, and doesn't have a lot of Excel experience. Otherwise it probably won't be very helpful
+\item Mac and Windows are both fine, though I don't have much experience on Mac so I won't be as helpful with OS-specific issues
+\item This class is hard. Those who don't have good technical skills already should prepare to put a lot of work in or consider another course.
+\item We focus on the modeling process and skills, not as much on the finance, so you need to have a good knowledge of finance first.
+\item If you don't have any of the required Excel skills, take a look at the resources provided on the syllabus and ask me any questions
+\item The lab sessions are perhaps the most valuable part of the course because you can get lots of hands on feedback
+\item I have consistently heard that these are the hardest (and most rewarding) projects in the finance program at UF. Start early and ask questions.
+\item I would highly encourage those who don't have Python experience to work through some of the resources in the syllabus. This will greatly enhance your learning and allow you to focus on the models rather than struggling with programming basics.
+\item Please review the syllabus document for the grading structure
+\end{itemize}
+\end{section}
+\begin{section}{What is a Financial Model?}
+\begin{itemize}
+\item A model is simply a repeatable process which converts inputs to outputs
+\item The process might be as simple as a single calculation or as complicated as trying to value a large multinational company
+\item There can be one or many inputs and outputs
+\item A model is a logical and mathematical construct, it has nothing to do with Excel or Python. These are just tools we can use to implement the model
+\end{itemize}
+\end{section}
+\begin{section}{Tools and Skills}
+\begin{itemize}
+\item We will implement models in both Excel and Python in this class
+\item It is necessary to learn programming to build real-world custom models
+\item Out of programming languages, people love Python for its short(er) learning curve, readability, power, and flexibility. 
+\item Learning programming and Python has many applications outside financial modeling and proves technical competency on a resume
+\item Python, like (nearly) any other programming language, is text-based and lives in a terminal
+\item While it does get much easier to learn more languages after your first, if you're going to pick just one, it should definitely be Python over VBA
+\item Excel is not going anywhere. It has its problems, some of which are major, but it is so widespread and people are used to dealing with these problems
+\end{itemize}
+\end{section}
+\begin{section}{Installing Python}
+\begin{itemize}
+\item Watch this process to learn how to install Python
+\item You will only need to complete this once on a given computer
+\item The "Add Anaconda to my PATH environment variable" is very important, it will warn you that it could cause issues but it won't for our purposes, and if you leave it unchecked you may have to reinstall Python later in the course
+\item Be sure to test your installation is working
+\end{itemize}
+\end{section}
+\end{document}

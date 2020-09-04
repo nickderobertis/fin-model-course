@@ -1,0 +1,96 @@
+\documentclass[]{article}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Full DCF Valuation}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Overview}
+\begin{subsection}{Problem Definition}
+The purpose of this exercise is to complete a full discounted cash flow valuation of a stock from end to end,
+complete with all of the additional analyses you learned throughout the course. You can pick any publicly traded
+stock for your valuation. You must find the data on your own and research the company's operations. Ultimately the
+main output is your valuation of the stock, but you must also provide a written justification of why you
+believe this value to be correct. You must discuss and show how variable this estimate is, as well as what could
+have large effects on the valuation. You should also consider several realistic scenarios based on states of the
+economy, and how these scenarios affect the valuation.
+
+Some of the components of your project should include: \begin{itemize}
+\item WACC estimation
+\item FCF estimation and forecasting (must forecast financial statements, not only FCFs directly, though that can be an extra check)
+\item A written justification for why statements were forecasted as they were
+\item Terminal value estimation using both perpetuity growth and various exit multiples
+\item Monte carlo simulation
+\item Sensitivity analysis
+\item Scenario analysis
+\item Visualization
+\end{itemize}
+
+\end{subsection}
+\begin{subsection}{Notes}
+Unlike the prior exercises, there is no solution key, as everyone will be working on a different company. Further,
+there is considerable flexibility in forecasting so solutions wouldn't make sense even with the same company.
+
+Readability is a higher portion of the grade as these will be large models and it's very important to stay
+organized with a large model.
+\end{subsection}
+\begin{subsection}{Bonus}
+Since this exercise is a lot less structured than prior projects, so too is the bonus. The bonus will be based on
+doing parts of the model especially well. If your model stands out for having great visualization, that will earn
+some bonus points. If it has a great write up, is organized very well, is especially thorough, etc. then you
+can earn bonus points. Basically any part of the project, if you are doing it especially well you could earn
+bonus points for that. The maximum on the bonus is 5\%.
+\end{subsection}
+\end{section}
+\begin{section}{Submission \& Grading}
+\begin{subsection}{Submission}
+Please submit your model, a write up of the results, and any data you used. The write up can be included in the
+model if desired.
+\end{subsection}
+\begin{subsection}{Grading}
+\begin{center}
+\begin{tabular}{l|c}
+\multicolumn{2}{c}{Grading Breakdown}\\
+
+\toprule
+Category & Percentage\\
+
+\cmidrule(lr){1-2}
+Model Accuracy & 60\%\\
+Model Readability & 30\%\\
+Model Formatting & 10\%\\
+Bonus & 5\%\\
+
+\midrule
+Total Possible & 105\%\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\end{subsection}
+\end{section}
+\end{document}

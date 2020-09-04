@@ -1,0 +1,368 @@
+\documentclass[handout, 11pt]{beamer}
+\mode
+<presentation>{\usetheme{Madrid}}
+\institute[UF]{\inst{1}
+University of Florida\\
+Department of Finance, Insurance, and Real Estate}
+\usepackage{minted}
+\definecolor{darkgreen}{RGB}{31,156,17}
+\usepackage{booktabs}
+\setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
+\insertnavigation{\paperwidth}
+\end{beamercolorbox}}
+\AtBeginSection{\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents[currentsection]
+\end{frame}}
+\begin{document}
+\title[Combining Tools]{Combining Excel and Python}
+\subtitle{Using \texttt{xlwings} to Run Excel from Python}
+\author[DeRobertis]{Nick DeRobertis\inst{1}}
+\date{\today}
+\begin{frame}
+\titlepage
+\label{title-frame}
+\end{frame}
+\begin{section}{Introduction}
+\begin{frame}
+\frametitle{Leveraging the Power of Both Tools}
+\begin{itemize}
+\item We have learned how to use both Excel and Python to solve problems. Throughout this process, there were advantages and disadvantages of each tool for each problem.
+\vfill
+\item I wanted you to know both tools so you could pick whichever is best to tackle your problem
+\vfill
+\item For larger problems, you'll likely find some parts are better with Excel and some with Python
+\vfill
+\item After this lecture, you won't need to choose one anymore, you can use both at once.
+\end{itemize}
+\end{frame}
+\end{section}
+\begin{section}[\texttt{pandas}]{To and From Excel with \texttt{pandas}}
+\begin{frame}
+\frametitle{How Far does \texttt{pandas} Get Us?}
+\begin{itemize}
+\item \texttt{pandas}
+has built-in tools for working with Excel
+\vfill
+\item \texttt{pandas}
+can read Excel workbooks into
+\texttt{DataFrames}
+and it can write
+\texttt{DataFrames}
+back to Excel workbooks
+\vfill
+\item For simple uses, this may be enough. If you just need to get data from somewhere once and put it in your workbook, or you have your data in Excel and want to analyze it in Python, this is sufficient
+\vfill
+\item If you want to manipulate your workbook from Python, or you want to run Python code from your workbook, look to
+\texttt{xlwings}
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Reading and Writing to Excel Files with \texttt{pandas}}
+\begin{block}<+->{Reading Excel Files}
+\begin{minted}{python}
+df = pd.read_excel('data.xlsx', sheet_name='My Data')
+\end{minted}
+\vspace{-0.3cm}
+\begin{itemize}
+\item If you don't pass a sheet name, it will take the first sheet.
+\end{itemize}
+\end{block}
+\vfill
+\begin{block}<+->{Writing to Excel Files}
+\begin{minted}{python}
+df.to_excel('data.xlsx', sheet_name='My Data', index=False)
+\end{minted}
+\vspace{-0.3cm}
+\begin{itemize}
+\item We are passing
+\texttt{index=False}
+because usually the 0, 1, 2 ... index is not useful
+\item If you had set your index to something useful, then don't include
+\texttt{index=False}
+\end{itemize}
+\end{block}
+\vfill
+\begin{alertblock}<+->{Careful When Writing!}
+When
+\texttt{pandas}
+writes to a workbook, it replaces the file. Do not write over an existing workbook that you want to keep!
+\end{alertblock}
+\end{frame}
+\begin{frame}
+\frametitle{Showcasing Reading and Writing to Excel Files}
+{
+\setbeamercolor{block title}{bg=darkgreen}
+\begin{block}{Read and Write to Excel using \texttt{pandas}}
+\begin{itemize}
+\item Download the contents of the "Read Write Excel Pandas" folder in Examples
+\item Ensure that you put the Excel file and notebook in the same folder for it to work
+\item Follow along with the notebook
+\end{itemize}
+\end{block}
+}
+\end{frame}
+\begin{frame}
+\frametitle{Reading and Writing to Excel with \texttt{pandas}, Level 1}
+{
+\setbeamercolor{block title}{bg=violet}
+\begin{block}{Reading and Writing to Excel, Level 1}
+\begin{enumerate}
+\item Download "MSFT Financials.xls" from Canvas in Lab Exercises -> Read Write Excel Pandas
+\item Read the sheet "Income Statement" into a DataFrame
+\item Write the DataFrame to a new workbook, "My Data.xlsx", with the sheet name "Income Statement"
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
+\toprule
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-3}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{lab:read-write-excel-pandas-1}
+\end{frame}
+\end{section}
+\begin{section}[\texttt{xlwings}]{Introducing Full Python-Excel Connection with \texttt{xlwings}}
+\begin{frame}
+\frametitle{Introducing \texttt{xlwings}}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\vbox to 0.8\textheight{\begin{itemize}
+\item The easiest way to use Python from in Excel, or Excel from in Python, is
+\texttt{xlwings}
+\vfill
+\item In Windows, it's based off the Microsoft COM API, which is some common tools they give for creating plugins.
+\vfill
+\item It's still in active development, but overall it works pretty well and is far beyond where we were a few years ago
+\end{itemize}}
+\end{column}
+\begin{column}{0.5\textwidth}
+\vbox to 0.8\textheight{\centering
+\vfill
+\includegraphics[height=1.0\textheight, keepaspectratio, width=0.9\textwidth]{Sources/xlwings-logo.png}
+\vfill
+\vfill}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}
+\frametitle{What are the Main Ways to use \texttt{xlwings}?}
+\begin{itemize}
+\item There are two main ways to use
+\texttt{xlwings}
+\vfill
+\item You can
+\textbf{manipulate Excel from Python,}
+which gives you the full power of Excel from
+within Python. In this class we'll focus on reading and writing values, but you can do anything
+that you would normally be able to in Excel, but by executing Python code.
+\vfill
+\item Or you can
+\textbf{run Python from Excel}
+using one of two approaches:
+\underline{Python as a VBA replacement}
+and
+\underline{user-defined functions (UDFs)}
+\vfill
+\item We will focus on manipulating Excel from Python in this class. I encourage you to explore the other two approaches on your own.
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Using Python to Drive Excel Models}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\vbox to 0.8\textheight{\begin{itemize}
+\small
+\vfill
+\item \texttt{xlwings}
+allows us to write Python values into Excel and fetch Excel values into Python
+\vfill
+\item There is also a complete VBA API, meaning you can do everything that you could do with VBA from within Python, which means you have the full capabilities of Excel within Python
+\vfill
+\item There are also convenient features to work with entire tables at once rather than a single value
+\end{itemize}}
+\end{column}
+\begin{column}{0.5\textwidth}
+\vbox to 0.8\textheight{\centering
+\vfill
+\includegraphics[height=1.0\textheight, keepaspectratio, width=0.9\textwidth]{Sources/python-excel-logo.png}
+\vfill
+\vfill}
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Write and Read Values to and from Excel}
+\begin{block}{Read Values from Excel}
+\begin{minted}{python}
+
+my_value = sht.range("G11").value  # single value
+# all values in cell range
+my_value = sht.range("G11:F13").value  
+# expands cell range down and right getting all values
+my_values = sht.range("G11").expand().value  
+
+\end{minted}
+\end{block}
+\begin{block}{Write Values to Excel}
+\begin{minted}{python}
+
+sht.range("G11").value = 10
+sht.range("G11").value = [10, 11]  # horizontal
+sht.range("G11:G12").value = [10, 11]  # vertical
+# table, DataFrame from elsewhere
+sht.range("G11").value = df  
+
+\end{minted}
+\end{block}
+\end{frame}
+\begin{frame}
+\frametitle{How to Use \texttt{xlwings}}
+{
+\setbeamercolor{block title}{bg=darkgreen}
+\begin{block}{Trying out \texttt{xlwings}}
+\begin{itemize}
+\item Download the contents of the "xlwings" folder in Examples
+\item Ensure that you put the Excel file and notebook in the same folder for it to work
+\item Follow along with the notebook
+\end{itemize}
+\end{block}
+}
+\end{frame}
+\begin{frame}
+\frametitle{Reading and Writing to Excel with \texttt{xlwings}, Level 1}
+{
+\setbeamercolor{block title}{bg=violet}
+\begin{block}{Dynamically Reading and Writing to Excel, Level 1}
+\begin{enumerate}
+\item For all of the
+\texttt{xlwings}
+lab exercises, work with "xlwings Lab.xlsx".
+\item Use
+\texttt{xlwings}
+to read the values in the column A and then write them beside
+the initial values in column B
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
+\toprule
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-3}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-4}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{lab:xlwings-1}
+\end{frame}
+\end{section}
+\appendix
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\begin{frame}
+\frametitle{Reading and Writing to Excel with \texttt{pandas}, Level 2}
+{
+\setbeamercolor{block title}{bg=violet}
+\begin{block}{Reading and Writing to Excel, Level 2}
+\begin{enumerate}
+\item Use the same "MSFT Financials.xls" from the first exercise on Slide
+\ref{lab:read-write-excel-pandas-1}
+\item Output to five separate workbooks, named "My Data1.xlsx", "My Data2.xlsx", and so on.
+\item Do this
+\underline{without}
+writing the
+\texttt{to\_excel}
+command multiple times
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
+\toprule
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-3}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{lab:read-write-excel-pandas-2}
+\end{frame}
+\begin{frame}
+\frametitle{Reading and Writing to Excel with \texttt{pandas}, Level 3}
+{
+\setbeamercolor{block title}{bg=violet}
+\begin{block}{Reading and Writing to Excel, Level 3}
+\begin{enumerate}
+\item Note: this exercise uses the Advanced material covered in Examples -> Read Write Excel Pandas
+\item Use the same "MSFT Financials.xls" from the first exercise on Slide
+\ref{lab:read-write-excel-pandas-1}
+\item Output to five separate sheets in the same workbook "My Data.xlsx". The sheets should be named "Income Statement 1", "Income Statement 2", and so on.
+\item Do this
+\underline{without}
+writing the
+\texttt{to\_excel}
+command multiple times
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
+\toprule
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-2}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{lab:read-write-excel-pandas-3}
+\end{frame}
+\begin{frame}
+\frametitle{Reading and Writing to Excel with \texttt{xlwings}, Level 2}
+{
+\setbeamercolor{block title}{bg=violet}
+\begin{block}{Dynamically Reading and Writing to Excel, Level 2}
+\begin{enumerate}
+\item Get the value in C9 and multiply it by 2.5 in Python
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
+\toprule
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-3}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-4}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{lab:xlwings-2}
+\end{frame}
+\begin{frame}
+\frametitle{Reading and Writing to Excel with \texttt{xlwings}, Level 3}
+{
+\setbeamercolor{block title}{bg=violet}
+\begin{block}{Dynamically Reading and Writing to Excel, Level 3}
+\begin{enumerate}
+\item Read the table which starts in E4 into Python. Multiply the prices by 2.5, and then output back into Excel starting in cell H5.
+\item Ensure that the outputted table appears in the same format as the original (pay attention to index and header)
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
+\toprule
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-2}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-4}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{lab:xlwings-3}
+\end{frame}
+\begin{frame}
+\frametitle{Reading and Writing to Excel with \texttt{xlwings}, Level 4}
+{
+\setbeamercolor{block title}{bg=violet}
+\begin{block}{Dynamically Reading and Writing to Excel, Level 4}
+\begin{enumerate}
+\item In column L, write 5, 10, 15 ... 100 spaced two cells apart, so L1 would have 5, L4 would have 10, and so on.
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
+\toprule
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-3}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{lab:xlwings-4}
+\end{frame}
+\setcounter{framenumber}{\value{finalframe}}
+\end{document}

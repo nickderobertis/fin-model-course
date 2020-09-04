@@ -1,0 +1,51 @@
+\documentclass[]{article}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Scenario Modeling Problems}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Capital Budgeting}
+\begin{subsection}{Problem Statement}
+You are an analyst trying to decide whether it is worth it to launch a new product line selling t-shirts. The success of the t-shirt business will depend on the state of the economy. You can purchase a machine which costs \$10,000,000 at $t=0$, then each year you will earn the profit per unit (revenue minus variable cost), multiplied by the output. The machine will last for 10 years. Should this project be undertaken? Will it be successful in all scenarios?
+\end{subsection}
+\begin{subsection}{Scenarios}
+\begin{center}
+\begin{tabular}{l|cccc}
+\toprule
+State of Economy & Probability & Price & Output & Interest Rate\\
+
+\midrule
+Expansion & 20\% & 15 & 1000000 & 7\%\\
+Normal & 70\% & 12 & 500000 & 5\%\\
+Recession & 10\% & 10 & 200000 & 3\%\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\end{subsection}
+\end{section}
+\end{document}
