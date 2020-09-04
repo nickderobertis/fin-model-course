@@ -81,19 +81,24 @@ class Lecture:
 @dataclass
 class LectureResource:
     name: str
-    generated_url: Optional[str] = None
+    static_url: Optional[str] = None
     external_url: Optional[str] = None
     updated: Optional[datetime.datetime] = None
     index: Optional[int] = None
     datetime_fmt: str = "%B%e, %l:%M %p"
 
     @classmethod
-    def from_metadata(cls, md: "ContentMetadata") -> "LectureResource":
-        generated_content_subfolder = md.output_extension + "s"
-        url = f"{generated_content_subfolder}/{md.content_type_code}{md.content_index} {md.name}.{md.output_extension}"
+    def from_metadata(cls, md: "ContentMetadata", url: Optional[str] = None) -> "LectureResource":
+        from models.content import GeneratedContentMetadata
+        if url is None:
+            generated_content_subfolder = md.output_extension + "s"
+            if isinstance(md, GeneratedContentMetadata):
+                url = f"generated/{generated_content_subfolder}/{md.content_type_code}{md.content_index} {md.name}.{md.output_extension}"
+            else:
+                raise NotImplementedError('need to implement auto url for non-generated content')
         resource = cls(
             name=md.name,
-            generated_url=url,
+            static_url=url,
             index=md.content_index,
             updated=md.last_modified,
         )
@@ -101,8 +106,8 @@ class LectureResource:
 
     @property
     def url(self) -> Optional[str]:
-        if self.generated_url is not None:
-            return f"/_static/generated/{self.generated_url}"
+        if self.static_url is not None:
+            return f"/_static/{self.static_url}"
         if self.external_url is not None:
             return self.external_url
         return None

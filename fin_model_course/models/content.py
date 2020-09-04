@@ -1,11 +1,13 @@
 import datetime
 import hashlib
+import os
 import pathlib
-from typing import Optional, Dict, List, Type
+from typing import Optional, Dict, List, Type, cast
 
 from pydantic import BaseModel, Field
 
 from build_tools.config import DOCSRC_STATIC_PATH
+from build_tools.ext_rst import header_rst
 from lectures.model import LectureResource
 
 CONTENT_TYPE_CODES_TO_NAMES = {
@@ -42,7 +44,7 @@ class ContentMetadata(BaseModel):
     @classmethod
     def generate_from_file(
         cls,
-        folder: pathlib.Path,
+        file_path: pathlib.Path,
         file_name: str,
         hashed_extension: str = "tex",
         output_extension: str = "pdf",
@@ -70,11 +72,11 @@ class GeneratedContentMetadata(ContentMetadata):
     @classmethod
     def generate_from_file(
         cls,
-        folder: pathlib.Path,
+        file_path: pathlib.Path,
         file_name: str,
         hashed_extension: str = "tex",
         output_extension: str = "pdf",
-    ) -> "ContentMetadata":
+    ) -> "GeneratedContentMetadata":
         name_parts = str(file_name).split()
         content_type_code_and_index = name_parts[0]
         content_type = ""
@@ -88,9 +90,7 @@ class GeneratedContentMetadata(ContentMetadata):
 
         name = " ".join(name_parts[1:])
 
-        full_file_name = f"{file_name}.{hashed_extension}"
-        path = folder / full_file_name
-        contents = path.read_bytes()
+        contents = file_path.read_bytes()
         hashed = hashlib.md5(contents).hexdigest()
         return cls(
             name=name,
@@ -99,6 +99,27 @@ class GeneratedContentMetadata(ContentMetadata):
             output_extension=output_extension,
             content_type_code=content_type,
             content_index=int(content_index),
+        )
+
+
+class StaticContentMetadata(ContentMetadata):
+
+    @classmethod
+    def generate_from_file(
+        cls,
+        file_path: pathlib.Path,
+        file_name: str,
+        hashed_extension: str = "xlsx",
+        output_extension: str = "xlsx",
+    ) -> "StaticContentMetadata":
+        name = file_path.stem
+        contents = file_path.read_bytes()
+        hashed = hashlib.md5(contents).hexdigest()
+        return cls(
+            name=name,
+            file_hash=hashed,
+            hashed_extension=hashed_extension,
+            output_extension=output_extension,
         )
 
 
@@ -115,10 +136,12 @@ class CollectionMetadata(BaseModel):
         base_path: pathlib.Path = CONTENT_BASE_PATH,
     ) -> "CollectionMetadata":
         items: Dict[str, ContentMetadata] = {}
-        for file in folder.glob(f"*.{hashed_extension}"):
+        for file in folder.rglob(f"*.{hashed_extension}"):
+            if '.ipynb_checkpoints' in str(file):
+                continue
             file_name = file.stem
             metadata = cls._metadata_cls.generate_from_file(
-                folder,
+                file,
                 file_name,
                 hashed_extension=hashed_extension,
                 output_extension=output_extension,
@@ -150,10 +173,7 @@ class GeneratedCollectionMetadata(CollectionMetadata):
     _metadata_cls: Type[ContentMetadata] = GeneratedContentMetadata
 
     def to_rst(self) -> str:
-        out_str = f"""
-Downloads
-************************************************************************************************************************
-"""
+        out_str = header_rst('Downloads', 2)
         items_categories: Dict[str, List[LectureResource]] = {
             name: [] for name in CONTENT_TYPE_CODES_TO_NAMES.values()
         }
@@ -170,10 +190,50 @@ Downloads
         for category, items in items_categories.items():
             if not items:
                 continue
-            out_str += f"""
-{category}
-=======================================================================================================================
-            """
+            out_str += header_rst(category, 3)
             for resource in items:
                 out_str += resource.to_rst()
         return out_str
+
+
+class StaticCollectionMetadata(CollectionMetadata):
+    items: Dict[str, GeneratedContentMetadata]
+    _metadata_cls: Type[ContentMetadata] = StaticContentMetadata
+
+    def to_rst(self) -> str:
+        sections_dict = {'_items': []}
+        for file_path, md in self.items.items():
+            file_parts = file_path.split(os.path.sep)
+            folders = file_parts[:-1]
+            resource = LectureResource.from_metadata(md, url=file_path)
+            this_section_dict = sections_dict
+            for folder in folders:
+                if folder not in this_section_dict:
+                    this_section_dict[folder] = {'_items': []}
+                this_section_dict = this_section_dict[folder]
+            this_section_dict['_items'].append(resource)
+            # TODO: static resource sorting would be more efficient in a separate loop after all items are created
+            this_section_dict['_items'].sort(key=lambda res: res.index if res.index is not None else -1)
+
+        out_str = _static_sections_rst(sections_dict, 2)
+        return out_str
+
+
+def _static_sections_rst(sections_dict: dict, level: int) -> str:
+    this_section_contents = ''
+    sub_section_contents = ''
+    for section_name, section_content in sections_dict.items():
+        if section_name == '_items':
+            # Content for this section, not another subsection
+            section_content = cast(List[LectureResource], section_content)
+            for res in section_content:
+                this_section_contents += res.to_rst()
+            continue
+
+        # Content for sub-section
+        section_content = cast(dict, section_content)
+        sub_section_contents += header_rst(section_name, level)
+        sub_section_contents += _static_sections_rst(section_content, level + 1)
+
+    all_contents = this_section_contents + sub_section_contents
+    return all_contents
