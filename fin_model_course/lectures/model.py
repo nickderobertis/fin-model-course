@@ -121,6 +121,8 @@ class Lecture:
     :height: 315
     :width: 560
     :align: center
+
+|
 """
         out_str += header_rst('Notes', 4)
         out_str += self.notes.to_rst()
