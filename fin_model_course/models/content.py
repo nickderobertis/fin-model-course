@@ -1,7 +1,7 @@
 import datetime
 import hashlib
 import pathlib
-from typing import Optional, Dict, List
+from typing import Optional, Dict, List, Type
 
 from pydantic import BaseModel, Field
 
@@ -27,6 +27,30 @@ class ContentMetadata(BaseModel):
     last_modified: datetime.datetime = Field(
         default_factory=lambda: datetime.datetime.now()
     )
+
+    def __eq__(self, other):
+        try:
+            return all(
+                [
+                    self.file_hash == other.file_hash,
+                    self.name == other.name,
+                ]
+            )
+        except AttributeError:
+            return False
+
+    @classmethod
+    def generate_from_file(
+        cls,
+        folder: pathlib.Path,
+        file_name: str,
+        hashed_extension: str = "tex",
+        output_extension: str = "pdf",
+    ) -> "ContentMetadata":
+        raise NotImplementedError
+
+
+class GeneratedContentMetadata(ContentMetadata):
     content_type_code: Optional[str] = None
     content_index: Optional[int] = None
 
@@ -80,6 +104,7 @@ class ContentMetadata(BaseModel):
 
 class CollectionMetadata(BaseModel):
     items: Dict[str, ContentMetadata]
+    _metadata_cls: Type[ContentMetadata] = ContentMetadata
 
     @classmethod
     def generate_from_folder(
@@ -92,7 +117,7 @@ class CollectionMetadata(BaseModel):
         items: Dict[str, ContentMetadata] = {}
         for file in folder.glob(f"*.{hashed_extension}"):
             file_name = file.stem
-            metadata = ContentMetadata.generate_from_file(
+            metadata = cls._metadata_cls.generate_from_file(
                 folder,
                 file_name,
                 hashed_extension=hashed_extension,
@@ -116,7 +141,15 @@ class CollectionMetadata(BaseModel):
             items[name] = md
         return self.__class__(items=items)
 
-    def to_rst(self):
+    def to_rst(self) -> str:
+        raise NotImplementedError
+
+
+class GeneratedCollectionMetadata(CollectionMetadata):
+    items: Dict[str, GeneratedContentMetadata]
+    _metadata_cls: Type[ContentMetadata] = GeneratedContentMetadata
+
+    def to_rst(self) -> str:
         out_str = f"""
 Downloads
 ************************************************************************************************************************
