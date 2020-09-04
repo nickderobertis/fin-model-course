@@ -1,5 +1,7 @@
 import pathlib
 
+SITE_URL = 'https://nickderobertis.github.io/fin-model-course/'
+
 PACKAGE_ROOT = pathlib.Path(__file__).parent.parent
 PROJECT_ROOT = PACKAGE_ROOT.parent
 LOCAL_PLBUILDER_ROOT = PACKAGE_ROOT / 'plbuild' / 'sources'
