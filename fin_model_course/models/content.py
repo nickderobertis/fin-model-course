@@ -5,6 +5,7 @@ from typing import Optional, Dict, List
 
 from pydantic import BaseModel, Field
 
+from build_tools.config import DOCSRC_STATIC_PATH
 from lectures.model import LectureResource
 
 CONTENT_TYPE_CODES_TO_NAMES = {
@@ -14,6 +15,8 @@ CONTENT_TYPE_CODES_TO_NAMES = {
     "PJ": "Project Descriptions",
     "PR": "Practice Problems",
 }
+
+CONTENT_BASE_PATH = DOCSRC_STATIC_PATH
 
 
 class ContentMetadata(BaseModel):
@@ -71,7 +74,7 @@ class ContentMetadata(BaseModel):
             hashed_extension=hashed_extension,
             output_extension=output_extension,
             content_type_code=content_type,
-            content_index=content_index,
+            content_index=int(content_index),
         )
 
 
@@ -84,18 +87,19 @@ class CollectionMetadata(BaseModel):
         folder: pathlib.Path,
         hashed_extension: str = "tex",
         output_extension: str = "pdf",
+        base_path: pathlib.Path = CONTENT_BASE_PATH,
     ) -> "CollectionMetadata":
         items: Dict[str, ContentMetadata] = {}
         for file in folder.glob(f"*.{hashed_extension}"):
-            file_path = folder / file
-            file_name = file_path.stem
+            file_name = file.stem
             metadata = ContentMetadata.generate_from_file(
                 folder,
                 file_name,
                 hashed_extension=hashed_extension,
                 output_extension=output_extension,
             )
-            items[f"{file_name}.{hashed_extension}"] = metadata
+            relative_path = file.relative_to(base_path)
+            items[str(relative_path)] = metadata
         return cls(items=items)
 
     def merge(self, other: "CollectionMetadata") -> "CollectionMetadata":
