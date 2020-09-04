@@ -210,24 +210,28 @@ class StaticCollectionMetadata(CollectionMetadata):
     _metadata_cls: Type[ContentMetadata] = StaticContentMetadata
 
     def to_rst(self) -> str:
-        sections_dict = {"_items": []}
+        sections_dict = {"_items": [], '_description': ''}
         for file_path, md in self.items.items():
             file_parts = file_path.split(os.path.sep)
             folders = file_parts[:-1]
+            file_name = file_parts[-1]
             resource = LectureResource.from_metadata(md, url=file_path)
             this_section_dict = sections_dict
             for folder in folders:
                 if folder not in this_section_dict:
-                    this_section_dict[folder] = {"_items": []}
+                    this_section_dict[folder] = {"_items": [], '_description': ''}
                 this_section_dict = this_section_dict[folder]
-            this_section_dict["_items"].append(resource)
+            if file_name == 'README.rst':
+                this_section_dict['_description'] = (DOCSRC_STATIC_PATH / file_path).read_text()
+            else:
+                this_section_dict["_items"].append(resource)
             # TODO: static resource sorting would be more efficient in a separate loop after all items are created
             this_section_dict["_items"].sort(
                 key=lambda res: res.index if res.index is not None else -1
             )
 
         for section_name, section in sections_dict.items():
-            if section_name == '_items':
+            if section_name in ['_items', '_description']:
                 continue
             sorted_section = dict(
                 sorted(
@@ -244,9 +248,11 @@ class StaticCollectionMetadata(CollectionMetadata):
 
 
 def _static_sections_rst(sections_dict: dict, level: int) -> str:
-    this_section_contents = ""
+    this_section_contents = sections_dict['_description'] + '\n\n'
     sub_section_contents = ""
     for section_name, section_content in sections_dict.items():
+        if section_name == '_description':
+            continue
         if section_name == "_items":
             # Content for this section, not another subsection
             section_content = cast(List[LectureResource], section_content)
