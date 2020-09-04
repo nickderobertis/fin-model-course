@@ -12,4 +12,5 @@ A Python and Excel Financial Modeling Course
    :caption: Course Content
 
    lectures/introduction
+   lectures/getting-started-with-python-and-excel
    downloads

@@ -10,7 +10,7 @@ def get_getting_started_with_python_and_excel_lecture() -> LectureGroup:
                   'Python and Excel.'
     resources = [
         LectureResource(f'Lecture Notes - {title}', static_url=f'generated/pdfs/LN2 {title}.pdf'),
-        LectureResource(f'Slides - {LECTURE_2_NAME}', static_url=f'generated/pdfs/2 {LECTURE_2_NAME}.pdf'),
+        LectureResource(f'Slides - {LECTURE_2_NAME}', static_url=f'generated/pdfs/S2 {LECTURE_2_NAME}.pdf'),
     ]
     lectures = [
         notes.get_intro_and_problem_lecture(),

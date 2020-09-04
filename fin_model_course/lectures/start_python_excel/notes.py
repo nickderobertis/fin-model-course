@@ -3,7 +3,7 @@ from lectures.model import LectureNotes, Lecture, LectureResource
 
 def get_intro_and_problem_lecture() -> Lecture:
     title = 'Introduction and an Example Model'
-    youtube_id = ''
+    youtube_id = 'KL48T_XGbzI'
     notes = LectureNotes([
         'In the beginning of the course, we will do everything with both Excel and Python to understand '
         'the differences. Later we will focus on choosing the best tool for the task at hand and '
@@ -21,7 +21,7 @@ def get_intro_and_problem_lecture() -> Lecture:
 
 def get_excel_solution_lecture() -> Lecture:
     title = 'Building a Simple Excel Model'
-    youtube_id = ''
+    youtube_id = 'hySE7wOAlfc'
     notes = LectureNotes([
         'It is crucial that all your Excel calculations are linked together by '
         'cell references. If you hard-code values in your calculations you are '
@@ -45,7 +45,7 @@ def get_excel_solution_lecture() -> Lecture:
 
 def get_python_solution_lecture() -> Lecture:
     title = 'Building a Simple Python Model'
-    youtube_id = ''
+    youtube_id = 'syrwXU1wqps'
     notes = LectureNotes([
         'In Python, we keep things linked together by using variables. If you hard-code values in '
         'your calculations, you are just using Python as a calculator',
@@ -69,7 +69,7 @@ def get_python_solution_lecture() -> Lecture:
 
 def get_basic_iteration_lecture() -> Lecture:
     title = 'Basic Iteration'
-    youtube_id = ''
+    youtube_id = 'vAOrxaKnXaQ'
     notes = LectureNotes([
         'Iteration is a key concept in financial modeling (as well as programming)',
         'Using iteration, we can complete the same process for multiple inputs to '
@@ -86,7 +86,7 @@ def get_basic_iteration_lecture() -> Lecture:
 
 def get_excel_extending_lecture() -> Lecture:
     title = 'Extending a Simple Excel Model'
-    youtube_id = ''
+    youtube_id = 'GD34LyjvMaE'
     notes = LectureNotes([
         'Essentially the model with iteration is the same, we just drag the formula to '
         'cover multiple inputs',
@@ -97,7 +97,7 @@ def get_excel_extending_lecture() -> Lecture:
 
 def get_python_extending_lecture() -> Lecture:
     title = 'Extending a Simple Python Model'
-    youtube_id = ''
+    youtube_id = 'Ejk6ektd21I'
     notes = LectureNotes([
         'To add iteration to the Python model, just wrap the existing code in a loop',
         'We must also collect or show the output in some way, as we can no longer take advantage '
@@ -108,7 +108,7 @@ def get_python_extending_lecture() -> Lecture:
 
 def get_lab_exercise_lecture() -> Lecture:
     title = 'Getting Started with Python and Excel Labs'
-    youtube_id = ''
+    youtube_id = '2J-GCwSNGBw'
     notes = LectureNotes([
         'This is our first real lab exercise (must be submitted). Be sure to complete the same exercise in '
         'both Python and Excel',
