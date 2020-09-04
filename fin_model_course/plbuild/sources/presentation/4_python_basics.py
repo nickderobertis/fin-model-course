@@ -18,7 +18,7 @@ from pltemplates.frames.model_flowchart import (
     in_out_style
 )
 from pltemplates.blocks import LabBlock
-from schedule.main import LECTURE_1_NAME
+from schedule.main import LECTURE_4_NAME
 
 TITLE = LECTURE_4_NAME
 SHORT_TITLE = 'Python Basics'

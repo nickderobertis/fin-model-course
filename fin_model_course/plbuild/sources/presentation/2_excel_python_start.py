@@ -31,6 +31,7 @@ from pyexlatex.graphics import (
 )
 
 import plbuild
+from build_tools.config import SITE_URL
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
 from pltemplates.frames.model_flowchart import (
@@ -61,6 +62,7 @@ HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 
 def get_content():
     random.seed(1000)
+    site_link = Hyperlink(SITE_URL, 'the course site')
 
     full_fix = Monospace('\$A\$2')
     col_fix = Monospace('\$A2')
@@ -74,6 +76,7 @@ def get_content():
     cmd = Monospace('cmd')
     terminal = Monospace('terminal')
     in_block = Monospace('In [ ]:')
+    numpy_financial = pl.Monospace('numpy_financial')
 
     example_python_iteration = Block(
         Python("""
@@ -148,7 +151,7 @@ for item in inputs:
                 ),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download Simple Retirement Model.xlsx from Examples > Intro > Excel',
+                        ['Go to', site_link, 'and download Simple Retirement Model Excel'],
                         'Follow along as I recreate the simple model.'
                     ],
                     title='Simple Retirement Problem in Excel',
@@ -161,10 +164,12 @@ for item in inputs:
             [
                 TwoColumnGraphicDimRevealFrame(
                     [
+                        pl.TextSize(-1),
                         "Using Python in the terminal is kind of a pain. And so, tools were born.",
                         "Jupyter is a graphical interface we can use for Python. It also supports over 40 other "
                         "languages such as R, SAS, Julia, and Scala",
-                        f"You can use {notebook} or {lab}. The latter has a lot more features outside of the notebook"
+                        f"You can use {notebook} or {lab}. The latter has a lot more features outside of the notebook. "
+                        f"We will focus on using {lab} in this class as it is the future of Jupyter."
                     ],
                     graphics=[
                         images_path('jupyter-notebook.png')
@@ -186,7 +191,7 @@ for item in inputs:
                         ),
                         AlertBlock(
                             f"If you don't have Anaconda Navigator, just open a terminal (search {cmd} on Windows, {terminal} on Mac). Then in the "
-                            f"terminal, type {notebook} and enter. Then continue with the third step."
+                            f"terminal, type {lab} and enter. Then continue with the third step."
                         )
                     ],
                     title="Let's Get Set up with Jupyter"
@@ -205,7 +210,21 @@ for item in inputs:
                     ],
                     title='Some Python Basics'
                 ),
-                TwoColumnGraphicFrame(
+                TwoColumnFrame(
+                    [
+                        pl.Graphic(images_path('numpy-logo.png')),
+                        pl.Block(
+                            [
+                                pl.TextSize(-2),
+                                'In the future, these numpy financial functions are being moved '
+                                'to a separate package', f'{numpy_financial}.', 'For',
+                                "the purposes of this class, this won't matter, but in the future you may have "
+                                "to install", numpy_financial, 'to use these functions.',
+                                'In the meantime, you will see a warning come up when calling the functions.'
+                            ],
+                            title='Note: Deprecation warning'
+                        ),
+                    ],
                     [
                         UnorderedList([
                             DimAndRevealListItems(
@@ -218,22 +237,18 @@ for item in inputs:
                                     f'A lot more is available using the {numpy} package',
                                     Python("np.pv, np.nper,\nnp.fv, np.pmt"),
                                     Hyperlink(
-                                        'https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.financial.html',
+                                        'https://numpy.org/doc/stable/reference/routines.financial.html',
                                         f'All numpy financial functions')
                                 ],
                                 dim_earlier_items=False
                             )
                         ])
                     ],
-                    graphics=[
-                        images_path('numpy-logo.png')
-                    ],
-                    graphics_on_right=False,
                     title='Doing Some Math in Python'
                 ),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download Simple Retirement Model.ipynb from Examples > Intro > Python',
+                        ['Go to', site_link, 'and download Simple Retirement Model Python'],
                         'In Jupyter, then navigate to your Downloads folder (or wherever you saved it)',
                         'You should then see Simple Retirement Model.ipynb come up in the list of files in Jupyter. '
                         'Click it to open it and follow along.'
