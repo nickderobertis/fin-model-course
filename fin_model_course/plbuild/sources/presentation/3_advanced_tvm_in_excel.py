@@ -8,6 +8,7 @@ import pyexlatex.layouts as ll
 from pyexlatex.models.sizes.textwidth import TextWidth
 
 import plbuild
+from build_tools.config import SITE_URL
 from plbuild.paths import images_path
 from pltemplates.frames.in_class_example import InClassExampleFrame
 from pltemplates.hyperlink import Hyperlink
@@ -39,6 +40,7 @@ HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 def get_content():
     random.seed(1000)
     next_slide = lp.Overlay([lp.NextWithIncrement()])
+    site_link = Hyperlink(SITE_URL, 'the course site')
 
     model_block_options = [
         'fill=blue!50'
@@ -179,8 +181,10 @@ def get_content():
                     [
                         'I will now relax the assumption that salary is a fixed number in the Excel model.',
                         'As this will be quite different from the last model, I will start from scratch.',
-                        'I have uploaded the finished product to '
-                        'Examples > Intro > Excel > "Dynamic Salary Retirement Model.xlsx"'
+                        [
+                            'I have uploaded the finished product to', site_link,
+                            'as Dynamic Salary Retirement Model'
+                        ]
                     ],
                     title='Salary Growth in Excel',
                     block_title='Extending the Excel Retirement Model for Realistic Salaries'
