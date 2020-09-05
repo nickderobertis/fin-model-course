@@ -38,6 +38,7 @@ def generate_content_metadata_json(
     if current_metadata is not None:
         print(f"Merging metadata")
         metadata = current_metadata.merge(metadata, drop_unique_old=drop_unique_old)
+    metadata.sort()
     print(f"Writing content metadata to {out_path}")
     out_path.write_text(metadata.json(indent=2))
 

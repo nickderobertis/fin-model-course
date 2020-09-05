@@ -2,7 +2,7 @@ import datetime
 import hashlib
 import os
 import pathlib
-from typing import Optional, Dict, List, Type, cast
+from typing import Optional, Dict, List, Type, cast, Callable
 
 from pydantic import BaseModel, Field
 
@@ -172,6 +172,10 @@ class CollectionMetadata(BaseModel):
                 continue
             items[name] = md
         return self.__class__(items=items)
+
+    def sort(self, key: Callable = lambda tup: tup[0], reverse: bool = False):
+        sorted_items = dict(sorted(self.items.items(), key=key, reverse=reverse))
+        self.items = sorted_items
 
     def to_rst(self) -> str:
         raise NotImplementedError
