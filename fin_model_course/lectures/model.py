@@ -65,6 +65,16 @@ class LectureResource:
     index: Optional[int] = None
     datetime_fmt: str = "%B%e, %l:%M %p"
 
+    def __eq__(self, other):
+        try:
+            return all([
+                self.name == other.name,
+                self.static_url == other.static_url,
+                self.external_url == other.external_url
+            ])
+        except AttributeError:
+            return False
+
     @classmethod
     def from_metadata(cls, md: "ContentMetadata", url: Optional[str] = None) -> "LectureResource":
         from models.content import GeneratedContentMetadata
@@ -101,10 +111,21 @@ class LectureResource:
         return name
 
     def to_rst(self) -> str:
+        if self.static_url is not None:
+            return self._to_download_rst()
+        if self.external_url is not None:
+            return self._to_external_link_rst()
+        raise ValueError(f'No link provided, cannot form RST in {self}')
+
+    def _to_download_rst(self) -> str:
         return f"""
 - :download:`{self.display_name} <{self.url}>`
         """
 
+    def _to_external_link_rst(self) -> str:
+        return f"""
+- `{self.display_name} <{self.url}>`_
+        """
 
 @dataclass
 class Lecture:
@@ -157,7 +178,9 @@ class LectureGroup:
         resources = list(self.global_resources)
         for lecture in self:
             if lecture.resources:
-                resources.extend(lecture.resources)
+                for resource in lecture.resources:
+                    if resource not in resources:
+                        resources.append(resource)
         return resources
 
     def to_models(
