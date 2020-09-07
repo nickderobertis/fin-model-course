@@ -9,6 +9,7 @@ import plbuild
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
+from pltemplates.graphics.model_structure import get_model_structure_graphic
 from pltemplates.hyperlink import Hyperlink
 
 from pltemplates.frames.model_flowchart import (
@@ -200,6 +201,12 @@ caught the error
                         images_path('python-logo.png')
                     ],
                     title='An Organized Structure of an Advanced Python Model'
+                ),
+                lp.GraphicFrame(
+                    [
+                        get_model_structure_graphic()
+                    ],
+                    title='The Structure of a Complex Model'
                 ),
             ],
             title='Introduction',
