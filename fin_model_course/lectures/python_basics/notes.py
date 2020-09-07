@@ -163,6 +163,10 @@ def get_python_classes_lecture() -> Lecture:
     ], title=title)
     resources = LECTURE_4_COMMON_RESOURCES + [
         LectureResource(
+            'Car Class Example',
+            static_url='Examples/Introduction/Python/car_example.py'
+        ),
+        LectureResource(
             'Python Classes Official Reference',
             external_url='https://docs.python.org/3/reference/datamodel.html'
         )
