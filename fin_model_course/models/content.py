@@ -14,8 +14,8 @@ CONTENT_TYPE_CODES_TO_NAMES = {
     "C": "Course Materials",
     "S": "Slides",
     "LN": "Lecture Notes",
-    "PJ": "Project Descriptions",
     "PR": "Practice Problems",
+    "PJ": "Project Descriptions",
 }
 
 EXAMPLE_SECTION_ORDER = [
@@ -30,6 +30,7 @@ EXAMPLE_SECTION_ORDER = [
 ]
 
 STATIC_CONTENT_ORDER = [
+    "Project Materials",
     "Practice Problem Solutions",
     "Materials for Lab Exercises",
     "Examples",
