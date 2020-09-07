@@ -11,6 +11,7 @@ import pyexlatex.presentation as lp
 import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
+from build_tools.config import LAB_EXERCISES_PATH
 from pltemplates.blocks import LabBlock
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.hyperlink import Hyperlink
@@ -69,7 +70,7 @@ def get_dcf_enterprise_equity_value_exercise() -> LabExercise:
 def get_dcf_cost_equity_exercise() -> LabExercise:
     risk_free = 0.02
 
-    data_path = os.path.sep.join(['Labs', 'DCF', 'Cost of Equity', 'prices.xlsx'])
+    data_path = LAB_EXERCISES_PATH / 'DCF' / 'Cost of Equity' / 'prices.xlsx'
     df = pd.read_excel(data_path)
     returns = df.pct_change().dropna()
     returns['MRP'] = returns['Market'] - risk_free

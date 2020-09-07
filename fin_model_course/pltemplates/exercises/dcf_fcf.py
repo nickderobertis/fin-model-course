@@ -11,6 +11,7 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 from finstmt import IncomeStatements, BalanceSheets, FinancialStatements
 
+from build_tools.config import LAB_EXERCISES_PATH
 from pltemplates.blocks import LabBlock
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.hyperlink import Hyperlink
@@ -32,7 +33,7 @@ def get_dcf_fcf_calculation_exercise() -> LabExercise:
     lab_1_capex = lab_1_inputs['change_ppe'] + lab_1_inputs['dep_amort']
     lab_1_fcf = lab_1_inputs['net_income'] + lab_1_inputs['adjustments'] - lab_1_nwc - lab_1_capex
 
-    stmt_folder = os.path.sep.join(['Labs', 'DCF', 'FCF'])
+    stmt_folder = LAB_EXERCISES_PATH / 'DCF' / 'FCF'
     bs_path = os.path.join(stmt_folder, 'WMT Balance Sheet.xlsx')
     inc_path = os.path.join(stmt_folder, 'WMT Income Statement.xlsx')
 

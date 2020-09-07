@@ -29,6 +29,13 @@ EXAMPLE_SECTION_ORDER = [
     "DCF",
 ]
 
+STATIC_CONTENT_ORDER = [
+    "Practice Problem Solutions",
+    "Materials for Lab Exercises",
+    "Examples",
+    "Extra Examples",
+]
+
 CONTENT_BASE_PATH = DOCSRC_STATIC_PATH
 
 
@@ -155,7 +162,9 @@ class CollectionMetadata(BaseModel):
             items[str(relative_path)] = metadata
         return cls(items=items)
 
-    def merge(self, other: "CollectionMetadata", drop_unique_old: bool = False) -> "CollectionMetadata":
+    def merge(
+        self, other: "CollectionMetadata", drop_unique_old: bool = False
+    ) -> "CollectionMetadata":
         items: Dict[str, ContentMetadata] = {}
         if not drop_unique_old:
             items = {**self.items}
@@ -186,7 +195,7 @@ class GeneratedCollectionMetadata(CollectionMetadata):
     _metadata_cls: Type[ContentMetadata] = GeneratedContentMetadata
 
     def to_rst(self) -> str:
-        out_str = ''
+        out_str = ""
         items_categories: Dict[str, List[LectureResource]] = {
             name: [] for name in CONTENT_TYPE_CODES_TO_NAMES.values()
         }
@@ -214,7 +223,7 @@ class StaticCollectionMetadata(CollectionMetadata):
     _metadata_cls: Type[ContentMetadata] = StaticContentMetadata
 
     def to_rst(self) -> str:
-        sections_dict = {"_items": [], '_description': ''}
+        sections_dict = {"_items": [], "_description": ""}
         for file_path, md in self.items.items():
             file_parts = file_path.split(os.path.sep)
             folders = file_parts[:-1]
@@ -223,10 +232,12 @@ class StaticCollectionMetadata(CollectionMetadata):
             this_section_dict = sections_dict
             for folder in folders:
                 if folder not in this_section_dict:
-                    this_section_dict[folder] = {"_items": [], '_description': ''}
+                    this_section_dict[folder] = {"_items": [], "_description": ""}
                 this_section_dict = this_section_dict[folder]
-            if file_name == 'README.rst':
-                this_section_dict['_description'] = (DOCSRC_STATIC_PATH / file_path).read_text()
+            if file_name == "README.rst":
+                this_section_dict["_description"] = (
+                    DOCSRC_STATIC_PATH / file_path
+                ).read_text()
             else:
                 this_section_dict["_items"].append(resource)
             # TODO [#20]: static resource sorting would be more efficient in a separate loop after all items are created
@@ -234,8 +245,17 @@ class StaticCollectionMetadata(CollectionMetadata):
                 key=lambda res: res.index if res.index is not None else -1
             )
 
+        sections_dict = dict(
+            sorted(
+                sections_dict.items(),
+                key=lambda tup: f"aaa{STATIC_CONTENT_ORDER.index(tup[0])}"
+                if tup[0] in STATIC_CONTENT_ORDER
+                else tup[0],
+            )
+        )
+
         for section_name, section in sections_dict.items():
-            if section_name in ['_items', '_description']:
+            if section_name in ["_items", "_description"]:
                 continue
             sorted_section = dict(
                 sorted(
@@ -252,10 +272,10 @@ class StaticCollectionMetadata(CollectionMetadata):
 
 
 def _static_sections_rst(sections_dict: dict, level: int) -> str:
-    this_section_contents = sections_dict['_description'] + '\n\n'
+    this_section_contents = sections_dict["_description"] + "\n\n"
     sub_section_contents = ""
     for section_name, section_content in sections_dict.items():
-        if section_name == '_description':
+        if section_name == "_description":
             continue
         if section_name == "_items":
             # Content for this section, not another subsection
