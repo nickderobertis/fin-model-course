@@ -48,7 +48,7 @@ def get_model_structure_graphic() -> lg.TikZPicture:
                                    content_offset=0.2, shape_options=model_block_options,
                                    text_options=text_options)
 
-    outputs_rectangle = lg.Rectangle(2, 8, offset=(6, 4), contents=pl.Bold('Outputs'),
+    outputs_rectangle = lg.Rectangle(2, 8, offset=(5.85, 4), contents=pl.Bold('Outputs'),
                                      shape_options=outputs_block_options,
                                      text_options=outputs_text_options)
 
@@ -71,7 +71,7 @@ def get_model_structure_graphic() -> lg.TikZPicture:
 
     arrows = [
         lg.Arrow((-2.3, 4), (-1.3, 4), options=arrow_options),
-        lg.Arrow((3.85, 4), (4.85, 4), options=arrow_options),
+        lg.Arrow((3.8, 4), (4.8, 4), options=arrow_options),
     ]
 
     return lg.TikZPicture([
