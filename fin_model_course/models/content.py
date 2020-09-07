@@ -186,6 +186,12 @@ class CollectionMetadata(BaseModel):
         sorted_items = dict(sorted(self.items.items(), key=key, reverse=reverse))
         self.items = sorted_items
 
+    @property
+    def last_modified(self) -> datetime.datetime:
+        lms = [item.last_modified for item in self.items.values()]
+        valid_lms = [lm for lm in lms if lm is not None]
+        return max(valid_lms)
+
     def to_rst(self) -> str:
         raise NotImplementedError
 
