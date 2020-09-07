@@ -60,7 +60,7 @@ def get_content():
             [
                 pl.SubSection(
                     [
-                        'You work for new startup that is trying to manufacture phones. You are tasked with building '
+                        'You work for a new startup that is trying to manufacture phones. You are tasked with building '
                         'a model which will help determine how many machines to invest in and how much to spend on '
                         'marketing. Each machine produces $n_{output}$ phones per year. Each phone sells '
                         r'for \$$p_{phone}$ and costs \$$c_{phone}$ in variable costs to produce. '
@@ -172,7 +172,7 @@ def get_content():
         ),
         pl.Section(
             [
-                'You must start from "Project 1 Template.xlsx" on Canvas. Ensure that you reference all inputs from '
+                'You must start from "Project 1 Template.xlsx". Ensure that you reference all inputs from '
                 'the Inputs/Outputs tab. Also ensure that all outputs are referenced back to the Inputs/Outputs tab. '
                 'Do not change any locations of the inputs or outputs. '
                 'The final submission is your Excel workbook.'
@@ -182,10 +182,11 @@ def get_content():
         pl.Section(
             [
                 [
-                    'You must start from "Project 1 Template.ipynb" on Canvas. '
+                    'You must start from "Project 1 Template.ipynb". '
                     'I should be able to run all the '
-                    'cells and get the output of your model at the bottom. '
-                    'You should not change the ModelInputs cell and the ModelInputs cell should be the fifth cell. '
+                    'cells and get the output of your model at the bottom. ',
+                    ['You should not change the name of the', pl.Monospace('ModelInputs'), 'class or the',
+                     pl.Monospace('model_data'), 'variable.'],
                     'You need to define', pl.Monospace('cash_flows'), 'as your output cash flows (numbers, '
                     'not formatted), and ', pl.Monospace('npv'), 'as your NPV (number, not formatted). When you '
                     'show your final outputs in the notebook, then they should be formatted.'
@@ -209,9 +210,10 @@ def get_content():
                             lt.TableLineSegment(0, 1),
                             lt.ValuesTable.from_list_of_lists(
                                 [
-                                    ['Model Accuracy', '70%'],
+                                    ['Model Accuracy', '60%'],
                                     ['Model Readability', '20%'],
                                     ['Model Formatting', '10%'],
+                                    ['Following the Template', '10%'],
                                     ['Bonus', '5%']
                                 ]
                             ),
@@ -221,7 +223,6 @@ def get_content():
                                     ['Total Possible', '105%']
                                 ]
                             ),
-                            # lt.MultiColumn('Total Possible: 105%', span=2),
                             lt.BottomRule()
 
                         ],
