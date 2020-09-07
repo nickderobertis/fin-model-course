@@ -140,6 +140,7 @@ class LectureGroup:
     title: str
     description: str
     lectures: Sequence[Lecture]
+    order: int
     global_resources: Sequence[LectureResource] = tuple()
 
     def __getitem__(self, item):
@@ -148,7 +149,7 @@ class LectureGroup:
     @property
     def stub(self) -> str:
         lower = self.title.casefold()
-        parts = lower.split()
+        parts = [str(self.order)] + lower.split()
         return "-".join(parts)
 
     @property

@@ -4,6 +4,7 @@ from lectures.model import LectureGroup, LectureResource
 
 def get_intro_lecture() -> LectureGroup:
     title = 'Introduction'
+    lecture_index = 1
     description = 'Introduces myself, the course structure, financial modeling, the tools we will use, ' \
                   'and how to set up Python.'
     resources = [
@@ -19,4 +20,4 @@ def get_intro_lecture() -> LectureGroup:
         notes.get_tools_and_skills_lecture(),
         notes.get_install_python_lecture(),
     ]
-    return LectureGroup(title, description, lectures, global_resources=resources)
+    return LectureGroup(title, description, lectures, order=lecture_index, global_resources=resources)
