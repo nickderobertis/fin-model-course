@@ -15,7 +15,7 @@ LECTURE_4_COMMON_RESOURCES = [
 
 def get_intro_structure_lecture() -> Lecture:
     title = 'Structuring a Complex Python Model'
-    youtube_id = ''
+    youtube_id = 'jlKuO-vlXFw'
     notes = LectureNotes([
         'There are two layers of organization we should have in our Python models',
         'The Python code itself should be well organized by using functions, which are self-contained '
@@ -34,7 +34,7 @@ def get_intro_structure_lecture() -> Lecture:
 
 def get_conditionals_lecture() -> Lecture:
     title = 'Branching Logic with Python Conditionals'
-    youtube_id = ''
+    youtube_id = 'mOkdoRzqXH4'
     notes = LectureNotes([
         'Conditionals let you choose which logic to run based on some logical condition',
         'This is just like using Excel =IF, but more flexible as we can run any arbitrary '
@@ -55,7 +55,7 @@ def get_conditionals_lecture() -> Lecture:
 
 def get_lists_lecture() -> Lecture:
     title = 'Grouping Objects with Python Lists'
-    youtube_id = ''
+    youtube_id = 'a8UeoMMgLQw'
     notes = LectureNotes([
         'Lists are one of the basic container data types in Python. They hold other objects so we '
         'can work with them as a group',
@@ -80,7 +80,7 @@ def get_lists_lecture() -> Lecture:
 
 def get_functions_lecture() -> Lecture:
     title = 'Grouping Logic with Python Functions'
-    youtube_id = ''
+    youtube_id = 'e5IGeMHmq0Q'
     notes = LectureNotes([
         'Functions are the logical building blocks for any Python program, including our models',
         'Functions contain a piece of logic which then can be reused flexibly with different inputs',
@@ -111,7 +111,7 @@ def get_functions_lecture() -> Lecture:
 
 def get_python_data_types_lecture() -> Lecture:
     title = 'Python Basic Data Types'
-    youtube_id = ''
+    youtube_id = 'C7i_Q_2tyXc'
     notes = LectureNotes([
         'Everything in Python is an object and every object has a type. The type '
         'defines the data structure and functions for that object',
@@ -144,7 +144,7 @@ def get_python_data_types_lecture() -> Lecture:
 
 def get_python_classes_lecture() -> Lecture:
     title = 'Creating Python Data Types with Classes'
-    youtube_id = ''
+    youtube_id = 'Q9UJ4Nqoung'
     notes = LectureNotes([
         "We've talked about strings, floats, ints, lists, tuples, and dicts as basic data types. It is "
         "possible to define your own custom data types as well using classes",
@@ -176,7 +176,7 @@ def get_python_classes_lecture() -> Lecture:
 
 def get_python_error_handling_lecture() -> Lecture:
     title = 'Handling Errors in Python'
-    youtube_id = ''
+    youtube_id = 'RLx-ssfeon8'
     notes = LectureNotes([
         "Error handling is generally a more advanced pattern and so we won't put a lot of "
         "focus on it in the class. But sometimes it is the best solution to a problem.",
