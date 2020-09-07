@@ -28,7 +28,8 @@ def get_content():
                 pl.UnorderedList([
                     'Model Accuracy',
                     'Model Readability',
-                    'Model Formatting'
+                    'Model Formatting',
+                    'Following the Template',
                 ]),
                 'Some projects may have their own specific categories. If so, the criteria for that category will '
                 "be defined in that project's description."
@@ -129,7 +130,44 @@ def get_content():
                 )
             ],
             title='Model Formatting'
-        )
+        ),
+        pl.Section(
+            [
+                "Following the template is about conforming to the requested structure of the project "
+                "such that it can be graded in a uniform way.",
+                pl.SubSection(
+                    [
+                        pl.UnorderedList([
+                            'Use any provided template to start from',
+                            'Do not move any of the inputs or outputs from the template',
+                            'It is fine to change formatting of the inputs and outputs so long as the cell '
+                            'reference location stay the same'
+                        ])
+                    ],
+                    title='Excel'
+                ),
+                pl.SubSection(
+                    [
+                        pl.UnorderedList([
+                            'Use any provided template to start from',
+                            'Do not change the name of the ModelInputs class and be sure to use model_data as '
+                            'the name of the variable containing the inputs',
+                            'Do not rename variables in the ModelInputs dataclass. You may add additional variables '
+                            'if you wish.',
+                            'Keep the inputs at the top and outputs at the bottom',
+                            'The instructions for a project may ask you to define certain variables and that they '
+                            'should conform to certain data structures. Ensure that you do this and do not use '
+                            'a different name or data structure.',
+                            'For example, it may ask for cash_flows as a list of numbers. Ensure that you actually '
+                            'have numbers in it and not formatted strings. However when you show the output '
+                            'you should format it.'
+                        ])
+                    ],
+                    title='Python'
+                )
+            ],
+            title='Following the Template'
+        ),
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(
