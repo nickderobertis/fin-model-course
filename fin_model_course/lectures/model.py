@@ -161,7 +161,7 @@ class LectureGroup:
     title: str
     description: str
     lectures: Sequence[Lecture]
-    order: int
+    order: Union[int, str]
     global_resources: Sequence[LectureResource] = tuple()
 
     def __getitem__(self, item):
