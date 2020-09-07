@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Going Beyond an Initial Python Script &mdash; fin_model_course 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Projects" href="PJ1-projects.html" />
+    <link rel="prev" title="The Depth of a Financial Model - Excel" href="3-the-depth-of-a-financial-model---excel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fin_model_course
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-getting-started-with-python-and-excel.html">Getting Started with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-the-depth-of-a-financial-model---excel.html">The Depth of a Financial Model - Excel</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Going Beyond an Initial Python Script</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#structuring-a-complex-python-model">Structuring a Complex Python Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-logic-with-python-conditionals">Branching Logic with Python Conditionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#grouping-objects-with-python-lists">Grouping Objects with Python Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#grouping-logic-with-python-functions">Grouping Logic with Python Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python-basic-data-types">Python Basic Data Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-python-data-types-with-classes">Creating Python Data Types with Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#handling-errors-in-python">Handling Errors in Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fin_model_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Going Beyond an Initial Python Script</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/lectures/4-going-beyond-an-initial-python-script.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="going-beyond-an-initial-python-script">
+<h1>Going Beyond an Initial Python Script<a class="headerlink" href="#going-beyond-an-initial-python-script" title="Permalink to this headline">¶</a></h1>
+<p>Aimed at building a solid foundation of technical skills in Python to enable creating complex financial models solely in Python</p>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/72bcdee1efe356adc04cb05d36e59af2/LN4 Going Beyond an Initial Python Script.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Lecture</span> <span class="pre">Notes</span> <span class="pre">-</span> <span class="pre">Going</span> <span class="pre">Beyond</span> <span class="pre">an</span> <span class="pre">Initial</span> <span class="pre">Python</span> <span class="pre">Script</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/efc8c78454ae1947bd99441401eba32e/S4 Going Beyond an Initial Python Script.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Going</span> <span class="pre">Beyond</span> <span class="pre">an</span> <span class="pre">Initial</span> <span class="pre">Python</span> <span class="pre">Script</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2c5fd281c5c00d969acf6191b0803e8b/Python Basics.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/770a0b7a42573829f48eda667209b712/Python Basics Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span> <span class="pre">Lab</span> <span class="pre">Exercises</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html">Python Built-in Functions Official Reference</a></p></li>
+<li><p><a class="reference external" href="http://cis.bentley.edu/sandbox/wp-content/uploads/Documentation-on-f-strings.pdf">Guide to f-strings</a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/994d39c8d9c440915d284a9574ab3368/car_example.py"><code class="xref download docutils literal notranslate"><span class="pre">Car</span> <span class="pre">Class</span> <span class="pre">Example</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/reference/datamodel.html">Python Classes Official Reference</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/errors.html">Python Error Handling Official Reference</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html">Python Built-in Exceptions Official Reference</a></p></li>
+</ul>
+</div>
+<div class="section" id="structuring-a-complex-python-model">
+<h2>Structuring a Complex Python Model<a class="headerlink" href="#structuring-a-complex-python-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/jlKuO-vlXFw"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>There are two layers of organization we should have in our Python models</p></li>
+<li><p>The Python code itself should be well organized by using functions, which are self-contained logical units with inputs and outputs and optionally a description of what it does as well as the inputs and outputs</p></li>
+<li><p>We can use Jupyter features to provide additional structure on top of this. The sub-problems or sub-models can be divided into sections using Jupyter markdown. A table of contents can be provided to easily navigate through the sections and to give an overview of the structure of the model.</p></li>
+<li><p>The main inputs should be at the top of the notebook and the main outputs should be at the bottom of the notebook</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="branching-logic-with-python-conditionals">
+<h2>Branching Logic with Python Conditionals<a class="headerlink" href="#branching-logic-with-python-conditionals" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/mOkdoRzqXH4"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id1">
+<h3>Notes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Conditionals let you choose which logic to run based on some logical condition</p></li>
+<li><p>This is just like using Excel =IF, but more flexible as we can run any arbitrary operation rather than just returning a single value</p></li>
+<li><p>If/else if/else pattern becomes a lot more clear in Python as they are written as separate blocks rather than a nested =IF statement in Excel</p></li>
+<li><p>Logical conditions are always evaluated first to True or False. If True, goes into if part, if False, goes into else part (if included)</p></li>
+<li><p>Be careful about single = vs double ==, it is an easy mistake to make and you will get a SyntaxError applying the incorrect one</p></li>
+<li><p>Elif is never strictly necessary but can help simplify the code substantially</p></li>
+<li><p>The lab exercises test knowledge of conditionals but also build on our prior knowledge of for loops and show how they can be combined</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Resources<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2c5fd281c5c00d969acf6191b0803e8b/Python Basics.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/770a0b7a42573829f48eda667209b712/Python Basics Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span> <span class="pre">Lab</span> <span class="pre">Exercises</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="grouping-objects-with-python-lists">
+<h2>Grouping Objects with Python Lists<a class="headerlink" href="#grouping-objects-with-python-lists" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/a8UeoMMgLQw"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id3">
+<h3>Notes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Lists are one of the basic container data types in Python. They hold other objects so we can work with them as a group</p></li>
+<li><p>Lists hold objects one by one in order and objects can be looked up from the list using the numeric index of the object</p></li>
+<li><p>It is a very common pattern to create an empty list, then go through some logic in a loop to create the object you want in the list and add it in each run of the loop</p></li>
+<li><p>This numeric index is zero-based, so look up the first object by 0, the second object by 1, and so on.</p></li>
+<li><p>We can pass a slice to get a group of objects out of the list as a new list or a single integer to get a single object out of the list</p></li>
+<li><p>Negative numbers means count from the end of the list, -1 is last object, -2 is second to last object, and so on</p></li>
+<li><p>Objects can be added to the list when it is created, but also later on using .append and .insert. Objects can be removed using .pop</p></li>
+<li><p>Lab exercise 1 tests list building for loop pattern, 2 tests adding objects to lists, and 3 tests list indexing and slicing</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Resources<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2c5fd281c5c00d969acf6191b0803e8b/Python Basics.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/770a0b7a42573829f48eda667209b712/Python Basics Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span> <span class="pre">Lab</span> <span class="pre">Exercises</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="grouping-logic-with-python-functions">
+<h2>Grouping Logic with Python Functions<a class="headerlink" href="#grouping-logic-with-python-functions" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/e5IGeMHmq0Q"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id5">
+<h3>Notes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Functions are the logical building blocks for any Python program, including our models</p></li>
+<li><p>Functions contain a piece of logic which then can be reused flexibly with different inputs</p></li>
+<li><p>We have functions in Excel, e.g. =SUM, =IF, =VLOOKUP, but as an Excel user you typically do not define functions. Python has built-in functions and also it is very easy to define your own.</p></li>
+<li><p>Ultimately, you should be able to run your entire model by running a single function</p></li>
+<li><p>The sub-models should also be functions, and the steps within the sub-models should also be functions. This can be broken into as many layers as is necessary. Your higher-level custom functions will be calling your lower-level custom functions.</p></li>
+<li><p>Not only will you have better readability and organization of your model, but also you will be able to reuse logic more often which lowers maintenance costs</p></li>
+<li><p>Functions scope the variables defined within. You cannot use those variables outside the function. This lets you use more general variable names which increases readabilityDefault arguments are a great way to keep your function flexible but also easy to use</p></li>
+<li><p>For these lab exercise, I have provided cells to check your work. After adding your solution and running the exercise cell, then run the check cell which will throw an AssertionError or NameError if incorrect and nothing if correct.</p></li>
+<li><p>The exercises test creating functions with and without default arguments and adding docstrings to functions</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>Resources<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2c5fd281c5c00d969acf6191b0803e8b/Python Basics.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/770a0b7a42573829f48eda667209b712/Python Basics Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span> <span class="pre">Lab</span> <span class="pre">Exercises</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html">Python Built-in Functions Official Reference</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="python-basic-data-types">
+<h2>Python Basic Data Types<a class="headerlink" href="#python-basic-data-types" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/C7i_Q_2tyXc"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id8">
+<h3>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Everything in Python is an object and every object has a type. The type defines the data structure and functions for that object</p></li>
+<li><p>A class defines a type (see next section)</p></li>
+<li><p>Strings are used to represent text and have a lot of convenience functions attached to them.</p></li>
+<li><p>We can make a “format” or “f” string by putting f in front of it. This allows us to place variables in the string and apply formatting to them.</p></li>
+<li><p>Most of the time you don’t need to care whether a number is an integer (int) or floating point number (float). Probably the only place we will care about it in this class is looping a number of times requires an integer.</p></li>
+<li><p>range allows us to loop a certain number of times</p></li>
+<li><p>tuple: think list that you cannot change after creating. Better to use these when you know the objects you want in the group at the outset and you know they will not change.</p></li>
+<li><p>Dictionaries associate one object (value) with another object (key) and allow you to look up the value by the key</p></li>
+<li><p>Because everything in Python is an object, you can have any arbitrary nesting of objects. Lists of lists of strings, dictionaries where keys are integers and values are lists of strings, and so on, whatever is appropriate to solve your problem</p></li>
+<li><p>The lab exercises test working with tuples, dicts, and nested data structures</p></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>Resources<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2c5fd281c5c00d969acf6191b0803e8b/Python Basics.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/770a0b7a42573829f48eda667209b712/Python Basics Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span> <span class="pre">Lab</span> <span class="pre">Exercises</span></code></a></p></li>
+<li><p><a class="reference external" href="http://cis.bentley.edu/sandbox/wp-content/uploads/Documentation-on-f-strings.pdf">Guide to f-strings</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="creating-python-data-types-with-classes">
+<h2>Creating Python Data Types with Classes<a class="headerlink" href="#creating-python-data-types-with-classes" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/Q9UJ4Nqoung"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id11">
+<h3>Notes<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We’ve talked about strings, floats, ints, lists, tuples, and dicts as basic data types. It is possible to define your own custom data types as well using classes</p></li>
+<li><p>I will not be expecting you to construct your own data types in this class. This section is mainly so you can understand how Python works in general. We will start using custom data types defined in external packages so it is good to have an understanding of this and how to use custom objects.</p></li>
+<li><p>The difference between objects of the same data type (same class definition) is the data contained within. They will all have the same functions attached to them (called methods when it is functions attached to objects)</p></li>
+<li><p>Feel free to study the car example in more detail to get a greater understanding of how to define classes, but we will not spend time on this</p></li>
+<li><p>Dataclasses are simplified versions of classes meant to group data together. We will use them to organize our model inputs.</p></li>
+<li><p>The lab exercises test working with externally-defined custom data types and creating and using dataclasses for our model inputs.</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>Resources<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2c5fd281c5c00d969acf6191b0803e8b/Python Basics.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/770a0b7a42573829f48eda667209b712/Python Basics Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Basics</span> <span class="pre">Lab</span> <span class="pre">Exercises</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/994d39c8d9c440915d284a9574ab3368/car_example.py"><code class="xref download docutils literal notranslate"><span class="pre">Car</span> <span class="pre">Class</span> <span class="pre">Example</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/reference/datamodel.html">Python Classes Official Reference</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="handling-errors-in-python">
+<h2>Handling Errors in Python<a class="headerlink" href="#handling-errors-in-python" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/RLx-ssfeon8"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id14">
+<h3>Notes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Error handling is generally a more advanced pattern and so we won’t put a lot of focus on it in the class. But sometimes it is the best solution to a problem.</p></li>
+<li><p>Combining lists of different lengths is one possible application of error handling, but there are many others</p></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>Resources<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/errors.html">Python Error Handling Official Reference</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html">Python Built-in Exceptions Official Reference</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PJ1-projects.html" class="btn btn-neutral float-right" title="Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="3-the-depth-of-a-financial-model---excel.html" class="btn btn-neutral float-left" title="The Depth of a Financial Model - Excel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-155751319-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

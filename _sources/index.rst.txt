@@ -9,8 +9,15 @@ Welcome to Nick DeRobertis' Financial Modeling Course!
 A Python and Excel Financial Modeling Course
 
 .. toctree::
+   :glob:
    :caption: Course Content
+   :maxdepth: 2
 
-   lectures/introduction
-   lectures/getting-started-with-python-and-excel
+   lectures/*
+
+
+.. toctree::
+   :caption: Course Resources
+   :maxdepth: 2
+
    downloads

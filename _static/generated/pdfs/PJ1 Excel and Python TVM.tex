@@ -34,7 +34,7 @@
 \maketitle
 \begin{section}{Overview}
 \begin{subsection}{The Problem}
-You work for new startup that is trying to manufacture phones. You are tasked with building a model which will help determine how many machines to invest in and how much to spend on marketing. Each machine produces $n_{output}$ phones per year. Each phone sells for \$$p_{phone}$ and costs \$$c_{phone}$ in variable costs to produce. After $n_{life}$ years, the machine can no longer produce output, but may be scrapped for \$$p_{scrap}$. The machine will not be replaced, so you may end up with zero total output before your model time period ends. Equity investment is limited, so in each year you can spend $c_{machine}$ to either buy a machine or buy advertisements. In the first year you must buy a machine. Any other machine purchases must be made one after another (advertising can only begin after machine buying is done). Demand for your phones starts at $d_1$. Each time you advertise, demand increases by $g_d$\%. The prevailing market interest rate is $r$.
+You work for a new startup that is trying to manufacture phones. You are tasked with building a model which will help determine how many machines to invest in and how much to spend on marketing. Each machine produces $n_{output}$ phones per year. Each phone sells for \$$p_{phone}$ and costs \$$c_{phone}$ in variable costs to produce. After $n_{life}$ years, the machine can no longer produce output, but may be scrapped for \$$p_{scrap}$. The machine will not be replaced, so you may end up with zero total output before your model time period ends. Equity investment is limited, so in each year you can spend $c_{machine}$ to either buy a machine or buy advertisements. In the first year you must buy a machine. Any other machine purchases must be made one after another (advertising can only begin after machine buying is done). Demand for your phones starts at $d_1$. Each time you advertise, demand increases by $g_d$\%. The prevailing market interest rate is $r$.
 \end{subsection}
 \begin{subsection}{Notes}
 \begin{itemize}
@@ -102,10 +102,16 @@ section only applies to without the bonus.
 \end{subsection}
 \end{section}
 \begin{section}{Excel Exercise}
-You must start from "Project 1 Template.xlsx" on Canvas. Ensure that you reference all inputs from the Inputs/Outputs tab. Also ensure that all outputs are referenced back to the Inputs/Outputs tab. Do not change any locations of the inputs or outputs. The final submission is your Excel workbook.
+You must start from "Project 1 Template.xlsx". Ensure that you reference all inputs from the Inputs/Outputs tab. Also ensure that all outputs are referenced back to the Inputs/Outputs tab. Do not change any locations of the inputs or outputs. The final submission is your Excel workbook.
 \end{section}
 \begin{section}{Python Exercise}
-You must start from "Project 1 Template.ipynb" on Canvas. I should be able to run all the cells and get the output of your model at the bottom. You should not change the ModelInputs cell and the ModelInputs cell should be the fifth cell. You need to define
+You must start from "Project 1 Template.ipynb". I should be able to run all the cells and get the output of your model at the bottom. 
+You should not change the name of the
+\texttt{ModelInputs}
+class or the
+\texttt{model\_data}
+variable.
+You need to define
 \texttt{cash\_flows}
 as your output cash flows (numbers, not formatted), and 
 \texttt{npv}
@@ -120,9 +126,10 @@ as your NPV (number, not formatted). When you show your final outputs in the not
 Category & Percentage\\
 
 \cmidrule(lr){1-2}
-Model Accuracy & 70\%\\
+Model Accuracy & 60\%\\
 Model Readability & 20\%\\
 Model Formatting & 10\%\\
+Following the Template & 10\%\\
 Bonus & 5\%\\
 
 \midrule

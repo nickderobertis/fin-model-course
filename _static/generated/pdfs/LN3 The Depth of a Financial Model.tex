@@ -1,0 +1,75 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{The Depth of a Financial Model}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Simple Retirement Model Assumptions}
+\begin{itemize}
+\item Part of the reason we begin with such a seemingly simple problem is to show how complex it is to model any real-world situation with a high degree of accuracy
+\item You may have thought we solved the retirement problem already, but there is a lot that we left out intentionally to make the problem simpler
+\item Assumptions are key to any model. They allow you to simplify the problem so it is actually feasible to solve. The stronger your assumptions, the less accurate the model, but the simpler it is to implement.
+\item No real-world model will ever be perfectly accurate. The world is just too complex to capture it all. We always have to settle for some level of assumptions
+\item The assumptions form the base of the model, from which we can generate the logic and equations
+\item There can be many different possible assumptions for a given model. It is a big part of the modeler's job to pick the best assumptions that can get the model as accurate as needed while balancing the costs of building and maintaining complex models
+\end{itemize}
+\end{section}
+\begin{section}{Relaxing the Salary Assumption}
+\begin{itemize}
+\item We will experience first-hand the tradeoff in relaxing assumptions: greater accuracy but also greater complexity
+\item We are going to now a fairly realistic assumption for salary. It is still not however the most realistic possible. For example, promotions should be less frequent and smaller raises during recessions and more frequent/larger raises during expansionary periods. Promotions should not come at a fixed interval, they should be faster in the early stages of the career and there should be randomness to it. The model should be run many times to understand the distribution of years to retirement based on the randomness in the salary.
+\item Obviously that would lead to quite a complex model already, and that's only thinking about the salary assumption.
+\item In deciding how much to relax assumptions, the desired degree of accuracy of the model is critically important. For what decisions is the model being used? Will those decisions be any different if the model increases in accuracy? What is the cost of being wrong?
+\end{itemize}
+\end{section}
+\begin{section}{Skills for the Advanced Excel Model}
+\begin{itemize}
+\item Larger Excel models can get very messy quickly. Then it becomes difficult for anyone to consume your model or to improve it later. Therefore it is important to stay organized.
+\item As before, we want to keep the inputs separate from the outputs. But in a larger model, we need to take this a step further. We can break the model into various parts or stages, each which have their own inputs and outputs. Each part should have its own dedicated worksheet and there should be an overview page which has the main inputs and outputs.
+\item Conditionals are necessary to control the flow and output of a model under different conditions. We use =IF, =AND, =OR in Excel to accomplish this
+\item Use modulo (=MOD) to get the division remainder. You might not need this every day in modeling but it is very useful for this particular salary situation we are modeling
+\item =VLOOKUP is very useful to find items in a table and can make your model much more flexible
+\end{itemize}
+\end{section}
+\begin{section}{Implementing the Dynamic Salary Model}
+\begin{itemize}
+\item We are building this model from scratch as it is so different from the original
+\item We can break this larger problem down into three sub-problems: determining salary over time, determining wealth over time, and determining when the individual can retire. Each of these become worksheets in the model
+\item In the overall inputs, it is good to have sections if inputs are relevant only to individual sub-problems. Also reference over the inputs onto the individual sheet for both visual organization of having everything for the calculation on one sheet as well as keeping cell references shorter
+\item =IF and =MOD combined can figure out whether it is a promotion year
+\item A cumulative sum can be used to determine how many promotions have occurred up until a given point in time
+\item Calculating factors helps split out the calculation and make it more clear
+\end{itemize}
+\end{section}
+\begin{section}{Lab Exercise}
+\begin{itemize}
+\item Feel free to work from the example model though I would recommend you build that out yourself following the prior videos
+\item The new calculation being added is simple, with the main focus being adding new functionality to an existing model and keeping it organized
+\item Hint: if you cut the desired cash cell (Ctrl/Cmd + x), you can move it from the inputs into a calculation area and retain all the references to it
+\end{itemize}
+\end{section}
+\end{document}

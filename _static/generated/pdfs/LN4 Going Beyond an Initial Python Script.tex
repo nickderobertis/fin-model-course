@@ -1,0 +1,105 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{Going Beyond an Initial Python Script}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Structuring a Complex Python Model}
+\begin{itemize}
+\item There are two layers of organization we should have in our Python models
+\item The Python code itself should be well organized by using functions, which are self-contained logical units with inputs and outputs and optionally a description of what it does as well as the inputs and outputs
+\item We can use Jupyter features to provide additional structure on top of this. The sub-problems or sub-models can be divided into sections using Jupyter markdown. A table of contents can be provided to easily navigate through the sections and to give an overview of the structure of the model.
+\item The main inputs should be at the top of the notebook and the main outputs should be at the bottom of the notebook
+\end{itemize}
+\end{section}
+\begin{section}{Branching Logic with Python Conditionals}
+\begin{itemize}
+\item Conditionals let you choose which logic to run based on some logical condition
+\item This is just like using Excel =IF, but more flexible as we can run any arbitrary operation rather than just returning a single value
+\item If/else if/else pattern becomes a lot more clear in Python as they are written as separate blocks rather than a nested =IF statement in Excel
+\item Logical conditions are always evaluated first to True or False. If True, goes into if part, if False, goes into else part (if included)
+\item Be careful about single = vs double ==, it is an easy mistake to make and you will get a SyntaxError applying the incorrect one
+\item Elif is never strictly necessary but can help simplify the code substantially
+\item The lab exercises test knowledge of conditionals but also build on our prior knowledge of for loops and show how they can be combined
+\end{itemize}
+\end{section}
+\begin{section}{Grouping Objects with Python Lists}
+\begin{itemize}
+\item Lists are one of the basic container data types in Python. They hold other objects so we can work with them as a group
+\item Lists hold objects one by one in order and objects can be looked up from the list using the numeric index of the object
+\item It is a very common pattern to create an empty list, then go through some logic in a loop to create the object you want in the list and add it in each run of the loop
+\item This numeric index is zero-based, so look up the first object by 0, the second object by 1, and so on.
+\item We can pass a slice to get a group of objects out of the list as a new list or a single integer to get a single object out of the list
+\item Negative numbers means count from the end of the list, -1 is last object, -2 is second to last object, and so on
+\item Objects can be added to the list when it is created, but also later on using .append and .insert. Objects can be removed using .pop
+\item Lab exercise 1 tests list building for loop pattern, 2 tests adding objects to lists, and 3 tests list indexing and slicing
+\end{itemize}
+\end{section}
+\begin{section}{Grouping Logic with Python Functions}
+\begin{itemize}
+\item Functions are the logical building blocks for any Python program, including our models
+\item Functions contain a piece of logic which then can be reused flexibly with different inputs
+\item We have functions in Excel, e.g. =SUM, =IF, =VLOOKUP, but as an Excel user you typically do not define functions. Python has built-in functions and also it is very easy to define your own.
+\item Ultimately, you should be able to run your entire model by running a single function
+\item The sub-models should also be functions, and the steps within the sub-models should also be functions. This can be broken into as many layers as is necessary. Your higher-level custom functions will be calling your lower-level custom functions.
+\item Not only will you have better readability and organization of your model, but also you will be able to reuse logic more often which lowers maintenance costs
+\item Functions scope the variables defined within. You cannot use those variables outside the function. This lets you use more general variable names which increases readabilityDefault arguments are a great way to keep your function flexible but also easy to use
+\item For these lab exercise, I have provided cells to check your work. After adding your solution and running the exercise cell, then run the check cell which will throw an AssertionError or NameError if incorrect and nothing if correct.
+\item The exercises test creating functions with and without default arguments and adding docstrings to functions
+\end{itemize}
+\end{section}
+\begin{section}{Python Basic Data Types}
+\begin{itemize}
+\item Everything in Python is an object and every object has a type. The type defines the data structure and functions for that object
+\item A class defines a type (see next section)
+\item Strings are used to represent text and have a lot of convenience functions attached to them.
+\item We can make a "format" or "f" string by putting f in front of it. This allows us to place variables in the string and apply formatting to them.
+\item Most of the time you don't need to care whether a number is an integer (int) or floating point number (float). Probably the only place we will care about it in this class is looping a number of times requires an integer.
+\item range allows us to loop a certain number of times
+\item tuple: think list that you cannot change after creating. Better to use these when you know the objects you want in the group at the outset and you know they will not change.
+\item Dictionaries associate one object (value) with another object (key) and allow you to look up the value by the key
+\item Because everything in Python is an object, you can have any arbitrary nesting of objects. Lists of lists of strings, dictionaries where keys are integers and values are lists of strings, and so on, whatever is appropriate to solve your problem
+\item The lab exercises test working with tuples, dicts, and nested data structures
+\end{itemize}
+\end{section}
+\begin{section}{Creating Python Data Types with Classes}
+\begin{itemize}
+\item We've talked about strings, floats, ints, lists, tuples, and dicts as basic data types. It is possible to define your own custom data types as well using classes
+\item I will not be expecting you to construct your own data types in this class. This section is mainly so you can understand how Python works in general. We will start using custom data types defined in external packages so it is good to have an understanding of this and how to use custom objects.
+\item The difference between objects of the same data type (same class definition) is the data contained within. They will all have the same functions attached to them (called methods when it is functions attached to objects)
+\item Feel free to study the car example in more detail to get a greater understanding of how to define classes, but we will not spend time on this
+\item Dataclasses are simplified versions of classes meant to group data together. We will use them to organize our model inputs.
+\item The lab exercises test working with externally-defined custom data types and creating and using dataclasses for our model inputs.
+\end{itemize}
+\end{section}
+\begin{section}{Handling Errors in Python}
+\begin{itemize}
+\item Error handling is generally a more advanced pattern and so we won't put a lot of focus on it in the class. But sometimes it is the best solution to a problem.
+\item Combining lists of different lengths is one possible application of error handling, but there are many others
+\end{itemize}
+\end{section}
+\end{document}

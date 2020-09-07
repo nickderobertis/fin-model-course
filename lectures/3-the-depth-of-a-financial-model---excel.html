@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Depth of a Financial Model - Excel &mdash; fin_model_course 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Going Beyond an Initial Python Script" href="4-going-beyond-an-initial-python-script.html" />
+    <link rel="prev" title="Getting Started with Python and Excel" href="2-getting-started-with-python-and-excel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fin_model_course
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-getting-started-with-python-and-excel.html">Getting Started with Python and Excel</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Depth of a Financial Model - Excel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simple-retirement-model-assumptions">Simple Retirement Model Assumptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#relaxing-the-salary-assumption">Relaxing the Salary Assumption</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#skills-for-the-advanced-excel-model">Skills for the Advanced Excel Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#implementing-the-dynamic-salary-model">Implementing the Dynamic Salary Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-exercise">Lab Exercise</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Notes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4-going-beyond-an-initial-python-script.html">Going Beyond an Initial Python Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fin_model_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>The Depth of a Financial Model - Excel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/lectures/3-the-depth-of-a-financial-model---excel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-depth-of-a-financial-model-excel">
+<h1>The Depth of a Financial Model - Excel<a class="headerlink" href="#the-depth-of-a-financial-model-excel" title="Permalink to this headline">¶</a></h1>
+<p>Explores building a more complex and realistic model with Excel. Here we focus on extending the simple retirement model to have dynamic salary growth.</p>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/562fdd2974e2f6934e0a68f47567d63f/LN3 The Depth of a Financial Model.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Lecture</span> <span class="pre">Notes</span> <span class="pre">-</span> <span class="pre">The</span> <span class="pre">Depth</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">Financial</span> <span class="pre">Model</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/e8679a3b3cf38eddadd6e08b02cbbdfa/S3 The Depth of a Financial Model.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">The</span> <span class="pre">Depth</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">Financial</span> <span class="pre">Model</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2e990d881620e13dec67413d160e9de9/Dynamic Salary Retirement Model.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="simple-retirement-model-assumptions">
+<h2>Simple Retirement Model Assumptions<a class="headerlink" href="#simple-retirement-model-assumptions" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/kSuy87EELWE"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Part of the reason we begin with such a seemingly simple problem is to show how complex it is to model any real-world situation with a high degree of accuracy</p></li>
+<li><p>You may have thought we solved the retirement problem already, but there is a lot that we left out intentionally to make the problem simpler</p></li>
+<li><p>Assumptions are key to any model. They allow you to simplify the problem so it is actually feasible to solve. The stronger your assumptions, the less accurate the model, but the simpler it is to implement.</p></li>
+<li><p>No real-world model will ever be perfectly accurate. The world is just too complex to capture it all. We always have to settle for some level of assumptions</p></li>
+<li><p>The assumptions form the base of the model, from which we can generate the logic and equations</p></li>
+<li><p>There can be many different possible assumptions for a given model. It is a big part of the modeler’s job to pick the best assumptions that can get the model as accurate as needed while balancing the costs of building and maintaining complex models</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="relaxing-the-salary-assumption">
+<h2>Relaxing the Salary Assumption<a class="headerlink" href="#relaxing-the-salary-assumption" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/_PuQgUIpMTg"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id1">
+<h3>Notes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We will experience first-hand the tradeoff in relaxing assumptions: greater accuracy but also greater complexity</p></li>
+<li><p>We are going to now a fairly realistic assumption for salary. It is still not however the most realistic possible. For example, promotions should be less frequent and smaller raises during recessions and more frequent/larger raises during expansionary periods. Promotions should not come at a fixed interval, they should be faster in the early stages of the career and there should be randomness to it. The model should be run many times to understand the distribution of years to retirement based on the randomness in the salary.</p></li>
+<li><p>Obviously that would lead to quite a complex model already, and that’s only thinking about the salary assumption.</p></li>
+<li><p>In deciding how much to relax assumptions, the desired degree of accuracy of the model is critically important. For what decisions is the model being used? Will those decisions be any different if the model increases in accuracy? What is the cost of being wrong?</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="skills-for-the-advanced-excel-model">
+<h2>Skills for the Advanced Excel Model<a class="headerlink" href="#skills-for-the-advanced-excel-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/iRrVYz_cips"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id2">
+<h3>Notes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Larger Excel models can get very messy quickly. Then it becomes difficult for anyone to consume your model or to improve it later. Therefore it is important to stay organized.</p></li>
+<li><p>As before, we want to keep the inputs separate from the outputs. But in a larger model, we need to take this a step further. We can break the model into various parts or stages, each which have their own inputs and outputs. Each part should have its own dedicated worksheet and there should be an overview page which has the main inputs and outputs.</p></li>
+<li><p>Conditionals are necessary to control the flow and output of a model under different conditions. We use =IF, =AND, =OR in Excel to accomplish this</p></li>
+<li><p>Use modulo (=MOD) to get the division remainder. You might not need this every day in modeling but it is very useful for this particular salary situation we are modeling</p></li>
+<li><p>=VLOOKUP is very useful to find items in a table and can make your model much more flexible</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="implementing-the-dynamic-salary-model">
+<h2>Implementing the Dynamic Salary Model<a class="headerlink" href="#implementing-the-dynamic-salary-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/uU3Za6p3KJs"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id3">
+<h3>Notes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We are building this model from scratch as it is so different from the original</p></li>
+<li><p>We can break this larger problem down into three sub-problems: determining salary over time, determining wealth over time, and determining when the individual can retire. Each of these become worksheets in the model</p></li>
+<li><p>In the overall inputs, it is good to have sections if inputs are relevant only to individual sub-problems. Also reference over the inputs onto the individual sheet for both visual organization of having everything for the calculation on one sheet as well as keeping cell references shorter</p></li>
+<li><p>=IF and =MOD combined can figure out whether it is a promotion year</p></li>
+<li><p>A cumulative sum can be used to determine how many promotions have occurred up until a given point in time</p></li>
+<li><p>Calculating factors helps split out the calculation and make it more clear</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Resources<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2e990d881620e13dec67413d160e9de9/Dynamic Salary Retirement Model.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="lab-exercise">
+<h2>Lab Exercise<a class="headerlink" href="#lab-exercise" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/CqsIz00OH38"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id5">
+<h3>Notes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Feel free to work from the example model though I would recommend you build that out yourself following the prior videos</p></li>
+<li><p>The new calculation being added is simple, with the main focus being adding new functionality to an existing model and keeping it organized</p></li>
+<li><p>Hint: if you cut the desired cash cell (Ctrl/Cmd + x), you can move it from the inputs into a calculation area and retain all the references to it</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="4-going-beyond-an-initial-python-script.html" class="btn btn-neutral float-right" title="Going Beyond an Initial Python Script" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2-getting-started-with-python-and-excel.html" class="btn btn-neutral float-left" title="Getting Started with Python and Excel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-155751319-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
