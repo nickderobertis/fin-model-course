@@ -60,21 +60,21 @@ def get_course_schedule() -> CourseSchedule:
             lectures=[lecture_4],
         ),
         ClassContent(  # week 4
-            summary='Wrapping up Python Basics, and Building a Full Python Model',
-            lectures=[lecture_4, lecture_5]
+            summary='Building a Full Python Model',
+            lectures=[lecture_5]
         ),
         ClassContent(  # week 5
-            summary='Building a Full Python Model and Visualization',
-            lectures=[lecture_5, lecture_6]
+            summary='Visualization',
+            lectures=[lecture_6]
         ),
         ClassContent(  # week 6
-            summary='Visualization and Sensitivity Analysis',
-            lectures=[lecture_6, lecture_7],
+            summary='Sensitivity Analysis',
+            lectures=[lecture_7],
             projects_due=[project_1]
         ),
         ClassContent(  # week 7
-            summary='Sensitivity Analysis',
-            lectures=[lecture_7],
+            summary='Sensitivity Analysis and Probability Modeling',
+            lectures=[lecture_7, lecture_8],
             assigned_projects=[project_2]
         ),
         ClassContent(  # week 8
