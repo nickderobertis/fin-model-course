@@ -6,6 +6,7 @@ import pyexlatex.layouts as ll
 from pyexlatex.models.format.breaks import OutputLineBreak
 
 import plbuild
+from build_tools.config import SITE_URL
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -187,6 +188,8 @@ caught the error
 """
     )
 
+    site_link = Hyperlink(SITE_URL, 'the course site')
+
     return [
         pl.Section(
             [
@@ -238,8 +241,8 @@ caught the error
                 ),
                 InClassExampleFrame(
                     [
-                        "On Canvas, there is a Jupyter notebook containing all of the examples for today's lecture",
-                        "It's at Examples > Intro > Python > Python Basics.ipynb",
+                        f"On {site_link}, there is a Jupyter notebook called Python Basics containing all "
+                        f"of the examples for today's lecture",
                         'Now I will go through the example material under "Conditionals"'
                     ],
                     title='Conditionals Example',
@@ -248,8 +251,8 @@ caught the error
                 LabExercise(
                     [
                         [
-                            "On Canvas, there is a Jupyter notebook containing all of the labs for today's lecture",
-                            "It's at Labs > Intro > Python > Python Basics Lab.ipynb",
+                            f"On {site_link}, there is a Jupyter notebook called Python Basics Lab containing "
+                            f"all of the labs for today's lecture",
                             'Please complete the exercises under "Conditionals"'
                         ]
                     ],
@@ -445,7 +448,7 @@ caught the error
                         'Typically the class definition says it should accept some data to create the object',
                         'Then when you have multiple objects of the same type (created from the same class), '
                         'they will have the same functions (methods) attached to them, but different data stored within',
-                        ['For example, we can create two different lists. They will have different contents, but we can'
+                        ['For example, we can create two different lists. They will have different contents, but we can',
                         'do', pl.Monospace('.append'), 'on either of the lists']
                     ],
                     title='Many Objects to One Class'
