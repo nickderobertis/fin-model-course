@@ -94,7 +94,9 @@ def get_python_basics_conditionals_lab_lecture() -> LabExerciseLecture:
     youtube_id = 'T4LK0QgPbNA'
     bullets = [
         [
-
+            f"The Jupyter notebook called Python Basics Lab contains "
+            f"all of the labs for today's lecture",
+            'Please complete the exercises under "Conditionals"'
         ]
     ]
     answers = [
@@ -113,46 +115,92 @@ def get_python_basics_conditionals_lab_lecture() -> LabExerciseLecture:
 
 def get_python_basics_lists_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Lists'
+    short_title = 'Python Lists Lab'
     youtube_id = 'AViA3IBpXcc'
-    notes = LectureNotes([
+    bullets = [
+        [
+            "Keep working off of Python Basics Lab.ipynb",
+            'Please complete the exercises under "Working with Lists"'
+        ]
+    ]
+    answers = [
+        [
 
-    ], title=title)
+        ]
+    ]
     resources = [
         *LAB_LECTURE_4_COMMON_RESOURCES,
     ]
-    return LabExerciseLecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources
+    )
 
 
 def get_python_basics_functions_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Functions'
+    short_title = 'Python Functions Lab'
     youtube_id = 'xOxJst-SMy8'
-    notes = LectureNotes([
+    bullets = [
+        [
+            "Keep working off of Python Basics Lab.ipynb",
+            'Please complete the exercises under "Functions"'
+        ]
+    ]
+    answers = [
+        [
 
-    ], title=title)
+        ]
+    ]
     resources = [
         *LAB_LECTURE_4_COMMON_RESOURCES,
     ]
-    return LabExerciseLecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources
+    )
 
 
 def get_python_basics_data_types_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Data Types'
+    short_title = 'Python Data Types Lab'
     youtube_id = 'pyjfrIzdjgo'
-    notes = LectureNotes([
+    bullets = [
+        [
+            "Keep working off of Python Basics Lab.ipynb",
+            'Please complete the exercises under "Data Types"'
+        ]
+    ]
+    answers = [
+        [
 
-    ], title=title)
+        ]
+    ]
     resources = [
         *LAB_LECTURE_4_COMMON_RESOURCES,
     ]
-    return LabExerciseLecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources
+    )
 
 
 def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Classes'
+    short_title = 'Python Classes Lab'
     youtube_id = 'znxtmT66UAM'
-    notes = LectureNotes([
+    bullets = [
+        [
+            "Keep working off of Python Basics Lab.ipynb",
+            'Make sure you have car_example.py in the same folder',
+            'Please complete the exercises under "Working with Classes"'
+        ]
+    ]
+    answers = [
+        [
 
-    ], title=title)
+        ]
+    ]
     resources = [
         *LAB_LECTURE_4_COMMON_RESOURCES,
         LectureResource(
@@ -160,7 +208,11 @@ def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
             static_url='Examples/Introduction/Python/car_example.py'
         ),
     ]
-    return LabExerciseLecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources
+    )
+
 
 def get_lecture() -> LabExerciseLecture:
     title = ''
