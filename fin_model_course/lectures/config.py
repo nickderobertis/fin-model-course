@@ -2,6 +2,7 @@ from typing import List
 
 from lectures.dynamic_excel.main import get_dynamic_salary_excel_lecture
 from lectures.intro.main import get_intro_lecture
+from lectures.lab_exercises.main import get_lab_exercises_lecture
 from lectures.model import LectureGroup
 from lectures.projects.main import get_projects_lecture
 from lectures.python_basics.main import get_python_basics_lecture
@@ -15,4 +16,5 @@ def get_lecture_groups() -> List[LectureGroup]:
         get_dynamic_salary_excel_lecture(),
         get_python_basics_lecture(),
         get_projects_lecture(),
+        get_lab_exercises_lecture(),
     ]
