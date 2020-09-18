@@ -19,5 +19,8 @@ def get_lab_exercises_lecture() -> LabExerciseGroup:
         notes.get_python_basics_data_types_lab_lecture(),
         notes.get_python_basics_classes_lab_lecture(),
         notes.get_extend_dynamic_retirement_python_lab_lecture(),
+        notes.get_intro_to_pandas_lab_lecture(),
+        notes.get_pandas_styling_lab_lecture(),
+        notes.get_intro_python_visualization_lab_lecture(),
     ]
     return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources)

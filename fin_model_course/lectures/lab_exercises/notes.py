@@ -2,12 +2,19 @@ from build_tools.config import LAB_FOLDER_NAME
 from lectures.lab_exercise import LabExerciseLecture
 from lectures.model import LectureNotes, Lecture, LectureResource
 from lectures.python_basics.notes import LECTURE_4_COMMON_RESOURCES
-from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME
+from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME, LECTURE_6_NAME
 
 LAB_LECTURE_4_COMMON_RESOURCES = [
     LECTURE_4_COMMON_RESOURCES[1],
     LectureResource(f'Slides - {LECTURE_4_NAME}',
                     static_url=f'generated/pdfs/S4 {LECTURE_4_NAME}.pdf'),
+]
+
+LAB_LECTURE_6_COMMON_RESOURCES = [
+    LectureResource(f'Pandas and Visualization Labs',
+                    static_url=f'{LAB_FOLDER_NAME}/Visualization/Pandas and Visualization Labs.ipynb'),
+    LectureResource(f'Slides - {LECTURE_6_NAME}',
+                    static_url=f'generated/pdfs/S6 {LECTURE_6_NAME}.pdf'),
 ]
 
 
@@ -255,7 +262,84 @@ def get_extend_dynamic_retirement_python_lab_lecture() -> LabExerciseLecture:
         youtube_id=youtube_id, resources=resources, due_week=due_week,
     )
 
-def get_lecture() -> LabExerciseLecture:
+
+def get_intro_to_pandas_lab_lecture() -> LabExerciseLecture:
+    title = 'Getting Started with Pandas'
+    short_title = 'Intro Pandas Lab'
+    youtube_id = ''
+    due_week = 5
+    bullets = [
+        [
+            'Work off of the Jupyter notebook Pandas and Visualization Labs.ipynb',
+            'Complete the lab exercises in the first section entitled "Pandas"'
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        *LAB_LECTURE_6_COMMON_RESOURCES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_pandas_styling_lab_lecture() -> LabExerciseLecture:
+    title = 'Styling Pandas DataFrames'
+    short_title = 'Pandas Styling Lab'
+    youtube_id = ''
+    due_week = 5
+    bullets = [
+        [
+            'Keep working with the same lab Jupyter Notebook',
+            'Complete the lab exercises in the second section entitled "Pandas Styling"'
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        *LAB_LECTURE_6_COMMON_RESOURCES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_intro_python_visualization_lab_lecture() -> LabExerciseLecture:
+    title = 'Introduction to Graphing with Pandas'
+    short_title = 'Intro Visualization Lab'
+    youtube_id = ''
+    due_week = 5
+    bullets = [
+        [
+            'Keep working with the same lab Jupyter Notebook',
+            'Complete the lab exercises in the final section entitled "Graphics"'
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        *LAB_LECTURE_6_COMMON_RESOURCES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+
+def get_lab_lecture() -> LabExerciseLecture:
     title = ''
     short_title = title
     youtube_id = ''
