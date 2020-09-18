@@ -9,6 +9,7 @@ from pyexlatex.models.sizes.textwidth import TextWidth
 
 import plbuild
 from build_tools.config import SITE_URL
+from lectures.lab_exercises.notes import get_extend_dynamic_retirement_excel_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.frames.in_class_example import InClassExampleFrame
 from pltemplates.hyperlink import Hyperlink
@@ -189,28 +190,16 @@ def get_content():
                     title='Salary Growth in Excel',
                     block_title='Extending the Excel Retirement Model for Realistic Salaries'
                 ),
-                lp.Frame(
-                    [
-                        pl.UnorderedList([
-                            'We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash'
-                        ]),
-                        pl.VFill(),
-                        LabBlock(
-                            pl.UnorderedList([
-                                'Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"',
-                                'Calculate desired cash based on interest, cash spend, and years in retirement',
-                                'Use the calculated desired cash in the model to determine years to retirement',
-                                r'If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash'
-                            ]),
-                            title='Modeling Desired Cash'
-                        )
-                    ],
-                    title='Relaxing the Static Desired Cash in Excel'
-                )
+                get_extend_dynamic_retirement_excel_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Advanced Excel Modeling',
             short_title='Advanced Excel'
         ),
+        pl.PresentationAppendix(
+            [
+                get_extend_dynamic_retirement_excel_lab_lecture().to_pyexlatex().appendix_frames(),
+            ]
+        )
     ]
 
 

@@ -56,15 +56,22 @@ def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
 
 def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Determining Desired Cash in the Dynamic Salary Retirement Excel Model'
+    short_title = 'Dynamic Desired Cash in Excel'
     youtube_id = 'cM3uKsHXS3M'
     bullets = [
         [
+            'We want to relax the assumption that the amount needed in retirement is given by '
+            'a fixed amount of desired cash',
+            'Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"',
+            'Calculate desired cash based on interest, cash spend, and years in retirement',
+            'Use the calculated desired cash in the model to determine years to retirement',
 
         ]
     ]
     answers = [
         [
-
+            r'If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash and there '
+            r'should be 18 years to retirement.'
         ]
     ]
     resources = [
@@ -76,20 +83,32 @@ def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
                         static_url=f'generated/pdfs/S3 {LECTURE_3_NAME}.pdf'),
     ]
     return LabExerciseLecture.from_seq_of_seq(
-        title, bullet_content=bullets, answers_content=answers, youtube_id=youtube_id, resources=resources
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources
     )
 
 
 def get_python_basics_conditionals_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Conditionals'
+    short_title = 'Python Conditionals Lab'
     youtube_id = 'T4LK0QgPbNA'
-    notes = LectureNotes([
+    bullets = [
+        [
 
-    ], title=title)
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
     resources = [
         *LAB_LECTURE_4_COMMON_RESOURCES,
     ]
-    return LabExerciseLecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources
+    )
 
 
 def get_python_basics_lists_lab_lecture() -> LabExerciseLecture:
