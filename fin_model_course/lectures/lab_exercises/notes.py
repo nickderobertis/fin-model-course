@@ -13,10 +13,30 @@ LAB_LECTURE_4_COMMON_RESOURCES = [
 
 def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     title = 'Extending a Simple Retirement Model'
+    short_title = 'Vary Savings Rate Lab'
     youtube_id = 'KVVabq4n-ow'
-    notes = LectureNotes([
-
-    ], title=title)
+    bullets = [
+        [
+            "Now we want to see the effect of savings rate on time until retirement, in addition to interest rate",
+            "In both Excel and Python, calculate the years to retirement for savings rates of 10%, 25%, and 40%, "
+            "and each of these cases with each of the interest rate cases, 4%, 5%, and 6%",
+            f"Be sure that you drag formulas in Excel and use for loops in Python to accomplish this",
+            "In total you should have 9 calculated years to retirement numbers, in each of the two models.",
+        ]
+    ]
+    answers = [
+        [
+            "Martha has 61.1 years to retirement if she earns a 4% return and saves 10%.",
+            "Martha has 41.0 years to retirement if she earns a 4% return and saves 25%.",
+            "Martha has 31.9 years to retirement if she earns a 4% return and saves 40%.",
+            "Martha has 53.3 years to retirement if she earns a 5% return and saves 10%.",
+            "Martha has 36.7 years to retirement if she earns a 5% return and saves 25%.",
+            "Martha has 29.0 years to retirement if she earns a 5% return and saves 40%.",
+            "Martha has 47.6 years to retirement if she earns a 6% return and saves 10%.",
+            "Martha has 33.4 years to retirement if she earns a 6% return and saves 25%.",
+            "Martha has 26.7 years to retirement if she earns a 6% return and saves 40%.",
+        ]
+    ]
     resources = [
         LectureResource(
             'Simple Retirement Model Excel',
@@ -28,15 +48,25 @@ def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
         ),
         LectureResource(f'Slides - {LECTURE_2_NAME}', static_url=f'generated/pdfs/S2 {LECTURE_2_NAME}.pdf'),
     ]
-    return LabExerciseLecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources
+    )
 
 
 def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Determining Desired Cash in the Dynamic Salary Retirement Excel Model'
     youtube_id = 'cM3uKsHXS3M'
-    notes = LectureNotes([
+    bullets = [
+        [
 
-    ], title=title)
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
     resources = [
         LectureResource(
             'Dynamic Salary Retirement Model - Excel',
@@ -45,7 +75,9 @@ def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
         LectureResource(f'Slides - {LECTURE_3_NAME}',
                         static_url=f'generated/pdfs/S3 {LECTURE_3_NAME}.pdf'),
     ]
-    return LabExerciseLecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, youtube_id=youtube_id, resources=resources
+    )
 
 
 def get_python_basics_conditionals_lab_lecture() -> LabExerciseLecture:

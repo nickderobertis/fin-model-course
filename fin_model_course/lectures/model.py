@@ -130,12 +130,20 @@ class LectureResource:
 @dataclass
 class Lecture:
     title: str
-    notes: LectureNotes
+    notes: Optional[LectureNotes] = None
     youtube_id: Optional[str] = None
     resources: Optional[Sequence[LectureResource]] = None
 
     def to_rst(self) -> str:
         out_str = header_rst(self.title, 3)
+        out_str += self._youtube_rst
+        out_str += self._notes_rst
+        out_str += self._resources_rst
+        return out_str
+
+    @property
+    def _youtube_rst(self) -> str:
+        out_str = ''
         if self.youtube_id is not None:
             out_str += f"""
 .. youtube:: {self.youtube_id}
@@ -144,9 +152,20 @@ class Lecture:
     :align: center
 
 |
-"""
-        out_str += header_rst('Notes', 4)
-        out_str += self.notes.to_rst()
+            """
+        return out_str
+
+    @property
+    def _notes_rst(self) -> str:
+        out_str = ''
+        if self.notes is not None:
+            out_str += header_rst('Notes', 4)
+            out_str += self.notes.to_rst()
+        return out_str
+
+    @property
+    def _resources_rst(self) -> str:
+        out_str = ''
         if self.resources:
             out_str += (
                 header_rst('Resources', 4)
