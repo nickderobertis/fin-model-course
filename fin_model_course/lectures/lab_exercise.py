@@ -1,9 +1,11 @@
+import datetime
 from dataclasses import dataclass
 from typing import Sequence, Optional, List
 
 from build_tools.ext_rst import header_rst
 from lectures.model import Lecture, LectureNotes
 from pltemplates.exercises.lab_exercise import LabExercise
+from schedule.main import get_course_schedule
 
 
 @dataclass
@@ -27,6 +29,7 @@ class LabExerciseLecture(Lecture):
     short_title: Optional[str] = None
     label: Optional[str] = None
     exercises: Sequence[LabExerciseModel] = tuple()
+    due_week: Optional[int] = None
 
     @classmethod
     def from_seq_of_seq(cls, *args, bullet_content: Sequence[Sequence[str]], answers_content: Sequence[Sequence[str]],
@@ -37,6 +40,18 @@ class LabExerciseLecture(Lecture):
             exercises.append(le)
 
         return cls(*args, exercises=exercises, **kwargs)
+
+    @property
+    def visible_from_week(self) -> int:
+        if self.due_week is None:
+            return 1
+        return self.due_week + 1
+
+    @property
+    def visible(self) -> bool:
+        schedule = get_course_schedule()
+        begin_date, _ = schedule.dates_for_week(self.visible_from_week)
+        return datetime.datetime.today().date() >= begin_date
 
     def to_pyexlatex(self) -> LabExercise:
         bullet_contents = []
@@ -56,6 +71,13 @@ class LabExerciseLecture(Lecture):
         )
 
     def to_rst(self) -> str:
+        if not self.visible:
+            return ''
+
+        return self._rst
+
+    @property
+    def _rst(self) -> str:
         out_str = header_rst(self.title, 3)
         out_str += self._youtube_rst
         out_str += self._description_rst

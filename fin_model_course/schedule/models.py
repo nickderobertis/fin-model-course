@@ -1,5 +1,5 @@
 import datetime
-from typing import Sequence, Optional
+from typing import Sequence, Optional, Tuple
 
 from pydantic import BaseModel
 import pyexlatex as pl
@@ -31,6 +31,18 @@ class CourseSchedule(BaseModel):
     start_date: datetime.date
     end_date: datetime.date
     date_fmt: str = '%m/%d'
+
+    def dates_for_week(self, week_num: int) -> Tuple[datetime.date, datetime.date]:
+        begin_date = self.start_date
+        for i, content in enumerate(self.weeks):
+            if i != len(self.weeks) - 1:
+                end_date = begin_date + datetime.timedelta(days=7)
+            else:
+                end_date = self.end_date
+            if i + 1 == week_num:
+                return begin_date, end_date
+            begin_date = end_date
+        raise ValueError(f'invalid week number {week_num}')
 
     def to_pyexlatex(self):
         table_rows = []

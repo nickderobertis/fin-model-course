@@ -1,5 +1,6 @@
 import datetime
 from dataclasses import dataclass
+from string import ascii_lowercase
 from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List
 
 from build_tools.ext_rst import header_rst
@@ -189,7 +190,14 @@ class LectureGroup:
     @property
     def stub(self) -> str:
         lower = self.title.casefold()
-        parts = [str(self.order)] + lower.split()
+        if isinstance(self.order, int):
+            if self.order > 26:
+                raise ValueError('currently using alphabet to order lecture groups, with more '
+                                 'than 26 need another strategy')
+            order_parts = ['1', ascii_lowercase[self.order - 1], str(self.order)]
+        else:
+            order_parts = [str(self.order)]
+        parts = order_parts + lower.split()
         return "-".join(parts)
 
     @property

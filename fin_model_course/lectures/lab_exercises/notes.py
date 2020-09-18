@@ -15,6 +15,7 @@ def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     title = 'Extending a Simple Retirement Model'
     short_title = 'Vary Savings Rate Lab'
     youtube_id = 'KVVabq4n-ow'
+    due_week = 2
     bullets = [
         [
             "Now we want to see the effect of savings rate on time until retirement, in addition to interest rate",
@@ -50,7 +51,7 @@ def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
     )
 
 
@@ -58,6 +59,7 @@ def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Determining Desired Cash in the Dynamic Salary Retirement Excel Model'
     short_title = 'Dynamic Desired Cash in Excel'
     youtube_id = 'cM3uKsHXS3M'
+    due_week = 2
     bullets = [
         [
             'We want to relax the assumption that the amount needed in retirement is given by '
@@ -84,7 +86,7 @@ def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
     )
 
 
@@ -92,6 +94,7 @@ def get_python_basics_conditionals_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Conditionals'
     short_title = 'Python Conditionals Lab'
     youtube_id = 'T4LK0QgPbNA'
+    due_week = 2
     bullets = [
         [
             f"The Jupyter notebook called Python Basics Lab contains "
@@ -109,7 +112,7 @@ def get_python_basics_conditionals_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
     )
 
 
@@ -117,6 +120,7 @@ def get_python_basics_lists_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Lists'
     short_title = 'Python Lists Lab'
     youtube_id = 'AViA3IBpXcc'
+    due_week = 3
     bullets = [
         [
             "Keep working off of Python Basics Lab.ipynb",
@@ -133,7 +137,7 @@ def get_python_basics_lists_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
     )
 
 
@@ -141,6 +145,7 @@ def get_python_basics_functions_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Functions'
     short_title = 'Python Functions Lab'
     youtube_id = 'xOxJst-SMy8'
+    due_week = 3
     bullets = [
         [
             "Keep working off of Python Basics Lab.ipynb",
@@ -157,7 +162,7 @@ def get_python_basics_functions_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
     )
 
 
@@ -165,6 +170,7 @@ def get_python_basics_data_types_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Data Types'
     short_title = 'Python Data Types Lab'
     youtube_id = 'pyjfrIzdjgo'
+    due_week = 3
     bullets = [
         [
             "Keep working off of Python Basics Lab.ipynb",
@@ -181,7 +187,7 @@ def get_python_basics_data_types_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
     )
 
 
@@ -189,6 +195,7 @@ def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Classes'
     short_title = 'Python Classes Lab'
     youtube_id = 'znxtmT66UAM'
+    due_week = 3
     bullets = [
         [
             "Keep working off of Python Basics Lab.ipynb",
@@ -210,7 +217,7 @@ def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
     )
 
 
