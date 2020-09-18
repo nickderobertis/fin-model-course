@@ -35,6 +35,10 @@ class LabExercise(pl.Template):
     def appendix_frames(self):
         return self.contents[1:]
 
+    @property
+    def has_multiple_exercises(self) -> bool:
+        return len(self.all_bullet_content) > 1
+
     def _get_content(self):
         question_refs = self._get_question_references()
         answer_refs = self._get_answers_references()
@@ -49,8 +53,11 @@ class LabExercise(pl.Template):
                 refs.append(answer_refs[i])
             disp_idx = i + 1
             level_str = f', Level {disp_idx}'
-            block_title = self.block_title + level_str
-            frame_title = self.frame_title + level_str
+            block_title = self.block_title
+            frame_title = self.frame_title
+            if self.has_multiple_exercises:
+                block_title += level_str
+                frame_title += level_str
             label = self._get_label_for(i)
             lab_frame = LabFrame(bullet_content, block_title, frame_title, bottom_content=refs, label=label)
             all_content.append(lab_frame)
@@ -58,9 +65,11 @@ class LabExercise(pl.Template):
         for i, bullet_content in enumerate(self.answers_content):
             refs = deepcopy(question_refs)
             disp_idx = i + 1
-            level_str = f', Answers for Level {disp_idx}'
-            block_title = self.block_title + level_str
-            frame_title = self.frame_title + level_str
+            add_str = ', Answers'
+            if self.has_multiple_exercises:
+                add_str += f' for Level {disp_idx}'
+            block_title = self.block_title + add_str
+            frame_title = self.frame_title + add_str
             label = self._get_label_for(i, answers=True)
             lab_frame = LabFrame(bullet_content, block_title, frame_title, bottom_content=refs, label=label, color='orange')
             all_content.append(lab_frame)
@@ -71,7 +80,10 @@ class LabExercise(pl.Template):
         # Handle exercise slides
         for i, bullet_content in enumerate(self.all_bullet_content):
             disp_idx = i + 1
-            level_str = f'Level {disp_idx}'
+            if self.has_multiple_exercises:
+                level_str = f'Level {disp_idx}'
+            else:
+                level_str = 'Exercise'
             label = self._get_label_for(i)
             ref = pl.Ref(label)
             color_ref = f'Slide {pl.TextColor(pl.Underline(ref), "blue")}'
@@ -86,7 +98,9 @@ class LabExercise(pl.Template):
                 # Didn't get answers for this slide
                 refs.append(None)
             disp_idx = i + 1
-            level_str = f'Answers {disp_idx}'
+            level_str = f'Answers'
+            if self.has_multiple_exercises:
+                level_str += f' {disp_idx}'
             label = self._get_label_for(i, answers=True)
             ref = pl.Ref(label)
             color_ref = f'Slide {pl.TextColor(pl.Underline(ref), "blue")}'
