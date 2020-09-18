@@ -7,6 +7,7 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.lab_exercises.notes import get_extend_dynamic_retirement_python_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -201,26 +202,7 @@ def get_content():
                     title='Creating a Full Model in Python',
                     block_title='Dynamic Salary Retirement Model in Python',
                 ),
-                lp.Frame(
-                    [
-                        pl.UnorderedList([
-                            'We want to relax the assumption that the amount needed in retirement is given by a fixed '
-                            'amount of desired cash'
-                        ]),
-                        pl.VFill(),
-                        LabBlock(
-                            pl.UnorderedList([
-                                'Start from the completed retirement model Dynamic Salary Retirement Model.ipynb ',
-                                'Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"',
-                                'Calculate desired cash based on interest, cash spend, and years in retirement',
-                                'Use the calculated desired cash in the model to determine years to retirement',
-                                r'If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash'
-                            ]),
-                            title='Modeling Desired Cash'
-                        )
-                    ],
-                    title='Relaxing the Static Desired Cash in Python'
-                ),
+                get_extend_dynamic_retirement_python_lab_lecture().to_pyexlatex().presentation_frames(),
                 LabExercise(
                     [
                         [
@@ -231,18 +213,24 @@ def get_content():
                             'This is similar to how the projects will be assigned, so it is good preparation',
                             "I would encourage you to try it from scratch. If you are totally stuck, try working off "
                             "of the retirement model I completed today to have a lot of the structure already. If you "
-                            "still are having trouble with that, check the solution and see me in office hours."
+                            "still are having trouble with that, check the solution and see me in office hours.",
+                            'Note: this is not an official lab exercise you need to submit, it is practice only, but '
+                            'I would highly encourage you to complete it.'
                         ]
                     ],
                     block_title='Practice Building A Model',
                     frame_title='Extending the Simple Retirement Model in a Different Way',
                     label='lab:retire-model'
                 ),
-                get_project_1_lab_frame(),
             ],
             title='Building the Dynamic Salary Retirement Model',
             short_title='Build the Model'
         ),
+        pl.PresentationAppendix(
+            [
+                get_extend_dynamic_retirement_python_lab_lecture().to_pyexlatex().appendix_frames(),
+            ]
+        )
     ]
 
 

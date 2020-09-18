@@ -2,7 +2,7 @@ from build_tools.config import LAB_FOLDER_NAME
 from lectures.lab_exercise import LabExerciseLecture
 from lectures.model import LectureNotes, Lecture, LectureResource
 from lectures.python_basics.notes import LECTURE_4_COMMON_RESOURCES
-from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME
+from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME
 
 LAB_LECTURE_4_COMMON_RESOURCES = [
     LECTURE_4_COMMON_RESOURCES[1],
@@ -221,13 +221,60 @@ def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
     )
 
 
+def get_extend_dynamic_retirement_python_lab_lecture() -> LabExerciseLecture:
+    title = 'Determining Desired Cash in the Dynamic Salary Retirement Python Model'
+    short_title = 'Dynamic Desired Cash in Python'
+    youtube_id = ''
+    due_week = 4
+    bullets = [
+        [
+            'We want to relax the assumption that the amount needed in retirement is given by '
+            'a fixed amount of desired cash',
+            'Start from the completed retirement model Jupyter notebook Dynamic Salary Retirement Model.ipynb',
+            'Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"',
+            'Calculate desired cash based on interest, cash spend, and years in retirement',
+            'Use the calculated desired cash in the model to determine years to retirement',
+        ]
+    ]
+    answers = [
+        [
+            r'If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash and there '
+            r'should be 18 years to retirement.'
+        ]
+    ]
+    resources = [
+        LectureResource(
+            'Dynamic Salary Retirement Model - Python',
+            static_url='Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb'
+        ),
+        LectureResource(f'Slides - {LECTURE_5_NAME}',
+                        static_url=f'generated/pdfs/S5 {LECTURE_5_NAME}.pdf'),
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
 def get_lecture() -> LabExerciseLecture:
     title = ''
+    short_title = title
     youtube_id = ''
-    notes = LectureNotes([
+    due_week = 0
+    bullets = [
+        [
 
-    ], title=title)
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
     resources = [
 
     ]
-    return LabExerciseLecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
