@@ -26,6 +26,8 @@ LECTURE_13_NAME = 'Advanced Financial Modeling'
 
 
 def get_course_schedule() -> CourseSchedule:
+    from lectures.lab_exercises.main import get_lab_exercises_lecture
+
     project_1 = ScheduleProject(name=PROJECT_1_NAME, index=1)
     project_2 = ScheduleProject(name=PROJECT_2_NAME, index=2)
     project_3 = ScheduleProject(name=PROJECT_3_NAME, index=3)
@@ -116,5 +118,9 @@ def get_course_schedule() -> CourseSchedule:
         )
     ]
 
-    schedule = CourseSchedule(weeks=weeks, start_date=COURSE_BEGIN_DATE, end_date=COURSE_END_DATE)
+    lab_exercises = get_lab_exercises_lecture()
+
+    schedule = CourseSchedule(
+        weeks=weeks, start_date=COURSE_BEGIN_DATE, end_date=COURSE_END_DATE, lab_exercises=lab_exercises
+    )
     return schedule

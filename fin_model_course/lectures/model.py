@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from string import ascii_lowercase
 from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List
 
+from build_tools.config import SITE_URL
 from build_tools.ext_rst import header_rst
 
 if TYPE_CHECKING:
@@ -192,6 +193,10 @@ class LectureGroup:
         lower = self.title.casefold()
         parts = [str(self.order)] + lower.split()
         return "-".join(parts)
+
+    @property
+    def url(self) -> str:
+        return f'{SITE_URL}lectures/{self.stub}'
 
     @property
     def resources(self) -> List[LectureResource]:

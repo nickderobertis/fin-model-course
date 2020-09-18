@@ -3,9 +3,8 @@ from dataclasses import dataclass
 from typing import Sequence, Optional, List
 
 from build_tools.ext_rst import header_rst
-from lectures.model import Lecture, LectureNotes
+from lectures.model import Lecture, LectureNotes, LectureGroup
 from pltemplates.exercises.lab_exercise import LabExercise
-from schedule.main import get_course_schedule
 
 
 @dataclass
@@ -49,6 +48,8 @@ class LabExerciseLecture(Lecture):
 
     @property
     def visible(self) -> bool:
+        from schedule.main import get_course_schedule
+
         schedule = get_course_schedule()
         begin_date, _ = schedule.dates_for_week(self.visible_from_week)
         return datetime.datetime.today().date() >= begin_date
@@ -113,3 +114,10 @@ class LabExerciseLecture(Lecture):
 
                 out_str += exercise.answers.to_rst()
         return out_str
+
+
+class LabExerciseGroup(LectureGroup):
+    lectures: Sequence[LabExerciseLecture]
+
+    def exercises_for_week(self, week_num: int) -> List[LabExerciseLecture]:
+        return [exc for exc in self.lectures if exc.due_week == week_num]

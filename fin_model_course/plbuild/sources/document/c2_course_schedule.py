@@ -21,7 +21,7 @@ ORDER = 'C2'
 
 def get_content():
     schedule = get_course_schedule()
-    return Landscape().wrap(schedule.to_pyexlatex())
+    return schedule.to_pyexlatex()
 
 DOCUMENT_CLASS_KWARGS = dict(
     remove_section_numbering=True,

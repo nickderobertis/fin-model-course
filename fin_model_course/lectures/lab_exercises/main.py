@@ -1,9 +1,10 @@
+from lectures.lab_exercise import LabExerciseGroup
 from lectures.lab_exercises import notes
 from lectures.model import LectureGroup, LectureResource
 
 
-def get_lab_exercises_lecture() -> LectureGroup:
-    lecture_index = 14
+def get_lab_exercises_lecture() -> LabExerciseGroup:
+    lecture_index = 'LS1'
     title = f'Lab Exercise Solutions'
     description = 'The solutions to all the lab exercises in the course.'
     resources = [
@@ -18,4 +19,4 @@ def get_lab_exercises_lecture() -> LectureGroup:
         notes.get_python_basics_data_types_lab_lecture(),
         notes.get_python_basics_classes_lab_lecture(),
     ]
-    return LectureGroup(title, description, lectures, order=lecture_index, global_resources=resources)
+    return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources)
