@@ -22,5 +22,9 @@ def get_lab_exercises_lecture() -> LabExerciseGroup:
         notes.get_intro_to_pandas_lab_lecture(),
         notes.get_pandas_styling_lab_lecture(),
         notes.get_intro_python_visualization_lab_lecture(),
+        notes.get_sensitivity_analysis_excel_lab_lecture(),
+        notes.get_dictionaries_lab_lecture(),
+        notes.get_list_comprehensions_lab_lecture(),
+        notes.get_sensitivity_analysis_python_lab_lecture(),
     ]
     return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources)

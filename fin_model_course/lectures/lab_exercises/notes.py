@@ -2,7 +2,7 @@ from build_tools.config import LAB_FOLDER_NAME
 from lectures.lab_exercise import LabExerciseLecture
 from lectures.model import LectureNotes, Lecture, LectureResource
 from lectures.python_basics.notes import LECTURE_4_COMMON_RESOURCES
-from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME, LECTURE_6_NAME
+from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME, LECTURE_6_NAME, LECTURE_7_NAME
 
 LAB_LECTURE_4_COMMON_RESOURCES = [
     LECTURE_4_COMMON_RESOURCES[1],
@@ -16,6 +16,13 @@ LAB_LECTURE_6_COMMON_RESOURCES = [
     LectureResource(f'Slides - {LECTURE_6_NAME}',
                     static_url=f'generated/pdfs/S6 {LECTURE_6_NAME}.pdf'),
 ]
+
+LECTURE_7_SLIDES = LectureResource(f'Slides - {LECTURE_7_NAME}',
+                    static_url=f'generated/pdfs/S7 {LECTURE_7_NAME}.pdf')
+LECTURE_7_LAB_NOTEBOOK = LectureResource(f'Dictionaries, List Comprehensions, and Imports Labs',
+                    static_url=f'{LAB_FOLDER_NAME}/Python Basics/Dicts and List Comprehensions Lab.ipynb')
+LECTURE_7_EXAMPLE_NOTEBOOK = LectureResource(f'Dictionaries, List Comprehensions, and Imports Examples',
+                    static_url=f'Examples/Introduction/Python/Python Dicts, List comprehensions, and Imports.ipynb')
 
 
 def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
@@ -338,6 +345,112 @@ def get_intro_python_visualization_lab_lecture() -> LabExerciseLecture:
     )
 
 
+def get_sensitivity_analysis_excel_lab_lecture() -> LabExerciseLecture:
+    title = 'Adding Sensitivity Analysis to Project 1 - Excel'
+    short_title = 'Sensitivity Analysis in Excel Lab'
+    youtube_id = ''
+    due_week = 6
+    bullets = [
+        [
+            'Add sensitivity analysis to your Excel model from Project 1',
+            'See how the NPV changes when the number of machines and initial demand change',
+            'Do a one-way Data Table with a graph for each of the two inputs, then a two-way '
+            'data table with conditional formatting'
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_7_SLIDES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_dictionaries_lab_lecture() -> LabExerciseLecture:
+    title = 'Learning How to Use Dictionaries'
+    short_title = 'Dictionaries Lab'
+    youtube_id = ''
+    due_week = 6
+    bullets = [
+        [
+            'For this Python section, lab exercises are in the Jupyter notebook '
+            'Dicts and List Comprehensions Lab.ipynb',
+            'Complete the exercises in the dictionaries section for now',
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_7_SLIDES,
+        LECTURE_7_EXAMPLE_NOTEBOOK,
+        LECTURE_7_LAB_NOTEBOOK,
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_list_comprehensions_lab_lecture() -> LabExerciseLecture:
+    title = 'Learning How to Use List Comprehensions'
+    short_title = 'List Comprehensions Lab'
+    youtube_id = ''
+    due_week = 6
+    bullets = [
+        [
+            'Continue working on the same Jupyter notebook from the previous lab exercise',
+            'Complete the exercises in the List Comprehensions section for now',
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_7_SLIDES,
+        LECTURE_7_EXAMPLE_NOTEBOOK,
+        LECTURE_7_LAB_NOTEBOOK,
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_sensitivity_analysis_python_lab_lecture() -> LabExerciseLecture:
+    title = 'Adding Sensitivity Analysis to Project 1 - Python'
+    short_title = 'Sensitivity Analysis in Python Lab'
+    youtube_id = ''
+    due_week = 7
+    bullets = [
+        [
+            'Add sensitivity analysis to your Python model from Project 1',
+            'See how the NPV changes when the number of machines and initial demand change',
+            'Output both a hex-bin plot and a styled DataFrame'
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_7_SLIDES,
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
 
 def get_lab_lecture() -> LabExerciseLecture:
     title = ''

@@ -32,7 +32,7 @@ class ClassContent(BaseModel):
     def to_pyexlatex(self, lab_exercises: List[LabExerciseLecture], week_num: int, start_date: datetime.date,
                      end_date: datetime.date, project_date: Optional[datetime.date] = None) -> pl.Section:
         if project_date is None:
-            project_date = end_date
+            project_date = start_date
 
         start_fmt = start_date.strftime(self.date_fmt)
         end_fmt = end_date.strftime(self.date_fmt)
