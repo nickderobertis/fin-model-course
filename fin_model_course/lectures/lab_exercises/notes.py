@@ -2,7 +2,8 @@ from build_tools.config import LAB_FOLDER_NAME
 from lectures.lab_exercise import LabExerciseLecture
 from lectures.model import LectureNotes, Lecture, LectureResource
 from lectures.python_basics.notes import LECTURE_4_COMMON_RESOURCES
-from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME, LECTURE_6_NAME, LECTURE_7_NAME
+from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME, LECTURE_6_NAME, \
+    LECTURE_7_NAME, LECTURE_8_NAME
 
 LAB_LECTURE_4_COMMON_RESOURCES = [
     LECTURE_4_COMMON_RESOURCES[1],
@@ -24,6 +25,8 @@ LECTURE_7_LAB_NOTEBOOK = LectureResource(f'Dictionaries, List Comprehensions, an
 LECTURE_7_EXAMPLE_NOTEBOOK = LectureResource(f'Dictionaries, List Comprehensions, and Imports Examples',
                     static_url=f'Examples/Introduction/Python/Python Dicts, List comprehensions, and Imports.ipynb')
 
+LECTURE_8_SLIDES = LectureResource(f'Slides - {LECTURE_8_NAME}',
+                    static_url=f'generated/pdfs/S8 {LECTURE_8_NAME}.pdf')
 
 def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     title = 'Extending a Simple Retirement Model'
@@ -446,6 +449,175 @@ def get_sensitivity_analysis_python_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_7_SLIDES,
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_scenario_analysis_excel_lab_lecture() -> LabExerciseLecture:
+    title = 'Adding Scenario Analysis to Project 1 - Excel'
+    short_title = 'Scenario Analysis Excel Lab'
+    youtube_id = ''
+    due_week = 7
+    bullets = [
+        [
+            'Add external scenario analysis to your Excel model from Project 1',
+            'Create three cases, for a bad, normal, and good economy. Change the initial demand '
+            'and price per phone in each of the cases. Both demand and price should be higher '
+            'in better economic situations. ',
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_8_SLIDES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_scenario_analysis_python_lab_lecture() -> LabExerciseLecture:
+    title = 'Adding Scenario Analysis to Project 1 - Python'
+    short_title = 'Scenario Analysis Python Lab'
+    youtube_id = ''
+    due_week = 8
+    bullets = [
+        [
+            'Add external scenario analysis to your Python model from Project 1',
+            'Create three cases, for a bad, normal, and good economy. Change the initial demand '
+            'and price per phone in each of the cases. Both demand and price should be higher '
+            'in better economic situations. ',
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_8_SLIDES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_randomness_excel_lab_lecture() -> LabExerciseLecture:
+    title = 'Generating and Visualizing Random Numbers - Excel'
+    short_title = 'Randomness Excel Lab'
+    youtube_id = ''
+    due_week = 8
+    bullets = [
+        [
+            'Complete the following excercise in Excel for n=10 and n=1000',
+            'Generate n values between 0 and 1 with a uniform distribution',
+            'Generate n values from a normal distribution with a 0.5 mean and 10 standard deviation',
+            'Visualize each of the two outputs with a histogram',
+            'Calculate the mean and standard deviation of each of the two sets of generated numbers',
+            'Re-calculate it a few times, take note of how much the mean and standard deviation change'
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_8_SLIDES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_randomness_python_lab_lecture() -> LabExerciseLecture:
+    title = 'Generating and Visualizing Random Numbers - Python'
+    short_title = 'Randomness Python Lab'
+    youtube_id = ''
+    due_week = 8
+    bullets = [
+        [
+            'Complete the following excercise in Python for n=10 and n=1000',
+            'Generate n values between 0 and 1 with a uniform distribution',
+            'Generate n values from a normal distribution with a 0.5 mean and 10 standard deviation',
+            'Visualize each of the two outputs with a histogram',
+            'Calculate the mean and standard deviation of each of the two sets of generated numbers',
+            'Re-calculate it a few times, take note of how much the mean and standard deviation change'
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_8_SLIDES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_random_stock_model_lab_lecture() -> LabExerciseLecture:
+    title = 'Generating and Visualizing Random Numbers - Python'
+    short_title = 'Randomness Python Lab'
+    youtube_id = ''
+    due_week = 8
+    bullets = [
+        [
+            'Create the following model in both Excel and Python',
+            'A stock starts out priced at 100. Each period, it can either go up or down.',
+            'When it goes up, it will grow by 1%. When it goes down, it will decrease by 1%.',
+            'The likelihood of the stock going up is 60%, and down 40%.',
+            'Build a model which shows how the stock price changes throughout time. Visualize it up to 100 periods and '
+            'show the final price.'
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_8_SLIDES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_extend_model_internal_randomness_lab_lecture() -> LabExerciseLecture:
+    title = 'Extending the Dynamic Salary Retirement Model with Internal Randomness'
+    short_title = 'Internal Randomness Model Lab'
+    youtube_id = ''
+    due_week = 9
+    bullets = [
+        [
+            "Add internal randomness to your Project 1 Excel and Python models",
+            "We will relax the assumption that there is a single investment return which holds for every period",
+            "Instead we will now assume that investment returns are drawn from a normal distribution",
+            "For baseline values of the inputs, you can use a 4% mean and 3% standard deviation",
+            "You should be able to run the model repeatedly and see different years to retirement each time"
+        ]
+    ]
+    answers = [
+        [
+
+        ]
+    ]
+    resources = [
+        LECTURE_8_SLIDES
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,

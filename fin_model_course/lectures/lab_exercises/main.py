@@ -26,5 +26,11 @@ def get_lab_exercises_lecture() -> LabExerciseGroup:
         notes.get_dictionaries_lab_lecture(),
         notes.get_list_comprehensions_lab_lecture(),
         notes.get_sensitivity_analysis_python_lab_lecture(),
+        notes.get_scenario_analysis_excel_lab_lecture(),
+        notes.get_scenario_analysis_python_lab_lecture(),
+        notes.get_randomness_excel_lab_lecture(),
+        notes.get_randomness_python_lab_lecture(),
+        notes.get_random_stock_model_lab_lecture(),
+        notes.get_extend_model_internal_randomness_lab_lecture(),
     ]
     return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources)
