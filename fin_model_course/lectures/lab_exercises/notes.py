@@ -1,9 +1,9 @@
 from build_tools.config import LAB_FOLDER_NAME
 from lectures.lab_exercise import LabExerciseLecture
-from lectures.model import LectureNotes, Lecture, LectureResource
+from lectures.model import LectureNotes, Lecture, LectureResource, Equation
 from lectures.python_basics.notes import LECTURE_4_COMMON_RESOURCES
 from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME, LECTURE_6_NAME, \
-    LECTURE_7_NAME, LECTURE_8_NAME, LECTURE_9_NAME
+    LECTURE_7_NAME, LECTURE_8_NAME, LECTURE_9_NAME, LECTURE_10_NAME
 
 LAB_LECTURE_4_COMMON_RESOURCES = [
     LECTURE_4_COMMON_RESOURCES[1],
@@ -27,9 +27,10 @@ LECTURE_7_EXAMPLE_NOTEBOOK = LectureResource(f'Dictionaries, List Comprehensions
 
 LECTURE_8_SLIDES = LectureResource(f'Slides - {LECTURE_8_NAME}',
                     static_url=f'generated/pdfs/S8 {LECTURE_8_NAME}.pdf')
-
 LECTURE_9_SLIDES = LectureResource(f'Slides - {LECTURE_9_NAME}',
                     static_url=f'generated/pdfs/S9 {LECTURE_9_NAME}.pdf')
+LECTURE_10_SLIDES = LectureResource(f'Slides - {LECTURE_10_NAME}',
+                    static_url=f'generated/pdfs/S10 {LECTURE_10_NAME}.pdf')
 
 def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     title = 'Extending a Simple Retirement Model'
@@ -702,6 +703,119 @@ def get_read_write_xlwings_lab_lecture() -> LabExerciseLecture:
         LECTURE_9_SLIDES,
         LectureResource(f'xlwings Lab',
                         static_url=f'{LAB_FOLDER_NAME}/Connecting Python and Excel/xlwings/xlwings Lab.xlsx'),
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_intro_monte_carlo_lab_lecture() -> LabExerciseLecture:
+    title = 'Monte Carlo Simulation of DDM'
+    short_title = 'Intro Monte Carlo Lab'
+    youtube_id = ''
+    due_week = 10
+    bullets = [
+        [
+            'You are trying to determine the value of a mature company. The company has had stable dividend '
+            'growth for a long time so you select the dividend discount model (DDM).',
+            Equation(r'P = \frac{d_1}{r_s - g}'),
+            r'The next dividend will be \$1, and your baseline estimates of the cost of capital and growth are '
+            r'9% and 4%, respectively',
+            'Write a function which is able to get the price based on values of the inputs',
+            'Then you are concerned about mis-estimation of the inputs and how it could affect the price. So then '
+            'assume that the growth rate has a mean of 4% but a standard deviation of 1%',
+            'Visualize and summarize the resulting probability distribution of the price'
+        ],
+        [
+            'Continue from the first lab exercise',
+            'Now you are also concerned you have mis-estimated the cost of capital. So now use a mean of 9% and '
+            'standard deviation of 2%, in addition to varying the growth',
+            'Visualize and summarize the resulting probability distribution of the price',
+            'Be careful as in some cases, the drawn cost of capital will be lower than the drawn growth rate, '
+            'which breaks the DDM. You will need to modify your logic to throw out these cases.'
+        ]
+    ]
+    answers = [
+        [], [],
+    ]
+    resources = [
+        LECTURE_10_SLIDES,
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_python_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
+    title = 'Monte Carlo Simulation of Python Models'
+    short_title = 'Monte Carlo Python Lab'
+    youtube_id = ''
+    due_week = 10
+    bullets = [
+        [
+            'Work off of your existing Project 1 Python model',
+            'You are concerned the NPV could be heavily affected by changes in the interest rate. '
+            'Instead of fixing it, draw it from a normal distribution with mean of 7% and standard deviation of 2%.',
+            'Run the model 10,000 times and collect the years to retirement results. Visualize the results. Create a '
+            'table of probabilities and the minimum NPV we could expect with that probability. Output '
+            'the chance that the NPV will be more than \\$400,000,000.'
+        ],
+        [
+            "Continue from the first lab exercise. Now you are also concerned that your assembly line will not be "
+            "as efficient amd so the number of phones per machine will be lower. So draw that from a normal "
+            "distribution with mean 100,000 and standard deviation of 20,000. ",
+            "As you run the model, also store what were the interest and number of phones corresponding "
+            "to the NPV. You want to see which has a greater impact on the NPV: "
+            "interest or number of phones. Visualize the relationship between interest and NPV, and "
+            "the relationship between beginning salary and NPV. Also run a regression "
+            "to quantitatively determine which has a greater effect."
+        ]
+    ]
+    answers = [
+        [], [],
+    ]
+    resources = [
+        LECTURE_10_SLIDES,
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_excel_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
+    title = 'Monte Carlo Simulation of Excel Models'
+    short_title = 'Monte Carlo Excel Lab'
+    youtube_id = ''
+    due_week = 10
+    bullets = [
+        [
+            'You will be running Monte Carlo simulations on your existing Excel model from Project 1',
+            'You are concerned that your estimate for the number of phones that will be sold is incorrect. ',
+            'The number of phones should instead be drawn from a normal distribution with mean 100,000 and '
+            'standard deviation of 20,000.',
+            'Estimate the model 1,000 times and output the results back to Excel',
+            'In Excel, visualize the results.  Create a '
+            'table of probabilities and the minimum NPV we could expect with that probability. Output '
+            r'the chance that the NPV will be more than \$800,000,000.'
+        ],
+        [
+            "Continue from the first lab exercise. Now you are also concerned that there is varying quality "
+            "in the machines, so they may have a different lifespan. Draw that from a normal distribution with mean "
+            "10 years and standard deviation of 2 years.",
+            "As you run the model, also store what were the number of phones and machine life corresponding "
+            "to the NPV, all in Excel. You want to see which has a greater impact on the NPV: "
+            "number of phones or machine life. Visualize the relationship between number of phones and NPV, and "
+            "the relationship between beginning machine life and NPV. Try to determine which has a greater effect."
+        ]
+    ]
+    answers = [
+        [], [],
+    ]
+    resources = [
+        LECTURE_10_SLIDES,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,

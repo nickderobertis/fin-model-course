@@ -2,6 +2,8 @@ import datetime
 from dataclasses import dataclass
 from typing import Sequence, Optional, List
 
+import pyexlatex as pl
+
 from build_tools.ext_rst import header_rst
 from lectures.model import Lecture, LectureNotes, LectureGroup
 from pltemplates.exercises.lab_exercise import LabExercise
@@ -58,8 +60,14 @@ class LabExerciseLecture(Lecture):
         bullet_contents = []
         answer_contents = []
         for exercise in self.exercises:
-            bullet_contents.append(exercise.bullet_content)
-            answer_contents.append(exercise.answers_content)
+            if exercise.exercise:
+                bullet_contents.append(exercise.exercise.to_pyexlatex_content())
+            else:
+                bullet_contents.append([])
+            if exercise.answers:
+                answer_contents.append(exercise.answers.to_pyexlatex_content())
+            else:
+                answer_contents.append([])
 
         frame_title = self.short_title or self.title
         label = self.label or "labs:" + "-".join(frame_title.casefold().split())
@@ -94,7 +102,7 @@ class LabExerciseLecture(Lecture):
             out_str += header_rst('Description', 4)
             for i, exercise in enumerate(self.exercises):
                 if num_exercises > 1:
-                    out_str += header_rst(f'Level {i}', 5)
+                    out_str += header_rst(f'Level {i + 1}', 5)
 
                 out_str += exercise.exercise.to_rst()
         return out_str
@@ -110,7 +118,7 @@ class LabExerciseLecture(Lecture):
                 if not exercise.answers_content:
                     continue
                 if num_exercises > 1:
-                    out_str += header_rst(f'Level {i}', 5)
+                    out_str += header_rst(f'Level {i + 1}', 5)
 
                 out_str += exercise.answers.to_rst()
         return out_str

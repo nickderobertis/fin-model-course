@@ -34,5 +34,8 @@ def get_lab_exercises_lecture() -> LabExerciseGroup:
         notes.get_extend_model_internal_randomness_lab_lecture(),
         notes.get_read_write_excel_pandas_lab_lecture(),
         notes.get_read_write_xlwings_lab_lecture(),
+        notes.get_intro_monte_carlo_lab_lecture(),
+        notes.get_python_retirement_monte_carlo_lab_lecture(),
+        notes.get_excel_retirement_monte_carlo_lab_lecture(),
     ]
     return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources)

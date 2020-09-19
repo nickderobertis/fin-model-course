@@ -1,7 +1,8 @@
 import datetime
+import itertools
 from dataclasses import dataclass
 from string import ascii_lowercase
-from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List
+from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List, Any
 
 from build_tools.config import SITE_URL
 from build_tools.ext_rst import header_rst
@@ -39,6 +40,8 @@ class LectureNotes:
         for item in items:
             if isinstance(item, str):
                 current_str_items.append(item)
+            elif hasattr(item, 'to_pyexlatex'):
+                current_str_items.append(item.to_pyexlatex())
             else:
                 # Not a str item, so the str section has ended
                 if current_str_items:
@@ -52,10 +55,54 @@ class LectureNotes:
         if current_str_items:
             final_items.append(sub_model(current_str_items))
 
-        return top_model(final_items, title=self.title)
+        if top_model is not None:
+            return top_model(final_items, title=self.title)
+
+        return final_items
+
+    def to_pyexlatex_content(self) -> list:
+        return [to_pyexlatex_content(item) for item in self]
 
     def to_rst(self) -> str:
-        return "\n" + "\n".join([f"- {note}" for note in self]) + "\n"
+        lines = []
+        for note in self:
+            lines.extend(to_rst_bullet_content(note))
+        return "\n" + "\n".join(lines) + "\n"
+
+
+def to_pyexlatex_content(item: Any):
+    if isinstance(item, str):
+        return item
+    if isinstance(item, (list, tuple)):
+        out_items = []
+        for sub_item in item:
+            out_items.append(to_pyexlatex_content(sub_item))
+        return out_items
+    if hasattr(item, 'to_pyexlatex'):
+        return item.to_pyexlatex()
+
+    return item
+
+
+def to_rst_bullet_content(item: Any) -> list:
+    if isinstance(item, str):
+        return [f'- {item}']
+    elif isinstance(item, (list, tuple)):
+        return list(itertools.chain(*[to_rst_bullet_content(sub_item) for sub_item in item]))
+    elif hasattr(item, 'to_rst'):
+        return [f'- {item.to_rst()}']
+    else:
+        raise ValueError(f'could not serialize {item} of type {type(item)} to rst')
+
+@dataclass
+class Equation:
+    latex: str
+
+    def to_pyexlatex(self):
+        return pl.Equation(str_eq=self.latex)
+
+    def to_rst(self) -> str:
+        return f':math:`{self.latex}`'
 
 
 @dataclass
