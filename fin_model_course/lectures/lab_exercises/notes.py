@@ -3,7 +3,7 @@ from lectures.lab_exercise import LabExerciseLecture
 from lectures.model import LectureNotes, Lecture, LectureResource
 from lectures.python_basics.notes import LECTURE_4_COMMON_RESOURCES
 from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME, LECTURE_6_NAME, \
-    LECTURE_7_NAME, LECTURE_8_NAME
+    LECTURE_7_NAME, LECTURE_8_NAME, LECTURE_9_NAME
 
 LAB_LECTURE_4_COMMON_RESOURCES = [
     LECTURE_4_COMMON_RESOURCES[1],
@@ -27,6 +27,9 @@ LECTURE_7_EXAMPLE_NOTEBOOK = LectureResource(f'Dictionaries, List Comprehensions
 
 LECTURE_8_SLIDES = LectureResource(f'Slides - {LECTURE_8_NAME}',
                     static_url=f'generated/pdfs/S8 {LECTURE_8_NAME}.pdf')
+
+LECTURE_9_SLIDES = LectureResource(f'Slides - {LECTURE_9_NAME}',
+                    static_url=f'generated/pdfs/S9 {LECTURE_9_NAME}.pdf')
 
 def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     title = 'Extending a Simple Retirement Model'
@@ -618,6 +621,87 @@ def get_extend_model_internal_randomness_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_8_SLIDES
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_read_write_excel_pandas_lab_lecture() -> LabExerciseLecture:
+    title = 'Reading and Writing to Excel with Pandas'
+    short_title = 'Read Write Pandas Lab'
+    youtube_id = ''
+    due_week = 9
+    bullets = [
+        [
+            'Download "MSFT Financials.xls" from the course site',
+            'Read the sheet "Income Statement" into a DataFrame',
+            'Write the DataFrame to a new workbook, "My Data.xlsx", with the sheet '
+            'name "Income Statement"'
+        ],
+        [
+            'Use the same "MSFT Financials.xls" from the first exercise',
+            'Output to five separate workbooks, named "My Data1.xlsx", "My Data2.xlsx", and so on.',
+            ['Do this without writing the to_excel command multiple times']
+        ],
+        [
+            'Note: this exercise uses the Advanced material covered in the example '
+            'Jupyter notebook Read Write Excel Pandas.ipynb',
+            ['Use the same "MSFT Financials.xls" from the first exercise'],
+            'Output to five separate sheets in the same workbook "My Data.xlsx". The sheets should '
+            'be named "Income Statement 1", "Income Statement 2", and so on.',
+            ['Do this without writing the to_excel command multiple times']
+        ]
+    ]
+    answers = [
+        [], [], []
+    ]
+    resources = [
+        LECTURE_9_SLIDES,
+        LectureResource(f'MSFT Financials',
+                        static_url=f'{LAB_FOLDER_NAME}/Connecting Python and Excel/pandas/MSFT Financials.xls'),
+        LectureResource(f'Read Write Excel Pandas Notebook',
+                        static_url=f'Examples/Connecting Python and Excel/pandas/Read Write Excel Pandas.ipynb'),
+    ]
+    return LabExerciseLecture.from_seq_of_seq(
+        title, bullet_content=bullets, answers_content=answers, short_title=short_title,
+        youtube_id=youtube_id, resources=resources, due_week=due_week,
+    )
+
+
+def get_read_write_xlwings_lab_lecture() -> LabExerciseLecture:
+    title = 'Reading and Writing to Excel with xlwings'
+    short_title = 'Read Write xlwings Lab'
+    youtube_id = ''
+    due_week = 9
+    bullets = [
+        [
+            ['For all of the xlwings lab exercises, work with "xlwings Lab.xlsx".'],
+            ['Use xlwings to read the values in the column A and then write them beside',
+             'the initial values in column B']
+        ],
+        [
+            'Get the value in C9 and multiply it by 2.5 in Python',
+        ],
+        [
+            'Read the table which starts in E4 into Python. Multiply the prices by 2.5, and then output '
+            'back into Excel starting in cell H5.',
+            'Ensure that the outputted table appears in the same format as the original (pay attention to '
+            'index and header)'
+        ],
+        [
+            'In column L, write 5, 10, 15 ... 100 spaced two cells apart, so L1 would have 5, L4 would have 10, '
+            'and so on.'
+        ]
+    ]
+    answers = [
+        [], [], [], []
+    ]
+    resources = [
+        LECTURE_9_SLIDES,
+        LectureResource(f'xlwings Lab',
+                        static_url=f'{LAB_FOLDER_NAME}/Connecting Python and Excel/xlwings/xlwings Lab.xlsx'),
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,

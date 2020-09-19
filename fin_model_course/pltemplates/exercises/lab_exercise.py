@@ -63,6 +63,8 @@ class LabExercise(pl.Template):
             all_content.append(lab_frame)
         # Handle answer slides
         for i, bullet_content in enumerate(self.answers_content):
+            if not bullet_content:
+                continue
             refs = deepcopy(question_refs)
             disp_idx = i + 1
             add_str = ', Answers'
@@ -97,6 +99,7 @@ class LabExercise(pl.Template):
             if not bullet_content:
                 # Didn't get answers for this slide
                 refs.append(None)
+                continue
             disp_idx = i + 1
             level_str = f'Answers'
             if self.has_multiple_exercises:
