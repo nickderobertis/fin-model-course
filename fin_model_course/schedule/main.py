@@ -98,14 +98,14 @@ def get_course_schedule() -> CourseSchedule:
             lectures=[lecture_11],
         ),
         ClassContent(  # week 12
-            summary='Cost of Capital Estimation and Free Cash Flow Estimation',
-            lectures=[lecture_11, lecture_12],
+            summary='Free Cash Flow Estimation and Intro to Forecasting',
+            lectures=[lecture_12],
             assigned_projects=[project_4],
-            projects_due=[project_3],
         ),
         ClassContent(  # week 13
             summary='Forecasting Free Cash Flows',
             lectures=[lecture_12],
+            projects_due=[project_3],
         ),
         ClassContent(  # week 14
             summary='Advanced Financial Modeling Roadmap',
