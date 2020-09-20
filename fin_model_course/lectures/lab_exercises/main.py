@@ -37,5 +37,8 @@ def get_lab_exercises_lecture() -> LabExerciseGroup:
         notes.get_intro_monte_carlo_lab_lecture(),
         notes.get_python_retirement_monte_carlo_lab_lecture(),
         notes.get_excel_retirement_monte_carlo_lab_lecture(),
+        notes.get_enterprise_value_lab_lecture(),
+        notes.get_dcf_cost_equity_lab_lecture(),
+        notes.get_dcf_cost_debt_lab_lecture(),
     ]
     return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources)

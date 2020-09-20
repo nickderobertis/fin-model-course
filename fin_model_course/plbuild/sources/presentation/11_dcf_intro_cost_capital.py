@@ -8,6 +8,8 @@ import pyexlatex.layouts as ll
 from pyexlatex.logic.format.sizing import adjust_to_size
 
 import plbuild
+from lectures.lab_exercises.notes import get_enterprise_value_lab_lecture, get_dcf_cost_equity_lab_lecture, \
+    get_dcf_cost_debt_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.dcf import (
     get_dcf_enterprise_equity_value_exercise,
@@ -50,9 +52,9 @@ def get_content():
     dcf_overview_graphic = get_dcf_graphic()
     cc_graphic = get_dcf_graphic(include_output=False, include_fcf=False)
     fcf_graphic = get_dcf_graphic(include_output=False, include_coc=False)
-    enterprise_equity_value_excercise = get_dcf_enterprise_equity_value_exercise()
-    cost_equity_exercise = get_dcf_cost_equity_exercise()
-    cost_debt_exercise = get_dcf_cost_debt_exercise()
+    enterprise_equity_value_excercise = get_enterprise_value_lab_lecture().to_pyexlatex()
+    cost_equity_exercise = get_dcf_cost_equity_lab_lecture().to_pyexlatex()
+    cost_debt_exercise = get_dcf_cost_debt_lab_lecture().to_pyexlatex()
     wacc_graphics = get_wacc_graphics()
 
     return [
