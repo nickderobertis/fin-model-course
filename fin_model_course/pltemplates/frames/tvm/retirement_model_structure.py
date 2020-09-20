@@ -4,14 +4,14 @@ import pyexlatex.graphics as lg
 
 
 def get_retirement_model_overview_frame():
-    dark_green_def = pl.RGB(15, 82, 13, color_name='darkgreen')
+    darker_green_def = pl.RGB(15, 82, 13, color_name='darkergreen')
 
     model_block_options = [
-        'fill=darkgreen!60'
+        'fill=darkergreen!60'
     ]
 
     model_sub_block_options = [
-        'fill=darkgreen'
+        'fill=darkergreen'
     ]
 
     text_options = [
@@ -47,5 +47,5 @@ def get_retirement_model_overview_frame():
             ])
         ],
         title='The Structure of the Retirement Model',
-        pre_env_contents=dark_green_def
+        pre_env_contents=darker_green_def
     )

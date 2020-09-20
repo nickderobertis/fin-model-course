@@ -7,6 +7,9 @@ from pyexlatex.models.format.breaks import OutputLineBreak
 
 import plbuild
 from build_tools.config import SITE_URL
+from lectures.lab_exercises.notes import get_python_basics_conditionals_lab_lecture, \
+    get_python_basics_lists_lab_lecture, get_python_basics_functions_lab_lecture, \
+    get_python_basics_data_types_lab_lecture, get_python_basics_classes_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -248,18 +251,7 @@ caught the error
                     title='Conditionals Example',
                     block_title='Trying out Conditionals'
                 ),
-                LabExercise(
-                    [
-                        [
-                            f"On {site_link}, there is a Jupyter notebook called Python Basics Lab containing "
-                            f"all of the labs for today's lecture",
-                            'Please complete the exercises under "Conditionals"'
-                        ]
-                    ],
-                    frame_title='Conditionals Lab',
-                    block_title='Python Conditionals',
-                    label='lab:conditionals'
-                )
+                get_python_basics_conditionals_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Conditionals'
         ),
@@ -298,17 +290,7 @@ caught the error
                     title='Lists Example',
                     block_title='Doing More with Lists'
                 ),
-                LabExercise(
-                    [
-                        [
-                            "Keep working off of Python Basics Lab.ipynb",
-                            'Please complete the exercises under "Working with Lists"'
-                        ]
-                    ],
-                    frame_title='Lists Lab',
-                    block_title='Python Lists - Beyond the Basics',
-                    label='lab:lists'
-                )
+                get_python_basics_lists_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='More with Lists',
             short_title='Lists'
@@ -332,17 +314,7 @@ caught the error
                     title='Functions Example',
                     block_title='Structuring Code using Functions'
                 ),
-                LabExercise(
-                    [
-                        [
-                            "Keep working off of Python Basics Lab.ipynb",
-                            'Please complete the exercises under "Functions"'
-                        ]
-                    ],
-                    frame_title='Functions Lab',
-                    block_title='Using Functions to Structure Code',
-                    label='lab:functions'
-                ),
+                get_python_basics_functions_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Functions'
         ),
@@ -410,17 +382,7 @@ caught the error
                     title='Data Types Example',
                     block_title='Understanding the Different Data Types'
                 ),
-                LabExercise(
-                    [
-                        [
-                            "Keep working off of Python Basics Lab.ipynb",
-                            'Please complete the exercises under "Data Types"'
-                        ]
-                    ],
-                    frame_title='Data Types Lab',
-                    block_title='Working with Data Types',
-                    label='lab:data-types'
-                )
+                get_python_basics_data_types_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='More about Data Types',
             short_title='Data Types'
@@ -531,18 +493,7 @@ caught the error
                     title='Classes Example',
                     block_title='Working with Classes and Creating Dataclasses'
                 ),
-                LabExercise(
-                    [
-                        [
-                            "Keep working off of Python Basics Lab.ipynb",
-                            'Make sure you have car_example.py in the same folder',
-                            'Please complete the exercises under "Working with Classes"'
-                        ]
-                    ],
-                    frame_title='Classes Lab',
-                    block_title='Getting Started with Classes',
-                    label='lab:classes'
-                )
+                get_python_basics_classes_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Classes and Dataclasses',
             short_title='Classes'

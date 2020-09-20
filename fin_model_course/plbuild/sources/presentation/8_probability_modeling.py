@@ -7,6 +7,9 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.lab_exercises.notes import get_scenario_analysis_excel_lab_lecture, \
+    get_scenario_analysis_python_lab_lecture, get_randomness_excel_lab_lecture, get_randomness_python_lab_lecture, \
+    get_random_stock_model_lab_lecture, get_extend_model_internal_randomness_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -418,19 +421,7 @@ def get_content():
                     title='Scenario Analysis in Excel',
                     block_title='Adding Scenario Analysis to the Dynamic Retirement Excel Model'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'Add external scenario analysis to your Excel model from Project 1',
-                            'Create three cases, for a bad, normal, and good economy. Change the initial demand '
-                            'and price per phone in each of the cases. Both demand and price should be higher '
-                            'in better economic situations. ',
-                        ]
-                    ],
-                    block_title='Adding Scenario Analysis to Project 1',
-                    frame_title='Scenario Analysis in Excel Lab',
-                    label='labs:scenario:excel'
-                ),
+                get_scenario_analysis_excel_lab_lecture().to_pyexlatex().presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         ['For internal scenario analysis, set up a', df_mono,
@@ -451,19 +442,7 @@ def get_content():
                     title='Scenario Analysis in Python',
                     block_title='Adding Scenario Analysis to the Dynamic Retirement Python Model'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'Add external scenario analysis to your Python model from Project 1',
-                            'Create three cases, for a bad, normal, and good economy. Change the initial demand '
-                            'and price per phone in each of the cases. Both demand and price should be higher '
-                            'in better economic situations. ',
-                        ]
-                    ],
-                    block_title='Adding Scenario Analysis to Project 1',
-                    frame_title='Scenario Analysis in Python Lab',
-                    label='labs:scenario:python'
-                ),
+                get_scenario_analysis_python_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Scenario Modeling'
         ),
@@ -538,27 +517,7 @@ def get_content():
                     title='Example for Continuous Random Variables in Excel',
                     block_title='Generating Random Numbers from Normal Distributions in Excel'
                 ),
-                lp.Frame(
-                    [
-                        LabBlock(
-                            [
-                                ['Complete the following excercise in Excel for', pl.Equation(str_eq='n_{iter} = 10'),
-                                 'and',
-                                 pl.Equation(str_eq='n_{iter} = 1000')],
-                                pl.UnorderedList([
-                                    ['Generate', n_iter, 'values between 0 and 1 with a uniform distribution'],
-                                    ['Generate', n_iter,
-                                     'values from a normal distribution with a 0.5 mean and 10 standard deviation'],
-                                    'Visualize each of the two outputs with a histogram',
-                                    'Calculate the mean and standard deviation of each of the two sets of generated numbers',
-                                    'Re-calculate it a few times, take note of how much the mean and standard deviation change'
-                                ])
-                            ],
-                            title='Getting Started with Randomness in Excel'
-                        )
-                    ],
-                    title='Generating and Visualizing Random Numbers in Excel'
-                ),
+                get_randomness_excel_lab_lecture().to_pyexlatex().presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         ['In Python, we have the built-in', random_module_mono, 'module'],
@@ -581,41 +540,7 @@ def get_content():
                     title='Example for Continuous Random Variables in Python',
                     block_title='Generating Random Numbers from Normal Distributions in Python'
                 ),
-                lp.Frame(
-                    [
-                        pl.TextSize(-3),
-                        LabBlock(
-                            [
-                                ['Complete the following excercise in Python for', pl.Equation(str_eq='n_{iter} = 10'),
-                                 'and',
-                                 pl.Equation(str_eq='n_{iter} = 1000')],
-                                pl.UnorderedList([
-                                    ['Generate', n_iter, 'values between 0 and 1 with a uniform distribution'],
-                                    ['Generate', n_iter,
-                                     'values from a normal distribution with a 0.5 mean and 10 standard deviation'],
-                                    'Visualize each of the two outputs with a histogram',
-                                    'Calculate the mean and standard deviation of each of the two sets of generated numbers',
-                                    'Re-calculate it a few times, take note of how much the mean and standard deviation change'
-                                ])
-                            ],
-                            title='Getting Started with Randomness in Python'
-                        ),
-                        lp.Block(
-                            [
-                                pl.UnorderedList([
-                                    ['You will likely find it useful to store your data in a', df_mono,
-                                     'as that makes it easy to '
-                                     'calculate mean and standard deviation'],
-                                    ['Once you have your columns in the', df_mono, 'just do', df_mean,
-                                     'to get the mean and',
-                                     df_std, 'to get the standard deviations for each column.']
-                                ])
-                            ],
-                            title='Taking Mean and Standard Deviation in Python'
-                        )
-                    ],
-                    title='Generating and Visualizing Random Numbers in Python'
-                ),
+                get_randomness_python_lab_lecture().to_pyexlatex().presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         'We can also build randomness into the model for discrete variables',
@@ -701,23 +626,8 @@ def get_content():
                     title='Example for Discrete Random Variables in Excel and Python',
                     block_title='Generating Random Numbers from Discrete Distributions in Excel and Python'
                 ),
-                lp.Frame(
-                    [
-                        LabBlock(
-                            [
-                                pl.UnorderedList([
-                                    'A stock starts out priced at 100. Each period, it can either go up or down.',
-                                    'When it goes up, it will grow by 1%. When it goes down, it will decrease by 1%.',
-                                    'The likelihood of the stock going up is 60%, and down 40%.',
-                                    'Build a model which shows how the stock price changes throughout time. Visualize it up to 100 periods and '
-                                    'show the final price.'
-                                ]),
-                            ],
-                            title='A Simple Model of a Stock Price Over Time'
-                        )
-                    ],
-                    title='Random Discrete Variables in Python and Excel'
-                )
+                get_random_stock_model_lab_lecture().to_pyexlatex().presentation_frames(),
+                get_extend_model_internal_randomness_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Internal Randomness'
         )

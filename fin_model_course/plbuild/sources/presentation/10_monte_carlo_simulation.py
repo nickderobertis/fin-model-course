@@ -6,6 +6,8 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.lab_exercises.notes import get_intro_monte_carlo_lab_lecture, \
+    get_python_retirement_monte_carlo_lab_lecture, get_excel_retirement_monte_carlo_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.monte_carlo import get_monte_carlo_python_exercise, get_monte_carlo_excel_exercise, \
     get_intro_monte_carlo_python_exercise
@@ -89,9 +91,9 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
         ]
     )
 
-    intro_mc_python_lab = get_intro_monte_carlo_python_exercise()
-    mc_python_lab = get_monte_carlo_python_exercise()
-    mc_excel_lab = get_monte_carlo_excel_exercise()
+    intro_mc_python_lab = get_intro_monte_carlo_lab_lecture().to_pyexlatex()
+    mc_python_lab = get_python_retirement_monte_carlo_lab_lecture().to_pyexlatex()
+    mc_excel_lab = get_excel_retirement_monte_carlo_lab_lecture().to_pyexlatex()
 
     return [
         pl.Section(
@@ -190,7 +192,9 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
                     title='Simluating Portfolio Values',
                     block_title='Example for Simulating Portfolio Values'
                 ),
+                pl.TextSize(-2),
                 intro_mc_python_lab.presentation_frames(),
+                pl.TextSize(0),
             ],
             title='Running a First Monte Carlo Simulation',
             short_title='Run MC',

@@ -1,17 +1,17 @@
 from lectures.start_python_excel import notes
 from lectures.model import LectureGroup, LectureResource
+from resources.models import RESOURCES
 from schedule.main import LECTURE_2_NAME
 
 
 def get_getting_started_with_python_and_excel_lecture() -> LectureGroup:
-    title = 'Getting Started with Python and Excel'
+    title = LECTURE_2_NAME
     lecture_index = 2
     description = 'Discusses the basics of financial modeling in both Python and Excel. Explores a ' \
                   'simple time-value of money problem and how to build a model for it in both ' \
                   'Python and Excel.'
     resources = [
-        LectureResource(f'Lecture Notes - {title}', static_url=f'generated/pdfs/LN2 {title}.pdf'),
-        LectureResource(f'Slides - {LECTURE_2_NAME}', static_url=f'generated/pdfs/S2 {LECTURE_2_NAME}.pdf'),
+        *RESOURCES.lectures.getting_started.resources(),
     ]
     lectures = [
         notes.get_intro_and_problem_lecture(),

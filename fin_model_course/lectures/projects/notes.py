@@ -1,5 +1,6 @@
 from build_tools.config import LAB_FOLDER_NAME
 from lectures.model import LectureNotes, Lecture, LectureResource
+from resources.models import RESOURCES
 
 
 def get_project_overview_lecture() -> Lecture:
@@ -7,6 +8,7 @@ def get_project_overview_lecture() -> Lecture:
     project_num = 0
     title = f'Project {project_num} - {project_title}'
     youtube_id = 'SW4Yk-pQdA8'
+    week_covered = 2
     notes = LectureNotes([
         'The biggest part of the typical project grade is accuracy, but that only represents 60% of the total.',
         'Answers with the baseline model inputs are often provided, so use these to ensure you have built the model '
@@ -24,12 +26,9 @@ def get_project_overview_lecture() -> Lecture:
         "formatting of the model."
     ], title=title)
     resources = [
-        LectureResource(
-            'Project Grading Overview',
-            static_url=f'generated/pdfs/PJ{project_num} {project_title}.pdf'
-        )
+        RESOURCES.projects.grading_overview,
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_project_1_lecture() -> Lecture:
@@ -37,6 +36,7 @@ def get_project_1_lecture() -> Lecture:
     project_num = 1
     title = f'Project {project_num} - {project_title}'
     youtube_id = 'vcvE5RrtrL4'
+    week_covered = 2
     notes = LectureNotes([
         'This project is really about cash flow modeling which is a huge part of financial modeling.',
         'This is a classic capital budgeting problem. Buy production capacity, produce units for variable '
@@ -51,19 +51,8 @@ def get_project_1_lecture() -> Lecture:
         'have waited to the last minute have ended up struggling in the entire course'
     ], title=title)
     resources = [
-        LectureResource(
-            f'Project {project_num} Description',
-            static_url=f'generated/pdfs/PJ{project_num} {project_title}.pdf'
-        ),
-        LectureResource(
-            f'Project {project_num} Excel Template',
-            static_url=f'Project Materials/Project {project_num}/Project {project_num} Template.xlsx'
-        ),
-        LectureResource(
-            f'Project {project_num} Python Template',
-            static_url=f'Project Materials/Project {project_num}/Project {project_num} Template.ipynb'
-        ),
+        *RESOURCES.projects.project_1.resources(),
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 

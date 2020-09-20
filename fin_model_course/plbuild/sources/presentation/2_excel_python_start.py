@@ -32,6 +32,7 @@ from pyexlatex.graphics import (
 
 import plbuild
 from build_tools.config import SITE_URL
+from lectures.lab_exercises.notes import get_simple_retirement_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
 from pltemplates.frames.model_flowchart import (
@@ -330,30 +331,18 @@ for item in inputs:
                     title='Iterating the Existing Model',
                     block_title='Expanding on Python and Excel'
                 ),
-                Frame(
-                    [
-                        LabBlock(
-                            [
-                                UnorderedList([
-                                    "Now we want to see the effect of savings rate on time until retirement, in addition to interest rate",
-                                    "In both Excel and Python, calculate the years to retirement for savings rates of 10%, 25%, and 40%, "
-                                    "and each of these cases with each of the interest rate cases, 4%, 5%, and 6%",
-                                    f"Be sure that you drag formulas in Excel and use {for_} loops in Python to accomplish this"
-                                ])
-                            ],
-                            title="Let's Vary the Savings Rate, Too"
-                        ),
-                        Block(
-                            "In total you should have 9 calculated years to retirement numbers, in each of the two models.",
-                            title='Note'
-                        )
-                    ],
-                    title="Putting it All Together - A Basic Model with Iteration"
-                )
+                get_simple_retirement_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Extending the Model and Iteration',
             short_title='Extend & Iterate'
         ),
+        pl.PresentationAppendix(
+            [
+                pl.TextSize(-1),
+                get_simple_retirement_lab_lecture().to_pyexlatex().appendix_frames(),
+                pl.TextSize(0),
+            ]
+        )
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(

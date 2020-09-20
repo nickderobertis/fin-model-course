@@ -7,6 +7,8 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.lab_exercises.notes import get_intro_to_pandas_lab_lecture, get_pandas_styling_lab_lecture, \
+    get_intro_python_visualization_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -176,17 +178,7 @@ df
                     title='Introduction to Pandas',
                     block_title='Creating and Using Pandas DataFrames'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'Find the lab exercises in Labs > Visualization > Pandas and Visualization Labs.ipynb',
-                            'Complete the lab exercises in the first section entitled "Pandas"'
-                        ]
-                    ],
-                    block_title='Intro to Pandas Exercises',
-                    frame_title='Getting Started with Pandas',
-                    label='labs:intro-pandas'
-                ),
+                get_intro_to_pandas_lab_lecture().to_pyexlatex().presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         ['It is possible to add styling to our displayed tabular data by styling the', df_mono],
@@ -206,17 +198,7 @@ df
                     title='Introduction to Pandas',
                     block_title='Creating and Using Pandas DataFrames'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'Keep working with the same lab Jupyter Notebook',
-                            'Complete the lab exercises in the second section entitled "Pandas Styling"'
-                        ]
-                    ],
-                    block_title='Intro to Pandas Exercises',
-                    frame_title='Getting Started with Pandas',
-                    label='labs:intro-pandas'
-                ),
+                get_pandas_styling_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Tables with Pandas DataFrames',
             short_title='Pandas'
@@ -268,17 +250,7 @@ df
                     title='Introduction to Graphing',
                     block_title='Graphing Using Pandas'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'Keep working with the same lab Jupyter Notebook',
-                            'Complete the lab exercises in the final section entitled "Graphics"'
-                        ]
-                    ],
-                    block_title='Intro to Graphing with Pandas',
-                    frame_title='Getting Started with Visualization',
-                    label='labs:intro-graphing'
-                ),
+                get_intro_python_visualization_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Graphing using Pandas',
             short_title='Graphs'

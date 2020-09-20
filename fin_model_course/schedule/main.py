@@ -1,4 +1,5 @@
 import datetime
+from typing import Optional
 
 from schedule.models import CourseSchedule, ClassContent, ScheduleProject, ScheduleLecture
 
@@ -24,8 +25,19 @@ LECTURE_11_NAME = 'Introduction to DCF Valuation and Cost of Capital Estimation'
 LECTURE_12_NAME = 'Free Cash Flow Estimation and Forecasting'
 LECTURE_13_NAME = 'Advanced Financial Modeling'
 
+SCHEDULE: Optional[CourseSchedule] = None
 
-def get_course_schedule() -> CourseSchedule:
+
+def get_course_schedule(use_cache: bool = True, overwrite_cache: bool = True) -> CourseSchedule:
+    global SCHEDULE
+
+    if use_cache:
+        if SCHEDULE is not None:
+            return SCHEDULE
+
+    from lectures.lab_exercises.main import get_lab_exercises_lecture
+    from lectures.config import get_lecture_groups
+
     project_1 = ScheduleProject(name=PROJECT_1_NAME, index=1)
     project_2 = ScheduleProject(name=PROJECT_2_NAME, index=2)
     project_3 = ScheduleProject(name=PROJECT_3_NAME, index=3)
@@ -96,14 +108,14 @@ def get_course_schedule() -> CourseSchedule:
             lectures=[lecture_11],
         ),
         ClassContent(  # week 12
-            summary='Cost of Capital Estimation and Free Cash Flow Estimation',
-            lectures=[lecture_11, lecture_12],
+            summary='Free Cash Flow Estimation and Intro to Forecasting',
+            lectures=[lecture_12],
             assigned_projects=[project_4],
-            projects_due=[project_3],
         ),
         ClassContent(  # week 13
             summary='Forecasting Free Cash Flows',
             lectures=[lecture_12],
+            projects_due=[project_3],
         ),
         ClassContent(  # week 14
             summary='Advanced Financial Modeling Roadmap',
@@ -116,5 +128,15 @@ def get_course_schedule() -> CourseSchedule:
         )
     ]
 
-    schedule = CourseSchedule(weeks=weeks, start_date=COURSE_BEGIN_DATE, end_date=COURSE_END_DATE)
+    lab_exercises = get_lab_exercises_lecture()
+    lectures = get_lecture_groups(include_labs=False, include_projects=False)
+
+    schedule = CourseSchedule(
+        weeks=weeks, start_date=COURSE_BEGIN_DATE, end_date=COURSE_END_DATE, lab_exercises=lab_exercises,
+        lectures=lectures,
+    )
+
+    if overwrite_cache:
+        SCHEDULE = schedule
+
     return schedule

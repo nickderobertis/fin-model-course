@@ -8,6 +8,8 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.lab_exercises.notes import get_sensitivity_analysis_excel_lab_lecture, get_dictionaries_lab_lecture, \
+    get_list_comprehensions_lab_lecture, get_sensitivity_analysis_python_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -286,19 +288,7 @@ sa.df
                     title='Sensitivity Analysis in Excel',
                     block_title='Adding Sensitivity Analysis to the Dynamic Retirement Excel Model'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'Add sensitivity analysis to your Excel model from Project 1',
-                            'See how the NPV changes when the number of machines and initial demand change',
-                            'Do a one-way Data Table with a graph for each of the two inputs, then a two-way '
-                            'data table with conditional formatting'
-                        ]
-                    ],
-                    block_title='Adding Sensitivity Analysis to Project 1',
-                    frame_title='Sensitivity Analysis in Excel Lab',
-                    label='labs:sensitivity:excel'
-                ),
+                get_sensitivity_analysis_excel_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Sensitivity Analysis in Excel with Data Tables',
             short_title='SA Excel'
@@ -370,18 +360,7 @@ sa.df
                     title='More About Dictionaries in Python',
                     block_title='Using Dictionaries'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'For this Python section, lab exercises are in Labs > Sensitivity Analysis > Python > '
-                            'Python Dicts, List comprehensions, and Imports Lab.ipynb',
-                            'Complete the exercises in the dictionaries section for now',
-                        ]
-                    ],
-                    block_title='Learning How to Use Dictionaries',
-                    frame_title='Dictionaries Lab',
-                    label='labs:python:dicts'
-                ),
+                get_dictionaries_lab_lecture().to_pyexlatex().presentation_frames(),
                 lp.Frame(
                     [
                         pl.TextSize(-1),
@@ -415,18 +394,7 @@ sa.df
                     title='Easier Loops in Python',
                     block_title='Using List Comprehensions'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'For this Python section, lab exercises are in Labs > Sensitivity Analysis > Python > '
-                            'Python Dicts, List comprehensions, and Imports Lab.ipynb',
-                            'Complete the exercises in the List Comprehensions section for now',
-                        ]
-                    ],
-                    block_title='Learning How to Use List Comprehensions',
-                    frame_title='List Comprehensions Lab',
-                    label='labs:python:list-comps'
-                ),
+                get_list_comprehensions_lab_lecture().to_pyexlatex().presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         ['In the past we have used', import_mono, 'to load packages such as', np_mono, 'and', pd_mono],
@@ -560,18 +528,7 @@ sa.df
                     title='Sensitivity Analysis in Python',
                     block_title='Adding Sensitivity Analysis to the Dynamic Retirement Python Model'
                 ),
-                LabExercise(
-                    [
-                        [
-                            'Add sensitivity analysis to your Python model from Project 1',
-                            'See how the NPV changes when the number of machines and initial demand change',
-                            'Output both a hex-bin plot and a styled DataFrame'
-                        ]
-                    ],
-                    block_title='Adding Sensitivity Analysis to Project 1',
-                    frame_title='Sensitivity Analysis in Python Lab',
-                    label='labs:sensitivity:python'
-                ),
+                get_sensitivity_analysis_python_lab_lecture().to_pyexlatex().presentation_frames(),
             ],
             title='Sensitivity Analysis in Python',
             short_title='SA Python'

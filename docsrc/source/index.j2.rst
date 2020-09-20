@@ -9,11 +9,11 @@ Welcome to Nick DeRobertis' Financial Modeling Course!
 A Python and Excel Financial Modeling Course
 
 .. toctree::
-   :glob:
    :caption: Course Content
    :maxdepth: 2
+   {% for lecture_path in lecture_paths %}
+   {{ lecture_path }}{% endfor %}
 
-   lectures/*
 
 
 .. toctree::

@@ -7,7 +7,7 @@ import pyexlatex.layouts as ll
 import plbuild
 from lectures.intro.main import get_intro_lecture
 from plbuild.paths import images_path
-
+from schedule.main import LECTURE_1_NAME
 
 AUTHORS = ['Nick DeRobertis']
 
@@ -15,7 +15,7 @@ DOCUMENT_CLASS = pl.Document
 OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
-TITLE = 'Introduction'
+TITLE = LECTURE_1_NAME
 ORDER = 'LN1'
 
 

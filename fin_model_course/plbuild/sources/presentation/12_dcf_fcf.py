@@ -5,6 +5,8 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.lab_exercises.notes import get_fcf_calculation_lab_lecture, get_simple_forecast_lab_lecture, \
+    get_complex_forecast_lab_lecture, get_dcf_tv_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
@@ -51,10 +53,10 @@ def get_content():
         str_eq=f'{pl.Text("Adjustments")} = {" + ".join([str(pl.Text(item)) for item in non_cash_items])}',
     )
 
-    fcf_exercise = get_dcf_fcf_calculation_exercise()
-    simple_ts_exercise = get_dcf_fcf_simple_forecast_exercise()
-    complex_ts_exercise = get_dcf_fcf_complex_forecast_exercise()
-    tv_exercise = get_dcf_fcf_tv_exercise()
+    fcf_exercise = get_fcf_calculation_lab_lecture().to_pyexlatex()
+    simple_ts_exercise = get_simple_forecast_lab_lecture().to_pyexlatex()
+    complex_ts_exercise = get_complex_forecast_lab_lecture().to_pyexlatex()
+    tv_exercise = get_dcf_tv_lab_lecture().to_pyexlatex()
 
     return [
         pl.Section(
@@ -556,7 +558,9 @@ def get_content():
                     ],
                     title='Finding EV Using TV and FCFs'
                 ),
+                pl.TextSize(-2),
                 tv_exercise.presentation_frames(),
+                pl.TextSize(0)
             ],
             title='Using the Forecasted FCFs in the DCF Model',
             short_title='Valuation'

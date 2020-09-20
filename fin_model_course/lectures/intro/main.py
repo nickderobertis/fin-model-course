@@ -1,17 +1,17 @@
 from lectures.intro import notes
 from lectures.model import LectureGroup, LectureResource
+from resources.models import RESOURCES
+from schedule.main import LECTURE_1_NAME
 
 
 def get_intro_lecture() -> LectureGroup:
-    title = 'Introduction'
+    title = LECTURE_1_NAME
     lecture_index = 1
     description = 'Introduces myself, the course structure, financial modeling, the tools we will use, ' \
                   'and how to set up Python.'
     resources = [
-        LectureResource(f'Syllabus', static_url='generated/pdfs/C1 Financial Modeling Syllabus.pdf'),
-        LectureResource(f'Course Schedule', static_url='generated/pdfs/C2 Course Schedule.pdf'),
-        LectureResource(f'Lecture Notes - {title}', static_url='generated/pdfs/LN1 Introduction.pdf'),
-        LectureResource(f'Slides - {title}', static_url='generated/pdfs/S1 Financial Modeling with Python and Excel.pdf'),
+        *RESOURCES.course_materials.resources(),
+        *RESOURCES.lectures.intro.resources(),
     ]
     lectures = [
         notes.get_about_me_lecture(),
