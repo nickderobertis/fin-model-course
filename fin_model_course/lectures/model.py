@@ -208,9 +208,11 @@ class LectureResource:
 - `{self.display_name} <{self.url}>`_
         """
 
+
 @dataclass
 class Lecture:
     title: str
+    week_covered: int
     notes: Optional[LectureNotes] = None
     youtube_id: Optional[str] = None
     resources: Optional[Sequence[LectureResource]] = None

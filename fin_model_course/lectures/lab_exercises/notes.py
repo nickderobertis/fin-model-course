@@ -10,6 +10,7 @@ from build_tools.config import LAB_FOLDER_NAME, LAB_EXERCISES_PATH, SITE_URL
 from lectures.lab_exercise import LabExerciseLecture
 from lectures.model import LectureNotes, Lecture, LectureResource, Equation, Link
 from lectures.python_basics.notes import LECTURE_4_COMMON_RESOURCES
+from resources.models import RESOURCES
 from schedule.main import LECTURE_2_NAME, LECTURE_3_NAME, LECTURE_4_NAME, LECTURE_5_NAME, LECTURE_6_NAME, \
     LECTURE_7_NAME, LECTURE_8_NAME, LECTURE_9_NAME, LECTURE_10_NAME, LECTURE_11_NAME, LECTURE_12_NAME
 
@@ -50,7 +51,7 @@ def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     title = 'Extending a Simple Retirement Model'
     short_title = 'Vary Savings Rate Lab'
     youtube_id = 'KVVabq4n-ow'
-    due_week = 2
+    week_covered = 2
     bullets = [
         [
             "Now we want to see the effect of savings rate on time until retirement, in addition to interest rate",
@@ -86,7 +87,7 @@ def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -94,7 +95,7 @@ def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Determining Desired Cash in the Dynamic Salary Retirement Excel Model'
     short_title = 'Dynamic Desired Cash in Excel'
     youtube_id = 'cM3uKsHXS3M'
-    due_week = 2
+    week_covered = 2
     bullets = [
         [
             'We want to relax the assumption that the amount needed in retirement is given by '
@@ -121,7 +122,7 @@ def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -129,7 +130,7 @@ def get_python_basics_conditionals_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Conditionals'
     short_title = 'Python Conditionals Lab'
     youtube_id = 'T4LK0QgPbNA'
-    due_week = 2
+    week_covered = 2
     bullets = [
         [
             f"The Jupyter notebook called Python Basics Lab contains "
@@ -147,7 +148,7 @@ def get_python_basics_conditionals_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -155,7 +156,7 @@ def get_python_basics_lists_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Lists'
     short_title = 'Python Lists Lab'
     youtube_id = 'AViA3IBpXcc'
-    due_week = 3
+    week_covered = 3
     bullets = [
         [
             "Keep working off of Python Basics Lab.ipynb",
@@ -172,7 +173,7 @@ def get_python_basics_lists_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -180,7 +181,7 @@ def get_python_basics_functions_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Functions'
     short_title = 'Python Functions Lab'
     youtube_id = 'xOxJst-SMy8'
-    due_week = 3
+    week_covered = 3
     bullets = [
         [
             "Keep working off of Python Basics Lab.ipynb",
@@ -197,7 +198,7 @@ def get_python_basics_functions_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -205,7 +206,7 @@ def get_python_basics_data_types_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Data Types'
     short_title = 'Python Data Types Lab'
     youtube_id = 'pyjfrIzdjgo'
-    due_week = 3
+    week_covered = 3
     bullets = [
         [
             "Keep working off of Python Basics Lab.ipynb",
@@ -222,7 +223,7 @@ def get_python_basics_data_types_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -230,7 +231,7 @@ def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
     title = 'Python Basics - Classes'
     short_title = 'Python Classes Lab'
     youtube_id = 'znxtmT66UAM'
-    due_week = 3
+    week_covered = 3
     bullets = [
         [
             "Keep working off of Python Basics Lab.ipynb",
@@ -252,7 +253,7 @@ def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -260,7 +261,7 @@ def get_extend_dynamic_retirement_python_lab_lecture() -> LabExerciseLecture:
     title = 'Determining Desired Cash in the Dynamic Salary Retirement Python Model'
     short_title = 'Dynamic Desired Cash in Python'
     youtube_id = ''
-    due_week = 4
+    week_covered = 4
     bullets = [
         [
             'We want to relax the assumption that the amount needed in retirement is given by '
@@ -287,7 +288,7 @@ def get_extend_dynamic_retirement_python_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -295,7 +296,7 @@ def get_intro_to_pandas_lab_lecture() -> LabExerciseLecture:
     title = 'Getting Started with Pandas'
     short_title = 'Intro Pandas Lab'
     youtube_id = ''
-    due_week = 5
+    week_covered = 5
     bullets = [
         [
             'Work off of the Jupyter notebook Pandas and Visualization Labs.ipynb',
@@ -312,7 +313,7 @@ def get_intro_to_pandas_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -320,7 +321,7 @@ def get_pandas_styling_lab_lecture() -> LabExerciseLecture:
     title = 'Styling Pandas DataFrames'
     short_title = 'Pandas Styling Lab'
     youtube_id = ''
-    due_week = 5
+    week_covered = 5
     bullets = [
         [
             'Keep working with the same lab Jupyter Notebook',
@@ -337,7 +338,7 @@ def get_pandas_styling_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -345,7 +346,7 @@ def get_intro_python_visualization_lab_lecture() -> LabExerciseLecture:
     title = 'Introduction to Graphing with Pandas'
     short_title = 'Intro Visualization Lab'
     youtube_id = ''
-    due_week = 5
+    week_covered = 5
     bullets = [
         [
             'Keep working with the same lab Jupyter Notebook',
@@ -362,7 +363,7 @@ def get_intro_python_visualization_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -370,7 +371,7 @@ def get_sensitivity_analysis_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Adding Sensitivity Analysis to Project 1 - Excel'
     short_title = 'Sensitivity Analysis in Excel Lab'
     youtube_id = ''
-    due_week = 6
+    week_covered = 6
     bullets = [
         [
             'Add sensitivity analysis to your Excel model from Project 1',
@@ -389,7 +390,7 @@ def get_sensitivity_analysis_excel_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -397,7 +398,7 @@ def get_dictionaries_lab_lecture() -> LabExerciseLecture:
     title = 'Learning How to Use Dictionaries'
     short_title = 'Dictionaries Lab'
     youtube_id = ''
-    due_week = 6
+    week_covered = 6
     bullets = [
         [
             'For this Python section, lab exercises are in the Jupyter notebook '
@@ -413,11 +414,11 @@ def get_dictionaries_lab_lecture() -> LabExerciseLecture:
     resources = [
         LECTURE_7_SLIDES,
         LECTURE_7_EXAMPLE_NOTEBOOK,
-        LECTURE_7_LAB_NOTEBOOK,
+        RESOURCES.labs.python_basics.dicts_lists_comprehensions_notebook,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -425,7 +426,7 @@ def get_list_comprehensions_lab_lecture() -> LabExerciseLecture:
     title = 'Learning How to Use List Comprehensions'
     short_title = 'List Comprehensions Lab'
     youtube_id = ''
-    due_week = 6
+    week_covered = 6
     bullets = [
         [
             'Continue working on the same Jupyter notebook from the previous lab exercise',
@@ -444,7 +445,7 @@ def get_list_comprehensions_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -452,7 +453,7 @@ def get_sensitivity_analysis_python_lab_lecture() -> LabExerciseLecture:
     title = 'Adding Sensitivity Analysis to Project 1 - Python'
     short_title = 'Sensitivity Analysis in Python Lab'
     youtube_id = ''
-    due_week = 7
+    week_covered = 7
     bullets = [
         [
             'Add sensitivity analysis to your Python model from Project 1',
@@ -470,7 +471,7 @@ def get_sensitivity_analysis_python_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -478,7 +479,7 @@ def get_scenario_analysis_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Adding Scenario Analysis to Project 1 - Excel'
     short_title = 'Scenario Analysis Excel Lab'
     youtube_id = ''
-    due_week = 7
+    week_covered = 7
     bullets = [
         [
             'Add external scenario analysis to your Excel model from Project 1',
@@ -497,7 +498,7 @@ def get_scenario_analysis_excel_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -505,7 +506,7 @@ def get_scenario_analysis_python_lab_lecture() -> LabExerciseLecture:
     title = 'Adding Scenario Analysis to Project 1 - Python'
     short_title = 'Scenario Analysis Python Lab'
     youtube_id = ''
-    due_week = 8
+    week_covered = 8
     bullets = [
         [
             'Add external scenario analysis to your Python model from Project 1',
@@ -524,7 +525,7 @@ def get_scenario_analysis_python_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -532,7 +533,7 @@ def get_randomness_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Generating and Visualizing Random Numbers - Excel'
     short_title = 'Randomness Excel Lab'
     youtube_id = ''
-    due_week = 8
+    week_covered = 8
     bullets = [
         [
             'Complete the following excercise in Excel for n=10 and n=1000',
@@ -553,7 +554,7 @@ def get_randomness_excel_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -561,7 +562,7 @@ def get_randomness_python_lab_lecture() -> LabExerciseLecture:
     title = 'Generating and Visualizing Random Numbers - Python'
     short_title = 'Randomness Python Lab'
     youtube_id = ''
-    due_week = 8
+    week_covered = 8
     bullets = [
         [
             'Complete the following excercise in Python for n=10 and n=1000',
@@ -582,7 +583,7 @@ def get_randomness_python_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -590,7 +591,7 @@ def get_random_stock_model_lab_lecture() -> LabExerciseLecture:
     title = 'Building a Simple Model of Stock Returns'
     short_title = 'Internal Randomness Simple Model Lab'
     youtube_id = ''
-    due_week = 8
+    week_covered = 8
     bullets = [
         [
             'Create the following model in both Excel and Python',
@@ -611,7 +612,7 @@ def get_random_stock_model_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -619,7 +620,7 @@ def get_extend_model_internal_randomness_lab_lecture() -> LabExerciseLecture:
     title = 'Extending the Dynamic Salary Retirement Model with Internal Randomness'
     short_title = 'Internal Randomness Model Lab'
     youtube_id = ''
-    due_week = 9
+    week_covered = 9
     bullets = [
         [
             "Add internal randomness to your Project 1 Excel and Python models",
@@ -639,7 +640,7 @@ def get_extend_model_internal_randomness_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -647,7 +648,7 @@ def get_read_write_excel_pandas_lab_lecture() -> LabExerciseLecture:
     title = 'Reading and Writing to Excel with Pandas'
     short_title = 'Read Write Pandas Lab'
     youtube_id = ''
-    due_week = 9
+    week_covered = 9
     bullets = [
         [
             'Download "MSFT Financials.xls" from the course site',
@@ -681,7 +682,7 @@ def get_read_write_excel_pandas_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -689,7 +690,7 @@ def get_read_write_xlwings_lab_lecture() -> LabExerciseLecture:
     title = 'Reading and Writing to Excel with xlwings'
     short_title = 'Read Write xlwings Lab'
     youtube_id = ''
-    due_week = 9
+    week_covered = 9
     bullets = [
         [
             ['For all of the xlwings lab exercises, work with "xlwings Lab.xlsx".'],
@@ -720,7 +721,7 @@ def get_read_write_xlwings_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -728,7 +729,7 @@ def get_intro_monte_carlo_lab_lecture() -> LabExerciseLecture:
     title = 'Monte Carlo Simulation of DDM'
     short_title = 'Intro Monte Carlo Lab'
     youtube_id = ''
-    due_week = 10
+    week_covered = 10
     bullets = [
         [
             'You are trying to determine the value of a mature company. The company has had stable dividend '
@@ -758,7 +759,7 @@ def get_intro_monte_carlo_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -766,7 +767,7 @@ def get_python_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
     title = 'Monte Carlo Simulation of Python Models'
     short_title = 'Monte Carlo Python Lab'
     youtube_id = ''
-    due_week = 10
+    week_covered = 10
     bullets = [
         [
             'Work off of your existing Project 1 Python model',
@@ -795,7 +796,7 @@ def get_python_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -803,7 +804,7 @@ def get_excel_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
     title = 'Monte Carlo Simulation of Excel Models'
     short_title = 'Monte Carlo Excel Lab'
     youtube_id = ''
-    due_week = 10
+    week_covered = 10
     bullets = [
         [
             'You will be running Monte Carlo simulations on your existing Excel model from Project 1',
@@ -833,7 +834,7 @@ def get_excel_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -841,7 +842,7 @@ def get_enterprise_value_lab_lecture() -> LabExerciseLecture:
     title = 'Finding Enterprise and Equity Value Given FCF and WACC'
     short_title = 'Enterprise and Equity Value Lab'
     youtube_id = ''
-    due_week = 11
+    week_covered = 11
     bullets = [
         [
             'You are the CFO for a startup developing artificial intelligence technologies. There will be an '
@@ -882,7 +883,7 @@ def get_enterprise_value_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -890,7 +891,7 @@ def get_dcf_cost_equity_lab_lecture() -> LabExerciseLecture:
     title = 'Finding Cost of Equity Given Historical Prices'
     short_title = 'DCF Cost of Equity Lab'
     youtube_id = ''
-    due_week = 11
+    week_covered = 11
 
     risk_free = 0.02
 
@@ -929,7 +930,7 @@ def get_dcf_cost_equity_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -937,7 +938,7 @@ def get_dcf_cost_debt_lab_lecture() -> LabExerciseLecture:
     title = 'Finding Cost of Debt Given Financial and Market Info'
     short_title = 'DCF Cost of Debt Lab'
     youtube_id = ''
-    due_week = 11
+    week_covered = 11
 
     risk_free = 0.02
 
@@ -994,7 +995,7 @@ def get_dcf_cost_debt_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -1002,7 +1003,7 @@ def get_fcf_calculation_lab_lecture() -> LabExerciseLecture:
     title = 'Free Cash Flow Calculation'
     short_title = 'Calculate FCF Lab'
     youtube_id = ''
-    due_week = 12
+    week_covered = 12
 
     lab_1_inputs = dict(
         adjustments=100,
@@ -1068,7 +1069,7 @@ def get_fcf_calculation_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -1076,7 +1077,7 @@ def get_simple_forecast_lab_lecture() -> LabExerciseLecture:
     title = 'Forecasting Simple Time-Series'
     short_title = 'Simple Forecast Lab'
     youtube_id = ''
-    due_week = 12
+    week_covered = 12
 
     # NOTE: to get answers, ran Forecast Sales COGS simple but loading in these data instead
 
@@ -1105,7 +1106,7 @@ def get_simple_forecast_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -1113,7 +1114,7 @@ def get_complex_forecast_lab_lecture() -> LabExerciseLecture:
     title = 'Forecasting Complex Time-Series'
     short_title = 'Complex Forecast Lab'
     youtube_id = ''
-    due_week = 13
+    week_covered = 13
 
     #  NOTE: to get answers, ran Forecast Quarterly Financial Statements.ipynb but loading in these data instead
 
@@ -1142,7 +1143,7 @@ def get_complex_forecast_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -1150,7 +1151,7 @@ def get_dcf_tv_lab_lecture() -> LabExerciseLecture:
     title = 'DCF Stock Price using Terminal Values'
     short_title = 'Terminal Values Lab'
     youtube_id = ''
-    due_week = 13
+    week_covered = 13
 
     ev_ebitda = 18.58
     ev_sales = 1.92
@@ -1218,7 +1219,7 @@ def get_dcf_tv_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 
 
@@ -1226,7 +1227,7 @@ def get_lab_lecture() -> LabExerciseLecture:
     title = ''
     short_title = title
     youtube_id = ''
-    due_week = 0
+    week_covered = 0
     bullets = [
         [
 
@@ -1242,6 +1243,6 @@ def get_lab_lecture() -> LabExerciseLecture:
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
-        youtube_id=youtube_id, resources=resources, due_week=due_week,
+        youtube_id=youtube_id, resources=resources, week_covered=week_covered,
     )
 

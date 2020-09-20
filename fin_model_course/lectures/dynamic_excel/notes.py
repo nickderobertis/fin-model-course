@@ -4,6 +4,7 @@ from lectures.model import LectureNotes, Lecture, LectureResource
 def get_extending_simple_retirement_model_lecture() -> Lecture:
     title = 'Simple Retirement Model Assumptions'
     youtube_id = 'kSuy87EELWE'
+    week_covered = 2
     notes = LectureNotes([
         'Part of the reason we begin with such a seemingly simple problem is to show '
         'how complex it is to model any real-world situation with a high degree of accuracy',
@@ -20,12 +21,13 @@ def get_extending_simple_retirement_model_lecture() -> Lecture:
         "of building and maintaining complex models"
     ], title=title)
     resources = []
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_relaxing_salary_assumption_lecture() -> Lecture:
     title = 'Relaxing the Salary Assumption'
     youtube_id = '_PuQgUIpMTg'
+    week_covered = 2
     notes = LectureNotes([
         'We will experience first-hand the tradeoff in relaxing assumptions: greater accuracy '
         'but also greater complexity',
@@ -42,12 +44,13 @@ def get_relaxing_salary_assumption_lecture() -> Lecture:
         'different if the model increases in accuracy? What is the cost of being wrong?'
     ], title=title)
     resources = []
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_advanced_excel_functions_lecture() -> Lecture:
     title = 'Skills for the Advanced Excel Model'
     youtube_id = 'iRrVYz_cips'
+    week_covered = 2
     notes = LectureNotes([
         'Larger Excel models can get very messy quickly. Then it becomes difficult for anyone to '
         'consume your model or to improve it later. Therefore it is important to stay organized.',
@@ -62,12 +65,13 @@ def get_advanced_excel_functions_lecture() -> Lecture:
         '=VLOOKUP is very useful to find items in a table and can make your model much more flexible'
     ], title=title)
     resources = []
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_implement_dynamic_salary_excel_lecture() -> Lecture:
     title = 'Implementing the Dynamic Salary Model'
     youtube_id = 'uU3Za6p3KJs'
+    week_covered = 2
     notes = LectureNotes([
         'We are building this model from scratch as it is so different from the original',
         'We can break this larger problem down into three sub-problems: determining '
@@ -88,12 +92,13 @@ def get_implement_dynamic_salary_excel_lecture() -> Lecture:
             static_url='Examples/Introduction/Excel/Dynamic Salary Retirement Model.xlsx'
         ),
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_lab_excercise_lecture() -> Lecture:
     title = 'Lab Exercise'
     youtube_id = 'CqsIz00OH38'
+    week_covered = 2
     notes = LectureNotes([
         'Feel free to work from the example model though I would recommend you '
         'build that out yourself following the prior videos',
@@ -104,14 +109,4 @@ def get_lab_excercise_lecture() -> Lecture:
         'the inputs into a calculation area and retain all the references to it'
     ], title=title)
     resources = []
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
-
-
-def get_lecture() -> Lecture:
-    title = ''
-    youtube_id = ''
-    notes = LectureNotes([
-
-    ], title=title)
-    resources = []
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)

@@ -30,7 +30,6 @@ class LabExerciseLecture(Lecture):
     short_title: Optional[str] = None
     label: Optional[str] = None
     exercises: Sequence[LabExerciseModel] = tuple()
-    due_week: Optional[int] = None
 
     @classmethod
     def from_seq_of_seq(cls, *args, bullet_content: Sequence[Sequence[str]], answers_content: Sequence[Sequence[str]],
@@ -44,9 +43,9 @@ class LabExerciseLecture(Lecture):
 
     @property
     def visible_from_week(self) -> int:
-        if self.due_week is None:
+        if self.week_covered is None:
             return 1
-        return self.due_week + 1
+        return self.week_covered + 1
 
     @property
     def visible(self) -> bool:
@@ -128,4 +127,4 @@ class LabExerciseGroup(LectureGroup):
     lectures: Sequence[LabExerciseLecture]
 
     def exercises_for_week(self, week_num: int) -> List[LabExerciseLecture]:
-        return [exc for exc in self.lectures if exc.due_week == week_num]
+        return [exc for exc in self.lectures if exc.week_covered == week_num]

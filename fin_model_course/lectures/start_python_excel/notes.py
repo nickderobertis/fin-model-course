@@ -4,6 +4,7 @@ from lectures.model import LectureNotes, Lecture, LectureResource
 def get_intro_and_problem_lecture() -> Lecture:
     title = 'Introduction and an Example Model'
     youtube_id = 'KL48T_XGbzI'
+    week_covered = 1
     notes = LectureNotes([
         'In the beginning of the course, we will do everything with both Excel and Python to understand '
         'the differences. Later we will focus on choosing the best tool for the task at hand and '
@@ -16,12 +17,13 @@ def get_intro_and_problem_lecture() -> Lecture:
         'With a model, the calculations are linked from the inputs to the outputs, so changing the '
         'inputs changes the outputs. This increases reproducibility and efficiency.'
     ], title=title)
-    return Lecture(title, notes, youtube_id=youtube_id)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id)
 
 
 def get_excel_solution_lecture() -> Lecture:
     title = 'Building a Simple Excel Model'
     youtube_id = 'hySE7wOAlfc'
+    week_covered = 1
     notes = LectureNotes([
         'It is crucial that all your Excel calculations are linked together by '
         'cell references. If you hard-code values in your calculations you are '
@@ -40,12 +42,13 @@ def get_excel_solution_lecture() -> Lecture:
             static_url='Examples/Introduction/Excel/Simple Retirement Model.xlsx'
         ),
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_python_solution_lecture() -> Lecture:
     title = 'Building a Simple Python Model'
     youtube_id = 'syrwXU1wqps'
+    week_covered = 1
     notes = LectureNotes([
         'In Python, we keep things linked together by using variables. If you hard-code values in '
         'your calculations, you are just using Python as a calculator',
@@ -64,12 +67,13 @@ def get_python_solution_lecture() -> Lecture:
             static_url='Examples/Introduction/Python/Simple Retirement Model.ipynb'
         ),
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_basic_iteration_lecture() -> Lecture:
     title = 'Basic Iteration'
     youtube_id = 'vAOrxaKnXaQ'
+    week_covered = 1
     notes = LectureNotes([
         'Iteration is a key concept in financial modeling (as well as programming)',
         'Using iteration, we can complete the same process for multiple inputs to '
@@ -81,34 +85,37 @@ def get_basic_iteration_lecture() -> Lecture:
         'To iterate in Excel, drag formulas. To iterate in Python and other '
         'programming languages, use loops.',
     ], title=title)
-    return Lecture(title, notes, youtube_id=youtube_id)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id)
 
 
 def get_excel_extending_lecture() -> Lecture:
     title = 'Extending a Simple Excel Model'
     youtube_id = 'GD34LyjvMaE'
+    week_covered = 1
     notes = LectureNotes([
         'Essentially the model with iteration is the same, we just drag the formula to '
         'cover multiple inputs',
         'It is crucial to set up fixed and relative cell references appropriately before you drag formulas'
     ], title=title)
-    return Lecture(title, notes, youtube_id=youtube_id)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id)
 
 
 def get_python_extending_lecture() -> Lecture:
     title = 'Extending a Simple Python Model'
     youtube_id = 'Ejk6ektd21I'
+    week_covered = 1
     notes = LectureNotes([
         'To add iteration to the Python model, just wrap the existing code in a loop',
         'We must also collect or show the output in some way, as we can no longer take advantage '
         'of the Jupyter shortcut to show the output without printing.',
     ], title=title)
-    return Lecture(title, notes, youtube_id=youtube_id)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id)
 
 
 def get_lab_exercise_lecture() -> Lecture:
     title = 'Getting Started with Python and Excel Labs'
     youtube_id = '2J-GCwSNGBw'
+    week_covered = 1
     notes = LectureNotes([
         'This is our first real lab exercise (must be submitted). Be sure to complete the same exercise in '
         'both Python and Excel',
@@ -117,14 +124,4 @@ def get_lab_exercise_lecture() -> Lecture:
         'Excel hint: there is a nice way to lay this out so you only need to type the formula a single time',
         'Python hint: It is possible to nest loops to loop over the combination of two different inputs',
     ], title=title)
-    return Lecture(title, notes, youtube_id=youtube_id)
-
-
-def get_lecture() -> Lecture:
-    title = ''
-    youtube_id = ''
-    notes = LectureNotes([
-
-    ], title=title)
-    resources = []
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id)

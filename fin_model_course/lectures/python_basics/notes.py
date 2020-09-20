@@ -16,6 +16,7 @@ LECTURE_4_COMMON_RESOURCES = [
 def get_intro_structure_lecture() -> Lecture:
     title = 'Structuring a Complex Python Model'
     youtube_id = 'jlKuO-vlXFw'
+    week_covered = 2
     notes = LectureNotes([
         'There are two layers of organization we should have in our Python models',
         'The Python code itself should be well organized by using functions, which are self-contained '
@@ -29,12 +30,13 @@ def get_intro_structure_lecture() -> Lecture:
         'of the notebook'
     ], title=title)
     resources = []
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_conditionals_lecture() -> Lecture:
     title = 'Branching Logic with Python Conditionals'
     youtube_id = 'mOkdoRzqXH4'
+    week_covered = 2
     notes = LectureNotes([
         'Conditionals let you choose which logic to run based on some logical condition',
         'This is just like using Excel =IF, but more flexible as we can run any arbitrary '
@@ -50,12 +52,13 @@ def get_conditionals_lecture() -> Lecture:
         'of for loops and show how they can be combined'
     ], title=title)
     resources = LECTURE_4_COMMON_RESOURCES
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_lists_lecture() -> Lecture:
     title = 'Grouping Objects with Python Lists'
     youtube_id = 'a8UeoMMgLQw'
+    week_covered = 3
     notes = LectureNotes([
         'Lists are one of the basic container data types in Python. They hold other objects so we '
         'can work with them as a group',
@@ -75,12 +78,13 @@ def get_lists_lecture() -> Lecture:
         '3 tests list indexing and slicing'
     ], title=title)
     resources = LECTURE_4_COMMON_RESOURCES
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_functions_lecture() -> Lecture:
     title = 'Grouping Logic with Python Functions'
     youtube_id = 'e5IGeMHmq0Q'
+    week_covered = 3
     notes = LectureNotes([
         'Functions are the logical building blocks for any Python program, including our models',
         'Functions contain a piece of logic which then can be reused flexibly with different inputs',
@@ -106,12 +110,13 @@ def get_functions_lecture() -> Lecture:
             external_url='https://docs.python.org/3/library/functions.html'
         )
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_python_data_types_lecture() -> Lecture:
     title = 'Python Basic Data Types'
     youtube_id = 'C7i_Q_2tyXc'
+    week_covered = 3
     notes = LectureNotes([
         'Everything in Python is an object and every object has a type. The type '
         'defines the data structure and functions for that object',
@@ -139,12 +144,13 @@ def get_python_data_types_lecture() -> Lecture:
             external_url='http://cis.bentley.edu/sandbox/wp-content/uploads/Documentation-on-f-strings.pdf'
         )
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_python_classes_lecture() -> Lecture:
     title = 'Creating Python Data Types with Classes'
     youtube_id = 'Q9UJ4Nqoung'
+    week_covered = 3
     notes = LectureNotes([
         "We've talked about strings, floats, ints, lists, tuples, and dicts as basic data types. It is "
         "possible to define your own custom data types as well using classes",
@@ -171,12 +177,13 @@ def get_python_classes_lecture() -> Lecture:
             external_url='https://docs.python.org/3/reference/datamodel.html'
         )
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_python_error_handling_lecture() -> Lecture:
     title = 'Handling Errors in Python'
     youtube_id = 'RLx-ssfeon8'
+    week_covered = 3
     notes = LectureNotes([
         "Error handling is generally a more advanced pattern and so we won't put a lot of "
         "focus on it in the class. But sometimes it is the best solution to a problem.",
@@ -193,13 +200,4 @@ def get_python_error_handling_lecture() -> Lecture:
             external_url='https://docs.python.org/3/library/exceptions.html'
         )
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
-
-def get_lecture() -> Lecture:
-    title = ''
-    youtube_id = ''
-    notes = LectureNotes([
-
-    ], title=title)
-    resources = []
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
