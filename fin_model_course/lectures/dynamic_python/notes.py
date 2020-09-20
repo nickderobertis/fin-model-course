@@ -9,7 +9,7 @@ LECTURE_4_COMMON_RESOURCES = [
 
 def get_jupyter_structure_lecture() -> Lecture:
     title = 'Using Jupyter to Structure a Python Model'
-    youtube_id = ''
+    youtube_id = 'Zk29_tWiWGc'
     week_covered = 4
     notes = LectureNotes([
         'It can be a bit tricky in the beginning to structure Python models in Jupyter as you '
@@ -44,7 +44,7 @@ def get_jupyter_structure_lecture() -> Lecture:
 
 def get_dynamic_salary_model_python_lecture() -> Lecture:
     title = 'Salaries in the Python Dynamic Salary Retirement Model'
-    youtube_id = ''
+    youtube_id = '190Xci0yDpA'
     week_covered = 4
     notes = LectureNotes([
         'For development purposes, create a new variable data which is set equal to model_data. '
@@ -68,7 +68,7 @@ def get_dynamic_salary_model_python_lecture() -> Lecture:
 
 def get_wealth_python_lecture() -> Lecture:
     title = 'Wealth in the Python Dynamic Salary Retirement Model'
-    youtube_id = ''
+    youtube_id = 'ACSk15RnOG0'
     week_covered = 4
     notes = LectureNotes([
         'Here we will develop two functions which comprise the wealth sub-model',
@@ -85,7 +85,7 @@ def get_wealth_python_lecture() -> Lecture:
 
 def get_retirement_python_lecture() -> Lecture:
     title = 'Retirement in the Python Dynamic Salary Retirement Model'
-    youtube_id = ''
+    youtube_id = 'zHoYWl3YHJ8'
     week_covered = 4
     notes = LectureNotes([
         'Now we will bring everything together to calculate the years to retirement',
