@@ -21,6 +21,8 @@ def build_lecture_pages(
     lecture_groups = get_lecture_groups()
     lecture_rst_paths = []
     for lg in lecture_groups:
+        if not lg.has_content:
+            continue
         file_path = out_folder / (lg.stub + ".rst")
         file_path.write_text(lg.to_rst())
         lecture_rst_paths.append(f"lectures/{lg.stub}")

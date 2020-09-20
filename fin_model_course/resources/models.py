@@ -354,7 +354,7 @@ class ConnectingPythonExcelPandasExampleResources(ResourceCollection):
 
 class ConnectingPythonExcelXlwingsExampleResources(ResourceCollection):
     title: str = "xlwings"
-    read_write_excel_pandas: LectureResource = LectureResource(
+    example_notebook: LectureResource = LectureResource(
         "Combining Excel and Python",
         static_url="Examples/Connecting Python and Excel/xlwings/Combining Excel and Python.ipynb",
     )
@@ -514,8 +514,9 @@ class DCFExampleResources(ResourceCollection):
 class ExampleResources(ResourceCollection):
     title: str = "Examples"
     intro: IntroductionExampleResources = IntroductionExampleResources()
-    visualization: VisualizationLabResources = VisualizationLabResources()
+    visualization: VisualizationExampleResources = VisualizationExampleResources()
     sensitivity: SensitivityAnalysisExampleResources = SensitivityAnalysisExampleResources()
+    scenario: ScenarioAnalysisExampleResources = ScenarioAnalysisExampleResources()
     internal_randomness: InternalRandomnessExampleResources = InternalRandomnessExampleResources()
     connecting_python_excel: ConnectingPythonExcelExampleResources = ConnectingPythonExcelExampleResources()
     monte_carlo: MonteCarloExampleResources = MonteCarloExampleResources()

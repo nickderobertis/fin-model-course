@@ -289,6 +289,15 @@ class LectureGroup:
                         resources.append(resource)
         return resources
 
+    @property
+    def has_content(self) -> bool:
+        for lecture in self:
+            if lecture.youtube_id:
+                return True
+            if lecture.notes and lecture.notes.items:
+                return True
+        return False
+
     def to_models(
         self, top_model: Type[T] = pl.Section, sub_model: Type = pl.UnorderedList
     ) -> T:

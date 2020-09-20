@@ -23,9 +23,11 @@ def get_dynamic_salary_model_python_lecture() -> Lecture:
     youtube_id = ''
     week_covered = 4
     notes = LectureNotes([
-        RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
+
     ], title=title)
-    resources = []
+    resources = [
+        RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
+    ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
@@ -34,9 +36,11 @@ def get_wealth_python_lecture() -> Lecture:
     youtube_id = ''
     week_covered = 4
     notes = LectureNotes([
-        RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
+
     ], title=title)
-    resources = []
+    resources = [
+        RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
+    ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
@@ -45,7 +49,9 @@ def get_retirement_python_lecture() -> Lecture:
     youtube_id = ''
     week_covered = 4
     notes = LectureNotes([
-        RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
+
     ], title=title)
-    resources = []
+    resources = [
+        RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
+    ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)

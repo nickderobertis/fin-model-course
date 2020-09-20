@@ -18,10 +18,12 @@ def get_pandas_combining_excel_python_lecture() -> Lecture:
     youtube_id = ''
     week_covered = 9
     notes = LectureNotes([
+
+    ], title=title)
+    resources = [
         RESOURCES.examples.connecting_python_excel.pandas.read_write_excel_pandas,
         RESOURCES.labs.connecting_python_excel.pandas.msft_financials,
-    ], title=title)
-    resources = []
+    ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
@@ -30,9 +32,11 @@ def get_xlwings_combining_excel_python_lecture() -> Lecture:
     youtube_id = ''
     week_covered = 9
     notes = LectureNotes([
+
+    ], title=title)
+    resources = [
         RESOURCES.examples.connecting_python_excel.xlwings.example_notebook,
         RESOURCES.examples.connecting_python_excel.xlwings.example_workbook,
         RESOURCES.labs.connecting_python_excel.xlwings.lab_xlsx,
-    ], title=title)
-    resources = []
+    ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
