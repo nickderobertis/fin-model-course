@@ -1,5 +1,6 @@
 from typing import List
 
+from lectures.combining_excel_python.main import get_combining_excel_python_lecture
 from lectures.dynamic_excel.main import get_dynamic_salary_excel_lecture
 from lectures.dynamic_python.main import get_dynamic_salary_python_lecture
 from lectures.intro.main import get_intro_lecture
@@ -23,6 +24,7 @@ def get_lecture_groups(include_labs: bool = True, include_projects: bool = True)
         get_visualization_lecture(),
         get_sensitivity_analysis_lecture(),
         get_probability_lecture(),
+        get_combining_excel_python_lecture(),
     ]
 
     if not include_labs and not include_projects:
