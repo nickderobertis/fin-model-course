@@ -1,4 +1,5 @@
 import datetime
+from typing import Optional
 
 from schedule.models import CourseSchedule, ClassContent, ScheduleProject, ScheduleLecture
 
@@ -24,8 +25,16 @@ LECTURE_11_NAME = 'Introduction to DCF Valuation and Cost of Capital Estimation'
 LECTURE_12_NAME = 'Free Cash Flow Estimation and Forecasting'
 LECTURE_13_NAME = 'Advanced Financial Modeling'
 
+SCHEDULE: Optional[CourseSchedule] = None
 
-def get_course_schedule() -> CourseSchedule:
+
+def get_course_schedule(use_cache: bool = True, overwrite_cache: bool = True) -> CourseSchedule:
+    global SCHEDULE
+
+    if use_cache:
+        if SCHEDULE is not None:
+            return SCHEDULE
+
     from lectures.lab_exercises.main import get_lab_exercises_lecture
 
     project_1 = ScheduleProject(name=PROJECT_1_NAME, index=1)
@@ -123,4 +132,8 @@ def get_course_schedule() -> CourseSchedule:
     schedule = CourseSchedule(
         weeks=weeks, start_date=COURSE_BEGIN_DATE, end_date=COURSE_END_DATE, lab_exercises=lab_exercises
     )
+
+    if overwrite_cache:
+        SCHEDULE = schedule
+
     return schedule
