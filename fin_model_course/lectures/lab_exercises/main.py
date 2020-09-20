@@ -40,5 +40,9 @@ def get_lab_exercises_lecture() -> LabExerciseGroup:
         notes.get_enterprise_value_lab_lecture(),
         notes.get_dcf_cost_equity_lab_lecture(),
         notes.get_dcf_cost_debt_lab_lecture(),
+        notes.get_fcf_calculation_lab_lecture(),
+        notes.get_simple_forecast_lab_lecture(),
+        notes.get_complex_forecast_lab_lecture(),
+        notes.get_dcf_tv_lab_lecture(),
     ]
     return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources)
