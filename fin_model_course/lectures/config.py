@@ -6,6 +6,7 @@ from lectures.dynamic_python.main import get_dynamic_salary_python_lecture
 from lectures.intro.main import get_intro_lecture
 from lectures.lab_exercises.main import get_lab_exercises_lecture
 from lectures.model import LectureGroup
+from lectures.monte_carlo.main import get_monte_carlo_lecture
 from lectures.probability.main import get_probability_lecture
 from lectures.projects.main import get_projects_lecture
 from lectures.python_basics.main import get_python_basics_lecture
@@ -25,6 +26,7 @@ def get_lecture_groups(include_labs: bool = True, include_projects: bool = True)
         get_sensitivity_analysis_lecture(),
         get_probability_lecture(),
         get_combining_excel_python_lecture(),
+        get_monte_carlo_lecture(),
     ]
 
     if not include_labs and not include_projects:
