@@ -144,7 +144,7 @@ class LectureResource:
     external_url: Optional[str] = None
     updated: Optional[datetime.datetime] = None
     index: Optional[int] = None
-    datetime_fmt: str = "%B%e, %l:%M %p"
+    datetime_fmt: str = "%B %e, %l:%M %p"
 
     def __eq__(self, other):
         try:
@@ -265,6 +265,7 @@ class LectureGroup:
     lectures: Sequence[Lecture]
     order: Union[int, str]
     global_resources: Sequence[LectureResource] = tuple()
+    show_aggregate_resources: bool = True
 
     def __getitem__(self, item):
         return self.lectures[item]
@@ -309,7 +310,7 @@ class LectureGroup:
     def to_rst(self) -> str:
         out_str = header_rst(self.title, 2)
         out_str += f'\n{self.description}\n'
-        if self.resources:
+        if self.show_aggregate_resources and self.resources:
             out_str += (
                 header_rst('Resources', 3)
                 + "\n"

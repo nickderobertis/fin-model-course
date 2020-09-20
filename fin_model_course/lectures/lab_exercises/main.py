@@ -45,4 +45,5 @@ def get_lab_exercises_lecture() -> LabExerciseGroup:
         notes.get_complex_forecast_lab_lecture(),
         notes.get_dcf_tv_lab_lecture(),
     ]
-    return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources)
+    return LabExerciseGroup(title, description, lectures, order=lecture_index, global_resources=resources,
+                            show_aggregate_resources=False)
