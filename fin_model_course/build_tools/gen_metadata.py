@@ -46,7 +46,7 @@ def generate_content_metadata_json(
 if __name__ == "__main__":
     generate_content_metadata_json(drop_unique_old=True)
     for path in EXAMPLE_PATHS:
-        for ext in ['xlsx', 'xls', 'ipynb', 'py', 'rst', 'csv']:
+        for ext in ['xlsx', 'xls', 'ipynb', 'py', 'rst', 'csv', 'pdf']:
             generate_content_metadata_json(
                 path,
                 STATIC_CONTENT_METADATA_PATH,
