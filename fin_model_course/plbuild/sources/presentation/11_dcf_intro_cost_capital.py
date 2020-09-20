@@ -94,20 +94,6 @@ def get_content():
                     ],
                     title='Motivating the DCF'
                 ),
-                lp.DimRevealListFrame(
-                    [
-                        'The enterprise value of the business is the asset value or the cost to purchase the '
-                        'entire company',
-                        pl.Equation(
-                            str_eq=f'{pl.Text("Enterprise Value")} = {pl.Text("Equity Value")} + '
-                                   f'{pl.Text("Debt Value")} - {pl.Text("Cash")}'
-                        ),
-                        'A stock represents only the equity value or market capitalization of a business',
-                        'By determining the enterprise value, we can back into the equity value to get the stock price'
-                    ],
-                    title='Enterprise Value vs. Equity Value'
-                ),
-                enterprise_equity_value_excercise.presentation_frames(),
                 lp.TwoColumnGraphicDimRevealFrame(
                     [
                         pl.TextSize(-1),
@@ -137,6 +123,28 @@ def get_content():
             ],
             title='Introduction to Discounted Cash Flow (DCF) Valuation',
             short_title='DCF Intro'
+        ),
+        pl.Section(
+            [
+                lp.DimRevealListFrame(
+                    [
+                        'The enterprise value of the business is the asset value or the cost to purchase the '
+                        'entire company',
+                        pl.Equation(
+                            str_eq=f'{pl.Text("Enterprise Value")} = {pl.Text("Equity Value")} + '
+                                   f'{pl.Text("Debt Value")} - {pl.Text("Cash")}'
+                        ),
+                        'A stock represents only the equity value or market capitalization of a business',
+                        'By determining the enterprise value, we can back into the equity value to get the stock price'
+                    ],
+                    title='Enterprise Value vs. Equity Value'
+                ),
+                pl.TextSize(-1),
+                enterprise_equity_value_excercise.presentation_frames(),
+                pl.TextSize(0),
+            ],
+            title='Enterprise and Equity Value',
+            short_title='EV'
         ),
         pl.Section(
             [
@@ -269,6 +277,23 @@ def get_content():
                 ),
                 lp.DimRevealListFrame(
                     [
+                        pl.TextSize(-1),
+                        ['Debt has an interesting feature in our tax system: debt is', pl.Underline('tax deductible.')],
+                        'The amount a company has to pay in income tax is taken as a percentage of earnings before tax (EBT).',
+                        'As interest is taken out while calculating EBT, it lowers the tax payment.',
+                        'Think about two hypothetical companies with the exact same operations, revenues, costs, etc. '
+                        'One is financed completely with equity and the other with 50% debt. They will both have the '
+                        'same EBIT but the EBT will be lower for the debt firm and so the taxes will be lower for the '
+                        'debt firm, likely giving the debt firm a higher value than the equity firm.',
+                        'What this means for cost of capital estimation is that all our calculations will be based on '
+                        f'pre-tax numbers, then we multiply by $(1 - {pl.Text("tax rate")})$ to get the after-tax cost '
+                        f'of debt to use in the WACC.'
+                    ],
+                    title='After-Tax Cost of Debt'
+                ),
+                cost_debt_exercise.presentation_frames(),
+                lp.DimRevealListFrame(
+                    [
                         "If you have taken the debt course, you should be familiar with the fact that bonds' values "
                         "change over time.",
                         'The value of a bond can be determined (just like any financial asset) by taking the present value of '
@@ -293,23 +318,6 @@ def get_content():
                     ],
                     title='Why Should we Care about the Market Value of Debt?'
                 ),
-                lp.DimRevealListFrame(
-                    [
-                        pl.TextSize(-1),
-                        ['Debt has an interesting feature in our tax system: debt is', pl.Underline('tax deductible.')],
-                        'The amount a company has to pay in income tax is taken as a percentage of earnings before tax (EBT).',
-                        'As interest is taken out while calculating EBT, it lowers the tax payment.',
-                        'Think about two hypothetical companies with the exact same operations, revenues, costs, etc. '
-                        'One is financed completely with equity and the other with 50% debt. They will both have the '
-                        'same EBIT but the EBT will be lower for the debt firm and so the taxes will be lower for the '
-                        'debt firm, likely giving the debt firm a higher value than the equity firm.',
-                        'What this means for cost of capital estimation is that all our calculations will be based on '
-                        f'pre-tax numbers, then we multiply by $(1 - {pl.Text("tax rate")})$ to get the after-tax cost '
-                        f'of debt to use in the WACC.'
-                    ],
-                    title='After-Tax Cost of Debt'
-                ),
-                cost_debt_exercise.presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         'There are three main approaches to calculating the market value of debt for use in the '
