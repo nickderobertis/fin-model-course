@@ -2,6 +2,7 @@ from typing import List
 
 from lectures.combining_excel_python.main import get_combining_excel_python_lecture
 from lectures.dcf_cost_capital.main import get_dcf_cost_capital_lecture
+from lectures.dcf_fcf.main import get_dcf_fcf_lecture
 from lectures.dynamic_excel.main import get_dynamic_salary_excel_lecture
 from lectures.dynamic_python.main import get_dynamic_salary_python_lecture
 from lectures.intro.main import get_intro_lecture
@@ -29,6 +30,7 @@ def get_lecture_groups(include_labs: bool = True, include_projects: bool = True)
         get_combining_excel_python_lecture(),
         get_monte_carlo_lecture(),
         get_dcf_cost_capital_lecture(),
+        get_dcf_fcf_lecture(),
     ]
 
     if not include_labs and not include_projects:
