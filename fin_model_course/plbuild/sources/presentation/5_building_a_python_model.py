@@ -22,6 +22,7 @@ from pltemplates.blocks import LabBlock
 from pltemplates.frames.tvm.project_1_lab import get_project_1_lab_frame
 from pltemplates.frames.tvm.salary_eq import salary_block_content
 from pltemplates.frames.tvm.retirement_model_structure import get_retirement_model_overview_frame
+from pltemplates.graphics.model_structure import get_model_structure_graphic
 from pltemplates.hyperlink import Hyperlink
 from schedule.main import LECTURE_5_NAME
 
@@ -79,6 +80,12 @@ def get_content():
                         'explaining it. Add comments where anything is unclear in the code.',
                     ],
                     title='Using Jupyter for Structure of a Model'
+                ),
+                lp.GraphicFrame(
+                    [
+                        get_model_structure_graphic()
+                    ],
+                    title='Structuring a Python Model'
                 ),
                 lp.DimRevealListFrame(
                     [
@@ -196,7 +203,7 @@ def get_content():
                 InClassExampleFrame(
                     [
                         'I will now show the process I use to create a full model.',
-                        'I will be recreating the model in Examples > Intro > Python > Dynamic Salary Retirement Model.ipynb',
+                        'I will be recreating the model "Dynamic Salary Retirement Model.ipynb"',
                         'Go ahead and download that to follow along as you will also extend it in a lab exercise',
                     ],
                     title='Creating a Full Model in Python',
@@ -208,8 +215,8 @@ def get_content():
                         [
                             "Usually I would try to have smaller labs but it didn't fit the format of this lecture. "
                             "Most will not be able to complete this during class.",
-                            "For this lab, attempt the practice problem in Practice > Retirement > "
-                            "P1 Python Retirement Savings Rate Problem.pdf",
+                            "For this lab, attempt the practice problem "
+                            '"P1 Python Retirement Savings Rate Problem.pdf"',
                             'This is similar to how the projects will be assigned, so it is good preparation',
                             "I would encourage you to try it from scratch. If you are totally stuck, try working off "
                             "of the retirement model I completed today to have a lot of the structure already. If you "
