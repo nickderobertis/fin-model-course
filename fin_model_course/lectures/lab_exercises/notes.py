@@ -587,8 +587,8 @@ def get_randomness_python_lab_lecture() -> LabExerciseLecture:
 
 
 def get_random_stock_model_lab_lecture() -> LabExerciseLecture:
-    title = 'Generating and Visualizing Random Numbers - Python'
-    short_title = 'Randomness Python Lab'
+    title = 'Building a Simple Model of Stock Returns'
+    short_title = 'Internal Randomness Simple Model Lab'
     youtube_id = ''
     due_week = 8
     bullets = [
