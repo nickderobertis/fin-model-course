@@ -1,11 +1,11 @@
 import datetime
 import itertools
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
 from string import ascii_lowercase
 from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List, Any
 
 from pydantic import BaseModel, AnyHttpUrl
+from pydantic.dataclasses import dataclass
 
 from build_tools.config import SITE_URL
 from build_tools.ext_rst import header_rst
@@ -20,7 +20,7 @@ import pyexlatex as pl
 T = TypeVar("T")
 
 
-class Serializable(ABC):
+class Serializable(BaseModel, ABC):
 
     @abstractmethod
     def to_pyexlatex(self):
@@ -30,9 +30,6 @@ class Serializable(ABC):
     def to_rst(self) -> str:
         ...
 
-    @abstractmethod
-    def json(self) -> dict:
-        ...
 
 
 @dataclass
@@ -114,7 +111,7 @@ def to_rst_bullet_content(item: Any) -> list:
         raise ValueError(f'could not serialize {item} of type {type(item)} to rst')
 
 
-class Equation(BaseModel, Serializable):
+class Equation(Serializable):
     latex: str
 
     def to_pyexlatex(self):
@@ -124,7 +121,7 @@ class Equation(BaseModel, Serializable):
         return f':math:`{self.latex}`'
 
 
-class Link(BaseModel, Serializable):
+class Link(Serializable):
     href: AnyHttpUrl
     display_text: Optional[str]
 

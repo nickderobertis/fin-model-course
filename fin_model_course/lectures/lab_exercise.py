@@ -1,18 +1,18 @@
 import datetime
-from dataclasses import dataclass
-from typing import Sequence, Optional, List
+from typing import Sequence, Optional, List, Union
 
 import pyexlatex as pl
+from pydantic.dataclasses import dataclass
 
 from build_tools.ext_rst import header_rst
-from lectures.model import Lecture, LectureNotes, LectureGroup
+from lectures.model import Lecture, LectureNotes, LectureGroup, Serializable
 from pltemplates.exercises.lab_exercise import LabExercise
 
 
 @dataclass
 class LabExerciseModel:
-    bullet_content: Sequence[str]
-    answers_content: Sequence[str] = tuple()
+    bullet_content: Sequence[Union[str, Serializable, Sequence]]
+    answers_content: Sequence[Union[str, Serializable, Sequence]] = tuple()
 
     @property
     def exercise(self) -> LectureNotes:
