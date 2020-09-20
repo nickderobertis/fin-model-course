@@ -1,4 +1,5 @@
 from lectures.model import LectureNotes, Lecture, LectureResource
+from resources.models import RESOURCES
 
 
 def get_extending_simple_retirement_model_lecture() -> Lecture:
@@ -87,10 +88,7 @@ def get_implement_dynamic_salary_excel_lecture() -> Lecture:
         'Calculating factors helps split out the calculation and make it more clear'
     ], title=title)
     resources = [
-        LectureResource(
-            'Dynamic Salary Retirement Model - Excel',
-            static_url='Examples/Introduction/Excel/Dynamic Salary Retirement Model.xlsx'
-        ),
+        RESOURCES.examples.intro.excel.dynamic_salary_retirement_model,
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 

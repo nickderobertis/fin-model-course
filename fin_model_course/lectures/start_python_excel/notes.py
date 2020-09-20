@@ -1,4 +1,5 @@
 from lectures.model import LectureNotes, Lecture, LectureResource
+from resources.models import RESOURCES
 
 
 def get_intro_and_problem_lecture() -> Lecture:
@@ -37,10 +38,7 @@ def get_excel_solution_lecture() -> Lecture:
         'for larger models it makes sense to have separate calculation sections'
     ], title=title)
     resources = [
-        LectureResource(
-            'Simple Retirement Model Excel',
-            static_url='Examples/Introduction/Excel/Simple Retirement Model.xlsx'
-        ),
+        RESOURCES.examples.intro.excel.simple_retirement_model,
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
@@ -62,10 +60,7 @@ def get_python_solution_lecture() -> Lecture:
         'calculation',
     ], title=title)
     resources = [
-        LectureResource(
-            'Simple Retirement Model Python',
-            static_url='Examples/Introduction/Python/Simple Retirement Model.ipynb'
-        ),
+        RESOURCES.examples.intro.python.simple_retirement_model,
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 

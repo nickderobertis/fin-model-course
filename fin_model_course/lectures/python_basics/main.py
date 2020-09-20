@@ -1,5 +1,6 @@
 from lectures.python_basics import notes
 from lectures.model import LectureGroup, LectureResource
+from resources.models import RESOURCES
 from schedule.main import LECTURE_4_NAME
 
 
@@ -9,8 +10,7 @@ def get_python_basics_lecture() -> LectureGroup:
     description = 'Aimed at building a solid foundation of technical skills in Python to enable ' \
                   'creating complex financial models solely in Python'
     resources = [
-        LectureResource(f'Lecture Notes - {title}', static_url=f'generated/pdfs/LN{lecture_index} {title}.pdf'),
-        LectureResource(f'Slides - {LECTURE_4_NAME}', static_url=f'generated/pdfs/S{lecture_index} {LECTURE_4_NAME}.pdf'),
+        *RESOURCES.lectures.beyond_initial_python.resources(),
     ]
     lectures = [
         notes.get_intro_structure_lecture(),

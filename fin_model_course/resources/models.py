@@ -189,7 +189,7 @@ class LabResources(ResourceCollection):
     python_basics: PythonBasicsLabResources = PythonBasicsLabResources()
     visualization: VisualizationLabResources = VisualizationLabResources()
     connecting_python_excel: ConnectingPythonExcelLabResources = ConnectingPythonExcelLabResources()
-    dcf: DCFFCFLabResources = DCFFCFLabResources()
+    dcf: DCFLabResources = DCFLabResources()
 
 
 class IntroExcelExampleResources(ResourceCollection):
@@ -602,6 +602,10 @@ class ProjectResources(ResourceCollection):
     project_2: Project2Resources = Project2Resources()
     project_3: Project3Resources = Project3Resources()
     project_4: Project4Resources = Project4Resources()
+    grading_overview: LectureResource = LectureResource(
+        f"Project Grading Overview",
+        static_url=f"generated/pdfs/PJ0 Project Grading Overview.pdf",
+    )
 
 
 class CourseMaterialsResources(ResourceCollection):

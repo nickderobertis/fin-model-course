@@ -18,34 +18,23 @@ COURSE_SITE = Link(href=SITE_URL, display_text='the course site')
 
 LAB_LECTURE_4_COMMON_RESOURCES = [
     LECTURE_4_COMMON_RESOURCES[1],
-    LectureResource(f'Slides - {LECTURE_4_NAME}',
-                    static_url=f'generated/pdfs/S4 {LECTURE_4_NAME}.pdf'),
+    RESOURCES.lectures.beyond_initial_python.slides,
 ]
 
 LAB_LECTURE_6_COMMON_RESOURCES = [
-    LectureResource(f'Pandas and Visualization Labs',
-                    static_url=f'{LAB_FOLDER_NAME}/Visualization/Pandas and Visualization Labs.ipynb'),
-    LectureResource(f'Slides - {LECTURE_6_NAME}',
-                    static_url=f'generated/pdfs/S6 {LECTURE_6_NAME}.pdf'),
+    RESOURCES.labs.visualization.pandas_visualization_notebook,
+    RESOURCES.lectures.visualization.slides,
 ]
 
-LECTURE_7_SLIDES = LectureResource(f'Slides - {LECTURE_7_NAME}',
-                    static_url=f'generated/pdfs/S7 {LECTURE_7_NAME}.pdf')
-LECTURE_7_LAB_NOTEBOOK = LectureResource(f'Dictionaries, List Comprehensions, and Imports Labs',
-                    static_url=f'{LAB_FOLDER_NAME}/Python Basics/Dicts and List Comprehensions Lab.ipynb')
-LECTURE_7_EXAMPLE_NOTEBOOK = LectureResource(f'Dictionaries, List Comprehensions, and Imports Examples',
-                    static_url=f'Examples/Introduction/Python/Python Dicts, List comprehensions, and Imports.ipynb')
+LECTURE_7_SLIDES = RESOURCES.lectures.sensitivity_analysis.slides
+LECTURE_7_LAB_NOTEBOOK = RESOURCES.labs.python_basics.dicts_lists_comprehensions_notebook
+LECTURE_7_EXAMPLE_NOTEBOOK = RESOURCES.examples.intro.python.dicts_list_comp_imports_notebook
 
-LECTURE_8_SLIDES = LectureResource(f'Slides - {LECTURE_8_NAME}',
-                    static_url=f'generated/pdfs/S8 {LECTURE_8_NAME}.pdf')
-LECTURE_9_SLIDES = LectureResource(f'Slides - {LECTURE_9_NAME}',
-                    static_url=f'generated/pdfs/S9 {LECTURE_9_NAME}.pdf')
-LECTURE_10_SLIDES = LectureResource(f'Slides - {LECTURE_10_NAME}',
-                    static_url=f'generated/pdfs/S10 {LECTURE_10_NAME}.pdf')
-LECTURE_11_SLIDES = LectureResource(f'Slides - {LECTURE_11_NAME}',
-                    static_url=f'generated/pdfs/S11 {LECTURE_11_NAME}.pdf')
-LECTURE_12_SLIDES = LectureResource(f'Slides - {LECTURE_12_NAME}',
-                    static_url=f'generated/pdfs/S12 {LECTURE_12_NAME}.pdf')
+LECTURE_8_SLIDES = RESOURCES.lectures.probability.slides
+LECTURE_9_SLIDES = RESOURCES.lectures.combining_excel_python.slides
+LECTURE_10_SLIDES = RESOURCES.lectures.monte_carlo.slides
+LECTURE_11_SLIDES = RESOURCES.lectures.dcf_cost_capital.slides
+LECTURE_12_SLIDES = RESOURCES.lectures.dcf_fcf.slides
 
 def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
     title = 'Extending a Simple Retirement Model'
@@ -75,15 +64,9 @@ def get_simple_retirement_lab_lecture() -> LabExerciseLecture:
         ]
     ]
     resources = [
-        LectureResource(
-            'Simple Retirement Model Excel',
-            static_url='Examples/Introduction/Excel/Simple Retirement Model.xlsx'
-        ),
-        LectureResource(
-            'Simple Retirement Model Python',
-            static_url='Examples/Introduction/Python/Simple Retirement Model.ipynb'
-        ),
-        LectureResource(f'Slides - {LECTURE_2_NAME}', static_url=f'generated/pdfs/S2 {LECTURE_2_NAME}.pdf'),
+        RESOURCES.examples.intro.excel.simple_retirement_model,
+        RESOURCES.examples.intro.python.simple_retirement_model,
+        RESOURCES.lectures.getting_started.slides,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -113,12 +96,8 @@ def get_extend_dynamic_retirement_excel_lab_lecture() -> LabExerciseLecture:
         ]
     ]
     resources = [
-        LectureResource(
-            'Dynamic Salary Retirement Model - Excel',
-            static_url='Examples/Introduction/Excel/Dynamic Salary Retirement Model.xlsx'
-        ),
-        LectureResource(f'Slides - {LECTURE_3_NAME}',
-                        static_url=f'generated/pdfs/S3 {LECTURE_3_NAME}.pdf'),
+        RESOURCES.examples.intro.excel.dynamic_salary_retirement_model,
+        RESOURCES.lectures.depth_excel.slides,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -246,10 +225,7 @@ def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         *LAB_LECTURE_4_COMMON_RESOURCES,
-        LectureResource(
-            'Car Class Example',
-            static_url='Examples/Introduction/Python/car_example.py'
-        ),
+        RESOURCES.examples.intro.python.car_example,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -279,12 +255,8 @@ def get_extend_dynamic_retirement_python_lab_lecture() -> LabExerciseLecture:
         ]
     ]
     resources = [
-        LectureResource(
-            'Dynamic Salary Retirement Model - Python',
-            static_url='Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb'
-        ),
-        LectureResource(f'Slides - {LECTURE_5_NAME}',
-                        static_url=f'generated/pdfs/S5 {LECTURE_5_NAME}.pdf'),
+        RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
+        RESOURCES.lectures.depth_python.slides,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -675,10 +647,8 @@ def get_read_write_excel_pandas_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_9_SLIDES,
-        LectureResource(f'MSFT Financials',
-                        static_url=f'{LAB_FOLDER_NAME}/Connecting Python and Excel/pandas/MSFT Financials.xls'),
-        LectureResource(f'Read Write Excel Pandas Notebook',
-                        static_url=f'Examples/Connecting Python and Excel/pandas/Read Write Excel Pandas.ipynb'),
+        RESOURCES.labs.connecting_python_excel.pandas.msft_financials,
+        RESOURCES.examples.connecting_python_excel.pandas.read_write_excel_pandas,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -716,8 +686,7 @@ def get_read_write_xlwings_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_9_SLIDES,
-        LectureResource(f'xlwings Lab',
-                        static_url=f'{LAB_FOLDER_NAME}/Connecting Python and Excel/xlwings/xlwings Lab.xlsx'),
+        RESOURCES.labs.connecting_python_excel.xlwings.lab_xlsx,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -925,8 +894,7 @@ def get_dcf_cost_equity_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_11_SLIDES,
-        LectureResource(f'Prices',
-                        static_url=f'{LAB_FOLDER_NAME}/DCF/Cost of Equity/prices.xlsx')
+        RESOURCES.labs.dcf.cost_of_equity.prices_xlsx,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -990,8 +958,6 @@ def get_dcf_cost_debt_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_11_SLIDES,
-        LectureResource(f'Prices',
-                        static_url=f'{LAB_FOLDER_NAME}/DCF/Cost of Equity/prices.xlsx')
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -1062,10 +1028,8 @@ def get_fcf_calculation_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_12_SLIDES,
-        LectureResource(f'WMT Balance Sheet',
-                        static_url=f'{LAB_FOLDER_NAME}/DCF/FCF/WMT Balance Sheet.xlsx'),
-        LectureResource(f'WMT Income Statement',
-                        static_url=f'{LAB_FOLDER_NAME}/DCF/FCF/WMT Income Statement.xlsx')
+        RESOURCES.labs.dcf.fcf.wmt_balance_sheet,
+        RESOURCES.labs.dcf.fcf.wmt_income_statement,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -1101,8 +1065,7 @@ def get_simple_forecast_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_12_SLIDES,
-        LectureResource(f'Debt Interest',
-                        static_url=f'{LAB_FOLDER_NAME}/DCF/Forecasting/Simple/Debt Interest.xlsx'),
+        RESOURCES.labs.dcf.forecasting.simple.debt_interest,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -1136,10 +1099,8 @@ def get_complex_forecast_lab_lecture() -> LabExerciseLecture:
     ]
     resources = [
         LECTURE_12_SLIDES,
-        LectureResource(f'CAT Balance Sheet',
-                        static_url=f'{LAB_FOLDER_NAME}/DCF/Forecasting/Complex/CAT Balance Sheet.xlsx'),
-        LectureResource(f'CAT Income Statement',
-                        static_url=f'{LAB_FOLDER_NAME}/DCF/Forecasting/Complex/CAT Income Statement.xlsx')
+        RESOURCES.labs.dcf.forecasting.complex.cat_balance_sheet,
+        RESOURCES.labs.dcf.forecasting.complex.cat_income_statement,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,

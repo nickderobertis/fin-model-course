@@ -1,5 +1,6 @@
 from lectures.dynamic_excel import notes
 from lectures.model import LectureGroup, LectureResource
+from resources.models import RESOURCES
 from schedule.main import LECTURE_3_NAME
 
 
@@ -9,8 +10,7 @@ def get_dynamic_salary_excel_lecture() -> LectureGroup:
     description = 'Explores building a more complex and realistic model with Excel. Here we focus on ' \
                   'extending the simple retirement model to have dynamic salary growth.'
     resources = [
-        LectureResource(f'Lecture Notes - {LECTURE_3_NAME}', static_url=f'generated/pdfs/LN{lecture_index} {LECTURE_3_NAME}.pdf'),
-        LectureResource(f'Slides - {LECTURE_3_NAME}', static_url=f'generated/pdfs/S{lecture_index} {LECTURE_3_NAME}.pdf'),
+        *RESOURCES.lectures.depth_excel.resources(),
     ]
     lectures = [
         notes.get_extending_simple_retirement_model_lecture(),

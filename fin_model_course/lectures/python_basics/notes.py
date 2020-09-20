@@ -1,15 +1,10 @@
 from build_tools.config import LAB_FOLDER_NAME
 from lectures.model import LectureNotes, Lecture, LectureResource
+from resources.models import RESOURCES
 
 LECTURE_4_COMMON_RESOURCES = [
-    LectureResource(
-        'Python Basics',
-        static_url='Examples/Introduction/Python/Python Basics.ipynb',
-    ),
-    LectureResource(
-        'Python Basics Lab Exercises',
-        static_url=f'{LAB_FOLDER_NAME}/Python Basics/Python Basics Lab.ipynb',
-    ),
+    RESOURCES.examples.intro.python.basics_notebook,
+    RESOURCES.labs.python_basics.python_basics_notebook,
 ]
 
 
@@ -168,10 +163,7 @@ def get_python_classes_lecture() -> Lecture:
         'dataclasses for our model inputs.',
     ], title=title)
     resources = LECTURE_4_COMMON_RESOURCES + [
-        LectureResource(
-            'Car Class Example',
-            static_url='Examples/Introduction/Python/car_example.py'
-        ),
+        RESOURCES.examples.intro.python.car_example,
         LectureResource(
             'Python Classes Official Reference',
             external_url='https://docs.python.org/3/reference/datamodel.html'
