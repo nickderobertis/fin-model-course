@@ -159,10 +159,10 @@ $\text{Adjustments} = \text{depreciation} + \text{amortization} + \text{stock-ba
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Free Cash Flow Calculation, Level 1}
+\frametitle{Calculate FCF Lab, Level 1}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Calculate FCFs, Level 1}
+\begin{block}{Free Cash Flow Calculation, Level 1}
 \begin{enumerate}
 \item Calculate free cash flow from the following information:
 \item Net income is 300, the total of non-cash expenditures is 100, the changes in accounts receivable, inventory, accounts payable, and PPE are 1000, 500, 800, and 2000, and depreciation \& amortization is 200.
@@ -170,12 +170,12 @@ $\text{Adjustments} = \text{depreciation} + \text{amortization} + \text{stock-ba
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
 \toprule
-\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-calc-2}}} & Answers 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-calc-1-answers}}} & \hfill\\
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:calculate-fcf-lab-2}}} & Answers 1: Slide \textcolor{blue}{\underline{\ref{labs:calculate-fcf-lab-1-answers}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-calc-1}
+\label{labs:calculate-fcf-lab-1}
 \end{frame}
 \begin{frame}
 \frametitle{Example for Calculating FCFs}
@@ -375,12 +375,14 @@ $y_{T + n} = y_T * \text{CAGR}^n$
 }
 \end{frame}
 \begin{frame}
-\frametitle{Forecasting Simple Time-Series, Level 1}
+\frametitle{Simple Forecast Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Simple Forecast, Level 1}
+\begin{block}{Forecasting Simple Time-Series}
 \begin{enumerate}
-\item Go to Canvas and download "Debt Interest.xlsx" from Lab Exercises > Forecasting > Simple
+\item Go to
+\textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/}{the course site}}}
+and download "Debt Interest.xlsx"
 \item Forecast the next value of total debt using trend regression approach
 \item Forecast the next value of interest using the four approaches (average, recent, trend reg, trend CAGR)
 \item Forecast the next value of interest using the \% of total debt method, with the percentages forecasted using the four approaches (average, recent, trend reg, trend CAGR)
@@ -388,12 +390,12 @@ $y_{T + n} = y_T * \text{CAGR}^n$
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Answers 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-forecast-simple-1-answers}}} & \hfill\\
+\hfill & Answers: Slide \textcolor{blue}{\underline{\ref{labs:simple-forecast-lab-1-answers}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-forecast-simple-1}
+\label{labs:simple-forecast-lab-1}
 \end{frame}
 \end{section}
 \begin{section}[Complex Forecast]{Forecasting Complex Time-Series}
@@ -490,24 +492,26 @@ For each $t$ you want to predict, calculate $a + \beta t$ adding the appropriate
 }
 \end{frame}
 \begin{frame}
-\frametitle{Forecasting Complex Time-Series, Level 1}
+\frametitle{Complex Forecast Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Complex Forecast, Level 1}
+\begin{block}{Forecasting Complex Time-Series}
 \begin{enumerate}
-\item Go to Canvas and download "CAT Balance Sheet.xlsx" and "CAT Income Statement.xlsx" from Lab Exercises > Forecasting > Complex
+\item Go to
+\textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/}{the course site}}}
+and download "CAT Balance Sheet.xlsx" and "CAT Income Statement.xlsx"
 \item Forecast the next four periods (one year) of cash using both the Quarterly Seasonal Trend Model and the automated software approach.
 \item Plot both forecasts to see how they worked.
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Answers 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-forecast-complex-1-answers}}} & \hfill\\
+\hfill & Answers: Slide \textcolor{blue}{\underline{\ref{labs:complex-forecast-lab-1-answers}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-forecast-complex-1}
+\label{labs:complex-forecast-lab-1}
 \end{frame}
 \end{section}
 \begin{section}[Future FCFs]{Forecasting Free Cash Flows}
@@ -606,13 +610,13 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \item Follow the adjustments described in the intro lecture to get the stock price from that
 \end{itemize}
 \end{frame}
+\footnotesize
 \begin{frame}
-\frametitle{DCF Stock Price using Terminal Values, Level 1}
+\frametitle{Terminal Values Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Terminal Values, Level 1}
+\begin{block}{DCF Stock Price using Terminal Values}
 \begin{enumerate}
-\small
 \item Calculate possible stock prices today for a hypothetical company. Use EV/EBITDA, EV/Sales, EV/FCF, and P/E and the perpetuity growth method to determine five different possible terminal values. You have already determined that the next 5 years FCFs will be \$1,324M. 
 \item EV/EBITDA is 18.58, EV/Sales is 1.92, EV/FCF is 11.82, and P/E is 39.30.
 \item Final period forecasted financial statement values are as follows: EBITDA is \$1,500M, sales is \$7,898M, and net income is \$232M
@@ -624,22 +628,23 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Answers 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-tv-1-answers}}} & \hfill\\
+\hfill & Answers: Slide \textcolor{blue}{\underline{\ref{labs:terminal-values-lab-1-answers}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-tv-1}
+\label{labs:terminal-values-lab-1}
 \end{frame}
+\normalsize
 \end{section}
 \appendix
 \newcounter{finalframe}
 \setcounter{finalframe}{\value{framenumber}}
 \begin{frame}
-\frametitle{Free Cash Flow Calculation, Level 2}
+\frametitle{Calculate FCF Lab, Level 2}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Calculate FCFs, Level 2}
+\begin{block}{Free Cash Flow Calculation, Level 2}
 \begin{enumerate}
 \item Load in the income statement and balance sheet data associated with Project 3, "WMT Balance Sheet.xlsx" and "WMT Income Statement.xlsx"
 \item Calculate the free cash flows from these data. Note that some items are missing in these data such as depreciation. You will just need to exclude any missing items from your calculation
@@ -648,18 +653,18 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-calc-1}}} & Answers 2: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-calc-2-answers}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:calculate-fcf-lab-1}}} & Answers 2: Slide \textcolor{blue}{\underline{\ref{labs:calculate-fcf-lab-2-answers}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-calc-2}
+\label{labs:calculate-fcf-lab-2}
 \end{frame}
 \begin{frame}
-\frametitle{Free Cash Flow Calculation, Answers for Level 1}
+\frametitle{Calculate FCF Lab, Answers for Level 1}
 {
 \setbeamercolor{block title}{bg=orange}
-\begin{block}{Calculate FCFs, Answers for Level 1}
+\begin{block}{Free Cash Flow Calculation, Answers for Level 1}
 \begin{enumerate}
 \item The NWC is \$700
 \item The CapEx is \$2,200
@@ -668,18 +673,18 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-calc-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-calc-2}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:calculate-fcf-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:calculate-fcf-lab-2}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-calc-1-answers}
+\label{labs:calculate-fcf-lab-1-answers}
 \end{frame}
 \begin{frame}
-\frametitle{Free Cash Flow Calculation, Answers for Level 2}
+\frametitle{Calculate FCF Lab, Answers for Level 2}
 {
 \setbeamercolor{block title}{bg=orange}
-\begin{block}{Calculate FCFs, Answers for Level 2}
+\begin{block}{Free Cash Flow Calculation, Answers for Level 2}
 \begin{enumerate}
 \item The FCF for 2019-04-30 is \$-11,495,000,000
 \item The FCF for 2019-07-31 is \$4,327,000,000
@@ -687,18 +692,18 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-calc-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-calc-2}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:calculate-fcf-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:calculate-fcf-lab-2}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-calc-2-answers}
+\label{labs:calculate-fcf-lab-2-answers}
 \end{frame}
 \begin{frame}
-\frametitle{Forecasting Simple Time-Series, Answers for Level 1}
+\frametitle{Simple Forecast Lab, Answers}
 {
 \setbeamercolor{block title}{bg=orange}
-\begin{block}{Simple Forecast, Answers for Level 1}
+\begin{block}{Forecasting Simple Time-Series, Answers}
 \begin{enumerate}
 \item The forecasted value of total debt should be \$6,867
 \item The directly forecasted values of interest should be \$1,600, \$1,900, \$2,300, and \$2,391, for average, recent, trend reg, trend CAGR, respectively
@@ -707,18 +712,18 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-forecast-simple-1}}} & \hfill\\
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:simple-forecast-lab-1}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-forecast-simple-1-answers}
+\label{labs:simple-forecast-lab-1-answers}
 \end{frame}
 \begin{frame}
-\frametitle{Forecasting Complex Time-Series, Answers for Level 1}
+\frametitle{Complex Forecast Lab, Answers}
 {
 \setbeamercolor{block title}{bg=orange}
-\begin{block}{Complex Forecast, Answers for Level 1}
+\begin{block}{Forecasting Complex Time-Series, Answers}
 \begin{enumerate}
 \item The forecasted values of cash using the Quarterly Seasonal Trend Model should be \$8,454,920,455, \$8,833,593,182, \$8,869,693,182, and \$10,251,393,182
 \item The forecasted values of cash using the automated approach should be \$8,071,641,657, \$8,185,822,286, \$9,132,093,865, and \$9,502,395,879
@@ -726,18 +731,18 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-forecast-complex-1}}} & \hfill\\
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:complex-forecast-lab-1}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-forecast-complex-1-answers}
+\label{labs:complex-forecast-lab-1-answers}
 \end{frame}
 \begin{frame}
-\frametitle{DCF Stock Price using Terminal Values, Answers for Level 1}
+\frametitle{Terminal Values Lab, Answers}
 {
 \setbeamercolor{block title}{bg=orange}
-\begin{block}{Terminal Values, Answers for Level 1}
+\begin{block}{DCF Stock Price using Terminal Values, Answers}
 \begin{enumerate}
 \item The stock prices using the five methods are as follows:
 \item EV/EBITDA: \$27.74
@@ -749,12 +754,12 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:dcf-fcf-tv-1}}} & \hfill\\
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:terminal-values-lab-1}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:dcf-fcf-tv-1-answers}
+\label{labs:terminal-values-lab-1-answers}
 \end{frame}
 \setcounter{framenumber}{\value{finalframe}}
 \end{document}

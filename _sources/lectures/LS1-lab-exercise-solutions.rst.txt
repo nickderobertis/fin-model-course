@@ -1,0 +1,108 @@
+
+Lab Exercise Solutions
+*************************
+
+The solutions to all the lab exercises in the course.
+
+Extending a Simple Retirement Model
+======================================
+
+.. youtube:: KVVabq4n-ow
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Now we want to see the effect of savings rate on time until retirement, in addition to interest rate
+- In both Excel and Python, calculate the years to retirement for savings rates of 10%, 25%, and 40%, and each of these cases with each of the interest rate cases, 4%, 5%, and 6%
+- Be sure that you drag formulas in Excel and use for loops in Python to accomplish this
+- In total you should have 9 calculated years to retirement numbers, in each of the two models.
+
+Resources
+------------
+
+
+- :download:`Simple Retirement Model - Excel </_static/Examples/Introduction/Excel/Simple Retirement Model.xlsx>`
+        
+
+- :download:`Simple Retirement Model - Python </_static/Examples/Introduction/Python/Simple Retirement Model.ipynb>`
+        
+
+- :download:`Slides - Getting Started with Python and Excel </_static/generated/pdfs/S2 Getting Started with Python and Excel.pdf>`
+        
+
+Answers
+----------
+
+- Martha has 61.1 years to retirement if she earns a 4% return and saves 10%.
+- Martha has 41.0 years to retirement if she earns a 4% return and saves 25%.
+- Martha has 31.9 years to retirement if she earns a 4% return and saves 40%.
+- Martha has 53.3 years to retirement if she earns a 5% return and saves 10%.
+- Martha has 36.7 years to retirement if she earns a 5% return and saves 25%.
+- Martha has 29.0 years to retirement if she earns a 5% return and saves 40%.
+- Martha has 47.6 years to retirement if she earns a 6% return and saves 10%.
+- Martha has 33.4 years to retirement if she earns a 6% return and saves 25%.
+- Martha has 26.7 years to retirement if she earns a 6% return and saves 40%.
+
+Determining Desired Cash in the Dynamic Salary Retirement Excel Model
+========================================================================
+
+.. youtube:: cM3uKsHXS3M
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Description
+--------------
+
+- We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash
+- Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"
+- Calculate desired cash based on interest, cash spend, and years in retirement
+- Use the calculated desired cash in the model to determine years to retirement
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model - Excel </_static/Examples/Introduction/Excel/Dynamic Salary Retirement Model.xlsx>`
+        
+
+- :download:`Slides - The Depth of a Financial Model </_static/generated/pdfs/S3 The Depth of a Financial Model.pdf>`
+        
+
+Answers
+----------
+
+- If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash and there should be 18 years to retirement.
+
+Python Basics - Conditionals
+===============================
+
+.. youtube:: T4LK0QgPbNA
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Description
+--------------
+
+- The Jupyter notebook called Python Basics Lab contains all of the labs for today's lecture
+- Please complete the exercises under "Conditionals"
+
+Resources
+------------
+
+
+- :download:`Python Basics Lab Exercises </_static/Materials for Lab Exercises/Python Basics/Python Basics Lab.ipynb>`
+        
+
+- :download:`Slides - Going Beyond an Initial Python Script </_static/generated/pdfs/S4 Going Beyond an Initial Python Script.pdf>`
+        

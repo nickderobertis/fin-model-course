@@ -1,0 +1,138 @@
+
+The Depth of a Financial Model, Continued
+********************************************
+
+Explores building a more complex and realistic model with Python. Here we focus on extending the simple retirement model to have dynamic salary growth.
+
+Resources
+============
+
+
+- :download:`Slides - The Depth of a Financial Model, Continued </_static/generated/pdfs/S5 The Depth of a Financial Model, Continued.pdf>`
+        
+
+- :download:`Lecture Notes - The Depth of a Financial Model, Continued </_static/generated/pdfs/LN5 The Depth of a Financial Model, Continued.pdf>`
+        
+
+- `Markdown Basic Syntax <https://www.markdownguide.org/basic-syntax/>`_
+        
+
+- `Markdown Extended Syntax <https://www.markdownguide.org/extended-syntax/>`_
+        
+
+- `LaTeX Equations in Jupyter <https://medium.com/analytics-vidhya/writing-math-equations-in-jupyter-notebook-a-naive-introduction-a5ce87b9a214>`_
+        
+
+- :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
+        
+
+Using Jupyter to Structure a Python Model
+============================================
+
+.. youtube:: Zk29_tWiWGc
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- It can be a bit tricky in the beginning to structure Python models in Jupyter as you are dealing with two different layers of organization
+- Jupyter gives us nicely formatted markdown cells which make it easy to organize sections of the model
+- Markdown is actually a general markup language, not anything specific to Jupyter, and it supports a lot of features. Jupyter has their own extension to markdown which also adds LaTeX equation support
+- Most often, you will just need section headers, bullets, and equations, and anything else you can look at a Markdown reference
+- It is easy to add a table of contents for a Jupyter notebook and you should do this to increase the readability of your model
+- When adding a TOC item, spaces get converted to dashes for the reference
+
+Resources
+------------
+
+
+- `Markdown Basic Syntax <https://www.markdownguide.org/basic-syntax/>`_
+        
+
+- `Markdown Extended Syntax <https://www.markdownguide.org/extended-syntax/>`_
+        
+
+- `LaTeX Equations in Jupyter <https://medium.com/analytics-vidhya/writing-math-equations-in-jupyter-notebook-a-naive-introduction-a5ce87b9a214>`_
+        
+
+Salaries in the Python Dynamic Salary Retirement Model
+=========================================================
+
+.. youtube:: 190Xci0yDpA
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- For development purposes, create a new variable data which is set equal to model_data. When you are done with the model, you will remove this.
+- Write the logic for a function in a cell and run it to ensure it works, then move it into a function
+- Using data in the functions while the original variable is model_data ensures that you are not accidentally accessing the overall (global) model_data when it should be the specific instance of ModelInputs being passed
+- This may be confusing and sound like extra unnecessary steps, but setting things up this way will enable your model to be easily extended
+- Here we will create a function which can get the salary in any given year
+- We will write also some example code to test the function and show its results
+- Later we will use this function in the overall calculation
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
+        
+
+Wealth in the Python Dynamic Salary Retirement Model
+=======================================================
+
+.. youtube:: ACSk15RnOG0
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Here we will develop two functions which comprise the wealth sub-model
+- First create a function which determines the amount of cash saved in a given year
+- Then create a function which determines the amount of wealth in a given year
+- We create some example code to show how the function works, but it will actually be applied in the Retirement sub-model
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
+        
+
+Retirement in the Python Dynamic Salary Retirement Model
+===========================================================
+
+.. youtube:: zHoYWl3YHJ8
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Now we will bring everything together to calculate the years to retirement
+- The salary and cash saved functions are already getting called from within the wealth function, so we only need to call the wealth function in the final loop
+- Here we are making use of a while loop to stop the loop once a certain condition is met, in this case once wealth exceeds desired cash
+- We will use formatted strings and new lines to create a good display for the output
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
+        

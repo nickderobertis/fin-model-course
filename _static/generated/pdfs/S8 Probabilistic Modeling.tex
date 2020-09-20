@@ -363,10 +363,10 @@ Complexity to run model is unchanged & Complexity to run model has increased\\
 }
 \end{frame}
 \begin{frame}
-\frametitle{Scenario Analysis in Excel Lab, Level 1}
+\frametitle{Scenario Analysis Excel Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Adding Scenario Analysis to Project 1, Level 1}
+\begin{block}{Adding Scenario Analysis to Project 1 - Excel}
 \begin{enumerate}
 \item Add external scenario analysis to your Excel model from Project 1
 \item Create three cases, for a bad, normal, and good economy. Change the initial demand and price per phone in each of the cases. Both demand and price should be higher in better economic situations. 
@@ -374,7 +374,7 @@ Complexity to run model is unchanged & Complexity to run model has increased\\
 \vfill
 \end{block}
 }
-\label{labs:scenario:excel-1}
+\label{labs:scenario-analysis-excel-lab-1}
 \end{frame}
 \begin{frame}
 \frametitle{Scenario Analysis in Python}
@@ -399,10 +399,10 @@ or dictionary of the cases and probabilities. Then calculate the expected value 
 }
 \end{frame}
 \begin{frame}
-\frametitle{Scenario Analysis in Python Lab, Level 1}
+\frametitle{Scenario Analysis Python Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Adding Scenario Analysis to Project 1, Level 1}
+\begin{block}{Adding Scenario Analysis to Project 1 - Python}
 \begin{enumerate}
 \item Add external scenario analysis to your Python model from Project 1
 \item Create three cases, for a bad, normal, and good economy. Change the initial demand and price per phone in each of the cases. Both demand and price should be higher in better economic situations. 
@@ -410,7 +410,7 @@ or dictionary of the cases and probabilities. Then calculate the expected value 
 \vfill
 \end{block}
 }
-\label{labs:scenario:python-1}
+\label{labs:scenario-analysis-python-lab-1}
 \end{frame}
 \end{section}
 \begin{section}{Internal Randomness}
@@ -525,28 +525,22 @@ would draw a number from a normal distribution with mean 10 and standard deviati
 }
 \end{frame}
 \begin{frame}
-\frametitle{Generating and Visualizing Random Numbers in Excel}
+\frametitle{Randomness Excel Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Getting Started with Randomness in Excel}
-Complete the following excercise in Excel for
-$n_{iter} = 10$
-and
-$n_{iter} = 1000$
-\begin{itemize}
-\item Generate
-$n_{iter}$
-values between 0 and 1 with a uniform distribution
-\item Generate
-$n_{iter}$
-values from a normal distribution with a 0.5 mean and 10 standard deviation
+\begin{block}{Generating and Visualizing Random Numbers - Excel}
+\begin{enumerate}
+\item Complete the following excercise in Excel for n=10 and n=1000
+\item Generate n values between 0 and 1 with a uniform distribution
+\item Generate n values from a normal distribution with a 0.5 mean and 10 standard deviation
 \item Visualize each of the two outputs with a histogram
 \item Calculate the mean and standard deviation of each of the two sets of generated numbers
 \item Re-calculate it a few times, take note of how much the mean and standard deviation change
-\end{itemize}
+\end{enumerate}
 \vfill
 \end{block}
 }
+\label{labs:randomness-excel-lab-1}
 \end{frame}
 \begin{frame}
 \frametitle{Internal Randomness with Continuous Variables in Python}
@@ -587,43 +581,22 @@ would draw a number from a normal distribution with mean 10 and standard deviati
 }
 \end{frame}
 \begin{frame}
-\frametitle{Generating and Visualizing Random Numbers in Python}
-\scriptsize
+\frametitle{Randomness Python Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Getting Started with Randomness in Python}
-Complete the following excercise in Python for
-$n_{iter} = 10$
-and
-$n_{iter} = 1000$
-\begin{itemize}
-\item Generate
-$n_{iter}$
-values between 0 and 1 with a uniform distribution
-\item Generate
-$n_{iter}$
-values from a normal distribution with a 0.5 mean and 10 standard deviation
+\begin{block}{Generating and Visualizing Random Numbers - Python}
+\begin{enumerate}
+\item Complete the following excercise in Python for n=10 and n=1000
+\item Generate n values between 0 and 1 with a uniform distribution
+\item Generate n values from a normal distribution with a 0.5 mean and 10 standard deviation
 \item Visualize each of the two outputs with a histogram
 \item Calculate the mean and standard deviation of each of the two sets of generated numbers
 \item Re-calculate it a few times, take note of how much the mean and standard deviation change
-\end{itemize}
+\end{enumerate}
 \vfill
 \end{block}
 }
-\begin{block}{Taking Mean and Standard Deviation in Python}
-\begin{itemize}
-\item You will likely find it useful to store your data in a
-\texttt{DataFrame}
-as that makes it easy to calculate mean and standard deviation
-\item Once you have your columns in the
-\texttt{DataFrame}
-just do
-\texttt{df.mean()}
-to get the mean and
-\texttt{df.std()}
-to get the standard deviations for each column.
-\end{itemize}
-\end{block}
+\label{labs:randomness-python-lab-1}
 \end{frame}
 \begin{frame}
 \frametitle{Internal Randomness with Discrete Variables}
@@ -706,19 +679,38 @@ to yield the exact same result for the prior example
 }
 \end{frame}
 \begin{frame}
-\frametitle{Random Discrete Variables in Python and Excel}
+\frametitle{Internal Randomness Simple Model Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{A Simple Model of a Stock Price Over Time}
-\begin{itemize}
+\begin{block}{Building a Simple Model of Stock Returns}
+\begin{enumerate}
+\item Create the following model in both Excel and Python
 \item A stock starts out priced at 100. Each period, it can either go up or down.
 \item When it goes up, it will grow by 1\%. When it goes down, it will decrease by 1\%.
 \item The likelihood of the stock going up is 60\%, and down 40\%.
 \item Build a model which shows how the stock price changes throughout time. Visualize it up to 100 periods and show the final price.
-\end{itemize}
+\end{enumerate}
 \vfill
 \end{block}
 }
+\label{labs:internal-randomness-simple-model-lab-1}
+\end{frame}
+\begin{frame}
+\frametitle{Internal Randomness Model Lab}
+{
+\setbeamercolor{block title}{bg=violet}
+\begin{block}{Extending the Dynamic Salary Retirement Model with Internal Randomness}
+\begin{enumerate}
+\item Add internal randomness to your Project 1 Excel and Python models
+\item We will relax the assumption that there is a single investment return which holds for every period
+\item Instead we will now assume that investment returns are drawn from a normal distribution
+\item For baseline values of the inputs, you can use a 4\% mean and 3\% standard deviation
+\item You should be able to run the model repeatedly and see different years to retirement each time
+\end{enumerate}
+\vfill
+\end{block}
+}
+\label{labs:internal-randomness-model-lab-1}
 \end{frame}
 \end{section}
 \end{document}

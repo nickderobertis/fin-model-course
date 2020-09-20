@@ -8,6 +8,7 @@ Department of Finance, Insurance, and Real Estate}
 \usepackage{adjustbox}
 \usepackage{tikz}
 \definecolor{darkgreen}{RGB}{31,156,17}
+\usepackage{booktabs}
 \setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
 \insertnavigation{\paperwidth}
 \end{beamercolorbox}}
@@ -53,6 +54,36 @@ and
 \vfill
 \item Break your code up into small sections dealing with each step, with nicely formatted text explaining it. Add comments where anything is unclear in the code.
 \end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Structuring a Python Model}
+\begin{center}
+\begin{adjustbox}{width=0.9\textwidth, height=0.8\textheight, keepaspectratio}
+\begin{tikzpicture}
+\node [fill=orange!30, minimum width=2cm, minimum height=8cm, rectangle, draw, text=black] (c76dabc2-1964-4a10-b72a-88fafa6f2138) at (-3.35, 4) {\textbf{Inputs}};
+\coordinate [fill=blue!50, minimum width=5cm, minimum height=8cm, rectangle, draw] (ab3d5dad-7dfb-43ae-aa5d-3acc752e0aad) at (1.25, 4) {};
+\node [text=white, above=0.2cm ] (f9bf7c24-76fd-46b5-aab1-e33305c3d589) at (ab3d5dad-7dfb-43ae-aa5d-3acc752e0aad.south) {\textbf{Model}};
+\coordinate [fill=blue!90, minimum width=4cm, minimum height=1.75cm, rectangle, draw] (170050d0-04a2-4a41-8a84-c7c58c1e31e8) at (1.25, 1.75) {};
+\node [text=white, above] (4a6151fc-a83a-4b5b-9e7c-e5ffde1e4b60) at (170050d0-04a2-4a41-8a84-c7c58c1e31e8.south) {Sub-Model};
+\coordinate [fill=blue!90, minimum width=4cm, minimum height=1.75cm, rectangle, draw] (c112de39-eed3-4d4d-a44c-c4ed6acd5201) at (1.25, 4.25) {};
+\node [text=white, above] (8fe197b4-2a19-4c68-b29d-77606584eb06) at (c112de39-eed3-4d4d-a44c-c4ed6acd5201.south) {Sub-Model};
+\coordinate [fill=blue!90, minimum width=4cm, minimum height=1.75cm, rectangle, draw] (3cc024c3-c59c-4785-b03b-7a2ac843d684) at (1.25, 6.75) {};
+\node [text=white, above] (68b4c6ee-00a7-40d9-88fe-fb75febf9b0f) at (3cc024c3-c59c-4785-b03b-7a2ac843d684.south) {Sub-Model};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (755d7c98-4778-44f2-bbf4-030d2473a6b6) at (0.0, 1.95) {Step};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (133a4ad1-cb06-49dc-9e20-34fbe122a1bf) at (1.25, 1.95) {Step};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (80db54e7-5856-4ac2-83b1-7aaf33e6df66) at (2.5, 1.95) {Step};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (fc4cf0e5-0c0b-4c33-b31a-5733e1241913) at (0.0, 4.45) {Step};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (228c44fd-358e-471a-ba35-a10d2827c4bf) at (1.25, 4.45) {Step};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (ec5d97db-2b15-4d47-b739-37459c049e05) at (2.5, 4.45) {Step};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (e3ecad63-11ff-437b-bf47-b7a337066c1a) at (0.0, 6.95) {Step};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (dde1cb4a-3654-423a-9639-0239efc395c9) at (1.25, 6.95) {Step};
+\node [fill=cyan!20, minimum width=1.1cm, minimum height=1cm, rectangle, draw, text=black] (bd9a2309-8b7f-4c79-a6df-f8a69e27b9b5) at (2.5, 6.95) {Step};
+\node [fill=green!20, minimum width=2cm, minimum height=8cm, rectangle, draw, text=black] (77b7cfc5-f237-4b8b-ade6-b2b41b402949) at (5.85, 4) {\textbf{Outputs}};
+\path [draw, line width=0.75mm, ->] (-2.3, 4) -- (-1.3, 4);
+\path [draw, line width=0.75mm, ->] (3.8, 4) -- (4.8, 4);
+\end{tikzpicture}
+\end{adjustbox}
+\end{center}
 \end{frame}
 \begin{frame}
 \frametitle{Workflow and Final Output}
@@ -123,19 +154,19 @@ There are a couple of basic economic equations we haven't talked about that we'l
 \end{frame}
 \end{section}
 \begin{section}[Build the Model]{Building the Dynamic Salary Retirement Model}
-\definecolor{darkgreen}{RGB}{15,82,13}
+\definecolor{darkergreen}{RGB}{15,82,13}
 \begin{frame}
 \frametitle{The Structure of the Retirement Model}
 \begin{center}
 \begin{adjustbox}{width=0.9\textwidth, height=0.8\textheight, keepaspectratio}
 \begin{tikzpicture}
-\coordinate [fill=darkgreen!60, minimum width=5cm, minimum height=8cm, rectangle, draw] (c76dabc2-1964-4a10-b72a-88fafa6f2138) at (1.25, 4) {};
-\node [text=white, above=0.2cm ] (ab3d5dad-7dfb-43ae-aa5d-3acc752e0aad) at (c76dabc2-1964-4a10-b72a-88fafa6f2138.south) {\textbf{Model}};
-\node [fill=darkgreen, minimum width=4cm, minimum height=1.75cm, rectangle, draw, text=white] (f9bf7c24-76fd-46b5-aab1-e33305c3d589) at (1.25, 6.75) {Salary};
-\node [fill=darkgreen, minimum width=4cm, minimum height=1.75cm, rectangle, draw, text=white] (77b7cfc5-f237-4b8b-ade6-b2b41b402949) at (1.25, 4.25) {Wealths};
-\node [fill=darkgreen, minimum width=4cm, minimum height=1.75cm, rectangle, draw, text=white] (170050d0-04a2-4a41-8a84-c7c58c1e31e8) at (1.25, 1.75) {Retirement};
-\path [draw, ->] (f9bf7c24-76fd-46b5-aab1-e33305c3d589) -- (77b7cfc5-f237-4b8b-ade6-b2b41b402949);
-\path [draw, ->] (77b7cfc5-f237-4b8b-ade6-b2b41b402949) -- (170050d0-04a2-4a41-8a84-c7c58c1e31e8);
+\coordinate [fill=darkergreen!60, minimum width=5cm, minimum height=8cm, rectangle, draw] (b160c36c-329a-4adb-bc57-1b415066e852) at (1.25, 4) {};
+\node [text=white, above=0.2cm ] (f0c47c6f-9d36-4e24-8abc-a56c481fc342) at (b160c36c-329a-4adb-bc57-1b415066e852.south) {\textbf{Model}};
+\node [fill=darkergreen, minimum width=4cm, minimum height=1.75cm, rectangle, draw, text=white] (d32173a0-67ec-4b7a-b943-d3db42881358) at (1.25, 6.75) {Salary};
+\node [fill=darkergreen, minimum width=4cm, minimum height=1.75cm, rectangle, draw, text=white] (bc8ace85-db17-412c-a5be-7af770b381b0) at (1.25, 4.25) {Wealths};
+\node [fill=darkergreen, minimum width=4cm, minimum height=1.75cm, rectangle, draw, text=white] (b48ab027-b4d4-4131-8d20-c66c6c02d54f) at (1.25, 1.75) {Retirement};
+\path [draw, ->] (d32173a0-67ec-4b7a-b943-d3db42881358) -- (bc8ace85-db17-412c-a5be-7af770b381b0);
+\path [draw, ->] (bc8ace85-db17-412c-a5be-7af770b381b0) -- (b48ab027-b4d4-4131-8d20-c66c6c02d54f);
 \end{tikzpicture}
 \end{adjustbox}
 \end{center}
@@ -186,61 +217,72 @@ $W_t = W_{t-1}  (1 + r_i) + S_t  v$
 \begin{block}{Dynamic Salary Retirement Model in Python}
 \begin{itemize}
 \item I will now show the process I use to create a full model.
-\item I will be recreating the model in Examples > Intro > Python > Dynamic Salary Retirement Model.ipynb
+\item I will be recreating the model "Dynamic Salary Retirement Model.ipynb"
 \item Go ahead and download that to follow along as you will also extend it in a lab exercise
 \end{itemize}
 \end{block}
 }
 \end{frame}
 \begin{frame}
-\frametitle{Relaxing the Static Desired Cash in Python}
-\begin{itemize}
-\item We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash
-\end{itemize}
-\vfill
+\frametitle{Dynamic Desired Cash in Python}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Modeling Desired Cash}
-\begin{itemize}
-\item Start from the completed retirement model Dynamic Salary Retirement Model.ipynb 
+\begin{block}{Determining Desired Cash in the Dynamic Salary Retirement Python Model}
+\begin{enumerate}
+\item We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash
+\item Start from the completed retirement model Jupyter notebook Dynamic Salary Retirement Model.ipynb
 \item Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"
 \item Calculate desired cash based on interest, cash spend, and years in retirement
 \item Use the calculated desired cash in the model to determine years to retirement
-\item If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash
-\end{itemize}
+\end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Answers: Slide \textcolor{blue}{\underline{\ref{labs:dynamic-desired-cash-in-python-1-answers}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
+\label{labs:dynamic-desired-cash-in-python-1}
 \end{frame}
 \begin{frame}
-\frametitle{Extending the Simple Retirement Model in a Different Way, Level 1}
+\frametitle{Extending the Simple Retirement Model in a Different Way}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Practice Building A Model, Level 1}
+\begin{block}{Practice Building A Model}
 \begin{enumerate}
 \item Usually I would try to have smaller labs but it didn't fit the format of this lecture. Most will not be able to complete this during class.
-\item For this lab, attempt the practice problem in Practice > Retirement > P1 Python Retirement Savings Rate Problem.pdf
+\item For this lab, attempt the practice problem "P1 Python Retirement Savings Rate Problem.pdf"
 \item This is similar to how the projects will be assigned, so it is good preparation
 \item I would encourage you to try it from scratch. If you are totally stuck, try working off of the retirement model I completed today to have a lot of the structure already. If you still are having trouble with that, check the solution and see me in office hours.
+\item Note: this is not an official lab exercise you need to submit, it is practice only, but I would highly encourage you to complete it.
 \end{enumerate}
 \vfill
 \end{block}
 }
 \label{lab:retire-model-1}
 \end{frame}
+\end{section}
+\appendix
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
 \begin{frame}
-\frametitle{Some Time to Work on the First Project}
+\frametitle{Dynamic Desired Cash in Python, Answers}
 {
-\setbeamercolor{block title}{bg=violet}
-\begin{block}{Project 1}
-\begin{itemize}
-\item Download and open the Project 1 document from Canvas
-\item It is up to you whether you want to attempt the Excel or Python model first
-\item If you feel comfortable with the Excel model, you may want to start with Python so I can give help on that today.
-\end{itemize}
+\setbeamercolor{block title}{bg=orange}
+\begin{block}{Determining Desired Cash in the Dynamic Salary Retirement Python Model, Answers}
+\begin{enumerate}
+\item If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash and there should be 18 years to retirement.
+\end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:dynamic-desired-cash-in-python-1}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
+\label{labs:dynamic-desired-cash-in-python-1-answers}
 \end{frame}
-\end{section}
+\setcounter{framenumber}{\value{finalframe}}
 \end{document}

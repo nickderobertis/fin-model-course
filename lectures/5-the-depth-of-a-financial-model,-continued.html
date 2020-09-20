@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Depth of a Financial Model, Continued &mdash; fin_model_course 0.1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Projects" href="PJ1-projects.html" />
+    <link rel="prev" title="Going Beyond an Initial Python Script" href="4-going-beyond-an-initial-python-script.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fin_model_course
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1-financial-modeling-with-python-and-excel.html">Financial Modeling with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-getting-started-with-python-and-excel.html">Getting Started with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-the-depth-of-a-financial-model.html">The Depth of a Financial Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-going-beyond-an-initial-python-script.html">Going Beyond an Initial Python Script</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Depth of a Financial Model, Continued</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-jupyter-to-structure-a-python-model">Using Jupyter to Structure a Python Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#salaries-in-the-python-dynamic-salary-retirement-model">Salaries in the Python Dynamic Salary Retirement Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wealth-in-the-python-dynamic-salary-retirement-model">Wealth in the Python Dynamic Salary Retirement Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#retirement-in-the-python-dynamic-salary-retirement-model">Retirement in the Python Dynamic Salary Retirement Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LS1-lab-exercise-solutions.html">Lab Exercise Solutions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fin_model_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>The Depth of a Financial Model, Continued</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/lectures/5-the-depth-of-a-financial-model,-continued.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-depth-of-a-financial-model-continued">
+<h1>The Depth of a Financial Model, Continued<a class="headerlink" href="#the-depth-of-a-financial-model-continued" title="Permalink to this headline">¶</a></h1>
+<p>Explores building a more complex and realistic model with Python. Here we focus on extending the simple retirement model to have dynamic salary growth.</p>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/d02846d43c5ffa6ae6e7a604d731ac56/S5 The Depth of a Financial Model, Continued.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">The</span> <span class="pre">Depth</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">Financial</span> <span class="pre">Model,</span> <span class="pre">Continued</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/aac0b46281b587599edcd363662afddd/LN5 The Depth of a Financial Model, Continued.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Lecture</span> <span class="pre">Notes</span> <span class="pre">-</span> <span class="pre">The</span> <span class="pre">Depth</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">Financial</span> <span class="pre">Model,</span> <span class="pre">Continued</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.markdownguide.org/basic-syntax/">Markdown Basic Syntax</a></p></li>
+<li><p><a class="reference external" href="https://www.markdownguide.org/extended-syntax/">Markdown Extended Syntax</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/analytics-vidhya/writing-math-equations-in-jupyter-notebook-a-naive-introduction-a5ce87b9a214">LaTeX Equations in Jupyter</a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="using-jupyter-to-structure-a-python-model">
+<h2>Using Jupyter to Structure a Python Model<a class="headerlink" href="#using-jupyter-to-structure-a-python-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/Zk29_tWiWGc"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>It can be a bit tricky in the beginning to structure Python models in Jupyter as you are dealing with two different layers of organization</p></li>
+<li><p>Jupyter gives us nicely formatted markdown cells which make it easy to organize sections of the model</p></li>
+<li><p>Markdown is actually a general markup language, not anything specific to Jupyter, and it supports a lot of features. Jupyter has their own extension to markdown which also adds LaTeX equation support</p></li>
+<li><p>Most often, you will just need section headers, bullets, and equations, and anything else you can look at a Markdown reference</p></li>
+<li><p>It is easy to add a table of contents for a Jupyter notebook and you should do this to increase the readability of your model</p></li>
+<li><p>When adding a TOC item, spaces get converted to dashes for the reference</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Resources<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.markdownguide.org/basic-syntax/">Markdown Basic Syntax</a></p></li>
+<li><p><a class="reference external" href="https://www.markdownguide.org/extended-syntax/">Markdown Extended Syntax</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/analytics-vidhya/writing-math-equations-in-jupyter-notebook-a-naive-introduction-a5ce87b9a214">LaTeX Equations in Jupyter</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="salaries-in-the-python-dynamic-salary-retirement-model">
+<h2>Salaries in the Python Dynamic Salary Retirement Model<a class="headerlink" href="#salaries-in-the-python-dynamic-salary-retirement-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/190Xci0yDpA"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id5">
+<h3>Notes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>For development purposes, create a new variable data which is set equal to model_data. When you are done with the model, you will remove this.</p></li>
+<li><p>Write the logic for a function in a cell and run it to ensure it works, then move it into a function</p></li>
+<li><p>Using data in the functions while the original variable is model_data ensures that you are not accidentally accessing the overall (global) model_data when it should be the specific instance of ModelInputs being passed</p></li>
+<li><p>This may be confusing and sound like extra unnecessary steps, but setting things up this way will enable your model to be easily extended</p></li>
+<li><p>Here we will create a function which can get the salary in any given year</p></li>
+<li><p>We will write also some example code to test the function and show its results</p></li>
+<li><p>Later we will use this function in the overall calculation</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>Resources<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="wealth-in-the-python-dynamic-salary-retirement-model">
+<h2>Wealth in the Python Dynamic Salary Retirement Model<a class="headerlink" href="#wealth-in-the-python-dynamic-salary-retirement-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/ACSk15RnOG0"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id7">
+<h3>Notes<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Here we will develop two functions which comprise the wealth sub-model</p></li>
+<li><p>First create a function which determines the amount of cash saved in a given year</p></li>
+<li><p>Then create a function which determines the amount of wealth in a given year</p></li>
+<li><p>We create some example code to show how the function works, but it will actually be applied in the Retirement sub-model</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>Resources<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="retirement-in-the-python-dynamic-salary-retirement-model">
+<h2>Retirement in the Python Dynamic Salary Retirement Model<a class="headerlink" href="#retirement-in-the-python-dynamic-salary-retirement-model" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/zHoYWl3YHJ8"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id9">
+<h3>Notes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Now we will bring everything together to calculate the years to retirement</p></li>
+<li><p>The salary and cash saved functions are already getting called from within the wealth function, so we only need to call the wealth function in the final loop</p></li>
+<li><p>Here we are making use of a while loop to stop the loop once a certain condition is met, in this case once wealth exceeds desired cash</p></li>
+<li><p>We will use formatted strings and new lines to create a good display for the output</p></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>Resources<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PJ1-projects.html" class="btn btn-neutral float-right" title="Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="4-going-beyond-an-initial-python-script.html" class="btn btn-neutral float-left" title="Going Beyond an Initial Python Script" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-155751319-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

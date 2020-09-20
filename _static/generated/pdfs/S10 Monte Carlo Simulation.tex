@@ -168,13 +168,13 @@ You have \$1,000 now and need to pay \$1,050 in one year. You have available to 
 \end{block}
 }
 \end{frame}
+\footnotesize
 \begin{frame}
-\frametitle{Monte Carlo Simulation of DDM, Level 1}
+\frametitle{Intro Monte Carlo Lab, Level 1}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Intro Monte Carlo, Level 1}
+\begin{block}{Monte Carlo Simulation of DDM, Level 1}
 \begin{enumerate}
-\footnotesize
 \item You are trying to determine the value of a mature company. The company has had stable dividend growth for a long time so you select the dividend discount model (DDM).
 \item $P = \frac{d_1}{r_s - g}$
 \item The next dividend will be \$1, and your baseline estimates of the cost of capital and growth are 9\% and 4\%, respectively
@@ -185,13 +185,14 @@ You have \$1,000 now and need to pay \$1,050 in one year. You have available to 
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:intro-monte-carlo-python-2}}} & \hfill\\
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:intro-monte-carlo-lab-2}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:intro-monte-carlo-python-1}
+\label{labs:intro-monte-carlo-lab-1}
 \end{frame}
+\normalsize
 \end{section}
 \begin{section}[Formal MC]{A More Formal Treatment of Monte Carlo Simulation}
 \begin{frame}
@@ -449,12 +450,11 @@ to check for each trial, whether it was a positive outcome (made it a 1) or not 
 }
 \end{frame}
 \begin{frame}
-\frametitle{Monte Carlo Simulation of Python Models, Level 1}
+\frametitle{Monte Carlo Python Lab, Level 1}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Monte Carlo Python, Level 1}
+\begin{block}{Monte Carlo Simulation of Python Models, Level 1}
 \begin{enumerate}
-\small
 \item Work off of your existing Project 1 Python model
 \item You are concerned the NPV could be heavily affected by changes in the interest rate. Instead of fixing it, draw it from a normal distribution with mean of 7\% and standard deviation of 2\%.
 \item Run the model 10,000 times and collect the years to retirement results. Visualize the results. Create a table of probabilities and the minimum NPV we could expect with that probability. Output the chance that the NPV will be more than \$400,000,000.
@@ -462,12 +462,12 @@ to check for each trial, whether it was a positive outcome (made it a 1) or not 
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:monte-carlo-python-2}}} & \hfill\\
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:monte-carlo-python-lab-2}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:monte-carlo-python-1}
+\label{labs:monte-carlo-python-lab-1}
 \end{frame}
 \end{section}
 \begin{section}[Excel MC]{Monte Carlo Simulation in Excel}
@@ -515,10 +515,10 @@ from Python code we can change and retrieve the values of cells
 }
 \end{frame}
 \begin{frame}
-\frametitle{Monte Carlo Simulation of Excel Models, Level 1}
+\frametitle{Monte Carlo Excel Lab, Level 1}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Monte Carlo Excel, Level 1}
+\begin{block}{Monte Carlo Simulation of Excel Models, Level 1}
 \begin{enumerate}
 \item You will be running Monte Carlo simulations on your existing Excel model from Project 1
 \item You are concerned that your estimate for the number of phones that will be sold is incorrect. 
@@ -529,24 +529,23 @@ from Python code we can change and retrieve the values of cells
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:monte-carlo-excel-2}}} & \hfill\\
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:monte-carlo-excel-lab-2}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:monte-carlo-excel-1}
+\label{labs:monte-carlo-excel-lab-1}
 \end{frame}
 \end{section}
 \appendix
 \newcounter{finalframe}
 \setcounter{finalframe}{\value{framenumber}}
 \begin{frame}
-\frametitle{Monte Carlo Simulation of DDM, Level 2}
+\frametitle{Intro Monte Carlo Lab, Level 2}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Intro Monte Carlo, Level 2}
+\begin{block}{Monte Carlo Simulation of DDM, Level 2}
 \begin{enumerate}
-\small
 \item Continue from the first lab exercise
 \item Now you are also concerned you have mis-estimated the cost of capital. So now use a mean of 9\% and standard deviation of 2\%, in addition to varying the growth
 \item Visualize and summarize the resulting probability distribution of the price
@@ -555,38 +554,37 @@ from Python code we can change and retrieve the values of cells
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:intro-monte-carlo-python-1}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:intro-monte-carlo-lab-1}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:intro-monte-carlo-python-2}
+\label{labs:intro-monte-carlo-lab-2}
 \end{frame}
 \begin{frame}
-\frametitle{Monte Carlo Simulation of Python Models, Level 2}
+\frametitle{Monte Carlo Python Lab, Level 2}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Monte Carlo Python, Level 2}
+\begin{block}{Monte Carlo Simulation of Python Models, Level 2}
 \begin{enumerate}
-\small
 \item Continue from the first lab exercise. Now you are also concerned that your assembly line will not be as efficient amd so the number of phones per machine will be lower. So draw that from a normal distribution with mean 100,000 and standard deviation of 20,000. 
 \item As you run the model, also store what were the interest and number of phones corresponding to the NPV. You want to see which has a greater impact on the NPV: interest or number of phones. Visualize the relationship between interest and NPV, and the relationship between beginning salary and NPV. Also run a regression to quantitatively determine which has a greater effect.
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:monte-carlo-python-1}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:monte-carlo-python-lab-1}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:monte-carlo-python-2}
+\label{labs:monte-carlo-python-lab-2}
 \end{frame}
 \begin{frame}
-\frametitle{Monte Carlo Simulation of Excel Models, Level 2}
+\frametitle{Monte Carlo Excel Lab, Level 2}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Monte Carlo Excel, Level 2}
+\begin{block}{Monte Carlo Simulation of Excel Models, Level 2}
 \begin{enumerate}
 \item Continue from the first lab exercise. Now you are also concerned that there is varying quality in the machines, so they may have a different lifespan. Draw that from a normal distribution with mean 10 years and standard deviation of 2 years.
 \item As you run the model, also store what were the number of phones and machine life corresponding to the NPV, all in Excel. You want to see which has a greater impact on the NPV: number of phones or machine life. Visualize the relationship between number of phones and NPV, and the relationship between beginning machine life and NPV. Try to determine which has a greater effect.
@@ -594,12 +592,12 @@ from Python code we can change and retrieve the values of cells
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:monte-carlo-excel-1}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:monte-carlo-excel-lab-1}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:monte-carlo-excel-2}
+\label{labs:monte-carlo-excel-lab-2}
 \end{frame}
 \setcounter{framenumber}{\value{finalframe}}
 \end{document}

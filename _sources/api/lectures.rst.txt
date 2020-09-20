@@ -11,11 +11,21 @@ Subpackages
 
 .. toctree::
 
+   lectures.advanced
+   lectures.combining_excel_python
+   lectures.dcf_cost_capital
+   lectures.dcf_fcf
    lectures.dynamic_excel
+   lectures.dynamic_python
    lectures.intro
+   lectures.lab_exercises
+   lectures.monte_carlo
+   lectures.probability
    lectures.projects
    lectures.python_basics
+   lectures.sensitivity_analysis
    lectures.start_python_excel
+   lectures.visualization
 
 Submodules
 ----------
@@ -24,6 +34,14 @@ lectures.config module
 ----------------------
 
 .. automodule:: lectures.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lectures.lab\_exercise module
+-----------------------------
+
+.. automodule:: lectures.lab_exercise
    :members:
    :undoc-members:
    :show-inheritance:

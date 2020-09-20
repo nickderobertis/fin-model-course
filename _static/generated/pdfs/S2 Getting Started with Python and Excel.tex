@@ -15,6 +15,7 @@ Department of Finance, Insurance, and Real Estate}
 \definecolor{darkgreen}{RGB}{31,156,17}
 \usepackage{xcolor}
 \usepackage{minted}
+\usepackage{booktabs}
 \setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
 \insertnavigation{\paperwidth}
 \end{beamercolorbox}}
@@ -382,21 +383,57 @@ for item in inputs:
 }
 \end{frame}
 \begin{frame}
-\frametitle{Putting it All Together - A Basic Model with Iteration}
+\frametitle{Vary Savings Rate Lab}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Let's Vary the Savings Rate, Too}
-\begin{itemize}
+\begin{block}{Extending a Simple Retirement Model}
+\begin{enumerate}
 \item Now we want to see the effect of savings rate on time until retirement, in addition to interest rate
 \item In both Excel and Python, calculate the years to retirement for savings rates of 10\%, 25\%, and 40\%, and each of these cases with each of the interest rate cases, 4\%, 5\%, and 6\%
-\item Be sure that you drag formulas in Excel and use \texttt{for} loops in Python to accomplish this
-\end{itemize}
+\item Be sure that you drag formulas in Excel and use for loops in Python to accomplish this
+\item In total you should have 9 calculated years to retirement numbers, in each of the two models.
+\end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Answers: Slide \textcolor{blue}{\underline{\ref{labs:vary-savings-rate-lab-1-answers}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
-\begin{block}{Note}
-In total you should have 9 calculated years to retirement numbers, in each of the two models.
-\end{block}
+\label{labs:vary-savings-rate-lab-1}
 \end{frame}
 \end{section}
+\appendix
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\small
+\begin{frame}
+\frametitle{Vary Savings Rate Lab, Answers}
+{
+\setbeamercolor{block title}{bg=orange}
+\begin{block}{Extending a Simple Retirement Model, Answers}
+\begin{enumerate}
+\item Martha has 61.1 years to retirement if she earns a 4\% return and saves 10\%.
+\item Martha has 41.0 years to retirement if she earns a 4\% return and saves 25\%.
+\item Martha has 31.9 years to retirement if she earns a 4\% return and saves 40\%.
+\item Martha has 53.3 years to retirement if she earns a 5\% return and saves 10\%.
+\item Martha has 36.7 years to retirement if she earns a 5\% return and saves 25\%.
+\item Martha has 29.0 years to retirement if she earns a 5\% return and saves 40\%.
+\item Martha has 47.6 years to retirement if she earns a 6\% return and saves 10\%.
+\item Martha has 33.4 years to retirement if she earns a 6\% return and saves 25\%.
+\item Martha has 26.7 years to retirement if she earns a 6\% return and saves 40\%.
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:vary-savings-rate-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:vary-savings-rate-lab-1-answers}
+\end{frame}
+\normalsize
+\setcounter{framenumber}{\value{finalframe}}
 \end{document}

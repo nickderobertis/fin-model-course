@@ -1,0 +1,68 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{threeparttable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textcomp}
+\usepackage{dcolumn}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{.}{D{.}{.}{-1}}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[margin=0.8in, bottom=1.2in]{geometry}
+\usepackage[page]{appendix}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\rfoot{Page \thepage\  of \pageref{LastPage}}
+\cfoot{}
+\begin{document}
+\title{The Depth of a Financial Model, Continued}
+\author{Nick DeRobertis}
+\date{\today}
+\maketitle
+\begin{section}{Using Jupyter to Structure a Python Model}
+\begin{itemize}
+\item It can be a bit tricky in the beginning to structure Python models in Jupyter as you are dealing with two different layers of organization
+\item Jupyter gives us nicely formatted markdown cells which make it easy to organize sections of the model
+\item Markdown is actually a general markup language, not anything specific to Jupyter, and it supports a lot of features. Jupyter has their own extension to markdown which also adds LaTeX equation support
+\item Most often, you will just need section headers, bullets, and equations, and anything else you can look at a Markdown reference
+\item It is easy to add a table of contents for a Jupyter notebook and you should do this to increase the readability of your model
+\item When adding a TOC item, spaces get converted to dashes for the reference
+\end{itemize}
+\end{section}
+\begin{section}{Salaries in the Python Dynamic Salary Retirement Model}
+\begin{itemize}
+\item For development purposes, create a new variable data which is set equal to model\_data. When you are done with the model, you will remove this.
+\item Write the logic for a function in a cell and run it to ensure it works, then move it into a function
+\item Using data in the functions while the original variable is model\_data ensures that you are not accidentally accessing the overall (global) model\_data when it should be the specific instance of ModelInputs being passed
+\item This may be confusing and sound like extra unnecessary steps, but setting things up this way will enable your model to be easily extended
+\item Here we will create a function which can get the salary in any given year
+\item We will write also some example code to test the function and show its results
+\item Later we will use this function in the overall calculation
+\end{itemize}
+\end{section}
+\begin{section}{Wealth in the Python Dynamic Salary Retirement Model}
+\begin{itemize}
+\item Here we will develop two functions which comprise the wealth sub-model
+\item First create a function which determines the amount of cash saved in a given year
+\item Then create a function which determines the amount of wealth in a given year
+\item We create some example code to show how the function works, but it will actually be applied in the Retirement sub-model
+\end{itemize}
+\end{section}
+\begin{section}{Retirement in the Python Dynamic Salary Retirement Model}
+\begin{itemize}
+\item Now we will bring everything together to calculate the years to retirement
+\item The salary and cash saved functions are already getting called from within the wealth function, so we only need to call the wealth function in the final loop
+\item Here we are making use of a while loop to stop the loop once a certain condition is met, in this case once wealth exceeds desired cash
+\item We will use formatted strings and new lines to create a good display for the output
+\end{itemize}
+\end{section}
+\end{document}

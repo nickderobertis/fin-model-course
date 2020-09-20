@@ -103,24 +103,24 @@ writes to a workbook, it replaces the file. Do not write over an existing workbo
 }
 \end{frame}
 \begin{frame}
-\frametitle{Reading and Writing to Excel with \texttt{pandas}, Level 1}
+\frametitle{Read Write Pandas Lab, Level 1}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Reading and Writing to Excel, Level 1}
+\begin{block}{Reading and Writing to Excel with Pandas, Level 1}
 \begin{enumerate}
-\item Download "MSFT Financials.xls" from Canvas in Lab Exercises -> Read Write Excel Pandas
+\item Download "MSFT Financials.xls" from the course site
 \item Read the sheet "Income Statement" into a DataFrame
 \item Write the DataFrame to a new workbook, "My Data.xlsx", with the sheet name "Income Statement"
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
 \toprule
-\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-3}}} & \hfill\\
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-3}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:read-write-excel-pandas-1}
+\label{labs:read-write-pandas-lab-1}
 \end{frame}
 \end{section}
 \begin{section}[\texttt{xlwings}]{Introducing Full Python-Excel Connection with \texttt{xlwings}}
@@ -231,107 +231,93 @@ sht.range("G11").value = df
 }
 \end{frame}
 \begin{frame}
-\frametitle{Reading and Writing to Excel with \texttt{xlwings}, Level 1}
+\frametitle{Read Write xlwings Lab, Level 1}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Dynamically Reading and Writing to Excel, Level 1}
+\begin{block}{Reading and Writing to Excel with xlwings, Level 1}
 \begin{enumerate}
-\item For all of the
-\texttt{xlwings}
-lab exercises, work with "xlwings Lab.xlsx".
-\item Use
-\texttt{xlwings}
-to read the values in the column A and then write them beside
+\item For all of the xlwings lab exercises, work with "xlwings Lab.xlsx".
+\item Use xlwings to read the values in the column A and then write them beside
 the initial values in column B
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
-\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-3}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-4}}} & \hfill\\
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-3}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-4}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:xlwings-1}
+\label{labs:read-write-xlwings-lab-1}
 \end{frame}
 \end{section}
 \appendix
 \newcounter{finalframe}
 \setcounter{finalframe}{\value{framenumber}}
 \begin{frame}
-\frametitle{Reading and Writing to Excel with \texttt{pandas}, Level 2}
+\frametitle{Read Write Pandas Lab, Level 2}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Reading and Writing to Excel, Level 2}
+\begin{block}{Reading and Writing to Excel with Pandas, Level 2}
 \begin{enumerate}
-\item Use the same "MSFT Financials.xls" from the first exercise on Slide
-\ref{lab:read-write-excel-pandas-1}
+\item Use the same "MSFT Financials.xls" from the first exercise
 \item Output to five separate workbooks, named "My Data1.xlsx", "My Data2.xlsx", and so on.
-\item Do this
-\underline{without}
-writing the
-\texttt{to\_excel}
-command multiple times
+\item Do this without writing the to\_excel command multiple times
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-3}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-3}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:read-write-excel-pandas-2}
+\label{labs:read-write-pandas-lab-2}
 \end{frame}
 \begin{frame}
-\frametitle{Reading and Writing to Excel with \texttt{pandas}, Level 3}
+\frametitle{Read Write Pandas Lab, Level 3}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Reading and Writing to Excel, Level 3}
+\begin{block}{Reading and Writing to Excel with Pandas, Level 3}
 \begin{enumerate}
-\item Note: this exercise uses the Advanced material covered in Examples -> Read Write Excel Pandas
-\item Use the same "MSFT Financials.xls" from the first exercise on Slide
-\ref{lab:read-write-excel-pandas-1}
+\item Note: this exercise uses the Advanced material covered in the example Jupyter notebook Read Write Excel Pandas.ipynb
+\item Use the same "MSFT Financials.xls" from the first exercise
 \item Output to five separate sheets in the same workbook "My Data.xlsx". The sheets should be named "Income Statement 1", "Income Statement 2", and so on.
-\item Do this
-\underline{without}
-writing the
-\texttt{to\_excel}
-command multiple times
+\item Do this without writing the to\_excel command multiple times
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:read-write-excel-pandas-2}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-2}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:read-write-excel-pandas-3}
+\label{labs:read-write-pandas-lab-3}
 \end{frame}
 \begin{frame}
-\frametitle{Reading and Writing to Excel with \texttt{xlwings}, Level 2}
+\frametitle{Read Write xlwings Lab, Level 2}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Dynamically Reading and Writing to Excel, Level 2}
+\begin{block}{Reading and Writing to Excel with xlwings, Level 2}
 \begin{enumerate}
 \item Get the value in C9 and multiply it by 2.5 in Python
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-3}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-4}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-3}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-4}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:xlwings-2}
+\label{labs:read-write-xlwings-lab-2}
 \end{frame}
 \begin{frame}
-\frametitle{Reading and Writing to Excel with \texttt{xlwings}, Level 3}
+\frametitle{Read Write xlwings Lab, Level 3}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Dynamically Reading and Writing to Excel, Level 3}
+\begin{block}{Reading and Writing to Excel with xlwings, Level 3}
 \begin{enumerate}
 \item Read the table which starts in E4 into Python. Multiply the prices by 2.5, and then output back into Excel starting in cell H5.
 \item Ensure that the outputted table appears in the same format as the original (pay attention to index and header)
@@ -339,30 +325,30 @@ command multiple times
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-2}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-4}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-2}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-4}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:xlwings-3}
+\label{labs:read-write-xlwings-lab-3}
 \end{frame}
 \begin{frame}
-\frametitle{Reading and Writing to Excel with \texttt{xlwings}, Level 4}
+\frametitle{Read Write xlwings Lab, Level 4}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Dynamically Reading and Writing to Excel, Level 4}
+\begin{block}{Reading and Writing to Excel with xlwings, Level 4}
 \begin{enumerate}
 \item In column L, write 5, 10, 15 ... 100 spaced two cells apart, so L1 would have 5, L4 would have 10, and so on.
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{lab:xlwings-3}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-3}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
-\label{lab:xlwings-4}
+\label{labs:read-write-xlwings-lab-4}
 \end{frame}
 \setcounter{framenumber}{\value{finalframe}}
 \end{document}

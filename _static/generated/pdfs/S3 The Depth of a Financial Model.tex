@@ -8,6 +8,7 @@ Department of Finance, Insurance, and Real Estate}
 \usepackage{tikz}
 \definecolor{darkgreen}{RGB}{31,156,17}
 \usepackage{xcolor}
+\usepackage{booktabs}
 \setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
 \insertnavigation{\paperwidth}
 \end{beamercolorbox}}
@@ -180,23 +181,47 @@ as Dynamic Salary Retirement Model
 }
 \end{frame}
 \begin{frame}
-\frametitle{Relaxing the Static Desired Cash in Excel}
-\begin{itemize}
-\item We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash
-\end{itemize}
-\vfill
+\frametitle{Dynamic Desired Cash in Excel}
 {
 \setbeamercolor{block title}{bg=violet}
-\begin{block}{Modeling Desired Cash}
-\begin{itemize}
+\begin{block}{Determining Desired Cash in the Dynamic Salary Retirement Excel Model}
+\begin{enumerate}
+\item We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash
 \item Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"
 \item Calculate desired cash based on interest, cash spend, and years in retirement
 \item Use the calculated desired cash in the model to determine years to retirement
-\item If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash
-\end{itemize}
+\end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Answers: Slide \textcolor{blue}{\underline{\ref{labs:dynamic-desired-cash-in-excel-1-answers}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
+\label{labs:dynamic-desired-cash-in-excel-1}
 \end{frame}
 \end{section}
+\appendix
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\begin{frame}
+\frametitle{Dynamic Desired Cash in Excel, Answers}
+{
+\setbeamercolor{block title}{bg=orange}
+\begin{block}{Determining Desired Cash in the Dynamic Salary Retirement Excel Model, Answers}
+\begin{enumerate}
+\item If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash and there should be 18 years to retirement.
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:dynamic-desired-cash-in-excel-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:dynamic-desired-cash-in-excel-1-answers}
+\end{frame}
+\setcounter{framenumber}{\value{finalframe}}
 \end{document}
