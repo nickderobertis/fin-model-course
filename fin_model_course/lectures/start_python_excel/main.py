@@ -4,7 +4,7 @@ from schedule.main import LECTURE_2_NAME
 
 
 def get_getting_started_with_python_and_excel_lecture() -> LectureGroup:
-    title = 'Getting Started with Python and Excel'
+    title = LECTURE_2_NAME
     lecture_index = 2
     description = 'Discusses the basics of financial modeling in both Python and Excel. Explores a ' \
                   'simple time-value of money problem and how to build a model for it in both ' \

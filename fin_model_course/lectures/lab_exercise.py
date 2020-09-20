@@ -125,6 +125,3 @@ class LabExerciseLecture(Lecture):
 
 class LabExerciseGroup(LectureGroup):
     lectures: Sequence[LabExerciseLecture]
-
-    def exercises_for_week(self, week_num: int) -> List[LabExerciseLecture]:
-        return [exc for exc in self.lectures if exc.week_covered == week_num]

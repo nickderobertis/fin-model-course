@@ -5,7 +5,7 @@ from schedule.main import LECTURE_3_NAME
 
 def get_dynamic_salary_excel_lecture() -> LectureGroup:
     lecture_index = 3
-    title = f'{LECTURE_3_NAME} - Excel'
+    title = f'{LECTURE_3_NAME}'
     description = 'Explores building a more complex and realistic model with Excel. Here we focus on ' \
                   'extending the simple retirement model to have dynamic salary growth.'
     resources = [

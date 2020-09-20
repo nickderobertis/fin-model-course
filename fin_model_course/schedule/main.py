@@ -36,6 +36,7 @@ def get_course_schedule(use_cache: bool = True, overwrite_cache: bool = True) ->
             return SCHEDULE
 
     from lectures.lab_exercises.main import get_lab_exercises_lecture
+    from lectures.config import get_lecture_groups
 
     project_1 = ScheduleProject(name=PROJECT_1_NAME, index=1)
     project_2 = ScheduleProject(name=PROJECT_2_NAME, index=2)
@@ -128,9 +129,11 @@ def get_course_schedule(use_cache: bool = True, overwrite_cache: bool = True) ->
     ]
 
     lab_exercises = get_lab_exercises_lecture()
+    lectures = get_lecture_groups(include_labs=False, include_projects=False)
 
     schedule = CourseSchedule(
-        weeks=weeks, start_date=COURSE_BEGIN_DATE, end_date=COURSE_END_DATE, lab_exercises=lab_exercises
+        weeks=weeks, start_date=COURSE_BEGIN_DATE, end_date=COURSE_END_DATE, lab_exercises=lab_exercises,
+        lectures=lectures,
     )
 
     if overwrite_cache:

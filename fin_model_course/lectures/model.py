@@ -310,3 +310,6 @@ class LectureGroup:
         for lecture in self:
             out_str += lecture.to_rst()
         return out_str
+
+    def lectures_for_week(self, week_num: int) -> List[Lecture]:
+        return [exc for exc in self.lectures if exc.week_covered == week_num]

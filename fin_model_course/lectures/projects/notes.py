@@ -7,6 +7,7 @@ def get_project_overview_lecture() -> Lecture:
     project_num = 0
     title = f'Project {project_num} - {project_title}'
     youtube_id = 'SW4Yk-pQdA8'
+    week_covered = 2
     notes = LectureNotes([
         'The biggest part of the typical project grade is accuracy, but that only represents 60% of the total.',
         'Answers with the baseline model inputs are often provided, so use these to ensure you have built the model '
@@ -29,7 +30,7 @@ def get_project_overview_lecture() -> Lecture:
             static_url=f'generated/pdfs/PJ{project_num} {project_title}.pdf'
         )
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_project_1_lecture() -> Lecture:
@@ -37,6 +38,7 @@ def get_project_1_lecture() -> Lecture:
     project_num = 1
     title = f'Project {project_num} - {project_title}'
     youtube_id = 'vcvE5RrtrL4'
+    week_covered = 2
     notes = LectureNotes([
         'This project is really about cash flow modeling which is a huge part of financial modeling.',
         'This is a classic capital budgeting problem. Buy production capacity, produce units for variable '
@@ -64,6 +66,6 @@ def get_project_1_lecture() -> Lecture:
             static_url=f'Project Materials/Project {project_num}/Project {project_num} Template.ipynb'
         ),
     ]
-    return Lecture(title, notes, youtube_id=youtube_id, resources=resources)
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 

@@ -1,11 +1,12 @@
 import datetime
-from typing import Sequence, Optional, Tuple, List
+from typing import Sequence, Optional, Tuple, List, Dict
 
 from pydantic import BaseModel
 import pyexlatex as pl
 from pyexlatex.models.landscape import Landscape
 
 from lectures.lab_exercise import LabExerciseGroup, LabExerciseLecture
+from lectures.model import Lecture, LectureGroup
 
 
 class ScheduleProject(BaseModel):
@@ -29,7 +30,8 @@ class ClassContent(BaseModel):
     projects_due: Optional[Sequence[ScheduleProject]] = None
     date_fmt: str = '%m/%d'
 
-    def to_pyexlatex(self, lab_exercises: List[LabExerciseLecture], week_num: int, start_date: datetime.date,
+    def to_pyexlatex(self, lectures: Dict[str, List[Lecture]], lab_exercises: List[LabExerciseLecture],
+                     week_num: int, start_date: datetime.date,
                      end_date: datetime.date, project_date: Optional[datetime.date] = None) -> pl.Section:
         if project_date is None:
             project_date = start_date
@@ -40,12 +42,15 @@ class ClassContent(BaseModel):
 
         section_contents = []
 
-        if self.lectures:
+        if lectures:
+            content = []
+            for lecture_group_title, lecture_list in lectures.items():
+                lecture_contents = pl.UnorderedList([lect.title for lect in lecture_list])
+                content.append(pl.UnorderedList([lecture_group_title, lecture_contents]))
+
             section_contents.append(
                 pl.SubSection(
-                    [
-                        pl.UnorderedList([lect.display_name for lect in self.lectures])
-                    ],
+                    content,
                     title='Lectures Covered'
                 )
             )
@@ -90,6 +95,7 @@ class CourseSchedule(BaseModel):
     start_date: datetime.date
     end_date: datetime.date
     lab_exercises: LabExerciseGroup
+    lectures: Sequence[LectureGroup]
     date_fmt: str = '%m/%d'
 
     class Config:
@@ -189,8 +195,13 @@ class CourseSchedule(BaseModel):
             if i == len(self.weeks) - 1:
                 # last week, project should be due at end instead of beginning
                 kwargs['project_date'] = end_date
-            lab_exercises = self.lab_exercises.exercises_for_week(week_num)
+            lab_exercises = self.lab_exercises.lectures_for_week(week_num)
+            week_lecture_titles = [lect.name for lect in week.lectures]
+            lectures: Dict[str, List[Lecture]] = {}
+            for lg in self.lectures:
+                if lg.title in week_lecture_titles:
+                    lectures[lg.title] = lg.lectures_for_week(week_num)
             sections.append(
-                week.to_pyexlatex(lab_exercises, week_num, begin_date, end_date, **kwargs)
+                week.to_pyexlatex(lectures, lab_exercises, week_num, begin_date, end_date, **kwargs)
             )
         return sections

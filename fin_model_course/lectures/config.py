@@ -9,12 +9,32 @@ from lectures.python_basics.main import get_python_basics_lecture
 from lectures.start_python_excel.main import get_getting_started_with_python_and_excel_lecture
 
 
-def get_lecture_groups() -> List[LectureGroup]:
-    return [
+def get_lecture_groups(include_labs: bool = True, include_projects: bool = True) -> List[LectureGroup]:
+    lectures = [
         get_intro_lecture(),
         get_getting_started_with_python_and_excel_lecture(),
         get_dynamic_salary_excel_lecture(),
         get_python_basics_lecture(),
+    ]
+
+    if not include_labs and not include_projects:
+        return lectures
+
+    projects = [
         get_projects_lecture(),
+    ]
+
+    if not include_labs:
+        return [*lectures, *projects]
+
+    lab_exercises = [
         get_lab_exercises_lecture(),
+    ]
+
+
+
+    return [
+        *lectures,
+        *projects,
+        *lab_exercises,
     ]

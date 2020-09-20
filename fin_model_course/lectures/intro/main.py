@@ -1,9 +1,10 @@
 from lectures.intro import notes
 from lectures.model import LectureGroup, LectureResource
+from schedule.main import LECTURE_1_NAME
 
 
 def get_intro_lecture() -> LectureGroup:
-    title = 'Introduction'
+    title = LECTURE_1_NAME
     lecture_index = 1
     description = 'Introduces myself, the course structure, financial modeling, the tools we will use, ' \
                   'and how to set up Python.'
