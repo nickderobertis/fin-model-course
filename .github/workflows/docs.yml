@@ -7,6 +7,9 @@ on:
       - 'docsrc/**'
     branches:
       - master
+  schedule:
+    - cron: "0 4 * * 3"  # At 04:00 on Wednesday
+  workflow_dispatch:
 
 jobs:
   # TODO [#2]: refactor docs workflow once Github Actions improves
