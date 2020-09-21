@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 from string import ascii_lowercase
 from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List, Any
 
+import more_itertools
 from pydantic import BaseModel, AnyHttpUrl
 from pydantic.dataclasses import dataclass
 
@@ -337,17 +338,37 @@ class LectureGroup:
         return [exc for exc in self.lectures if exc.week_covered == week_num]
 
     @property
-    def pyexlatex_resources_frame(self) -> Optional[LabFrame]:
+    def pyexlatex_resources_frame(self) -> Optional[Sequence[LabFrame]]:
         if not self.resources:
             return None
 
-        pyexlatex_resources = [res.to_pyexlatex() for res in self.resources]
         block_title = frame_title = 'Lecture Resources'
         label = 'frames:resources'
-        return LabFrame(
-            pyexlatex_resources,
-            block_title,
-            frame_title,
-            label=label,
-            color='teal',
-        )
+
+        pyexlatex_resources = [res.to_pyexlatex() for res in self.resources]
+        resource_chunks = list(more_itertools.chunked(pyexlatex_resources, 10))
+        if len(resource_chunks) > 1:
+            # Multiple slides
+            all_content = []
+            num_slides = len(resource_chunks)
+            for i, resources in enumerate(resource_chunks):
+                count = i + 1
+                slide_position_str = f' ({count}/{num_slides})'
+                lab = label + f'-{count}'
+                bt = block_title + slide_position_str
+                ft = block_title + slide_position_str
+                lab_frame = LabFrame(resources, bt, ft,
+                                     label=label,
+                                     color='teal')
+                all_content.append(lab_frame)
+            return all_content
+        else:
+            return [
+                LabFrame(
+                    pyexlatex_resources,
+                    block_title,
+                    frame_title,
+                    label=label,
+                    color='teal',
+                )
+            ]

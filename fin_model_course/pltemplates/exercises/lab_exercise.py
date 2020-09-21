@@ -2,6 +2,7 @@ from copy import deepcopy
 from enum import Enum
 from typing import Sequence, Optional, List
 
+import more_itertools
 import pyexlatex as pl
 import pyexlatex.table as lt
 import pyexlatex.presentation as lp
@@ -90,14 +91,31 @@ class LabExercise(pl.Template):
             lab_frame = LabFrame(bullet_content, block_title, frame_title, bottom_content=refs, label=label, color='orange')
             all_content.append(lab_frame)
         # Add references slide
-        if self.resources is not None:
+        if self.resources:
             block_title = self.block_title + ' Resources'
             frame_title = self.frame_title + ' Resources'
             label = self._get_label_for(0, frame_type=LabFrameTypes.RESOURCES)
-            lab_frame = LabFrame(self.resources, block_title, frame_title,
-                                 bottom_content=refs_for_resource_frame, label=label,
-                                 color='teal')
-            all_content.append(lab_frame)
+            resource_chunks = list(more_itertools.chunked(self.resources, 10))
+            if len(resource_chunks) > 1:
+                # Multiple slides
+                num_slides = len(resource_chunks)
+                for i, resources in enumerate(resource_chunks):
+                    count = i + 1
+                    slide_position_str = f' ({count}/{num_slides})'
+                    label = self._get_label_for(i, frame_type=LabFrameTypes.RESOURCES)
+                    bt = block_title + slide_position_str
+                    ft = block_title + slide_position_str
+                    lab_frame = LabFrame(resources, bt, ft,
+                                         bottom_content=refs_for_resource_frame, label=label,
+                                         color='teal')
+                    all_content.append(lab_frame)
+
+            else:
+                # Single slide
+                lab_frame = LabFrame(self.resources, block_title, frame_title,
+                                     bottom_content=refs_for_resource_frame, label=label,
+                                     color='teal')
+                all_content.append(lab_frame)
         return all_content
 
     def _get_question_references(self) -> List[str]:
