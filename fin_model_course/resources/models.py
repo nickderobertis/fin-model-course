@@ -313,11 +313,11 @@ class ScenarioAnalysisExampleResources(ResourceCollection):
 class InternalRandomnessExcelExampleResources(ResourceCollection):
     title: str = "Excel"
     dynamic_salary_model_random: LectureResource = LectureResource(
-        "Dynamic Salary Retirement Model Internal Randomness",
+        "Dynamic Salary Retirement Model Internal Randomness - Excel",
         static_url="Examples/Internal Randomness/Excel/Dynamic Salary Retirement Model Internal Randomness.xlsx",
     )
     generate_numbers: LectureResource = LectureResource(
-        "Generating Random Numbers",
+        "Generating Random Numbers - Excel",
         static_url="Examples/Internal Randomness/Excel/Generating Random Numbers.xlsx",
     )
 
@@ -325,11 +325,11 @@ class InternalRandomnessExcelExampleResources(ResourceCollection):
 class InternalRandomnessPythonExampleResources(ResourceCollection):
     title: str = "Python"
     dynamic_salary_model_random: LectureResource = LectureResource(
-        "Dynamic Salary Retirement Model Internal Randomness",
+        "Dynamic Salary Retirement Model Internal Randomness - Python",
         static_url="Examples/Internal Randomness/Python/Dynamic Salary Retirement Model Internal Randomness.ipynb",
     )
     generate_numbers: LectureResource = LectureResource(
-        "Generating Random Numbers",
+        "Generating Random Numbers - Python",
         static_url="Examples/Internal Randomness/Python/Generating Random Numbers.ipynb",
     )
 
