@@ -8,6 +8,8 @@ Department of Finance, Insurance, and Real Estate}
 \usepackage{tikz}
 \usepackage{minted}
 \definecolor{darkgreen}{RGB}{31,156,17}
+\usepackage{booktabs}
+\usepackage{xcolor}
 \setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
 \insertnavigation{\paperwidth}
 \end{beamercolorbox}}
@@ -140,6 +142,11 @@ Department of Finance, Insurance, and Real Estate}
 \item Please complete the exercises under "Conditionals"
 \end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Resources: Slide \textcolor{blue}{\underline{\ref{labs:python-conditionals-lab-1-resources}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
 \label{labs:python-conditionals-lab-1}
@@ -218,6 +225,11 @@ Department of Finance, Insurance, and Real Estate}
 \item Please complete the exercises under "Working with Lists"
 \end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Resources: Slide \textcolor{blue}{\underline{\ref{labs:python-lists-lab-1-resources}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
 \label{labs:python-lists-lab-1}
@@ -266,6 +278,11 @@ def my_func(a, b, c=10):
 \item Please complete the exercises under "Functions"
 \end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Resources: Slide \textcolor{blue}{\underline{\ref{labs:python-functions-lab-1-resources}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
 \label{labs:python-functions-lab-1}
@@ -377,6 +394,11 @@ introduce them now as they are a very fundamental data type
 \item Please complete the exercises under "Data Types"
 \end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Resources: Slide \textcolor{blue}{\underline{\ref{labs:python-data-types-lab-1-resources}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
 \label{labs:python-data-types-lab-1}
@@ -552,6 +574,11 @@ inputs to the model makes sense
 \item Please complete the exercises under "Working with Classes"
 \end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Resources: Slide \textcolor{blue}{\underline{\ref{labs:python-classes-lab-1-resources}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
 \label{labs:python-classes-lab-1}
@@ -614,4 +641,126 @@ caught the error
 \end{block}
 \end{frame}
 \end{section}
+\appendix
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\begin{frame}
+\frametitle{Lecture Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Lecture Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S4 Going Beyond an Initial Python Script.pdf}{Slides - Going Beyond an Initial Python Script}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/LN4 Going Beyond an Initial Python Script.pdf}{Lecture Notes - Going Beyond an Initial Python Script}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Introduction/Python/Python Basics.ipynb}{Python Basics}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Python Basics/Python Basics Lab.ipynb}{Python Basics Lab Exercises}}}
+\item \textcolor{blue}{\underline{\href{https://docs.python.org/3/library/functions.html}{Python Built-in Functions Official Reference}}}
+\item \textcolor{blue}{\underline{\href{http://cis.bentley.edu/sandbox/wp-content/uploads/Documentation-on-f-strings.pdf}{Guide to f-strings}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Introduction/Python/car\_example.py}{Car Class Example}}}
+\item \textcolor{blue}{\underline{\href{https://docs.python.org/3/reference/datamodel.html}{Python Classes Official Reference}}}
+\item \textcolor{blue}{\underline{\href{https://docs.python.org/3/tutorial/errors.html}{Python Error Handling Official Reference}}}
+\item \textcolor{blue}{\underline{\href{https://docs.python.org/3/library/exceptions.html}{Python Built-in Exceptions Official Reference}}}
+\end{enumerate}
+\vfill
+\end{block}
+}
+\label{frames:resources}
+\end{frame}
+\begin{frame}
+\frametitle{Python Conditionals Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Python Basics - Conditionals Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Python Basics/Python Basics Lab.ipynb}{Python Basics Lab Exercises}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S4 Going Beyond an Initial Python Script.pdf}{Slides - Going Beyond an Initial Python Script}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:python-conditionals-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:python-conditionals-lab-1-resources}
+\end{frame}
+\begin{frame}
+\frametitle{Python Lists Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Python Basics - Lists Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Python Basics/Python Basics Lab.ipynb}{Python Basics Lab Exercises}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S4 Going Beyond an Initial Python Script.pdf}{Slides - Going Beyond an Initial Python Script}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:python-lists-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:python-lists-lab-1-resources}
+\end{frame}
+\begin{frame}
+\frametitle{Python Functions Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Python Basics - Functions Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Python Basics/Python Basics Lab.ipynb}{Python Basics Lab Exercises}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S4 Going Beyond an Initial Python Script.pdf}{Slides - Going Beyond an Initial Python Script}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:python-functions-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:python-functions-lab-1-resources}
+\end{frame}
+\begin{frame}
+\frametitle{Python Data Types Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Python Basics - Data Types Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Python Basics/Python Basics Lab.ipynb}{Python Basics Lab Exercises}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S4 Going Beyond an Initial Python Script.pdf}{Slides - Going Beyond an Initial Python Script}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:python-data-types-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:python-data-types-lab-1-resources}
+\end{frame}
+\begin{frame}
+\frametitle{Python Classes Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Python Basics - Classes Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Python Basics/Python Basics Lab.ipynb}{Python Basics Lab Exercises}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S4 Going Beyond an Initial Python Script.pdf}{Slides - Going Beyond an Initial Python Script}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Introduction/Python/car\_example.py}{Car Class Example}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:python-classes-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:python-classes-lab-1-resources}
+\end{frame}
+\setcounter{framenumber}{\value{finalframe}}
 \end{document}

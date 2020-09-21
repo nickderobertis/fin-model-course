@@ -20,6 +20,7 @@ Department of Finance, Insurance, and Real Estate}
 \usetikzlibrary{positioning}
 \usetikzlibrary{positioning}
 \usetikzlibrary{positioning}
+\usepackage{xcolor}
 \setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
 \insertnavigation{\paperwidth}
 \end{beamercolorbox}}
@@ -323,4 +324,24 @@ Make sure you have selected Python 3.8 and not 2.7
 \end{alertblock}
 \end{frame}
 \end{section}
+\appendix
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\begin{frame}
+\frametitle{Lecture Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Lecture Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/C1 Financial Modeling Syllabus.pdf}{Syllabus}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/C2 Course Schedule.pdf}{Course Schedule}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S1 Financial Modeling with Python and Excel.pdf}{Slides - Financial Modeling with Python and Excel}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/LN1 Financial Modeling with Python and Excel.pdf}{Lecture Notes - Financial Modeling with Python and Excel}}}
+\end{enumerate}
+\vfill
+\end{block}
+}
+\label{frames:resources}
+\end{frame}
+\setcounter{framenumber}{\value{finalframe}}
 \end{document}

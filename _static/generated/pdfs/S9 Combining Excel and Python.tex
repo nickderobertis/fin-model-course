@@ -7,6 +7,7 @@ Department of Finance, Insurance, and Real Estate}
 \usepackage{minted}
 \definecolor{darkgreen}{RGB}{31,156,17}
 \usepackage{booktabs}
+\usepackage{xcolor}
 \setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
 \insertnavigation{\paperwidth}
 \end{beamercolorbox}}
@@ -113,9 +114,9 @@ writes to a workbook, it replaces the file. Do not write over an existing workbo
 \item Write the DataFrame to a new workbook, "My Data.xlsx", with the sheet name "Income Statement"
 \end{enumerate}
 \vfill
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
-\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-3}}} & \hfill\\
+\hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-3}}} & Resources: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1-resources}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
@@ -244,6 +245,7 @@ the initial values in column B
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
 \hfill & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-3}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-4}}} & \hfill\\
+\hfill &  & Resources: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1-resources}}} &  & \hfill\\
 
 \end{tabular*}
 \end{block}
@@ -255,6 +257,25 @@ the initial values in column B
 \newcounter{finalframe}
 \setcounter{finalframe}{\value{framenumber}}
 \begin{frame}
+\frametitle{Lecture Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Lecture Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S9 Combining Excel and Python.pdf}{Slides - Combining Excel and Python}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/LN9 Combining Excel and Python.pdf}{Lecture Notes - Combining Excel and Python}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Connecting Python and Excel/pandas/Read Write Excel Pandas.ipynb}{Read Write Excel Pandas}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Connecting Python and Excel/pandas/MSFT Financials.xls}{MSFT Financials}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Connecting Python and Excel/xlwings/Combining Excel and Python.ipynb}{Combining Excel and Python}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Connecting Python and Excel/xlwings/Example Workbook.xlsx}{Example Workbook}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Connecting Python and Excel/xlwings/xlwings Lab.xlsx}{xlwings Lab}}}
+\end{enumerate}
+\vfill
+\end{block}
+}
+\label{frames:resources}
+\end{frame}
+\begin{frame}
 \frametitle{Read Write Pandas Lab, Level 2}
 {
 \setbeamercolor{block title}{bg=violet}
@@ -265,9 +286,9 @@ the initial values in column B
 \item Do this without writing the to\_excel command multiple times
 \end{enumerate}
 \vfill
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-3}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-3}}} & Resources: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1-resources}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
@@ -286,14 +307,34 @@ the initial values in column B
 \item Do this without writing the to\_excel command multiple times
 \end{enumerate}
 \vfill
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
-\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-2}}} & \hfill\\
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-2}}} & Resources: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1-resources}}} & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
 \label{labs:read-write-pandas-lab-3}
+\end{frame}
+\begin{frame}
+\frametitle{Read Write Pandas Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Reading and Writing to Excel with Pandas Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S9 Combining Excel and Python.pdf}{Slides - Combining Excel and Python}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Connecting Python and Excel/pandas/MSFT Financials.xls}{MSFT Financials}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Connecting Python and Excel/pandas/Read Write Excel Pandas.ipynb}{Read Write Excel Pandas}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
+\toprule
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-pandas-lab-3}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:read-write-pandas-lab-1-resources}
 \end{frame}
 \begin{frame}
 \frametitle{Read Write xlwings Lab, Level 2}
@@ -307,6 +348,7 @@ the initial values in column B
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
 \hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-3}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-4}}} & \hfill\\
+\hfill &  & Resources: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1-resources}}} &  & \hfill\\
 
 \end{tabular*}
 \end{block}
@@ -326,6 +368,7 @@ the initial values in column B
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
 \hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-2}}} & Level 4: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-4}}} & \hfill\\
+\hfill &  & Resources: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1-resources}}} &  & \hfill\\
 
 \end{tabular*}
 \end{block}
@@ -344,11 +387,32 @@ the initial values in column B
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
 \toprule
 \hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-3}}} & \hfill\\
+\hfill &  & Resources: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1-resources}}} &  & \hfill\\
 
 \end{tabular*}
 \end{block}
 }
 \label{labs:read-write-xlwings-lab-4}
+\end{frame}
+\begin{frame}
+\frametitle{Read Write xlwings Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Reading and Writing to Excel with xlwings Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S9 Combining Excel and Python.pdf}{Slides - Combining Excel and Python}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Connecting Python and Excel/xlwings/xlwings Lab.xlsx}{xlwings Lab}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
+\toprule
+\hfill & Level 1: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-1}}} & Level 2: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-2}}} & Level 3: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-3}}} & \hfill\\
+\hfill &  & Level 4: Slide \textcolor{blue}{\underline{\ref{labs:read-write-xlwings-lab-4}}} &  & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:read-write-xlwings-lab-1-resources}
 \end{frame}
 \setcounter{framenumber}{\value{finalframe}}
 \end{document}

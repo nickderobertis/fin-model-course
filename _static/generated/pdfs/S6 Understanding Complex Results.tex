@@ -9,6 +9,7 @@ Department of Finance, Insurance, and Real Estate}
 \usepackage{tikz}
 \definecolor{darkgreen}{RGB}{31,156,17}
 \usepackage{minted}
+\usepackage{xcolor}
 \setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
 \insertnavigation{\paperwidth}
 \end{beamercolorbox}}
@@ -184,6 +185,11 @@ df
 \item Complete the lab exercises in the first section entitled "Pandas"
 \end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Resources: Slide \textcolor{blue}{\underline{\ref{labs:intro-pandas-lab-1-resources}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
 \label{labs:intro-pandas-lab-1}
@@ -222,6 +228,11 @@ df
 \item Complete the lab exercises in the second section entitled "Pandas Styling"
 \end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Resources: Slide \textcolor{blue}{\underline{\ref{labs:pandas-styling-lab-1-resources}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
 \label{labs:pandas-styling-lab-1}
@@ -292,9 +303,94 @@ df
 \item Complete the lab exercises in the final section entitled "Graphics"
 \end{enumerate}
 \vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Resources: Slide \textcolor{blue}{\underline{\ref{labs:intro-visualization-lab-1-resources}}} & \hfill\\
+
+\end{tabular*}
 \end{block}
 }
 \label{labs:intro-visualization-lab-1}
 \end{frame}
 \end{section}
+\appendix
+\newcounter{finalframe}
+\setcounter{finalframe}{\value{framenumber}}
+\begin{frame}
+\frametitle{Lecture Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Lecture Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S6 Understanding Complex Results.pdf}{Slides - Understanding Complex Results}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/LN6 Understanding Complex Results.pdf}{Lecture Notes - Understanding Complex Results}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Visualization/Excel/Dynamic Salary Retirement Model Visualized.xlsx}{Dynamic Salary Retirement Model Visualized}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Visualization/Python/Intro to Pandas and Table Visualization.ipynb}{Intro to Pandas and Table Visualization}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Visualization/Pandas and Visualization Labs.ipynb}{Pandas and Visualization Labs}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Visualization/Python/Intro to Graphics.ipynb}{Intro to Graphics}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/Visualization/Python/Dynamic Salary Retirement Model Visualized.ipynb}{Dynamic Salary Retirement Model Visualized}}}
+\end{enumerate}
+\vfill
+\end{block}
+}
+\label{frames:resources}
+\end{frame}
+\begin{frame}
+\frametitle{Intro Pandas Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Getting Started with Pandas Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Visualization/Pandas and Visualization Labs.ipynb}{Pandas and Visualization Labs}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S6 Understanding Complex Results.pdf}{Slides - Understanding Complex Results}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:intro-pandas-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:intro-pandas-lab-1-resources}
+\end{frame}
+\begin{frame}
+\frametitle{Pandas Styling Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Styling Pandas DataFrames Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Visualization/Pandas and Visualization Labs.ipynb}{Pandas and Visualization Labs}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S6 Understanding Complex Results.pdf}{Slides - Understanding Complex Results}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:pandas-styling-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:pandas-styling-lab-1-resources}
+\end{frame}
+\begin{frame}
+\frametitle{Intro Visualization Lab Resources}
+{
+\setbeamercolor{block title}{bg=teal}
+\begin{block}{Introduction to Graphing with Pandas Resources}
+\begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/Visualization/Pandas and Visualization Labs.ipynb}{Pandas and Visualization Labs}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/generated/pdfs/S6 Understanding Complex Results.pdf}{Slides - Understanding Complex Results}}}
+\end{enumerate}
+\vfill
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc}
+\toprule
+\hfill & Exercise: Slide \textcolor{blue}{\underline{\ref{labs:intro-visualization-lab-1}}} & \hfill\\
+
+\end{tabular*}
+\end{block}
+}
+\label{labs:intro-visualization-lab-1-resources}
+\end{frame}
+\setcounter{framenumber}{\value{finalframe}}
 \end{document}
