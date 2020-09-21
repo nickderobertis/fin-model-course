@@ -53,7 +53,7 @@ class LabExerciseLecture(Lecture):
 
         schedule = get_course_schedule()
         begin_date, _ = schedule.dates_for_week(self.visible_from_week)
-        return datetime.datetime.today().date() >= begin_date
+        return datetime.datetime.today().date() > begin_date
 
     def to_pyexlatex(self) -> LabExercise:
         bullet_contents = []
