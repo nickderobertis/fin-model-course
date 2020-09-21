@@ -182,6 +182,14 @@ class LectureResource:
         return None
 
     @property
+    def full_url(self) -> Optional[str]:
+        if self.static_url is not None:
+            return f'{SITE_URL}_static/{self.static_url}'
+        if self.external_url is not None:
+            return self.external_url
+        return None
+
+    @property
     def display_name(self) -> str:
         name = ""
         if self.index is not None:
@@ -190,6 +198,9 @@ class LectureResource:
         if self.updated is not None:
             name += f" (updated {self.updated.strftime(self.datetime_fmt)})"
         return name
+
+    def to_pyexlatex(self) -> Hyperlink:
+        return Hyperlink(self.full_url, self.display_name)
 
     def to_rst(self) -> str:
         if self.static_url is not None:

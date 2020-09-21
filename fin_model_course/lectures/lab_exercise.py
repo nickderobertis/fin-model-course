@@ -68,6 +68,8 @@ class LabExerciseLecture(Lecture):
             else:
                 answer_contents.append([])
 
+        resources = [res.to_pyexlatex() for res in self.resources]
+
         frame_title = self.short_title or self.title
         label = self.label or "labs:" + "-".join(frame_title.casefold().split())
         return LabExercise(
@@ -76,6 +78,7 @@ class LabExerciseLecture(Lecture):
             frame_title,
             label,
             answers_content=answer_contents,
+            resources=resources,
         )
 
     def to_rst(self) -> str:
