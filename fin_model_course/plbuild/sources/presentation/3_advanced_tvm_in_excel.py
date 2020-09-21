@@ -9,6 +9,7 @@ from pyexlatex.models.sizes.textwidth import TextWidth
 
 import plbuild
 from build_tools.config import SITE_URL
+from lectures.dynamic_excel.main import get_dynamic_salary_excel_lecture
 from lectures.lab_exercises.notes import get_extend_dynamic_retirement_excel_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -42,6 +43,8 @@ def get_content():
     random.seed(1000)
     next_slide = lp.Overlay([lp.NextWithIncrement()])
     site_link = Hyperlink(SITE_URL, 'the course site')
+
+    lecture = get_dynamic_salary_excel_lecture()
 
     model_block_options = [
         'fill=blue!50'
@@ -197,6 +200,7 @@ def get_content():
         ),
         pl.PresentationAppendix(
             [
+                lecture.pyexlatex_resources_frame,
                 get_extend_dynamic_retirement_excel_lab_lecture().to_pyexlatex().appendix_frames(),
             ]
         )

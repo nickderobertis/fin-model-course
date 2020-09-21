@@ -9,6 +9,7 @@ import pyexlatex.layouts as ll
 import plbuild
 from lectures.lab_exercises.notes import get_intro_to_pandas_lab_lecture, get_pandas_styling_lab_lecture, \
     get_intro_python_visualization_lab_lecture
+from lectures.visualization.main import get_visualization_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -44,6 +45,18 @@ ORDER = 'S6'
 
 def get_content():
     random.seed(1000)
+
+    lecture = get_visualization_lecture()
+    intro_pandas_lab = get_intro_to_pandas_lab_lecture().to_pyexlatex()
+    styling_pandas_lab = get_pandas_styling_lab_lecture().to_pyexlatex()
+    graphing_lab = get_intro_python_visualization_lab_lecture().to_pyexlatex()
+    appendix_frames = [
+        lecture.pyexlatex_resources_frame,
+        intro_pandas_lab.appendix_frames(),
+        styling_pandas_lab.appendix_frames(),
+        graphing_lab.appendix_frames()
+    ]
+
     ret_model = RetirementModel()
     ret_df = ret_model.get_formatted_df(num_years=12)
     ret_table = lt.Tabular.from_df(ret_df, extra_header=pl.Bold('Retirement Info'))
@@ -178,7 +191,7 @@ df
                     title='Introduction to Pandas',
                     block_title='Creating and Using Pandas DataFrames'
                 ),
-                get_intro_to_pandas_lab_lecture().to_pyexlatex().presentation_frames(),
+                intro_pandas_lab.presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         ['It is possible to add styling to our displayed tabular data by styling the', df_mono],
@@ -198,7 +211,7 @@ df
                     title='Introduction to Pandas',
                     block_title='Creating and Using Pandas DataFrames'
                 ),
-                get_pandas_styling_lab_lecture().to_pyexlatex().presentation_frames(),
+                styling_pandas_lab.presentation_frames(),
             ],
             title='Tables with Pandas DataFrames',
             short_title='Pandas'
@@ -250,11 +263,12 @@ df
                     title='Introduction to Graphing',
                     block_title='Graphing Using Pandas'
                 ),
-                get_intro_python_visualization_lab_lecture().to_pyexlatex().presentation_frames(),
+                graphing_lab.presentation_frames(),
             ],
             title='Graphing using Pandas',
             short_title='Graphs'
         ),
+        pl.PresentationAppendix(appendix_frames)
     ]
 
 

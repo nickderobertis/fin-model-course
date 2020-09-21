@@ -10,6 +10,7 @@ import plbuild
 from lectures.lab_exercises.notes import get_scenario_analysis_excel_lab_lecture, \
     get_scenario_analysis_python_lab_lecture, get_randomness_excel_lab_lecture, get_randomness_python_lab_lecture, \
     get_random_stock_model_lab_lecture, get_extend_model_internal_randomness_lab_lecture
+from lectures.probability.main import get_probability_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -44,6 +45,24 @@ ORDER = 'S8'
 
 def get_content():
     random.seed(1000)
+
+    lecture = get_probability_lecture()
+    scenario_excel_lab = get_scenario_analysis_excel_lab_lecture().to_pyexlatex()
+    scenario_python_lab = get_scenario_analysis_python_lab_lecture().to_pyexlatex()
+    randomness_excel_lab = get_randomness_excel_lab_lecture().to_pyexlatex()
+    randomness_python_lab = get_randomness_python_lab_lecture().to_pyexlatex()
+    random_stock_lab = get_random_stock_model_lab_lecture().to_pyexlatex()
+    full_model_internal_randomness_lab = get_extend_model_internal_randomness_lab_lecture().to_pyexlatex()
+    appendix_frames = [
+        lecture.pyexlatex_resources_frame,
+        scenario_excel_lab.appendix_frames(),
+        scenario_python_lab.appendix_frames(),
+        randomness_excel_lab.appendix_frames(),
+        randomness_python_lab.appendix_frames(),
+        random_stock_lab.appendix_frames(),
+        full_model_internal_randomness_lab.appendix_frames(),
+    ]
+
     df_mono = pl.Monospace('DataFrame')
     next_slide = lp.Overlay([lp.NextWithIncrement()])
     with_previous = lp.Overlay([lp.NextWithoutIncrement()])
@@ -421,7 +440,7 @@ def get_content():
                     title='Scenario Analysis in Excel',
                     block_title='Adding Scenario Analysis to the Dynamic Retirement Excel Model'
                 ),
-                get_scenario_analysis_excel_lab_lecture().to_pyexlatex().presentation_frames(),
+                scenario_excel_lab.presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         ['For internal scenario analysis, set up a', df_mono,
@@ -442,7 +461,7 @@ def get_content():
                     title='Scenario Analysis in Python',
                     block_title='Adding Scenario Analysis to the Dynamic Retirement Python Model'
                 ),
-                get_scenario_analysis_python_lab_lecture().to_pyexlatex().presentation_frames(),
+                scenario_python_lab.presentation_frames(),
             ],
             title='Scenario Modeling'
         ),
@@ -517,7 +536,7 @@ def get_content():
                     title='Example for Continuous Random Variables in Excel',
                     block_title='Generating Random Numbers from Normal Distributions in Excel'
                 ),
-                get_randomness_excel_lab_lecture().to_pyexlatex().presentation_frames(),
+                randomness_excel_lab.presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         ['In Python, we have the built-in', random_module_mono, 'module'],
@@ -540,7 +559,7 @@ def get_content():
                     title='Example for Continuous Random Variables in Python',
                     block_title='Generating Random Numbers from Normal Distributions in Python'
                 ),
-                get_randomness_python_lab_lecture().to_pyexlatex().presentation_frames(),
+                randomness_python_lab.presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         'We can also build randomness into the model for discrete variables',
@@ -626,11 +645,12 @@ def get_content():
                     title='Example for Discrete Random Variables in Excel and Python',
                     block_title='Generating Random Numbers from Discrete Distributions in Excel and Python'
                 ),
-                get_random_stock_model_lab_lecture().to_pyexlatex().presentation_frames(),
-                get_extend_model_internal_randomness_lab_lecture().to_pyexlatex().presentation_frames(),
+                random_stock_lab.presentation_frames(),
+                full_model_internal_randomness_lab.presentation_frames(),
             ],
             title='Internal Randomness'
-        )
+        ),
+        pl.PresentationAppendix(appendix_frames),
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(

@@ -9,6 +9,7 @@ from pydantic.dataclasses import dataclass
 
 from build_tools.config import SITE_URL
 from build_tools.ext_rst import header_rst
+from pltemplates.frames.lab import LabFrame
 from pltemplates.hyperlink import Hyperlink
 
 if TYPE_CHECKING:
@@ -334,3 +335,19 @@ class LectureGroup:
 
     def lectures_for_week(self, week_num: int) -> List[Lecture]:
         return [exc for exc in self.lectures if exc.week_covered == week_num]
+
+    @property
+    def pyexlatex_resources_frame(self) -> Optional[LabFrame]:
+        if not self.resources:
+            return None
+
+        pyexlatex_resources = [res.to_pyexlatex() for res in self.resources]
+        block_title = frame_title = 'Lecture Resources'
+        label = 'frames:resources'
+        return LabFrame(
+            pyexlatex_resources,
+            block_title,
+            frame_title,
+            label=label,
+            color='teal',
+        )

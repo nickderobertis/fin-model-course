@@ -10,6 +10,7 @@ import pyexlatex.layouts as ll
 import plbuild
 from lectures.lab_exercises.notes import get_sensitivity_analysis_excel_lab_lecture, get_dictionaries_lab_lecture, \
     get_list_comprehensions_lab_lecture, get_sensitivity_analysis_python_lab_lecture
+from lectures.sensitivity_analysis.main import get_sensitivity_analysis_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -43,6 +44,20 @@ ORDER = 'S7'
 
 def get_content():
     random.seed(1000)
+
+    lecture = get_sensitivity_analysis_lecture()
+    sensitivity_excel_lab = get_sensitivity_analysis_excel_lab_lecture().to_pyexlatex()
+    dictionaries_lab = get_dictionaries_lab_lecture().to_pyexlatex()
+    list_comp_lab = get_list_comprehensions_lab_lecture().to_pyexlatex()
+    sensitivity_python_lab = get_sensitivity_analysis_python_lab_lecture().to_pyexlatex()
+    appendix_frames = [
+        lecture.pyexlatex_resources_frame,
+        sensitivity_excel_lab.appendix_frames(),
+        dictionaries_lab.appendix_frames(),
+        list_comp_lab.appendix_frames(),
+        sensitivity_python_lab.appendix_frames(),
+    ]
+
     pd_mono = pl.Monospace('pandas')
     series_mono = pl.Monospace('Series')
     df_mono = pl.Monospace('DataFrame')
@@ -288,7 +303,7 @@ sa.df
                     title='Sensitivity Analysis in Excel',
                     block_title='Adding Sensitivity Analysis to the Dynamic Retirement Excel Model'
                 ),
-                get_sensitivity_analysis_excel_lab_lecture().to_pyexlatex().presentation_frames(),
+                sensitivity_excel_lab.presentation_frames(),
             ],
             title='Sensitivity Analysis in Excel with Data Tables',
             short_title='SA Excel'
@@ -360,7 +375,7 @@ sa.df
                     title='More About Dictionaries in Python',
                     block_title='Using Dictionaries'
                 ),
-                get_dictionaries_lab_lecture().to_pyexlatex().presentation_frames(),
+                dictionaries_lab.presentation_frames(),
                 lp.Frame(
                     [
                         pl.TextSize(-1),
@@ -394,7 +409,7 @@ sa.df
                     title='Easier Loops in Python',
                     block_title='Using List Comprehensions'
                 ),
-                get_list_comprehensions_lab_lecture().to_pyexlatex().presentation_frames(),
+                list_comp_lab.presentation_frames(),
                 lp.DimRevealListFrame(
                     [
                         ['In the past we have used', import_mono, 'to load packages such as', np_mono, 'and', pd_mono],
@@ -528,11 +543,12 @@ sa.df
                     title='Sensitivity Analysis in Python',
                     block_title='Adding Sensitivity Analysis to the Dynamic Retirement Python Model'
                 ),
-                get_sensitivity_analysis_python_lab_lecture().to_pyexlatex().presentation_frames(),
+                sensitivity_python_lab.presentation_frames(),
             ],
             title='Sensitivity Analysis in Python',
             short_title='SA Python'
         ),
+        pl.PresentationAppendix(appendix_frames),
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(

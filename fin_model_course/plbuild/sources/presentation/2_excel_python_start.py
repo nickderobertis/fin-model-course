@@ -33,6 +33,7 @@ from pyexlatex.graphics import (
 import plbuild
 from build_tools.config import SITE_URL
 from lectures.lab_exercises.notes import get_simple_retirement_lab_lecture
+from lectures.start_python_excel.main import get_getting_started_with_python_and_excel_lecture
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
 from pltemplates.frames.model_flowchart import (
@@ -64,6 +65,7 @@ HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 def get_content():
     random.seed(1000)
     site_link = Hyperlink(SITE_URL, 'the course site')
+    lecture = get_getting_started_with_python_and_excel_lecture()
 
     full_fix = Monospace('\$A\$2')
     col_fix = Monospace('\$A2')
@@ -338,6 +340,7 @@ for item in inputs:
         ),
         pl.PresentationAppendix(
             [
+                lecture.pyexlatex_resources_frame,
                 pl.TextSize(-1),
                 get_simple_retirement_lab_lecture().to_pyexlatex().appendix_frames(),
                 pl.TextSize(0),

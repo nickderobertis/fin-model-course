@@ -35,6 +35,7 @@ from pyexlatex.graphics import (
 )
 
 import plbuild
+from lectures.intro.main import get_intro_lecture
 from plbuild.paths import images_path
 from pltemplates.hyperlink import Hyperlink
 from pltemplates.frames.model_flowchart import (
@@ -65,6 +66,7 @@ def get_content():
     random.seed(1000)
     next_slide_ov = Overlay([NextWithIncrement()])
     next_until_end_ov = Overlay([UntilEnd(NextWithIncrement())])
+    lecture = get_intro_lecture()
 
     input_model_output_fc = TikZPicture(
         LinearFlowchart(
@@ -272,6 +274,11 @@ def get_content():
             title='Introduction to the Modeling Toolset',
             short_title='Tools and Skills',
         ),
+        pl.PresentationAppendix(
+            [
+                lecture.pyexlatex_resources_frame,
+            ]
+        )
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(

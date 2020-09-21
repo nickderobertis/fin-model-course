@@ -5,6 +5,7 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.advanced.main import get_advanced_modeling_lecture
 from plbuild.paths import images_path
 from pltemplates.frames.model_flowchart import (
     ModelFlowchartFrame,
@@ -35,6 +36,8 @@ ORDER = 'S13'
 
 
 def get_content():
+    lecture = get_advanced_modeling_lecture()
+
     pd_mono = pl.Monospace('pandas')
     selenium_mono = pl.Monospace('selenium')
     requests_mono = pl.Monospace('requests')
@@ -576,7 +579,8 @@ def get_content():
                 )
             ],
             title='Extras'
-        )
+        ),
+        pl.PresentationAppendix([lecture.pyexlatex_resources_frame]),
     ]
 
 DOCUMENT_CLASS_KWARGS = dict(

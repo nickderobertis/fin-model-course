@@ -8,6 +8,7 @@ import pyexlatex.layouts as ll
 import plbuild
 from lectures.lab_exercises.notes import get_intro_monte_carlo_lab_lecture, \
     get_python_retirement_monte_carlo_lab_lecture, get_excel_retirement_monte_carlo_lab_lecture
+from lectures.monte_carlo.main import get_monte_carlo_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.monte_carlo import get_monte_carlo_python_exercise, get_monte_carlo_excel_exercise, \
     get_intro_monte_carlo_python_exercise
@@ -91,6 +92,7 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
         ]
     )
 
+    lecture = get_monte_carlo_lecture()
     intro_mc_python_lab = get_intro_monte_carlo_lab_lecture().to_pyexlatex()
     mc_python_lab = get_python_retirement_monte_carlo_lab_lecture().to_pyexlatex()
     mc_excel_lab = get_excel_retirement_monte_carlo_lab_lecture().to_pyexlatex()
@@ -430,6 +432,7 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
         ),
         pl.PresentationAppendix(
             [
+                lecture.pyexlatex_resources_frame,
                 intro_mc_python_lab.appendix_frames(),
                 mc_python_lab.appendix_frames(),
                 mc_excel_lab.appendix_frames(),

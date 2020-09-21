@@ -7,6 +7,7 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.dynamic_python.main import get_dynamic_salary_python_lecture
 from lectures.lab_exercises.notes import get_extend_dynamic_retirement_python_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
@@ -47,6 +48,7 @@ def get_content():
     next_until_end_ov = lp.Overlay([lp.UntilEnd(lp.NextWithIncrement())])
     next_slide = lp.Overlay([lp.NextWithIncrement()])
     numpy_mono = pl.Monospace('numpy')
+    lecture = get_dynamic_salary_python_lecture()
 
 
     return [
@@ -235,6 +237,7 @@ def get_content():
         ),
         pl.PresentationAppendix(
             [
+                lecture.pyexlatex_resources_frame,
                 get_extend_dynamic_retirement_python_lab_lecture().to_pyexlatex().appendix_frames(),
             ]
         )

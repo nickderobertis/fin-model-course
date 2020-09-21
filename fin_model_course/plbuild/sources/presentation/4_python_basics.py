@@ -10,6 +10,7 @@ from build_tools.config import SITE_URL
 from lectures.lab_exercises.notes import get_python_basics_conditionals_lab_lecture, \
     get_python_basics_lists_lab_lecture, get_python_basics_functions_lab_lecture, \
     get_python_basics_data_types_lab_lecture, get_python_basics_classes_lab_lecture
+from lectures.python_basics.main import get_python_basics_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.lab_exercise import LabExercise
 from pltemplates.frames.in_class_example import InClassExampleFrame
@@ -41,6 +42,21 @@ HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
 
 
 def get_content():
+    lecture = get_python_basics_lecture()
+    conditionals_lab = get_python_basics_conditionals_lab_lecture().to_pyexlatex()
+    lists_lab = get_python_basics_lists_lab_lecture().to_pyexlatex()
+    functions_lab = get_python_basics_functions_lab_lecture().to_pyexlatex()
+    data_types_lab = get_python_basics_data_types_lab_lecture().to_pyexlatex()
+    classes_lab = get_python_basics_classes_lab_lecture().to_pyexlatex()
+    appendix_frames = [
+        *conditionals_lab.appendix_frames(),
+        *lists_lab.appendix_frames(),
+        *functions_lab.appendix_frames(),
+        *data_types_lab.appendix_frames(),
+        *classes_lab.appendix_frames()
+    ]
+
+
     next_slide = lp.Overlay([lp.NextWithIncrement()])
     function_example = pl.Python(
 """
@@ -251,7 +267,7 @@ caught the error
                     title='Conditionals Example',
                     block_title='Trying out Conditionals'
                 ),
-                get_python_basics_conditionals_lab_lecture().to_pyexlatex().presentation_frames(),
+                conditionals_lab.presentation_frames(),
             ],
             title='Conditionals'
         ),
@@ -290,7 +306,7 @@ caught the error
                     title='Lists Example',
                     block_title='Doing More with Lists'
                 ),
-                get_python_basics_lists_lab_lecture().to_pyexlatex().presentation_frames(),
+                lists_lab.presentation_frames(),
             ],
             title='More with Lists',
             short_title='Lists'
@@ -314,7 +330,7 @@ caught the error
                     title='Functions Example',
                     block_title='Structuring Code using Functions'
                 ),
-                get_python_basics_functions_lab_lecture().to_pyexlatex().presentation_frames(),
+                functions_lab.presentation_frames(),
             ],
             title='Functions'
         ),
@@ -382,7 +398,7 @@ caught the error
                     title='Data Types Example',
                     block_title='Understanding the Different Data Types'
                 ),
-                get_python_basics_data_types_lab_lecture().to_pyexlatex().presentation_frames(),
+                data_types_lab.presentation_frames(),
             ],
             title='More about Data Types',
             short_title='Data Types'
@@ -493,7 +509,7 @@ caught the error
                     title='Classes Example',
                     block_title='Working with Classes and Creating Dataclasses'
                 ),
-                get_python_basics_classes_lab_lecture().to_pyexlatex().presentation_frames(),
+                classes_lab.presentation_frames(),
             ],
             title='Classes and Dataclasses',
             short_title='Classes'
@@ -541,6 +557,12 @@ caught the error
             ],
             title='Error Handling',
             short_title='Errors'
+        ),
+        pl.PresentationAppendix(
+            [
+                lecture.pyexlatex_resources_frame,
+                *appendix_frames
+            ]
         )
     ]
 

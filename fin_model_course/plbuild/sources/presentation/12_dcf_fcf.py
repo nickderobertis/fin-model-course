@@ -5,6 +5,7 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.dcf_fcf.main import get_dcf_fcf_lecture
 from lectures.lab_exercises.notes import get_fcf_calculation_lab_lecture, get_simple_forecast_lab_lecture, \
     get_complex_forecast_lab_lecture, get_dcf_tv_lab_lecture
 from plbuild.paths import images_path
@@ -53,6 +54,7 @@ def get_content():
         str_eq=f'{pl.Text("Adjustments")} = {" + ".join([str(pl.Text(item)) for item in non_cash_items])}',
     )
 
+    lecture = get_dcf_fcf_lecture()
     fcf_exercise = get_fcf_calculation_lab_lecture().to_pyexlatex()
     simple_ts_exercise = get_simple_forecast_lab_lecture().to_pyexlatex()
     complex_ts_exercise = get_complex_forecast_lab_lecture().to_pyexlatex()
@@ -568,6 +570,7 @@ def get_content():
 
         pl.PresentationAppendix(
             [
+                lecture.pyexlatex_resources_frame,
                 fcf_exercise.appendix_frames(),
                 simple_ts_exercise.appendix_frames(),
                 complex_ts_exercise.appendix_frames(),

@@ -5,6 +5,7 @@ import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
 
 import plbuild
+from lectures.combining_excel_python.main import get_combining_excel_python_lecture
 from lectures.lab_exercises.notes import get_read_write_excel_pandas_lab_lecture, get_read_write_xlwings_lab_lecture
 from plbuild.paths import images_path
 from pltemplates.exercises.xlwings import get_xlwings_exercise
@@ -67,6 +68,7 @@ def get_content():
     random_choice_mono = pl.Monospace('random_choice')
     random_choice_py = pl.Monospace('random.choices')
 
+    lecture = get_combining_excel_python_lecture()
     pd_read_write_exercise = get_read_write_excel_pandas_lab_lecture().to_pyexlatex()
     xlwings_exercise = get_read_write_xlwings_lab_lecture().to_pyexlatex()
 
@@ -257,6 +259,7 @@ sht.range("G11").value = df
 
         pl.PresentationAppendix(
             [
+                lecture.pyexlatex_resources_frame,
                 pd_read_write_exercise.appendix_frames(),
                 xlwings_exercise.appendix_frames(),
             ]
