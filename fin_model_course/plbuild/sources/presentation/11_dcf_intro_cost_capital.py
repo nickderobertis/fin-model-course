@@ -404,10 +404,13 @@ def get_content():
         ),
         pl.PresentationAppendix(
             [
+                pl.TextSize(-2),
                 lecture.pyexlatex_resources_frame,
+                pl.TextSize(-1),
                 enterprise_equity_value_excercise.appendix_frames(),
                 cost_equity_exercise.appendix_frames(),
                 cost_debt_exercise.appendix_frames(),
+                pl.TextSize(0),
             ]
         )
     ]

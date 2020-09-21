@@ -570,7 +570,9 @@ def get_content():
 
         pl.PresentationAppendix(
             [
+                pl.TextSize(-2),
                 lecture.pyexlatex_resources_frame,
+                pl.TextSize(0),
                 fcf_exercise.appendix_frames(),
                 simple_ts_exercise.appendix_frames(),
                 complex_ts_exercise.appendix_frames(),
