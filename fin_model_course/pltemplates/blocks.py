@@ -5,6 +5,7 @@ import pyexlatex.table as lt
 import pyexlatex.presentation as lp
 import pyexlatex.graphics as lg
 import pyexlatex.layouts as ll
+import more_itertools
 
 
 class _LabBlock(lp.Block):
@@ -34,11 +35,33 @@ class LabBlock(pl.Template):
             pl.VFill(),
         ]
         if self.bottom_content:
-            align = 'c' * len(self.all_bottom_contents)
+            bottom_contents = list(more_itertools.chunked(self.bottom_content, 3))
+            if len(bottom_contents) > 1:
+                # Multiple rows
+                new_bottom_contents = []
+                for content_row in bottom_contents:
+                    # Deal with incomplete rows
+                    if len(content_row) == 1:
+                        # Single item, center it
+                        value = content_row[0]
+                        new_bottom_contents.append(['', value, ''])
+                    elif len(content_row) == 2:
+                        # Two items, put on edges
+                        value1, value2 = content_row
+                        new_bottom_contents.append([value1, '', value2])
+                    else:
+                        new_bottom_contents.append(content_row)
+                bottom_contents = new_bottom_contents
+            # Add padding
+            new_bottom_contents = []
+            for row in bottom_contents:
+                new_bottom_contents.append([pl.HFill(), *row, pl.HFill()])
+            bottom_contents = new_bottom_contents
+            align = 'c' * len(bottom_contents[0])
             tab = lt.TabularStar(
                 [
                     lt.TopRule(),
-                    lt.ValuesTable.from_list_of_lists([self.all_bottom_contents])
+                    lt.ValuesTable.from_list_of_lists(bottom_contents)
                 ],
                 align=align
             )
