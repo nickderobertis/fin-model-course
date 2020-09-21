@@ -77,6 +77,10 @@ def get_python_imports_lecture() -> Lecture:
     ], title=title)
     resources = [
         RESOURCES.examples.intro.python.dicts_list_comp_imports_notebook,
+        LectureResource(
+            'Guide to Python Imports',
+            external_url='https://realpython.com/absolute-vs-relative-python-imports/'
+        )
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
