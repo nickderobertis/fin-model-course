@@ -99,3 +99,23 @@ def get_retirement_python_lecture() -> Lecture:
         RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
+
+
+def get_retirement_python_lab_exercise_lecture() -> Lecture:
+    title = 'Lab Exercise'
+    youtube_id = '5ruLMjkQ6C4'
+    week_covered = 4
+    notes = LectureNotes([
+        'Feel free to work from the example model though I would recommend you '
+        'build that out yourself following the prior videos',
+        'This exercise is exactly the same as the one we did for Excel to calculate the '
+        'desired cash rather than taking it as an input',
+        'Hint: You should add the new inputs to the ModelInputs dataclass and remove the desired '
+        'cash input. Then you can create a function which calculates the desired cash based on '
+        'the model inputs, and use that in place of where the desired cash was being accessed '
+        'directly before',
+    ], title=title)
+    resources = [
+        RESOURCES.examples.intro.python.dynamic_salary_retirement_model,
+    ]
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)

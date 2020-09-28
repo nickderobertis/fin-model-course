@@ -267,7 +267,7 @@ def get_extend_dynamic_retirement_python_lab_lecture() -> LabExerciseLecture:
 def get_intro_to_pandas_lab_lecture() -> LabExerciseLecture:
     title = 'Getting Started with Pandas'
     short_title = 'Intro Pandas Lab'
-    youtube_id = ''
+    youtube_id = 'XYBS-XhHyHo'
     week_covered = 5
     bullets = [
         [
@@ -281,7 +281,8 @@ def get_intro_to_pandas_lab_lecture() -> LabExerciseLecture:
         ]
     ]
     resources = [
-        *LAB_LECTURE_6_COMMON_RESOURCES
+        *LAB_LECTURE_6_COMMON_RESOURCES,
+        RESOURCES.external.visualization.pandas_official_intro,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -292,7 +293,7 @@ def get_intro_to_pandas_lab_lecture() -> LabExerciseLecture:
 def get_pandas_styling_lab_lecture() -> LabExerciseLecture:
     title = 'Styling Pandas DataFrames'
     short_title = 'Pandas Styling Lab'
-    youtube_id = ''
+    youtube_id = 'LwO9NblsC40'
     week_covered = 5
     bullets = [
         [
@@ -306,7 +307,8 @@ def get_pandas_styling_lab_lecture() -> LabExerciseLecture:
         ]
     ]
     resources = [
-        *LAB_LECTURE_6_COMMON_RESOURCES
+        *LAB_LECTURE_6_COMMON_RESOURCES,
+        RESOURCES.external.visualization.pandas_styling_guide,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,
@@ -317,7 +319,7 @@ def get_pandas_styling_lab_lecture() -> LabExerciseLecture:
 def get_intro_python_visualization_lab_lecture() -> LabExerciseLecture:
     title = 'Introduction to Graphing with Pandas'
     short_title = 'Intro Visualization Lab'
-    youtube_id = ''
+    youtube_id = 'C9yYyuzZPDw'
     week_covered = 5
     bullets = [
         [
@@ -331,7 +333,8 @@ def get_intro_python_visualization_lab_lecture() -> LabExerciseLecture:
         ]
     ]
     resources = [
-        *LAB_LECTURE_6_COMMON_RESOURCES
+        *LAB_LECTURE_6_COMMON_RESOURCES,
+        RESOURCES.external.visualization.pandas_visualization_guide,
     ]
     return LabExerciseLecture.from_seq_of_seq(
         title, bullet_content=bullets, answers_content=answers, short_title=short_title,

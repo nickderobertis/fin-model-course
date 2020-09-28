@@ -17,5 +17,6 @@ def get_dynamic_salary_python_lecture() -> LectureGroup:
         notes.get_dynamic_salary_model_python_lecture(),
         notes.get_wealth_python_lecture(),
         notes.get_retirement_python_lecture(),
+        notes.get_retirement_python_lab_exercise_lecture(),
     ]
     return LectureGroup(title, description, lectures, order=lecture_index, global_resources=resources)

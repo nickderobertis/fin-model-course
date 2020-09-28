@@ -792,6 +792,27 @@ class LectureResources(ResourceCollection):
     advanced: AdvancedLectureResources = AdvancedLectureResources()
 
 
+class VisualizationExternalResources(ResourceCollection):
+    title: str = "Visualization External Resources"
+    pandas_official_intro: LectureResource = LectureResource(
+        f"10 Minutes to Pandas (Official Intro)",
+        external_url='https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html',
+    )
+    pandas_styling_guide: LectureResource = LectureResource(
+        'Pandas Official Styling Guide',
+        external_url='https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html',
+    )
+    pandas_visualization_guide: LectureResource = LectureResource(
+        'Pandas Official Visualization Guide',
+        external_url='https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html',
+    )
+
+
+class ExternalResources(ResourceCollection):
+    title: str = 'External Resources'
+    visualization: VisualizationExternalResources = VisualizationExternalResources()
+
+
 class FinancialModelingResources(ResourceCollection):
     title: str = "Financial Modeling Resources"
     labs: LabResources = LabResources()
@@ -799,6 +820,7 @@ class FinancialModelingResources(ResourceCollection):
     projects: ProjectResources = ProjectResources()
     course_materials: CourseMaterialsResources = CourseMaterialsResources()
     lectures: LectureResources = LectureResources()
+    external: ExternalResources = ExternalResources()
 
 
 RESOURCES = FinancialModelingResources()
