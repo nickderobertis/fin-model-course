@@ -123,10 +123,9 @@ df
                 InClassExampleFrame(
                     [
                         'I will now go back to the "Dynamic Salary Retirement Model.xlsx" Excel model to '
-                        'add visualization. If you do not have it already, it is in '
-                        'Examples > Intro > Excel. ',
-                        'I have also uploaded the completed workbook from this exercise in '
-                        'Examples > Visualization > Excel > Dynamic Salary Retirement Model Visualized.xlsx',
+                        'add visualization',
+                        'I have also uploaded the completed workbook from this exercise '
+                        'as "Dynamic Salary Retirement Model Visualized.xlsx"',
                         'Follow along as I go through the example.',
                     ],
                     title='Visualization in Excel',
@@ -184,7 +183,7 @@ df
                 InClassExampleFrame(
                     [
                         'I will now go through the notebook in '
-                        'Examples > Visualization > Python > Intro to Pandas and Table Visualization.ipynb',
+                        '"Intro to Pandas and Table Visualization.ipynb"',
                         'Follow along as I go through the example.',
                         'We will complete everything up until DataFrame Styling'
                     ],
@@ -204,7 +203,7 @@ df
                 InClassExampleFrame(
                     [
                         'I will now go through the next section in '
-                        'Examples > Visualization > Python > Intro to Pandas and Table Visualization.ipynb',
+                        '"Intro to Pandas and Table Visualization.ipynb"',
                         'Follow along as I go through the example.',
                         'This time we are covering the remainder of the notebook starting from "DataFrame Styling"'
                     ],
@@ -257,7 +256,7 @@ df
                 InClassExampleFrame(
                     [
                         'I will now go through '
-                        'Examples > Visualization > Python > Intro to Graphics.ipynb',
+                        '"Intro to Graphics.ipynb"',
                         'Follow along as I go through the entire example notebook.',
                     ],
                     title='Introduction to Graphing',
