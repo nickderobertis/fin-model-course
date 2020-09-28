@@ -29,21 +29,51 @@
 \date{\today}
 \maketitle
 \begin{section}{Introduction to Visualization}
-
+\begin{itemize}
+\item Visualization is a key modeling concept as often we have many different outputs to understand, but humans are terrible at getting understanding by looking at lots of numbers
+\item Thoughtfully creating appropriate visualizations will allow someone to glance at your model and gain immediate understanding at a much richer level
+\item Tables are a more primitive form of visualization which lay out the numbers in a better format, while charts/graphs can summarize a lot of numbers in one picture
+\item For the most part, visualization in Excel is straightforward: insert chart and follow the prompts. Your numbers should already be in tables.
+\item Python, being open-source and developed by the community, has a dizzying array of options for visualization. There is far more than you can do in Excel, including interactive plots, but it is generally a bit more complicated to work with
+\item In this course, we will focus on Pandas (powered by matplotlib) to produce graphs simply
+\end{itemize}
 \end{section}
 \begin{section}{Visualization in Excel Example}
-
+\begin{itemize}
+\item Recommended Charts is a nice way to scan through a few possibilities which probably work well for your data, but take a look at All Charts if nothing seems right
+\item Make sure that you have an appropriate title and axis titles for your chart so the reader immediately knows what it is about.
+\end{itemize}
 \end{section}
 \begin{section}{Introduction to Pandas}
-
+\begin{itemize}
+\item We will be using pandas to produce tables and graphs in this course though the custom DataFrame type
+\item You will also find these DataFrames useful for general problem-solving purposes. Many use them as a primary way to store and work with data in their models
+\item Pandas does far more than we will cover in the course. It is the top Python package for manipulating and analyzing data. I use it extensively on a daily basis.
+\item In this course, with Pandas we will focus on loading and exporting data, doing math, other basic operations and summarizations, and presenting data in a tabular format
+\end{itemize}
 \end{section}
 \begin{section}{Styling Pandas DataFrames}
-
+\begin{itemize}
+\item Just as it is important to format tables in Excel to increase readability, we should do the same with any Pandas DataFrames we display to the reader of the model
+\item There is a philosophical difference in how styling is done in Excel versus Pandas. In Excel, you directly format the table which stores your data. In Pandas, you create a styled object immediately before displaying which is separate from the original data, the data itself does not get formatted
+\item Because of this difference in philosophy, the way I recommend working with Pandas styling is to create a styler function that accepts a DataFrame and returns the styled object. This way you can just call it on your DataFrame as you display it. This has a couple advantages: your data logic is completely separate from formatting code, and you can apply consistent formatting to multiple different DataFrames easily.
+\end{itemize}
 \end{section}
 \begin{section}{Introduction to Graphs in Python with Pandas}
-
+\begin{itemize}
+\item All the main graph types that you would expect are available in Pandas
+\item See the official Pandas visualization guide on how to adjust any plots to your liking, but the defaults are already pretty good
+\end{itemize}
 \end{section}
 \begin{section}{Visualization in Python Example}
-
+\begin{itemize}
+\item If you have structured your model well, it should be easy to add visualization at the various stages of your model
+\item Visualizations are especially helpful in Python as you don't automatically see the tabular representation of the data like you do in Excel
+\end{itemize}
+\end{section}
+\begin{section}{Lab Exercises}
+\begin{itemize}
+\item Complete all the exercises in the Pandas and Visualization Labs Jupyter notebook
+\end{itemize}
 \end{section}
 \end{document}

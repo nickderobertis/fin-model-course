@@ -1,0 +1,208 @@
+
+Understanding Complex Results
+********************************
+
+Learn how to analyze and communicate complicated results using visualization.
+
+Resources
+============
+
+
+- :download:`Slides - Understanding Complex Results </_static/generated/pdfs/S6 Understanding Complex Results.pdf>`
+        
+
+- :download:`Lecture Notes - Understanding Complex Results </_static/generated/pdfs/LN6 Understanding Complex Results.pdf>`
+        
+
+- :download:`Dynamic Salary Retirement Model Visualized </_static/Examples/Visualization/Excel/Dynamic Salary Retirement Model Visualized.xlsx>`
+        
+
+- :download:`Intro to Pandas and Table Visualization </_static/Examples/Visualization/Python/Intro to Pandas and Table Visualization.ipynb>`
+        
+
+- `10 Minutes to Pandas (Official Intro) <https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html>`_
+        
+
+- `Pandas Official Styling Guide <https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html>`_
+        
+
+- :download:`Intro to Graphics </_static/Examples/Visualization/Python/Intro to Graphics.ipynb>`
+        
+
+- `Pandas Official Visualization Guide <https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html>`_
+        
+
+- :download:`Dynamic Salary Retirement Model Visualized </_static/Examples/Visualization/Python/Dynamic Salary Retirement Model Visualized.ipynb>`
+        
+
+- :download:`Pandas and Visualization Labs </_static/Materials for Lab Exercises/Visualization/Pandas and Visualization Labs.ipynb>`
+        
+
+Introduction to Visualization
+================================
+
+.. youtube:: CsBirrZ3uFc
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Visualization is a key modeling concept as often we have many different outputs to understand, but humans are terrible at getting understanding by looking at lots of numbers
+- Thoughtfully creating appropriate visualizations will allow someone to glance at your model and gain immediate understanding at a much richer level
+- Tables are a more primitive form of visualization which lay out the numbers in a better format, while charts/graphs can summarize a lot of numbers in one picture
+- For the most part, visualization in Excel is straightforward: insert chart and follow the prompts. Your numbers should already be in tables.
+- Python, being open-source and developed by the community, has a dizzying array of options for visualization. There is far more than you can do in Excel, including interactive plots, but it is generally a bit more complicated to work with
+- In this course, we will focus on Pandas (powered by matplotlib) to produce graphs simply
+
+Visualization in Excel Example
+=================================
+
+.. youtube:: jJKqX4op2k8
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Recommended Charts is a nice way to scan through a few possibilities which probably work well for your data, but take a look at All Charts if nothing seems right
+- Make sure that you have an appropriate title and axis titles for your chart so the reader immediately knows what it is about.
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model Visualized </_static/Examples/Visualization/Excel/Dynamic Salary Retirement Model Visualized.xlsx>`
+        
+
+Introduction to Pandas
+=========================
+
+.. youtube:: ubF7-J5L0G0
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- We will be using pandas to produce tables and graphs in this course though the custom DataFrame type
+- You will also find these DataFrames useful for general problem-solving purposes. Many use them as a primary way to store and work with data in their models
+- Pandas does far more than we will cover in the course. It is the top Python package for manipulating and analyzing data. I use it extensively on a daily basis.
+- In this course, with Pandas we will focus on loading and exporting data, doing math, other basic operations and summarizations, and presenting data in a tabular format
+
+Resources
+------------
+
+
+- :download:`Intro to Pandas and Table Visualization </_static/Examples/Visualization/Python/Intro to Pandas and Table Visualization.ipynb>`
+        
+
+- `10 Minutes to Pandas (Official Intro) <https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html>`_
+        
+
+Styling Pandas DataFrames
+============================
+
+.. youtube:: S-wnf_q6kYQ
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Just as it is important to format tables in Excel to increase readability, we should do the same with any Pandas DataFrames we display to the reader of the model
+- There is a philosophical difference in how styling is done in Excel versus Pandas. In Excel, you directly format the table which stores your data. In Pandas, you create a styled object immediately before displaying which is separate from the original data, the data itself does not get formatted
+- Because of this difference in philosophy, the way I recommend working with Pandas styling is to create a styler function that accepts a DataFrame and returns the styled object. This way you can just call it on your DataFrame as you display it. This has a couple advantages: your data logic is completely separate from formatting code, and you can apply consistent formatting to multiple different DataFrames easily.
+
+Resources
+------------
+
+
+- :download:`Intro to Pandas and Table Visualization </_static/Examples/Visualization/Python/Intro to Pandas and Table Visualization.ipynb>`
+        
+
+- `Pandas Official Styling Guide <https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html>`_
+        
+
+Introduction to Graphs in Python with Pandas
+===============================================
+
+.. youtube:: QRDiae1lELI
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- All the main graph types that you would expect are available in Pandas
+- See the official Pandas visualization guide on how to adjust any plots to your liking, but the defaults are already pretty good
+
+Resources
+------------
+
+
+- :download:`Intro to Graphics </_static/Examples/Visualization/Python/Intro to Graphics.ipynb>`
+        
+
+- `Pandas Official Visualization Guide <https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html>`_
+        
+
+Visualization in Python Example
+==================================
+
+.. youtube:: yI_wCr5MfCo
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- If you have structured your model well, it should be easy to add visualization at the various stages of your model
+- Visualizations are especially helpful in Python as you don't automatically see the tabular representation of the data like you do in Excel
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model Visualized </_static/Examples/Visualization/Python/Dynamic Salary Retirement Model Visualized.ipynb>`
+        
+
+Lab Exercises
+================
+
+.. youtube:: h6okUbvP99E
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Complete all the exercises in the Pandas and Visualization Labs Jupyter notebook
+
+Resources
+------------
+
+
+- :download:`Pandas and Visualization Labs </_static/Materials for Lab Exercises/Visualization/Pandas and Visualization Labs.ipynb>`
+        

@@ -136,3 +136,27 @@ Resources
 
 - :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
         
+
+Lab Exercise
+===============
+
+.. youtube:: 5ruLMjkQ6C4
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Feel free to work from the example model though I would recommend you build that out yourself following the prior videos
+- This exercise is exactly the same as the one we did for Excel to calculate the desired cash rather than taking it as an input
+- Hint: You should add the new inputs to the ModelInputs dataclass and remove the desired cash input. Then you can create a function which calculates the desired cash based on the model inputs, and use that in place of where the desired cash was being accessed directly before
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
+        

@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Understanding Complex Results &mdash; fin_model_course 0.1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Projects" href="PJ1-projects.html" />
+    <link rel="prev" title="The Depth of a Financial Model, Continued" href="5-the-depth-of-a-financial-model%2C-continued.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fin_model_course
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1-financial-modeling-with-python-and-excel.html">Financial Modeling with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-getting-started-with-python-and-excel.html">Getting Started with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-the-depth-of-a-financial-model.html">The Depth of a Financial Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-going-beyond-an-initial-python-script.html">Going Beyond an Initial Python Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-the-depth-of-a-financial-model%2C-continued.html">The Depth of a Financial Model, Continued</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Understanding Complex Results</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-visualization">Introduction to Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visualization-in-excel-example">Visualization in Excel Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-pandas">Introduction to Pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#styling-pandas-dataframes">Styling Pandas DataFrames</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-graphs-in-python-with-pandas">Introduction to Graphs in Python with Pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#visualization-in-python-example">Visualization in Python Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-exercises">Lab Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LS1-lab-exercise-solutions.html">Lab Exercise Solutions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fin_model_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Understanding Complex Results</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/lectures/6-understanding-complex-results.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="understanding-complex-results">
+<h1>Understanding Complex Results<a class="headerlink" href="#understanding-complex-results" title="Permalink to this headline">¶</a></h1>
+<p>Learn how to analyze and communicate complicated results using visualization.</p>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/3e49b9858a56d4742afd00a26d90c888/S6 Understanding Complex Results.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Understanding</span> <span class="pre">Complex</span> <span class="pre">Results</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/ef6921c377ac03ea277bc7f8a475a19f/LN6 Understanding Complex Results.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Lecture</span> <span class="pre">Notes</span> <span class="pre">-</span> <span class="pre">Understanding</span> <span class="pre">Complex</span> <span class="pre">Results</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/e59a6a93388e214471fd79c8d0dbdfdd/Dynamic Salary Retirement Model Visualized.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Visualized</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/334f57dc20ed3b7605eb05f587fd4aa7/Intro to Pandas and Table Visualization.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Intro</span> <span class="pre">to</span> <span class="pre">Pandas</span> <span class="pre">and</span> <span class="pre">Table</span> <span class="pre">Visualization</span></code></a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">10 Minutes to Pandas (Official Intro)</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html">Pandas Official Styling Guide</a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/84abc514e07e7c02a57f0db3b429dca4/Intro to Graphics.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Intro</span> <span class="pre">to</span> <span class="pre">Graphics</span></code></a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html">Pandas Official Visualization Guide</a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/bccefc3f645aa5984cc26de1d091b450/Dynamic Salary Retirement Model Visualized.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Visualized</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/65ae9d3845f4eca5baf3f63e08de993c/Pandas and Visualization Labs.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Pandas</span> <span class="pre">and</span> <span class="pre">Visualization</span> <span class="pre">Labs</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="introduction-to-visualization">
+<h2>Introduction to Visualization<a class="headerlink" href="#introduction-to-visualization" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/CsBirrZ3uFc"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Visualization is a key modeling concept as often we have many different outputs to understand, but humans are terrible at getting understanding by looking at lots of numbers</p></li>
+<li><p>Thoughtfully creating appropriate visualizations will allow someone to glance at your model and gain immediate understanding at a much richer level</p></li>
+<li><p>Tables are a more primitive form of visualization which lay out the numbers in a better format, while charts/graphs can summarize a lot of numbers in one picture</p></li>
+<li><p>For the most part, visualization in Excel is straightforward: insert chart and follow the prompts. Your numbers should already be in tables.</p></li>
+<li><p>Python, being open-source and developed by the community, has a dizzying array of options for visualization. There is far more than you can do in Excel, including interactive plots, but it is generally a bit more complicated to work with</p></li>
+<li><p>In this course, we will focus on Pandas (powered by matplotlib) to produce graphs simply</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="visualization-in-excel-example">
+<h2>Visualization in Excel Example<a class="headerlink" href="#visualization-in-excel-example" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/jJKqX4op2k8"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id1">
+<h3>Notes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Recommended Charts is a nice way to scan through a few possibilities which probably work well for your data, but take a look at All Charts if nothing seems right</p></li>
+<li><p>Make sure that you have an appropriate title and axis titles for your chart so the reader immediately knows what it is about.</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Resources<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/e59a6a93388e214471fd79c8d0dbdfdd/Dynamic Salary Retirement Model Visualized.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Visualized</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction-to-pandas">
+<h2>Introduction to Pandas<a class="headerlink" href="#introduction-to-pandas" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/ubF7-J5L0G0"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id3">
+<h3>Notes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We will be using pandas to produce tables and graphs in this course though the custom DataFrame type</p></li>
+<li><p>You will also find these DataFrames useful for general problem-solving purposes. Many use them as a primary way to store and work with data in their models</p></li>
+<li><p>Pandas does far more than we will cover in the course. It is the top Python package for manipulating and analyzing data. I use it extensively on a daily basis.</p></li>
+<li><p>In this course, with Pandas we will focus on loading and exporting data, doing math, other basic operations and summarizations, and presenting data in a tabular format</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Resources<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/334f57dc20ed3b7605eb05f587fd4aa7/Intro to Pandas and Table Visualization.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Intro</span> <span class="pre">to</span> <span class="pre">Pandas</span> <span class="pre">and</span> <span class="pre">Table</span> <span class="pre">Visualization</span></code></a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">10 Minutes to Pandas (Official Intro)</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="styling-pandas-dataframes">
+<h2>Styling Pandas DataFrames<a class="headerlink" href="#styling-pandas-dataframes" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/S-wnf_q6kYQ"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id6">
+<h3>Notes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Just as it is important to format tables in Excel to increase readability, we should do the same with any Pandas DataFrames we display to the reader of the model</p></li>
+<li><p>There is a philosophical difference in how styling is done in Excel versus Pandas. In Excel, you directly format the table which stores your data. In Pandas, you create a styled object immediately before displaying which is separate from the original data, the data itself does not get formatted</p></li>
+<li><p>Because of this difference in philosophy, the way I recommend working with Pandas styling is to create a styler function that accepts a DataFrame and returns the styled object. This way you can just call it on your DataFrame as you display it. This has a couple advantages: your data logic is completely separate from formatting code, and you can apply consistent formatting to multiple different DataFrames easily.</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>Resources<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/334f57dc20ed3b7605eb05f587fd4aa7/Intro to Pandas and Table Visualization.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Intro</span> <span class="pre">to</span> <span class="pre">Pandas</span> <span class="pre">and</span> <span class="pre">Table</span> <span class="pre">Visualization</span></code></a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html">Pandas Official Styling Guide</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction-to-graphs-in-python-with-pandas">
+<h2>Introduction to Graphs in Python with Pandas<a class="headerlink" href="#introduction-to-graphs-in-python-with-pandas" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/QRDiae1lELI"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id9">
+<h3>Notes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>All the main graph types that you would expect are available in Pandas</p></li>
+<li><p>See the official Pandas visualization guide on how to adjust any plots to your liking, but the defaults are already pretty good</p></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>Resources<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/84abc514e07e7c02a57f0db3b429dca4/Intro to Graphics.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Intro</span> <span class="pre">to</span> <span class="pre">Graphics</span></code></a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html">Pandas Official Visualization Guide</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="visualization-in-python-example">
+<h2>Visualization in Python Example<a class="headerlink" href="#visualization-in-python-example" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/yI_wCr5MfCo"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id12">
+<h3>Notes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>If you have structured your model well, it should be easy to add visualization at the various stages of your model</p></li>
+<li><p>Visualizations are especially helpful in Python as you don’t automatically see the tabular representation of the data like you do in Excel</p></li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>Resources<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/bccefc3f645aa5984cc26de1d091b450/Dynamic Salary Retirement Model Visualized.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Visualized</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="lab-exercises">
+<h2>Lab Exercises<a class="headerlink" href="#lab-exercises" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/h6okUbvP99E"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id14">
+<h3>Notes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Complete all the exercises in the Pandas and Visualization Labs Jupyter notebook</p></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>Resources<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/65ae9d3845f4eca5baf3f63e08de993c/Pandas and Visualization Labs.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Pandas</span> <span class="pre">and</span> <span class="pre">Visualization</span> <span class="pre">Labs</span></code></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PJ1-projects.html" class="btn btn-neutral float-right" title="Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="5-the-depth-of-a-financial-model%2C-continued.html" class="btn btn-neutral float-left" title="The Depth of a Financial Model, Continued" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-155751319-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
