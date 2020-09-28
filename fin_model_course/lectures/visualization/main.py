@@ -18,5 +18,6 @@ def get_visualization_lecture() -> LectureGroup:
         notes.get_styling_pandas_lecture(),
         notes.get_pandas_graphing_lecture(),
         notes.get_visualize_retirement_python_lecture(),
+        notes.get_visualization_lab_excercise_lecture(),
     ]
     return LectureGroup(title, description, lectures, order=lecture_index, global_resources=resources)
