@@ -236,7 +236,7 @@ def get_python_basics_classes_lab_lecture() -> LabExerciseLecture:
 def get_extend_dynamic_retirement_python_lab_lecture() -> LabExerciseLecture:
     title = 'Determining Desired Cash in the Dynamic Salary Retirement Python Model'
     short_title = 'Dynamic Desired Cash in Python'
-    youtube_id = ''
+    youtube_id = 'TotudqllyGo'
     week_covered = 4
     bullets = [
         [
