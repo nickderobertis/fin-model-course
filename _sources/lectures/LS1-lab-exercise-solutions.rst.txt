@@ -214,3 +214,37 @@ Resources
 
 - :download:`Car Class Example </_static/Examples/Introduction/Python/car_example.py>`
         
+
+Determining Desired Cash in the Dynamic Salary Retirement Python Model
+=========================================================================
+
+.. youtube:: TotudqllyGo
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Description
+--------------
+
+- We want to relax the assumption that the amount needed in retirement is given by a fixed amount of desired cash
+- Start from the completed retirement model Jupyter notebook Dynamic Salary Retirement Model.ipynb
+- Add new inputs to the model, "Annual Cash Spend During Retirement" and "Years in Retirement"
+- Calculate desired cash based on interest, cash spend, and years in retirement
+- Use the calculated desired cash in the model to determine years to retirement
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
+        
+
+- :download:`Slides - The Depth of a Financial Model, Continued </_static/generated/pdfs/S5 The Depth of a Financial Model, Continued.pdf>`
+        
+
+Answers
+----------
+
+- If annual spend is 40k for 25 years in retirement, \$563,757.78 should be the retirement cash and there should be 18 years to retirement.
