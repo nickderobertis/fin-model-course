@@ -297,8 +297,8 @@ sa.df
                     [
                         'I will now go through adding sensitivity analysis to the Dynamic Salary Retirement Model '
                         'in Excel',
-                        'The completed exercise is in Examples > Sensitivity Analysis > Excel '
-                        '> Dynamic Salary Retirement Model Sensitivity.xlsx'
+                        'The completed exercise on the course site, '
+                        '"Dynamic Salary Retirement Model Sensitivity.xlsx"'
                     ],
                     title='Sensitivity Analysis in Excel',
                     block_title='Adding Sensitivity Analysis to the Dynamic Retirement Excel Model'
@@ -368,8 +368,8 @@ sa.df
                 ),
                 InClassExampleFrame(
                     [
-                        'I will now start going through the example notebook in Examples > Sensitivity Analysis '
-                        '> Python > Python Dicts, List comprehensions, and Imports.ipynb',
+                        'I will now start going through the example notebook called '
+                        '"Python Dicts, List comprehensions, and Imports.ipynb"',
                         'I will go through the Dictionaries section for now'
                     ],
                     title='More About Dictionaries in Python',
@@ -402,8 +402,8 @@ sa.df
                 ),
                 InClassExampleFrame(
                     [
-                        'I will continue going through the example notebook in Examples > Sensitivity Analysis '
-                        '> Python > Python Dicts, List comprehensions, and Imports.ipynb',
+                        'I will continue going through the example notebook '
+                        '"Python Dicts, List comprehensions, and Imports.ipynb"',
                         'I will go through the List Comprehensions section for now'
                     ],
                     title='Easier Loops in Python',
@@ -452,8 +452,8 @@ sa.df
                 ),
                 InClassExampleFrame(
                     [
-                        'I will continue going through the example notebook in Examples > Sensitivity Analysis '
-                        '> Python > Python Dicts, List comprehensions, and Imports.ipynb',
+                        'I will continue going through the example notebook '
+                        '"Python Dicts, List comprehensions, and Imports.ipynb"',
                         'I will go through the Imports and Installing Packages section for now'
                     ],
                     title='Installing Packages in Python',
@@ -537,8 +537,8 @@ sa.df
                     [
                         'I will now go through adding sensitivity analysis to the Dynamic Salary Retirement Model '
                         'in Python',
-                        'The completed exercise is in Examples > Sensitivity Analysis > Python '
-                        '> Dynamic Salary Retirement Model Sensitivity.ipynb'
+                        'The completed exercise available on the course site is called '
+                        '"Dynamic Salary Retirement Model Sensitivity.ipynb"'
                     ],
                     title='Sensitivity Analysis in Python',
                     block_title='Adding Sensitivity Analysis to the Dynamic Retirement Python Model'
