@@ -230,13 +230,16 @@ sa.df
                 ),
                 lp.DimRevealListFrame(
                     [
+                        pl.TextSize(-1),
                         'In this lecture, we will be discussing sensitivity analysis as an approach to exploring the '
                         'parameter space.',
-                        'After we cover probabilistic modeling, we will revisit exploring the parameter space with a '
-                        'method called Monte Carlo Simulation.',
+                        'After we cover probabilistic modeling, we will revisit exploring the parameter space with other '
+                        'methods: scenario analysis and Monte Carlo Simulation.',
                         'In sensitivity analysis, a fixed set of values for the parameters are chosen, while in Monte Carlo '
                         'Simulation, each parameter is assigned a distribution.',
-                        'Both methods may be used together to fully understand a model.'
+                        'In scenario analysis, several realistic cases of the inputs are chosen which represent '
+                        'possible real-world situations',
+                        'All three methods may be used together to fully understand a model.'
                     ],
                     title='Methods of Parameter Exploration'
                 ),
