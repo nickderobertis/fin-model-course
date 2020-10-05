@@ -808,8 +808,17 @@ class VisualizationExternalResources(ResourceCollection):
     )
 
 
+class GeneralPythonExternalResources(ResourceCollection):
+    title: str = 'Python External Resources'
+    imports_guide = LectureResource(
+        'Guide to Python Imports',
+        external_url='https://realpython.com/absolute-vs-relative-python-imports/'
+    )
+
+
 class ExternalResources(ResourceCollection):
     title: str = 'External Resources'
+    python: GeneralPythonExternalResources = GeneralPythonExternalResources()
     visualization: VisualizationExternalResources = VisualizationExternalResources()
 
 
