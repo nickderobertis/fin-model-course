@@ -9,7 +9,7 @@ EXTRA_PYTHON_BASICS_RESOURCES = [
 
 def get_parameter_exploration_intro_lecture() -> Lecture:
     title = 'Introduction to Parameter Exploration'
-    youtube_id = ''
+    youtube_id = 'IVC38ksxNfI'
     week_covered = 6
     notes = LectureNotes([
         "If you've merely done a calculation, you have a single answer and can't learn any more about the "
@@ -30,7 +30,7 @@ def get_parameter_exploration_intro_lecture() -> Lecture:
 
 def get_sensitivity_analysis_intro_lecture() -> Lecture:
     title = 'Introduction to Sensitivity Analysis'
-    youtube_id = ''
+    youtube_id = 'dMpQNAnIhJQ'
     week_covered = 6
     notes = LectureNotes([
         'The formal definition of sensitivity analysis may seem complicated, but all we are doing is '
@@ -44,7 +44,7 @@ def get_sensitivity_analysis_intro_lecture() -> Lecture:
 
 def get_sensitivity_analysis_excel_lecture() -> Lecture:
     title = 'Sensitivity Analysis in Excel'
-    youtube_id = ''
+    youtube_id = '1wECF1RjsNM'
     week_covered = 6
     notes = LectureNotes([
         'Data tables in Excel allow calculating a cell multiple times, changing some other cell. This is perfect for '
@@ -66,7 +66,7 @@ def get_sensitivity_analysis_excel_lecture() -> Lecture:
 
 def get_python_dictionaries_lecture() -> Lecture:
     title = 'Using Python Dictionaries'
-    youtube_id = ''
+    youtube_id = '6Q8LvUQmykE'
     week_covered = 6
     notes = LectureNotes([
         'There are three ways to loop through dictionaries: through the keys (the default), '
@@ -85,7 +85,7 @@ def get_python_dictionaries_lecture() -> Lecture:
 
 def get_python_list_comprehensions_lecture() -> Lecture:
     title = 'Python List Comprehensions - Convenient List Building'
-    youtube_id = ''
+    youtube_id = '6GpCoTG704o'
     week_covered = 6
     notes = LectureNotes([
         'List comprehensions are an example of "syntactic sugar," or a feature of a programming language '
@@ -100,7 +100,7 @@ def get_python_list_comprehensions_lecture() -> Lecture:
 
 def get_python_imports_lecture() -> Lecture:
     title = 'Python Imports and Installing Packages'
-    youtube_id = ''
+    youtube_id = 'xSX8sg7Twqw'
     week_covered = 6
     notes = LectureNotes([
         "Import can be used for third-party and built-in packages, but also for your own code offloaded into "

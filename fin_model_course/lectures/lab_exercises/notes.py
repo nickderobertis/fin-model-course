@@ -345,7 +345,7 @@ def get_intro_python_visualization_lab_lecture() -> LabExerciseLecture:
 def get_sensitivity_analysis_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Adding Sensitivity Analysis to Project 1 - Excel'
     short_title = 'Sensitivity Analysis in Excel Lab'
-    youtube_id = ''
+    youtube_id = 'p9n8uKZOqAY'
     week_covered = 6
     bullets = [
         [
@@ -372,7 +372,7 @@ def get_sensitivity_analysis_excel_lab_lecture() -> LabExerciseLecture:
 def get_dictionaries_lab_lecture() -> LabExerciseLecture:
     title = 'Learning How to Use Dictionaries'
     short_title = 'Dictionaries Lab'
-    youtube_id = ''
+    youtube_id = 'AwdowFEtoOU'
     week_covered = 6
     bullets = [
         [
@@ -400,7 +400,7 @@ def get_dictionaries_lab_lecture() -> LabExerciseLecture:
 def get_list_comprehensions_lab_lecture() -> LabExerciseLecture:
     title = 'Learning How to Use List Comprehensions'
     short_title = 'List Comprehensions Lab'
-    youtube_id = ''
+    youtube_id = 'fEPsRi1DWdg'
     week_covered = 6
     bullets = [
         [
