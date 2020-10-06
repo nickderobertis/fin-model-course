@@ -42,6 +42,9 @@ class LectureNotes:
     def __getitem__(self, item):
         return self.items[item]
 
+    def __bool__(self) -> bool:
+        return bool(self.items)
+
     def to_models(
         self, top_model: Type[T] = pl.Section, sub_model: Type = pl.UnorderedList
     ) -> T:
@@ -232,16 +235,20 @@ class Lecture:
 
     def to_rst(self) -> str:
         out_str = header_rst(self.title, 3)
-        out_str += self._youtube_rst
-        out_str += self._notes_rst
+        if self.youtube_id:
+            out_str += self._youtube_rst
+        else:
+            out_str += self._youtube_alt_rst
+        if self.notes:
+            out_str += self._notes_rst
+        else:
+            out_str += self._notes_alt_rst
         out_str += self._resources_rst
         return out_str
 
     @property
     def _youtube_rst(self) -> str:
-        out_str = ''
-        if self.youtube_id is not None:
-            out_str += f"""
+        return f"""
 .. youtube:: {self.youtube_id}
     :height: 315
     :width: 560
@@ -249,15 +256,20 @@ class Lecture:
 
 |
             """
-        return out_str
+
+    @property
+    def _youtube_alt_rst(self) -> str:
+        return '\n**Video coming soon**\n'
 
     @property
     def _notes_rst(self) -> str:
-        out_str = ''
-        if self.notes is not None:
-            out_str += header_rst('Notes', 4)
-            out_str += self.notes.to_rst()
+        out_str = header_rst('Notes', 4)
+        out_str += self.notes.to_rst()
         return out_str
+
+    @property
+    def _notes_alt_rst(self) -> str:
+        return '\n**Notes coming soon**\n'
 
     @property
     def _resources_rst(self) -> str:
