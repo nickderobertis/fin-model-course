@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Exploring the Parameter Space &mdash; fin_model_course 0.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Projects" href="PJ1-projects.html" />
+    <link rel="prev" title="Understanding Complex Results" href="6-understanding-complex-results.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fin_model_course
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1-financial-modeling-with-python-and-excel.html">Financial Modeling with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-getting-started-with-python-and-excel.html">Getting Started with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-the-depth-of-a-financial-model.html">The Depth of a Financial Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-going-beyond-an-initial-python-script.html">Going Beyond an Initial Python Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-the-depth-of-a-financial-model%2C-continued.html">The Depth of a Financial Model, Continued</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6-understanding-complex-results.html">Understanding Complex Results</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exploring the Parameter Space</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-parameter-exploration">Introduction to Parameter Exploration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-sensitivity-analysis">Introduction to Sensitivity Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sensitivity-analysis-in-excel">Sensitivity Analysis in Excel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-python-dictionaries">Using Python Dictionaries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python-list-comprehensions-convenient-list-building">Python List Comprehensions - Convenient List Building</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python-imports-and-installing-packages">Python Imports and Installing Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-sensitivity-analysis-in-python">Introduction to Sensitivity Analysis in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensitivity-analysis-in-python-example">Sensitivity Analysis in Python Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LS1-lab-exercise-solutions.html">Lab Exercise Solutions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fin_model_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Exploring the Parameter Space</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/lectures/7-exploring-the-parameter-space.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="exploring-the-parameter-space">
+<h1>Exploring the Parameter Space<a class="headerlink" href="#exploring-the-parameter-space" title="Permalink to this headline">¶</a></h1>
+<p>Expand models to check the full range of inputs and see how it impacts the outputs.</p>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/1ad0987a10ce95663631533edcc8a991/S7 Exploring the Parameter Space.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Exploring</span> <span class="pre">the</span> <span class="pre">Parameter</span> <span class="pre">Space</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/c6833ae6c5f117c496a3f05bea774d3f/LN7 Exploring the Parameter Space.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Lecture</span> <span class="pre">Notes</span> <span class="pre">-</span> <span class="pre">Exploring</span> <span class="pre">the</span> <span class="pre">Parameter</span> <span class="pre">Space</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2e990d881620e13dec67413d160e9de9/Dynamic Salary Retirement Model.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/cde86c9e209019938e84cd2bcf8a2141/Python Dicts, List comprehensions, and Imports.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Dicts,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2342c3cf85b21411913d6b6bcc07dfdb/Dicts and List Comprehensions Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dictionaries,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span> <span class="pre">Labs</span></code></a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/absolute-vs-relative-python-imports/">Guide to Python Imports</a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="introduction-to-parameter-exploration">
+<h2>Introduction to Parameter Exploration<a class="headerlink" href="#introduction-to-parameter-exploration" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/IVC38ksxNfI"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>If you’ve merely done a calculation, you have a single answer and can’t learn any more about the problem without redoing the calculations</p></li>
+<li><p>Instead because we are building models which can flexibly take any input and convert that into the appropriate output, it opens up a lot of possible extensions to the model</p></li>
+<li><p>This is our main focus for a large portion of the course: how can we extend any financial model to get a greater understanding of the underlying problem</p></li>
+<li><p>Sensitivity analysis is useful to understand how the full range of possible inputs affects the main results of your model</p></li>
+<li><p>Scenario analysis allows analyzing outcomes in example situations</p></li>
+<li><p>Monte Carlo Simulation allows assigning outputs to a probability distribution, which helps you understand the risk of your result</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction-to-sensitivity-analysis">
+<h2>Introduction to Sensitivity Analysis<a class="headerlink" href="#introduction-to-sensitivity-analysis" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/dMpQNAnIhJQ"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id1">
+<h3>Notes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The formal definition of sensitivity analysis may seem complicated, but all we are doing is running the model multiple times with different inputs and showing the outputs</p></li>
+<li><p>A key component of sensitivity analysis is the visualization, as now that there are many different outputs it is much easier to draw meaning from them when visualized</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="sensitivity-analysis-in-excel">
+<h2>Sensitivity Analysis in Excel<a class="headerlink" href="#sensitivity-analysis-in-excel" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/1wECF1RjsNM"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id2">
+<h3>Notes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Data tables in Excel allow calculating a cell multiple times, changing some other cell. This is perfect for sensitivity analysis if we target an output cell and change an input cell</p></li>
+<li><p>One-way data tables change one input at a time, two-way data tables change two inputs at a time</p></li>
+<li><p>You are basically limited to changing two inputs at once, without doing some clever hacks</p></li>
+<li><p>Visualization rule of thumb: graph one-way data tables and use conditional formatting for two-way</p></li>
+<li><p>Conditional formatting changes the format of cells based on conditions, such as putting the largest numbers in green and the smallest in red</p></li>
+<li><p>Row input cell means that your inputs are going horizontally in a row. Column input cell means that your inputs going vertically in a column. For one-way data tables, you will use only one of the two. For two-way data tables, you will use both</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Resources<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2e990d881620e13dec67413d160e9de9/Dynamic Salary Retirement Model.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="using-python-dictionaries">
+<h2>Using Python Dictionaries<a class="headerlink" href="#using-python-dictionaries" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/6Q8LvUQmykE"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id4">
+<h3>Notes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>There are three ways to loop through dictionaries: through the keys (the default), through the values (.values()), and through both at once (.items())</p></li>
+<li><p>If you want one way to do it, just always loop through the items as you have access to both the key and the value at once</p></li>
+<li><p>Combine dictionaries using update. Add items to dictionaries with brackets and assignment. Remove items from dictionaries with pop</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Resources<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/cde86c9e209019938e84cd2bcf8a2141/Python Dicts, List comprehensions, and Imports.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Dicts,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2342c3cf85b21411913d6b6bcc07dfdb/Dicts and List Comprehensions Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dictionaries,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span> <span class="pre">Labs</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="python-list-comprehensions-convenient-list-building">
+<h2>Python List Comprehensions - Convenient List Building<a class="headerlink" href="#python-list-comprehensions-convenient-list-building" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/6GpCoTG704o"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id6">
+<h3>Notes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>List comprehensions are an example of “syntactic sugar,” or a feature of a programming language which is not necessary but makes things easier (makes the programming experience “sweeter”)</p></li>
+<li><p>They allow us to write simple loops made to create lists with only a single line of code</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>Resources<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/cde86c9e209019938e84cd2bcf8a2141/Python Dicts, List comprehensions, and Imports.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Dicts,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2342c3cf85b21411913d6b6bcc07dfdb/Dicts and List Comprehensions Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dictionaries,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span> <span class="pre">Labs</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="python-imports-and-installing-packages">
+<h2>Python Imports and Installing Packages<a class="headerlink" href="#python-imports-and-installing-packages" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/xSX8sg7Twqw"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id8">
+<h3>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Import can be used for third-party and built-in packages, but also for your own code offloaded into separate files</p></li>
+<li><p>I had you install Anaconda to get Python because it includes most of the Python packages we would want to use pre-installed. So we haven’t had to install any package up to now</p></li>
+<li><p>With more than 250k packages out there and only about 200 installed in Anaconda, the time will come when you need to install something</p></li>
+<li><p>It will even happen in this course because we will use some packages I have created</p></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>Resources<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/cde86c9e209019938e84cd2bcf8a2141/Python Dicts, List comprehensions, and Imports.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Dicts,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span></code></a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/absolute-vs-relative-python-imports/">Guide to Python Imports</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction-to-sensitivity-analysis-in-python">
+<h2>Introduction to Sensitivity Analysis in Python<a class="headerlink" href="#introduction-to-sensitivity-analysis-in-python" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+</div>
+<div class="section" id="sensitivity-analysis-in-python-example">
+<h2>Sensitivity Analysis in Python Example<a class="headerlink" href="#sensitivity-analysis-in-python-example" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+<div class="section" id="id11">
+<h3>Resources<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PJ1-projects.html" class="btn btn-neutral float-right" title="Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="6-understanding-complex-results.html" class="btn btn-neutral float-left" title="Understanding Complex Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-155751319-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
