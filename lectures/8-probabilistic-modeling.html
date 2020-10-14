@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Probabilistic Modeling &mdash; fin_model_course 0.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Projects" href="PJ1-projects.html" />
+    <link rel="prev" title="Exploring the Parameter Space" href="7-exploring-the-parameter-space.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fin_model_course
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1-financial-modeling-with-python-and-excel.html">Financial Modeling with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-getting-started-with-python-and-excel.html">Getting Started with Python and Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-the-depth-of-a-financial-model.html">The Depth of a Financial Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-going-beyond-an-initial-python-script.html">Going Beyond an Initial Python Script</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-the-depth-of-a-financial-model%2C-continued.html">The Depth of a Financial Model, Continued</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6-understanding-complex-results.html">Understanding Complex Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-exploring-the-parameter-space.html">Exploring the Parameter Space</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Probabilistic Modeling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-probabilistic-modeling">Introduction to Probabilistic Modeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#math-review-for-probabilistic-modeling">Math Review for Probabilistic Modeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-scenario-analysis">Introduction to Scenario Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scenario-analysis-in-excel">Scenario Analysis in Excel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-exercise-adding-scenario-analysis-to-project-1-excel">Lab Exercise - Adding Scenario Analysis to Project 1 - Excel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scenario-analysis-in-python">Scenario Analysis in Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-internal-randomness">Introduction to Internal Randomness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#intro-to-randomness-in-excel">Intro to Randomness in Excel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#intro-to-randomness-in-python">Intro to Randomness in Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#discrete-randomness">Discrete Randomness</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-internal-randomness-to-an-excel-model">Adding Internal Randomness to an Excel Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-internal-randomness-to-a-python-model">Adding Internal Randomness to a Python Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#internal-randomness-lab-exercises-overview">Internal Randomness Lab Exercises Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LS1-lab-exercise-solutions.html">Lab Exercise Solutions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fin_model_course</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Probabilistic Modeling</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/lectures/8-probabilistic-modeling.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="probabilistic-modeling">
+<h1>Probabilistic Modeling<a class="headerlink" href="#probabilistic-modeling" title="Permalink to this headline">¶</a></h1>
+<p>Incorporate probabilities into models to be able to directly model uncertainty, and to know not only the most likely outcome but also the chance of different outcomes occurring.</p>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/12bd66870e113cc5c8e253240f03436b/S8 Probabilistic Modeling.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Probabilistic</span> <span class="pre">Modeling</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/eba5fc22598941d234a93780352f9da9/LN8 Probabilistic Modeling.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Lecture</span> <span class="pre">Notes</span> <span class="pre">-</span> <span class="pre">Probabilistic</span> <span class="pre">Modeling</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/64f979dc2d62bfce36df147fb91697e1/Dynamic Salary Retirement Model External Scenarios.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">External</span> <span class="pre">Scenarios</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/f3d3582fc5cf6a8ed85650de708dda5d/Dynamic Salary Retirement Model Scenario Analysis.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Scenario</span> <span class="pre">Analysis</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/cdf28c185525615bf64a509351aef476/Generating Random Numbers.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/a0430d325c2f0d9bd356e372dbcccad0/Generating Random Numbers.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/83caa88949af4f46be73943661589766/Dynamic Salary Retirement Model Internal Randomness.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Internal</span> <span class="pre">Randomness</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/243fb5ddd21d806cc9ffc425856deb65/Dynamic Salary Retirement Model Internal Randomness.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Internal</span> <span class="pre">Randomness</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="introduction-to-probabilistic-modeling">
+<h2>Introduction to Probabilistic Modeling<a class="headerlink" href="#introduction-to-probabilistic-modeling" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/OvLatB0ax1Y"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Probability is a key concept for financial models as it related to risk</p></li>
+<li><p>The base result from a deterministic model only gives a single answer, but does not consider the probability distribution of the result</p></li>
+<li><p>E.g. your model could predict a positive NPV from a project, but through probabilistic modeling you determine that there is a 98% chance the NPV is negative. Do you still want to take the project? This is important information to know when making that decision.</p></li>
+<li><p>We discuss three techniques in this course that take advantage of probability theory: scenario modeling, internal randomness, and Monte Carlo simulation</p></li>
+<li><p>Scenario modeling and Monte Carlo simulation are also methods of exploring the parameter space, just like sensitivity analysis</p></li>
+<li><p>Internal randomness is useful for when the probability is so core to the model that it should be built in from the beginning, rather than extending the base model to add probability</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="math-review-for-probabilistic-modeling">
+<h2>Math Review for Probabilistic Modeling<a class="headerlink" href="#math-review-for-probabilistic-modeling" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/2OIjIrtUERQ"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id1">
+<h3>Notes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Discrete variables: specific values, continuous variables: range of values. Note that an underlying variable can be continuous but the modeler can choose to make it discrete within the model to simplify it. E.g. condition of the economy is continuous, but you might make it discrete by classifying the economic conditions into recession, neutral, or expansion. This does not work in the other direction: a variable which is truly discrete cannot be made continuous</p></li>
+<li><p>Expected value is a key concept in probability theory. We will use it in scenario analysis to get the expected outcome across multiple different cases of the inputs</p></li>
+<li><p>The variance graph shows two series with the same mean but different variances. Variance is a measure of how much the value is moving around. If it moves a lot, it has high variance. Variance has nothing to do with the average, mean, or expected value.</p></li>
+<li><p>Probability distributions tell you how likely it is to observe different values of a given variable</p></li>
+<li><p>Discrete variables: think table of values with probabilities. Continuous variables: think curve, usually displayed by a graph but defined by a function</p></li>
+<li><p>The CLT is extremely powerful, because of it most of the distributions for continuous variables are normal distributions. So if we need to pick a distribution for a variable, the normal distribution is reasonable choice the majority of the time</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction-to-scenario-analysis">
+<h2>Introduction to Scenario Analysis<a class="headerlink" href="#introduction-to-scenario-analysis" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/ipxSUXZY5hk"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id2">
+<h3>Notes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Scenario modeling is another way to explore the parameter space, just like sensitivity analysis</p></li>
+<li><p>Scenario modeling is carried out in the same way as sensitivity analysis: run the model with each set of inputs and display the outputs with the inputs</p></li>
+<li><p>The difference is that unlike in sensitivity analysis where we tweak one input at a time, in scenario analysis, we consider some situations and determine all the values of the inputs that align with each situation</p></li>
+<li><p>We can also optionally assign probabilities to the situations, then take an expected value to get an expected outcome from our model</p></li>
+<li><p>Internal vs. external scenario analysis is just about whether the scenarios are included in the core model (internal), or as an extension to the base model (external)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="scenario-analysis-in-excel">
+<h2>Scenario Analysis in Excel<a class="headerlink" href="#scenario-analysis-in-excel" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/MfqFV00GVD4"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id3">
+<h3>Notes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We will focus on external scenario analysis for the purpose of this exercise</p></li>
+<li><p>Typically if the model has already been created, you should opt for external rather than internal</p></li>
+<li><p>Unfortunately without some hacks, in Excel we are limited to examining two inputs changing at once with external scenario analysis, as a data table is used to run the model repeatedly</p></li>
+<li><p>We will see that we do not have this limitation in Python, and later in the course we will see that you can use Python to run external scenario analysis on your Excel model with any number of inputs</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Resources<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/64f979dc2d62bfce36df147fb91697e1/Dynamic Salary Retirement Model External Scenarios.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">External</span> <span class="pre">Scenarios</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="lab-exercise-adding-scenario-analysis-to-project-1-excel">
+<h2>Lab Exercise - Adding Scenario Analysis to Project 1 - Excel<a class="headerlink" href="#lab-exercise-adding-scenario-analysis-to-project-1-excel" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/i7yO_o8tRyc"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id5">
+<h3>Notes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Here we are adding external scenario analysis to the Project 1 Excel model</p></li>
+<li><p>The process should be basically identical to what was shown in extending the Dynamic Salary Retirement Model in Excel</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="scenario-analysis-in-python">
+<h2>Scenario Analysis in Python<a class="headerlink" href="#scenario-analysis-in-python" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+<div class="section" id="id6">
+<h3>Resources<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/f3d3582fc5cf6a8ed85650de708dda5d/Dynamic Salary Retirement Model Scenario Analysis.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Scenario</span> <span class="pre">Analysis</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction-to-internal-randomness">
+<h2>Introduction to Internal Randomness<a class="headerlink" href="#introduction-to-internal-randomness" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+</div>
+<div class="section" id="intro-to-randomness-in-excel">
+<h2>Intro to Randomness in Excel<a class="headerlink" href="#intro-to-randomness-in-excel" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+<div class="section" id="id7">
+<h3>Resources<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/cdf28c185525615bf64a509351aef476/Generating Random Numbers.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="intro-to-randomness-in-python">
+<h2>Intro to Randomness in Python<a class="headerlink" href="#intro-to-randomness-in-python" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+<div class="section" id="id8">
+<h3>Resources<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/a0430d325c2f0d9bd356e372dbcccad0/Generating Random Numbers.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="discrete-randomness">
+<h2>Discrete Randomness<a class="headerlink" href="#discrete-randomness" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+<div class="section" id="id9">
+<h3>Resources<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/cdf28c185525615bf64a509351aef476/Generating Random Numbers.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/a0430d325c2f0d9bd356e372dbcccad0/Generating Random Numbers.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="adding-internal-randomness-to-an-excel-model">
+<h2>Adding Internal Randomness to an Excel Model<a class="headerlink" href="#adding-internal-randomness-to-an-excel-model" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+<div class="section" id="id10">
+<h3>Resources<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/83caa88949af4f46be73943661589766/Dynamic Salary Retirement Model Internal Randomness.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Internal</span> <span class="pre">Randomness</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="adding-internal-randomness-to-a-python-model">
+<h2>Adding Internal Randomness to a Python Model<a class="headerlink" href="#adding-internal-randomness-to-a-python-model" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+<div class="section" id="id11">
+<h3>Resources<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/243fb5ddd21d806cc9ffc425856deb65/Dynamic Salary Retirement Model Internal Randomness.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Internal</span> <span class="pre">Randomness</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="internal-randomness-lab-exercises-overview">
+<h2>Internal Randomness Lab Exercises Overview<a class="headerlink" href="#internal-randomness-lab-exercises-overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>Video coming soon</strong></p>
+<p><strong>Notes coming soon</strong></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PJ1-projects.html" class="btn btn-neutral float-right" title="Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="7-exploring-the-parameter-space.html" class="btn btn-neutral float-left" title="Exploring the Parameter Space" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-155751319-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

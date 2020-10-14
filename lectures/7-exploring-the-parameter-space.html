@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Projects" href="PJ1-projects.html" />
+    <link rel="next" title="Probabilistic Modeling" href="8-probabilistic-modeling.html" />
     <link rel="prev" title="Understanding Complex Results" href="6-understanding-complex-results.html" /> 
 </head>
 
@@ -132,13 +132,24 @@
 <li class="toctree-l3"><a class="reference internal" href="#id9">Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-sensitivity-analysis-in-python">Introduction to Sensitivity Analysis in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-sensitivity-analysis-in-python">Introduction to Sensitivity Analysis in Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Resources</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#sensitivity-analysis-in-python-example">Sensitivity Analysis in Python Example</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id11">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-exercise-adding-sensitivity-analysis-to-project-1-python">Lab Exercise - Adding Sensitivity Analysis to Project 1 - Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Resources</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="8-probabilistic-modeling.html">Probabilistic Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LS1-lab-exercise-solutions.html">Lab Exercise Solutions</a></li>
 </ul>
@@ -222,6 +233,7 @@
 <li><p><a class="reference download internal" download="" href="../_downloads/cde86c9e209019938e84cd2bcf8a2141/Python Dicts, List comprehensions, and Imports.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Dicts,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span></code></a></p></li>
 <li><p><a class="reference download internal" download="" href="../_downloads/2342c3cf85b21411913d6b6bcc07dfdb/Dicts and List Comprehensions Lab.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dictionaries,</span> <span class="pre">List</span> <span class="pre">Comprehensions,</span> <span class="pre">and</span> <span class="pre">Imports</span> <span class="pre">Labs</span></code></a></p></li>
 <li><p><a class="reference external" href="https://realpython.com/absolute-vs-relative-python-imports/">Guide to Python Imports</a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/0d2c04e49f34672f4253165c7a2d4cb4/Sensitivity Analysis.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Sensitivity</span> <span class="pre">Analysis</span></code></a></p></li>
 <li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
 </ul>
 </div>
@@ -343,15 +355,67 @@
 </div>
 <div class="section" id="introduction-to-sensitivity-analysis-in-python">
 <h2>Introduction to Sensitivity Analysis in Python<a class="headerlink" href="#introduction-to-sensitivity-analysis-in-python" title="Permalink to this headline">¶</a></h2>
-<p><strong>Video coming soon</strong></p>
-<p><strong>Notes coming soon</strong></p>
+<iframe src="https://www.youtube.com/embed/AybxBMC7dzo"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id11">
+<h3>Notes<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>With sensitivity analysis in Python, we can get DataFrames looking similar to the tables with conditional formatting we saw in Excel</p></li>
+<li><p>We can also output hexbin plots which show the same graphically</p></li>
+<li><p>Unlike Excel, we are not limited to analyzing two inputs at once, though it still makes sense to visualize the output in pairs of inputs</p></li>
+<li><p>The basic setup with pure Python is fairly simple: use loops over the possible input values and call your model function in the loop, saving the output associated with the inputs. Changing multiple inputs at once means multiple nested loops.</p></li>
+<li><p>Then you have to add the conditional formatting or hexbin plot</p></li>
+<li><p>The sensitivity package reduces this all to a couple lines of code, regardless of how many inputs you want to look at</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>Resources<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/0d2c04e49f34672f4253165c7a2d4cb4/Sensitivity Analysis.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Sensitivity</span> <span class="pre">Analysis</span></code></a></p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="sensitivity-analysis-in-python-example">
 <h2>Sensitivity Analysis in Python Example<a class="headerlink" href="#sensitivity-analysis-in-python-example" title="Permalink to this headline">¶</a></h2>
-<p><strong>Video coming soon</strong></p>
-<p><strong>Notes coming soon</strong></p>
-<div class="section" id="id11">
-<h3>Resources<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<iframe src="https://www.youtube.com/embed/7vACMHmUjYY"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id13">
+<h3>Notes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Here we will focus only on using the sensitivity package rather than carrying everything out manually</p></li>
+<li><p>We need to go back and add an optional argument to the model about whether it should print the results, otherwise we will have the results printed a huge number of times as we run the sensitivity analysis</p></li>
+<li><p>The sensitivity package is made to work with functions where each input is passed separately, whereas our model function takes a single dataclass instance. To make our model function work with the sensitivity package, we need to create a wrapper function which takes the separate arguments, creates the dataclass from them, passes that into the model function and returns the result. You can copy my snippet to do this with your model.</p></li>
+<li><p>List comprehensions are a nice easy way to specify values in a range, but you can also hard-code these lists</p></li>
+<li><p>Be careful not to look at too many input values as execution could be very slow. The progress bar will tell you how many cases of the model you are running and show how long it is taking.</p></li>
+<li><p>There are a number of options to customize the output from the library. You can change the names of the inputs and results, the color map, change direction of the colors, the grid size on the hexbin plots, and the number formatting in styled DataFrames.</p></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>Resources<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="lab-exercise-adding-sensitivity-analysis-to-project-1-python">
+<h2>Lab Exercise - Adding Sensitivity Analysis to Project 1 - Python<a class="headerlink" href="#lab-exercise-adding-sensitivity-analysis-to-project-1-python" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/YtE5oRv2Ot4"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id15">
+<h3>Notes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The lab exercise here is the same as that we did for Excel but now just doing it in Python</p></li>
+<li><p>You are free to use the manual approach or the sensitivity package but I would recommend the sensitivity package</p></li>
+<li><p>Be sure to upgrade your sensitivity package before working on the exercise</p></li>
+<li><p>The lecture on adding sensitivity analysis to the Python Dynamic Salary Retirement model will be very helpful for this</p></li>
+<li><p>You may need to restructure your model before you can even begin adding sensitivity analysis. You must have a function which accepts the data and produces the final output from that data, and your functions must not access the overall model_data</p></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>Resources<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/2541d8dcfb63488b9ef32e16ce110b40/Dynamic Salary Retirement Model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
 </ul>
@@ -367,7 +431,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="PJ1-projects.html" class="btn btn-neutral float-right" title="Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="8-probabilistic-modeling.html" class="btn btn-neutral float-right" title="Probabilistic Modeling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="6-understanding-complex-results.html" class="btn btn-neutral float-left" title="Understanding Complex Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

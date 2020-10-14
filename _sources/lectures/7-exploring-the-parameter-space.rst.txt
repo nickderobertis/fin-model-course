@@ -26,6 +26,9 @@ Resources
 - `Guide to Python Imports <https://realpython.com/absolute-vs-relative-python-imports/>`_
         
 
+- :download:`Sensitivity Analysis </_static/Examples/Sensitivity Analysis/Python/Sensitivity Analysis.ipynb>`
+        
+
 - :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
         
 
@@ -176,16 +179,75 @@ Resources
 Introduction to Sensitivity Analysis in Python
 =================================================
 
-**Video coming soon**
+.. youtube:: AybxBMC7dzo
+    :height: 315
+    :width: 560
+    :align: center
 
-**Notes coming soon**
+|
+            
+Notes
+--------
+
+- With sensitivity analysis in Python, we can get DataFrames looking similar to the tables with conditional formatting we saw in Excel
+- We can also output hexbin plots which show the same graphically
+- Unlike Excel, we are not limited to analyzing two inputs at once, though it still makes sense to visualize the output in pairs of inputs
+- The basic setup with pure Python is fairly simple: use loops over the possible input values and call your model function in the loop, saving the output associated with the inputs. Changing multiple inputs at once means multiple nested loops.
+- Then you have to add the conditional formatting or hexbin plot
+- The sensitivity package reduces this all to a couple lines of code, regardless of how many inputs you want to look at
+
+Resources
+------------
+
+
+- :download:`Sensitivity Analysis </_static/Examples/Sensitivity Analysis/Python/Sensitivity Analysis.ipynb>`
+        
 
 Sensitivity Analysis in Python Example
 =========================================
 
-**Video coming soon**
+.. youtube:: 7vACMHmUjYY
+    :height: 315
+    :width: 560
+    :align: center
 
-**Notes coming soon**
+|
+            
+Notes
+--------
+
+- Here we will focus only on using the sensitivity package rather than carrying everything out manually
+- We need to go back and add an optional argument to the model about whether it should print the results, otherwise we will have the results printed a huge number of times as we run the sensitivity analysis
+- The sensitivity package is made to work with functions where each input is passed separately, whereas our model function takes a single dataclass instance. To make our model function work with the sensitivity package, we need to create a wrapper function which takes the separate arguments, creates the dataclass from them, passes that into the model function and returns the result. You can copy my snippet to do this with your model.
+- List comprehensions are a nice easy way to specify values in a range, but you can also hard-code these lists
+- Be careful not to look at too many input values as execution could be very slow. The progress bar will tell you how many cases of the model you are running and show how long it is taking.
+- There are a number of options to customize the output from the library. You can change the names of the inputs and results, the color map, change direction of the colors, the grid size on the hexbin plots, and the number formatting in styled DataFrames.
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
+        
+
+Lab Exercise - Adding Sensitivity Analysis to Project 1 - Python
+===================================================================
+
+.. youtube:: YtE5oRv2Ot4
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- The lab exercise here is the same as that we did for Excel but now just doing it in Python
+- You are free to use the manual approach or the sensitivity package but I would recommend the sensitivity package
+- Be sure to upgrade your sensitivity package before working on the exercise
+- The lecture on adding sensitivity analysis to the Python Dynamic Salary Retirement model will be very helpful for this
+- You may need to restructure your model before you can even begin adding sensitivity analysis. You must have a function which accepts the data and produces the final output from that data, and your functions must not access the overall model_data
 
 Resources
 ------------

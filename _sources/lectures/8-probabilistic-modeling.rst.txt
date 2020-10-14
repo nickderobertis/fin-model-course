@@ -1,0 +1,234 @@
+
+Probabilistic Modeling
+*************************
+
+Incorporate probabilities into models to be able to directly model uncertainty, and to know not only the most likely outcome but also the chance of different outcomes occurring.
+
+Resources
+============
+
+
+- :download:`Slides - Probabilistic Modeling </_static/generated/pdfs/S8 Probabilistic Modeling.pdf>`
+        
+
+- :download:`Lecture Notes - Probabilistic Modeling </_static/generated/pdfs/LN8 Probabilistic Modeling.pdf>`
+        
+
+- :download:`Dynamic Salary Retirement Model External Scenarios </_static/Examples/Scenario Analysis/Excel/Dynamic Salary Retirement Model External Scenarios.xlsx>`
+        
+
+- :download:`Dynamic Salary Retirement Model Scenario Analysis </_static/Examples/Scenario Analysis/Python/Dynamic Salary Retirement Model Scenario Analysis.ipynb>`
+        
+
+- :download:`Generating Random Numbers - Excel </_static/Examples/Internal Randomness/Excel/Generating Random Numbers.xlsx>`
+        
+
+- :download:`Generating Random Numbers - Python </_static/Examples/Internal Randomness/Python/Generating Random Numbers.ipynb>`
+        
+
+- :download:`Dynamic Salary Retirement Model Internal Randomness - Excel </_static/Examples/Internal Randomness/Excel/Dynamic Salary Retirement Model Internal Randomness.xlsx>`
+        
+
+- :download:`Dynamic Salary Retirement Model Internal Randomness - Python </_static/Examples/Internal Randomness/Python/Dynamic Salary Retirement Model Internal Randomness.ipynb>`
+        
+
+Introduction to Probabilistic Modeling
+=========================================
+
+.. youtube:: OvLatB0ax1Y
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Probability is a key concept for financial models as it related to risk
+- The base result from a deterministic model only gives a single answer, but does not consider the probability distribution of the result
+- E.g. your model could predict a positive NPV from a project, but through probabilistic modeling you determine that there is a 98% chance the NPV is negative. Do you still want to take the project? This is important information to know when making that decision.
+- We discuss three techniques in this course that take advantage of probability theory: scenario modeling, internal randomness, and Monte Carlo simulation
+- Scenario modeling and Monte Carlo simulation are also methods of exploring the parameter space, just like sensitivity analysis
+- Internal randomness is useful for when the probability is so core to the model that it should be built in from the beginning, rather than extending the base model to add probability
+
+Math Review for Probabilistic Modeling
+=========================================
+
+.. youtube:: 2OIjIrtUERQ
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Discrete variables: specific values, continuous variables: range of values. Note that an underlying variable can be continuous but the modeler can choose to make it discrete within the model to simplify it. E.g. condition of the economy is continuous, but you might make it discrete by classifying the economic conditions into recession, neutral, or expansion. This does not work in the other direction: a variable which is truly discrete cannot be made continuous
+- Expected value is a key concept in probability theory. We will use it in scenario analysis to get the expected outcome across multiple different cases of the inputs
+- The variance graph shows two series with the same mean but different variances. Variance is a measure of how much the value is moving around. If it moves a lot, it has high variance. Variance has nothing to do with the average, mean, or expected value.
+- Probability distributions tell you how likely it is to observe different values of a given variable
+- Discrete variables: think table of values with probabilities. Continuous variables: think curve, usually displayed by a graph but defined by a function
+- The CLT is extremely powerful, because of it most of the distributions for continuous variables are normal distributions. So if we need to pick a distribution for a variable, the normal distribution is reasonable choice the majority of the time
+
+Introduction to Scenario Analysis
+====================================
+
+.. youtube:: ipxSUXZY5hk
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Scenario modeling is another way to explore the parameter space, just like sensitivity analysis
+- Scenario modeling is carried out in the same way as sensitivity analysis: run the model with each set of inputs and display the outputs with the inputs
+- The difference is that unlike in sensitivity analysis where we tweak one input at a time, in scenario analysis, we consider some situations and determine all the values of the inputs that align with each situation
+- We can also optionally assign probabilities to the situations, then take an expected value to get an expected outcome from our model
+- Internal vs. external scenario analysis is just about whether the scenarios are included in the core model (internal), or as an extension to the base model (external)
+
+Scenario Analysis in Excel
+=============================
+
+.. youtube:: MfqFV00GVD4
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- We will focus on external scenario analysis for the purpose of this exercise
+- Typically if the model has already been created, you should opt for external rather than internal
+- Unfortunately without some hacks, in Excel we are limited to examining two inputs changing at once with external scenario analysis, as a data table is used to run the model repeatedly
+- We will see that we do not have this limitation in Python, and later in the course we will see that you can use Python to run external scenario analysis on your Excel model with any number of inputs
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model External Scenarios </_static/Examples/Scenario Analysis/Excel/Dynamic Salary Retirement Model External Scenarios.xlsx>`
+        
+
+Lab Exercise - Adding Scenario Analysis to Project 1 - Excel
+===============================================================
+
+.. youtube:: i7yO_o8tRyc
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- Here we are adding external scenario analysis to the Project 1 Excel model
+- The process should be basically identical to what was shown in extending the Dynamic Salary Retirement Model in Excel
+
+Scenario Analysis in Python
+==============================
+
+**Video coming soon**
+
+**Notes coming soon**
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model Scenario Analysis </_static/Examples/Scenario Analysis/Python/Dynamic Salary Retirement Model Scenario Analysis.ipynb>`
+        
+
+Introduction to Internal Randomness
+======================================
+
+**Video coming soon**
+
+**Notes coming soon**
+
+Intro to Randomness in Excel
+===============================
+
+**Video coming soon**
+
+**Notes coming soon**
+
+Resources
+------------
+
+
+- :download:`Generating Random Numbers - Excel </_static/Examples/Internal Randomness/Excel/Generating Random Numbers.xlsx>`
+        
+
+Intro to Randomness in Python
+================================
+
+**Video coming soon**
+
+**Notes coming soon**
+
+Resources
+------------
+
+
+- :download:`Generating Random Numbers - Python </_static/Examples/Internal Randomness/Python/Generating Random Numbers.ipynb>`
+        
+
+Discrete Randomness
+======================
+
+**Video coming soon**
+
+**Notes coming soon**
+
+Resources
+------------
+
+
+- :download:`Generating Random Numbers - Excel </_static/Examples/Internal Randomness/Excel/Generating Random Numbers.xlsx>`
+        
+
+- :download:`Generating Random Numbers - Python </_static/Examples/Internal Randomness/Python/Generating Random Numbers.ipynb>`
+        
+
+Adding Internal Randomness to an Excel Model
+===============================================
+
+**Video coming soon**
+
+**Notes coming soon**
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model Internal Randomness - Excel </_static/Examples/Internal Randomness/Excel/Dynamic Salary Retirement Model Internal Randomness.xlsx>`
+        
+
+Adding Internal Randomness to a Python Model
+===============================================
+
+**Video coming soon**
+
+**Notes coming soon**
+
+Resources
+------------
+
+
+- :download:`Dynamic Salary Retirement Model Internal Randomness - Python </_static/Examples/Internal Randomness/Python/Dynamic Salary Retirement Model Internal Randomness.ipynb>`
+        
+
+Internal Randomness Lab Exercises Overview
+=============================================
+
+**Video coming soon**
+
+**Notes coming soon**
