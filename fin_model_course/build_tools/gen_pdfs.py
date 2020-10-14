@@ -32,7 +32,7 @@ def build_pdfs():
 def _build_pdfs():
     for root in CONTENT_ROOTS:
         for file in next(os.walk(root))[2]:
-            if file in ('__init__.py', 'academic_cv.py', 'professional_cv.py'):
+            if root == CV_SOURCES_ROOT and file != 'fin_model_syllabus.py':
                 continue
             file_path = (root / file).resolve()
             build_by_file_path(file_path)
