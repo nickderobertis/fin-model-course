@@ -538,12 +538,20 @@ sa.df
                 ),
                 InClassExampleFrame(
                     [
+                        'I will now go through Sensitivity Analysis example Jupyter notebook',
+                        'This notebook shows both the standard approach and using the sensitivity package',
+                    ],
+                    title='Intro to Sensitivity Analysis in Python',
+                    block_title='An Overview of the Manual and Automated Approaches'
+                ),
+                InClassExampleFrame(
+                    [
                         'I will now go through adding sensitivity analysis to the Dynamic Salary Retirement Model '
                         'in Python',
                         'The completed exercise available on the course site is called '
                         '"Dynamic Salary Retirement Model Sensitivity.ipynb"'
                     ],
-                    title='Sensitivity Analysis in Python',
+                    title='Applying Sensitivity Analysis in Python',
                     block_title='Adding Sensitivity Analysis to the Dynamic Retirement Python Model'
                 ),
                 sensitivity_python_lab.presentation_frames(),

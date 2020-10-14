@@ -427,7 +427,7 @@ def get_list_comprehensions_lab_lecture() -> LabExerciseLecture:
 def get_sensitivity_analysis_python_lab_lecture() -> LabExerciseLecture:
     title = 'Adding Sensitivity Analysis to Project 1 - Python'
     short_title = 'Sensitivity Analysis in Python Lab'
-    youtube_id = ''
+    youtube_id = 'r8ly1gY3jDA'
     week_covered = 7
     bullets = [
         [
@@ -453,7 +453,7 @@ def get_sensitivity_analysis_python_lab_lecture() -> LabExerciseLecture:
 def get_scenario_analysis_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Adding Scenario Analysis to Project 1 - Excel'
     short_title = 'Scenario Analysis Excel Lab'
-    youtube_id = ''
+    youtube_id = 'wOrBz9ddCpA'
     week_covered = 7
     bullets = [
         [

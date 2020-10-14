@@ -213,7 +213,7 @@ def get_content():
                         lp.Block(
                             [
                                 EquationWithVariableDefinitions(
-                                    r'Var[x] = \sigma^2 = \frac{1}{N - 1} \sum_{i=1}^{N} (x_i - \mu)',
+                                    r'Var[x] = \sigma^2 = \frac{1}{N - 1} \sum_{i=1}^{N} (x_i - \mu)^2',
                                     [
                                         [pl.Equation(str_eq=r'N:'), 'Number of samples of', pl.Equation(str_eq=r'x')],
                                         [pl.Equation(str_eq=r'\mu:'), 'Sample mean'],
@@ -435,7 +435,7 @@ def get_content():
                     [
                         'I will now go through adding external scenario analysis to the Dynamic Salary Retirement Model '
                         'in Excel',
-                        'The completed exercise is in Examples > Scenario Analysis > Excel ',
+                        'The completed exercise on the course site as "Dynamic Salary Retirement Model Sensitivity.xlsx"',
                     ],
                     title='Scenario Analysis in Excel',
                     block_title='Adding Scenario Analysis to the Dynamic Retirement Excel Model'
@@ -456,7 +456,7 @@ def get_content():
                     [
                         'I will now go through adding external scenario analysis to the Dynamic Salary Retirement Model '
                         'in Python',
-                        'The completed exercises are in Examples > Scenario Analysis > Python ',
+                        'he completed exercise on the course site as "Dynamic Salary Retirement Model Sensitivity.ipynb"',
                     ],
                     title='Scenario Analysis in Python',
                     block_title='Adding Scenario Analysis to the Dynamic Retirement Python Model'
@@ -530,7 +530,7 @@ def get_content():
                     [
                         'I will now go through generating random continuous variables '
                         'in Excel',
-                        'The completed exercise is in Examples > Internal Randomness > Excel ',
+                        'The completed exercise on the course site is called "Generating Random Numbers.xlsx"',
                         'We will focus only on the "Continuous" sheet for now',
                     ],
                     title='Example for Continuous Random Variables in Excel',
@@ -553,7 +553,7 @@ def get_content():
                     [
                         'I will now go through generating random continuous variables '
                         'in Python',
-                        'The completed exercise is in Examples > Internal Randomness > Python ',
+                        'The completed exercise on the course site is called "Generating Random Numbers.ipynb"',
                         'We will focus only on the "Continuous" section for now',
                     ],
                     title='Example for Continuous Random Variables in Python',
@@ -626,8 +626,8 @@ def get_content():
                     [
                         'I will now go through generating random discrete variables '
                         'in both Excel and Python',
-                        'We will be continuing with the same Excel workbook and Jupyter notebook from before which '
-                        'are in Examples > Internal Randomness',
+                        'We will be continuing with the same Excel workbook and Jupyter notebook from before, '
+                        '"Generating Random Numbers.xlsx" and "Generating Random Numbers.ipynb"',
                         'We will focus only on the "Discrete" sheet/section now',
                     ],
                     title='Example for Discrete Random Variables in Excel and Python',
@@ -638,9 +638,9 @@ def get_content():
                         'I will now add internal randomness with discrete variables to '
                         'both the Excel and Python Dynamic Salary Retirement models to simulate economic conditions '
                         'changing year by year',
-                        'The completed models '
-                        'are in Examples > Internal Randomness',
-                        'We will focus only on the "Discrete" sheet/section now',
+                        'The completed models on the course site are called '
+                        '"Dynamic Salary Retirement Model Internal Randomness.xlsx" and '
+                        '"Dynamic Salary Retirement Model Internal Randomness.ipynb"',
                     ],
                     title='Example for Discrete Random Variables in Excel and Python',
                     block_title='Generating Random Numbers from Discrete Distributions in Excel and Python'

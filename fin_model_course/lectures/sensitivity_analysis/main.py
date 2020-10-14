@@ -20,5 +20,6 @@ def get_sensitivity_analysis_lecture() -> LectureGroup:
         notes.get_python_imports_lecture(),
         notes.get_python_sensitivity_analysis_lecture(),
         notes.get_python_sensitivity_analysis_retirement_lecture(),
+        notes.get_python_sensitivity_analysis_lab_lecture(),
     ]
     return LectureGroup(title, description, lectures, order=lecture_index, global_resources=resources)

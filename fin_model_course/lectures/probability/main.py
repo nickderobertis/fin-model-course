@@ -18,6 +18,7 @@ def get_probability_lecture() -> LectureGroup:
         notes.get_probability_math_review_lecture(),
         notes.get_intro_scenario_analysis_lecture(),
         notes.get_excel_scenario_analysis_lecture(),
+        notes.get_excel_scenario_analysis_lab_lecture(),
         notes.get_python_scenario_analysis_lecture(),
         notes.get_intro_internal_randomness_lecture(),
         notes.get_excel_internal_randomness_lecture(),

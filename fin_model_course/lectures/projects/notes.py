@@ -56,3 +56,33 @@ def get_project_1_lecture() -> Lecture:
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
+def get_project_2_lecture() -> Lecture:
+    project_title = 'Probabilistic Loan Pricing'
+    project_num = 2
+    title = f'Project {project_num} - {project_title}'
+    youtube_id = 'Jxuuw8mM-vQ'
+    week_covered = 7
+    notes = LectureNotes([
+        'The focus of this project is to reinforce probabilistic modeling and to solve a common '
+        'problem faced by lenders: deciding the loan terms to offer',
+        'This project also tests your ability to explore the parameter space and visualize the results, '
+        'extending the base model',
+        'This model typically incorporates internal randomness. This means you will get a different result each time '
+        'you run your model. You can increase the number of iterations to get a more consistent result, but '
+        'it will also take longer for the model to run. When checking your answers against the provided solutions, they '
+        'will not match exactly, but as you run the model multiple times each number should be similar to the reported '
+        'answers. When you are ready to submit the model, run it with '
+        '1000 iterations and be sure to allow time for this',
+        'This project, and the remaining projects going forward in the course, may be submitted as an '
+        'Excel model, a Python model, or a combination model that uses both Python and Excel',
+        'It is up to you how you want to structure the model and which tools to use, but this problem is '
+        'difficult to solve using only Excel. If you want to work in Excel as much as possible, I would '
+        'recommend building the base deterministic model in Excel then handle the randomness and exploring '
+        'the parameter space using Python',
+        'As always, save the bonus for last, though students have generally found this bonus exercise easier than '
+        'that of the first project',
+    ], title=title)
+    resources = [
+        *RESOURCES.projects.project_1.resources(),
+    ]
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)

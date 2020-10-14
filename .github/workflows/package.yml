@@ -12,7 +12,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
 
     steps:
     - name: Dump GitHub context
@@ -63,7 +63,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
     steps:
       - uses: actions/checkout@v1
       - name: Collect TODO
@@ -92,7 +92,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
     steps:
       - uses: actions/checkout@v1
       - name: Set up Python ${{ matrix.python-version }}
