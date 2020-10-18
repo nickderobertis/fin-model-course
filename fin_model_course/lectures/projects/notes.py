@@ -83,6 +83,6 @@ def get_project_2_lecture() -> Lecture:
         'that of the first project',
     ], title=title)
     resources = [
-        *RESOURCES.projects.project_1.resources(),
+        *RESOURCES.projects.project_2.resources(),
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
