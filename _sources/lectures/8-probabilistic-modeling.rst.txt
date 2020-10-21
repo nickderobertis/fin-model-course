@@ -135,9 +135,20 @@ Notes
 Scenario Analysis in Python
 ==============================
 
-**Video coming soon**
+.. youtube:: LkVlviRFQtA
+    :height: 315
+    :width: 560
+    :align: center
 
-**Notes coming soon**
+|
+            
+Notes
+--------
+
+- Just as with sensitivity analysis and any other extension to the base model, your model needs to be set up appropriately to add scenario analysis. All the main logic should be in functions, and the functions should not access variables which were defined outside a function unless they are passed in as arguments.
+- Dictionaries are a helpful data structure for scenario analysis as you can put the name of the scenario as the key and have the input values as the value
+- The process is very similar to other methods of exploring the parameter space. Run the model with each set of inputs and keep the outputs associated with the inputs. In scenario analysis we often also assign probabilities to the cases and take the expected value of the results
+- Before you complete the lab, ensure that your Python sensitivity analysis lab is working properly, or else this and any other future extensions to the model will probably also not work properly
 
 Resources
 ------------
@@ -149,16 +160,36 @@ Resources
 Introduction to Internal Randomness
 ======================================
 
-**Video coming soon**
+.. youtube:: 9jPlnhUCQzY
+    :height: 315
+    :width: 560
+    :align: center
 
-**Notes coming soon**
+|
+            
+Notes
+--------
+
+- Internal randomness can be very powerful but also has one major drawback: your model is no longer deterministic, so the same inputs will produce different outputs each time. While this is the goal of internal randomness, it also makes it difficult to know if the model is working correctly.
+- You should only use internal randomness in cases where the randomness is so integral to the model that it wouldn't make sense to have the model without it
+- The external counterpart to internal randomness is Monte Carlo simulation, which will be the next extension we examine for our models. In most cases, Monte Carlo simulation will achieve your goals and you don't need internal randomness
+- Pick distributions which make sense for your inputs, but usually just pick a normal distribution with reasonable mean and standard deviation
+- For the mean, use the historical mean or your best estimate of the expected value of the input. For the standard deviation, a rule of thumb is that you should pick a standard deviation such that +/- 1x stdev changes from the mean are common, 2x occur occasionally, 3x are rare, and 4x will almost never occur.
 
 Intro to Randomness in Excel
 ===============================
 
-**Video coming soon**
+.. youtube:: IIUi4k3e7vg
+    :height: 315
+    :width: 560
+    :align: center
 
-**Notes coming soon**
+|
+            
+Notes
+--------
+
+- Excel has the functions to get most of the kinds of random numbers that you would want, but often multiple have to be combined such as NORM.INV(RAND()) for randomly drawing numbers from a normal distribution
 
 Resources
 ------------
@@ -170,9 +201,20 @@ Resources
 Intro to Randomness in Python
 ================================
 
-**Video coming soon**
+.. youtube:: 9BLPWoB1WGE
+    :height: 315
+    :width: 560
+    :align: center
 
-**Notes coming soon**
+|
+            
+Notes
+--------
+
+- Python has far more and more convenient features around randomness than Excel
+- A single function, random.normalvariate, can be used for generating random numbers from a normal distribution
+- There is a lot better support for other conveniently using other distributions in Python
+- You can also generate many random numbers at once using numpy
 
 Resources
 ------------
@@ -181,12 +223,38 @@ Resources
 - :download:`Generating Random Numbers - Python </_static/Examples/Internal Randomness/Python/Generating Random Numbers.ipynb>`
         
 
+Lab Exercise - Generating Continuous Random Numbers in Excel and Python
+==========================================================================
+
+.. youtube:: VAX57lCiUCw
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- The exercise is the same for Excel and Python
+- Make sure to do the entire exercise with n=10 and n=1000 so you can see the differences that number of iterations makes
+
 Discrete Randomness
 ======================
 
-**Video coming soon**
+.. youtube:: O5aJlVLbDYk
+    :height: 315
+    :width: 560
+    :align: center
 
-**Notes coming soon**
+|
+            
+Notes
+--------
+
+- The story around generating random discrete values in Excel is relatively complicated. In Python, it is just as straightforward as working with continuous numbers
+- We can hack our way into a discrete random value function in Excel by using uniform random numbers and the probability distribution. It is a manual effort to set this up in your model
+- In Python, just pass your discrete values and probabilities to the random.choices function and you are done. This function can even give you multiple choices
 
 Resources
 ------------

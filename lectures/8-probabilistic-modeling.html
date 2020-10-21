@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Probabilistic Modeling &mdash; fin_model_course 0.1.3 documentation</title>
+  <title>Probabilistic Modeling &mdash; fin_model_course 0.1.4 documentation</title>
   
 
   
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.1.3
+                0.1.4
               </div>
             
           
@@ -127,28 +127,39 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#scenario-analysis-in-python">Scenario Analysis in Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">Resources</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-internal-randomness">Introduction to Internal Randomness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#intro-to-randomness-in-excel">Intro to Randomness in Excel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Notes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id7">Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#intro-to-randomness-in-python">Intro to Randomness in Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id8">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-internal-randomness">Introduction to Internal Randomness</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Notes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#discrete-randomness">Discrete Randomness</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id9">Resources</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-internal-randomness-to-an-excel-model">Adding Internal Randomness to an Excel Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#intro-to-randomness-in-excel">Intro to Randomness in Excel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Notes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id10">Resources</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#intro-to-randomness-in-python">Intro to Randomness in Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-exercise-generating-continuous-random-numbers-in-excel-and-python">Lab Exercise - Generating Continuous Random Numbers in Excel and Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#discrete-randomness">Discrete Randomness</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-internal-randomness-to-an-excel-model">Adding Internal Randomness to an Excel Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Resources</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#adding-internal-randomness-to-a-python-model">Adding Internal Randomness to a Python Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id11">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#internal-randomness-lab-exercises-overview">Internal Randomness Lab Exercises Overview</a></li>
@@ -327,10 +338,20 @@
 </div>
 <div class="section" id="scenario-analysis-in-python">
 <h2>Scenario Analysis in Python<a class="headerlink" href="#scenario-analysis-in-python" title="Permalink to this headline">¶</a></h2>
-<p><strong>Video coming soon</strong></p>
-<p><strong>Notes coming soon</strong></p>
+<iframe src="https://www.youtube.com/embed/LkVlviRFQtA"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
 <div class="section" id="id6">
-<h3>Resources<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<h3>Notes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Just as with sensitivity analysis and any other extension to the base model, your model needs to be set up appropriately to add scenario analysis. All the main logic should be in functions, and the functions should not access variables which were defined outside a function unless they are passed in as arguments.</p></li>
+<li><p>Dictionaries are a helpful data structure for scenario analysis as you can put the name of the scenario as the key and have the input values as the value</p></li>
+<li><p>The process is very similar to other methods of exploring the parameter space. Run the model with each set of inputs and keep the outputs associated with the inputs. In scenario analysis we often also assign probabilities to the cases and take the expected value of the results</p></li>
+<li><p>Before you complete the lab, ensure that your Python sensitivity analysis lab is working properly, or else this and any other future extensions to the model will probably also not work properly</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>Resources<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/f3d3582fc5cf6a8ed85650de708dda5d/Dynamic Salary Retirement Model Scenario Analysis.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Scenario</span> <span class="pre">Analysis</span></code></a></p></li>
 </ul>
@@ -338,15 +359,33 @@
 </div>
 <div class="section" id="introduction-to-internal-randomness">
 <h2>Introduction to Internal Randomness<a class="headerlink" href="#introduction-to-internal-randomness" title="Permalink to this headline">¶</a></h2>
-<p><strong>Video coming soon</strong></p>
-<p><strong>Notes coming soon</strong></p>
+<iframe src="https://www.youtube.com/embed/9jPlnhUCQzY"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id8">
+<h3>Notes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Internal randomness can be very powerful but also has one major drawback: your model is no longer deterministic, so the same inputs will produce different outputs each time. While this is the goal of internal randomness, it also makes it difficult to know if the model is working correctly.</p></li>
+<li><p>You should only use internal randomness in cases where the randomness is so integral to the model that it wouldn’t make sense to have the model without it</p></li>
+<li><p>The external counterpart to internal randomness is Monte Carlo simulation, which will be the next extension we examine for our models. In most cases, Monte Carlo simulation will achieve your goals and you don’t need internal randomness</p></li>
+<li><p>Pick distributions which make sense for your inputs, but usually just pick a normal distribution with reasonable mean and standard deviation</p></li>
+<li><p>For the mean, use the historical mean or your best estimate of the expected value of the input. For the standard deviation, a rule of thumb is that you should pick a standard deviation such that +/- 1x stdev changes from the mean are common, 2x occur occasionally, 3x are rare, and 4x will almost never occur.</p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="intro-to-randomness-in-excel">
 <h2>Intro to Randomness in Excel<a class="headerlink" href="#intro-to-randomness-in-excel" title="Permalink to this headline">¶</a></h2>
-<p><strong>Video coming soon</strong></p>
-<p><strong>Notes coming soon</strong></p>
-<div class="section" id="id7">
-<h3>Resources<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<iframe src="https://www.youtube.com/embed/IIUi4k3e7vg"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id9">
+<h3>Notes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Excel has the functions to get most of the kinds of random numbers that you would want, but often multiple have to be combined such as NORM.INV(RAND()) for randomly drawing numbers from a normal distribution</p></li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>Resources<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/cdf28c185525615bf64a509351aef476/Generating Random Numbers.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
 </ul>
@@ -354,21 +393,53 @@
 </div>
 <div class="section" id="intro-to-randomness-in-python">
 <h2>Intro to Randomness in Python<a class="headerlink" href="#intro-to-randomness-in-python" title="Permalink to this headline">¶</a></h2>
-<p><strong>Video coming soon</strong></p>
-<p><strong>Notes coming soon</strong></p>
-<div class="section" id="id8">
-<h3>Resources<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<iframe src="https://www.youtube.com/embed/9BLPWoB1WGE"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id11">
+<h3>Notes<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Python has far more and more convenient features around randomness than Excel</p></li>
+<li><p>A single function, random.normalvariate, can be used for generating random numbers from a normal distribution</p></li>
+<li><p>There is a lot better support for other conveniently using other distributions in Python</p></li>
+<li><p>You can also generate many random numbers at once using numpy</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>Resources<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/a0430d325c2f0d9bd356e372dbcccad0/Generating Random Numbers.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
 </ul>
 </div>
 </div>
+<div class="section" id="lab-exercise-generating-continuous-random-numbers-in-excel-and-python">
+<h2>Lab Exercise - Generating Continuous Random Numbers in Excel and Python<a class="headerlink" href="#lab-exercise-generating-continuous-random-numbers-in-excel-and-python" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/VAX57lCiUCw"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id13">
+<h3>Notes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The exercise is the same for Excel and Python</p></li>
+<li><p>Make sure to do the entire exercise with n=10 and n=1000 so you can see the differences that number of iterations makes</p></li>
+</ul>
+</div>
+</div>
 <div class="section" id="discrete-randomness">
 <h2>Discrete Randomness<a class="headerlink" href="#discrete-randomness" title="Permalink to this headline">¶</a></h2>
-<p><strong>Video coming soon</strong></p>
-<p><strong>Notes coming soon</strong></p>
-<div class="section" id="id9">
-<h3>Resources<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<iframe src="https://www.youtube.com/embed/O5aJlVLbDYk"     width="560" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id14">
+<h3>Notes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The story around generating random discrete values in Excel is relatively complicated. In Python, it is just as straightforward as working with continuous numbers</p></li>
+<li><p>We can hack our way into a discrete random value function in Excel by using uniform random numbers and the probability distribution. It is a manual effort to set this up in your model</p></li>
+<li><p>In Python, just pass your discrete values and probabilities to the random.choices function and you are done. This function can even give you multiple choices</p></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>Resources<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/cdf28c185525615bf64a509351aef476/Generating Random Numbers.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
 <li><p><a class="reference download internal" download="" href="../_downloads/a0430d325c2f0d9bd356e372dbcccad0/Generating Random Numbers.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">Random</span> <span class="pre">Numbers</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
@@ -379,8 +450,8 @@
 <h2>Adding Internal Randomness to an Excel Model<a class="headerlink" href="#adding-internal-randomness-to-an-excel-model" title="Permalink to this headline">¶</a></h2>
 <p><strong>Video coming soon</strong></p>
 <p><strong>Notes coming soon</strong></p>
-<div class="section" id="id10">
-<h3>Resources<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3>Resources<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/83caa88949af4f46be73943661589766/Dynamic Salary Retirement Model Internal Randomness.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Internal</span> <span class="pre">Randomness</span> <span class="pre">-</span> <span class="pre">Excel</span></code></a></p></li>
 </ul>
@@ -390,8 +461,8 @@
 <h2>Adding Internal Randomness to a Python Model<a class="headerlink" href="#adding-internal-randomness-to-a-python-model" title="Permalink to this headline">¶</a></h2>
 <p><strong>Video coming soon</strong></p>
 <p><strong>Notes coming soon</strong></p>
-<div class="section" id="id11">
-<h3>Resources<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h3>Resources<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/243fb5ddd21d806cc9ffc425856deb65/Dynamic Salary Retirement Model Internal Randomness.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">Internal</span> <span class="pre">Randomness</span> <span class="pre">-</span> <span class="pre">Python</span></code></a></p></li>
 </ul>
