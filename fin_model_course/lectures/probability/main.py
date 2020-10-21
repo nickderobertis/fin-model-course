@@ -23,6 +23,7 @@ def get_probability_lecture() -> LectureGroup:
         notes.get_intro_internal_randomness_lecture(),
         notes.get_excel_internal_randomness_lecture(),
         notes.get_python_internal_randomness_lecture(),
+        notes.get_continuous_randomness_lab_lecture(),
         notes.get_discrete_randomness_lecture(),
         notes.get_internal_randomness_retirement_excel_lecture(),
         notes.get_internal_randomness_retirement_python_lecture(),

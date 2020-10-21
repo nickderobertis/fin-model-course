@@ -456,7 +456,7 @@ def get_content():
                     [
                         'I will now go through adding external scenario analysis to the Dynamic Salary Retirement Model '
                         'in Python',
-                        'he completed exercise on the course site as "Dynamic Salary Retirement Model Sensitivity.ipynb"',
+                        'he completed exercise on the course site as "Dynamic Salary Retirement Model Scenario.ipynb"',
                     ],
                     title='Scenario Analysis in Python',
                     block_title='Adding Scenario Analysis to the Dynamic Retirement Python Model'
@@ -633,6 +633,7 @@ def get_content():
                     title='Example for Discrete Random Variables in Excel and Python',
                     block_title='Generating Random Numbers from Discrete Distributions in Excel and Python'
                 ),
+                random_stock_lab.presentation_frames(),
                 InClassExampleFrame(
                     [
                         'I will now add internal randomness with discrete variables to '
@@ -642,10 +643,9 @@ def get_content():
                         '"Dynamic Salary Retirement Model Internal Randomness.xlsx" and '
                         '"Dynamic Salary Retirement Model Internal Randomness.ipynb"',
                     ],
-                    title='Example for Discrete Random Variables in Excel and Python',
-                    block_title='Generating Random Numbers from Discrete Distributions in Excel and Python'
+                    title='Adding Internal Randomness to Excel and Python Models',
+                    block_title='Extending the Dynamic Salary Retirement Model with Internal Randomness'
                 ),
-                random_stock_lab.presentation_frames(),
                 full_model_internal_randomness_lab.presentation_frames(),
             ],
             title='Internal Randomness'

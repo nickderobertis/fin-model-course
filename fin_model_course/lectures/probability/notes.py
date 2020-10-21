@@ -107,10 +107,20 @@ def get_excel_scenario_analysis_lab_lecture() -> Lecture:
 
 def get_python_scenario_analysis_lecture() -> Lecture:
     title = 'Scenario Analysis in Python'
-    youtube_id = ''
+    youtube_id = 'LkVlviRFQtA'
     week_covered = 8
     notes = LectureNotes([
-
+        'Just as with sensitivity analysis and any other extension to the base model, your model '
+        'needs to be set up appropriately to add scenario analysis. All the main logic should be '
+        'in functions, and the functions should not access variables which were defined outside a '
+        'function unless they are passed in as arguments.',
+        'Dictionaries are a helpful data structure for scenario analysis as you can put the name of the '
+        'scenario as the key and have the input values as the value',
+        'The process is very similar to other methods of exploring the parameter space. Run the model with '
+        'each set of inputs and keep the outputs associated with the inputs. In scenario analysis we often '
+        'also assign probabilities to the cases and take the expected value of the results',
+        'Before you complete the lab, ensure that your Python sensitivity analysis lab is working properly, or '
+        'else this and any other future extensions to the model will probably also not work properly'
     ], title=title)
     resources = [
         RESOURCES.examples.scenario.python.dynamic_salary_model_scenario,
@@ -120,23 +130,36 @@ def get_python_scenario_analysis_lecture() -> Lecture:
 
 def get_intro_internal_randomness_lecture() -> Lecture:
     title = 'Introduction to Internal Randomness'
-    youtube_id = ''
+    youtube_id = '9jPlnhUCQzY'
     week_covered = 8
     notes = LectureNotes([
-
+        'Internal randomness can be very powerful but also has one major drawback: your model is no longer '
+        'deterministic, so the same inputs will produce different outputs each time. While this is the goal of '
+        'internal randomness, it also makes it difficult to know if the model is working correctly.',
+        'You should only use internal randomness in cases where the randomness is so integral to the model '
+        "that it wouldn't make sense to have the model without it",
+        "The external counterpart to internal randomness is Monte Carlo simulation, which will be the next "
+        "extension we examine for our models. In most cases, Monte Carlo simulation will achieve your goals and "
+        "you don't need internal randomness",
+        'Pick distributions which make sense for your inputs, but usually just pick a normal distribution with '
+        'reasonable mean and standard deviation',
+        'For the mean, use the historical mean or your best estimate of the expected value of the input. For the '
+        'standard deviation, a rule of thumb is that you should pick a standard deviation such that +/- 1x stdev '
+        'changes from the mean are common, 2x occur occasionally, 3x are rare, and 4x will almost never occur.'
     ], title=title)
     resources = [
-
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
 def get_excel_internal_randomness_lecture() -> Lecture:
     title = 'Intro to Randomness in Excel'
-    youtube_id = ''
+    youtube_id = 'IIUi4k3e7vg'
     week_covered = 8
     notes = LectureNotes([
-
+        'Excel has the functions to get most of the kinds of random numbers that you would want, '
+        'but often multiple have to be combined such as NORM.INV(RAND()) for randomly drawing '
+        'numbers from a normal distribution'
     ], title=title)
     resources = [
         RESOURCES.examples.internal_randomness.excel.generate_numbers,
@@ -146,10 +169,14 @@ def get_excel_internal_randomness_lecture() -> Lecture:
 
 def get_python_internal_randomness_lecture() -> Lecture:
     title = 'Intro to Randomness in Python'
-    youtube_id = ''
+    youtube_id = '9BLPWoB1WGE'
     week_covered = 8
     notes = LectureNotes([
-
+        'Python has far more and more convenient features around randomness than Excel',
+        'A single function, random.normalvariate, can be used for generating random numbers '
+        'from a normal distribution',
+        'There is a lot better support for other conveniently using other distributions in Python',
+        'You can also generate many random numbers at once using numpy'
     ], title=title)
     resources = [
         RESOURCES.examples.internal_randomness.python.generate_numbers,
@@ -157,12 +184,32 @@ def get_python_internal_randomness_lecture() -> Lecture:
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 
 
-def get_discrete_randomness_lecture() -> Lecture:
-    title = 'Discrete Randomness'
-    youtube_id = ''
+def get_continuous_randomness_lab_lecture() -> Lecture:
+    title = 'Lab Exercise - Generating Continuous Random Numbers in Excel and Python'
+    youtube_id = 'VAX57lCiUCw'
     week_covered = 8
     notes = LectureNotes([
+        'The exercise is the same for Excel and Python',
+        'Make sure to do the entire exercise with n=10 and n=1000 so you can see the '
+        'differences that number of iterations makes'
+    ], title=title)
+    resources = [
 
+    ]
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
+
+
+def get_discrete_randomness_lecture() -> Lecture:
+    title = 'Discrete Randomness'
+    youtube_id = 'O5aJlVLbDYk'
+    week_covered = 8
+    notes = LectureNotes([
+        'The story around generating random discrete values in Excel is relatively complicated. In Python, '
+        'it is just as straightforward as working with continuous numbers',
+        'We can hack our way into a discrete random value function in Excel by using uniform random numbers '
+        'and the probability distribution. It is a manual effort to set this up in your model',
+        'In Python, just pass your discrete values and probabilities to the random.choices function and you are done. '
+        'This function can even give you multiple choices'
     ], title=title)
     resources = [
         RESOURCES.examples.internal_randomness.excel.generate_numbers,

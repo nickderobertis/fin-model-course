@@ -480,7 +480,7 @@ def get_scenario_analysis_excel_lab_lecture() -> LabExerciseLecture:
 def get_scenario_analysis_python_lab_lecture() -> LabExerciseLecture:
     title = 'Adding Scenario Analysis to Project 1 - Python'
     short_title = 'Scenario Analysis Python Lab'
-    youtube_id = ''
+    youtube_id = '4MDIUB1kcY4'
     week_covered = 8
     bullets = [
         [
@@ -507,7 +507,7 @@ def get_scenario_analysis_python_lab_lecture() -> LabExerciseLecture:
 def get_randomness_excel_lab_lecture() -> LabExerciseLecture:
     title = 'Generating and Visualizing Random Numbers - Excel'
     short_title = 'Randomness Excel Lab'
-    youtube_id = ''
+    youtube_id = 'dxCFS4dQqVo'
     week_covered = 8
     bullets = [
         [
@@ -536,7 +536,7 @@ def get_randomness_excel_lab_lecture() -> LabExerciseLecture:
 def get_randomness_python_lab_lecture() -> LabExerciseLecture:
     title = 'Generating and Visualizing Random Numbers - Python'
     short_title = 'Randomness Python Lab'
-    youtube_id = ''
+    youtube_id = 'A42MrQL6Dz4'
     week_covered = 8
     bullets = [
         [
@@ -565,7 +565,7 @@ def get_randomness_python_lab_lecture() -> LabExerciseLecture:
 def get_random_stock_model_lab_lecture() -> LabExerciseLecture:
     title = 'Building a Simple Model of Stock Returns'
     short_title = 'Internal Randomness Simple Model Lab'
-    youtube_id = ''
+    youtube_id = 'mRiaOqoKuQQ'
     week_covered = 8
     bullets = [
         [
