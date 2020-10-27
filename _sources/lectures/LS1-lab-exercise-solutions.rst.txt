@@ -464,3 +464,106 @@ Resources
 
 - :download:`Slides - Probabilistic Modeling </_static/generated/pdfs/S8 Probabilistic Modeling.pdf>`
         
+
+Adding Scenario Analysis to Project 1 - Python
+=================================================
+
+.. youtube:: 4MDIUB1kcY4
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Add external scenario analysis to your Python model from Project 1
+- Create three cases, for a bad, normal, and good economy. Change the initial demand and price per phone in each of the cases. Both demand and price should be higher in better economic situations. 
+
+Resources
+------------
+
+
+- :download:`Slides - Probabilistic Modeling </_static/generated/pdfs/S8 Probabilistic Modeling.pdf>`
+        
+
+Generating and Visualizing Random Numbers - Excel
+====================================================
+
+.. youtube:: dxCFS4dQqVo
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Complete the following excercise in Excel for n=10 and n=1000
+- Generate n values between 0 and 1 with a uniform distribution
+- Generate n values from a normal distribution with a 0.5 mean and 10 standard deviation
+- Visualize each of the two outputs with a histogram
+- Calculate the mean and standard deviation of each of the two sets of generated numbers
+- Re-calculate it a few times, take note of how much the mean and standard deviation change
+
+Resources
+------------
+
+
+- :download:`Slides - Probabilistic Modeling </_static/generated/pdfs/S8 Probabilistic Modeling.pdf>`
+        
+
+Generating and Visualizing Random Numbers - Python
+=====================================================
+
+.. youtube:: A42MrQL6Dz4
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Complete the following excercise in Python for n=10 and n=1000
+- Generate n values between 0 and 1 with a uniform distribution
+- Generate n values from a normal distribution with a 0.5 mean and 10 standard deviation
+- Visualize each of the two outputs with a histogram
+- Calculate the mean and standard deviation of each of the two sets of generated numbers
+- Re-calculate it a few times, take note of how much the mean and standard deviation change
+
+Resources
+------------
+
+
+- :download:`Slides - Probabilistic Modeling </_static/generated/pdfs/S8 Probabilistic Modeling.pdf>`
+        
+
+Building a Simple Model of Stock Returns
+===========================================
+
+.. youtube:: mRiaOqoKuQQ
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Create the following model in both Excel and Python
+- A stock starts out priced at 100. Each period, it can either go up or down.
+- When it goes up, it will grow by 1%. When it goes down, it will decrease by 1%.
+- The likelihood of the stock going up is 60%, and down 40%.
+- Build a model which shows how the stock price changes throughout time. Visualize it up to 100 periods and show the final price.
+
+Resources
+------------
+
+
+- :download:`Slides - Probabilistic Modeling </_static/generated/pdfs/S8 Probabilistic Modeling.pdf>`
+        

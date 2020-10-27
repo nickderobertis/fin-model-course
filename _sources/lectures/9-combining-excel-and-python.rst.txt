@@ -1,0 +1,111 @@
+
+Combining Excel and Python
+*****************************
+
+Use Python from Excel and use Excel from Python. Learn to use the two tools together flexibly to enable using the most effective tool for each portion of the model.
+
+Resources
+============
+
+
+- :download:`Slides - Combining Excel and Python </_static/generated/pdfs/S9 Combining Excel and Python.pdf>`
+        
+
+- :download:`Lecture Notes - Combining Excel and Python </_static/generated/pdfs/LN9 Combining Excel and Python.pdf>`
+        
+
+- :download:`Read Write Excel Pandas </_static/Examples/Connecting Python and Excel/pandas/Read Write Excel Pandas.ipynb>`
+        
+
+- :download:`MSFT Financials </_static/Materials for Lab Exercises/Connecting Python and Excel/pandas/MSFT Financials.xls>`
+        
+
+- :download:`Combining Excel and Python </_static/Examples/Connecting Python and Excel/xlwings/Combining Excel and Python.ipynb>`
+        
+
+- :download:`Example Workbook </_static/Examples/Connecting Python and Excel/xlwings/Example Workbook.xlsx>`
+        
+
+- :download:`xlwings Lab </_static/Materials for Lab Exercises/Connecting Python and Excel/xlwings/xlwings Lab.xlsx>`
+        
+
+Introduction to Combining Excel and Python
+=============================================
+
+.. youtube:: HbIVMdbZuzQ
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- At this point in the course, you should feel comfortable using both Python and Excel to create models to solve problems
+- Now it is time to learn how to combine the two tools for the maximum flexibility, power, and convenience
+- We will cover two approaches to integrating the two: using Pandas and using xlwings
+- We are also about to learn Monte Carlo simulation, which can be done easily in Python but would require using VBA or an extension in Excel. Using this combination we can have the model in Excel and run Monte Carlo simulations on it in Python
+- The Pandas approach is simpler but is much more limited, basically you can read in Excel workbooks and you can output an entire workbook or sheet
+- The xlwings approach gets a bit more complicated but allows to have a connection between Excel and Python and transfer individual values or entire tables back and forth with an existing workbook
+
+Combining Excel and Python using Pandas
+==========================================
+
+.. youtube:: GrzJSNrP6ns
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- If you have a Python model and you just want to load some data in from Excel, Pandas is probably your best choice
+- If you have an Excel model and you collect the data using Python, this is also a good choice
+- If you want to have some parts of your model in Excel and some parts in Python, you should probably look to xlwings
+- BE CAREFUL WHEN WRITING TO WORKBOOKS as it will replace what is there. It could overwrite your Excel model. THERE IS NO UNDO (back up your work)
+
+Resources
+------------
+
+
+- :download:`Read Write Excel Pandas </_static/Examples/Connecting Python and Excel/pandas/Read Write Excel Pandas.ipynb>`
+        
+
+- :download:`MSFT Financials </_static/Materials for Lab Exercises/Connecting Python and Excel/pandas/MSFT Financials.xls>`
+        
+
+Combining Excel and Python using xlwings
+===========================================
+
+.. youtube:: LYzVXHCJs40
+    :height: 315
+    :width: 560
+    :align: center
+
+|
+            
+Notes
+--------
+
+- xlwings is a package that makes it quite easy to combine Excel and Python in ways that should work for nearly every use case
+- This can be done without xlwings using the Microsoft COM API in Python, but xlwings is far more convenient
+- We are focusing here on only manipulating Excel from Python, but I encourage you to explore running Python from Excel on your own time
+- Now with xlwings, anything that you can do in Excel, you can make it happen from Python
+- It is easy to transfer individual values, ranges, and tables back and forth between Excel and Python
+- For those who have a lot of difficulty with Python and feel comfortable in Excel, xlwings allows building out the core model in Excel and adding extensions such as Monte Carlo simulation, sensitivity analysis, and scenario analysis in Python
+
+Resources
+------------
+
+
+- :download:`Combining Excel and Python </_static/Examples/Connecting Python and Excel/xlwings/Combining Excel and Python.ipynb>`
+        
+
+- :download:`Example Workbook </_static/Examples/Connecting Python and Excel/xlwings/Example Workbook.xlsx>`
+        
+
+- :download:`xlwings Lab </_static/Materials for Lab Exercises/Connecting Python and Excel/xlwings/xlwings Lab.xlsx>`
+        
