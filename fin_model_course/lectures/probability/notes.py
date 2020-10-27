@@ -220,10 +220,20 @@ def get_discrete_randomness_lecture() -> Lecture:
 
 def get_internal_randomness_retirement_excel_lecture() -> Lecture:
     title = 'Adding Internal Randomness to an Excel Model'
-    youtube_id = ''
+    youtube_id = 'CTXV_BzffC8'
     week_covered = 9
     notes = LectureNotes([
-
+        'Typically you would add internal randomness as you build the model, not afterwards. It can '
+        'require substantial changes to the original logic to add it afterwards',
+        'In most cases Monte Carlo simulation should be used when the model is already built',
+        'Here we will be randomly picking for each year whether it is a recession, normal, or expansion economy',
+        'In this case, as we want to add different behavior year by year based on the randomness, '
+        'it is not possible via an external method such as Monte Carlo simulation',
+        'Here I am treating interest rate and savings rate as discrete random variables since they are tied to the '
+        'state of the economy which is a discrete random variable. I could have assigned the quality of the economy '
+        'to a normal distribution to make it continuous and then the other variables could be continuous as well',
+        'There are no special tricks here in Excel, we are just applying the previous approach for discrete random '
+        'variables and hooking it into the model',
     ], title=title)
     resources = [
         RESOURCES.examples.internal_randomness.excel.dynamic_salary_model_random,
@@ -233,10 +243,14 @@ def get_internal_randomness_retirement_excel_lecture() -> Lecture:
 
 def get_internal_randomness_retirement_python_lecture() -> Lecture:
     title = 'Adding Internal Randomness to a Python Model'
-    youtube_id = ''
+    youtube_id = 'COdfQ642ATI'
     week_covered = 9
     notes = LectureNotes([
-
+        'See the notes for Adding Internal Randomness to an Excel Model as the conclusions are the same here',
+        'It is quite an effort to add internal randomness which is this integral to the model after it has already '
+        'been built',
+        'Similarly to in Excel, there are not any new concepts in this lecture, but we are just applying the '
+        'discrete random variables concepts and integrating into the model'
     ], title=title)
     resources = [
         RESOURCES.examples.internal_randomness.python.dynamic_salary_model_random,
@@ -246,10 +260,15 @@ def get_internal_randomness_retirement_python_lecture() -> Lecture:
 
 def get_internal_randomness_lab_overview_lecture() -> Lecture:
     title = 'Internal Randomness Lab Exercises Overview'
-    youtube_id = ''
+    youtube_id = 'f7jjnQQ57Xc'
     week_covered = 9
     notes = LectureNotes([
-
+        'Whereas I was adding internal discrete randomness in the examples, now you will add '
+        'internal continuous randomness to your own model',
+        'I have selected the investment return as the random variable as it is only used in '
+        'the NPV calculation. It should only require minimal changes to your model to integrate this',
+        'This is a case where we would normally use Monte Carlo simulation as we are just randomizing '
+        'the existing inputs. Here we are just applying internal randomness to understand how to implement it'
     ], title=title)
     resources = [
 

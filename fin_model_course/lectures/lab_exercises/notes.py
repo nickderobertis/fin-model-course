@@ -592,17 +592,16 @@ def get_random_stock_model_lab_lecture() -> LabExerciseLecture:
 
 
 def get_extend_model_internal_randomness_lab_lecture() -> LabExerciseLecture:
-    title = 'Extending the Dynamic Salary Retirement Model with Internal Randomness'
+    title = 'Extending the Project 1 Model with Internal Randomness'
     short_title = 'Internal Randomness Model Lab'
-    youtube_id = ''
+    youtube_id = 'LBXRPocOCDs'
     week_covered = 9
     bullets = [
         [
             "Add internal randomness to your Project 1 Excel and Python models",
-            "We will relax the assumption that there is a single investment return which holds for every period",
-            "Instead we will now assume that investment returns are drawn from a normal distribution",
+            "Now assume that the interest rate is drawn from a normal distribution",
             "For baseline values of the inputs, you can use a 4% mean and 3% standard deviation",
-            "You should be able to run the model repeatedly and see different years to retirement each time"
+            "You should be able to run the model repeatedly and see a different NPV each time"
         ]
     ]
     answers = [
@@ -622,7 +621,7 @@ def get_extend_model_internal_randomness_lab_lecture() -> LabExerciseLecture:
 def get_read_write_excel_pandas_lab_lecture() -> LabExerciseLecture:
     title = 'Reading and Writing to Excel with Pandas'
     short_title = 'Read Write Pandas Lab'
-    youtube_id = ''
+    youtube_id = 'Y1A39qzglik'
     week_covered = 9
     bullets = [
         [
@@ -662,7 +661,7 @@ def get_read_write_excel_pandas_lab_lecture() -> LabExerciseLecture:
 def get_read_write_xlwings_lab_lecture() -> LabExerciseLecture:
     title = 'Reading and Writing to Excel with xlwings'
     short_title = 'Read Write xlwings Lab'
-    youtube_id = ''
+    youtube_id = 'Jgjml7JnYwY'
     week_covered = 9
     bullets = [
         [
