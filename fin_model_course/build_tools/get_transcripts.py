@@ -7,7 +7,6 @@ from pydantic import BaseModel
 from youtube_transcript_api import YouTubeTranscriptApi
 
 from build_tools.config import TRANSCRIPTS_FOLDER
-from lectures.config import get_lecture_groups
 
 if not os.path.exists(TRANSCRIPTS_FOLDER):
     os.makedirs(TRANSCRIPTS_FOLDER)
@@ -20,7 +19,7 @@ class TranscriptEntry(BaseModel):
 
     @property
     def hhmmss(self) -> str:
-        seconds = self.start % (24 * 3600)
+        seconds = self.start
         hour = seconds // 3600
         seconds %= 3600
         minutes = seconds // 60
@@ -28,16 +27,37 @@ class TranscriptEntry(BaseModel):
 
         return "%d:%02d:%02d" % (hour, minutes, seconds)
 
-    def to_html(self) -> str:
-        return f'<li class="transcript-entry"><span class="transcript-timestamp">{self.hhmmss}</span>{self.text}</li>'
+    @property
+    def mmss(self) -> str:
+        seconds = self.start
+        minutes = seconds // 60
+        seconds %= 60
+
+        return "%02d:%02d" % (minutes, seconds)
+
+    def to_html(self, include_hours: bool = False) -> str:
+        if include_hours:
+            timestamp = self.hhmmss
+        else:
+            timestamp = self.mmss
+        return f'\t\t<li class="transcript-entry"><span class="transcript-timestamp">{timestamp}: </span>{self.text}</li>'
 
 
 class Transcript(BaseModel):
     entries: List[TranscriptEntry]
 
+    @property
+    def max_start(self) -> float:
+        return max([entry.start for entry in self.entries])
+
     def to_html(self) -> str:
-        entry_html = '\n'.join([entry.to_html() for entry in self.entries])
-        return f'<div class="transcript"><ul class="transcript-entries">{entry_html}</ul></div>'
+        if self.max_start >= (60 * 60):
+            include_hours = True
+        else:
+            include_hours = False
+
+        entry_html = '\n'.join([entry.to_html(include_hours=include_hours) for entry in self.entries])
+        return f'<div class="transcript"><ul class="transcript-entries">\n{entry_html}\n\t</ul></div>'
 
 
 def get_all_transcripts(
@@ -45,6 +65,8 @@ def get_all_transcripts(
     store_in_cache: bool = True,
     cache_folder: Path = TRANSCRIPTS_FOLDER,
 ) -> List[Transcript]:
+    from lectures.config import get_lecture_groups
+
     lecture_groups = get_lecture_groups()
     transcripts: List[Transcript] = []
     for lg in lecture_groups:
