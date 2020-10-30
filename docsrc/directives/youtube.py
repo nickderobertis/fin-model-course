@@ -29,10 +29,10 @@ class IframeVideo(Directive):
     final_argument_whitespace = False
     option_spec = {
         'height': directives.nonnegative_int,
-        'width': directives.nonnegative_int,
+        'width': directives.unchanged,
         'align': align,
     }
-    default_width = 500
+    default_width = '500'
     default_height = 281
 
     def run(self):
@@ -48,7 +48,7 @@ class IframeVideo(Directive):
 
 class Youtube(IframeVideo):
     html = '<iframe src="https://www.youtube.com/embed/%(video_id)s" \
-    width="%(width)u" height="%(height)u" frameborder="0" \
+    width="%(width)s" height="%(height)u" frameborder="0" \
     webkitAllowFullScreen mozallowfullscreen allowfullscreen \
     class="align-%(align)s"></iframe>'
 
