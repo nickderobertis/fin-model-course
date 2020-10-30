@@ -10,6 +10,7 @@ from pydantic.dataclasses import dataclass
 
 from build_tools.config import SITE_URL
 from build_tools.ext_rst import header_rst
+from build_tools.get_transcripts import Transcript, get_transcript
 from pltemplates.frames.lab import LabFrame
 from pltemplates.hyperlink import Hyperlink
 
@@ -232,6 +233,7 @@ class Lecture:
     notes: Optional[LectureNotes] = None
     youtube_id: Optional[str] = None
     resources: Optional[Sequence[LectureResource]] = None
+    _transcript: Optional[Transcript] = None
 
     def to_rst(self) -> str:
         out_str = header_rst(self.title, 3)
@@ -244,6 +246,7 @@ class Lecture:
         else:
             out_str += self._notes_alt_rst
         out_str += self._resources_rst
+        out_str += self._transcript_rst
         return out_str
 
     @property
@@ -251,7 +254,7 @@ class Lecture:
         return f"""
 .. youtube:: {self.youtube_id}
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -282,6 +285,35 @@ class Lecture:
                 + "\n"
             )
         return out_str
+
+    @property
+    def _transcript_rst(self) -> str:
+        if not self.youtube_id:
+            return ''
+
+        out_str = header_rst('Transcript', 4)
+        html = self.transcript.to_html()
+        rst = f"""
+.. raw:: html
+    
+    {html}
+
+|
+"""
+        out_str += rst
+        return out_str
+
+    @property
+    def transcript(self) -> Transcript:
+        if self._transcript is not None:
+            return self._transcript
+
+        if not self.youtube_id:
+            raise ValueError('cannot load transcript without YouTube ID')
+
+        self._transcript = get_transcript(self.youtube_id)
+        return self._transcript
+
 
 @dataclass
 class LectureGroup:

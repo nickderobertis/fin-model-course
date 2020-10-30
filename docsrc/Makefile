@@ -34,6 +34,7 @@ github:
 	@./nb-examples.sh
 	@./gen-pdfs.sh
 	@./gen-metadata.sh
+	@./gen-transcripts.sh
 	@./gen-lectures.sh
 	@./gen-downloads.sh
 	@make doctest
