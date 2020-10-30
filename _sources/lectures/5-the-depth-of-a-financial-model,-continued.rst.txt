@@ -31,7 +31,7 @@ Using Jupyter to Structure a Python Model
 
 .. youtube:: Zk29_tWiWGc
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -59,12 +59,490 @@ Resources
 - `LaTeX Equations in Jupyter <https://medium.com/analytics-vidhya/writing-math-equations-in-jupyter-notebook-a-naive-introduction-a5ce87b9a214>`_
         
 
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:02: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>nick dear bertis here teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:05: </span>financial modeling today we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:07: </span>be talking about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>how to structure a python model inside a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:11: </span>jupiter notebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:13: </span>and this is the first video of our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:15: </span>lecture series on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:16: </span>building a dynamic salary retirement</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:18: </span>model in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:21: </span>so it can be a little bit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:25: </span>difficult for you know new people in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:29: </span>financial modeling in python to figure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:31: </span>out how to structure their</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>models um but certainly the organization</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:36: </span>is important uh because it's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:38: </span>make it so much easier for other people</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:40: </span>to understand</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:41: </span>what is going on in your model and to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:43: </span>able to add to it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:45: </span>so we've already seen how in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:48: </span>models</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:48: </span>uh you know clearly defining input and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:51: </span>output areas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:52: </span>uh having different sheets for different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:55: </span>parts of the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:58: </span>you know clear clear table headers and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:00: </span>things like that are very important</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:02: </span>for making it a readable model and we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:05: </span>can bring a similar kind of organization</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:07: </span>to our python models as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:10: </span>so we've already talked in the course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:12: </span>about how</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:13: </span>it makes sense to use functions to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:15: </span>organize your logic within a python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:18: </span>model and in order to wrap all the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:21: </span>model inputs up into a single data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:24: </span>structure a data class</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:25: </span>is very helpful for that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:29: </span>and the way that you would work with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:32: </span>these functions in the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:33: </span>is basically any discrete step any</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:36: </span>logical step</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:37: </span>in the model becomes a function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:40: </span>and then functions can call other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:42: </span>functions so you kind of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:44: </span>build up your model in layers uh going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:48: </span>very individual steps all the way up to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:50: </span>you know run the entire model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:53: </span>as a single function so you'll have you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:57: </span>know your model function and that model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:58: </span>function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:59: </span>calls each of the sub model functions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:01: </span>and then each of those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:02: </span>sub model functions have their own uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:05: </span>functions for the individual steps you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:07: </span>know something like that you can have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:09: </span>any number of layers in here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:12: </span>however you know complex your model is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:14: </span>is going to determine how many layers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:15: </span>you need</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:18: </span>um but you know just talking about all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:20: </span>of that that's just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:22: </span>you know playing python organization but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:24: </span>then we're also working in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:26: </span>jupiter to build our financial models</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:29: </span>so jupiter gives us a lot of additional</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:31: </span>tools that we can use to give even</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:33: </span>better structure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:34: </span>even more organization to our python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:38: </span>models</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:40: </span>so with jupiter you know we don't just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:42: </span>have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:43: </span>plain text code anymore</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:46: </span>uh not only can we have that code but we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:48: </span>can have this you know nicely formatted</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:51: </span>text uh with headers and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:54: </span>bold italics you know whatever you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:56: </span>kind of standard things you would want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:58: </span>to see with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:59: </span>nicely formatted text you can have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:01: </span>equations in there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:03: </span>you can have sections you can have links</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:06: </span>you can have graphics</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:07: </span>and everything is all in there right</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:09: </span>with the code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:11: </span>so it's a really interesting way to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:13: </span>present</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:14: </span>your results of a model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:19: </span>uh this nicely formatted text jupiter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:22: </span>uses something called</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:23: </span>markdown markdown is actually its own</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:26: </span>mini markup language it's not a jupiter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:29: </span>specific thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>it's there in a lot of different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>platforms</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:34: </span>and so you can look up just general</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:36: </span>resources on markdown</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:38: </span>and i've given a couple of those for you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:40: </span>here and those will let you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:42: </span>all the different things that you can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:43: </span>in these nicely formatted</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:45: </span>cells uh but for the most part as far as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:49: </span>what you're going to need</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:50: </span>you know on a daily basis it would be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:52: </span>you know headers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:53: </span>for sections uh bullet points are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:57: </span>another good one to know offhand</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:01: </span>and you want to know also equations so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:04: </span>you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:05: </span>speak about what you're doing in math</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:07: </span>terms</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:08: </span>and then the equations are actually not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:10: </span>built into regular</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:12: </span>markdown jupiter actually has extended</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:15: </span>markdown to add</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:16: </span>equation support by using latex</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:19: </span>equations um so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:23: </span>uh you know you can google about how to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:25: </span>write latex equations uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:28: </span>in order to be able to add them to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:30: </span>jupiter but we'll also look at an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:32: </span>example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:33: </span>as well um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:36: </span>so with our jupiter organization we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:38: </span>think about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:39: </span>you know how in excel we had worksheets</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:42: </span>within the workbook to represent</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:44: </span>different sections or sub models within</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:47: </span>the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:48: </span>here we can use you know the headers in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:50: </span>jupiter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:51: </span>to separate these sections and think of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:54: </span>these sections as analogous to those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:56: </span>excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:57: </span>worksheets</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:00: </span>um and it's always good with these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:02: </span>sections to give some kind of overview</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:05: </span>uh you know what are we doing in this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:06: </span>section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:08: </span>and this really goes a long way to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:11: </span>making your model a lot more readable</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:13: </span>especially for non-technical people who</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:16: </span>aren't necessarily going to be able to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:17: </span>read the code very easily</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:19: </span>having this nicely formatted text in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>then makes it so much easier to read</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:26: </span>without having to go and understand all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:28: </span>of the code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:30: </span>let's look at some examples of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:33: </span>things that we can do with this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:34: </span>jupiter markdown</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:38: </span>so moving over to the jupiter notebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:40: </span>uh so the first thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:42: </span>that uh you'll see you know when i start</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:45: </span>uh typing i'm in edit mode</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:49: </span>um and when i hit escape i'm in command</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:52: </span>mode so you can see that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:53: </span>here uh when i click in it switches to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:56: </span>edit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:58: </span>and the reason i'm talking about that is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:00: </span>because when you're in command mode</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:02: </span>then you can switch the type of the cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:06: </span>with the keyboard so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:09: </span>m is going to make it into a markdown</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:12: </span>cell and y</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:13: </span>is going to make it into a code cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:17: </span>now you can always just use this drop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:19: </span>down to do the same thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:21: </span>uh but it's nice to know the keyboard</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:23: </span>shortcuts to make your life easier</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:26: </span>um so you know if we have a code cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:29: </span>then we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:30: </span>you know run whatever python code in it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:34: </span>and then if we have a markdown cell uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:38: </span>you know you try to put code in it it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:40: </span>not going to run the code it's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:42: </span>display that now as text because it is a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:44: </span>markdown cell it does not run code it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:47: </span>displays</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:48: </span>uh formatted text so what can we do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:52: </span>in these markdown cells so uh you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:55: </span>most</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:56: </span>often the thing that you're gonna do is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:57: </span>create headers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:59: </span>so to create a header is with the hash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>sign</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:02: </span>so this would be a level one header</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:07: </span>and then as you add additional hash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:09: </span>signs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:10: </span>it makes additional smaller levels of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:14: </span>headers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:15: </span>so i think you have up to six um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:18: </span>but you can see uh you notice the more</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:21: </span>hash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:22: </span>signs that you have the smaller the uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:25: </span>header for the section is and so this is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:28: </span>how you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:28: </span>represent subsections within the section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:31: </span>uh you know you can have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:33: </span>you know some things in between the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:35: </span>sections</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:36: </span>uh and you know this would be like a sub</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:39: </span>section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:40: </span>and then this would be like a sub sub</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:43: </span>section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:44: </span>um so that you can you know have one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:47: </span>overall</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:48: </span>header for your model describing what</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:50: </span>your model is and then you can have each</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:51: </span>you know sub model as the level two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:54: </span>header</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:55: </span>and then you can even break that further</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:56: </span>up into parts and and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:58: </span>keep going further down as you need to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:00: </span>to really</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:01: </span>uh give a good structure to something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:05: </span>so these headers are are going to be the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:07: </span>biggest thing that we're going to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:11: </span>and then another one which is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:14: </span>uh useful is uh to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:18: </span>uh bullet points so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:21: </span>bullet points uh all it is is you just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:24: </span>do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:25: </span>a dash and then a space and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:28: </span>whatever you want to have in the bullet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:29: </span>and then you know enter to go to the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:31: </span>next line and repeat</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:33: </span>that way you're able to get bullets</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:38: </span>and then we can do equations as well so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:41: </span>equations</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:42: </span>uh in order to do equation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:46: </span>you're going to wrap the actual equation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:49: </span>part of it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:50: </span>in dollar signs so it could be that you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:53: </span>have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:54: </span>a sentence uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:57: </span>with an equation uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:00: </span>in the middle a equals b plus c</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:03: </span>uh and it would render</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:07: </span>like this so we see you know the nicely</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:10: </span>formatted equation coming here in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:12: </span>middle of the text</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:14: </span>um and it rendered that way because we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:16: </span>added the dollar signs if we don't add</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:18: </span>the dollar signs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:19: </span>then it doesn't know as an equation and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:21: </span>you don't see like the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:23: </span>uh you know nicer equation format there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:26: </span>it doesn't look a lot different with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:27: </span>you know this very simple equation but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:30: </span>if we want to do something like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:32: </span>say add a subscript let's say this is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:35: </span>you know b1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:36: </span>and this is c2 um then you can see that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:40: </span>you know it looks very nice with the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:42: </span>subscripts that way and if we didn't</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:44: </span>include the dollar signs then it's not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:46: </span>rendering as an equation so it's just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:48: </span>going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:49: </span>you know raw with those uh underscores</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:52: </span>so there's there's a lot that you can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:55: </span>with this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:56: </span>equation syntax and we're not really</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:58: </span>going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:59: </span>dig into it a whole lot in this course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:00: </span>you can definitely take a look at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:02: </span>latex references and i gave a reference</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:05: </span>along with the lecture</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:06: </span>you can look at but just know that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:10: </span>you know kind of the basic math symbols</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:12: </span>work fine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:14: </span>underscores uh do subscripts</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:18: </span>and then the uh carrot sign does a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:21: </span>superscript</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:22: </span>and that's mostly what you're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:24: </span>need to know to be able to write</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:26: </span>simple equations uh one other thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:29: </span>to note is you know this equation came</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:32: </span>in the middle of the text</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:34: </span>if we wanted it to be offset then you do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:37: </span>two dollar signs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:38: </span>on each side and then you can see it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:40: </span>actually broke the sentence into two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:42: </span>and it has now put the equation centered</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:45: </span>and on its own line</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:46: </span>so if you want your equation to really</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:48: </span>stand out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:49: </span>then it makes sense to do the double</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:51: </span>dollar signs and if you want your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:53: </span>equation to just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:54: </span>flow in line with the text then do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:57: </span>single dollar signs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:00: </span>so these are going to be the main things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:02: </span>that you would want to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:04: </span>and one other is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>we'll look at building a table of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:09: </span>contents in jupiter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:13: </span>and so a way we can do that um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:17: </span>is we put um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:21: </span>we put what we want to show</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:24: </span>as the um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:28: </span>as the uh text which is going to display</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:32: </span>and then uh we're going to put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:35: </span>the header um so let's go to sub sub</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:39: </span>section so if you sub</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:41: </span>sub section so when we do that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:45: </span>then we click this link we can see it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:47: </span>takes us right to that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:48: </span>section so this will be really useful</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:51: </span>for building out a table of contents</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:52: </span>which we'll look at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:53: </span>in the full uh python model example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:59: </span>but what's going on here is to do this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:01: </span>link and you'll see this in the markdown</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:03: </span>references as well but it's it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:06: </span>brackets</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:06: </span>square brackets and then you put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:09: </span>whatever</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:10: </span>text you want to display and then it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:12: </span>parentheses</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:13: </span>and then we have the hash sign to say</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:15: </span>that this is going to be a header in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:16: </span>page</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:17: </span>and then it's the header text but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:20: </span>wherever there are spaces</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:21: </span>you replace those spaces with dashes to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:24: </span>get that to work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:27: </span>so those are all the main jupiter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:30: </span>features</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:31: </span>that we'll use and you can take a look</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:33: </span>at the references to see the other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:35: </span>features</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:36: </span>which there are plenty of them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:42: </span>and then you know thinking about how</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:45: </span>this all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:46: </span>fits in with what we've talked about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:48: </span>already about structuring a python model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:51: </span>you know where the overall model is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:53: </span>going to be a function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:54: </span>uh each you know individual kind of main</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:57: </span>step in the model we'll call that a sub</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:59: </span>model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:00: </span>is also going to be a function and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:02: </span>any</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:03: </span>steps involved in those sub models are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:06: </span>going to be individual functions as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:09: </span>and this can keep going down as many</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:11: </span>layers as you need it to go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:12: </span>for your organization</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:15: </span>but we want to work this into the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:17: </span>jupiter structure as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:18: </span>so what i would generally recommend is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:22: </span>you know follow a similar structure with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:24: </span>your jupiter sections</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:25: </span>as you are with your functions so we'll</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:28: </span>have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:29: </span>you know an overview header which talks</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:32: </span>about the main model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:34: </span>and what the main it will have some</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:35: </span>description of the main model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:37: </span>and then we'll have the table of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:38: </span>contents and then each section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:41: </span>will be one of the sub models and in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:43: </span>each of those sections</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:45: </span>uh we define that function for the sub</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:48: </span>model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:48: </span>and explain what it does and what we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:50: </span>doing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:52: </span>um and you know any individual step</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:54: </span>functions and everything</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:56: </span>and then uh you know go on to the next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:59: </span>jupiter section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:00: </span>it has another uh function for the next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:03: </span>sub model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:05: </span>and if you know any of these areas got</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:08: </span>really involved</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:09: </span>uh you know you could further break them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:11: </span>down you know with additional layers of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:13: </span>functions or additional jupiter sections</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:16: </span>so that everything is very clear</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:21: </span>and one other thing to note about just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:25: </span>the workflow</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:26: </span>in jupiter is you know when you're first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:29: </span>filling things out in jupiter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:30: </span>i've always found that i just have cells</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:32: </span>going everywhere</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:33: </span>with all these random bits of testing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:36: </span>code just trying random little things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:38: </span>uh which is totally fine but then once</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:41: </span>you get to the end of the project you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:43: </span>want to make sure that you clean up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:45: </span>all these little cells so that you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:47: </span>everything just goes in order from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:48: </span>beginning to end</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:49: </span>and there's a logical flow all the way</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:51: </span>through</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:53: </span>and you can ensure that this is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:56: </span>there by going into the kernel menu</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:00: </span>and hitting restart and run all cells</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:03: </span>what that's going to do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:04: </span>is it's going to give you a totally new</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:06: </span>session in the notebook so nothing is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:08: </span>defined at all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:09: </span>and it's going to just start from the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:10: </span>top and it's going to run everything in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:12: </span>order</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:13: </span>and that way you know for sure that the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:15: </span>thing runs from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:16: </span>end to end appropriately and you get the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:18: </span>results that you're expecting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:22: </span>and you know once you're at this stage</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:25: </span>of everything seems to be working</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:27: </span>let me you know make sure you've</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:29: </span>restarted it run all the cells you got</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:31: </span>the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:31: </span>result that you expected you want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:33: </span>keep going a step further</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:35: </span>and change around the inputs in your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:37: </span>model and make sure that the outputs are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:39: </span>changing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:40: </span>as you would expect to for whatever</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:42: </span>change you made in the inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:44: </span>so that way you can make sure that all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:47: </span>of your inputs are being properly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:49: </span>incorporated</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:49: </span>into the model um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:54: </span>you should have your your final output</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:57: </span>at the end of the notebook whatever your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:58: </span>final answer from the model is so that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:01: </span>you know someone who doesn't care so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:02: </span>much about the details of the model can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:04: </span>just scroll through and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:05: </span>see the answer right at the end uh but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:08: </span>it's also good to have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:10: </span>outputs in each section if possible or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:13: </span>just you know whatever the most</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:15: </span>uh useful tangible uh you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:18: </span>intermediate outputs to show you should</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:20: </span>show them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:21: </span>you know unlike in excel where you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:23: </span>all your calculations are kind of shown</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:25: </span>automatically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:26: </span>in python you have to be very explicit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:28: </span>about what you want to show and not show</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:30: </span>and so you should show everything which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:34: </span>is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:35: </span>you know interesting or useful to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:36: </span>understand the whole context</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:38: </span>of your model not just going all the way</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:41: </span>doing a bunch of calculations and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:42: </span>spitting out one number at the end</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:44: </span>then it becomes way less clear how we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:47: </span>actually</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:47: </span>got to that number versus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:51: </span>actually having a full um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:54: </span>you know step-by-step you know with the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:57: </span>retirement model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:58: </span>you know showing the salaries showing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:59: </span>the wealth before</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:01: </span>ultimately getting to just a single</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:02: </span>years to retirement number</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:06: </span>so that's an overview of how to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:07: </span>structure python models</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:09: </span>in jupiter notebooks thanks for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:11: </span>listening and we'll see you next time</li>
+	</ul></div>
+
+|
+
 Salaries in the Python Dynamic Salary Retirement Model
 =========================================================
 
 .. youtube:: 190Xci0yDpA
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -87,12 +565,383 @@ Resources
 - :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
         
 
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>nick dear bird is here teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:06: </span>financial modeling today</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>we're going to build out the salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:10: </span>portion of the dynamic salary retirement</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:13: </span>model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:13: </span>in python so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:16: </span>we've been talking about this model uh a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:19: </span>fair amount already</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:20: </span>we built out the whole model in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:24: </span>and now it's time to go do that in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:26: </span>python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:27: </span>so just as a quick review of what's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:31: </span>involved in this model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>so we're looking at a model where</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:36: </span>the salaries are uh determined by</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:39: </span>a cost of living raise that occurs every</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:41: </span>year uh promotion that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:44: </span>happens every number of years with a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:45: </span>certain percentage raise</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:47: </span>and of course an initial starting salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:50: </span>and it grows through time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:52: </span>and then the individual saves a certain</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:55: </span>portion of that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:56: </span>each year and that is going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:59: </span>be invested at a certain interest rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:02: </span>to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:03: </span>build up the individual's wealth over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:05: </span>time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:06: </span>and then we check</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:10: </span>the wealth year by year to determine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:13: </span>once the individual has hit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:14: </span>a certain goal of how much cash they</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:17: </span>want to retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:19: </span>and that's how we determine how long it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:22: </span>takes for them to retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:26: </span>so as more quick recap this is what the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:28: </span>salary equation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:29: </span>looks like we start from an initial</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:31: </span>salary and then we grow that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:33: </span>at the cost of living raises and we also</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:36: </span>grow that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:37: </span>for the number of promotions at the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:40: </span>promotion raise rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:43: </span>and for the wealth it is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:46: </span>taking always whatever the prior wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:49: </span>was</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:50: </span>and adding the investment return to it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:53: </span>and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:54: </span>taking the cash saved in that year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:58: </span>the salary times the savings rate and to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:01: </span>get the wealth for that given</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:03: </span>year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:07: </span>so let's go ahead and see what this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:09: </span>looks like in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:15: </span>so uh the full completed example of this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:19: </span>uh is there on the course site but i'm</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:22: </span>going to go ahead and build it out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:23: </span>in the this and the following videos</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:26: </span>so i strip this down to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:29: </span>just an initial uh basically template</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:32: </span>this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:33: </span>is you know basically what you would get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:36: </span>on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:36: </span>any given project in the course as far</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:39: </span>as the python side</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:41: </span>where you know you have the basic inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:43: </span>of the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:44: </span>already set up in a data class for you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:47: </span>and you have you know the very start of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:50: </span>a table of contents</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:52: </span>and a placeholder for a description and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:54: </span>things like that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:56: </span>so you know certainly you would want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:58: </span>fill out a full description</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:00: </span>of what your model is doing um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:04: </span>but we'll leave that for now uh for the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:06: </span>sake of time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:08: </span>um so i'm just gonna go ahead</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:11: </span>and just run run everything in order</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:14: </span>just to start with so i have everything</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:16: </span>defined</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:18: </span>so now i have this model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:21: </span>which has all of my different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:24: </span>variables attached to it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>now there's a couple um things that you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:33: </span>which are going to make your experience</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:36: </span>of building the model a little bit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:39: </span>smoother and help you avoid some</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:41: </span>pitfalls</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:42: </span>so one trick that i like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:45: </span>is i'm going to go ahead and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:49: </span>assign data to be model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:53: </span>and now we can use data instead of model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:56: </span>data so why are we doing that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:00: </span>uh so it goes along with another pattern</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:05: </span>that i'm about to show you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:06: </span>where uh you know ultimately we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:09: </span>trying to write functions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:10: </span>but it's not uh necessarily as easy to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:13: </span>go straight</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:14: </span>to writing functions it adds additional</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:16: </span>structure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:17: </span>and so it can be just a little bit more</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:19: </span>challenging to work with especially as a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:21: </span>beginner</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:23: </span>and so what we can do is we can write</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:26: </span>out all the logic of the function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:28: </span>just straight in the cell like this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:32: </span>and then we can take that and we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:34: </span>just put it into a function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:35: </span>once it works and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:39: </span>the way that we'll define our functions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:40: </span>we'll define them all to take data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:43: </span>you know data being an instance of model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:45: </span>inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:46: </span>and it'll work with data not model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:50: </span>and the reason we're doing that is so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:52: </span>that we don't accidentally use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:54: </span>this model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:57: </span>without passing it to the function if</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:00: </span>you use it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:01: </span>in the function without passing it to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:02: </span>the function then it's going to be tied</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:04: </span>to this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:05: </span>specific instance of the data and not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:08: </span>any arbitrary data that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:10: </span>could pass to it so we want our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:12: </span>functions uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:13: </span>to be able to just take an input and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:17: </span>give an output</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:18: </span>we don't want them to be you know in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:20: </span>background</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:21: </span>using some different inputs that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>didn't expect it to be using</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:25: </span>so this you know pattern of of going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:27: </span>using data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:29: </span>and using data everywhere basically at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:31: </span>the end you'll remove this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:33: </span>data equals mod of data cell and so then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:36: </span>you'll just be left with functions that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:37: </span>take data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:38: </span>and you'll be passing model data to them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:41: </span>um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:42: </span>and so they should still work and they</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:44: </span>should not be accessing the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:46: </span>overall model data so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:49: </span>that should become more clear as we go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:51: </span>to build all this out but that's a quick</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:53: </span>overview of why i'm setting data equal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:56: </span>to model data here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:59: </span>so the first portion of the model that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:02: </span>we want to build</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:03: </span>out is the salaries portion</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:06: </span>uh so i'm going to create a salaries</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:08: </span>header and we already use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:10: </span>you know the level 1 header for the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:13: </span>overall model title so i'm going to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:14: </span>the level 2 header</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:16: </span>for each of the sub models so you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:20: </span>the sub models are going to be salaries</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:21: </span>wealth and retirement</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:24: </span>um so we can go ahead and add salaries</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:27: </span>to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:27: </span>our uh table of contents so you can just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:31: </span>you know copy the previous</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:34: </span>so that you're able to work off that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:40: </span>and here we can say determines the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:43: </span>annual salary based on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:47: </span>cost of living raises and promotions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:53: </span>and now when we click that it takes us</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:54: </span>right to the salaries section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:59: </span>so you know you'll see in the completed</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:02: </span>uh model that i have a full description</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:05: </span>written out here of what's going on and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:06: </span>it has the equation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:08: </span>and everything um but we'll just leave</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:11: </span>that off</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:11: </span>for now just for the sake of time just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:14: </span>go and reference the completed example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:16: </span>to see a good example of the kind of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:18: </span>description that we should see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:20: </span>for one of these sections but let's just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:23: </span>go ahead and go right to the code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:26: </span>so we know that we want to be taking</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:30: </span>the salary the initial salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:35: </span>times one plus the cost of living return</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:37: </span>to the number of years</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:39: </span>times one plus the promotion return to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:41: </span>the number of promotions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:44: </span>so how do we figure out the pieces</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:48: </span>for this so we don't know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:51: </span>off the bat how many promotions there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:53: </span>have been at a given year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:55: </span>we know how often those promotions are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:58: </span>occurring here by default every five</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>years</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:00: </span>uh but we you know if the year is three</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:03: </span>if the year is seven</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:05: </span>ten whatever we don't immediately know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:07: </span>how many promotions have occurred up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:09: </span>until that point</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:11: </span>so we have to calculate that so i'm</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:13: </span>going to calculate that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:15: </span>um so you know first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:18: </span>let me just say you know let's work with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:20: </span>year seven</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:22: </span>year equals seven um so let's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:25: </span>say um you know year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:28: </span>divided by uh the promotions every</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:32: </span>n years uh what do we get from that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:35: </span>so uh year seven we've had 1.4</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:38: </span>promotions that doesn't we're not quite</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:40: </span>the way we're there would be one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:41: </span>promotion right</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:42: </span>we get 10 that goes to 2 we hit 11. it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:44: </span>2.2</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:46: </span>up to 14 we're at 2.8 so really we want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:50: </span>just the integer portion of this right</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:53: </span>we don't care about the decimal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:55: </span>as soon as it you know goes up to the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:57: </span>next integer that's when we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:59: </span>recognize that there's been another</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:00: </span>promotion so if we just take the integer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:04: </span>portion of that then we will be left</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:08: </span>with what we want uh you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:11: </span>years 11 through 12 or 11 through 14.</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:14: </span>it's two promotions as soon as we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:17: </span>15</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:18: </span>we get to three promotions so this is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:20: </span>what we want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:23: </span>and then we can go ahead and calculate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:27: </span>calculate the salary at the given year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:30: </span>so salary at year t</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:32: </span>is going to be the starting salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:35: </span>which is in the inputs times 1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:38: </span>plus the cost of living raise</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:42: </span>and we're going to take that to the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:45: </span>power</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:45: </span>of the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:49: </span>and then that's going to be times one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:51: </span>plus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:52: </span>the promotional raise uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:56: </span>to the power of the number of promotions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:00: </span>um so then we see by year 15</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:04: </span>we have 120 000 roughly a year one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:07: </span>sixty one thousand two hundred year two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:10: </span>sixty four</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:11: </span>sixty two thousand uh you know starting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:13: </span>off in a starting salary of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:14: </span>six thousand two percent cost of living</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:16: </span>raise so this all sounds correct</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:19: </span>uh and year four uh just under 65 and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:22: </span>then we hit year five and we get a big</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:24: </span>jump</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:25: </span>in the salary as we would expect coming</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:27: </span>along with the promotion</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:28: </span>so it looks like everything is working</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:30: </span>correctly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:33: </span>so now we have a piece of the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:35: </span>which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:36: </span>works appropriately let's go ahead and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:39: </span>make this logical step</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:41: </span>into a function so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:44: </span>uh what we can do you know this year uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:47: </span>is going to be an input to the function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:49: </span>now and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:51: </span>also the data is going to be the other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:52: </span>input to the function so def</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:55: </span>uh you know salary at year and it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:58: </span>going to take the data and it's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:00: </span>take the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:01: </span>and then we just uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:05: </span>you know highlight all that and press</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:07: </span>tab to shift it over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:09: </span>and then we're just going to add a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:10: </span>return on to the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:13: </span>and now we have a function which does</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:17: </span>what we were trying to do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:21: </span>so now we can get rid of this year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:24: </span>um so at year four we see the same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:27: </span>almost 65</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:28: </span>000 year five we see the 76 000.</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:34: </span>and since we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:37: </span>used just whatever data is being passed</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:39: </span>to it and not the overall model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:42: </span>that means that you know you could</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:44: </span>potentially</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:45: </span>uh you know construct you know other uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:48: </span>data you know say uh you know we wanted</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:51: </span>the salary to start at 40 000 instead</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:54: </span>and pass that data into there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:58: </span>um then we can see that it's going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:00: </span>based off of that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:02: </span>new inputs whereas if you had to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:05: </span>model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:06: </span>in all of these and you may or may not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:07: </span>have put an argument here for that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:10: </span>then it's going to always use these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:12: </span>values which are defined up here which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:14: </span>makes your model significantly less</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:16: </span>flexible</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:19: </span>so we have our portion of the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:23: </span>that works getting the salary at a given</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:25: </span>year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:26: </span>and you know definitely take a look at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:28: </span>the full example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:30: </span>you would want to put a description of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:31: </span>what it does in the docs string and you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:33: </span>want to describe what's going on in this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:35: </span>section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:37: </span>uh but the other thing that i think is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:39: </span>appropriate to complete out this section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:41: </span>is uh just showing how this works year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:45: </span>over year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:46: </span>so we define the function now let's look</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:50: </span>at what it looks like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:52: </span>you know over a range of years so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:56: </span>we're just going to go through six years</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:59: </span>and with the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:00: </span>zero based indexing and python you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:02: </span>the the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:03: </span>i is always starting at zero but we want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:05: </span>our year to start from one so we're just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:06: </span>going to add one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:08: </span>to the i to get the actual year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:11: </span>and then we're going to calculate the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:13: </span>salary at that year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:15: </span>and here we're going to pass it the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:18: </span>model data because all this is happening</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:20: </span>outside of function and we want this to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:22: </span>still work after we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:24: </span>remove this when we're done with the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:25: </span>model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:29: </span>and then we want to go ahead and print</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:32: </span>a nice formatted string the salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:35: </span>at year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:38: </span>and then the year is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:42: </span>uh and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:45: </span>let's give it you know some commas in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:47: </span>there uh and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:48: </span>zero decimal places so then we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:51: </span>run that and we see that we get the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:54: </span>salary year every year and indeed see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:56: </span>you know cost of living raises going up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:58: </span>through year four and then we hit year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:00: </span>five a promotion occurs and we see a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:02: </span>larger jump in salary so it looks like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:04: </span>everything is working appropriately</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:07: </span>so definitely look at the full completed</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:09: </span>example for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:10: </span>all the description of everything but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:13: </span>that's the basic logic</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:15: </span>so next time we will come back to build</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:17: </span>the wealth section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:19: </span>of the model and then the following</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:21: </span>video build the retirement section to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:23: </span>finish it up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:24: </span>so thanks for listening and see you next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:28: </span>time</li>
+	</ul></div>
+
+|
+
 Wealth in the Python Dynamic Salary Retirement Model
 =======================================================
 
 .. youtube:: ACSk15RnOG0
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -112,12 +961,323 @@ Resources
 - :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
         
 
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>nick duraburtis here teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:05: </span>financial modeling today we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>building out the wealth portion of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:11: </span>dynamic salary retirement model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:13: </span>in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:16: </span>we left off last time and that we were</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:19: </span>uh you know building out the full python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:21: </span>model and we had already done the salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:24: </span>portion of the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:25: </span>so in this video we're working on the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:28: </span>welsh portion</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:29: </span>and we'll come back in the following</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:30: </span>video to finish up the model with the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>retirement portion so let's go ahead and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:36: </span>go over to the jupiter notebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:38: </span>so we already have you know this setup</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:41: </span>stuff at the beginning</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:42: </span>and then we have the salary section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:44: </span>built out already</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:46: </span>now we're getting to the wealth portion</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:48: </span>of the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:50: </span>so let's uh you know just like we did</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:53: </span>for salary make a section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:56: </span>and clearly differentiate this from the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:58: </span>salary related code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:00: </span>and you would definitely want to have uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:04: </span>you know a description of what this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:05: </span>section is doing as well as the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:07: </span>equations</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:08: </span>involved but for the interest of time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:12: </span>i'm gonna leave those out here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:14: </span>um just take a look at the completed</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:16: </span>example to see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:17: </span>what that should look like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:21: </span>so to get the wealth we can go back to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:25: </span>what the wealth equation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:28: </span>was it is just taking whatever the prior</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:32: </span>wealth was</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:34: </span>and multiplying it by one plus the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:36: </span>investment return</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:38: </span>and then we're going to add the cash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:41: </span>save to that and the cash saved is the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:43: </span>salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:44: </span>in that given year times the savings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:48: </span>so we can think of this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:51: </span>equation in two parts one is uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:55: </span>you know calculating the overall wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:56: </span>equation and the other is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:58: </span>figuring out this cash saved so let's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:01: </span>first create a function which will get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:03: </span>us the cash saved</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:05: </span>and then we can plug that into another</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:07: </span>function which gets us the overall</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:09: </span>wealth at a given year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:14: </span>so we want to figure out the cash saved</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:18: </span>in any given year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:20: </span>and you know obviously as we just looked</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:23: </span>at the equation it's just going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:26: </span>salary times the savings rate right</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:29: </span>um but what is salary where do we get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:31: </span>salary from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:33: </span>well we have this whole other section of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:35: </span>the model that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:36: </span>was responsible for being able to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:38: </span>calculate a salary at any given year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:41: </span>so you know if we just you know say it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:44: </span>a certain year let's say a zero three</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:47: </span>um before we can do this calculation to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:50: </span>get the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:51: </span>cash saved we need to figure out the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:54: </span>salary for that year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:56: </span>so to get the salary of that year we had</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:58: </span>this nice</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:59: </span>convenient function where we just pass</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:02: </span>it our data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:03: </span>and we pass it the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:06: </span>and it's going to give us the salary for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:08: </span>that year year three in this case</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:11: </span>and then we can calculate the cash saved</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:13: </span>based off of that salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:15: </span>so let's see what that looks like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:18: </span>so in year three we're gonna be saving</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:20: </span>almost sixteen thousand dollars</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:22: </span>which uh if our uh salary here is sixty</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:26: </span>three thousand and our savings rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:27: </span>is twenty five percent then that sounds</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>correct</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>and we can try it with some other years</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:34: </span>year 10</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:36: </span>year it's going up year one it's it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:38: </span>lower</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:40: </span>so this all seems appropriate for what</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:42: </span>we would expect to see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:44: </span>for the cash saved in a given year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:47: </span>so now that we know that it works</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:48: </span>appropriately we can go ahead and wrap</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:50: </span>it up into a function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:51: </span>so it can be easily reused</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:54: </span>so year is going to become an input</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:58: </span>and the data is our other input so let's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:01: </span>go ahead and write</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:02: </span>our function definition so cache</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:06: </span>saved during year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:09: </span>and it's going to take the data and the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:11: </span>year and then i'm going to highlight all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:13: </span>that hit tab to shift it over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:15: </span>and then return the cache saved and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:18: </span>we'll see when we call</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:20: </span>this function uh with the data uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:23: </span>and some year that will get the same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:26: </span>kind of results that we were getting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:28: </span>just with the planes code in the cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:32: </span>so now we have a function which can give</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:35: </span>us the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:36: </span>cash saved at any given year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:40: </span>now we need to figure out what the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:41: </span>wealth is for that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:43: </span>year so we know that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:46: </span>we're just going to take this cash save</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:48: </span>portion and add it on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:49: </span>so then the other portion is taking</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:51: </span>whatever the prior wealth was</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:53: </span>and then multiplying it by</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:57: </span>one plus the investment rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:02: </span>so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:07: </span>we're going to figure out the wealth in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:08: </span>any given year now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:11: </span>and the first step that is calculating</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:14: </span>the cash saved which now we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:17: </span>a nice convenient function to do that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:20: </span>cash saved during year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>let's again set up you know year equals</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:25: </span>five</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:27: </span>um and that's going to take the data and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:29: </span>it's going to take the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:30: </span>as we have defined that and i</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:34: </span>you know as we just saw from the prior</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:36: </span>cell will give us the cash saved in that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:37: </span>year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:39: </span>so then we need to go and calculate the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:41: </span>wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:42: </span>so the wealth we know is going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:45: </span>equal to the prior wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:47: </span>times 1 plus data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:51: </span>the interest rate and we're going to add</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:53: </span>the cash saved</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:55: </span>onto that now of course when we run this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:59: </span>we're going to get an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:00: </span>error because prior wealth is not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:02: </span>defined we don't know what prior wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:04: </span>is yet so let's just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:08: </span>uh you know think of that as an input to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:10: </span>this function that we're creating as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:12: </span>well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:12: </span>and say that we start with no well um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:16: </span>and then the function is able to run um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:20: </span>and it says we have ninety thousand</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:21: </span>dollars saved at year five which is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:23: </span>not correct that's just how much we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:25: </span>saving in year five</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:26: </span>but it's because we have no wealth to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:29: </span>begin with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:30: </span>um so clearly we're gonna need to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:33: </span>this in a way that we're able to take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:35: </span>whatever the wealth was from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:36: </span>last year and pass it in next time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:39: </span>for the wealth the prior wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:43: </span>so let's go ahead and create this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:45: </span>function as is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:46: </span>and then we can look at how we can use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:48: </span>this in a structure of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:50: </span>taking the wealth from each year and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:52: </span>saving it and then using it as the prior</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:54: </span>wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:54: </span>for the next year so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:57: </span>we can create our function wealth that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>which is going to take the data and it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:03: </span>going to take the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:04: </span>and it's also going to take the prior</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:06: </span>wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:07: </span>and we can tab that all over and we want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:10: </span>to return the wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:11: </span>at the end and just double check that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:14: </span>get the same thing when we passed the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:15: </span>data we passed it the year and we passed</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:17: </span>the prior wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:19: </span>just a quick sandy check to make sure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:21: </span>you didn't break anything while</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:22: </span>transferring it over to a function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:24: </span>we're doing d d get the same number here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:28: </span>so we don't need these anymore</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:32: </span>and now we can go and look at how we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:35: </span>would use this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:37: </span>so this will be good just you know for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:40: </span>two things one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:41: </span>to to get a better understanding of how</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:43: </span>this will be plugged into the overall</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:45: </span>function which determines the years to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:47: </span>retirement uh but also</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:48: </span>just as a quick check of showing how</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:51: </span>this section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:52: </span>works standalone you know what happens</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:55: </span>to the wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:55: </span>year by year so the way that we can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:01: </span>is a fairly common pattern in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:03: </span>programming</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:04: </span>where you initialize some variable</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:07: </span>and then you go throughout a loop and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:10: </span>then at the end of the loop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:12: </span>you're going to uh set that variable to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:15: </span>be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:16: </span>uh you know the main variable's value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:19: </span>and it's going to be like the prior</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:20: </span>value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:21: </span>and you you know you keep going through</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:23: </span>and at the end of the loop it always</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:24: </span>gets</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:25: </span>reassigned to whatever last uh the last</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:28: </span>value was</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:30: </span>so let's look at how that would work so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:33: </span>first we set our prior wealth to zero</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:35: </span>we aren't starting with any money and so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:37: </span>that makes sense</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:38: </span>if you had some other input in the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:40: </span>of you know starting cash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:42: </span>then you would want to use that instead</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:44: </span>of zero</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:46: </span>and then we want to have some kind of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:48: </span>loop and let's just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:49: </span>look you know over six years so we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:52: </span>make sure to get that promotion</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:54: </span>in there and again just like we did for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:58: </span>salaries</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:58: </span>uh we want to think about the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:00: </span>starting from one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:02: </span>not starting from zero so we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:04: </span>take year as i plus one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:08: </span>then we can get the wealth as the using</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:11: </span>our wealth at year function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:12: </span>passing it uh this time model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:16: </span>because this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:16: </span>is going to be permanently outside of a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:18: </span>function uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:19: </span>the year and the prior wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:25: </span>and then we can show that result so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:29: </span>the wealth at year year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:33: </span>is and then we're gonna put the wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:37: </span>and let's put commas and zero decimal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:39: </span>places</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:44: </span>and then at the end of the loop we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:46: </span>going to set prior wealth equal to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:48: </span>wealth um so then when we run this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:51: </span>we can see that indeed does go through</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:54: </span>each of the years</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:54: </span>and the money is accumulating like you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:57: </span>might think it would</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:59: </span>uh you know we have after year two we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:02: </span>have more than double of what we were</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:04: </span>able to save</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:05: </span>after the first year because we got two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:07: </span>years of savings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:08: </span>second year had the cost of living raise</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:10: </span>on the salary and then there's also an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:12: </span>investment return</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:13: </span>baked in there as well so this all looks</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:15: </span>like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:16: </span>what we would expect to see and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:19: </span>uh you know you can see that uh here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:22: </span>from year four to five</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:23: </span>it's jumping by about 23 000</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:26: </span>uh and then going to year six</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:30: </span>it's an even um greater or sorry year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:33: </span>four</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:34: </span>year three to four we have uh only a 16</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:37: </span>000 increase</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:38: </span>and then year four to five we have a uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:41: </span>23 000 increase so it's quite a bit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:43: </span>bigger going to year five when we get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:45: </span>that promotion</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:48: </span>and so this uh prior wealth pattern</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:52: </span>you can see that every time at the end</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:54: </span>of the loop it's setting prior wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:55: </span>equal to wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:56: </span>so that means that the next time that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:58: </span>this loop comes around</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:00: </span>it's going to be using the wealth from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:01: </span>the last calculation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:03: </span>as the prior wealth and keep going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:06: </span>through always using the last value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>of wealth as prior wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:12: </span>and we'll apply the same exact pattern</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:14: </span>when we go to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:15: </span>build out the retirement portion of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:17: </span>model in the next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:19: </span>video so thanks for listening and i'll</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:22: </span>see you next time</li>
+	</ul></div>
+
+|
+
 Retirement in the Python Dynamic Salary Retirement Model
 ===========================================================
 
 .. youtube:: zHoYWl3YHJ8
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -137,12 +1297,338 @@ Resources
 - :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
         
 
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>nick dear burtis here teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:06: </span>financial modeling and today we're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>to be building out the retirement</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:10: </span>portion</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:11: </span>of the dynamic salary retirement model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>python and this retirement portion of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:17: </span>the model is the final portion which is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:19: </span>going to finish up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:20: </span>the model and the lecture series</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:24: </span>so we've been working on this dynamic</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:26: </span>salary retirement model we built out the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:28: </span>entire thing in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:30: </span>and then in python we've already built</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>out the salary and wealth portions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:34: </span>so look at the prior videos if you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:36: </span>haven't seen those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:37: </span>and now we're just going to build out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:39: </span>the retirement portion of the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:41: </span>and finish it out so let's jump back</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:45: </span>over to the jupiter notebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:47: </span>so we already have you know all this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:50: </span>initial setup stuff and we have the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:51: </span>salaries section and we have the wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:53: </span>section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:54: </span>and now we're going to build out the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:56: </span>retirement section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:58: </span>so here i'm going to have retirement and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:01: </span>now we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:02: </span>write out logic which the goal here is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:06: </span>as soon as this person hits the desired</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:09: </span>cash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:10: </span>which is given in the inputs then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:13: </span>uh whatever year it is that they've</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:15: </span>accumulated that much wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:17: </span>that is the year that they're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:19: </span>be able to retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:22: </span>so uh we don't have to completely start</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:26: </span>from scratch here we already have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:29: </span>a way to get the wells going up over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:32: </span>time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:34: </span>so then we just need to take this and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:37: </span>make it stop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:38: </span>as soon as we hit the desired cache</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:41: </span>so i'm just going to go ahead and start</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:44: </span>from this code and just copy it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>and i'm going to switch data for model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:50: </span>data since this is code which is going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:52: </span>to go inside of a function so we want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:54: </span>use data not model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:58: </span>and i'll just give that another try</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:00: </span>there so it still works</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:02: </span>and gives us the salary or the wealth in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:05: </span>each year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:08: </span>and we could make this thing go out to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:10: </span>you know 30 years or whatever</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:12: </span>and now we can see we do hit the point</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:15: </span>where</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:16: </span>we hit the desired cash we can see here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:18: </span>that year 28 is going to be the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:20: </span>but we want the code to be able to stop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:22: </span>specifically at that point and tell us</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:24: </span>that that was the year that they were</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:26: </span>able to retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:30: </span>so what we can do to accomplish that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:34: </span>there are a few different ways that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:36: </span>can go about this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:38: </span>um one way is with actually a different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:42: </span>type of loop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:42: </span>that we haven't covered uh called a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:45: </span>while loop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:46: </span>and a while loop uh you know whereas the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:49: </span>for loop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:50: </span>runs for whatever you're passing it you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:53: </span>know range it will you know just run 30</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:55: </span>times</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:57: </span>if you have you know for uh something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:00: </span>and a list then it's going to run for as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:04: </span>many items as you have in that list</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:07: </span>etc whereas the while loop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:10: </span>runs until some condition is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:13: </span>met so it's kind of a combination</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:16: </span>between</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:16: </span>a loop and an if statement and it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:19: </span>going to stop the loop as soon as that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:21: </span>if condition is true</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:26: </span>or sorry as soon as it is false it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:28: </span>going to stop the loop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>so um what we can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:33: </span>is we can also initialize</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:36: </span>wealth to zero before starting this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:41: </span>and what we want to do is say while</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:45: </span>the wealth is less than</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:48: </span>the desired cash then we're going to do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:52: </span>this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:55: </span>but you'll notice as soon as i make that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:57: </span>change and try to run this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:58: </span>that it's not working anymore right</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:00: </span>because uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:03: </span>this i there's no i anymore we had i</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:06: </span>from my code that i deleted to where it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:08: </span>was a string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:09: </span>and so i'm getting an error but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:12: </span>really we just need to have a new way of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:15: </span>figuring out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:16: </span>what the year is going to be so let's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:19: </span>also</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:20: </span>start the year at zero</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:23: </span>and every time we're going to increment</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:26: </span>the year by one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:28: </span>so that way the first loop is starting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:30: </span>at zero then it has one so the first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:32: </span>loop it's one and then it comes around</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:33: </span>to the next loop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:34: </span>now it's going to add one again so the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:36: </span>year is going to be two on the second</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:37: </span>loop as we would expect</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:40: </span>so now we run this and we can see it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:42: </span>does indeed stop at year 28</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:45: </span>so this already has gotten us to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:48: </span>what we wanted um only</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:52: </span>that we don't necessarily have it in a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:54: </span>very usable format yet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:56: </span>um you know it printed out what the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:59: </span>last year was but we don't have that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:01: </span>saved in a variable that we could use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:04: </span>in some other way uh it's just kind of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:07: </span>you know the the print the prince of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:09: </span>wealth stop happening at that point</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:13: </span>so but let's look at the value of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:16: </span>year variable when this is all done</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:19: </span>oh that is 28. so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>the year variable now contains what we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:25: </span>need as our final answer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:27: </span>um so just putting year there at the end</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:31: </span>then we get the retirement year from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:33: </span>that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:34: </span>and the reason was because it kept going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:36: </span>through the loops it kept incrementing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:37: </span>the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:38: </span>and then as soon as we got enough cash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:41: </span>uh this condition evaluated to false and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:44: </span>then it stopped going through additional</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:46: </span>loops</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:46: </span>and so the last time that it incremented</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:48: </span>the year would be the last year that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:50: </span>added the wealth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:52: </span>and that would be the same year where</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:53: </span>the wealth has now surpassed the desired</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:55: </span>cash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:56: </span>so just the year variable is going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:58: </span>contain what we need</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:02: </span>so then we've gotten to the final answer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:05: </span>but we want to clean up the output here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:07: </span>a little bit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:09: </span>um so you know we don't want to just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:13: </span>uh you know print out a show a number at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:15: </span>the end we want to say what this number</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:17: </span>means</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:19: </span>so we can say uh you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:22: </span>it will take you know year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:25: </span>i need to put the f at this beginning of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:27: </span>the string it will take year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:29: </span>years to retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:33: </span>okay now this is a little bit better it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:35: </span>will take 28 years to retire that's a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:37: </span>lot</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:37: </span>more clear um but we do have like two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:40: </span>different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:41: </span>sections of the output here one is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:43: </span>showing the wealth year over year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:44: </span>and one is showing the final year's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:48: </span>retirement</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:49: </span>so it makes sense to separate those so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:52: </span>let's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:52: </span>uh put like a header here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:56: </span>in the output and we can put one here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:07: </span>and now this is a little bit better we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:09: </span>have kind of a header</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:10: </span>for each portion of the output but it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:12: </span>still all together</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:13: </span>there's a couple ways that we can add</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:16: </span>some separation here in between these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:18: </span>lines</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:18: </span>one is just you know kind of simple</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:21: </span>intuitive you can just print</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:23: </span>an empty string and that's going to make</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:25: </span>an empty line there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:27: </span>the other way to go about it is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:30: </span>backslash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:30: </span>n actually means make a new line so if</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:34: </span>we put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:34: </span>backslash n retirement there then that's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:37: </span>going to do the exact same thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:39: </span>as uh having the empty print so even if</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:42: </span>you wanted</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:43: </span>you know a few lines there of spacing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:46: </span>then you can easily do that in one print</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:49: </span>statement there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:51: </span>so now we have two clear sections in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:53: </span>output what are the wealths</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:54: </span>over time and what are the retirement</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:56: </span>details and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:58: </span>we get our main answer here in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>retirement details that it's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:01: </span>take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:01: </span>28 years to retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:05: </span>so now this block</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:08: </span>does do what we want to do but we should</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:11: </span>go ahead and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:12: </span>wrap this up into a function as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:15: </span>um so these uh or so the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:19: </span>uh these are all initializing for the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:22: </span>loop they aren't actually inputs this is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:23: </span>all going to happen inside the function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:26: </span>so years to retirement and the only</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:30: </span>input here is going to be the data and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:32: </span>then we can take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:33: </span>all of the remaining code and hit tab to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:36: </span>indent it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:39: </span>and we're going to switch this to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:41: </span>returning the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:42: </span>at the end um so then when we call</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:46: </span>years to retirement on the model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:49: </span>then we see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:50: </span>the whole summary of the output here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:51: </span>that it's going to take 28 years to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:53: </span>retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:54: </span>and we can also have that saved in a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:57: </span>variable</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:58: </span>as well so that we could do additional</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:01: </span>things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:02: </span>with that result</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:05: </span>and so now our model works we have it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:08: </span>all together</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:10: </span>so now that you have all your sections</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:12: </span>working you've got your final result</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:14: </span>the next thing that you should do and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:15: </span>building out your models is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:17: </span>go to this kernel menu and then restart</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:19: </span>and run all cells</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:21: </span>because this is gonna say you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:23: </span>throughout your your session you've been</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:24: </span>jumping all over the place</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:26: </span>uh you know building things and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:28: </span>deleting them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:29: </span>and so things are just in a weird state</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:32: </span>from you playing around with things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:33: </span>so if you restart this kernel and run</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:36: </span>all cells</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:37: </span>that gives you a fresh session and it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:39: </span>runs everything in order</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:41: </span>and that way we can be sure that the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:43: </span>model does indeed work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:45: </span>from end to end the next thing that i'm</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:48: </span>going to do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:49: </span>is i'm going to go back and i'm going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:51: </span>remove this data equals model data cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:56: </span>and then i'm going to restart and run</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:58: </span>all cells again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:00: </span>so there we want to see again that it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:02: </span>goes all the way through without error</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:04: </span>and here actually it did have an error</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:07: </span>i accidentally left this one cache saved</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:10: </span>during year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:11: </span>using the data not the model data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:15: </span>so this one should be model data to show</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:18: </span>that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:18: </span>because it's happening outside the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:19: </span>function so now i'm going to restart and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:22: </span>run all cells again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:25: </span>and now we can see it ran all the way</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:28: </span>through just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:29: </span>fine um and now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:32: </span>because all the functions are set to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:34: </span>take data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:36: </span>and they're not directly using the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:38: </span>data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:39: </span>that means that any possible data can be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:42: </span>passed into this function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:44: </span>um so you know you can change it so that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:48: </span>uh you know you're passing the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:50: </span>inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:51: </span>with you know let's do starting salary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:54: </span>equals 30 000 and then you run it again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:58: </span>and now we can see it takes 37 years to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:01: </span>retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:02: </span>oh well what if instead we had uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:05: </span>the cost of living raised was higher at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>4</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:10: </span>going back to the original starting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:11: </span>salary then it would</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:13: </span>be three years quicker for us to retire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:15: </span>from that additional return</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:17: </span>um and so you're able to pass whatever</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:19: </span>you want to it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:20: </span>and as we look at other extensions to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:23: </span>models</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:24: </span>as we go throughout the course you're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:25: </span>going to be able to add whatever</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:26: </span>extensions you want very easily</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:30: </span>and it's not tied to this particular</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:32: </span>instance</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:33: </span>of the model inputs defined here at the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:36: </span>top you can pass it whatever</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:38: </span>inputs you want and everything flows</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:40: </span>through the entire model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:43: </span>so that wraps up this lecture series</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:47: </span>on going uh to build out the full</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:51: </span>dynamic salary retirement model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:53: </span>in python the next lecture series is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:56: </span>going to be focused</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:57: </span>on visualization so thanks for listening</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:00: </span>and see you next time</li>
+	</ul></div>
+
+|
+
 Lab Exercise
 ===============
 
 .. youtube:: 5ruLMjkQ6C4
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -160,3 +1646,71 @@ Resources
 
 - :download:`Dynamic Salary Retirement Model - Python </_static/Examples/Introduction/Python/Dynamic Salary Retirement Model.ipynb>`
         
+
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>nick derbertus here teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:06: </span>financial modeling and today</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>we're going to talk about the lab</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:09: </span>exercise for the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:11: </span>section of the course on the depth of a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>financial model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>in python where we focused on building</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:17: </span>out the dynamic salary model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:19: </span>in python so the lab exercise here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:23: </span>is the same as the one that we did for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:26: </span>excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:26: </span>in the section on building out the excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:29: </span>dynamic salary retirement model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>and here what we want to do is we want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:34: </span>to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:35: </span>relax this assumption that there's some</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:38: </span>fixed amount of desired cash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:40: </span>that we need for retirement and the way</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:42: </span>that we talked about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:44: </span>relaxing that was that we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:46: </span>think about instead of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:47: </span>just having a certain number instead</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:49: </span>we're going to have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:51: </span>an amount that we want to spend each</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:53: </span>year in retirement as an input</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:55: </span>as well as the length of time that this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:57: </span>individual</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:58: </span>is in retirement until they die</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:01: </span>so then based off of those inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:04: </span>we can then calculate the desired cash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:08: </span>within the model and plug that through</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:11: </span>into the existing structure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:12: </span>so that the rest of the model works the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:14: </span>same way that it did</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:16: </span>before so that's the basic idea</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:20: </span>and to accomplish this um something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:24: </span>a way you might want to go about it is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:27: </span>go ahead</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:27: </span>and remove the desired cache from the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:31: </span>model inputs in the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:34: </span>and add these two new inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:37: </span>and then it makes sense to create a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:39: </span>function which is able to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:42: </span>calculate the desired cache from the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:44: </span>model inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:45: </span>and then you'll just take uh calling</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>that function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:48: </span>and put it in the place of where you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:51: </span>were just directly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:52: </span>using the desired cache before and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:55: </span>you really won't have to change much at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:57: </span>all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:57: </span>about the existing model and it will</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:59: </span>just start working with this new</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:01: </span>desired cache calculation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:04: </span>so thanks for listening and see you next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:07: </span>time</li>
+	</ul></div>
+
+|

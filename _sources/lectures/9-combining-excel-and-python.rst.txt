@@ -34,7 +34,7 @@ Introduction to Combining Excel and Python
 
 .. youtube:: HbIVMdbZuzQ
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -49,12 +49,118 @@ Notes
 - The Pandas approach is simpler but is much more limited, basically you can read in Excel workbooks and you can output an entire workbook or sheet
 - The xlwings approach gets a bit more complicated but allows to have a connection between Excel and Python and transfer individual values or entire tables back and forth with an existing workbook
 
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>nick dear burtis here teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:05: </span>financial modeling today</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:07: </span>we're going to be starting a new lecture</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:10: </span>segment</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:10: </span>on combining excel and python so in this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>video we're just going to introduce the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:16: </span>topic</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:17: </span>and talk about why we're combining the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:19: </span>two why we're just covering this now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:22: </span>etc so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:26: </span>we so far have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:29: </span>built out a competency in working</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>with both excel and python now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:36: </span>at this point in the course you should</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:38: </span>feel comfortable</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:39: </span>working with both in excel and python to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:42: </span>build out models for whatever problem</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:46: </span>that you're trying to solve and now that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:49: </span>we feel comfortable</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:50: </span>with each of the two tools we can start</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:54: </span>looking at how we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:55: </span>combine the two tools</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:58: </span>um because excel and python they both</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:02: </span>have different advantages and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:03: </span>disadvantages</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:04: </span>and for any particular problem that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:06: </span>you're going to tackle</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:08: </span>uh one of the two tools may be better</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:10: </span>suited</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:11: </span>for different parts of the problem</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:15: </span>and so it's really an ideal setup to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:18: </span>able to flexibly switch back and forth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:20: </span>between the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:22: </span>to be able to use whichever tool is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:25: </span>most effective for the job</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:28: </span>so that is a big thing that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:31: </span>we're building towards in this course is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:34: </span>not only knowing how to build financial</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:36: </span>models in both excel and python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:39: </span>but also knowing which one to use and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:41: </span>when</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:42: </span>so that you can most effectively work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:46: </span>on the problems that you're trying to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>solve</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:52: </span>different problems we can break them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:53: </span>down and do some parts with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:55: </span>each and um this will probably also</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:59: </span>be a breath of fresh air for those that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:02: </span>have really struggled with the python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:04: </span>side of things and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:05: </span>want to do as much as possible in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:08: </span>well this allows you to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:10: </span>build most of your model model in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:12: </span>and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:13: </span>add on these additional capabilities</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:15: </span>that python has</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:18: </span>to your excel model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:22: </span>so now you're going to be able to just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:25: </span>flexibly go back and forth between the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:28: </span>two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:29: </span>and this is going to be really useful as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:32: </span>we go to learning monte carlo simulation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:35: </span>the next major</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:36: </span>topic because there's not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:39: </span>a easy way to do that in excel without</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:42: </span>going to vba so we can use python to run</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:47: </span>monte carlo simulations on both our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:48: </span>python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:49: </span>and excel models</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:52: </span>and as far as how we can combine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:56: </span>python and excel we'll talk about two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:58: </span>major approaches</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:00: </span>we'll talk about using pandas and we'll</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:04: </span>also talk about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:06: </span>excel wings as two libraries which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:09: </span>are going to be able to help us combine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:11: </span>the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:12: </span>where pandas is a simpler integration</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:15: </span>where we can just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:18: </span>pass a workbook back and forth basically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:21: </span>read that in from a workbook output to a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:24: </span>workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:27: </span>where as when we use excel wings then we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>can really flexibly go back and forth</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>between the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:33: </span>write individual values uh back and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:36: </span>forth between excel and python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:38: </span>run uh excel functionality from python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:42: </span>and many more use cases so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:46: </span>we'll explore each of these two methods</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:49: </span>in turn</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:50: </span>and that will be the focus of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:52: </span>following videos</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:54: </span>so thanks for listening and see you next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:58: </span>time</li>
+	</ul></div>
+
+|
+
 Combining Excel and Python using Pandas
 ==========================================
 
 .. youtube:: GrzJSNrP6ns
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -77,12 +183,367 @@ Resources
 - :download:`MSFT Financials </_static/Materials for Lab Exercises/Connecting Python and Excel/pandas/MSFT Financials.xls>`
         
 
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>nick dearmardis here teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:06: </span>financial modeling today we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>be talking about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:09: </span>combining excel in python using pandas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:13: </span>and this is part of our lecture series</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:15: </span>on combining excel and python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:17: </span>so we said that there are two main ways</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:20: </span>that we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:22: </span>combine excel in python that we're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:24: </span>to explore in this course that's using</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:26: </span>pandas and using excel wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:28: </span>so we'll come back in the following</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:30: </span>video to explore excel wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>but in this video we're going to look at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:35: </span>the pandas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:36: </span>way of going between excel and python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:41: </span>so this is generally a simpler</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:44: </span>integration which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:47: </span>is not does not have nearly as many</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:50: </span>features</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:52: </span>but it's very fast and has a very simple</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:57: </span>api that we can work with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:00: </span>so pandas we get data frames we can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:04: </span>all this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:04: </span>visualization and different analysis and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:07: </span>it also</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:08: </span>can go in and out of different data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:10: </span>formats so excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:12: </span>files are one of those formats</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:16: </span>so we can take a data frame and we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:20: </span>output that to an excel workbook and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:23: </span>we can take an excel workbook and we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:26: </span>read that in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:27: </span>to append this data frame so that's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:30: </span>pretty much the extent of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:32: </span>integration between the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:35: </span>and for a lot of cases this is all that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:37: </span>you need</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:38: </span>if you have a python model and you just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:41: </span>need to get some data which is stored in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:43: </span>excel spreadsheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:45: </span>then this is perfect um or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:48: </span>if uh you have an excel model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:52: </span>and you use python to collect the data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:56: </span>maybe through</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:57: </span>web scraping or pulling from a database</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:59: </span>or apis or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:01: </span>something which is going to be easier to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:02: </span>approach in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:05: </span>you just want to take that data from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:06: </span>python and be able to load it into your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:09: </span>excel model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:09: </span>as a full worksheet this is also</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:12: </span>a good way to go about it but for any</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:16: </span>use case which is going to require a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:18: </span>tighter integration things going back</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:20: </span>and forth between</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:22: </span>excel and python or taking individual</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:25: </span>values rather than an entire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:27: </span>worksheet or workbook at once then excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:31: </span>wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:31: </span>should be the way to go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:35: </span>but um oftentimes</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:38: </span>we either have a python or excel model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:41: </span>and it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:42: </span>easy just to transfer the data between</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:44: </span>using pandas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:47: </span>so what does this actually look like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:50: </span>we'll look at a quick example here so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:53: </span>the first block here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:54: </span>is for reading excel files so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:59: </span>for reading excel files uh we're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:02: </span>to use a method of panis library read</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:05: </span>excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:06: </span>so assume you've already imported pandas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:08: </span>as pd</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:09: </span>then you can do pd.read excel and you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:12: </span>give it the name</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:13: </span>or file path of your spreadsheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:16: </span>if it's in the same folder you can just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:18: </span>give the name and if it's somewhere else</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:20: </span>on your computer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:21: </span>then you would want to put the full file</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:23: </span>path here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:26: </span>and this sheet name is optional you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:29: </span>do that to say which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>specific sheet you want to get out of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>the workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:34: </span>and if you don't pass it then it's just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:35: </span>going to take the first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:37: </span>sheet out of the workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:40: </span>and it's always going to read in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:42: </span>entire worksheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:44: </span>so if you have multiple different tables</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:46: </span>in the worksheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:47: </span>that can be another reason to go to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:50: </span>using excel wings you can more flexibly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:52: </span>grab</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:54: </span>individual things out of a worksheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:56: </span>whereas pandas is going to read the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:58: </span>entire worksheet as a data frame so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:00: </span>if you have anything other than just one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:02: </span>table in that worksheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:05: </span>then pandas is going to be picking up a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:09: </span>lot of blank cells and things like that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:11: </span>and you'll have to do additional cleanup</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:13: </span>so it's definitely easiest if you just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:16: </span>have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:16: </span>one tab one table on the worksheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:21: </span>and then for writing in that case we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:24: </span>would already have a data frame created</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:27: </span>and then we can use the method of that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:29: </span>data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:30: </span>to excel to output to an excel workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:34: </span>um and so there similarly to reading you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:38: </span>give</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:38: </span>the name or file path of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:42: </span>output so if you just put a name it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:44: </span>going to go in the same folder</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:46: </span>if you put a full file path then you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:47: </span>go wherever you want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:50: </span>and you want to give the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:54: </span>name of the sheet that we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:55: </span>output to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:57: </span>and the last thing we're including here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:59: </span>is index equals false</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:00: </span>so index in penis is that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:03: </span>thing which goes on the left-hand side</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:06: </span>of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:07: </span>the data frame which by default is just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:10: </span>going to be 0 1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:11: </span>2 like auto incrementing um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:15: </span>so if you do just have that 0 1 2 and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:18: </span>you don't care about it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:19: </span>pass this index equals false if you have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>actually set the index to something so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:24: </span>the index has meaningful values in it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:27: </span>then you don't want to put that index</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:29: </span>equals false</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:30: </span>assuming you want to have that in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:32: </span>output as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:36: </span>and i want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:39: </span>definitely highlight this warning this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:42: </span>is very very important</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:45: </span>when you write to an excel workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:48: </span>using pandas it's going to replace</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:52: </span>whatever is there and it's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:55: </span>whatever was there before is going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:57: </span>gone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:58: </span>and there is no undo this is true</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:02: </span>in general with programming if you tell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:05: </span>the computer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:06: </span>to do something it's going to do it it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:08: </span>not going to ask you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:09: </span>are you sure you want to do this uh it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:12: </span>only if you're using an app which has</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:14: </span>built in those kind of protections</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:16: </span>um but with a programming language it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:18: </span>going to do whatever you tell it to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:20: </span>and so if you tell it to output to a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:22: </span>workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:23: </span>which already has your full excel model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:26: </span>in it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:28: </span>you really meant to just output to one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:29: </span>sheet of that workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:31: </span>but you accidentally output it to the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:33: </span>entire workbook it's just going to erase</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:35: </span>everything that you had in your model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:36: </span>it's going to be gone forever</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:39: </span>so be really careful about this make</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:42: </span>sure to back up your work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:45: </span>and generally uh be really careful</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:48: </span>if you're going to try and write a sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:51: </span>into an existing excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:52: </span>model um it's better generally to just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:56: </span>write to a separate workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:58: </span>because then uh that workbook is always</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>just being generated by the code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:02: </span>and you don't really care about what's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:05: </span>in there it's just getting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:06: </span>replaced whenever you run the code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:10: </span>so just be careful about this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:13: </span>you cannot undo it once you have written</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:16: </span>it over so you get a very bad day</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:18: </span>if you made a mistake with this so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:20: </span>that's why i always</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:22: </span>among other reasons always recommend</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:23: </span>that people back up their work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:25: </span>regularly uh you know you can use a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:28: </span>service like like dropbox or something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:31: </span>to do it automatically or you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:33: </span>you know have your own manual system of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:34: </span>copying files</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:36: </span>whatever you do just be careful when you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:38: </span>write</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:39: </span>to excel workbooks and this you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:43: </span>this is the only</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:44: </span>uh part of the course where we've</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:47: </span>actually outputted a file um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:50: </span>this is really a general caution about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:52: </span>any time you're going to output a file</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:55: </span>in any programming language it's going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:57: </span>to overwrite whatever is there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>so just be careful about this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:05: </span>so let's go look at a quick example of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:09: </span>how we can work with pandas to read and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:12: </span>write</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:12: </span>excel files</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:16: </span>so we'll hop over to the jupyter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:18: </span>notebook here read write</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:20: </span>excel pandas and we can see it works</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:23: </span>with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:24: </span>a workbook called stock data so i'm just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:27: </span>going to quickly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:29: </span>open up that stock data excel workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:32: </span>so that we can see what the contents are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:36: </span>and you can see it's got two worksheets</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:38: </span>here the first sheet and the second</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:39: </span>sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:40: </span>first sheet got microsoft and apple</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:42: </span>stock prices</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:43: </span>over time second sheet amazon and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:46: </span>facebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:47: </span>stock prices over time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:51: </span>so of course first we want to import</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:54: </span>pandas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:55: </span>and then we can read that data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:58: </span>into a data frame so we read the stock</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:02: </span>data file we didn't tell it any sheet or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:03: </span>anything</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:04: </span>and we can see that it loaded the first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:06: </span>sheet by default which has microsoft</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:09: </span>and apple and now we have all that and a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:11: </span>data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:14: </span>um but if we want that second sheet then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:17: </span>we just pass receipt name</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:18: </span>here the second sheet whatever the name</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:21: </span>of the sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:22: </span>and now we get the amazon and facebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:25: </span>worksheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:29: </span>so now coming to outputting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:32: </span>the data frame to an excel file so let's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:35: </span>look at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:36: </span>let's do something with the data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:37: </span>so that we know it's different uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:39: </span>here we're just adding a column which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:42: </span>has the string stuff</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:44: </span>in it a custom column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:47: </span>and now we're going to go ahead and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:49: </span>output this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:50: </span>so i'm going to run this to excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:53: </span>creating newbook.xlsx</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:56: </span>and let's take a look at what we got in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:00: </span>the new book</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:03: </span>so we can see um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:08: </span>that we have the data which uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:11: </span>was in the data frame has now come over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:14: </span>to the excel worksheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:16: </span>the stock uh tickers prices and dates</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:20: </span>um and we also have this additional</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:23: </span>column that we added</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:26: </span>you'll also notice um that it just put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:30: </span>it on a sheet one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:31: </span>that's going to be the default sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:33: </span>name</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:35: </span>and you can see that it brought over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:36: </span>this index 0 1 2</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:38: </span>3 4 5 6 7 as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:42: </span>so let's look at some different ways we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:44: </span>can affect this output</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:47: </span>so first is we can do index equals false</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:51: </span>and then that is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:54: </span>going to remove that 0 1 2</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:58: </span>3 going down the side see now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:01: </span>it starts right from the stock column so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:03: </span>this in this case we didn't care about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:05: </span>that index and so this is what we want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>but still outputting to something sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:10: </span>1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:12: </span>so we can control that part as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:15: </span>so here we just also pass the sheet name</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:18: </span>and then um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:21: </span>we are going to have the sheet named as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:25: </span>we put it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:26: </span>in python and we've got that coming over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:29: </span>to our excel workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:34: </span>um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:38: </span>the um lab exercise on this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:42: </span>material um is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:46: </span>going to be here in the slides the last</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:50: </span>slide of the panda section and there's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:53: </span>actually three different exercises here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:56: </span>contained within one so you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:57: </span>click on the links to go to the other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:59: </span>exercises</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:01: </span>um and this does require</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:05: </span>using some files uh from the course site</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:07: </span>so you can go directly to download those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:09: </span>or you can go to the resources slide and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:12: </span>download those from here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:16: </span>and as far as what you're required to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:20: </span>submit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:21: </span>or to get full credit on the lab</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:24: </span>exercises</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:25: </span>you need to do level one and level two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:28: </span>level three is an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:29: </span>optional exercise it uses uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:32: </span>the advanced material in the jupiter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:33: </span>notebook um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:35: </span>so that's down here we're not going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:38: </span>be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:39: </span>covering this in detail in the course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:41: </span>you can look at this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:43: </span>as an extension where we can write to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:45: </span>multiple different sheets</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:46: </span>in the same workbook but we're not going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:50: </span>to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:50: </span>covering that in detail so that's an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:53: </span>optional</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:54: </span>lab exercise only one and two are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:56: </span>required here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:58: </span>and so one is pretty much reading in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:00: </span>this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:01: </span>financials workbook and do note that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:05: </span>this is an xls</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:06: </span>file the old uh excel format and so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:10: </span>similarly in your code you'll have to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:11: </span>have xls not xlsx</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:15: </span>uh read the income statement sheet and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:17: </span>then write that out to a new workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:20: </span>um and then the level two using the same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:24: </span>initial workbook now we're just going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:27: </span>output to five different workbooks um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:30: </span>and do that without having to write the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:32: </span>to excel command over and over again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:36: </span>so that covers the integration</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:40: </span>of excel and python using pandas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:43: </span>next time we're going to come back to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:45: </span>talk about how we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:47: </span>do an even more more flexible</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:50: </span>integration</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:51: </span>using excel wings so thanks for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:54: </span>listening</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:54: </span>and see you next time</li>
+	</ul></div>
+
+|
+
 Combining Excel and Python using xlwings
 ===========================================
 
 .. youtube:: LYzVXHCJs40
     :height: 315
-    :width: 560
+    :width: 80%
     :align: center
 
 |
@@ -109,3 +570,820 @@ Resources
 
 - :download:`xlwings Lab </_static/Materials for Lab Exercises/Connecting Python and Excel/xlwings/xlwings Lab.xlsx>`
         
+
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:02: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>this is nick dearmardis teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:05: </span>financial modeling</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:07: </span>today we're going to be talking about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>combining excel and python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:11: </span>using excel wings this is part of our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>lecture segment on combining excel in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:16: </span>python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:18: </span>so we already explored how to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:21: </span>pandas to do simpler integrations of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:24: </span>excel in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:25: </span>now we're going to look at the full</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:28: </span>possible connection between the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:30: </span>using the excel wings library</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:34: </span>so excel wings gives</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:37: </span>us a nice convenient way that we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:41: </span>use excel from python and use python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:43: </span>from excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:44: </span>and go back and forth between the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:48: </span>so you don't actually need to use excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:50: </span>wings it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:51: </span>it's built on top of uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:54: </span>the microsoft com api</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:58: </span>so that's an api that microsoft</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:01: </span>releases so that other software can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:04: </span>interact</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:05: </span>with microsoft office products</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:11: </span>but it's kind of a pain to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:14: </span>uh directly in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:17: </span>i uh was doing that myself before this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:21: </span>xl wings library really became a thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:24: </span>uh years back i had to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:28: </span>build out some code that um was</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:32: </span>i was driving an excel plugin from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:33: </span>python i was basically using</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:35: </span>excel plugin to pull some data and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:37: </span>i would use python to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:40: </span>switch it out for different companies</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:41: </span>and keep re-running the plug-in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:43: </span>relaunching excel and all these things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>so that was all possible without excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:48: </span>wings but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:50: </span>it sure would have been quite a bit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:51: </span>easier had</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:53: </span>excel wings been where it is today</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:57: </span>when i had built out that project</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:01: </span>so it is still under active development</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:04: </span>just like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:06: </span>any of the um third-party packages that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:08: </span>we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:09: </span>use in the class um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:13: </span>some parts of it are more stable than</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:15: </span>others the part</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:16: </span>that we're going to look at and use in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:18: </span>this course is very stable</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:20: </span>uh i've never had any issues with it and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:23: </span>neither have i heard any issues from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:25: </span>anyone in the classes</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:27: </span>um there are other ways to use it which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:30: </span>we'll talk about briefly and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:33: </span>some of those are newer and less stable</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:36: </span>but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:37: </span>really interesting ways to integrate the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:38: </span>two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:41: </span>but the things are moving quickly in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:43: </span>this space</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:44: </span>every day there are improvements</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:47: </span>and so over time i expect all these to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:50: </span>become</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:50: </span>stable and well accepted ways of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:52: </span>combining the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:55: </span>so i keep saying there are different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:57: </span>ways to use excel wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:58: </span>and combine the two so what are those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:01: </span>different ways so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:05: </span>of two main categories of ways that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:09: </span>can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:10: </span>uh integrate excel in python one of cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:13: </span>wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:14: </span>the first here is manipulating excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:17: </span>from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:18: </span>python so that's writing python code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:21: </span>to make excel do things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:24: </span>and that is where we're going to focus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:27: </span>in this course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>and we're even focusing on a subset of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:33: </span>that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:33: </span>we're gonna focus on just bringing data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:35: </span>back and forth between excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:37: </span>and python um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:40: </span>orchestrating that from python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:44: </span>um but you can also</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:47: </span>use this integration to do absolutely</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:50: </span>anything that you would</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:51: </span>be able to do in excel uh you want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:56: </span>you know run run a create a data table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:59: </span>or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:01: </span>you know make a pivot table or whatever</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:04: </span>anything that you can do in excel you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:06: </span>can do it from python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:09: </span>execute some python code and excel will</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:11: </span>respond</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:12: </span>in turn</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:16: </span>the other main way that we can combine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:18: </span>the two is to run</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:20: </span>python from excel so that's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:23: </span>using excel to orchestrate things and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:25: </span>running python code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:27: </span>and within that we have two different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:29: </span>categories here that are supported</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:31: </span>in the excel wings library so one is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:34: </span>python as a vba replacement and the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:37: </span>other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:38: </span>is user defined functions so python is a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:41: </span>vba</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:41: </span>replacement that means you know you have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:45: </span>an excel model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:46: </span>and you've hit the limits of what you're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:49: </span>able to do with basic cell you're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:51: </span>thinking okay i've got to write some vba</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:53: </span>code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:53: </span>to accomplish what i'm trying to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:55: </span>accomplish well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:57: </span>this lets you write python code instead</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:00: </span>and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:01: </span>just use that in place of using vba for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:04: </span>whatever you are going to do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:07: </span>so it basically gives you a vba function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:10: </span>run python which then will run python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:13: </span>code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:13: </span>in the background uh the other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:17: </span>main way of running python from excel is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:20: </span>using user-defined functions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>and with user-defined functions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:25: </span>uh you basically create</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:28: </span>a function in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:31: </span>and you're able to call it from excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:35: </span>so just like you have equals average in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:38: </span>excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:39: </span>you can now have equals my function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:42: </span>and that my function is defined in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:45: </span>python code and it runs python code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:47: </span>it'll take the inputs from excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:50: </span>run it through the python code and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:51: </span>it will return</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:53: </span>whatever you're returning it will take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:54: </span>that and bring it back into excel and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:56: </span>put the result in the cell so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:59: </span>really cool way of combining the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:02: </span>and i think that um can really give you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:05: </span>the most power</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:06: </span>um but those user-defined functions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:10: </span>are where uh there's still a lot of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:12: </span>active development going on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:14: </span>there's still um some bugs that they're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:17: </span>working through with them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:18: </span>and it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:22: </span>uh something that you know i think a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:25: </span>couple years down the road they're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:26: </span>to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:27: </span>a lot more widespread but it's still</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:29: </span>kind of the early days for the user to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:31: </span>find functions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:32: </span>um so lots of cool applications there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:37: </span>but we're just going to be focusing in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:39: </span>this course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:40: </span>on bringing data back and forth between</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:42: </span>excel and python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:44: </span>because that is going to cover the vast</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:45: </span>majority of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:47: </span>use cases for combining the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:53: </span>and i would encourage you to google</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:55: </span>excel wings documentation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:57: </span>and you can take a look at the other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:58: </span>approaches and give them a try on your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>own as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:05: </span>so the main integration that we're using</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:09: </span>in this course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:09: </span>is that we can take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:13: </span>values numbers or data frames that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:17: </span>have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:17: </span>lists numbers data frames strings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:22: </span>that we have in python and we can bring</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:25: </span>those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:25: </span>into excel and we can take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:28: </span>data which we have in excel your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:30: </span>individual cells or whole tables</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:32: </span>columns rows we can take that and we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:35: </span>bring it into python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:36: </span>as lists or individual values or data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:38: </span>frames</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:41: </span>um so we'll also just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:44: </span>briefly touch on uh you know one bit of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:48: </span>functionality that we'll use which um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:52: </span>the vba api that we have in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:55: </span>um so this means that you can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:58: </span>anything</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>in excel from your python code and we'll</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:02: </span>we'll just look at recalculating the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:04: </span>workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:05: </span>as the one application here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:08: </span>but you can expand that to any possible</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:10: </span>thing that you can do in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:12: </span>you can make your python code trigger</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:14: </span>that in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:19: </span>and we'll look at how we can work with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:20: </span>entire tables at once</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:22: </span>for convenience so here's a quick</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:26: </span>example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:27: </span>of reading and writing values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:30: </span>um to and from excel so first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:34: </span>we have reading values from excel into</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:36: </span>python and all of this is going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:38: </span>python code because we're talking about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:40: </span>doing all this from the python side</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:43: </span>doing things from the excel side would</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:44: </span>be the other way of integrating the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:49: </span>and so here looking at reading values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:51: </span>from excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:53: </span>here's the simplest example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:56: </span>um so we'll talk about this this sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:59: </span>object in the full jupiter notebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:02: </span>example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:03: </span>we'll see how we get that but just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:04: </span>assume you have that already</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:06: </span>then it's just dot range and you give it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:09: </span>whatever cell range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:10: </span>you want to get and then dot value and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:14: </span>that's going to get the value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:15: </span>from that cell in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:18: </span>and then you can save that into a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:20: </span>variable just like you can with any</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:23: </span>other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:23: </span>expression um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:27: </span>if you uh give it a range you know just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:30: </span>like you would type that range in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:32: </span>with the colon</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:33: </span>and the cells on each side then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:36: </span>it will give you all the values which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:40: </span>exist in that range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:41: </span>and in the jupiter notebook example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:42: </span>we'll look at the format we get those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:44: </span>back</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:45: </span>in and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:49: </span>we it also has a nice shortcut this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:51: </span>expand</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:52: </span>function which basically says</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:55: </span>you know start from g11 and then go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:58: </span>right and go down</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:59: </span>until you reach the end of the table so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:01: </span>that lets you just take the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:03: </span>top left cell of a table and grab the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:05: </span>entire table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:07: </span>using expand</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:10: </span>and then looking at writing values we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:12: </span>have numbers in python we want to bring</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:14: </span>them into excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:17: </span>so then it's just taking this expression</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:19: </span>and and flipping it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:21: </span>so same thing that we did to pull the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:24: </span>value from excel now we have that on the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:26: </span>left hand side</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:27: </span>of the equals we're assigning to it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:30: </span>and we just assign whatever value and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:32: </span>that's going to come into excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:34: </span>and if we give it a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:38: </span>list then it's going to put multiple</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:40: </span>values in multiple cells so 10 would go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:42: </span>in g11</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:44: </span>and then 11 would go in h11 it would go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:48: </span>horizontally</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:49: </span>to the next column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:53: </span>and then if you specify that range as a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:56: </span>vertical range then that will make that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:58: </span>same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:59: </span>so same values go vertically g11 and g12</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:02: </span>will have those values and then if you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:04: </span>already have a data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:06: </span>it's already set up to work very nicely</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:09: </span>with data frames</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:10: </span>and so you can just assign a data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:12: </span>into a cell and then it's going to put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:14: </span>the entire table there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:16: </span>expanding outward from that cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:20: </span>so that's the basic idea now let's go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:22: </span>ahead and take a look at the full</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:24: </span>example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:24: </span>in the jupiter notebook um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:28: </span>so in addition to importing pandas we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:31: </span>gonna need to work with data frames now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:33: </span>we also import excel wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:35: </span>and there's one of these conventions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:37: </span>here for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:38: </span>excel wings as well people typically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:41: </span>import excel wings as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:42: </span>xw</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:46: </span>um so what we didn't show in that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:48: </span>example is how you initially</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:50: </span>get connected to the workbook in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:51: </span>worksheet so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:53: </span>now we're going to look at that so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:57: </span>now that we have xw we can do xw.book to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:00: </span>get a workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:02: </span>and you give it the name of the workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:04: </span>or the full file path</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:05: </span>if it's in a different folder</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:08: </span>and if you don't already have the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:11: </span>workbook open it's automatically going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:13: </span>to open it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:14: </span>for you um so i can see now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:18: </span>that opened example workbook for me</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:21: </span>and this is the example workbook that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:25: </span>we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:25: </span>working with so i'm just going to put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:28: </span>that over there so we can see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:30: </span>what's going on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:34: </span>in the excel as well as the python so we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:38: </span>look at that book object it's a book</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:40: </span>object and we can see the name of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:42: </span>workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:44: </span>um and that's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:47: </span>an excel wings book object</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:50: </span>um so now we're connected to the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:53: </span>workbook we want to connect to the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:55: </span>worksheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:56: </span>um so if you do book doc sheets you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:59: </span>see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:00: </span>uh the sheets which are in there here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:02: </span>example workbook has sheet one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:06: </span>and you can a neat way that they've set</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:10: </span>up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:10: </span>uh these sheets and book objects</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:14: </span>in uh xl wings is that they kind of work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:18: </span>both like lists and like dictionaries</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:20: </span>you can access it either way</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:23: </span>so if you give it a numerical index then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:26: </span>it's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:28: </span>pull it out by the order so here this is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:31: </span>going to get the first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:32: </span>worksheet from the workbook so now we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:34: </span>have that sheet1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:36: </span>worksheet or you can look it up by the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:39: </span>name like you would with a dictionary</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:42: </span>and that will also get us to sheet1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:45: </span>and this is a sheet object that we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:47: </span>here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:49: </span>um so typically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:53: </span>you're just going to have those two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:54: </span>things together</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:56: </span>you would get the workbook and then you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:58: </span>would get the sheet from the workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:00: </span>and then everything else you would just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:02: </span>work with the sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:07: </span>so let's see what we can do with this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:11: </span>so we can see we have this something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:13: </span>over here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:14: </span>in a1 and if we look up from a1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:19: </span>uh in that sheet we want to get the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:20: </span>value that's going to give us that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:23: </span>something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:23: </span>right there and just to prove that's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:27: </span>working we can move over to a2</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:30: </span>and that's getting nothing right because</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:32: </span>there's nothing in that cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:34: </span>but we can look at b1 and that's going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:36: </span>to get else so we are indeed pulling</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:38: </span>values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:39: </span>from that excel workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:43: </span>and when we pull from a cell which has</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:46: </span>no value we're going to get none</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:48: </span>as a result so we can see that what</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:50: </span>we're getting is none</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:52: </span>that is indeed true because c1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:55: </span>has no value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:58: </span>so that's reading a single value now we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:01: </span>can write a single value so we're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:03: </span>to write into a2 now we want to take the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:05: </span>value of 10 and write it in there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:07: </span>and we run this and we can see that has</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:09: </span>now showed up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:10: </span>in the excel workbook so pretty neat to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:13: </span>see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:14: </span>all that happening live</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:17: </span>um and then we can read multiple values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:21: </span>at once so we can give a range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:23: </span>of cells here a1 to a2 and we want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:27: </span>get that value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:28: </span>and that's going to get us those values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:30: </span>in a list first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:31: </span>something and then the 10.</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:35: </span>um and we can target this a1 to b1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:38: </span>instead and we'll get something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:40: </span>else uh each of those coming as an item</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:42: </span>in the list</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:45: </span>now it does get a little bit more</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:46: </span>complicated when we want to do a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:48: </span>two-dimensional range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:50: </span>so here a1 to b2 that's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:54: </span>getting all four of these cells so the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:56: </span>way that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:57: </span>excel wings is going to represent that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:59: </span>by default</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:00: </span>is with a list of lists so within this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:04: </span>outer list</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:05: </span>we have lists and each one of these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:08: </span>lists</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:08: </span>is representative of a row um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:12: </span>so we can see the first row something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:14: </span>else and then we can see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:16: </span>the second row 10 and then a blank cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:18: </span>so none</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:20: </span>um and it can be a little bit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:22: </span>complicated to work with that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:24: </span>and the creators of excel wings realize</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:27: </span>this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:28: </span>so we can also pass</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:31: </span>options to this and we can pass the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:35: </span>option that we would like to get a data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:36: </span>frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:37: </span>with the result instead of a list of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:39: </span>lists</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:40: </span>so if we just do the same thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:44: </span>but put this options data frame before</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:47: </span>the value now you can see it comes</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:50: </span>as a data frame but there is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:53: </span>uh something weird here that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:56: </span>um we have else here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:00: </span>as the name of a column and then we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:03: </span>something as the name of the index and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:05: </span>then we have 10</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:06: </span>as a value of the index and we have a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:08: </span>single cell data frame which has none in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:10: </span>it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:11: </span>so maybe not quite what we wanted um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:14: </span>maybe it is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:15: </span>but we have options to control how we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:18: </span>pull it in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:20: </span>so pulling from that same range again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:22: </span>with data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:23: </span>just now additionally in options we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:25: </span>passing index equals false</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:27: </span>that means assume that the data in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:29: </span>does not have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:30: </span>an index column on it um you can go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:33: </span>ahead and just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:34: </span>automatically make the index be this 0 1</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:36: </span>2</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:37: </span>auto incrementing thing and when we do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:40: </span>that then we see that something and else</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:42: </span>come as the columns and 10 and none</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:46: </span>come as the values for those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:50: </span>um and we can also pass</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:55: </span>header equals false so that these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:58: </span>uh the first values which are there are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:01: </span>going to come</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:01: </span>into the data frame rather than as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:03: </span>columns of the data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:07: </span>so now it auto named the column is zero</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:10: </span>and we have something else as values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:13: </span>though something in 10 did come back</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:15: </span>over to the index because we didn't</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:17: </span>include index equals false</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:19: </span>so if we include both of those then we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:21: </span>see the index is auto</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:22: </span>0 1 the columns are auto 0 1 and we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:26: </span>those four values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:27: </span>as cells of the data frame so which you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:30: </span>pick in between these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:31: </span>is just going to depend on how you have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:32: </span>your data in excel if it has headers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:35: </span>um then you would want to leave it as it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:38: </span>is if it doesn't have headers you would</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:39: </span>want to pass header equals false</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:43: </span>and generally you're going to want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:44: </span>pass index equals false unless you want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:46: </span>to have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:47: </span>your left most values as the mx of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:49: </span>data frame and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:50: </span>you can exclude that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:55: </span>so um then we can look at writing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:58: </span>multiple values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:59: </span>so um here if we just take a single</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:03: </span>value and we assign it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:04: </span>across a range here d1 to d2 we're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:07: </span>to see that that same value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:09: </span>comes into each one of the cells in that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:11: </span>range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:12: </span>um and then uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:16: </span>so a5 to b5 a5 to b5 that's here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:20: </span>we want to put the 10 and 11 to there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:24: </span>so same size range one dimensional</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:27: </span>it's going to be able to put those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:28: </span>values there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:31: </span>and then if you did a vertical range uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:35: </span>that would work as well so we can go a7</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:37: </span>to a8</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:39: </span>and that should uh oh that does</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:42: </span>it does always go horizontally you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:45: </span>cannot just write vertically like that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:47: </span>um if you want to write vertically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:50: </span>what you have to do is go to this list</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:53: </span>of lists</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:54: </span>pattern and put each of these values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:58: </span>in lists so then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:02: </span>we can see that the values come</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:04: </span>vertically um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:07: </span>and as a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:11: </span>one-liner for that uh i'm just double</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:13: </span>checking we don't have that later in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:15: </span>here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:16: </span>nope so one liner for that if you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:20: </span>already have your 10 and 11 lists</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:21: </span>and you want to put it vertically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:24: </span>starting at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:25: </span>a10 so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:28: </span>my list is 10 12.</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:33: </span>then you can use a list comprehension to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:35: </span>convert it into that structure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:38: </span>um so you're just taking each element of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:41: </span>the list and wrapping it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:43: </span>into a list and then we should see from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:46: </span>a 10 down to a11 that these numbers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:49: </span>then come there so you can use this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:52: </span>pattern</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:53: </span>if you want to output vertically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:57: </span>um and then to output to an entire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:00: </span>two two-dimensional range then we do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:02: </span>this list of list patterns so here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:04: </span>going from a7 to b8</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:08: </span>and you'll notice also that whatever is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:10: </span>there it's going to overwrite it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:12: </span>as well so now we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:15: </span>this 12 13 14 15 12 and 13 in the first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:18: </span>row 14 and 15 in the second row</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:21: </span>in that a7 and b8 range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:27: </span>so then um we can read entire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:31: </span>rows or columns</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:35: </span>using the expand functionality in excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:38: </span>wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:39: </span>so expand it can automat if you don't</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:43: </span>pass anything it automatically goes</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:44: </span>down and right but you can also pass</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:46: </span>right or down to just go in that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:48: </span>direction</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:49: </span>um so starting from this a7 if we expand</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:52: </span>to the right</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:54: </span>then we're going to get the 12 and the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:55: </span>13 because it started from here and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:57: </span>expanded right to get both of those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:00: </span>but if we target the same cell but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:02: </span>expand down</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:04: </span>then we're going to get 12 and 14</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:06: </span>because it's going to start from here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:07: </span>and expand down</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:09: </span>and if you don't pass anything into</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:11: </span>expand then it's going to get all of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:12: </span>this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:14: </span>with the list of lists kind of data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:16: </span>structure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:18: </span>but you can combine expand with options</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:21: </span>um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:23: </span>and that lets us put this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:26: </span>two-dimensional data into a data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:28: </span>so using the same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:30: </span>stuff we learned from the above section</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:32: </span>we're making that a data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:34: </span>excluding the index excluding the header</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:37: </span>and we can see that we get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:41: </span>the 12 13 14 15 with the auto</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:44: </span>incrementing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:45: </span>columns and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:49: </span>index</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:52: </span>so we can take an entire table from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:55: </span>python we can take a python data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:58: </span>um and we can write that into</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:01: </span>excel as well it just directly works</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:04: </span>uh here i already have something in a10</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:07: </span>i didn't need to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:08: </span>delete it out but just so it's clear</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:11: </span>i'm going to write into a10 there with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:14: </span>data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:15: </span>and we can see that all of that comes in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:17: </span>there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:19: </span>now you will notice you know just like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:21: </span>when we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:22: </span>reading into a data frame from excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:26: </span>that there are options around</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:30: </span>the index and the header</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:34: </span>because by default it's going to put the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:37: </span>index</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:37: </span>and the columns there so we said start</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:40: </span>from a 10 we want to output this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:42: </span>16 17 18 19 but it also took this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:45: </span>0 and 1 uh index and column names and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:49: </span>brought them in here as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:51: </span>um so now we're going to try here at 8</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:55: </span>14</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:55: </span>and if we exclude the index and the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:57: </span>header assign that data frame again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:00: </span>now it's just going to take those values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:03: </span>from the data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:04: </span>rather than including the um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:07: </span>index and column names</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:14: </span>so um there's an important</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:17: </span>gotcha when you want to work with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:20: </span>integers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:21: </span>uh and pulling them from excel into</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:23: </span>python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:25: </span>and most of the time in python we don't</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:27: </span>really care whether it's an integer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:28: </span>or a floating point number but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:32: </span>in certain cases such as when we want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:34: </span>do a number of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:35: </span>loops we do care whether it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:38: </span>an integer or a floating point number</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:42: </span>so um we're gonna pull in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:46: </span>from f5 so f5 is this five here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:50: </span>and we're going to um pull in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:53: </span>the value from there as our number of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:55: </span>loops variable</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:56: </span>and you can see it's just a plain five</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:58: </span>there's no decimals on it or anything</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:00: </span>here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:00: </span>but we can see when it came into uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:04: </span>python that we got 5.0</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:08: </span>and we look at the type it is indeed a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:11: </span>float not an integer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:13: </span>and so that means if you just take that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:15: </span>and you just try and loop with it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:17: </span>then we're going to get this error float</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:18: </span>object cannot be interpreted as an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:20: </span>integer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:21: </span>um so what we have to do is convert that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:25: </span>into an integer before we can loop over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:28: </span>it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:29: </span>so we just wrap that num loops in and in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:32: </span>and then now it's an integer and so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:36: </span>we can do our loops and everything on it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:43: </span>um there are also some gotchas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:47: </span>around formatting in excel when you try</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:49: </span>and read that back into python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:52: </span>um so here let's look at the f1 value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:55: </span>it's formatted as currency</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:57: </span>in excel let's pull that into python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:00: </span>you can see it comes in as decimal 10.25</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:05: </span>and if you just try and add a number</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:08: </span>to this decimal we're going to get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:10: </span>unsupported operand type</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:12: </span>decimal and float so what we can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:16: </span>same thing as we did with the integers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:18: </span>you just convert it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:20: </span>so just convert that to a float and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:23: </span>we can do the math with it just fine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:27: </span>um and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:31: </span>f3 there we have the accounting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:33: </span>formatting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:34: </span>it's going to be the same thing but if</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:36: </span>you just take the float of that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:38: </span>you're going to be able to get the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:40: </span>number back from the decimal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:43: </span>um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:46: </span>percentages do thankfully just work out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:49: </span>of the box just fine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:50: </span>it pulls it in as a float in the correct</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:53: </span>format</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:56: </span>and then if you have a date it's going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:58: </span>to pull it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:59: </span>as the date time type in python so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:02: </span>that's a built-in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:03: </span>type that we haven't talked about in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:05: </span>course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:06: </span>but this is a standard way to work with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:09: </span>dates in python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:10: </span>and it works perfectly fine with pandas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:13: </span>as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:18: </span>so the last thing that we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:19: </span>look at here um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:22: </span>is recalculating the workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:26: </span>so typically you're not going to need to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:29: </span>do this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:31: </span>because when you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:36: </span>write an input into excel it's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:40: </span>recalculate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:42: </span>the workbook automatically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:46: </span>so let me just write a value here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:49: </span>um a2 let's make that 11.</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:53: </span>you can see that the random value over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:55: </span>here recalculated</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:56: </span>when i did that i'm just running this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:58: </span>python code over here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:00: </span>and you can see the excel workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:01: </span>recalculating over there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:03: </span>so anytime that you write something into</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:06: </span>excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:06: </span>it's going to recalculate um and so you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:09: </span>don't normally need to explicitly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:11: </span>recalculate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:12: </span>um the only time where you're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:14: </span>need to do that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:16: </span>is if you want to keep re-running the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:18: </span>excel model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:19: </span>when you're not changing any inputs and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:22: </span>the case where that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:23: </span>generally applies is when you have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:25: </span>internal randomness</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:26: </span>in your excel model such that each time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:29: </span>you run the excel model with the same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:30: </span>inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:31: </span>you're getting a different output each</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:33: </span>time so in that case</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:35: </span>you might want to have your python code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:37: </span>do a loop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:38: </span>where it uh you know recalculates the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:42: </span>workbook and then extracts the output</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:43: </span>from excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:44: </span>and saves that in the list and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:46: </span>recalculates the workbook extracts it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:47: </span>from excel saves it in the list and does</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:49: </span>that for some number of iterations</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:53: </span>so how can we do this recalculation so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:57: </span>we do have to work with the app object</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:00: </span>instead of the book or sheet object um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:03: </span>so this one liner here can get us access</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:06: </span>to the current</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:08: </span>uh application object excel app</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:12: </span>and then on that you can do app.api</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:16: </span>dot recalculate full and you notice when</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:19: </span>i run that that the random value in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:22: </span>excel sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:23: </span>keeps recalculating</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:26: </span>um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:30: </span>you might try this on your machine and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:32: </span>find it doesn't work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:34: </span>and that's because the api is actually</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:37: </span>slightly different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:38: </span>on x on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:42: </span>mac versus windows so this command</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:44: </span>should work on mac while this one works</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:46: </span>on windows</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:49: </span>so in case you need to do this in your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:51: </span>model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:52: </span>i included a convenience function for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:55: </span>you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:56: </span>uh recalculate workbook you can just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:58: </span>copy this function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:59: </span>into your model um and you just call</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:02: </span>recalculate workbook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:03: </span>and you see i call that it is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:05: </span>recalculating and what this does is that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:07: </span>it gets the app</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:08: </span>excel wings app um and then it's going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:11: </span>to check</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:11: </span>what operating system you're on if</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:13: </span>you're on windows it's going to call</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:14: </span>that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:15: </span>first calculate full if you're on mac</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:18: </span>it's going to call that just calculate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:20: </span>and otherwise it's it's going to raise</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:23: </span>an error if it can't properly detect</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:24: </span>your operating system</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:26: </span>um so you can just take this into your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:30: </span>model and use it should you need to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:32: </span>recalculate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:33: </span>uh your model because it's an internal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:35: </span>randomness excel model that you're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:36: </span>trying to run</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:37: </span>repeatedly from python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:41: </span>that covers how to integrate uh python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:44: </span>and excel using excel wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:47: </span>and there is a lab exercise multiple lab</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:50: </span>exercises on this material</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:52: </span>as well so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:56: </span>there are actually four lab exercises</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:59: </span>here the different levels</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:01: </span>um and the fourth one is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:04: </span>optional one two and three are what's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:06: </span>required to submit for the course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:10: </span>and number one here and with all the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:13: </span>exercises</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:14: </span>you're going to download this uh excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:16: </span>wings lab file from the course site or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:18: </span>from the resources slide here this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:20: </span>directory will let you download it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:24: </span>and the first exercise is to read</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:28: </span>the values in the workbook or the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:30: </span>worksheet from column a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:32: </span>and then write them into column b using</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:35: </span>python and excel wings the second</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:38: </span>exercise is to get the value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:40: </span>from c9 and multiply it by 2.5</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:43: </span>in python and show the result and the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:46: </span>third exercise</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:48: </span>is to read this table in a python do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:50: </span>some math on it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:52: </span>and output it back into excel and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:55: </span>make sure that you can uh match up the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:58: </span>index and header to the same format as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:01: </span>the original</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:02: </span>table so that covers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:06: </span>uh everything we're going to look at in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:08: </span>the course with combining excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:10: </span>and python and this also concludes</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:14: </span>all the material um that you would need</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:17: </span>that everyone should need for every</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:18: </span>possible variation of the project 2</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:22: </span>model so thanks for listening</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:26: </span>and see you next time</li>
+	</ul></div>
+
+|

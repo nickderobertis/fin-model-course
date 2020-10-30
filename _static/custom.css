@@ -25,3 +25,23 @@ a.copybtn {
     width: 1.8em;
     height: 1.8em;
 }
+
+/* To support transcripts */
+
+.transcript-timestamp {
+    font-weight: 600;
+}
+
+.transcript ul li.transcript-entry {
+    list-style: none;
+    margin-left: 12px;
+}
+
+.transcript-entries {
+
+}
+
+.transcript {
+    max-height: 200px;
+    overflow-y: auto;
+}
