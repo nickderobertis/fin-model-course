@@ -86,3 +86,33 @@ def get_project_2_lecture() -> Lecture:
         *RESOURCES.projects.project_2.resources(),
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
+
+
+def get_project_3_lecture() -> Lecture:
+    project_title = 'Monte Carlo Cost of Capital'
+    project_num = 3
+    title = f'Project {project_num} - {project_title}'
+    youtube_id = '1mlVhKn81DY'
+    week_covered = 10
+    notes = LectureNotes([
+        'The focus of this project is to start working towards the Discounted Cash Flow (DCF) valuation '
+        'of a stock. The weighted average cost of capital (WACC) is a component of that model',
+        'This project also tests your ability to carry out a Monte Carlo simulation',
+        'Project 4 will be the full DCF valuation, which means it will include doing this analysis again '
+        'for a different company. I encourage you to write general functions that will be useful for both, '
+        'and after this project you can move those functions into a separate file so they can be shared',
+        'This is also our first project that requires working with external data',
+        'You can feel free to modify any of the data files. If you do modify them, then submit them along '
+        'with your project. If you did not modify the file, leave it out of the submission',
+        'To earn the bonus, complete the project without modifying any data files. I would recommend saving '
+        'this for last as it will be a substantial challenge. If you plan to do the bonus, as you modify the '
+        'files for your model, take note of every manual step that you take so you can try to automate it later',
+        'Please see the project description for some links to extra resources to help you automate the data cleanup',
+        'As with Project 2 and the remaining projects in the course, you are free to submit a Python model, Excel '
+        'model, or combination Python/Excel model. The only requirement is if you do submit a combination model, '
+        'the final outputs should be in Python',
+    ], title=title)
+    resources = [
+        *RESOURCES.projects.project_3.resources(),
+    ]
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)

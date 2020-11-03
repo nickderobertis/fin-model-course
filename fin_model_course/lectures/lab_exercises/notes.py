@@ -744,7 +744,7 @@ def get_python_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
             'Work off of your existing Project 1 Python model',
             'You are concerned the NPV could be heavily affected by changes in the interest rate. '
             'Instead of fixing it, draw it from a normal distribution with mean of 7% and standard deviation of 2%.',
-            'Run the model 10,000 times and collect the years to retirement results. Visualize the results. Create a '
+            'Run the model 10,000 times and collect the NPV results. Visualize the results. Create a '
             'table of probabilities and the minimum NPV we could expect with that probability. Output '
             'the chance that the NPV will be more than \\$400,000,000.'
         ],

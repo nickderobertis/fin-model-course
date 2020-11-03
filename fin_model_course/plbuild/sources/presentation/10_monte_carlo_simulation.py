@@ -187,8 +187,8 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
                 ),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download the Jupyter notebook "MC Investment Returns.ipynb" from '
-                        'Examples > Monte Carlo',
+                        'Go to the course site and download the Jupyter notebook "MC Investment Returns.ipynb" from '
+                        'Monte Carlo Examples',
                         'I will go through this example notebook to solve the problem from the prior slide.'
                     ],
                     title='Simluating Portfolio Values',
@@ -247,7 +247,7 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
                 ),
                 lp.TwoColumnGraphicDimRevealFrame(
                     [
-                        pl.TextSize(-1),
+                        pl.TextSize(-3),
                         'The outcome probability distribution represents the chance of receiving different '
                         'outcomes from your model.',
                         'There are two main ways to visualize a probability distribution: a plot and a table.',
@@ -255,7 +255,10 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
                          'gives a high-level overview of the probabilities and can uncover any non-normal '
                          'features of the distribution.'],
                         ['The probability table represents the chance of receiving the given value or '
-                         'lower.']
+                         'lower.'],
+                        'The Value at Risk (VaR) is a common measure calculated in the industry, and it represents '
+                        'the probability of losing at least a certain amount. This would be a subset of this analysis '
+                        'and so this analysis can be used to calculate VaR',
                     ],
                     graphics=[
                         images_path('outcome-probability-distribution.png'),
@@ -308,7 +311,7 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
                          pl.Equation(str_eq=r'p = \frac{350}{1000} = 0.35'),],
                         ['In the investment example, we used', pd_mono, 'to check for each trial, whether it was a '
                          'positive outcome (made it a 1) or not (made it a 0). Then the sum is the count of '
-                         'positive outcomes and so the mean is the probability.']
+                         'positive outcomes and so the mean is the probability.'],
                     ],
                     title='Probability of a Certain Outcome, Formally'
                 ),
@@ -379,8 +382,8 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
                     [
                         'I will now go through adding a Monte Carlo simulation to the Dynamic Salary Retirement '
                         'Model in Python',
-                        'The completed example is in '
-                        'Examples > Monte Carlo > Python',
+                        'The completed example is on the course site in '
+                        'Monte Carlo Examples',
                     ],
                     title='Adding Monte Carlo Simulation to a Formal Model',
                     block_title='Dynamic Salary Retirement with Monte Carlo'
@@ -416,8 +419,8 @@ xw.Range("G11").value = [[10, 11], [12, 13]]  # table
                 ),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download the "Dynamic Salary Retirement Model.xlsx" and '
-                        '"Excel Monte Carlo.ipynb" from Examples > Monte Carlo > Excel',
+                        'Go to the course site and download the "Dynamic Salary Retirement Model.xlsx" and '
+                        '"Excel Monte Carlo.ipynb" from the Monte Carlo Examples',
                         'Open up the Jupyter notebook and follow along with me',
                         'The completed Excel model is also there in case you lose track. Visualizations '
                         'were added after running the Jupyter notebook on the original Excel model.',

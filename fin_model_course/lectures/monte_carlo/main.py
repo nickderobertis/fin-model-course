@@ -16,9 +16,11 @@ def get_monte_carlo_lecture() -> LectureGroup:
     lectures = [
         notes.get_intro_monte_carlo_lecture(),
         notes.get_mc_investment_returns_lecture(),
+        notes.get_mc_ddm_lab_lecture(),
         notes.get_formal_mc_lecture(),
         notes.get_io_mc_lecture(),
         notes.get_mc_retirement_python_lecture(),
         notes.get_mc_retirement_excel_lecture(),
+        notes.get_mc_retirement_excel_io_analysis_lecture(),
     ]
     return LectureGroup(title, description, lectures, order=lecture_index, global_resources=resources)
