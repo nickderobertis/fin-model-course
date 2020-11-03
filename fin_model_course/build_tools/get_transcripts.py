@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import List
 
 from pydantic import BaseModel
-from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled
 
 from build_tools.config import TRANSCRIPTS_FOLDER
 
@@ -77,14 +77,17 @@ def get_all_transcripts(
                     f"Skipping getting transcript for lecture {lecture.title} as has no YouTube ID"
                 )
                 continue
-            transcripts.append(
-                get_transcript(
+            try:
+                transcript = get_transcript(
                     yt_id,
                     retreive_from_cache=retreive_from_cache,
                     store_in_cache=store_in_cache,
                     cache_folder=cache_folder,
                 )
-            )
+            except TranscriptsDisabled as e:
+                print(e)
+                continue
+            transcripts.append(transcript)
     return transcripts
 
 

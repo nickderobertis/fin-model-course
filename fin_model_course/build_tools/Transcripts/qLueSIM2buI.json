@@ -1,0 +1,1839 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick durabartis",
+      "start": 3.28,
+      "duration": 3.68
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 5.2,
+      "duration": 3.6
+    },
+    {
+      "text": "today we're going to be talking about",
+      "start": 6.96,
+      "duration": 4.32
+    },
+    {
+      "text": "how to analyze the relationship",
+      "start": 8.8,
+      "duration": 5.6
+    },
+    {
+      "text": "between inputs and outputs in our model",
+      "start": 11.28,
+      "duration": 5.919
+    },
+    {
+      "text": "using monte carlo simulation in the",
+      "start": 14.4,
+      "duration": 3.52
+    },
+    {
+      "text": "context",
+      "start": 17.199,
+      "duration": 3.761
+    },
+    {
+      "text": "of an existing excel model",
+      "start": 17.92,
+      "duration": 5.92
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 20.96,
+      "duration": 5.68
+    },
+    {
+      "text": "monte carlo simulation",
+      "start": 23.84,
+      "duration": 6.16
+    },
+    {
+      "text": "so we left off last time",
+      "start": 26.64,
+      "duration": 7.52
+    },
+    {
+      "text": "we were working on this example of how",
+      "start": 30.0,
+      "duration": 6.079
+    },
+    {
+      "text": "to run monte carlo simulation on an",
+      "start": 34.16,
+      "duration": 3.919
+    },
+    {
+      "text": "existing excel model",
+      "start": 36.079,
+      "duration": 4.8
+    },
+    {
+      "text": "and we went ahead and got it to where we",
+      "start": 38.079,
+      "duration": 4.881
+    },
+    {
+      "text": "were able to run the simulations",
+      "start": 40.879,
+      "duration": 3.68
+    },
+    {
+      "text": "and output the results of those",
+      "start": 42.96,
+      "duration": 3.759
+    },
+    {
+      "text": "simulations into excel",
+      "start": 44.559,
+      "duration": 6.16
+    },
+    {
+      "text": "and be able to get the probability of a",
+      "start": 46.719,
+      "duration": 5.36
+    },
+    {
+      "text": "particular objective",
+      "start": 50.719,
+      "duration": 5.441
+    },
+    {
+      "text": "a histogram of the distribution",
+      "start": 52.079,
+      "duration": 7.521
+    },
+    {
+      "text": "and a table of the percentiles of the",
+      "start": 56.16,
+      "duration": 6.48
+    },
+    {
+      "text": "distribution so definitely watch that",
+      "start": 59.6,
+      "duration": 4.4
+    },
+    {
+      "text": "prior video",
+      "start": 62.64,
+      "duration": 4.0
+    },
+    {
+      "text": "before coming to this one what we're",
+      "start": 64.0,
+      "duration": 3.76
+    },
+    {
+      "text": "doing in this video",
+      "start": 66.64,
+      "duration": 3.6
+    },
+    {
+      "text": "is we're going to modify the simulation",
+      "start": 67.76,
+      "duration": 4.48
+    },
+    {
+      "text": "a little bit so that it keeps",
+      "start": 70.24,
+      "duration": 6.08
+    },
+    {
+      "text": "the interest rate associated",
+      "start": 72.24,
+      "duration": 8.239
+    },
+    {
+      "text": "with the uh years to retirement",
+      "start": 76.32,
+      "duration": 8.479
+    },
+    {
+      "text": "and that will allow us to then",
+      "start": 80.479,
+      "duration": 4.32
+    },
+    {
+      "text": "analyze the relationship between the",
+      "start": 85.04,
+      "duration": 3.52
+    },
+    {
+      "text": "interest rate",
+      "start": 87.52,
+      "duration": 4.559
+    },
+    {
+      "text": "and the years for retirement",
+      "start": 88.56,
+      "duration": 7.519
+    },
+    {
+      "text": "so i'm going to come over to here um",
+      "start": 92.079,
+      "duration": 7.121
+    },
+    {
+      "text": "and we already have this function",
+      "start": 96.079,
+      "duration": 6.0
+    },
+    {
+      "text": "which is getting us the random interest",
+      "start": 99.2,
+      "duration": 4.4
+    },
+    {
+      "text": "rate putting into the model",
+      "start": 102.079,
+      "duration": 3.441
+    },
+    {
+      "text": "getting the result from the excel model",
+      "start": 103.6,
+      "duration": 3.519
+    },
+    {
+      "text": "which has recalculated that point and",
+      "start": 105.52,
+      "duration": 3.279
+    },
+    {
+      "text": "saving it",
+      "start": 107.119,
+      "duration": 5.921
+    },
+    {
+      "text": "so what we need to do is",
+      "start": 108.799,
+      "duration": 5.841
+    },
+    {
+      "text": "now we're gonna save not just the years",
+      "start": 113.04,
+      "duration": 4.48
+    },
+    {
+      "text": "to retirement but also",
+      "start": 114.64,
+      "duration": 7.519
+    },
+    {
+      "text": "the um interest rate as well",
+      "start": 117.52,
+      "duration": 7.279
+    },
+    {
+      "text": "so i'm going to rename this list to all",
+      "start": 122.159,
+      "duration": 4.881
+    },
+    {
+      "text": "data so it's more indicative of what",
+      "start": 124.799,
+      "duration": 4.16
+    },
+    {
+      "text": "we're doing",
+      "start": 127.04,
+      "duration": 4.4
+    },
+    {
+      "text": "and then here i'm going to append not",
+      "start": 128.959,
+      "duration": 4.561
+    },
+    {
+      "text": "just the years to retirement but also",
+      "start": 131.44,
+      "duration": 2.4
+    },
+    {
+      "text": "the",
+      "start": 133.52,
+      "duration": 4.48
+    },
+    {
+      "text": "interest rate um",
+      "start": 133.84,
+      "duration": 8.54
+    },
+    {
+      "text": "and let me just quickly grab that logic",
+      "start": 138.0,
+      "duration": 7.59
+    },
+    {
+      "text": "[Music]",
+      "start": 142.38,
+      "duration": 3.21
+    },
+    {
+      "text": "that we now",
+      "start": 145.76,
+      "duration": 7.28
+    },
+    {
+      "text": "have those results in a list here",
+      "start": 149.52,
+      "duration": 5.68
+    },
+    {
+      "text": "and then what we can do is we can create",
+      "start": 153.04,
+      "duration": 3.919
+    },
+    {
+      "text": "a data frame",
+      "start": 155.2,
+      "duration": 4.43
+    },
+    {
+      "text": "from those results so data frame",
+      "start": 156.959,
+      "duration": 3.92
+    },
+    {
+      "text": "[Music]",
+      "start": 159.63,
+      "duration": 5.17
+    },
+    {
+      "text": "and then the columns are going to be",
+      "start": 160.879,
+      "duration": 10.961
+    },
+    {
+      "text": "interest and use retirement",
+      "start": 164.8,
+      "duration": 7.04
+    },
+    {
+      "text": "and then we have that data frame",
+      "start": 173.519,
+      "duration": 3.841
+    },
+    {
+      "text": "um and then instead of",
+      "start": 177.68,
+      "duration": 5.919
+    },
+    {
+      "text": "i'm gonna go ahead and move this over",
+      "start": 180.879,
+      "duration": 3.681
+    },
+    {
+      "text": "one",
+      "start": 183.599,
+      "duration": 4.72
+    },
+    {
+      "text": "um instead of writing using the",
+      "start": 184.56,
+      "duration": 7.2
+    },
+    {
+      "text": "column and uh you know list within list",
+      "start": 188.319,
+      "duration": 4.801
+    },
+    {
+      "text": "approach we can actually just",
+      "start": 191.76,
+      "duration": 5.08
+    },
+    {
+      "text": "write the data frame back into",
+      "start": 193.12,
+      "duration": 6.479
+    },
+    {
+      "text": "excel um",
+      "start": 196.84,
+      "duration": 7.08
+    },
+    {
+      "text": "so then we're going to do uh this same",
+      "start": 199.599,
+      "duration": 8.881
+    },
+    {
+      "text": "assignment but we're going to",
+      "start": 203.92,
+      "duration": 9.92
+    },
+    {
+      "text": "assign the data frame instead so",
+      "start": 208.48,
+      "duration": 5.36
+    },
+    {
+      "text": "but i know if i do this right now it's",
+      "start": 215.04,
+      "duration": 2.8
+    },
+    {
+      "text": "going to bring the index over and so",
+      "start": 216.48,
+      "duration": 2.72
+    },
+    {
+      "text": "it'll be three columns and it's going to",
+      "start": 217.84,
+      "duration": 4.319
+    },
+    {
+      "text": "overwrite what we have here",
+      "start": 219.2,
+      "duration": 6.56
+    },
+    {
+      "text": "so i'm going to also put options",
+      "start": 222.159,
+      "duration": 8.0
+    },
+    {
+      "text": "data frame uh index equals false",
+      "start": 225.76,
+      "duration": 8.559
+    },
+    {
+      "text": "um and then we should get it coming in",
+      "start": 230.159,
+      "duration": 7.041
+    },
+    {
+      "text": "it will have the headers um but that's",
+      "start": 234.319,
+      "duration": 3.681
+    },
+    {
+      "text": "that's fine",
+      "start": 237.2,
+      "duration": 4.48
+    },
+    {
+      "text": "so let's give that a try um",
+      "start": 238.0,
+      "duration": 6.4
+    },
+    {
+      "text": "and now we do see coming over here what",
+      "start": 241.68,
+      "duration": 4.0
+    },
+    {
+      "text": "we expected to see",
+      "start": 244.4,
+      "duration": 2.96
+    },
+    {
+      "text": "of course we only have it at 10",
+      "start": 245.68,
+      "duration": 4.24
+    },
+    {
+      "text": "iterations right now instead of the full",
+      "start": 247.36,
+      "duration": 6.72
+    },
+    {
+      "text": "um instead of the full thousand",
+      "start": 249.92,
+      "duration": 7.279
+    },
+    {
+      "text": "now we can see that works so let's bring",
+      "start": 254.08,
+      "duration": 5.679
+    },
+    {
+      "text": "that back into our function",
+      "start": 257.199,
+      "duration": 6.641
+    },
+    {
+      "text": "rather than what we had before",
+      "start": 259.759,
+      "duration": 4.081
+    },
+    {
+      "text": "of doing the list within less approach",
+      "start": 264.56,
+      "duration": 7.84
+    },
+    {
+      "text": "so bring all that into here and then we",
+      "start": 268.24,
+      "duration": 8.16
+    },
+    {
+      "text": "can return the data frame instead",
+      "start": 272.4,
+      "duration": 4.0
+    },
+    {
+      "text": "and now we should be able to run this",
+      "start": 279.6,
+      "duration": 3.44
+    },
+    {
+      "text": "thousand simulations",
+      "start": 281.6,
+      "duration": 4.4
+    },
+    {
+      "text": "ten percent mean five percent interest",
+      "start": 283.04,
+      "duration": 3.28
+    },
+    {
+      "text": "or",
+      "start": 286.0,
+      "duration": 4.08
+    },
+    {
+      "text": "standard deviation and",
+      "start": 286.32,
+      "duration": 7.36
+    },
+    {
+      "text": "we want to see uh",
+      "start": 290.08,
+      "duration": 6.16
+    },
+    {
+      "text": "the first few results out of that so",
+      "start": 293.68,
+      "duration": 4.72
+    },
+    {
+      "text": "let's give that a try",
+      "start": 296.24,
+      "duration": 4.08
+    },
+    {
+      "text": "it's going to take a little bit to run",
+      "start": 298.4,
+      "duration": 4.08
+    },
+    {
+      "text": "through the model",
+      "start": 300.32,
+      "duration": 5.12
+    },
+    {
+      "text": "[Music]",
+      "start": 302.48,
+      "duration": 9.04
+    },
+    {
+      "text": "and oh i didn't redefine this that would",
+      "start": 305.44,
+      "duration": 9.44
+    },
+    {
+      "text": "cause it to not actually change",
+      "start": 311.52,
+      "duration": 3.36
+    },
+    {
+      "text": "i've accidentally got this still in here",
+      "start": 315.199,
+      "duration": 6.0
+    },
+    {
+      "text": "definitely don't want that",
+      "start": 318.08,
+      "duration": 6.72
+    },
+    {
+      "text": "that was the old code so now let's",
+      "start": 321.199,
+      "duration": 6.401
+    },
+    {
+      "text": "redefine this okay now let's try this",
+      "start": 324.8,
+      "duration": 4.8
+    },
+    {
+      "text": "again",
+      "start": 327.6,
+      "duration": 3.599
+    },
+    {
+      "text": "um so again it's going to take a little",
+      "start": 329.6,
+      "duration": 3.36
+    },
+    {
+      "text": "bit to run",
+      "start": 331.199,
+      "duration": 4.0
+    },
+    {
+      "text": "but now we do see all the interest rates",
+      "start": 332.96,
+      "duration": 4.4
+    },
+    {
+      "text": "associated with the year's retirement",
+      "start": 335.199,
+      "duration": 3.921
+    },
+    {
+      "text": "coming in",
+      "start": 337.36,
+      "duration": 5.04
+    },
+    {
+      "text": "and now we can modify this",
+      "start": 339.12,
+      "duration": 4.88
+    },
+    {
+      "text": "because now the years to retirement have",
+      "start": 342.4,
+      "duration": 3.92
+    },
+    {
+      "text": "moved",
+      "start": 344.0,
+      "duration": 2.32
+    },
+    {
+      "text": "and so we can get back to our",
+      "start": 346.72,
+      "duration": 7.12
+    },
+    {
+      "text": "probability of achieving the objective",
+      "start": 348.4,
+      "duration": 5.44
+    },
+    {
+      "text": "and so now and then this also we want to",
+      "start": 356.88,
+      "duration": 7.599
+    },
+    {
+      "text": "move over",
+      "start": 362.0,
+      "duration": 2.479
+    },
+    {
+      "text": "and same thing with the percentile",
+      "start": 365.12,
+      "duration": 4.4
+    },
+    {
+      "text": "because we did have to move",
+      "start": 367.44,
+      "duration": 5.84
+    },
+    {
+      "text": "um that column",
+      "start": 369.52,
+      "duration": 7.119
+    },
+    {
+      "text": "so just uh carrying those results all",
+      "start": 373.28,
+      "duration": 3.759
+    },
+    {
+      "text": "over",
+      "start": 376.639,
+      "duration": 3.921
+    },
+    {
+      "text": "great so",
+      "start": 377.039,
+      "duration": 6.081
+    },
+    {
+      "text": "we have everything we need in excel now",
+      "start": 380.56,
+      "duration": 3.04
+    },
+    {
+      "text": "let's",
+      "start": 383.12,
+      "duration": 3.199
+    },
+    {
+      "text": "go to do the analysis of how the inputs",
+      "start": 383.6,
+      "duration": 4.719
+    },
+    {
+      "text": "relate to the outputs",
+      "start": 386.319,
+      "duration": 3.841
+    },
+    {
+      "text": "so the first thing that you want to do",
+      "start": 388.319,
+      "duration": 3.681
+    },
+    {
+      "text": "is a scatter plot so we can just",
+      "start": 390.16,
+      "duration": 2.72
+    },
+    {
+      "text": "highlight",
+      "start": 392.0,
+      "duration": 3.84
+    },
+    {
+      "text": "all of these data",
+      "start": 392.88,
+      "duration": 2.96
+    },
+    {
+      "text": "back up to the top and we want to insert",
+      "start": 396.319,
+      "duration": 7.041
+    },
+    {
+      "text": "and we can see that the scatter plot",
+      "start": 401.36,
+      "duration": 3.92
+    },
+    {
+      "text": "comes up as the first",
+      "start": 403.36,
+      "duration": 3.679
+    },
+    {
+      "text": "recommended chart there so let's add",
+      "start": 405.28,
+      "duration": 3.12
+    },
+    {
+      "text": "that",
+      "start": 407.039,
+      "duration": 3.681
+    },
+    {
+      "text": "and we can definitely see a very clear",
+      "start": 408.4,
+      "duration": 3.44
+    },
+    {
+      "text": "relationship here",
+      "start": 410.72,
+      "duration": 4.479
+    },
+    {
+      "text": "between the year's retirement and",
+      "start": 411.84,
+      "duration": 8.32
+    },
+    {
+      "text": "the interest rate",
+      "start": 415.199,
+      "duration": 6.641
+    },
+    {
+      "text": "it also highlights that we have some",
+      "start": 420.16,
+      "duration": 3.28
+    },
+    {
+      "text": "issues here we are getting some",
+      "start": 421.84,
+      "duration": 3.84
+    },
+    {
+      "text": "negative interest rates and so we would",
+      "start": 423.44,
+      "duration": 3.759
+    },
+    {
+      "text": "probably want to",
+      "start": 425.68,
+      "duration": 5.359
+    },
+    {
+      "text": "deal with that in the model as well",
+      "start": 427.199,
+      "duration": 6.72
+    },
+    {
+      "text": "um let's come over to python to quickly",
+      "start": 431.039,
+      "duration": 6.081
+    },
+    {
+      "text": "fix that",
+      "start": 433.919,
+      "duration": 6.801
+    },
+    {
+      "text": "so what we can do is instead of",
+      "start": 437.12,
+      "duration": 8.32
+    },
+    {
+      "text": "random.normal variant we can",
+      "start": 440.72,
+      "duration": 4.72
+    },
+    {
+      "text": "call that but um we're going to do",
+      "start": 448.24,
+      "duration": 6.32
+    },
+    {
+      "text": "while the value is less than zero we're",
+      "start": 452.479,
+      "duration": 3.361
+    },
+    {
+      "text": "going to keep drawing more",
+      "start": 454.56,
+      "duration": 5.52
+    },
+    {
+      "text": "values um and initialize the value at a",
+      "start": 455.84,
+      "duration": 7.04
+    },
+    {
+      "text": "negative number",
+      "start": 460.08,
+      "duration": 2.8
+    },
+    {
+      "text": "and we can call this random normal",
+      "start": 463.599,
+      "duration": 4.16
+    },
+    {
+      "text": "positive you can see it i explained this",
+      "start": 465.36,
+      "duration": 3.76
+    },
+    {
+      "text": "in more detail",
+      "start": 467.759,
+      "duration": 4.72
+    },
+    {
+      "text": "and the adding uh",
+      "start": 469.12,
+      "duration": 5.44
+    },
+    {
+      "text": "monte carlo simulation to a python model",
+      "start": 472.479,
+      "duration": 3.361
+    },
+    {
+      "text": "in that video",
+      "start": 474.56,
+      "duration": 3.6
+    },
+    {
+      "text": "uh same built the same function over",
+      "start": 475.84,
+      "duration": 3.919
+    },
+    {
+      "text": "there",
+      "start": 478.16,
+      "duration": 4.64
+    },
+    {
+      "text": "um and then that can take the mean and",
+      "start": 479.759,
+      "duration": 3.361
+    },
+    {
+      "text": "the",
+      "start": 482.8,
+      "duration": 3.28
+    },
+    {
+      "text": "standard deviation",
+      "start": 483.12,
+      "duration": 2.96
+    },
+    {
+      "text": "and then finally return the value",
+      "start": 488.56,
+      "duration": 7.199
+    },
+    {
+      "text": "so then we can use that instead of",
+      "start": 493.36,
+      "duration": 5.6
+    },
+    {
+      "text": "random normal variant",
+      "start": 495.759,
+      "duration": 5.761
+    },
+    {
+      "text": "redefine that let's go ahead and try",
+      "start": 498.96,
+      "duration": 4.0
+    },
+    {
+      "text": "this again",
+      "start": 501.52,
+      "duration": 3.6
+    },
+    {
+      "text": "and then after this finishes we'll see",
+      "start": 502.96,
+      "duration": 3.2
+    },
+    {
+      "text": "the members update",
+      "start": 505.12,
+      "duration": 3.44
+    },
+    {
+      "text": "yep and now we see that we don't have",
+      "start": 506.16,
+      "duration": 3.68
+    },
+    {
+      "text": "those negative numbers in the",
+      "start": 508.56,
+      "duration": 2.079
+    },
+    {
+      "text": "distribution",
+      "start": 509.84,
+      "duration": 3.92
+    },
+    {
+      "text": "so doing plots of your output is a great",
+      "start": 510.639,
+      "duration": 3.921
+    },
+    {
+      "text": "way to",
+      "start": 513.76,
+      "duration": 2.56
+    },
+    {
+      "text": "check and understand everything that's",
+      "start": 514.56,
+      "duration": 4.279
+    },
+    {
+      "text": "going on in your",
+      "start": 516.32,
+      "duration": 5.04
+    },
+    {
+      "text": "simulations so now we can see there's a",
+      "start": 518.839,
+      "duration": 3.56
+    },
+    {
+      "text": "clear relationship",
+      "start": 521.36,
+      "duration": 3.12
+    },
+    {
+      "text": "just from the scatter plot as the",
+      "start": 522.399,
+      "duration": 3.841
+    },
+    {
+      "text": "interest rate goes up your retirement",
+      "start": 524.48,
+      "duration": 2.4
+    },
+    {
+      "text": "goes down",
+      "start": 526.24,
+      "duration": 3.68
+    },
+    {
+      "text": "and it's a non-linear and it's it's",
+      "start": 526.88,
+      "duration": 4.8
+    },
+    {
+      "text": "a steeper decrease at first and then it",
+      "start": 529.92,
+      "duration": 3.359
+    },
+    {
+      "text": "flattens out as you get to higher",
+      "start": 531.68,
+      "duration": 3.52
+    },
+    {
+      "text": "interest rates",
+      "start": 533.279,
+      "duration": 5.841
+    },
+    {
+      "text": "but we can quantify this relationship",
+      "start": 535.2,
+      "duration": 7.44
+    },
+    {
+      "text": "using the regression so",
+      "start": 539.12,
+      "duration": 5.36
+    },
+    {
+      "text": "regression excel is going to live on the",
+      "start": 542.64,
+      "duration": 3.199
+    },
+    {
+      "text": "data tab",
+      "start": 544.48,
+      "duration": 4.72
+    },
+    {
+      "text": "and then it would be over here",
+      "start": 545.839,
+      "duration": 5.041
+    },
+    {
+      "text": "you can notice that i have nothing over",
+      "start": 549.2,
+      "duration": 3.68
+    },
+    {
+      "text": "here right now and that's because i need",
+      "start": 550.88,
+      "duration": 3.36
+    },
+    {
+      "text": "to enable",
+      "start": 552.88,
+      "duration": 4.079
+    },
+    {
+      "text": "the add-in or the data analysis tool",
+      "start": 554.24,
+      "duration": 3.12
+    },
+    {
+      "text": "pack",
+      "start": 556.959,
+      "duration": 3.201
+    },
+    {
+      "text": "for that to show up so you might already",
+      "start": 557.36,
+      "duration": 3.36
+    },
+    {
+      "text": "have",
+      "start": 560.16,
+      "duration": 2.72
+    },
+    {
+      "text": "data analysis showing up over here but",
+      "start": 560.72,
+      "duration": 3.119
+    },
+    {
+      "text": "if you don't",
+      "start": 562.88,
+      "duration": 2.8
+    },
+    {
+      "text": "it is built into excel you just have to",
+      "start": 563.839,
+      "duration": 4.241
+    },
+    {
+      "text": "enable it so in order to do that you do",
+      "start": 565.68,
+      "duration": 7.279
+    },
+    {
+      "text": "file and then options",
+      "start": 568.08,
+      "duration": 8.08
+    },
+    {
+      "text": "and then add-ins",
+      "start": 572.959,
+      "duration": 5.841
+    },
+    {
+      "text": "um and then you want to manage excel",
+      "start": 576.16,
+      "duration": 3.84
+    },
+    {
+      "text": "add-ins",
+      "start": 578.8,
+      "duration": 3.92
+    },
+    {
+      "text": "and then",
+      "start": 580.0,
+      "duration": 2.72
+    },
+    {
+      "text": "that's where it does say that i have it",
+      "start": 583.68,
+      "duration": 3.52
+    },
+    {
+      "text": "enabled",
+      "start": 585.92,
+      "duration": 3.359
+    },
+    {
+      "text": "let me try disabling it and then",
+      "start": 587.2,
+      "duration": 3.84
+    },
+    {
+      "text": "re-enabling it to see",
+      "start": 589.279,
+      "duration": 6.801
+    },
+    {
+      "text": "if that will allow it to come up um",
+      "start": 591.04,
+      "duration": 8.479
+    },
+    {
+      "text": "hopefully this will come up okay good",
+      "start": 596.08,
+      "duration": 5.92
+    },
+    {
+      "text": "good so now we have the data analysis",
+      "start": 599.519,
+      "duration": 3.041
+    },
+    {
+      "text": "section",
+      "start": 602.0,
+      "duration": 4.48
+    },
+    {
+      "text": "showing up over here and so we can go to",
+      "start": 602.56,
+      "duration": 4.24
+    },
+    {
+      "text": "do",
+      "start": 606.48,
+      "duration": 3.52
+    },
+    {
+      "text": "our regression so just click data",
+      "start": 606.8,
+      "duration": 5.12
+    },
+    {
+      "text": "analysis it brings up a lot of options",
+      "start": 610.0,
+      "duration": 3.36
+    },
+    {
+      "text": "the one we want to use here",
+      "start": 611.92,
+      "duration": 4.0
+    },
+    {
+      "text": "is regression and then it's going to ask",
+      "start": 613.36,
+      "duration": 4.0
+    },
+    {
+      "text": "for your y's and your x's",
+      "start": 615.92,
+      "duration": 4.8
+    },
+    {
+      "text": "so the y is always going to be",
+      "start": 617.36,
+      "duration": 6.4
+    },
+    {
+      "text": "whatever your output is here used to",
+      "start": 620.72,
+      "duration": 5.119
+    },
+    {
+      "text": "retirement",
+      "start": 623.76,
+      "duration": 5.04
+    },
+    {
+      "text": "and the x you can add multiple x",
+      "start": 625.839,
+      "duration": 3.68
+    },
+    {
+      "text": "variables",
+      "start": 628.8,
+      "duration": 2.32
+    },
+    {
+      "text": "and you should if you're changing",
+      "start": 629.519,
+      "duration": 3.76
+    },
+    {
+      "text": "multiple things in your simulation",
+      "start": 631.12,
+      "duration": 4.08
+    },
+    {
+      "text": "here we just have one variable so i'm",
+      "start": 633.279,
+      "duration": 4.721
+    },
+    {
+      "text": "going to add that",
+      "start": 635.2,
+      "duration": 4.24
+    },
+    {
+      "text": "and you'll notice with both of these",
+      "start": 638.0,
+      "duration": 3.04
+    },
+    {
+      "text": "that i picked up the",
+      "start": 639.44,
+      "duration": 3.6
+    },
+    {
+      "text": "label as well and so i'm going to check",
+      "start": 641.04,
+      "duration": 3.52
+    },
+    {
+      "text": "that they have labels and that will",
+      "start": 643.04,
+      "duration": 3.12
+    },
+    {
+      "text": "allow that to come through into the",
+      "start": 644.56,
+      "duration": 5.12
+    },
+    {
+      "text": "regression results as well",
+      "start": 646.16,
+      "duration": 3.52
+    },
+    {
+      "text": "and i'm going to output that analysis",
+      "start": 649.76,
+      "duration": 6.88
+    },
+    {
+      "text": "um right here you can also put it on a",
+      "start": 653.519,
+      "duration": 3.76
+    },
+    {
+      "text": "new sheet",
+      "start": 656.64,
+      "duration": 4.56
+    },
+    {
+      "text": "if you'd like um and then hit okay to",
+      "start": 657.279,
+      "duration": 5.921
+    },
+    {
+      "text": "run it",
+      "start": 661.2,
+      "duration": 3.84
+    },
+    {
+      "text": "and then we see the regression output",
+      "start": 663.2,
+      "duration": 4.56
+    },
+    {
+      "text": "coming up here",
+      "start": 665.04,
+      "duration": 2.72
+    },
+    {
+      "text": "um so then we",
+      "start": 668.079,
+      "duration": 7.081
+    },
+    {
+      "text": "um get the result here of a negative",
+      "start": 671.44,
+      "duration": 6.48
+    },
+    {
+      "text": "95.8 coefficient with a very low",
+      "start": 675.16,
+      "duration": 4.52
+    },
+    {
+      "text": "p value so it definitely is",
+      "start": 677.92,
+      "duration": 4.159
+    },
+    {
+      "text": "significantly related",
+      "start": 679.68,
+      "duration": 5.44
+    },
+    {
+      "text": "and negative 95.8 that's saying a one",
+      "start": 682.079,
+      "duration": 4.0
+    },
+    {
+      "text": "unit increase",
+      "start": 685.12,
+      "duration": 3.36
+    },
+    {
+      "text": "in the interest rate decreases years to",
+      "start": 686.079,
+      "duration": 5.121
+    },
+    {
+      "text": "retirement by 95.8 years",
+      "start": 688.48,
+      "duration": 4.4
+    },
+    {
+      "text": "now you might say whoa that's huge why",
+      "start": 691.2,
+      "duration": 3.12
+    },
+    {
+      "text": "is that so huge",
+      "start": 692.88,
+      "duration": 4.079
+    },
+    {
+      "text": "that's because a one unit increase here",
+      "start": 694.32,
+      "duration": 3.44
+    },
+    {
+      "text": "is going from",
+      "start": 696.959,
+      "duration": 3.281
+    },
+    {
+      "text": "zero to one hundred percent interest so",
+      "start": 697.76,
+      "duration": 4.48
+    },
+    {
+      "text": "that's obviously uh",
+      "start": 700.24,
+      "duration": 3.76
+    },
+    {
+      "text": "much larger than a realistic interest",
+      "start": 702.24,
+      "duration": 3.279
+    },
+    {
+      "text": "rate change",
+      "start": 704.0,
+      "duration": 4.24
+    },
+    {
+      "text": "uh so to get it to a one percent entry",
+      "start": 705.519,
+      "duration": 4.481
+    },
+    {
+      "text": "increase in interest rate which is a",
+      "start": 708.24,
+      "duration": 3.279
+    },
+    {
+      "text": "more reasonable thing to talk about we",
+      "start": 710.0,
+      "duration": 3.519
+    },
+    {
+      "text": "just divide by 100",
+      "start": 711.519,
+      "duration": 5.041
+    },
+    {
+      "text": "um and so that would be a one percent",
+      "start": 713.519,
+      "duration": 4.56
+    },
+    {
+      "text": "increase in interest rate",
+      "start": 716.56,
+      "duration": 4.16
+    },
+    {
+      "text": "decreases years to retirement by almost",
+      "start": 718.079,
+      "duration": 4.961
+    },
+    {
+      "text": "a year",
+      "start": 720.72,
+      "duration": 2.32
+    },
+    {
+      "text": "um so",
+      "start": 723.36,
+      "duration": 6.8
+    },
+    {
+      "text": "that um we can use that to interpret it",
+      "start": 726.399,
+      "duration": 7.12
+    },
+    {
+      "text": "um and then you know if you had",
+      "start": 730.16,
+      "duration": 5.6
+    },
+    {
+      "text": "other inputs they would just show up as",
+      "start": 733.519,
+      "duration": 3.601
+    },
+    {
+      "text": "additional lines here and you could",
+      "start": 735.76,
+      "duration": 2.16
+    },
+    {
+      "text": "interpret those",
+      "start": 737.12,
+      "duration": 4.56
+    },
+    {
+      "text": "coefficients in a similar fashion",
+      "start": 737.92,
+      "duration": 6.32
+    },
+    {
+      "text": "um and then the one other part of the",
+      "start": 741.68,
+      "duration": 3.36
+    },
+    {
+      "text": "analysis",
+      "start": 744.24,
+      "duration": 3.599
+    },
+    {
+      "text": "is when you do have multiple inputs you",
+      "start": 745.04,
+      "duration": 4.479
+    },
+    {
+      "text": "can't just directly compare the",
+      "start": 747.839,
+      "duration": 3.761
+    },
+    {
+      "text": "coefficients to determine",
+      "start": 749.519,
+      "duration": 4.56
+    },
+    {
+      "text": "which is the most impactful you have to",
+      "start": 751.6,
+      "duration": 5.28
+    },
+    {
+      "text": "compare these standardized coefficients",
+      "start": 754.079,
+      "duration": 5.361
+    },
+    {
+      "text": "and to get the standardized coefficients",
+      "start": 756.88,
+      "duration": 3.759
+    },
+    {
+      "text": "um",
+      "start": 759.44,
+      "duration": 3.12
+    },
+    {
+      "text": "so you would do this for each one of",
+      "start": 760.639,
+      "duration": 3.841
+    },
+    {
+      "text": "your um",
+      "start": 762.56,
+      "duration": 4.88
+    },
+    {
+      "text": "you don't care about the intercept uh",
+      "start": 764.48,
+      "duration": 4.0
+    },
+    {
+      "text": "you would do this for",
+      "start": 767.44,
+      "duration": 5.04
+    },
+    {
+      "text": "each one of uh your inputs",
+      "start": 768.48,
+      "duration": 6.96
+    },
+    {
+      "text": "you would go and you would calculate the",
+      "start": 772.48,
+      "duration": 4.799
+    },
+    {
+      "text": "standard deviation",
+      "start": 775.44,
+      "duration": 6.079
+    },
+    {
+      "text": "uh of that input",
+      "start": 777.279,
+      "duration": 4.24
+    },
+    {
+      "text": "and then",
+      "start": 782.16,
+      "duration": 6.4
+    },
+    {
+      "text": "the standardized coefficients so this",
+      "start": 786.32,
+      "duration": 4.56
+    },
+    {
+      "text": "would be standard deviation",
+      "start": 788.56,
+      "duration": 6.64
+    },
+    {
+      "text": "and then standard coefficients",
+      "start": 790.88,
+      "duration": 4.32
+    },
+    {
+      "text": "so again interest it's just going to be",
+      "start": 796.959,
+      "duration": 5.361
+    },
+    {
+      "text": "standard deviation multiplied by the",
+      "start": 800.0,
+      "duration": 4.0
+    },
+    {
+      "text": "coefficient",
+      "start": 802.32,
+      "duration": 4.319
+    },
+    {
+      "text": "so that's now saying that a one standard",
+      "start": 804.0,
+      "duration": 4.639
+    },
+    {
+      "text": "deviation increase",
+      "start": 806.639,
+      "duration": 5.681
+    },
+    {
+      "text": "in the interest rate leads to",
+      "start": 808.639,
+      "duration": 6.481
+    },
+    {
+      "text": "uh is associated with a decrease in",
+      "start": 812.32,
+      "duration": 4.8
+    },
+    {
+      "text": "years to retirement of",
+      "start": 815.12,
+      "duration": 4.56
+    },
+    {
+      "text": "almost four and a half years and a one",
+      "start": 817.12,
+      "duration": 4.24
+    },
+    {
+      "text": "standard deviation increase and interest",
+      "start": 819.68,
+      "duration": 2.08
+    },
+    {
+      "text": "rate",
+      "start": 821.36,
+      "duration": 3.839
+    },
+    {
+      "text": "is close to five percent",
+      "start": 821.76,
+      "duration": 4.879
+    },
+    {
+      "text": "um and then when you have other",
+      "start": 825.199,
+      "duration": 3.2
+    },
+    {
+      "text": "coefficients here you can just",
+      "start": 826.639,
+      "duration": 4.161
+    },
+    {
+      "text": "pick the largest in absolute value and",
+      "start": 828.399,
+      "duration": 3.761
+    },
+    {
+      "text": "those are going to be the ones",
+      "start": 830.8,
+      "duration": 4.08
+    },
+    {
+      "text": "which are the most impactful inputs in",
+      "start": 832.16,
+      "duration": 3.2
+    },
+    {
+      "text": "your",
+      "start": 834.88,
+      "duration": 3.84
+    },
+    {
+      "text": "model so that shows",
+      "start": 835.36,
+      "duration": 5.68
+    },
+    {
+      "text": "how we can do this analysis of the",
+      "start": 838.72,
+      "duration": 3.84
+    },
+    {
+      "text": "relationship between the inputs and",
+      "start": 841.04,
+      "duration": 2.239
+    },
+    {
+      "text": "outputs",
+      "start": 842.56,
+      "duration": 4.24
+    },
+    {
+      "text": "in excel and then",
+      "start": 843.279,
+      "duration": 6.161
+    },
+    {
+      "text": "to wrap up all this material on monte",
+      "start": 846.8,
+      "duration": 4.64
+    },
+    {
+      "text": "carlo simulation",
+      "start": 849.44,
+      "duration": 5.199
+    },
+    {
+      "text": "there's also a lab exercise here on",
+      "start": 851.44,
+      "duration": 4.639
+    },
+    {
+      "text": "doing this process for",
+      "start": 854.639,
+      "duration": 5.921
+    },
+    {
+      "text": "your project one model in excel",
+      "start": 856.079,
+      "duration": 7.281
+    },
+    {
+      "text": "it's going to be very similar to the",
+      "start": 860.56,
+      "duration": 4.48
+    },
+    {
+      "text": "python",
+      "start": 863.36,
+      "duration": 4.24
+    },
+    {
+      "text": "project one extension exercise that was",
+      "start": 865.04,
+      "duration": 3.28
+    },
+    {
+      "text": "mentioned",
+      "start": 867.6,
+      "duration": 3.599
+    },
+    {
+      "text": "in the prior video on extending the",
+      "start": 868.32,
+      "duration": 4.48
+    },
+    {
+      "text": "dynamic salary retirement model in",
+      "start": 871.199,
+      "duration": 3.361
+    },
+    {
+      "text": "python",
+      "start": 872.8,
+      "duration": 4.159
+    },
+    {
+      "text": "um you're just going to go through this",
+      "start": 874.56,
+      "duration": 4.0
+    },
+    {
+      "text": "process of adding",
+      "start": 876.959,
+      "duration": 3.68
+    },
+    {
+      "text": "a monte carlo simulation to your excel",
+      "start": 878.56,
+      "duration": 4.079
+    },
+    {
+      "text": "model",
+      "start": 880.639,
+      "duration": 4.081
+    },
+    {
+      "text": "so here in the level one you're going to",
+      "start": 882.639,
+      "duration": 4.401
+    },
+    {
+      "text": "be varying the number of phones",
+      "start": 884.72,
+      "duration": 5.359
+    },
+    {
+      "text": "um and then analyze the results",
+      "start": 887.04,
+      "duration": 6.64
+    },
+    {
+      "text": "table of probabilities um chance of",
+      "start": 890.079,
+      "duration": 5.44
+    },
+    {
+      "text": "reaching 800 million mpv",
+      "start": 893.68,
+      "duration": 5.279
+    },
+    {
+      "text": "et and cetera two then you're going to",
+      "start": 895.519,
+      "duration": 5.281
+    },
+    {
+      "text": "do the same",
+      "start": 898.959,
+      "duration": 3.68
+    },
+    {
+      "text": "keep that varying as it was but also",
+      "start": 900.8,
+      "duration": 3.52
+    },
+    {
+      "text": "vary the",
+      "start": 902.639,
+      "duration": 6.081
+    },
+    {
+      "text": "lifespan of the machines",
+      "start": 904.32,
+      "duration": 7.44
+    },
+    {
+      "text": "and then in addition to",
+      "start": 908.72,
+      "duration": 4.64
+    },
+    {
+      "text": "the visualization we just talked about",
+      "start": 911.76,
+      "duration": 2.639
+    },
+    {
+      "text": "then you want to go through this",
+      "start": 913.36,
+      "duration": 1.919
+    },
+    {
+      "text": "analysis",
+      "start": 914.399,
+      "duration": 4.24
+    },
+    {
+      "text": "of what's the relationship between the",
+      "start": 915.279,
+      "duration": 4.0
+    },
+    {
+      "text": "inputs",
+      "start": 918.639,
+      "duration": 4.56
+    },
+    {
+      "text": "and the outputs so",
+      "start": 919.279,
+      "duration": 6.641
+    },
+    {
+      "text": "that wraps up this segment on monte",
+      "start": 923.199,
+      "duration": 3.281
+    },
+    {
+      "text": "carlo",
+      "start": 925.92,
+      "duration": 2.96
+    },
+    {
+      "text": "simulation so thanks for listening and",
+      "start": 926.48,
+      "duration": 7.279
+    },
+    {
+      "text": "see you next time",
+      "start": 928.88,
+      "duration": 4.879
+    }
+  ]
+}

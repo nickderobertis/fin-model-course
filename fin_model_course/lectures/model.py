@@ -7,6 +7,7 @@ from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List
 import more_itertools
 from pydantic import BaseModel, AnyHttpUrl
 from pydantic.dataclasses import dataclass
+from youtube_transcript_api import TranscriptsDisabled
 
 from build_tools.config import SITE_URL
 from build_tools.ext_rst import header_rst
@@ -291,8 +292,13 @@ class Lecture:
         if not self.youtube_id:
             return ''
 
+        try:
+            transcript = self.transcript
+        except TranscriptsDisabled:
+            return ''
+
         out_str = header_rst('Transcript', 4)
-        html = self.transcript.to_html()
+        html = transcript.to_html()
         rst = f"""
 .. raw:: html
     
