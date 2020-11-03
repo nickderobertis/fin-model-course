@@ -567,3 +567,121 @@ Resources
 
 - :download:`Slides - Probabilistic Modeling </_static/generated/pdfs/S8 Probabilistic Modeling.pdf>`
         
+
+Extending the Project 1 Model with Internal Randomness
+=========================================================
+
+.. youtube:: LBXRPocOCDs
+    :height: 315
+    :width: 80%
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Add internal randomness to your Project 1 Excel and Python models
+- Now assume that the interest rate is drawn from a normal distribution
+- For baseline values of the inputs, you can use a 4% mean and 3% standard deviation
+- You should be able to run the model repeatedly and see a different NPV each time
+
+Resources
+------------
+
+
+- :download:`Slides - Probabilistic Modeling </_static/generated/pdfs/S8 Probabilistic Modeling.pdf>`
+        
+
+Reading and Writing to Excel with Pandas
+===========================================
+
+.. youtube:: Y1A39qzglik
+    :height: 315
+    :width: 80%
+    :align: center
+
+|
+            
+Description
+--------------
+
+Level 1
+^^^^^^^^^^
+
+- Download "MSFT Financials.xls" from the course site
+- Read the sheet "Income Statement" into a DataFrame
+- Write the DataFrame to a new workbook, "My Data.xlsx", with the sheet name "Income Statement"
+
+Level 2
+^^^^^^^^^^
+
+- Use the same "MSFT Financials.xls" from the first exercise
+- Output to five separate workbooks, named "My Data1.xlsx", "My Data2.xlsx", and so on.
+- Do this without writing the to_excel command multiple times
+
+Level 3
+^^^^^^^^^^
+
+- Note: this exercise uses the Advanced material covered in the example Jupyter notebook Read Write Excel Pandas.ipynb
+- Use the same "MSFT Financials.xls" from the first exercise
+- Output to five separate sheets in the same workbook "My Data.xlsx". The sheets should be named "Income Statement 1", "Income Statement 2", and so on.
+- Do this without writing the to_excel command multiple times
+
+Resources
+------------
+
+
+- :download:`Slides - Combining Excel and Python </_static/generated/pdfs/S9 Combining Excel and Python.pdf>`
+        
+
+- :download:`MSFT Financials </_static/Materials for Lab Exercises/Connecting Python and Excel/pandas/MSFT Financials.xls>`
+        
+
+- :download:`Read Write Excel Pandas </_static/Examples/Connecting Python and Excel/pandas/Read Write Excel Pandas.ipynb>`
+        
+
+Reading and Writing to Excel with xlwings
+============================================
+
+.. youtube:: Jgjml7JnYwY
+    :height: 315
+    :width: 80%
+    :align: center
+
+|
+            
+Description
+--------------
+
+Level 1
+^^^^^^^^^^
+
+- For all of the xlwings lab exercises, work with "xlwings Lab.xlsx".
+- Use xlwings to read the values in the column A and then write them beside the initial values in column B
+
+Level 2
+^^^^^^^^^^
+
+- Get the value in C9 and multiply it by 2.5 in Python
+
+Level 3
+^^^^^^^^^^
+
+- Read the table which starts in E4 into Python. Multiply the prices by 2.5, and then output back into Excel starting in cell H5.
+- Ensure that the outputted table appears in the same format as the original (pay attention to index and header)
+
+Level 4
+^^^^^^^^^^
+
+- In column L, write 5, 10, 15 ... 100 spaced two cells apart, so L1 would have 5, L4 would have 10, and so on.
+
+Resources
+------------
+
+
+- :download:`Slides - Combining Excel and Python </_static/generated/pdfs/S9 Combining Excel and Python.pdf>`
+        
+
+- :download:`xlwings Lab </_static/Materials for Lab Exercises/Connecting Python and Excel/xlwings/xlwings Lab.xlsx>`
+        

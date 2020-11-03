@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lab Exercise Solutions &mdash; fin_model_course 0.1.6 documentation</title>
+  <title>Lab Exercise Solutions &mdash; fin_model_course 0.1.7 documentation</title>
   
 
   
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.1.6
+                0.1.7
               </div>
             
           
@@ -105,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="7-exploring-the-parameter-space.html">Exploring the Parameter Space</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8-probabilistic-modeling.html">Probabilistic Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9-combining-excel-and-python.html">Combining Excel and Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-monte-carlo-simulation.html">Monte Carlo Simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Lab Exercise Solutions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#extending-a-simple-retirement-model">Extending a Simple Retirement Model</a><ul>
@@ -208,6 +209,32 @@
 <li class="toctree-l2"><a class="reference internal" href="#building-a-simple-model-of-stock-returns">Building a Simple Model of Stock Returns</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id39">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id40">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-the-project-1-model-with-internal-randomness">Extending the Project 1 Model with Internal Randomness</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id41">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-and-writing-to-excel-with-pandas">Reading and Writing to Excel with Pandas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id43">Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level-1">Level 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level-2">Level 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level-3">Level 3</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-and-writing-to-excel-with-xlwings">Reading and Writing to Excel with xlwings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id45">Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id46">Level 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id47">Level 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id48">Level 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level-4">Level 4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id49">Resources</a></li>
 </ul>
 </li>
 </ul>
@@ -728,6 +755,111 @@
 <h3>Resources<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/12bd66870e113cc5c8e253240f03436b/S8 Probabilistic Modeling.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Probabilistic</span> <span class="pre">Modeling</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="extending-the-project-1-model-with-internal-randomness">
+<h2>Extending the Project 1 Model with Internal Randomness<a class="headerlink" href="#extending-the-project-1-model-with-internal-randomness" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/LBXRPocOCDs"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id41">
+<h3>Description<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Add internal randomness to your Project 1 Excel and Python models</p></li>
+<li><p>Now assume that the interest rate is drawn from a normal distribution</p></li>
+<li><p>For baseline values of the inputs, you can use a 4% mean and 3% standard deviation</p></li>
+<li><p>You should be able to run the model repeatedly and see a different NPV each time</p></li>
+</ul>
+</div>
+<div class="section" id="id42">
+<h3>Resources<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/12bd66870e113cc5c8e253240f03436b/S8 Probabilistic Modeling.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Probabilistic</span> <span class="pre">Modeling</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="reading-and-writing-to-excel-with-pandas">
+<h2>Reading and Writing to Excel with Pandas<a class="headerlink" href="#reading-and-writing-to-excel-with-pandas" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/Y1A39qzglik"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id43">
+<h3>Description<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="level-1">
+<h4>Level 1<a class="headerlink" href="#level-1" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Download “MSFT Financials.xls” from the course site</p></li>
+<li><p>Read the sheet “Income Statement” into a DataFrame</p></li>
+<li><p>Write the DataFrame to a new workbook, “My Data.xlsx”, with the sheet name “Income Statement”</p></li>
+</ul>
+</div>
+<div class="section" id="level-2">
+<h4>Level 2<a class="headerlink" href="#level-2" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Use the same “MSFT Financials.xls” from the first exercise</p></li>
+<li><p>Output to five separate workbooks, named “My Data1.xlsx”, “My Data2.xlsx”, and so on.</p></li>
+<li><p>Do this without writing the to_excel command multiple times</p></li>
+</ul>
+</div>
+<div class="section" id="level-3">
+<h4>Level 3<a class="headerlink" href="#level-3" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Note: this exercise uses the Advanced material covered in the example Jupyter notebook Read Write Excel Pandas.ipynb</p></li>
+<li><p>Use the same “MSFT Financials.xls” from the first exercise</p></li>
+<li><p>Output to five separate sheets in the same workbook “My Data.xlsx”. The sheets should be named “Income Statement 1”, “Income Statement 2”, and so on.</p></li>
+<li><p>Do this without writing the to_excel command multiple times</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id44">
+<h3>Resources<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/70ecbc16ff2916f54efd6cf8015628d2/S9 Combining Excel and Python.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Combining</span> <span class="pre">Excel</span> <span class="pre">and</span> <span class="pre">Python</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/e03603ee4e33699514a93ec733d2779b/MSFT Financials.xls"><code class="xref download docutils literal notranslate"><span class="pre">MSFT</span> <span class="pre">Financials</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/5b5c02c2b7c0b7857fd556a60ab92ca8/Read Write Excel Pandas.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Read</span> <span class="pre">Write</span> <span class="pre">Excel</span> <span class="pre">Pandas</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="reading-and-writing-to-excel-with-xlwings">
+<h2>Reading and Writing to Excel with xlwings<a class="headerlink" href="#reading-and-writing-to-excel-with-xlwings" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/Jgjml7JnYwY"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id45">
+<h3>Description<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id46">
+<h4>Level 1<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>For all of the xlwings lab exercises, work with “xlwings Lab.xlsx”.</p></li>
+<li><p>Use xlwings to read the values in the column A and then write them beside the initial values in column B</p></li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h4>Level 2<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Get the value in C9 and multiply it by 2.5 in Python</p></li>
+</ul>
+</div>
+<div class="section" id="id48">
+<h4>Level 3<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Read the table which starts in E4 into Python. Multiply the prices by 2.5, and then output back into Excel starting in cell H5.</p></li>
+<li><p>Ensure that the outputted table appears in the same format as the original (pay attention to index and header)</p></li>
+</ul>
+</div>
+<div class="section" id="level-4">
+<h4>Level 4<a class="headerlink" href="#level-4" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>In column L, write 5, 10, 15 … 100 spaced two cells apart, so L1 would have 5, L4 would have 10, and so on.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id49">
+<h3>Resources<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/70ecbc16ff2916f54efd6cf8015628d2/S9 Combining Excel and Python.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Combining</span> <span class="pre">Excel</span> <span class="pre">and</span> <span class="pre">Python</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/be967b05a0026eb02a0cf0155e7e3262/xlwings Lab.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">xlwings</span> <span class="pre">Lab</span></code></a></p></li>
 </ul>
 </div>
 </div>
