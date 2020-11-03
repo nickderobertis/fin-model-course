@@ -1,0 +1,3469 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.96,
+      "duration": 2.399
+    },
+    {
+      "text": "nick dear bird is here teaching you",
+      "start": 3.84,
+      "duration": 3.439
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 5.359,
+      "duration": 3.761
+    },
+    {
+      "text": "we're going to talk about implementing a",
+      "start": 7.279,
+      "duration": 3.36
+    },
+    {
+      "text": "basic model in",
+      "start": 9.12,
+      "duration": 4.72
+    },
+    {
+      "text": "python so from previous videos we've",
+      "start": 10.639,
+      "duration": 5.521
+    },
+    {
+      "text": "already been talking about this",
+      "start": 13.84,
+      "duration": 4.96
+    },
+    {
+      "text": "very basic retirement model we already",
+      "start": 16.16,
+      "duration": 3.36
+    },
+    {
+      "text": "implemented it",
+      "start": 18.8,
+      "duration": 3.04
+    },
+    {
+      "text": "in excel and now we're going to look at",
+      "start": 19.52,
+      "duration": 4.32
+    },
+    {
+      "text": "the analogous implementation",
+      "start": 21.84,
+      "duration": 5.15
+    },
+    {
+      "text": "in python so",
+      "start": 23.84,
+      "duration": 5.279
+    },
+    {
+      "text": "[Music]",
+      "start": 26.99,
+      "duration": 3.97
+    },
+    {
+      "text": "we've gotta um do a little bit of",
+      "start": 29.119,
+      "duration": 4.721
+    },
+    {
+      "text": "background on python before we can just",
+      "start": 30.96,
+      "duration": 5.119
+    },
+    {
+      "text": "jump right into actually building out",
+      "start": 33.84,
+      "duration": 3.44
+    },
+    {
+      "text": "the model",
+      "start": 36.079,
+      "duration": 4.16
+    },
+    {
+      "text": "um so you know from the introduction we",
+      "start": 37.28,
+      "duration": 4.32
+    },
+    {
+      "text": "talked about how",
+      "start": 40.239,
+      "duration": 3.521
+    },
+    {
+      "text": "python and other programming languages",
+      "start": 41.6,
+      "duration": 3.439
+    },
+    {
+      "text": "they basically live",
+      "start": 43.76,
+      "duration": 4.319
+    },
+    {
+      "text": "in the terminal they're text-based uh",
+      "start": 45.039,
+      "duration": 4.081
+    },
+    {
+      "text": "you input text",
+      "start": 48.079,
+      "duration": 4.241
+    },
+    {
+      "text": "you get text as the output um but of",
+      "start": 49.12,
+      "duration": 4.959
+    },
+    {
+      "text": "course you know we would like to have a",
+      "start": 52.32,
+      "duration": 3.68
+    },
+    {
+      "text": "little bit more than that",
+      "start": 54.079,
+      "duration": 4.32
+    },
+    {
+      "text": "and so there's been a whole ecosystem uh",
+      "start": 56.0,
+      "duration": 3.68
+    },
+    {
+      "text": "built around",
+      "start": 58.399,
+      "duration": 3.601
+    },
+    {
+      "text": "nicer ways to use python and other",
+      "start": 59.68,
+      "duration": 3.84
+    },
+    {
+      "text": "programming languages",
+      "start": 62.0,
+      "duration": 5.2
+    },
+    {
+      "text": "um and so we've got this very nice tool",
+      "start": 63.52,
+      "duration": 6.959
+    },
+    {
+      "text": "called jupiter that we can use and will",
+      "start": 67.2,
+      "duration": 5.919
+    },
+    {
+      "text": "use for the entire class",
+      "start": 70.479,
+      "duration": 6.0
+    },
+    {
+      "text": "and jupiter is a project that",
+      "start": 73.119,
+      "duration": 6.561
+    },
+    {
+      "text": "brings in all sorts of things",
+      "start": 76.479,
+      "duration": 6.32
+    },
+    {
+      "text": "along with the code so you can have",
+      "start": 79.68,
+      "duration": 5.28
+    },
+    {
+      "text": "nicely formatted text",
+      "start": 82.799,
+      "duration": 4.96
+    },
+    {
+      "text": "you can have equations you can have",
+      "start": 84.96,
+      "duration": 3.76
+    },
+    {
+      "text": "graphics",
+      "start": 87.759,
+      "duration": 4.081
+    },
+    {
+      "text": "you can have uh you know",
+      "start": 88.72,
+      "duration": 5.52
+    },
+    {
+      "text": "basically anything that you could have",
+      "start": 91.84,
+      "duration": 3.599
+    },
+    {
+      "text": "on a web page",
+      "start": 94.24,
+      "duration": 3.919
+    },
+    {
+      "text": "you can get into a jupiter notebook and",
+      "start": 95.439,
+      "duration": 3.841
+    },
+    {
+      "text": "control",
+      "start": 98.159,
+      "duration": 3.841
+    },
+    {
+      "text": "through your code even like interactive",
+      "start": 99.28,
+      "duration": 3.519
+    },
+    {
+      "text": "stuff like",
+      "start": 102.0,
+      "duration": 3.04
+    },
+    {
+      "text": "sliders and things that change how your",
+      "start": 102.799,
+      "duration": 3.6
+    },
+    {
+      "text": "model works",
+      "start": 105.04,
+      "duration": 4.88
+    },
+    {
+      "text": "um so tons of stuff you can do there",
+      "start": 106.399,
+      "duration": 5.521
+    },
+    {
+      "text": "and it's generally just a lot nicer to",
+      "start": 109.92,
+      "duration": 4.0
+    },
+    {
+      "text": "work with than just working in a",
+      "start": 111.92,
+      "duration": 2.8
+    },
+    {
+      "text": "terminal",
+      "start": 113.92,
+      "duration": 2.799
+    },
+    {
+      "text": "so we're just going to focus 100 percent",
+      "start": 114.72,
+      "duration": 3.84
+    },
+    {
+      "text": "on using jupiter",
+      "start": 116.719,
+      "duration": 4.961
+    },
+    {
+      "text": "to work with python in this class",
+      "start": 118.56,
+      "duration": 5.519
+    },
+    {
+      "text": "and jupiter was actually born out of",
+      "start": 121.68,
+      "duration": 3.759
+    },
+    {
+      "text": "python",
+      "start": 124.079,
+      "duration": 4.32
+    },
+    {
+      "text": "it was a python project originally it",
+      "start": 125.439,
+      "duration": 4.16
+    },
+    {
+      "text": "was actually called",
+      "start": 128.399,
+      "duration": 4.161
+    },
+    {
+      "text": "ipython notebook before it was called",
+      "start": 129.599,
+      "duration": 4.401
+    },
+    {
+      "text": "jupiter",
+      "start": 132.56,
+      "duration": 3.6
+    },
+    {
+      "text": "but the reason they kind of rebranded is",
+      "start": 134.0,
+      "duration": 4.319
+    },
+    {
+      "text": "they have expanded out into",
+      "start": 136.16,
+      "duration": 4.96
+    },
+    {
+      "text": "now more than 40 programming languages",
+      "start": 138.319,
+      "duration": 4.0
+    },
+    {
+      "text": "this has just become",
+      "start": 141.12,
+      "duration": 4.4
+    },
+    {
+      "text": "such a popular way to",
+      "start": 142.319,
+      "duration": 5.601
+    },
+    {
+      "text": "build things that so many people have",
+      "start": 145.52,
+      "duration": 3.28
+    },
+    {
+      "text": "jumped on this",
+      "start": 147.92,
+      "duration": 2.48
+    },
+    {
+      "text": "from so many different programming",
+      "start": 148.8,
+      "duration": 3.36
+    },
+    {
+      "text": "languages",
+      "start": 150.4,
+      "duration": 5.6
+    },
+    {
+      "text": "so we're going to keep our focus here",
+      "start": 152.16,
+      "duration": 5.92
+    },
+    {
+      "text": "now when you're using jupiter there's",
+      "start": 156.0,
+      "duration": 3.599
+    },
+    {
+      "text": "two main versions",
+      "start": 158.08,
+      "duration": 3.84
+    },
+    {
+      "text": "of jupiter that you can use jupiter",
+      "start": 159.599,
+      "duration": 3.041
+    },
+    {
+      "text": "notebook",
+      "start": 161.92,
+      "duration": 3.52
+    },
+    {
+      "text": "and jupiter lab so jupiter notebook is",
+      "start": 162.64,
+      "duration": 4.4
+    },
+    {
+      "text": "kind of the most basic",
+      "start": 165.44,
+      "duration": 5.6
+    },
+    {
+      "text": "interface uh and jupiter lab is",
+      "start": 167.04,
+      "duration": 6.0
+    },
+    {
+      "text": "taking the jupiter notebook and kind of",
+      "start": 171.04,
+      "duration": 3.76
+    },
+    {
+      "text": "expanding on it so",
+      "start": 173.04,
+      "duration": 4.88
+    },
+    {
+      "text": "um you can have multiple different",
+      "start": 174.8,
+      "duration": 6.32
+    },
+    {
+      "text": "uh notebooks open at once in lab as",
+      "start": 177.92,
+      "duration": 6.16
+    },
+    {
+      "text": "as different tabs uh you can view other",
+      "start": 181.12,
+      "duration": 4.64
+    },
+    {
+      "text": "kinds of files other than just",
+      "start": 184.08,
+      "duration": 5.519
+    },
+    {
+      "text": "jupyter notebooks so it has a lot of",
+      "start": 185.76,
+      "duration": 4.88
+    },
+    {
+      "text": "features",
+      "start": 189.599,
+      "duration": 4.081
+    },
+    {
+      "text": "and and jupiter lab is where",
+      "start": 190.64,
+      "duration": 5.679
+    },
+    {
+      "text": "the future of jupiter is all the new",
+      "start": 193.68,
+      "duration": 3.52
+    },
+    {
+      "text": "development",
+      "start": 196.319,
+      "duration": 3.521
+    },
+    {
+      "text": "and jupiter is going towards lab and not",
+      "start": 197.2,
+      "duration": 3.84
+    },
+    {
+      "text": "notebook",
+      "start": 199.84,
+      "duration": 4.16
+    },
+    {
+      "text": "and so we're going to focus on lab and",
+      "start": 201.04,
+      "duration": 4.24
+    },
+    {
+      "text": "the class",
+      "start": 204.0,
+      "duration": 4.64
+    },
+    {
+      "text": "so i would recommend you use lab but",
+      "start": 205.28,
+      "duration": 4.8
+    },
+    {
+      "text": "if you really don't like lab you really",
+      "start": 208.64,
+      "duration": 3.84
+    },
+    {
+      "text": "want something just a little bit simpler",
+      "start": 210.08,
+      "duration": 5.2
+    },
+    {
+      "text": "feel free to use jupiter notebook it's",
+      "start": 212.48,
+      "duration": 3.6
+    },
+    {
+      "text": "going to be",
+      "start": 215.28,
+      "duration": 3.039
+    },
+    {
+      "text": "you know essentially the same experience",
+      "start": 216.08,
+      "duration": 3.04
+    },
+    {
+      "text": "as far as",
+      "start": 218.319,
+      "duration": 4.081
+    },
+    {
+      "text": "just working within it it's really not",
+      "start": 219.12,
+      "duration": 3.759
+    },
+    {
+      "text": "going to be",
+      "start": 222.4,
+      "duration": 2.32
+    },
+    {
+      "text": "substantially different between jupiter",
+      "start": 222.879,
+      "duration": 5.201
+    },
+    {
+      "text": "notebook and jupiter lab",
+      "start": 224.72,
+      "duration": 3.36
+    },
+    {
+      "text": "so you should you know at this point",
+      "start": 229.36,
+      "duration": 7.12
+    },
+    {
+      "text": "pause the the video and try to get your",
+      "start": 233.28,
+      "duration": 3.84
+    },
+    {
+      "text": "jupiter",
+      "start": 236.48,
+      "duration": 2.24
+    },
+    {
+      "text": "environment set up so you can kind of",
+      "start": 237.12,
+      "duration": 3.28
+    },
+    {
+      "text": "follow along",
+      "start": 238.72,
+      "duration": 4.719
+    },
+    {
+      "text": "as i go and implement this model so",
+      "start": 240.4,
+      "duration": 4.72
+    },
+    {
+      "text": "we've got some instructions here",
+      "start": 243.439,
+      "duration": 5.041
+    },
+    {
+      "text": "on how to get uh",
+      "start": 245.12,
+      "duration": 6.56
+    },
+    {
+      "text": "jupiter lab started",
+      "start": 248.48,
+      "duration": 3.2
+    },
+    {
+      "text": "so we can look at that quickly how we",
+      "start": 251.84,
+      "duration": 6.239
+    },
+    {
+      "text": "would do that",
+      "start": 255.68,
+      "duration": 5.76
+    },
+    {
+      "text": "so the easiest way to do this",
+      "start": 258.079,
+      "duration": 6.961
+    },
+    {
+      "text": "is to search for anaconda navigator",
+      "start": 261.44,
+      "duration": 7.039
+    },
+    {
+      "text": "and you see this thing come up here as i",
+      "start": 265.04,
+      "duration": 5.12
+    },
+    {
+      "text": "search that",
+      "start": 268.479,
+      "duration": 4.16
+    },
+    {
+      "text": "you'll see a bit of a delay before the",
+      "start": 270.16,
+      "duration": 3.039
+    },
+    {
+      "text": "thing",
+      "start": 272.639,
+      "duration": 3.681
+    },
+    {
+      "text": "actually comes up",
+      "start": 273.199,
+      "duration": 3.121
+    },
+    {
+      "text": "and then once it comes up you can launch",
+      "start": 276.479,
+      "duration": 4.0
+    },
+    {
+      "text": "jupiter lab",
+      "start": 279.44,
+      "duration": 3.92
+    },
+    {
+      "text": "from that now if you don't have",
+      "start": 280.479,
+      "duration": 4.241
+    },
+    {
+      "text": "navigator",
+      "start": 283.36,
+      "duration": 3.44
+    },
+    {
+      "text": "or you don't want to use that you can",
+      "start": 284.72,
+      "duration": 3.84
+    },
+    {
+      "text": "just open a terminal and type",
+      "start": 286.8,
+      "duration": 5.28
+    },
+    {
+      "text": "jupiter lab that's also going to",
+      "start": 288.56,
+      "duration": 7.6
+    },
+    {
+      "text": "launch it for you but this is what",
+      "start": 292.08,
+      "duration": 7.6
+    },
+    {
+      "text": "um anaconda navigator looks like",
+      "start": 296.16,
+      "duration": 6.56
+    },
+    {
+      "text": "um and so from here you just click",
+      "start": 299.68,
+      "duration": 6.48
+    },
+    {
+      "text": "launch jupiter lab um and it's going to",
+      "start": 302.72,
+      "duration": 4.4
+    },
+    {
+      "text": "go ahead",
+      "start": 306.16,
+      "duration": 4.24
+    },
+    {
+      "text": "and launch that for you",
+      "start": 307.12,
+      "duration": 6.72
+    },
+    {
+      "text": "so then that will you know",
+      "start": 310.4,
+      "duration": 6.48
+    },
+    {
+      "text": "launch jupiter like",
+      "start": 313.84,
+      "duration": 5.07
+    },
+    {
+      "text": "this",
+      "start": 316.88,
+      "duration": 3.599
+    },
+    {
+      "text": "[Music]",
+      "start": 318.91,
+      "duration": 4.37
+    },
+    {
+      "text": "so let's go back and look at a couple",
+      "start": 320.479,
+      "duration": 3.521
+    },
+    {
+      "text": "more python",
+      "start": 323.28,
+      "duration": 4.0
+    },
+    {
+      "text": "basics before we actually start using",
+      "start": 324.0,
+      "duration": 3.68
+    },
+    {
+      "text": "this",
+      "start": 327.28,
+      "duration": 3.44
+    },
+    {
+      "text": "but that's basically how you would get",
+      "start": 327.68,
+      "duration": 3.6
+    },
+    {
+      "text": "jupiter",
+      "start": 330.72,
+      "duration": 4.0
+    },
+    {
+      "text": "launched on your system",
+      "start": 331.28,
+      "duration": 3.44
+    },
+    {
+      "text": "so you know most people are going to be",
+      "start": 335.68,
+      "duration": 4.799
+    },
+    {
+      "text": "you know fairly familiar with excel at",
+      "start": 338.72,
+      "duration": 3.6
+    },
+    {
+      "text": "this point so i think it's helpful to",
+      "start": 340.479,
+      "duration": 4.321
+    },
+    {
+      "text": "kind of compare and contrast to excel",
+      "start": 342.32,
+      "duration": 5.68
+    },
+    {
+      "text": "to understand how we can use python to",
+      "start": 344.8,
+      "duration": 5.119
+    },
+    {
+      "text": "do similar things",
+      "start": 348.0,
+      "duration": 4.8
+    },
+    {
+      "text": "so in excel everything is about the",
+      "start": 349.919,
+      "duration": 4.641
+    },
+    {
+      "text": "cells right you have these different",
+      "start": 352.8,
+      "duration": 2.32
+    },
+    {
+      "text": "cells",
+      "start": 354.56,
+      "duration": 2.72
+    },
+    {
+      "text": "you put the values in the cells you can",
+      "start": 355.12,
+      "duration": 3.28
+    },
+    {
+      "text": "make references",
+      "start": 357.28,
+      "duration": 4.32
+    },
+    {
+      "text": "to the cells so the basic unit is",
+      "start": 358.4,
+      "duration": 7.04
+    },
+    {
+      "text": "a cell or python the basic unit",
+      "start": 361.6,
+      "duration": 7.28
+    },
+    {
+      "text": "is an object and that's kind of an",
+      "start": 365.44,
+      "duration": 5.52
+    },
+    {
+      "text": "abstract thing that probably isn't going",
+      "start": 368.88,
+      "duration": 4.319
+    },
+    {
+      "text": "to have a lot of meaning for you yet",
+      "start": 370.96,
+      "duration": 5.359
+    },
+    {
+      "text": "um but it's just basically the way",
+      "start": 373.199,
+      "duration": 6.081
+    },
+    {
+      "text": "of thinking about things in python",
+      "start": 376.319,
+      "duration": 3.681
+    },
+    {
+      "text": "everything",
+      "start": 379.28,
+      "duration": 4.16
+    },
+    {
+      "text": "is an object um and we'll see",
+      "start": 380.0,
+      "duration": 5.84
+    },
+    {
+      "text": "more what that means as the course goes",
+      "start": 383.44,
+      "duration": 4.319
+    },
+    {
+      "text": "on",
+      "start": 385.84,
+      "duration": 4.72
+    },
+    {
+      "text": "so for excel you know you can have",
+      "start": 387.759,
+      "duration": 3.921
+    },
+    {
+      "text": "numbers",
+      "start": 390.56,
+      "duration": 4.16
+    },
+    {
+      "text": "in your cells or you can have you know",
+      "start": 391.68,
+      "duration": 4.639
+    },
+    {
+      "text": "characters letters that would be called",
+      "start": 394.72,
+      "duration": 2.88
+    },
+    {
+      "text": "a string",
+      "start": 396.319,
+      "duration": 3.761
+    },
+    {
+      "text": "so you can have numbers or strings as",
+      "start": 397.6,
+      "duration": 4.08
+    },
+    {
+      "text": "your data types",
+      "start": 400.08,
+      "duration": 5.44
+    },
+    {
+      "text": "for your excel cells",
+      "start": 401.68,
+      "duration": 6.959
+    },
+    {
+      "text": "and python we also have",
+      "start": 405.52,
+      "duration": 6.48
+    },
+    {
+      "text": "numbers we also have strings we also",
+      "start": 408.639,
+      "duration": 6.081
+    },
+    {
+      "text": "have other types",
+      "start": 412.0,
+      "duration": 6.72
+    },
+    {
+      "text": "and each object has a type",
+      "start": 414.72,
+      "duration": 6.96
+    },
+    {
+      "text": "so it might be an object which has a",
+      "start": 418.72,
+      "duration": 3.44
+    },
+    {
+      "text": "string",
+      "start": 421.68,
+      "duration": 5.44
+    },
+    {
+      "text": "type or it might be something else",
+      "start": 422.16,
+      "duration": 4.96
+    },
+    {
+      "text": "so each everything is an object and",
+      "start": 427.199,
+      "duration": 4.56
+    },
+    {
+      "text": "every object has a type",
+      "start": 429.84,
+      "duration": 3.919
+    },
+    {
+      "text": "and that tells you you know what kind of",
+      "start": 431.759,
+      "duration": 4.72
+    },
+    {
+      "text": "data is actually being represented",
+      "start": 433.759,
+      "duration": 6.081
+    },
+    {
+      "text": "within that object",
+      "start": 436.479,
+      "duration": 3.361
+    },
+    {
+      "text": "and then you know thinking about",
+      "start": 440.0,
+      "duration": 3.12
+    },
+    {
+      "text": "referencing",
+      "start": 442.08,
+      "duration": 4.239
+    },
+    {
+      "text": "uh our values so in excel we did",
+      "start": 443.12,
+      "duration": 5.76
+    },
+    {
+      "text": "cell references right you put the values",
+      "start": 446.319,
+      "duration": 4.32
+    },
+    {
+      "text": "and then you do equals you click on the",
+      "start": 448.88,
+      "duration": 2.56
+    },
+    {
+      "text": "cell",
+      "start": 450.639,
+      "duration": 3.521
+    },
+    {
+      "text": "equals a2 or whatever and that will",
+      "start": 451.44,
+      "duration": 3.44
+    },
+    {
+      "text": "reference",
+      "start": 454.16,
+      "duration": 4.0
+    },
+    {
+      "text": "the value contained within that cell so",
+      "start": 454.88,
+      "duration": 5.68
+    },
+    {
+      "text": "you know you have definitely a similar",
+      "start": 458.16,
+      "duration": 4.319
+    },
+    {
+      "text": "concept in python",
+      "start": 460.56,
+      "duration": 4.88
+    },
+    {
+      "text": "but instead of using cells we give a",
+      "start": 462.479,
+      "duration": 3.681
+    },
+    {
+      "text": "name",
+      "start": 465.44,
+      "duration": 3.52
+    },
+    {
+      "text": "to an object so you can uh whatever",
+      "start": 466.16,
+      "duration": 4.159
+    },
+    {
+      "text": "object you can give it a name",
+      "start": 468.96,
+      "duration": 3.919
+    },
+    {
+      "text": "and then you whenever you use that name",
+      "start": 470.319,
+      "duration": 4.801
+    },
+    {
+      "text": "that's going to reference back to that",
+      "start": 472.879,
+      "duration": 5.6
+    },
+    {
+      "text": "object um so",
+      "start": 475.12,
+      "duration": 6.799
+    },
+    {
+      "text": "you know here is the analogous um",
+      "start": 478.479,
+      "duration": 5.361
+    },
+    {
+      "text": "way of representing these things in",
+      "start": 481.919,
+      "duration": 3.601
+    },
+    {
+      "text": "python um",
+      "start": 483.84,
+      "duration": 3.52
+    },
+    {
+      "text": "so in excel you know you would type six",
+      "start": 485.52,
+      "duration": 3.679
+    },
+    {
+      "text": "in a cell and you would type abc another",
+      "start": 487.36,
+      "duration": 3.44
+    },
+    {
+      "text": "cell and then you would",
+      "start": 489.199,
+      "duration": 3.601
+    },
+    {
+      "text": "reference back to whatever those cell",
+      "start": 490.8,
+      "duration": 3.04
+    },
+    {
+      "text": "references are",
+      "start": 492.8,
+      "duration": 4.64
+    },
+    {
+      "text": "to be able to get that value to flow",
+      "start": 493.84,
+      "duration": 4.56
+    },
+    {
+      "text": "through",
+      "start": 497.44,
+      "duration": 4.879
+    },
+    {
+      "text": "whereas in python we just give a name",
+      "start": 498.4,
+      "duration": 6.799
+    },
+    {
+      "text": "and then equals and then whatever our",
+      "start": 502.319,
+      "duration": 4.16
+    },
+    {
+      "text": "object is",
+      "start": 505.199,
+      "duration": 4.881
+    },
+    {
+      "text": "so my number here the name is my",
+      "start": 506.479,
+      "duration": 4.321
+    },
+    {
+      "text": "underscore",
+      "start": 510.08,
+      "duration": 4.16
+    },
+    {
+      "text": "number and the value the object the",
+      "start": 510.8,
+      "duration": 5.44
+    },
+    {
+      "text": "object which has the type of a number",
+      "start": 514.24,
+      "duration": 6.0
+    },
+    {
+      "text": "is six here and then we have my string",
+      "start": 516.24,
+      "duration": 7.359
+    },
+    {
+      "text": "another name um equals",
+      "start": 520.24,
+      "duration": 7.279
+    },
+    {
+      "text": "here abc is string the the object with",
+      "start": 523.599,
+      "duration": 4.561
+    },
+    {
+      "text": "type",
+      "start": 527.519,
+      "duration": 3.921
+    },
+    {
+      "text": "string is this abc on the right hand",
+      "start": 528.16,
+      "duration": 4.0
+    },
+    {
+      "text": "side",
+      "start": 531.44,
+      "duration": 2.88
+    },
+    {
+      "text": "and then going forward after we've",
+      "start": 532.16,
+      "duration": 4.0
+    },
+    {
+      "text": "defined these we can then",
+      "start": 534.32,
+      "duration": 4.32
+    },
+    {
+      "text": "uh say my number or my string and be",
+      "start": 536.16,
+      "duration": 4.08
+    },
+    {
+      "text": "able to get back to six",
+      "start": 538.64,
+      "duration": 4.72
+    },
+    {
+      "text": "or abc so that's how everything can flow",
+      "start": 540.24,
+      "duration": 5.36
+    },
+    {
+      "text": "through",
+      "start": 543.36,
+      "duration": 2.24
+    },
+    {
+      "text": "and then thinking about uh how we do",
+      "start": 546.32,
+      "duration": 3.36
+    },
+    {
+      "text": "math",
+      "start": 548.8,
+      "duration": 4.719
+    },
+    {
+      "text": "and python um so the basic",
+      "start": 549.68,
+      "duration": 5.279
+    },
+    {
+      "text": "operations are going to be",
+      "start": 553.519,
+      "duration": 4.081
+    },
+    {
+      "text": "straightforward um",
+      "start": 554.959,
+      "duration": 4.56
+    },
+    {
+      "text": "you know two plus five equals seven you",
+      "start": 557.6,
+      "duration": 3.76
+    },
+    {
+      "text": "can literally just type two plus five",
+      "start": 559.519,
+      "duration": 2.961
+    },
+    {
+      "text": "and it will give you seven",
+      "start": 561.36,
+      "duration": 3.36
+    },
+    {
+      "text": "right six minus two it's going to give",
+      "start": 562.48,
+      "duration": 4.0
+    },
+    {
+      "text": "you four so all these",
+      "start": 564.72,
+      "duration": 4.32
+    },
+    {
+      "text": "uh kind of math basic math operations",
+      "start": 566.48,
+      "duration": 3.84
+    },
+    {
+      "text": "that you would expect",
+      "start": 569.04,
+      "duration": 4.56
+    },
+    {
+      "text": "uh just just work like you would think",
+      "start": 570.32,
+      "duration": 6.639
+    },
+    {
+      "text": "um and then beyond that",
+      "start": 573.6,
+      "duration": 5.84
+    },
+    {
+      "text": "um you know i mentioned a little bit in",
+      "start": 576.959,
+      "duration": 3.361
+    },
+    {
+      "text": "the introduction",
+      "start": 579.44,
+      "duration": 4.8
+    },
+    {
+      "text": "about how uh python is a very flexible",
+      "start": 580.32,
+      "duration": 6.24
+    },
+    {
+      "text": "language with a lot of",
+      "start": 584.24,
+      "duration": 5.12
+    },
+    {
+      "text": "potential add-on features right in the",
+      "start": 586.56,
+      "duration": 4.56
+    },
+    {
+      "text": "form of these open source",
+      "start": 589.36,
+      "duration": 3.599
+    },
+    {
+      "text": "packages so there are all these",
+      "start": 591.12,
+      "duration": 4.719
+    },
+    {
+      "text": "different uh you know more than 250 000",
+      "start": 592.959,
+      "duration": 5.121
+    },
+    {
+      "text": "different packages out there which add",
+      "start": 595.839,
+      "duration": 4.0
+    },
+    {
+      "text": "little bits of functionality",
+      "start": 598.08,
+      "duration": 4.96
+    },
+    {
+      "text": "to python and so numpy",
+      "start": 599.839,
+      "duration": 6.24
+    },
+    {
+      "text": "is one of those packages",
+      "start": 603.04,
+      "duration": 6.16
+    },
+    {
+      "text": "which add functionality to python",
+      "start": 606.079,
+      "duration": 6.88
+    },
+    {
+      "text": "and with numpy we can get all those",
+      "start": 609.2,
+      "duration": 6.0
+    },
+    {
+      "text": "kind of financial functions that we have",
+      "start": 612.959,
+      "duration": 3.921
+    },
+    {
+      "text": "out of the box in excel",
+      "start": 615.2,
+      "duration": 4.72
+    },
+    {
+      "text": "so you just bring numpy",
+      "start": 616.88,
+      "duration": 5.36
+    },
+    {
+      "text": "into your python session and then you",
+      "start": 619.92,
+      "duration": 3.039
+    },
+    {
+      "text": "can use",
+      "start": 622.24,
+      "duration": 4.24
+    },
+    {
+      "text": "all these functions and",
+      "start": 622.959,
+      "duration": 6.241
+    },
+    {
+      "text": "you you know i told you to download",
+      "start": 626.48,
+      "duration": 3.52
+    },
+    {
+      "text": "anaconda",
+      "start": 629.2,
+      "duration": 4.0
+    },
+    {
+      "text": "in order to get python and packaged",
+      "start": 630.0,
+      "duration": 3.92
+    },
+    {
+      "text": "along with",
+      "start": 633.2,
+      "duration": 3.84
+    },
+    {
+      "text": "anaconda you already have numpy numpy",
+      "start": 633.92,
+      "duration": 5.52
+    },
+    {
+      "text": "is one of the most popular python",
+      "start": 637.04,
+      "duration": 3.039
+    },
+    {
+      "text": "packages",
+      "start": 639.44,
+      "duration": 3.76
+    },
+    {
+      "text": "in the world um and so it comes out of",
+      "start": 640.079,
+      "duration": 5.361
+    },
+    {
+      "text": "the box with anaconda",
+      "start": 643.2,
+      "duration": 4.319
+    },
+    {
+      "text": "you just have to bring it into your",
+      "start": 645.44,
+      "duration": 3.44
+    },
+    {
+      "text": "session that's that'll be",
+      "start": 647.519,
+      "duration": 3.121
+    },
+    {
+      "text": "via an import we'll look at what that",
+      "start": 648.88,
+      "duration": 4.48
+    },
+    {
+      "text": "looks like in a moment here",
+      "start": 650.64,
+      "duration": 4.879
+    },
+    {
+      "text": "but you just you know one line of code",
+      "start": 653.36,
+      "duration": 3.599
+    },
+    {
+      "text": "to add it into your session and then",
+      "start": 655.519,
+      "duration": 2.481
+    },
+    {
+      "text": "you'll be able to use",
+      "start": 656.959,
+      "duration": 3.521
+    },
+    {
+      "text": "all these functions if it was some",
+      "start": 658.0,
+      "duration": 3.04
+    },
+    {
+      "text": "package",
+      "start": 660.48,
+      "duration": 3.039
+    },
+    {
+      "text": "where it wasn't already included in",
+      "start": 661.04,
+      "duration": 3.359
+    },
+    {
+      "text": "anaconda",
+      "start": 663.519,
+      "duration": 3.041
+    },
+    {
+      "text": "then you would have to install it before",
+      "start": 664.399,
+      "duration": 3.841
+    },
+    {
+      "text": "you could use it",
+      "start": 666.56,
+      "duration": 3.12
+    },
+    {
+      "text": "but we'll deal with that a little bit",
+      "start": 668.24,
+      "duration": 3.44
+    },
+    {
+      "text": "later in the course once we need to go",
+      "start": 669.68,
+      "duration": 3.599
+    },
+    {
+      "text": "to some things which are outside of",
+      "start": 671.68,
+      "duration": 3.92
+    },
+    {
+      "text": "anaconda",
+      "start": 673.279,
+      "duration": 4.081
+    },
+    {
+      "text": "and then i just have a note on here",
+      "start": 675.6,
+      "duration": 3.359
+    },
+    {
+      "text": "about a deprecation",
+      "start": 677.36,
+      "duration": 5.36
+    },
+    {
+      "text": "warning so this isn't really anything to",
+      "start": 678.959,
+      "duration": 5.44
+    },
+    {
+      "text": "worry about",
+      "start": 682.72,
+      "duration": 4.239
+    },
+    {
+      "text": "these financial functions in numpy are",
+      "start": 684.399,
+      "duration": 3.68
+    },
+    {
+      "text": "actually getting moved",
+      "start": 686.959,
+      "duration": 3.281
+    },
+    {
+      "text": "to a separate package in the future",
+      "start": 688.079,
+      "duration": 3.921
+    },
+    {
+      "text": "numpy financial",
+      "start": 690.24,
+      "duration": 4.159
+    },
+    {
+      "text": "um and so what happens right now if you",
+      "start": 692.0,
+      "duration": 3.92
+    },
+    {
+      "text": "use these functions",
+      "start": 694.399,
+      "duration": 3.761
+    },
+    {
+      "text": "it will show a warning which just says",
+      "start": 695.92,
+      "duration": 4.159
+    },
+    {
+      "text": "hey we're going to move these functions",
+      "start": 698.16,
+      "duration": 4.48
+    },
+    {
+      "text": "in the future it doesn't affect anything",
+      "start": 700.079,
+      "duration": 3.361
+    },
+    {
+      "text": "for right now",
+      "start": 702.64,
+      "duration": 2.08
+    },
+    {
+      "text": "it's just that you're going to see a",
+      "start": 703.44,
+      "duration": 3.519
+    },
+    {
+      "text": "warning when you use the functions so",
+      "start": 704.72,
+      "duration": 3.28
+    },
+    {
+      "text": "just don't worry",
+      "start": 706.959,
+      "duration": 4.161
+    },
+    {
+      "text": "about that warning",
+      "start": 708.0,
+      "duration": 3.12
+    },
+    {
+      "text": "so let's go ahead and look at what this",
+      "start": 711.76,
+      "duration": 3.44
+    },
+    {
+      "text": "implementation",
+      "start": 714.24,
+      "duration": 4.08
+    },
+    {
+      "text": "actually looks like",
+      "start": 715.2,
+      "duration": 3.12
+    },
+    {
+      "text": "so we're still talking about this simple",
+      "start": 721.12,
+      "duration": 4.399
+    },
+    {
+      "text": "retirement model",
+      "start": 724.24,
+      "duration": 5.839
+    },
+    {
+      "text": "where uh you know we had a few different",
+      "start": 725.519,
+      "duration": 8.32
+    },
+    {
+      "text": "inputs we have",
+      "start": 730.079,
+      "duration": 5.921
+    },
+    {
+      "text": "uh the salary savings rate investment",
+      "start": 733.839,
+      "duration": 4.721
+    },
+    {
+      "text": "rate desired cash",
+      "start": 736.0,
+      "duration": 6.399
+    },
+    {
+      "text": "so we would want to first",
+      "start": 738.56,
+      "duration": 3.839
+    },
+    {
+      "text": "you know kind of just like we did in",
+      "start": 742.48,
+      "duration": 3.84
+    },
+    {
+      "text": "excel right we made an input section and",
+      "start": 744.399,
+      "duration": 3.761
+    },
+    {
+      "text": "then we defined all the inputs",
+      "start": 746.32,
+      "duration": 3.68
+    },
+    {
+      "text": "we want to do a similar thing here in",
+      "start": 748.16,
+      "duration": 3.679
+    },
+    {
+      "text": "our jupyter model we want to maintain",
+      "start": 750.0,
+      "duration": 3.92
+    },
+    {
+      "text": "that same separation of inputs and",
+      "start": 751.839,
+      "duration": 2.721
+    },
+    {
+      "text": "outputs",
+      "start": 753.92,
+      "duration": 2.719
+    },
+    {
+      "text": "that we're talking about doing in excel",
+      "start": 754.56,
+      "duration": 4.959
+    },
+    {
+      "text": "so um in jupyter you can have",
+      "start": 756.639,
+      "duration": 5.121
+    },
+    {
+      "text": "uh you know a section at the top which",
+      "start": 759.519,
+      "duration": 4.0
+    },
+    {
+      "text": "has all your inputs",
+      "start": 761.76,
+      "duration": 3.68
+    },
+    {
+      "text": "and then at the bottom you should have",
+      "start": 763.519,
+      "duration": 3.76
+    },
+    {
+      "text": "another section which has your main",
+      "start": 765.44,
+      "duration": 2.8
+    },
+    {
+      "text": "outputs",
+      "start": 767.279,
+      "duration": 2.881
+    },
+    {
+      "text": "and then in between you can have other",
+      "start": 768.24,
+      "duration": 4.56
+    },
+    {
+      "text": "sections for uh you know any kind of",
+      "start": 770.16,
+      "duration": 4.56
+    },
+    {
+      "text": "intermediate calculations",
+      "start": 772.8,
+      "duration": 4.719
+    },
+    {
+      "text": "but here you know it's a very direct",
+      "start": 774.72,
+      "duration": 4.64
+    },
+    {
+      "text": "model",
+      "start": 777.519,
+      "duration": 4.081
+    },
+    {
+      "text": "so",
+      "start": 779.36,
+      "duration": 2.24
+    },
+    {
+      "text": "two so you see these uh cells here",
+      "start": 784.24,
+      "duration": 6.8
+    },
+    {
+      "text": "in jupiter and you can type code in any",
+      "start": 787.36,
+      "duration": 4.64
+    },
+    {
+      "text": "one of the cells",
+      "start": 791.04,
+      "duration": 4.239
+    },
+    {
+      "text": "and you can run cells individually",
+      "start": 792.0,
+      "duration": 6.399
+    },
+    {
+      "text": "um and there are also you know two main",
+      "start": 795.279,
+      "duration": 4.161
+    },
+    {
+      "text": "types of cells",
+      "start": 798.399,
+      "duration": 2.961
+    },
+    {
+      "text": "that we'll think about using in this",
+      "start": 799.44,
+      "duration": 3.839
+    },
+    {
+      "text": "class um",
+      "start": 801.36,
+      "duration": 5.52
+    },
+    {
+      "text": "so um",
+      "start": 803.279,
+      "duration": 7.041
+    },
+    {
+      "text": "we have the um",
+      "start": 806.88,
+      "duration": 6.72
+    },
+    {
+      "text": "the code cell and the markdown cell are",
+      "start": 810.32,
+      "duration": 3.68
+    },
+    {
+      "text": "the two",
+      "start": 813.6,
+      "duration": 4.08
+    },
+    {
+      "text": "main ways that we'll use it in the class",
+      "start": 814.0,
+      "duration": 6.399
+    },
+    {
+      "text": "um so the code cell you're you're typing",
+      "start": 817.68,
+      "duration": 3.12
+    },
+    {
+      "text": "code",
+      "start": 820.399,
+      "duration": 2.401
+    },
+    {
+      "text": "and then the markdown cell you're typing",
+      "start": 820.8,
+      "duration": 5.36
+    },
+    {
+      "text": "these this nicely formatted text",
+      "start": 822.8,
+      "duration": 6.32
+    },
+    {
+      "text": "so we'll get definitely more into what",
+      "start": 826.16,
+      "duration": 5.119
+    },
+    {
+      "text": "you can do with this text formatting",
+      "start": 829.12,
+      "duration": 5.36
+    },
+    {
+      "text": "uh as we dig more into this stuff",
+      "start": 831.279,
+      "duration": 5.201
+    },
+    {
+      "text": "but here you know just know if you put",
+      "start": 834.48,
+      "duration": 3.039
+    },
+    {
+      "text": "this uh",
+      "start": 836.48,
+      "duration": 3.919
+    },
+    {
+      "text": "hash then that can give you a header um",
+      "start": 837.519,
+      "duration": 3.201
+    },
+    {
+      "text": "so",
+      "start": 840.399,
+      "duration": 3.521
+    },
+    {
+      "text": "i'm going to say you know inputs here",
+      "start": 840.72,
+      "duration": 5.119
+    },
+    {
+      "text": "and then when i run that you can see it",
+      "start": 843.92,
+      "duration": 3.76
+    },
+    {
+      "text": "comes as this nice header",
+      "start": 845.839,
+      "duration": 5.68
+    },
+    {
+      "text": "and you know i can put some regular text",
+      "start": 847.68,
+      "duration": 7.839
+    },
+    {
+      "text": "uh here and you can see that comes in a",
+      "start": 851.519,
+      "duration": 6.401
+    },
+    {
+      "text": "regular size there",
+      "start": 855.519,
+      "duration": 5.201
+    },
+    {
+      "text": "and to run this i'm holding shift and",
+      "start": 857.92,
+      "duration": 4.0
+    },
+    {
+      "text": "pressing enter",
+      "start": 860.72,
+      "duration": 5.04
+    },
+    {
+      "text": "uh you can also uh do this play button",
+      "start": 861.92,
+      "duration": 6.88
+    },
+    {
+      "text": "that does the same thing and it's the",
+      "start": 865.76,
+      "duration": 4.079
+    },
+    {
+      "text": "same thing for",
+      "start": 868.8,
+      "duration": 3.839
+    },
+    {
+      "text": "these markdown cells as well as the code",
+      "start": 869.839,
+      "duration": 3.36
+    },
+    {
+      "text": "cells",
+      "start": 872.639,
+      "duration": 3.76
+    },
+    {
+      "text": "you run them the same way so",
+      "start": 873.199,
+      "duration": 5.76
+    },
+    {
+      "text": "now we have you know a nice header for",
+      "start": 876.399,
+      "duration": 3.12
+    },
+    {
+      "text": "our input",
+      "start": 878.959,
+      "duration": 3.841
+    },
+    {
+      "text": "section um now let's go ahead and type",
+      "start": 879.519,
+      "duration": 4.481
+    },
+    {
+      "text": "out our various",
+      "start": 882.8,
+      "duration": 4.96
+    },
+    {
+      "text": "inputs so first let's put the salary",
+      "start": 884.0,
+      "duration": 7.04
+    },
+    {
+      "text": "salary equals 60 000.",
+      "start": 887.76,
+      "duration": 6.8
+    },
+    {
+      "text": "then we have the savings rate um",
+      "start": 891.04,
+      "duration": 6.32
+    },
+    {
+      "text": "and you'll notice i didn't do saving",
+      "start": 894.56,
+      "duration": 4.399
+    },
+    {
+      "text": "space rate",
+      "start": 897.36,
+      "duration": 4.0
+    },
+    {
+      "text": "because variable names cannot have",
+      "start": 898.959,
+      "duration": 3.201
+    },
+    {
+      "text": "spaces",
+      "start": 901.36,
+      "duration": 4.0
+    },
+    {
+      "text": "in python so the convention is you know",
+      "start": 902.16,
+      "duration": 4.88
+    },
+    {
+      "text": "make them all lowercase and instead of",
+      "start": 905.36,
+      "duration": 4.479
+    },
+    {
+      "text": "spaces you use underscores",
+      "start": 907.04,
+      "duration": 4.88
+    },
+    {
+      "text": "and that's what you'll find in pretty",
+      "start": 909.839,
+      "duration": 4.881
+    },
+    {
+      "text": "much any python code",
+      "start": 911.92,
+      "duration": 5.039
+    },
+    {
+      "text": "and then we have also the investment",
+      "start": 914.72,
+      "duration": 3.119
+    },
+    {
+      "text": "rate",
+      "start": 916.959,
+      "duration": 4.801
+    },
+    {
+      "text": "equals 0.05 and the desired",
+      "start": 917.839,
+      "duration": 8.8
+    },
+    {
+      "text": "cash is going to be 1.5 million",
+      "start": 921.76,
+      "duration": 7.04
+    },
+    {
+      "text": "um and then you see i hit shift enter",
+      "start": 926.639,
+      "duration": 3.521
+    },
+    {
+      "text": "and now that it's a code cell",
+      "start": 928.8,
+      "duration": 3.2
+    },
+    {
+      "text": "you can see actually this execution",
+      "start": 930.16,
+      "duration": 3.44
+    },
+    {
+      "text": "count uh go up",
+      "start": 932.0,
+      "duration": 5.6
+    },
+    {
+      "text": "each time that i run it um",
+      "start": 933.6,
+      "duration": 6.799
+    },
+    {
+      "text": "and another thing you'll note is that",
+      "start": 937.6,
+      "duration": 5.039
+    },
+    {
+      "text": "unlike in excel",
+      "start": 940.399,
+      "duration": 4.481
+    },
+    {
+      "text": "i did not type a percentage sign in here",
+      "start": 942.639,
+      "duration": 4.961
+    },
+    {
+      "text": "i typed it in decibel format",
+      "start": 944.88,
+      "duration": 6.16
+    },
+    {
+      "text": "you cannot just put",
+      "start": 947.6,
+      "duration": 6.72
+    },
+    {
+      "text": "you know a percent like you can in excel",
+      "start": 951.04,
+      "duration": 5.44
+    },
+    {
+      "text": "you can see it actually gives a syntax",
+      "start": 954.32,
+      "duration": 3.439
+    },
+    {
+      "text": "error",
+      "start": 956.48,
+      "duration": 3.2
+    },
+    {
+      "text": "if we do that because that basically",
+      "start": 957.759,
+      "duration": 4.32
+    },
+    {
+      "text": "means syntax error means",
+      "start": 959.68,
+      "duration": 4.079
+    },
+    {
+      "text": "python doesn't understand what you're",
+      "start": 962.079,
+      "duration": 3.2
+    },
+    {
+      "text": "trying to do",
+      "start": 963.759,
+      "duration": 4.0
+    },
+    {
+      "text": "so percent has another special meaning",
+      "start": 965.279,
+      "duration": 4.321
+    },
+    {
+      "text": "in python we're we're not going to cover",
+      "start": 967.759,
+      "duration": 2.64
+    },
+    {
+      "text": "that",
+      "start": 969.6,
+      "duration": 2.88
+    },
+    {
+      "text": "um it's not important for what we're",
+      "start": 970.399,
+      "duration": 3.601
+    },
+    {
+      "text": "doing",
+      "start": 972.48,
+      "duration": 4.0
+    },
+    {
+      "text": "but just know that you can't just you",
+      "start": 974.0,
+      "duration": 3.839
+    },
+    {
+      "text": "know put a percent",
+      "start": 976.48,
+      "duration": 3.279
+    },
+    {
+      "text": "sign and expect it to know that you're",
+      "start": 977.839,
+      "duration": 3.521
+    },
+    {
+      "text": "talking about a percentage",
+      "start": 979.759,
+      "duration": 3.601
+    },
+    {
+      "text": "you have to just put it in decimal is",
+      "start": 981.36,
+      "duration": 5.279
+    },
+    {
+      "text": "the way that it's going to know",
+      "start": 983.36,
+      "duration": 6.88
+    },
+    {
+      "text": "so we have our inputs defined now",
+      "start": 986.639,
+      "duration": 7.921
+    },
+    {
+      "text": "and so then we can make the next section",
+      "start": 990.24,
+      "duration": 7.68
+    },
+    {
+      "text": "determining cash saved",
+      "start": 994.56,
+      "duration": 3.36
+    },
+    {
+      "text": "um and you'll notice you know whenever",
+      "start": 999.68,
+      "duration": 4.24
+    },
+    {
+      "text": "i'm in the last cell and i run it",
+      "start": 1001.92,
+      "duration": 5.12
+    },
+    {
+      "text": "it does create another cell um also you",
+      "start": 1003.92,
+      "duration": 4.159
+    },
+    {
+      "text": "can",
+      "start": 1007.04,
+      "duration": 5.359
+    },
+    {
+      "text": "um you know insert cells above and below",
+      "start": 1008.079,
+      "duration": 6.641
+    },
+    {
+      "text": "um",
+      "start": 1012.399,
+      "duration": 2.321
+    },
+    {
+      "text": "the the here you know it's a",
+      "start": 1017.6,
+      "duration": 5.919
+    },
+    {
+      "text": "a and b are able to insert cells above",
+      "start": 1021.36,
+      "duration": 3.28
+    },
+    {
+      "text": "and below",
+      "start": 1023.519,
+      "duration": 4.241
+    },
+    {
+      "text": "and d twice is able to",
+      "start": 1024.64,
+      "duration": 6.88
+    },
+    {
+      "text": "delete cells and all of these things",
+      "start": 1027.76,
+      "duration": 8.319
+    },
+    {
+      "text": "are in the menus as well",
+      "start": 1031.52,
+      "duration": 7.36
+    },
+    {
+      "text": "so you can you know if you prefer to",
+      "start": 1036.079,
+      "duration": 3.281
+    },
+    {
+      "text": "just",
+      "start": 1038.88,
+      "duration": 2.72
+    },
+    {
+      "text": "use the menus you can find all the",
+      "start": 1039.36,
+      "duration": 3.439
+    },
+    {
+      "text": "things in there",
+      "start": 1041.6,
+      "duration": 5.359
+    },
+    {
+      "text": "uh but i always just use the hotkeys um",
+      "start": 1042.799,
+      "duration": 7.201
+    },
+    {
+      "text": "so b for below a for above",
+      "start": 1046.959,
+      "duration": 6.161
+    },
+    {
+      "text": "dd for delete um",
+      "start": 1050.0,
+      "duration": 6.16
+    },
+    {
+      "text": "and you'll notice also one more thing is",
+      "start": 1053.12,
+      "duration": 3.84
+    },
+    {
+      "text": "that",
+      "start": 1056.16,
+      "duration": 3.92
+    },
+    {
+      "text": "uh we basically have two different",
+      "start": 1056.96,
+      "duration": 4.88
+    },
+    {
+      "text": "modes here you can see that switching",
+      "start": 1060.08,
+      "duration": 3.28
+    },
+    {
+      "text": "here command mode",
+      "start": 1061.84,
+      "duration": 4.56
+    },
+    {
+      "text": "or edit mode and what i'm doing here is",
+      "start": 1063.36,
+      "duration": 3.52
+    },
+    {
+      "text": "i'm hitting",
+      "start": 1066.4,
+      "duration": 2.159
+    },
+    {
+      "text": "enter to go into edit mode and i'm",
+      "start": 1066.88,
+      "duration": 3.679
+    },
+    {
+      "text": "hitting escape to go back out",
+      "start": 1068.559,
+      "duration": 3.761
+    },
+    {
+      "text": "into command mode and when you're in",
+      "start": 1070.559,
+      "duration": 3.761
+    },
+    {
+      "text": "command mode you can do these a",
+      "start": 1072.32,
+      "duration": 6.239
+    },
+    {
+      "text": "b d d uh et cetera",
+      "start": 1074.32,
+      "duration": 6.479
+    },
+    {
+      "text": "where as when you're in edit mode then",
+      "start": 1078.559,
+      "duration": 3.761
+    },
+    {
+      "text": "those would be you know just typing",
+      "start": 1080.799,
+      "duration": 4.88
+    },
+    {
+      "text": "characters into the cell",
+      "start": 1082.32,
+      "duration": 3.359
+    },
+    {
+      "text": "so uh we have our next section",
+      "start": 1085.84,
+      "duration": 5.04
+    },
+    {
+      "text": "determining cache saved",
+      "start": 1089.28,
+      "duration": 4.56
+    },
+    {
+      "text": "and now we're going to do our actual",
+      "start": 1090.88,
+      "duration": 4.08
+    },
+    {
+      "text": "calculation",
+      "start": 1093.84,
+      "duration": 4.959
+    },
+    {
+      "text": "of what is the cash saved",
+      "start": 1094.96,
+      "duration": 8.64
+    },
+    {
+      "text": "so let's call this variable annual cash",
+      "start": 1098.799,
+      "duration": 7.281
+    },
+    {
+      "text": "and it's going to be salary times the",
+      "start": 1103.6,
+      "duration": 4.56
+    },
+    {
+      "text": "savings rate",
+      "start": 1106.08,
+      "duration": 4.4
+    },
+    {
+      "text": "and you'll see you know one nice feature",
+      "start": 1108.16,
+      "duration": 3.2
+    },
+    {
+      "text": "of jupiter",
+      "start": 1110.48,
+      "duration": 4.24
+    },
+    {
+      "text": "is we can get auto completion for our",
+      "start": 1111.36,
+      "duration": 5.28
+    },
+    {
+      "text": "variables if you can't remember what it",
+      "start": 1114.72,
+      "duration": 3.6
+    },
+    {
+      "text": "was called or you just don't want to go",
+      "start": 1116.64,
+      "duration": 3.919
+    },
+    {
+      "text": "all the way through with typing it",
+      "start": 1118.32,
+      "duration": 3.52
+    },
+    {
+      "text": "if you're in the middle of typing",
+      "start": 1120.559,
+      "duration": 3.041
+    },
+    {
+      "text": "something you can hit tab",
+      "start": 1121.84,
+      "duration": 3.68
+    },
+    {
+      "text": "and that's going to bring up the",
+      "start": 1123.6,
+      "duration": 3.12
+    },
+    {
+      "text": "possibilities",
+      "start": 1125.52,
+      "duration": 3.039
+    },
+    {
+      "text": "and then as you type it's going to",
+      "start": 1126.72,
+      "duration": 3.44
+    },
+    {
+      "text": "narrow down the possibilities",
+      "start": 1128.559,
+      "duration": 4.961
+    },
+    {
+      "text": "and you hit enter to pick the option or",
+      "start": 1130.16,
+      "duration": 6.639
+    },
+    {
+      "text": "you can up and down to",
+      "start": 1133.52,
+      "duration": 6.88
+    },
+    {
+      "text": "pick whichever option so here we want",
+      "start": 1136.799,
+      "duration": 3.921
+    },
+    {
+      "text": "the",
+      "start": 1140.4,
+      "duration": 3.76
+    },
+    {
+      "text": "savings rate um and so now we have our",
+      "start": 1140.72,
+      "duration": 4.48
+    },
+    {
+      "text": "calculation",
+      "start": 1144.16,
+      "duration": 3.36
+    },
+    {
+      "text": "the annual cash is the salary times the",
+      "start": 1145.2,
+      "duration": 3.2
+    },
+    {
+      "text": "savings rate",
+      "start": 1147.52,
+      "duration": 3.84
+    },
+    {
+      "text": "okay let's run it and now you might say",
+      "start": 1148.4,
+      "duration": 3.519
+    },
+    {
+      "text": "where",
+      "start": 1151.36,
+      "duration": 3.36
+    },
+    {
+      "text": "is the annual cache i just calculated it",
+      "start": 1151.919,
+      "duration": 3.521
+    },
+    {
+      "text": "where is it",
+      "start": 1154.72,
+      "duration": 3.04
+    },
+    {
+      "text": "right and that's uh you know one thing",
+      "start": 1155.44,
+      "duration": 4.0
+    },
+    {
+      "text": "which is definitely difficult for people",
+      "start": 1157.76,
+      "duration": 3.6
+    },
+    {
+      "text": "who are used to working in excel",
+      "start": 1159.44,
+      "duration": 3.28
+    },
+    {
+      "text": "in excel you know you do your",
+      "start": 1161.36,
+      "duration": 3.199
+    },
+    {
+      "text": "calculation and it shows you the result",
+      "start": 1162.72,
+      "duration": 3.199
+    },
+    {
+      "text": "right away right",
+      "start": 1164.559,
+      "duration": 3.841
+    },
+    {
+      "text": "with python and this is generally the",
+      "start": 1165.919,
+      "duration": 4.721
+    },
+    {
+      "text": "case with any programming language",
+      "start": 1168.4,
+      "duration": 3.92
+    },
+    {
+      "text": "it's not going to show you anything",
+      "start": 1170.64,
+      "duration": 3.52
+    },
+    {
+      "text": "unless you tell it to show you",
+      "start": 1172.32,
+      "duration": 4.88
+    },
+    {
+      "text": "something so the general way to",
+      "start": 1174.16,
+      "duration": 5.6
+    },
+    {
+      "text": "show something in python is with the",
+      "start": 1177.2,
+      "duration": 4.16
+    },
+    {
+      "text": "print command",
+      "start": 1179.76,
+      "duration": 4.56
+    },
+    {
+      "text": "so if we print the annual cache then we",
+      "start": 1181.36,
+      "duration": 4.4
+    },
+    {
+      "text": "can see it is indeed",
+      "start": 1184.32,
+      "duration": 4.96
+    },
+    {
+      "text": "uh 15 000.",
+      "start": 1185.76,
+      "duration": 6.4
+    },
+    {
+      "text": "but there is a nice shortcut in jupiter",
+      "start": 1189.28,
+      "duration": 3.44
+    },
+    {
+      "text": "so",
+      "start": 1192.16,
+      "duration": 3.68
+    },
+    {
+      "text": "in jupiter uh you can",
+      "start": 1192.72,
+      "duration": 6.56
+    },
+    {
+      "text": "uh just put uh",
+      "start": 1195.84,
+      "duration": 5.199
+    },
+    {
+      "text": "whatever you want to see as the last",
+      "start": 1199.28,
+      "duration": 3.279
+    },
+    {
+      "text": "thing in the cell",
+      "start": 1201.039,
+      "duration": 3.041
+    },
+    {
+      "text": "and then it's going to basically print",
+      "start": 1202.559,
+      "duration": 3.12
+    },
+    {
+      "text": "it for you",
+      "start": 1204.08,
+      "duration": 3.28
+    },
+    {
+      "text": "so it's just you know lets you save a",
+      "start": 1205.679,
+      "duration": 3.681
+    },
+    {
+      "text": "little bit of typing whatever",
+      "start": 1207.36,
+      "duration": 4.559
+    },
+    {
+      "text": "is on the last line of the cell it's",
+      "start": 1209.36,
+      "duration": 3.439
+    },
+    {
+      "text": "going to print",
+      "start": 1211.919,
+      "duration": 2.081
+    },
+    {
+      "text": "so if we just wanted to do our",
+      "start": 1212.799,
+      "duration": 3.281
+    },
+    {
+      "text": "calculation and then see it right away",
+      "start": 1214.0,
+      "duration": 3.36
+    },
+    {
+      "text": "in the same cell",
+      "start": 1216.08,
+      "duration": 3.839
+    },
+    {
+      "text": "then you can do it like that just put",
+      "start": 1217.36,
+      "duration": 3.6
+    },
+    {
+      "text": "whatever variable",
+      "start": 1219.919,
+      "duration": 2.961
+    },
+    {
+      "text": "on the last line and then you're going",
+      "start": 1220.96,
+      "duration": 3.12
+    },
+    {
+      "text": "to see it right away",
+      "start": 1222.88,
+      "duration": 3.679
+    },
+    {
+      "text": "and you don't have to do all of that",
+      "start": 1224.08,
+      "duration": 4.8
+    },
+    {
+      "text": "stuff",
+      "start": 1226.559,
+      "duration": 2.321
+    },
+    {
+      "text": "so we have now the annual cash and so",
+      "start": 1230.08,
+      "duration": 3.92
+    },
+    {
+      "text": "the last",
+      "start": 1233.28,
+      "duration": 4.0
+    },
+    {
+      "text": "would then be calculating the",
+      "start": 1234.0,
+      "duration": 7.039
+    },
+    {
+      "text": "years to retirement um",
+      "start": 1237.28,
+      "duration": 5.6
+    },
+    {
+      "text": "and you know definitely take a look at",
+      "start": 1241.039,
+      "duration": 3.041
+    },
+    {
+      "text": "the completed",
+      "start": 1242.88,
+      "duration": 4.799
+    },
+    {
+      "text": "model for this because it you know shows",
+      "start": 1244.08,
+      "duration": 5.76
+    },
+    {
+      "text": "you know how you can be you know putting",
+      "start": 1247.679,
+      "duration": 3.681
+    },
+    {
+      "text": "more text and a little more formatting",
+      "start": 1249.84,
+      "duration": 2.8
+    },
+    {
+      "text": "in this to really",
+      "start": 1251.36,
+      "duration": 2.799
+    },
+    {
+      "text": "uh you know make it a more polished",
+      "start": 1252.64,
+      "duration": 3.12
+    },
+    {
+      "text": "model",
+      "start": 1254.159,
+      "duration": 3.121
+    },
+    {
+      "text": "but here you know we're just going kind",
+      "start": 1255.76,
+      "duration": 3.76
+    },
+    {
+      "text": "of quickly",
+      "start": 1257.28,
+      "duration": 4.879
+    },
+    {
+      "text": "uh it also explains a little bit more",
+      "start": 1259.52,
+      "duration": 4.159
+    },
+    {
+      "text": "all the various steps",
+      "start": 1262.159,
+      "duration": 5.441
+    },
+    {
+      "text": "that are going on um",
+      "start": 1263.679,
+      "duration": 6.081
+    },
+    {
+      "text": "so we want to calculate the years to",
+      "start": 1267.6,
+      "duration": 4.079
+    },
+    {
+      "text": "retirement and we talked about how the",
+      "start": 1269.76,
+      "duration": 2.64
+    },
+    {
+      "text": "numpy",
+      "start": 1271.679,
+      "duration": 3.841
+    },
+    {
+      "text": "library has the nper number of periods",
+      "start": 1272.4,
+      "duration": 4.24
+    },
+    {
+      "text": "function",
+      "start": 1275.52,
+      "duration": 4.56
+    },
+    {
+      "text": "which is going to allow us to do this",
+      "start": 1276.64,
+      "duration": 7.12
+    },
+    {
+      "text": "but how do we use that so you don't have",
+      "start": 1280.08,
+      "duration": 5.839
+    },
+    {
+      "text": "access to it immediately in your session",
+      "start": 1283.76,
+      "duration": 4.56
+    },
+    {
+      "text": "you do have to actually import the",
+      "start": 1285.919,
+      "duration": 3.041
+    },
+    {
+      "text": "package",
+      "start": 1288.32,
+      "duration": 3.839
+    },
+    {
+      "text": "to get access to it um",
+      "start": 1288.96,
+      "duration": 7.839
+    },
+    {
+      "text": "so if we import numpy",
+      "start": 1292.159,
+      "duration": 8.241
+    },
+    {
+      "text": "uh then run that then all of a sudden",
+      "start": 1296.799,
+      "duration": 7.521
+    },
+    {
+      "text": "we get access to everything which is in",
+      "start": 1300.4,
+      "duration": 8.159
+    },
+    {
+      "text": "numpy so then we can do",
+      "start": 1304.32,
+      "duration": 9.12
+    },
+    {
+      "text": "uh you know numpy dot mper",
+      "start": 1308.559,
+      "duration": 4.881
+    },
+    {
+      "text": "and you might say well how do i actually",
+      "start": 1313.679,
+      "duration": 5.841
+    },
+    {
+      "text": "use this thing",
+      "start": 1316.96,
+      "duration": 6.079
+    },
+    {
+      "text": "so a nice another feature in jupiter",
+      "start": 1319.52,
+      "duration": 5.6
+    },
+    {
+      "text": "is you can put a question mark after",
+      "start": 1323.039,
+      "duration": 5.281
+    },
+    {
+      "text": "something and it will tell you about it",
+      "start": 1325.12,
+      "duration": 5.439
+    },
+    {
+      "text": "so here we can get all the information",
+      "start": 1328.32,
+      "duration": 3.12
+    },
+    {
+      "text": "about this",
+      "start": 1330.559,
+      "duration": 2.721
+    },
+    {
+      "text": "function we can see that it takes the",
+      "start": 1331.44,
+      "duration": 3.52
+    },
+    {
+      "text": "rate first then the payment then the",
+      "start": 1333.28,
+      "duration": 2.879
+    },
+    {
+      "text": "present value",
+      "start": 1334.96,
+      "duration": 3.04
+    },
+    {
+      "text": "then the future value which defaults to",
+      "start": 1336.159,
+      "duration": 3.681
+    },
+    {
+      "text": "zero and then",
+      "start": 1338.0,
+      "duration": 4.72
+    },
+    {
+      "text": "uh you know the the annuity part annuity",
+      "start": 1339.84,
+      "duration": 5.52
+    },
+    {
+      "text": "due or not annuity due",
+      "start": 1342.72,
+      "duration": 5.68
+    },
+    {
+      "text": "um another way you can go about this",
+      "start": 1345.36,
+      "duration": 5.92
+    },
+    {
+      "text": "is you know uh after you type the",
+      "start": 1348.4,
+      "duration": 5.68
+    },
+    {
+      "text": "parentheses here to call this function",
+      "start": 1351.28,
+      "duration": 5.68
+    },
+    {
+      "text": "uh if you hold shift and press tab then",
+      "start": 1354.08,
+      "duration": 3.599
+    },
+    {
+      "text": "you're gonna see",
+      "start": 1356.96,
+      "duration": 2.719
+    },
+    {
+      "text": "the same thing just come up as a little",
+      "start": 1357.679,
+      "duration": 3.12
+    },
+    {
+      "text": "pop-up here",
+      "start": 1359.679,
+      "duration": 3.36
+    },
+    {
+      "text": "where you can take a look at that so i",
+      "start": 1360.799,
+      "duration": 5.201
+    },
+    {
+      "text": "use this all the time shift tab",
+      "start": 1363.039,
+      "duration": 8.081
+    },
+    {
+      "text": "to quickly look at how to use a function",
+      "start": 1366.0,
+      "duration": 5.12
+    },
+    {
+      "text": "so we're going to then pass in",
+      "start": 1371.28,
+      "duration": 6.639
+    },
+    {
+      "text": "our uh arguments uh for",
+      "start": 1374.72,
+      "duration": 6.959
+    },
+    {
+      "text": "this um so",
+      "start": 1377.919,
+      "duration": 7.041
+    },
+    {
+      "text": "our arguments are going to be um",
+      "start": 1381.679,
+      "duration": 5.281
+    },
+    {
+      "text": "you know first we got to put the rate so",
+      "start": 1384.96,
+      "duration": 4.4
+    },
+    {
+      "text": "that was the",
+      "start": 1386.96,
+      "duration": 6.16
+    },
+    {
+      "text": "investment rate and the next",
+      "start": 1389.36,
+      "duration": 7.52
+    },
+    {
+      "text": "we got to put the payment",
+      "start": 1393.12,
+      "duration": 7.6
+    },
+    {
+      "text": "so the payment is",
+      "start": 1396.88,
+      "duration": 7.44
+    },
+    {
+      "text": "the minus annual cash and then we've got",
+      "start": 1400.72,
+      "duration": 4.64
+    },
+    {
+      "text": "to put",
+      "start": 1404.32,
+      "duration": 4.08
+    },
+    {
+      "text": "the present value so the present value",
+      "start": 1405.36,
+      "duration": 5.84
+    },
+    {
+      "text": "is zero we're not starting with any cash",
+      "start": 1408.4,
+      "duration": 6.32
+    },
+    {
+      "text": "and then we've got to put the um",
+      "start": 1411.2,
+      "duration": 6.64
+    },
+    {
+      "text": "desired cache",
+      "start": 1414.72,
+      "duration": 3.12
+    },
+    {
+      "text": "and so we do that and we can see that we",
+      "start": 1419.919,
+      "duration": 4.24
+    },
+    {
+      "text": "get the same result",
+      "start": 1422.64,
+      "duration": 4.88
+    },
+    {
+      "text": "that we did in excel",
+      "start": 1424.159,
+      "duration": 6.801
+    },
+    {
+      "text": "um now um",
+      "start": 1427.52,
+      "duration": 4.88
+    },
+    {
+      "text": "this works just fine but there's a",
+      "start": 1430.96,
+      "duration": 3.28
+    },
+    {
+      "text": "couple things that we want to do to",
+      "start": 1432.4,
+      "duration": 4.159
+    },
+    {
+      "text": "clean this up a little bit um and you",
+      "start": 1434.24,
+      "duration": 3.12
+    },
+    {
+      "text": "can see this",
+      "start": 1436.559,
+      "duration": 2.801
+    },
+    {
+      "text": "this morning that i mentioned came up",
+      "start": 1437.36,
+      "duration": 3.76
+    },
+    {
+      "text": "that's nothing to worry about just",
+      "start": 1439.36,
+      "duration": 3.52
+    },
+    {
+      "text": "ignore this warning that comes up",
+      "start": 1441.12,
+      "duration": 3.679
+    },
+    {
+      "text": "deprecation warning you can just ignore",
+      "start": 1442.88,
+      "duration": 3.919
+    },
+    {
+      "text": "that",
+      "start": 1444.799,
+      "duration": 4.081
+    },
+    {
+      "text": "um so there's a couple things we want to",
+      "start": 1446.799,
+      "duration": 4.0
+    },
+    {
+      "text": "do to make this a little bit cleaner",
+      "start": 1448.88,
+      "duration": 5.12
+    },
+    {
+      "text": "one is there is actually a convention",
+      "start": 1450.799,
+      "duration": 4.88
+    },
+    {
+      "text": "that everyone uses for",
+      "start": 1454.0,
+      "duration": 4.88
+    },
+    {
+      "text": "importing numpy if you google anything",
+      "start": 1455.679,
+      "duration": 4.0
+    },
+    {
+      "text": "about",
+      "start": 1458.88,
+      "duration": 4.08
+    },
+    {
+      "text": "numpy you'll see everyone using this",
+      "start": 1459.679,
+      "duration": 4.48
+    },
+    {
+      "text": "same convention",
+      "start": 1462.96,
+      "duration": 4.48
+    },
+    {
+      "text": "and that's to actually import numpy as",
+      "start": 1464.159,
+      "duration": 6.961
+    },
+    {
+      "text": "np and that basically just renames numpy",
+      "start": 1467.44,
+      "duration": 7.52
+    },
+    {
+      "text": "to np so that then we can do np",
+      "start": 1471.12,
+      "duration": 5.84
+    },
+    {
+      "text": "number of periods and it does the same",
+      "start": 1474.96,
+      "duration": 3.599
+    },
+    {
+      "text": "thing so functionally",
+      "start": 1476.96,
+      "duration": 3.36
+    },
+    {
+      "text": "no difference but this is just the",
+      "start": 1478.559,
+      "duration": 4.321
+    },
+    {
+      "text": "convention that everybody uses",
+      "start": 1480.32,
+      "duration": 5.839
+    },
+    {
+      "text": "um then the other thing is",
+      "start": 1482.88,
+      "duration": 6.88
+    },
+    {
+      "text": "that um you know the formatting of this",
+      "start": 1486.159,
+      "duration": 6.0
+    },
+    {
+      "text": "is not very good we would like to get",
+      "start": 1489.76,
+      "duration": 5.68
+    },
+    {
+      "text": "a better formatting of this result",
+      "start": 1492.159,
+      "duration": 5.681
+    },
+    {
+      "text": "so we can go ahead and save that result",
+      "start": 1495.44,
+      "duration": 3.68
+    },
+    {
+      "text": "to a variable",
+      "start": 1497.84,
+      "duration": 5.04
+    },
+    {
+      "text": "so we can say years to retirement",
+      "start": 1499.12,
+      "duration": 7.36
+    },
+    {
+      "text": "equals that right",
+      "start": 1502.88,
+      "duration": 5.84
+    },
+    {
+      "text": "and so we look at years to retirement it",
+      "start": 1506.48,
+      "duration": 3.36
+    },
+    {
+      "text": "is that",
+      "start": 1508.72,
+      "duration": 3.36
+    },
+    {
+      "text": "um but now we want to add some",
+      "start": 1509.84,
+      "duration": 5.92
+    },
+    {
+      "text": "formatting to it",
+      "start": 1512.08,
+      "duration": 5.68
+    },
+    {
+      "text": "so the way that we can do easy",
+      "start": 1515.76,
+      "duration": 4.08
+    },
+    {
+      "text": "formatting and also you know include it",
+      "start": 1517.76,
+      "duration": 4.56
+    },
+    {
+      "text": "in a sentence or anything like that",
+      "start": 1519.84,
+      "duration": 5.36
+    },
+    {
+      "text": "is with f strings and we'll dig more",
+      "start": 1522.32,
+      "duration": 4.32
+    },
+    {
+      "text": "into f strings when we go",
+      "start": 1525.2,
+      "duration": 4.56
+    },
+    {
+      "text": "into the python basics lecture",
+      "start": 1526.64,
+      "duration": 6.0
+    },
+    {
+      "text": "but basically we can say you know martha",
+      "start": 1529.76,
+      "duration": 3.84
+    },
+    {
+      "text": "has",
+      "start": 1532.64,
+      "duration": 4.08
+    },
+    {
+      "text": "and then we can drop in our variable",
+      "start": 1533.6,
+      "duration": 5.439
+    },
+    {
+      "text": "years to retirement and then we can",
+      "start": 1536.72,
+      "duration": 3.68
+    },
+    {
+      "text": "specify",
+      "start": 1539.039,
+      "duration": 5.201
+    },
+    {
+      "text": "uh the format of that um",
+      "start": 1540.4,
+      "duration": 7.12
+    },
+    {
+      "text": "and then we finish the string and then",
+      "start": 1544.24,
+      "duration": 8.4
+    },
+    {
+      "text": "we say uh you know that she has 3.67",
+      "start": 1547.52,
+      "duration": 7.68
+    },
+    {
+      "text": "36.7 years to retirement so this is a",
+      "start": 1552.64,
+      "duration": 5.039
+    },
+    {
+      "text": "lot nicer way to see the result",
+      "start": 1555.2,
+      "duration": 5.599
+    },
+    {
+      "text": "you know if someone just sees this at",
+      "start": 1557.679,
+      "duration": 4.721
+    },
+    {
+      "text": "the end they don't necessarily know what",
+      "start": 1560.799,
+      "duration": 3.12
+    },
+    {
+      "text": "you're talking about",
+      "start": 1562.4,
+      "duration": 4.8
+    },
+    {
+      "text": "but putting it into a sentence here",
+      "start": 1563.919,
+      "duration": 5.521
+    },
+    {
+      "text": "with you know nice number formatting it",
+      "start": 1567.2,
+      "duration": 3.839
+    },
+    {
+      "text": "becomes very clear",
+      "start": 1569.44,
+      "duration": 5.2
+    },
+    {
+      "text": "what you're talking about",
+      "start": 1571.039,
+      "duration": 3.601
+    },
+    {
+      "text": "so we'll dig into a lot more of these",
+      "start": 1575.679,
+      "duration": 5.36
+    },
+    {
+      "text": "python concepts as we go into the basics",
+      "start": 1578.96,
+      "duration": 3.68
+    },
+    {
+      "text": "this was just a very quick run through",
+      "start": 1581.039,
+      "duration": 5.041
+    },
+    {
+      "text": "on how to build a basic model",
+      "start": 1582.64,
+      "duration": 3.44
+    },
+    {
+      "text": "and then you know there's a useful",
+      "start": 1586.48,
+      "duration": 5.12
+    },
+    {
+      "text": "shortcut up here",
+      "start": 1589.84,
+      "duration": 5.6
+    },
+    {
+      "text": "kernel restart kernel and run all cells",
+      "start": 1591.6,
+      "duration": 7.679
+    },
+    {
+      "text": "so if we say change this to 40 000",
+      "start": 1595.44,
+      "duration": 5.76
+    },
+    {
+      "text": "and then we restart kernel and run all",
+      "start": 1599.279,
+      "duration": 3.361
+    },
+    {
+      "text": "cells",
+      "start": 1601.2,
+      "duration": 4.0
+    },
+    {
+      "text": "then we'll see that it updates the",
+      "start": 1602.64,
+      "duration": 4.72
+    },
+    {
+      "text": "year's retirement down here so that's",
+      "start": 1605.2,
+      "duration": 4.079
+    },
+    {
+      "text": "the easy way that you can just rerun",
+      "start": 1607.36,
+      "duration": 3.04
+    },
+    {
+      "text": "everything in the model",
+      "start": 1609.279,
+      "duration": 4.321
+    },
+    {
+      "text": "in order to be able to",
+      "start": 1610.4,
+      "duration": 5.519
+    },
+    {
+      "text": "get the new result for whatever change",
+      "start": 1613.6,
+      "duration": 4.959
+    },
+    {
+      "text": "in the inputs",
+      "start": 1615.919,
+      "duration": 4.88
+    },
+    {
+      "text": "so next time we'll come back and we'll",
+      "start": 1618.559,
+      "duration": 3.041
+    },
+    {
+      "text": "look at",
+      "start": 1620.799,
+      "duration": 3.76
+    },
+    {
+      "text": "how we can extend these basic excel and",
+      "start": 1621.6,
+      "duration": 4.72
+    },
+    {
+      "text": "python models",
+      "start": 1624.559,
+      "duration": 3.681
+    },
+    {
+      "text": "so thanks for listening and i'll see you",
+      "start": 1626.32,
+      "duration": 7.839
+    },
+    {
+      "text": "next time",
+      "start": 1628.24,
+      "duration": 5.919
+    }
+  ]
+}

@@ -1,0 +1,654 @@
+{
+  "entries": [
+    {
+      "text": "hey",
+      "start": 3.199,
+      "duration": 2.08
+    },
+    {
+      "text": "this is nick duraburtis here teaching",
+      "start": 3.6,
+      "duration": 3.279
+    },
+    {
+      "text": "you financial modeling",
+      "start": 5.279,
+      "duration": 3.28
+    },
+    {
+      "text": "and today we're going to talk about the",
+      "start": 6.879,
+      "duration": 3.441
+    },
+    {
+      "text": "lab exercises for",
+      "start": 8.559,
+      "duration": 4.0
+    },
+    {
+      "text": "the segment of the course on the depth",
+      "start": 10.32,
+      "duration": 4.0
+    },
+    {
+      "text": "of a financial model",
+      "start": 12.559,
+      "duration": 3.521
+    },
+    {
+      "text": "focusing on extending a simple",
+      "start": 14.32,
+      "duration": 4.719
+    },
+    {
+      "text": "retirement model in excel",
+      "start": 16.08,
+      "duration": 6.8
+    },
+    {
+      "text": "uh so there's just one lab exercise here",
+      "start": 19.039,
+      "duration": 7.121
+    },
+    {
+      "text": "uh to go along with this lecture um",
+      "start": 22.88,
+      "duration": 6.0
+    },
+    {
+      "text": "and so that is then extending even a",
+      "start": 26.16,
+      "duration": 3.6
+    },
+    {
+      "text": "little bit further",
+      "start": 28.88,
+      "duration": 4.56
+    },
+    {
+      "text": "beyond what we built out in the prior",
+      "start": 29.76,
+      "duration": 4.56
+    },
+    {
+      "text": "video",
+      "start": 33.44,
+      "duration": 3.92
+    },
+    {
+      "text": "of this dynamic salary retirement",
+      "start": 34.32,
+      "duration": 6.399
+    },
+    {
+      "text": "model so i would highly recommend that",
+      "start": 37.36,
+      "duration": 4.4
+    },
+    {
+      "text": "you follow along",
+      "start": 40.719,
+      "duration": 4.0
+    },
+    {
+      "text": "with the previous videos and you build",
+      "start": 41.76,
+      "duration": 3.68
+    },
+    {
+      "text": "that",
+      "start": 44.719,
+      "duration": 4.481
+    },
+    {
+      "text": "all out yourself following the video",
+      "start": 45.44,
+      "duration": 6.72
+    },
+    {
+      "text": "and then you can continue to add on that",
+      "start": 49.2,
+      "duration": 3.6
+    },
+    {
+      "text": "with this",
+      "start": 52.16,
+      "duration": 4.079
+    },
+    {
+      "text": "lab exercise you can also",
+      "start": 52.8,
+      "duration": 5.439
+    },
+    {
+      "text": "you know download the existing one and",
+      "start": 56.239,
+      "duration": 3.521
+    },
+    {
+      "text": "work off of that for this",
+      "start": 58.239,
+      "duration": 4.401
+    },
+    {
+      "text": "if you know the initial exercise was was",
+      "start": 59.76,
+      "duration": 3.68
+    },
+    {
+      "text": "that basic",
+      "start": 62.64,
+      "duration": 2.159
+    },
+    {
+      "text": "for you that you don't feel that you",
+      "start": 63.44,
+      "duration": 3.999
+    },
+    {
+      "text": "need to go through that",
+      "start": 64.799,
+      "duration": 4.241
+    },
+    {
+      "text": "but either way that you want to go on",
+      "start": 67.439,
+      "duration": 3.841
+    },
+    {
+      "text": "this",
+      "start": 69.04,
+      "duration": 2.24
+    },
+    {
+      "text": "and so you know the main focus here is",
+      "start": 71.439,
+      "duration": 3.841
+    },
+    {
+      "text": "that the new calculation that we're",
+      "start": 73.52,
+      "duration": 2.56
+    },
+    {
+      "text": "gonna do here",
+      "start": 75.28,
+      "duration": 3.76
+    },
+    {
+      "text": "is you know pretty straightforward um",
+      "start": 76.08,
+      "duration": 3.52
+    },
+    {
+      "text": "here",
+      "start": 79.04,
+      "duration": 3.2
+    },
+    {
+      "text": "you know it's just instead of uh saying",
+      "start": 79.6,
+      "duration": 3.28
+    },
+    {
+      "text": "that there's",
+      "start": 82.24,
+      "duration": 3.04
+    },
+    {
+      "text": "you know we need 1.5 million dollars",
+      "start": 82.88,
+      "duration": 3.279
+    },
+    {
+      "text": "where did that not",
+      "start": 85.28,
+      "duration": 2.4
+    },
+    {
+      "text": "number come from we don't know we just",
+      "start": 86.159,
+      "duration": 4.0
+    },
+    {
+      "text": "need that much instead it's",
+      "start": 87.68,
+      "duration": 5.6
+    },
+    {
+      "text": "uh now we want to spend a certain amount",
+      "start": 90.159,
+      "duration": 4.161
+    },
+    {
+      "text": "of cash",
+      "start": 93.28,
+      "duration": 3.199
+    },
+    {
+      "text": "each year in retirement that's going to",
+      "start": 94.32,
+      "duration": 4.159
+    },
+    {
+      "text": "become an input",
+      "start": 96.479,
+      "duration": 4.401
+    },
+    {
+      "text": "and we're going to live for a certain",
+      "start": 98.479,
+      "duration": 3.761
+    },
+    {
+      "text": "number of years",
+      "start": 100.88,
+      "duration": 4.72
+    },
+    {
+      "text": "in retirement um",
+      "start": 102.24,
+      "duration": 8.159
+    },
+    {
+      "text": "so then considering those numbers uh how",
+      "start": 105.6,
+      "duration": 7.6
+    },
+    {
+      "text": "long uh or how much money then do you",
+      "start": 110.399,
+      "duration": 4.0
+    },
+    {
+      "text": "need",
+      "start": 113.2,
+      "duration": 3.199
+    },
+    {
+      "text": "to retire and working that into the",
+      "start": 114.399,
+      "duration": 3.121
+    },
+    {
+      "text": "model",
+      "start": 116.399,
+      "duration": 3.521
+    },
+    {
+      "text": "such that everything flows through now",
+      "start": 117.52,
+      "duration": 4.32
+    },
+    {
+      "text": "desired cash is no longer",
+      "start": 119.92,
+      "duration": 4.32
+    },
+    {
+      "text": "an input to the model but it's actually",
+      "start": 121.84,
+      "duration": 4.08
+    },
+    {
+      "text": "an intermediate output",
+      "start": 124.24,
+      "duration": 5.6
+    },
+    {
+      "text": "of the model um so this exercise",
+      "start": 125.92,
+      "duration": 5.76
+    },
+    {
+      "text": "is mostly about just being able to take",
+      "start": 129.84,
+      "duration": 3.36
+    },
+    {
+      "text": "an existing model",
+      "start": 131.68,
+      "duration": 4.8
+    },
+    {
+      "text": "and extend it uh and have everything",
+      "start": 133.2,
+      "duration": 4.08
+    },
+    {
+      "text": "flow through",
+      "start": 136.48,
+      "duration": 3.04
+    },
+    {
+      "text": "without you know breaking anything and",
+      "start": 137.28,
+      "duration": 3.56
+    },
+    {
+      "text": "you know keeping everything",
+      "start": 139.52,
+      "duration": 4.96
+    },
+    {
+      "text": "organized so one nice hint",
+      "start": 140.84,
+      "duration": 6.759
+    },
+    {
+      "text": "here that will help you out with this is",
+      "start": 144.48,
+      "duration": 6.399
+    },
+    {
+      "text": "that you know right now you have desired",
+      "start": 147.599,
+      "duration": 5.28
+    },
+    {
+      "text": "cache as an input you want it to become",
+      "start": 150.879,
+      "duration": 2.241
+    },
+    {
+      "text": "an",
+      "start": 152.879,
+      "duration": 2.401
+    },
+    {
+      "text": "output but you want everything to stay",
+      "start": 153.12,
+      "duration": 3.199
+    },
+    {
+      "text": "linked together",
+      "start": 155.28,
+      "duration": 3.52
+    },
+    {
+      "text": "you know you don't want to have to redo",
+      "start": 156.319,
+      "duration": 3.28
+    },
+    {
+      "text": "how",
+      "start": 158.8,
+      "duration": 2.96
+    },
+    {
+      "text": "uh you know we're ultimately determining",
+      "start": 159.599,
+      "duration": 3.121
+    },
+    {
+      "text": "the year",
+      "start": 161.76,
+      "duration": 3.119
+    },
+    {
+      "text": "uh that they retire you know that part",
+      "start": 162.72,
+      "duration": 4.72
+    },
+    {
+      "text": "should still work the same even if now",
+      "start": 164.879,
+      "duration": 4.881
+    },
+    {
+      "text": "desired cash becomes a calculated value",
+      "start": 167.44,
+      "duration": 4.72
+    },
+    {
+      "text": "rather than an inputted value",
+      "start": 169.76,
+      "duration": 5.839
+    },
+    {
+      "text": "so the way that you can move that over",
+      "start": 172.16,
+      "duration": 6.4
+    },
+    {
+      "text": "is if you actually cut the cell which",
+      "start": 175.599,
+      "duration": 4.0
+    },
+    {
+      "text": "has that",
+      "start": 178.56,
+      "duration": 3.28
+    },
+    {
+      "text": "so that's you know control x on windows",
+      "start": 179.599,
+      "duration": 3.441
+    },
+    {
+      "text": "command x",
+      "start": 181.84,
+      "duration": 4.399
+    },
+    {
+      "text": "on mac and then you paste it somewhere",
+      "start": 183.04,
+      "duration": 3.68
+    },
+    {
+      "text": "else",
+      "start": 186.239,
+      "duration": 3.681
+    },
+    {
+      "text": "that will move the cell and move",
+      "start": 186.72,
+      "duration": 6.0
+    },
+    {
+      "text": "also all the references to that cell so",
+      "start": 189.92,
+      "duration": 4.239
+    },
+    {
+      "text": "you can move the cell",
+      "start": 192.72,
+      "duration": 3.519
+    },
+    {
+      "text": "and have the model work exactly like it",
+      "start": 194.159,
+      "duration": 4.72
+    },
+    {
+      "text": "did before because all the references",
+      "start": 196.239,
+      "duration": 5.201
+    },
+    {
+      "text": "move at the same time so that allows you",
+      "start": 198.879,
+      "duration": 3.36
+    },
+    {
+      "text": "to then",
+      "start": 201.44,
+      "duration": 3.2
+    },
+    {
+      "text": "move that cell from the inputs to the",
+      "start": 202.239,
+      "duration": 3.521
+    },
+    {
+      "text": "outputs",
+      "start": 204.64,
+      "duration": 3.84
+    },
+    {
+      "text": "for your organizational purposes very",
+      "start": 205.76,
+      "duration": 3.68
+    },
+    {
+      "text": "easily",
+      "start": 208.48,
+      "duration": 3.92
+    },
+    {
+      "text": "and then from there you can then",
+      "start": 209.44,
+      "duration": 3.6
+    },
+    {
+      "text": "actually",
+      "start": 212.4,
+      "duration": 2.96
+    },
+    {
+      "text": "change it so that instead of just",
+      "start": 213.04,
+      "duration": 3.839
+    },
+    {
+      "text": "inputting that value",
+      "start": 215.36,
+      "duration": 5.01
+    },
+    {
+      "text": "it's the result of doing a calculation",
+      "start": 216.879,
+      "duration": 4.801
+    },
+    {
+      "text": "[Music]",
+      "start": 220.37,
+      "duration": 4.35
+    },
+    {
+      "text": "so then you're able to easily you know",
+      "start": 221.68,
+      "duration": 4.639
+    },
+    {
+      "text": "not really have to change anything in",
+      "start": 224.72,
+      "duration": 3.36
+    },
+    {
+      "text": "the existing model it will all just keep",
+      "start": 226.319,
+      "duration": 2.64
+    },
+    {
+      "text": "working",
+      "start": 228.08,
+      "duration": 3.04
+    },
+    {
+      "text": "you just then add on this part to do",
+      "start": 228.959,
+      "duration": 3.761
+    },
+    {
+      "text": "this additional calculation",
+      "start": 231.12,
+      "duration": 5.839
+    },
+    {
+      "text": "to determine the desired cache",
+      "start": 232.72,
+      "duration": 4.239
+    },
+    {
+      "text": "so that's the idea behind the",
+      "start": 237.12,
+      "duration": 6.56
+    },
+    {
+      "text": "lab exercise um so please uh work on",
+      "start": 240.4,
+      "duration": 5.039
+    },
+    {
+      "text": "that and and complete that",
+      "start": 243.68,
+      "duration": 4.88
+    },
+    {
+      "text": "uh this week and then we will also be uh",
+      "start": 245.439,
+      "duration": 3.841
+    },
+    {
+      "text": "having a",
+      "start": 248.56,
+      "duration": 3.36
+    },
+    {
+      "text": "lab session where you can uh work on",
+      "start": 249.28,
+      "duration": 3.2
+    },
+    {
+      "text": "that",
+      "start": 251.92,
+      "duration": 3.599
+    },
+    {
+      "text": "and ask questions as well",
+      "start": 252.48,
+      "duration": 5.36
+    },
+    {
+      "text": "so that concludes our segment on the",
+      "start": 255.519,
+      "duration": 3.921
+    },
+    {
+      "text": "depth of a financial model",
+      "start": 257.84,
+      "duration": 5.04
+    },
+    {
+      "text": "and focusing on excel",
+      "start": 259.44,
+      "duration": 5.84
+    },
+    {
+      "text": "and the next segment we're going to be",
+      "start": 262.88,
+      "duration": 3.2
+    },
+    {
+      "text": "looking at",
+      "start": 265.28,
+      "duration": 3.68
+    },
+    {
+      "text": "some basics in python so that we can",
+      "start": 266.08,
+      "duration": 4.88
+    },
+    {
+      "text": "work up to implementing the same model",
+      "start": 268.96,
+      "duration": 4.959
+    },
+    {
+      "text": "in python as well so thanks for",
+      "start": 270.96,
+      "duration": 3.679
+    },
+    {
+      "text": "listening",
+      "start": 273.919,
+      "duration": 6.401
+    },
+    {
+      "text": "and see you next time",
+      "start": 274.639,
+      "duration": 5.681
+    }
+  ]
+}

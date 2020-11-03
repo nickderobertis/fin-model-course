@@ -1,0 +1,1509 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.679,
+      "duration": 2.241
+    },
+    {
+      "text": "nick duraburtis here teaching you",
+      "start": 4.48,
+      "duration": 3.76
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.92,
+      "duration": 2.639
+    },
+    {
+      "text": "be",
+      "start": 8.24,
+      "duration": 3.04
+    },
+    {
+      "text": "building out the wealth portion of the",
+      "start": 8.559,
+      "duration": 4.801
+    },
+    {
+      "text": "dynamic salary retirement model",
+      "start": 11.28,
+      "duration": 5.12
+    },
+    {
+      "text": "in python",
+      "start": 13.36,
+      "duration": 6.48
+    },
+    {
+      "text": "we left off last time and that we were",
+      "start": 16.4,
+      "duration": 5.44
+    },
+    {
+      "text": "uh you know building out the full python",
+      "start": 19.84,
+      "duration": 4.24
+    },
+    {
+      "text": "model and we had already done the salary",
+      "start": 21.84,
+      "duration": 3.92
+    },
+    {
+      "text": "portion of the model",
+      "start": 24.08,
+      "duration": 3.92
+    },
+    {
+      "text": "so in this video we're working on the",
+      "start": 25.76,
+      "duration": 3.359
+    },
+    {
+      "text": "welsh portion",
+      "start": 28.0,
+      "duration": 2.48
+    },
+    {
+      "text": "and we'll come back in the following",
+      "start": 29.119,
+      "duration": 3.841
+    },
+    {
+      "text": "video to finish up the model with the",
+      "start": 30.48,
+      "duration": 5.919
+    },
+    {
+      "text": "retirement portion so let's go ahead and",
+      "start": 32.96,
+      "duration": 5.84
+    },
+    {
+      "text": "go over to the jupiter notebook",
+      "start": 36.399,
+      "duration": 4.801
+    },
+    {
+      "text": "so we already have you know this setup",
+      "start": 38.8,
+      "duration": 3.759
+    },
+    {
+      "text": "stuff at the beginning",
+      "start": 41.2,
+      "duration": 3.359
+    },
+    {
+      "text": "and then we have the salary section",
+      "start": 42.559,
+      "duration": 4.0
+    },
+    {
+      "text": "built out already",
+      "start": 44.559,
+      "duration": 4.16
+    },
+    {
+      "text": "now we're getting to the wealth portion",
+      "start": 46.559,
+      "duration": 4.0
+    },
+    {
+      "text": "of the model",
+      "start": 48.719,
+      "duration": 5.041
+    },
+    {
+      "text": "so let's uh you know just like we did",
+      "start": 50.559,
+      "duration": 5.441
+    },
+    {
+      "text": "for salary make a section",
+      "start": 53.76,
+      "duration": 4.959
+    },
+    {
+      "text": "and clearly differentiate this from the",
+      "start": 56.0,
+      "duration": 4.8
+    },
+    {
+      "text": "salary related code",
+      "start": 58.719,
+      "duration": 5.281
+    },
+    {
+      "text": "and you would definitely want to have uh",
+      "start": 60.8,
+      "duration": 4.719
+    },
+    {
+      "text": "you know a description of what this",
+      "start": 64.0,
+      "duration": 3.68
+    },
+    {
+      "text": "section is doing as well as the",
+      "start": 65.519,
+      "duration": 3.121
+    },
+    {
+      "text": "equations",
+      "start": 67.68,
+      "duration": 4.479
+    },
+    {
+      "text": "involved but for the interest of time",
+      "start": 68.64,
+      "duration": 5.68
+    },
+    {
+      "text": "i'm gonna leave those out here",
+      "start": 72.159,
+      "duration": 4.081
+    },
+    {
+      "text": "um just take a look at the completed",
+      "start": 74.32,
+      "duration": 3.439
+    },
+    {
+      "text": "example to see",
+      "start": 76.24,
+      "duration": 4.879
+    },
+    {
+      "text": "what that should look like",
+      "start": 77.759,
+      "duration": 7.36
+    },
+    {
+      "text": "so to get the wealth we can go back to",
+      "start": 81.119,
+      "duration": 7.441
+    },
+    {
+      "text": "what the wealth equation",
+      "start": 85.119,
+      "duration": 7.841
+    },
+    {
+      "text": "was it is just taking whatever the prior",
+      "start": 88.56,
+      "duration": 5.44
+    },
+    {
+      "text": "wealth was",
+      "start": 92.96,
+      "duration": 3.44
+    },
+    {
+      "text": "and multiplying it by one plus the",
+      "start": 94.0,
+      "duration": 4.24
+    },
+    {
+      "text": "investment return",
+      "start": 96.4,
+      "duration": 4.719
+    },
+    {
+      "text": "and then we're going to add the cash",
+      "start": 98.24,
+      "duration": 5.12
+    },
+    {
+      "text": "save to that and the cash saved is the",
+      "start": 101.119,
+      "duration": 2.96
+    },
+    {
+      "text": "salary",
+      "start": 103.36,
+      "duration": 3.84
+    },
+    {
+      "text": "in that given year times the savings",
+      "start": 104.079,
+      "duration": 4.801
+    },
+    {
+      "text": "rate",
+      "start": 107.2,
+      "duration": 4.72
+    },
+    {
+      "text": "so we can think of this",
+      "start": 108.88,
+      "duration": 6.239
+    },
+    {
+      "text": "equation in two parts one is uh",
+      "start": 111.92,
+      "duration": 5.04
+    },
+    {
+      "text": "you know calculating the overall wealth",
+      "start": 115.119,
+      "duration": 3.521
+    },
+    {
+      "text": "equation and the other is",
+      "start": 116.96,
+      "duration": 4.96
+    },
+    {
+      "text": "figuring out this cash saved so let's",
+      "start": 118.64,
+      "duration": 5.2
+    },
+    {
+      "text": "first create a function which will get",
+      "start": 121.92,
+      "duration": 3.44
+    },
+    {
+      "text": "us the cash saved",
+      "start": 123.84,
+      "duration": 3.52
+    },
+    {
+      "text": "and then we can plug that into another",
+      "start": 125.36,
+      "duration": 3.84
+    },
+    {
+      "text": "function which gets us the overall",
+      "start": 127.36,
+      "duration": 5.2
+    },
+    {
+      "text": "wealth at a given year",
+      "start": 129.2,
+      "duration": 3.36
+    },
+    {
+      "text": "so we want to figure out the cash saved",
+      "start": 134.8,
+      "duration": 5.84
+    },
+    {
+      "text": "in any given year",
+      "start": 138.16,
+      "duration": 5.6
+    },
+    {
+      "text": "and you know obviously as we just looked",
+      "start": 140.64,
+      "duration": 5.36
+    },
+    {
+      "text": "at the equation it's just going to be",
+      "start": 143.76,
+      "duration": 6.08
+    },
+    {
+      "text": "salary times the savings rate right",
+      "start": 146.0,
+      "duration": 5.92
+    },
+    {
+      "text": "um but what is salary where do we get",
+      "start": 149.84,
+      "duration": 3.28
+    },
+    {
+      "text": "salary from",
+      "start": 151.92,
+      "duration": 3.52
+    },
+    {
+      "text": "well we have this whole other section of",
+      "start": 153.12,
+      "duration": 3.28
+    },
+    {
+      "text": "the model that",
+      "start": 155.44,
+      "duration": 3.439
+    },
+    {
+      "text": "was responsible for being able to",
+      "start": 156.4,
+      "duration": 5.44
+    },
+    {
+      "text": "calculate a salary at any given year",
+      "start": 158.879,
+      "duration": 5.841
+    },
+    {
+      "text": "so you know if we just you know say it's",
+      "start": 161.84,
+      "duration": 5.52
+    },
+    {
+      "text": "a certain year let's say a zero three",
+      "start": 164.72,
+      "duration": 6.159
+    },
+    {
+      "text": "um before we can do this calculation to",
+      "start": 167.36,
+      "duration": 4.08
+    },
+    {
+      "text": "get the",
+      "start": 170.879,
+      "duration": 4.0
+    },
+    {
+      "text": "cash saved we need to figure out the",
+      "start": 171.44,
+      "duration": 4.96
+    },
+    {
+      "text": "salary for that year",
+      "start": 174.879,
+      "duration": 3.601
+    },
+    {
+      "text": "so to get the salary of that year we had",
+      "start": 176.4,
+      "duration": 3.04
+    },
+    {
+      "text": "this nice",
+      "start": 178.48,
+      "duration": 3.679
+    },
+    {
+      "text": "convenient function where we just pass",
+      "start": 179.44,
+      "duration": 4.159
+    },
+    {
+      "text": "it our data",
+      "start": 182.159,
+      "duration": 4.561
+    },
+    {
+      "text": "and we pass it the year",
+      "start": 183.599,
+      "duration": 4.72
+    },
+    {
+      "text": "and it's going to give us the salary for",
+      "start": 186.72,
+      "duration": 4.4
+    },
+    {
+      "text": "that year year three in this case",
+      "start": 188.319,
+      "duration": 4.881
+    },
+    {
+      "text": "and then we can calculate the cash saved",
+      "start": 191.12,
+      "duration": 4.479
+    },
+    {
+      "text": "based off of that salary",
+      "start": 193.2,
+      "duration": 5.44
+    },
+    {
+      "text": "so let's see what that looks like",
+      "start": 195.599,
+      "duration": 4.881
+    },
+    {
+      "text": "so in year three we're gonna be saving",
+      "start": 198.64,
+      "duration": 3.92
+    },
+    {
+      "text": "almost sixteen thousand dollars",
+      "start": 200.48,
+      "duration": 5.52
+    },
+    {
+      "text": "which uh if our uh salary here is sixty",
+      "start": 202.56,
+      "duration": 5.2
+    },
+    {
+      "text": "three thousand and our savings rate",
+      "start": 206.0,
+      "duration": 4.84
+    },
+    {
+      "text": "is twenty five percent then that sounds",
+      "start": 207.76,
+      "duration": 4.399
+    },
+    {
+      "text": "correct",
+      "start": 210.84,
+      "duration": 3.72
+    },
+    {
+      "text": "and we can try it with some other years",
+      "start": 212.159,
+      "duration": 4.08
+    },
+    {
+      "text": "year 10",
+      "start": 214.56,
+      "duration": 4.0
+    },
+    {
+      "text": "year it's going up year one it's it's",
+      "start": 216.239,
+      "duration": 3.841
+    },
+    {
+      "text": "lower",
+      "start": 218.56,
+      "duration": 4.399
+    },
+    {
+      "text": "so this all seems appropriate for what",
+      "start": 220.08,
+      "duration": 4.32
+    },
+    {
+      "text": "we would expect to see",
+      "start": 222.959,
+      "duration": 4.56
+    },
+    {
+      "text": "for the cash saved in a given year",
+      "start": 224.4,
+      "duration": 4.399
+    },
+    {
+      "text": "so now that we know that it works",
+      "start": 227.519,
+      "duration": 2.881
+    },
+    {
+      "text": "appropriately we can go ahead and wrap",
+      "start": 228.799,
+      "duration": 2.881
+    },
+    {
+      "text": "it up into a function",
+      "start": 230.4,
+      "duration": 4.559
+    },
+    {
+      "text": "so it can be easily reused",
+      "start": 231.68,
+      "duration": 6.4
+    },
+    {
+      "text": "so year is going to become an input",
+      "start": 234.959,
+      "duration": 6.161
+    },
+    {
+      "text": "and the data is our other input so let's",
+      "start": 238.08,
+      "duration": 4.079
+    },
+    {
+      "text": "go ahead and write",
+      "start": 241.12,
+      "duration": 4.88
+    },
+    {
+      "text": "our function definition so cache",
+      "start": 242.159,
+      "duration": 7.121
+    },
+    {
+      "text": "saved during year",
+      "start": 246.0,
+      "duration": 5.04
+    },
+    {
+      "text": "and it's going to take the data and the",
+      "start": 249.28,
+      "duration": 3.84
+    },
+    {
+      "text": "year and then i'm going to highlight all",
+      "start": 251.04,
+      "duration": 4.72
+    },
+    {
+      "text": "that hit tab to shift it over",
+      "start": 253.12,
+      "duration": 5.679
+    },
+    {
+      "text": "and then return the cache saved and then",
+      "start": 255.76,
+      "duration": 4.56
+    },
+    {
+      "text": "we'll see when we call",
+      "start": 258.799,
+      "duration": 5.041
+    },
+    {
+      "text": "this function uh with the data uh",
+      "start": 260.32,
+      "duration": 6.0
+    },
+    {
+      "text": "and some year that will get the same",
+      "start": 263.84,
+      "duration": 4.639
+    },
+    {
+      "text": "kind of results that we were getting",
+      "start": 266.32,
+      "duration": 6.4
+    },
+    {
+      "text": "just with the planes code in the cell",
+      "start": 268.479,
+      "duration": 6.72
+    },
+    {
+      "text": "so now we have a function which can give",
+      "start": 272.72,
+      "duration": 3.28
+    },
+    {
+      "text": "us the",
+      "start": 275.199,
+      "duration": 5.121
+    },
+    {
+      "text": "cash saved at any given year",
+      "start": 276.0,
+      "duration": 5.919
+    },
+    {
+      "text": "now we need to figure out what the",
+      "start": 280.32,
+      "duration": 3.12
+    },
+    {
+      "text": "wealth is for that",
+      "start": 281.919,
+      "duration": 4.72
+    },
+    {
+      "text": "year so we know that",
+      "start": 283.44,
+      "duration": 4.8
+    },
+    {
+      "text": "we're just going to take this cash save",
+      "start": 286.639,
+      "duration": 3.201
+    },
+    {
+      "text": "portion and add it on",
+      "start": 288.24,
+      "duration": 3.36
+    },
+    {
+      "text": "so then the other portion is taking",
+      "start": 289.84,
+      "duration": 4.0
+    },
+    {
+      "text": "whatever the prior wealth was",
+      "start": 291.6,
+      "duration": 5.84
+    },
+    {
+      "text": "and then multiplying it by",
+      "start": 293.84,
+      "duration": 8.24
+    },
+    {
+      "text": "one plus the investment rate",
+      "start": 297.44,
+      "duration": 6.8
+    },
+    {
+      "text": "so",
+      "start": 302.08,
+      "duration": 2.16
+    },
+    {
+      "text": "we're going to figure out the wealth in",
+      "start": 307.36,
+      "duration": 3.92
+    },
+    {
+      "text": "any given year now",
+      "start": 308.96,
+      "duration": 5.92
+    },
+    {
+      "text": "and the first step that is calculating",
+      "start": 311.28,
+      "duration": 6.639
+    },
+    {
+      "text": "the cash saved which now we have",
+      "start": 314.88,
+      "duration": 5.36
+    },
+    {
+      "text": "a nice convenient function to do that",
+      "start": 317.919,
+      "duration": 4.481
+    },
+    {
+      "text": "cash saved during year",
+      "start": 320.24,
+      "duration": 5.12
+    },
+    {
+      "text": "let's again set up you know year equals",
+      "start": 322.4,
+      "duration": 4.639
+    },
+    {
+      "text": "five",
+      "start": 325.36,
+      "duration": 4.16
+    },
+    {
+      "text": "um and that's going to take the data and",
+      "start": 327.039,
+      "duration": 3.521
+    },
+    {
+      "text": "it's going to take the year",
+      "start": 329.52,
+      "duration": 4.8
+    },
+    {
+      "text": "as we have defined that and i",
+      "start": 330.56,
+      "duration": 5.52
+    },
+    {
+      "text": "you know as we just saw from the prior",
+      "start": 334.32,
+      "duration": 3.599
+    },
+    {
+      "text": "cell will give us the cash saved in that",
+      "start": 336.08,
+      "duration": 3.04
+    },
+    {
+      "text": "year",
+      "start": 337.919,
+      "duration": 3.84
+    },
+    {
+      "text": "so then we need to go and calculate the",
+      "start": 339.12,
+      "duration": 3.6
+    },
+    {
+      "text": "wealth",
+      "start": 341.759,
+      "duration": 3.601
+    },
+    {
+      "text": "so the wealth we know is going to be",
+      "start": 342.72,
+      "duration": 5.039
+    },
+    {
+      "text": "equal to the prior wealth",
+      "start": 345.36,
+      "duration": 6.16
+    },
+    {
+      "text": "times 1 plus data",
+      "start": 347.759,
+      "duration": 6.16
+    },
+    {
+      "text": "the interest rate and we're going to add",
+      "start": 351.52,
+      "duration": 4.0
+    },
+    {
+      "text": "the cash saved",
+      "start": 353.919,
+      "duration": 5.521
+    },
+    {
+      "text": "onto that now of course when we run this",
+      "start": 355.52,
+      "duration": 4.72
+    },
+    {
+      "text": "we're going to get an",
+      "start": 359.44,
+      "duration": 3.52
+    },
+    {
+      "text": "error because prior wealth is not",
+      "start": 360.24,
+      "duration": 4.64
+    },
+    {
+      "text": "defined we don't know what prior wealth",
+      "start": 362.96,
+      "duration": 5.44
+    },
+    {
+      "text": "is yet so let's just",
+      "start": 364.88,
+      "duration": 5.439
+    },
+    {
+      "text": "uh you know think of that as an input to",
+      "start": 368.4,
+      "duration": 3.919
+    },
+    {
+      "text": "this function that we're creating as",
+      "start": 370.319,
+      "duration": 2.481
+    },
+    {
+      "text": "well",
+      "start": 372.319,
+      "duration": 3.841
+    },
+    {
+      "text": "and say that we start with no well um",
+      "start": 372.8,
+      "duration": 7.28
+    },
+    {
+      "text": "and then the function is able to run um",
+      "start": 376.16,
+      "duration": 5.52
+    },
+    {
+      "text": "and it says we have ninety thousand",
+      "start": 380.08,
+      "duration": 3.6
+    },
+    {
+      "text": "dollars saved at year five which is",
+      "start": 381.68,
+      "duration": 3.76
+    },
+    {
+      "text": "not correct that's just how much we're",
+      "start": 383.68,
+      "duration": 3.2
+    },
+    {
+      "text": "saving in year five",
+      "start": 385.44,
+      "duration": 3.84
+    },
+    {
+      "text": "but it's because we have no wealth to",
+      "start": 386.88,
+      "duration": 3.759
+    },
+    {
+      "text": "begin with",
+      "start": 389.28,
+      "duration": 4.08
+    },
+    {
+      "text": "um so clearly we're gonna need to use",
+      "start": 390.639,
+      "duration": 4.481
+    },
+    {
+      "text": "this in a way that we're able to take",
+      "start": 393.36,
+      "duration": 3.04
+    },
+    {
+      "text": "whatever the wealth was from",
+      "start": 395.12,
+      "duration": 4.32
+    },
+    {
+      "text": "last year and pass it in next time",
+      "start": 396.4,
+      "duration": 7.2
+    },
+    {
+      "text": "for the wealth the prior wealth",
+      "start": 399.44,
+      "duration": 6.4
+    },
+    {
+      "text": "so let's go ahead and create this",
+      "start": 403.6,
+      "duration": 3.28
+    },
+    {
+      "text": "function as is",
+      "start": 405.84,
+      "duration": 2.72
+    },
+    {
+      "text": "and then we can look at how we can use",
+      "start": 406.88,
+      "duration": 3.84
+    },
+    {
+      "text": "this in a structure of",
+      "start": 408.56,
+      "duration": 3.84
+    },
+    {
+      "text": "taking the wealth from each year and",
+      "start": 410.72,
+      "duration": 3.52
+    },
+    {
+      "text": "saving it and then using it as the prior",
+      "start": 412.4,
+      "duration": 2.32
+    },
+    {
+      "text": "wealth",
+      "start": 414.24,
+      "duration": 3.519
+    },
+    {
+      "text": "for the next year so",
+      "start": 414.72,
+      "duration": 5.52
+    },
+    {
+      "text": "we can create our function wealth that",
+      "start": 417.759,
+      "duration": 3.121
+    },
+    {
+      "text": "year",
+      "start": 420.24,
+      "duration": 2.88
+    },
+    {
+      "text": "which is going to take the data and it's",
+      "start": 420.88,
+      "duration": 3.2
+    },
+    {
+      "text": "going to take the year",
+      "start": 423.12,
+      "duration": 3.44
+    },
+    {
+      "text": "and it's also going to take the prior",
+      "start": 424.08,
+      "duration": 3.679
+    },
+    {
+      "text": "wealth",
+      "start": 426.56,
+      "duration": 3.52
+    },
+    {
+      "text": "and we can tab that all over and we want",
+      "start": 427.759,
+      "duration": 3.361
+    },
+    {
+      "text": "to return the wealth",
+      "start": 430.08,
+      "duration": 4.0
+    },
+    {
+      "text": "at the end and just double check that we",
+      "start": 431.12,
+      "duration": 4.799
+    },
+    {
+      "text": "get the same thing when we passed the",
+      "start": 434.08,
+      "duration": 3.679
+    },
+    {
+      "text": "data we passed it the year and we passed",
+      "start": 435.919,
+      "duration": 3.361
+    },
+    {
+      "text": "the prior wealth",
+      "start": 437.759,
+      "duration": 3.361
+    },
+    {
+      "text": "just a quick sandy check to make sure",
+      "start": 439.28,
+      "duration": 3.039
+    },
+    {
+      "text": "you didn't break anything while",
+      "start": 441.12,
+      "duration": 3.04
+    },
+    {
+      "text": "transferring it over to a function",
+      "start": 442.319,
+      "duration": 6.0
+    },
+    {
+      "text": "we're doing d d get the same number here",
+      "start": 444.16,
+      "duration": 7.68
+    },
+    {
+      "text": "so we don't need these anymore",
+      "start": 448.319,
+      "duration": 3.521
+    },
+    {
+      "text": "and now we can go and look at how we",
+      "start": 452.56,
+      "duration": 4.639
+    },
+    {
+      "text": "would use this",
+      "start": 455.36,
+      "duration": 4.959
+    },
+    {
+      "text": "so this will be good just you know for",
+      "start": 457.199,
+      "duration": 4.081
+    },
+    {
+      "text": "two things one",
+      "start": 460.319,
+      "duration": 2.72
+    },
+    {
+      "text": "to to get a better understanding of how",
+      "start": 461.28,
+      "duration": 4.24
+    },
+    {
+      "text": "this will be plugged into the overall",
+      "start": 463.039,
+      "duration": 4.0
+    },
+    {
+      "text": "function which determines the years to",
+      "start": 465.52,
+      "duration": 3.359
+    },
+    {
+      "text": "retirement uh but also",
+      "start": 467.039,
+      "duration": 4.56
+    },
+    {
+      "text": "just as a quick check of showing how",
+      "start": 468.879,
+      "duration": 3.6
+    },
+    {
+      "text": "this section",
+      "start": 471.599,
+      "duration": 3.44
+    },
+    {
+      "text": "works standalone you know what happens",
+      "start": 472.479,
+      "duration": 3.28
+    },
+    {
+      "text": "to the wealth",
+      "start": 475.039,
+      "duration": 4.321
+    },
+    {
+      "text": "year by year so the way that we can do",
+      "start": 475.759,
+      "duration": 5.681
+    },
+    {
+      "text": "this",
+      "start": 479.36,
+      "duration": 4.239
+    },
+    {
+      "text": "is a fairly common pattern in",
+      "start": 481.44,
+      "duration": 3.439
+    },
+    {
+      "text": "programming",
+      "start": 483.599,
+      "duration": 4.32
+    },
+    {
+      "text": "where you initialize some variable",
+      "start": 484.879,
+      "duration": 5.44
+    },
+    {
+      "text": "and then you go throughout a loop and",
+      "start": 487.919,
+      "duration": 4.081
+    },
+    {
+      "text": "then at the end of the loop",
+      "start": 490.319,
+      "duration": 4.801
+    },
+    {
+      "text": "you're going to uh set that variable to",
+      "start": 492.0,
+      "duration": 4.08
+    },
+    {
+      "text": "be",
+      "start": 495.12,
+      "duration": 4.0
+    },
+    {
+      "text": "uh you know the main variable's value",
+      "start": 496.08,
+      "duration": 4.239
+    },
+    {
+      "text": "and it's going to be like the prior",
+      "start": 499.12,
+      "duration": 2.16
+    },
+    {
+      "text": "value",
+      "start": 500.319,
+      "duration": 2.88
+    },
+    {
+      "text": "and you you know you keep going through",
+      "start": 501.28,
+      "duration": 3.199
+    },
+    {
+      "text": "and at the end of the loop it always",
+      "start": 503.199,
+      "duration": 1.84
+    },
+    {
+      "text": "gets",
+      "start": 504.479,
+      "duration": 3.921
+    },
+    {
+      "text": "reassigned to whatever last uh the last",
+      "start": 505.039,
+      "duration": 5.28
+    },
+    {
+      "text": "value was",
+      "start": 508.4,
+      "duration": 5.04
+    },
+    {
+      "text": "so let's look at how that would work so",
+      "start": 510.319,
+      "duration": 5.52
+    },
+    {
+      "text": "first we set our prior wealth to zero",
+      "start": 513.44,
+      "duration": 4.24
+    },
+    {
+      "text": "we aren't starting with any money and so",
+      "start": 515.839,
+      "duration": 3.041
+    },
+    {
+      "text": "that makes sense",
+      "start": 517.68,
+      "duration": 3.039
+    },
+    {
+      "text": "if you had some other input in the model",
+      "start": 518.88,
+      "duration": 3.839
+    },
+    {
+      "text": "of you know starting cash",
+      "start": 520.719,
+      "duration": 3.68
+    },
+    {
+      "text": "then you would want to use that instead",
+      "start": 522.719,
+      "duration": 3.68
+    },
+    {
+      "text": "of zero",
+      "start": 524.399,
+      "duration": 3.841
+    },
+    {
+      "text": "and then we want to have some kind of",
+      "start": 526.399,
+      "duration": 3.521
+    },
+    {
+      "text": "loop and let's just",
+      "start": 528.24,
+      "duration": 4.159
+    },
+    {
+      "text": "look you know over six years so we can",
+      "start": 529.92,
+      "duration": 4.08
+    },
+    {
+      "text": "make sure to get that promotion",
+      "start": 532.399,
+      "duration": 5.601
+    },
+    {
+      "text": "in there and again just like we did for",
+      "start": 534.0,
+      "duration": 4.88
+    },
+    {
+      "text": "salaries",
+      "start": 538.0,
+      "duration": 2.64
+    },
+    {
+      "text": "uh we want to think about the year",
+      "start": 538.88,
+      "duration": 3.519
+    },
+    {
+      "text": "starting from one",
+      "start": 540.64,
+      "duration": 3.759
+    },
+    {
+      "text": "not starting from zero so we're going to",
+      "start": 542.399,
+      "duration": 5.681
+    },
+    {
+      "text": "take year as i plus one",
+      "start": 544.399,
+      "duration": 6.961
+    },
+    {
+      "text": "then we can get the wealth as the using",
+      "start": 548.08,
+      "duration": 4.8
+    },
+    {
+      "text": "our wealth at year function",
+      "start": 551.36,
+      "duration": 4.72
+    },
+    {
+      "text": "passing it uh this time model data",
+      "start": 552.88,
+      "duration": 3.68
+    },
+    {
+      "text": "because this",
+      "start": 556.08,
+      "duration": 2.24
+    },
+    {
+      "text": "is going to be permanently outside of a",
+      "start": 556.56,
+      "duration": 3.279
+    },
+    {
+      "text": "function uh",
+      "start": 558.32,
+      "duration": 6.24
+    },
+    {
+      "text": "the year and the prior wealth",
+      "start": 559.839,
+      "duration": 4.721
+    },
+    {
+      "text": "and then we can show that result so",
+      "start": 565.519,
+      "duration": 8.081
+    },
+    {
+      "text": "the wealth at year year",
+      "start": 569.68,
+      "duration": 7.44
+    },
+    {
+      "text": "is and then we're gonna put the wealth",
+      "start": 573.6,
+      "duration": 6.239
+    },
+    {
+      "text": "and let's put commas and zero decimal",
+      "start": 577.12,
+      "duration": 5.2
+    },
+    {
+      "text": "places",
+      "start": 579.839,
+      "duration": 2.481
+    },
+    {
+      "text": "and then at the end of the loop we're",
+      "start": 584.08,
+      "duration": 4.759
+    },
+    {
+      "text": "going to set prior wealth equal to",
+      "start": 586.64,
+      "duration": 4.879
+    },
+    {
+      "text": "wealth um so then when we run this",
+      "start": 588.839,
+      "duration": 5.161
+    },
+    {
+      "text": "we can see that indeed does go through",
+      "start": 591.519,
+      "duration": 3.361
+    },
+    {
+      "text": "each of the years",
+      "start": 594.0,
+      "duration": 3.279
+    },
+    {
+      "text": "and the money is accumulating like you",
+      "start": 594.88,
+      "duration": 4.399
+    },
+    {
+      "text": "might think it would",
+      "start": 597.279,
+      "duration": 5.281
+    },
+    {
+      "text": "uh you know we have after year two we",
+      "start": 599.279,
+      "duration": 5.201
+    },
+    {
+      "text": "have more than double of what we were",
+      "start": 602.56,
+      "duration": 2.8
+    },
+    {
+      "text": "able to save",
+      "start": 604.48,
+      "duration": 2.72
+    },
+    {
+      "text": "after the first year because we got two",
+      "start": 605.36,
+      "duration": 3.2
+    },
+    {
+      "text": "years of savings",
+      "start": 607.2,
+      "duration": 3.199
+    },
+    {
+      "text": "second year had the cost of living raise",
+      "start": 608.56,
+      "duration": 3.68
+    },
+    {
+      "text": "on the salary and then there's also an",
+      "start": 610.399,
+      "duration": 2.801
+    },
+    {
+      "text": "investment return",
+      "start": 612.24,
+      "duration": 3.599
+    },
+    {
+      "text": "baked in there as well so this all looks",
+      "start": 613.2,
+      "duration": 3.199
+    },
+    {
+      "text": "like",
+      "start": 615.839,
+      "duration": 3.68
+    },
+    {
+      "text": "what we would expect to see and then",
+      "start": 616.399,
+      "duration": 6.0
+    },
+    {
+      "text": "uh you know you can see that uh here",
+      "start": 619.519,
+      "duration": 4.0
+    },
+    {
+      "text": "from year four to five",
+      "start": 622.399,
+      "duration": 4.56
+    },
+    {
+      "text": "it's jumping by about 23 000",
+      "start": 623.519,
+      "duration": 6.481
+    },
+    {
+      "text": "uh and then going to year six",
+      "start": 626.959,
+      "duration": 6.481
+    },
+    {
+      "text": "it's an even um greater or sorry year",
+      "start": 630.0,
+      "duration": 4.0
+    },
+    {
+      "text": "four",
+      "start": 633.44,
+      "duration": 4.24
+    },
+    {
+      "text": "year three to four we have uh only a 16",
+      "start": 634.0,
+      "duration": 4.56
+    },
+    {
+      "text": "000 increase",
+      "start": 637.68,
+      "duration": 3.92
+    },
+    {
+      "text": "and then year four to five we have a uh",
+      "start": 638.56,
+      "duration": 5.04
+    },
+    {
+      "text": "23 000 increase so it's quite a bit",
+      "start": 641.6,
+      "duration": 4.08
+    },
+    {
+      "text": "bigger going to year five when we get",
+      "start": 643.6,
+      "duration": 4.799
+    },
+    {
+      "text": "that promotion",
+      "start": 645.68,
+      "duration": 2.719
+    },
+    {
+      "text": "and so this uh prior wealth pattern",
+      "start": 648.72,
+      "duration": 5.28
+    },
+    {
+      "text": "you can see that every time at the end",
+      "start": 652.0,
+      "duration": 3.519
+    },
+    {
+      "text": "of the loop it's setting prior wealth",
+      "start": 654.0,
+      "duration": 2.56
+    },
+    {
+      "text": "equal to wealth",
+      "start": 655.519,
+      "duration": 2.721
+    },
+    {
+      "text": "so that means that the next time that",
+      "start": 656.56,
+      "duration": 3.6
+    },
+    {
+      "text": "this loop comes around",
+      "start": 658.24,
+      "duration": 3.52
+    },
+    {
+      "text": "it's going to be using the wealth from",
+      "start": 660.16,
+      "duration": 3.44
+    },
+    {
+      "text": "the last calculation",
+      "start": 661.76,
+      "duration": 4.24
+    },
+    {
+      "text": "as the prior wealth and keep going",
+      "start": 663.6,
+      "duration": 4.72
+    },
+    {
+      "text": "through always using the last value",
+      "start": 666.0,
+      "duration": 6.72
+    },
+    {
+      "text": "of wealth as prior wealth",
+      "start": 668.32,
+      "duration": 6.56
+    },
+    {
+      "text": "and we'll apply the same exact pattern",
+      "start": 672.72,
+      "duration": 3.119
+    },
+    {
+      "text": "when we go to",
+      "start": 674.88,
+      "duration": 2.959
+    },
+    {
+      "text": "build out the retirement portion of the",
+      "start": 675.839,
+      "duration": 3.44
+    },
+    {
+      "text": "model in the next",
+      "start": 677.839,
+      "duration": 4.961
+    },
+    {
+      "text": "video so thanks for listening and i'll",
+      "start": 679.279,
+      "duration": 8.56
+    },
+    {
+      "text": "see you next time",
+      "start": 682.8,
+      "duration": 5.039
+    }
+  ]
+}

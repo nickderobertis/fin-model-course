@@ -1,0 +1,949 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.96,
+      "duration": 2.24
+    },
+    {
+      "text": "nick durber is here teaching you",
+      "start": 3.76,
+      "duration": 3.84
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 5.2,
+      "duration": 2.96
+    },
+    {
+      "text": "to be",
+      "start": 7.6,
+      "duration": 3.119
+    },
+    {
+      "text": "solving the lab exercise on adding",
+      "start": 8.16,
+      "duration": 4.32
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 10.719,
+      "duration": 5.441
+    },
+    {
+      "text": "to the project one excel model",
+      "start": 12.48,
+      "duration": 6.639
+    },
+    {
+      "text": "so this is the lab exercise which is",
+      "start": 16.16,
+      "duration": 3.92
+    },
+    {
+      "text": "part of the",
+      "start": 19.119,
+      "duration": 3.361
+    },
+    {
+      "text": "exploring the parameter space lecture",
+      "start": 20.08,
+      "duration": 3.6
+    },
+    {
+      "text": "series",
+      "start": 22.48,
+      "duration": 4.08
+    },
+    {
+      "text": "which is located at the end of the excel",
+      "start": 23.68,
+      "duration": 3.759
+    },
+    {
+      "text": "section",
+      "start": 26.56,
+      "duration": 4.32
+    },
+    {
+      "text": "of the lecture so here we're going to",
+      "start": 27.439,
+      "duration": 5.12
+    },
+    {
+      "text": "take our existing excel model",
+      "start": 30.88,
+      "duration": 4.48
+    },
+    {
+      "text": "from project 1 and we want to see how",
+      "start": 32.559,
+      "duration": 4.241
+    },
+    {
+      "text": "the mpv changes",
+      "start": 35.36,
+      "duration": 3.519
+    },
+    {
+      "text": "when the number of machines and the",
+      "start": 36.8,
+      "duration": 3.2
+    },
+    {
+      "text": "initial demand",
+      "start": 38.879,
+      "duration": 3.52
+    },
+    {
+      "text": "change and so we're going to do a",
+      "start": 40.0,
+      "duration": 3.44
+    },
+    {
+      "text": "one-way data table",
+      "start": 42.399,
+      "duration": 3.84
+    },
+    {
+      "text": "for each of those and graph each of",
+      "start": 43.44,
+      "duration": 3.439
+    },
+    {
+      "text": "those",
+      "start": 46.239,
+      "duration": 2.16
+    },
+    {
+      "text": "and we're going to do a two-way data",
+      "start": 46.879,
+      "duration": 4.16
+    },
+    {
+      "text": "table as well",
+      "start": 48.399,
+      "duration": 4.64
+    },
+    {
+      "text": "with both at once adding conditional",
+      "start": 51.039,
+      "duration": 4.881
+    },
+    {
+      "text": "formatting on that",
+      "start": 53.039,
+      "duration": 5.68
+    },
+    {
+      "text": "so let's go ahead and jump over to the",
+      "start": 55.92,
+      "duration": 3.52
+    },
+    {
+      "text": "excel",
+      "start": 58.719,
+      "duration": 2.801
+    },
+    {
+      "text": "model and i'm going to go fairly quickly",
+      "start": 59.44,
+      "duration": 3.84
+    },
+    {
+      "text": "through this because",
+      "start": 61.52,
+      "duration": 3.84
+    },
+    {
+      "text": "we did cover the exact same process",
+      "start": 63.28,
+      "duration": 3.839
+    },
+    {
+      "text": "already in the lecture",
+      "start": 65.36,
+      "duration": 3.6
+    },
+    {
+      "text": "with the dynamics salary retirement",
+      "start": 67.119,
+      "duration": 4.241
+    },
+    {
+      "text": "model it's just different numbers here",
+      "start": 68.96,
+      "duration": 5.839
+    },
+    {
+      "text": "but same exact process so",
+      "start": 71.36,
+      "duration": 6.64
+    },
+    {
+      "text": "first we want to evaluate",
+      "start": 74.799,
+      "duration": 6.081
+    },
+    {
+      "text": "when the",
+      "start": 78.0,
+      "duration": 2.88
+    },
+    {
+      "text": "number of machines changes and so we're",
+      "start": 82.0,
+      "duration": 4.0
+    },
+    {
+      "text": "going to do a one-way data",
+      "start": 84.96,
+      "duration": 4.0
+    },
+    {
+      "text": "table and so we're going to reference",
+      "start": 86.0,
+      "duration": 3.6
+    },
+    {
+      "text": "the",
+      "start": 88.96,
+      "duration": 4.64
+    },
+    {
+      "text": "number of machines here um",
+      "start": 89.6,
+      "duration": 6.8
+    },
+    {
+      "text": "and we can look at one two three four",
+      "start": 93.6,
+      "duration": 4.559
+    },
+    {
+      "text": "and five machines",
+      "start": 96.4,
+      "duration": 4.32
+    },
+    {
+      "text": "and so then we're going to add the data",
+      "start": 98.159,
+      "duration": 3.521
+    },
+    {
+      "text": "table",
+      "start": 100.72,
+      "duration": 3.12
+    },
+    {
+      "text": "and we're going to do that as a column",
+      "start": 101.68,
+      "duration": 4.079
+    },
+    {
+      "text": "input cell because these are going in a",
+      "start": 103.84,
+      "duration": 2.48
+    },
+    {
+      "text": "column",
+      "start": 105.759,
+      "duration": 3.761
+    },
+    {
+      "text": "and click number of machines um",
+      "start": 106.32,
+      "duration": 5.839
+    },
+    {
+      "text": "and whoops i was supposed to reference",
+      "start": 109.52,
+      "duration": 3.599
+    },
+    {
+      "text": "uh the mvb",
+      "start": 112.159,
+      "duration": 4.721
+    },
+    {
+      "text": "here not the number of machines",
+      "start": 113.119,
+      "duration": 5.6
+    },
+    {
+      "text": "so mpv here at the top number of",
+      "start": 116.88,
+      "duration": 3.519
+    },
+    {
+      "text": "machines here",
+      "start": 118.719,
+      "duration": 4.72
+    },
+    {
+      "text": "and now we have the mpv coming here as",
+      "start": 120.399,
+      "duration": 4.08
+    },
+    {
+      "text": "well",
+      "start": 123.439,
+      "duration": 4.241
+    },
+    {
+      "text": "um and so we would want to add some",
+      "start": 124.479,
+      "duration": 5.84
+    },
+    {
+      "text": "formatting on it let's make it currency",
+      "start": 127.68,
+      "duration": 3.76
+    },
+    {
+      "text": "formatting",
+      "start": 130.319,
+      "duration": 5.201
+    },
+    {
+      "text": "we don't really need these decimals um",
+      "start": 131.44,
+      "duration": 7.68
+    },
+    {
+      "text": "and this is going to be number of",
+      "start": 135.52,
+      "duration": 5.359
+    },
+    {
+      "text": "machines",
+      "start": 139.12,
+      "duration": 4.72
+    },
+    {
+      "text": "versus mpv",
+      "start": 140.879,
+      "duration": 2.961
+    },
+    {
+      "text": "um so going to set that up there",
+      "start": 145.12,
+      "duration": 5.199
+    },
+    {
+      "text": "and you would want to add table",
+      "start": 148.56,
+      "duration": 3.759
+    },
+    {
+      "text": "formatting to this as well",
+      "start": 150.319,
+      "duration": 6.161
+    },
+    {
+      "text": "this is by machines",
+      "start": 152.319,
+      "duration": 8.0
+    },
+    {
+      "text": "and we're going to make this one white",
+      "start": 156.48,
+      "duration": 3.839
+    },
+    {
+      "text": "um and then we can go",
+      "start": 160.8,
+      "duration": 6.159
+    },
+    {
+      "text": "and do the same for our",
+      "start": 163.84,
+      "duration": 6.32
+    },
+    {
+      "text": "other input which is the initial demand",
+      "start": 166.959,
+      "duration": 6.961
+    },
+    {
+      "text": "so i'm gonna again reference the mpv",
+      "start": 170.16,
+      "duration": 7.12
+    },
+    {
+      "text": "here and then um",
+      "start": 173.92,
+      "duration": 7.12
+    },
+    {
+      "text": "i'm going to reference or sorry i'm",
+      "start": 177.28,
+      "duration": 4.4
+    },
+    {
+      "text": "going to",
+      "start": 181.04,
+      "duration": 2.559
+    },
+    {
+      "text": "write out the values for initial demand",
+      "start": 181.68,
+      "duration": 3.6
+    },
+    {
+      "text": "that i want to look at so the baseline",
+      "start": 183.599,
+      "duration": 2.241
+    },
+    {
+      "text": "is 50",
+      "start": 185.28,
+      "duration": 3.84
+    },
+    {
+      "text": "000 maybe i'll start with uh",
+      "start": 185.84,
+      "duration": 6.8
+    },
+    {
+      "text": "25 000 and then i'll go up to",
+      "start": 189.12,
+      "duration": 7.6
+    },
+    {
+      "text": "50 000 and",
+      "start": 192.64,
+      "duration": 4.08
+    },
+    {
+      "text": "look at those increments up to 200 000.",
+      "start": 196.8,
+      "duration": 7.28
+    },
+    {
+      "text": "so then again insert the data table uh",
+      "start": 200.879,
+      "duration": 5.28
+    },
+    {
+      "text": "column input cell because it's in a",
+      "start": 204.08,
+      "duration": 3.04
+    },
+    {
+      "text": "column",
+      "start": 206.159,
+      "duration": 3.36
+    },
+    {
+      "text": "that's going to be the initial demand",
+      "start": 207.12,
+      "duration": 3.92
+    },
+    {
+      "text": "and now we get the mpv",
+      "start": 209.519,
+      "duration": 4.481
+    },
+    {
+      "text": "values there we can then apply",
+      "start": 211.04,
+      "duration": 5.919
+    },
+    {
+      "text": "formatting to them",
+      "start": 214.0,
+      "duration": 2.959
+    },
+    {
+      "text": "and add our label here",
+      "start": 217.599,
+      "duration": 8.72
+    },
+    {
+      "text": "as well this would be initial demand",
+      "start": 221.28,
+      "duration": 8.319
+    },
+    {
+      "text": "reverse mpv uh go and",
+      "start": 226.319,
+      "duration": 7.521
+    },
+    {
+      "text": "hide this cell and this is demand",
+      "start": 229.599,
+      "duration": 7.121
+    },
+    {
+      "text": "and so now we can create the graphs of",
+      "start": 233.84,
+      "duration": 3.84
+    },
+    {
+      "text": "each of those",
+      "start": 236.72,
+      "duration": 4.159
+    },
+    {
+      "text": "so let's highlight these data",
+      "start": 237.68,
+      "duration": 6.72
+    },
+    {
+      "text": "and we can insert recommended chart",
+      "start": 240.879,
+      "duration": 7.121
+    },
+    {
+      "text": "let's do line chart and make this a",
+      "start": 244.4,
+      "duration": 6.24
+    },
+    {
+      "text": "little smaller",
+      "start": 248.0,
+      "duration": 2.64
+    },
+    {
+      "text": "so this is going to be again the same",
+      "start": 253.36,
+      "duration": 7.68
+    },
+    {
+      "text": "number of machines versus mpv",
+      "start": 257.28,
+      "duration": 3.76
+    },
+    {
+      "text": "um and it would be good to put the axis",
+      "start": 261.359,
+      "duration": 3.361
+    },
+    {
+      "text": "labels",
+      "start": 264.08,
+      "duration": 3.92
+    },
+    {
+      "text": "on here as well so this is going to be",
+      "start": 264.72,
+      "duration": 9.039
+    },
+    {
+      "text": "machines and this is going to be the mpv",
+      "start": 268.0,
+      "duration": 5.759
+    },
+    {
+      "text": "and then we can see very clearly that",
+      "start": 274.8,
+      "duration": 3.44
+    },
+    {
+      "text": "the npv increases with additional",
+      "start": 276.479,
+      "duration": 3.761
+    },
+    {
+      "text": "machines but that drops off quickly",
+      "start": 278.24,
+      "duration": 5.519
+    },
+    {
+      "text": "as you add more machines and let's do",
+      "start": 280.24,
+      "duration": 4.399
+    },
+    {
+      "text": "the same thing",
+      "start": 283.759,
+      "duration": 4.321
+    },
+    {
+      "text": "with the demand insert recommended chart",
+      "start": 284.639,
+      "duration": 7.601
+    },
+    {
+      "text": "um let's stick with the line here",
+      "start": 288.08,
+      "duration": 6.8
+    },
+    {
+      "text": "and we can see that increasing demand",
+      "start": 292.24,
+      "duration": 3.92
+    },
+    {
+      "text": "also increases the",
+      "start": 294.88,
+      "duration": 4.319
+    },
+    {
+      "text": "mpv but it doesn't seem to have nearly",
+      "start": 296.16,
+      "duration": 4.879
+    },
+    {
+      "text": "as big of an effect",
+      "start": 299.199,
+      "duration": 5.041
+    },
+    {
+      "text": "or it has a much more linear effect than",
+      "start": 301.039,
+      "duration": 6.561
+    },
+    {
+      "text": "the number of machines",
+      "start": 304.24,
+      "duration": 7.44
+    },
+    {
+      "text": "um so this one is initial demand versus",
+      "start": 307.6,
+      "duration": 6.56
+    },
+    {
+      "text": "mpv",
+      "start": 311.68,
+      "duration": 2.48
+    },
+    {
+      "text": "um and we're going to add the access",
+      "start": 314.32,
+      "duration": 3.04
+    },
+    {
+      "text": "titles",
+      "start": 316.639,
+      "duration": 3.921
+    },
+    {
+      "text": "on here as well um",
+      "start": 317.36,
+      "duration": 6.88
+    },
+    {
+      "text": "with the demand versus the",
+      "start": 320.56,
+      "duration": 7.68
+    },
+    {
+      "text": "mpv i make this a little wider because",
+      "start": 324.24,
+      "duration": 5.2
+    },
+    {
+      "text": "the numbers are kind of",
+      "start": 328.24,
+      "duration": 2.88
+    },
+    {
+      "text": "falling on each other there we go that's",
+      "start": 329.44,
+      "duration": 3.92
+    },
+    {
+      "text": "clear",
+      "start": 331.12,
+      "duration": 4.96
+    },
+    {
+      "text": "um and now we can go to do our two-way",
+      "start": 333.36,
+      "duration": 3.92
+    },
+    {
+      "text": "data table",
+      "start": 336.08,
+      "duration": 5.04
+    },
+    {
+      "text": "so can reference again the mpv",
+      "start": 337.28,
+      "duration": 5.359
+    },
+    {
+      "text": "[Music]",
+      "start": 341.12,
+      "duration": 4.48
+    },
+    {
+      "text": "and then we can get the number of",
+      "start": 342.639,
+      "duration": 3.601
+    },
+    {
+      "text": "machines",
+      "start": 345.6,
+      "duration": 4.159
+    },
+    {
+      "text": "going down the row uh demand",
+      "start": 346.24,
+      "duration": 7.12
+    },
+    {
+      "text": "can let's see pace transpose that",
+      "start": 349.759,
+      "duration": 7.681
+    },
+    {
+      "text": "to get the uh to get it going in a row",
+      "start": 353.36,
+      "duration": 7.44
+    },
+    {
+      "text": "the demands um and now i can",
+      "start": 357.44,
+      "duration": 5.599
+    },
+    {
+      "text": "or sorry this needs to go all needs to",
+      "start": 360.8,
+      "duration": 3.679
+    },
+    {
+      "text": "go down one",
+      "start": 363.039,
+      "duration": 4.88
+    },
+    {
+      "text": "uh so that the mpv is in the corner cell",
+      "start": 364.479,
+      "duration": 5.681
+    },
+    {
+      "text": "and then you can highlight all this add",
+      "start": 367.919,
+      "duration": 3.601
+    },
+    {
+      "text": "the data table",
+      "start": 370.16,
+      "duration": 4.479
+    },
+    {
+      "text": "the row input cell is going to be the",
+      "start": 371.52,
+      "duration": 5.04
+    },
+    {
+      "text": "initial demand the column input cell",
+      "start": 374.639,
+      "duration": 5.201
+    },
+    {
+      "text": "is going to be the number of machines uh",
+      "start": 376.56,
+      "duration": 4.16
+    },
+    {
+      "text": "hit okay",
+      "start": 379.84,
+      "duration": 4.079
+    },
+    {
+      "text": "it does that calculation we can then add",
+      "start": 380.72,
+      "duration": 6.56
+    },
+    {
+      "text": "formatting on all these numbers um",
+      "start": 383.919,
+      "duration": 5.761
+    },
+    {
+      "text": "so going over to currency formatting",
+      "start": 387.28,
+      "duration": 4.479
+    },
+    {
+      "text": "taking off those decimal places",
+      "start": 389.68,
+      "duration": 4.56
+    },
+    {
+      "text": "uh wait demand is not a currency i can",
+      "start": 391.759,
+      "duration": 3.28
+    },
+    {
+      "text": "go back to",
+      "start": 394.24,
+      "duration": 4.079
+    },
+    {
+      "text": "general um",
+      "start": 395.039,
+      "duration": 5.681
+    },
+    {
+      "text": "and so now we have the mpv across all",
+      "start": 398.319,
+      "duration": 4.32
+    },
+    {
+      "text": "these different combinations of demand",
+      "start": 400.72,
+      "duration": 3.52
+    },
+    {
+      "text": "and number of machines",
+      "start": 402.639,
+      "duration": 3.441
+    },
+    {
+      "text": "now we can add the conditional",
+      "start": 404.24,
+      "duration": 4.64
+    },
+    {
+      "text": "formatting here on the home tab",
+      "start": 406.08,
+      "duration": 5.119
+    },
+    {
+      "text": "and higher mpv is good so that first",
+      "start": 408.88,
+      "duration": 4.56
+    },
+    {
+      "text": "color scale is going to be correct",
+      "start": 411.199,
+      "duration": 3.681
+    },
+    {
+      "text": "and of course when you have the highest",
+      "start": 413.44,
+      "duration": 3.36
+    },
+    {
+      "text": "number of machines and the most demand",
+      "start": 414.88,
+      "duration": 2.96
+    },
+    {
+      "text": "you have the highest",
+      "start": 416.8,
+      "duration": 5.6
+    },
+    {
+      "text": "mpv and we can see that um",
+      "start": 417.84,
+      "duration": 6.32
+    },
+    {
+      "text": "when the demand is really low increasing",
+      "start": 422.4,
+      "duration": 3.44
+    },
+    {
+      "text": "the number of machines does not help you",
+      "start": 424.16,
+      "duration": 3.2
+    },
+    {
+      "text": "you need to have kind of both things",
+      "start": 425.84,
+      "duration": 2.799
+    },
+    {
+      "text": "going together",
+      "start": 427.36,
+      "duration": 3.119
+    },
+    {
+      "text": "for it to make sense to scale up the",
+      "start": 428.639,
+      "duration": 4.721
+    },
+    {
+      "text": "number of machines",
+      "start": 430.479,
+      "duration": 2.881
+    },
+    {
+      "text": "so you know then you would just want to",
+      "start": 433.52,
+      "duration": 4.079
+    },
+    {
+      "text": "add some additional formatting on here",
+      "start": 435.28,
+      "duration": 6.56
+    },
+    {
+      "text": "add you know a header for this",
+      "start": 437.599,
+      "duration": 6.641
+    },
+    {
+      "text": "column row labels just like the",
+      "start": 441.84,
+      "duration": 4.4
+    },
+    {
+      "text": "completed example that you can find on",
+      "start": 444.24,
+      "duration": 3.2
+    },
+    {
+      "text": "the course site",
+      "start": 446.24,
+      "duration": 3.359
+    },
+    {
+      "text": "or adding sensitivity analysis to the",
+      "start": 447.44,
+      "duration": 4.0
+    },
+    {
+      "text": "dynamic salary retirement",
+      "start": 449.599,
+      "duration": 4.16
+    },
+    {
+      "text": "model i'm just going to skip that here",
+      "start": 451.44,
+      "duration": 3.12
+    },
+    {
+      "text": "in the interest",
+      "start": 453.759,
+      "duration": 3.521
+    },
+    {
+      "text": "of time but that's those formatting is",
+      "start": 454.56,
+      "duration": 4.079
+    },
+    {
+      "text": "definitely something that you should",
+      "start": 457.28,
+      "duration": 4.72
+    },
+    {
+      "text": "have on here as well",
+      "start": 458.639,
+      "duration": 6.161
+    },
+    {
+      "text": "so that wraps up this lab exercise so",
+      "start": 462.0,
+      "duration": 3.84
+    },
+    {
+      "text": "thanks for listening",
+      "start": 464.8,
+      "duration": 6.16
+    },
+    {
+      "text": "and see you next time",
+      "start": 465.84,
+      "duration": 5.12
+    }
+  ]
+}

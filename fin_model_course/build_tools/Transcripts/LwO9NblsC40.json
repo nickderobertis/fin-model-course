@@ -1,0 +1,674 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.72,
+      "duration": 2.16
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 3.439,
+      "duration": 3.44
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 4.88,
+      "duration": 3.92
+    },
+    {
+      "text": "we're going to be going over the lab",
+      "start": 6.879,
+      "duration": 3.601
+    },
+    {
+      "text": "exercise solutions",
+      "start": 8.8,
+      "duration": 4.719
+    },
+    {
+      "text": "for styling pandas data frames as part",
+      "start": 10.48,
+      "duration": 3.84
+    },
+    {
+      "text": "of the",
+      "start": 13.519,
+      "duration": 3.361
+    },
+    {
+      "text": "series on understanding complex results",
+      "start": 14.32,
+      "duration": 3.2
+    },
+    {
+      "text": "using",
+      "start": 16.88,
+      "duration": 3.68
+    },
+    {
+      "text": "visualization so",
+      "start": 17.52,
+      "duration": 6.24
+    },
+    {
+      "text": "we have been working from the last lab",
+      "start": 20.56,
+      "duration": 6.16
+    },
+    {
+      "text": "exercises in the jupiter notebook",
+      "start": 23.76,
+      "duration": 4.24
+    },
+    {
+      "text": "appendice and",
+      "start": 26.72,
+      "duration": 3.44
+    },
+    {
+      "text": "visualization lab exercises so we",
+      "start": 28.0,
+      "duration": 3.92
+    },
+    {
+      "text": "already completed the first part of this",
+      "start": 30.16,
+      "duration": 3.04
+    },
+    {
+      "text": "and already have",
+      "start": 31.92,
+      "duration": 3.52
+    },
+    {
+      "text": "the data frames and everything defined",
+      "start": 33.2,
+      "duration": 3.84
+    },
+    {
+      "text": "from that",
+      "start": 35.44,
+      "duration": 4.72
+    },
+    {
+      "text": "now we're coming to the pandas styling",
+      "start": 37.04,
+      "duration": 6.0
+    },
+    {
+      "text": "section of the lab exercises so that",
+      "start": 40.16,
+      "duration": 4.32
+    },
+    {
+      "text": "works off of that",
+      "start": 43.04,
+      "duration": 3.199
+    },
+    {
+      "text": "existing data frame which you have",
+      "start": 44.48,
+      "duration": 4.239
+    },
+    {
+      "text": "created this data frame with the",
+      "start": 46.239,
+      "duration": 6.0
+    },
+    {
+      "text": "item price revenue and quantity",
+      "start": 48.719,
+      "duration": 5.201
+    },
+    {
+      "text": "so the first thing that we want to do",
+      "start": 52.239,
+      "duration": 3.121
+    },
+    {
+      "text": "here um",
+      "start": 53.92,
+      "duration": 6.0
+    },
+    {
+      "text": "is to um highlight the minimum value in",
+      "start": 55.36,
+      "duration": 6.32
+    },
+    {
+      "text": "each of the columns",
+      "start": 59.92,
+      "duration": 5.12
+    },
+    {
+      "text": "so all this styling stuff",
+      "start": 61.68,
+      "duration": 8.0
+    },
+    {
+      "text": "is going to be off of the df.style",
+      "start": 65.04,
+      "duration": 8.079
+    },
+    {
+      "text": "and we want to here",
+      "start": 69.68,
+      "duration": 6.72
+    },
+    {
+      "text": "highlight the minimum values",
+      "start": 73.119,
+      "duration": 6.32
+    },
+    {
+      "text": "and the data frame so thankfully pandas",
+      "start": 76.4,
+      "duration": 5.359
+    },
+    {
+      "text": "has that shortcut there for us that",
+      "start": 79.439,
+      "duration": 4.481
+    },
+    {
+      "text": "makes it very easy to do that",
+      "start": 81.759,
+      "duration": 4.881
+    },
+    {
+      "text": "uh with the highlight min command so",
+      "start": 83.92,
+      "duration": 4.0
+    },
+    {
+      "text": "then we can see",
+      "start": 86.64,
+      "duration": 3.439
+    },
+    {
+      "text": "the lowest price lowest quantity and",
+      "start": 87.92,
+      "duration": 3.68
+    },
+    {
+      "text": "lowest revenue are all now",
+      "start": 90.079,
+      "duration": 4.72
+    },
+    {
+      "text": "highlighted um",
+      "start": 91.6,
+      "duration": 6.24
+    },
+    {
+      "text": "so next we want to uh give a new",
+      "start": 94.799,
+      "duration": 4.881
+    },
+    {
+      "text": "background color and text color",
+      "start": 97.84,
+      "duration": 4.8
+    },
+    {
+      "text": "to our data frame so we learned about",
+      "start": 99.68,
+      "duration": 4.0
+    },
+    {
+      "text": "how",
+      "start": 102.64,
+      "duration": 4.64
+    },
+    {
+      "text": "we want to first create a function",
+      "start": 103.68,
+      "duration": 5.6
+    },
+    {
+      "text": "which is going to return the style for",
+      "start": 107.28,
+      "duration": 3.519
+    },
+    {
+      "text": "an individual cell",
+      "start": 109.28,
+      "duration": 3.839
+    },
+    {
+      "text": "and then we want to apply that across",
+      "start": 110.799,
+      "duration": 4.401
+    },
+    {
+      "text": "all the cells in the data frame",
+      "start": 113.119,
+      "duration": 5.521
+    },
+    {
+      "text": "so we want to define our",
+      "start": 115.2,
+      "duration": 7.12
+    },
+    {
+      "text": "um let's say we're going to make the",
+      "start": 118.64,
+      "duration": 6.799
+    },
+    {
+      "text": "um the foreground",
+      "start": 122.32,
+      "duration": 6.24
+    },
+    {
+      "text": "the the text is going to be white and",
+      "start": 125.439,
+      "duration": 3.6
+    },
+    {
+      "text": "the",
+      "start": 128.56,
+      "duration": 3.759
+    },
+    {
+      "text": "background is going to be blue uh so we",
+      "start": 129.039,
+      "duration": 3.761
+    },
+    {
+      "text": "can",
+      "start": 132.319,
+      "duration": 4.241
+    },
+    {
+      "text": "call our function uh white text",
+      "start": 132.8,
+      "duration": 6.88
+    },
+    {
+      "text": "uh blue bg how about that",
+      "start": 136.56,
+      "duration": 6.399
+    },
+    {
+      "text": "uh it takes a value",
+      "start": 139.68,
+      "duration": 6.8
+    },
+    {
+      "text": "and it's going to return uh",
+      "start": 142.959,
+      "duration": 6.161
+    },
+    {
+      "text": "for all the different cells it's going",
+      "start": 146.48,
+      "duration": 4.0
+    },
+    {
+      "text": "to return",
+      "start": 149.12,
+      "duration": 4.64
+    },
+    {
+      "text": "uh that the color should be",
+      "start": 150.48,
+      "duration": 6.96
+    },
+    {
+      "text": "white semicolon background",
+      "start": 153.76,
+      "duration": 8.96
+    },
+    {
+      "text": "color should be blue",
+      "start": 157.44,
+      "duration": 5.28
+    },
+    {
+      "text": "and then we're going to do our",
+      "start": 162.8,
+      "duration": 4.64
+    },
+    {
+      "text": "df.style.applymap",
+      "start": 165.56,
+      "duration": 5.64
+    },
+    {
+      "text": "of this function making sure that you",
+      "start": 167.44,
+      "duration": 5.12
+    },
+    {
+      "text": "put just the function",
+      "start": 171.2,
+      "duration": 3.52
+    },
+    {
+      "text": "we're not calling it here just the name",
+      "start": 172.56,
+      "duration": 3.52
+    },
+    {
+      "text": "of the function we're passing the",
+      "start": 174.72,
+      "duration": 3.2
+    },
+    {
+      "text": "function itself",
+      "start": 176.08,
+      "duration": 4.159
+    },
+    {
+      "text": "and then we'll see that that then gets",
+      "start": 177.92,
+      "duration": 4.319
+    },
+    {
+      "text": "applied to the data frame now we've got",
+      "start": 180.239,
+      "duration": 2.881
+    },
+    {
+      "text": "blue background",
+      "start": 182.239,
+      "duration": 4.0
+    },
+    {
+      "text": "and white text",
+      "start": 183.12,
+      "duration": 3.119
+    },
+    {
+      "text": "so then coming to exercise three we want",
+      "start": 187.36,
+      "duration": 4.239
+    },
+    {
+      "text": "to highlight any values which",
+      "start": 189.92,
+      "duration": 4.959
+    },
+    {
+      "text": "are less than or equal to five",
+      "start": 191.599,
+      "duration": 7.28
+    },
+    {
+      "text": "so we want to highlight only in some",
+      "start": 194.879,
+      "duration": 5.761
+    },
+    {
+      "text": "cases so this is a conditional",
+      "start": 198.879,
+      "duration": 4.08
+    },
+    {
+      "text": "formatting problem",
+      "start": 200.64,
+      "duration": 5.519
+    },
+    {
+      "text": "so we need to again just like we did",
+      "start": 202.959,
+      "duration": 3.681
+    },
+    {
+      "text": "here",
+      "start": 206.159,
+      "duration": 2.72
+    },
+    {
+      "text": "write a function which is going to",
+      "start": 206.64,
+      "duration": 3.44
+    },
+    {
+      "text": "return the style",
+      "start": 208.879,
+      "duration": 4.64
+    },
+    {
+      "text": "let's call this highlight uh",
+      "start": 210.08,
+      "duration": 7.12
+    },
+    {
+      "text": "lt5 less than five it's going to take",
+      "start": 213.519,
+      "duration": 5.681
+    },
+    {
+      "text": "the cell value",
+      "start": 217.2,
+      "duration": 5.039
+    },
+    {
+      "text": "and it's going to uh",
+      "start": 219.2,
+      "duration": 6.24
+    },
+    {
+      "text": "check if the value is",
+      "start": 222.239,
+      "duration": 6.161
+    },
+    {
+      "text": "less than or equal to five then we want",
+      "start": 225.44,
+      "duration": 4.799
+    },
+    {
+      "text": "to return",
+      "start": 228.4,
+      "duration": 4.479
+    },
+    {
+      "text": "uh we wanted to highlight it so we can",
+      "start": 230.239,
+      "duration": 4.321
+    },
+    {
+      "text": "do background color",
+      "start": 232.879,
+      "duration": 5.521
+    },
+    {
+      "text": "yellow um otherwise we don't want to",
+      "start": 234.56,
+      "duration": 6.959
+    },
+    {
+      "text": "return any style",
+      "start": 238.4,
+      "duration": 5.52
+    },
+    {
+      "text": "we can see this is not going to work",
+      "start": 241.519,
+      "duration": 5.44
+    },
+    {
+      "text": "appropriately right away",
+      "start": 243.92,
+      "duration": 5.36
+    },
+    {
+      "text": "so we're going to apply the highlight",
+      "start": 246.959,
+      "duration": 3.28
+    },
+    {
+      "text": "lt5",
+      "start": 249.28,
+      "duration": 2.72
+    },
+    {
+      "text": "and it's going to give us an error",
+      "start": 250.239,
+      "duration": 3.841
+    },
+    {
+      "text": "because we can't compare",
+      "start": 252.0,
+      "duration": 4.799
+    },
+    {
+      "text": "a string to an integer with less than or",
+      "start": 254.08,
+      "duration": 3.6
+    },
+    {
+      "text": "equal to",
+      "start": 256.799,
+      "duration": 3.12
+    },
+    {
+      "text": "uh we have this apple banana and pair",
+      "start": 257.68,
+      "duration": 3.36
+    },
+    {
+      "text": "coming in",
+      "start": 259.919,
+      "duration": 3.041
+    },
+    {
+      "text": "trying to compare that to five and that",
+      "start": 261.04,
+      "duration": 3.599
+    },
+    {
+      "text": "is not going to work",
+      "start": 262.96,
+      "duration": 5.76
+    },
+    {
+      "text": "so if the value that we're getting",
+      "start": 264.639,
+      "duration": 6.961
+    },
+    {
+      "text": "is a string then we don't want to do any",
+      "start": 268.72,
+      "duration": 3.84
+    },
+    {
+      "text": "formatting",
+      "start": 271.6,
+      "duration": 4.08
+    },
+    {
+      "text": "otherwise continue on and highlight",
+      "start": 272.56,
+      "duration": 6.639
+    },
+    {
+      "text": "if the value is less than five so now",
+      "start": 275.68,
+      "duration": 5.76
+    },
+    {
+      "text": "this is working appropriately to do the",
+      "start": 279.199,
+      "duration": 3.681
+    },
+    {
+      "text": "conditional formatting",
+      "start": 281.44,
+      "duration": 6.08
+    },
+    {
+      "text": "whenever the value is less than five",
+      "start": 282.88,
+      "duration": 4.64
+    },
+    {
+      "text": "next we want to create like light green",
+      "start": 291.28,
+      "duration": 5.44
+    },
+    {
+      "text": "bar graphs inside the quantity column",
+      "start": 294.24,
+      "duration": 5.92
+    },
+    {
+      "text": "only so we saw before",
+      "start": 296.72,
+      "duration": 6.96
+    },
+    {
+      "text": "that df.style.bar is going to add these",
+      "start": 300.16,
+      "duration": 4.64
+    },
+    {
+      "text": "bars",
+      "start": 303.68,
+      "duration": 3.359
+    },
+    {
+      "text": "but we only want it to apply to the",
+      "start": 304.8,
+      "duration": 3.04
+    },
+    {
+      "text": "quantity",
+      "start": 307.039,
+      "duration": 4.481
+    },
+    {
+      "text": "column and we want the color",
+      "start": 307.84,
+      "duration": 8.24
+    },
+    {
+      "text": "of that to be light green",
+      "start": 311.52,
+      "duration": 4.56
+    },
+    {
+      "text": "so that's the fourth exercise",
+      "start": 317.52,
+      "duration": 7.44
+    },
+    {
+      "text": "so that wraps up the uh",
+      "start": 321.6,
+      "duration": 6.319
+    },
+    {
+      "text": "exercises on styling pandas data frames",
+      "start": 324.96,
+      "duration": 3.679
+    },
+    {
+      "text": "we'll come back",
+      "start": 327.919,
+      "duration": 4.401
+    },
+    {
+      "text": "next time to solve the exercises",
+      "start": 328.639,
+      "duration": 6.881
+    },
+    {
+      "text": "on graphing with pandas data frames so",
+      "start": 332.32,
+      "duration": 4.24
+    },
+    {
+      "text": "thanks for listening",
+      "start": 335.52,
+      "duration": 4.32
+    },
+    {
+      "text": "and see you next time",
+      "start": 336.56,
+      "duration": 3.28
+    }
+  ]
+}

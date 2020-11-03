@@ -1,0 +1,764 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.6,
+      "duration": 2.239
+    },
+    {
+      "text": "nick dear birds here teaching you",
+      "start": 4.4,
+      "duration": 3.439
+    },
+    {
+      "text": "financial modeling today",
+      "start": 5.839,
+      "duration": 4.321
+    },
+    {
+      "text": "we're going to be doing an introduction",
+      "start": 7.839,
+      "duration": 3.84
+    },
+    {
+      "text": "on randomness",
+      "start": 10.16,
+      "duration": 4.32
+    },
+    {
+      "text": "in python it's part of our lecture",
+      "start": 11.679,
+      "duration": 4.641
+    },
+    {
+      "text": "series on probabilistic",
+      "start": 14.48,
+      "duration": 5.28
+    },
+    {
+      "text": "modeling so last time",
+      "start": 16.32,
+      "duration": 5.28
+    },
+    {
+      "text": "we had already covered the intro to",
+      "start": 19.76,
+      "duration": 3.439
+    },
+    {
+      "text": "internal randomness and then we looked",
+      "start": 21.6,
+      "duration": 2.32
+    },
+    {
+      "text": "at",
+      "start": 23.199,
+      "duration": 5.041
+    },
+    {
+      "text": "how to implement that in excel as well",
+      "start": 23.92,
+      "duration": 6.8
+    },
+    {
+      "text": "and now we're coming to the python side",
+      "start": 28.24,
+      "duration": 5.2
+    },
+    {
+      "text": "of the implementation",
+      "start": 30.72,
+      "duration": 5.839
+    },
+    {
+      "text": "so in python we",
+      "start": 33.44,
+      "duration": 6.32
+    },
+    {
+      "text": "have a built-in module so this module",
+      "start": 36.559,
+      "duration": 6.801
+    },
+    {
+      "text": "our package is built into every python",
+      "start": 39.76,
+      "duration": 4.479
+    },
+    {
+      "text": "installation",
+      "start": 43.36,
+      "duration": 2.879
+    },
+    {
+      "text": "you do have to import it but it's there",
+      "start": 44.239,
+      "duration": 3.121
+    },
+    {
+      "text": "with every python",
+      "start": 46.239,
+      "duration": 3.281
+    },
+    {
+      "text": "and it's the random module and the",
+      "start": 47.36,
+      "duration": 3.679
+    },
+    {
+      "text": "random module",
+      "start": 49.52,
+      "duration": 4.0
+    },
+    {
+      "text": "gives us pretty much everything that we",
+      "start": 51.039,
+      "duration": 3.36
+    },
+    {
+      "text": "would want",
+      "start": 53.52,
+      "duration": 5.12
+    },
+    {
+      "text": "for generating random numbers",
+      "start": 54.399,
+      "duration": 7.201
+    },
+    {
+      "text": "we'll also look at numpy has its own",
+      "start": 58.64,
+      "duration": 3.919
+    },
+    {
+      "text": "random",
+      "start": 61.6,
+      "duration": 4.08
+    },
+    {
+      "text": "module which is able to do all the same",
+      "start": 62.559,
+      "duration": 4.001
+    },
+    {
+      "text": "things but",
+      "start": 65.68,
+      "duration": 3.04
+    },
+    {
+      "text": "produce entire arrays of random numbers",
+      "start": 66.56,
+      "duration": 3.84
+    },
+    {
+      "text": "rather than",
+      "start": 68.72,
+      "duration": 4.24
+    },
+    {
+      "text": "just one random number at a time but",
+      "start": 70.4,
+      "duration": 3.2
+    },
+    {
+      "text": "primarily",
+      "start": 72.96,
+      "duration": 1.76
+    },
+    {
+      "text": "we're gonna be looking at using the",
+      "start": 73.6,
+      "duration": 3.839
+    },
+    {
+      "text": "random module",
+      "start": 74.72,
+      "duration": 2.719
+    },
+    {
+      "text": "so we have functions in that module",
+      "start": 77.52,
+      "duration": 5.04
+    },
+    {
+      "text": "which work just like the ones we've",
+      "start": 80.799,
+      "duration": 3.921
+    },
+    {
+      "text": "already covered in excel",
+      "start": 82.56,
+      "duration": 5.28
+    },
+    {
+      "text": "um so we have",
+      "start": 84.72,
+      "duration": 3.12
+    },
+    {
+      "text": "random.random",
+      "start": 88.36,
+      "duration": 4.799
+    },
+    {
+      "text": "is just like the rand function",
+      "start": 90.88,
+      "duration": 3.84
+    },
+    {
+      "text": "random.uniform",
+      "start": 93.159,
+      "duration": 5.401
+    },
+    {
+      "text": "allows you to get a random number",
+      "start": 94.72,
+      "duration": 7.439
+    },
+    {
+      "text": "in any range and there's also a rand int",
+      "start": 98.56,
+      "duration": 6.0
+    },
+    {
+      "text": "which allows you to pick just integers",
+      "start": 102.159,
+      "duration": 3.6
+    },
+    {
+      "text": "in that particular",
+      "start": 104.56,
+      "duration": 4.72
+    },
+    {
+      "text": "range and then",
+      "start": 105.759,
+      "duration": 5.921
+    },
+    {
+      "text": "uh where it starts to get a lot nicer",
+      "start": 109.28,
+      "duration": 3.839
+    },
+    {
+      "text": "than working excel",
+      "start": 111.68,
+      "duration": 4.64
+    },
+    {
+      "text": "is for the normal distribution and",
+      "start": 113.119,
+      "duration": 5.28
+    },
+    {
+      "text": "for quite a few other distributions as",
+      "start": 116.32,
+      "duration": 4.0
+    },
+    {
+      "text": "well we have functions which",
+      "start": 118.399,
+      "duration": 4.481
+    },
+    {
+      "text": "directly generate random numbers from",
+      "start": 120.32,
+      "duration": 4.24
+    },
+    {
+      "text": "those distributions",
+      "start": 122.88,
+      "duration": 3.919
+    },
+    {
+      "text": "so random.normal variant we just give it",
+      "start": 124.56,
+      "duration": 4.16
+    },
+    {
+      "text": "the mean and the standard deviation",
+      "start": 126.799,
+      "duration": 3.761
+    },
+    {
+      "text": "and it draws a random number from a",
+      "start": 128.72,
+      "duration": 3.36
+    },
+    {
+      "text": "normal distribution with those",
+      "start": 130.56,
+      "duration": 2.399
+    },
+    {
+      "text": "parameters",
+      "start": 132.08,
+      "duration": 4.08
+    },
+    {
+      "text": "nice and simple and straightforward and",
+      "start": 132.959,
+      "duration": 5.121
+    },
+    {
+      "text": "you'll find this kind of syntax",
+      "start": 136.16,
+      "duration": 2.799
+    },
+    {
+      "text": "typically for",
+      "start": 138.08,
+      "duration": 3.84
+    },
+    {
+      "text": "every type of randomness that you would",
+      "start": 138.959,
+      "duration": 5.841
+    },
+    {
+      "text": "want to do in python",
+      "start": 141.92,
+      "duration": 5.12
+    },
+    {
+      "text": "so let's look at a quick example of how",
+      "start": 144.8,
+      "duration": 3.439
+    },
+    {
+      "text": "we can generate",
+      "start": 147.04,
+      "duration": 4.32
+    },
+    {
+      "text": "continuous random numbers in python",
+      "start": 148.239,
+      "duration": 6.321
+    },
+    {
+      "text": "and this uh jupiter notebook is on",
+      "start": 151.36,
+      "duration": 6.72
+    },
+    {
+      "text": "the course site as well",
+      "start": 154.56,
+      "duration": 3.52
+    },
+    {
+      "text": "so we're starting here",
+      "start": 158.4,
+      "duration": 6.08
+    },
+    {
+      "text": "with generating a single continuous",
+      "start": 162.08,
+      "duration": 5.04
+    },
+    {
+      "text": "random number",
+      "start": 164.48,
+      "duration": 2.64
+    },
+    {
+      "text": "and using the random module so we can",
+      "start": 167.28,
+      "duration": 4.319
+    },
+    {
+      "text": "specify a mean",
+      "start": 170.0,
+      "duration": 4.8
+    },
+    {
+      "text": "specify a standard deviation",
+      "start": 171.599,
+      "duration": 6.961
+    },
+    {
+      "text": "and with that we can generate random",
+      "start": 174.8,
+      "duration": 5.04
+    },
+    {
+      "text": "random numbers from a normal",
+      "start": 178.56,
+      "duration": 4.0
+    },
+    {
+      "text": "distribution right away",
+      "start": 179.84,
+      "duration": 6.96
+    },
+    {
+      "text": "we can also uh do the",
+      "start": 182.56,
+      "duration": 5.68
+    },
+    {
+      "text": "the random function",
+      "start": 186.8,
+      "duration": 3.12
+    },
+    {
+      "text": "[Music]",
+      "start": 188.24,
+      "duration": 3.84
+    },
+    {
+      "text": "which just gets us you know just like",
+      "start": 189.92,
+      "duration": 5.039
+    },
+    {
+      "text": "rand and excel",
+      "start": 192.08,
+      "duration": 6.799
+    },
+    {
+      "text": "we can do that random.uniform",
+      "start": 194.959,
+      "duration": 8.801
+    },
+    {
+      "text": "to give us random numbers in some range",
+      "start": 198.879,
+      "duration": 8.08
+    },
+    {
+      "text": "and we have random.rand in",
+      "start": 203.76,
+      "duration": 6.16
+    },
+    {
+      "text": "which is able to get us random integers",
+      "start": 206.959,
+      "duration": 5.041
+    },
+    {
+      "text": "in some range so that's analogous to",
+      "start": 209.92,
+      "duration": 5.44
+    },
+    {
+      "text": "the random between function in excel",
+      "start": 212.0,
+      "duration": 6.4
+    },
+    {
+      "text": "um so we have those and we have plenty",
+      "start": 215.36,
+      "duration": 5.68
+    },
+    {
+      "text": "of other functions here available in the",
+      "start": 218.4,
+      "duration": 4.16
+    },
+    {
+      "text": "random module",
+      "start": 221.04,
+      "duration": 4.8
+    },
+    {
+      "text": "uh you know gamma variant we gamma",
+      "start": 222.56,
+      "duration": 5.759
+    },
+    {
+      "text": "distribution log normal distribution",
+      "start": 225.84,
+      "duration": 5.52
+    },
+    {
+      "text": "uh pareto distribution whatever uh",
+      "start": 228.319,
+      "duration": 4.56
+    },
+    {
+      "text": "you know the common distributions that",
+      "start": 231.36,
+      "duration": 4.239
+    },
+    {
+      "text": "you would expect to see are all here",
+      "start": 232.879,
+      "duration": 6.161
+    },
+    {
+      "text": "um and so it's really nice to have",
+      "start": 235.599,
+      "duration": 7.84
+    },
+    {
+      "text": "all of that just there out of the box",
+      "start": 239.04,
+      "duration": 4.399
+    },
+    {
+      "text": "and then if we want to generate multiple",
+      "start": 244.4,
+      "duration": 4.24
+    },
+    {
+      "text": "of these random numbers",
+      "start": 246.48,
+      "duration": 5.36
+    },
+    {
+      "text": "either we could do with just the random",
+      "start": 248.64,
+      "duration": 4.879
+    },
+    {
+      "text": "module and we can",
+      "start": 251.84,
+      "duration": 5.04
+    },
+    {
+      "text": "go with a list comprehension so i can",
+      "start": 253.519,
+      "duration": 4.24
+    },
+    {
+      "text": "just",
+      "start": 256.88,
+      "duration": 5.199
+    },
+    {
+      "text": "uh whoops other way around it would be",
+      "start": 257.759,
+      "duration": 6.0
+    },
+    {
+      "text": "random",
+      "start": 262.079,
+      "duration": 4.481
+    },
+    {
+      "text": "normal variant on this side rye and",
+      "start": 263.759,
+      "duration": 3.521
+    },
+    {
+      "text": "range",
+      "start": 266.56,
+      "duration": 2.8
+    },
+    {
+      "text": "however many you want to generate and",
+      "start": 267.28,
+      "duration": 3.359
+    },
+    {
+      "text": "they're going to be able to generate",
+      "start": 269.36,
+      "duration": 2.32
+    },
+    {
+      "text": "that many",
+      "start": 270.639,
+      "duration": 4.0
+    },
+    {
+      "text": "uh random numbers so still possible in",
+      "start": 271.68,
+      "duration": 3.76
+    },
+    {
+      "text": "one line",
+      "start": 274.639,
+      "duration": 2.551
+    },
+    {
+      "text": "with the random module",
+      "start": 275.44,
+      "duration": 3.36
+    },
+    {
+      "text": "[Music]",
+      "start": 277.19,
+      "duration": 4.41
+    },
+    {
+      "text": "but you can also do it with numpy",
+      "start": 278.8,
+      "duration": 5.36
+    },
+    {
+      "text": "directly",
+      "start": 281.6,
+      "duration": 5.92
+    },
+    {
+      "text": "so with numpy dot random",
+      "start": 284.16,
+      "duration": 6.24
+    },
+    {
+      "text": "dot normal we can draw a number from a",
+      "start": 287.52,
+      "duration": 4.32
+    },
+    {
+      "text": "normal distribution",
+      "start": 290.4,
+      "duration": 3.6
+    },
+    {
+      "text": "and then if you add a third parameter of",
+      "start": 291.84,
+      "duration": 4.4
+    },
+    {
+      "text": "how many numbers that you want then it's",
+      "start": 294.0,
+      "duration": 3.12
+    },
+    {
+      "text": "going to give you",
+      "start": 296.24,
+      "duration": 4.799
+    },
+    {
+      "text": "an array with that many",
+      "start": 297.12,
+      "duration": 6.56
+    },
+    {
+      "text": "random numbers and we can still loop",
+      "start": 301.039,
+      "duration": 4.401
+    },
+    {
+      "text": "through that",
+      "start": 303.68,
+      "duration": 4.72
+    },
+    {
+      "text": "just like a list you can index it just",
+      "start": 305.44,
+      "duration": 4.16
+    },
+    {
+      "text": "like a list",
+      "start": 308.4,
+      "duration": 3.92
+    },
+    {
+      "text": "and you can even convert it to a list by",
+      "start": 309.6,
+      "duration": 3.52
+    },
+    {
+      "text": "wrapping it",
+      "start": 312.32,
+      "duration": 2.64
+    },
+    {
+      "text": "in list",
+      "start": 313.12,
+      "duration": 3.519
+    },
+    {
+      "text": "[Music]",
+      "start": 314.96,
+      "duration": 5.76
+    },
+    {
+      "text": "so then the one liner you can copy paste",
+      "start": 316.639,
+      "duration": 7.441
+    },
+    {
+      "text": "to get a list of random numbers",
+      "start": 320.72,
+      "duration": 6.56
+    },
+    {
+      "text": "would be here numpy random normal",
+      "start": 324.08,
+      "duration": 4.959
+    },
+    {
+      "text": "however many random numbers that you",
+      "start": 327.28,
+      "duration": 3.68
+    },
+    {
+      "text": "want and wrapping that",
+      "start": 329.039,
+      "duration": 5.921
+    },
+    {
+      "text": "in list to convert it to a list",
+      "start": 330.96,
+      "duration": 4.0
+    },
+    {
+      "text": "so that's really all it takes for doing",
+      "start": 335.759,
+      "duration": 4.961
+    },
+    {
+      "text": "randomness in python it's very",
+      "start": 338.88,
+      "duration": 3.599
+    },
+    {
+      "text": "straightforward this is",
+      "start": 340.72,
+      "duration": 3.12
+    },
+    {
+      "text": "definitely one of the areas where it",
+      "start": 342.479,
+      "duration": 4.641
+    },
+    {
+      "text": "shines over excel",
+      "start": 343.84,
+      "duration": 6.079
+    },
+    {
+      "text": "so that's a quick overview of that we'll",
+      "start": 347.12,
+      "duration": 3.6
+    },
+    {
+      "text": "come back",
+      "start": 349.919,
+      "duration": 3.84
+    },
+    {
+      "text": "next time to look at discrete",
+      "start": 350.72,
+      "duration": 5.919
+    },
+    {
+      "text": "random numbers and generating that them",
+      "start": 353.759,
+      "duration": 3.44
+    },
+    {
+      "text": "in",
+      "start": 356.639,
+      "duration": 3.521
+    },
+    {
+      "text": "both excel and python so thanks for",
+      "start": 357.199,
+      "duration": 3.681
+    },
+    {
+      "text": "listening",
+      "start": 360.16,
+      "duration": 6.8
+    },
+    {
+      "text": "and see you next time",
+      "start": 360.88,
+      "duration": 6.08
+    }
+  ]
+}

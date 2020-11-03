@@ -1,0 +1,659 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.28,
+      "duration": 2.24
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.08,
+      "duration": 3.44
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 5.52,
+      "duration": 3.36
+    },
+    {
+      "text": "to be solving the lab",
+      "start": 7.52,
+      "duration": 5.039
+    },
+    {
+      "text": "exercises on graphing using python and",
+      "start": 8.88,
+      "duration": 4.56
+    },
+    {
+      "text": "pandas",
+      "start": 12.559,
+      "duration": 3.12
+    },
+    {
+      "text": "as part of the lecture series on",
+      "start": 13.44,
+      "duration": 3.839
+    },
+    {
+      "text": "understanding complex results",
+      "start": 15.679,
+      "duration": 4.881
+    },
+    {
+      "text": "using visualization so for",
+      "start": 17.279,
+      "duration": 5.76
+    },
+    {
+      "text": "all of these lab exercises in this",
+      "start": 20.56,
+      "duration": 3.92
+    },
+    {
+      "text": "lecture series",
+      "start": 23.039,
+      "duration": 4.0
+    },
+    {
+      "text": "we have been working off of the pandas",
+      "start": 24.48,
+      "duration": 4.959
+    },
+    {
+      "text": "and visualization lab exercises jupiter",
+      "start": 27.039,
+      "duration": 3.361
+    },
+    {
+      "text": "notebook",
+      "start": 29.439,
+      "duration": 3.28
+    },
+    {
+      "text": "so the first section we already",
+      "start": 30.4,
+      "duration": 3.92
+    },
+    {
+      "text": "completed was the intro to pandas",
+      "start": 32.719,
+      "duration": 2.401
+    },
+    {
+      "text": "section",
+      "start": 34.32,
+      "duration": 3.52
+    },
+    {
+      "text": "the second section pantis styling we",
+      "start": 35.12,
+      "duration": 4.32
+    },
+    {
+      "text": "completed that as well",
+      "start": 37.84,
+      "duration": 3.68
+    },
+    {
+      "text": "and now we're coming to the third and",
+      "start": 39.44,
+      "duration": 3.279
+    },
+    {
+      "text": "final section",
+      "start": 41.52,
+      "duration": 4.559
+    },
+    {
+      "text": "on graphing with pandas so we already",
+      "start": 42.719,
+      "duration": 4.081
+    },
+    {
+      "text": "have this",
+      "start": 46.079,
+      "duration": 4.32
+    },
+    {
+      "text": "data frame defined from the previous",
+      "start": 46.8,
+      "duration": 6.8
+    },
+    {
+      "text": "sections and now we're just going to",
+      "start": 50.399,
+      "duration": 3.921
+    },
+    {
+      "text": "work with it",
+      "start": 53.6,
+      "duration": 4.88
+    },
+    {
+      "text": "to create some uh graphs so here in the",
+      "start": 54.32,
+      "duration": 4.48
+    },
+    {
+      "text": "first",
+      "start": 58.48,
+      "duration": 2.48
+    },
+    {
+      "text": "exercise we want to create a scatter",
+      "start": 58.8,
+      "duration": 4.239
+    },
+    {
+      "text": "plot of price versus quantity",
+      "start": 60.96,
+      "duration": 5.28
+    },
+    {
+      "text": "so that's going to be df.plot.scatter",
+      "start": 63.039,
+      "duration": 5.601
+    },
+    {
+      "text": "and for scatter you do have to give it",
+      "start": 66.24,
+      "duration": 3.84
+    },
+    {
+      "text": "the x and y",
+      "start": 68.64,
+      "duration": 4.0
+    },
+    {
+      "text": "so i'm going to say that i want price on",
+      "start": 70.08,
+      "duration": 3.2
+    },
+    {
+      "text": "the x",
+      "start": 72.64,
+      "duration": 4.159
+    },
+    {
+      "text": "i'm going to say that i want uh quantity",
+      "start": 73.28,
+      "duration": 7.6
+    },
+    {
+      "text": "on the y and we can see",
+      "start": 76.799,
+      "duration": 6.081
+    },
+    {
+      "text": "uh you know the banana we were supposed",
+      "start": 80.88,
+      "duration": 3.44
+    },
+    {
+      "text": "to have 30 quantity",
+      "start": 82.88,
+      "duration": 4.4
+    },
+    {
+      "text": "and 42 price and here we have a 30",
+      "start": 84.32,
+      "duration": 4.4
+    },
+    {
+      "text": "quantity 42",
+      "start": 87.28,
+      "duration": 4.799
+    },
+    {
+      "text": "price so everything looks appropriate",
+      "start": 88.72,
+      "duration": 5.359
+    },
+    {
+      "text": "and the other plot points are plotted",
+      "start": 92.079,
+      "duration": 4.561
+    },
+    {
+      "text": "there as well",
+      "start": 94.079,
+      "duration": 2.561
+    },
+    {
+      "text": "coming to exercise 2 we want to create a",
+      "start": 96.799,
+      "duration": 3.201
+    },
+    {
+      "text": "box and whisker plot",
+      "start": 98.88,
+      "duration": 3.599
+    },
+    {
+      "text": "showing the distribution of revenue so",
+      "start": 100.0,
+      "duration": 4.399
+    },
+    {
+      "text": "the easiest way to do that is to first",
+      "start": 102.479,
+      "duration": 4.081
+    },
+    {
+      "text": "pull out the revenue column from the",
+      "start": 104.399,
+      "duration": 3.441
+    },
+    {
+      "text": "data frame",
+      "start": 106.56,
+      "duration": 3.519
+    },
+    {
+      "text": "and then we're going to plot on that so",
+      "start": 107.84,
+      "duration": 3.68
+    },
+    {
+      "text": "we can do a plot",
+      "start": 110.079,
+      "duration": 5.04
+    },
+    {
+      "text": "dot box on that and we will see the box",
+      "start": 111.52,
+      "duration": 5.279
+    },
+    {
+      "text": "and whisker plot to understand the",
+      "start": 115.119,
+      "duration": 3.04
+    },
+    {
+      "text": "distribution of the",
+      "start": 116.799,
+      "duration": 5.521
+    },
+    {
+      "text": "revenue then coming to the",
+      "start": 118.159,
+      "duration": 8.0
+    },
+    {
+      "text": "final exercise here we want to",
+      "start": 122.32,
+      "duration": 5.919
+    },
+    {
+      "text": "get a pie chart of the frequency of",
+      "start": 126.159,
+      "duration": 3.201
+    },
+    {
+      "text": "these fruits",
+      "start": 128.239,
+      "duration": 2.961
+    },
+    {
+      "text": "and we want to get histogram and density",
+      "start": 129.36,
+      "duration": 4.239
+    },
+    {
+      "text": "plots rest representing the distribution",
+      "start": 131.2,
+      "duration": 4.72
+    },
+    {
+      "text": "of the quantities so the first thing",
+      "start": 133.599,
+      "duration": 3.201
+    },
+    {
+      "text": "that we have to do",
+      "start": 135.92,
+      "duration": 4.399
+    },
+    {
+      "text": "is create the data frame",
+      "start": 136.8,
+      "duration": 6.24
+    },
+    {
+      "text": "so because we have a list of tuples here",
+      "start": 140.319,
+      "duration": 3.841
+    },
+    {
+      "text": "we can create",
+      "start": 143.04,
+      "duration": 4.16
+    },
+    {
+      "text": "the data frame directly from that and by",
+      "start": 144.16,
+      "duration": 5.12
+    },
+    {
+      "text": "giving it the names of the columns",
+      "start": 147.2,
+      "duration": 4.319
+    },
+    {
+      "text": "so i'm going to call these columns fruit",
+      "start": 149.28,
+      "duration": 3.76
+    },
+    {
+      "text": "and quantity",
+      "start": 151.519,
+      "duration": 4.641
+    },
+    {
+      "text": "and then we can look at the",
+      "start": 153.04,
+      "duration": 5.12
+    },
+    {
+      "text": "data frame that we've created and",
+      "start": 156.16,
+      "duration": 5.2
+    },
+    {
+      "text": "everything seems appropriate",
+      "start": 158.16,
+      "duration": 6.96
+    },
+    {
+      "text": "so then we want to plot this so uh",
+      "start": 161.36,
+      "duration": 6.959
+    },
+    {
+      "text": "we can do a pi plot",
+      "start": 165.12,
+      "duration": 5.44
+    },
+    {
+      "text": "and for the pie plot you do have to tell",
+      "start": 168.319,
+      "duration": 4.241
+    },
+    {
+      "text": "it uh what you want to plot",
+      "start": 170.56,
+      "duration": 6.24
+    },
+    {
+      "text": "as the y so we want to plot the quantity",
+      "start": 172.56,
+      "duration": 4.24
+    },
+    {
+      "text": "and so now we have a pie plot here",
+      "start": 177.12,
+      "duration": 5.36
+    },
+    {
+      "text": "and we can see that one chunk is",
+      "start": 180.4,
+      "duration": 3.44
+    },
+    {
+      "text": "representing most of it then the other",
+      "start": 182.48,
+      "duration": 3.039
+    },
+    {
+      "text": "two are smaller chunks so that",
+      "start": 183.84,
+      "duration": 4.0
+    },
+    {
+      "text": "makes sense with our data but we can't",
+      "start": 185.519,
+      "duration": 3.121
+    },
+    {
+      "text": "see which",
+      "start": 187.84,
+      "duration": 3.36
+    },
+    {
+      "text": "is which by the labels so you can pass",
+      "start": 188.64,
+      "duration": 3.28
+    },
+    {
+      "text": "the labels",
+      "start": 191.2,
+      "duration": 3.759
+    },
+    {
+      "text": "separately it's going to be the",
+      "start": 191.92,
+      "duration": 6.64
+    },
+    {
+      "text": "fruit column of the fruit data frame",
+      "start": 194.959,
+      "duration": 5.441
+    },
+    {
+      "text": "and now we have the labels coming into",
+      "start": 198.56,
+      "duration": 3.84
+    },
+    {
+      "text": "the graph as well and it's clear that",
+      "start": 200.4,
+      "duration": 3.6
+    },
+    {
+      "text": "apples represent",
+      "start": 202.4,
+      "duration": 6.32
+    },
+    {
+      "text": "the majority share of the fruits",
+      "start": 204.0,
+      "duration": 4.72
+    },
+    {
+      "text": "then we want to visualize the",
+      "start": 208.799,
+      "duration": 3.44
+    },
+    {
+      "text": "distribution of the quantity",
+      "start": 210.319,
+      "duration": 5.441
+    },
+    {
+      "text": "so we can do that with",
+      "start": 212.239,
+      "duration": 6.72
+    },
+    {
+      "text": "a histogram",
+      "start": 215.76,
+      "duration": 5.36
+    },
+    {
+      "text": "so quantity is the only numeric column",
+      "start": 218.959,
+      "duration": 4.241
+    },
+    {
+      "text": "so it knows to plot that one",
+      "start": 221.12,
+      "duration": 4.32
+    },
+    {
+      "text": "and we can see that two of the",
+      "start": 223.2,
+      "duration": 3.119
+    },
+    {
+      "text": "quantities",
+      "start": 225.44,
+      "duration": 3.6
+    },
+    {
+      "text": "are about two and we can see that one of",
+      "start": 226.319,
+      "duration": 3.441
+    },
+    {
+      "text": "the quantities",
+      "start": 229.04,
+      "duration": 4.559
+    },
+    {
+      "text": "is about seven um of course",
+      "start": 229.76,
+      "duration": 5.119
+    },
+    {
+      "text": "you would typically do these",
+      "start": 233.599,
+      "duration": 3.121
+    },
+    {
+      "text": "distribution kind of plots with",
+      "start": 234.879,
+      "duration": 3.521
+    },
+    {
+      "text": "many more values in the data frame it",
+      "start": 236.72,
+      "duration": 2.879
+    },
+    {
+      "text": "doesn't make a whole lot of sense with",
+      "start": 238.4,
+      "duration": 2.96
+    },
+    {
+      "text": "three values in there",
+      "start": 239.599,
+      "duration": 4.881
+    },
+    {
+      "text": "but this is just for sake of example",
+      "start": 241.36,
+      "duration": 7.439
+    },
+    {
+      "text": "then we can do the density plot as well",
+      "start": 244.48,
+      "duration": 6.959
+    },
+    {
+      "text": "and the density plot even more so than",
+      "start": 248.799,
+      "duration": 3.921
+    },
+    {
+      "text": "the histogram",
+      "start": 251.439,
+      "duration": 3.201
+    },
+    {
+      "text": "really is meant for larger quantities of",
+      "start": 252.72,
+      "duration": 3.12
+    },
+    {
+      "text": "data",
+      "start": 254.64,
+      "duration": 3.599
+    },
+    {
+      "text": "because it's the smoothed out histogram",
+      "start": 255.84,
+      "duration": 3.44
+    },
+    {
+      "text": "and smoothing it out",
+      "start": 258.239,
+      "duration": 2.56
+    },
+    {
+      "text": "doesn't make a lot of sense if you only",
+      "start": 259.28,
+      "duration": 3.12
+    },
+    {
+      "text": "have a few values",
+      "start": 260.799,
+      "duration": 5.041
+    },
+    {
+      "text": "so we can see that uh the most frequent",
+      "start": 262.4,
+      "duration": 5.04
+    },
+    {
+      "text": "quantities are at two",
+      "start": 265.84,
+      "duration": 3.6
+    },
+    {
+      "text": "but is a little bit misleading about the",
+      "start": 267.44,
+      "duration": 4.479
+    },
+    {
+      "text": "frequency of the other quantities",
+      "start": 269.44,
+      "duration": 4.4
+    },
+    {
+      "text": "by doing the density plot with such a",
+      "start": 271.919,
+      "duration": 3.521
+    },
+    {
+      "text": "small amount of data",
+      "start": 273.84,
+      "duration": 3.84
+    },
+    {
+      "text": "but it still does get at the same",
+      "start": 275.44,
+      "duration": 4.72
+    },
+    {
+      "text": "general kind of idea",
+      "start": 277.68,
+      "duration": 5.76
+    },
+    {
+      "text": "so that wraps up the lab exercises for",
+      "start": 280.16,
+      "duration": 6.08
+    },
+    {
+      "text": "the lecture series on understanding",
+      "start": 283.44,
+      "duration": 4.24
+    },
+    {
+      "text": "complex results using",
+      "start": 286.24,
+      "duration": 4.399
+    },
+    {
+      "text": "visualization thanks for listening and",
+      "start": 287.68,
+      "duration": 7.76
+    },
+    {
+      "text": "see you next time",
+      "start": 290.639,
+      "duration": 4.801
+    }
+  ]
+}

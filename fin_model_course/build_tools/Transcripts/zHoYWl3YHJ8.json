@@ -1,0 +1,1584 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.6,
+      "duration": 2.56
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.64,
+      "duration": 3.76
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 6.16,
+      "duration": 4.0
+    },
+    {
+      "text": "to be building out the retirement",
+      "start": 8.4,
+      "duration": 2.8
+    },
+    {
+      "text": "portion",
+      "start": 10.16,
+      "duration": 3.84
+    },
+    {
+      "text": "of the dynamic salary retirement model",
+      "start": 11.2,
+      "duration": 3.12
+    },
+    {
+      "text": "in",
+      "start": 14.0,
+      "duration": 3.359
+    },
+    {
+      "text": "python and this retirement portion of",
+      "start": 14.32,
+      "duration": 5.2
+    },
+    {
+      "text": "the model is the final portion which is",
+      "start": 17.359,
+      "duration": 3.361
+    },
+    {
+      "text": "going to finish up",
+      "start": 19.52,
+      "duration": 4.88
+    },
+    {
+      "text": "the model and the lecture series",
+      "start": 20.72,
+      "duration": 6.08
+    },
+    {
+      "text": "so we've been working on this dynamic",
+      "start": 24.4,
+      "duration": 4.08
+    },
+    {
+      "text": "salary retirement model we built out the",
+      "start": 26.8,
+      "duration": 3.28
+    },
+    {
+      "text": "entire thing in excel",
+      "start": 28.48,
+      "duration": 4.0
+    },
+    {
+      "text": "and then in python we've already built",
+      "start": 30.08,
+      "duration": 4.4
+    },
+    {
+      "text": "out the salary and wealth portions",
+      "start": 32.48,
+      "duration": 3.759
+    },
+    {
+      "text": "so look at the prior videos if you",
+      "start": 34.48,
+      "duration": 3.04
+    },
+    {
+      "text": "haven't seen those",
+      "start": 36.239,
+      "duration": 3.281
+    },
+    {
+      "text": "and now we're just going to build out",
+      "start": 37.52,
+      "duration": 4.4
+    },
+    {
+      "text": "the retirement portion of the model",
+      "start": 39.52,
+      "duration": 5.92
+    },
+    {
+      "text": "and finish it out so let's jump back",
+      "start": 41.92,
+      "duration": 5.92
+    },
+    {
+      "text": "over to the jupiter notebook",
+      "start": 45.44,
+      "duration": 4.56
+    },
+    {
+      "text": "so we already have you know all this",
+      "start": 47.84,
+      "duration": 3.92
+    },
+    {
+      "text": "initial setup stuff and we have the",
+      "start": 50.0,
+      "duration": 3.52
+    },
+    {
+      "text": "salaries section and we have the wealth",
+      "start": 51.76,
+      "duration": 2.72
+    },
+    {
+      "text": "section",
+      "start": 53.52,
+      "duration": 2.879
+    },
+    {
+      "text": "and now we're going to build out the",
+      "start": 54.48,
+      "duration": 4.239
+    },
+    {
+      "text": "retirement section",
+      "start": 56.399,
+      "duration": 5.361
+    },
+    {
+      "text": "so here i'm going to have retirement and",
+      "start": 58.719,
+      "duration": 4.241
+    },
+    {
+      "text": "now we're going to",
+      "start": 61.76,
+      "duration": 4.719
+    },
+    {
+      "text": "write out logic which the goal here is",
+      "start": 62.96,
+      "duration": 6.64
+    },
+    {
+      "text": "as soon as this person hits the desired",
+      "start": 66.479,
+      "duration": 3.601
+    },
+    {
+      "text": "cash",
+      "start": 69.6,
+      "duration": 3.68
+    },
+    {
+      "text": "which is given in the inputs then",
+      "start": 70.08,
+      "duration": 5.2
+    },
+    {
+      "text": "uh whatever year it is that they've",
+      "start": 73.28,
+      "duration": 3.76
+    },
+    {
+      "text": "accumulated that much wealth",
+      "start": 75.28,
+      "duration": 3.92
+    },
+    {
+      "text": "that is the year that they're going to",
+      "start": 77.04,
+      "duration": 4.96
+    },
+    {
+      "text": "be able to retire",
+      "start": 79.2,
+      "duration": 6.8
+    },
+    {
+      "text": "so uh we don't have to completely start",
+      "start": 82.0,
+      "duration": 7.28
+    },
+    {
+      "text": "from scratch here we already have",
+      "start": 86.0,
+      "duration": 6.0
+    },
+    {
+      "text": "a way to get the wells going up over",
+      "start": 89.28,
+      "duration": 4.879
+    },
+    {
+      "text": "time",
+      "start": 92.0,
+      "duration": 5.04
+    },
+    {
+      "text": "so then we just need to take this and",
+      "start": 94.159,
+      "duration": 3.841
+    },
+    {
+      "text": "make it stop",
+      "start": 97.04,
+      "duration": 4.56
+    },
+    {
+      "text": "as soon as we hit the desired cache",
+      "start": 98.0,
+      "duration": 6.479
+    },
+    {
+      "text": "so i'm just going to go ahead and start",
+      "start": 101.6,
+      "duration": 5.6
+    },
+    {
+      "text": "from this code and just copy it",
+      "start": 104.479,
+      "duration": 6.0
+    },
+    {
+      "text": "and i'm going to switch data for model",
+      "start": 107.2,
+      "duration": 5.279
+    },
+    {
+      "text": "data since this is code which is going",
+      "start": 110.479,
+      "duration": 3.92
+    },
+    {
+      "text": "to go inside of a function so we want to",
+      "start": 112.479,
+      "duration": 5.361
+    },
+    {
+      "text": "use data not model data",
+      "start": 114.399,
+      "duration": 3.441
+    },
+    {
+      "text": "and i'll just give that another try",
+      "start": 118.64,
+      "duration": 4.079
+    },
+    {
+      "text": "there so it still works",
+      "start": 120.64,
+      "duration": 5.119
+    },
+    {
+      "text": "and gives us the salary or the wealth in",
+      "start": 122.719,
+      "duration": 6.001
+    },
+    {
+      "text": "each year",
+      "start": 125.759,
+      "duration": 5.12
+    },
+    {
+      "text": "and we could make this thing go out to",
+      "start": 128.72,
+      "duration": 4.08
+    },
+    {
+      "text": "you know 30 years or whatever",
+      "start": 130.879,
+      "duration": 4.321
+    },
+    {
+      "text": "and now we can see we do hit the point",
+      "start": 132.8,
+      "duration": 3.2
+    },
+    {
+      "text": "where",
+      "start": 135.2,
+      "duration": 3.039
+    },
+    {
+      "text": "we hit the desired cash we can see here",
+      "start": 136.0,
+      "duration": 4.56
+    },
+    {
+      "text": "that year 28 is going to be the year",
+      "start": 138.239,
+      "duration": 4.161
+    },
+    {
+      "text": "but we want the code to be able to stop",
+      "start": 140.56,
+      "duration": 4.319
+    },
+    {
+      "text": "specifically at that point and tell us",
+      "start": 142.4,
+      "duration": 4.08
+    },
+    {
+      "text": "that that was the year that they were",
+      "start": 144.879,
+      "duration": 4.561
+    },
+    {
+      "text": "able to retire",
+      "start": 146.48,
+      "duration": 2.96
+    },
+    {
+      "text": "so what we can do to accomplish that",
+      "start": 150.64,
+      "duration": 5.76
+    },
+    {
+      "text": "there are a few different ways that we",
+      "start": 154.56,
+      "duration": 3.679
+    },
+    {
+      "text": "can go about this",
+      "start": 156.4,
+      "duration": 5.76
+    },
+    {
+      "text": "um one way is with actually a different",
+      "start": 158.239,
+      "duration": 4.72
+    },
+    {
+      "text": "type of loop",
+      "start": 162.16,
+      "duration": 3.76
+    },
+    {
+      "text": "that we haven't covered uh called a",
+      "start": 162.959,
+      "duration": 3.761
+    },
+    {
+      "text": "while loop",
+      "start": 165.92,
+      "duration": 4.0
+    },
+    {
+      "text": "and a while loop uh you know whereas the",
+      "start": 166.72,
+      "duration": 4.159
+    },
+    {
+      "text": "for loop",
+      "start": 169.92,
+      "duration": 4.0
+    },
+    {
+      "text": "runs for whatever you're passing it you",
+      "start": 170.879,
+      "duration": 5.041
+    },
+    {
+      "text": "know range it will you know just run 30",
+      "start": 173.92,
+      "duration": 3.28
+    },
+    {
+      "text": "times",
+      "start": 175.92,
+      "duration": 4.959
+    },
+    {
+      "text": "if you have you know for uh something",
+      "start": 177.2,
+      "duration": 7.36
+    },
+    {
+      "text": "and a list then it's going to run for as",
+      "start": 180.879,
+      "duration": 6.561
+    },
+    {
+      "text": "many items as you have in that list",
+      "start": 184.56,
+      "duration": 6.08
+    },
+    {
+      "text": "etc whereas the while loop",
+      "start": 187.44,
+      "duration": 6.24
+    },
+    {
+      "text": "runs until some condition is",
+      "start": 190.64,
+      "duration": 5.36
+    },
+    {
+      "text": "met so it's kind of a combination",
+      "start": 193.68,
+      "duration": 3.04
+    },
+    {
+      "text": "between",
+      "start": 196.0,
+      "duration": 3.519
+    },
+    {
+      "text": "a loop and an if statement and it's",
+      "start": 196.72,
+      "duration": 5.04
+    },
+    {
+      "text": "going to stop the loop as soon as that",
+      "start": 199.519,
+      "duration": 6.0
+    },
+    {
+      "text": "if condition is true",
+      "start": 201.76,
+      "duration": 3.759
+    },
+    {
+      "text": "or sorry as soon as it is false it's",
+      "start": 206.239,
+      "duration": 3.761
+    },
+    {
+      "text": "going to stop the loop",
+      "start": 208.08,
+      "duration": 5.519
+    },
+    {
+      "text": "so um what we can do",
+      "start": 210.0,
+      "duration": 6.799
+    },
+    {
+      "text": "is we can also initialize",
+      "start": 213.599,
+      "duration": 7.521
+    },
+    {
+      "text": "wealth to zero before starting this",
+      "start": 216.799,
+      "duration": 8.241
+    },
+    {
+      "text": "and what we want to do is say while",
+      "start": 221.12,
+      "duration": 7.679
+    },
+    {
+      "text": "the wealth is less than",
+      "start": 225.04,
+      "duration": 7.279
+    },
+    {
+      "text": "the desired cash then we're going to do",
+      "start": 228.799,
+      "duration": 5.841
+    },
+    {
+      "text": "this",
+      "start": 232.319,
+      "duration": 2.321
+    },
+    {
+      "text": "but you'll notice as soon as i make that",
+      "start": 235.76,
+      "duration": 3.199
+    },
+    {
+      "text": "change and try to run this",
+      "start": 237.439,
+      "duration": 3.281
+    },
+    {
+      "text": "that it's not working anymore right",
+      "start": 238.959,
+      "duration": 4.081
+    },
+    {
+      "text": "because uh",
+      "start": 240.72,
+      "duration": 5.439
+    },
+    {
+      "text": "this i there's no i anymore we had i",
+      "start": 243.04,
+      "duration": 5.6
+    },
+    {
+      "text": "from my code that i deleted to where it",
+      "start": 246.159,
+      "duration": 3.681
+    },
+    {
+      "text": "was a string",
+      "start": 248.64,
+      "duration": 4.319
+    },
+    {
+      "text": "and so i'm getting an error but",
+      "start": 249.84,
+      "duration": 5.44
+    },
+    {
+      "text": "really we just need to have a new way of",
+      "start": 252.959,
+      "duration": 3.68
+    },
+    {
+      "text": "figuring out",
+      "start": 255.28,
+      "duration": 4.16
+    },
+    {
+      "text": "what the year is going to be so let's",
+      "start": 256.639,
+      "duration": 3.681
+    },
+    {
+      "text": "also",
+      "start": 259.44,
+      "duration": 4.0
+    },
+    {
+      "text": "start the year at zero",
+      "start": 260.32,
+      "duration": 6.159
+    },
+    {
+      "text": "and every time we're going to increment",
+      "start": 263.44,
+      "duration": 5.039
+    },
+    {
+      "text": "the year by one",
+      "start": 266.479,
+      "duration": 4.16
+    },
+    {
+      "text": "so that way the first loop is starting",
+      "start": 268.479,
+      "duration": 3.841
+    },
+    {
+      "text": "at zero then it has one so the first",
+      "start": 270.639,
+      "duration": 3.201
+    },
+    {
+      "text": "loop it's one and then it comes around",
+      "start": 272.32,
+      "duration": 2.64
+    },
+    {
+      "text": "to the next loop",
+      "start": 273.84,
+      "duration": 2.48
+    },
+    {
+      "text": "now it's going to add one again so the",
+      "start": 274.96,
+      "duration": 2.88
+    },
+    {
+      "text": "year is going to be two on the second",
+      "start": 276.32,
+      "duration": 4.08
+    },
+    {
+      "text": "loop as we would expect",
+      "start": 277.84,
+      "duration": 4.72
+    },
+    {
+      "text": "so now we run this and we can see it",
+      "start": 280.4,
+      "duration": 4.64
+    },
+    {
+      "text": "does indeed stop at year 28",
+      "start": 282.56,
+      "duration": 6.24
+    },
+    {
+      "text": "so this already has gotten us to",
+      "start": 285.04,
+      "duration": 7.2
+    },
+    {
+      "text": "what we wanted um only",
+      "start": 288.8,
+      "duration": 5.44
+    },
+    {
+      "text": "that we don't necessarily have it in a",
+      "start": 292.24,
+      "duration": 4.32
+    },
+    {
+      "text": "very usable format yet",
+      "start": 294.24,
+      "duration": 5.44
+    },
+    {
+      "text": "um you know it printed out what the year",
+      "start": 296.56,
+      "duration": 5.28
+    },
+    {
+      "text": "last year was but we don't have that",
+      "start": 299.68,
+      "duration": 4.48
+    },
+    {
+      "text": "saved in a variable that we could use",
+      "start": 301.84,
+      "duration": 5.68
+    },
+    {
+      "text": "in some other way uh it's just kind of",
+      "start": 304.16,
+      "duration": 5.2
+    },
+    {
+      "text": "you know the the print the prince of the",
+      "start": 307.52,
+      "duration": 5.44
+    },
+    {
+      "text": "wealth stop happening at that point",
+      "start": 309.36,
+      "duration": 3.6
+    },
+    {
+      "text": "so but let's look at the value of the",
+      "start": 313.12,
+      "duration": 6.0
+    },
+    {
+      "text": "year variable when this is all done",
+      "start": 316.88,
+      "duration": 5.44
+    },
+    {
+      "text": "oh that is 28. so",
+      "start": 319.12,
+      "duration": 5.919
+    },
+    {
+      "text": "the year variable now contains what we",
+      "start": 322.32,
+      "duration": 5.04
+    },
+    {
+      "text": "need as our final answer",
+      "start": 325.039,
+      "duration": 6.0
+    },
+    {
+      "text": "um so just putting year there at the end",
+      "start": 327.36,
+      "duration": 6.32
+    },
+    {
+      "text": "then we get the retirement year from",
+      "start": 331.039,
+      "duration": 3.281
+    },
+    {
+      "text": "that",
+      "start": 333.68,
+      "duration": 2.56
+    },
+    {
+      "text": "and the reason was because it kept going",
+      "start": 334.32,
+      "duration": 3.28
+    },
+    {
+      "text": "through the loops it kept incrementing",
+      "start": 336.24,
+      "duration": 2.239
+    },
+    {
+      "text": "the year",
+      "start": 337.6,
+      "duration": 4.0
+    },
+    {
+      "text": "and then as soon as we got enough cash",
+      "start": 338.479,
+      "duration": 6.16
+    },
+    {
+      "text": "uh this condition evaluated to false and",
+      "start": 341.6,
+      "duration": 4.64
+    },
+    {
+      "text": "then it stopped going through additional",
+      "start": 344.639,
+      "duration": 2.081
+    },
+    {
+      "text": "loops",
+      "start": 346.24,
+      "duration": 2.239
+    },
+    {
+      "text": "and so the last time that it incremented",
+      "start": 346.72,
+      "duration": 4.16
+    },
+    {
+      "text": "the year would be the last year that we",
+      "start": 348.479,
+      "duration": 3.521
+    },
+    {
+      "text": "added the wealth",
+      "start": 350.88,
+      "duration": 2.56
+    },
+    {
+      "text": "and that would be the same year where",
+      "start": 352.0,
+      "duration": 3.759
+    },
+    {
+      "text": "the wealth has now surpassed the desired",
+      "start": 353.44,
+      "duration": 3.52
+    },
+    {
+      "text": "cash",
+      "start": 355.759,
+      "duration": 2.961
+    },
+    {
+      "text": "so just the year variable is going to",
+      "start": 356.96,
+      "duration": 5.04
+    },
+    {
+      "text": "contain what we need",
+      "start": 358.72,
+      "duration": 3.28
+    },
+    {
+      "text": "so then we've gotten to the final answer",
+      "start": 362.4,
+      "duration": 5.44
+    },
+    {
+      "text": "but we want to clean up the output here",
+      "start": 365.52,
+      "duration": 3.519
+    },
+    {
+      "text": "a little bit",
+      "start": 367.84,
+      "duration": 5.52
+    },
+    {
+      "text": "um so you know we don't want to just",
+      "start": 369.039,
+      "duration": 6.561
+    },
+    {
+      "text": "uh you know print out a show a number at",
+      "start": 373.36,
+      "duration": 4.0
+    },
+    {
+      "text": "the end we want to say what this number",
+      "start": 375.6,
+      "duration": 3.439
+    },
+    {
+      "text": "means",
+      "start": 377.36,
+      "duration": 4.88
+    },
+    {
+      "text": "so we can say uh you know",
+      "start": 379.039,
+      "duration": 6.88
+    },
+    {
+      "text": "it will take you know year",
+      "start": 382.24,
+      "duration": 5.44
+    },
+    {
+      "text": "i need to put the f at this beginning of",
+      "start": 385.919,
+      "duration": 3.84
+    },
+    {
+      "text": "the string it will take year",
+      "start": 387.68,
+      "duration": 5.12
+    },
+    {
+      "text": "years to retire",
+      "start": 389.759,
+      "duration": 3.041
+    },
+    {
+      "text": "okay now this is a little bit better it",
+      "start": 393.199,
+      "duration": 4.0
+    },
+    {
+      "text": "will take 28 years to retire that's a",
+      "start": 395.28,
+      "duration": 2.4
+    },
+    {
+      "text": "lot",
+      "start": 397.199,
+      "duration": 3.681
+    },
+    {
+      "text": "more clear um but we do have like two",
+      "start": 397.68,
+      "duration": 3.6
+    },
+    {
+      "text": "different",
+      "start": 400.88,
+      "duration": 2.48
+    },
+    {
+      "text": "sections of the output here one is",
+      "start": 401.28,
+      "duration": 3.52
+    },
+    {
+      "text": "showing the wealth year over year",
+      "start": 403.36,
+      "duration": 4.64
+    },
+    {
+      "text": "and one is showing the final year's",
+      "start": 404.8,
+      "duration": 4.48
+    },
+    {
+      "text": "retirement",
+      "start": 408.0,
+      "duration": 4.0
+    },
+    {
+      "text": "so it makes sense to separate those so",
+      "start": 409.28,
+      "duration": 3.44
+    },
+    {
+      "text": "let's",
+      "start": 412.0,
+      "duration": 4.56
+    },
+    {
+      "text": "uh put like a header here",
+      "start": 412.72,
+      "duration": 8.0
+    },
+    {
+      "text": "in the output and we can put one here",
+      "start": 416.56,
+      "duration": 7.28
+    },
+    {
+      "text": "as well",
+      "start": 420.72,
+      "duration": 3.12
+    },
+    {
+      "text": "and now this is a little bit better we",
+      "start": 427.44,
+      "duration": 3.039
+    },
+    {
+      "text": "have kind of a header",
+      "start": 429.44,
+      "duration": 2.64
+    },
+    {
+      "text": "for each portion of the output but it's",
+      "start": 430.479,
+      "duration": 3.44
+    },
+    {
+      "text": "still all together",
+      "start": 432.08,
+      "duration": 4.32
+    },
+    {
+      "text": "there's a couple ways that we can add",
+      "start": 433.919,
+      "duration": 4.081
+    },
+    {
+      "text": "some separation here in between these",
+      "start": 436.4,
+      "duration": 2.239
+    },
+    {
+      "text": "lines",
+      "start": 438.0,
+      "duration": 3.28
+    },
+    {
+      "text": "one is just you know kind of simple",
+      "start": 438.639,
+      "duration": 4.481
+    },
+    {
+      "text": "intuitive you can just print",
+      "start": 441.28,
+      "duration": 4.0
+    },
+    {
+      "text": "an empty string and that's going to make",
+      "start": 443.12,
+      "duration": 4.24
+    },
+    {
+      "text": "an empty line there",
+      "start": 445.28,
+      "duration": 4.8
+    },
+    {
+      "text": "the other way to go about it is",
+      "start": 447.36,
+      "duration": 3.6
+    },
+    {
+      "text": "backslash",
+      "start": 450.08,
+      "duration": 3.92
+    },
+    {
+      "text": "n actually means make a new line so if",
+      "start": 450.96,
+      "duration": 3.84
+    },
+    {
+      "text": "we put",
+      "start": 454.0,
+      "duration": 3.919
+    },
+    {
+      "text": "backslash n retirement there then that's",
+      "start": 454.8,
+      "duration": 5.119
+    },
+    {
+      "text": "going to do the exact same thing",
+      "start": 457.919,
+      "duration": 5.041
+    },
+    {
+      "text": "as uh having the empty print so even if",
+      "start": 459.919,
+      "duration": 3.761
+    },
+    {
+      "text": "you wanted",
+      "start": 462.96,
+      "duration": 4.0
+    },
+    {
+      "text": "you know a few lines there of spacing",
+      "start": 463.68,
+      "duration": 5.84
+    },
+    {
+      "text": "then you can easily do that in one print",
+      "start": 466.96,
+      "duration": 4.32
+    },
+    {
+      "text": "statement there",
+      "start": 469.52,
+      "duration": 3.679
+    },
+    {
+      "text": "so now we have two clear sections in the",
+      "start": 471.28,
+      "duration": 3.199
+    },
+    {
+      "text": "output what are the wealths",
+      "start": 473.199,
+      "duration": 3.641
+    },
+    {
+      "text": "over time and what are the retirement",
+      "start": 474.479,
+      "duration": 3.761
+    },
+    {
+      "text": "details and",
+      "start": 476.84,
+      "duration": 3.0
+    },
+    {
+      "text": "we get our main answer here in the",
+      "start": 478.24,
+      "duration": 3.2
+    },
+    {
+      "text": "retirement details that it's going to",
+      "start": 479.84,
+      "duration": 2.0
+    },
+    {
+      "text": "take",
+      "start": 481.44,
+      "duration": 3.68
+    },
+    {
+      "text": "28 years to retire",
+      "start": 481.84,
+      "duration": 6.799
+    },
+    {
+      "text": "so now this block",
+      "start": 485.12,
+      "duration": 6.079
+    },
+    {
+      "text": "does do what we want to do but we should",
+      "start": 488.639,
+      "duration": 3.361
+    },
+    {
+      "text": "go ahead and",
+      "start": 491.199,
+      "duration": 3.921
+    },
+    {
+      "text": "wrap this up into a function as well",
+      "start": 492.0,
+      "duration": 7.599
+    },
+    {
+      "text": "um so these uh or so the",
+      "start": 495.12,
+      "duration": 6.88
+    },
+    {
+      "text": "uh these are all initializing for the",
+      "start": 499.599,
+      "duration": 4.16
+    },
+    {
+      "text": "loop they aren't actually inputs this is",
+      "start": 502.0,
+      "duration": 4.639
+    },
+    {
+      "text": "all going to happen inside the function",
+      "start": 503.759,
+      "duration": 6.241
+    },
+    {
+      "text": "so years to retirement and the only",
+      "start": 506.639,
+      "duration": 6.001
+    },
+    {
+      "text": "input here is going to be the data and",
+      "start": 510.0,
+      "duration": 3.919
+    },
+    {
+      "text": "then we can take",
+      "start": 512.64,
+      "duration": 3.6
+    },
+    {
+      "text": "all of the remaining code and hit tab to",
+      "start": 513.919,
+      "duration": 4.881
+    },
+    {
+      "text": "indent it",
+      "start": 516.24,
+      "duration": 2.56
+    },
+    {
+      "text": "and we're going to switch this to",
+      "start": 519.519,
+      "duration": 3.44
+    },
+    {
+      "text": "returning the year",
+      "start": 521.12,
+      "duration": 4.96
+    },
+    {
+      "text": "at the end um so then when we call",
+      "start": 522.959,
+      "duration": 6.081
+    },
+    {
+      "text": "years to retirement on the model data",
+      "start": 526.08,
+      "duration": 4.08
+    },
+    {
+      "text": "then we see",
+      "start": 529.04,
+      "duration": 2.799
+    },
+    {
+      "text": "the whole summary of the output here",
+      "start": 530.16,
+      "duration": 3.28
+    },
+    {
+      "text": "that it's going to take 28 years to",
+      "start": 531.839,
+      "duration": 2.881
+    },
+    {
+      "text": "retire",
+      "start": 533.44,
+      "duration": 4.079
+    },
+    {
+      "text": "and we can also have that saved in a",
+      "start": 534.72,
+      "duration": 3.84
+    },
+    {
+      "text": "variable",
+      "start": 537.519,
+      "duration": 3.841
+    },
+    {
+      "text": "as well so that we could do additional",
+      "start": 538.56,
+      "duration": 3.44
+    },
+    {
+      "text": "things",
+      "start": 541.36,
+      "duration": 3.919
+    },
+    {
+      "text": "with that result",
+      "start": 542.0,
+      "duration": 3.279
+    },
+    {
+      "text": "and so now our model works we have it",
+      "start": 545.76,
+      "duration": 4.56
+    },
+    {
+      "text": "all together",
+      "start": 548.32,
+      "duration": 3.84
+    },
+    {
+      "text": "so now that you have all your sections",
+      "start": 550.32,
+      "duration": 3.68
+    },
+    {
+      "text": "working you've got your final result",
+      "start": 552.16,
+      "duration": 3.28
+    },
+    {
+      "text": "the next thing that you should do and",
+      "start": 554.0,
+      "duration": 3.279
+    },
+    {
+      "text": "building out your models is",
+      "start": 555.44,
+      "duration": 4.399
+    },
+    {
+      "text": "go to this kernel menu and then restart",
+      "start": 557.279,
+      "duration": 4.161
+    },
+    {
+      "text": "and run all cells",
+      "start": 559.839,
+      "duration": 3.44
+    },
+    {
+      "text": "because this is gonna say you know",
+      "start": 561.44,
+      "duration": 3.44
+    },
+    {
+      "text": "throughout your your session you've been",
+      "start": 563.279,
+      "duration": 3.361
+    },
+    {
+      "text": "jumping all over the place",
+      "start": 564.88,
+      "duration": 3.92
+    },
+    {
+      "text": "uh you know building things and then",
+      "start": 566.64,
+      "duration": 3.04
+    },
+    {
+      "text": "deleting them",
+      "start": 568.8,
+      "duration": 3.2
+    },
+    {
+      "text": "and so things are just in a weird state",
+      "start": 569.68,
+      "duration": 4.159
+    },
+    {
+      "text": "from you playing around with things",
+      "start": 572.0,
+      "duration": 4.16
+    },
+    {
+      "text": "so if you restart this kernel and run",
+      "start": 573.839,
+      "duration": 3.281
+    },
+    {
+      "text": "all cells",
+      "start": 576.16,
+      "duration": 2.96
+    },
+    {
+      "text": "that gives you a fresh session and it",
+      "start": 577.12,
+      "duration": 3.92
+    },
+    {
+      "text": "runs everything in order",
+      "start": 579.12,
+      "duration": 4.56
+    },
+    {
+      "text": "and that way we can be sure that the",
+      "start": 581.04,
+      "duration": 4.479
+    },
+    {
+      "text": "model does indeed work",
+      "start": 583.68,
+      "duration": 5.2
+    },
+    {
+      "text": "from end to end the next thing that i'm",
+      "start": 585.519,
+      "duration": 4.161
+    },
+    {
+      "text": "going to do",
+      "start": 588.88,
+      "duration": 2.72
+    },
+    {
+      "text": "is i'm going to go back and i'm going to",
+      "start": 589.68,
+      "duration": 6.56
+    },
+    {
+      "text": "remove this data equals model data cell",
+      "start": 591.6,
+      "duration": 6.48
+    },
+    {
+      "text": "and then i'm going to restart and run",
+      "start": 596.24,
+      "duration": 4.4
+    },
+    {
+      "text": "all cells again",
+      "start": 598.08,
+      "duration": 4.24
+    },
+    {
+      "text": "so there we want to see again that it",
+      "start": 600.64,
+      "duration": 3.6
+    },
+    {
+      "text": "goes all the way through without error",
+      "start": 602.32,
+      "duration": 5.519
+    },
+    {
+      "text": "and here actually it did have an error",
+      "start": 604.24,
+      "duration": 6.24
+    },
+    {
+      "text": "i accidentally left this one cache saved",
+      "start": 607.839,
+      "duration": 3.361
+    },
+    {
+      "text": "during year",
+      "start": 610.48,
+      "duration": 4.64
+    },
+    {
+      "text": "using the data not the model data",
+      "start": 611.2,
+      "duration": 6.8
+    },
+    {
+      "text": "so this one should be model data to show",
+      "start": 615.12,
+      "duration": 3.52
+    },
+    {
+      "text": "that",
+      "start": 618.0,
+      "duration": 1.92
+    },
+    {
+      "text": "because it's happening outside the",
+      "start": 618.64,
+      "duration": 3.84
+    },
+    {
+      "text": "function so now i'm going to restart and",
+      "start": 619.92,
+      "duration": 5.599
+    },
+    {
+      "text": "run all cells again",
+      "start": 622.48,
+      "duration": 3.039
+    },
+    {
+      "text": "and now we can see it ran all the way",
+      "start": 625.92,
+      "duration": 3.28
+    },
+    {
+      "text": "through just",
+      "start": 628.32,
+      "duration": 4.4
+    },
+    {
+      "text": "fine um and now",
+      "start": 629.2,
+      "duration": 5.759
+    },
+    {
+      "text": "because all the functions are set to",
+      "start": 632.72,
+      "duration": 3.6
+    },
+    {
+      "text": "take data",
+      "start": 634.959,
+      "duration": 3.601
+    },
+    {
+      "text": "and they're not directly using the model",
+      "start": 636.32,
+      "duration": 3.28
+    },
+    {
+      "text": "data",
+      "start": 638.56,
+      "duration": 3.839
+    },
+    {
+      "text": "that means that any possible data can be",
+      "start": 639.6,
+      "duration": 4.72
+    },
+    {
+      "text": "passed into this function",
+      "start": 642.399,
+      "duration": 6.161
+    },
+    {
+      "text": "um so you know you can change it so that",
+      "start": 644.32,
+      "duration": 6.56
+    },
+    {
+      "text": "uh you know you're passing the model",
+      "start": 648.56,
+      "duration": 3.36
+    },
+    {
+      "text": "inputs",
+      "start": 650.88,
+      "duration": 4.079
+    },
+    {
+      "text": "with you know let's do starting salary",
+      "start": 651.92,
+      "duration": 6.88
+    },
+    {
+      "text": "equals 30 000 and then you run it again",
+      "start": 654.959,
+      "duration": 6.161
+    },
+    {
+      "text": "and now we can see it takes 37 years to",
+      "start": 658.8,
+      "duration": 3.279
+    },
+    {
+      "text": "retire",
+      "start": 661.12,
+      "duration": 4.719
+    },
+    {
+      "text": "oh well what if instead we had uh",
+      "start": 662.079,
+      "duration": 6.641
+    },
+    {
+      "text": "the cost of living raised was higher at",
+      "start": 665.839,
+      "duration": 4.24
+    },
+    {
+      "text": "4",
+      "start": 668.72,
+      "duration": 2.88
+    },
+    {
+      "text": "going back to the original starting",
+      "start": 670.079,
+      "duration": 3.521
+    },
+    {
+      "text": "salary then it would",
+      "start": 671.6,
+      "duration": 4.08
+    },
+    {
+      "text": "be three years quicker for us to retire",
+      "start": 673.6,
+      "duration": 3.919
+    },
+    {
+      "text": "from that additional return",
+      "start": 675.68,
+      "duration": 4.0
+    },
+    {
+      "text": "um and so you're able to pass whatever",
+      "start": 677.519,
+      "duration": 3.361
+    },
+    {
+      "text": "you want to it",
+      "start": 679.68,
+      "duration": 3.76
+    },
+    {
+      "text": "and as we look at other extensions to",
+      "start": 680.88,
+      "duration": 3.199
+    },
+    {
+      "text": "models",
+      "start": 683.44,
+      "duration": 2.24
+    },
+    {
+      "text": "as we go throughout the course you're",
+      "start": 684.079,
+      "duration": 2.801
+    },
+    {
+      "text": "going to be able to add whatever",
+      "start": 685.68,
+      "duration": 4.719
+    },
+    {
+      "text": "extensions you want very easily",
+      "start": 686.88,
+      "duration": 6.0
+    },
+    {
+      "text": "and it's not tied to this particular",
+      "start": 690.399,
+      "duration": 3.12
+    },
+    {
+      "text": "instance",
+      "start": 692.88,
+      "duration": 3.36
+    },
+    {
+      "text": "of the model inputs defined here at the",
+      "start": 693.519,
+      "duration": 4.88
+    },
+    {
+      "text": "top you can pass it whatever",
+      "start": 696.24,
+      "duration": 3.839
+    },
+    {
+      "text": "inputs you want and everything flows",
+      "start": 698.399,
+      "duration": 5.201
+    },
+    {
+      "text": "through the entire model",
+      "start": 700.079,
+      "duration": 7.44
+    },
+    {
+      "text": "so that wraps up this lecture series",
+      "start": 703.6,
+      "duration": 7.44
+    },
+    {
+      "text": "on going uh to build out the full",
+      "start": 707.519,
+      "duration": 5.841
+    },
+    {
+      "text": "dynamic salary retirement model",
+      "start": 711.04,
+      "duration": 5.359
+    },
+    {
+      "text": "in python the next lecture series is",
+      "start": 713.36,
+      "duration": 4.08
+    },
+    {
+      "text": "going to be focused",
+      "start": 716.399,
+      "duration": 4.401
+    },
+    {
+      "text": "on visualization so thanks for listening",
+      "start": 717.44,
+      "duration": 9.199
+    },
+    {
+      "text": "and see you next time",
+      "start": 720.8,
+      "duration": 5.839
+    }
+  ]
+}

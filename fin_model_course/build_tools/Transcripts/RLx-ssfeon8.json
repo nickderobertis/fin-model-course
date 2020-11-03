@@ -1,0 +1,1299 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.199,
+      "duration": 2.481
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.16,
+      "duration": 3.52
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.68,
+      "duration": 2.959
+    },
+    {
+      "text": "be talking about",
+      "start": 7.68,
+      "duration": 3.919
+    },
+    {
+      "text": "error handling in python which will",
+      "start": 8.639,
+      "duration": 4.641
+    },
+    {
+      "text": "conclude our segment on",
+      "start": 11.599,
+      "duration": 4.881
+    },
+    {
+      "text": "going beyond an initial python script",
+      "start": 13.28,
+      "duration": 5.2
+    },
+    {
+      "text": "the tools and skills that we need in",
+      "start": 16.48,
+      "duration": 3.36
+    },
+    {
+      "text": "python to go",
+      "start": 18.48,
+      "duration": 4.719
+    },
+    {
+      "text": "and build out financial models so",
+      "start": 19.84,
+      "duration": 5.84
+    },
+    {
+      "text": "this is going to be a quick video we're",
+      "start": 23.199,
+      "duration": 3.92
+    },
+    {
+      "text": "just going to be",
+      "start": 25.68,
+      "duration": 5.2
+    },
+    {
+      "text": "quickly reviewing error handling uh",
+      "start": 27.119,
+      "duration": 5.041
+    },
+    {
+      "text": "most people probably are not even going",
+      "start": 30.88,
+      "duration": 3.839
+    },
+    {
+      "text": "to need this it's just something to be",
+      "start": 32.16,
+      "duration": 5.6
+    },
+    {
+      "text": "familiar with in python because you may",
+      "start": 34.719,
+      "duration": 3.921
+    },
+    {
+      "text": "need it",
+      "start": 37.76,
+      "duration": 2.63
+    },
+    {
+      "text": "at certain points",
+      "start": 38.64,
+      "duration": 3.12
+    },
+    {
+      "text": "[Music]",
+      "start": 40.39,
+      "duration": 2.89
+    },
+    {
+      "text": "you know definitely it comes up a lot",
+      "start": 41.76,
+      "duration": 3.119
+    },
+    {
+      "text": "more in general programming than in",
+      "start": 43.28,
+      "duration": 3.599
+    },
+    {
+      "text": "building financial models but there are",
+      "start": 44.879,
+      "duration": 3.601
+    },
+    {
+      "text": "still cases where you",
+      "start": 46.879,
+      "duration": 4.721
+    },
+    {
+      "text": "may find it useful uh for modeling",
+      "start": 48.48,
+      "duration": 5.12
+    },
+    {
+      "text": "and then you know as you go outside the",
+      "start": 51.6,
+      "duration": 3.279
+    },
+    {
+      "text": "class and expand",
+      "start": 53.6,
+      "duration": 3.2
+    },
+    {
+      "text": "into other areas in python you'll find",
+      "start": 54.879,
+      "duration": 4.401
+    },
+    {
+      "text": "it useful as well",
+      "start": 56.8,
+      "duration": 5.12
+    },
+    {
+      "text": "so you know at this point if you've been",
+      "start": 59.28,
+      "duration": 4.4
+    },
+    {
+      "text": "following along and you've been working",
+      "start": 61.92,
+      "duration": 2.16
+    },
+    {
+      "text": "on",
+      "start": 63.68,
+      "duration": 3.439
+    },
+    {
+      "text": "all the labs and you've been uh you know",
+      "start": 64.08,
+      "duration": 5.92
+    },
+    {
+      "text": "building out the the models and examples",
+      "start": 67.119,
+      "duration": 4.641
+    },
+    {
+      "text": "along with me",
+      "start": 70.0,
+      "duration": 3.6
+    },
+    {
+      "text": "then i'm sure you've seen errors coming",
+      "start": 71.76,
+      "duration": 4.08
+    },
+    {
+      "text": "up i've also shown examples of errors",
+      "start": 73.6,
+      "duration": 3.92
+    },
+    {
+      "text": "you know syntax error",
+      "start": 75.84,
+      "duration": 5.36
+    },
+    {
+      "text": "annotation error name error uh",
+      "start": 77.52,
+      "duration": 6.56
+    },
+    {
+      "text": "you know index error there's so many",
+      "start": 81.2,
+      "duration": 5.84
+    },
+    {
+      "text": "different kinds of errors",
+      "start": 84.08,
+      "duration": 7.039
+    },
+    {
+      "text": "and when you hit an error in python code",
+      "start": 87.04,
+      "duration": 7.6
+    },
+    {
+      "text": "it stops the execution of the code",
+      "start": 91.119,
+      "duration": 5.281
+    },
+    {
+      "text": "wherever you're at as soon as it throws",
+      "start": 94.64,
+      "duration": 3.6
+    },
+    {
+      "text": "the error it's just done it's just",
+      "start": 96.4,
+      "duration": 4.48
+    },
+    {
+      "text": "it's not going to execute anything after",
+      "start": 98.24,
+      "duration": 4.879
+    },
+    {
+      "text": "that",
+      "start": 100.88,
+      "duration": 2.239
+    },
+    {
+      "text": "and sometimes you're going to be going",
+      "start": 103.92,
+      "duration": 3.839
+    },
+    {
+      "text": "through your code and you're going to",
+      "start": 106.64,
+      "duration": 1.759
+    },
+    {
+      "text": "expect",
+      "start": 107.759,
+      "duration": 4.961
+    },
+    {
+      "text": "to get an error uh that this error",
+      "start": 108.399,
+      "duration": 7.601
+    },
+    {
+      "text": "is actually something that",
+      "start": 112.72,
+      "duration": 4.88
+    },
+    {
+      "text": "is inherent to the way that the model",
+      "start": 116.0,
+      "duration": 3.68
+    },
+    {
+      "text": "works uh",
+      "start": 117.6,
+      "duration": 4.24
+    },
+    {
+      "text": "it could be you know something like you",
+      "start": 119.68,
+      "duration": 3.759
+    },
+    {
+      "text": "could set it up that",
+      "start": 121.84,
+      "duration": 3.2
+    },
+    {
+      "text": "you know you're supposed to put you know",
+      "start": 123.439,
+      "duration": 3.201
+    },
+    {
+      "text": "a number of years as an input into the",
+      "start": 125.04,
+      "duration": 2.48
+    },
+    {
+      "text": "model",
+      "start": 126.64,
+      "duration": 3.2
+    },
+    {
+      "text": "and you want to add some validation such",
+      "start": 127.52,
+      "duration": 3.76
+    },
+    {
+      "text": "that if a user",
+      "start": 129.84,
+      "duration": 4.88
+    },
+    {
+      "text": "uh you know gets less than or it puts in",
+      "start": 131.28,
+      "duration": 4.24
+    },
+    {
+      "text": "less than",
+      "start": 134.72,
+      "duration": 4.32
+    },
+    {
+      "text": "uh zero for the number of years then",
+      "start": 135.52,
+      "duration": 4.799
+    },
+    {
+      "text": "you know it could be you raising an",
+      "start": 139.04,
+      "duration": 3.839
+    },
+    {
+      "text": "error or catching the the error that",
+      "start": 140.319,
+      "duration": 3.92
+    },
+    {
+      "text": "comes out of your program and",
+      "start": 142.879,
+      "duration": 2.961
+    },
+    {
+      "text": "and then you know printing that out to",
+      "start": 144.239,
+      "duration": 3.681
+    },
+    {
+      "text": "the user hey make sure you pass a number",
+      "start": 145.84,
+      "duration": 5.36
+    },
+    {
+      "text": "greater than uh zero for",
+      "start": 147.92,
+      "duration": 6.56
+    },
+    {
+      "text": "the number of years or you know it could",
+      "start": 151.2,
+      "duration": 3.679
+    },
+    {
+      "text": "be",
+      "start": 154.48,
+      "duration": 1.6
+    },
+    {
+      "text": "something that comes up just from the",
+      "start": 154.879,
+      "duration": 3.281
+    },
+    {
+      "text": "logic of your model where you do",
+      "start": 156.08,
+      "duration": 3.519
+    },
+    {
+      "text": "actually expect to see an error",
+      "start": 158.16,
+      "duration": 4.4
+    },
+    {
+      "text": "in some or all of the cases um and you",
+      "start": 159.599,
+      "duration": 5.28
+    },
+    {
+      "text": "want to do something in response to that",
+      "start": 162.56,
+      "duration": 4.8
+    },
+    {
+      "text": "error instead of just having the code",
+      "start": 164.879,
+      "duration": 3.36
+    },
+    {
+      "text": "stop",
+      "start": 167.36,
+      "duration": 3.92
+    },
+    {
+      "text": "at that point uh",
+      "start": 168.239,
+      "duration": 5.921
+    },
+    {
+      "text": "so here's the basic structure for error",
+      "start": 171.28,
+      "duration": 4.0
+    },
+    {
+      "text": "handling",
+      "start": 174.16,
+      "duration": 4.799
+    },
+    {
+      "text": "um so um",
+      "start": 175.28,
+      "duration": 6.0
+    },
+    {
+      "text": "the structure is what's called a try and",
+      "start": 178.959,
+      "duration": 3.041
+    },
+    {
+      "text": "accept",
+      "start": 181.28,
+      "duration": 4.16
+    },
+    {
+      "text": "clause um and",
+      "start": 182.0,
+      "duration": 5.76
+    },
+    {
+      "text": "basically you try to do something and",
+      "start": 185.44,
+      "duration": 3.84
+    },
+    {
+      "text": "then if there's an error",
+      "start": 187.76,
+      "duration": 4.559
+    },
+    {
+      "text": "then you're gonna go into the accept",
+      "start": 189.28,
+      "duration": 6.4
+    },
+    {
+      "text": "um so here you know we've got",
+      "start": 192.319,
+      "duration": 5.601
+    },
+    {
+      "text": "a list defined that has two items a and",
+      "start": 195.68,
+      "duration": 3.12
+    },
+    {
+      "text": "b",
+      "start": 197.92,
+      "duration": 4.0
+    },
+    {
+      "text": "and then we're trying to uh",
+      "start": 198.8,
+      "duration": 6.24
+    },
+    {
+      "text": "look up the 11th item from the list of",
+      "start": 201.92,
+      "duration": 4.48
+    },
+    {
+      "text": "course the list only has",
+      "start": 205.04,
+      "duration": 4.479
+    },
+    {
+      "text": "two items and so there is no 11th item",
+      "start": 206.4,
+      "duration": 5.36
+    },
+    {
+      "text": "and so as we saw you know previously",
+      "start": 209.519,
+      "duration": 3.601
+    },
+    {
+      "text": "when covering lists",
+      "start": 211.76,
+      "duration": 3.92
+    },
+    {
+      "text": "uh that we're gonna get an index error",
+      "start": 213.12,
+      "duration": 3.52
+    },
+    {
+      "text": "in that case",
+      "start": 215.68,
+      "duration": 4.4
+    },
+    {
+      "text": "right um and so",
+      "start": 216.64,
+      "duration": 6.8
+    },
+    {
+      "text": "uh you know you run this code and",
+      "start": 220.08,
+      "duration": 5.36
+    },
+    {
+      "text": "it's just going to print out caught the",
+      "start": 223.44,
+      "duration": 3.359
+    },
+    {
+      "text": "error",
+      "start": 225.44,
+      "duration": 4.48
+    },
+    {
+      "text": "it's not going to fail it's not going to",
+      "start": 226.799,
+      "duration": 5.281
+    },
+    {
+      "text": "show you any index error it's just going",
+      "start": 229.92,
+      "duration": 2.72
+    },
+    {
+      "text": "to print",
+      "start": 232.08,
+      "duration": 3.359
+    },
+    {
+      "text": "caught the error and that's because we",
+      "start": 232.64,
+      "duration": 3.84
+    },
+    {
+      "text": "tried",
+      "start": 235.439,
+      "duration": 3.761
+    },
+    {
+      "text": "to look up the 11th item in the list and",
+      "start": 236.48,
+      "duration": 3.2
+    },
+    {
+      "text": "then",
+      "start": 239.2,
+      "duration": 3.84
+    },
+    {
+      "text": "this triggered the index error",
+      "start": 239.68,
+      "duration": 6.0
+    },
+    {
+      "text": "but then we have this accept clause and",
+      "start": 243.04,
+      "duration": 4.32
+    },
+    {
+      "text": "so this accept clause",
+      "start": 245.68,
+      "duration": 4.24
+    },
+    {
+      "text": "says you know whatever exception you put",
+      "start": 247.36,
+      "duration": 3.439
+    },
+    {
+      "text": "here",
+      "start": 249.92,
+      "duration": 2.72
+    },
+    {
+      "text": "it's going to look for that exception",
+      "start": 250.799,
+      "duration": 4.241
+    },
+    {
+      "text": "coming up within the try clause",
+      "start": 252.64,
+      "duration": 4.4
+    },
+    {
+      "text": "and if it does then we're all of a",
+      "start": 255.04,
+      "duration": 3.039
+    },
+    {
+      "text": "sudden going to be",
+      "start": 257.04,
+      "duration": 3.739
+    },
+    {
+      "text": "in this part of the logic",
+      "start": 258.079,
+      "duration": 3.921
+    },
+    {
+      "text": "[Music]",
+      "start": 260.779,
+      "duration": 2.661
+    },
+    {
+      "text": "so it's a totally different way to",
+      "start": 262.0,
+      "duration": 3.68
+    },
+    {
+      "text": "handle uh the flow",
+      "start": 263.44,
+      "duration": 4.479
+    },
+    {
+      "text": "in your python program versus you know",
+      "start": 265.68,
+      "duration": 4.079
+    },
+    {
+      "text": "like using conditionals or something",
+      "start": 267.919,
+      "duration": 3.761
+    },
+    {
+      "text": "like that to control flow",
+      "start": 269.759,
+      "duration": 4.641
+    },
+    {
+      "text": "um it's you know if you get an error",
+      "start": 271.68,
+      "duration": 5.28
+    },
+    {
+      "text": "we're going somewhere else in the code",
+      "start": 274.4,
+      "duration": 5.84
+    },
+    {
+      "text": "um so",
+      "start": 276.96,
+      "duration": 3.28
+    },
+    {
+      "text": "there's a lot of different possible",
+      "start": 280.72,
+      "duration": 2.96
+    },
+    {
+      "text": "applications of this and we'll look at",
+      "start": 282.16,
+      "duration": 2.4
+    },
+    {
+      "text": "an example here",
+      "start": 283.68,
+      "duration": 4.56
+    },
+    {
+      "text": "in the moment um and then you'll notice",
+      "start": 284.56,
+      "duration": 4.72
+    },
+    {
+      "text": "it's just like",
+      "start": 288.24,
+      "duration": 3.28
+    },
+    {
+      "text": "uh you know every other kind of logical",
+      "start": 289.28,
+      "duration": 4.24
+    },
+    {
+      "text": "block that we've defined in",
+      "start": 291.52,
+      "duration": 5.04
+    },
+    {
+      "text": "python you know be it for loops be it",
+      "start": 293.52,
+      "duration": 6.239
+    },
+    {
+      "text": "if statements uh function definitions",
+      "start": 296.56,
+      "duration": 6.479
+    },
+    {
+      "text": "class definitions uh now also try and",
+      "start": 299.759,
+      "duration": 4.16
+    },
+    {
+      "text": "accept",
+      "start": 303.039,
+      "duration": 4.641
+    },
+    {
+      "text": "again it's you put uh the",
+      "start": 303.919,
+      "duration": 7.041
+    },
+    {
+      "text": "you know the control statement and then",
+      "start": 307.68,
+      "duration": 6.239
+    },
+    {
+      "text": "a colon and then on the next line you",
+      "start": 310.96,
+      "duration": 3.84
+    },
+    {
+      "text": "end in",
+      "start": 313.919,
+      "duration": 2.961
+    },
+    {
+      "text": "and then whatever is indented is going",
+      "start": 314.8,
+      "duration": 3.119
+    },
+    {
+      "text": "to be running",
+      "start": 316.88,
+      "duration": 4.159
+    },
+    {
+      "text": "as part of that block that logical block",
+      "start": 317.919,
+      "duration": 5.84
+    },
+    {
+      "text": "so the try block as this code in it the",
+      "start": 321.039,
+      "duration": 4.0
+    },
+    {
+      "text": "accept block",
+      "start": 323.759,
+      "duration": 3.761
+    },
+    {
+      "text": "has this code in it because they are",
+      "start": 325.039,
+      "duration": 3.761
+    },
+    {
+      "text": "indented",
+      "start": 327.52,
+      "duration": 3.679
+    },
+    {
+      "text": "and the try and the accept have to be on",
+      "start": 328.8,
+      "duration": 4.399
+    },
+    {
+      "text": "the same indentation level",
+      "start": 331.199,
+      "duration": 4.72
+    },
+    {
+      "text": "just like when we looked at if and else",
+      "start": 333.199,
+      "duration": 4.481
+    },
+    {
+      "text": "right like if and else are like part of",
+      "start": 335.919,
+      "duration": 2.881
+    },
+    {
+      "text": "the same",
+      "start": 337.68,
+      "duration": 4.32
+    },
+    {
+      "text": "um construct here and so then the same",
+      "start": 338.8,
+      "duration": 4.8
+    },
+    {
+      "text": "thing with try and accept",
+      "start": 342.0,
+      "duration": 4.08
+    },
+    {
+      "text": "um they go together and so they should",
+      "start": 343.6,
+      "duration": 4.24
+    },
+    {
+      "text": "be on the same indentation",
+      "start": 346.08,
+      "duration": 6.08
+    },
+    {
+      "text": "level so then um",
+      "start": 347.84,
+      "duration": 5.919
+    },
+    {
+      "text": "you know just thinking about an example",
+      "start": 352.16,
+      "duration": 3.68
+    },
+    {
+      "text": "here uh so let's say",
+      "start": 353.759,
+      "duration": 4.321
+    },
+    {
+      "text": "you know you've got um you know two",
+      "start": 355.84,
+      "duration": 3.6
+    },
+    {
+      "text": "different annuities",
+      "start": 358.08,
+      "duration": 3.44
+    },
+    {
+      "text": "uh they both pay a hundred dollars a",
+      "start": 359.44,
+      "duration": 3.44
+    },
+    {
+      "text": "year for five years",
+      "start": 361.52,
+      "duration": 2.799
+    },
+    {
+      "text": "uh but one you're getting in the year",
+      "start": 362.88,
+      "duration": 3.36
+    },
+    {
+      "text": "zero and one you're getting in year",
+      "start": 364.319,
+      "duration": 3.44
+    },
+    {
+      "text": "three",
+      "start": 366.24,
+      "duration": 3.76
+    },
+    {
+      "text": "so we can define this annuity as just a",
+      "start": 367.759,
+      "duration": 4.241
+    },
+    {
+      "text": "list of a hundred five times",
+      "start": 370.0,
+      "duration": 4.4
+    },
+    {
+      "text": "and here's a nice little shortcut that",
+      "start": 372.0,
+      "duration": 3.6
+    },
+    {
+      "text": "will let you define",
+      "start": 374.4,
+      "duration": 3.359
+    },
+    {
+      "text": "something repetitive like that this will",
+      "start": 375.6,
+      "duration": 3.599
+    },
+    {
+      "text": "expand out to being",
+      "start": 377.759,
+      "duration": 5.041
+    },
+    {
+      "text": "a list with a hundred in it five times",
+      "start": 379.199,
+      "duration": 7.361
+    },
+    {
+      "text": "um and then we want to figure out",
+      "start": 382.8,
+      "duration": 5.839
+    },
+    {
+      "text": "what are the cash flows overall you know",
+      "start": 386.56,
+      "duration": 5.359
+    },
+    {
+      "text": "going up to 15 years",
+      "start": 388.639,
+      "duration": 7.201
+    },
+    {
+      "text": "or you know however many years",
+      "start": 391.919,
+      "duration": 3.921
+    },
+    {
+      "text": "so here's some code which is able to",
+      "start": 396.319,
+      "duration": 8.241
+    },
+    {
+      "text": "get to that result using error handling",
+      "start": 400.4,
+      "duration": 7.28
+    },
+    {
+      "text": "so here looking at 10 years",
+      "start": 404.56,
+      "duration": 4.24
+    },
+    {
+      "text": "and we've got these two different",
+      "start": 407.68,
+      "duration": 3.2
+    },
+    {
+      "text": "annuities um",
+      "start": 408.8,
+      "duration": 3.76
+    },
+    {
+      "text": "this second annuity is going to start in",
+      "start": 410.88,
+      "duration": 3.68
+    },
+    {
+      "text": "year four uh the first",
+      "start": 412.56,
+      "duration": 4.88
+    },
+    {
+      "text": "annuity or year three or year zero",
+      "start": 414.56,
+      "duration": 4.32
+    },
+    {
+      "text": "whatever you want to call the first year",
+      "start": 417.44,
+      "duration": 3.36
+    },
+    {
+      "text": "zero or one it's gonna start three years",
+      "start": 418.88,
+      "duration": 4.319
+    },
+    {
+      "text": "later for the second annuity",
+      "start": 420.8,
+      "duration": 6.16
+    },
+    {
+      "text": "um and we want to ultimately get the",
+      "start": 423.199,
+      "duration": 5.361
+    },
+    {
+      "text": "cash flows at the end right so",
+      "start": 426.96,
+      "duration": 4.239
+    },
+    {
+      "text": "three periods of getting just 100 and",
+      "start": 428.56,
+      "duration": 4.079
+    },
+    {
+      "text": "then two periods where they're both",
+      "start": 431.199,
+      "duration": 2.72
+    },
+    {
+      "text": "paying we get 200",
+      "start": 432.639,
+      "duration": 2.881
+    },
+    {
+      "text": "and then three more periods are just a",
+      "start": 433.919,
+      "duration": 3.361
+    },
+    {
+      "text": "hundred and then zero for the remaining",
+      "start": 435.52,
+      "duration": 3.44
+    },
+    {
+      "text": "periods is the result that we would",
+      "start": 437.28,
+      "duration": 2.56
+    },
+    {
+      "text": "expect",
+      "start": 438.96,
+      "duration": 3.28
+    },
+    {
+      "text": "of putting these two things together um",
+      "start": 439.84,
+      "duration": 4.24
+    },
+    {
+      "text": "so one way you might think to put them",
+      "start": 442.24,
+      "duration": 2.64
+    },
+    {
+      "text": "together is",
+      "start": 444.08,
+      "duration": 2.48
+    },
+    {
+      "text": "okay let me loop through the number of",
+      "start": 444.88,
+      "duration": 3.599
+    },
+    {
+      "text": "years and then",
+      "start": 446.56,
+      "duration": 4.639
+    },
+    {
+      "text": "let me go through the annuities and add",
+      "start": 448.479,
+      "duration": 3.201
+    },
+    {
+      "text": "up",
+      "start": 451.199,
+      "duration": 3.28
+    },
+    {
+      "text": "you know looking up that year's value",
+      "start": 451.68,
+      "duration": 3.28
+    },
+    {
+      "text": "from",
+      "start": 454.479,
+      "duration": 3.521
+    },
+    {
+      "text": "the annuity",
+      "start": 454.96,
+      "duration": 3.04
+    },
+    {
+      "text": "but the",
+      "start": 458.72,
+      "duration": 7.68
+    },
+    {
+      "text": "issue there is then that",
+      "start": 461.84,
+      "duration": 7.919
+    },
+    {
+      "text": "the annuities uh",
+      "start": 466.4,
+      "duration": 5.68
+    },
+    {
+      "text": "don't have equal links here this one is",
+      "start": 469.759,
+      "duration": 3.521
+    },
+    {
+      "text": "only five",
+      "start": 472.08,
+      "duration": 5.119
+    },
+    {
+      "text": "long this is eight long and so",
+      "start": 473.28,
+      "duration": 6.96
+    },
+    {
+      "text": "as you get uh to year six",
+      "start": 477.199,
+      "duration": 4.961
+    },
+    {
+      "text": "all of a sudden is trying to look up the",
+      "start": 480.24,
+      "duration": 3.679
+    },
+    {
+      "text": "sixth year in this annuity which has",
+      "start": 482.16,
+      "duration": 3.36
+    },
+    {
+      "text": "only five items",
+      "start": 483.919,
+      "duration": 3.361
+    },
+    {
+      "text": "and that's going to give you an index",
+      "start": 485.52,
+      "duration": 3.04
+    },
+    {
+      "text": "error um",
+      "start": 487.28,
+      "duration": 3.68
+    },
+    {
+      "text": "so then if we have this try accept",
+      "start": 488.56,
+      "duration": 3.68
+    },
+    {
+      "text": "handling in here",
+      "start": 490.96,
+      "duration": 3.6
+    },
+    {
+      "text": "uh if we get the index error well we're",
+      "start": 492.24,
+      "duration": 3.84
+    },
+    {
+      "text": "just not going to do anything",
+      "start": 494.56,
+      "duration": 4.0
+    },
+    {
+      "text": "that's what pass means is just uh you",
+      "start": 496.08,
+      "duration": 3.92
+    },
+    {
+      "text": "know go on ahead",
+      "start": 498.56,
+      "duration": 4.96
+    },
+    {
+      "text": "uh i don't want to do anything here",
+      "start": 500.0,
+      "duration": 3.52
+    },
+    {
+      "text": "because in that case you know we don't",
+      "start": 503.759,
+      "duration": 3.84
+    },
+    {
+      "text": "need to add anything the annuity is done",
+      "start": 505.599,
+      "duration": 4.72
+    },
+    {
+      "text": "so we just want it to keep going without",
+      "start": 507.599,
+      "duration": 4.641
+    },
+    {
+      "text": "throwing an error",
+      "start": 510.319,
+      "duration": 4.561
+    },
+    {
+      "text": "and so then when we do that then we",
+      "start": 512.24,
+      "duration": 4.4
+    },
+    {
+      "text": "ultimately get the output",
+      "start": 514.88,
+      "duration": 3.92
+    },
+    {
+      "text": "that we would expect of these two",
+      "start": 516.64,
+      "duration": 3.04
+    },
+    {
+      "text": "annuities",
+      "start": 518.8,
+      "duration": 5.28
+    },
+    {
+      "text": "combined so that's a quick overview",
+      "start": 519.68,
+      "duration": 7.599
+    },
+    {
+      "text": "on error handling in python",
+      "start": 524.08,
+      "duration": 6.48
+    },
+    {
+      "text": "definitely uh you know it's not going to",
+      "start": 527.279,
+      "duration": 5.441
+    },
+    {
+      "text": "be super common in financial modeling to",
+      "start": 530.56,
+      "duration": 3.6
+    },
+    {
+      "text": "hit this until you get to you know",
+      "start": 532.72,
+      "duration": 3.28
+    },
+    {
+      "text": "definitely more complex",
+      "start": 534.16,
+      "duration": 5.52
+    },
+    {
+      "text": "uh models but a good pattern to know",
+      "start": 536.0,
+      "duration": 6.72
+    },
+    {
+      "text": "regardless and if you're unsure about",
+      "start": 539.68,
+      "duration": 4.56
+    },
+    {
+      "text": "whether you should be applying it or you",
+      "start": 542.72,
+      "duration": 3.28
+    },
+    {
+      "text": "have questions about applying it just",
+      "start": 544.24,
+      "duration": 5.12
+    },
+    {
+      "text": "feel free to to ask me about that",
+      "start": 546.0,
+      "duration": 6.8
+    },
+    {
+      "text": "and i can give more contacts there",
+      "start": 549.36,
+      "duration": 6.479
+    },
+    {
+      "text": "so that wraps up our segment on",
+      "start": 552.8,
+      "duration": 6.159
+    },
+    {
+      "text": "going beyond an initial python script",
+      "start": 555.839,
+      "duration": 6.241
+    },
+    {
+      "text": "where now we have the basic python",
+      "start": 558.959,
+      "duration": 4.241
+    },
+    {
+      "text": "knowledge that we need",
+      "start": 562.08,
+      "duration": 3.04
+    },
+    {
+      "text": "such that we can go and build out the",
+      "start": 563.2,
+      "duration": 4.4
+    },
+    {
+      "text": "dynamic salary retirement model",
+      "start": 565.12,
+      "duration": 5.839
+    },
+    {
+      "text": "fully in python for our next major",
+      "start": 567.6,
+      "duration": 6.08
+    },
+    {
+      "text": "segment so thanks for listening and see",
+      "start": 570.959,
+      "duration": 6.88
+    },
+    {
+      "text": "you next time",
+      "start": 573.68,
+      "duration": 4.159
+    }
+  ]
+}

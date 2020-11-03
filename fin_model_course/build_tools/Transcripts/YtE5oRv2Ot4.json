@@ -1,0 +1,464 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.52,
+      "duration": 2.319
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.319,
+      "duration": 3.921
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.839,
+      "duration": 2.72
+    },
+    {
+      "text": "be",
+      "start": 8.24,
+      "duration": 2.88
+    },
+    {
+      "text": "talking about the lab exercise for",
+      "start": 8.559,
+      "duration": 4.24
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 11.12,
+      "duration": 4.559
+    },
+    {
+      "text": "in python as part of the lecture series",
+      "start": 12.799,
+      "duration": 5.841
+    },
+    {
+      "text": "on exploring the parameter space",
+      "start": 15.679,
+      "duration": 5.76
+    },
+    {
+      "text": "so we left off last time we had covered",
+      "start": 18.64,
+      "duration": 5.2
+    },
+    {
+      "text": "all the material on sensitivity analysis",
+      "start": 21.439,
+      "duration": 5.201
+    },
+    {
+      "text": "in python and now we're coming here to",
+      "start": 23.84,
+      "duration": 4.48
+    },
+    {
+      "text": "the last slide which has the lab",
+      "start": 26.64,
+      "duration": 2.879
+    },
+    {
+      "text": "exercise",
+      "start": 28.32,
+      "duration": 4.32
+    },
+    {
+      "text": "for python sensitivity analysis",
+      "start": 29.519,
+      "duration": 6.241
+    },
+    {
+      "text": "and that is analogous to the exercise we",
+      "start": 32.64,
+      "duration": 4.56
+    },
+    {
+      "text": "completed in excel",
+      "start": 35.76,
+      "duration": 3.04
+    },
+    {
+      "text": "you're going to be adding sensitivity",
+      "start": 37.2,
+      "duration": 3.76
+    },
+    {
+      "text": "analysis to your project",
+      "start": 38.8,
+      "duration": 5.439
+    },
+    {
+      "text": "1 model um",
+      "start": 40.96,
+      "duration": 5.919
+    },
+    {
+      "text": "and so what we just went through with",
+      "start": 44.239,
+      "duration": 3.441
+    },
+    {
+      "text": "adding",
+      "start": 46.879,
+      "duration": 3.36
+    },
+    {
+      "text": "the uh sensitivity analysis to the",
+      "start": 47.68,
+      "duration": 4.48
+    },
+    {
+      "text": "dynamic salary retirement model in",
+      "start": 50.239,
+      "duration": 3.201
+    },
+    {
+      "text": "python",
+      "start": 52.16,
+      "duration": 3.039
+    },
+    {
+      "text": "is going to be really useful for",
+      "start": 53.44,
+      "duration": 3.439
+    },
+    {
+      "text": "completing this exercise so",
+      "start": 55.199,
+      "duration": 3.921
+    },
+    {
+      "text": "watch that carefully and carry out some",
+      "start": 56.879,
+      "duration": 5.36
+    },
+    {
+      "text": "of the same steps over there",
+      "start": 59.12,
+      "duration": 6.079
+    },
+    {
+      "text": "now since this is working with your own",
+      "start": 62.239,
+      "duration": 4.88
+    },
+    {
+      "text": "model",
+      "start": 65.199,
+      "duration": 3.92
+    },
+    {
+      "text": "there's a good chance that your model",
+      "start": 67.119,
+      "duration": 3.721
+    },
+    {
+      "text": "will not have the structure",
+      "start": 69.119,
+      "duration": 4.801
+    },
+    {
+      "text": "required to be able to extend it in any",
+      "start": 70.84,
+      "duration": 4.12
+    },
+    {
+      "text": "way",
+      "start": 73.92,
+      "duration": 3.68
+    },
+    {
+      "text": "if you're accessing the model data",
+      "start": 74.96,
+      "duration": 3.76
+    },
+    {
+      "text": "directly",
+      "start": 77.6,
+      "duration": 3.6
+    },
+    {
+      "text": "inside your logic rather than having a",
+      "start": 78.72,
+      "duration": 5.2
+    },
+    {
+      "text": "function which accepts an arbitrary data",
+      "start": 81.2,
+      "duration": 5.68
+    },
+    {
+      "text": "and working with that arbitrary data",
+      "start": 83.92,
+      "duration": 4.32
+    },
+    {
+      "text": "then this is not going to work you're",
+      "start": 86.88,
+      "duration": 2.239
+    },
+    {
+      "text": "going to have to go back",
+      "start": 88.24,
+      "duration": 3.839
+    },
+    {
+      "text": "and restructure it you should never be",
+      "start": 89.119,
+      "duration": 5.921
+    },
+    {
+      "text": "accessing that",
+      "start": 92.079,
+      "duration": 2.961
+    },
+    {
+      "text": "original model data from within your",
+      "start": 95.36,
+      "duration": 3.68
+    },
+    {
+      "text": "functions",
+      "start": 97.6,
+      "duration": 3.839
+    },
+    {
+      "text": "and you should have one function where",
+      "start": 99.04,
+      "duration": 3.52
+    },
+    {
+      "text": "you can pass it",
+      "start": 101.439,
+      "duration": 4.96
+    },
+    {
+      "text": "the data class and",
+      "start": 102.56,
+      "duration": 7.519
+    },
+    {
+      "text": "get the result of the entire model",
+      "start": 106.399,
+      "duration": 8.72
+    },
+    {
+      "text": "uh the mpv and cash flows um",
+      "start": 110.079,
+      "duration": 8.08
+    },
+    {
+      "text": "by just running a single function so",
+      "start": 115.119,
+      "duration": 4.401
+    },
+    {
+      "text": "you'll need to have both of those things",
+      "start": 118.159,
+      "duration": 3.521
+    },
+    {
+      "text": "in place before you can even go and",
+      "start": 119.52,
+      "duration": 2.879
+    },
+    {
+      "text": "start",
+      "start": 121.68,
+      "duration": 3.039
+    },
+    {
+      "text": "on this exercise so you should",
+      "start": 122.399,
+      "duration": 4.08
+    },
+    {
+      "text": "definitely go back and restructure",
+      "start": 124.719,
+      "duration": 2.961
+    },
+    {
+      "text": "things",
+      "start": 126.479,
+      "duration": 4.48
+    },
+    {
+      "text": "to be able to complete this and",
+      "start": 127.68,
+      "duration": 5.6
+    },
+    {
+      "text": "don't just think well my model is too",
+      "start": 130.959,
+      "duration": 3.92
+    },
+    {
+      "text": "far gone i'll just skip this lab",
+      "start": 133.28,
+      "duration": 3.44
+    },
+    {
+      "text": "exercise because",
+      "start": 134.879,
+      "duration": 3.121
+    },
+    {
+      "text": "as we go forward in the course we're",
+      "start": 136.72,
+      "duration": 2.96
+    },
+    {
+      "text": "gonna have more of these similar",
+      "start": 138.0,
+      "duration": 4.64
+    },
+    {
+      "text": "exercises of extending project one",
+      "start": 139.68,
+      "duration": 5.76
+    },
+    {
+      "text": "and so you really need to to rebuild it",
+      "start": 142.64,
+      "duration": 3.679
+    },
+    {
+      "text": "in a way",
+      "start": 145.44,
+      "duration": 3.36
+    },
+    {
+      "text": "that is going to be flexible to any",
+      "start": 146.319,
+      "duration": 4.721
+    },
+    {
+      "text": "extensions that you can add to it",
+      "start": 148.8,
+      "duration": 4.64
+    },
+    {
+      "text": "and i set it up this way because you",
+      "start": 151.04,
+      "duration": 3.839
+    },
+    {
+      "text": "want to always structure your models",
+      "start": 153.44,
+      "duration": 3.2
+    },
+    {
+      "text": "this way and this will really teach you",
+      "start": 154.879,
+      "duration": 2.401
+    },
+    {
+      "text": "why",
+      "start": 156.64,
+      "duration": 3.28
+    },
+    {
+      "text": "you want to structure them this way that",
+      "start": 157.28,
+      "duration": 3.76
+    },
+    {
+      "text": "way you can actually",
+      "start": 159.92,
+      "duration": 3.92
+    },
+    {
+      "text": "extend them rather than the model is",
+      "start": 161.04,
+      "duration": 5.279
+    },
+    {
+      "text": "what it is",
+      "start": 163.84,
+      "duration": 2.479
+    },
+    {
+      "text": "so that's the main idea here and then",
+      "start": 166.64,
+      "duration": 5.44
+    },
+    {
+      "text": "unlike the excel exercise where you're",
+      "start": 169.84,
+      "duration": 3.84
+    },
+    {
+      "text": "looking at doing just conditional",
+      "start": 172.08,
+      "duration": 3.12
+    },
+    {
+      "text": "formatting in a table",
+      "start": 173.68,
+      "duration": 3.839
+    },
+    {
+      "text": "here we're going to have the hexman plot",
+      "start": 175.2,
+      "duration": 4.319
+    },
+    {
+      "text": "as well as the styled",
+      "start": 177.519,
+      "duration": 5.921
+    },
+    {
+      "text": "data frame as the outputs",
+      "start": 179.519,
+      "duration": 6.881
+    },
+    {
+      "text": "so that's the lab exercise for the",
+      "start": 183.44,
+      "duration": 4.96
+    },
+    {
+      "text": "python sensitivity analysis and that",
+      "start": 186.4,
+      "duration": 2.96
+    },
+    {
+      "text": "wraps up this",
+      "start": 188.4,
+      "duration": 3.759
+    },
+    {
+      "text": "segment on exploring the parameter space",
+      "start": 189.36,
+      "duration": 3.519
+    },
+    {
+      "text": "so",
+      "start": 192.159,
+      "duration": 2.72
+    },
+    {
+      "text": "thanks for listening next time we'll be",
+      "start": 192.879,
+      "duration": 3.121
+    },
+    {
+      "text": "talking about",
+      "start": 194.879,
+      "duration": 4.72
+    },
+    {
+      "text": "probability modeling so i'll see you",
+      "start": 196.0,
+      "duration": 10.799
+    },
+    {
+      "text": "next time",
+      "start": 199.599,
+      "duration": 7.2
+    }
+  ]
+}

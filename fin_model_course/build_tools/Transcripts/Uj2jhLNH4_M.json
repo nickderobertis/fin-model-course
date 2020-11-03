@@ -1,0 +1,699 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick diabetis",
+      "start": 3.28,
+      "duration": 3.599
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 5.12,
+      "duration": 4.24
+    },
+    {
+      "text": "today we're going to be going over the",
+      "start": 6.879,
+      "duration": 3.601
+    },
+    {
+      "text": "lab exercise",
+      "start": 9.36,
+      "duration": 3.92
+    },
+    {
+      "text": "on applying monte carlo simulation to",
+      "start": 10.48,
+      "duration": 5.039
+    },
+    {
+      "text": "the dividend discount model",
+      "start": 13.28,
+      "duration": 3.999
+    },
+    {
+      "text": "this is part of our lecture series on",
+      "start": 15.519,
+      "duration": 4.321
+    },
+    {
+      "text": "monte carlo simulation",
+      "start": 17.279,
+      "duration": 5.92
+    },
+    {
+      "text": "so we have already introduced what monte",
+      "start": 19.84,
+      "duration": 5.359
+    },
+    {
+      "text": "carlo simulation is and then we went",
+      "start": 23.199,
+      "duration": 5.041
+    },
+    {
+      "text": "and applied it in the context of a",
+      "start": 25.199,
+      "duration": 4.881
+    },
+    {
+      "text": "portfolio model choosing between two",
+      "start": 28.24,
+      "duration": 3.439
+    },
+    {
+      "text": "different assets",
+      "start": 30.08,
+      "duration": 3.999
+    },
+    {
+      "text": "and now we're reaching the lab exercise",
+      "start": 31.679,
+      "duration": 5.201
+    },
+    {
+      "text": "at the end of that material",
+      "start": 34.079,
+      "duration": 4.64
+    },
+    {
+      "text": "and it's focused on the dividend",
+      "start": 36.88,
+      "duration": 3.839
+    },
+    {
+      "text": "discount model",
+      "start": 38.719,
+      "duration": 4.321
+    },
+    {
+      "text": "so the situation here is that you're",
+      "start": 40.719,
+      "duration": 3.36
+    },
+    {
+      "text": "trying to value",
+      "start": 43.04,
+      "duration": 3.6
+    },
+    {
+      "text": "a mature company they have stable",
+      "start": 44.079,
+      "duration": 3.201
+    },
+    {
+      "text": "dividend",
+      "start": 46.64,
+      "duration": 3.84
+    },
+    {
+      "text": "growth and so this is a reasonable",
+      "start": 47.28,
+      "duration": 6.72
+    },
+    {
+      "text": "model to look at for evaluation",
+      "start": 50.48,
+      "duration": 6.559
+    },
+    {
+      "text": "and the model is defined as you see here",
+      "start": 54.0,
+      "duration": 5.52
+    },
+    {
+      "text": "in the second point the price is equal",
+      "start": 57.039,
+      "duration": 4.881
+    },
+    {
+      "text": "to the next dividend",
+      "start": 59.52,
+      "duration": 5.599
+    },
+    {
+      "text": "over the cost of capital or",
+      "start": 61.92,
+      "duration": 6.96
+    },
+    {
+      "text": "discount rate of the stock minus",
+      "start": 65.119,
+      "duration": 6.641
+    },
+    {
+      "text": "the growth rate of the dividends on",
+      "start": 68.88,
+      "duration": 5.2
+    },
+    {
+      "text": "stock",
+      "start": 71.76,
+      "duration": 5.679
+    },
+    {
+      "text": "and i gave you the initial",
+      "start": 74.08,
+      "duration": 6.079
+    },
+    {
+      "text": "values to use for the inputs so the next",
+      "start": 77.439,
+      "duration": 4.881
+    },
+    {
+      "text": "dividend is going to be a dollar",
+      "start": 80.159,
+      "duration": 5.521
+    },
+    {
+      "text": "uh the discount rate cost of capital",
+      "start": 82.32,
+      "duration": 6.159
+    },
+    {
+      "text": "is gonna be nine percent and the growth",
+      "start": 85.68,
+      "duration": 3.439
+    },
+    {
+      "text": "rate",
+      "start": 88.479,
+      "duration": 3.121
+    },
+    {
+      "text": "is going to be four percent so the first",
+      "start": 89.119,
+      "duration": 4.32
+    },
+    {
+      "text": "step here is just to build out the core",
+      "start": 91.6,
+      "duration": 2.8
+    },
+    {
+      "text": "model",
+      "start": 93.439,
+      "duration": 3.521
+    },
+    {
+      "text": "which is able to take these inputs and",
+      "start": 94.4,
+      "duration": 3.92
+    },
+    {
+      "text": "produce the price",
+      "start": 96.96,
+      "duration": 4.4
+    },
+    {
+      "text": "from those inputs",
+      "start": 98.32,
+      "duration": 5.92
+    },
+    {
+      "text": "but then as the modeler you're concerned",
+      "start": 101.36,
+      "duration": 4.56
+    },
+    {
+      "text": "that some of these inputs could have",
+      "start": 104.24,
+      "duration": 2.96
+    },
+    {
+      "text": "been mis-estimated",
+      "start": 105.92,
+      "duration": 3.6
+    },
+    {
+      "text": "maybe the growth isn't four percent",
+      "start": 107.2,
+      "duration": 3.919
+    },
+    {
+      "text": "maybe the cost of capital isn't nine",
+      "start": 109.52,
+      "duration": 2.959
+    },
+    {
+      "text": "percent",
+      "start": 111.119,
+      "duration": 4.881
+    },
+    {
+      "text": "so how can we evaluate changing these",
+      "start": 112.479,
+      "duration": 6.24
+    },
+    {
+      "text": "and understand what are the chances of",
+      "start": 116.0,
+      "duration": 3.68
+    },
+    {
+      "text": "achieving different",
+      "start": 118.719,
+      "duration": 4.241
+    },
+    {
+      "text": "prices uh based on the possibility that",
+      "start": 119.68,
+      "duration": 4.799
+    },
+    {
+      "text": "these values could be different",
+      "start": 122.96,
+      "duration": 3.28
+    },
+    {
+      "text": "that's where the monte carlo simulation",
+      "start": 124.479,
+      "duration": 3.121
+    },
+    {
+      "text": "comes in",
+      "start": 126.24,
+      "duration": 4.48
+    },
+    {
+      "text": "so for the level one exercise",
+      "start": 127.6,
+      "duration": 6.16
+    },
+    {
+      "text": "uh we're going to take the growth rate",
+      "start": 130.72,
+      "duration": 4.96
+    },
+    {
+      "text": "and now draw that from a normal",
+      "start": 133.76,
+      "duration": 4.16
+    },
+    {
+      "text": "distribution with a mean of four percent",
+      "start": 135.68,
+      "duration": 5.36
+    },
+    {
+      "text": "standard deviation of one percent and",
+      "start": 137.92,
+      "duration": 6.48
+    },
+    {
+      "text": "run that through the simulations",
+      "start": 141.04,
+      "duration": 6.0
+    },
+    {
+      "text": "and ultimately visualize and summarize",
+      "start": 144.4,
+      "duration": 3.12
+    },
+    {
+      "text": "the",
+      "start": 147.04,
+      "duration": 3.52
+    },
+    {
+      "text": "resulting probability distribution of",
+      "start": 147.52,
+      "duration": 5.52
+    },
+    {
+      "text": "the price",
+      "start": 150.56,
+      "duration": 5.28
+    },
+    {
+      "text": "and then coming to the level 2 exercise",
+      "start": 153.04,
+      "duration": 4.559
+    },
+    {
+      "text": "it's going to be continuing on from the",
+      "start": 155.84,
+      "duration": 2.88
+    },
+    {
+      "text": "first",
+      "start": 157.599,
+      "duration": 3.201
+    },
+    {
+      "text": "but here you're just also concerned that",
+      "start": 158.72,
+      "duration": 3.36
+    },
+    {
+      "text": "the cost of capital",
+      "start": 160.8,
+      "duration": 4.88
+    },
+    {
+      "text": "could be misestimated so for that",
+      "start": 162.08,
+      "duration": 5.12
+    },
+    {
+      "text": "we'll also be drawing from normal",
+      "start": 165.68,
+      "duration": 3.839
+    },
+    {
+      "text": "distributions using a mean of nine",
+      "start": 167.2,
+      "duration": 2.96
+    },
+    {
+      "text": "percent",
+      "start": 169.519,
+      "duration": 3.36
+    },
+    {
+      "text": "standard deviation of two percent and",
+      "start": 170.16,
+      "duration": 5.04
+    },
+    {
+      "text": "the growth is also being randomly drawn",
+      "start": 172.879,
+      "duration": 5.201
+    },
+    {
+      "text": "at the same time",
+      "start": 175.2,
+      "duration": 2.88
+    },
+    {
+      "text": "and then you want to run through the",
+      "start": 178.48,
+      "duration": 3.039
+    },
+    {
+      "text": "simulations and",
+      "start": 180.239,
+      "duration": 4.321
+    },
+    {
+      "text": "visualize and summarize the resulting",
+      "start": 181.519,
+      "duration": 6.881
+    },
+    {
+      "text": "probability distribution of the price",
+      "start": 184.56,
+      "duration": 6.48
+    },
+    {
+      "text": "and now you have to be careful in this",
+      "start": 188.4,
+      "duration": 3.44
+    },
+    {
+      "text": "level 2",
+      "start": 191.04,
+      "duration": 5.04
+    },
+    {
+      "text": "exercise that there is a condition",
+      "start": 191.84,
+      "duration": 5.92
+    },
+    {
+      "text": "in the dividend discount model for it to",
+      "start": 196.08,
+      "duration": 3.28
+    },
+    {
+      "text": "be valid",
+      "start": 197.76,
+      "duration": 3.199
+    },
+    {
+      "text": "when we look at the dividend discount",
+      "start": 199.36,
+      "duration": 3.92
+    },
+    {
+      "text": "model we have this denominator",
+      "start": 200.959,
+      "duration": 5.36
+    },
+    {
+      "text": "the uh cost of capital minus the growth",
+      "start": 203.28,
+      "duration": 4.4
+    },
+    {
+      "text": "rate",
+      "start": 206.319,
+      "duration": 3.761
+    },
+    {
+      "text": "for the model to be valid the cost of",
+      "start": 207.68,
+      "duration": 4.4
+    },
+    {
+      "text": "capital has to be greater than",
+      "start": 210.08,
+      "duration": 5.12
+    },
+    {
+      "text": "the growth rate otherwise this",
+      "start": 212.08,
+      "duration": 5.12
+    },
+    {
+      "text": "denominator becomes negative the price",
+      "start": 215.2,
+      "duration": 5.679
+    },
+    {
+      "text": "becomes negative which is nonsensical",
+      "start": 217.2,
+      "duration": 5.92
+    },
+    {
+      "text": "so that's actually an assumption of the",
+      "start": 220.879,
+      "duration": 3.841
+    },
+    {
+      "text": "dividend discount model",
+      "start": 223.12,
+      "duration": 3.44
+    },
+    {
+      "text": "that the cost of capital should be",
+      "start": 224.72,
+      "duration": 4.48
+    },
+    {
+      "text": "greater than the growth rate",
+      "start": 226.56,
+      "duration": 4.64
+    },
+    {
+      "text": "and as you're doing the level one it's",
+      "start": 229.2,
+      "duration": 3.36
+    },
+    {
+      "text": "it's pretty unlikely",
+      "start": 231.2,
+      "duration": 4.64
+    },
+    {
+      "text": "that that situation would occur",
+      "start": 232.56,
+      "duration": 5.36
+    },
+    {
+      "text": "that the growth rate would be greater",
+      "start": 235.84,
+      "duration": 4.64
+    },
+    {
+      "text": "than the cost of capital uh because",
+      "start": 237.92,
+      "duration": 3.84
+    },
+    {
+      "text": "we're drawing with a mean of four",
+      "start": 240.48,
+      "duration": 2.64
+    },
+    {
+      "text": "percent standard deviation of one",
+      "start": 241.76,
+      "duration": 2.8
+    },
+    {
+      "text": "percent it's pretty unlikely that it's",
+      "start": 243.12,
+      "duration": 3.44
+    },
+    {
+      "text": "going to hit nine percent",
+      "start": 244.56,
+      "duration": 4.319
+    },
+    {
+      "text": "but then once we start also varying the",
+      "start": 246.56,
+      "duration": 3.84
+    },
+    {
+      "text": "cost of capital",
+      "start": 248.879,
+      "duration": 3.28
+    },
+    {
+      "text": "now if we happen to get a low cost of",
+      "start": 250.4,
+      "duration": 3.199
+    },
+    {
+      "text": "capital at the same time we're getting a",
+      "start": 252.159,
+      "duration": 3.36
+    },
+    {
+      "text": "high growth rate",
+      "start": 253.599,
+      "duration": 5.76
+    },
+    {
+      "text": "then that would lead to this condition",
+      "start": 255.519,
+      "duration": 5.68
+    },
+    {
+      "text": "or violation a violation of the",
+      "start": 259.359,
+      "duration": 3.84
+    },
+    {
+      "text": "assumptions of the model",
+      "start": 261.199,
+      "duration": 4.081
+    },
+    {
+      "text": "uh that the cost of capital should be",
+      "start": 263.199,
+      "duration": 4.801
+    },
+    {
+      "text": "greater than the growth rate",
+      "start": 265.28,
+      "duration": 5.12
+    },
+    {
+      "text": "then you'll get negative crazy prices in",
+      "start": 268.0,
+      "duration": 3.919
+    },
+    {
+      "text": "your model",
+      "start": 270.4,
+      "duration": 4.96
+    },
+    {
+      "text": "so what you need to do in addition to",
+      "start": 271.919,
+      "duration": 5.121
+    },
+    {
+      "text": "building the base model and building the",
+      "start": 275.36,
+      "duration": 3.04
+    },
+    {
+      "text": "simulation is",
+      "start": 277.04,
+      "duration": 3.76
+    },
+    {
+      "text": "you need to be able to check the",
+      "start": 278.4,
+      "duration": 4.0
+    },
+    {
+      "text": "simulation inputs",
+      "start": 280.8,
+      "duration": 4.32
+    },
+    {
+      "text": "before passing it through the model and",
+      "start": 282.4,
+      "duration": 3.68
+    },
+    {
+      "text": "you want to check",
+      "start": 285.12,
+      "duration": 3.44
+    },
+    {
+      "text": "that the cost of capital is indeed",
+      "start": 286.08,
+      "duration": 4.08
+    },
+    {
+      "text": "greater than the growth rate",
+      "start": 288.56,
+      "duration": 4.639
+    },
+    {
+      "text": "and if not just reject that simulation",
+      "start": 290.16,
+      "duration": 5.2
+    },
+    {
+      "text": "you want to draw new inputs because it's",
+      "start": 293.199,
+      "duration": 3.201
+    },
+    {
+      "text": "not a valid",
+      "start": 295.36,
+      "duration": 4.24
+    },
+    {
+      "text": "run of the model",
+      "start": 296.4,
+      "duration": 3.2
+    },
+    {
+      "text": "so that's the overview of the live",
+      "start": 299.84,
+      "duration": 3.84
+    },
+    {
+      "text": "exercise",
+      "start": 302.88,
+      "duration": 3.039
+    },
+    {
+      "text": "on adding monte carlo simulation to a",
+      "start": 303.68,
+      "duration": 4.079
+    },
+    {
+      "text": "dividend discount model",
+      "start": 305.919,
+      "duration": 3.601
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 307.759,
+      "duration": 4.081
+    },
+    {
+      "text": "time",
+      "start": 309.52,
+      "duration": 2.32
+    }
+  ]
+}

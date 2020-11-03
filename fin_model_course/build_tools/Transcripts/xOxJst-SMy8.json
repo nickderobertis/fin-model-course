@@ -1,0 +1,909 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 4.08,
+      "duration": 2.319
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.88,
+      "duration": 3.759
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 6.399,
+      "duration": 3.041
+    },
+    {
+      "text": "be solving",
+      "start": 8.639,
+      "duration": 3.761
+    },
+    {
+      "text": "the python basics lab exercises focused",
+      "start": 9.44,
+      "duration": 3.44
+    },
+    {
+      "text": "on",
+      "start": 12.4,
+      "duration": 4.32
+    },
+    {
+      "text": "functions so the lab exercise i'm",
+      "start": 12.88,
+      "duration": 5.44
+    },
+    {
+      "text": "talking about is mentioned here",
+      "start": 16.72,
+      "duration": 3.76
+    },
+    {
+      "text": "in the going beyond an initial python",
+      "start": 18.32,
+      "duration": 3.2
+    },
+    {
+      "text": "script uh",
+      "start": 20.48,
+      "duration": 4.24
+    },
+    {
+      "text": "lecture series slides and",
+      "start": 21.52,
+      "duration": 5.599
+    },
+    {
+      "text": "the actual exercise is contained within",
+      "start": 24.72,
+      "duration": 3.6
+    },
+    {
+      "text": "the python basics",
+      "start": 27.119,
+      "duration": 4.0
+    },
+    {
+      "text": "lab jupiter notebook so let's jump over",
+      "start": 28.32,
+      "duration": 5.199
+    },
+    {
+      "text": "to that",
+      "start": 31.119,
+      "duration": 2.4
+    },
+    {
+      "text": "so in that notebook then we have this",
+      "start": 33.68,
+      "duration": 3.68
+    },
+    {
+      "text": "functions section",
+      "start": 35.6,
+      "duration": 4.88
+    },
+    {
+      "text": "which the three exercises here are",
+      "start": 37.36,
+      "duration": 6.719
+    },
+    {
+      "text": "what we're going to be covering",
+      "start": 40.48,
+      "duration": 6.48
+    },
+    {
+      "text": "so the first exercise asks you to create",
+      "start": 44.079,
+      "duration": 3.521
+    },
+    {
+      "text": "a function",
+      "start": 46.96,
+      "duration": 3.599
+    },
+    {
+      "text": "add 10 which adds 10 to whatever the",
+      "start": 47.6,
+      "duration": 4.24
+    },
+    {
+      "text": "number that you pass",
+      "start": 50.559,
+      "duration": 4.64
+    },
+    {
+      "text": "to it um so",
+      "start": 51.84,
+      "duration": 7.039
+    },
+    {
+      "text": "recall that with functions you must",
+      "start": 55.199,
+      "duration": 6.081
+    },
+    {
+      "text": "first define the function and then you",
+      "start": 58.879,
+      "duration": 3.041
+    },
+    {
+      "text": "can",
+      "start": 61.28,
+      "duration": 3.839
+    },
+    {
+      "text": "uh use or call the function so",
+      "start": 61.92,
+      "duration": 4.96
+    },
+    {
+      "text": "there's always going to be a def",
+      "start": 65.119,
+      "duration": 4.961
+    },
+    {
+      "text": "statement first to define the function",
+      "start": 66.88,
+      "duration": 5.04
+    },
+    {
+      "text": "and we're going to call this function",
+      "start": 70.08,
+      "duration": 3.12
+    },
+    {
+      "text": "add 10 as",
+      "start": 71.92,
+      "duration": 4.8
+    },
+    {
+      "text": "is requested and it's going to",
+      "start": 73.2,
+      "duration": 8.48
+    },
+    {
+      "text": "take a number as the input",
+      "start": 76.72,
+      "duration": 4.96
+    },
+    {
+      "text": "and then this function",
+      "start": 82.479,
+      "duration": 5.68
+    },
+    {
+      "text": "it should take whatever the number is",
+      "start": 85.52,
+      "duration": 3.44
+    },
+    {
+      "text": "and add",
+      "start": 88.159,
+      "duration": 4.481
+    },
+    {
+      "text": "10 to it so the",
+      "start": 88.96,
+      "duration": 8.4
+    },
+    {
+      "text": "you know new value is going to be",
+      "start": 92.64,
+      "duration": 7.519
+    },
+    {
+      "text": "the original past value with 10 added to",
+      "start": 97.36,
+      "duration": 4.079
+    },
+    {
+      "text": "it",
+      "start": 100.159,
+      "duration": 5.041
+    },
+    {
+      "text": "and then we want to actually get that",
+      "start": 101.439,
+      "duration": 4.241
+    },
+    {
+      "text": "number",
+      "start": 105.2,
+      "duration": 3.04
+    },
+    {
+      "text": "out of the function and so we have to",
+      "start": 105.68,
+      "duration": 6.56
+    },
+    {
+      "text": "return it so return new value",
+      "start": 108.24,
+      "duration": 6.32
+    },
+    {
+      "text": "so then you know we execute that cell",
+      "start": 112.24,
+      "duration": 3.919
+    },
+    {
+      "text": "and you see you know nothing has",
+      "start": 114.56,
+      "duration": 2.879
+    },
+    {
+      "text": "happened here",
+      "start": 116.159,
+      "duration": 4.56
+    },
+    {
+      "text": "um and so in order to actually see",
+      "start": 117.439,
+      "duration": 4.241
+    },
+    {
+      "text": "something happen",
+      "start": 120.719,
+      "duration": 3.521
+    },
+    {
+      "text": "we would uh call the function like this",
+      "start": 121.68,
+      "duration": 4.32
+    },
+    {
+      "text": "with its name and then the parentheses",
+      "start": 124.24,
+      "duration": 3.36
+    },
+    {
+      "text": "and then the arguments we want to pass",
+      "start": 126.0,
+      "duration": 2.399
+    },
+    {
+      "text": "to it",
+      "start": 127.6,
+      "duration": 3.12
+    },
+    {
+      "text": "uh so here we add five it adds 10 and we",
+      "start": 128.399,
+      "duration": 3.441
+    },
+    {
+      "text": "get 15.",
+      "start": 130.72,
+      "duration": 4.32
+    },
+    {
+      "text": "we add 20 we put 25 it has 10 we get 35",
+      "start": 131.84,
+      "duration": 7.039
+    },
+    {
+      "text": "so it looks like it's working correctly",
+      "start": 135.04,
+      "duration": 3.839
+    },
+    {
+      "text": "and then you have this check cell here",
+      "start": 139.2,
+      "duration": 3.119
+    },
+    {
+      "text": "as well",
+      "start": 140.959,
+      "duration": 2.721
+    },
+    {
+      "text": "where you run it and you don't see",
+      "start": 142.319,
+      "duration": 3.361
+    },
+    {
+      "text": "anything that means it works correctly",
+      "start": 143.68,
+      "duration": 5.52
+    },
+    {
+      "text": "if we had added 11 instead then we see",
+      "start": 145.68,
+      "duration": 4.32
+    },
+    {
+      "text": "that we get this",
+      "start": 149.2,
+      "duration": 3.52
+    },
+    {
+      "text": "assertion error so if you have something",
+      "start": 150.0,
+      "duration": 3.84
+    },
+    {
+      "text": "that's incorrect you're going to get",
+      "start": 152.72,
+      "duration": 1.44
+    },
+    {
+      "text": "this",
+      "start": 153.84,
+      "duration": 3.119
+    },
+    {
+      "text": "assertion error and if everything is",
+      "start": 154.16,
+      "duration": 4.56
+    },
+    {
+      "text": "working appropriately then running this",
+      "start": 156.959,
+      "duration": 4.881
+    },
+    {
+      "text": "cell will do nothing",
+      "start": 158.72,
+      "duration": 6.159
+    },
+    {
+      "text": "and so that is enough for the",
+      "start": 161.84,
+      "duration": 4.88
+    },
+    {
+      "text": "lab solution the other thing that you",
+      "start": 164.879,
+      "duration": 3.921
+    },
+    {
+      "text": "usually want to include in a function",
+      "start": 166.72,
+      "duration": 4.239
+    },
+    {
+      "text": "is a doc string here so the triple",
+      "start": 168.8,
+      "duration": 3.04
+    },
+    {
+      "text": "quoted string",
+      "start": 170.959,
+      "duration": 3.761
+    },
+    {
+      "text": "and then you know a description of what",
+      "start": 171.84,
+      "duration": 4.56
+    },
+    {
+      "text": "it does so it adds",
+      "start": 174.72,
+      "duration": 10.32
+    },
+    {
+      "text": "10 to the past number",
+      "start": 176.4,
+      "duration": 11.839
+    },
+    {
+      "text": "so then going on to exercise two we want",
+      "start": 185.04,
+      "duration": 4.4
+    },
+    {
+      "text": "to create a function",
+      "start": 188.239,
+      "duration": 4.161
+    },
+    {
+      "text": "multiply which multiplies the uh first",
+      "start": 189.44,
+      "duration": 4.56
+    },
+    {
+      "text": "number that we passed to it",
+      "start": 192.4,
+      "duration": 3.6
+    },
+    {
+      "text": "by the second number that we passed to",
+      "start": 194.0,
+      "duration": 4.0
+    },
+    {
+      "text": "it uh but we want to have",
+      "start": 196.0,
+      "duration": 5.519
+    },
+    {
+      "text": "a default of 100 for that second",
+      "start": 198.0,
+      "duration": 5.28
+    },
+    {
+      "text": "argument",
+      "start": 201.519,
+      "duration": 4.561
+    },
+    {
+      "text": "so you know fairly similar to the last",
+      "start": 203.28,
+      "duration": 4.64
+    },
+    {
+      "text": "exercise",
+      "start": 206.08,
+      "duration": 5.36
+    },
+    {
+      "text": "but now we're looking at using a",
+      "start": 207.92,
+      "duration": 6.8
+    },
+    {
+      "text": "default value for an argument so again",
+      "start": 211.44,
+      "duration": 5.359
+    },
+    {
+      "text": "we want to define",
+      "start": 214.72,
+      "duration": 5.2
+    },
+    {
+      "text": "the function multiply",
+      "start": 216.799,
+      "duration": 7.121
+    },
+    {
+      "text": "and it's going to take two numbers",
+      "start": 219.92,
+      "duration": 6.319
+    },
+    {
+      "text": "here",
+      "start": 223.92,
+      "duration": 2.319
+    },
+    {
+      "text": "but here we want the second number to",
+      "start": 226.959,
+      "duration": 4.801
+    },
+    {
+      "text": "have a default",
+      "start": 230.239,
+      "duration": 4.321
+    },
+    {
+      "text": "of 100 and so that's why we put equals",
+      "start": 231.76,
+      "duration": 3.92
+    },
+    {
+      "text": "100",
+      "start": 234.56,
+      "duration": 3.599
+    },
+    {
+      "text": "if the user of the function does not",
+      "start": 235.68,
+      "duration": 4.72
+    },
+    {
+      "text": "pass the second argument then",
+      "start": 238.159,
+      "duration": 4.321
+    },
+    {
+      "text": "it's going to take the default value of",
+      "start": 240.4,
+      "duration": 4.72
+    },
+    {
+      "text": "100",
+      "start": 242.48,
+      "duration": 2.64
+    },
+    {
+      "text": "so then you know the result here is",
+      "start": 245.519,
+      "duration": 4.321
+    },
+    {
+      "text": "going to be x",
+      "start": 248.959,
+      "duration": 5.28
+    },
+    {
+      "text": "times y and we want to return that",
+      "start": 249.84,
+      "duration": 5.84
+    },
+    {
+      "text": "result",
+      "start": 254.239,
+      "duration": 3.68
+    },
+    {
+      "text": "um so that's the function then we can",
+      "start": 255.68,
+      "duration": 3.279
+    },
+    {
+      "text": "test it out",
+      "start": 257.919,
+      "duration": 3.521
+    },
+    {
+      "text": "uh you know of course running uh the",
+      "start": 258.959,
+      "duration": 3.52
+    },
+    {
+      "text": "check cell",
+      "start": 261.44,
+      "duration": 2.72
+    },
+    {
+      "text": "uh we don't get any errors so it did",
+      "start": 262.479,
+      "duration": 5.121
+    },
+    {
+      "text": "work uh but just you know for your own",
+      "start": 264.16,
+      "duration": 5.36
+    },
+    {
+      "text": "purposes you might want to try just",
+      "start": 267.6,
+      "duration": 3.92
+    },
+    {
+      "text": "running it with some example",
+      "start": 269.52,
+      "duration": 5.2
+    },
+    {
+      "text": "inputs we put in 2 and we get 200 so we",
+      "start": 271.52,
+      "duration": 5.119
+    },
+    {
+      "text": "can see that it must have taken 2 and",
+      "start": 274.72,
+      "duration": 3.68
+    },
+    {
+      "text": "multiplied it by the default value of",
+      "start": 276.639,
+      "duration": 2.801
+    },
+    {
+      "text": "100",
+      "start": 278.4,
+      "duration": 4.72
+    },
+    {
+      "text": "but then if we do pass that second value",
+      "start": 279.44,
+      "duration": 5.759
+    },
+    {
+      "text": "then it's going to use whatever value we",
+      "start": 283.12,
+      "duration": 4.0
+    },
+    {
+      "text": "passed so now it's just multiplying",
+      "start": 285.199,
+      "duration": 3.841
+    },
+    {
+      "text": "those two numbers",
+      "start": 287.12,
+      "duration": 5.28
+    },
+    {
+      "text": "and you can also specify this",
+      "start": 289.04,
+      "duration": 5.68
+    },
+    {
+      "text": "by you know putting the argument name as",
+      "start": 292.4,
+      "duration": 4.32
+    },
+    {
+      "text": "well that does the same thing",
+      "start": 294.72,
+      "duration": 4.64
+    },
+    {
+      "text": "but what that allows you is if you have",
+      "start": 296.72,
+      "duration": 3.6
+    },
+    {
+      "text": "um",
+      "start": 299.36,
+      "duration": 4.72
+    },
+    {
+      "text": "you know other arguments in here um",
+      "start": 300.32,
+      "duration": 5.2
+    },
+    {
+      "text": "you know here we just added an a",
+      "start": 304.08,
+      "duration": 2.88
+    },
+    {
+      "text": "argument it's not even actually being",
+      "start": 305.52,
+      "duration": 3.519
+    },
+    {
+      "text": "used in the calculation",
+      "start": 306.96,
+      "duration": 4.32
+    },
+    {
+      "text": "so if you just call a function now like",
+      "start": 309.039,
+      "duration": 4.481
+    },
+    {
+      "text": "this you're getting 200",
+      "start": 311.28,
+      "duration": 3.84
+    },
+    {
+      "text": "because it's taking the default value of",
+      "start": 313.52,
+      "duration": 3.679
+    },
+    {
+      "text": "y but here then you can pass",
+      "start": 315.12,
+      "duration": 5.359
+    },
+    {
+      "text": "y equals 10 and it will put that value",
+      "start": 317.199,
+      "duration": 4.081
+    },
+    {
+      "text": "for 10",
+      "start": 320.479,
+      "duration": 2.961
+    },
+    {
+      "text": "ignoring and taking the existing value",
+      "start": 321.28,
+      "duration": 3.28
+    },
+    {
+      "text": "for a",
+      "start": 323.44,
+      "duration": 4.08
+    },
+    {
+      "text": "uh because you specifically targeted y",
+      "start": 324.56,
+      "duration": 3.52
+    },
+    {
+      "text": "um",
+      "start": 327.52,
+      "duration": 4.16
+    },
+    {
+      "text": "for this optional input",
+      "start": 328.08,
+      "duration": 3.6
+    },
+    {
+      "text": "so then coming to exercise three um",
+      "start": 334.32,
+      "duration": 6.0
+    },
+    {
+      "text": "this is just about checking to make sure",
+      "start": 338.08,
+      "duration": 3.119
+    },
+    {
+      "text": "that you",
+      "start": 340.32,
+      "duration": 2.96
+    },
+    {
+      "text": "have a doc string for your function and",
+      "start": 341.199,
+      "duration": 4.801
+    },
+    {
+      "text": "you know how to write doc strings",
+      "start": 343.28,
+      "duration": 6.08
+    },
+    {
+      "text": "so if we create this hasdock",
+      "start": 346.0,
+      "duration": 7.28
+    },
+    {
+      "text": "function and here it doesn't matter what",
+      "start": 349.36,
+      "duration": 5.679
+    },
+    {
+      "text": "function does so i'm not even going to",
+      "start": 353.28,
+      "duration": 3.44
+    },
+    {
+      "text": "give it any arguments",
+      "start": 355.039,
+      "duration": 4.0
+    },
+    {
+      "text": "um and we want to have a doc string and",
+      "start": 356.72,
+      "duration": 3.599
+    },
+    {
+      "text": "this is going to be",
+      "start": 359.039,
+      "duration": 5.041
+    },
+    {
+      "text": "my doc string and then we can just",
+      "start": 360.319,
+      "duration": 5.041
+    },
+    {
+      "text": "return",
+      "start": 364.08,
+      "duration": 4.32
+    },
+    {
+      "text": "let's just return 47 that'll be what the",
+      "start": 365.36,
+      "duration": 6.24
+    },
+    {
+      "text": "function does it just returns 47.",
+      "start": 368.4,
+      "duration": 6.239
+    },
+    {
+      "text": "um so then we can see we run this",
+      "start": 371.6,
+      "duration": 6.159
+    },
+    {
+      "text": "and we indeed don't get any errors",
+      "start": 374.639,
+      "duration": 6.56
+    },
+    {
+      "text": "whereas if we had left this out",
+      "start": 377.759,
+      "duration": 6.801
+    },
+    {
+      "text": "then we do get an error so",
+      "start": 381.199,
+      "duration": 5.551
+    },
+    {
+      "text": "this came through correctly",
+      "start": 384.56,
+      "duration": 3.359
+    },
+    {
+      "text": "[Music]",
+      "start": 386.75,
+      "duration": 3.169
+    },
+    {
+      "text": "and you know you don't really have to",
+      "start": 387.919,
+      "duration": 3.84
+    },
+    {
+      "text": "worry about what this code is doing this",
+      "start": 389.919,
+      "duration": 3.441
+    },
+    {
+      "text": "is a little bit more advanced but this",
+      "start": 391.759,
+      "duration": 2.241
+    },
+    {
+      "text": "is a way that",
+      "start": 393.36,
+      "duration": 4.72
+    },
+    {
+      "text": "you can you know retrieve the doc string",
+      "start": 394.0,
+      "duration": 7.6
+    },
+    {
+      "text": "from a function",
+      "start": 398.08,
+      "duration": 3.52
+    },
+    {
+      "text": "but of course you know you already have",
+      "start": 401.919,
+      "duration": 3.28
+    },
+    {
+      "text": "the",
+      "start": 403.84,
+      "duration": 3.44
+    },
+    {
+      "text": "jupiter shortcuts of using the question",
+      "start": 405.199,
+      "duration": 3.681
+    },
+    {
+      "text": "mark and that will",
+      "start": 407.28,
+      "duration": 4.96
+    },
+    {
+      "text": "display that or in the parentheses",
+      "start": 408.88,
+      "duration": 5.12
+    },
+    {
+      "text": "holding shift and pressing tab and that",
+      "start": 412.24,
+      "duration": 2.72
+    },
+    {
+      "text": "will",
+      "start": 414.0,
+      "duration": 4.479
+    },
+    {
+      "text": "display that doc string as well",
+      "start": 414.96,
+      "duration": 3.519
+    },
+    {
+      "text": "so that completes the lab exercises on",
+      "start": 419.199,
+      "duration": 5.361
+    },
+    {
+      "text": "python basics",
+      "start": 423.12,
+      "duration": 3.359
+    },
+    {
+      "text": "dealing with functions so thanks for",
+      "start": 424.56,
+      "duration": 7.44
+    },
+    {
+      "text": "listening and see you next time",
+      "start": 426.479,
+      "duration": 5.521
+    }
+  ]
+}

@@ -1,0 +1,1799 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.56,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dear vertis here teaching you",
+      "start": 3.52,
+      "duration": 3.68
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 4.96,
+      "duration": 4.559
+    },
+    {
+      "text": "to be going over an example of how to do",
+      "start": 7.2,
+      "duration": 5.439
+    },
+    {
+      "text": "visualization in python as part of our",
+      "start": 9.519,
+      "duration": 4.401
+    },
+    {
+      "text": "lecture series on",
+      "start": 12.639,
+      "duration": 3.361
+    },
+    {
+      "text": "understanding complex results through",
+      "start": 13.92,
+      "duration": 3.68
+    },
+    {
+      "text": "visualization",
+      "start": 16.0,
+      "duration": 4.8
+    },
+    {
+      "text": "so we're going to add visualization",
+      "start": 17.6,
+      "duration": 5.919
+    },
+    {
+      "text": "to the dynamic salary retirement model",
+      "start": 20.8,
+      "duration": 4.559
+    },
+    {
+      "text": "which we've already built out in the",
+      "start": 23.519,
+      "duration": 2.801
+    },
+    {
+      "text": "course",
+      "start": 25.359,
+      "duration": 4.0
+    },
+    {
+      "text": "so i'm going to pull that up here",
+      "start": 26.32,
+      "duration": 4.64
+    },
+    {
+      "text": "and this is the same one which is",
+      "start": 29.359,
+      "duration": 3.441
+    },
+    {
+      "text": "available as a completed example",
+      "start": 30.96,
+      "duration": 5.36
+    },
+    {
+      "text": "on the course website so",
+      "start": 32.8,
+      "duration": 6.72
+    },
+    {
+      "text": "um we already have the retirement model",
+      "start": 36.32,
+      "duration": 5.28
+    },
+    {
+      "text": "and i'm just going to restart the kernel",
+      "start": 39.52,
+      "duration": 2.4
+    },
+    {
+      "text": "and",
+      "start": 41.6,
+      "duration": 3.2
+    },
+    {
+      "text": "run all cells so that we have everything",
+      "start": 41.92,
+      "duration": 5.44
+    },
+    {
+      "text": "defined",
+      "start": 44.8,
+      "duration": 2.56
+    },
+    {
+      "text": "and so we already have where we got to",
+      "start": 47.92,
+      "duration": 4.56
+    },
+    {
+      "text": "ultimately the result of",
+      "start": 50.879,
+      "duration": 4.0
+    },
+    {
+      "text": "it's going to take 28 years to retire",
+      "start": 52.48,
+      "duration": 4.32
+    },
+    {
+      "text": "and we just printed out strings",
+      "start": 54.879,
+      "duration": 5.041
+    },
+    {
+      "text": "of the wealth over time",
+      "start": 56.8,
+      "duration": 6.559
+    },
+    {
+      "text": "so now we want to do two things",
+      "start": 59.92,
+      "duration": 7.28
+    },
+    {
+      "text": "to visualize our results in a better way",
+      "start": 63.359,
+      "duration": 6.721
+    },
+    {
+      "text": "one is it would be good to have a table",
+      "start": 67.2,
+      "duration": 3.919
+    },
+    {
+      "text": "of",
+      "start": 70.08,
+      "duration": 3.44
+    },
+    {
+      "text": "these salaries and wells over time so",
+      "start": 71.119,
+      "duration": 4.0
+    },
+    {
+      "text": "that you can see both the salary and",
+      "start": 73.52,
+      "duration": 2.48
+    },
+    {
+      "text": "wealth together",
+      "start": 75.119,
+      "duration": 2.64
+    },
+    {
+      "text": "and each of those over time in a nice",
+      "start": 76.0,
+      "duration": 3.119
+    },
+    {
+      "text": "format",
+      "start": 77.759,
+      "duration": 3.761
+    },
+    {
+      "text": "and then the other uh thing we want to",
+      "start": 79.119,
+      "duration": 3.281
+    },
+    {
+      "text": "do to visualize",
+      "start": 81.52,
+      "duration": 4.8
+    },
+    {
+      "text": "is graph the salary and graph the wealth",
+      "start": 82.4,
+      "duration": 7.359
+    },
+    {
+      "text": "over time so",
+      "start": 86.32,
+      "duration": 7.36
+    },
+    {
+      "text": "we can create a new section of the model",
+      "start": 89.759,
+      "duration": 8.561
+    },
+    {
+      "text": "let's call this results summary",
+      "start": 93.68,
+      "duration": 6.399
+    },
+    {
+      "text": "and you would want to put some",
+      "start": 98.32,
+      "duration": 3.2
+    },
+    {
+      "text": "description of that",
+      "start": 100.079,
+      "duration": 3.121
+    },
+    {
+      "text": "here you can take a look at the",
+      "start": 101.52,
+      "duration": 3.68
+    },
+    {
+      "text": "completed example",
+      "start": 103.2,
+      "duration": 5.12
+    },
+    {
+      "text": "on the course website for having this",
+      "start": 105.2,
+      "duration": 5.36
+    },
+    {
+      "text": "thing fully polished with all the",
+      "start": 108.32,
+      "duration": 4.96
+    },
+    {
+      "text": "descriptions doc strings for functions",
+      "start": 110.56,
+      "duration": 3.519
+    },
+    {
+      "text": "etc",
+      "start": 113.28,
+      "duration": 2.4
+    },
+    {
+      "text": "we're just going to kind of build it out",
+      "start": 114.079,
+      "duration": 5.201
+    },
+    {
+      "text": "quickly here for sake of time",
+      "start": 115.68,
+      "duration": 7.36
+    },
+    {
+      "text": "so first thing we want to do",
+      "start": 119.28,
+      "duration": 6.08
+    },
+    {
+      "text": "is we want to create a data frame a",
+      "start": 123.04,
+      "duration": 3.52
+    },
+    {
+      "text": "pandas data frame",
+      "start": 125.36,
+      "duration": 4.56
+    },
+    {
+      "text": "which has our results so coming back to",
+      "start": 126.56,
+      "duration": 4.24
+    },
+    {
+      "text": "the top",
+      "start": 129.92,
+      "duration": 2.8
+    },
+    {
+      "text": "uh you'll notice that we don't yet have",
+      "start": 130.8,
+      "duration": 3.84
+    },
+    {
+      "text": "an import for pandas so we're going to",
+      "start": 132.72,
+      "duration": 3.36
+    },
+    {
+      "text": "import pandas",
+      "start": 134.64,
+      "duration": 4.72
+    },
+    {
+      "text": "as pd and then run this cell so that we",
+      "start": 136.08,
+      "duration": 4.32
+    },
+    {
+      "text": "can actually work",
+      "start": 139.36,
+      "duration": 3.599
+    },
+    {
+      "text": "with pandas the other thing that you'll",
+      "start": 140.4,
+      "duration": 4.08
+    },
+    {
+      "text": "notice because this is",
+      "start": 142.959,
+      "duration": 3.36
+    },
+    {
+      "text": "kind of the polished completed model is",
+      "start": 144.48,
+      "duration": 3.28
+    },
+    {
+      "text": "we don't have",
+      "start": 146.319,
+      "duration": 4.64
+    },
+    {
+      "text": "the uh setting model data to data so i'm",
+      "start": 147.76,
+      "duration": 4.32
+    },
+    {
+      "text": "going to add that",
+      "start": 150.959,
+      "duration": 3.761
+    },
+    {
+      "text": "back here so that we can develop our",
+      "start": 152.08,
+      "duration": 3.519
+    },
+    {
+      "text": "functions",
+      "start": 154.72,
+      "duration": 3.44
+    },
+    {
+      "text": "easily outside the function in the cell",
+      "start": 155.599,
+      "duration": 4.241
+    },
+    {
+      "text": "and then wrap it up into a function",
+      "start": 158.16,
+      "duration": 3.12
+    },
+    {
+      "text": "which accepts data",
+      "start": 159.84,
+      "duration": 3.36
+    },
+    {
+      "text": "and we're not going to accidentally use",
+      "start": 161.28,
+      "duration": 3.12
+    },
+    {
+      "text": "this global",
+      "start": 163.2,
+      "duration": 4.72
+    },
+    {
+      "text": "model data so",
+      "start": 164.4,
+      "duration": 6.08
+    },
+    {
+      "text": "coming back down to the bottom now i",
+      "start": 167.92,
+      "duration": 4.319
+    },
+    {
+      "text": "want to write out the logic which is",
+      "start": 170.48,
+      "duration": 2.479
+    },
+    {
+      "text": "going to",
+      "start": 172.239,
+      "duration": 4.481
+    },
+    {
+      "text": "put the uh salaries and wells into a",
+      "start": 172.959,
+      "duration": 5.441
+    },
+    {
+      "text": "data frame",
+      "start": 176.72,
+      "duration": 4.879
+    },
+    {
+      "text": "so to get there i'm going to start from",
+      "start": 178.4,
+      "duration": 6.8
+    },
+    {
+      "text": "the logic that we had before",
+      "start": 181.599,
+      "duration": 5.681
+    },
+    {
+      "text": "so i'm going to copy and paste that down",
+      "start": 185.2,
+      "duration": 3.84
+    },
+    {
+      "text": "to here",
+      "start": 187.28,
+      "duration": 3.52
+    },
+    {
+      "text": "highlight that all and hold shift and",
+      "start": 189.04,
+      "duration": 3.119
+    },
+    {
+      "text": "press tab to",
+      "start": 190.8,
+      "duration": 6.56
+    },
+    {
+      "text": "undo that and then and then",
+      "start": 192.159,
+      "duration": 5.201
+    },
+    {
+      "text": "you know if we take out the return part",
+      "start": 197.44,
+      "duration": 3.04
+    },
+    {
+      "text": "uh",
+      "start": 200.0,
+      "duration": 2.239
+    },
+    {
+      "text": "we run this it does the same thing as",
+      "start": 200.48,
+      "duration": 3.6
+    },
+    {
+      "text": "that function right",
+      "start": 202.239,
+      "duration": 3.681
+    },
+    {
+      "text": "but we don't care about the print",
+      "start": 204.08,
+      "duration": 3.76
+    },
+    {
+      "text": "display so i'm going to remove all the",
+      "start": 205.92,
+      "duration": 3.12
+    },
+    {
+      "text": "prints here",
+      "start": 207.84,
+      "duration": 2.959
+    },
+    {
+      "text": "i'm just hitting ctrl x that would be",
+      "start": 209.04,
+      "duration": 3.279
+    },
+    {
+      "text": "command x on a map",
+      "start": 210.799,
+      "duration": 4.72
+    },
+    {
+      "text": "mac to just remove a line",
+      "start": 212.319,
+      "duration": 6.401
+    },
+    {
+      "text": "and so now uh we",
+      "start": 215.519,
+      "duration": 4.8
+    },
+    {
+      "text": "have kind of the base logic without it",
+      "start": 218.72,
+      "duration": 3.76
+    },
+    {
+      "text": "displaying anything",
+      "start": 220.319,
+      "duration": 6.081
+    },
+    {
+      "text": "so what we want to do is we want to",
+      "start": 222.48,
+      "duration": 4.96
+    },
+    {
+      "text": "store",
+      "start": 226.4,
+      "duration": 4.88
+    },
+    {
+      "text": "the sell the salary and wealth results",
+      "start": 227.44,
+      "duration": 6.24
+    },
+    {
+      "text": "in each year so that we can put them all",
+      "start": 231.28,
+      "duration": 3.84
+    },
+    {
+      "text": "into a data frame",
+      "start": 233.68,
+      "duration": 3.119
+    },
+    {
+      "text": "and we don't actually have the salary",
+      "start": 235.12,
+      "duration": 3.759
+    },
+    {
+      "text": "separately in here within the wealthy",
+      "start": 236.799,
+      "duration": 3.36
+    },
+    {
+      "text": "year function it",
+      "start": 238.879,
+      "duration": 4.08
+    },
+    {
+      "text": "is determining a salary um so we're",
+      "start": 240.159,
+      "duration": 3.761
+    },
+    {
+      "text": "going to want to also",
+      "start": 242.959,
+      "duration": 4.081
+    },
+    {
+      "text": "separately calculate the salary so",
+      "start": 243.92,
+      "duration": 5.44
+    },
+    {
+      "text": "that was the salary year function that",
+      "start": 247.04,
+      "duration": 3.52
+    },
+    {
+      "text": "got us there",
+      "start": 249.36,
+      "duration": 3.92
+    },
+    {
+      "text": "and to that we passed the data and also",
+      "start": 250.56,
+      "duration": 4.64
+    },
+    {
+      "text": "the year",
+      "start": 253.28,
+      "duration": 4.799
+    },
+    {
+      "text": "so now we have uh calculating both the",
+      "start": 255.2,
+      "duration": 4.559
+    },
+    {
+      "text": "salary and the wealth",
+      "start": 258.079,
+      "duration": 4.801
+    },
+    {
+      "text": "in any given year",
+      "start": 259.759,
+      "duration": 3.121
+    },
+    {
+      "text": "so now we've got to store that data so",
+      "start": 263.04,
+      "duration": 4.48
+    },
+    {
+      "text": "we can create a data frame",
+      "start": 265.28,
+      "duration": 5.04
+    },
+    {
+      "text": "and any time where you have you know",
+      "start": 267.52,
+      "duration": 4.64
+    },
+    {
+      "text": "some kind of loop",
+      "start": 270.32,
+      "duration": 4.08
+    },
+    {
+      "text": "and you're ultimately going to want to",
+      "start": 272.16,
+      "duration": 3.599
+    },
+    {
+      "text": "put the results of that loop into a",
+      "start": 274.4,
+      "duration": 2.079
+    },
+    {
+      "text": "table",
+      "start": 275.759,
+      "duration": 3.121
+    },
+    {
+      "text": "and you have multiple different columns",
+      "start": 276.479,
+      "duration": 3.28
+    },
+    {
+      "text": "that you're going to want to have in",
+      "start": 278.88,
+      "duration": 3.2
+    },
+    {
+      "text": "that table that are all coming out of",
+      "start": 279.759,
+      "duration": 2.961
+    },
+    {
+      "text": "this same",
+      "start": 282.08,
+      "duration": 2.48
+    },
+    {
+      "text": "loop then i recommend using the",
+      "start": 282.72,
+      "duration": 3.68
+    },
+    {
+      "text": "structure of",
+      "start": 284.56,
+      "duration": 6.16
+    },
+    {
+      "text": "creating a list of tuples where",
+      "start": 286.4,
+      "duration": 5.84
+    },
+    {
+      "text": "you can then create the data frame all",
+      "start": 290.72,
+      "duration": 4.0
+    },
+    {
+      "text": "at once from that list of tuples",
+      "start": 292.24,
+      "duration": 5.12
+    },
+    {
+      "text": "you can certainly do the approach of",
+      "start": 294.72,
+      "duration": 3.84
+    },
+    {
+      "text": "creating the empty data frame and",
+      "start": 297.36,
+      "duration": 2.64
+    },
+    {
+      "text": "assigning columns",
+      "start": 298.56,
+      "duration": 3.04
+    },
+    {
+      "text": "but then you have to maintain separate",
+      "start": 300.0,
+      "duration": 3.84
+    },
+    {
+      "text": "lists for each one of the inputs which",
+      "start": 301.6,
+      "duration": 3.12
+    },
+    {
+      "text": "gets a little bit",
+      "start": 303.84,
+      "duration": 4.4
+    },
+    {
+      "text": "tedious um so first",
+      "start": 304.72,
+      "duration": 6.8
+    },
+    {
+      "text": "let's look at the recommended approach",
+      "start": 308.24,
+      "duration": 5.36
+    },
+    {
+      "text": "and then i'll quickly show",
+      "start": 311.52,
+      "duration": 5.119
+    },
+    {
+      "text": "the other approach just to show",
+      "start": 313.6,
+      "duration": 6.56
+    },
+    {
+      "text": "why it has drawbacks so",
+      "start": 316.639,
+      "duration": 6.241
+    },
+    {
+      "text": "my recommended approach is to create",
+      "start": 320.16,
+      "duration": 4.16
+    },
+    {
+      "text": "your",
+      "start": 322.88,
+      "duration": 4.0
+    },
+    {
+      "text": "list which is going to store all the",
+      "start": 324.32,
+      "duration": 3.2
+    },
+    {
+      "text": "tuples",
+      "start": 326.88,
+      "duration": 3.52
+    },
+    {
+      "text": "so you create that before the loop and",
+      "start": 327.52,
+      "duration": 4.16
+    },
+    {
+      "text": "then at the end of the loop",
+      "start": 330.4,
+      "duration": 4.799
+    },
+    {
+      "text": "we can append to that list and we're",
+      "start": 331.68,
+      "duration": 4.72
+    },
+    {
+      "text": "going to append",
+      "start": 335.199,
+      "duration": 5.041
+    },
+    {
+      "text": "a tuple which has the year the salary",
+      "start": 336.4,
+      "duration": 6.4
+    },
+    {
+      "text": "and the wealth all in it all three items",
+      "start": 340.24,
+      "duration": 3.679
+    },
+    {
+      "text": "together",
+      "start": 342.8,
+      "duration": 5.679
+    },
+    {
+      "text": "um and so then we can look at that",
+      "start": 343.919,
+      "duration": 7.28
+    },
+    {
+      "text": "df data tubes and we can see that gets",
+      "start": 348.479,
+      "duration": 4.961
+    },
+    {
+      "text": "us you know for each year we have the",
+      "start": 351.199,
+      "duration": 2.881
+    },
+    {
+      "text": "salary",
+      "start": 353.44,
+      "duration": 4.24
+    },
+    {
+      "text": "and the wealth so then we can",
+      "start": 354.08,
+      "duration": 7.04
+    },
+    {
+      "text": "create a data frame from that",
+      "start": 357.68,
+      "duration": 7.04
+    },
+    {
+      "text": "df is a pd.data frame from",
+      "start": 361.12,
+      "duration": 6.72
+    },
+    {
+      "text": "the list of tuples and we pass it the",
+      "start": 364.72,
+      "duration": 4.56
+    },
+    {
+      "text": "names of our columns",
+      "start": 367.84,
+      "duration": 4.96
+    },
+    {
+      "text": "so that would be year salary and",
+      "start": 369.28,
+      "duration": 5.84
+    },
+    {
+      "text": "wealth",
+      "start": 372.8,
+      "duration": 2.32
+    },
+    {
+      "text": "and then we can look at the data frame",
+      "start": 376.24,
+      "duration": 3.44
+    },
+    {
+      "text": "and then we see all this",
+      "start": 378.24,
+      "duration": 4.799
+    },
+    {
+      "text": "in the data frame format instead",
+      "start": 379.68,
+      "duration": 6.239
+    },
+    {
+      "text": "so definitely um i'm just going to go",
+      "start": 383.039,
+      "duration": 3.761
+    },
+    {
+      "text": "ahead and",
+      "start": 385.919,
+      "duration": 4.4
+    },
+    {
+      "text": "copy this cell so that we still have our",
+      "start": 386.8,
+      "duration": 5.92
+    },
+    {
+      "text": "you know good solution here and to show",
+      "start": 390.319,
+      "duration": 4.16
+    },
+    {
+      "text": "you the other way",
+      "start": 392.72,
+      "duration": 4.24
+    },
+    {
+      "text": "where we first create the empty data",
+      "start": 394.479,
+      "duration": 4.241
+    },
+    {
+      "text": "frame and then we want to assign the",
+      "start": 396.96,
+      "duration": 2.799
+    },
+    {
+      "text": "columns",
+      "start": 398.72,
+      "duration": 2.64
+    },
+    {
+      "text": "to do that you would have to have",
+      "start": 399.759,
+      "duration": 3.921
+    },
+    {
+      "text": "separate lists for",
+      "start": 401.36,
+      "duration": 6.64
+    },
+    {
+      "text": "each of your values so years salaries",
+      "start": 403.68,
+      "duration": 8.56
+    },
+    {
+      "text": "uh wealth and then you would do",
+      "start": 408.0,
+      "duration": 7.52
+    },
+    {
+      "text": "uh you know years dot append year",
+      "start": 412.24,
+      "duration": 6.88
+    },
+    {
+      "text": "you would do salaries",
+      "start": 415.52,
+      "duration": 3.6
+    },
+    {
+      "text": "uh dotted pen salary and you would do",
+      "start": 419.599,
+      "duration": 8.801
+    },
+    {
+      "text": "else without append wealth",
+      "start": 423.68,
+      "duration": 8.079
+    },
+    {
+      "text": "and then you would do df",
+      "start": 428.4,
+      "duration": 6.56
+    },
+    {
+      "text": "year equal years df",
+      "start": 431.759,
+      "duration": 6.481
+    },
+    {
+      "text": "wealth equals wealth",
+      "start": 434.96,
+      "duration": 6.48
+    },
+    {
+      "text": "and df salary equals",
+      "start": 438.24,
+      "duration": 5.519
+    },
+    {
+      "text": "salaries so this will produce the same",
+      "start": 441.44,
+      "duration": 3.12
+    },
+    {
+      "text": "exact",
+      "start": 443.759,
+      "duration": 4.0
+    },
+    {
+      "text": "data frame but this",
+      "start": 444.56,
+      "duration": 6.4
+    },
+    {
+      "text": "is definitely a little tedious to create",
+      "start": 447.759,
+      "duration": 4.72
+    },
+    {
+      "text": "individual lists for each one of those",
+      "start": 450.96,
+      "duration": 2.56
+    },
+    {
+      "text": "inputs",
+      "start": 452.479,
+      "duration": 3.201
+    },
+    {
+      "text": "and assign those individually when you",
+      "start": 453.52,
+      "duration": 3.36
+    },
+    {
+      "text": "can just",
+      "start": 455.68,
+      "duration": 3.76
+    },
+    {
+      "text": "do it all together here single list",
+      "start": 456.88,
+      "duration": 3.759
+    },
+    {
+      "text": "append the tuple",
+      "start": 459.44,
+      "duration": 3.44
+    },
+    {
+      "text": "just give it the column names and you're",
+      "start": 460.639,
+      "duration": 3.84
+    },
+    {
+      "text": "done and this",
+      "start": 462.88,
+      "duration": 3.28
+    },
+    {
+      "text": "will continue to scale for as many",
+      "start": 464.479,
+      "duration": 3.601
+    },
+    {
+      "text": "different things as you want to track at",
+      "start": 466.16,
+      "duration": 5.039
+    },
+    {
+      "text": "once in a single loop",
+      "start": 468.08,
+      "duration": 3.119
+    },
+    {
+      "text": "so now we have some logic which can",
+      "start": 471.52,
+      "duration": 3.679
+    },
+    {
+      "text": "produce",
+      "start": 474.72,
+      "duration": 3.039
+    },
+    {
+      "text": "our data frame let's wrap this up in a",
+      "start": 475.199,
+      "duration": 3.601
+    },
+    {
+      "text": "function",
+      "start": 477.759,
+      "duration": 4.081
+    },
+    {
+      "text": "so let's call this um get",
+      "start": 478.8,
+      "duration": 6.88
+    },
+    {
+      "text": "salaries wealth df",
+      "start": 481.84,
+      "duration": 6.639
+    },
+    {
+      "text": "and it takes the data and now we can",
+      "start": 485.68,
+      "duration": 4.72
+    },
+    {
+      "text": "just indent all this",
+      "start": 488.479,
+      "duration": 6.56
+    },
+    {
+      "text": "and add the return before the df",
+      "start": 490.4,
+      "duration": 4.639
+    },
+    {
+      "text": "and then when we call this um get",
+      "start": 495.44,
+      "duration": 4.159
+    },
+    {
+      "text": "salaries well cf",
+      "start": 498.16,
+      "duration": 4.56
+    },
+    {
+      "text": "on the model data then we can see we get",
+      "start": 499.599,
+      "duration": 3.841
+    },
+    {
+      "text": "the same",
+      "start": 502.72,
+      "duration": 3.759
+    },
+    {
+      "text": "data frame coming out of that and so now",
+      "start": 503.44,
+      "duration": 5.439
+    },
+    {
+      "text": "because we set that up with general data",
+      "start": 506.479,
+      "duration": 4.881
+    },
+    {
+      "text": "you can",
+      "start": 508.879,
+      "duration": 2.481
+    },
+    {
+      "text": "give it any values you want say your",
+      "start": 511.919,
+      "duration": 5.92
+    },
+    {
+      "text": "your high roller your starting salary",
+      "start": 515.44,
+      "duration": 3.279
+    },
+    {
+      "text": "starts",
+      "start": 517.839,
+      "duration": 4.64
+    },
+    {
+      "text": "at 100 000 now we can see",
+      "start": 518.719,
+      "duration": 6.401
+    },
+    {
+      "text": "the data frame of all those results over",
+      "start": 522.479,
+      "duration": 3.201
+    },
+    {
+      "text": "time",
+      "start": 525.12,
+      "duration": 3.76
+    },
+    {
+      "text": "based on whatever different",
+      "start": 525.68,
+      "duration": 5.599
+    },
+    {
+      "text": "values we want to give to it so that's",
+      "start": 528.88,
+      "duration": 3.959
+    },
+    {
+      "text": "why we make sure",
+      "start": 531.279,
+      "duration": 4.56
+    },
+    {
+      "text": "to",
+      "start": 532.839,
+      "duration": 3.0
+    },
+    {
+      "text": "structure everything in this way where",
+      "start": 536.0,
+      "duration": 3.04
+    },
+    {
+      "text": "it can take any arbitrary data",
+      "start": 537.36,
+      "duration": 5.12
+    },
+    {
+      "text": "and not always the original model data",
+      "start": 539.04,
+      "duration": 9.28
+    },
+    {
+      "text": "but anyway so now we can",
+      "start": 542.48,
+      "duration": 8.64
+    },
+    {
+      "text": "get a data frame which contains our",
+      "start": 548.32,
+      "duration": 4.8
+    },
+    {
+      "text": "salaries and wealth over time",
+      "start": 551.12,
+      "duration": 5.279
+    },
+    {
+      "text": "with a single command",
+      "start": 553.12,
+      "duration": 3.279
+    },
+    {
+      "text": "so then",
+      "start": 558.32,
+      "duration": 5.28
+    },
+    {
+      "text": "maybe say below this in the next cell",
+      "start": 561.76,
+      "duration": 3.6
+    },
+    {
+      "text": "we'll just define that here",
+      "start": 563.6,
+      "duration": 5.359
+    },
+    {
+      "text": "and then we can do uh df equals that",
+      "start": 565.36,
+      "duration": 6.8
+    },
+    {
+      "text": "on the model data",
+      "start": 568.959,
+      "duration": 6.241
+    },
+    {
+      "text": "so then again we have that data frame so",
+      "start": 572.16,
+      "duration": 4.72
+    },
+    {
+      "text": "the next thing that we might",
+      "start": 575.2,
+      "duration": 3.44
+    },
+    {
+      "text": "want to do or we definitely want to do",
+      "start": 576.88,
+      "duration": 4.16
+    },
+    {
+      "text": "if we're showing this off to the reader",
+      "start": 578.64,
+      "duration": 6.08
+    },
+    {
+      "text": "is to add some number formatting here uh",
+      "start": 581.04,
+      "duration": 5.2
+    },
+    {
+      "text": "we don't need we don't care about these",
+      "start": 584.72,
+      "duration": 3.679
+    },
+    {
+      "text": "decimals and",
+      "start": 586.24,
+      "duration": 3.599
+    },
+    {
+      "text": "we don't really want the scientific",
+      "start": 588.399,
+      "duration": 3.44
+    },
+    {
+      "text": "notation coming in here",
+      "start": 589.839,
+      "duration": 4.081
+    },
+    {
+      "text": "and these are all uh dollar amounts so",
+      "start": 591.839,
+      "duration": 3.601
+    },
+    {
+      "text": "it'd be nice to have the dollar sign",
+      "start": 593.92,
+      "duration": 5.599
+    },
+    {
+      "text": "on those values so",
+      "start": 595.44,
+      "duration": 8.8
+    },
+    {
+      "text": "um below this we can",
+      "start": 599.519,
+      "duration": 7.961
+    },
+    {
+      "text": "out what we're going to do so",
+      "start": 604.24,
+      "duration": 4.719
+    },
+    {
+      "text": "df.style.format",
+      "start": 607.48,
+      "duration": 3.72
+    },
+    {
+      "text": "then you pass the dictionary where you",
+      "start": 608.959,
+      "duration": 4.161
+    },
+    {
+      "text": "give it the column names",
+      "start": 611.2,
+      "duration": 4.96
+    },
+    {
+      "text": "and then you as the values",
+      "start": 613.12,
+      "duration": 6.48
+    },
+    {
+      "text": "is how you want to format that column",
+      "start": 616.16,
+      "duration": 5.52
+    },
+    {
+      "text": "so i want to put a dollar sign in front",
+      "start": 619.6,
+      "duration": 4.08
+    },
+    {
+      "text": "and i want to have zero decimal places",
+      "start": 621.68,
+      "duration": 3.92
+    },
+    {
+      "text": "and i want to have commas",
+      "start": 623.68,
+      "duration": 4.159
+    },
+    {
+      "text": "and i want that to be a fixed zero",
+      "start": 625.6,
+      "duration": 3.919
+    },
+    {
+      "text": "decimal places",
+      "start": 627.839,
+      "duration": 5.921
+    },
+    {
+      "text": "and then um want to do the same thing",
+      "start": 629.519,
+      "duration": 7.281
+    },
+    {
+      "text": "for the wealth the same format is going",
+      "start": 633.76,
+      "duration": 4.319
+    },
+    {
+      "text": "to be fine there",
+      "start": 636.8,
+      "duration": 4.0
+    },
+    {
+      "text": "as well",
+      "start": 638.079,
+      "duration": 2.721
+    },
+    {
+      "text": "so then when i do that then we can see a",
+      "start": 641.279,
+      "duration": 3.68
+    },
+    {
+      "text": "much nicer",
+      "start": 644.16,
+      "duration": 6.16
+    },
+    {
+      "text": "representation of those values over time",
+      "start": 644.959,
+      "duration": 5.361
+    },
+    {
+      "text": "another thing which we could possibly do",
+      "start": 651.76,
+      "duration": 5.28
+    },
+    {
+      "text": "here to help understand these results",
+      "start": 654.8,
+      "duration": 5.279
+    },
+    {
+      "text": "is to add the",
+      "start": 657.04,
+      "duration": 6.32
+    },
+    {
+      "text": "inline bar graph here um so we can do it",
+      "start": 660.079,
+      "duration": 4.801
+    },
+    {
+      "text": "we don't want it on the year column",
+      "start": 663.36,
+      "duration": 3.68
+    },
+    {
+      "text": "we just want it on the salary and wealth",
+      "start": 664.88,
+      "duration": 3.36
+    },
+    {
+      "text": "columns",
+      "start": 667.04,
+      "duration": 4.56
+    },
+    {
+      "text": "um and then we can see you know it makes",
+      "start": 668.24,
+      "duration": 5.279
+    },
+    {
+      "text": "it a lot easier to see those jumps for",
+      "start": 671.6,
+      "duration": 3.84
+    },
+    {
+      "text": "the promotions right we see this",
+      "start": 673.519,
+      "duration": 5.281
+    },
+    {
+      "text": "immediate break in",
+      "start": 675.44,
+      "duration": 5.44
+    },
+    {
+      "text": "the length of the bars representing that",
+      "start": 678.8,
+      "duration": 4.0
+    },
+    {
+      "text": "the salary or wealth",
+      "start": 680.88,
+      "duration": 6.639
+    },
+    {
+      "text": "jumped and",
+      "start": 682.8,
+      "duration": 7.76
+    },
+    {
+      "text": "we might also want to hide the index",
+      "start": 687.519,
+      "duration": 3.44
+    },
+    {
+      "text": "here",
+      "start": 690.56,
+      "duration": 3.44
+    },
+    {
+      "text": "the index is not useful here",
+      "start": 690.959,
+      "duration": 6.0
+    },
+    {
+      "text": "and now we've got a pretty nice display",
+      "start": 694.0,
+      "duration": 5.76
+    },
+    {
+      "text": "of these data",
+      "start": 696.959,
+      "duration": 5.681
+    },
+    {
+      "text": "so now what i recommend just always for",
+      "start": 699.76,
+      "duration": 3.84
+    },
+    {
+      "text": "our data frame",
+      "start": 702.64,
+      "duration": 3.12
+    },
+    {
+      "text": "styling is we want to wrap this in a",
+      "start": 703.6,
+      "duration": 3.6
+    },
+    {
+      "text": "styler function",
+      "start": 705.76,
+      "duration": 4.879
+    },
+    {
+      "text": "so let's",
+      "start": 707.2,
+      "duration": 6.16
+    },
+    {
+      "text": "style salaries wealth can be the name of",
+      "start": 710.639,
+      "duration": 3.521
+    },
+    {
+      "text": "the function",
+      "start": 713.36,
+      "duration": 3.36
+    },
+    {
+      "text": "and it takes a data frame and then i'm",
+      "start": 714.16,
+      "duration": 4.56
+    },
+    {
+      "text": "going to",
+      "start": 716.72,
+      "duration": 3.919
+    },
+    {
+      "text": "indent all of that and then i'm going to",
+      "start": 718.72,
+      "duration": 5.359
+    },
+    {
+      "text": "return the result of that",
+      "start": 720.639,
+      "duration": 6.481
+    },
+    {
+      "text": "so then that's defined",
+      "start": 724.079,
+      "duration": 7.44
+    },
+    {
+      "text": "so then we can",
+      "start": 727.12,
+      "duration": 6.399
+    },
+    {
+      "text": "uh below this then we're getting our",
+      "start": 731.519,
+      "duration": 3.361
+    },
+    {
+      "text": "data frame",
+      "start": 733.519,
+      "duration": 4.481
+    },
+    {
+      "text": "and then we want to style the",
+      "start": 734.88,
+      "duration": 5.759
+    },
+    {
+      "text": "data frame and that's what we're looking",
+      "start": 738.0,
+      "duration": 3.279
+    },
+    {
+      "text": "at",
+      "start": 740.639,
+      "duration": 3.44
+    },
+    {
+      "text": "so now two lines of code here off of any",
+      "start": 741.279,
+      "duration": 4.081
+    },
+    {
+      "text": "set of data that we want",
+      "start": 744.079,
+      "duration": 4.56
+    },
+    {
+      "text": "and we can get this nice styled",
+      "start": 745.36,
+      "duration": 5.68
+    },
+    {
+      "text": "uh representation of the salaries and",
+      "start": 748.639,
+      "duration": 5.521
+    },
+    {
+      "text": "wells over time",
+      "start": 751.04,
+      "duration": 3.12
+    },
+    {
+      "text": "so then the other thing that we want to",
+      "start": 755.279,
+      "duration": 3.68
+    },
+    {
+      "text": "do is",
+      "start": 757.12,
+      "duration": 6.8
+    },
+    {
+      "text": "plot our results so",
+      "start": 758.959,
+      "duration": 4.961
+    },
+    {
+      "text": "we have our original data frame still",
+      "start": 765.12,
+      "duration": 4.8
+    },
+    {
+      "text": "and this has the original values it's",
+      "start": 768.16,
+      "duration": 3.6
+    },
+    {
+      "text": "not the styled one you can't do any",
+      "start": 769.92,
+      "duration": 3.44
+    },
+    {
+      "text": "plotting on the styler object",
+      "start": 771.76,
+      "duration": 4.639
+    },
+    {
+      "text": "only on the data frame itself and we",
+      "start": 773.36,
+      "duration": 4.719
+    },
+    {
+      "text": "want to do a plot",
+      "start": 776.399,
+      "duration": 4.801
+    },
+    {
+      "text": "and let's do a line plot and we want our",
+      "start": 778.079,
+      "duration": 6.32
+    },
+    {
+      "text": "x to be the year and",
+      "start": 781.2,
+      "duration": 6.4
+    },
+    {
+      "text": "let's uh just plot the salary",
+      "start": 784.399,
+      "duration": 6.24
+    },
+    {
+      "text": "right now so there we can see the",
+      "start": 787.6,
+      "duration": 4.0
+    },
+    {
+      "text": "salaries",
+      "start": 790.639,
+      "duration": 4.64
+    },
+    {
+      "text": "over time now i could have",
+      "start": 791.6,
+      "duration": 5.679
+    },
+    {
+      "text": "plot both the salary and wealth on a",
+      "start": 795.279,
+      "duration": 3.36
+    },
+    {
+      "text": "single graph",
+      "start": 797.279,
+      "duration": 3.921
+    },
+    {
+      "text": "but we can see there's definitely a",
+      "start": 798.639,
+      "duration": 3.76
+    },
+    {
+      "text": "scale problem here",
+      "start": 801.2,
+      "duration": 3.68
+    },
+    {
+      "text": "where the wealth has a so much larger",
+      "start": 802.399,
+      "duration": 3.361
+    },
+    {
+      "text": "scale",
+      "start": 804.88,
+      "duration": 4.48
+    },
+    {
+      "text": "than the salaries and so it doesn't",
+      "start": 805.76,
+      "duration": 5.04
+    },
+    {
+      "text": "make a lot of sense to put these on the",
+      "start": 809.36,
+      "duration": 4.32
+    },
+    {
+      "text": "same graph so we can have the salaries",
+      "start": 810.8,
+      "duration": 6.4
+    },
+    {
+      "text": "and then we can have the wealth separate",
+      "start": 813.68,
+      "duration": 6.64
+    },
+    {
+      "text": "from that so",
+      "start": 817.2,
+      "duration": 8.24
+    },
+    {
+      "text": "we can plot the wealth here separately",
+      "start": 820.32,
+      "duration": 5.12
+    },
+    {
+      "text": "so line line plots are perfectly good",
+      "start": 826.48,
+      "duration": 4.32
+    },
+    {
+      "text": "for this you know you could",
+      "start": 829.12,
+      "duration": 5.04
+    },
+    {
+      "text": "do something like a bar or an area",
+      "start": 830.8,
+      "duration": 6.96
+    },
+    {
+      "text": "plot instead but i think the line",
+      "start": 834.16,
+      "duration": 8.16
+    },
+    {
+      "text": "is perfectly fine for this",
+      "start": 837.76,
+      "duration": 7.84
+    },
+    {
+      "text": "um and now we have",
+      "start": 842.32,
+      "duration": 6.959
+    },
+    {
+      "text": "a nice display of all of our",
+      "start": 845.6,
+      "duration": 6.799
+    },
+    {
+      "text": "information in the model",
+      "start": 849.279,
+      "duration": 6.481
+    },
+    {
+      "text": "so that's a an overview on how to add",
+      "start": 852.399,
+      "duration": 4.481
+    },
+    {
+      "text": "visualization",
+      "start": 855.76,
+      "duration": 5.439
+    },
+    {
+      "text": "to an existing python model using pandas",
+      "start": 856.88,
+      "duration": 7.44
+    },
+    {
+      "text": "and this uh concludes our lecture series",
+      "start": 861.199,
+      "duration": 5.841
+    },
+    {
+      "text": "on understanding complex results through",
+      "start": 864.32,
+      "duration": 4.24
+    },
+    {
+      "text": "visualization",
+      "start": 867.04,
+      "duration": 5.96
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 868.56,
+      "duration": 7.44
+    },
+    {
+      "text": "time",
+      "start": 873.0,
+      "duration": 3.0
+    }
+  ]
+}

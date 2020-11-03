@@ -1,0 +1,914 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.36,
+      "duration": 2.24
+    },
+    {
+      "text": "nick durabartis here teaching you",
+      "start": 4.24,
+      "duration": 3.679
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 5.6,
+      "duration": 2.8
+    },
+    {
+      "text": "to be",
+      "start": 7.919,
+      "duration": 2.961
+    },
+    {
+      "text": "solving the lab exercise on adding",
+      "start": 8.4,
+      "duration": 4.08
+    },
+    {
+      "text": "desired cash",
+      "start": 10.88,
+      "duration": 4.56
+    },
+    {
+      "text": "as a calculation into the dynamic salary",
+      "start": 12.48,
+      "duration": 3.68
+    },
+    {
+      "text": "python",
+      "start": 15.44,
+      "duration": 4.32
+    },
+    {
+      "text": "model so this is",
+      "start": 16.16,
+      "duration": 6.0
+    },
+    {
+      "text": "part of the lecture series on the depth",
+      "start": 19.76,
+      "duration": 3.439
+    },
+    {
+      "text": "of a financial",
+      "start": 22.16,
+      "duration": 3.92
+    },
+    {
+      "text": "model in python and the lab exercise",
+      "start": 23.199,
+      "duration": 4.24
+    },
+    {
+      "text": "that we're talking about is",
+      "start": 26.08,
+      "duration": 3.76
+    },
+    {
+      "text": "here on this slide where we're just",
+      "start": 27.439,
+      "duration": 3.281
+    },
+    {
+      "text": "modifying",
+      "start": 29.84,
+      "duration": 3.76
+    },
+    {
+      "text": "the existing model to which took the",
+      "start": 30.72,
+      "duration": 3.999
+    },
+    {
+      "text": "desired cash",
+      "start": 33.6,
+      "duration": 3.84
+    },
+    {
+      "text": "as an input a certain dollar amount now",
+      "start": 34.719,
+      "duration": 4.081
+    },
+    {
+      "text": "we want to",
+      "start": 37.44,
+      "duration": 4.4
+    },
+    {
+      "text": "instead calculate the desired cash based",
+      "start": 38.8,
+      "duration": 4.24
+    },
+    {
+      "text": "on",
+      "start": 41.84,
+      "duration": 4.08
+    },
+    {
+      "text": "some new inputs how much we can spend",
+      "start": 43.04,
+      "duration": 4.48
+    },
+    {
+      "text": "each year in retirement",
+      "start": 45.92,
+      "duration": 3.119
+    },
+    {
+      "text": "how long we're going to spend in",
+      "start": 47.52,
+      "duration": 4.48
+    },
+    {
+      "text": "retirement as well as the existing",
+      "start": 49.039,
+      "duration": 6.721
+    },
+    {
+      "text": "uh input of the interest rate",
+      "start": 52.0,
+      "duration": 6.879
+    },
+    {
+      "text": "so let's go over to the",
+      "start": 55.76,
+      "duration": 6.72
+    },
+    {
+      "text": "model and we can add this into it",
+      "start": 58.879,
+      "duration": 6.32
+    },
+    {
+      "text": "so we have the existing model here and",
+      "start": 62.48,
+      "duration": 3.92
+    },
+    {
+      "text": "i'm just going to",
+      "start": 65.199,
+      "duration": 3.841
+    },
+    {
+      "text": "restart kernel and run all cells to make",
+      "start": 66.4,
+      "duration": 3.36
+    },
+    {
+      "text": "sure",
+      "start": 69.04,
+      "duration": 4.079
+    },
+    {
+      "text": "that we have everything defined",
+      "start": 69.76,
+      "duration": 7.76
+    },
+    {
+      "text": "and then so desired cache we have here",
+      "start": 73.119,
+      "duration": 6.801
+    },
+    {
+      "text": "as an input but it's no longer going to",
+      "start": 77.52,
+      "duration": 3.84
+    },
+    {
+      "text": "be an input it's going to be",
+      "start": 79.92,
+      "duration": 4.8
+    },
+    {
+      "text": "a calculated value so i'm going to go",
+      "start": 81.36,
+      "duration": 4.64
+    },
+    {
+      "text": "ahead and just remove",
+      "start": 84.72,
+      "duration": 4.96
+    },
+    {
+      "text": "desired cash from those inputs",
+      "start": 86.0,
+      "duration": 6.64
+    },
+    {
+      "text": "and instead i'm going to add our new",
+      "start": 89.68,
+      "duration": 4.0
+    },
+    {
+      "text": "inputs",
+      "start": 92.64,
+      "duration": 5.6
+    },
+    {
+      "text": "so years in retirement",
+      "start": 93.68,
+      "duration": 4.56
+    },
+    {
+      "text": "um let's just",
+      "start": 98.84,
+      "duration": 6.68
+    },
+    {
+      "text": "um default that to 20",
+      "start": 101.52,
+      "duration": 8.559
+    },
+    {
+      "text": "and then the cash spend",
+      "start": 105.52,
+      "duration": 7.599
+    },
+    {
+      "text": "during retirement",
+      "start": 110.079,
+      "duration": 3.04
+    },
+    {
+      "text": "let's set that to 40 000",
+      "start": 113.6,
+      "duration": 7.44
+    },
+    {
+      "text": "and then we have i'll rerun this",
+      "start": 117.759,
+      "duration": 6.881
+    },
+    {
+      "text": "cell and",
+      "start": 121.04,
+      "duration": 6.96
+    },
+    {
+      "text": "the other thing um",
+      "start": 124.64,
+      "duration": 7.2
+    },
+    {
+      "text": "i will do is i will set",
+      "start": 128.0,
+      "duration": 3.84
+    },
+    {
+      "text": "uh model data to data so that we can",
+      "start": 132.08,
+      "duration": 6.96
+    },
+    {
+      "text": "develop our functions out in the cells",
+      "start": 136.08,
+      "duration": 4.64
+    },
+    {
+      "text": "taking an input of data",
+      "start": 139.04,
+      "duration": 3.52
+    },
+    {
+      "text": "and then easily just wrap it up at a",
+      "start": 140.72,
+      "duration": 4.159
+    },
+    {
+      "text": "function",
+      "start": 142.56,
+      "duration": 6.48
+    },
+    {
+      "text": "so what we need to do is",
+      "start": 144.879,
+      "duration": 7.041
+    },
+    {
+      "text": "in two parts one is calculate the",
+      "start": 149.04,
+      "duration": 3.839
+    },
+    {
+      "text": "desired cache",
+      "start": 151.92,
+      "duration": 3.679
+    },
+    {
+      "text": "and the second is to then plug that into",
+      "start": 152.879,
+      "duration": 3.761
+    },
+    {
+      "text": "our existing",
+      "start": 155.599,
+      "duration": 4.401
+    },
+    {
+      "text": "model so i'm going to",
+      "start": 156.64,
+      "duration": 7.2
+    },
+    {
+      "text": "calculate the desired cache here",
+      "start": 160.0,
+      "duration": 7.04
+    },
+    {
+      "text": "as a subsection",
+      "start": 163.84,
+      "duration": 7.2
+    },
+    {
+      "text": "of the retirement section of the model",
+      "start": 167.04,
+      "duration": 7.36
+    },
+    {
+      "text": "so i can put calculate",
+      "start": 171.04,
+      "duration": 8.559
+    },
+    {
+      "text": "desired cash here as a section and then",
+      "start": 174.4,
+      "duration": 10.16
+    },
+    {
+      "text": "calculate years to retirement",
+      "start": 179.599,
+      "duration": 10.961
+    },
+    {
+      "text": "as a section so for the desired cash",
+      "start": 184.56,
+      "duration": 9.599
+    },
+    {
+      "text": "we want to take the present value",
+      "start": 190.56,
+      "duration": 7.039
+    },
+    {
+      "text": "of the cash spend per year and the",
+      "start": 194.159,
+      "duration": 3.841
+    },
+    {
+      "text": "number",
+      "start": 197.599,
+      "duration": 3.201
+    },
+    {
+      "text": "of years having a zero future value",
+      "start": 198.0,
+      "duration": 4.64
+    },
+    {
+      "text": "because we don't need any cash left over",
+      "start": 200.8,
+      "duration": 3.12
+    },
+    {
+      "text": "at the end",
+      "start": 202.64,
+      "duration": 3.28
+    },
+    {
+      "text": "and we have that present value function",
+      "start": 203.92,
+      "duration": 3.2
+    },
+    {
+      "text": "available in",
+      "start": 205.92,
+      "duration": 4.16
+    },
+    {
+      "text": "numpy so i'm going to go back up to the",
+      "start": 207.12,
+      "duration": 3.52
+    },
+    {
+      "text": "top",
+      "start": 210.08,
+      "duration": 4.159
+    },
+    {
+      "text": "and i'm going to import numpy",
+      "start": 210.64,
+      "duration": 7.2
+    },
+    {
+      "text": "as mp and then rerun that cell so that i",
+      "start": 214.239,
+      "duration": 4.08
+    },
+    {
+      "text": "have",
+      "start": 217.84,
+      "duration": 3.84
+    },
+    {
+      "text": "numpy available to work with down here",
+      "start": 218.319,
+      "duration": 5.121
+    },
+    {
+      "text": "in the section where we're just",
+      "start": 221.68,
+      "duration": 4.479
+    },
+    {
+      "text": "calculating desired cash",
+      "start": 223.44,
+      "duration": 5.92
+    },
+    {
+      "text": "so we can do mp.pv",
+      "start": 226.159,
+      "duration": 6.321
+    },
+    {
+      "text": "and shift tab brings up the inputs so",
+      "start": 229.36,
+      "duration": 3.68
+    },
+    {
+      "text": "the first",
+      "start": 232.48,
+      "duration": 2.24
+    },
+    {
+      "text": "is going to be the interest rate so",
+      "start": 233.04,
+      "duration": 3.04
+    },
+    {
+      "text": "that's going to be",
+      "start": 234.72,
+      "duration": 5.439
+    },
+    {
+      "text": "data dot interest rate",
+      "start": 236.08,
+      "duration": 7.6
+    },
+    {
+      "text": "um dot um what is it",
+      "start": 240.159,
+      "duration": 6.08
+    },
+    {
+      "text": "some reason not coming up for me today",
+      "start": 243.68,
+      "duration": 3.6
+    },
+    {
+      "text": "um",
+      "start": 246.239,
+      "duration": 4.64
+    },
+    {
+      "text": "yup it is interest rate so data dot",
+      "start": 247.28,
+      "duration": 6.239
+    },
+    {
+      "text": "interest rate",
+      "start": 250.879,
+      "duration": 5.681
+    },
+    {
+      "text": "um did i run the",
+      "start": 253.519,
+      "duration": 6.72
+    },
+    {
+      "text": "yeah i ran this so data.interest rate",
+      "start": 256.56,
+      "duration": 5.199
+    },
+    {
+      "text": "is the first thing that we're passing",
+      "start": 260.239,
+      "duration": 3.52
+    },
+    {
+      "text": "here the second argument",
+      "start": 261.759,
+      "duration": 5.361
+    },
+    {
+      "text": "is the number of periods so",
+      "start": 263.759,
+      "duration": 6.88
+    },
+    {
+      "text": "that would be the um tab completion",
+      "start": 267.12,
+      "duration": 5.28
+    },
+    {
+      "text": "doesn't want to agree with me today",
+      "start": 270.639,
+      "duration": 5.521
+    },
+    {
+      "text": "the cash spend during retirement",
+      "start": 272.4,
+      "duration": 3.76
+    },
+    {
+      "text": "or sorry um that would be the third",
+      "start": 276.32,
+      "duration": 4.56
+    },
+    {
+      "text": "argument payment is going to be the cash",
+      "start": 278.56,
+      "duration": 3.68
+    },
+    {
+      "text": "spend during retirement",
+      "start": 280.88,
+      "duration": 4.64
+    },
+    {
+      "text": "negative of that and the",
+      "start": 282.24,
+      "duration": 6.399
+    },
+    {
+      "text": "um years in retirement",
+      "start": 285.52,
+      "duration": 5.119
+    },
+    {
+      "text": "is going to be our second argument which",
+      "start": 288.639,
+      "duration": 4.161
+    },
+    {
+      "text": "is the number of periods",
+      "start": 290.639,
+      "duration": 4.641
+    },
+    {
+      "text": "over which we want to take this present",
+      "start": 292.8,
+      "duration": 3.679
+    },
+    {
+      "text": "value",
+      "start": 295.28,
+      "duration": 4.72
+    },
+    {
+      "text": "um and then future value",
+      "start": 296.479,
+      "duration": 4.961
+    },
+    {
+      "text": "is going to take the default of zero",
+      "start": 300.0,
+      "duration": 2.96
+    },
+    {
+      "text": "because we don't need any cash at the",
+      "start": 301.44,
+      "duration": 2.479
+    },
+    {
+      "text": "end",
+      "start": 302.96,
+      "duration": 4.32
+    },
+    {
+      "text": "so we run this and we see the",
+      "start": 303.919,
+      "duration": 7.761
+    },
+    {
+      "text": "desired cash here so",
+      "start": 307.28,
+      "duration": 7.52
+    },
+    {
+      "text": "we can then wrap this up into",
+      "start": 311.68,
+      "duration": 5.84
+    },
+    {
+      "text": "a function which is going to make it",
+      "start": 314.8,
+      "duration": 4.239
+    },
+    {
+      "text": "more clear what this is doing",
+      "start": 317.52,
+      "duration": 5.32
+    },
+    {
+      "text": "so this is going to be a desired cache",
+      "start": 319.039,
+      "duration": 5.761
+    },
+    {
+      "text": "function",
+      "start": 322.84,
+      "duration": 4.52
+    },
+    {
+      "text": "or we can say get desired cache and it",
+      "start": 324.8,
+      "duration": 3.839
+    },
+    {
+      "text": "takes the data",
+      "start": 327.36,
+      "duration": 3.83
+    },
+    {
+      "text": "and we just ended this and add a return",
+      "start": 328.639,
+      "duration": 3.681
+    },
+    {
+      "text": "[Music]",
+      "start": 331.19,
+      "duration": 4.81
+    },
+    {
+      "text": "and now we can call get desired cache",
+      "start": 332.32,
+      "duration": 7.599
+    },
+    {
+      "text": "on the data and it gets us that same",
+      "start": 336.0,
+      "duration": 6.32
+    },
+    {
+      "text": "value",
+      "start": 339.919,
+      "duration": 2.401
+    },
+    {
+      "text": "so and you would want to",
+      "start": 343.36,
+      "duration": 6.0
+    },
+    {
+      "text": "[Music]",
+      "start": 348.17,
+      "duration": 2.869
+    },
+    {
+      "text": "to display this within your model you",
+      "start": 349.36,
+      "duration": 3.279
+    },
+    {
+      "text": "would want to put this inside a",
+      "start": 351.039,
+      "duration": 2.72
+    },
+    {
+      "text": "formatted",
+      "start": 352.639,
+      "duration": 6.881
+    },
+    {
+      "text": "string so i'm going to say",
+      "start": 353.759,
+      "duration": 5.761
+    },
+    {
+      "text": "martha needs",
+      "start": 360.24,
+      "duration": 7.04
+    },
+    {
+      "text": "this much cash formatted with commas",
+      "start": 363.28,
+      "duration": 9.68
+    },
+    {
+      "text": "and zero decimal places and retirement",
+      "start": 367.28,
+      "duration": 5.68
+    },
+    {
+      "text": "so now we have that printed out in a",
+      "start": 373.039,
+      "duration": 3.201
+    },
+    {
+      "text": "nice",
+      "start": 375.6,
+      "duration": 3.24
+    },
+    {
+      "text": "way if we add a print statement around",
+      "start": 376.24,
+      "duration": 5.6
+    },
+    {
+      "text": "that",
+      "start": 378.84,
+      "duration": 3.0
+    },
+    {
+      "text": "so then we want to incorporate this into",
+      "start": 383.44,
+      "duration": 4.08
+    },
+    {
+      "text": "the actual calculation",
+      "start": 385.44,
+      "duration": 4.879
+    },
+    {
+      "text": "where here it's using data.desiredcache",
+      "start": 387.52,
+      "duration": 4.16
+    },
+    {
+      "text": "but we no longer have",
+      "start": 390.319,
+      "duration": 5.381
+    },
+    {
+      "text": "a data.desiredcache so",
+      "start": 391.68,
+      "duration": 5.84
+    },
+    {
+      "text": "[Music]",
+      "start": 395.7,
+      "duration": 4.3
+    },
+    {
+      "text": "instead we can calculate the desired",
+      "start": 397.52,
+      "duration": 3.6
+    },
+    {
+      "text": "cash",
+      "start": 400.0,
+      "duration": 4.319
+    },
+    {
+      "text": "equal to get desired cash",
+      "start": 401.12,
+      "duration": 7.359
+    },
+    {
+      "text": "on the data and then we want to just use",
+      "start": 404.319,
+      "duration": 6.801
+    },
+    {
+      "text": "that desired cache rather than accessing",
+      "start": 408.479,
+      "duration": 4.321
+    },
+    {
+      "text": "it from the data",
+      "start": 411.12,
+      "duration": 4.4
+    },
+    {
+      "text": "and then this should at this point work",
+      "start": 412.8,
+      "duration": 3.6
+    },
+    {
+      "text": "all the way through",
+      "start": 415.52,
+      "duration": 2.88
+    },
+    {
+      "text": "so i'm going to go ahead and restart the",
+      "start": 416.4,
+      "duration": 6.56
+    },
+    {
+      "text": "kernel and run all cells",
+      "start": 418.4,
+      "duration": 7.76
+    },
+    {
+      "text": "and now we see as soon as",
+      "start": 422.96,
+      "duration": 6.239
+    },
+    {
+      "text": "we go beyond this desired cache",
+      "start": 426.16,
+      "duration": 7.12
+    },
+    {
+      "text": "that indeed uh martha is able to retire",
+      "start": 429.199,
+      "duration": 7.601
+    },
+    {
+      "text": "in the following year so",
+      "start": 433.28,
+      "duration": 5.84
+    },
+    {
+      "text": "that's the idea behind this lab exercise",
+      "start": 436.8,
+      "duration": 3.2
+    },
+    {
+      "text": "we now have",
+      "start": 439.12,
+      "duration": 3.84
+    },
+    {
+      "text": "desired cache calculated and part of the",
+      "start": 440.0,
+      "duration": 3.919
+    },
+    {
+      "text": "model",
+      "start": 442.96,
+      "duration": 4.959
+    },
+    {
+      "text": "and using those calculated values",
+      "start": 443.919,
+      "duration": 7.28
+    },
+    {
+      "text": "so we can easily",
+      "start": 447.919,
+      "duration": 6.081
+    },
+    {
+      "text": "pass other",
+      "start": 451.199,
+      "duration": 2.801
+    },
+    {
+      "text": "inputs we could have said that",
+      "start": 454.479,
+      "duration": 5.761
+    },
+    {
+      "text": "you know we needed 40 years in",
+      "start": 458.16,
+      "duration": 3.599
+    },
+    {
+      "text": "retirement instead",
+      "start": 460.24,
+      "duration": 3.12
+    },
+    {
+      "text": "now it's going to take an additional few",
+      "start": 461.759,
+      "duration": 4.56
+    },
+    {
+      "text": "years to save up that cash",
+      "start": 463.36,
+      "duration": 7.119
+    },
+    {
+      "text": "etc so that is the solution",
+      "start": 466.319,
+      "duration": 6.241
+    },
+    {
+      "text": "to the lab exercise on extending the",
+      "start": 470.479,
+      "duration": 4.16
+    },
+    {
+      "text": "dynamic salary retirement model in",
+      "start": 472.56,
+      "duration": 2.96
+    },
+    {
+      "text": "python",
+      "start": 474.639,
+      "duration": 2.56
+    },
+    {
+      "text": "thanks for listening and see you next",
+      "start": 475.52,
+      "duration": 4.32
+    },
+    {
+      "text": "time",
+      "start": 477.199,
+      "duration": 2.641
+    }
+  ]
+}

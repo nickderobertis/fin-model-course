@@ -1,0 +1,899 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 4.16,
+      "duration": 2.159
+    },
+    {
+      "text": "nick dearburst here teaching you",
+      "start": 4.96,
+      "duration": 3.76
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 6.319,
+      "duration": 3.121
+    },
+    {
+      "text": "be solving",
+      "start": 8.72,
+      "duration": 3.28
+    },
+    {
+      "text": "the lab exercise in the python basics",
+      "start": 9.44,
+      "duration": 3.119
+    },
+    {
+      "text": "section",
+      "start": 12.0,
+      "duration": 4.16
+    },
+    {
+      "text": "on data types that lab exercise is",
+      "start": 12.559,
+      "duration": 6.321
+    },
+    {
+      "text": "mentioned here in the uh going beyond an",
+      "start": 16.16,
+      "duration": 4.8
+    },
+    {
+      "text": "initial python script slides",
+      "start": 18.88,
+      "duration": 4.559
+    },
+    {
+      "text": "at the end of the data types section and",
+      "start": 20.96,
+      "duration": 4.639
+    },
+    {
+      "text": "the actual exercise is contained within",
+      "start": 23.439,
+      "duration": 3.68
+    },
+    {
+      "text": "the python basic slag",
+      "start": 25.599,
+      "duration": 3.76
+    },
+    {
+      "text": "jupiter notebook so let's jump over to",
+      "start": 27.119,
+      "duration": 4.32
+    },
+    {
+      "text": "that",
+      "start": 29.359,
+      "duration": 5.36
+    },
+    {
+      "text": "so this is within that notebook the data",
+      "start": 31.439,
+      "duration": 3.681
+    },
+    {
+      "text": "types",
+      "start": 34.719,
+      "duration": 4.561
+    },
+    {
+      "text": "section of that notebook and we have",
+      "start": 35.12,
+      "duration": 8.32
+    },
+    {
+      "text": "three exercises here to work on",
+      "start": 39.28,
+      "duration": 7.36
+    },
+    {
+      "text": "so the first uh exercise here",
+      "start": 43.44,
+      "duration": 5.439
+    },
+    {
+      "text": "is to create a tuple with the values",
+      "start": 46.64,
+      "duration": 3.599
+    },
+    {
+      "text": "first and second",
+      "start": 48.879,
+      "duration": 4.081
+    },
+    {
+      "text": "and then extract the value second from",
+      "start": 50.239,
+      "duration": 4.401
+    },
+    {
+      "text": "that tuple",
+      "start": 52.96,
+      "duration": 4.8
+    },
+    {
+      "text": "so we can go ahead and create my tuple",
+      "start": 54.64,
+      "duration": 3.36
+    },
+    {
+      "text": "and",
+      "start": 57.76,
+      "duration": 2.959
+    },
+    {
+      "text": "for tuples we use uh parentheses to",
+      "start": 58.0,
+      "duration": 4.96
+    },
+    {
+      "text": "define them easily",
+      "start": 60.719,
+      "duration": 4.08
+    },
+    {
+      "text": "and so we're just going to put first and",
+      "start": 62.96,
+      "duration": 3.6
+    },
+    {
+      "text": "second in there you know just like we",
+      "start": 64.799,
+      "duration": 3.201
+    },
+    {
+      "text": "would with defining a list",
+      "start": 66.56,
+      "duration": 4.32
+    },
+    {
+      "text": "just with parentheses instead of the",
+      "start": 68.0,
+      "duration": 5.04
+    },
+    {
+      "text": "square brackets",
+      "start": 70.88,
+      "duration": 5.599
+    },
+    {
+      "text": "and then we want to index that and we",
+      "start": 73.04,
+      "duration": 4.32
+    },
+    {
+      "text": "can index",
+      "start": 76.479,
+      "duration": 3.68
+    },
+    {
+      "text": "that exactly like we index a list again",
+      "start": 77.36,
+      "duration": 3.28
+    },
+    {
+      "text": "with the",
+      "start": 80.159,
+      "duration": 3.441
+    },
+    {
+      "text": "zero based indexing here so we want to",
+      "start": 80.64,
+      "duration": 3.839
+    },
+    {
+      "text": "get the",
+      "start": 83.6,
+      "duration": 3.839
+    },
+    {
+      "text": "second value in the list and with zero",
+      "start": 84.479,
+      "duration": 4.801
+    },
+    {
+      "text": "based indexing that's going to be index",
+      "start": 87.439,
+      "duration": 3.921
+    },
+    {
+      "text": "number one",
+      "start": 89.28,
+      "duration": 5.519
+    },
+    {
+      "text": "so uh you know running that we are able",
+      "start": 91.36,
+      "duration": 4.56
+    },
+    {
+      "text": "to pull out this",
+      "start": 94.799,
+      "duration": 4.0
+    },
+    {
+      "text": "second value and show that there so that",
+      "start": 95.92,
+      "duration": 3.839
+    },
+    {
+      "text": "completes the",
+      "start": 98.799,
+      "duration": 4.081
+    },
+    {
+      "text": "first exercise",
+      "start": 99.759,
+      "duration": 3.121
+    },
+    {
+      "text": "now the second exercise we want to",
+      "start": 105.439,
+      "duration": 4.561
+    },
+    {
+      "text": "create a dictionary",
+      "start": 107.6,
+      "duration": 5.76
+    },
+    {
+      "text": "where we have a favorite color",
+      "start": 110.0,
+      "duration": 6.399
+    },
+    {
+      "text": "and we have a second favorite color and",
+      "start": 113.36,
+      "duration": 5.439
+    },
+    {
+      "text": "we have green as the favorite color",
+      "start": 116.399,
+      "duration": 4.641
+    },
+    {
+      "text": "and blue as the second favorite color",
+      "start": 118.799,
+      "duration": 3.521
+    },
+    {
+      "text": "which are",
+      "start": 121.04,
+      "duration": 4.96
+    },
+    {
+      "text": "both true for me so we want to set up",
+      "start": 122.32,
+      "duration": 4.88
+    },
+    {
+      "text": "this dictionary",
+      "start": 126.0,
+      "duration": 4.319
+    },
+    {
+      "text": "so we can say call it",
+      "start": 127.2,
+      "duration": 7.039
+    },
+    {
+      "text": "let's call it color preferences um",
+      "start": 130.319,
+      "duration": 7.121
+    },
+    {
+      "text": "and we want to",
+      "start": 134.239,
+      "duration": 6.241
+    },
+    {
+      "text": "have as the favorite color",
+      "start": 137.44,
+      "duration": 6.08
+    },
+    {
+      "text": "we're going to have green and as",
+      "start": 140.48,
+      "duration": 6.56
+    },
+    {
+      "text": "the second favorite color",
+      "start": 143.52,
+      "duration": 3.52
+    },
+    {
+      "text": "we're going to have blue",
+      "start": 147.76,
+      "duration": 6.24
+    },
+    {
+      "text": "and i knew to create it in this way and",
+      "start": 151.28,
+      "duration": 3.12
+    },
+    {
+      "text": "not",
+      "start": 154.0,
+      "duration": 2.48
+    },
+    {
+      "text": "with green over here and favorite color",
+      "start": 154.4,
+      "duration": 3.76
+    },
+    {
+      "text": "over here because we want to be able to",
+      "start": 156.48,
+      "duration": 2.64
+    },
+    {
+      "text": "look up",
+      "start": 158.16,
+      "duration": 4.159
+    },
+    {
+      "text": "green by favorite color so we want to be",
+      "start": 159.12,
+      "duration": 4.72
+    },
+    {
+      "text": "able to look up by",
+      "start": 162.319,
+      "duration": 3.361
+    },
+    {
+      "text": "this string favorite color and so that's",
+      "start": 163.84,
+      "duration": 3.36
+    },
+    {
+      "text": "going to be the key",
+      "start": 165.68,
+      "duration": 3.04
+    },
+    {
+      "text": "whereas the thing that we want to look",
+      "start": 167.2,
+      "duration": 3.6
+    },
+    {
+      "text": "up is going to be the value",
+      "start": 168.72,
+      "duration": 5.92
+    },
+    {
+      "text": "in the dictionary so now we have that",
+      "start": 170.8,
+      "duration": 5.2
+    },
+    {
+      "text": "dictionary",
+      "start": 174.64,
+      "duration": 4.239
+    },
+    {
+      "text": "and we want to",
+      "start": 176.0,
+      "duration": 2.879
+    },
+    {
+      "text": "then pull out the appropriate parts",
+      "start": 179.44,
+      "duration": 7.28
+    },
+    {
+      "text": "so um we can pull out the",
+      "start": 183.44,
+      "duration": 6.4
+    },
+    {
+      "text": "favorite color um and",
+      "start": 186.72,
+      "duration": 5.92
+    },
+    {
+      "text": "we can also pull out the second favorite",
+      "start": 189.84,
+      "duration": 3.679
+    },
+    {
+      "text": "color",
+      "start": 192.64,
+      "duration": 3.12
+    },
+    {
+      "text": "um and so that way we'll get green and",
+      "start": 193.519,
+      "duration": 3.44
+    },
+    {
+      "text": "we'll get blue",
+      "start": 195.76,
+      "duration": 4.559
+    },
+    {
+      "text": "being printed one after another",
+      "start": 196.959,
+      "duration": 7.121
+    },
+    {
+      "text": "so that's the second exercise",
+      "start": 200.319,
+      "duration": 3.761
+    },
+    {
+      "text": "and coming to the final exercise in this",
+      "start": 207.76,
+      "duration": 4.64
+    },
+    {
+      "text": "lab",
+      "start": 211.04,
+      "duration": 4.72
+    },
+    {
+      "text": "we ultimately want to",
+      "start": 212.4,
+      "duration": 5.68
+    },
+    {
+      "text": "extract this string from this very",
+      "start": 215.76,
+      "duration": 4.57
+    },
+    {
+      "text": "nested data structure",
+      "start": 218.08,
+      "duration": 3.439
+    },
+    {
+      "text": "[Music]",
+      "start": 220.33,
+      "duration": 2.95
+    },
+    {
+      "text": "and so there's a couple of strategies",
+      "start": 221.519,
+      "duration": 3.921
+    },
+    {
+      "text": "that you could do here",
+      "start": 223.28,
+      "duration": 3.76
+    },
+    {
+      "text": "what i think is definitely the most",
+      "start": 225.44,
+      "duration": 3.519
+    },
+    {
+      "text": "direct strategy is to",
+      "start": 227.04,
+      "duration": 4.16
+    },
+    {
+      "text": "use indexing and and uh you know",
+      "start": 228.959,
+      "duration": 4.161
+    },
+    {
+      "text": "dictionary lookups",
+      "start": 231.2,
+      "duration": 4.88
+    },
+    {
+      "text": "to get to this item it is possible to go",
+      "start": 233.12,
+      "duration": 3.52
+    },
+    {
+      "text": "at this",
+      "start": 236.08,
+      "duration": 3.84
+    },
+    {
+      "text": "using loops instead but i think it is",
+      "start": 236.64,
+      "duration": 5.12
+    },
+    {
+      "text": "substantially more complicated to set it",
+      "start": 239.92,
+      "duration": 2.959
+    },
+    {
+      "text": "up that way",
+      "start": 241.76,
+      "duration": 3.039
+    },
+    {
+      "text": "so let's look at doing an indexing kind",
+      "start": 242.879,
+      "duration": 3.201
+    },
+    {
+      "text": "of setup",
+      "start": 244.799,
+      "duration": 4.64
+    },
+    {
+      "text": "um so a nice way to approach this",
+      "start": 246.08,
+      "duration": 4.96
+    },
+    {
+      "text": "you know there are a lot of lookups to",
+      "start": 249.439,
+      "duration": 3.201
+    },
+    {
+      "text": "be done here",
+      "start": 251.04,
+      "duration": 3.279
+    },
+    {
+      "text": "but since we're working in jupiter",
+      "start": 252.64,
+      "duration": 3.28
+    },
+    {
+      "text": "jupiter is interactive you can run",
+      "start": 254.319,
+      "duration": 2.401
+    },
+    {
+      "text": "little things",
+      "start": 255.92,
+      "duration": 3.439
+    },
+    {
+      "text": "uh and just see the result of them so",
+      "start": 256.72,
+      "duration": 4.56
+    },
+    {
+      "text": "let's kind of go step by step",
+      "start": 259.359,
+      "duration": 5.12
+    },
+    {
+      "text": "in doing this lookup so we can start uh",
+      "start": 261.28,
+      "duration": 4.639
+    },
+    {
+      "text": "you know we're gonna need to look up in",
+      "start": 264.479,
+      "duration": 2.881
+    },
+    {
+      "text": "my data",
+      "start": 265.919,
+      "duration": 5.361
+    },
+    {
+      "text": "and we can see that my data is a list",
+      "start": 267.36,
+      "duration": 5.839
+    },
+    {
+      "text": "it's a list with a single item in it and",
+      "start": 271.28,
+      "duration": 3.68
+    },
+    {
+      "text": "that item is the dictionary which we",
+      "start": 273.199,
+      "duration": 2.801
+    },
+    {
+      "text": "want to keep",
+      "start": 274.96,
+      "duration": 4.08
+    },
+    {
+      "text": "going into so if we pull the first item",
+      "start": 276.0,
+      "duration": 4.0
+    },
+    {
+      "text": "out of a list",
+      "start": 279.04,
+      "duration": 5.12
+    },
+    {
+      "text": "by doing the index zero now you can see",
+      "start": 280.0,
+      "duration": 6.4
+    },
+    {
+      "text": "uh just run that and you can see you've",
+      "start": 284.16,
+      "duration": 4.0
+    },
+    {
+      "text": "gotten out of this next part",
+      "start": 286.4,
+      "duration": 4.64
+    },
+    {
+      "text": "you've pulled this part out of the",
+      "start": 288.16,
+      "duration": 3.52
+    },
+    {
+      "text": "original",
+      "start": 291.04,
+      "duration": 3.28
+    },
+    {
+      "text": "list um so now we're just thinking about",
+      "start": 291.68,
+      "duration": 4.72
+    },
+    {
+      "text": "how do we work with this uh to be able",
+      "start": 294.32,
+      "duration": 4.159
+    },
+    {
+      "text": "to keep going down to ultimately get to",
+      "start": 296.4,
+      "duration": 3.44
+    },
+    {
+      "text": "here",
+      "start": 298.479,
+      "duration": 4.0
+    },
+    {
+      "text": "so now next this next layer is a",
+      "start": 299.84,
+      "duration": 3.76
+    },
+    {
+      "text": "dictionary",
+      "start": 302.479,
+      "duration": 4.241
+    },
+    {
+      "text": "where the key is a and the value",
+      "start": 303.6,
+      "duration": 5.12
+    },
+    {
+      "text": "is another dictionary which we're going",
+      "start": 306.72,
+      "duration": 3.68
+    },
+    {
+      "text": "to need to go into",
+      "start": 308.72,
+      "duration": 4.0
+    },
+    {
+      "text": "so how do we get you know ultimately we",
+      "start": 310.4,
+      "duration": 3.92
+    },
+    {
+      "text": "want to get here and so we want to get",
+      "start": 312.72,
+      "duration": 2.88
+    },
+    {
+      "text": "to this part of it",
+      "start": 314.32,
+      "duration": 3.439
+    },
+    {
+      "text": "and so how do we look up the value from",
+      "start": 315.6,
+      "duration": 3.039
+    },
+    {
+      "text": "a dictionary",
+      "start": 317.759,
+      "duration": 2.72
+    },
+    {
+      "text": "we do brackets and then we give it the",
+      "start": 318.639,
+      "duration": 3.441
+    },
+    {
+      "text": "key",
+      "start": 320.479,
+      "duration": 3.601
+    },
+    {
+      "text": "so by doing that and then we can run",
+      "start": 322.08,
+      "duration": 4.24
+    },
+    {
+      "text": "that we can see now we've stripped off",
+      "start": 324.08,
+      "duration": 5.28
+    },
+    {
+      "text": "this uh you know outer a part and now",
+      "start": 326.32,
+      "duration": 4.0
+    },
+    {
+      "text": "we're at just",
+      "start": 329.36,
+      "duration": 4.72
+    },
+    {
+      "text": "this uh dictionary here with the b key",
+      "start": 330.32,
+      "duration": 6.08
+    },
+    {
+      "text": "um so next it's going to be very similar",
+      "start": 334.08,
+      "duration": 3.2
+    },
+    {
+      "text": "to the last step",
+      "start": 336.4,
+      "duration": 2.16
+    },
+    {
+      "text": "you know ultimately we want to get to",
+      "start": 337.28,
+      "duration": 3.84
+    },
+    {
+      "text": "here so we want to get you know this",
+      "start": 338.56,
+      "duration": 4.88
+    },
+    {
+      "text": "dictionary value so we can look that up",
+      "start": 341.12,
+      "duration": 3.28
+    },
+    {
+      "text": "by the key",
+      "start": 343.44,
+      "duration": 4.64
+    },
+    {
+      "text": "b um so then we add on that b there",
+      "start": 344.4,
+      "duration": 6.16
+    },
+    {
+      "text": "and now we've gotten just to this uh",
+      "start": 348.08,
+      "duration": 3.119
+    },
+    {
+      "text": "value",
+      "start": 350.56,
+      "duration": 3.12
+    },
+    {
+      "text": "of this dictionary which had be as the",
+      "start": 351.199,
+      "duration": 4.401
+    },
+    {
+      "text": "key",
+      "start": 353.68,
+      "duration": 4.48
+    },
+    {
+      "text": "so now we're getting close uh we can see",
+      "start": 355.6,
+      "duration": 4.56
+    },
+    {
+      "text": "the next layer here is a list",
+      "start": 358.16,
+      "duration": 4.879
+    },
+    {
+      "text": "and we want to get to here so we want to",
+      "start": 360.16,
+      "duration": 3.759
+    },
+    {
+      "text": "get",
+      "start": 363.039,
+      "duration": 3.121
+    },
+    {
+      "text": "you know this as the next thing which is",
+      "start": 363.919,
+      "duration": 3.84
+    },
+    {
+      "text": "going to be the first item out of this",
+      "start": 366.16,
+      "duration": 2.8
+    },
+    {
+      "text": "list",
+      "start": 367.759,
+      "duration": 3.521
+    },
+    {
+      "text": "so we can do a zero and now we're down",
+      "start": 368.96,
+      "duration": 3.359
+    },
+    {
+      "text": "to just this",
+      "start": 371.28,
+      "duration": 4.479
+    },
+    {
+      "text": "final dictionary um so then it's just a",
+      "start": 372.319,
+      "duration": 4.0
+    },
+    {
+      "text": "single",
+      "start": 375.759,
+      "duration": 2.801
+    },
+    {
+      "text": "dictionary lookup we want to look up",
+      "start": 376.319,
+      "duration": 3.841
+    },
+    {
+      "text": "this look me up key",
+      "start": 378.56,
+      "duration": 5.04
+    },
+    {
+      "text": "and we finally get to you got it so that",
+      "start": 380.16,
+      "duration": 5.92
+    },
+    {
+      "text": "is now the solution just all these",
+      "start": 383.6,
+      "duration": 3.039
+    },
+    {
+      "text": "different",
+      "start": 386.08,
+      "duration": 4.72
+    },
+    {
+      "text": "uh nested lookups one after another",
+      "start": 386.639,
+      "duration": 8.161
+    },
+    {
+      "text": "so that's the lab exercises on python",
+      "start": 390.8,
+      "duration": 4.64
+    },
+    {
+      "text": "basics",
+      "start": 394.8,
+      "duration": 2.959
+    },
+    {
+      "text": "functions thanks for listening and see",
+      "start": 395.44,
+      "duration": 7.84
+    },
+    {
+      "text": "you next time",
+      "start": 397.759,
+      "duration": 5.521
+    }
+  ]
+}

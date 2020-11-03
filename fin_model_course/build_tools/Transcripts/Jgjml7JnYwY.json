@@ -1,0 +1,1104 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.96,
+      "duration": 2.24
+    },
+    {
+      "text": "nick dierbert is here teaching you",
+      "start": 3.84,
+      "duration": 3.68
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.2,
+      "duration": 4.479
+    },
+    {
+      "text": "be solving the lab exercise",
+      "start": 7.52,
+      "duration": 5.44
+    },
+    {
+      "text": "for reading and writing to excel with",
+      "start": 9.679,
+      "duration": 6.08
+    },
+    {
+      "text": "excel wings this is part of our lecture",
+      "start": 12.96,
+      "duration": 3.44
+    },
+    {
+      "text": "segment",
+      "start": 15.759,
+      "duration": 4.161
+    },
+    {
+      "text": "on combining excel and python",
+      "start": 16.4,
+      "duration": 5.76
+    },
+    {
+      "text": "so we covered all the excel wings",
+      "start": 19.92,
+      "duration": 3.439
+    },
+    {
+      "text": "material",
+      "start": 22.16,
+      "duration": 3.199
+    },
+    {
+      "text": "and then we're left with these four",
+      "start": 23.359,
+      "duration": 4.321
+    },
+    {
+      "text": "different lab exercises and the fourth",
+      "start": 25.359,
+      "duration": 2.961
+    },
+    {
+      "text": "one",
+      "start": 27.68,
+      "duration": 2.8
+    },
+    {
+      "text": "is an optional one the first three were",
+      "start": 28.32,
+      "duration": 4.399
+    },
+    {
+      "text": "required",
+      "start": 30.48,
+      "duration": 5.2
+    },
+    {
+      "text": "so for the first lab exercise and for",
+      "start": 32.719,
+      "duration": 4.481
+    },
+    {
+      "text": "all the exercises we're going to use",
+      "start": 35.68,
+      "duration": 2.24
+    },
+    {
+      "text": "this",
+      "start": 37.2,
+      "duration": 3.92
+    },
+    {
+      "text": "excel wings lab so i'll just",
+      "start": 37.92,
+      "duration": 7.6
+    },
+    {
+      "text": "download that there um and",
+      "start": 41.12,
+      "duration": 7.52
+    },
+    {
+      "text": "for the first one we are going to read",
+      "start": 45.52,
+      "duration": 4.559
+    },
+    {
+      "text": "the values in column a",
+      "start": 48.64,
+      "duration": 4.559
+    },
+    {
+      "text": "and then write them into column b",
+      "start": 50.079,
+      "duration": 6.401
+    },
+    {
+      "text": "um so let's go over to",
+      "start": 53.199,
+      "duration": 7.84
+    },
+    {
+      "text": "the jupiter notebook",
+      "start": 56.48,
+      "duration": 4.559
+    },
+    {
+      "text": "and we can",
+      "start": 61.44,
+      "duration": 3.84
+    },
+    {
+      "text": "[Music]",
+      "start": 63.71,
+      "duration": 4.61
+    },
+    {
+      "text": "also open up this excel",
+      "start": 65.28,
+      "duration": 4.96
+    },
+    {
+      "text": "workbook so we can see what's going on",
+      "start": 68.32,
+      "duration": 4.32
+    },
+    {
+      "text": "in it",
+      "start": 70.24,
+      "duration": 2.4
+    },
+    {
+      "text": "and then i'll put the two side by side",
+      "start": 73.28,
+      "duration": 4.4
+    },
+    {
+      "text": "so it's clear",
+      "start": 75.84,
+      "duration": 4.88
+    },
+    {
+      "text": "i can put this over here um",
+      "start": 77.68,
+      "duration": 8.4
+    },
+    {
+      "text": "put jupiter over here",
+      "start": 80.72,
+      "duration": 8.8
+    },
+    {
+      "text": "now let's work with these data",
+      "start": 86.08,
+      "duration": 3.44
+    },
+    {
+      "text": "so we want to take the values which are",
+      "start": 93.52,
+      "duration": 3.12
+    },
+    {
+      "text": "in",
+      "start": 95.6,
+      "duration": 4.08
+    },
+    {
+      "text": "column a and write them into column b so",
+      "start": 96.64,
+      "duration": 3.439
+    },
+    {
+      "text": "first",
+      "start": 99.68,
+      "duration": 3.6
+    },
+    {
+      "text": "of course we're going to um",
+      "start": 100.079,
+      "duration": 6.161
+    },
+    {
+      "text": "import excel wings uh we need to get",
+      "start": 103.28,
+      "duration": 4.56
+    },
+    {
+      "text": "access to the book and the sheet",
+      "start": 106.24,
+      "duration": 5.28
+    },
+    {
+      "text": "so um book equals xw dot book",
+      "start": 107.84,
+      "duration": 8.0
+    },
+    {
+      "text": "uh and this is excel wings",
+      "start": 111.52,
+      "duration": 4.32
+    },
+    {
+      "text": "and the sheet is going to be book.sheets",
+      "start": 118.719,
+      "duration": 7.921
+    },
+    {
+      "text": "sheet1 so now",
+      "start": 122.96,
+      "duration": 6.88
+    },
+    {
+      "text": "we have access to this",
+      "start": 126.64,
+      "duration": 3.2
+    },
+    {
+      "text": "and we can let's look at",
+      "start": 130.56,
+      "duration": 6.96
+    },
+    {
+      "text": "a1 to a5 that's the range that we want",
+      "start": 133.92,
+      "duration": 5.52
+    },
+    {
+      "text": "to get",
+      "start": 137.52,
+      "duration": 5.359
+    },
+    {
+      "text": "values from column a what does that look",
+      "start": 139.44,
+      "duration": 3.76
+    },
+    {
+      "text": "like",
+      "start": 142.879,
+      "duration": 5.201
+    },
+    {
+      "text": "we get a list of a none b mountain c",
+      "start": 143.2,
+      "duration": 8.24
+    },
+    {
+      "text": "so we can do call a values",
+      "start": 148.08,
+      "duration": 6.799
+    },
+    {
+      "text": "or that and now we can then",
+      "start": 151.44,
+      "duration": 6.72
+    },
+    {
+      "text": "assign back to column b",
+      "start": 154.879,
+      "duration": 6.801
+    },
+    {
+      "text": "the same rows in column b with those",
+      "start": 158.16,
+      "duration": 7.359
+    },
+    {
+      "text": "column a values so we do that",
+      "start": 161.68,
+      "duration": 5.52
+    },
+    {
+      "text": "and that didn't work right we got it",
+      "start": 165.519,
+      "duration": 4.241
+    },
+    {
+      "text": "going horizontally so",
+      "start": 167.2,
+      "duration": 5.2
+    },
+    {
+      "text": "that's where we have to apply this trick",
+      "start": 169.76,
+      "duration": 4.24
+    },
+    {
+      "text": "which is going to allow us to",
+      "start": 172.4,
+      "duration": 3.839
+    },
+    {
+      "text": "output vertically so i'm just going to",
+      "start": 174.0,
+      "duration": 3.28
+    },
+    {
+      "text": "delete those out",
+      "start": 176.239,
+      "duration": 5.28
+    },
+    {
+      "text": "from excel we want to output vertically",
+      "start": 177.28,
+      "duration": 5.599
+    },
+    {
+      "text": "so we're going to do",
+      "start": 181.519,
+      "duration": 5.201
+    },
+    {
+      "text": "a list comprehension uh ifr i",
+      "start": 182.879,
+      "duration": 7.36
+    },
+    {
+      "text": "am the values and wrapping this part",
+      "start": 186.72,
+      "duration": 5.599
+    },
+    {
+      "text": "in another list and then when we rerun",
+      "start": 190.239,
+      "duration": 4.241
+    },
+    {
+      "text": "that now we can see that those same",
+      "start": 192.319,
+      "duration": 2.801
+    },
+    {
+      "text": "values",
+      "start": 194.48,
+      "duration": 5.679
+    },
+    {
+      "text": "have come over to column b as well",
+      "start": 195.12,
+      "duration": 5.039
+    },
+    {
+      "text": "so that's the first exercise the",
+      "start": 200.239,
+      "duration": 6.64
+    },
+    {
+      "text": "second exercise is then to take the",
+      "start": 203.599,
+      "duration": 4.161
+    },
+    {
+      "text": "value in",
+      "start": 206.879,
+      "duration": 5.841
+    },
+    {
+      "text": "c9 and multiply it by 2.5 and python",
+      "start": 207.76,
+      "duration": 8.32
+    },
+    {
+      "text": "so the value in c9",
+      "start": 212.72,
+      "duration": 3.36
+    },
+    {
+      "text": "so we can do sheet range",
+      "start": 217.519,
+      "duration": 7.601
+    },
+    {
+      "text": "this time c9 we can see",
+      "start": 222.0,
+      "duration": 7.519
+    },
+    {
+      "text": "we're getting that um 950",
+      "start": 225.12,
+      "duration": 6.72
+    },
+    {
+      "text": "and",
+      "start": 229.519,
+      "duration": 2.321
+    },
+    {
+      "text": "that's weird that it's coming in as a",
+      "start": 232.879,
+      "duration": 3.521
+    },
+    {
+      "text": "float that does",
+      "start": 234.72,
+      "duration": 5.28
+    },
+    {
+      "text": "make it easy um i expected it to come",
+      "start": 236.4,
+      "duration": 6.24
+    },
+    {
+      "text": "in as a decimal up there we go i'm not",
+      "start": 240.0,
+      "duration": 3.92
+    },
+    {
+      "text": "sure",
+      "start": 242.64,
+      "duration": 4.0
+    },
+    {
+      "text": "what the change was there uh but now it",
+      "start": 243.92,
+      "duration": 3.28
+    },
+    {
+      "text": "comes in",
+      "start": 246.64,
+      "duration": 3.2
+    },
+    {
+      "text": "as a decimal uh and that's why this is",
+      "start": 247.2,
+      "duration": 3.36
+    },
+    {
+      "text": "not",
+      "start": 249.84,
+      "duration": 4.16
+    },
+    {
+      "text": "just incredibly straightforward uh",
+      "start": 250.56,
+      "duration": 5.519
+    },
+    {
+      "text": "multiply it and we get the unsupported",
+      "start": 254.0,
+      "duration": 3.359
+    },
+    {
+      "text": "uh between decimal",
+      "start": 256.079,
+      "duration": 4.081
+    },
+    {
+      "text": "and float so all that it takes is just",
+      "start": 257.359,
+      "duration": 3.521
+    },
+    {
+      "text": "wrapping",
+      "start": 260.16,
+      "duration": 3.44
+    },
+    {
+      "text": "that in float to convert it and then you",
+      "start": 260.88,
+      "duration": 3.92
+    },
+    {
+      "text": "can properly",
+      "start": 263.6,
+      "duration": 3.24
+    },
+    {
+      "text": "do the math so that's the level two",
+      "start": 264.8,
+      "duration": 4.399
+    },
+    {
+      "text": "exercise",
+      "start": 266.84,
+      "duration": 5.16
+    },
+    {
+      "text": "then coming to level 3 we want to read",
+      "start": 269.199,
+      "duration": 4.241
+    },
+    {
+      "text": "the table starting in e4",
+      "start": 272.0,
+      "duration": 4.72
+    },
+    {
+      "text": "into python multiply the prices by 2.5",
+      "start": 273.44,
+      "duration": 6.479
+    },
+    {
+      "text": "and then output back into the cell",
+      "start": 276.72,
+      "duration": 5.6
+    },
+    {
+      "text": "h5 and we want to make sure to keep the",
+      "start": 279.919,
+      "duration": 4.641
+    },
+    {
+      "text": "same table format",
+      "start": 282.32,
+      "duration": 5.68
+    },
+    {
+      "text": "for both tables and excel so",
+      "start": 284.56,
+      "duration": 7.84
+    },
+    {
+      "text": "we have this table starting here in e4",
+      "start": 288.0,
+      "duration": 5.6
+    },
+    {
+      "text": "and we're going to want to read it in",
+      "start": 292.4,
+      "duration": 3.2
+    },
+    {
+      "text": "multiply the prices and spit it back",
+      "start": 293.6,
+      "duration": 2.54
+    },
+    {
+      "text": "into",
+      "start": 295.6,
+      "duration": 2.24
+    },
+    {
+      "text": "[Music]",
+      "start": 296.14,
+      "duration": 4.74
+    },
+    {
+      "text": "h5 so h5",
+      "start": 297.84,
+      "duration": 6.079
+    },
+    {
+      "text": "is off the screen it's",
+      "start": 300.88,
+      "duration": 5.759
+    },
+    {
+      "text": "over here",
+      "start": 303.919,
+      "duration": 2.72
+    },
+    {
+      "text": "so we can first read this table end",
+      "start": 307.28,
+      "duration": 7.6
+    },
+    {
+      "text": "so um again sheet.range um",
+      "start": 311.199,
+      "duration": 6.481
+    },
+    {
+      "text": "and we can use the expand trick to not",
+      "start": 314.88,
+      "duration": 4.48
+    },
+    {
+      "text": "have to do the entire range we can just",
+      "start": 317.68,
+      "duration": 3.04
+    },
+    {
+      "text": "do e4",
+      "start": 319.36,
+      "duration": 3.44
+    },
+    {
+      "text": "dot expand that's going to grab all that",
+      "start": 320.72,
+      "duration": 3.28
+    },
+    {
+      "text": "and if we look at that",
+      "start": 322.8,
+      "duration": 3.76
+    },
+    {
+      "text": "we'll see we get all of that and we can",
+      "start": 324.0,
+      "duration": 4.08
+    },
+    {
+      "text": "add options",
+      "start": 326.56,
+      "duration": 5.76
+    },
+    {
+      "text": "um we do have to import pandas pd",
+      "start": 328.08,
+      "duration": 5.76
+    },
+    {
+      "text": "to be able to use the pandas",
+      "start": 332.32,
+      "duration": 7.04
+    },
+    {
+      "text": "functionality so options pdf data frame",
+      "start": 333.84,
+      "duration": 7.44
+    },
+    {
+      "text": "and now you can see we get in this",
+      "start": 339.36,
+      "duration": 4.64
+    },
+    {
+      "text": "sticker price data frame",
+      "start": 341.28,
+      "duration": 4.639
+    },
+    {
+      "text": "but we might not want to have the ticker",
+      "start": 344.0,
+      "duration": 4.4
+    },
+    {
+      "text": "as the index so we can put in x equals",
+      "start": 345.919,
+      "duration": 4.081
+    },
+    {
+      "text": "false",
+      "start": 348.4,
+      "duration": 4.0
+    },
+    {
+      "text": "and now we've got kind of what we expect",
+      "start": 350.0,
+      "duration": 4.639
+    },
+    {
+      "text": "ticker and price as the columns",
+      "start": 352.4,
+      "duration": 5.919
+    },
+    {
+      "text": "and the index just the normal 0 1 2 etc",
+      "start": 354.639,
+      "duration": 5.921
+    },
+    {
+      "text": "so we can save that into the data frame",
+      "start": 358.319,
+      "duration": 4.32
+    },
+    {
+      "text": "and now we can output it",
+      "start": 360.56,
+      "duration": 6.56
+    },
+    {
+      "text": "so um now this is going to go",
+      "start": 362.639,
+      "duration": 8.4
+    },
+    {
+      "text": "into h5 um",
+      "start": 367.12,
+      "duration": 5.919
+    },
+    {
+      "text": "and we're going to assign the data frame",
+      "start": 371.039,
+      "duration": 3.761
+    },
+    {
+      "text": "there um",
+      "start": 373.039,
+      "duration": 3.761
+    },
+    {
+      "text": "i have to assign a value or it's not",
+      "start": 374.8,
+      "duration": 3.119
+    },
+    {
+      "text": "going to work",
+      "start": 376.8,
+      "duration": 4.399
+    },
+    {
+      "text": "and we can see uh initially that wasn't",
+      "start": 377.919,
+      "duration": 4.961
+    },
+    {
+      "text": "quite what we wanted because we got this",
+      "start": 381.199,
+      "duration": 5.041
+    },
+    {
+      "text": "index in here as well we don't want that",
+      "start": 382.88,
+      "duration": 7.759
+    },
+    {
+      "text": "um so then we add the dot options",
+      "start": 386.24,
+      "duration": 8.48
+    },
+    {
+      "text": "uh data frame",
+      "start": 390.639,
+      "duration": 7.361
+    },
+    {
+      "text": "index equals false",
+      "start": 394.72,
+      "duration": 3.28
+    },
+    {
+      "text": "and now we can see that it comes back in",
+      "start": 399.84,
+      "duration": 3.04
+    },
+    {
+      "text": "the same format",
+      "start": 401.759,
+      "duration": 4.16
+    },
+    {
+      "text": "oh but we did want to also multiply",
+      "start": 402.88,
+      "duration": 6.08
+    },
+    {
+      "text": "uh the values rate by 2.5",
+      "start": 405.919,
+      "duration": 6.321
+    },
+    {
+      "text": "um so we can add in df price",
+      "start": 408.96,
+      "duration": 6.56
+    },
+    {
+      "text": "equals df price times",
+      "start": 412.24,
+      "duration": 6.959
+    },
+    {
+      "text": "2.5 and then we can re-output it and now",
+      "start": 415.52,
+      "duration": 4.32
+    },
+    {
+      "text": "we see",
+      "start": 419.199,
+      "duration": 4.641
+    },
+    {
+      "text": "the larger prices coming in there",
+      "start": 419.84,
+      "duration": 4.0
+    },
+    {
+      "text": "so that covers the level three exercise",
+      "start": 424.319,
+      "duration": 3.361
+    },
+    {
+      "text": "and that",
+      "start": 427.12,
+      "duration": 3.6
+    },
+    {
+      "text": "is everything that would be required and",
+      "start": 427.68,
+      "duration": 3.68
+    },
+    {
+      "text": "then the",
+      "start": 430.72,
+      "duration": 4.0
+    },
+    {
+      "text": "optional exercise is level four",
+      "start": 431.36,
+      "duration": 5.6
+    },
+    {
+      "text": "and level 4 in column l we want to write",
+      "start": 434.72,
+      "duration": 5.039
+    },
+    {
+      "text": "5 10 15 going up to 100",
+      "start": 436.96,
+      "duration": 5.6
+    },
+    {
+      "text": "and spacing that two cells apart for",
+      "start": 439.759,
+      "duration": 5.041
+    },
+    {
+      "text": "each one",
+      "start": 442.56,
+      "duration": 6.0
+    },
+    {
+      "text": "so for this one we're writing everything",
+      "start": 444.8,
+      "duration": 7.76
+    },
+    {
+      "text": "into column out and",
+      "start": 448.56,
+      "duration": 7.84
+    },
+    {
+      "text": "first let's get the numbers that we want",
+      "start": 452.56,
+      "duration": 4.56
+    },
+    {
+      "text": "to",
+      "start": 456.4,
+      "duration": 3.919
+    },
+    {
+      "text": "use so",
+      "start": 457.12,
+      "duration": 7.519
+    },
+    {
+      "text": "i4i and range um",
+      "start": 460.319,
+      "duration": 8.32
+    },
+    {
+      "text": "so we want to go up to",
+      "start": 464.639,
+      "duration": 6.96
+    },
+    {
+      "text": "100 but we want to do it in increments",
+      "start": 468.639,
+      "duration": 3.84
+    },
+    {
+      "text": "or",
+      "start": 471.599,
+      "duration": 2.72
+    },
+    {
+      "text": "yeah 100 but increments of five so that",
+      "start": 472.479,
+      "duration": 4.16
+    },
+    {
+      "text": "would be",
+      "start": 474.319,
+      "duration": 2.32
+    },
+    {
+      "text": "0 100",
+      "start": 477.44,
+      "duration": 3.599
+    },
+    {
+      "text": "1 in increments of 5",
+      "start": 481.28,
+      "duration": 6.4
+    },
+    {
+      "text": "there we go and we don't want do we want",
+      "start": 484.879,
+      "duration": 5.201
+    },
+    {
+      "text": "zero",
+      "start": 487.68,
+      "duration": 2.4
+    },
+    {
+      "text": "it's starting from 5 and going to 100 so",
+      "start": 490.24,
+      "duration": 4.639
+    },
+    {
+      "text": "we'll start from one here instead",
+      "start": 492.4,
+      "duration": 7.6
+    },
+    {
+      "text": "now we uh i know we'll start",
+      "start": 494.879,
+      "duration": 5.121
+    },
+    {
+      "text": "sorry we'll start from five yep so five",
+      "start": 500.16,
+      "duration": 4.68
+    },
+    {
+      "text": "going up to 100 so those are the right",
+      "start": 502.96,
+      "duration": 4.16
+    },
+    {
+      "text": "numbers",
+      "start": 504.84,
+      "duration": 6.039
+    },
+    {
+      "text": "so now i'll form the loop",
+      "start": 507.12,
+      "duration": 7.76
+    },
+    {
+      "text": "and so we have the number",
+      "start": 510.879,
+      "duration": 6.801
+    },
+    {
+      "text": "that we want to output now we have to",
+      "start": 514.88,
+      "duration": 4.0
+    },
+    {
+      "text": "get this",
+      "start": 517.68,
+      "duration": 5.279
+    },
+    {
+      "text": "where do we put it into the excel sheet",
+      "start": 518.88,
+      "duration": 8.399
+    },
+    {
+      "text": "so we can say",
+      "start": 522.959,
+      "duration": 6.721
+    },
+    {
+      "text": "that the row is going to start from row",
+      "start": 527.279,
+      "duration": 4.161
+    },
+    {
+      "text": "number one",
+      "start": 529.68,
+      "duration": 4.48
+    },
+    {
+      "text": "and so the cell reference is going to be",
+      "start": 531.44,
+      "duration": 3.6
+    },
+    {
+      "text": "l",
+      "start": 534.16,
+      "duration": 5.84
+    },
+    {
+      "text": "and then the row",
+      "start": 535.04,
+      "duration": 4.96
+    },
+    {
+      "text": "and then we're going to",
+      "start": 540.24,
+      "duration": 3.279
+    },
+    {
+      "text": "do the range of the cell reference value",
+      "start": 543.76,
+      "duration": 7.199
+    },
+    {
+      "text": "we're going to set that to i",
+      "start": 547.279,
+      "duration": 3.68
+    },
+    {
+      "text": "and then to the row we're going to add 2",
+      "start": 551.279,
+      "duration": 4.161
+    },
+    {
+      "text": "to it",
+      "start": 554.56,
+      "duration": 4.08
+    },
+    {
+      "text": "um so that it goes down by 2. so",
+      "start": 555.44,
+      "duration": 5.28
+    },
+    {
+      "text": "i think we should run this and that",
+      "start": 558.64,
+      "duration": 3.36
+    },
+    {
+      "text": "should work uh",
+      "start": 560.72,
+      "duration": 5.44
+    },
+    {
+      "text": "we did want them space two apart um",
+      "start": 562.0,
+      "duration": 7.519
+    },
+    {
+      "text": "so that would be plus three each time",
+      "start": 566.16,
+      "duration": 7.04
+    },
+    {
+      "text": "let's try that again um",
+      "start": 569.519,
+      "duration": 3.681
+    },
+    {
+      "text": "and yes now we have starting from five",
+      "start": 573.839,
+      "duration": 3.841
+    },
+    {
+      "text": "going up to 100",
+      "start": 576.32,
+      "duration": 4.079
+    },
+    {
+      "text": "and they're each spaced two cells apart",
+      "start": 577.68,
+      "duration": 3.44
+    },
+    {
+      "text": "so this",
+      "start": 580.399,
+      "duration": 3.521
+    },
+    {
+      "text": "is what we wanted for the fourth lab",
+      "start": 581.12,
+      "duration": 4.24
+    },
+    {
+      "text": "exercise",
+      "start": 583.92,
+      "duration": 4.72
+    },
+    {
+      "text": "so that covers all the lab exercises on",
+      "start": 585.36,
+      "duration": 5.52
+    },
+    {
+      "text": "reading and writing to excel with excel",
+      "start": 588.64,
+      "duration": 3.04
+    },
+    {
+      "text": "links",
+      "start": 590.88,
+      "duration": 4.2
+    },
+    {
+      "text": "thanks for listening and see you next",
+      "start": 591.68,
+      "duration": 6.4
+    },
+    {
+      "text": "time",
+      "start": 595.08,
+      "duration": 3.0
+    }
+  ]
+}

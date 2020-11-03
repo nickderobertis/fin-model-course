@@ -1,0 +1,1729 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.6,
+      "duration": 2.56
+    },
+    {
+      "text": "nick dearmardis here teaching you",
+      "start": 4.64,
+      "duration": 3.84
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 6.16,
+      "duration": 3.2
+    },
+    {
+      "text": "be talking about",
+      "start": 8.48,
+      "duration": 4.8
+    },
+    {
+      "text": "combining excel in python using pandas",
+      "start": 9.36,
+      "duration": 5.68
+    },
+    {
+      "text": "and this is part of our lecture series",
+      "start": 13.28,
+      "duration": 4.4
+    },
+    {
+      "text": "on combining excel and python",
+      "start": 15.04,
+      "duration": 5.36
+    },
+    {
+      "text": "so we said that there are two main ways",
+      "start": 17.68,
+      "duration": 4.96
+    },
+    {
+      "text": "that we can",
+      "start": 20.4,
+      "duration": 3.92
+    },
+    {
+      "text": "combine excel in python that we're going",
+      "start": 22.64,
+      "duration": 3.76
+    },
+    {
+      "text": "to explore in this course that's using",
+      "start": 24.32,
+      "duration": 4.48
+    },
+    {
+      "text": "pandas and using excel wings",
+      "start": 26.4,
+      "duration": 3.68
+    },
+    {
+      "text": "so we'll come back in the following",
+      "start": 28.8,
+      "duration": 3.84
+    },
+    {
+      "text": "video to explore excel wings",
+      "start": 30.08,
+      "duration": 4.96
+    },
+    {
+      "text": "but in this video we're going to look at",
+      "start": 32.64,
+      "duration": 3.599
+    },
+    {
+      "text": "the pandas",
+      "start": 35.04,
+      "duration": 6.08
+    },
+    {
+      "text": "way of going between excel and python",
+      "start": 36.239,
+      "duration": 8.241
+    },
+    {
+      "text": "so this is generally a simpler",
+      "start": 41.12,
+      "duration": 6.8
+    },
+    {
+      "text": "integration which",
+      "start": 44.48,
+      "duration": 5.84
+    },
+    {
+      "text": "is not does not have nearly as many",
+      "start": 47.92,
+      "duration": 4.72
+    },
+    {
+      "text": "features",
+      "start": 50.32,
+      "duration": 7.12
+    },
+    {
+      "text": "but it's very fast and has a very simple",
+      "start": 52.64,
+      "duration": 7.919
+    },
+    {
+      "text": "api that we can work with",
+      "start": 57.44,
+      "duration": 7.039
+    },
+    {
+      "text": "so pandas we get data frames we can do",
+      "start": 60.559,
+      "duration": 4.401
+    },
+    {
+      "text": "all this",
+      "start": 64.479,
+      "duration": 2.96
+    },
+    {
+      "text": "visualization and different analysis and",
+      "start": 64.96,
+      "duration": 3.68
+    },
+    {
+      "text": "it also",
+      "start": 67.439,
+      "duration": 2.961
+    },
+    {
+      "text": "can go in and out of different data",
+      "start": 68.64,
+      "duration": 3.36
+    },
+    {
+      "text": "formats so excel",
+      "start": 70.4,
+      "duration": 6.0
+    },
+    {
+      "text": "files are one of those formats",
+      "start": 72.0,
+      "duration": 4.4
+    },
+    {
+      "text": "so we can take a data frame and we can",
+      "start": 76.479,
+      "duration": 7.361
+    },
+    {
+      "text": "output that to an excel workbook and",
+      "start": 80.479,
+      "duration": 5.68
+    },
+    {
+      "text": "we can take an excel workbook and we can",
+      "start": 83.84,
+      "duration": 3.36
+    },
+    {
+      "text": "read that in",
+      "start": 86.159,
+      "duration": 4.241
+    },
+    {
+      "text": "to append this data frame so that's",
+      "start": 87.2,
+      "duration": 5.2
+    },
+    {
+      "text": "pretty much the extent of the",
+      "start": 90.4,
+      "duration": 5.12
+    },
+    {
+      "text": "integration between the two",
+      "start": 92.4,
+      "duration": 4.96
+    },
+    {
+      "text": "and for a lot of cases this is all that",
+      "start": 95.52,
+      "duration": 3.04
+    },
+    {
+      "text": "you need",
+      "start": 97.36,
+      "duration": 4.0
+    },
+    {
+      "text": "if you have a python model and you just",
+      "start": 98.56,
+      "duration": 4.879
+    },
+    {
+      "text": "need to get some data which is stored in",
+      "start": 101.36,
+      "duration": 3.759
+    },
+    {
+      "text": "excel spreadsheet",
+      "start": 103.439,
+      "duration": 5.36
+    },
+    {
+      "text": "then this is perfect um or",
+      "start": 105.119,
+      "duration": 7.441
+    },
+    {
+      "text": "if uh you have an excel model",
+      "start": 108.799,
+      "duration": 7.441
+    },
+    {
+      "text": "and you use python to collect the data",
+      "start": 112.56,
+      "duration": 4.64
+    },
+    {
+      "text": "maybe through",
+      "start": 116.24,
+      "duration": 3.12
+    },
+    {
+      "text": "web scraping or pulling from a database",
+      "start": 117.2,
+      "duration": 4.4
+    },
+    {
+      "text": "or apis or",
+      "start": 119.36,
+      "duration": 3.6
+    },
+    {
+      "text": "something which is going to be easier to",
+      "start": 121.6,
+      "duration": 3.68
+    },
+    {
+      "text": "approach in python",
+      "start": 122.96,
+      "duration": 3.759
+    },
+    {
+      "text": "you just want to take that data from",
+      "start": 125.28,
+      "duration": 3.759
+    },
+    {
+      "text": "python and be able to load it into your",
+      "start": 126.719,
+      "duration": 3.121
+    },
+    {
+      "text": "excel model",
+      "start": 129.039,
+      "duration": 3.84
+    },
+    {
+      "text": "as a full worksheet this is also",
+      "start": 129.84,
+      "duration": 6.72
+    },
+    {
+      "text": "a good way to go about it but for any",
+      "start": 132.879,
+      "duration": 5.761
+    },
+    {
+      "text": "use case which is going to require a",
+      "start": 136.56,
+      "duration": 3.92
+    },
+    {
+      "text": "tighter integration things going back",
+      "start": 138.64,
+      "duration": 3.599
+    },
+    {
+      "text": "and forth between",
+      "start": 140.48,
+      "duration": 5.28
+    },
+    {
+      "text": "excel and python or taking individual",
+      "start": 142.239,
+      "duration": 5.201
+    },
+    {
+      "text": "values rather than an entire",
+      "start": 145.76,
+      "duration": 5.28
+    },
+    {
+      "text": "worksheet or workbook at once then excel",
+      "start": 147.44,
+      "duration": 4.4
+    },
+    {
+      "text": "wings",
+      "start": 151.04,
+      "duration": 3.839
+    },
+    {
+      "text": "should be the way to go",
+      "start": 151.84,
+      "duration": 3.039
+    },
+    {
+      "text": "but um oftentimes",
+      "start": 155.599,
+      "duration": 5.441
+    },
+    {
+      "text": "we either have a python or excel model",
+      "start": 158.959,
+      "duration": 3.201
+    },
+    {
+      "text": "and it's",
+      "start": 161.04,
+      "duration": 3.68
+    },
+    {
+      "text": "easy just to transfer the data between",
+      "start": 162.16,
+      "duration": 5.439
+    },
+    {
+      "text": "using pandas",
+      "start": 164.72,
+      "duration": 6.239
+    },
+    {
+      "text": "so what does this actually look like",
+      "start": 167.599,
+      "duration": 5.841
+    },
+    {
+      "text": "we'll look at a quick example here so",
+      "start": 170.959,
+      "duration": 3.92
+    },
+    {
+      "text": "the first block here",
+      "start": 173.44,
+      "duration": 6.079
+    },
+    {
+      "text": "is for reading excel files so",
+      "start": 174.879,
+      "duration": 8.0
+    },
+    {
+      "text": "for reading excel files uh we're going",
+      "start": 179.519,
+      "duration": 5.841
+    },
+    {
+      "text": "to use a method of panis library read",
+      "start": 182.879,
+      "duration": 3.521
+    },
+    {
+      "text": "excel",
+      "start": 185.36,
+      "duration": 3.04
+    },
+    {
+      "text": "so assume you've already imported pandas",
+      "start": 186.4,
+      "duration": 3.199
+    },
+    {
+      "text": "as pd",
+      "start": 188.4,
+      "duration": 4.16
+    },
+    {
+      "text": "then you can do pd.read excel and you",
+      "start": 189.599,
+      "duration": 4.241
+    },
+    {
+      "text": "give it the name",
+      "start": 192.56,
+      "duration": 4.399
+    },
+    {
+      "text": "or file path of your spreadsheet",
+      "start": 193.84,
+      "duration": 4.56
+    },
+    {
+      "text": "if it's in the same folder you can just",
+      "start": 196.959,
+      "duration": 4.0
+    },
+    {
+      "text": "give the name and if it's somewhere else",
+      "start": 198.4,
+      "duration": 3.52
+    },
+    {
+      "text": "on your computer",
+      "start": 200.959,
+      "duration": 2.56
+    },
+    {
+      "text": "then you would want to put the full file",
+      "start": 201.92,
+      "duration": 4.08
+    },
+    {
+      "text": "path here",
+      "start": 203.519,
+      "duration": 2.481
+    },
+    {
+      "text": "and this sheet name is optional you can",
+      "start": 206.159,
+      "duration": 4.72
+    },
+    {
+      "text": "do that to say which",
+      "start": 209.599,
+      "duration": 3.2
+    },
+    {
+      "text": "specific sheet you want to get out of",
+      "start": 210.879,
+      "duration": 3.121
+    },
+    {
+      "text": "the workbook",
+      "start": 212.799,
+      "duration": 2.881
+    },
+    {
+      "text": "and if you don't pass it then it's just",
+      "start": 214.0,
+      "duration": 3.2
+    },
+    {
+      "text": "going to take the first",
+      "start": 215.68,
+      "duration": 5.199
+    },
+    {
+      "text": "sheet out of the workbook",
+      "start": 217.2,
+      "duration": 5.119
+    },
+    {
+      "text": "and it's always going to read in the",
+      "start": 220.879,
+      "duration": 3.761
+    },
+    {
+      "text": "entire worksheet",
+      "start": 222.319,
+      "duration": 4.321
+    },
+    {
+      "text": "so if you have multiple different tables",
+      "start": 224.64,
+      "duration": 3.28
+    },
+    {
+      "text": "in the worksheet",
+      "start": 226.64,
+      "duration": 3.44
+    },
+    {
+      "text": "that can be another reason to go to",
+      "start": 227.92,
+      "duration": 4.56
+    },
+    {
+      "text": "using excel wings you can more flexibly",
+      "start": 230.08,
+      "duration": 3.92
+    },
+    {
+      "text": "grab",
+      "start": 232.48,
+      "duration": 4.319
+    },
+    {
+      "text": "individual things out of a worksheet",
+      "start": 234.0,
+      "duration": 4.48
+    },
+    {
+      "text": "whereas pandas is going to read the",
+      "start": 236.799,
+      "duration": 4.08
+    },
+    {
+      "text": "entire worksheet as a data frame so",
+      "start": 238.48,
+      "duration": 4.24
+    },
+    {
+      "text": "if you have anything other than just one",
+      "start": 240.879,
+      "duration": 4.401
+    },
+    {
+      "text": "table in that worksheet",
+      "start": 242.72,
+      "duration": 6.48
+    },
+    {
+      "text": "then pandas is going to be picking up a",
+      "start": 245.28,
+      "duration": 5.76
+    },
+    {
+      "text": "lot of blank cells and things like that",
+      "start": 249.2,
+      "duration": 4.0
+    },
+    {
+      "text": "and you'll have to do additional cleanup",
+      "start": 251.04,
+      "duration": 5.039
+    },
+    {
+      "text": "so it's definitely easiest if you just",
+      "start": 253.2,
+      "duration": 3.759
+    },
+    {
+      "text": "have",
+      "start": 256.079,
+      "duration": 5.44
+    },
+    {
+      "text": "one tab one table on the worksheet",
+      "start": 256.959,
+      "duration": 7.761
+    },
+    {
+      "text": "and then for writing in that case we",
+      "start": 261.519,
+      "duration": 5.761
+    },
+    {
+      "text": "would already have a data frame created",
+      "start": 264.72,
+      "duration": 5.12
+    },
+    {
+      "text": "and then we can use the method of that",
+      "start": 267.28,
+      "duration": 3.28
+    },
+    {
+      "text": "data frame",
+      "start": 269.84,
+      "duration": 5.04
+    },
+    {
+      "text": "to excel to output to an excel workbook",
+      "start": 270.56,
+      "duration": 7.76
+    },
+    {
+      "text": "um and so there similarly to reading you",
+      "start": 274.88,
+      "duration": 3.92
+    },
+    {
+      "text": "give",
+      "start": 278.32,
+      "duration": 3.92
+    },
+    {
+      "text": "the name or file path of the",
+      "start": 278.8,
+      "duration": 5.44
+    },
+    {
+      "text": "output so if you just put a name it's",
+      "start": 282.24,
+      "duration": 3.84
+    },
+    {
+      "text": "going to go in the same folder",
+      "start": 284.24,
+      "duration": 3.679
+    },
+    {
+      "text": "if you put a full file path then you can",
+      "start": 286.08,
+      "duration": 4.16
+    },
+    {
+      "text": "go wherever you want",
+      "start": 287.919,
+      "duration": 6.081
+    },
+    {
+      "text": "and you want to give the",
+      "start": 290.24,
+      "duration": 5.36
+    },
+    {
+      "text": "name of the sheet that we're going to",
+      "start": 294.0,
+      "duration": 3.44
+    },
+    {
+      "text": "output to",
+      "start": 295.6,
+      "duration": 3.52
+    },
+    {
+      "text": "and the last thing we're including here",
+      "start": 297.44,
+      "duration": 3.199
+    },
+    {
+      "text": "is index equals false",
+      "start": 299.12,
+      "duration": 4.56
+    },
+    {
+      "text": "so index in penis is that",
+      "start": 300.639,
+      "duration": 6.0
+    },
+    {
+      "text": "thing which goes on the left-hand side",
+      "start": 303.68,
+      "duration": 3.519
+    },
+    {
+      "text": "of",
+      "start": 306.639,
+      "duration": 4.241
+    },
+    {
+      "text": "the data frame which by default is just",
+      "start": 307.199,
+      "duration": 4.72
+    },
+    {
+      "text": "going to be 0 1",
+      "start": 310.88,
+      "duration": 4.24
+    },
+    {
+      "text": "2 like auto incrementing um",
+      "start": 311.919,
+      "duration": 6.241
+    },
+    {
+      "text": "so if you do just have that 0 1 2 and",
+      "start": 315.12,
+      "duration": 4.16
+    },
+    {
+      "text": "you don't care about it",
+      "start": 318.16,
+      "duration": 4.56
+    },
+    {
+      "text": "pass this index equals false if you have",
+      "start": 319.28,
+      "duration": 5.52
+    },
+    {
+      "text": "actually set the index to something so",
+      "start": 322.72,
+      "duration": 4.72
+    },
+    {
+      "text": "the index has meaningful values in it",
+      "start": 324.8,
+      "duration": 4.72
+    },
+    {
+      "text": "then you don't want to put that index",
+      "start": 327.44,
+      "duration": 3.12
+    },
+    {
+      "text": "equals false",
+      "start": 329.52,
+      "duration": 2.8
+    },
+    {
+      "text": "assuming you want to have that in the",
+      "start": 330.56,
+      "duration": 4.4
+    },
+    {
+      "text": "output as well",
+      "start": 332.32,
+      "duration": 2.64
+    },
+    {
+      "text": "and i want to",
+      "start": 336.84,
+      "duration": 5.639
+    },
+    {
+      "text": "definitely highlight this warning this",
+      "start": 339.919,
+      "duration": 5.441
+    },
+    {
+      "text": "is very very important",
+      "start": 342.479,
+      "duration": 6.481
+    },
+    {
+      "text": "when you write to an excel workbook",
+      "start": 345.36,
+      "duration": 6.64
+    },
+    {
+      "text": "using pandas it's going to replace",
+      "start": 348.96,
+      "duration": 6.56
+    },
+    {
+      "text": "whatever is there and it's going to",
+      "start": 352.0,
+      "duration": 5.6
+    },
+    {
+      "text": "whatever was there before is going to be",
+      "start": 355.52,
+      "duration": 3.2
+    },
+    {
+      "text": "gone",
+      "start": 357.6,
+      "duration": 4.96
+    },
+    {
+      "text": "and there is no undo this is true",
+      "start": 358.72,
+      "duration": 6.64
+    },
+    {
+      "text": "in general with programming if you tell",
+      "start": 362.56,
+      "duration": 3.52
+    },
+    {
+      "text": "the computer",
+      "start": 365.36,
+      "duration": 3.36
+    },
+    {
+      "text": "to do something it's going to do it it's",
+      "start": 366.08,
+      "duration": 3.839
+    },
+    {
+      "text": "not going to ask you",
+      "start": 368.72,
+      "duration": 3.52
+    },
+    {
+      "text": "are you sure you want to do this uh it's",
+      "start": 369.919,
+      "duration": 4.161
+    },
+    {
+      "text": "only if you're using an app which has",
+      "start": 372.24,
+      "duration": 4.079
+    },
+    {
+      "text": "built in those kind of protections",
+      "start": 374.08,
+      "duration": 4.559
+    },
+    {
+      "text": "um but with a programming language it's",
+      "start": 376.319,
+      "duration": 4.241
+    },
+    {
+      "text": "going to do whatever you tell it to",
+      "start": 378.639,
+      "duration": 4.161
+    },
+    {
+      "text": "and so if you tell it to output to a",
+      "start": 380.56,
+      "duration": 3.359
+    },
+    {
+      "text": "workbook",
+      "start": 382.8,
+      "duration": 3.92
+    },
+    {
+      "text": "which already has your full excel model",
+      "start": 383.919,
+      "duration": 4.241
+    },
+    {
+      "text": "in it",
+      "start": 386.72,
+      "duration": 3.12
+    },
+    {
+      "text": "you really meant to just output to one",
+      "start": 388.16,
+      "duration": 3.44
+    },
+    {
+      "text": "sheet of that workbook",
+      "start": 389.84,
+      "duration": 3.199
+    },
+    {
+      "text": "but you accidentally output it to the",
+      "start": 391.6,
+      "duration": 3.92
+    },
+    {
+      "text": "entire workbook it's just going to erase",
+      "start": 393.039,
+      "duration": 3.921
+    },
+    {
+      "text": "everything that you had in your model",
+      "start": 395.52,
+      "duration": 4.16
+    },
+    {
+      "text": "it's going to be gone forever",
+      "start": 396.96,
+      "duration": 5.04
+    },
+    {
+      "text": "so be really careful about this make",
+      "start": 399.68,
+      "duration": 5.76
+    },
+    {
+      "text": "sure to back up your work",
+      "start": 402.0,
+      "duration": 3.44
+    },
+    {
+      "text": "and generally uh be really careful",
+      "start": 405.68,
+      "duration": 5.359
+    },
+    {
+      "text": "if you're going to try and write a sheet",
+      "start": 408.96,
+      "duration": 3.6
+    },
+    {
+      "text": "into an existing excel",
+      "start": 411.039,
+      "duration": 5.28
+    },
+    {
+      "text": "model um it's better generally to just",
+      "start": 412.56,
+      "duration": 5.44
+    },
+    {
+      "text": "write to a separate workbook",
+      "start": 416.319,
+      "duration": 4.561
+    },
+    {
+      "text": "because then uh that workbook is always",
+      "start": 418.0,
+      "duration": 4.72
+    },
+    {
+      "text": "just being generated by the code",
+      "start": 420.88,
+      "duration": 4.879
+    },
+    {
+      "text": "and you don't really care about what's",
+      "start": 422.72,
+      "duration": 4.08
+    },
+    {
+      "text": "in there it's just getting",
+      "start": 425.759,
+      "duration": 4.641
+    },
+    {
+      "text": "replaced whenever you run the code",
+      "start": 426.8,
+      "duration": 3.6
+    },
+    {
+      "text": "so just be careful about this",
+      "start": 430.56,
+      "duration": 5.68
+    },
+    {
+      "text": "you cannot undo it once you have written",
+      "start": 433.68,
+      "duration": 4.56
+    },
+    {
+      "text": "it over so you get a very bad day",
+      "start": 436.24,
+      "duration": 4.32
+    },
+    {
+      "text": "if you made a mistake with this so",
+      "start": 438.24,
+      "duration": 4.0
+    },
+    {
+      "text": "that's why i always",
+      "start": 440.56,
+      "duration": 3.28
+    },
+    {
+      "text": "among other reasons always recommend",
+      "start": 442.24,
+      "duration": 3.44
+    },
+    {
+      "text": "that people back up their work",
+      "start": 443.84,
+      "duration": 5.12
+    },
+    {
+      "text": "regularly uh you know you can use a",
+      "start": 445.68,
+      "duration": 5.359
+    },
+    {
+      "text": "service like like dropbox or something",
+      "start": 448.96,
+      "duration": 4.16
+    },
+    {
+      "text": "to do it automatically or you can",
+      "start": 451.039,
+      "duration": 3.761
+    },
+    {
+      "text": "you know have your own manual system of",
+      "start": 453.12,
+      "duration": 3.519
+    },
+    {
+      "text": "copying files",
+      "start": 454.8,
+      "duration": 4.16
+    },
+    {
+      "text": "whatever you do just be careful when you",
+      "start": 456.639,
+      "duration": 3.28
+    },
+    {
+      "text": "write",
+      "start": 458.96,
+      "duration": 4.079
+    },
+    {
+      "text": "to excel workbooks and this you know",
+      "start": 459.919,
+      "duration": 4.801
+    },
+    {
+      "text": "this is the only",
+      "start": 463.039,
+      "duration": 4.72
+    },
+    {
+      "text": "uh part of the course where we've",
+      "start": 464.72,
+      "duration": 6.159
+    },
+    {
+      "text": "actually outputted a file um",
+      "start": 467.759,
+      "duration": 4.961
+    },
+    {
+      "text": "this is really a general caution about",
+      "start": 470.879,
+      "duration": 4.561
+    },
+    {
+      "text": "any time you're going to output a file",
+      "start": 472.72,
+      "duration": 4.479
+    },
+    {
+      "text": "in any programming language it's going",
+      "start": 475.44,
+      "duration": 4.24
+    },
+    {
+      "text": "to overwrite whatever is there",
+      "start": 477.199,
+      "duration": 7.521
+    },
+    {
+      "text": "so just be careful about this",
+      "start": 479.68,
+      "duration": 5.04
+    },
+    {
+      "text": "so let's go look at a quick example of",
+      "start": 485.199,
+      "duration": 7.28
+    },
+    {
+      "text": "how we can work with pandas to read and",
+      "start": 489.199,
+      "duration": 3.601
+    },
+    {
+      "text": "write",
+      "start": 492.479,
+      "duration": 3.201
+    },
+    {
+      "text": "excel files",
+      "start": 492.8,
+      "duration": 2.88
+    },
+    {
+      "text": "so we'll hop over to the jupyter",
+      "start": 496.24,
+      "duration": 4.16
+    },
+    {
+      "text": "notebook here read write",
+      "start": 498.08,
+      "duration": 5.6
+    },
+    {
+      "text": "excel pandas and we can see it works",
+      "start": 500.4,
+      "duration": 3.76
+    },
+    {
+      "text": "with",
+      "start": 503.68,
+      "duration": 3.919
+    },
+    {
+      "text": "a workbook called stock data so i'm just",
+      "start": 504.16,
+      "duration": 4.879
+    },
+    {
+      "text": "going to quickly",
+      "start": 507.599,
+      "duration": 4.961
+    },
+    {
+      "text": "open up that stock data excel workbook",
+      "start": 509.039,
+      "duration": 7.281
+    },
+    {
+      "text": "so that we can see what the contents are",
+      "start": 512.56,
+      "duration": 5.599
+    },
+    {
+      "text": "and you can see it's got two worksheets",
+      "start": 516.32,
+      "duration": 3.36
+    },
+    {
+      "text": "here the first sheet and the second",
+      "start": 518.159,
+      "duration": 2.24
+    },
+    {
+      "text": "sheet",
+      "start": 519.68,
+      "duration": 2.96
+    },
+    {
+      "text": "first sheet got microsoft and apple",
+      "start": 520.399,
+      "duration": 3.361
+    },
+    {
+      "text": "stock prices",
+      "start": 522.64,
+      "duration": 3.759
+    },
+    {
+      "text": "over time second sheet amazon and",
+      "start": 523.76,
+      "duration": 3.28
+    },
+    {
+      "text": "facebook",
+      "start": 526.399,
+      "duration": 4.081
+    },
+    {
+      "text": "stock prices over time",
+      "start": 527.04,
+      "duration": 3.44
+    },
+    {
+      "text": "so of course first we want to import",
+      "start": 531.839,
+      "duration": 3.521
+    },
+    {
+      "text": "pandas",
+      "start": 534.48,
+      "duration": 4.479
+    },
+    {
+      "text": "and then we can read that data",
+      "start": 535.36,
+      "duration": 6.64
+    },
+    {
+      "text": "into a data frame so we read the stock",
+      "start": 538.959,
+      "duration": 4.961
+    },
+    {
+      "text": "data file we didn't tell it any sheet or",
+      "start": 542.0,
+      "duration": 2.8
+    },
+    {
+      "text": "anything",
+      "start": 543.92,
+      "duration": 2.96
+    },
+    {
+      "text": "and we can see that it loaded the first",
+      "start": 544.8,
+      "duration": 4.88
+    },
+    {
+      "text": "sheet by default which has microsoft",
+      "start": 546.88,
+      "duration": 4.959
+    },
+    {
+      "text": "and apple and now we have all that and a",
+      "start": 549.68,
+      "duration": 4.64
+    },
+    {
+      "text": "data frame",
+      "start": 551.839,
+      "duration": 5.281
+    },
+    {
+      "text": "um but if we want that second sheet then",
+      "start": 554.32,
+      "duration": 4.639
+    },
+    {
+      "text": "we just pass receipt name",
+      "start": 557.12,
+      "duration": 3.92
+    },
+    {
+      "text": "here the second sheet whatever the name",
+      "start": 558.959,
+      "duration": 3.521
+    },
+    {
+      "text": "of the sheet",
+      "start": 561.04,
+      "duration": 4.479
+    },
+    {
+      "text": "and now we get the amazon and facebook",
+      "start": 562.48,
+      "duration": 5.52
+    },
+    {
+      "text": "worksheet",
+      "start": 565.519,
+      "duration": 2.481
+    },
+    {
+      "text": "so now coming to outputting",
+      "start": 569.36,
+      "duration": 6.0
+    },
+    {
+      "text": "the data frame to an excel file so let's",
+      "start": 572.399,
+      "duration": 3.761
+    },
+    {
+      "text": "look at",
+      "start": 575.36,
+      "duration": 2.32
+    },
+    {
+      "text": "let's do something with the data frame",
+      "start": 576.16,
+      "duration": 3.44
+    },
+    {
+      "text": "so that we know it's different uh",
+      "start": 577.68,
+      "duration": 4.8
+    },
+    {
+      "text": "here we're just adding a column which",
+      "start": 579.6,
+      "duration": 4.4
+    },
+    {
+      "text": "has the string stuff",
+      "start": 582.48,
+      "duration": 5.039
+    },
+    {
+      "text": "in it a custom column",
+      "start": 584.0,
+      "duration": 5.12
+    },
+    {
+      "text": "and now we're going to go ahead and",
+      "start": 587.519,
+      "duration": 3.041
+    },
+    {
+      "text": "output this",
+      "start": 589.12,
+      "duration": 4.56
+    },
+    {
+      "text": "so i'm going to run this to excel",
+      "start": 590.56,
+      "duration": 6.32
+    },
+    {
+      "text": "creating newbook.xlsx",
+      "start": 593.68,
+      "duration": 6.48
+    },
+    {
+      "text": "and let's take a look at what we got in",
+      "start": 596.88,
+      "duration": 6.32
+    },
+    {
+      "text": "the new book",
+      "start": 600.16,
+      "duration": 3.04
+    },
+    {
+      "text": "so we can see um",
+      "start": 603.44,
+      "duration": 8.399
+    },
+    {
+      "text": "that we have the data which uh",
+      "start": 608.16,
+      "duration": 6.0
+    },
+    {
+      "text": "was in the data frame has now come over",
+      "start": 611.839,
+      "duration": 4.56
+    },
+    {
+      "text": "to the excel worksheet",
+      "start": 614.16,
+      "duration": 5.919
+    },
+    {
+      "text": "the stock uh tickers prices and dates",
+      "start": 616.399,
+      "duration": 7.361
+    },
+    {
+      "text": "um and we also have this additional",
+      "start": 620.079,
+      "duration": 6.401
+    },
+    {
+      "text": "column that we added",
+      "start": 623.76,
+      "duration": 6.319
+    },
+    {
+      "text": "you'll also notice um that it just put",
+      "start": 626.48,
+      "duration": 5.12
+    },
+    {
+      "text": "it on a sheet one",
+      "start": 630.079,
+      "duration": 3.361
+    },
+    {
+      "text": "that's going to be the default sheet",
+      "start": 631.6,
+      "duration": 3.52
+    },
+    {
+      "text": "name",
+      "start": 633.44,
+      "duration": 3.44
+    },
+    {
+      "text": "and you can see that it brought over",
+      "start": 635.12,
+      "duration": 3.36
+    },
+    {
+      "text": "this index 0 1 2",
+      "start": 636.88,
+      "duration": 5.76
+    },
+    {
+      "text": "3 4 5 6 7 as well",
+      "start": 638.48,
+      "duration": 6.16
+    },
+    {
+      "text": "so let's look at some different ways we",
+      "start": 642.64,
+      "duration": 4.72
+    },
+    {
+      "text": "can affect this output",
+      "start": 644.64,
+      "duration": 6.879
+    },
+    {
+      "text": "so first is we can do index equals false",
+      "start": 647.36,
+      "duration": 7.52
+    },
+    {
+      "text": "and then that is",
+      "start": 651.519,
+      "duration": 6.481
+    },
+    {
+      "text": "going to remove that 0 1 2",
+      "start": 654.88,
+      "duration": 6.48
+    },
+    {
+      "text": "3 going down the side see now",
+      "start": 658.0,
+      "duration": 5.519
+    },
+    {
+      "text": "it starts right from the stock column so",
+      "start": 661.36,
+      "duration": 4.32
+    },
+    {
+      "text": "this in this case we didn't care about",
+      "start": 663.519,
+      "duration": 4.961
+    },
+    {
+      "text": "that index and so this is what we want",
+      "start": 665.68,
+      "duration": 5.279
+    },
+    {
+      "text": "but still outputting to something sheet",
+      "start": 668.48,
+      "duration": 3.76
+    },
+    {
+      "text": "1",
+      "start": 670.959,
+      "duration": 4.56
+    },
+    {
+      "text": "so we can control that part as well",
+      "start": 672.24,
+      "duration": 6.32
+    },
+    {
+      "text": "so here we just also pass the sheet name",
+      "start": 675.519,
+      "duration": 6.161
+    },
+    {
+      "text": "and then um",
+      "start": 678.56,
+      "duration": 6.719
+    },
+    {
+      "text": "we are going to have the sheet named as",
+      "start": 681.68,
+      "duration": 4.8
+    },
+    {
+      "text": "we put it",
+      "start": 685.279,
+      "duration": 4.401
+    },
+    {
+      "text": "in python and we've got that coming over",
+      "start": 686.48,
+      "duration": 6.56
+    },
+    {
+      "text": "to our excel workbook",
+      "start": 689.68,
+      "duration": 3.36
+    },
+    {
+      "text": "um and",
+      "start": 694.48,
+      "duration": 8.08
+    },
+    {
+      "text": "the um lab exercise on this",
+      "start": 698.0,
+      "duration": 8.72
+    },
+    {
+      "text": "material um is",
+      "start": 702.56,
+      "duration": 7.68
+    },
+    {
+      "text": "going to be here in the slides the last",
+      "start": 706.72,
+      "duration": 6.559
+    },
+    {
+      "text": "slide of the panda section and there's",
+      "start": 710.24,
+      "duration": 5.76
+    },
+    {
+      "text": "actually three different exercises here",
+      "start": 713.279,
+      "duration": 4.641
+    },
+    {
+      "text": "contained within one so you can",
+      "start": 716.0,
+      "duration": 3.68
+    },
+    {
+      "text": "click on the links to go to the other",
+      "start": 717.92,
+      "duration": 3.68
+    },
+    {
+      "text": "exercises",
+      "start": 719.68,
+      "duration": 5.44
+    },
+    {
+      "text": "um and this does require",
+      "start": 721.6,
+      "duration": 6.16
+    },
+    {
+      "text": "using some files uh from the course site",
+      "start": 725.12,
+      "duration": 4.32
+    },
+    {
+      "text": "so you can go directly to download those",
+      "start": 727.76,
+      "duration": 4.639
+    },
+    {
+      "text": "or you can go to the resources slide and",
+      "start": 729.44,
+      "duration": 6.32
+    },
+    {
+      "text": "download those from here",
+      "start": 732.399,
+      "duration": 3.361
+    },
+    {
+      "text": "and as far as what you're required to",
+      "start": 736.56,
+      "duration": 4.719
+    },
+    {
+      "text": "submit",
+      "start": 740.0,
+      "duration": 4.16
+    },
+    {
+      "text": "or to get full credit on the lab",
+      "start": 741.279,
+      "duration": 4.081
+    },
+    {
+      "text": "exercises",
+      "start": 744.16,
+      "duration": 3.84
+    },
+    {
+      "text": "you need to do level one and level two",
+      "start": 745.36,
+      "duration": 3.76
+    },
+    {
+      "text": "level three is an",
+      "start": 748.0,
+      "duration": 4.24
+    },
+    {
+      "text": "optional exercise it uses uh",
+      "start": 749.12,
+      "duration": 4.8
+    },
+    {
+      "text": "the advanced material in the jupiter",
+      "start": 752.24,
+      "duration": 3.599
+    },
+    {
+      "text": "notebook um",
+      "start": 753.92,
+      "duration": 4.88
+    },
+    {
+      "text": "so that's down here we're not going to",
+      "start": 755.839,
+      "duration": 3.44
+    },
+    {
+      "text": "be",
+      "start": 758.8,
+      "duration": 2.719
+    },
+    {
+      "text": "covering this in detail in the course",
+      "start": 759.279,
+      "duration": 4.321
+    },
+    {
+      "text": "you can look at this",
+      "start": 761.519,
+      "duration": 4.0
+    },
+    {
+      "text": "as an extension where we can write to",
+      "start": 763.6,
+      "duration": 3.039
+    },
+    {
+      "text": "multiple different sheets",
+      "start": 765.519,
+      "duration": 4.721
+    },
+    {
+      "text": "in the same workbook but we're not going",
+      "start": 766.639,
+      "duration": 4.081
+    },
+    {
+      "text": "to be",
+      "start": 770.24,
+      "duration": 2.8
+    },
+    {
+      "text": "covering that in detail so that's an",
+      "start": 770.72,
+      "duration": 3.28
+    },
+    {
+      "text": "optional",
+      "start": 773.04,
+      "duration": 3.76
+    },
+    {
+      "text": "lab exercise only one and two are",
+      "start": 774.0,
+      "duration": 4.32
+    },
+    {
+      "text": "required here",
+      "start": 776.8,
+      "duration": 3.68
+    },
+    {
+      "text": "and so one is pretty much reading in",
+      "start": 778.32,
+      "duration": 3.6
+    },
+    {
+      "text": "this",
+      "start": 780.48,
+      "duration": 4.72
+    },
+    {
+      "text": "financials workbook and do note that",
+      "start": 781.92,
+      "duration": 4.64
+    },
+    {
+      "text": "this is an xls",
+      "start": 785.2,
+      "duration": 5.199
+    },
+    {
+      "text": "file the old uh excel format and so",
+      "start": 786.56,
+      "duration": 5.279
+    },
+    {
+      "text": "similarly in your code you'll have to",
+      "start": 790.399,
+      "duration": 5.521
+    },
+    {
+      "text": "have xls not xlsx",
+      "start": 791.839,
+      "duration": 6.081
+    },
+    {
+      "text": "uh read the income statement sheet and",
+      "start": 795.92,
+      "duration": 5.039
+    },
+    {
+      "text": "then write that out to a new workbook",
+      "start": 797.92,
+      "duration": 6.4
+    },
+    {
+      "text": "um and then the level two using the same",
+      "start": 800.959,
+      "duration": 6.801
+    },
+    {
+      "text": "initial workbook now we're just going to",
+      "start": 804.32,
+      "duration": 6.24
+    },
+    {
+      "text": "output to five different workbooks um",
+      "start": 807.76,
+      "duration": 4.8
+    },
+    {
+      "text": "and do that without having to write the",
+      "start": 810.56,
+      "duration": 5.92
+    },
+    {
+      "text": "to excel command over and over again",
+      "start": 812.56,
+      "duration": 3.92
+    },
+    {
+      "text": "so that covers the integration",
+      "start": 816.56,
+      "duration": 6.48
+    },
+    {
+      "text": "of excel and python using pandas",
+      "start": 820.0,
+      "duration": 5.12
+    },
+    {
+      "text": "next time we're going to come back to",
+      "start": 823.04,
+      "duration": 4.239
+    },
+    {
+      "text": "talk about how we can",
+      "start": 825.12,
+      "duration": 5.76
+    },
+    {
+      "text": "do an even more more flexible",
+      "start": 827.279,
+      "duration": 4.481
+    },
+    {
+      "text": "integration",
+      "start": 830.88,
+      "duration": 3.36
+    },
+    {
+      "text": "using excel wings so thanks for",
+      "start": 831.76,
+      "duration": 3.04
+    },
+    {
+      "text": "listening",
+      "start": 834.24,
+      "duration": 5.68
+    },
+    {
+      "text": "and see you next time",
+      "start": 834.8,
+      "duration": 5.12
+    }
+  ]
+}

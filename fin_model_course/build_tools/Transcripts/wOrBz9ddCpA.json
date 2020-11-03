@@ -1,0 +1,619 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.8,
+      "duration": 2.32
+    },
+    {
+      "text": "nick dear bird is here teaching you",
+      "start": 3.6,
+      "duration": 3.84
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.12,
+      "duration": 3.28
+    },
+    {
+      "text": "be solving the",
+      "start": 7.44,
+      "duration": 4.319
+    },
+    {
+      "text": "lab exercise or adding scenario analysis",
+      "start": 8.4,
+      "duration": 6.399
+    },
+    {
+      "text": "to the project one excel model",
+      "start": 11.759,
+      "duration": 6.881
+    },
+    {
+      "text": "so we have finished up talking about the",
+      "start": 14.799,
+      "duration": 5.681
+    },
+    {
+      "text": "scenario modeling material",
+      "start": 18.64,
+      "duration": 4.32
+    },
+    {
+      "text": "around excel and then we were tasked",
+      "start": 20.48,
+      "duration": 4.24
+    },
+    {
+      "text": "with this lab exercise",
+      "start": 22.96,
+      "duration": 5.44
+    },
+    {
+      "text": "to add external scenario analysis",
+      "start": 24.72,
+      "duration": 7.359
+    },
+    {
+      "text": "to the project one model thinking about",
+      "start": 28.4,
+      "duration": 6.48
+    },
+    {
+      "text": "modeling for the different situations of",
+      "start": 32.079,
+      "duration": 3.521
+    },
+    {
+      "text": "the economy",
+      "start": 34.88,
+      "duration": 3.92
+    },
+    {
+      "text": "bad normal good economy and",
+      "start": 35.6,
+      "duration": 5.279
+    },
+    {
+      "text": "changing around the initial demand and",
+      "start": 38.8,
+      "duration": 3.68
+    },
+    {
+      "text": "the price per phone",
+      "start": 40.879,
+      "duration": 5.601
+    },
+    {
+      "text": "in each of those economic cases",
+      "start": 42.48,
+      "duration": 6.32
+    },
+    {
+      "text": "where the demand and the price should be",
+      "start": 46.48,
+      "duration": 3.04
+    },
+    {
+      "text": "higher",
+      "start": 48.8,
+      "duration": 4.079
+    },
+    {
+      "text": "with the better economic conditions",
+      "start": 49.52,
+      "duration": 6.64
+    },
+    {
+      "text": "so let's jump over to the project one",
+      "start": 52.879,
+      "duration": 5.52
+    },
+    {
+      "text": "model where we can go ahead and",
+      "start": 56.16,
+      "duration": 4.48
+    },
+    {
+      "text": "implement this",
+      "start": 58.399,
+      "duration": 5.441
+    },
+    {
+      "text": "um so this process",
+      "start": 60.64,
+      "duration": 5.2
+    },
+    {
+      "text": "is really going to be exactly the same",
+      "start": 63.84,
+      "duration": 4.0
+    },
+    {
+      "text": "as what we did for the dynamics salary",
+      "start": 65.84,
+      "duration": 2.88
+    },
+    {
+      "text": "retirement model",
+      "start": 67.84,
+      "duration": 2.88
+    },
+    {
+      "text": "so i'm going to go sort of quickly",
+      "start": 68.72,
+      "duration": 3.68
+    },
+    {
+      "text": "through it",
+      "start": 70.72,
+      "duration": 3.84
+    },
+    {
+      "text": "so here first i'm adding some additional",
+      "start": 72.4,
+      "duration": 3.92
+    },
+    {
+      "text": "space so i can go",
+      "start": 74.56,
+      "duration": 5.68
+    },
+    {
+      "text": "and add the scenario analysis",
+      "start": 76.32,
+      "duration": 7.839
+    },
+    {
+      "text": "inputs this is going to be the economic",
+      "start": 80.24,
+      "duration": 7.6
+    },
+    {
+      "text": "condition probabilities",
+      "start": 84.159,
+      "duration": 3.681
+    },
+    {
+      "text": "and we're going to have the bad and the",
+      "start": 89.119,
+      "duration": 5.68
+    },
+    {
+      "text": "good economy percentages",
+      "start": 90.799,
+      "duration": 4.0
+    },
+    {
+      "text": "and then we can build out the scenario",
+      "start": 96.079,
+      "duration": 5.04
+    },
+    {
+      "text": "analysis table",
+      "start": 98.84,
+      "duration": 4.68
+    },
+    {
+      "text": "where we have the economic condition",
+      "start": 101.119,
+      "duration": 3.921
+    },
+    {
+      "text": "that's going to be bad",
+      "start": 103.52,
+      "duration": 4.239
+    },
+    {
+      "text": "normal good economy then we're going to",
+      "start": 105.04,
+      "duration": 5.359
+    },
+    {
+      "text": "have the expected outcome",
+      "start": 107.759,
+      "duration": 4.4
+    },
+    {
+      "text": "and we're going to have the probability",
+      "start": 110.399,
+      "duration": 3.76
+    },
+    {
+      "text": "we reference back over here",
+      "start": 112.159,
+      "duration": 5.201
+    },
+    {
+      "text": "for the probabilities um and then we can",
+      "start": 114.159,
+      "duration": 4.161
+    },
+    {
+      "text": "do one minus",
+      "start": 117.36,
+      "duration": 3.92
+    },
+    {
+      "text": "each of the other probabilities to get",
+      "start": 118.32,
+      "duration": 3.759
+    },
+    {
+      "text": "the normal",
+      "start": 121.28,
+      "duration": 4.0
+    },
+    {
+      "text": "case and then we want to",
+      "start": 122.079,
+      "duration": 5.841
+    },
+    {
+      "text": "line up our cases of the inputs next so",
+      "start": 125.28,
+      "duration": 4.64
+    },
+    {
+      "text": "that's initial demand and price per",
+      "start": 127.92,
+      "duration": 3.2
+    },
+    {
+      "text": "phone",
+      "start": 129.92,
+      "duration": 4.64
+    },
+    {
+      "text": "so initial demand price",
+      "start": 131.12,
+      "duration": 7.28
+    },
+    {
+      "text": "phone um and",
+      "start": 134.56,
+      "duration": 7.12
+    },
+    {
+      "text": "then think about what makes sense",
+      "start": 138.4,
+      "duration": 5.839
+    },
+    {
+      "text": "so normal we can use our baseline values",
+      "start": 141.68,
+      "duration": 4.639
+    },
+    {
+      "text": "hundred thousand for demand",
+      "start": 144.239,
+      "duration": 3.841
+    },
+    {
+      "text": "five hundred dollars for the price of",
+      "start": 146.319,
+      "duration": 4.0
+    },
+    {
+      "text": "the phone let's say in a good economy",
+      "start": 148.08,
+      "duration": 4.159
+    },
+    {
+      "text": "we'll be able to get 750 for the phone",
+      "start": 150.319,
+      "duration": 4.241
+    },
+    {
+      "text": "bad economy only 400",
+      "start": 152.239,
+      "duration": 5.28
+    },
+    {
+      "text": "um and as far as demand that'll be 70",
+      "start": 154.56,
+      "duration": 4.8
+    },
+    {
+      "text": "000 in the bad economy",
+      "start": 157.519,
+      "duration": 5.521
+    },
+    {
+      "text": "and 150 000 in the good economy",
+      "start": 159.36,
+      "duration": 7.12
+    },
+    {
+      "text": "um then we can go ahead and make our",
+      "start": 163.04,
+      "duration": 4.32
+    },
+    {
+      "text": "data table",
+      "start": 166.48,
+      "duration": 3.92
+    },
+    {
+      "text": "so the data table will reference uh",
+      "start": 167.36,
+      "duration": 5.2
+    },
+    {
+      "text": "the ultimate ultimate result here the",
+      "start": 170.4,
+      "duration": 4.559
+    },
+    {
+      "text": "mpv",
+      "start": 172.56,
+      "duration": 5.75
+    },
+    {
+      "text": "and then can put these same",
+      "start": 174.959,
+      "duration": 4.481
+    },
+    {
+      "text": "[Music]",
+      "start": 178.31,
+      "duration": 6.09
+    },
+    {
+      "text": "values of the inputs here um",
+      "start": 179.44,
+      "duration": 8.96
+    },
+    {
+      "text": "so here um where's pace transpose",
+      "start": 184.4,
+      "duration": 7.839
+    },
+    {
+      "text": "there we go um and then the price of the",
+      "start": 188.4,
+      "duration": 6.479
+    },
+    {
+      "text": "phone over here",
+      "start": 192.239,
+      "duration": 5.201
+    },
+    {
+      "text": "and then we can make the data table row",
+      "start": 194.879,
+      "duration": 3.28
+    },
+    {
+      "text": "input cell",
+      "start": 197.44,
+      "duration": 3.519
+    },
+    {
+      "text": "is going to be the initial demand column",
+      "start": 198.159,
+      "duration": 3.601
+    },
+    {
+      "text": "input cell",
+      "start": 200.959,
+      "duration": 3.041
+    },
+    {
+      "text": "is going to be the price of the phone",
+      "start": 201.76,
+      "duration": 5.039
+    },
+    {
+      "text": "then we get the different mpvs here",
+      "start": 204.0,
+      "duration": 5.519
+    },
+    {
+      "text": "and then we can put mpv here and just",
+      "start": 206.799,
+      "duration": 4.561
+    },
+    {
+      "text": "reference over to the table so four",
+      "start": 209.519,
+      "duration": 2.401
+    },
+    {
+      "text": "hundred",
+      "start": 211.36,
+      "duration": 3.36
+    },
+    {
+      "text": "and seventy thousand five hundred and",
+      "start": 211.92,
+      "duration": 4.56
+    },
+    {
+      "text": "hundred thousand",
+      "start": 214.72,
+      "duration": 4.159
+    },
+    {
+      "text": "and seven fifty and hundred fifty",
+      "start": 216.48,
+      "duration": 3.759
+    },
+    {
+      "text": "thousand",
+      "start": 218.879,
+      "duration": 4.561
+    },
+    {
+      "text": "um and we wanna format all these things",
+      "start": 220.239,
+      "duration": 6.321
+    },
+    {
+      "text": "as currency",
+      "start": 223.44,
+      "duration": 7.68
+    },
+    {
+      "text": "uh and we don't need any decimal places",
+      "start": 226.56,
+      "duration": 4.56
+    },
+    {
+      "text": "and then we can take the expected value",
+      "start": 231.92,
+      "duration": 3.679
+    },
+    {
+      "text": "as the probability fixed",
+      "start": 233.84,
+      "duration": 5.2
+    },
+    {
+      "text": "times the value plus next probability",
+      "start": 235.599,
+      "duration": 3.84
+    },
+    {
+      "text": "fixed",
+      "start": 239.04,
+      "duration": 2.96
+    },
+    {
+      "text": "times the value plus the final",
+      "start": 239.439,
+      "duration": 3.761
+    },
+    {
+      "text": "probability fix",
+      "start": 242.0,
+      "duration": 4.08
+    },
+    {
+      "text": "times the last value and that will get",
+      "start": 243.2,
+      "duration": 4.239
+    },
+    {
+      "text": "us the expected",
+      "start": 246.08,
+      "duration": 5.2
+    },
+    {
+      "text": "value for each one of these",
+      "start": 247.439,
+      "duration": 3.841
+    },
+    {
+      "text": "so that's the whole process there of",
+      "start": 252.48,
+      "duration": 4.159
+    },
+    {
+      "text": "course the other thing you would want to",
+      "start": 255.36,
+      "duration": 3.04
+    },
+    {
+      "text": "do is add formatting to",
+      "start": 256.639,
+      "duration": 4.641
+    },
+    {
+      "text": "all of these tables which you should",
+      "start": 258.4,
+      "duration": 4.64
+    },
+    {
+      "text": "definitely look at the completed dynamic",
+      "start": 261.28,
+      "duration": 3.919
+    },
+    {
+      "text": "salary retirement model with scenario",
+      "start": 263.04,
+      "duration": 3.92
+    },
+    {
+      "text": "analysis on the course site for an",
+      "start": 265.199,
+      "duration": 3.921
+    },
+    {
+      "text": "example of the formatting",
+      "start": 266.96,
+      "duration": 4.64
+    },
+    {
+      "text": "but i'll leave it here in interest of",
+      "start": 269.12,
+      "duration": 3.28
+    },
+    {
+      "text": "time",
+      "start": 271.6,
+      "duration": 4.159
+    },
+    {
+      "text": "so now we have the npv and a bad economy",
+      "start": 272.4,
+      "duration": 6.16
+    },
+    {
+      "text": "normal economy and good economy and an",
+      "start": 275.759,
+      "duration": 4.16
+    },
+    {
+      "text": "expected npv",
+      "start": 278.56,
+      "duration": 3.199
+    },
+    {
+      "text": "across those cases based on the",
+      "start": 279.919,
+      "duration": 3.681
+    },
+    {
+      "text": "probabilities and we can shift around",
+      "start": 281.759,
+      "duration": 3.281
+    },
+    {
+      "text": "the probabilities",
+      "start": 283.6,
+      "duration": 4.64
+    },
+    {
+      "text": "to shift around the expected value based",
+      "start": 285.04,
+      "duration": 3.68
+    },
+    {
+      "text": "on",
+      "start": 288.24,
+      "duration": 3.76
+    },
+    {
+      "text": "what we think is going to occur so this",
+      "start": 288.72,
+      "duration": 4.08
+    },
+    {
+      "text": "is all set up",
+      "start": 292.0,
+      "duration": 4.4
+    },
+    {
+      "text": "appropriately so thanks for listening",
+      "start": 292.8,
+      "duration": 9.28
+    },
+    {
+      "text": "and see you next time",
+      "start": 296.4,
+      "duration": 5.68
+    }
+  ]
+}

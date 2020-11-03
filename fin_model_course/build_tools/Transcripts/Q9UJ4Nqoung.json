@@ -1,0 +1,4304 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.919,
+      "duration": 2.48
+    },
+    {
+      "text": "nick dearborn is here teaching you",
+      "start": 4.799,
+      "duration": 3.84
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 6.399,
+      "duration": 3.2
+    },
+    {
+      "text": "to talk about",
+      "start": 8.639,
+      "duration": 4.0
+    },
+    {
+      "text": "creating data types in python with",
+      "start": 9.599,
+      "duration": 7.121
+    },
+    {
+      "text": "classes so this is part of our segment",
+      "start": 12.639,
+      "duration": 7.281
+    },
+    {
+      "text": "on going beyond an initial python script",
+      "start": 16.72,
+      "duration": 6.479
+    },
+    {
+      "text": "the tools and skills that we need to get",
+      "start": 19.92,
+      "duration": 3.599
+    },
+    {
+      "text": "to",
+      "start": 23.199,
+      "duration": 4.16
+    },
+    {
+      "text": "building financial models in python",
+      "start": 23.519,
+      "duration": 7.041
+    },
+    {
+      "text": "so we have already talked about",
+      "start": 27.359,
+      "duration": 6.001
+    },
+    {
+      "text": "data types and the basic data types that",
+      "start": 30.56,
+      "duration": 3.76
+    },
+    {
+      "text": "are built",
+      "start": 33.36,
+      "duration": 4.32
+    },
+    {
+      "text": "into python such as strings uh you know",
+      "start": 34.32,
+      "duration": 4.16
+    },
+    {
+      "text": "floats",
+      "start": 37.68,
+      "duration": 5.16
+    },
+    {
+      "text": "in tuples dicks booleans",
+      "start": 38.48,
+      "duration": 7.28
+    },
+    {
+      "text": "etc but i've also mentioned",
+      "start": 42.84,
+      "duration": 5.8
+    },
+    {
+      "text": "that we can also have custom data types",
+      "start": 45.76,
+      "duration": 4.24
+    },
+    {
+      "text": "in python",
+      "start": 48.64,
+      "duration": 4.64
+    },
+    {
+      "text": "and that is where uh you know the",
+      "start": 50.0,
+      "duration": 4.399
+    },
+    {
+      "text": "flexibility",
+      "start": 53.28,
+      "duration": 4.48
+    },
+    {
+      "text": "of python really comes in",
+      "start": 54.399,
+      "duration": 7.041
+    },
+    {
+      "text": "and that you can do basically anything",
+      "start": 57.76,
+      "duration": 5.279
+    },
+    {
+      "text": "with python and you can build all these",
+      "start": 61.44,
+      "duration": 4.32
+    },
+    {
+      "text": "sorts of extensions to python and",
+      "start": 63.039,
+      "duration": 5.76
+    },
+    {
+      "text": "people have you know put out 250 000",
+      "start": 65.76,
+      "duration": 4.08
+    },
+    {
+      "text": "different packages",
+      "start": 68.799,
+      "duration": 3.441
+    },
+    {
+      "text": "out there which extend python",
+      "start": 69.84,
+      "duration": 3.599
+    },
+    {
+      "text": "functionality",
+      "start": 72.24,
+      "duration": 4.4
+    },
+    {
+      "text": "and most of that is by way of defining",
+      "start": 73.439,
+      "duration": 5.441
+    },
+    {
+      "text": "these classes to create",
+      "start": 76.64,
+      "duration": 5.04
+    },
+    {
+      "text": "new data types that you can use when",
+      "start": 78.88,
+      "duration": 5.96
+    },
+    {
+      "text": "you're working with python",
+      "start": 81.68,
+      "duration": 6.0
+    },
+    {
+      "text": "so um",
+      "start": 84.84,
+      "duration": 6.36
+    },
+    {
+      "text": "the class is the definition",
+      "start": 87.68,
+      "duration": 6.72
+    },
+    {
+      "text": "of the data type itself",
+      "start": 91.2,
+      "duration": 5.599
+    },
+    {
+      "text": "um so that's definitely a little bit",
+      "start": 94.4,
+      "duration": 4.079
+    },
+    {
+      "text": "abstract",
+      "start": 96.799,
+      "duration": 4.401
+    },
+    {
+      "text": "but let's break down what the data type",
+      "start": 98.479,
+      "duration": 4.401
+    },
+    {
+      "text": "actually means and it will become a",
+      "start": 101.2,
+      "duration": 3.68
+    },
+    {
+      "text": "little bit more concrete",
+      "start": 102.88,
+      "duration": 6.0
+    },
+    {
+      "text": "um so a data type and python",
+      "start": 104.88,
+      "duration": 8.4
+    },
+    {
+      "text": "is just uh a way to describe",
+      "start": 108.88,
+      "duration": 7.68
+    },
+    {
+      "text": "the data which should be stored",
+      "start": 113.28,
+      "duration": 7.36
+    },
+    {
+      "text": "within the object and the functions",
+      "start": 116.56,
+      "duration": 6.8
+    },
+    {
+      "text": "which are attached to the object and we",
+      "start": 120.64,
+      "duration": 4.24
+    },
+    {
+      "text": "call those methods",
+      "start": 123.36,
+      "duration": 3.6
+    },
+    {
+      "text": "when they're functions attached to an",
+      "start": 124.88,
+      "duration": 4.96
+    },
+    {
+      "text": "object",
+      "start": 126.96,
+      "duration": 2.88
+    },
+    {
+      "text": "and so we define the class and that",
+      "start": 129.92,
+      "duration": 4.72
+    },
+    {
+      "text": "defines the data type",
+      "start": 132.64,
+      "duration": 5.599
+    },
+    {
+      "text": "and then you can create objects of that",
+      "start": 134.64,
+      "duration": 7.76
+    },
+    {
+      "text": "class and so from a single",
+      "start": 138.239,
+      "duration": 6.561
+    },
+    {
+      "text": "class definition a single data type you",
+      "start": 142.4,
+      "duration": 4.32
+    },
+    {
+      "text": "can have as many objects",
+      "start": 144.8,
+      "duration": 5.2
+    },
+    {
+      "text": "as you want of that type",
+      "start": 146.72,
+      "duration": 7.12
+    },
+    {
+      "text": "and so for each one of those objects",
+      "start": 150.0,
+      "duration": 5.36
+    },
+    {
+      "text": "they could potentially have different",
+      "start": 153.84,
+      "duration": 3.52
+    },
+    {
+      "text": "data that you're passing in",
+      "start": 155.36,
+      "duration": 4.64
+    },
+    {
+      "text": "or that particular object but they're",
+      "start": 157.36,
+      "duration": 3.36
+    },
+    {
+      "text": "going to have",
+      "start": 160.0,
+      "duration": 3.599
+    },
+    {
+      "text": "the same functions attached to them the",
+      "start": 160.72,
+      "duration": 3.92
+    },
+    {
+      "text": "same ones which",
+      "start": 163.599,
+      "duration": 4.0
+    },
+    {
+      "text": "are defined within the class and",
+      "start": 164.64,
+      "duration": 6.879
+    },
+    {
+      "text": "attached to the data type",
+      "start": 167.599,
+      "duration": 6.161
+    },
+    {
+      "text": "and while the data itself may be",
+      "start": 171.519,
+      "duration": 3.761
+    },
+    {
+      "text": "different the structure",
+      "start": 173.76,
+      "duration": 4.399
+    },
+    {
+      "text": "of the data is going to be the same",
+      "start": 175.28,
+      "duration": 4.4
+    },
+    {
+      "text": "because that is also",
+      "start": 178.159,
+      "duration": 4.961
+    },
+    {
+      "text": "defined within the class",
+      "start": 179.68,
+      "duration": 3.44
+    },
+    {
+      "text": "so again you know everything in python",
+      "start": 183.44,
+      "duration": 5.519
+    },
+    {
+      "text": "is an object except for just you know",
+      "start": 186.8,
+      "duration": 3.2
+    },
+    {
+      "text": "the names of things",
+      "start": 188.959,
+      "duration": 3.681
+    },
+    {
+      "text": "those are just references back to those",
+      "start": 190.0,
+      "duration": 3.68
+    },
+    {
+      "text": "objects",
+      "start": 192.64,
+      "duration": 5.04
+    },
+    {
+      "text": "um and so we've already seen these",
+      "start": 193.68,
+      "duration": 6.479
+    },
+    {
+      "text": "strings floats it's list tuples",
+      "start": 197.68,
+      "duration": 6.24
+    },
+    {
+      "text": "they're just types of objects and there",
+      "start": 200.159,
+      "duration": 5.44
+    },
+    {
+      "text": "are other types other built-in types",
+      "start": 203.92,
+      "duration": 3.2
+    },
+    {
+      "text": "that we didn't talk about because",
+      "start": 205.599,
+      "duration": 2.64
+    },
+    {
+      "text": "they're not going to be",
+      "start": 207.12,
+      "duration": 3.119
+    },
+    {
+      "text": "you know very useful for the things that",
+      "start": 208.239,
+      "duration": 4.64
+    },
+    {
+      "text": "we're doing or at least uh",
+      "start": 210.239,
+      "duration": 4.64
+    },
+    {
+      "text": "you know at the level of python that",
+      "start": 212.879,
+      "duration": 3.36
+    },
+    {
+      "text": "we're going to explore in this class",
+      "start": 214.879,
+      "duration": 3.121
+    },
+    {
+      "text": "there's definitely a few that",
+      "start": 216.239,
+      "duration": 3.201
+    },
+    {
+      "text": "would be useful but are just more",
+      "start": 218.0,
+      "duration": 4.319
+    },
+    {
+      "text": "advanced to use",
+      "start": 219.44,
+      "duration": 2.879
+    },
+    {
+      "text": "but you know we're not limited to just",
+      "start": 222.799,
+      "duration": 4.8
+    },
+    {
+      "text": "using those built-in types right there",
+      "start": 225.36,
+      "duration": 4.799
+    },
+    {
+      "text": "are these custom types",
+      "start": 227.599,
+      "duration": 5.121
+    },
+    {
+      "text": "you can you know import a package which",
+      "start": 230.159,
+      "duration": 4.08
+    },
+    {
+      "text": "is going to have its own custom types",
+      "start": 232.72,
+      "duration": 2.64
+    },
+    {
+      "text": "and you can just",
+      "start": 234.239,
+      "duration": 2.56
+    },
+    {
+      "text": "use those and benefit from the",
+      "start": 235.36,
+      "duration": 3.439
+    },
+    {
+      "text": "functionality they built out",
+      "start": 236.799,
+      "duration": 4.961
+    },
+    {
+      "text": "or you can define your own class and",
+      "start": 238.799,
+      "duration": 4.401
+    },
+    {
+      "text": "associated data type",
+      "start": 241.76,
+      "duration": 6.559
+    },
+    {
+      "text": "and use it for your own model or program",
+      "start": 243.2,
+      "duration": 5.119
+    },
+    {
+      "text": "so again the class defines the type",
+      "start": 248.56,
+      "duration": 6.879
+    },
+    {
+      "text": "of the object um",
+      "start": 252.239,
+      "duration": 5.68
+    },
+    {
+      "text": "and then we can create as many objects",
+      "start": 255.439,
+      "duration": 3.2
+    },
+    {
+      "text": "as we want",
+      "start": 257.919,
+      "duration": 3.681
+    },
+    {
+      "text": "of that type",
+      "start": 258.639,
+      "duration": 2.961
+    },
+    {
+      "text": "so um",
+      "start": 262.4,
+      "duration": 5.68
+    },
+    {
+      "text": "the class definition is going to say",
+      "start": 265.68,
+      "duration": 4.64
+    },
+    {
+      "text": "what type of data we need to pass in",
+      "start": 268.08,
+      "duration": 7.04
+    },
+    {
+      "text": "to create an object of that data type",
+      "start": 270.32,
+      "duration": 8.159
+    },
+    {
+      "text": "and then we also on that class define",
+      "start": 275.12,
+      "duration": 6.0
+    },
+    {
+      "text": "the functions or methods",
+      "start": 278.479,
+      "duration": 6.0
+    },
+    {
+      "text": "which should go along with that type",
+      "start": 281.12,
+      "duration": 5.92
+    },
+    {
+      "text": "of object and then every object we",
+      "start": 284.479,
+      "duration": 3.28
+    },
+    {
+      "text": "create",
+      "start": 287.04,
+      "duration": 3.599
+    },
+    {
+      "text": "of that type is gonna have all those",
+      "start": 287.759,
+      "duration": 3.521
+    },
+    {
+      "text": "functions",
+      "start": 290.639,
+      "duration": 3.521
+    },
+    {
+      "text": "so it can be a nice way to uh organize",
+      "start": 291.28,
+      "duration": 4.24
+    },
+    {
+      "text": "your code so that it can",
+      "start": 294.16,
+      "duration": 4.8
+    },
+    {
+      "text": "easily be reused",
+      "start": 295.52,
+      "duration": 3.44
+    },
+    {
+      "text": "um so to make this a little more",
+      "start": 299.28,
+      "duration": 3.919
+    },
+    {
+      "text": "concrete",
+      "start": 302.32,
+      "duration": 3.12
+    },
+    {
+      "text": "you know thinking about the list that's",
+      "start": 303.199,
+      "duration": 3.761
+    },
+    {
+      "text": "the data type we're already familiar",
+      "start": 305.44,
+      "duration": 3.92
+    },
+    {
+      "text": "with we've already worked with",
+      "start": 306.96,
+      "duration": 4.48
+    },
+    {
+      "text": "so in the list we might have one list",
+      "start": 309.36,
+      "duration": 3.76
+    },
+    {
+      "text": "that has one two three",
+      "start": 311.44,
+      "duration": 4.319
+    },
+    {
+      "text": "another list that has abc right we",
+      "start": 313.12,
+      "duration": 5.04
+    },
+    {
+      "text": "constructed them both in the same way",
+      "start": 315.759,
+      "duration": 4.481
+    },
+    {
+      "text": "they're both expecting to receive this",
+      "start": 318.16,
+      "duration": 4.24
+    },
+    {
+      "text": "sequence of different objects",
+      "start": 320.24,
+      "duration": 5.2
+    },
+    {
+      "text": "and so uh you know the class definition",
+      "start": 322.4,
+      "duration": 3.84
+    },
+    {
+      "text": "for lists",
+      "start": 325.44,
+      "duration": 3.599
+    },
+    {
+      "text": "that's in you know python's source code",
+      "start": 326.24,
+      "duration": 3.44
+    },
+    {
+      "text": "um",
+      "start": 329.039,
+      "duration": 2.16
+    },
+    {
+      "text": "you know says that we should pass it",
+      "start": 329.68,
+      "duration": 3.28
+    },
+    {
+      "text": "some kind of sequence of items",
+      "start": 331.199,
+      "duration": 3.681
+    },
+    {
+      "text": "and that's going to become you know just",
+      "start": 332.96,
+      "duration": 3.12
+    },
+    {
+      "text": "an ordered",
+      "start": 334.88,
+      "duration": 5.12
+    },
+    {
+      "text": "uh structure in the list",
+      "start": 336.08,
+      "duration": 5.92
+    },
+    {
+      "text": "uh within every single list that we work",
+      "start": 340.0,
+      "duration": 3.12
+    },
+    {
+      "text": "with we can do it",
+      "start": 342.0,
+      "duration": 4.24
+    },
+    {
+      "text": "a dot append and that will add into the",
+      "start": 343.12,
+      "duration": 3.76
+    },
+    {
+      "text": "list",
+      "start": 346.24,
+      "duration": 3.679
+    },
+    {
+      "text": "right if that's an item in the list so",
+      "start": 346.88,
+      "duration": 4.8
+    },
+    {
+      "text": "no matter if it's the one two three list",
+      "start": 349.919,
+      "duration": 3.84
+    },
+    {
+      "text": "or if it's the abc list",
+      "start": 351.68,
+      "duration": 4.16
+    },
+    {
+      "text": "either one we can append on it just",
+      "start": 353.759,
+      "duration": 3.201
+    },
+    {
+      "text": "anything that's a list",
+      "start": 355.84,
+      "duration": 3.52
+    },
+    {
+      "text": "we can do an append on it and that's",
+      "start": 356.96,
+      "duration": 3.84
+    },
+    {
+      "text": "because that append",
+      "start": 359.36,
+      "duration": 3.839
+    },
+    {
+      "text": "is defined within the class which",
+      "start": 360.8,
+      "duration": 3.519
+    },
+    {
+      "text": "defines the list",
+      "start": 363.199,
+      "duration": 4.641
+    },
+    {
+      "text": "data type",
+      "start": 364.319,
+      "duration": 3.521
+    },
+    {
+      "text": "so then looking at that you know with",
+      "start": 368.0,
+      "duration": 4.319
+    },
+    {
+      "text": "that same kind of visualization that we",
+      "start": 370.319,
+      "duration": 3.361
+    },
+    {
+      "text": "looked at before",
+      "start": 372.319,
+      "duration": 5.201
+    },
+    {
+      "text": "where we have one class it defines the",
+      "start": 373.68,
+      "duration": 5.84
+    },
+    {
+      "text": "structure of the data and it defines the",
+      "start": 377.52,
+      "duration": 3.679
+    },
+    {
+      "text": "functions and then we can create objects",
+      "start": 379.52,
+      "duration": 3.28
+    },
+    {
+      "text": "of that",
+      "start": 381.199,
+      "duration": 4.641
+    },
+    {
+      "text": "so here list is the class",
+      "start": 382.8,
+      "duration": 5.76
+    },
+    {
+      "text": "and so for the list you know we have the",
+      "start": 385.84,
+      "duration": 3.359
+    },
+    {
+      "text": "items",
+      "start": 388.56,
+      "duration": 2.479
+    },
+    {
+      "text": "and the lists you know just this ordered",
+      "start": 389.199,
+      "duration": 3.681
+    },
+    {
+      "text": "sequence of items",
+      "start": 391.039,
+      "duration": 4.561
+    },
+    {
+      "text": "and then it has defined the methods",
+      "start": 392.88,
+      "duration": 3.36
+    },
+    {
+      "text": "append",
+      "start": 395.6,
+      "duration": 3.92
+    },
+    {
+      "text": "insert pop etc all the other uh list",
+      "start": 396.24,
+      "duration": 5.519
+    },
+    {
+      "text": "methods that we work with",
+      "start": 399.52,
+      "duration": 4.88
+    },
+    {
+      "text": "and so whether we create you know a list",
+      "start": 401.759,
+      "duration": 3.041
+    },
+    {
+      "text": "of",
+      "start": 404.4,
+      "duration": 3.6
+    },
+    {
+      "text": "a and b the strings or we create a list",
+      "start": 404.8,
+      "duration": 6.399
+    },
+    {
+      "text": "of one and two they're both gonna have",
+      "start": 408.0,
+      "duration": 6.24
+    },
+    {
+      "text": "append insert all the functions uh",
+      "start": 411.199,
+      "duration": 6.081
+    },
+    {
+      "text": "but the actual items the data is inside",
+      "start": 414.24,
+      "duration": 5.28
+    },
+    {
+      "text": "uh is gonna be different this one has a",
+      "start": 417.28,
+      "duration": 4.88
+    },
+    {
+      "text": "and b this one has one and two uh but",
+      "start": 419.52,
+      "duration": 3.679
+    },
+    {
+      "text": "they are in the same",
+      "start": 422.16,
+      "duration": 3.439
+    },
+    {
+      "text": "structure they are you know a sequence",
+      "start": 423.199,
+      "duration": 3.601
+    },
+    {
+      "text": "and ordered sequence",
+      "start": 425.599,
+      "duration": 4.0
+    },
+    {
+      "text": "of items",
+      "start": 426.8,
+      "duration": 2.799
+    },
+    {
+      "text": "um so this concept extends",
+      "start": 429.84,
+      "duration": 6.639
+    },
+    {
+      "text": "to creating your own custom data types",
+      "start": 432.96,
+      "duration": 6.4
+    },
+    {
+      "text": "so uh you know let's use a car as an",
+      "start": 436.479,
+      "duration": 4.321
+    },
+    {
+      "text": "example because that's you know it's a",
+      "start": 439.36,
+      "duration": 3.679
+    },
+    {
+      "text": "very concrete thing that everybody knows",
+      "start": 440.8,
+      "duration": 3.119
+    },
+    {
+      "text": "about",
+      "start": 443.039,
+      "duration": 4.0
+    },
+    {
+      "text": "um so we can make a class uh for a car",
+      "start": 443.919,
+      "duration": 5.201
+    },
+    {
+      "text": "and make a dab type for a car",
+      "start": 447.039,
+      "duration": 5.28
+    },
+    {
+      "text": "um and so you know for a car",
+      "start": 449.12,
+      "duration": 4.72
+    },
+    {
+      "text": "you think about kind of the main",
+      "start": 452.319,
+      "duration": 3.44
+    },
+    {
+      "text": "characteristics uh",
+      "start": 453.84,
+      "duration": 3.359
+    },
+    {
+      "text": "you know right at the highest level the",
+      "start": 455.759,
+      "duration": 3.681
+    },
+    {
+      "text": "make and the model are like the most",
+      "start": 457.199,
+      "duration": 4.0
+    },
+    {
+      "text": "important characteristics of the car",
+      "start": 459.44,
+      "duration": 3.52
+    },
+    {
+      "text": "right um",
+      "start": 461.199,
+      "duration": 3.28
+    },
+    {
+      "text": "and so you know certainly there there",
+      "start": 462.96,
+      "duration": 3.44
+    },
+    {
+      "text": "could be other characteristics",
+      "start": 464.479,
+      "duration": 4.321
+    },
+    {
+      "text": "uh other data which we have within the",
+      "start": 466.4,
+      "duration": 3.28
+    },
+    {
+      "text": "car",
+      "start": 468.8,
+      "duration": 3.04
+    },
+    {
+      "text": "um data type but let's just keep it",
+      "start": 469.68,
+      "duration": 3.76
+    },
+    {
+      "text": "simple and say you know just make and",
+      "start": 471.84,
+      "duration": 2.16
+    },
+    {
+      "text": "model",
+      "start": 473.44,
+      "duration": 3.039
+    },
+    {
+      "text": "are the two pieces of data which we're",
+      "start": 474.0,
+      "duration": 3.12
+    },
+    {
+      "text": "gonna have",
+      "start": 476.479,
+      "duration": 3.521
+    },
+    {
+      "text": "in the car and then with a car you can",
+      "start": 477.12,
+      "duration": 4.16
+    },
+    {
+      "text": "drive the car",
+      "start": 480.0,
+      "duration": 3.84
+    },
+    {
+      "text": "uh you know you can fill it up uh add",
+      "start": 481.28,
+      "duration": 3.52
+    },
+    {
+      "text": "gas to it",
+      "start": 483.84,
+      "duration": 4.56
+    },
+    {
+      "text": "etc um and",
+      "start": 484.8,
+      "duration": 6.48
+    },
+    {
+      "text": "so uh we can create then you know two",
+      "start": 488.4,
+      "duration": 3.76
+    },
+    {
+      "text": "different cars here",
+      "start": 491.28,
+      "duration": 2.96
+    },
+    {
+      "text": "we can create a honda civic bypassing it",
+      "start": 492.16,
+      "duration": 3.68
+    },
+    {
+      "text": "honda and then civic",
+      "start": 494.24,
+      "duration": 3.76
+    },
+    {
+      "text": "um and so the make is going to be honda",
+      "start": 495.84,
+      "duration": 4.0
+    },
+    {
+      "text": "the model is going to be civic",
+      "start": 498.0,
+      "duration": 3.68
+    },
+    {
+      "text": "and that you can drive the honda civic",
+      "start": 499.84,
+      "duration": 3.759
+    },
+    {
+      "text": "you can fill up the honda civic",
+      "start": 501.68,
+      "duration": 4.72
+    },
+    {
+      "text": "or we could create the toyota corolla",
+      "start": 503.599,
+      "duration": 4.481
+    },
+    {
+      "text": "and for that the data is going to be",
+      "start": 506.4,
+      "duration": 3.12
+    },
+    {
+      "text": "different though it will be in the same",
+      "start": 508.08,
+      "duration": 3.2
+    },
+    {
+      "text": "structure it is going to have a make it",
+      "start": 509.52,
+      "duration": 2.8
+    },
+    {
+      "text": "is going to have a model",
+      "start": 511.28,
+      "duration": 2.48
+    },
+    {
+      "text": "it's just going to be different values",
+      "start": 512.32,
+      "duration": 3.04
+    },
+    {
+      "text": "for each of those",
+      "start": 513.76,
+      "duration": 3.6
+    },
+    {
+      "text": "and we are going to be able to drive it",
+      "start": 515.36,
+      "duration": 3.52
+    },
+    {
+      "text": "we are going to be able to fill it up",
+      "start": 517.36,
+      "duration": 4.64
+    },
+    {
+      "text": "etc so again the functions",
+      "start": 518.88,
+      "duration": 5.36
+    },
+    {
+      "text": "come universally to all the objects and",
+      "start": 522.0,
+      "duration": 3.6
+    },
+    {
+      "text": "the data structure",
+      "start": 524.24,
+      "duration": 2.96
+    },
+    {
+      "text": "is going to come but it's going to be",
+      "start": 525.6,
+      "duration": 3.52
+    },
+    {
+      "text": "different actual values",
+      "start": 527.2,
+      "duration": 4.319
+    },
+    {
+      "text": "in the data depending on how we created",
+      "start": 529.12,
+      "duration": 6.719
+    },
+    {
+      "text": "the object",
+      "start": 531.519,
+      "duration": 8.161
+    },
+    {
+      "text": "so um let's just say we have this",
+      "start": 535.839,
+      "duration": 7.68
+    },
+    {
+      "text": "car class defined elsewhere",
+      "start": 539.68,
+      "duration": 7.2
+    },
+    {
+      "text": "so we're going to import that car",
+      "start": 543.519,
+      "duration": 7.601
+    },
+    {
+      "text": "class and so this can be as simple as",
+      "start": 546.88,
+      "duration": 6.32
+    },
+    {
+      "text": "just you know a python file",
+      "start": 551.12,
+      "duration": 5.52
+    },
+    {
+      "text": "in the same directory as your notebook",
+      "start": 553.2,
+      "duration": 4.8
+    },
+    {
+      "text": "then you would be able to import like",
+      "start": 556.64,
+      "duration": 3.84
+    },
+    {
+      "text": "this or it could be from some",
+      "start": 558.0,
+      "duration": 4.8
+    },
+    {
+      "text": "external package which you've installed",
+      "start": 560.48,
+      "duration": 3.359
+    },
+    {
+      "text": "then you can also",
+      "start": 562.8,
+      "duration": 2.8
+    },
+    {
+      "text": "import like that if this was the name of",
+      "start": 563.839,
+      "duration": 3.041
+    },
+    {
+      "text": "the package",
+      "start": 565.6,
+      "duration": 4.799
+    },
+    {
+      "text": "um but you know the main idea is we're",
+      "start": 566.88,
+      "duration": 5.2
+    },
+    {
+      "text": "just we're getting the car",
+      "start": 570.399,
+      "duration": 4.56
+    },
+    {
+      "text": "uh class even though we didn't define it",
+      "start": 572.08,
+      "duration": 3.199
+    },
+    {
+      "text": "you know",
+      "start": 574.959,
+      "duration": 4.88
+    },
+    {
+      "text": "in this particular uh session directly",
+      "start": 575.279,
+      "duration": 8.721
+    },
+    {
+      "text": "so then we can create the car and",
+      "start": 579.839,
+      "duration": 7.44
+    },
+    {
+      "text": "calling a class to create an object",
+      "start": 584.0,
+      "duration": 5.839
+    },
+    {
+      "text": "of that data type looks just like",
+      "start": 587.279,
+      "duration": 4.081
+    },
+    {
+      "text": "calling a function",
+      "start": 589.839,
+      "duration": 4.081
+    },
+    {
+      "text": "you put the name of the class and then",
+      "start": 591.36,
+      "duration": 3.52
+    },
+    {
+      "text": "open parentheses",
+      "start": 593.92,
+      "duration": 3.28
+    },
+    {
+      "text": "and then you pass whatever inputs and",
+      "start": 594.88,
+      "duration": 4.0
+    },
+    {
+      "text": "then close parentheses and that's going",
+      "start": 597.2,
+      "duration": 2.48
+    },
+    {
+      "text": "to make",
+      "start": 598.88,
+      "duration": 4.24
+    },
+    {
+      "text": "the object so if we print that out",
+      "start": 599.68,
+      "duration": 7.52
+    },
+    {
+      "text": "then we can see that it prints as a car",
+      "start": 603.12,
+      "duration": 5.92
+    },
+    {
+      "text": "and then if we check the type we can see",
+      "start": 607.2,
+      "duration": 3.04
+    },
+    {
+      "text": "that the type is",
+      "start": 609.04,
+      "duration": 4.4
+    },
+    {
+      "text": "a car type inside the",
+      "start": 610.24,
+      "duration": 6.32
+    },
+    {
+      "text": "car example module",
+      "start": 613.44,
+      "duration": 6.0
+    },
+    {
+      "text": "and then if we check the make of this",
+      "start": 616.56,
+      "duration": 4.88
+    },
+    {
+      "text": "honda civic we get honda",
+      "start": 619.44,
+      "duration": 5.28
+    },
+    {
+      "text": "and if we call the drive method uh",
+      "start": 621.44,
+      "duration": 5.2
+    },
+    {
+      "text": "then we're gonna see that it's driving",
+      "start": 624.72,
+      "duration": 3.52
+    },
+    {
+      "text": "away um",
+      "start": 626.64,
+      "duration": 4.0
+    },
+    {
+      "text": "so again you know calling any function",
+      "start": 628.24,
+      "duration": 4.48
+    },
+    {
+      "text": "we gotta do open close parenthesis to",
+      "start": 630.64,
+      "duration": 3.759
+    },
+    {
+      "text": "actually call",
+      "start": 632.72,
+      "duration": 5.28
+    },
+    {
+      "text": "that function in this case a method",
+      "start": 634.399,
+      "duration": 3.601
+    },
+    {
+      "text": "so you know it's generally a little bit",
+      "start": 639.279,
+      "duration": 3.601
+    },
+    {
+      "text": "more advanced",
+      "start": 641.92,
+      "duration": 4.159
+    },
+    {
+      "text": "to construct your own classes your own",
+      "start": 642.88,
+      "duration": 4.639
+    },
+    {
+      "text": "custom data types",
+      "start": 646.079,
+      "duration": 2.88
+    },
+    {
+      "text": "that's not where we're going to be",
+      "start": 647.519,
+      "duration": 3.841
+    },
+    {
+      "text": "focusing in this course",
+      "start": 648.959,
+      "duration": 3.841
+    },
+    {
+      "text": "i would definitely encourage you to",
+      "start": 651.36,
+      "duration": 4.4
+    },
+    {
+      "text": "learn about that it's very useful",
+      "start": 652.8,
+      "duration": 4.8
+    },
+    {
+      "text": "you know i certainly apply it all the",
+      "start": 655.76,
+      "duration": 3.519
+    },
+    {
+      "text": "time",
+      "start": 657.6,
+      "duration": 3.52
+    },
+    {
+      "text": "but it's just you know one of those",
+      "start": 659.279,
+      "duration": 3.841
+    },
+    {
+      "text": "things where if this was a two-semester",
+      "start": 661.12,
+      "duration": 4.0
+    },
+    {
+      "text": "course i would be happy to spend time on",
+      "start": 663.12,
+      "duration": 2.64
+    },
+    {
+      "text": "this",
+      "start": 665.12,
+      "duration": 2.56
+    },
+    {
+      "text": "but we have very limited time we got to",
+      "start": 665.76,
+      "duration": 3.04
+    },
+    {
+      "text": "make sure to",
+      "start": 667.68,
+      "duration": 2.8
+    },
+    {
+      "text": "get all the financial modeling material",
+      "start": 668.8,
+      "duration": 3.92
+    },
+    {
+      "text": "in and so we can't spend a bunch of time",
+      "start": 670.48,
+      "duration": 2.88
+    },
+    {
+      "text": "on",
+      "start": 672.72,
+      "duration": 2.4
+    },
+    {
+      "text": "you know more generally useful",
+      "start": 673.36,
+      "duration": 4.24
+    },
+    {
+      "text": "programming concepts",
+      "start": 675.12,
+      "duration": 4.56
+    },
+    {
+      "text": "so definitely i would encourage you to",
+      "start": 677.6,
+      "duration": 4.4
+    },
+    {
+      "text": "learn about that on your own",
+      "start": 679.68,
+      "duration": 4.32
+    },
+    {
+      "text": "you will definitely find it useful going",
+      "start": 682.0,
+      "duration": 3.279
+    },
+    {
+      "text": "forward",
+      "start": 684.0,
+      "duration": 3.68
+    },
+    {
+      "text": "but for the purposes of this course you",
+      "start": 685.279,
+      "duration": 4.56
+    },
+    {
+      "text": "don't need to know how to do that",
+      "start": 687.68,
+      "duration": 6.0
+    },
+    {
+      "text": "um now why do we just cover this",
+      "start": 689.839,
+      "duration": 5.601
+    },
+    {
+      "text": "if we're not going to go and create our",
+      "start": 693.68,
+      "duration": 3.44
+    },
+    {
+      "text": "own custom classes",
+      "start": 695.44,
+      "duration": 4.8
+    },
+    {
+      "text": "so couple reasons one is just to give a",
+      "start": 697.12,
+      "duration": 4.88
+    },
+    {
+      "text": "better understanding of the general",
+      "start": 700.24,
+      "duration": 3.76
+    },
+    {
+      "text": "workings of python you know again",
+      "start": 702.0,
+      "duration": 3.44
+    },
+    {
+      "text": "everything",
+      "start": 704.0,
+      "duration": 4.079
+    },
+    {
+      "text": "in python is an object every object has",
+      "start": 705.44,
+      "duration": 3.44
+    },
+    {
+      "text": "a type",
+      "start": 708.079,
+      "duration": 5.601
+    },
+    {
+      "text": "we can define those types using classes",
+      "start": 708.88,
+      "duration": 4.8
+    },
+    {
+      "text": "and then you know when you're just",
+      "start": 713.92,
+      "duration": 3.76
+    },
+    {
+      "text": "calling functions or methods",
+      "start": 715.44,
+      "duration": 5.36
+    },
+    {
+      "text": "um you know sometimes we've had like",
+      "start": 717.68,
+      "duration": 4.8
+    },
+    {
+      "text": "you know when it's a list we do dot",
+      "start": 720.8,
+      "duration": 3.12
+    },
+    {
+      "text": "append and so it's you know",
+      "start": 722.48,
+      "duration": 4.64
+    },
+    {
+      "text": "attached to the object we then do a dot",
+      "start": 723.92,
+      "duration": 6.0
+    },
+    {
+      "text": "and then we call a function versus if we",
+      "start": 727.12,
+      "duration": 4.56
+    },
+    {
+      "text": "just define a function",
+      "start": 729.92,
+      "duration": 4.24
+    },
+    {
+      "text": "then you're just calling that open close",
+      "start": 731.68,
+      "duration": 4.32
+    },
+    {
+      "text": "parenthesis there's not a dot or any",
+      "start": 734.16,
+      "duration": 4.0
+    },
+    {
+      "text": "variable before that",
+      "start": 736.0,
+      "duration": 3.92
+    },
+    {
+      "text": "so hopefully this makes a little more",
+      "start": 738.16,
+      "duration": 3.44
+    },
+    {
+      "text": "sense now",
+      "start": 739.92,
+      "duration": 3.68
+    },
+    {
+      "text": "that when we see this kind of format is",
+      "start": 741.6,
+      "duration": 3.039
+    },
+    {
+      "text": "because",
+      "start": 743.6,
+      "duration": 4.08
+    },
+    {
+      "text": "uh whatever the data type of the object",
+      "start": 744.639,
+      "duration": 6.161
+    },
+    {
+      "text": "the class has defined this function as a",
+      "start": 747.68,
+      "duration": 3.76
+    },
+    {
+      "text": "method",
+      "start": 750.8,
+      "duration": 4.24
+    },
+    {
+      "text": "of the data type and so you can do dot",
+      "start": 751.44,
+      "duration": 6.959
+    },
+    {
+      "text": "and then the function on anything",
+      "start": 755.04,
+      "duration": 6.479
+    },
+    {
+      "text": "of that data type versus a plane",
+      "start": 758.399,
+      "duration": 4.321
+    },
+    {
+      "text": "function",
+      "start": 761.519,
+      "duration": 3.521
+    },
+    {
+      "text": "is not attached to any data type and you",
+      "start": 762.72,
+      "duration": 3.359
+    },
+    {
+      "text": "just call it",
+      "start": 765.04,
+      "duration": 3.919
+    },
+    {
+      "text": "uh by its name without any dot or",
+      "start": 766.079,
+      "duration": 6.081
+    },
+    {
+      "text": "variable name before that",
+      "start": 768.959,
+      "duration": 6.401
+    },
+    {
+      "text": "and then the um",
+      "start": 772.16,
+      "duration": 4.88
+    },
+    {
+      "text": "you know one other reason which i didn't",
+      "start": 775.36,
+      "duration": 3.12
+    },
+    {
+      "text": "put on here is then that",
+      "start": 777.04,
+      "duration": 4.0
+    },
+    {
+      "text": "uh you know all these uh libraries which",
+      "start": 778.48,
+      "duration": 3.84
+    },
+    {
+      "text": "are going to bring in",
+      "start": 781.04,
+      "duration": 3.919
+    },
+    {
+      "text": "and work with they have defined their",
+      "start": 782.32,
+      "duration": 3.12
+    },
+    {
+      "text": "own",
+      "start": 784.959,
+      "duration": 2.961
+    },
+    {
+      "text": "custom classes and so just getting a",
+      "start": 785.44,
+      "duration": 4.32
+    },
+    {
+      "text": "little bit more visibility",
+      "start": 787.92,
+      "duration": 4.08
+    },
+    {
+      "text": "into you know when you just import car",
+      "start": 789.76,
+      "duration": 4.0
+    },
+    {
+      "text": "and you use that like what is going on",
+      "start": 792.0,
+      "duration": 3.279
+    },
+    {
+      "text": "where did that come from what is this",
+      "start": 793.76,
+      "duration": 2.319
+    },
+    {
+      "text": "car thing",
+      "start": 795.279,
+      "duration": 4.081
+    },
+    {
+      "text": "it's a class and that defines the data",
+      "start": 796.079,
+      "duration": 4.481
+    },
+    {
+      "text": "type that we're going to use",
+      "start": 799.36,
+      "duration": 3.68
+    },
+    {
+      "text": "so you know giving more visibility into",
+      "start": 800.56,
+      "duration": 3.839
+    },
+    {
+      "text": "how that works",
+      "start": 803.04,
+      "duration": 4.72
+    },
+    {
+      "text": "um but then also there is a",
+      "start": 804.399,
+      "duration": 6.721
+    },
+    {
+      "text": "simplified version of classes called",
+      "start": 807.76,
+      "duration": 4.8
+    },
+    {
+      "text": "data classes",
+      "start": 811.12,
+      "duration": 3.76
+    },
+    {
+      "text": "and we are going to directly create",
+      "start": 812.56,
+      "duration": 3.12
+    },
+    {
+      "text": "those",
+      "start": 814.88,
+      "duration": 3.68
+    },
+    {
+      "text": "so those we're going to use to organize",
+      "start": 815.68,
+      "duration": 3.92
+    },
+    {
+      "text": "the inputs",
+      "start": 818.56,
+      "duration": 4.719
+    },
+    {
+      "text": "for our model um",
+      "start": 819.6,
+      "duration": 5.679
+    },
+    {
+      "text": "but we're not going to go to building",
+      "start": 823.279,
+      "duration": 4.721
+    },
+    {
+      "text": "you know full-on just general classes in",
+      "start": 825.279,
+      "duration": 5.521
+    },
+    {
+      "text": "this course you can certainly feel free",
+      "start": 828.0,
+      "duration": 3.36
+    },
+    {
+      "text": "to use them",
+      "start": 830.8,
+      "duration": 2.56
+    },
+    {
+      "text": "in your projects if you you know figure",
+      "start": 831.36,
+      "duration": 3.919
+    },
+    {
+      "text": "out everything on your own",
+      "start": 833.36,
+      "duration": 3.919
+    },
+    {
+      "text": "i'm happy to answer questions on them",
+      "start": 835.279,
+      "duration": 3.521
+    },
+    {
+      "text": "but it's just not something we're going",
+      "start": 837.279,
+      "duration": 2.0
+    },
+    {
+      "text": "to",
+      "start": 838.8,
+      "duration": 4.24
+    },
+    {
+      "text": "focus on in the course um",
+      "start": 839.279,
+      "duration": 7.041
+    },
+    {
+      "text": "but data classes we will so data classes",
+      "start": 843.04,
+      "duration": 6.32
+    },
+    {
+      "text": "uh is they're a lot simpler to define",
+      "start": 846.32,
+      "duration": 5.92
+    },
+    {
+      "text": "than a class um and typically they're",
+      "start": 849.36,
+      "duration": 4.96
+    },
+    {
+      "text": "just used to kind of group data together",
+      "start": 852.24,
+      "duration": 3.12
+    },
+    {
+      "text": "which is exactly",
+      "start": 854.32,
+      "duration": 4.24
+    },
+    {
+      "text": "what we're trying to do here",
+      "start": 855.36,
+      "duration": 3.2
+    },
+    {
+      "text": "so for data classes here's kind of the",
+      "start": 859.199,
+      "duration": 4.32
+    },
+    {
+      "text": "setup",
+      "start": 862.72,
+      "duration": 4.799
+    },
+    {
+      "text": "to define a data class",
+      "start": 863.519,
+      "duration": 7.841
+    },
+    {
+      "text": "so here um we do need to import it",
+      "start": 867.519,
+      "duration": 6.88
+    },
+    {
+      "text": "it is built into python but it's uh",
+      "start": 871.36,
+      "duration": 5.599
+    },
+    {
+      "text": "you know there are about 30 or 40",
+      "start": 874.399,
+      "duration": 3.361
+    },
+    {
+      "text": "modules",
+      "start": 876.959,
+      "duration": 2.88
+    },
+    {
+      "text": "or packages which are built into python",
+      "start": 877.76,
+      "duration": 3.759
+    },
+    {
+      "text": "but you still need to import them",
+      "start": 879.839,
+      "duration": 4.0
+    },
+    {
+      "text": "they're not just you know they're",
+      "start": 881.519,
+      "duration": 3.68
+    },
+    {
+      "text": "waiting for you to use it you still need",
+      "start": 883.839,
+      "duration": 2.881
+    },
+    {
+      "text": "to import it even though it comes with",
+      "start": 885.199,
+      "duration": 2.801
+    },
+    {
+      "text": "every python",
+      "start": 886.72,
+      "duration": 2.96
+    },
+    {
+      "text": "this is one of those instances data",
+      "start": 888.0,
+      "duration": 3.04
+    },
+    {
+      "text": "classes is built in",
+      "start": 889.68,
+      "duration": 4.32
+    },
+    {
+      "text": "but we still got to import it so we do",
+      "start": 891.04,
+      "duration": 5.359
+    },
+    {
+      "text": "this import so we get the data class",
+      "start": 894.0,
+      "duration": 4.8
+    },
+    {
+      "text": "and then um this is what's called a",
+      "start": 896.399,
+      "duration": 3.12
+    },
+    {
+      "text": "decorator",
+      "start": 898.8,
+      "duration": 1.92
+    },
+    {
+      "text": "you don't really need to worry about",
+      "start": 899.519,
+      "duration": 3.361
+    },
+    {
+      "text": "that that's definitely a more advanced",
+      "start": 900.72,
+      "duration": 4.4
+    },
+    {
+      "text": "uh concept actually you know like",
+      "start": 902.88,
+      "duration": 4.48
+    },
+    {
+      "text": "creating decorators and understanding",
+      "start": 905.12,
+      "duration": 4.8
+    },
+    {
+      "text": "how they work in detail uh we're not",
+      "start": 907.36,
+      "duration": 3.52
+    },
+    {
+      "text": "gonna go there",
+      "start": 909.92,
+      "duration": 2.159
+    },
+    {
+      "text": "in this class that's definitely",
+      "start": 910.88,
+      "duration": 2.88
+    },
+    {
+      "text": "something you can learn about on your",
+      "start": 912.079,
+      "duration": 2.56
+    },
+    {
+      "text": "own",
+      "start": 913.76,
+      "duration": 2.56
+    },
+    {
+      "text": "just know that you have to put this at",
+      "start": 914.639,
+      "duration": 4.081
+    },
+    {
+      "text": "data class at sign data class",
+      "start": 916.32,
+      "duration": 4.8
+    },
+    {
+      "text": "above the class statement and then it's",
+      "start": 918.72,
+      "duration": 3.359
+    },
+    {
+      "text": "class",
+      "start": 921.12,
+      "duration": 3.04
+    },
+    {
+      "text": "the keyword class and then whatever you",
+      "start": 922.079,
+      "duration": 3.2
+    },
+    {
+      "text": "want the name",
+      "start": 924.16,
+      "duration": 4.08
+    },
+    {
+      "text": "of the class to be and then a colon and",
+      "start": 925.279,
+      "duration": 4.721
+    },
+    {
+      "text": "then just like we've seen with",
+      "start": 928.24,
+      "duration": 3.44
+    },
+    {
+      "text": "you know if statements we've seen it",
+      "start": 930.0,
+      "duration": 3.12
+    },
+    {
+      "text": "with for loops we've seen it with",
+      "start": 931.68,
+      "duration": 2.719
+    },
+    {
+      "text": "defining functions",
+      "start": 933.12,
+      "duration": 4.639
+    },
+    {
+      "text": "we do this colon and then after that we",
+      "start": 934.399,
+      "duration": 5.041
+    },
+    {
+      "text": "have indentation and then everything",
+      "start": 937.759,
+      "duration": 2.64
+    },
+    {
+      "text": "indented",
+      "start": 939.44,
+      "duration": 3.199
+    },
+    {
+      "text": "is going to be part of this class",
+      "start": 940.399,
+      "duration": 4.161
+    },
+    {
+      "text": "definition",
+      "start": 942.639,
+      "duration": 5.041
+    },
+    {
+      "text": "so for that the data class",
+      "start": 944.56,
+      "duration": 5.44
+    },
+    {
+      "text": "uh what we do is we define all the",
+      "start": 947.68,
+      "duration": 3.44
+    },
+    {
+      "text": "pieces of data",
+      "start": 950.0,
+      "duration": 3.6
+    },
+    {
+      "text": "which are going to be stored within this",
+      "start": 951.12,
+      "duration": 4.399
+    },
+    {
+      "text": "class so we're defining that data",
+      "start": 953.6,
+      "duration": 2.64
+    },
+    {
+      "text": "structure",
+      "start": 955.519,
+      "duration": 4.0
+    },
+    {
+      "text": "of the class and so here",
+      "start": 956.24,
+      "duration": 7.039
+    },
+    {
+      "text": "i'm going to say that these model inputs",
+      "start": 959.519,
+      "duration": 6.641
+    },
+    {
+      "text": "should have interest rates as one of the",
+      "start": 963.279,
+      "duration": 4.721
+    },
+    {
+      "text": "pieces of data in here",
+      "start": 966.16,
+      "duration": 4.72
+    },
+    {
+      "text": "and that should be a tuple and that's",
+      "start": 968.0,
+      "duration": 4.8
+    },
+    {
+      "text": "going to default to five six and seven",
+      "start": 970.88,
+      "duration": 3.12
+    },
+    {
+      "text": "percent",
+      "start": 972.8,
+      "duration": 4.32
+    },
+    {
+      "text": "and then uh we should have a payment",
+      "start": 974.0,
+      "duration": 6.24
+    },
+    {
+      "text": "as well that's going to be a floating",
+      "start": 977.12,
+      "duration": 4.159
+    },
+    {
+      "text": "point number",
+      "start": 980.24,
+      "duration": 3.44
+    },
+    {
+      "text": "um because it could have decimals",
+      "start": 981.279,
+      "duration": 3.68
+    },
+    {
+      "text": "potentially",
+      "start": 983.68,
+      "duration": 3.36
+    },
+    {
+      "text": "and we're going to set that equal to a",
+      "start": 984.959,
+      "duration": 4.8
+    },
+    {
+      "text": "thousand by default",
+      "start": 987.04,
+      "duration": 6.56
+    },
+    {
+      "text": "um so then we can create",
+      "start": 989.759,
+      "duration": 6.961
+    },
+    {
+      "text": "an instance of the inputs so again it's",
+      "start": 993.6,
+      "duration": 5.039
+    },
+    {
+      "text": "just like the functions you know first",
+      "start": 996.72,
+      "duration": 4.08
+    },
+    {
+      "text": "you have to define the function and then",
+      "start": 998.639,
+      "duration": 4.32
+    },
+    {
+      "text": "you have to use the function",
+      "start": 1000.8,
+      "duration": 4.959
+    },
+    {
+      "text": "same concept with classes first you have",
+      "start": 1002.959,
+      "duration": 4.24
+    },
+    {
+      "text": "to define the class",
+      "start": 1005.759,
+      "duration": 4.721
+    },
+    {
+      "text": "then you can use the class so",
+      "start": 1007.199,
+      "duration": 5.041
+    },
+    {
+      "text": "here we're just setting up the",
+      "start": 1010.48,
+      "duration": 3.279
+    },
+    {
+      "text": "definition uh",
+      "start": 1012.24,
+      "duration": 4.159
+    },
+    {
+      "text": "you know this we're setting up this part",
+      "start": 1013.759,
+      "duration": 4.88
+    },
+    {
+      "text": "we haven't actually created the objects",
+      "start": 1016.399,
+      "duration": 4.481
+    },
+    {
+      "text": "out of it yet",
+      "start": 1018.639,
+      "duration": 4.56
+    },
+    {
+      "text": "so to create the objects then it looks",
+      "start": 1020.88,
+      "duration": 4.159
+    },
+    {
+      "text": "again just like calling a function",
+      "start": 1023.199,
+      "duration": 4.64
+    },
+    {
+      "text": "you put the name of the class and then",
+      "start": 1025.039,
+      "duration": 4.081
+    },
+    {
+      "text": "open parentheses",
+      "start": 1027.839,
+      "duration": 3.521
+    },
+    {
+      "text": "and then you pass whatever arguments and",
+      "start": 1029.12,
+      "duration": 3.439
+    },
+    {
+      "text": "then you close",
+      "start": 1031.36,
+      "duration": 4.8
+    },
+    {
+      "text": "the parentheses so here",
+      "start": 1032.559,
+      "duration": 6.321
+    },
+    {
+      "text": "we're passing that the payment uh should",
+      "start": 1036.16,
+      "duration": 3.84
+    },
+    {
+      "text": "be equal to",
+      "start": 1038.88,
+      "duration": 4.159
+    },
+    {
+      "text": "2000 um and we're not passing the",
+      "start": 1040.0,
+      "duration": 3.919
+    },
+    {
+      "text": "interest rates",
+      "start": 1043.039,
+      "duration": 2.64
+    },
+    {
+      "text": "so those are gonna take the default",
+      "start": 1043.919,
+      "duration": 3.12
+    },
+    {
+      "text": "value of five six",
+      "start": 1045.679,
+      "duration": 3.921
+    },
+    {
+      "text": "and seven percent so then when we print",
+      "start": 1047.039,
+      "duration": 3.121
+    },
+    {
+      "text": "out",
+      "start": 1049.6,
+      "duration": 4.079
+    },
+    {
+      "text": "the inputs then uh we're going to see",
+      "start": 1050.16,
+      "duration": 4.96
+    },
+    {
+      "text": "that it's an instance of",
+      "start": 1053.679,
+      "duration": 4.081
+    },
+    {
+      "text": "model inputs um we have the interest",
+      "start": 1055.12,
+      "duration": 4.4
+    },
+    {
+      "text": "rates five six and seven percent",
+      "start": 1057.76,
+      "duration": 4.72
+    },
+    {
+      "text": "and we have a two thousand payment here",
+      "start": 1059.52,
+      "duration": 4.08
+    },
+    {
+      "text": "and the type of that",
+      "start": 1062.48,
+      "duration": 4.64
+    },
+    {
+      "text": "is model inputs and we can grab those",
+      "start": 1063.6,
+      "duration": 4.56
+    },
+    {
+      "text": "individual things",
+      "start": 1067.12,
+      "duration": 3.28
+    },
+    {
+      "text": "out of the inputs we can do inputs dot",
+      "start": 1068.16,
+      "duration": 3.28
+    },
+    {
+      "text": "interest rates",
+      "start": 1070.4,
+      "duration": 3.279
+    },
+    {
+      "text": "that gives us five six seven percent and",
+      "start": 1071.44,
+      "duration": 4.32
+    },
+    {
+      "text": "we can do inputs.payment and that will",
+      "start": 1073.679,
+      "duration": 4.081
+    },
+    {
+      "text": "give us 2 000.",
+      "start": 1075.76,
+      "duration": 4.48
+    },
+    {
+      "text": "so that's the basic idea of how to",
+      "start": 1077.76,
+      "duration": 3.6
+    },
+    {
+      "text": "create and work with",
+      "start": 1080.24,
+      "duration": 4.559
+    },
+    {
+      "text": "data classes so why",
+      "start": 1081.36,
+      "duration": 5.12
+    },
+    {
+      "text": "why would we want to use data classes",
+      "start": 1084.799,
+      "duration": 5.201
+    },
+    {
+      "text": "when are we going to use data classes",
+      "start": 1086.48,
+      "duration": 6.079
+    },
+    {
+      "text": "so again it's just a convenient way to",
+      "start": 1090.0,
+      "duration": 4.559
+    },
+    {
+      "text": "group data together you can definitely",
+      "start": 1092.559,
+      "duration": 4.24
+    },
+    {
+      "text": "use them for a lot more than that",
+      "start": 1094.559,
+      "duration": 4.401
+    },
+    {
+      "text": "but that's the most common usage and",
+      "start": 1096.799,
+      "duration": 3.601
+    },
+    {
+      "text": "what we're going to be focusing on in",
+      "start": 1098.96,
+      "duration": 3.2
+    },
+    {
+      "text": "this course we just have",
+      "start": 1100.4,
+      "duration": 3.12
+    },
+    {
+      "text": "you know all these different inputs we",
+      "start": 1102.16,
+      "duration": 3.12
+    },
+    {
+      "text": "just want to package up those inputs",
+      "start": 1103.52,
+      "duration": 4.96
+    },
+    {
+      "text": "into a single place",
+      "start": 1105.28,
+      "duration": 3.2
+    },
+    {
+      "text": "and you know the reason that we end up",
+      "start": 1109.6,
+      "duration": 3.52
+    },
+    {
+      "text": "going to this is because financial",
+      "start": 1111.6,
+      "duration": 2.319
+    },
+    {
+      "text": "models",
+      "start": 1113.12,
+      "duration": 2.64
+    },
+    {
+      "text": "uh typically have a lot of different",
+      "start": 1113.919,
+      "duration": 4.481
+    },
+    {
+      "text": "inputs you know we might have easily",
+      "start": 1115.76,
+      "duration": 5.919
+    },
+    {
+      "text": "you know 15 20 30 different inputs that",
+      "start": 1118.4,
+      "duration": 4.08
+    },
+    {
+      "text": "we need to pass",
+      "start": 1121.679,
+      "duration": 4.641
+    },
+    {
+      "text": "in and uh you know what you'll find when",
+      "start": 1122.48,
+      "duration": 5.6
+    },
+    {
+      "text": "we go with this structure of having you",
+      "start": 1126.32,
+      "duration": 3.84
+    },
+    {
+      "text": "know functions within functions",
+      "start": 1128.08,
+      "duration": 4.0
+    },
+    {
+      "text": "and passing the data you know back and",
+      "start": 1130.16,
+      "duration": 4.0
+    },
+    {
+      "text": "forth between all the functions",
+      "start": 1132.08,
+      "duration": 3.76
+    },
+    {
+      "text": "if you keep everything as just",
+      "start": 1134.16,
+      "duration": 3.28
+    },
+    {
+      "text": "individual variables",
+      "start": 1135.84,
+      "duration": 3.12
+    },
+    {
+      "text": "all of a sudden you know every function",
+      "start": 1137.44,
+      "duration": 3.84
+    },
+    {
+      "text": "is passing like 10 inputs to each other",
+      "start": 1138.96,
+      "duration": 3.12
+    },
+    {
+      "text": "function",
+      "start": 1141.28,
+      "duration": 3.36
+    },
+    {
+      "text": "and it just becomes very tedious to be",
+      "start": 1142.08,
+      "duration": 3.52
+    },
+    {
+      "text": "passing",
+      "start": 1144.64,
+      "duration": 2.96
+    },
+    {
+      "text": "all these individual variables around",
+      "start": 1145.6,
+      "duration": 4.4
+    },
+    {
+      "text": "everywhere so by grouping it all into",
+      "start": 1147.6,
+      "duration": 5.04
+    },
+    {
+      "text": "a single data class we can just pass",
+      "start": 1150.0,
+      "duration": 4.0
+    },
+    {
+      "text": "this data class",
+      "start": 1152.64,
+      "duration": 4.0
+    },
+    {
+      "text": "around we can pass the instance uh of",
+      "start": 1154.0,
+      "duration": 4.16
+    },
+    {
+      "text": "the data class around",
+      "start": 1156.64,
+      "duration": 3.76
+    },
+    {
+      "text": "as one single variable and then we have",
+      "start": 1158.16,
+      "duration": 4.0
+    },
+    {
+      "text": "access to all the inputs in every",
+      "start": 1160.4,
+      "duration": 2.399
+    },
+    {
+      "text": "function",
+      "start": 1162.16,
+      "duration": 3.84
+    },
+    {
+      "text": "very easily just by passing this data",
+      "start": 1162.799,
+      "duration": 5.441
+    },
+    {
+      "text": "so it's mainly a convenience thing it's",
+      "start": 1166.0,
+      "duration": 4.72
+    },
+    {
+      "text": "also going to make your code shorter",
+      "start": 1168.24,
+      "duration": 4.08
+    },
+    {
+      "text": "and that it groups all your inputs",
+      "start": 1170.72,
+      "duration": 4.079
+    },
+    {
+      "text": "together",
+      "start": 1172.32,
+      "duration": 2.479
+    },
+    {
+      "text": "um",
+      "start": 1176.84,
+      "duration": 5.16
+    },
+    {
+      "text": "the other nice advantage of this was um",
+      "start": 1178.64,
+      "duration": 6.48
+    },
+    {
+      "text": "again all this data is together and you",
+      "start": 1182.0,
+      "duration": 3.679
+    },
+    {
+      "text": "can just",
+      "start": 1185.12,
+      "duration": 2.48
+    },
+    {
+      "text": "you know whatever the name of your",
+      "start": 1185.679,
+      "duration": 3.681
+    },
+    {
+      "text": "instance is for the data class",
+      "start": 1187.6,
+      "duration": 3.28
+    },
+    {
+      "text": "you type that and then you do dot and",
+      "start": 1189.36,
+      "duration": 3.679
+    },
+    {
+      "text": "then you hit tab and you're gonna see",
+      "start": 1190.88,
+      "duration": 3.919
+    },
+    {
+      "text": "all your inputs right you can auto",
+      "start": 1193.039,
+      "duration": 3.681
+    },
+    {
+      "text": "complete all your different inputs",
+      "start": 1194.799,
+      "duration": 3.521
+    },
+    {
+      "text": "you have just your inputs there you",
+      "start": 1196.72,
+      "duration": 3.199
+    },
+    {
+      "text": "don't have all your other intermediate",
+      "start": 1198.32,
+      "duration": 3.44
+    },
+    {
+      "text": "variables and things like that",
+      "start": 1199.919,
+      "duration": 5.281
+    },
+    {
+      "text": "um so it's it's nice and convenient to",
+      "start": 1201.76,
+      "duration": 7.12
+    },
+    {
+      "text": "work with it as well even within",
+      "start": 1205.2,
+      "duration": 6.32
+    },
+    {
+      "text": "the functions",
+      "start": 1208.88,
+      "duration": 2.64
+    },
+    {
+      "text": "so let's go ahead and look at the",
+      "start": 1213.2,
+      "duration": 5.04
+    },
+    {
+      "text": "jupiter example for this",
+      "start": 1214.799,
+      "duration": 3.441
+    },
+    {
+      "text": "so um again every data type",
+      "start": 1219.6,
+      "duration": 6.959
+    },
+    {
+      "text": "has an associated class um so even",
+      "start": 1223.52,
+      "duration": 6.399
+    },
+    {
+      "text": "the built-in data types they also have",
+      "start": 1226.559,
+      "duration": 7.441
+    },
+    {
+      "text": "classes um and",
+      "start": 1229.919,
+      "duration": 8.161
+    },
+    {
+      "text": "so um those built-in data types often",
+      "start": 1234.0,
+      "duration": 4.48
+    },
+    {
+      "text": "have",
+      "start": 1238.08,
+      "duration": 4.16
+    },
+    {
+      "text": "also more convenient ways to create them",
+      "start": 1238.48,
+      "duration": 5.76
+    },
+    {
+      "text": "but you can create them just like a",
+      "start": 1242.24,
+      "duration": 3.84
+    },
+    {
+      "text": "normal class as well",
+      "start": 1244.24,
+      "duration": 4.08
+    },
+    {
+      "text": "um so you know for strings we've looked",
+      "start": 1246.08,
+      "duration": 3.839
+    },
+    {
+      "text": "at creating them like this right like",
+      "start": 1248.32,
+      "duration": 2.719
+    },
+    {
+      "text": "singular double quotes",
+      "start": 1249.919,
+      "duration": 3.12
+    },
+    {
+      "text": "automatically is going to go to a string",
+      "start": 1251.039,
+      "duration": 3.041
+    },
+    {
+      "text": "that's a little just",
+      "start": 1253.039,
+      "duration": 2.961
+    },
+    {
+      "text": "you know shortcut python has thrown in",
+      "start": 1254.08,
+      "duration": 3.68
+    },
+    {
+      "text": "there for us to make our lives easier",
+      "start": 1256.0,
+      "duration": 4.159
+    },
+    {
+      "text": "because we use strings all the time",
+      "start": 1257.76,
+      "duration": 6.32
+    },
+    {
+      "text": "um but uh you know scr",
+      "start": 1260.159,
+      "duration": 7.041
+    },
+    {
+      "text": "is actually the class uh for",
+      "start": 1264.08,
+      "duration": 5.28
+    },
+    {
+      "text": "string the name of the class for string",
+      "start": 1267.2,
+      "duration": 3.44
+    },
+    {
+      "text": "i mean you can see that when you check",
+      "start": 1269.36,
+      "duration": 3.199
+    },
+    {
+      "text": "the type it's str",
+      "start": 1270.64,
+      "duration": 6.32
+    },
+    {
+      "text": "um and so you can also create strings",
+      "start": 1272.559,
+      "duration": 6.961
+    },
+    {
+      "text": "by you know just like we looked at with",
+      "start": 1276.96,
+      "duration": 4.32
+    },
+    {
+      "text": "car and with model inputs you put the",
+      "start": 1279.52,
+      "duration": 2.96
+    },
+    {
+      "text": "name of the class",
+      "start": 1281.28,
+      "duration": 3.44
+    },
+    {
+      "text": "and then parentheses and the data you",
+      "start": 1282.48,
+      "duration": 4.64
+    },
+    {
+      "text": "want to pass and then close parentheses",
+      "start": 1284.72,
+      "duration": 4.0
+    },
+    {
+      "text": "that's going to work exactly the same",
+      "start": 1287.12,
+      "duration": 3.2
+    },
+    {
+      "text": "way so this would be",
+      "start": 1288.72,
+      "duration": 3.439
+    },
+    {
+      "text": "you know kind of just the standard way",
+      "start": 1290.32,
+      "duration": 3.359
+    },
+    {
+      "text": "of using any class",
+      "start": 1292.159,
+      "duration": 4.081
+    },
+    {
+      "text": "here we're using it for the string but",
+      "start": 1293.679,
+      "duration": 4.081
+    },
+    {
+      "text": "of course you know the built-in data",
+      "start": 1296.24,
+      "duration": 3.52
+    },
+    {
+      "text": "types have the more convenient ways to",
+      "start": 1297.76,
+      "duration": 8.08
+    },
+    {
+      "text": "construct them as well",
+      "start": 1299.76,
+      "duration": 6.08
+    },
+    {
+      "text": "uh but then moving to custom classes um",
+      "start": 1305.919,
+      "duration": 6.561
+    },
+    {
+      "text": "so you know here we're gonna look at",
+      "start": 1310.24,
+      "duration": 3.76
+    },
+    {
+      "text": "working with this custom car",
+      "start": 1312.48,
+      "duration": 4.24
+    },
+    {
+      "text": "class and if you're curious uh you know",
+      "start": 1314.0,
+      "duration": 4.559
+    },
+    {
+      "text": "what this code looks like to create this",
+      "start": 1316.72,
+      "duration": 2.56
+    },
+    {
+      "text": "class",
+      "start": 1318.559,
+      "duration": 2.6
+    },
+    {
+      "text": "uh we have it here in this car",
+      "start": 1319.28,
+      "duration": 3.44
+    },
+    {
+      "text": "example.py",
+      "start": 1321.159,
+      "duration": 4.921
+    },
+    {
+      "text": "um so it's all this stuff here",
+      "start": 1322.72,
+      "duration": 5.36
+    },
+    {
+      "text": "and you know this stuff is probably not",
+      "start": 1326.08,
+      "duration": 3.599
+    },
+    {
+      "text": "gonna make a lot of sense",
+      "start": 1328.08,
+      "duration": 4.719
+    },
+    {
+      "text": "uh just looking at it um there's you",
+      "start": 1329.679,
+      "duration": 4.641
+    },
+    {
+      "text": "know a fair number of things in here",
+      "start": 1332.799,
+      "duration": 2.081
+    },
+    {
+      "text": "which",
+      "start": 1334.32,
+      "duration": 2.32
+    },
+    {
+      "text": "uh takes some deeper knowledge of python",
+      "start": 1334.88,
+      "duration": 3.84
+    },
+    {
+      "text": "to understand what's going on",
+      "start": 1336.64,
+      "duration": 5.039
+    },
+    {
+      "text": "um so don't really worry about it uh you",
+      "start": 1338.72,
+      "duration": 4.319
+    },
+    {
+      "text": "know if you have extra time",
+      "start": 1341.679,
+      "duration": 3.12
+    },
+    {
+      "text": "i would recommend reading out more on",
+      "start": 1343.039,
+      "duration": 3.12
+    },
+    {
+      "text": "classes and learning about how this",
+      "start": 1344.799,
+      "duration": 2.481
+    },
+    {
+      "text": "works",
+      "start": 1346.159,
+      "duration": 3.121
+    },
+    {
+      "text": "but it's not going to be anything that",
+      "start": 1347.28,
+      "duration": 4.8
+    },
+    {
+      "text": "is covered in the course",
+      "start": 1349.28,
+      "duration": 4.48
+    },
+    {
+      "text": "so we don't really need to worry about",
+      "start": 1352.08,
+      "duration": 3.04
+    },
+    {
+      "text": "how it's actually defined",
+      "start": 1353.76,
+      "duration": 5.08
+    },
+    {
+      "text": "we just want to work with it right",
+      "start": 1355.12,
+      "duration": 6.96
+    },
+    {
+      "text": "so um here i'm doing from car example",
+      "start": 1358.84,
+      "duration": 7.0
+    },
+    {
+      "text": "import car and this worked because",
+      "start": 1362.08,
+      "duration": 6.4
+    },
+    {
+      "text": "i have car example defined in the same",
+      "start": 1365.84,
+      "duration": 3.52
+    },
+    {
+      "text": "folder",
+      "start": 1368.48,
+      "duration": 4.24
+    },
+    {
+      "text": "as my notebook so if you want to run",
+      "start": 1369.36,
+      "duration": 5.12
+    },
+    {
+      "text": "this on your own make sure you download",
+      "start": 1372.72,
+      "duration": 3.52
+    },
+    {
+      "text": "this car example and that it's in the",
+      "start": 1374.48,
+      "duration": 2.559
+    },
+    {
+      "text": "same",
+      "start": 1376.24,
+      "duration": 3.04
+    },
+    {
+      "text": "folder as your notebook in order for",
+      "start": 1377.039,
+      "duration": 3.52
+    },
+    {
+      "text": "this to run otherwise you're going to",
+      "start": 1379.28,
+      "duration": 2.399
+    },
+    {
+      "text": "get an import error",
+      "start": 1380.559,
+      "duration": 4.321
+    },
+    {
+      "text": "it won't be able to find car example",
+      "start": 1381.679,
+      "duration": 5.36
+    },
+    {
+      "text": "and you won't be able to run this part",
+      "start": 1384.88,
+      "duration": 4.88
+    },
+    {
+      "text": "of the code",
+      "start": 1387.039,
+      "duration": 6.0
+    },
+    {
+      "text": "so um here we're going to make a",
+      "start": 1389.76,
+      "duration": 5.2
+    },
+    {
+      "text": "subaru forester that's going to be my",
+      "start": 1393.039,
+      "duration": 3.041
+    },
+    {
+      "text": "car",
+      "start": 1394.96,
+      "duration": 3.199
+    },
+    {
+      "text": "and we can see it's coming through as a",
+      "start": 1396.08,
+      "duration": 3.44
+    },
+    {
+      "text": "car with the make",
+      "start": 1398.159,
+      "duration": 5.76
+    },
+    {
+      "text": "as subaru and the model as forester",
+      "start": 1399.52,
+      "duration": 6.72
+    },
+    {
+      "text": "and so now you know we have these",
+      "start": 1403.919,
+      "duration": 3.841
+    },
+    {
+      "text": "methods which are attached",
+      "start": 1406.24,
+      "duration": 5.6
+    },
+    {
+      "text": "on the data type the class of the car",
+      "start": 1407.76,
+      "duration": 6.32
+    },
+    {
+      "text": "and if we hit dot and then tab we can",
+      "start": 1411.84,
+      "duration": 4.48
+    },
+    {
+      "text": "see what those are",
+      "start": 1414.08,
+      "duration": 4.479
+    },
+    {
+      "text": "and jupiter even helps us out a little",
+      "start": 1416.32,
+      "duration": 3.359
+    },
+    {
+      "text": "bit here",
+      "start": 1418.559,
+      "duration": 4.961
+    },
+    {
+      "text": "um with telling us you know what is this",
+      "start": 1419.679,
+      "duration": 5.6
+    },
+    {
+      "text": "thing these two are functions right",
+      "start": 1423.52,
+      "duration": 4.399
+    },
+    {
+      "text": "drive and fill up whereas the gas",
+      "start": 1425.279,
+      "duration": 5.121
+    },
+    {
+      "text": "percentage the make and the model those",
+      "start": 1427.919,
+      "duration": 5.841
+    },
+    {
+      "text": "are data and stored within the class",
+      "start": 1430.4,
+      "duration": 5.2
+    },
+    {
+      "text": "um so checking you know make i'm going",
+      "start": 1433.76,
+      "duration": 4.159
+    },
+    {
+      "text": "to get subaru",
+      "start": 1435.6,
+      "duration": 4.24
+    },
+    {
+      "text": "or you know running drive i'm going to",
+      "start": 1437.919,
+      "duration": 3.76
+    },
+    {
+      "text": "see that it's driving away",
+      "start": 1439.84,
+      "duration": 5.199
+    },
+    {
+      "text": "and that the gas is now down to 40",
+      "start": 1441.679,
+      "duration": 5.201
+    },
+    {
+      "text": "percent",
+      "start": 1445.039,
+      "duration": 3.76
+    },
+    {
+      "text": "so if i you know keep driving the car",
+      "start": 1446.88,
+      "duration": 4.08
+    },
+    {
+      "text": "here i'm going to drive it five times",
+      "start": 1448.799,
+      "duration": 4.721
+    },
+    {
+      "text": "um we can see that it drives and it",
+      "start": 1450.96,
+      "duration": 4.56
+    },
+    {
+      "text": "takes 10 of the gas to drive and then it",
+      "start": 1453.52,
+      "duration": 3.519
+    },
+    {
+      "text": "drives and takes 10",
+      "start": 1455.52,
+      "duration": 5.6
+    },
+    {
+      "text": "more and so on until we hit zero percent",
+      "start": 1457.039,
+      "duration": 7.52
+    },
+    {
+      "text": "um and now we are out of gas",
+      "start": 1461.12,
+      "duration": 6.48
+    },
+    {
+      "text": "um so now when we",
+      "start": 1464.559,
+      "duration": 6.24
+    },
+    {
+      "text": "um call drive we are just going to be",
+      "start": 1467.6,
+      "duration": 4.4
+    },
+    {
+      "text": "out of gas no matter",
+      "start": 1470.799,
+      "duration": 5.12
+    },
+    {
+      "text": "how many times that we drive um",
+      "start": 1472.0,
+      "duration": 7.2
+    },
+    {
+      "text": "so that's the basic you know idea here",
+      "start": 1475.919,
+      "duration": 4.321
+    },
+    {
+      "text": "and then we can",
+      "start": 1479.2,
+      "duration": 3.68
+    },
+    {
+      "text": "uh you know fill up the car now the gas",
+      "start": 1480.24,
+      "duration": 3.679
+    },
+    {
+      "text": "is at 100",
+      "start": 1482.88,
+      "duration": 3.44
+    },
+    {
+      "text": "and we can start you know driving again",
+      "start": 1483.919,
+      "duration": 4.0
+    },
+    {
+      "text": "until we get down to",
+      "start": 1486.32,
+      "duration": 5.04
+    },
+    {
+      "text": "zero percent um then it's out of gas",
+      "start": 1487.919,
+      "duration": 6.0
+    },
+    {
+      "text": "and then we can fill it up etc so you",
+      "start": 1491.36,
+      "duration": 4.24
+    },
+    {
+      "text": "can give whatever kind of functionality",
+      "start": 1493.919,
+      "duration": 3.041
+    },
+    {
+      "text": "you want to your objects",
+      "start": 1495.6,
+      "duration": 4.24
+    },
+    {
+      "text": "and uh you know we're going to show or",
+      "start": 1496.96,
+      "duration": 4.16
+    },
+    {
+      "text": "we're going to use",
+      "start": 1499.84,
+      "duration": 3.68
+    },
+    {
+      "text": "these custom data types defined in other",
+      "start": 1501.12,
+      "duration": 3.2
+    },
+    {
+      "text": "libraries",
+      "start": 1503.52,
+      "duration": 2.8
+    },
+    {
+      "text": "uh that help us do a lot of interesting",
+      "start": 1504.32,
+      "duration": 3.2
+    },
+    {
+      "text": "things uh",
+      "start": 1506.32,
+      "duration": 3.52
+    },
+    {
+      "text": "without really understanding you know",
+      "start": 1507.52,
+      "duration": 3.68
+    },
+    {
+      "text": "how that was defined",
+      "start": 1509.84,
+      "duration": 3.76
+    },
+    {
+      "text": "in the background we just need to know",
+      "start": 1511.2,
+      "duration": 3.52
+    },
+    {
+      "text": "you know how can we",
+      "start": 1513.6,
+      "duration": 4.319
+    },
+    {
+      "text": "figure out the functions on this um how",
+      "start": 1514.72,
+      "duration": 4.079
+    },
+    {
+      "text": "can we",
+      "start": 1517.919,
+      "duration": 2.64
+    },
+    {
+      "text": "uh figure out the data associated with",
+      "start": 1518.799,
+      "duration": 4.801
+    },
+    {
+      "text": "this and you know just doing the dot tab",
+      "start": 1520.559,
+      "duration": 4.72
+    },
+    {
+      "text": "is going to get you a lot of the way",
+      "start": 1523.6,
+      "duration": 4.24
+    },
+    {
+      "text": "there and then you know the other main",
+      "start": 1525.279,
+      "duration": 3.121
+    },
+    {
+      "text": "part of it",
+      "start": 1527.84,
+      "duration": 2.959
+    },
+    {
+      "text": "is you can also just google about",
+      "start": 1528.4,
+      "duration": 3.2
+    },
+    {
+      "text": "whatever",
+      "start": 1530.799,
+      "duration": 3.201
+    },
+    {
+      "text": "um you know custom data type that you're",
+      "start": 1531.6,
+      "duration": 3.92
+    },
+    {
+      "text": "working with you know here",
+      "start": 1534.0,
+      "duration": 3.919
+    },
+    {
+      "text": "i defined this car so you're not gonna",
+      "start": 1535.52,
+      "duration": 3.68
+    },
+    {
+      "text": "find that on google",
+      "start": 1537.919,
+      "duration": 3.841
+    },
+    {
+      "text": "uh but uh you know for any of these",
+      "start": 1539.2,
+      "duration": 3.44
+    },
+    {
+      "text": "libraries",
+      "start": 1541.76,
+      "duration": 2.48
+    },
+    {
+      "text": "packages that we're going to work with",
+      "start": 1542.64,
+      "duration": 3.2
+    },
+    {
+      "text": "you'll be able to google",
+      "start": 1544.24,
+      "duration": 4.24
+    },
+    {
+      "text": "all about it",
+      "start": 1545.84,
+      "duration": 2.64
+    },
+    {
+      "text": "so then that brings us to data classes",
+      "start": 1549.919,
+      "duration": 4.24
+    },
+    {
+      "text": "where data classes are",
+      "start": 1552.64,
+      "duration": 4.159
+    },
+    {
+      "text": "the simplified class so you know we had",
+      "start": 1554.159,
+      "duration": 3.361
+    },
+    {
+      "text": "a lot of stuff",
+      "start": 1556.799,
+      "duration": 4.0
+    },
+    {
+      "text": "going on here in this class um",
+      "start": 1557.52,
+      "duration": 6.56
+    },
+    {
+      "text": "but for the data class i mean bam we got",
+      "start": 1560.799,
+      "duration": 4.24
+    },
+    {
+      "text": "four lines",
+      "start": 1564.08,
+      "duration": 3.199
+    },
+    {
+      "text": "and it's done right it's a lot simpler",
+      "start": 1565.039,
+      "duration": 3.801
+    },
+    {
+      "text": "to define that",
+      "start": 1567.279,
+      "duration": 4.161
+    },
+    {
+      "text": "um so we got to have this data class",
+      "start": 1568.84,
+      "duration": 3.56
+    },
+    {
+      "text": "import",
+      "start": 1571.44,
+      "duration": 3.119
+    },
+    {
+      "text": "and then we've got to do this at sign",
+      "start": 1572.4,
+      "duration": 3.04
+    },
+    {
+      "text": "data class",
+      "start": 1574.559,
+      "duration": 4.0
+    },
+    {
+      "text": "this decorator um you know again you",
+      "start": 1575.44,
+      "duration": 4.08
+    },
+    {
+      "text": "don't have to worry about what a",
+      "start": 1578.559,
+      "duration": 2.72
+    },
+    {
+      "text": "decorator is",
+      "start": 1579.52,
+      "duration": 3.68
+    },
+    {
+      "text": "that's a more advanced python thing but",
+      "start": 1581.279,
+      "duration": 3.52
+    },
+    {
+      "text": "you just know that you put it here",
+      "start": 1583.2,
+      "duration": 4.4
+    },
+    {
+      "text": "for a data class and then the very next",
+      "start": 1584.799,
+      "duration": 4.401
+    },
+    {
+      "text": "line you want to have as the class",
+      "start": 1587.6,
+      "duration": 2.64
+    },
+    {
+      "text": "statement",
+      "start": 1589.2,
+      "duration": 3.68
+    },
+    {
+      "text": "and then you have the keyword class and",
+      "start": 1590.24,
+      "duration": 3.439
+    },
+    {
+      "text": "then the name",
+      "start": 1592.88,
+      "duration": 2.64
+    },
+    {
+      "text": "of the class you want to create and then",
+      "start": 1593.679,
+      "duration": 3.681
+    },
+    {
+      "text": "a colon and then the indent and then",
+      "start": 1595.52,
+      "duration": 3.84
+    },
+    {
+      "text": "this is where you start defining",
+      "start": 1597.36,
+      "duration": 4.24
+    },
+    {
+      "text": "your variables uh that are going to be",
+      "start": 1599.36,
+      "duration": 3.28
+    },
+    {
+      "text": "attached to",
+      "start": 1601.6,
+      "duration": 4.319
+    },
+    {
+      "text": "the class um so again this is just",
+      "start": 1602.64,
+      "duration": 6.399
+    },
+    {
+      "text": "like the um",
+      "start": 1605.919,
+      "duration": 5.281
+    },
+    {
+      "text": "example in the slides we have a payment",
+      "start": 1609.039,
+      "duration": 3.52
+    },
+    {
+      "text": "defaults to a thousand and we have",
+      "start": 1611.2,
+      "duration": 2.88
+    },
+    {
+      "text": "interest rates defaults to five",
+      "start": 1612.559,
+      "duration": 5.041
+    },
+    {
+      "text": "six and seven percent",
+      "start": 1614.08,
+      "duration": 3.52
+    },
+    {
+      "text": "um so then you know again",
+      "start": 1619.2,
+      "duration": 5.04
+    },
+    {
+      "text": "this is just the definition part right",
+      "start": 1622.4,
+      "duration": 4.0
+    },
+    {
+      "text": "we haven't actually uh",
+      "start": 1624.24,
+      "duration": 5.76
+    },
+    {
+      "text": "created any concrete object we haven't",
+      "start": 1626.4,
+      "duration": 5.44
+    },
+    {
+      "text": "you know we don't have this data really",
+      "start": 1630.0,
+      "duration": 3.2
+    },
+    {
+      "text": "anywhere yet",
+      "start": 1631.84,
+      "duration": 4.64
+    },
+    {
+      "text": "uh we need to create an instance of the",
+      "start": 1633.2,
+      "duration": 6.719
+    },
+    {
+      "text": "class uh to get that so here we're doing",
+      "start": 1636.48,
+      "duration": 4.0
+    },
+    {
+      "text": "data",
+      "start": 1639.919,
+      "duration": 3.041
+    },
+    {
+      "text": "data equals model inputs open close",
+      "start": 1640.48,
+      "duration": 3.679
+    },
+    {
+      "text": "parentheses",
+      "start": 1642.96,
+      "duration": 3.439
+    },
+    {
+      "text": "so again you know just like functions to",
+      "start": 1644.159,
+      "duration": 4.0
+    },
+    {
+      "text": "could to create an instance of the class",
+      "start": 1646.399,
+      "duration": 3.28
+    },
+    {
+      "text": "you put the class name",
+      "start": 1648.159,
+      "duration": 3.281
+    },
+    {
+      "text": "and then open close parenthesis and you",
+      "start": 1649.679,
+      "duration": 3.281
+    },
+    {
+      "text": "can pass any arguments",
+      "start": 1651.44,
+      "duration": 4.479
+    },
+    {
+      "text": "in here um so you know i could pass 2",
+      "start": 1652.96,
+      "duration": 4.24
+    },
+    {
+      "text": "000 and that would come",
+      "start": 1655.919,
+      "duration": 4.321
+    },
+    {
+      "text": "for the payment um you know 2 000",
+      "start": 1657.2,
+      "duration": 7.199
+    },
+    {
+      "text": "then i could do you know 0.1.2.3 if i",
+      "start": 1660.24,
+      "duration": 5.76
+    },
+    {
+      "text": "wanted to change the interest rates as",
+      "start": 1664.399,
+      "duration": 3.201
+    },
+    {
+      "text": "well",
+      "start": 1666.0,
+      "duration": 4.799
+    },
+    {
+      "text": "also uh if you want to",
+      "start": 1667.6,
+      "duration": 6.24
+    },
+    {
+      "text": "change you know them not in order then",
+      "start": 1670.799,
+      "duration": 5.281
+    },
+    {
+      "text": "you can specify them by name",
+      "start": 1673.84,
+      "duration": 4.079
+    },
+    {
+      "text": "now it's taking the default payment of",
+      "start": 1676.08,
+      "duration": 4.76
+    },
+    {
+      "text": "thousand and changing the interest rates",
+      "start": 1677.919,
+      "duration": 4.561
+    },
+    {
+      "text": "um",
+      "start": 1680.84,
+      "duration": 3.959
+    },
+    {
+      "text": "but you can also just do it with nothing",
+      "start": 1682.48,
+      "duration": 5.28
+    },
+    {
+      "text": "to get the defaults for everything",
+      "start": 1684.799,
+      "duration": 5.521
+    },
+    {
+      "text": "and then once you have that um well we",
+      "start": 1687.76,
+      "duration": 3.919
+    },
+    {
+      "text": "can just do data dot",
+      "start": 1690.32,
+      "duration": 3.12
+    },
+    {
+      "text": "and look at it well we've got interest",
+      "start": 1691.679,
+      "duration": 3.041
+    },
+    {
+      "text": "rates and payments",
+      "start": 1693.44,
+      "duration": 4.0
+    },
+    {
+      "text": "are the two pieces of information we",
+      "start": 1694.72,
+      "duration": 5.52
+    },
+    {
+      "text": "have associated with that data class",
+      "start": 1697.44,
+      "duration": 5.2
+    },
+    {
+      "text": "so we can you know look up either of",
+      "start": 1700.24,
+      "duration": 3.6
+    },
+    {
+      "text": "those individually",
+      "start": 1702.64,
+      "duration": 5.2
+    },
+    {
+      "text": "and get that value back",
+      "start": 1703.84,
+      "duration": 6.079
+    },
+    {
+      "text": "so here's showing also that you can",
+      "start": 1707.84,
+      "duration": 5.12
+    },
+    {
+      "text": "override those defaults",
+      "start": 1709.919,
+      "duration": 6.88
+    },
+    {
+      "text": "and get that information as well",
+      "start": 1712.96,
+      "duration": 6.48
+    },
+    {
+      "text": "so then to show the motivation why we",
+      "start": 1716.799,
+      "duration": 5.6
+    },
+    {
+      "text": "want to use these things",
+      "start": 1719.44,
+      "duration": 4.239
+    },
+    {
+      "text": "rather than just passing around the",
+      "start": 1722.399,
+      "duration": 3.52
+    },
+    {
+      "text": "payment interest rates themselves",
+      "start": 1723.679,
+      "duration": 6.561
+    },
+    {
+      "text": "uh so here uh we have a function",
+      "start": 1725.919,
+      "duration": 7.921
+    },
+    {
+      "text": "which is going to determine",
+      "start": 1730.24,
+      "duration": 6.0
+    },
+    {
+      "text": "uh you know if you have an interest rate",
+      "start": 1733.84,
+      "duration": 3.76
+    },
+    {
+      "text": "and you have a payment",
+      "start": 1736.24,
+      "duration": 4.48
+    },
+    {
+      "text": "what would be the principal that uh",
+      "start": 1737.6,
+      "duration": 6.16
+    },
+    {
+      "text": "you know got to that percentage interest",
+      "start": 1740.72,
+      "duration": 4.88
+    },
+    {
+      "text": "rate equating that payment",
+      "start": 1743.76,
+      "duration": 5.2
+    },
+    {
+      "text": "um and then uh you know does that for",
+      "start": 1745.6,
+      "duration": 5.04
+    },
+    {
+      "text": "each one of the interest rates",
+      "start": 1748.96,
+      "duration": 5.36
+    },
+    {
+      "text": "so we can call that um and",
+      "start": 1750.64,
+      "duration": 8.0
+    },
+    {
+      "text": "we uh call that and we get",
+      "start": 1754.32,
+      "duration": 6.079
+    },
+    {
+      "text": "the results we would expect you know for",
+      "start": 1758.64,
+      "duration": 3.519
+    },
+    {
+      "text": "three percent uh",
+      "start": 1760.399,
+      "duration": 3.361
+    },
+    {
+      "text": "to get to a thousand payment that would",
+      "start": 1762.159,
+      "duration": 3.041
+    },
+    {
+      "text": "have had to have been thirty three",
+      "start": 1763.76,
+      "duration": 4.96
+    },
+    {
+      "text": "000 principal and if it's a four percent",
+      "start": 1765.2,
+      "duration": 4.8
+    },
+    {
+      "text": "interest rate to get to a thousand",
+      "start": 1768.72,
+      "duration": 2.88
+    },
+    {
+      "text": "dollars it would have had to have been",
+      "start": 1770.0,
+      "duration": 4.399
+    },
+    {
+      "text": "25 000",
+      "start": 1771.6,
+      "duration": 2.799
+    },
+    {
+      "text": "um so but you did notice",
+      "start": 1774.64,
+      "duration": 6.72
+    },
+    {
+      "text": "um that we had to pass the payment and",
+      "start": 1778.0,
+      "duration": 3.84
+    },
+    {
+      "text": "rates",
+      "start": 1781.36,
+      "duration": 3.919
+    },
+    {
+      "text": "separately here um where as",
+      "start": 1781.84,
+      "duration": 6.48
+    },
+    {
+      "text": "if we create a data class um",
+      "start": 1785.279,
+      "duration": 6.081
+    },
+    {
+      "text": "here we're creating the data an instance",
+      "start": 1788.32,
+      "duration": 4.32
+    },
+    {
+      "text": "of model inputs",
+      "start": 1791.36,
+      "duration": 3.76
+    },
+    {
+      "text": "and then here we pass only the data and",
+      "start": 1792.64,
+      "duration": 4.6
+    },
+    {
+      "text": "in here then we do data.interest rates",
+      "start": 1795.12,
+      "duration": 3.679
+    },
+    {
+      "text": "data.payment",
+      "start": 1797.24,
+      "duration": 5.319
+    },
+    {
+      "text": "um to get the same result um so the key",
+      "start": 1798.799,
+      "duration": 5.201
+    },
+    {
+      "text": "difference here being",
+      "start": 1802.559,
+      "duration": 4.881
+    },
+    {
+      "text": "two things one is that we passed only a",
+      "start": 1804.0,
+      "duration": 4.0
+    },
+    {
+      "text": "single",
+      "start": 1807.44,
+      "duration": 2.88
+    },
+    {
+      "text": "argument here and the other is you know",
+      "start": 1808.0,
+      "duration": 3.76
+    },
+    {
+      "text": "while you're writing this",
+      "start": 1810.32,
+      "duration": 3.04
+    },
+    {
+      "text": "you can go you know what were my",
+      "start": 1811.76,
+      "duration": 4.799
+    },
+    {
+      "text": "variables data.oh it's interest rates",
+      "start": 1813.36,
+      "duration": 5.12
+    },
+    {
+      "text": "and then use that what was the other one",
+      "start": 1816.559,
+      "duration": 4.281
+    },
+    {
+      "text": "oh it's data.payment",
+      "start": 1818.48,
+      "duration": 4.799
+    },
+    {
+      "text": "um so",
+      "start": 1820.84,
+      "duration": 4.839
+    },
+    {
+      "text": "um you know not a big difference when we",
+      "start": 1823.279,
+      "duration": 3.76
+    },
+    {
+      "text": "only have two inputs",
+      "start": 1825.679,
+      "duration": 3.6
+    },
+    {
+      "text": "but you can imagine if you had 10",
+      "start": 1827.039,
+      "duration": 3.441
+    },
+    {
+      "text": "different inputs into",
+      "start": 1829.279,
+      "duration": 2.721
+    },
+    {
+      "text": "you know the function that runs your",
+      "start": 1830.48,
+      "duration": 3.84
+    },
+    {
+      "text": "whole model um",
+      "start": 1832.0,
+      "duration": 3.76
+    },
+    {
+      "text": "then all of a sudden we're passing a",
+      "start": 1834.32,
+      "duration": 3.2
+    },
+    {
+      "text": "whole bunch of things here and it gets",
+      "start": 1835.76,
+      "duration": 3.76
+    },
+    {
+      "text": "pretty tedious just typing out all those",
+      "start": 1837.52,
+      "duration": 3.84
+    },
+    {
+      "text": "separate variables each time",
+      "start": 1839.52,
+      "duration": 4.0
+    },
+    {
+      "text": "it might be that then your main model",
+      "start": 1841.36,
+      "duration": 3.679
+    },
+    {
+      "text": "function which takes these ten inputs",
+      "start": 1843.52,
+      "duration": 2.32
+    },
+    {
+      "text": "then passes",
+      "start": 1845.039,
+      "duration": 2.321
+    },
+    {
+      "text": "five of them to the first sub model and",
+      "start": 1845.84,
+      "duration": 3.199
+    },
+    {
+      "text": "then you know seven of them to the",
+      "start": 1847.36,
+      "duration": 2.4
+    },
+    {
+      "text": "second",
+      "start": 1849.039,
+      "duration": 2.801
+    },
+    {
+      "text": "sub model and you're just passing a lot",
+      "start": 1849.76,
+      "duration": 3.279
+    },
+    {
+      "text": "of things uh",
+      "start": 1851.84,
+      "duration": 2.8
+    },
+    {
+      "text": "in a lot of places and it becomes",
+      "start": 1853.039,
+      "duration": 3.841
+    },
+    {
+      "text": "tedious whereas here you just pass the",
+      "start": 1854.64,
+      "duration": 2.72
+    },
+    {
+      "text": "data",
+      "start": 1856.88,
+      "duration": 2.96
+    },
+    {
+      "text": "everywhere a single variable going",
+      "start": 1857.36,
+      "duration": 3.439
+    },
+    {
+      "text": "everywhere",
+      "start": 1859.84,
+      "duration": 3.04
+    },
+    {
+      "text": "um and then you can just use whatever",
+      "start": 1860.799,
+      "duration": 5.521
+    },
+    {
+      "text": "you need out of that data so quite a bit",
+      "start": 1862.88,
+      "duration": 6.96
+    },
+    {
+      "text": "more convenient to use",
+      "start": 1866.32,
+      "duration": 6.4
+    },
+    {
+      "text": "so that's the basic idea with data",
+      "start": 1869.84,
+      "duration": 4.559
+    },
+    {
+      "text": "classes and also",
+      "start": 1872.72,
+      "duration": 4.64
+    },
+    {
+      "text": "you know we looked at using other custom",
+      "start": 1874.399,
+      "duration": 4.801
+    },
+    {
+      "text": "classes as well",
+      "start": 1877.36,
+      "duration": 3.6
+    },
+    {
+      "text": "um and just the whole idea of what a",
+      "start": 1879.2,
+      "duration": 3.44
+    },
+    {
+      "text": "class is what uh",
+      "start": 1880.96,
+      "duration": 3.76
+    },
+    {
+      "text": "how it's relates to a data type defines",
+      "start": 1882.64,
+      "duration": 3.68
+    },
+    {
+      "text": "the data type",
+      "start": 1884.72,
+      "duration": 5.12
+    },
+    {
+      "text": "so um next time we're going to come back",
+      "start": 1886.32,
+      "duration": 7.12
+    },
+    {
+      "text": "and cover handling errors in python",
+      "start": 1889.84,
+      "duration": 6.4
+    },
+    {
+      "text": "and that will be uh wrapping up our",
+      "start": 1893.44,
+      "duration": 3.359
+    },
+    {
+      "text": "segment",
+      "start": 1896.24,
+      "duration": 2.96
+    },
+    {
+      "text": "on the basics in python that will",
+      "start": 1896.799,
+      "duration": 4.48
+    },
+    {
+      "text": "prepare us to actually go and build out",
+      "start": 1899.2,
+      "duration": 3.68
+    },
+    {
+      "text": "a full-on financial model",
+      "start": 1901.279,
+      "duration": 4.481
+    },
+    {
+      "text": "in python so thanks for listening and",
+      "start": 1902.88,
+      "duration": 9.2
+    },
+    {
+      "text": "see you next time",
+      "start": 1905.76,
+      "duration": 6.32
+    }
+  ]
+}

@@ -1,0 +1,1809 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 4.0,
+      "duration": 2.319
+    },
+    {
+      "text": "nick dear bird is here teaching you",
+      "start": 4.88,
+      "duration": 3.44
+    },
+    {
+      "text": "financial modeling today",
+      "start": 6.319,
+      "duration": 4.32
+    },
+    {
+      "text": "we're going to build out the salary",
+      "start": 8.32,
+      "duration": 4.88
+    },
+    {
+      "text": "portion of the dynamic salary retirement",
+      "start": 10.639,
+      "duration": 3.04
+    },
+    {
+      "text": "model",
+      "start": 13.2,
+      "duration": 3.52
+    },
+    {
+      "text": "in python so",
+      "start": 13.679,
+      "duration": 5.921
+    },
+    {
+      "text": "we've been talking about this model uh a",
+      "start": 16.72,
+      "duration": 4.0
+    },
+    {
+      "text": "fair amount already",
+      "start": 19.6,
+      "duration": 4.4
+    },
+    {
+      "text": "we built out the whole model in excel",
+      "start": 20.72,
+      "duration": 5.36
+    },
+    {
+      "text": "and now it's time to go do that in",
+      "start": 24.0,
+      "duration": 3.359
+    },
+    {
+      "text": "python",
+      "start": 26.08,
+      "duration": 5.039
+    },
+    {
+      "text": "so just as a quick review of what's",
+      "start": 27.359,
+      "duration": 5.36
+    },
+    {
+      "text": "involved in this model",
+      "start": 31.119,
+      "duration": 4.881
+    },
+    {
+      "text": "so we're looking at a model where",
+      "start": 32.719,
+      "duration": 7.201
+    },
+    {
+      "text": "the salaries are uh determined by",
+      "start": 36.0,
+      "duration": 5.84
+    },
+    {
+      "text": "a cost of living raise that occurs every",
+      "start": 39.92,
+      "duration": 4.08
+    },
+    {
+      "text": "year uh promotion that",
+      "start": 41.84,
+      "duration": 3.84
+    },
+    {
+      "text": "happens every number of years with a",
+      "start": 44.0,
+      "duration": 3.6
+    },
+    {
+      "text": "certain percentage raise",
+      "start": 45.68,
+      "duration": 4.719
+    },
+    {
+      "text": "and of course an initial starting salary",
+      "start": 47.6,
+      "duration": 4.479
+    },
+    {
+      "text": "and it grows through time",
+      "start": 50.399,
+      "duration": 4.881
+    },
+    {
+      "text": "and then the individual saves a certain",
+      "start": 52.079,
+      "duration": 4.16
+    },
+    {
+      "text": "portion of that",
+      "start": 55.28,
+      "duration": 4.079
+    },
+    {
+      "text": "each year and that is going to",
+      "start": 56.239,
+      "duration": 5.761
+    },
+    {
+      "text": "be invested at a certain interest rate",
+      "start": 59.359,
+      "duration": 3.921
+    },
+    {
+      "text": "to",
+      "start": 62.0,
+      "duration": 3.519
+    },
+    {
+      "text": "build up the individual's wealth over",
+      "start": 63.28,
+      "duration": 3.519
+    },
+    {
+      "text": "time",
+      "start": 65.519,
+      "duration": 5.041
+    },
+    {
+      "text": "and then we check",
+      "start": 66.799,
+      "duration": 6.64
+    },
+    {
+      "text": "the wealth year by year to determine",
+      "start": 70.56,
+      "duration": 4.4
+    },
+    {
+      "text": "once the individual has hit",
+      "start": 73.439,
+      "duration": 4.081
+    },
+    {
+      "text": "a certain goal of how much cash they",
+      "start": 74.96,
+      "duration": 4.159
+    },
+    {
+      "text": "want to retire",
+      "start": 77.52,
+      "duration": 4.8
+    },
+    {
+      "text": "and that's how we determine how long it",
+      "start": 79.119,
+      "duration": 6.961
+    },
+    {
+      "text": "takes for them to retire",
+      "start": 82.32,
+      "duration": 6.479
+    },
+    {
+      "text": "so as more quick recap this is what the",
+      "start": 86.08,
+      "duration": 3.84
+    },
+    {
+      "text": "salary equation",
+      "start": 88.799,
+      "duration": 2.801
+    },
+    {
+      "text": "looks like we start from an initial",
+      "start": 89.92,
+      "duration": 3.92
+    },
+    {
+      "text": "salary and then we grow that",
+      "start": 91.6,
+      "duration": 5.28
+    },
+    {
+      "text": "at the cost of living raises and we also",
+      "start": 93.84,
+      "duration": 3.76
+    },
+    {
+      "text": "grow that",
+      "start": 96.88,
+      "duration": 3.199
+    },
+    {
+      "text": "for the number of promotions at the",
+      "start": 97.6,
+      "duration": 5.519
+    },
+    {
+      "text": "promotion raise rate",
+      "start": 100.079,
+      "duration": 6.4
+    },
+    {
+      "text": "and for the wealth it is",
+      "start": 103.119,
+      "duration": 6.481
+    },
+    {
+      "text": "taking always whatever the prior wealth",
+      "start": 106.479,
+      "duration": 3.841
+    },
+    {
+      "text": "was",
+      "start": 109.6,
+      "duration": 3.519
+    },
+    {
+      "text": "and adding the investment return to it",
+      "start": 110.32,
+      "duration": 3.839
+    },
+    {
+      "text": "and then",
+      "start": 113.119,
+      "duration": 5.04
+    },
+    {
+      "text": "taking the cash saved in that year",
+      "start": 114.159,
+      "duration": 7.201
+    },
+    {
+      "text": "the salary times the savings rate and to",
+      "start": 118.159,
+      "duration": 5.041
+    },
+    {
+      "text": "get the wealth for that given",
+      "start": 121.36,
+      "duration": 4.079
+    },
+    {
+      "text": "year",
+      "start": 123.2,
+      "duration": 2.239
+    },
+    {
+      "text": "so let's go ahead and see what this",
+      "start": 127.68,
+      "duration": 5.6
+    },
+    {
+      "text": "looks like in python",
+      "start": 129.84,
+      "duration": 3.44
+    },
+    {
+      "text": "so uh the full completed example of this",
+      "start": 135.44,
+      "duration": 6.56
+    },
+    {
+      "text": "uh is there on the course site but i'm",
+      "start": 139.04,
+      "duration": 4.559
+    },
+    {
+      "text": "going to go ahead and build it out",
+      "start": 142.0,
+      "duration": 4.72
+    },
+    {
+      "text": "in the this and the following videos",
+      "start": 143.599,
+      "duration": 6.241
+    },
+    {
+      "text": "so i strip this down to",
+      "start": 146.72,
+      "duration": 6.0
+    },
+    {
+      "text": "just an initial uh basically template",
+      "start": 149.84,
+      "duration": 3.28
+    },
+    {
+      "text": "this",
+      "start": 152.72,
+      "duration": 3.28
+    },
+    {
+      "text": "is you know basically what you would get",
+      "start": 153.12,
+      "duration": 3.36
+    },
+    {
+      "text": "on",
+      "start": 156.0,
+      "duration": 3.84
+    },
+    {
+      "text": "any given project in the course as far",
+      "start": 156.48,
+      "duration": 5.039
+    },
+    {
+      "text": "as the python side",
+      "start": 159.84,
+      "duration": 4.08
+    },
+    {
+      "text": "where you know you have the basic inputs",
+      "start": 161.519,
+      "duration": 3.281
+    },
+    {
+      "text": "of the model",
+      "start": 163.92,
+      "duration": 3.92
+    },
+    {
+      "text": "already set up in a data class for you",
+      "start": 164.8,
+      "duration": 5.76
+    },
+    {
+      "text": "and you have you know the very start of",
+      "start": 167.84,
+      "duration": 4.32
+    },
+    {
+      "text": "a table of contents",
+      "start": 170.56,
+      "duration": 4.16
+    },
+    {
+      "text": "and a placeholder for a description and",
+      "start": 172.16,
+      "duration": 4.799
+    },
+    {
+      "text": "things like that",
+      "start": 174.72,
+      "duration": 4.159
+    },
+    {
+      "text": "so you know certainly you would want to",
+      "start": 176.959,
+      "duration": 3.2
+    },
+    {
+      "text": "fill out a full description",
+      "start": 178.879,
+      "duration": 5.121
+    },
+    {
+      "text": "of what your model is doing um",
+      "start": 180.159,
+      "duration": 6.561
+    },
+    {
+      "text": "but we'll leave that for now uh for the",
+      "start": 184.0,
+      "duration": 4.319
+    },
+    {
+      "text": "sake of time",
+      "start": 186.72,
+      "duration": 4.64
+    },
+    {
+      "text": "um so i'm just gonna go ahead",
+      "start": 188.319,
+      "duration": 6.081
+    },
+    {
+      "text": "and just run run everything in order",
+      "start": 191.36,
+      "duration": 5.48
+    },
+    {
+      "text": "just to start with so i have everything",
+      "start": 194.4,
+      "duration": 3.919
+    },
+    {
+      "text": "defined",
+      "start": 196.84,
+      "duration": 4.679
+    },
+    {
+      "text": "so now i have this model data",
+      "start": 198.319,
+      "duration": 6.64
+    },
+    {
+      "text": "which has all of my different",
+      "start": 201.519,
+      "duration": 6.961
+    },
+    {
+      "text": "variables attached to it",
+      "start": 204.959,
+      "duration": 3.521
+    },
+    {
+      "text": "now there's a couple um things that you",
+      "start": 210.08,
+      "duration": 3.68
+    },
+    {
+      "text": "can do",
+      "start": 212.56,
+      "duration": 4.399
+    },
+    {
+      "text": "which are going to make your experience",
+      "start": 213.76,
+      "duration": 5.92
+    },
+    {
+      "text": "of building the model a little bit",
+      "start": 216.959,
+      "duration": 4.161
+    },
+    {
+      "text": "smoother and help you avoid some",
+      "start": 219.68,
+      "duration": 2.559
+    },
+    {
+      "text": "pitfalls",
+      "start": 221.12,
+      "duration": 4.399
+    },
+    {
+      "text": "so one trick that i like",
+      "start": 222.239,
+      "duration": 6.881
+    },
+    {
+      "text": "is i'm going to go ahead and",
+      "start": 225.519,
+      "duration": 7.761
+    },
+    {
+      "text": "assign data to be model data",
+      "start": 229.12,
+      "duration": 7.679
+    },
+    {
+      "text": "and now we can use data instead of model",
+      "start": 233.28,
+      "duration": 7.28
+    },
+    {
+      "text": "data so why are we doing that",
+      "start": 236.799,
+      "duration": 8.401
+    },
+    {
+      "text": "uh so it goes along with another pattern",
+      "start": 240.56,
+      "duration": 6.0
+    },
+    {
+      "text": "that i'm about to show you",
+      "start": 245.2,
+      "duration": 3.84
+    },
+    {
+      "text": "where uh you know ultimately we're",
+      "start": 246.56,
+      "duration": 3.84
+    },
+    {
+      "text": "trying to write functions",
+      "start": 249.04,
+      "duration": 4.24
+    },
+    {
+      "text": "but it's not uh necessarily as easy to",
+      "start": 250.4,
+      "duration": 3.6
+    },
+    {
+      "text": "go straight",
+      "start": 253.28,
+      "duration": 3.04
+    },
+    {
+      "text": "to writing functions it adds additional",
+      "start": 254.0,
+      "duration": 3.68
+    },
+    {
+      "text": "structure",
+      "start": 256.32,
+      "duration": 3.36
+    },
+    {
+      "text": "and so it can be just a little bit more",
+      "start": 257.68,
+      "duration": 3.839
+    },
+    {
+      "text": "challenging to work with especially as a",
+      "start": 259.68,
+      "duration": 4.16
+    },
+    {
+      "text": "beginner",
+      "start": 261.519,
+      "duration": 4.481
+    },
+    {
+      "text": "and so what we can do is we can write",
+      "start": 263.84,
+      "duration": 4.799
+    },
+    {
+      "text": "out all the logic of the function",
+      "start": 266.0,
+      "duration": 6.0
+    },
+    {
+      "text": "just straight in the cell like this",
+      "start": 268.639,
+      "duration": 5.521
+    },
+    {
+      "text": "and then we can take that and we can",
+      "start": 272.0,
+      "duration": 3.84
+    },
+    {
+      "text": "just put it into a function",
+      "start": 274.16,
+      "duration": 4.96
+    },
+    {
+      "text": "once it works and",
+      "start": 275.84,
+      "duration": 5.04
+    },
+    {
+      "text": "the way that we'll define our functions",
+      "start": 279.12,
+      "duration": 4.48
+    },
+    {
+      "text": "we'll define them all to take data",
+      "start": 280.88,
+      "duration": 4.8
+    },
+    {
+      "text": "you know data being an instance of model",
+      "start": 283.6,
+      "duration": 3.28
+    },
+    {
+      "text": "inputs",
+      "start": 285.68,
+      "duration": 4.4
+    },
+    {
+      "text": "and it'll work with data not model data",
+      "start": 286.88,
+      "duration": 5.36
+    },
+    {
+      "text": "and the reason we're doing that is so",
+      "start": 290.08,
+      "duration": 4.559
+    },
+    {
+      "text": "that we don't accidentally use",
+      "start": 292.24,
+      "duration": 5.6
+    },
+    {
+      "text": "this model data",
+      "start": 294.639,
+      "duration": 3.201
+    },
+    {
+      "text": "without passing it to the function if",
+      "start": 297.919,
+      "duration": 3.28
+    },
+    {
+      "text": "you use it",
+      "start": 300.56,
+      "duration": 2.16
+    },
+    {
+      "text": "in the function without passing it to",
+      "start": 301.199,
+      "duration": 3.761
+    },
+    {
+      "text": "the function then it's going to be tied",
+      "start": 302.72,
+      "duration": 2.88
+    },
+    {
+      "text": "to this",
+      "start": 304.96,
+      "duration": 3.44
+    },
+    {
+      "text": "specific instance of the data and not",
+      "start": 305.6,
+      "duration": 4.4
+    },
+    {
+      "text": "any arbitrary data that we",
+      "start": 308.4,
+      "duration": 3.6
+    },
+    {
+      "text": "could pass to it so we want our",
+      "start": 310.0,
+      "duration": 3.84
+    },
+    {
+      "text": "functions uh",
+      "start": 312.0,
+      "duration": 5.36
+    },
+    {
+      "text": "to be able to just take an input and",
+      "start": 313.84,
+      "duration": 4.32
+    },
+    {
+      "text": "give an output",
+      "start": 317.36,
+      "duration": 3.44
+    },
+    {
+      "text": "we don't want them to be you know in the",
+      "start": 318.16,
+      "duration": 3.28
+    },
+    {
+      "text": "background",
+      "start": 320.8,
+      "duration": 2.16
+    },
+    {
+      "text": "using some different inputs that we",
+      "start": 321.44,
+      "duration": 3.599
+    },
+    {
+      "text": "didn't expect it to be using",
+      "start": 322.96,
+      "duration": 4.88
+    },
+    {
+      "text": "so this you know pattern of of going to",
+      "start": 325.039,
+      "duration": 4.481
+    },
+    {
+      "text": "using data",
+      "start": 327.84,
+      "duration": 4.079
+    },
+    {
+      "text": "and using data everywhere basically at",
+      "start": 329.52,
+      "duration": 4.0
+    },
+    {
+      "text": "the end you'll remove this",
+      "start": 331.919,
+      "duration": 4.401
+    },
+    {
+      "text": "data equals mod of data cell and so then",
+      "start": 333.52,
+      "duration": 4.32
+    },
+    {
+      "text": "you'll just be left with functions that",
+      "start": 336.32,
+      "duration": 2.4
+    },
+    {
+      "text": "take data",
+      "start": 337.84,
+      "duration": 3.52
+    },
+    {
+      "text": "and you'll be passing model data to them",
+      "start": 338.72,
+      "duration": 3.52
+    },
+    {
+      "text": "um",
+      "start": 341.36,
+      "duration": 2.96
+    },
+    {
+      "text": "and so they should still work and they",
+      "start": 342.24,
+      "duration": 4.0
+    },
+    {
+      "text": "should not be accessing the",
+      "start": 344.32,
+      "duration": 5.36
+    },
+    {
+      "text": "overall model data so",
+      "start": 346.24,
+      "duration": 5.44
+    },
+    {
+      "text": "that should become more clear as we go",
+      "start": 349.68,
+      "duration": 4.079
+    },
+    {
+      "text": "to build all this out but that's a quick",
+      "start": 351.68,
+      "duration": 4.32
+    },
+    {
+      "text": "overview of why i'm setting data equal",
+      "start": 353.759,
+      "duration": 5.361
+    },
+    {
+      "text": "to model data here",
+      "start": 356.0,
+      "duration": 3.12
+    },
+    {
+      "text": "so the first portion of the model that",
+      "start": 359.28,
+      "duration": 4.24
+    },
+    {
+      "text": "we want to build",
+      "start": 362.56,
+      "duration": 4.16
+    },
+    {
+      "text": "out is the salaries portion",
+      "start": 363.52,
+      "duration": 4.88
+    },
+    {
+      "text": "uh so i'm going to create a salaries",
+      "start": 366.72,
+      "duration": 3.44
+    },
+    {
+      "text": "header and we already use",
+      "start": 368.4,
+      "duration": 5.04
+    },
+    {
+      "text": "you know the level 1 header for the",
+      "start": 370.16,
+      "duration": 4.8
+    },
+    {
+      "text": "overall model title so i'm going to use",
+      "start": 373.44,
+      "duration": 3.12
+    },
+    {
+      "text": "the level 2 header",
+      "start": 374.96,
+      "duration": 5.04
+    },
+    {
+      "text": "for each of the sub models so you know",
+      "start": 376.56,
+      "duration": 4.96
+    },
+    {
+      "text": "the sub models are going to be salaries",
+      "start": 380.0,
+      "duration": 4.24
+    },
+    {
+      "text": "wealth and retirement",
+      "start": 381.52,
+      "duration": 5.519
+    },
+    {
+      "text": "um so we can go ahead and add salaries",
+      "start": 384.24,
+      "duration": 3.44
+    },
+    {
+      "text": "to",
+      "start": 387.039,
+      "duration": 4.0
+    },
+    {
+      "text": "our uh table of contents so you can just",
+      "start": 387.68,
+      "duration": 7.2
+    },
+    {
+      "text": "you know copy the previous",
+      "start": 391.039,
+      "duration": 9.121
+    },
+    {
+      "text": "so that you're able to work off that",
+      "start": 394.88,
+      "duration": 9.039
+    },
+    {
+      "text": "and here we can say determines the",
+      "start": 400.16,
+      "duration": 6.96
+    },
+    {
+      "text": "annual salary based on",
+      "start": 403.919,
+      "duration": 8.72
+    },
+    {
+      "text": "cost of living raises and promotions",
+      "start": 407.12,
+      "duration": 5.519
+    },
+    {
+      "text": "and now when we click that it takes us",
+      "start": 413.199,
+      "duration": 5.041
+    },
+    {
+      "text": "right to the salaries section",
+      "start": 414.8,
+      "duration": 3.44
+    },
+    {
+      "text": "so you know you'll see in the completed",
+      "start": 419.12,
+      "duration": 5.919
+    },
+    {
+      "text": "uh model that i have a full description",
+      "start": 422.8,
+      "duration": 3.839
+    },
+    {
+      "text": "written out here of what's going on and",
+      "start": 425.039,
+      "duration": 3.521
+    },
+    {
+      "text": "it has the equation",
+      "start": 426.639,
+      "duration": 4.641
+    },
+    {
+      "text": "and everything um but we'll just leave",
+      "start": 428.56,
+      "duration": 3.359
+    },
+    {
+      "text": "that off",
+      "start": 431.28,
+      "duration": 2.72
+    },
+    {
+      "text": "for now just for the sake of time just",
+      "start": 431.919,
+      "duration": 4.481
+    },
+    {
+      "text": "go and reference the completed example",
+      "start": 434.0,
+      "duration": 4.56
+    },
+    {
+      "text": "to see a good example of the kind of",
+      "start": 436.4,
+      "duration": 4.56
+    },
+    {
+      "text": "description that we should see",
+      "start": 438.56,
+      "duration": 4.56
+    },
+    {
+      "text": "for one of these sections but let's just",
+      "start": 440.96,
+      "duration": 5.76
+    },
+    {
+      "text": "go ahead and go right to the code",
+      "start": 443.12,
+      "duration": 7.359
+    },
+    {
+      "text": "so we know that we want to be taking",
+      "start": 446.72,
+      "duration": 8.319
+    },
+    {
+      "text": "the salary the initial salary",
+      "start": 450.479,
+      "duration": 7.041
+    },
+    {
+      "text": "times one plus the cost of living return",
+      "start": 455.039,
+      "duration": 4.241
+    },
+    {
+      "text": "to the number of years",
+      "start": 457.52,
+      "duration": 4.399
+    },
+    {
+      "text": "times one plus the promotion return to",
+      "start": 459.28,
+      "duration": 5.039
+    },
+    {
+      "text": "the number of promotions",
+      "start": 461.919,
+      "duration": 6.321
+    },
+    {
+      "text": "so how do we figure out the pieces",
+      "start": 464.319,
+      "duration": 6.961
+    },
+    {
+      "text": "for this so we don't know",
+      "start": 468.24,
+      "duration": 5.04
+    },
+    {
+      "text": "off the bat how many promotions there",
+      "start": 471.28,
+      "duration": 4.0
+    },
+    {
+      "text": "have been at a given year",
+      "start": 473.28,
+      "duration": 4.88
+    },
+    {
+      "text": "we know how often those promotions are",
+      "start": 475.28,
+      "duration": 4.639
+    },
+    {
+      "text": "occurring here by default every five",
+      "start": 478.16,
+      "duration": 2.719
+    },
+    {
+      "text": "years",
+      "start": 479.919,
+      "duration": 3.68
+    },
+    {
+      "text": "uh but we you know if the year is three",
+      "start": 480.879,
+      "duration": 4.401
+    },
+    {
+      "text": "if the year is seven",
+      "start": 483.599,
+      "duration": 4.081
+    },
+    {
+      "text": "ten whatever we don't immediately know",
+      "start": 485.28,
+      "duration": 4.08
+    },
+    {
+      "text": "how many promotions have occurred up",
+      "start": 487.68,
+      "duration": 3.359
+    },
+    {
+      "text": "until that point",
+      "start": 489.36,
+      "duration": 4.239
+    },
+    {
+      "text": "so we have to calculate that so i'm",
+      "start": 491.039,
+      "duration": 4.0
+    },
+    {
+      "text": "going to calculate that",
+      "start": 493.599,
+      "duration": 4.88
+    },
+    {
+      "text": "um so you know first",
+      "start": 495.039,
+      "duration": 5.681
+    },
+    {
+      "text": "let me just say you know let's work with",
+      "start": 498.479,
+      "duration": 3.521
+    },
+    {
+      "text": "year seven",
+      "start": 500.72,
+      "duration": 4.4
+    },
+    {
+      "text": "year equals seven um so let's",
+      "start": 502.0,
+      "duration": 6.639
+    },
+    {
+      "text": "say um you know year",
+      "start": 505.12,
+      "duration": 7.2
+    },
+    {
+      "text": "divided by uh the promotions every",
+      "start": 508.639,
+      "duration": 7.041
+    },
+    {
+      "text": "n years uh what do we get from that",
+      "start": 512.32,
+      "duration": 6.24
+    },
+    {
+      "text": "so uh year seven we've had 1.4",
+      "start": 515.68,
+      "duration": 4.64
+    },
+    {
+      "text": "promotions that doesn't we're not quite",
+      "start": 518.56,
+      "duration": 2.88
+    },
+    {
+      "text": "the way we're there would be one",
+      "start": 520.32,
+      "duration": 2.24
+    },
+    {
+      "text": "promotion right",
+      "start": 521.44,
+      "duration": 3.519
+    },
+    {
+      "text": "we get 10 that goes to 2 we hit 11. it's",
+      "start": 522.56,
+      "duration": 4.399
+    },
+    {
+      "text": "2.2",
+      "start": 524.959,
+      "duration": 5.121
+    },
+    {
+      "text": "up to 14 we're at 2.8 so really we want",
+      "start": 526.959,
+      "duration": 6.241
+    },
+    {
+      "text": "just the integer portion of this right",
+      "start": 530.08,
+      "duration": 5.12
+    },
+    {
+      "text": "we don't care about the decimal",
+      "start": 533.2,
+      "duration": 4.079
+    },
+    {
+      "text": "as soon as it you know goes up to the",
+      "start": 535.2,
+      "duration": 4.24
+    },
+    {
+      "text": "next integer that's when we",
+      "start": 537.279,
+      "duration": 3.281
+    },
+    {
+      "text": "recognize that there's been another",
+      "start": 539.44,
+      "duration": 4.72
+    },
+    {
+      "text": "promotion so if we just take the integer",
+      "start": 540.56,
+      "duration": 7.6
+    },
+    {
+      "text": "portion of that then we will be left",
+      "start": 544.16,
+      "duration": 7.04
+    },
+    {
+      "text": "with what we want uh you know",
+      "start": 548.16,
+      "duration": 6.72
+    },
+    {
+      "text": "years 11 through 12 or 11 through 14.",
+      "start": 551.2,
+      "duration": 6.0
+    },
+    {
+      "text": "it's two promotions as soon as we have",
+      "start": 554.88,
+      "duration": 3.12
+    },
+    {
+      "text": "15",
+      "start": 557.2,
+      "duration": 2.88
+    },
+    {
+      "text": "we get to three promotions so this is",
+      "start": 558.0,
+      "duration": 5.36
+    },
+    {
+      "text": "what we want",
+      "start": 560.08,
+      "duration": 7.52
+    },
+    {
+      "text": "and then we can go ahead and calculate",
+      "start": 563.36,
+      "duration": 7.12
+    },
+    {
+      "text": "calculate the salary at the given year",
+      "start": 567.6,
+      "duration": 4.4
+    },
+    {
+      "text": "so salary at year t",
+      "start": 570.48,
+      "duration": 5.12
+    },
+    {
+      "text": "is going to be the starting salary",
+      "start": 572.0,
+      "duration": 6.959
+    },
+    {
+      "text": "which is in the inputs times 1",
+      "start": 575.6,
+      "duration": 6.88
+    },
+    {
+      "text": "plus the cost of living raise",
+      "start": 578.959,
+      "duration": 6.32
+    },
+    {
+      "text": "and we're going to take that to the",
+      "start": 582.48,
+      "duration": 3.44
+    },
+    {
+      "text": "power",
+      "start": 585.279,
+      "duration": 3.601
+    },
+    {
+      "text": "of the year",
+      "start": 585.92,
+      "duration": 2.96
+    },
+    {
+      "text": "and then that's going to be times one",
+      "start": 589.04,
+      "duration": 3.76
+    },
+    {
+      "text": "plus",
+      "start": 591.68,
+      "duration": 4.4
+    },
+    {
+      "text": "the promotional raise uh",
+      "start": 592.8,
+      "duration": 7.68
+    },
+    {
+      "text": "to the power of the number of promotions",
+      "start": 596.08,
+      "duration": 7.999
+    },
+    {
+      "text": "um so then we see by year 15",
+      "start": 600.48,
+      "duration": 7.039
+    },
+    {
+      "text": "we have 120 000 roughly a year one",
+      "start": 604.079,
+      "duration": 6.0
+    },
+    {
+      "text": "sixty one thousand two hundred year two",
+      "start": 607.519,
+      "duration": 3.601
+    },
+    {
+      "text": "sixty four",
+      "start": 610.079,
+      "duration": 3.361
+    },
+    {
+      "text": "sixty two thousand uh you know starting",
+      "start": 611.12,
+      "duration": 3.76
+    },
+    {
+      "text": "off in a starting salary of",
+      "start": 613.44,
+      "duration": 3.519
+    },
+    {
+      "text": "six thousand two percent cost of living",
+      "start": 614.88,
+      "duration": 4.56
+    },
+    {
+      "text": "raise so this all sounds correct",
+      "start": 616.959,
+      "duration": 5.681
+    },
+    {
+      "text": "uh and year four uh just under 65 and",
+      "start": 619.44,
+      "duration": 4.8
+    },
+    {
+      "text": "then we hit year five and we get a big",
+      "start": 622.64,
+      "duration": 2.4
+    },
+    {
+      "text": "jump",
+      "start": 624.24,
+      "duration": 2.8
+    },
+    {
+      "text": "in the salary as we would expect coming",
+      "start": 625.04,
+      "duration": 3.039
+    },
+    {
+      "text": "along with the promotion",
+      "start": 627.04,
+      "duration": 3.799
+    },
+    {
+      "text": "so it looks like everything is working",
+      "start": 628.079,
+      "duration": 5.121
+    },
+    {
+      "text": "correctly",
+      "start": 630.839,
+      "duration": 5.0
+    },
+    {
+      "text": "so now we have a piece of the model",
+      "start": 633.2,
+      "duration": 3.12
+    },
+    {
+      "text": "which",
+      "start": 635.839,
+      "duration": 3.521
+    },
+    {
+      "text": "works appropriately let's go ahead and",
+      "start": 636.32,
+      "duration": 4.88
+    },
+    {
+      "text": "make this logical step",
+      "start": 639.36,
+      "duration": 5.12
+    },
+    {
+      "text": "into a function so",
+      "start": 641.2,
+      "duration": 6.72
+    },
+    {
+      "text": "uh what we can do you know this year uh",
+      "start": 644.48,
+      "duration": 5.12
+    },
+    {
+      "text": "is going to be an input to the function",
+      "start": 647.92,
+      "duration": 3.12
+    },
+    {
+      "text": "now and",
+      "start": 649.6,
+      "duration": 3.04
+    },
+    {
+      "text": "also the data is going to be the other",
+      "start": 651.04,
+      "duration": 4.16
+    },
+    {
+      "text": "input to the function so def",
+      "start": 652.64,
+      "duration": 5.759
+    },
+    {
+      "text": "uh you know salary at year and it's",
+      "start": 655.2,
+      "duration": 5.36
+    },
+    {
+      "text": "going to take the data and it's going to",
+      "start": 658.399,
+      "duration": 3.521
+    },
+    {
+      "text": "take the year",
+      "start": 660.56,
+      "duration": 4.88
+    },
+    {
+      "text": "and then we just uh",
+      "start": 661.92,
+      "duration": 5.28
+    },
+    {
+      "text": "you know highlight all that and press",
+      "start": 665.44,
+      "duration": 3.839
+    },
+    {
+      "text": "tab to shift it over",
+      "start": 667.2,
+      "duration": 3.28
+    },
+    {
+      "text": "and then we're just going to add a",
+      "start": 669.279,
+      "duration": 4.56
+    },
+    {
+      "text": "return on to the",
+      "start": 670.48,
+      "duration": 6.64
+    },
+    {
+      "text": "and now we have a function which does",
+      "start": 673.839,
+      "duration": 7.361
+    },
+    {
+      "text": "what we were trying to do",
+      "start": 677.12,
+      "duration": 7.68
+    },
+    {
+      "text": "so now we can get rid of this year",
+      "start": 681.2,
+      "duration": 6.72
+    },
+    {
+      "text": "um so at year four we see the same",
+      "start": 684.8,
+      "duration": 4.08
+    },
+    {
+      "text": "almost 65",
+      "start": 687.92,
+      "duration": 5.84
+    },
+    {
+      "text": "000 year five we see the 76 000.",
+      "start": 688.88,
+      "duration": 4.88
+    },
+    {
+      "text": "and since we",
+      "start": 694.079,
+      "duration": 5.681
+    },
+    {
+      "text": "used just whatever data is being passed",
+      "start": 697.2,
+      "duration": 5.04
+    },
+    {
+      "text": "to it and not the overall model data",
+      "start": 699.76,
+      "duration": 4.72
+    },
+    {
+      "text": "that means that you know you could",
+      "start": 702.24,
+      "duration": 3.36
+    },
+    {
+      "text": "potentially",
+      "start": 704.48,
+      "duration": 4.4
+    },
+    {
+      "text": "uh you know construct you know other uh",
+      "start": 705.6,
+      "duration": 6.0
+    },
+    {
+      "text": "data you know say uh you know we wanted",
+      "start": 708.88,
+      "duration": 5.199
+    },
+    {
+      "text": "the salary to start at 40 000 instead",
+      "start": 711.6,
+      "duration": 6.4
+    },
+    {
+      "text": "and pass that data into there",
+      "start": 714.079,
+      "duration": 6.88
+    },
+    {
+      "text": "um then we can see that it's going to be",
+      "start": 718.0,
+      "duration": 4.48
+    },
+    {
+      "text": "based off of that",
+      "start": 720.959,
+      "duration": 4.081
+    },
+    {
+      "text": "new inputs whereas if you had to use",
+      "start": 722.48,
+      "duration": 3.52
+    },
+    {
+      "text": "model data",
+      "start": 725.04,
+      "duration": 2.799
+    },
+    {
+      "text": "in all of these and you may or may not",
+      "start": 726.0,
+      "duration": 4.56
+    },
+    {
+      "text": "have put an argument here for that",
+      "start": 727.839,
+      "duration": 4.641
+    },
+    {
+      "text": "then it's going to always use these",
+      "start": 730.56,
+      "duration": 3.76
+    },
+    {
+      "text": "values which are defined up here which",
+      "start": 732.48,
+      "duration": 3.84
+    },
+    {
+      "text": "makes your model significantly less",
+      "start": 734.32,
+      "duration": 4.56
+    },
+    {
+      "text": "flexible",
+      "start": 736.32,
+      "duration": 2.56
+    },
+    {
+      "text": "so we have our portion of the model",
+      "start": 739.519,
+      "duration": 6.241
+    },
+    {
+      "text": "that works getting the salary at a given",
+      "start": 743.2,
+      "duration": 3.439
+    },
+    {
+      "text": "year",
+      "start": 745.76,
+      "duration": 2.48
+    },
+    {
+      "text": "and you know definitely take a look at",
+      "start": 746.639,
+      "duration": 3.44
+    },
+    {
+      "text": "the full example",
+      "start": 748.24,
+      "duration": 3.599
+    },
+    {
+      "text": "you would want to put a description of",
+      "start": 750.079,
+      "duration": 3.361
+    },
+    {
+      "text": "what it does in the docs string and you",
+      "start": 751.839,
+      "duration": 3.361
+    },
+    {
+      "text": "want to describe what's going on in this",
+      "start": 753.44,
+      "duration": 4.0
+    },
+    {
+      "text": "section",
+      "start": 755.2,
+      "duration": 4.319
+    },
+    {
+      "text": "uh but the other thing that i think is",
+      "start": 757.44,
+      "duration": 4.24
+    },
+    {
+      "text": "appropriate to complete out this section",
+      "start": 759.519,
+      "duration": 6.0
+    },
+    {
+      "text": "is uh just showing how this works year",
+      "start": 761.68,
+      "duration": 5.04
+    },
+    {
+      "text": "over year",
+      "start": 765.519,
+      "duration": 4.721
+    },
+    {
+      "text": "so we define the function now let's look",
+      "start": 766.72,
+      "duration": 6.16
+    },
+    {
+      "text": "at what it looks like",
+      "start": 770.24,
+      "duration": 6.56
+    },
+    {
+      "text": "you know over a range of years so",
+      "start": 772.88,
+      "duration": 6.399
+    },
+    {
+      "text": "we're just going to go through six years",
+      "start": 776.8,
+      "duration": 3.279
+    },
+    {
+      "text": "and with the",
+      "start": 779.279,
+      "duration": 3.201
+    },
+    {
+      "text": "zero based indexing and python you know",
+      "start": 780.079,
+      "duration": 3.121
+    },
+    {
+      "text": "the the",
+      "start": 782.48,
+      "duration": 2.72
+    },
+    {
+      "text": "i is always starting at zero but we want",
+      "start": 783.2,
+      "duration": 3.52
+    },
+    {
+      "text": "our year to start from one so we're just",
+      "start": 785.2,
+      "duration": 2.8
+    },
+    {
+      "text": "going to add one",
+      "start": 786.72,
+      "duration": 4.64
+    },
+    {
+      "text": "to the i to get the actual year",
+      "start": 788.0,
+      "duration": 5.12
+    },
+    {
+      "text": "and then we're going to calculate the",
+      "start": 791.36,
+      "duration": 4.24
+    },
+    {
+      "text": "salary at that year",
+      "start": 793.12,
+      "duration": 5.44
+    },
+    {
+      "text": "and here we're going to pass it the",
+      "start": 795.6,
+      "duration": 5.359
+    },
+    {
+      "text": "model data because all this is happening",
+      "start": 798.56,
+      "duration": 4.24
+    },
+    {
+      "text": "outside of function and we want this to",
+      "start": 800.959,
+      "duration": 3.68
+    },
+    {
+      "text": "still work after we",
+      "start": 802.8,
+      "duration": 3.12
+    },
+    {
+      "text": "remove this when we're done with the",
+      "start": 804.639,
+      "duration": 3.601
+    },
+    {
+      "text": "model",
+      "start": 805.92,
+      "duration": 2.32
+    },
+    {
+      "text": "and then we want to go ahead and print",
+      "start": 809.44,
+      "duration": 6.24
+    },
+    {
+      "text": "a nice formatted string the salary",
+      "start": 812.56,
+      "duration": 5.839
+    },
+    {
+      "text": "at year",
+      "start": 815.68,
+      "duration": 2.719
+    },
+    {
+      "text": "and then the year is",
+      "start": 818.72,
+      "duration": 6.64
+    },
+    {
+      "text": "uh and then",
+      "start": 822.16,
+      "duration": 4.88
+    },
+    {
+      "text": "let's give it you know some commas in",
+      "start": 825.36,
+      "duration": 3.2
+    },
+    {
+      "text": "there uh and",
+      "start": 827.04,
+      "duration": 4.88
+    },
+    {
+      "text": "zero decimal places so then we can",
+      "start": 828.56,
+      "duration": 5.839
+    },
+    {
+      "text": "run that and we see that we get the",
+      "start": 831.92,
+      "duration": 4.96
+    },
+    {
+      "text": "salary year every year and indeed see",
+      "start": 834.399,
+      "duration": 4.56
+    },
+    {
+      "text": "you know cost of living raises going up",
+      "start": 836.88,
+      "duration": 3.84
+    },
+    {
+      "text": "through year four and then we hit year",
+      "start": 838.959,
+      "duration": 3.521
+    },
+    {
+      "text": "five a promotion occurs and we see a",
+      "start": 840.72,
+      "duration": 3.679
+    },
+    {
+      "text": "larger jump in salary so it looks like",
+      "start": 842.48,
+      "duration": 5.359
+    },
+    {
+      "text": "everything is working appropriately",
+      "start": 844.399,
+      "duration": 5.361
+    },
+    {
+      "text": "so definitely look at the full completed",
+      "start": 847.839,
+      "duration": 3.12
+    },
+    {
+      "text": "example for",
+      "start": 849.76,
+      "duration": 3.439
+    },
+    {
+      "text": "all the description of everything but",
+      "start": 850.959,
+      "duration": 4.801
+    },
+    {
+      "text": "that's the basic logic",
+      "start": 853.199,
+      "duration": 4.481
+    },
+    {
+      "text": "so next time we will come back to build",
+      "start": 855.76,
+      "duration": 3.28
+    },
+    {
+      "text": "the wealth section",
+      "start": 857.68,
+      "duration": 3.76
+    },
+    {
+      "text": "of the model and then the following",
+      "start": 859.04,
+      "duration": 4.479
+    },
+    {
+      "text": "video build the retirement section to",
+      "start": 861.44,
+      "duration": 3.28
+    },
+    {
+      "text": "finish it up",
+      "start": 863.519,
+      "duration": 5.0
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 864.72,
+      "duration": 6.799
+    },
+    {
+      "text": "time",
+      "start": 868.519,
+      "duration": 3.0
+    }
+  ]
+}

@@ -1,0 +1,1069 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 4.0,
+      "duration": 2.319
+    },
+    {
+      "text": "nick dierbert is here teaching you",
+      "start": 4.88,
+      "duration": 3.92
+    },
+    {
+      "text": "financial modeling today we're talking",
+      "start": 6.319,
+      "duration": 5.28
+    },
+    {
+      "text": "about how to extend a simple excel model",
+      "start": 8.8,
+      "duration": 3.6
+    },
+    {
+      "text": "to add",
+      "start": 11.599,
+      "duration": 3.521
+    },
+    {
+      "text": "basic iteration this is part of our",
+      "start": 12.4,
+      "duration": 4.32
+    },
+    {
+      "text": "segment on getting started",
+      "start": 15.12,
+      "duration": 3.52
+    },
+    {
+      "text": "on python and excel where we're building",
+      "start": 16.72,
+      "duration": 4.08
+    },
+    {
+      "text": "out basic retirement model",
+      "start": 18.64,
+      "duration": 5.76
+    },
+    {
+      "text": "with both tools so",
+      "start": 20.8,
+      "duration": 6.719
+    },
+    {
+      "text": "uh looking at how we would add this",
+      "start": 24.4,
+      "duration": 5.6
+    },
+    {
+      "text": "iteration so here i'm going to start",
+      "start": 27.519,
+      "duration": 4.641
+    },
+    {
+      "text": "from what we had from the prior video",
+      "start": 30.0,
+      "duration": 3.84
+    },
+    {
+      "text": "where we built out this basic",
+      "start": 32.16,
+      "duration": 3.84
+    },
+    {
+      "text": "excel model to get the years to",
+      "start": 33.84,
+      "duration": 3.28
+    },
+    {
+      "text": "retirement",
+      "start": 36.0,
+      "duration": 4.399
+    },
+    {
+      "text": "uh based off of these inputs but i'm",
+      "start": 37.12,
+      "duration": 5.52
+    },
+    {
+      "text": "going to go ahead and just",
+      "start": 40.399,
+      "duration": 7.601
+    },
+    {
+      "text": "copy it to a new sheet um",
+      "start": 42.64,
+      "duration": 5.36
+    },
+    {
+      "text": "and then we can call this uh you know",
+      "start": 48.719,
+      "duration": 5.921
+    },
+    {
+      "text": "model with iteration",
+      "start": 51.44,
+      "duration": 3.2
+    },
+    {
+      "text": "so uh here let's look at say three",
+      "start": 56.84,
+      "duration": 5.32
+    },
+    {
+      "text": "different interest rates and what's the",
+      "start": 60.16,
+      "duration": 3.52
+    },
+    {
+      "text": "years to retirement",
+      "start": 62.16,
+      "duration": 4.56
+    },
+    {
+      "text": "for each one of those rates um",
+      "start": 63.68,
+      "duration": 4.96
+    },
+    {
+      "text": "and we want to be sure to be able to do",
+      "start": 66.72,
+      "duration": 3.6
+    },
+    {
+      "text": "this without",
+      "start": 68.64,
+      "duration": 5.76
+    },
+    {
+      "text": "having to retype any formulas or copy",
+      "start": 70.32,
+      "duration": 5.28
+    },
+    {
+      "text": "paste or",
+      "start": 74.4,
+      "duration": 3.359
+    },
+    {
+      "text": "anything like that we want to be able to",
+      "start": 75.6,
+      "duration": 3.92
+    },
+    {
+      "text": "take the same formula that we've written",
+      "start": 77.759,
+      "duration": 3.201
+    },
+    {
+      "text": "and just apply it",
+      "start": 79.52,
+      "duration": 4.72
+    },
+    {
+      "text": "to multiple different inputs and",
+      "start": 80.96,
+      "duration": 5.28
+    },
+    {
+      "text": "you know with such a simple calculation",
+      "start": 84.24,
+      "duration": 3.44
+    },
+    {
+      "text": "it doesn't make a big difference",
+      "start": 86.24,
+      "duration": 3.519
+    },
+    {
+      "text": "but once you're you know running an",
+      "start": 87.68,
+      "duration": 4.16
+    },
+    {
+      "text": "entire complicated model here",
+      "start": 89.759,
+      "duration": 3.601
+    },
+    {
+      "text": "uh you're definitely not going to want",
+      "start": 91.84,
+      "duration": 3.919
+    },
+    {
+      "text": "to copy your model multiple times that",
+      "start": 93.36,
+      "duration": 5.2
+    },
+    {
+      "text": "becomes a huge maintenance nightmare",
+      "start": 95.759,
+      "duration": 6.961
+    },
+    {
+      "text": "and so iteration is important",
+      "start": 98.56,
+      "duration": 6.48
+    },
+    {
+      "text": "so we want to look at a couple other",
+      "start": 102.72,
+      "duration": 3.12
+    },
+    {
+      "text": "interest rates",
+      "start": 105.04,
+      "duration": 2.96
+    },
+    {
+      "text": "so let's say you know we want to also",
+      "start": 105.84,
+      "duration": 4.239
+    },
+    {
+      "text": "look at six and seven",
+      "start": 108.0,
+      "duration": 5.04
+    },
+    {
+      "text": "percent um of course you know you would",
+      "start": 110.079,
+      "duration": 4.881
+    },
+    {
+      "text": "want to update the formatting so it can",
+      "start": 113.04,
+      "duration": 2.719
+    },
+    {
+      "text": "capture",
+      "start": 114.96,
+      "duration": 4.64
+    },
+    {
+      "text": "all of this um but i'm just going to",
+      "start": 115.759,
+      "duration": 6.081
+    },
+    {
+      "text": "leave that as an exercise for you on",
+      "start": 119.6,
+      "duration": 3.76
+    },
+    {
+      "text": "your own so we don't have to spend time",
+      "start": 121.84,
+      "duration": 3.76
+    },
+    {
+      "text": "with it here",
+      "start": 123.36,
+      "duration": 4.64
+    },
+    {
+      "text": "um now we want to take this years to",
+      "start": 125.6,
+      "duration": 4.56
+    },
+    {
+      "text": "retirement calculation",
+      "start": 128.0,
+      "duration": 5.76
+    },
+    {
+      "text": "and apply that to not only the five",
+      "start": 130.16,
+      "duration": 4.48
+    },
+    {
+      "text": "percent rate",
+      "start": 133.76,
+      "duration": 4.559
+    },
+    {
+      "text": "but also the six and seven percent rate",
+      "start": 134.64,
+      "duration": 5.76
+    },
+    {
+      "text": "um so the first thing you might think to",
+      "start": 138.319,
+      "duration": 4.081
+    },
+    {
+      "text": "do uh you know i've already",
+      "start": 140.4,
+      "duration": 4.8
+    },
+    {
+      "text": "mentioned how uh iteration in excel you",
+      "start": 142.4,
+      "duration": 3.52
+    },
+    {
+      "text": "drag",
+      "start": 145.2,
+      "duration": 3.2
+    },
+    {
+      "text": "the formula right and so you can see you",
+      "start": 145.92,
+      "duration": 4.959
+    },
+    {
+      "text": "know on this box you can see that this",
+      "start": 148.4,
+      "duration": 6.16
+    },
+    {
+      "text": "bottom right corner that box there has",
+      "start": 150.879,
+      "duration": 5.681
+    },
+    {
+      "text": "uh you know a larger corner and you can",
+      "start": 154.56,
+      "duration": 3.84
+    },
+    {
+      "text": "see the cursor changes",
+      "start": 156.56,
+      "duration": 4.48
+    },
+    {
+      "text": "uh to this other one when i go over that",
+      "start": 158.4,
+      "duration": 4.4
+    },
+    {
+      "text": "and that's signifying that you're able",
+      "start": 161.04,
+      "duration": 2.16
+    },
+    {
+      "text": "to",
+      "start": 162.8,
+      "duration": 2.799
+    },
+    {
+      "text": "drag it um so you just click that and",
+      "start": 163.2,
+      "duration": 3.6
+    },
+    {
+      "text": "hold and drag it",
+      "start": 165.599,
+      "duration": 3.92
+    },
+    {
+      "text": "and then you can go in you know whatever",
+      "start": 166.8,
+      "duration": 3.28
+    },
+    {
+      "text": "direction",
+      "start": 169.519,
+      "duration": 3.681
+    },
+    {
+      "text": "you want from there so",
+      "start": 170.08,
+      "duration": 4.879
+    },
+    {
+      "text": "you know your your thought here might be",
+      "start": 173.2,
+      "duration": 3.759
+    },
+    {
+      "text": "just okay let's just drag it over",
+      "start": 174.959,
+      "duration": 4.801
+    },
+    {
+      "text": "and uh then we'll get the calculation",
+      "start": 176.959,
+      "duration": 3.2
+    },
+    {
+      "text": "again",
+      "start": 179.76,
+      "duration": 2.96
+    },
+    {
+      "text": "for the other inputs and to some extent",
+      "start": 180.159,
+      "duration": 3.841
+    },
+    {
+      "text": "that's true",
+      "start": 182.72,
+      "duration": 4.239
+    },
+    {
+      "text": "but you'll see the issue here right we",
+      "start": 184.0,
+      "duration": 3.92
+    },
+    {
+      "text": "can see that",
+      "start": 186.959,
+      "duration": 3.121
+    },
+    {
+      "text": "the reference for the interest rate",
+      "start": 187.92,
+      "duration": 3.2
+    },
+    {
+      "text": "indeed moved over",
+      "start": 190.08,
+      "duration": 4.32
+    },
+    {
+      "text": "as we wanted it to but the uh reference",
+      "start": 191.12,
+      "duration": 5.92
+    },
+    {
+      "text": "for desired cash and annual cash save",
+      "start": 194.4,
+      "duration": 5.52
+    },
+    {
+      "text": "also moved over even though we only have",
+      "start": 197.04,
+      "duration": 4.72
+    },
+    {
+      "text": "a single desired cash",
+      "start": 199.92,
+      "duration": 6.0
+    },
+    {
+      "text": "and annual cash saved and so one way you",
+      "start": 201.76,
+      "duration": 4.88
+    },
+    {
+      "text": "might think",
+      "start": 205.92,
+      "duration": 4.08
+    },
+    {
+      "text": "to solve this is okay well i'll just",
+      "start": 206.64,
+      "duration": 6.319
+    },
+    {
+      "text": "you know repeat these numbers uh you",
+      "start": 210.0,
+      "duration": 3.36
+    },
+    {
+      "text": "know",
+      "start": 212.959,
+      "duration": 2.56
+    },
+    {
+      "text": "in each one and then it should work",
+      "start": 213.36,
+      "duration": 3.76
+    },
+    {
+      "text": "right and",
+      "start": 215.519,
+      "duration": 3.841
+    },
+    {
+      "text": "uh",
+      "start": 217.12,
+      "duration": 2.24
+    },
+    {
+      "text": "and it's close to working you know if",
+      "start": 220.48,
+      "duration": 3.2
+    },
+    {
+      "text": "this was a hard-coded number that would",
+      "start": 222.0,
+      "duration": 3.04
+    },
+    {
+      "text": "have worked but again this",
+      "start": 223.68,
+      "duration": 3.279
+    },
+    {
+      "text": "face the same problem right this was",
+      "start": 225.04,
+      "duration": 4.24
+    },
+    {
+      "text": "actually a calculation",
+      "start": 226.959,
+      "duration": 4.801
+    },
+    {
+      "text": "uh and so that also dragged over well",
+      "start": 229.28,
+      "duration": 4.159
+    },
+    {
+      "text": "let's just say you know we had",
+      "start": 231.76,
+      "duration": 5.199
+    },
+    {
+      "text": "15 000 in here okay now it is working",
+      "start": 233.439,
+      "duration": 5.281
+    },
+    {
+      "text": "uh but what if you want to update the",
+      "start": 236.959,
+      "duration": 3.041
+    },
+    {
+      "text": "desired cache now",
+      "start": 238.72,
+      "duration": 4.079
+    },
+    {
+      "text": "it's you know 1.6 million oh wait that",
+      "start": 240.0,
+      "duration": 4.56
+    },
+    {
+      "text": "only updated the one calculation that",
+      "start": 242.799,
+      "duration": 3.52
+    },
+    {
+      "text": "didn't update the others",
+      "start": 244.56,
+      "duration": 4.08
+    },
+    {
+      "text": "uh and so there's definitely issues with",
+      "start": 246.319,
+      "duration": 3.041
+    },
+    {
+      "text": "this approach",
+      "start": 248.64,
+      "duration": 3.84
+    },
+    {
+      "text": "plus it just looks repetitive um",
+      "start": 249.36,
+      "duration": 6.64
+    },
+    {
+      "text": "so the solution to this is uh",
+      "start": 252.48,
+      "duration": 6.719
+    },
+    {
+      "text": "to use fixed references so",
+      "start": 256.0,
+      "duration": 6.479
+    },
+    {
+      "text": "by uh you know carefully picking which",
+      "start": 259.199,
+      "duration": 4.0
+    },
+    {
+      "text": "references",
+      "start": 262.479,
+      "duration": 3.041
+    },
+    {
+      "text": "should be fixed which should be relative",
+      "start": 263.199,
+      "duration": 3.361
+    },
+    {
+      "text": "and",
+      "start": 265.52,
+      "duration": 3.2
+    },
+    {
+      "text": "you know if you're uh depending on the",
+      "start": 266.56,
+      "duration": 3.6
+    },
+    {
+      "text": "situation you can",
+      "start": 268.72,
+      "duration": 3.36
+    },
+    {
+      "text": "fix just in one direction on the row or",
+      "start": 270.16,
+      "duration": 3.039
+    },
+    {
+      "text": "the column uh",
+      "start": 272.08,
+      "duration": 3.04
+    },
+    {
+      "text": "we'll get into that more as the course",
+      "start": 273.199,
+      "duration": 3.201
+    },
+    {
+      "text": "goes on",
+      "start": 275.12,
+      "duration": 3.2
+    },
+    {
+      "text": "but uh for now we can just think about",
+      "start": 276.4,
+      "duration": 3.84
+    },
+    {
+      "text": "fixed or relative",
+      "start": 278.32,
+      "duration": 4.0
+    },
+    {
+      "text": "so the fixed reference is not going to",
+      "start": 280.24,
+      "duration": 3.76
+    },
+    {
+      "text": "move as you drag",
+      "start": 282.32,
+      "duration": 3.52
+    },
+    {
+      "text": "the calculation while the relative",
+      "start": 284.0,
+      "duration": 3.36
+    },
+    {
+      "text": "reference will",
+      "start": 285.84,
+      "duration": 5.68
+    },
+    {
+      "text": "um and so you want to make all those",
+      "start": 287.36,
+      "duration": 6.16
+    },
+    {
+      "text": "changes to your formula before",
+      "start": 291.52,
+      "duration": 5.6
+    },
+    {
+      "text": "you go and drag it so if we click into",
+      "start": 293.52,
+      "duration": 4.88
+    },
+    {
+      "text": "the formula we again",
+      "start": 297.12,
+      "duration": 3.6
+    },
+    {
+      "text": "you know see those three references here",
+      "start": 298.4,
+      "duration": 4.4
+    },
+    {
+      "text": "highlighted in the same colors",
+      "start": 300.72,
+      "duration": 5.84
+    },
+    {
+      "text": "in the formula bar here",
+      "start": 302.8,
+      "duration": 3.76
+    },
+    {
+      "text": "and we want to then not fix the interest",
+      "start": 307.12,
+      "duration": 4.56
+    },
+    {
+      "text": "rate",
+      "start": 311.28,
+      "duration": 3.359
+    },
+    {
+      "text": "but we do want to fix the desired cash",
+      "start": 311.68,
+      "duration": 5.68
+    },
+    {
+      "text": "and the annual cash saved",
+      "start": 314.639,
+      "duration": 4.321
+    },
+    {
+      "text": "so we're going to leave the interest",
+      "start": 317.36,
+      "duration": 3.679
+    },
+    {
+      "text": "rate alone and we're going to come over",
+      "start": 318.96,
+      "duration": 2.56
+    },
+    {
+      "text": "here",
+      "start": 321.039,
+      "duration": 3.761
+    },
+    {
+      "text": "to the annual cash saved and the way",
+      "start": 321.52,
+      "duration": 4.239
+    },
+    {
+      "text": "that you can",
+      "start": 324.8,
+      "duration": 5.2
+    },
+    {
+      "text": "fix the inputs so on windows it's the f4",
+      "start": 325.759,
+      "duration": 6.72
+    },
+    {
+      "text": "key and you'll see when i press that i",
+      "start": 330.0,
+      "duration": 4.4
+    },
+    {
+      "text": "now have dollar signs",
+      "start": 332.479,
+      "duration": 5.121
+    },
+    {
+      "text": "in front of the b and in front of the",
+      "start": 334.4,
+      "duration": 4.799
+    },
+    {
+      "text": "eight that means it is a completely",
+      "start": 337.6,
+      "duration": 2.96
+    },
+    {
+      "text": "fixed reference",
+      "start": 339.199,
+      "duration": 3.601
+    },
+    {
+      "text": "then if i hit f4 again you'll see now",
+      "start": 340.56,
+      "duration": 4.079
+    },
+    {
+      "text": "the dollar sign is just in front of the",
+      "start": 342.8,
+      "duration": 2.399
+    },
+    {
+      "text": "eight",
+      "start": 344.639,
+      "duration": 3.28
+    },
+    {
+      "text": "that means that it's fixed on the on the",
+      "start": 345.199,
+      "duration": 3.521
+    },
+    {
+      "text": "row",
+      "start": 347.919,
+      "duration": 2.881
+    },
+    {
+      "text": "but not on the column that means it will",
+      "start": 348.72,
+      "duration": 4.08
+    },
+    {
+      "text": "move right and left but it will not",
+      "start": 350.8,
+      "duration": 5.519
+    },
+    {
+      "text": "move up and down and then hit it again",
+      "start": 352.8,
+      "duration": 6.72
+    },
+    {
+      "text": "now we have fixed on the column",
+      "start": 356.319,
+      "duration": 7.201
+    },
+    {
+      "text": "uh oops we have fixed on the column",
+      "start": 359.52,
+      "duration": 7.119
+    },
+    {
+      "text": "uh but not on the row so now",
+      "start": 363.52,
+      "duration": 4.72
+    },
+    {
+      "text": "it would move up and down but it would",
+      "start": 366.639,
+      "duration": 3.12
+    },
+    {
+      "text": "not move left",
+      "start": 368.24,
+      "duration": 4.72
+    },
+    {
+      "text": "or right and then you hit f4 again and",
+      "start": 369.759,
+      "duration": 5.361
+    },
+    {
+      "text": "you're back to just the regular relative",
+      "start": 372.96,
+      "duration": 5.28
+    },
+    {
+      "text": "reference and for mac users",
+      "start": 375.12,
+      "duration": 5.519
+    },
+    {
+      "text": "uh it's command t gets you the same",
+      "start": 378.24,
+      "duration": 3.36
+    },
+    {
+      "text": "thing as",
+      "start": 380.639,
+      "duration": 4.56
+    },
+    {
+      "text": "f4 on windows um",
+      "start": 381.6,
+      "duration": 6.159
+    },
+    {
+      "text": "and if you forget the key or you can't",
+      "start": 385.199,
+      "duration": 3.921
+    },
+    {
+      "text": "figure it out or it doesn't work on your",
+      "start": 387.759,
+      "duration": 2.401
+    },
+    {
+      "text": "system or something",
+      "start": 389.12,
+      "duration": 3.12
+    },
+    {
+      "text": "you can always just type the dollar",
+      "start": 390.16,
+      "duration": 3.36
+    },
+    {
+      "text": "signs it's not",
+      "start": 392.24,
+      "duration": 4.64
+    },
+    {
+      "text": "you know quite as convenient but it does",
+      "start": 393.52,
+      "duration": 6.16
+    },
+    {
+      "text": "work it'll do the exact same thing as",
+      "start": 396.88,
+      "duration": 4.159
+    },
+    {
+      "text": "the f4 command t",
+      "start": 399.68,
+      "duration": 5.12
+    },
+    {
+      "text": "keys um so then coming over",
+      "start": 401.039,
+      "duration": 6.801
+    },
+    {
+      "text": "to the uh desired cache we're gonna also",
+      "start": 404.8,
+      "duration": 4.48
+    },
+    {
+      "text": "fix that as well",
+      "start": 407.84,
+      "duration": 3.12
+    },
+    {
+      "text": "and for both we're just doing completely",
+      "start": 409.28,
+      "duration": 3.759
+    },
+    {
+      "text": "fixed uh references",
+      "start": 410.96,
+      "duration": 3.76
+    },
+    {
+      "text": "you know fix just on the column would",
+      "start": 413.039,
+      "duration": 3.121
+    },
+    {
+      "text": "have worked as well",
+      "start": 414.72,
+      "duration": 4.24
+    },
+    {
+      "text": "uh but here uh it doesn't matter which",
+      "start": 416.16,
+      "duration": 5.52
+    },
+    {
+      "text": "one we choose for this purpose",
+      "start": 418.96,
+      "duration": 6.16
+    },
+    {
+      "text": "so now uh interest rate relative",
+      "start": 421.68,
+      "duration": 5.6
+    },
+    {
+      "text": "desired cash and annual cash saved are",
+      "start": 425.12,
+      "duration": 3.04
+    },
+    {
+      "text": "fixed",
+      "start": 427.28,
+      "duration": 3.199
+    },
+    {
+      "text": "so i hit enter you can see the original",
+      "start": 428.16,
+      "duration": 3.759
+    },
+    {
+      "text": "number did not change",
+      "start": 430.479,
+      "duration": 3.601
+    },
+    {
+      "text": "but now we can drag this over and we can",
+      "start": 431.919,
+      "duration": 4.321
+    },
+    {
+      "text": "see we get the actual results",
+      "start": 434.08,
+      "duration": 4.16
+    },
+    {
+      "text": "and when we click into what happened we",
+      "start": 436.24,
+      "duration": 3.28
+    },
+    {
+      "text": "can see the interest rate",
+      "start": 438.24,
+      "duration": 4.0
+    },
+    {
+      "text": "indeed moved over while the desired cash",
+      "start": 439.52,
+      "duration": 4.16
+    },
+    {
+      "text": "and annual cash save",
+      "start": 442.24,
+      "duration": 3.92
+    },
+    {
+      "text": "stayed where they are because those are",
+      "start": 443.68,
+      "duration": 3.519
+    },
+    {
+      "text": "fixed",
+      "start": 446.16,
+      "duration": 4.64
+    },
+    {
+      "text": "references so you know with this kind of",
+      "start": 447.199,
+      "duration": 4.4
+    },
+    {
+      "text": "technique",
+      "start": 450.8,
+      "duration": 3.28
+    },
+    {
+      "text": "we can repeat the same calculation uh",
+      "start": 451.599,
+      "duration": 4.641
+    },
+    {
+      "text": "for a bunch of different inputs in excel",
+      "start": 454.08,
+      "duration": 5.119
+    },
+    {
+      "text": "uh to be able to uh look at a bunch of",
+      "start": 456.24,
+      "duration": 4.0
+    },
+    {
+      "text": "different outcomes",
+      "start": 459.199,
+      "duration": 4.0
+    },
+    {
+      "text": "from our model and then next time we're",
+      "start": 460.24,
+      "duration": 3.84
+    },
+    {
+      "text": "going to come back",
+      "start": 463.199,
+      "duration": 3.521
+    },
+    {
+      "text": "to do the same thing with our python",
+      "start": 464.08,
+      "duration": 3.28
+    },
+    {
+      "text": "model",
+      "start": 466.72,
+      "duration": 4.599
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 467.36,
+      "duration": 6.959
+    },
+    {
+      "text": "time",
+      "start": 471.319,
+      "duration": 3.0
+    }
+  ]
+}

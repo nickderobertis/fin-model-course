@@ -1,0 +1,4354 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 4.4,
+      "duration": 2.399
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 5.279,
+      "duration": 3.441
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 6.799,
+      "duration": 3.201
+    },
+    {
+      "text": "to be talking about",
+      "start": 8.72,
+      "duration": 3.6
+    },
+    {
+      "text": "grouping logic together with python",
+      "start": 10.0,
+      "duration": 3.2
+    },
+    {
+      "text": "functions",
+      "start": 12.32,
+      "duration": 3.68
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 13.2,
+      "duration": 3.6
+    },
+    {
+      "text": "going beyond an",
+      "start": 16.0,
+      "duration": 4.16
+    },
+    {
+      "text": "initial python script and this process",
+      "start": 16.8,
+      "duration": 5.68
+    },
+    {
+      "text": "of learning the python basics so that we",
+      "start": 20.16,
+      "duration": 2.8
+    },
+    {
+      "text": "can",
+      "start": 22.48,
+      "duration": 3.36
+    },
+    {
+      "text": "build out complex financial models using",
+      "start": 22.96,
+      "duration": 4.8
+    },
+    {
+      "text": "python",
+      "start": 25.84,
+      "duration": 5.04
+    },
+    {
+      "text": "so we talked a little bit before",
+      "start": 27.76,
+      "duration": 6.319
+    },
+    {
+      "text": "about how functions are going to become",
+      "start": 30.88,
+      "duration": 6.4
+    },
+    {
+      "text": "the logical structure",
+      "start": 34.079,
+      "duration": 6.881
+    },
+    {
+      "text": "to build out our model",
+      "start": 37.28,
+      "duration": 6.799
+    },
+    {
+      "text": "and that we're going to use functions",
+      "start": 40.96,
+      "duration": 6.079
+    },
+    {
+      "text": "to uh you know define the entire model",
+      "start": 44.079,
+      "duration": 4.32
+    },
+    {
+      "text": "should be a function",
+      "start": 47.039,
+      "duration": 3.921
+    },
+    {
+      "text": "and then each sub model should it be a",
+      "start": 48.399,
+      "duration": 3.441
+    },
+    {
+      "text": "function",
+      "start": 50.96,
+      "duration": 3.36
+    },
+    {
+      "text": "and each step within the sub model",
+      "start": 51.84,
+      "duration": 3.12
+    },
+    {
+      "text": "should be",
+      "start": 54.32,
+      "duration": 3.04
+    },
+    {
+      "text": "a function and this could continue going",
+      "start": 54.96,
+      "duration": 4.48
+    },
+    {
+      "text": "to additional levels of nesting",
+      "start": 57.36,
+      "duration": 5.359
+    },
+    {
+      "text": "as necessary whatever is appropriate for",
+      "start": 59.44,
+      "duration": 6.4
+    },
+    {
+      "text": "the problem that you're working on",
+      "start": 62.719,
+      "duration": 6.72
+    },
+    {
+      "text": "so each uh you know layer of the model",
+      "start": 65.84,
+      "duration": 6.72
+    },
+    {
+      "text": "is going to be a function and those",
+      "start": 69.439,
+      "duration": 4.72
+    },
+    {
+      "text": "functions are going to call the lower",
+      "start": 72.56,
+      "duration": 3.44
+    },
+    {
+      "text": "level functions",
+      "start": 74.159,
+      "duration": 5.521
+    },
+    {
+      "text": "to ultimately build up the entire model",
+      "start": 76.0,
+      "duration": 5.759
+    },
+    {
+      "text": "and going to this kind of structure",
+      "start": 79.68,
+      "duration": 3.36
+    },
+    {
+      "text": "means that",
+      "start": 81.759,
+      "duration": 3.201
+    },
+    {
+      "text": "things are a lot more contained it's a",
+      "start": 83.04,
+      "duration": 4.16
+    },
+    {
+      "text": "lot easier to just work on one part of",
+      "start": 84.96,
+      "duration": 2.88
+    },
+    {
+      "text": "the model",
+      "start": 87.2,
+      "duration": 2.48
+    },
+    {
+      "text": "and not worry about affecting other",
+      "start": 87.84,
+      "duration": 3.84
+    },
+    {
+      "text": "parts",
+      "start": 89.68,
+      "duration": 3.2
+    },
+    {
+      "text": "and it means that you're going to be",
+      "start": 91.68,
+      "duration": 4.399
+    },
+    {
+      "text": "able to reuse more of your code",
+      "start": 92.88,
+      "duration": 5.12
+    },
+    {
+      "text": "and it's going to be easier to read your",
+      "start": 96.079,
+      "duration": 3.601
+    },
+    {
+      "text": "code and there's lots of other",
+      "start": 98.0,
+      "duration": 4.399
+    },
+    {
+      "text": "advantages here",
+      "start": 99.68,
+      "duration": 5.84
+    },
+    {
+      "text": "in structuring the model in this way but",
+      "start": 102.399,
+      "duration": 4.4
+    },
+    {
+      "text": "in order to",
+      "start": 105.52,
+      "duration": 2.559
+    },
+    {
+      "text": "add that kind of structure we're going",
+      "start": 106.799,
+      "duration": 3.521
+    },
+    {
+      "text": "to have to learn how to",
+      "start": 108.079,
+      "duration": 4.08
+    },
+    {
+      "text": "work with functions in python how to",
+      "start": 110.32,
+      "duration": 4.96
+    },
+    {
+      "text": "define them how to use them",
+      "start": 112.159,
+      "duration": 6.801
+    },
+    {
+      "text": "and let's go ahead and dig into that",
+      "start": 115.28,
+      "duration": 3.68
+    },
+    {
+      "text": "so a function is basically",
+      "start": 119.84,
+      "duration": 8.399
+    },
+    {
+      "text": "just a lot a logical",
+      "start": 123.04,
+      "duration": 8.16
+    },
+    {
+      "text": "construct where it's just a group of you",
+      "start": 128.239,
+      "duration": 4.241
+    },
+    {
+      "text": "know statements of code",
+      "start": 131.2,
+      "duration": 5.119
+    },
+    {
+      "text": "that describe some logic and that logic",
+      "start": 132.48,
+      "duration": 5.6
+    },
+    {
+      "text": "you know may have inputs it may have",
+      "start": 136.319,
+      "duration": 3.521
+    },
+    {
+      "text": "outputs",
+      "start": 138.08,
+      "duration": 5.2
+    },
+    {
+      "text": "and we give that function a name uh so",
+      "start": 139.84,
+      "duration": 6.56
+    },
+    {
+      "text": "that we can call it by that name",
+      "start": 143.28,
+      "duration": 6.56
+    },
+    {
+      "text": "so you know it can take uh you know what",
+      "start": 146.4,
+      "duration": 4.479
+    },
+    {
+      "text": "was",
+      "start": 149.84,
+      "duration": 2.88
+    },
+    {
+      "text": "you know maybe you know thinking about",
+      "start": 150.879,
+      "duration": 3.44
+    },
+    {
+      "text": "our uh dynamic",
+      "start": 152.72,
+      "duration": 4.56
+    },
+    {
+      "text": "salary retirement model you know this",
+      "start": 154.319,
+      "duration": 4.401
+    },
+    {
+      "text": "part where we have to",
+      "start": 157.28,
+      "duration": 4.64
+    },
+    {
+      "text": "calculate the promotion factor year over",
+      "start": 158.72,
+      "duration": 3.92
+    },
+    {
+      "text": "year",
+      "start": 161.92,
+      "duration": 2.72
+    },
+    {
+      "text": "uh there's a few things going into that",
+      "start": 162.64,
+      "duration": 3.28
+    },
+    {
+      "text": "you know figuring out",
+      "start": 164.64,
+      "duration": 3.12
+    },
+    {
+      "text": "uh is this a promotion year how many",
+      "start": 165.92,
+      "duration": 3.28
+    },
+    {
+      "text": "promotions have occurred",
+      "start": 167.76,
+      "duration": 4.64
+    },
+    {
+      "text": "up until this point etc",
+      "start": 169.2,
+      "duration": 4.8
+    },
+    {
+      "text": "you know all that can just you know",
+      "start": 172.4,
+      "duration": 3.919
+    },
+    {
+      "text": "basically get wrapped under one function",
+      "start": 174.0,
+      "duration": 6.0
+    },
+    {
+      "text": "you know like calculate a promotion",
+      "start": 176.319,
+      "duration": 5.2
+    },
+    {
+      "text": "factor could be the name of that",
+      "start": 180.0,
+      "duration": 4.159
+    },
+    {
+      "text": "function and then you know as someone",
+      "start": 181.519,
+      "duration": 4.321
+    },
+    {
+      "text": "using that function or you know as",
+      "start": 184.159,
+      "duration": 3.041
+    },
+    {
+      "text": "you're building your model",
+      "start": 185.84,
+      "duration": 4.64
+    },
+    {
+      "text": "then you just call this create",
+      "start": 187.2,
+      "duration": 5.52
+    },
+    {
+      "text": "promotion factor and that's going to",
+      "start": 190.48,
+      "duration": 3.6
+    },
+    {
+      "text": "make the factor for you",
+      "start": 192.72,
+      "duration": 3.519
+    },
+    {
+      "text": "running all of that you know individual",
+      "start": 194.08,
+      "duration": 3.12
+    },
+    {
+      "text": "lines of code",
+      "start": 196.239,
+      "duration": 3.201
+    },
+    {
+      "text": "that actually carry that out so then",
+      "start": 197.2,
+      "duration": 3.679
+    },
+    {
+      "text": "we've reduced",
+      "start": 199.44,
+      "duration": 2.879
+    },
+    {
+      "text": "you know calling all these individual",
+      "start": 200.879,
+      "duration": 3.121
+    },
+    {
+      "text": "lines of code to",
+      "start": 202.319,
+      "duration": 3.761
+    },
+    {
+      "text": "a single line of code of calling this",
+      "start": 204.0,
+      "duration": 4.08
+    },
+    {
+      "text": "function and we've also",
+      "start": 206.08,
+      "duration": 4.56
+    },
+    {
+      "text": "given it a nice indicative name which",
+      "start": 208.08,
+      "duration": 4.719
+    },
+    {
+      "text": "describes exactly what it's doing",
+      "start": 210.64,
+      "duration": 4.159
+    },
+    {
+      "text": "in the context of our model rather than",
+      "start": 212.799,
+      "duration": 5.36
+    },
+    {
+      "text": "just having individual lines of code",
+      "start": 214.799,
+      "duration": 5.52
+    },
+    {
+      "text": "so it can definitely help a lot with the",
+      "start": 218.159,
+      "duration": 3.601
+    },
+    {
+      "text": "readability and structure",
+      "start": 220.319,
+      "duration": 4.48
+    },
+    {
+      "text": "of your model",
+      "start": 221.76,
+      "duration": 5.039
+    },
+    {
+      "text": "and you know going even further than",
+      "start": 224.799,
+      "duration": 3.36
+    },
+    {
+      "text": "that you can also",
+      "start": 226.799,
+      "duration": 4.08
+    },
+    {
+      "text": "add documentation to your functions it's",
+      "start": 228.159,
+      "duration": 4.321
+    },
+    {
+      "text": "called a doc string",
+      "start": 230.879,
+      "duration": 4.801
+    },
+    {
+      "text": "and that is just",
+      "start": 232.48,
+      "duration": 5.44
+    },
+    {
+      "text": "a string that goes along with your",
+      "start": 235.68,
+      "duration": 5.6
+    },
+    {
+      "text": "function which describes what it does",
+      "start": 237.92,
+      "duration": 5.44
+    },
+    {
+      "text": "and that is just another way to make",
+      "start": 241.28,
+      "duration": 5.599
+    },
+    {
+      "text": "your model even more readable",
+      "start": 243.36,
+      "duration": 5.519
+    },
+    {
+      "text": "because there's a lot of explanation of",
+      "start": 246.879,
+      "duration": 3.841
+    },
+    {
+      "text": "how things are working all the various",
+      "start": 248.879,
+      "duration": 4.161
+    },
+    {
+      "text": "steps",
+      "start": 250.72,
+      "duration": 5.28
+    },
+    {
+      "text": "um and then i've said before you know",
+      "start": 253.04,
+      "duration": 4.879
+    },
+    {
+      "text": "everything is an object in python",
+      "start": 256.0,
+      "duration": 2.88
+    },
+    {
+      "text": "functions are",
+      "start": 257.919,
+      "duration": 4.16
+    },
+    {
+      "text": "objects as well um and so",
+      "start": 258.88,
+      "duration": 6.879
+    },
+    {
+      "text": "you know that is probably not going to",
+      "start": 262.079,
+      "duration": 6.081
+    },
+    {
+      "text": "uh be too important for you as far as",
+      "start": 265.759,
+      "duration": 3.521
+    },
+    {
+      "text": "this class",
+      "start": 268.16,
+      "duration": 3.92
+    },
+    {
+      "text": "um but just know that they are treated",
+      "start": 269.28,
+      "duration": 4.0
+    },
+    {
+      "text": "like any other object",
+      "start": 272.08,
+      "duration": 4.48
+    },
+    {
+      "text": "and so you could um you know do things",
+      "start": 273.28,
+      "duration": 3.84
+    },
+    {
+      "text": "like how",
+      "start": 276.56,
+      "duration": 3.76
+    },
+    {
+      "text": "you could have a list of functions um",
+      "start": 277.12,
+      "duration": 5.76
+    },
+    {
+      "text": "you know you can pass functions as",
+      "start": 280.32,
+      "duration": 4.72
+    },
+    {
+      "text": "arguments and other functions",
+      "start": 282.88,
+      "duration": 4.319
+    },
+    {
+      "text": "there's tons you can do here python is",
+      "start": 285.04,
+      "duration": 3.12
+    },
+    {
+      "text": "very flexible",
+      "start": 287.199,
+      "duration": 5.601
+    },
+    {
+      "text": "by treating everything as an object",
+      "start": 288.16,
+      "duration": 8.0
+    },
+    {
+      "text": "so here's an example function here",
+      "start": 292.8,
+      "duration": 5.36
+    },
+    {
+      "text": "and you'll notice that there's a couple",
+      "start": 296.16,
+      "duration": 5.44
+    },
+    {
+      "text": "parts going on inside this function",
+      "start": 298.16,
+      "duration": 4.879
+    },
+    {
+      "text": "so one thing that you may notice",
+      "start": 301.6,
+      "duration": 3.439
+    },
+    {
+      "text": "initially is kind of this",
+      "start": 303.039,
+      "duration": 5.041
+    },
+    {
+      "text": "familiar structure that we had with the",
+      "start": 305.039,
+      "duration": 5.841
+    },
+    {
+      "text": "for loop we had it with the if statement",
+      "start": 308.08,
+      "duration": 4.72
+    },
+    {
+      "text": "and the else and the elif",
+      "start": 310.88,
+      "duration": 4.159
+    },
+    {
+      "text": "uh that we have some kind of statement",
+      "start": 312.8,
+      "duration": 3.839
+    },
+    {
+      "text": "and then we have a colon",
+      "start": 315.039,
+      "duration": 3.841
+    },
+    {
+      "text": "and then we have indentation and then we",
+      "start": 316.639,
+      "duration": 4.4
+    },
+    {
+      "text": "have logic that goes under that",
+      "start": 318.88,
+      "duration": 4.72
+    },
+    {
+      "text": "so again this is you know the common way",
+      "start": 321.039,
+      "duration": 3.121
+    },
+    {
+      "text": "that",
+      "start": 323.6,
+      "duration": 2.8
+    },
+    {
+      "text": "uh you know logical blocks are defined",
+      "start": 324.16,
+      "duration": 3.039
+    },
+    {
+      "text": "in python",
+      "start": 326.4,
+      "duration": 2.4
+    },
+    {
+      "text": "you have a colon and then you have an",
+      "start": 327.199,
+      "duration": 3.041
+    },
+    {
+      "text": "indent",
+      "start": 328.8,
+      "duration": 4.16
+    },
+    {
+      "text": "and so it's the same here for defining a",
+      "start": 330.24,
+      "duration": 3.92
+    },
+    {
+      "text": "function",
+      "start": 332.96,
+      "duration": 4.079
+    },
+    {
+      "text": "so defining a function that's uh going",
+      "start": 334.16,
+      "duration": 4.24
+    },
+    {
+      "text": "to start with a def",
+      "start": 337.039,
+      "duration": 2.88
+    },
+    {
+      "text": "you know just like a four leaf starts",
+      "start": 338.4,
+      "duration": 3.12
+    },
+    {
+      "text": "with a four and if statement starts with",
+      "start": 339.919,
+      "duration": 2.401
+    },
+    {
+      "text": "an if",
+      "start": 341.52,
+      "duration": 3.04
+    },
+    {
+      "text": "defining a function starts with a def so",
+      "start": 342.32,
+      "duration": 4.0
+    },
+    {
+      "text": "that's the first thing we'll see here",
+      "start": 344.56,
+      "duration": 4.88
+    },
+    {
+      "text": "for defining the function and then after",
+      "start": 346.32,
+      "duration": 3.68
+    },
+    {
+      "text": "that",
+      "start": 349.44,
+      "duration": 2.479
+    },
+    {
+      "text": "it's the name of the function whatever",
+      "start": 350.0,
+      "duration": 3.199
+    },
+    {
+      "text": "we want to call it",
+      "start": 351.919,
+      "duration": 3.12
+    },
+    {
+      "text": "uh you know it can be anything that",
+      "start": 353.199,
+      "duration": 3.601
+    },
+    {
+      "text": "describes what the function",
+      "start": 355.039,
+      "duration": 4.801
+    },
+    {
+      "text": "is doing um but it cannot have spaces in",
+      "start": 356.8,
+      "duration": 3.36
+    },
+    {
+      "text": "it",
+      "start": 359.84,
+      "duration": 3.28
+    },
+    {
+      "text": "we use underscores instead of spaces and",
+      "start": 360.16,
+      "duration": 4.479
+    },
+    {
+      "text": "typically people will make these",
+      "start": 363.12,
+      "duration": 6.079
+    },
+    {
+      "text": "uh as well so lowercase and underscores",
+      "start": 364.639,
+      "duration": 8.081
+    },
+    {
+      "text": "where you would normally have spaces",
+      "start": 369.199,
+      "duration": 5.681
+    },
+    {
+      "text": "so that's the name of the function and",
+      "start": 372.72,
+      "duration": 4.88
+    },
+    {
+      "text": "then we've got to have a parenthesis",
+      "start": 374.88,
+      "duration": 4.64
+    },
+    {
+      "text": "and then after the parentheses the open",
+      "start": 377.6,
+      "duration": 4.4
+    },
+    {
+      "text": "parenthesis then we define the arguments",
+      "start": 379.52,
+      "duration": 5.679
+    },
+    {
+      "text": "of the function so these are the inputs",
+      "start": 382.0,
+      "duration": 4.56
+    },
+    {
+      "text": "this is what we're going to be able to",
+      "start": 385.199,
+      "duration": 3.201
+    },
+    {
+      "text": "pass into the function",
+      "start": 386.56,
+      "duration": 4.96
+    },
+    {
+      "text": "um we're defining that here and so i",
+      "start": 388.4,
+      "duration": 5.12
+    },
+    {
+      "text": "said before you know it can have inputs",
+      "start": 391.52,
+      "duration": 3.44
+    },
+    {
+      "text": "it can have outputs",
+      "start": 393.52,
+      "duration": 2.959
+    },
+    {
+      "text": "it is possible to define a function",
+      "start": 394.96,
+      "duration": 3.519
+    },
+    {
+      "text": "without inputs you would just have open",
+      "start": 396.479,
+      "duration": 3.361
+    },
+    {
+      "text": "close parenthesis here",
+      "start": 398.479,
+      "duration": 3.681
+    },
+    {
+      "text": "instead of having things in here but",
+      "start": 399.84,
+      "duration": 4.56
+    },
+    {
+      "text": "this function here does have inputs",
+      "start": 402.16,
+      "duration": 5.44
+    },
+    {
+      "text": "it has three inputs a b and c",
+      "start": 404.4,
+      "duration": 6.56
+    },
+    {
+      "text": "and uh we'll notice a and b are there",
+      "start": 407.6,
+      "duration": 5.439
+    },
+    {
+      "text": "uh just by themselves and then we have c",
+      "start": 410.96,
+      "duration": 3.44
+    },
+    {
+      "text": "equals ten",
+      "start": 413.039,
+      "duration": 3.6
+    },
+    {
+      "text": "and we'll talk about what this equals",
+      "start": 414.4,
+      "duration": 3.359
+    },
+    {
+      "text": "ten means",
+      "start": 416.639,
+      "duration": 3.68
+    },
+    {
+      "text": "here in a moment but for now you know",
+      "start": 417.759,
+      "duration": 5.041
+    },
+    {
+      "text": "we've got three arguments three inputs",
+      "start": 420.319,
+      "duration": 4.72
+    },
+    {
+      "text": "to this function uh they're each going",
+      "start": 422.8,
+      "duration": 4.399
+    },
+    {
+      "text": "to be separated by commas",
+      "start": 425.039,
+      "duration": 5.201
+    },
+    {
+      "text": "and you're giving the name of each",
+      "start": 427.199,
+      "duration": 6.801
+    },
+    {
+      "text": "input uh here and then when you're done",
+      "start": 430.24,
+      "duration": 5.92
+    },
+    {
+      "text": "adding all the inputs then you put the",
+      "start": 434.0,
+      "duration": 4.16
+    },
+    {
+      "text": "closed parenthesis",
+      "start": 436.16,
+      "duration": 4.8
+    },
+    {
+      "text": "and then we have the familiar colon or",
+      "start": 438.16,
+      "duration": 3.68
+    },
+    {
+      "text": "after the colon",
+      "start": 440.96,
+      "duration": 2.32
+    },
+    {
+      "text": "then we've got to have that level of",
+      "start": 441.84,
+      "duration": 4.079
+    },
+    {
+      "text": "indentation and then at that level of",
+      "start": 443.28,
+      "duration": 3.84
+    },
+    {
+      "text": "indentation",
+      "start": 445.919,
+      "duration": 3.361
+    },
+    {
+      "text": "then we define the logic for the",
+      "start": 447.12,
+      "duration": 3.12
+    },
+    {
+      "text": "function",
+      "start": 449.28,
+      "duration": 2.96
+    },
+    {
+      "text": "so this can be absolutely anything that",
+      "start": 450.24,
+      "duration": 3.6
+    },
+    {
+      "text": "happens within the function it can be",
+      "start": 452.24,
+      "duration": 3.519
+    },
+    {
+      "text": "running whatever lines of code you want",
+      "start": 453.84,
+      "duration": 4.32
+    },
+    {
+      "text": "it can be calling other functions doing",
+      "start": 455.759,
+      "duration": 3.521
+    },
+    {
+      "text": "whatever",
+      "start": 458.16,
+      "duration": 3.84
+    },
+    {
+      "text": "uh you know for loops if whatever kind",
+      "start": 459.28,
+      "duration": 5.359
+    },
+    {
+      "text": "of logic you want to have in there",
+      "start": 462.0,
+      "duration": 6.16
+    },
+    {
+      "text": "and then at the end",
+      "start": 464.639,
+      "duration": 4.96
+    },
+    {
+      "text": "if we want to have an output from the",
+      "start": 468.16,
+      "duration": 3.599
+    },
+    {
+      "text": "function which most functions do have an",
+      "start": 469.599,
+      "duration": 3.761
+    },
+    {
+      "text": "output",
+      "start": 471.759,
+      "duration": 4.88
+    },
+    {
+      "text": "then we're going to want to return the",
+      "start": 473.36,
+      "duration": 5.679
+    },
+    {
+      "text": "result from that function so whatever",
+      "start": 476.639,
+      "duration": 4.24
+    },
+    {
+      "text": "you return",
+      "start": 479.039,
+      "duration": 4.401
+    },
+    {
+      "text": "is going to become the output of the",
+      "start": 480.879,
+      "duration": 3.681
+    },
+    {
+      "text": "function",
+      "start": 483.44,
+      "duration": 2.8
+    },
+    {
+      "text": "so what this function is actually doing",
+      "start": 484.56,
+      "duration": 3.52
+    },
+    {
+      "text": "is it's adding together",
+      "start": 486.24,
+      "duration": 4.799
+    },
+    {
+      "text": "the three inputs um and then returning",
+      "start": 488.08,
+      "duration": 4.08
+    },
+    {
+      "text": "that as the output",
+      "start": 491.039,
+      "duration": 3.361
+    },
+    {
+      "text": "so really it's like a sum function it's",
+      "start": 492.16,
+      "duration": 4.159
+    },
+    {
+      "text": "just summing up these three",
+      "start": 494.4,
+      "duration": 5.44
+    },
+    {
+      "text": "inputs that we can give to it",
+      "start": 496.319,
+      "duration": 5.841
+    },
+    {
+      "text": "and then it takes that sum and it's",
+      "start": 499.84,
+      "duration": 3.44
+    },
+    {
+      "text": "going to return that",
+      "start": 502.16,
+      "duration": 3.68
+    },
+    {
+      "text": "it's going to make that the output of",
+      "start": 503.28,
+      "duration": 5.199
+    },
+    {
+      "text": "the function",
+      "start": 505.84,
+      "duration": 5.28
+    },
+    {
+      "text": "so uh you know you're always going to",
+      "start": 508.479,
+      "duration": 3.601
+    },
+    {
+      "text": "have",
+      "start": 511.12,
+      "duration": 3.68
+    },
+    {
+      "text": "kind of two parts with functions the",
+      "start": 512.08,
+      "duration": 3.199
+    },
+    {
+      "text": "first",
+      "start": 514.8,
+      "duration": 3.119
+    },
+    {
+      "text": "is defining the function and then the",
+      "start": 515.279,
+      "duration": 3.12
+    },
+    {
+      "text": "second",
+      "start": 517.919,
+      "duration": 3.761
+    },
+    {
+      "text": "is using the function so defining the",
+      "start": 518.399,
+      "duration": 4.64
+    },
+    {
+      "text": "function",
+      "start": 521.68,
+      "duration": 4.08
+    },
+    {
+      "text": "no nothing actually happens like no",
+      "start": 523.039,
+      "duration": 5.041
+    },
+    {
+      "text": "computation is actually done",
+      "start": 525.76,
+      "duration": 4.639
+    },
+    {
+      "text": "after you've defined the function it's",
+      "start": 528.08,
+      "duration": 4.48
+    },
+    {
+      "text": "only when you use the function",
+      "start": 530.399,
+      "duration": 4.401
+    },
+    {
+      "text": "that is going to run the logic which is",
+      "start": 532.56,
+      "duration": 4.24
+    },
+    {
+      "text": "inside of the function",
+      "start": 534.8,
+      "duration": 4.4
+    },
+    {
+      "text": "so you define it one time and then you",
+      "start": 536.8,
+      "duration": 3.12
+    },
+    {
+      "text": "can use it",
+      "start": 539.2,
+      "duration": 2.56
+    },
+    {
+      "text": "as many times as you want so we could",
+      "start": 539.92,
+      "duration": 4.24
+    },
+    {
+      "text": "keep calling my funk again and again",
+      "start": 541.76,
+      "duration": 4.079
+    },
+    {
+      "text": "with all sorts of different inputs and",
+      "start": 544.16,
+      "duration": 4.32
+    },
+    {
+      "text": "get all sorts of different outputs uh",
+      "start": 545.839,
+      "duration": 5.201
+    },
+    {
+      "text": "as long as we defined it one time at the",
+      "start": 548.48,
+      "duration": 3.6
+    },
+    {
+      "text": "beginning",
+      "start": 551.04,
+      "duration": 2.72
+    },
+    {
+      "text": "and you have to define it before you can",
+      "start": 552.08,
+      "duration": 4.08
+    },
+    {
+      "text": "use it otherwise python is not going to",
+      "start": 553.76,
+      "duration": 2.8
+    },
+    {
+      "text": "know",
+      "start": 556.16,
+      "duration": 1.92
+    },
+    {
+      "text": "what you're talking about when you say",
+      "start": 556.56,
+      "duration": 3.2
+    },
+    {
+      "text": "myfunk you have to",
+      "start": 558.08,
+      "duration": 4.56
+    },
+    {
+      "text": "first define myfunk so that it knows",
+      "start": 559.76,
+      "duration": 5.68
+    },
+    {
+      "text": "what you're talking about",
+      "start": 562.64,
+      "duration": 6.0
+    },
+    {
+      "text": "and when we call a function uh then it's",
+      "start": 565.44,
+      "duration": 5.44
+    },
+    {
+      "text": "the name of the function the same name",
+      "start": 568.64,
+      "duration": 3.6
+    },
+    {
+      "text": "that you defined",
+      "start": 570.88,
+      "duration": 3.6
+    },
+    {
+      "text": "and then it's an open parenthesis and",
+      "start": 572.24,
+      "duration": 3.279
+    },
+    {
+      "text": "then we're going to pass",
+      "start": 574.48,
+      "duration": 4.16
+    },
+    {
+      "text": "the arguments to the function the inputs",
+      "start": 575.519,
+      "duration": 5.281
+    },
+    {
+      "text": "to the function and then we're going to",
+      "start": 578.64,
+      "duration": 3.68
+    },
+    {
+      "text": "close parentheses",
+      "start": 580.8,
+      "duration": 4.24
+    },
+    {
+      "text": "and that's how you call the function and",
+      "start": 582.32,
+      "duration": 4.079
+    },
+    {
+      "text": "each of those inputs is going to be",
+      "start": 585.04,
+      "duration": 4.0
+    },
+    {
+      "text": "separated by a comma",
+      "start": 586.399,
+      "duration": 5.841
+    },
+    {
+      "text": "and um you'll notice that we put in 5",
+      "start": 589.04,
+      "duration": 4.239
+    },
+    {
+      "text": "and 6 here",
+      "start": 592.24,
+      "duration": 4.0
+    },
+    {
+      "text": "and we get 21 as a result so how do we",
+      "start": 593.279,
+      "duration": 4.401
+    },
+    {
+      "text": "get to 21",
+      "start": 596.24,
+      "duration": 3.12
+    },
+    {
+      "text": "when we're just putting 5 and 6 in here",
+      "start": 597.68,
+      "duration": 2.8
+    },
+    {
+      "text": "it's supposed to be adding up the",
+      "start": 599.36,
+      "duration": 2.08
+    },
+    {
+      "text": "numbers",
+      "start": 600.48,
+      "duration": 3.44
+    },
+    {
+      "text": "well that brings in this last part here",
+      "start": 601.44,
+      "duration": 3.68
+    },
+    {
+      "text": "where we had to find",
+      "start": 603.92,
+      "duration": 3.919
+    },
+    {
+      "text": "c equals 10 in this last part of the",
+      "start": 605.12,
+      "duration": 3.6
+    },
+    {
+      "text": "function",
+      "start": 607.839,
+      "duration": 3.12
+    },
+    {
+      "text": "so that's what's called a default",
+      "start": 608.72,
+      "duration": 3.6
+    },
+    {
+      "text": "argument",
+      "start": 610.959,
+      "duration": 4.401
+    },
+    {
+      "text": "for this input c",
+      "start": 612.32,
+      "duration": 7.519
+    },
+    {
+      "text": "so c is going to default to 10",
+      "start": 615.36,
+      "duration": 7.76
+    },
+    {
+      "text": "whenever c is not passed so",
+      "start": 619.839,
+      "duration": 6.0
+    },
+    {
+      "text": "this is saying that 5 becomes a 6",
+      "start": 623.12,
+      "duration": 3.92
+    },
+    {
+      "text": "becomes b",
+      "start": 625.839,
+      "duration": 3.44
+    },
+    {
+      "text": "and then c is going to take its default",
+      "start": 627.04,
+      "duration": 4.08
+    },
+    {
+      "text": "value of 10 because we didn't pass",
+      "start": 629.279,
+      "duration": 3.361
+    },
+    {
+      "text": "anything else here",
+      "start": 631.12,
+      "duration": 4.08
+    },
+    {
+      "text": "and so that's why we get 5 plus 6 plus",
+      "start": 632.64,
+      "duration": 3.36
+    },
+    {
+      "text": "10",
+      "start": 635.2,
+      "duration": 4.079
+    },
+    {
+      "text": "is equal to 21. so whatever",
+      "start": 636.0,
+      "duration": 5.92
+    },
+    {
+      "text": "you're passing as your inputs to the",
+      "start": 639.279,
+      "duration": 3.921
+    },
+    {
+      "text": "function",
+      "start": 641.92,
+      "duration": 3.12
+    },
+    {
+      "text": "then that's going to basically come",
+      "start": 643.2,
+      "duration": 3.199
+    },
+    {
+      "text": "inside the function",
+      "start": 645.04,
+      "duration": 4.88
+    },
+    {
+      "text": "that you defined and those values that",
+      "start": 646.399,
+      "duration": 5.44
+    },
+    {
+      "text": "you passed are going to take on the",
+      "start": 649.92,
+      "duration": 2.64
+    },
+    {
+      "text": "names",
+      "start": 651.839,
+      "duration": 3.12
+    },
+    {
+      "text": "of the inputs that you've defined here",
+      "start": 652.56,
+      "duration": 3.839
+    },
+    {
+      "text": "so this 5 becomes a",
+      "start": 654.959,
+      "duration": 4.56
+    },
+    {
+      "text": "this 6 becomes b and c uh",
+      "start": 656.399,
+      "duration": 5.68
+    },
+    {
+      "text": "you know takes its default of 10 going",
+      "start": 659.519,
+      "duration": 4.32
+    },
+    {
+      "text": "into the function",
+      "start": 662.079,
+      "duration": 4.241
+    },
+    {
+      "text": "but an important thing about functions",
+      "start": 663.839,
+      "duration": 5.041
+    },
+    {
+      "text": "is that those names those variables are",
+      "start": 666.32,
+      "duration": 3.519
+    },
+    {
+      "text": "scoped",
+      "start": 668.88,
+      "duration": 4.8
+    },
+    {
+      "text": "to the function itself and so if you run",
+      "start": 669.839,
+      "duration": 7.68
+    },
+    {
+      "text": "my funk 5 6 and then after that you say",
+      "start": 673.68,
+      "duration": 5.92
+    },
+    {
+      "text": "you know what is a you try to print out",
+      "start": 677.519,
+      "duration": 4.401
+    },
+    {
+      "text": "a it's going to give you a",
+      "start": 679.6,
+      "duration": 5.04
+    },
+    {
+      "text": "you know name error a is not defined and",
+      "start": 681.92,
+      "duration": 3.44
+    },
+    {
+      "text": "that's because",
+      "start": 684.64,
+      "duration": 4.319
+    },
+    {
+      "text": "a is only defined within this function",
+      "start": 685.36,
+      "duration": 5.84
+    },
+    {
+      "text": "as soon as you leave the function it's",
+      "start": 688.959,
+      "duration": 4.801
+    },
+    {
+      "text": "no longer defined",
+      "start": 691.2,
+      "duration": 5.199
+    },
+    {
+      "text": "and so basically you call this and then",
+      "start": 693.76,
+      "duration": 4.319
+    },
+    {
+      "text": "you've already defined my func",
+      "start": 696.399,
+      "duration": 4.481
+    },
+    {
+      "text": "and so it knows python knows now that my",
+      "start": 698.079,
+      "duration": 5.601
+    },
+    {
+      "text": "func basically means execute this thing",
+      "start": 700.88,
+      "duration": 4.48
+    },
+    {
+      "text": "and so it's going to go inside this",
+      "start": 703.68,
+      "duration": 3.44
+    },
+    {
+      "text": "thing and then as long as it's inside",
+      "start": 705.36,
+      "duration": 2.32
+    },
+    {
+      "text": "this",
+      "start": 707.12,
+      "duration": 3.36
+    },
+    {
+      "text": "a b and c have meaning they're defined",
+      "start": 707.68,
+      "duration": 4.64
+    },
+    {
+      "text": "uh but as soon as it returns and it",
+      "start": 710.48,
+      "duration": 3.52
+    },
+    {
+      "text": "leaves this function and we come back",
+      "start": 712.32,
+      "duration": 3.84
+    },
+    {
+      "text": "out to here and get 21",
+      "start": 714.0,
+      "duration": 4.399
+    },
+    {
+      "text": "then these a b and c are no longer",
+      "start": 716.16,
+      "duration": 4.08
+    },
+    {
+      "text": "defined it has onset",
+      "start": 718.399,
+      "duration": 6.0
+    },
+    {
+      "text": "those variables so that is definitely",
+      "start": 720.24,
+      "duration": 6.64
+    },
+    {
+      "text": "a gotcha for people just getting started",
+      "start": 724.399,
+      "duration": 4.321
+    },
+    {
+      "text": "to use functions they may try and use",
+      "start": 726.88,
+      "duration": 3.519
+    },
+    {
+      "text": "the variables which are inside of",
+      "start": 728.72,
+      "duration": 3.52
+    },
+    {
+      "text": "functions",
+      "start": 730.399,
+      "duration": 4.721
+    },
+    {
+      "text": "whereas those say within the function",
+      "start": 732.24,
+      "duration": 3.92
+    },
+    {
+      "text": "but",
+      "start": 735.12,
+      "duration": 2.56
+    },
+    {
+      "text": "as you get more comfortable with the",
+      "start": 736.16,
+      "duration": 3.04
+    },
+    {
+      "text": "stuff it's definitely a",
+      "start": 737.68,
+      "duration": 4.719
+    },
+    {
+      "text": "feature of functions because",
+      "start": 739.2,
+      "duration": 5.6
+    },
+    {
+      "text": "what that allows you to do is use much",
+      "start": 742.399,
+      "duration": 3.44
+    },
+    {
+      "text": "more general",
+      "start": 744.8,
+      "duration": 4.56
+    },
+    {
+      "text": "naming for things um you know you still",
+      "start": 745.839,
+      "duration": 4.161
+    },
+    {
+      "text": "want to use",
+      "start": 749.36,
+      "duration": 2.32
+    },
+    {
+      "text": "names which are indicative of what the",
+      "start": 750.0,
+      "duration": 3.44
+    },
+    {
+      "text": "input actually means",
+      "start": 751.68,
+      "duration": 3.839
+    },
+    {
+      "text": "but it saves you from having to keep",
+      "start": 753.44,
+      "duration": 3.68
+    },
+    {
+      "text": "coming up with different names more and",
+      "start": 755.519,
+      "duration": 2.32
+    },
+    {
+      "text": "more",
+      "start": 757.12,
+      "duration": 2.8
+    },
+    {
+      "text": "because that name is just going to last",
+      "start": 757.839,
+      "duration": 3.041
+    },
+    {
+      "text": "for the function",
+      "start": 759.92,
+      "duration": 2.159
+    },
+    {
+      "text": "and then it's not going to be used",
+      "start": 760.88,
+      "duration": 3.04
+    },
+    {
+      "text": "anymore and that frees you up to again",
+      "start": 762.079,
+      "duration": 3.2
+    },
+    {
+      "text": "use that same name",
+      "start": 763.92,
+      "duration": 3.919
+    },
+    {
+      "text": "in a different function without either",
+      "start": 765.279,
+      "duration": 3.12
+    },
+    {
+      "text": "of them",
+      "start": 767.839,
+      "duration": 3.761
+    },
+    {
+      "text": "conflicting with each other",
+      "start": 768.399,
+      "duration": 3.201
+    },
+    {
+      "text": "so that's the basic idea with functions",
+      "start": 771.68,
+      "duration": 3.839
+    },
+    {
+      "text": "let's go ahead and",
+      "start": 774.32,
+      "duration": 3.68
+    },
+    {
+      "text": "look at some examples in the jupyter",
+      "start": 775.519,
+      "duration": 4.88
+    },
+    {
+      "text": "notebook",
+      "start": 778.0,
+      "duration": 2.399
+    },
+    {
+      "text": "so again uh function is just taking a",
+      "start": 783.44,
+      "duration": 4.32
+    },
+    {
+      "text": "logical process",
+      "start": 786.48,
+      "duration": 4.4
+    },
+    {
+      "text": "and wrapping it up into a unit",
+      "start": 787.76,
+      "duration": 7.12
+    },
+    {
+      "text": "um so um",
+      "start": 790.88,
+      "duration": 6.32
+    },
+    {
+      "text": "we've talked about how we want to",
+      "start": 794.88,
+      "duration": 3.36
+    },
+    {
+      "text": "structure our model",
+      "start": 797.2,
+      "duration": 2.639
+    },
+    {
+      "text": "and you know basically layers of",
+      "start": 798.24,
+      "duration": 3.92
+    },
+    {
+      "text": "functions um",
+      "start": 799.839,
+      "duration": 4.8
+    },
+    {
+      "text": "but let's just say you know not even",
+      "start": 802.16,
+      "duration": 3.76
+    },
+    {
+      "text": "thinking about the full structure of the",
+      "start": 804.639,
+      "duration": 1.681
+    },
+    {
+      "text": "model",
+      "start": 805.92,
+      "duration": 2.8
+    },
+    {
+      "text": "you're just writing out some code and",
+      "start": 806.32,
+      "duration": 4.079
+    },
+    {
+      "text": "then you find yourself",
+      "start": 808.72,
+      "duration": 3.2
+    },
+    {
+      "text": "taking the same code and then copy",
+      "start": 810.399,
+      "duration": 3.281
+    },
+    {
+      "text": "pasting it and changing a little thing",
+      "start": 811.92,
+      "duration": 2.96
+    },
+    {
+      "text": "and then copy pasting it and then",
+      "start": 813.68,
+      "duration": 3.279
+    },
+    {
+      "text": "changing a little thing",
+      "start": 814.88,
+      "duration": 3.759
+    },
+    {
+      "text": "that should definitely be an indication",
+      "start": 816.959,
+      "duration": 3.521
+    },
+    {
+      "text": "to you that you should be using a",
+      "start": 818.639,
+      "duration": 2.56
+    },
+    {
+      "text": "function",
+      "start": 820.48,
+      "duration": 2.719
+    },
+    {
+      "text": "for this now the function is going to",
+      "start": 821.199,
+      "duration": 3.041
+    },
+    {
+      "text": "save you from",
+      "start": 823.199,
+      "duration": 4.241
+    },
+    {
+      "text": "from just copy pasting that code",
+      "start": 824.24,
+      "duration": 4.719
+    },
+    {
+      "text": "having basically you know really",
+      "start": 827.44,
+      "duration": 3.44
+    },
+    {
+      "text": "repetitive code",
+      "start": 828.959,
+      "duration": 5.44
+    },
+    {
+      "text": "functions can avoid that",
+      "start": 830.88,
+      "duration": 3.519
+    },
+    {
+      "text": "and that's definitely really useful to",
+      "start": 834.48,
+      "duration": 3.359
+    },
+    {
+      "text": "have",
+      "start": 836.399,
+      "duration": 3.12
+    },
+    {
+      "text": "because it really helps with the",
+      "start": 837.839,
+      "duration": 3.841
+    },
+    {
+      "text": "maintenance of your code over time",
+      "start": 839.519,
+      "duration": 4.721
+    },
+    {
+      "text": "if you copy paste a whole bunch of code",
+      "start": 841.68,
+      "duration": 3.12
+    },
+    {
+      "text": "and then",
+      "start": 844.24,
+      "duration": 2.56
+    },
+    {
+      "text": "you know you've got the same basic code",
+      "start": 844.8,
+      "duration": 4.0
+    },
+    {
+      "text": "copy pasted 100 times",
+      "start": 846.8,
+      "duration": 3.52
+    },
+    {
+      "text": "and then you realize you need to change",
+      "start": 848.8,
+      "duration": 3.599
+    },
+    {
+      "text": "one little thing about that code",
+      "start": 850.32,
+      "duration": 3.519
+    },
+    {
+      "text": "you've now got to go and change it in a",
+      "start": 852.399,
+      "duration": 3.361
+    },
+    {
+      "text": "hundred places right",
+      "start": 853.839,
+      "duration": 4.081
+    },
+    {
+      "text": "whereas if you wrote one function that",
+      "start": 855.76,
+      "duration": 3.36
+    },
+    {
+      "text": "does that logic",
+      "start": 857.92,
+      "duration": 3.12
+    },
+    {
+      "text": "and then you called that function 100",
+      "start": 859.12,
+      "duration": 3.6
+    },
+    {
+      "text": "times in a loop or something like that",
+      "start": 861.04,
+      "duration": 3.919
+    },
+    {
+      "text": "so it's really just a few lines of code",
+      "start": 862.72,
+      "duration": 4.08
+    },
+    {
+      "text": "you just change that one function and it",
+      "start": 864.959,
+      "duration": 3.921
+    },
+    {
+      "text": "makes that change carry through",
+      "start": 866.8,
+      "duration": 4.08
+    },
+    {
+      "text": "to all the usages of the function all",
+      "start": 868.88,
+      "duration": 3.44
+    },
+    {
+      "text": "those hundred usages",
+      "start": 870.88,
+      "duration": 5.759
+    },
+    {
+      "text": "and so now it becomes way easier to",
+      "start": 872.32,
+      "duration": 7.44
+    },
+    {
+      "text": "make changes to the code because it's",
+      "start": 876.639,
+      "duration": 4.32
+    },
+    {
+      "text": "going to flow through",
+      "start": 879.76,
+      "duration": 5.36
+    },
+    {
+      "text": "to all the different parts of your model",
+      "start": 880.959,
+      "duration": 5.601
+    },
+    {
+      "text": "so this will definitely become more",
+      "start": 885.12,
+      "duration": 3.92
+    },
+    {
+      "text": "concrete if we look at an example",
+      "start": 886.56,
+      "duration": 6.24
+    },
+    {
+      "text": "of this um so here",
+      "start": 889.04,
+      "duration": 6.799
+    },
+    {
+      "text": "we've got an example of",
+      "start": 892.8,
+      "duration": 7.44
+    },
+    {
+      "text": "um and we've got you know some prices",
+      "start": 895.839,
+      "duration": 6.721
+    },
+    {
+      "text": "uh for three different stocks in three",
+      "start": 900.24,
+      "duration": 3.52
+    },
+    {
+      "text": "different lists",
+      "start": 902.56,
+      "duration": 2.48
+    },
+    {
+      "text": "and we want to get some summary",
+      "start": 903.76,
+      "duration": 3.12
+    },
+    {
+      "text": "statistics on those",
+      "start": 905.04,
+      "duration": 4.96
+    },
+    {
+      "text": "prices um and so",
+      "start": 906.88,
+      "duration": 6.48
+    },
+    {
+      "text": "you know we want to uh figure out",
+      "start": 910.0,
+      "duration": 5.04
+    },
+    {
+      "text": "you know what was the last price what",
+      "start": 913.36,
+      "duration": 3.68
+    },
+    {
+      "text": "was the average price what was the max",
+      "start": 915.04,
+      "duration": 3.039
+    },
+    {
+      "text": "and the minimum price",
+      "start": 917.04,
+      "duration": 3.599
+    },
+    {
+      "text": "out of the prices that were given so you",
+      "start": 918.079,
+      "duration": 3.44
+    },
+    {
+      "text": "know you might",
+      "start": 920.639,
+      "duration": 2.961
+    },
+    {
+      "text": "you know okay i have prices apple i go",
+      "start": 921.519,
+      "duration": 3.68
+    },
+    {
+      "text": "and write out this code",
+      "start": 923.6,
+      "duration": 4.239
+    },
+    {
+      "text": "um that the average is you know the sum",
+      "start": 925.199,
+      "duration": 3.76
+    },
+    {
+      "text": "over the length",
+      "start": 927.839,
+      "duration": 5.041
+    },
+    {
+      "text": "um we take the max we take the min",
+      "start": 928.959,
+      "duration": 7.12
+    },
+    {
+      "text": "um to get those and we",
+      "start": 932.88,
+      "duration": 6.16
+    },
+    {
+      "text": "um take the the last one in the list to",
+      "start": 936.079,
+      "duration": 4.161
+    },
+    {
+      "text": "get the last price",
+      "start": 939.04,
+      "duration": 2.799
+    },
+    {
+      "text": "and then we print that all out in a",
+      "start": 940.24,
+      "duration": 3.599
+    },
+    {
+      "text": "string right um",
+      "start": 941.839,
+      "duration": 3.841
+    },
+    {
+      "text": "and that's all well and good as long as",
+      "start": 943.839,
+      "duration": 3.041
+    },
+    {
+      "text": "we're just doing this",
+      "start": 945.68,
+      "duration": 5.12
+    },
+    {
+      "text": "one time but then we have to do the same",
+      "start": 946.88,
+      "duration": 5.28
+    },
+    {
+      "text": "thing with microsoft and we have to do",
+      "start": 950.8,
+      "duration": 2.08
+    },
+    {
+      "text": "the same thing with",
+      "start": 952.16,
+      "duration": 2.96
+    },
+    {
+      "text": "amazon so you might think okay we'll",
+      "start": 952.88,
+      "duration": 4.399
+    },
+    {
+      "text": "just take this whole thing copy paste it",
+      "start": 955.12,
+      "duration": 5.36
+    },
+    {
+      "text": "and let me just change aapl to msft",
+      "start": 957.279,
+      "duration": 7.761
+    },
+    {
+      "text": "now and you know just keep doing that",
+      "start": 960.48,
+      "duration": 7.039
+    },
+    {
+      "text": "and now we've got basically three blocks",
+      "start": 965.04,
+      "duration": 3.039
+    },
+    {
+      "text": "of",
+      "start": 967.519,
+      "duration": 2.401
+    },
+    {
+      "text": "pretty much the exact same code just",
+      "start": 968.079,
+      "duration": 4.32
+    },
+    {
+      "text": "changing out the variable names",
+      "start": 969.92,
+      "duration": 6.08
+    },
+    {
+      "text": "each time and so then",
+      "start": 972.399,
+      "duration": 5.201
+    },
+    {
+      "text": "you know we think about we want to add",
+      "start": 976.0,
+      "duration": 3.759
+    },
+    {
+      "text": "the standard deviation now to this",
+      "start": 977.6,
+      "duration": 5.12
+    },
+    {
+      "text": "okay well now we have to add that in",
+      "start": 979.759,
+      "duration": 4.32
+    },
+    {
+      "text": "each one of these we have to add the",
+      "start": 982.72,
+      "duration": 3.44
+    },
+    {
+      "text": "standard deviation three times which is",
+      "start": 984.079,
+      "duration": 3.841
+    },
+    {
+      "text": "going to be a big pain",
+      "start": 986.16,
+      "duration": 3.679
+    },
+    {
+      "text": "also this is just really repetitive to",
+      "start": 987.92,
+      "duration": 3.839
+    },
+    {
+      "text": "look at um",
+      "start": 989.839,
+      "duration": 4.8
+    },
+    {
+      "text": "and it could be easy just to you know",
+      "start": 991.759,
+      "duration": 5.281
+    },
+    {
+      "text": "make a mistake in just one of these",
+      "start": 994.639,
+      "duration": 5.681
+    },
+    {
+      "text": "and then you uh could easily miss over",
+      "start": 997.04,
+      "duration": 4.88
+    },
+    {
+      "text": "that because it's just in one of them",
+      "start": 1000.32,
+      "duration": 3.439
+    },
+    {
+      "text": "and not in all of them",
+      "start": 1001.92,
+      "duration": 3.68
+    },
+    {
+      "text": "so there's a lot of drawbacks to having",
+      "start": 1003.759,
+      "duration": 3.601
+    },
+    {
+      "text": "this kind of approach",
+      "start": 1005.6,
+      "duration": 3.76
+    },
+    {
+      "text": "so if you you know start to feel your",
+      "start": 1007.36,
+      "duration": 3.68
+    },
+    {
+      "text": "code getting like this",
+      "start": 1009.36,
+      "duration": 2.96
+    },
+    {
+      "text": "then you should think about",
+      "start": 1011.04,
+      "duration": 3.28
+    },
+    {
+      "text": "restructuring that code",
+      "start": 1012.32,
+      "duration": 4.16
+    },
+    {
+      "text": "and so we can restructure that using",
+      "start": 1014.32,
+      "duration": 3.92
+    },
+    {
+      "text": "functions",
+      "start": 1016.48,
+      "duration": 5.039
+    },
+    {
+      "text": "so now here instead we have",
+      "start": 1018.24,
+      "duration": 6.319
+    },
+    {
+      "text": "a function price summary statistics",
+      "start": 1021.519,
+      "duration": 6.56
+    },
+    {
+      "text": "that is going to do all this for us",
+      "start": 1024.559,
+      "duration": 6.64
+    },
+    {
+      "text": "and so for we're going to define",
+      "start": 1028.079,
+      "duration": 5.6
+    },
+    {
+      "text": "the function price summary statistics",
+      "start": 1031.199,
+      "duration": 4.561
+    },
+    {
+      "text": "that's the name of the function",
+      "start": 1033.679,
+      "duration": 4.481
+    },
+    {
+      "text": "and it's going to take prices and it's",
+      "start": 1035.76,
+      "duration": 4.64
+    },
+    {
+      "text": "going to take the ticker symbol",
+      "start": 1038.16,
+      "duration": 5.519
+    },
+    {
+      "text": "um and then here next you can see",
+      "start": 1040.4,
+      "duration": 5.519
+    },
+    {
+      "text": "this is that documentation that doc",
+      "start": 1043.679,
+      "duration": 3.201
+    },
+    {
+      "text": "string",
+      "start": 1045.919,
+      "duration": 3.681
+    },
+    {
+      "text": "that i was mentioning which describes",
+      "start": 1046.88,
+      "duration": 3.76
+    },
+    {
+      "text": "what the function",
+      "start": 1049.6,
+      "duration": 4.16
+    },
+    {
+      "text": "does so for docstring you",
+      "start": 1050.64,
+      "duration": 5.6
+    },
+    {
+      "text": "triple quotes and then you put the",
+      "start": 1053.76,
+      "duration": 3.919
+    },
+    {
+      "text": "description of the function",
+      "start": 1056.24,
+      "duration": 4.96
+    },
+    {
+      "text": "and then you do another triple quotes",
+      "start": 1057.679,
+      "duration": 6.161
+    },
+    {
+      "text": "and you can have this split on as many",
+      "start": 1061.2,
+      "duration": 4.64
+    },
+    {
+      "text": "lines as you want that's fine",
+      "start": 1063.84,
+      "duration": 4.079
+    },
+    {
+      "text": "by doing the triple quoted string that",
+      "start": 1065.84,
+      "duration": 4.4
+    },
+    {
+      "text": "makes it a multi-line string",
+      "start": 1067.919,
+      "duration": 6.481
+    },
+    {
+      "text": "so that you can have this kind of format",
+      "start": 1070.24,
+      "duration": 4.16
+    },
+    {
+      "text": "so here we're describing the function to",
+      "start": 1074.559,
+      "duration": 5.441
+    },
+    {
+      "text": "say it takes the prices and the ticker",
+      "start": 1078.16,
+      "duration": 2.96
+    },
+    {
+      "text": "and then it prints the summary",
+      "start": 1080.0,
+      "duration": 3.28
+    },
+    {
+      "text": "statistics so already",
+      "start": 1081.12,
+      "duration": 3.84
+    },
+    {
+      "text": "you know this code is starting to get a",
+      "start": 1083.28,
+      "duration": 3.12
+    },
+    {
+      "text": "lot clearer because",
+      "start": 1084.96,
+      "duration": 2.719
+    },
+    {
+      "text": "you know we know that this is doing",
+      "start": 1086.4,
+      "duration": 3.12
+    },
+    {
+      "text": "price summary statistics",
+      "start": 1087.679,
+      "duration": 4.801
+    },
+    {
+      "text": "we have a description of what it's doing",
+      "start": 1089.52,
+      "duration": 3.92
+    },
+    {
+      "text": "um",
+      "start": 1092.48,
+      "duration": 2.64
+    },
+    {
+      "text": "and this code is definitely less",
+      "start": 1093.44,
+      "duration": 3.52
+    },
+    {
+      "text": "repetitive than what we were looking at",
+      "start": 1095.12,
+      "duration": 3.679
+    },
+    {
+      "text": "before there's just less code",
+      "start": 1096.96,
+      "duration": 5.36
+    },
+    {
+      "text": "going on here to understand so",
+      "start": 1098.799,
+      "duration": 5.76
+    },
+    {
+      "text": "uh then we have basically the same code",
+      "start": 1102.32,
+      "duration": 4.0
+    },
+    {
+      "text": "as you know one of these blocks from",
+      "start": 1104.559,
+      "duration": 2.721
+    },
+    {
+      "text": "before",
+      "start": 1106.32,
+      "duration": 2.239
+    },
+    {
+      "text": "but it's even become a little bit",
+      "start": 1107.28,
+      "duration": 3.519
+    },
+    {
+      "text": "shorter because we didn't have to do",
+      "start": 1108.559,
+      "duration": 4.961
+    },
+    {
+      "text": "you know prices apple prices microsoft",
+      "start": 1110.799,
+      "duration": 5.281
+    },
+    {
+      "text": "we could use a more general prices name",
+      "start": 1113.52,
+      "duration": 5.039
+    },
+    {
+      "text": "uh you know again this is the advantage",
+      "start": 1116.08,
+      "duration": 4.56
+    },
+    {
+      "text": "of that scoping the names",
+      "start": 1118.559,
+      "duration": 4.0
+    },
+    {
+      "text": "uh that this prices is only going to be",
+      "start": 1120.64,
+      "duration": 3.68
+    },
+    {
+      "text": "defined within the function",
+      "start": 1122.559,
+      "duration": 5.12
+    },
+    {
+      "text": "and so when we run this for apple versus",
+      "start": 1124.32,
+      "duration": 5.04
+    },
+    {
+      "text": "running it for microsoft versus running",
+      "start": 1127.679,
+      "duration": 3.281
+    },
+    {
+      "text": "it for amazon",
+      "start": 1129.36,
+      "duration": 3.439
+    },
+    {
+      "text": "this prices variable is not going to",
+      "start": 1130.96,
+      "duration": 3.2
+    },
+    {
+      "text": "conflict uh",
+      "start": 1132.799,
+      "duration": 3.281
+    },
+    {
+      "text": "it's just going to you know when we run",
+      "start": 1134.16,
+      "duration": 3.28
+    },
+    {
+      "text": "it for apple it's going to",
+      "start": 1136.08,
+      "duration": 2.959
+    },
+    {
+      "text": "you know be the prices apple which is",
+      "start": 1137.44,
+      "duration": 4.16
+    },
+    {
+      "text": "taking its place when we run it for",
+      "start": 1139.039,
+      "duration": 4.081
+    },
+    {
+      "text": "microsoft it's going to be prices",
+      "start": 1141.6,
+      "duration": 3.439
+    },
+    {
+      "text": "microsoft taking its place",
+      "start": 1143.12,
+      "duration": 5.439
+    },
+    {
+      "text": "um but we can just write prices here",
+      "start": 1145.039,
+      "duration": 5.921
+    },
+    {
+      "text": "um and it becomes a more general name",
+      "start": 1148.559,
+      "duration": 5.601
+    },
+    {
+      "text": "and that makes this thing easier to read",
+      "start": 1150.96,
+      "duration": 6.4
+    },
+    {
+      "text": "so then we've got all the same basic",
+      "start": 1154.16,
+      "duration": 5.12
+    },
+    {
+      "text": "logic here",
+      "start": 1157.36,
+      "duration": 3.6
+    },
+    {
+      "text": "just shorter names it's a little bit",
+      "start": 1159.28,
+      "duration": 3.36
+    },
+    {
+      "text": "easier to read",
+      "start": 1160.96,
+      "duration": 3.36
+    },
+    {
+      "text": "and definitely a lot easier to read with",
+      "start": 1162.64,
+      "duration": 3.2
+    },
+    {
+      "text": "the name of the function as well as the",
+      "start": 1164.32,
+      "duration": 4.239
+    },
+    {
+      "text": "description of what it does",
+      "start": 1165.84,
+      "duration": 5.199
+    },
+    {
+      "text": "and then we want to use this function to",
+      "start": 1168.559,
+      "duration": 4.081
+    },
+    {
+      "text": "get the summary statistics",
+      "start": 1171.039,
+      "duration": 4.88
+    },
+    {
+      "text": "on each of these stocks so that's where",
+      "start": 1172.64,
+      "duration": 6.48
+    },
+    {
+      "text": "uh you know i'll go ahead and uh let's",
+      "start": 1175.919,
+      "duration": 5.201
+    },
+    {
+      "text": "just say we didn't have that at first",
+      "start": 1179.12,
+      "duration": 3.439
+    },
+    {
+      "text": "you'll see i run that and it does",
+      "start": 1181.12,
+      "duration": 3.6
+    },
+    {
+      "text": "nothing right we get no output here",
+      "start": 1182.559,
+      "duration": 3.761
+    },
+    {
+      "text": "and that's because all we've done is",
+      "start": 1184.72,
+      "duration": 3.04
+    },
+    {
+      "text": "define the function",
+      "start": 1186.32,
+      "duration": 3.92
+    },
+    {
+      "text": "we haven't actually called the function",
+      "start": 1187.76,
+      "duration": 3.68
+    },
+    {
+      "text": "to use it",
+      "start": 1190.24,
+      "duration": 4.24
+    },
+    {
+      "text": "uh so that's this other part here is",
+      "start": 1191.44,
+      "duration": 3.68
+    },
+    {
+      "text": "then",
+      "start": 1194.48,
+      "duration": 2.72
+    },
+    {
+      "text": "actually using the function actually",
+      "start": 1195.12,
+      "duration": 3.52
+    },
+    {
+      "text": "calling the function",
+      "start": 1197.2,
+      "duration": 3.599
+    },
+    {
+      "text": "and so that's where we put the name of",
+      "start": 1198.64,
+      "duration": 3.6
+    },
+    {
+      "text": "the function the same name",
+      "start": 1200.799,
+      "duration": 4.641
+    },
+    {
+      "text": "that we defined and then we put a",
+      "start": 1202.24,
+      "duration": 4.4
+    },
+    {
+      "text": "parenthesis",
+      "start": 1205.44,
+      "duration": 3.76
+    },
+    {
+      "text": "and then we pass whatever arguments and",
+      "start": 1206.64,
+      "duration": 4.399
+    },
+    {
+      "text": "then a closed parenthesis and that's how",
+      "start": 1209.2,
+      "duration": 2.719
+    },
+    {
+      "text": "you call",
+      "start": 1211.039,
+      "duration": 4.0
+    },
+    {
+      "text": "the function um",
+      "start": 1211.919,
+      "duration": 6.161
+    },
+    {
+      "text": "and so um here we're first",
+      "start": 1215.039,
+      "duration": 6.481
+    },
+    {
+      "text": "passing price is apple um",
+      "start": 1218.08,
+      "duration": 6.479
+    },
+    {
+      "text": "and the ticker symbol aapl",
+      "start": 1221.52,
+      "duration": 4.72
+    },
+    {
+      "text": "and so that's going to come into this",
+      "start": 1224.559,
+      "duration": 3.521
+    },
+    {
+      "text": "function uh so let me",
+      "start": 1226.24,
+      "duration": 4.88
+    },
+    {
+      "text": "remove these at first we're just looking",
+      "start": 1228.08,
+      "duration": 6.8
+    },
+    {
+      "text": "at the apple part so now that's going to",
+      "start": 1231.12,
+      "duration": 4.08
+    },
+    {
+      "text": "take",
+      "start": 1234.88,
+      "duration": 2.72
+    },
+    {
+      "text": "prices aapl which is all these different",
+      "start": 1235.2,
+      "duration": 3.44
+    },
+    {
+      "text": "prices",
+      "start": 1237.6,
+      "duration": 4.64
+    },
+    {
+      "text": "and now python knows because we defined",
+      "start": 1238.64,
+      "duration": 5.76
+    },
+    {
+      "text": "price summary statistics it knows that",
+      "start": 1242.24,
+      "duration": 3.919
+    },
+    {
+      "text": "this means okay i'm going to come into",
+      "start": 1244.4,
+      "duration": 2.56
+    },
+    {
+      "text": "here",
+      "start": 1246.159,
+      "duration": 3.76
+    },
+    {
+      "text": "and now prices aapl is going to become",
+      "start": 1246.96,
+      "duration": 3.92
+    },
+    {
+      "text": "prices",
+      "start": 1249.919,
+      "duration": 2.801
+    },
+    {
+      "text": "so for the scope of this function as",
+      "start": 1250.88,
+      "duration": 3.679
+    },
+    {
+      "text": "long as we're executing this",
+      "start": 1252.72,
+      "duration": 4.24
+    },
+    {
+      "text": "now the apple prices have become the",
+      "start": 1254.559,
+      "duration": 3.521
+    },
+    {
+      "text": "prices",
+      "start": 1256.96,
+      "duration": 4.16
+    },
+    {
+      "text": "and the apple ticker has become the",
+      "start": 1258.08,
+      "duration": 5.599
+    },
+    {
+      "text": "ticker and so that's why we see",
+      "start": 1261.12,
+      "duration": 5.679
+    },
+    {
+      "text": "uh you know all these apple uh specific",
+      "start": 1263.679,
+      "duration": 4.161
+    },
+    {
+      "text": "stuff here",
+      "start": 1266.799,
+      "duration": 3.441
+    },
+    {
+      "text": "even though we're using a general code",
+      "start": 1267.84,
+      "duration": 3.52
+    },
+    {
+      "text": "um",
+      "start": 1270.24,
+      "duration": 4.0
+    },
+    {
+      "text": "and then uh you know looking at the",
+      "start": 1271.36,
+      "duration": 3.76
+    },
+    {
+      "text": "other two",
+      "start": 1274.24,
+      "duration": 2.559
+    },
+    {
+      "text": "you know same thing we passed the",
+      "start": 1275.12,
+      "duration": 3.76
+    },
+    {
+      "text": "microsoft prices and microsoft and we",
+      "start": 1276.799,
+      "duration": 4.401
+    },
+    {
+      "text": "passed the amazon prices in amazon",
+      "start": 1278.88,
+      "duration": 5.039
+    },
+    {
+      "text": "and that's why we get uh you know the",
+      "start": 1281.2,
+      "duration": 3.44
+    },
+    {
+      "text": "statistics",
+      "start": 1283.919,
+      "duration": 3.521
+    },
+    {
+      "text": "specific for those particular stocks so",
+      "start": 1284.64,
+      "duration": 5.2
+    },
+    {
+      "text": "putting it all together",
+      "start": 1287.44,
+      "duration": 5.68
+    },
+    {
+      "text": "then we have all",
+      "start": 1289.84,
+      "duration": 6.959
+    },
+    {
+      "text": "three summary statistics here",
+      "start": 1293.12,
+      "duration": 6.799
+    },
+    {
+      "text": "and if you're worried about the",
+      "start": 1296.799,
+      "duration": 6.401
+    },
+    {
+      "text": "repetition of you know typing this",
+      "start": 1299.919,
+      "duration": 5.681
+    },
+    {
+      "text": "three times you can go a little bit",
+      "start": 1303.2,
+      "duration": 3.52
+    },
+    {
+      "text": "further with this",
+      "start": 1305.6,
+      "duration": 4.24
+    },
+    {
+      "text": "you know you could create an all prices",
+      "start": 1306.72,
+      "duration": 4.72
+    },
+    {
+      "text": "which actually has",
+      "start": 1309.84,
+      "duration": 5.52
+    },
+    {
+      "text": "uh you know the uh the apple prices",
+      "start": 1311.44,
+      "duration": 7.119
+    },
+    {
+      "text": "and then the microsoft prices",
+      "start": 1315.36,
+      "duration": 6.4
+    },
+    {
+      "text": "and then the amazon prices",
+      "start": 1318.559,
+      "duration": 6.321
+    },
+    {
+      "text": "and then you can you know create the",
+      "start": 1321.76,
+      "duration": 3.84
+    },
+    {
+      "text": "tickers",
+      "start": 1324.88,
+      "duration": 4.159
+    },
+    {
+      "text": "list which has aapl it has uh",
+      "start": 1325.6,
+      "duration": 6.959
+    },
+    {
+      "text": "you know msft it has amzn",
+      "start": 1329.039,
+      "duration": 6.081
+    },
+    {
+      "text": "and then uh you know instead of this we",
+      "start": 1332.559,
+      "duration": 3.761
+    },
+    {
+      "text": "could do",
+      "start": 1335.12,
+      "duration": 6.32
+    },
+    {
+      "text": "uh you know four uh",
+      "start": 1336.32,
+      "duration": 8.52
+    },
+    {
+      "text": "for price list",
+      "start": 1341.44,
+      "duration": 6.8
+    },
+    {
+      "text": "uh sticker symbol and",
+      "start": 1344.84,
+      "duration": 6.28
+    },
+    {
+      "text": "uh we'll learn more about this zip later",
+      "start": 1348.24,
+      "duration": 4.48
+    },
+    {
+      "text": "that lets you loop through",
+      "start": 1351.12,
+      "duration": 4.64
+    },
+    {
+      "text": "uh two lists at once uh you could do",
+      "start": 1352.72,
+      "duration": 3.839
+    },
+    {
+      "text": "that",
+      "start": 1355.76,
+      "duration": 4.48
+    },
+    {
+      "text": "and you could uh then indent this and we",
+      "start": 1356.559,
+      "duration": 4.641
+    },
+    {
+      "text": "can put",
+      "start": 1360.24,
+      "duration": 4.0
+    },
+    {
+      "text": "uh this price list here and we can put",
+      "start": 1361.2,
+      "duration": 4.64
+    },
+    {
+      "text": "this uh ticker symbol",
+      "start": 1364.24,
+      "duration": 4.72
+    },
+    {
+      "text": "here um and then we would get the same",
+      "start": 1365.84,
+      "duration": 6.0
+    },
+    {
+      "text": "output from that um so then that becomes",
+      "start": 1368.96,
+      "duration": 4.4
+    },
+    {
+      "text": "even a little bit more general you can",
+      "start": 1371.84,
+      "duration": 3.199
+    },
+    {
+      "text": "continue to add more price lists and",
+      "start": 1373.36,
+      "duration": 4.16
+    },
+    {
+      "text": "tickers in here and it's just going to",
+      "start": 1375.039,
+      "duration": 4.961
+    },
+    {
+      "text": "continue to add the output on there so",
+      "start": 1377.52,
+      "duration": 4.08
+    },
+    {
+      "text": "definitely that second pattern was a",
+      "start": 1380.0,
+      "duration": 3.76
+    },
+    {
+      "text": "little bit more advanced",
+      "start": 1381.6,
+      "duration": 3.68
+    },
+    {
+      "text": "but you'll be more comfortable with",
+      "start": 1383.76,
+      "duration": 3.279
+    },
+    {
+      "text": "these things as we progress",
+      "start": 1385.28,
+      "duration": 5.68
+    },
+    {
+      "text": "throughout the course um",
+      "start": 1387.039,
+      "duration": 5.921
+    },
+    {
+      "text": "so that's kind of the motivating example",
+      "start": 1390.96,
+      "duration": 4.24
+    },
+    {
+      "text": "on why we might want to use functions",
+      "start": 1392.96,
+      "duration": 5.52
+    },
+    {
+      "text": "uh now let's go to uh",
+      "start": 1395.2,
+      "duration": 4.959
+    },
+    {
+      "text": "digging a little bit more into detail of",
+      "start": 1398.48,
+      "duration": 4.24
+    },
+    {
+      "text": "how we actually use them",
+      "start": 1400.159,
+      "duration": 5.281
+    },
+    {
+      "text": "so again first to find the function then",
+      "start": 1402.72,
+      "duration": 3.76
+    },
+    {
+      "text": "use the function",
+      "start": 1405.44,
+      "duration": 4.16
+    },
+    {
+      "text": "so here we're just defining uh nothing",
+      "start": 1406.48,
+      "duration": 4.96
+    },
+    {
+      "text": "nothing happens as far as you know any",
+      "start": 1409.6,
+      "duration": 3.84
+    },
+    {
+      "text": "kind of output or code getting executed",
+      "start": 1411.44,
+      "duration": 3.119
+    },
+    {
+      "text": "it's just defined",
+      "start": 1413.44,
+      "duration": 4.4
+    },
+    {
+      "text": "now python knows that atom",
+      "start": 1414.559,
+      "duration": 5.681
+    },
+    {
+      "text": "will take two inputs and add them",
+      "start": 1417.84,
+      "duration": 3.04
+    },
+    {
+      "text": "together",
+      "start": 1420.24,
+      "duration": 5.039
+    },
+    {
+      "text": "and then return that as the output um",
+      "start": 1420.88,
+      "duration": 7.52
+    },
+    {
+      "text": "so then we add them of two and five and",
+      "start": 1425.279,
+      "duration": 4.081
+    },
+    {
+      "text": "that will give us",
+      "start": 1428.4,
+      "duration": 4.08
+    },
+    {
+      "text": "7 so that makes sense it added those two",
+      "start": 1429.36,
+      "duration": 5.919
+    },
+    {
+      "text": "numbers together",
+      "start": 1432.48,
+      "duration": 2.799
+    },
+    {
+      "text": "and the return is important here to get",
+      "start": 1435.36,
+      "duration": 5.28
+    },
+    {
+      "text": "that output",
+      "start": 1438.88,
+      "duration": 4.08
+    },
+    {
+      "text": "outside of the function if we had it as",
+      "start": 1440.64,
+      "duration": 3.12
+    },
+    {
+      "text": "just",
+      "start": 1442.96,
+      "duration": 4.48
+    },
+    {
+      "text": "you know atom is a plus b uh",
+      "start": 1443.76,
+      "duration": 5.84
+    },
+    {
+      "text": "then we run this you'll now see that we",
+      "start": 1447.44,
+      "duration": 3.44
+    },
+    {
+      "text": "have no result",
+      "start": 1449.6,
+      "duration": 2.88
+    },
+    {
+      "text": "uh coming out of the function right",
+      "start": 1450.88,
+      "duration": 3.44
+    },
+    {
+      "text": "because we didn't return it",
+      "start": 1452.48,
+      "duration": 4.559
+    },
+    {
+      "text": "so it's not able to come outside of the",
+      "start": 1454.32,
+      "duration": 4.08
+    },
+    {
+      "text": "function",
+      "start": 1457.039,
+      "duration": 3.52
+    },
+    {
+      "text": "we need to return it to actually get it",
+      "start": 1458.4,
+      "duration": 3.2
+    },
+    {
+      "text": "as output",
+      "start": 1460.559,
+      "duration": 3.921
+    },
+    {
+      "text": "for the function",
+      "start": 1461.6,
+      "duration": 2.88
+    },
+    {
+      "text": "so then you know that can definitely",
+      "start": 1468.159,
+      "duration": 4.64
+    },
+    {
+      "text": "confuse people a little bit with",
+      "start": 1471.039,
+      "duration": 4.24
+    },
+    {
+      "text": "uh you know you bring in print so you",
+      "start": 1472.799,
+      "duration": 3.681
+    },
+    {
+      "text": "know when you print something",
+      "start": 1475.279,
+      "duration": 4.241
+    },
+    {
+      "text": "it's going to show it um but that",
+      "start": 1476.48,
+      "duration": 5.679
+    },
+    {
+      "text": "doesn't mean that that value is actually",
+      "start": 1479.52,
+      "duration": 5.12
+    },
+    {
+      "text": "coming outside of the function uh the",
+      "start": 1482.159,
+      "duration": 3.12
+    },
+    {
+      "text": "variable",
+      "start": 1484.64,
+      "duration": 2.48
+    },
+    {
+      "text": "is gonna stay scoped to the function if",
+      "start": 1485.279,
+      "duration": 3.201
+    },
+    {
+      "text": "you don't return it",
+      "start": 1487.12,
+      "duration": 3.76
+    },
+    {
+      "text": "then uh you know that value is gonna be",
+      "start": 1488.48,
+      "duration": 3.12
+    },
+    {
+      "text": "gone",
+      "start": 1490.88,
+      "duration": 3.279
+    },
+    {
+      "text": "even though you already printed it um so",
+      "start": 1491.6,
+      "duration": 4.24
+    },
+    {
+      "text": "here is just a function that always",
+      "start": 1494.159,
+      "duration": 2.321
+    },
+    {
+      "text": "returns",
+      "start": 1495.84,
+      "duration": 4.24
+    },
+    {
+      "text": "five um but you know whatever you get",
+      "start": 1496.48,
+      "duration": 4.88
+    },
+    {
+      "text": "whatever you pass to it it's going to",
+      "start": 1500.08,
+      "duration": 3.04
+    },
+    {
+      "text": "add 10 to it and then it's going to",
+      "start": 1501.36,
+      "duration": 2.72
+    },
+    {
+      "text": "print that",
+      "start": 1503.12,
+      "duration": 2.4
+    },
+    {
+      "text": "uh but then it's ultimately going to",
+      "start": 1504.08,
+      "duration": 3.28
+    },
+    {
+      "text": "return five",
+      "start": 1505.52,
+      "duration": 4.48
+    },
+    {
+      "text": "so you run this and you see my value is",
+      "start": 1507.36,
+      "duration": 3.6
+    },
+    {
+      "text": "110",
+      "start": 1510.0,
+      "duration": 3.919
+    },
+    {
+      "text": "but then you see five so the result that",
+      "start": 1510.96,
+      "duration": 3.76
+    },
+    {
+      "text": "actually",
+      "start": 1513.919,
+      "duration": 3.921
+    },
+    {
+      "text": "came out of that uh is five because we",
+      "start": 1514.72,
+      "duration": 4.64
+    },
+    {
+      "text": "returned five",
+      "start": 1517.84,
+      "duration": 3.439
+    },
+    {
+      "text": "and then you'll notice now if we try to",
+      "start": 1519.36,
+      "duration": 3.199
+    },
+    {
+      "text": "look at my value",
+      "start": 1521.279,
+      "duration": 2.721
+    },
+    {
+      "text": "even though it was already printed out",
+      "start": 1522.559,
+      "duration": 3.12
+    },
+    {
+      "text": "here and it worked fine",
+      "start": 1524.0,
+      "duration": 4.48
+    },
+    {
+      "text": "now we get name error my value is not",
+      "start": 1525.679,
+      "duration": 3.921
+    },
+    {
+      "text": "defined",
+      "start": 1528.48,
+      "duration": 3.679
+    },
+    {
+      "text": "and that's because my value is only",
+      "start": 1529.6,
+      "duration": 4.8
+    },
+    {
+      "text": "defined within this function it's scoped",
+      "start": 1532.159,
+      "duration": 5.921
+    },
+    {
+      "text": "to this function and so within",
+      "start": 1534.4,
+      "duration": 6.399
+    },
+    {
+      "text": "return 5 you know anywhere inside this",
+      "start": 1538.08,
+      "duration": 3.76
+    },
+    {
+      "text": "logic we can use",
+      "start": 1540.799,
+      "duration": 5.441
+    },
+    {
+      "text": "myvalue and it will work just fine",
+      "start": 1541.84,
+      "duration": 6.24
+    },
+    {
+      "text": "but then as soon as we come outside the",
+      "start": 1546.24,
+      "duration": 4.08
+    },
+    {
+      "text": "function we can no longer use",
+      "start": 1548.08,
+      "duration": 4.479
+    },
+    {
+      "text": "myvalue or any other variables which are",
+      "start": 1550.32,
+      "duration": 3.04
+    },
+    {
+      "text": "defined",
+      "start": 1552.559,
+      "duration": 3.201
+    },
+    {
+      "text": "as part of that function or the inputs",
+      "start": 1553.36,
+      "duration": 4.799
+    },
+    {
+      "text": "to that function",
+      "start": 1555.76,
+      "duration": 4.08
+    },
+    {
+      "text": "they're just temporary temporary",
+      "start": 1558.159,
+      "duration": 3.681
+    },
+    {
+      "text": "variables which last only for the",
+      "start": 1559.84,
+      "duration": 2.959
+    },
+    {
+      "text": "function",
+      "start": 1561.84,
+      "duration": 3.36
+    },
+    {
+      "text": "body",
+      "start": 1562.799,
+      "duration": 2.401
+    },
+    {
+      "text": "then we can add a description",
+      "start": 1567.44,
+      "duration": 6.32
+    },
+    {
+      "text": "of what our function does and that's",
+      "start": 1570.96,
+      "duration": 4.8
+    },
+    {
+      "text": "called a doc string",
+      "start": 1573.76,
+      "duration": 5.12
+    },
+    {
+      "text": "um so when you you know type out your",
+      "start": 1575.76,
+      "duration": 4.24
+    },
+    {
+      "text": "function",
+      "start": 1578.88,
+      "duration": 3.36
+    },
+    {
+      "text": "and you know it takes some values then",
+      "start": 1580.0,
+      "duration": 3.44
+    },
+    {
+      "text": "you get to here",
+      "start": 1582.24,
+      "duration": 3.679
+    },
+    {
+      "text": "uh if you start typing you'll see once i",
+      "start": 1583.44,
+      "duration": 5.2
+    },
+    {
+      "text": "type the third",
+      "start": 1585.919,
+      "duration": 3.921
+    },
+    {
+      "text": "quotation mark it actually",
+      "start": 1588.64,
+      "duration": 3.12
+    },
+    {
+      "text": "auto-completes the rest of that it knows",
+      "start": 1589.84,
+      "duration": 3.839
+    },
+    {
+      "text": "i'm trying to do a triple quoted",
+      "start": 1591.76,
+      "duration": 3.84
+    },
+    {
+      "text": "uh string and then i just hit enter a",
+      "start": 1593.679,
+      "duration": 3.6
+    },
+    {
+      "text": "couple times",
+      "start": 1595.6,
+      "duration": 3.84
+    },
+    {
+      "text": "and then i can go ahead and type my",
+      "start": 1597.279,
+      "duration": 4.161
+    },
+    {
+      "text": "description",
+      "start": 1599.44,
+      "duration": 5.119
+    },
+    {
+      "text": "so that's what we've done here",
+      "start": 1601.44,
+      "duration": 5.04
+    },
+    {
+      "text": "is describe this function it always",
+      "start": 1604.559,
+      "duration": 4.081
+    },
+    {
+      "text": "returns 5 but it will also print",
+      "start": 1606.48,
+      "duration": 5.28
+    },
+    {
+      "text": "my value plus the past",
+      "start": 1608.64,
+      "duration": 7.039
+    },
+    {
+      "text": "you know 10 plus the past value um",
+      "start": 1611.76,
+      "duration": 6.08
+    },
+    {
+      "text": "so that now is the description of what",
+      "start": 1615.679,
+      "duration": 3.201
+    },
+    {
+      "text": "it does",
+      "start": 1617.84,
+      "duration": 4.079
+    },
+    {
+      "text": "um so that serves a couple purposes",
+      "start": 1618.88,
+      "duration": 4.72
+    },
+    {
+      "text": "one is that you know you just see the",
+      "start": 1621.919,
+      "duration": 3.281
+    },
+    {
+      "text": "function in there uh",
+      "start": 1623.6,
+      "duration": 3.439
+    },
+    {
+      "text": "as you're just reading through the code",
+      "start": 1625.2,
+      "duration": 4.079
+    },
+    {
+      "text": "as someone who's trying to understand",
+      "start": 1627.039,
+      "duration": 3.201
+    },
+    {
+      "text": "the model",
+      "start": 1629.279,
+      "duration": 3.041
+    },
+    {
+      "text": "and you have a description you can you",
+      "start": 1630.24,
+      "duration": 3.28
+    },
+    {
+      "text": "know see in plain text",
+      "start": 1632.32,
+      "duration": 2.56
+    },
+    {
+      "text": "what that's actually supposed to be",
+      "start": 1633.52,
+      "duration": 3.44
+    },
+    {
+      "text": "doing without having to understand the",
+      "start": 1634.88,
+      "duration": 5.44
+    },
+    {
+      "text": "code at a great level of detail",
+      "start": 1636.96,
+      "duration": 5.439
+    },
+    {
+      "text": "but the other thing which you know we",
+      "start": 1640.32,
+      "duration": 3.76
+    },
+    {
+      "text": "won't necessarily",
+      "start": 1642.399,
+      "duration": 3.841
+    },
+    {
+      "text": "uh be getting into this course we won't",
+      "start": 1644.08,
+      "duration": 4.0
+    },
+    {
+      "text": "at least focus on it some people may",
+      "start": 1646.24,
+      "duration": 5.2
+    },
+    {
+      "text": "use this but in python you can define",
+      "start": 1648.08,
+      "duration": 4.0
+    },
+    {
+      "text": "things",
+      "start": 1651.44,
+      "duration": 2.56
+    },
+    {
+      "text": "uh you know separately you can have a",
+      "start": 1652.08,
+      "duration": 4.24
+    },
+    {
+      "text": "separate python file where you define",
+      "start": 1654.0,
+      "duration": 3.52
+    },
+    {
+      "text": "some functions",
+      "start": 1656.32,
+      "duration": 3.12
+    },
+    {
+      "text": "and then you import to bring those",
+      "start": 1657.52,
+      "duration": 3.759
+    },
+    {
+      "text": "functions into",
+      "start": 1659.44,
+      "duration": 6.56
+    },
+    {
+      "text": "this um namespace where you can use them",
+      "start": 1661.279,
+      "duration": 6.161
+    },
+    {
+      "text": "and so where you're defining the",
+      "start": 1666.0,
+      "duration": 3.12
+    },
+    {
+      "text": "function where this dock string",
+      "start": 1667.44,
+      "duration": 3.92
+    },
+    {
+      "text": "is in the code might be somewhere",
+      "start": 1669.12,
+      "duration": 3.6
+    },
+    {
+      "text": "totally different than where you're",
+      "start": 1671.36,
+      "duration": 3.199
+    },
+    {
+      "text": "actually working right now",
+      "start": 1672.72,
+      "duration": 3.92
+    },
+    {
+      "text": "um but that doc string actually does",
+      "start": 1674.559,
+      "duration": 3.12
+    },
+    {
+      "text": "stay attached",
+      "start": 1676.64,
+      "duration": 4.24
+    },
+    {
+      "text": "to the function uh so that we can look",
+      "start": 1677.679,
+      "duration": 4.561
+    },
+    {
+      "text": "it up",
+      "start": 1680.88,
+      "duration": 3.76
+    },
+    {
+      "text": "so if we do the jupiter shortcut of you",
+      "start": 1682.24,
+      "duration": 3.52
+    },
+    {
+      "text": "know the question mark",
+      "start": 1684.64,
+      "duration": 3.2
+    },
+    {
+      "text": "after the name of the function you can",
+      "start": 1685.76,
+      "duration": 3.84
+    },
+    {
+      "text": "see it actually shows",
+      "start": 1687.84,
+      "duration": 4.16
+    },
+    {
+      "text": "that same doc string that we defined",
+      "start": 1689.6,
+      "duration": 3.36
+    },
+    {
+      "text": "over here",
+      "start": 1692.0,
+      "duration": 2.399
+    },
+    {
+      "text": "and that's going to hold true even if",
+      "start": 1692.96,
+      "duration": 3.199
+    },
+    {
+      "text": "this is defined in some totally",
+      "start": 1694.399,
+      "duration": 3.28
+    },
+    {
+      "text": "different spot",
+      "start": 1696.159,
+      "duration": 3.441
+    },
+    {
+      "text": "and so it's useful that that will stay",
+      "start": 1697.679,
+      "duration": 3.681
+    },
+    {
+      "text": "with the function",
+      "start": 1699.6,
+      "duration": 3.6
+    },
+    {
+      "text": "and that will also come up if you do the",
+      "start": 1701.36,
+      "duration": 3.76
+    },
+    {
+      "text": "parentheses and then shift tab",
+      "start": 1703.2,
+      "duration": 3.839
+    },
+    {
+      "text": "you'll also see the description of what",
+      "start": 1705.12,
+      "duration": 3.12
+    },
+    {
+      "text": "that does",
+      "start": 1707.039,
+      "duration": 3.441
+    },
+    {
+      "text": "so i mean even if you're all just in one",
+      "start": 1708.24,
+      "duration": 4.319
+    },
+    {
+      "text": "jupiter notebook for your model",
+      "start": 1710.48,
+      "duration": 4.48
+    },
+    {
+      "text": "um it's still useful to have that right",
+      "start": 1712.559,
+      "duration": 4.161
+    },
+    {
+      "text": "because your functions may be defined",
+      "start": 1714.96,
+      "duration": 3.439
+    },
+    {
+      "text": "like way up at the top of the model and",
+      "start": 1716.72,
+      "duration": 3.12
+    },
+    {
+      "text": "then you're using it down at the bottom",
+      "start": 1718.399,
+      "duration": 2.64
+    },
+    {
+      "text": "and you're like wait what did this",
+      "start": 1719.84,
+      "duration": 2.319
+    },
+    {
+      "text": "function do",
+      "start": 1721.039,
+      "duration": 3.12
+    },
+    {
+      "text": "well just shift tab and then you've got",
+      "start": 1722.159,
+      "duration": 3.041
+    },
+    {
+      "text": "your own description",
+      "start": 1724.159,
+      "duration": 3.041
+    },
+    {
+      "text": "of what that function does and the",
+      "start": 1725.2,
+      "duration": 4.16
+    },
+    {
+      "text": "arguments the inputs that it takes what",
+      "start": 1727.2,
+      "duration": 3.68
+    },
+    {
+      "text": "it's supposed to output",
+      "start": 1729.36,
+      "duration": 4.16
+    },
+    {
+      "text": "and so that can be really useful for uh",
+      "start": 1730.88,
+      "duration": 4.08
+    },
+    {
+      "text": "keeping yourself organized and not",
+      "start": 1733.52,
+      "duration": 3.039
+    },
+    {
+      "text": "having to go wait what does that do",
+      "start": 1734.96,
+      "duration": 3.199
+    },
+    {
+      "text": "let me scroll up and read that code",
+      "start": 1736.559,
+      "duration": 3.521
+    },
+    {
+      "text": "again i have a description of what it",
+      "start": 1738.159,
+      "duration": 5.12
+    },
+    {
+      "text": "does so i don't need to do that",
+      "start": 1740.08,
+      "duration": 3.199
+    },
+    {
+      "text": "and then coming to the",
+      "start": 1744.48,
+      "duration": 6.4
+    },
+    {
+      "text": "default arguments in functions default",
+      "start": 1747.52,
+      "duration": 5.6
+    },
+    {
+      "text": "inputs um so that's when",
+      "start": 1750.88,
+      "duration": 5.44
+    },
+    {
+      "text": "you put equals something after",
+      "start": 1753.12,
+      "duration": 6.48
+    },
+    {
+      "text": "the input in the definition of the",
+      "start": 1756.32,
+      "duration": 5.04
+    },
+    {
+      "text": "function",
+      "start": 1759.6,
+      "duration": 4.16
+    },
+    {
+      "text": "um so here this function is about",
+      "start": 1761.36,
+      "duration": 3.919
+    },
+    {
+      "text": "getting the beginning of a string",
+      "start": 1763.76,
+      "duration": 3.519
+    },
+    {
+      "text": "it's going to get the first however many",
+      "start": 1765.279,
+      "duration": 3.201
+    },
+    {
+      "text": "characters",
+      "start": 1767.279,
+      "duration": 4.241
+    },
+    {
+      "text": "of the string and",
+      "start": 1768.48,
+      "duration": 4.799
+    },
+    {
+      "text": "we're defaulting the number of",
+      "start": 1771.52,
+      "duration": 3.759
+    },
+    {
+      "text": "characters to five",
+      "start": 1773.279,
+      "duration": 5.201
+    },
+    {
+      "text": "so um you know whatever",
+      "start": 1775.279,
+      "duration": 6.561
+    },
+    {
+      "text": "we uh pass here as the string it's going",
+      "start": 1778.48,
+      "duration": 4.0
+    },
+    {
+      "text": "to be",
+      "start": 1781.84,
+      "duration": 3.12
+    },
+    {
+      "text": "looking for the beginning of that string",
+      "start": 1782.48,
+      "duration": 3.52
+    },
+    {
+      "text": "and then",
+      "start": 1784.96,
+      "duration": 2.959
+    },
+    {
+      "text": "by default it's going to grab five",
+      "start": 1786.0,
+      "duration": 3.6
+    },
+    {
+      "text": "characters so my space",
+      "start": 1787.919,
+      "duration": 4.161
+    },
+    {
+      "text": "st and that's why we get that as a",
+      "start": 1789.6,
+      "duration": 4.4
+    },
+    {
+      "text": "result",
+      "start": 1792.08,
+      "duration": 4.56
+    },
+    {
+      "text": "but we don't have to leave it at that",
+      "start": 1794.0,
+      "duration": 5.36
+    },
+    {
+      "text": "default argument we can pass a different",
+      "start": 1796.64,
+      "duration": 4.8
+    },
+    {
+      "text": "value for that here we want to get six",
+      "start": 1799.36,
+      "duration": 3.76
+    },
+    {
+      "text": "characters",
+      "start": 1801.44,
+      "duration": 3.2
+    },
+    {
+      "text": "and so now it's going to add one",
+      "start": 1803.12,
+      "duration": 4.159
+    },
+    {
+      "text": "additional character onto that",
+      "start": 1804.64,
+      "duration": 4.88
+    },
+    {
+      "text": "so default arguments default inputs are",
+      "start": 1807.279,
+      "duration": 3.52
+    },
+    {
+      "text": "really useful",
+      "start": 1809.52,
+      "duration": 3.68
+    },
+    {
+      "text": "to make your function easier to use if",
+      "start": 1810.799,
+      "duration": 3.841
+    },
+    {
+      "text": "it's something where you can think of a",
+      "start": 1813.2,
+      "duration": 2.88
+    },
+    {
+      "text": "reasonable default",
+      "start": 1814.64,
+      "duration": 4.159
+    },
+    {
+      "text": "um then it's useful to put one so that",
+      "start": 1816.08,
+      "duration": 3.68
+    },
+    {
+      "text": "you don't necessarily",
+      "start": 1818.799,
+      "duration": 2.161
+    },
+    {
+      "text": "have to add it when you call the",
+      "start": 1819.76,
+      "duration": 3.6
+    },
+    {
+      "text": "function but you still retain the full",
+      "start": 1820.96,
+      "duration": 4.24
+    },
+    {
+      "text": "flexibility and that you can",
+      "start": 1823.36,
+      "duration": 5.199
+    },
+    {
+      "text": "pass whatever you want for that argument",
+      "start": 1825.2,
+      "duration": 5.44
+    },
+    {
+      "text": "so it's nice you know for example when",
+      "start": 1828.559,
+      "duration": 4.0
+    },
+    {
+      "text": "you create the function which just runs",
+      "start": 1830.64,
+      "duration": 3.759
+    },
+    {
+      "text": "your entire model",
+      "start": 1832.559,
+      "duration": 3.761
+    },
+    {
+      "text": "that it's going to already have as",
+      "start": 1834.399,
+      "duration": 4.0
+    },
+    {
+      "text": "defaults all the just like baseline",
+      "start": 1836.32,
+      "duration": 3.92
+    },
+    {
+      "text": "values of all your inputs",
+      "start": 1838.399,
+      "duration": 3.361
+    },
+    {
+      "text": "and then you can just pass the inputs",
+      "start": 1840.24,
+      "duration": 3.039
+    },
+    {
+      "text": "that you want to change",
+      "start": 1841.76,
+      "duration": 3.76
+    },
+    {
+      "text": "and not have to pass every input every",
+      "start": 1843.279,
+      "duration": 4.88
+    },
+    {
+      "text": "single time",
+      "start": 1845.52,
+      "duration": 5.519
+    },
+    {
+      "text": "so that um you know covers the basics of",
+      "start": 1848.159,
+      "duration": 4.88
+    },
+    {
+      "text": "functions and pythons and how we can use",
+      "start": 1851.039,
+      "duration": 2.561
+    },
+    {
+      "text": "them",
+      "start": 1853.039,
+      "duration": 4.0
+    },
+    {
+      "text": "to group logic into units and then reuse",
+      "start": 1853.6,
+      "duration": 6.72
+    },
+    {
+      "text": "those units uh in a larger structure",
+      "start": 1857.039,
+      "duration": 5.041
+    },
+    {
+      "text": "and then next time we're going to come",
+      "start": 1860.32,
+      "duration": 5.839
+    },
+    {
+      "text": "back to discuss python basic data types",
+      "start": 1862.08,
+      "duration": 6.24
+    },
+    {
+      "text": "and you know kind of what data types are",
+      "start": 1866.159,
+      "duration": 3.841
+    },
+    {
+      "text": "out there and how we can",
+      "start": 1868.32,
+      "duration": 4.239
+    },
+    {
+      "text": "work with them so thanks for listening",
+      "start": 1870.0,
+      "duration": 9.84
+    },
+    {
+      "text": "and see you next time",
+      "start": 1872.559,
+      "duration": 7.281
+    }
+  ]
+}

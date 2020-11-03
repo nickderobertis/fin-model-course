@@ -1,0 +1,1379 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.76,
+      "duration": 2.559
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.88,
+      "duration": 3.92
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 6.319,
+      "duration": 2.881
+    },
+    {
+      "text": "to",
+      "start": 8.8,
+      "duration": 2.959
+    },
+    {
+      "text": "solve the first lab exercise on",
+      "start": 9.2,
+      "duration": 3.76
+    },
+    {
+      "text": "extending a simple",
+      "start": 11.759,
+      "duration": 4.721
+    },
+    {
+      "text": "retirement model so this is the lab",
+      "start": 12.96,
+      "duration": 6.159
+    },
+    {
+      "text": "exercise that we're talking about here",
+      "start": 16.48,
+      "duration": 5.6
+    },
+    {
+      "text": "um on the getting started with python",
+      "start": 19.119,
+      "duration": 3.681
+    },
+    {
+      "text": "and excel",
+      "start": 22.08,
+      "duration": 4.4
+    },
+    {
+      "text": "slides at the end um and here the basic",
+      "start": 22.8,
+      "duration": 5.12
+    },
+    {
+      "text": "idea is that we've already built out",
+      "start": 26.48,
+      "duration": 3.52
+    },
+    {
+      "text": "this simple retirement model",
+      "start": 27.92,
+      "duration": 4.159
+    },
+    {
+      "text": "uh with multiple different interest",
+      "start": 30.0,
+      "duration": 4.8
+    },
+    {
+      "text": "rates and now we're trying to look at",
+      "start": 32.079,
+      "duration": 5.441
+    },
+    {
+      "text": "what if we also vary the savings rate",
+      "start": 34.8,
+      "duration": 4.64
+    },
+    {
+      "text": "and vary those two things together so",
+      "start": 37.52,
+      "duration": 3.199
+    },
+    {
+      "text": "we're looking at each possible",
+      "start": 39.44,
+      "duration": 2.32
+    },
+    {
+      "text": "combination",
+      "start": 40.719,
+      "duration": 2.801
+    },
+    {
+      "text": "of the interest rate and the savings",
+      "start": 41.76,
+      "duration": 3.68
+    },
+    {
+      "text": "rate how do we carry that out",
+      "start": 43.52,
+      "duration": 5.28
+    },
+    {
+      "text": "in both excel and python in a reasonable",
+      "start": 45.44,
+      "duration": 4.959
+    },
+    {
+      "text": "way where you're not having to",
+      "start": 48.8,
+      "duration": 3.52
+    },
+    {
+      "text": "repeat your effort of typing this",
+      "start": 50.399,
+      "duration": 4.721
+    },
+    {
+      "text": "formula over and over",
+      "start": 52.32,
+      "duration": 5.919
+    },
+    {
+      "text": "so let's take a look at the excel",
+      "start": 55.12,
+      "duration": 5.04
+    },
+    {
+      "text": "implementation so we can go ahead and",
+      "start": 58.239,
+      "duration": 3.201
+    },
+    {
+      "text": "work from",
+      "start": 60.16,
+      "duration": 5.999
+    },
+    {
+      "text": "our existing simple retirement model",
+      "start": 61.44,
+      "duration": 4.719
+    },
+    {
+      "text": "so here we already have the year's",
+      "start": 66.479,
+      "duration": 4.32
+    },
+    {
+      "text": "retirement being calculated",
+      "start": 68.96,
+      "duration": 4.72
+    },
+    {
+      "text": "for each one of these different uh",
+      "start": 70.799,
+      "duration": 4.081
+    },
+    {
+      "text": "investment rates",
+      "start": 73.68,
+      "duration": 2.799
+    },
+    {
+      "text": "now we're trying to see let's do the",
+      "start": 74.88,
+      "duration": 3.36
+    },
+    {
+      "text": "same thing but with the savings rate and",
+      "start": 76.479,
+      "duration": 4.0
+    },
+    {
+      "text": "the combination of the two",
+      "start": 78.24,
+      "duration": 4.32
+    },
+    {
+      "text": "um so the first thing that we probably",
+      "start": 80.479,
+      "duration": 3.121
+    },
+    {
+      "text": "want to do",
+      "start": 82.56,
+      "duration": 4.72
+    },
+    {
+      "text": "is go ahead and reformat uh the layout",
+      "start": 83.6,
+      "duration": 5.519
+    },
+    {
+      "text": "of the output a little bit to be able to",
+      "start": 87.28,
+      "duration": 3.199
+    },
+    {
+      "text": "accommodate this because now we're going",
+      "start": 89.119,
+      "duration": 3.441
+    },
+    {
+      "text": "to have a table of nine different",
+      "start": 90.479,
+      "duration": 4.161
+    },
+    {
+      "text": "uh values for the years to retirement",
+      "start": 92.56,
+      "duration": 3.12
+    },
+    {
+      "text": "and we've got to have",
+      "start": 94.64,
+      "duration": 3.519
+    },
+    {
+      "text": "uh savings rate going along the other",
+      "start": 95.68,
+      "duration": 4.16
+    },
+    {
+      "text": "axis",
+      "start": 98.159,
+      "duration": 4.481
+    },
+    {
+      "text": "so i'm going to go ahead and cut control",
+      "start": 99.84,
+      "duration": 3.36
+    },
+    {
+      "text": "x",
+      "start": 102.64,
+      "duration": 5.04
+    },
+    {
+      "text": "or command x to move these things over",
+      "start": 103.2,
+      "duration": 6.48
+    },
+    {
+      "text": "i'm going to move investment rates to",
+      "start": 107.68,
+      "duration": 3.84
+    },
+    {
+      "text": "there i'm going to move years to",
+      "start": 109.68,
+      "duration": 3.6
+    },
+    {
+      "text": "retirement to here",
+      "start": 111.52,
+      "duration": 6.0
+    },
+    {
+      "text": "i'm going to make savings rates here",
+      "start": 113.28,
+      "duration": 6.72
+    },
+    {
+      "text": "and we're going to be looking at uh",
+      "start": 117.52,
+      "duration": 4.239
+    },
+    {
+      "text": "three different savings rates 10 percent",
+      "start": 120.0,
+      "duration": 2.799
+    },
+    {
+      "text": "25",
+      "start": 121.759,
+      "duration": 4.4
+    },
+    {
+      "text": "and 40 so i'm going to go ahead",
+      "start": 122.799,
+      "duration": 7.921
+    },
+    {
+      "text": "and put those savings rates in here",
+      "start": 126.159,
+      "duration": 7.041
+    },
+    {
+      "text": "um so then we're looking at our results",
+      "start": 130.72,
+      "duration": 4.32
+    },
+    {
+      "text": "coming in here",
+      "start": 133.2,
+      "duration": 5.119
+    },
+    {
+      "text": "um so then",
+      "start": 135.04,
+      "duration": 9.12
+    },
+    {
+      "text": "uh very sorry results coming in here so",
+      "start": 138.319,
+      "duration": 5.841
+    },
+    {
+      "text": "now we need to retype our formula",
+      "start": 144.879,
+      "duration": 4.321
+    },
+    {
+      "text": "because this existing formula that we",
+      "start": 147.28,
+      "duration": 3.679
+    },
+    {
+      "text": "have",
+      "start": 149.2,
+      "duration": 6.24
+    },
+    {
+      "text": "is going to be based off of",
+      "start": 150.959,
+      "duration": 7.761
+    },
+    {
+      "text": "this annual cash saved which now that's",
+      "start": 155.44,
+      "duration": 4.64
+    },
+    {
+      "text": "going to be",
+      "start": 158.72,
+      "duration": 3.04
+    },
+    {
+      "text": "changing with a savings rate so we can",
+      "start": 160.08,
+      "duration": 3.2
+    },
+    {
+      "text": "just calculate it",
+      "start": 161.76,
+      "duration": 4.88
+    },
+    {
+      "text": "in line in the formula so we need to go",
+      "start": 163.28,
+      "duration": 4.4
+    },
+    {
+      "text": "ahead and",
+      "start": 166.64,
+      "duration": 2.959
+    },
+    {
+      "text": "redo the formula but i'm just going to",
+      "start": 167.68,
+      "duration": 3.6
+    },
+    {
+      "text": "go and copy this one you know we've",
+      "start": 169.599,
+      "duration": 3.92
+    },
+    {
+      "text": "already got something that works",
+      "start": 171.28,
+      "duration": 5.76
+    },
+    {
+      "text": "so let's just extend that rather than",
+      "start": 173.519,
+      "duration": 5.36
+    },
+    {
+      "text": "starting from scratch so then i'm just",
+      "start": 177.04,
+      "duration": 4.32
+    },
+    {
+      "text": "going to paste the formula",
+      "start": 178.879,
+      "duration": 4.401
+    },
+    {
+      "text": "and so now instead of where we're using",
+      "start": 181.36,
+      "duration": 4.4
+    },
+    {
+      "text": "the annual cash saved",
+      "start": 183.28,
+      "duration": 6.0
+    },
+    {
+      "text": "instead we're going to want to do the",
+      "start": 185.76,
+      "duration": 8.08
+    },
+    {
+      "text": "current savings rate times the",
+      "start": 189.28,
+      "duration": 8.4
+    },
+    {
+      "text": "salary and",
+      "start": 193.84,
+      "duration": 5.28
+    },
+    {
+      "text": "we know we're always using the same",
+      "start": 197.68,
+      "duration": 3.12
+    },
+    {
+      "text": "salary regardless of",
+      "start": 199.12,
+      "duration": 2.96
+    },
+    {
+      "text": "which one of these that we're",
+      "start": 200.8,
+      "duration": 3.439
+    },
+    {
+      "text": "calculating so that's going to be",
+      "start": 202.08,
+      "duration": 4.96
+    },
+    {
+      "text": "completely fixed in both directions",
+      "start": 204.239,
+      "duration": 5.681
+    },
+    {
+      "text": "uh but then we have to think about the",
+      "start": 207.04,
+      "duration": 4.72
+    },
+    {
+      "text": "other references and the formula which",
+      "start": 209.92,
+      "duration": 2.239
+    },
+    {
+      "text": "way",
+      "start": 211.76,
+      "duration": 3.52
+    },
+    {
+      "text": "they should move and should not move so",
+      "start": 212.159,
+      "duration": 6.08
+    },
+    {
+      "text": "thinking about the investment rate right",
+      "start": 215.28,
+      "duration": 5.039
+    },
+    {
+      "text": "now we have that as a relative reference",
+      "start": 218.239,
+      "duration": 5.601
+    },
+    {
+      "text": "completely relative but we want that to",
+      "start": 220.319,
+      "duration": 4.0
+    },
+    {
+      "text": "move",
+      "start": 223.84,
+      "duration": 2.8
+    },
+    {
+      "text": "as we drag it to the right but we don't",
+      "start": 224.319,
+      "duration": 4.56
+    },
+    {
+      "text": "want it to move as we drag it down",
+      "start": 226.64,
+      "duration": 5.2
+    },
+    {
+      "text": "because we want it to stay in this row",
+      "start": 228.879,
+      "duration": 4.801
+    },
+    {
+      "text": "so we want it fixed on the row",
+      "start": 231.84,
+      "duration": 5.2
+    },
+    {
+      "text": "but not fixed on the column",
+      "start": 233.68,
+      "duration": 6.96
+    },
+    {
+      "text": "so here f4 gets us",
+      "start": 237.04,
+      "duration": 5.919
+    },
+    {
+      "text": "or command t on mac gets us to now fixed",
+      "start": 240.64,
+      "duration": 3.92
+    },
+    {
+      "text": "in both directions",
+      "start": 242.959,
+      "duration": 4.081
+    },
+    {
+      "text": "um and then doing it again now we have",
+      "start": 244.56,
+      "duration": 3.44
+    },
+    {
+      "text": "the dollar sign",
+      "start": 247.04,
+      "duration": 3.199
+    },
+    {
+      "text": "just in front of the eight that's just",
+      "start": 248.0,
+      "duration": 3.12
+    },
+    {
+      "text": "in front of the row",
+      "start": 250.239,
+      "duration": 3.041
+    },
+    {
+      "text": "and therefore the row is now fixed while",
+      "start": 251.12,
+      "duration": 4.479
+    },
+    {
+      "text": "the column is allowed to move",
+      "start": 253.28,
+      "duration": 4.639
+    },
+    {
+      "text": "so that's exactly what we want for the",
+      "start": 255.599,
+      "duration": 4.561
+    },
+    {
+      "text": "investment rate",
+      "start": 257.919,
+      "duration": 4.241
+    },
+    {
+      "text": "then coming to the savings rate we want",
+      "start": 260.16,
+      "duration": 3.68
+    },
+    {
+      "text": "the exact opposite here",
+      "start": 262.16,
+      "duration": 5.12
+    },
+    {
+      "text": "we want it to be able to go up and down",
+      "start": 263.84,
+      "duration": 6.079
+    },
+    {
+      "text": "so we want it to be not fixed we want it",
+      "start": 267.28,
+      "duration": 4.4
+    },
+    {
+      "text": "to be relative on the row",
+      "start": 269.919,
+      "duration": 3.84
+    },
+    {
+      "text": "uh but we don't want it to move left or",
+      "start": 271.68,
+      "duration": 3.2
+    },
+    {
+      "text": "right so",
+      "start": 273.759,
+      "duration": 3.921
+    },
+    {
+      "text": "here we want it fixed on the column so",
+      "start": 274.88,
+      "duration": 3.2
+    },
+    {
+      "text": "here",
+      "start": 277.68,
+      "duration": 3.92
+    },
+    {
+      "text": "f4 or command t three times",
+      "start": 278.08,
+      "duration": 5.04
+    },
+    {
+      "text": "and that will get the dollar sign in",
+      "start": 281.6,
+      "duration": 3.52
+    },
+    {
+      "text": "front of the a which is the column",
+      "start": 283.12,
+      "duration": 3.44
+    },
+    {
+      "text": "letter and so the column",
+      "start": 285.12,
+      "duration": 4.72
+    },
+    {
+      "text": "is now fixed and the row is not which is",
+      "start": 286.56,
+      "duration": 5.52
+    },
+    {
+      "text": "what we want",
+      "start": 289.84,
+      "duration": 4.96
+    },
+    {
+      "text": "um and then desired cash that we just",
+      "start": 292.08,
+      "duration": 5.2
+    },
+    {
+      "text": "have a single value so that one was fine",
+      "start": 294.8,
+      "duration": 5.6
+    },
+    {
+      "text": "as it was um",
+      "start": 297.28,
+      "duration": 6.24
+    },
+    {
+      "text": "and then this uh this cash",
+      "start": 300.4,
+      "duration": 5.04
+    },
+    {
+      "text": "uh saved we should that should be coming",
+      "start": 303.52,
+      "duration": 3.44
+    },
+    {
+      "text": "in as a negative amount",
+      "start": 305.44,
+      "duration": 3.4
+    },
+    {
+      "text": "uh because it's a payment in this",
+      "start": 306.96,
+      "duration": 3.76
+    },
+    {
+      "text": "formula um",
+      "start": 308.84,
+      "duration": 3.88
+    },
+    {
+      "text": "so then with that we go ahead and get an",
+      "start": 310.72,
+      "duration": 3.28
+    },
+    {
+      "text": "estimate of",
+      "start": 312.72,
+      "duration": 2.8
+    },
+    {
+      "text": "you know it would take 61 years to",
+      "start": 314.0,
+      "duration": 3.44
+    },
+    {
+      "text": "retire if you're only saving 10 percent",
+      "start": 315.52,
+      "duration": 3.6
+    },
+    {
+      "text": "of your salary and you are earning a",
+      "start": 317.44,
+      "duration": 4.4
+    },
+    {
+      "text": "lower investment return",
+      "start": 319.12,
+      "duration": 5.44
+    },
+    {
+      "text": "let's go ahead and get the formatting",
+      "start": 321.84,
+      "duration": 3.84
+    },
+    {
+      "text": "that we want on this",
+      "start": 324.56,
+      "duration": 4.16
+    },
+    {
+      "text": "before bringing it out to the other",
+      "start": 325.68,
+      "duration": 5.04
+    },
+    {
+      "text": "cells",
+      "start": 328.72,
+      "duration": 4.4
+    },
+    {
+      "text": "and then i'm going to drag it over and",
+      "start": 330.72,
+      "duration": 3.68
+    },
+    {
+      "text": "then drag it down",
+      "start": 333.12,
+      "duration": 3.519
+    },
+    {
+      "text": "and we just have it completed everywhere",
+      "start": 334.4,
+      "duration": 4.079
+    },
+    {
+      "text": "it's always using the savings rate and",
+      "start": 336.639,
+      "duration": 3.361
+    },
+    {
+      "text": "the investment rate",
+      "start": 338.479,
+      "duration": 4.401
+    },
+    {
+      "text": "from that row and column so we only had",
+      "start": 340.0,
+      "duration": 4.56
+    },
+    {
+      "text": "to type the formula once",
+      "start": 342.88,
+      "duration": 5.039
+    },
+    {
+      "text": "and it went everywhere and then of",
+      "start": 344.56,
+      "duration": 4.079
+    },
+    {
+      "text": "course",
+      "start": 347.919,
+      "duration": 3.12
+    },
+    {
+      "text": "you know you would want to reformat this",
+      "start": 348.639,
+      "duration": 3.521
+    },
+    {
+      "text": "output to then",
+      "start": 351.039,
+      "duration": 4.321
+    },
+    {
+      "text": "put all of this into a table uh",
+      "start": 352.16,
+      "duration": 5.68
+    },
+    {
+      "text": "and make it more clear uh what's going",
+      "start": 355.36,
+      "duration": 3.6
+    },
+    {
+      "text": "on here with",
+      "start": 357.84,
+      "duration": 3.68
+    },
+    {
+      "text": "a good you know alignment and sizing of",
+      "start": 358.96,
+      "duration": 4.239
+    },
+    {
+      "text": "columns and everything",
+      "start": 361.52,
+      "duration": 3.36
+    },
+    {
+      "text": "so you can actually see everything",
+      "start": 363.199,
+      "duration": 4.161
+    },
+    {
+      "text": "that's going on",
+      "start": 364.88,
+      "duration": 6.159
+    },
+    {
+      "text": "so that's the excel exercise and then",
+      "start": 367.36,
+      "duration": 7.36
+    },
+    {
+      "text": "the python part is next",
+      "start": 371.039,
+      "duration": 6.321
+    },
+    {
+      "text": "so also for the python part we can",
+      "start": 374.72,
+      "duration": 3.919
+    },
+    {
+      "text": "similarly",
+      "start": 377.36,
+      "duration": 3.52
+    },
+    {
+      "text": "work off of the existing simple",
+      "start": 378.639,
+      "duration": 5.041
+    },
+    {
+      "text": "retirement model",
+      "start": 380.88,
+      "duration": 2.8
+    },
+    {
+      "text": "and i'm just going to go ahead and go",
+      "start": 383.84,
+      "duration": 3.04
+    },
+    {
+      "text": "into the kernel menu",
+      "start": 385.759,
+      "duration": 3.681
+    },
+    {
+      "text": "and restart kernel and run all cells",
+      "start": 386.88,
+      "duration": 3.2
+    },
+    {
+      "text": "that way",
+      "start": 389.44,
+      "duration": 3.599
+    },
+    {
+      "text": "it just runs everything in order so that",
+      "start": 390.08,
+      "duration": 4.88
+    },
+    {
+      "text": "you know we have everything defined we",
+      "start": 393.039,
+      "duration": 3.28
+    },
+    {
+      "text": "already have",
+      "start": 394.96,
+      "duration": 4.64
+    },
+    {
+      "text": "uh you know the salary and the desired",
+      "start": 396.319,
+      "duration": 4.641
+    },
+    {
+      "text": "cash that we're going to need those are",
+      "start": 399.6,
+      "duration": 3.37
+    },
+    {
+      "text": "both already defined up there",
+      "start": 400.96,
+      "duration": 3.28
+    },
+    {
+      "text": "[Music]",
+      "start": 402.97,
+      "duration": 3.64
+    },
+    {
+      "text": "um so now we can go ahead",
+      "start": 404.24,
+      "duration": 3.519
+    },
+    {
+      "text": "[Music]",
+      "start": 406.61,
+      "duration": 4.27
+    },
+    {
+      "text": "uh you know vary both",
+      "start": 407.759,
+      "duration": 7.44
+    },
+    {
+      "text": "uh investment rate and savings rate",
+      "start": 410.88,
+      "duration": 7.36
+    },
+    {
+      "text": "um so then",
+      "start": 415.199,
+      "duration": 4.641
+    },
+    {
+      "text": "uh you know we already have this",
+      "start": 418.24,
+      "duration": 3.12
+    },
+    {
+      "text": "existing loop where",
+      "start": 419.84,
+      "duration": 3.04
+    },
+    {
+      "text": "we're going through each of the",
+      "start": 421.36,
+      "duration": 3.2
+    },
+    {
+      "text": "investment rates and",
+      "start": 422.88,
+      "duration": 5.52
+    },
+    {
+      "text": "looking at you know calculating",
+      "start": 424.56,
+      "duration": 5.919
+    },
+    {
+      "text": "the years of retirement based off of",
+      "start": 428.4,
+      "duration": 3.84
+    },
+    {
+      "text": "that investment rate",
+      "start": 430.479,
+      "duration": 5.041
+    },
+    {
+      "text": "and then printing out a string which",
+      "start": 432.24,
+      "duration": 4.16
+    },
+    {
+      "text": "contains",
+      "start": 435.52,
+      "duration": 4.239
+    },
+    {
+      "text": "what the use retirement are and what the",
+      "start": 436.4,
+      "duration": 5.359
+    },
+    {
+      "text": "investment rate was",
+      "start": 439.759,
+      "duration": 4.241
+    },
+    {
+      "text": "so we can start from here and work off",
+      "start": 441.759,
+      "duration": 3.601
+    },
+    {
+      "text": "of this",
+      "start": 444.0,
+      "duration": 3.12
+    },
+    {
+      "text": "of course it's currently doing the same",
+      "start": 445.36,
+      "duration": 3.119
+    },
+    {
+      "text": "thing",
+      "start": 447.12,
+      "duration": 3.44
+    },
+    {
+      "text": "and we're gonna want to make a couple of",
+      "start": 448.479,
+      "duration": 3.361
+    },
+    {
+      "text": "changes",
+      "start": 450.56,
+      "duration": 4.0
+    },
+    {
+      "text": "uh so the first change being we know now",
+      "start": 451.84,
+      "duration": 4.72
+    },
+    {
+      "text": "that we want to vary the savings rate in",
+      "start": 454.56,
+      "duration": 3.12
+    },
+    {
+      "text": "addition to",
+      "start": 456.56,
+      "duration": 4.72
+    },
+    {
+      "text": "the investment rate uh so we can also do",
+      "start": 457.68,
+      "duration": 7.919
+    },
+    {
+      "text": "for s rate and savings rates",
+      "start": 461.28,
+      "duration": 6.08
+    },
+    {
+      "text": "and we already have investment rates to",
+      "start": 465.599,
+      "duration": 3.761
+    },
+    {
+      "text": "find but we want to",
+      "start": 467.36,
+      "duration": 5.2
+    },
+    {
+      "text": "define savings rates uh here as",
+      "start": 469.36,
+      "duration": 9.04
+    },
+    {
+      "text": "the 10 25 percent and 40 percent",
+      "start": 472.56,
+      "duration": 8.079
+    },
+    {
+      "text": "and then we're going to do for s rate",
+      "start": 478.4,
+      "duration": 3.84
+    },
+    {
+      "text": "and savings rates",
+      "start": 480.639,
+      "duration": 3.68
+    },
+    {
+      "text": "and then all of this comes indented",
+      "start": 482.24,
+      "duration": 4.32
+    },
+    {
+      "text": "another time so that it executes",
+      "start": 484.319,
+      "duration": 4.88
+    },
+    {
+      "text": "uh as part of the inner loop so that",
+      "start": 486.56,
+      "duration": 3.6
+    },
+    {
+      "text": "everything here",
+      "start": 489.199,
+      "duration": 3.12
+    },
+    {
+      "text": "will run you know for each investment",
+      "start": 490.16,
+      "duration": 3.439
+    },
+    {
+      "text": "rate and then within that",
+      "start": 492.319,
+      "duration": 4.081
+    },
+    {
+      "text": "for each savings rate so for three and",
+      "start": 493.599,
+      "duration": 3.521
+    },
+    {
+      "text": "three",
+      "start": 496.4,
+      "duration": 3.199
+    },
+    {
+      "text": "it'll run a total of nine times this",
+      "start": 497.12,
+      "duration": 4.56
+    },
+    {
+      "text": "enter code",
+      "start": 499.599,
+      "duration": 3.521
+    },
+    {
+      "text": "uh and then the other thing is we're",
+      "start": 501.68,
+      "duration": 3.68
+    },
+    {
+      "text": "currently using annual cash which was",
+      "start": 503.12,
+      "duration": 3.44
+    },
+    {
+      "text": "calculated elsewhere",
+      "start": 505.36,
+      "duration": 4.239
+    },
+    {
+      "text": "but now we're going to need to calculate",
+      "start": 506.56,
+      "duration": 5.039
+    },
+    {
+      "text": "that within here",
+      "start": 509.599,
+      "duration": 4.8
+    },
+    {
+      "text": "because it is changing every time based",
+      "start": 511.599,
+      "duration": 3.201
+    },
+    {
+      "text": "off",
+      "start": 514.399,
+      "duration": 3.281
+    },
+    {
+      "text": "of the savings rate which is changing so",
+      "start": 514.8,
+      "duration": 4.799
+    },
+    {
+      "text": "it's just going to be the salary",
+      "start": 517.68,
+      "duration": 4.479
+    },
+    {
+      "text": "times the current savings rate which is",
+      "start": 519.599,
+      "duration": 3.92
+    },
+    {
+      "text": "our loop variable of",
+      "start": 522.159,
+      "duration": 5.201
+    },
+    {
+      "text": "s rate and then that is going to flow",
+      "start": 523.519,
+      "duration": 6.241
+    },
+    {
+      "text": "through to here",
+      "start": 527.36,
+      "duration": 5.2
+    },
+    {
+      "text": "so then if we run that we do see that",
+      "start": 529.76,
+      "duration": 3.36
+    },
+    {
+      "text": "now",
+      "start": 532.56,
+      "duration": 3.36
+    },
+    {
+      "text": "we get all these numbers and they do",
+      "start": 533.12,
+      "duration": 5.2
+    },
+    {
+      "text": "look like we're getting the same",
+      "start": 535.92,
+      "duration": 4.479
+    },
+    {
+      "text": "answers that we got here in excel so",
+      "start": 538.32,
+      "duration": 4.48
+    },
+    {
+      "text": "that's a positive sign",
+      "start": 540.399,
+      "duration": 4.641
+    },
+    {
+      "text": "but there's one other step here to make",
+      "start": 542.8,
+      "duration": 3.52
+    },
+    {
+      "text": "it more clear what's going on",
+      "start": 545.04,
+      "duration": 4.479
+    },
+    {
+      "text": "because right now our string um you know",
+      "start": 546.32,
+      "duration": 4.56
+    },
+    {
+      "text": "is just talking about the investment",
+      "start": 549.519,
+      "duration": 2.241
+    },
+    {
+      "text": "return",
+      "start": 550.88,
+      "duration": 2.399
+    },
+    {
+      "text": "we don't know what's going on with the",
+      "start": 551.76,
+      "duration": 3.28
+    },
+    {
+      "text": "savings rate which savings rate is",
+      "start": 553.279,
+      "duration": 2.961
+    },
+    {
+      "text": "associated with each",
+      "start": 555.04,
+      "duration": 3.68
+    },
+    {
+      "text": "user retirement based off of the current",
+      "start": 556.24,
+      "duration": 4.32
+    },
+    {
+      "text": "string",
+      "start": 558.72,
+      "duration": 4.239
+    },
+    {
+      "text": "so then we would want to add that into",
+      "start": 560.56,
+      "duration": 3.2
+    },
+    {
+      "text": "this uh",
+      "start": 562.959,
+      "duration": 3.121
+    },
+    {
+      "text": "string that we're printing out um so if",
+      "start": 563.76,
+      "duration": 3.12
+    },
+    {
+      "text": "she earns",
+      "start": 566.08,
+      "duration": 4.24
+    },
+    {
+      "text": "uh whatever percent return uh and",
+      "start": 566.88,
+      "duration": 7.28
+    },
+    {
+      "text": "saves uh s rate",
+      "start": 570.32,
+      "duration": 7.12
+    },
+    {
+      "text": "uh with the zero decimal percentage",
+      "start": 574.16,
+      "duration": 4.48
+    },
+    {
+      "text": "formatting",
+      "start": 577.44,
+      "duration": 4.959
+    },
+    {
+      "text": "um so and saves however many percent",
+      "start": 578.64,
+      "duration": 7.6
+    },
+    {
+      "text": "so then when i run that again um then",
+      "start": 582.399,
+      "duration": 6.801
+    },
+    {
+      "text": "it becomes more clear what is going with",
+      "start": 586.24,
+      "duration": 4.88
+    },
+    {
+      "text": "what um and again we see",
+      "start": 589.2,
+      "duration": 3.52
+    },
+    {
+      "text": "you know with the lowest savings and the",
+      "start": 591.12,
+      "duration": 3.279
+    },
+    {
+      "text": "lowest investment return it takes as",
+      "start": 592.72,
+      "duration": 3.119
+    },
+    {
+      "text": "much as 61 years",
+      "start": 594.399,
+      "duration": 4.481
+    },
+    {
+      "text": "to retire um whereas",
+      "start": 595.839,
+      "duration": 4.641
+    },
+    {
+      "text": "with the highest return and highest",
+      "start": 598.88,
+      "duration": 4.399
+    },
+    {
+      "text": "savings rate it's all the way down to",
+      "start": 600.48,
+      "duration": 6.32
+    },
+    {
+      "text": "less than 27 years",
+      "start": 603.279,
+      "duration": 3.521
+    },
+    {
+      "text": "so that is the initial lab exercise in",
+      "start": 607.12,
+      "duration": 4.719
+    },
+    {
+      "text": "both excel",
+      "start": 611.04,
+      "duration": 3.84
+    },
+    {
+      "text": "and python so thanks for listening",
+      "start": 611.839,
+      "duration": 8.0
+    },
+    {
+      "text": "and see you next time",
+      "start": 614.88,
+      "duration": 4.959
+    }
+  ]
+}

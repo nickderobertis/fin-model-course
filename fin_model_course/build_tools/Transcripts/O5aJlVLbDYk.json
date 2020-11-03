@@ -1,0 +1,2099 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick dear burtis",
+      "start": 3.52,
+      "duration": 3.6
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 5.44,
+      "duration": 4.4
+    },
+    {
+      "text": "today we're going to be talking about",
+      "start": 7.12,
+      "duration": 4.399
+    },
+    {
+      "text": "random discrete",
+      "start": 9.84,
+      "duration": 4.56
+    },
+    {
+      "text": "variables and this is part of our",
+      "start": 11.519,
+      "duration": 3.841
+    },
+    {
+      "text": "lecture series",
+      "start": 14.4,
+      "duration": 4.24
+    },
+    {
+      "text": "on probabilistic modeling so",
+      "start": 15.36,
+      "duration": 4.72
+    },
+    {
+      "text": "we've been talking about internal",
+      "start": 18.64,
+      "duration": 3.12
+    },
+    {
+      "text": "randomness in our models",
+      "start": 20.08,
+      "duration": 4.16
+    },
+    {
+      "text": "and we've already covered continuous",
+      "start": 21.76,
+      "duration": 4.88
+    },
+    {
+      "text": "random variables and how to implement",
+      "start": 24.24,
+      "duration": 5.92
+    },
+    {
+      "text": "them in excel in python",
+      "start": 26.64,
+      "duration": 5.36
+    },
+    {
+      "text": "we've talked kind of generally about",
+      "start": 30.16,
+      "duration": 3.6
+    },
+    {
+      "text": "discrete variables",
+      "start": 32.0,
+      "duration": 4.719
+    },
+    {
+      "text": "and now we're going to look at how we",
+      "start": 33.76,
+      "duration": 3.68
+    },
+    {
+      "text": "can",
+      "start": 36.719,
+      "duration": 3.041
+    },
+    {
+      "text": "implement them in our models as well in",
+      "start": 37.44,
+      "duration": 5.52
+    },
+    {
+      "text": "both excel and python",
+      "start": 39.76,
+      "duration": 3.2
+    },
+    {
+      "text": "so when we think about discrete",
+      "start": 43.6,
+      "duration": 4.799
+    },
+    {
+      "text": "variables again that's",
+      "start": 46.96,
+      "duration": 3.599
+    },
+    {
+      "text": "a variable that can take on a fixed set",
+      "start": 48.399,
+      "duration": 3.281
+    },
+    {
+      "text": "of values not",
+      "start": 50.559,
+      "duration": 4.0
+    },
+    {
+      "text": "just a number in some range but certain",
+      "start": 51.68,
+      "duration": 4.719
+    },
+    {
+      "text": "values",
+      "start": 54.559,
+      "duration": 4.64
+    },
+    {
+      "text": "uh we can also build random discrete",
+      "start": 56.399,
+      "duration": 4.8
+    },
+    {
+      "text": "variables into our models",
+      "start": 59.199,
+      "duration": 4.481
+    },
+    {
+      "text": "so unlike the continuous variable where",
+      "start": 61.199,
+      "duration": 4.081
+    },
+    {
+      "text": "the distribution is defined by a",
+      "start": 63.68,
+      "duration": 2.4
+    },
+    {
+      "text": "function or",
+      "start": 65.28,
+      "duration": 4.24
+    },
+    {
+      "text": "curve the discrete random variable",
+      "start": 66.08,
+      "duration": 6.079
+    },
+    {
+      "text": "we only have fixed numbers a fixed set",
+      "start": 69.52,
+      "duration": 3.36
+    },
+    {
+      "text": "of values",
+      "start": 72.159,
+      "duration": 4.32
+    },
+    {
+      "text": "it can take the value of and so just",
+      "start": 72.88,
+      "duration": 5.52
+    },
+    {
+      "text": "each one of those values has an assigned",
+      "start": 76.479,
+      "duration": 3.121
+    },
+    {
+      "text": "probability",
+      "start": 78.4,
+      "duration": 2.96
+    },
+    {
+      "text": "and that is our distribution for a",
+      "start": 79.6,
+      "duration": 3.92
+    },
+    {
+      "text": "discrete variable",
+      "start": 81.36,
+      "duration": 6.56
+    },
+    {
+      "text": "so um the general process",
+      "start": 83.52,
+      "duration": 7.599
+    },
+    {
+      "text": "uh that you're going to have to follow",
+      "start": 87.92,
+      "duration": 6.64
+    },
+    {
+      "text": "in excel to be able to pick a random",
+      "start": 91.119,
+      "duration": 5.761
+    },
+    {
+      "text": "discrete variable",
+      "start": 94.56,
+      "duration": 5.519
+    },
+    {
+      "text": "is you have this table of the different",
+      "start": 96.88,
+      "duration": 4.32
+    },
+    {
+      "text": "values of the variable and the",
+      "start": 100.079,
+      "duration": 4.0
+    },
+    {
+      "text": "probabilities then you want to add a new",
+      "start": 101.2,
+      "duration": 4.879
+    },
+    {
+      "text": "column to that table",
+      "start": 104.079,
+      "duration": 5.36
+    },
+    {
+      "text": "which is going to be the cumulative sum",
+      "start": 106.079,
+      "duration": 6.561
+    },
+    {
+      "text": "of the probabilities um",
+      "start": 109.439,
+      "duration": 6.401
+    },
+    {
+      "text": "and based off that as well as",
+      "start": 112.64,
+      "duration": 6.0
+    },
+    {
+      "text": "using the rand function you're going to",
+      "start": 115.84,
+      "duration": 4.8
+    },
+    {
+      "text": "be able to combine those",
+      "start": 118.64,
+      "duration": 5.04
+    },
+    {
+      "text": "into an approach that can pick a random",
+      "start": 120.64,
+      "duration": 6.0
+    },
+    {
+      "text": "discrete variable",
+      "start": 123.68,
+      "duration": 6.16
+    },
+    {
+      "text": "um you pull this random number from zero",
+      "start": 126.64,
+      "duration": 3.679
+    },
+    {
+      "text": "to one",
+      "start": 129.84,
+      "duration": 3.84
+    },
+    {
+      "text": "the rand function in excel and",
+      "start": 130.319,
+      "duration": 6.56
+    },
+    {
+      "text": "that is going to tell you the",
+      "start": 133.68,
+      "duration": 6.32
+    },
+    {
+      "text": "uh which range of probabilities",
+      "start": 136.879,
+      "duration": 6.561
+    },
+    {
+      "text": "that we should draw from",
+      "start": 140.0,
+      "duration": 6.08
+    },
+    {
+      "text": "so this will become more concrete",
+      "start": 143.44,
+      "duration": 4.799
+    },
+    {
+      "text": "looking at an example here",
+      "start": 146.08,
+      "duration": 5.2
+    },
+    {
+      "text": "here we have uh three different states",
+      "start": 148.239,
+      "duration": 3.921
+    },
+    {
+      "text": "of the economy",
+      "start": 151.28,
+      "duration": 3.599
+    },
+    {
+      "text": "that we want to choose from and we have",
+      "start": 152.16,
+      "duration": 4.56
+    },
+    {
+      "text": "three different probabilities",
+      "start": 154.879,
+      "duration": 3.761
+    },
+    {
+      "text": "associated with those states of the",
+      "start": 156.72,
+      "duration": 4.0
+    },
+    {
+      "text": "economy",
+      "start": 158.64,
+      "duration": 4.72
+    },
+    {
+      "text": "um so you can think of if we have 30",
+      "start": 160.72,
+      "duration": 5.12
+    },
+    {
+      "text": "recession 50 normal and 20",
+      "start": 163.36,
+      "duration": 5.36
+    },
+    {
+      "text": "expansion we can form ranges based off",
+      "start": 165.84,
+      "duration": 4.399
+    },
+    {
+      "text": "those probabilities",
+      "start": 168.72,
+      "duration": 3.36
+    },
+    {
+      "text": "zero to thirty percent we're going to be",
+      "start": 170.239,
+      "duration": 3.521
+    },
+    {
+      "text": "in the recession range",
+      "start": 172.08,
+      "duration": 3.519
+    },
+    {
+      "text": "then add the fifty thirty to eighty",
+      "start": 173.76,
+      "duration": 3.68
+    },
+    {
+      "text": "percent we're going to be in the normal",
+      "start": 175.599,
+      "duration": 4.881
+    },
+    {
+      "text": "uh range and with the",
+      "start": 177.44,
+      "duration": 5.2
+    },
+    {
+      "text": "expansion economy additional twenty",
+      "start": 180.48,
+      "duration": 4.16
+    },
+    {
+      "text": "percent the top 20 percent",
+      "start": 182.64,
+      "duration": 4.72
+    },
+    {
+      "text": "of the range 80 to 100 is going to",
+      "start": 184.64,
+      "duration": 3.76
+    },
+    {
+      "text": "correspond",
+      "start": 187.36,
+      "duration": 4.32
+    },
+    {
+      "text": "to an expansion economy uh and when you",
+      "start": 188.4,
+      "duration": 4.08
+    },
+    {
+      "text": "build this out",
+      "start": 191.68,
+      "duration": 2.559
+    },
+    {
+      "text": "you don't actually have to build both",
+      "start": 192.48,
+      "duration": 3.52
+    },
+    {
+      "text": "the begin and in range you can base it",
+      "start": 194.239,
+      "duration": 4.161
+    },
+    {
+      "text": "off of just one of the two",
+      "start": 196.0,
+      "duration": 4.64
+    },
+    {
+      "text": "but for sake of example i think this",
+      "start": 198.4,
+      "duration": 3.44
+    },
+    {
+      "text": "makes it a little more clear",
+      "start": 200.64,
+      "duration": 4.4
+    },
+    {
+      "text": "that um basically",
+      "start": 201.84,
+      "duration": 4.88
+    },
+    {
+      "text": "we're going to pick this random number",
+      "start": 205.04,
+      "duration": 3.119
+    },
+    {
+      "text": "between zero and one",
+      "start": 206.72,
+      "duration": 4.239
+    },
+    {
+      "text": "and whichever range it falls in is the",
+      "start": 208.159,
+      "duration": 3.36
+    },
+    {
+      "text": "case",
+      "start": 210.959,
+      "duration": 2.801
+    },
+    {
+      "text": "that we're going to pick for the",
+      "start": 211.519,
+      "duration": 3.28
+    },
+    {
+      "text": "discrete",
+      "start": 213.76,
+      "duration": 4.8
+    },
+    {
+      "text": "random variable um",
+      "start": 214.799,
+      "duration": 7.121
+    },
+    {
+      "text": "so just you know we",
+      "start": 218.56,
+      "duration": 6.16
+    },
+    {
+      "text": "we pull a random number let's say that",
+      "start": 221.92,
+      "duration": 3.2
+    },
+    {
+      "text": "it's",
+      "start": 224.72,
+      "duration": 4.0
+    },
+    {
+      "text": "0.15 uh well that's between zero and 30",
+      "start": 225.12,
+      "duration": 4.32
+    },
+    {
+      "text": "percent",
+      "start": 228.72,
+      "duration": 2.879
+    },
+    {
+      "text": "and so we're going to have a recession",
+      "start": 229.44,
+      "duration": 3.68
+    },
+    {
+      "text": "as the case",
+      "start": 231.599,
+      "duration": 5.441
+    },
+    {
+      "text": "if it's 0.45 that's between 30 and 80",
+      "start": 233.12,
+      "duration": 6.08
+    },
+    {
+      "text": "and so it's going to be the normal state",
+      "start": 237.04,
+      "duration": 4.08
+    },
+    {
+      "text": "of the economy and 0.94",
+      "start": 239.2,
+      "duration": 4.56
+    },
+    {
+      "text": "that's between 80 and 100 percent so",
+      "start": 241.12,
+      "duration": 4.72
+    },
+    {
+      "text": "that's going to be an expansionary",
+      "start": 243.76,
+      "duration": 5.839
+    },
+    {
+      "text": "period um and excel",
+      "start": 245.84,
+      "duration": 7.52
+    },
+    {
+      "text": "we do have to build that out manually",
+      "start": 249.599,
+      "duration": 6.161
+    },
+    {
+      "text": "um it's not very straightforward to do",
+      "start": 253.36,
+      "duration": 4.08
+    },
+    {
+      "text": "discrete random numbers",
+      "start": 255.76,
+      "duration": 5.28
+    },
+    {
+      "text": "in excel um whereas",
+      "start": 257.44,
+      "duration": 6.64
+    },
+    {
+      "text": "in python it is quite straightforward to",
+      "start": 261.04,
+      "duration": 4.32
+    },
+    {
+      "text": "do it",
+      "start": 264.08,
+      "duration": 4.88
+    },
+    {
+      "text": "we have the random choices function the",
+      "start": 265.36,
+      "duration": 4.32
+    },
+    {
+      "text": "choices",
+      "start": 268.96,
+      "duration": 3.36
+    },
+    {
+      "text": "function of the random module which you",
+      "start": 269.68,
+      "duration": 4.56
+    },
+    {
+      "text": "just directly pass it",
+      "start": 272.32,
+      "duration": 4.64
+    },
+    {
+      "text": "the different cases that you want to",
+      "start": 274.24,
+      "duration": 3.84
+    },
+    {
+      "text": "pick from",
+      "start": 276.96,
+      "duration": 3.2
+    },
+    {
+      "text": "and you pass it the probabilities of",
+      "start": 278.08,
+      "duration": 3.52
+    },
+    {
+      "text": "each of those",
+      "start": 280.16,
+      "duration": 3.44
+    },
+    {
+      "text": "and it's just going to pick the random",
+      "start": 281.6,
+      "duration": 3.36
+    },
+    {
+      "text": "values for us",
+      "start": 283.6,
+      "duration": 4.4
+    },
+    {
+      "text": "so you don't have to do any of this",
+      "start": 284.96,
+      "duration": 4.799
+    },
+    {
+      "text": "forming of the ranges and checking which",
+      "start": 288.0,
+      "duration": 3.28
+    },
+    {
+      "text": "range it falls in",
+      "start": 289.759,
+      "duration": 3.521
+    },
+    {
+      "text": "all that is going on in the background",
+      "start": 291.28,
+      "duration": 3.68
+    },
+    {
+      "text": "automatically for you",
+      "start": 293.28,
+      "duration": 5.359
+    },
+    {
+      "text": "in this random.choices function so",
+      "start": 294.96,
+      "duration": 7.6
+    },
+    {
+      "text": "we will now look at an example of",
+      "start": 298.639,
+      "duration": 6.081
+    },
+    {
+      "text": "implementing this in both excel and",
+      "start": 302.56,
+      "duration": 4.639
+    },
+    {
+      "text": "python",
+      "start": 304.72,
+      "duration": 2.479
+    },
+    {
+      "text": "and the complete examples of both of",
+      "start": 308.08,
+      "duration": 3.92
+    },
+    {
+      "text": "these are on the course site",
+      "start": 310.16,
+      "duration": 4.479
+    },
+    {
+      "text": "as well",
+      "start": 312.0,
+      "duration": 2.639
+    },
+    {
+      "text": "um so we're going to build out",
+      "start": 315.12,
+      "duration": 8.16
+    },
+    {
+      "text": "this discrete random variables",
+      "start": 318.32,
+      "duration": 7.84
+    },
+    {
+      "text": "and i'm going to look at this in the",
+      "start": 323.28,
+      "duration": 4.72
+    },
+    {
+      "text": "context of we have a few different",
+      "start": 326.16,
+      "duration": 3.92
+    },
+    {
+      "text": "scenarios and we want to pick a scenario",
+      "start": 328.0,
+      "duration": 6.08
+    },
+    {
+      "text": "at random so we can do that based on the",
+      "start": 330.08,
+      "duration": 6.76
+    },
+    {
+      "text": "state of the economy",
+      "start": 334.08,
+      "duration": 7.36
+    },
+    {
+      "text": "recession normal expansion economy",
+      "start": 336.84,
+      "duration": 7.96
+    },
+    {
+      "text": "um and then we want to assign",
+      "start": 341.44,
+      "duration": 6.96
+    },
+    {
+      "text": "a probability to",
+      "start": 344.8,
+      "duration": 5.679
+    },
+    {
+      "text": "each of those so we can go with that",
+      "start": 348.4,
+      "duration": 3.04
+    },
+    {
+      "text": "same 30",
+      "start": 350.479,
+      "duration": 5.361
+    },
+    {
+      "text": "50 20 probabilities",
+      "start": 351.44,
+      "duration": 4.4
+    },
+    {
+      "text": "and then we want to just get some",
+      "start": 356.16,
+      "duration": 7.12
+    },
+    {
+      "text": "inputs which are going to align",
+      "start": 359.44,
+      "duration": 6.879
+    },
+    {
+      "text": "with those cases so two percent interest",
+      "start": 363.28,
+      "duration": 4.16
+    },
+    {
+      "text": "rate in recession",
+      "start": 366.319,
+      "duration": 3.121
+    },
+    {
+      "text": "five in normal economy seven and",
+      "start": 367.44,
+      "duration": 3.36
+    },
+    {
+      "text": "expansion",
+      "start": 369.44,
+      "duration": 5.28
+    },
+    {
+      "text": "and um here we can go with the less",
+      "start": 370.8,
+      "duration": 5.76
+    },
+    {
+      "text": "financially constrained individual",
+      "start": 374.72,
+      "duration": 3.84
+    },
+    {
+      "text": "they're able to save more in the",
+      "start": 376.56,
+      "duration": 3.52
+    },
+    {
+      "text": "recession because they're not spending",
+      "start": 378.56,
+      "duration": 4.0
+    },
+    {
+      "text": "as much",
+      "start": 380.08,
+      "duration": 2.48
+    },
+    {
+      "text": "and now we have those inputs aligned",
+      "start": 383.28,
+      "duration": 4.88
+    },
+    {
+      "text": "with each of the cases",
+      "start": 385.199,
+      "duration": 6.72
+    },
+    {
+      "text": "then we can create our cumulative",
+      "start": 388.16,
+      "duration": 8.0
+    },
+    {
+      "text": "probability measure which we will use",
+      "start": 391.919,
+      "duration": 8.0
+    },
+    {
+      "text": "for picking the random discrete variable",
+      "start": 396.16,
+      "duration": 6.159
+    },
+    {
+      "text": "um so that we're going to do our",
+      "start": 399.919,
+      "duration": 4.4
+    },
+    {
+      "text": "cumulative sum pattern that we've seen",
+      "start": 402.319,
+      "duration": 2.641
+    },
+    {
+      "text": "before",
+      "start": 404.319,
+      "duration": 4.241
+    },
+    {
+      "text": "we're going to sum uh from",
+      "start": 404.96,
+      "duration": 5.92
+    },
+    {
+      "text": "the beginning of the range fixed up",
+      "start": 408.56,
+      "duration": 3.44
+    },
+    {
+      "text": "until",
+      "start": 410.88,
+      "duration": 4.24
+    },
+    {
+      "text": "uh the same and it unfixed me there",
+      "start": 412.0,
+      "duration": 6.0
+    },
+    {
+      "text": "so yeah fix just the first one not the",
+      "start": 415.12,
+      "duration": 4.24
+    },
+    {
+      "text": "second one",
+      "start": 418.0,
+      "duration": 4.88
+    },
+    {
+      "text": "and that allows it to expand the range",
+      "start": 419.36,
+      "duration": 6.559
+    },
+    {
+      "text": "as you go down each one is going to be",
+      "start": 422.88,
+      "duration": 4.08
+    },
+    {
+      "text": "picking up",
+      "start": 425.919,
+      "duration": 4.0
+    },
+    {
+      "text": "additional values",
+      "start": 426.96,
+      "duration": 2.959
+    },
+    {
+      "text": "so now we have you can think of this as",
+      "start": 430.4,
+      "duration": 4.72
+    },
+    {
+      "text": "the end range",
+      "start": 434.16,
+      "duration": 3.759
+    },
+    {
+      "text": "column we had seen in the example like i",
+      "start": 435.12,
+      "duration": 4.799
+    },
+    {
+      "text": "said you only need one of the two to",
+      "start": 437.919,
+      "duration": 2.641
+    },
+    {
+      "text": "actually",
+      "start": 439.919,
+      "duration": 4.0
+    },
+    {
+      "text": "be able to do this",
+      "start": 440.56,
+      "duration": 3.359
+    },
+    {
+      "text": "um so now comes actually drawing",
+      "start": 444.24,
+      "duration": 7.6
+    },
+    {
+      "text": "the um",
+      "start": 448.08,
+      "duration": 3.76
+    },
+    {
+      "text": "random states of the economy um",
+      "start": 452.479,
+      "duration": 6.801
+    },
+    {
+      "text": "so the first thing we need to do is",
+      "start": 455.759,
+      "duration": 8.801
+    },
+    {
+      "text": "draw a probability",
+      "start": 459.28,
+      "duration": 8.479
+    },
+    {
+      "text": "and so all that is is just equals",
+      "start": 464.56,
+      "duration": 6.96
+    },
+    {
+      "text": "and um so let's just",
+      "start": 467.759,
+      "duration": 7.12
+    },
+    {
+      "text": "get a few different random numbers here",
+      "start": 471.52,
+      "duration": 5.679
+    },
+    {
+      "text": "um and next we're going to figure out",
+      "start": 474.879,
+      "duration": 3.201
+    },
+    {
+      "text": "what is",
+      "start": 477.199,
+      "duration": 4.481
+    },
+    {
+      "text": "the economic state um",
+      "start": 478.08,
+      "duration": 8.0
+    },
+    {
+      "text": "so to determine the economic state",
+      "start": 481.68,
+      "duration": 6.799
+    },
+    {
+      "text": "we're going to do exactly what we just",
+      "start": 486.08,
+      "duration": 4.0
+    },
+    {
+      "text": "talked through a moment ago of just",
+      "start": 488.479,
+      "duration": 1.961
+    },
+    {
+      "text": "checking",
+      "start": 490.08,
+      "duration": 1.6
+    },
+    {
+      "text": "[Music]",
+      "start": 490.44,
+      "duration": 4.759
+    },
+    {
+      "text": "which range this drawn probability lies",
+      "start": 491.68,
+      "duration": 4.32
+    },
+    {
+      "text": "in",
+      "start": 495.199,
+      "duration": 3.521
+    },
+    {
+      "text": "so it's going to be a series of nested",
+      "start": 496.0,
+      "duration": 4.479
+    },
+    {
+      "text": "if statements",
+      "start": 498.72,
+      "duration": 4.479
+    },
+    {
+      "text": "determining which range this probability",
+      "start": 500.479,
+      "duration": 4.801
+    },
+    {
+      "text": "lies in",
+      "start": 503.199,
+      "duration": 5.361
+    },
+    {
+      "text": "so if the probability is less than",
+      "start": 505.28,
+      "duration": 6.639
+    },
+    {
+      "text": "or equal to this first cumulative",
+      "start": 508.56,
+      "duration": 4.479
+    },
+    {
+      "text": "probability i'm going to",
+      "start": 511.919,
+      "duration": 4.161
+    },
+    {
+      "text": "fix that then",
+      "start": 513.039,
+      "duration": 6.8
+    },
+    {
+      "text": "we're in the recession range the 0 to 30",
+      "start": 516.08,
+      "duration": 6.959
+    },
+    {
+      "text": "range so we're going to get recession",
+      "start": 519.839,
+      "duration": 7.521
+    },
+    {
+      "text": "fix as a result otherwise",
+      "start": 523.039,
+      "duration": 7.601
+    },
+    {
+      "text": "we are not in that 0 to 30 range",
+      "start": 527.36,
+      "duration": 5.44
+    },
+    {
+      "text": "and so now we need to check again what",
+      "start": 530.64,
+      "duration": 3.44
+    },
+    {
+      "text": "range we're in",
+      "start": 532.8,
+      "duration": 4.479
+    },
+    {
+      "text": "if we are",
+      "start": 534.08,
+      "duration": 6.56
+    },
+    {
+      "text": "again the drawn probability is less than",
+      "start": 537.279,
+      "duration": 6.641
+    },
+    {
+      "text": "or equal to the",
+      "start": 540.64,
+      "duration": 6.24
+    },
+    {
+      "text": "next cumulative probability so now this",
+      "start": 543.92,
+      "duration": 5.039
+    },
+    {
+      "text": "means because we're already not in the",
+      "start": 546.88,
+      "duration": 3.92
+    },
+    {
+      "text": "0-30 range this means we're now",
+      "start": 548.959,
+      "duration": 6.481
+    },
+    {
+      "text": "in the 30 to 80 range fixed",
+      "start": 550.8,
+      "duration": 7.52
+    },
+    {
+      "text": "which corresponds to the normal state of",
+      "start": 555.44,
+      "duration": 5.12
+    },
+    {
+      "text": "the economy",
+      "start": 558.32,
+      "duration": 4.8
+    },
+    {
+      "text": "otherwise now we know we're not 0 to 30",
+      "start": 560.56,
+      "duration": 4.399
+    },
+    {
+      "text": "we know we're not 30 to 80",
+      "start": 563.12,
+      "duration": 5.2
+    },
+    {
+      "text": "and so we're in this last range of 80 to",
+      "start": 564.959,
+      "duration": 4.721
+    },
+    {
+      "text": "100",
+      "start": 568.32,
+      "duration": 4.72
+    },
+    {
+      "text": "um so for the last one you don't need to",
+      "start": 569.68,
+      "duration": 4.64
+    },
+    {
+      "text": "do another if",
+      "start": 573.04,
+      "duration": 3.52
+    },
+    {
+      "text": "we know since we're not 0 to 30 we're",
+      "start": 574.32,
+      "duration": 3.12
+    },
+    {
+      "text": "not",
+      "start": 576.56,
+      "duration": 4.08
+    },
+    {
+      "text": "a 30 to 80 we must be in 80 to 100",
+      "start": 577.44,
+      "duration": 6.399
+    },
+    {
+      "text": "so otherwise it's the expansion economy",
+      "start": 580.64,
+      "duration": 7.36
+    },
+    {
+      "text": "and then we can close both those ifs",
+      "start": 583.839,
+      "duration": 4.161
+    },
+    {
+      "text": "and we can drag this down",
+      "start": 588.24,
+      "duration": 4.0
+    },
+    {
+      "text": "[Music]",
+      "start": 589.89,
+      "duration": 4.11
+    },
+    {
+      "text": "and we'll see the ones that are falling",
+      "start": 592.24,
+      "duration": 3.279
+    },
+    {
+      "text": "in this mid-range",
+      "start": 594.0,
+      "duration": 4.08
+    },
+    {
+      "text": "normal economy the ones that are falling",
+      "start": 595.519,
+      "duration": 3.041
+    },
+    {
+      "text": "in",
+      "start": 598.08,
+      "duration": 3.04
+    },
+    {
+      "text": "the upper range expansion economy let's",
+      "start": 598.56,
+      "duration": 3.76
+    },
+    {
+      "text": "calculate again",
+      "start": 601.12,
+      "duration": 3.839
+    },
+    {
+      "text": "the ones that are low values are falling",
+      "start": 602.32,
+      "duration": 4.8
+    },
+    {
+      "text": "as the recession economy",
+      "start": 604.959,
+      "duration": 5.361
+    },
+    {
+      "text": "so now you know just looking at these",
+      "start": 607.12,
+      "duration": 4.64
+    },
+    {
+      "text": "now we're getting random discrete",
+      "start": 610.32,
+      "duration": 3.04
+    },
+    {
+      "text": "variables after",
+      "start": 611.76,
+      "duration": 5.079
+    },
+    {
+      "text": "building out this whole setup",
+      "start": 613.36,
+      "duration": 7.599
+    },
+    {
+      "text": "um so then the other part of this",
+      "start": 616.839,
+      "duration": 8.521
+    },
+    {
+      "text": "would then be to get the",
+      "start": 620.959,
+      "duration": 8.401
+    },
+    {
+      "text": "variables that correspond to that",
+      "start": 625.36,
+      "duration": 5.52
+    },
+    {
+      "text": "economic case and there's a couple",
+      "start": 629.36,
+      "duration": 3.28
+    },
+    {
+      "text": "different ways you can go about this",
+      "start": 630.88,
+      "duration": 5.36
+    },
+    {
+      "text": "you could use a vlookup to be able to",
+      "start": 632.64,
+      "duration": 6.0
+    },
+    {
+      "text": "do this a little more generally but i'm",
+      "start": 636.24,
+      "duration": 3.599
+    },
+    {
+      "text": "just going to show again",
+      "start": 638.64,
+      "duration": 4.879
+    },
+    {
+      "text": "here with some simple if statements so",
+      "start": 639.839,
+      "duration": 7.041
+    },
+    {
+      "text": "if this economic state",
+      "start": 643.519,
+      "duration": 7.201
+    },
+    {
+      "text": "is equal to recession",
+      "start": 646.88,
+      "duration": 7.12
+    },
+    {
+      "text": "then um i'm going to get the",
+      "start": 650.72,
+      "duration": 7.679
+    },
+    {
+      "text": "interest rate value of the recession",
+      "start": 654.0,
+      "duration": 7.6
+    },
+    {
+      "text": "and here i'm going to fix only",
+      "start": 658.399,
+      "duration": 6.241
+    },
+    {
+      "text": "on the row and not on the column",
+      "start": 661.6,
+      "duration": 4.32
+    },
+    {
+      "text": "because i'm going to want to be able to",
+      "start": 664.64,
+      "duration": 3.36
+    },
+    {
+      "text": "drag over to be able to get the savings",
+      "start": 665.92,
+      "duration": 4.72
+    },
+    {
+      "text": "rate as well",
+      "start": 668.0,
+      "duration": 5.76
+    },
+    {
+      "text": "so now it's not",
+      "start": 670.64,
+      "duration": 5.439
+    },
+    {
+      "text": "recession so it's something other than",
+      "start": 673.76,
+      "duration": 3.44
+    },
+    {
+      "text": "recession",
+      "start": 676.079,
+      "duration": 3.041
+    },
+    {
+      "text": "so again we need to do another if",
+      "start": 677.2,
+      "duration": 3.04
+    },
+    {
+      "text": "statement",
+      "start": 679.12,
+      "duration": 4.48
+    },
+    {
+      "text": "if the economic state now",
+      "start": 680.24,
+      "duration": 7.599
+    },
+    {
+      "text": "is equal to normal fix that",
+      "start": 683.6,
+      "duration": 7.76
+    },
+    {
+      "text": "then grab the normal interest rate again",
+      "start": 687.839,
+      "duration": 6.641
+    },
+    {
+      "text": "fixed on the row but not on the column",
+      "start": 691.36,
+      "duration": 6.159
+    },
+    {
+      "text": "and then similar to when we picked the",
+      "start": 694.48,
+      "duration": 5.2
+    },
+    {
+      "text": "economic state",
+      "start": 697.519,
+      "duration": 4.081
+    },
+    {
+      "text": "because it's not recession or normal it",
+      "start": 699.68,
+      "duration": 3.279
+    },
+    {
+      "text": "has to be expansion",
+      "start": 701.6,
+      "duration": 4.64
+    },
+    {
+      "text": "and so now we don't need another if",
+      "start": 702.959,
+      "duration": 3.761
+    },
+    {
+      "text": "statement",
+      "start": 706.24,
+      "duration": 2.96
+    },
+    {
+      "text": "it can just be otherwise it's the other",
+      "start": 706.72,
+      "duration": 3.52
+    },
+    {
+      "text": "interest rate",
+      "start": 709.2,
+      "duration": 8.639
+    },
+    {
+      "text": "again fixing the row but not the column",
+      "start": 710.24,
+      "duration": 7.599
+    },
+    {
+      "text": "and then i need one additional",
+      "start": 718.56,
+      "duration": 3.2
+    },
+    {
+      "text": "parenthesis i forgot that",
+      "start": 720.399,
+      "duration": 5.68
+    },
+    {
+      "text": "excel was able to pick that up um",
+      "start": 721.76,
+      "duration": 7.519
+    },
+    {
+      "text": "and then this is a percentage and we can",
+      "start": 726.079,
+      "duration": 4.961
+    },
+    {
+      "text": "see normal we got the five percent so",
+      "start": 729.279,
+      "duration": 3.521
+    },
+    {
+      "text": "that's working appropriately and this is",
+      "start": 731.04,
+      "duration": 4.4
+    },
+    {
+      "text": "the interest rate",
+      "start": 732.8,
+      "duration": 4.56
+    },
+    {
+      "text": "and now we can get the savings rate as",
+      "start": 735.44,
+      "duration": 3.68
+    },
+    {
+      "text": "well",
+      "start": 737.36,
+      "duration": 4.8
+    },
+    {
+      "text": "um drag this over",
+      "start": 739.12,
+      "duration": 6.8
+    },
+    {
+      "text": "drag this down and",
+      "start": 742.16,
+      "duration": 5.44
+    },
+    {
+      "text": "let's see if this is working",
+      "start": 745.92,
+      "duration": 4.159
+    },
+    {
+      "text": "appropriately something is",
+      "start": 747.6,
+      "duration": 6.479
+    },
+    {
+      "text": "seems to not be working appropriately",
+      "start": 750.079,
+      "duration": 4.0
+    },
+    {
+      "text": "yeah you can see it didn't pick the",
+      "start": 754.399,
+      "duration": 2.961
+    },
+    {
+      "text": "correct savings rate corresponding to",
+      "start": 755.839,
+      "duration": 2.641
+    },
+    {
+      "text": "the interest rate",
+      "start": 757.36,
+      "duration": 4.88
+    },
+    {
+      "text": "and that's because i forgot to fix",
+      "start": 758.48,
+      "duration": 7.599
+    },
+    {
+      "text": "this on the column um",
+      "start": 762.24,
+      "duration": 5.76
+    },
+    {
+      "text": "or so you can see that it should stay",
+      "start": 766.079,
+      "duration": 3.44
+    },
+    {
+      "text": "over here on normal but it went",
+      "start": 768.0,
+      "duration": 5.04
+    },
+    {
+      "text": "over to the interest rate so i'm going",
+      "start": 769.519,
+      "duration": 5.041
+    },
+    {
+      "text": "to go in and modify that",
+      "start": 773.04,
+      "duration": 5.12
+    },
+    {
+      "text": "any references to the normal",
+      "start": 774.56,
+      "duration": 3.6
+    },
+    {
+      "text": "and now that should be fixed on the",
+      "start": 779.6,
+      "duration": 6.32
+    },
+    {
+      "text": "column we don't want the column to move",
+      "start": 784.079,
+      "duration": 5.281
+    },
+    {
+      "text": "but we do want to allow the row to move",
+      "start": 785.92,
+      "duration": 6.8
+    },
+    {
+      "text": "so here fixing on the column",
+      "start": 789.36,
+      "duration": 6.4
+    },
+    {
+      "text": "again over here fixing on the column",
+      "start": 792.72,
+      "duration": 8.08
+    },
+    {
+      "text": "and then we can re-drag into that range",
+      "start": 795.76,
+      "duration": 8.079
+    },
+    {
+      "text": "to now apply this everywhere and now it",
+      "start": 800.8,
+      "duration": 4.64
+    },
+    {
+      "text": "is appropriately staying",
+      "start": 803.839,
+      "duration": 5.12
+    },
+    {
+      "text": "in that column let's just check over our",
+      "start": 805.44,
+      "duration": 3.839
+    },
+    {
+      "text": "work",
+      "start": 808.959,
+      "duration": 2.401
+    },
+    {
+      "text": "normal we get five percent and 25",
+      "start": 809.279,
+      "duration": 3.761
+    },
+    {
+      "text": "percent recession we get",
+      "start": 811.36,
+      "duration": 3.44
+    },
+    {
+      "text": "two percent and thirty five percent",
+      "start": 813.04,
+      "duration": 3.68
+    },
+    {
+      "text": "expansion we get seven percent and",
+      "start": 814.8,
+      "duration": 4.399
+    },
+    {
+      "text": "fifteen percent so it's all working",
+      "start": 816.72,
+      "duration": 5.28
+    },
+    {
+      "text": "appropriately now",
+      "start": 819.199,
+      "duration": 5.521
+    },
+    {
+      "text": "um so that's a quick overview of how to",
+      "start": 822.0,
+      "duration": 3.839
+    },
+    {
+      "text": "do discrete",
+      "start": 824.72,
+      "duration": 4.4
+    },
+    {
+      "text": "random variables in excel",
+      "start": 825.839,
+      "duration": 6.8
+    },
+    {
+      "text": "and when you format this you may want to",
+      "start": 829.12,
+      "duration": 5.279
+    },
+    {
+      "text": "hide some areas of this like this",
+      "start": 832.639,
+      "duration": 4.161
+    },
+    {
+      "text": "is not important this is not important",
+      "start": 834.399,
+      "duration": 4.0
+    },
+    {
+      "text": "you could potentially hide those",
+      "start": 836.8,
+      "duration": 4.8
+    },
+    {
+      "text": "those areas of the sheet or otherwise",
+      "start": 838.399,
+      "duration": 5.521
+    },
+    {
+      "text": "change the formatting to make them uh",
+      "start": 841.6,
+      "duration": 3.2
+    },
+    {
+      "text": "de-emphasize",
+      "start": 843.92,
+      "duration": 3.599
+    },
+    {
+      "text": "something that the consumer of the model",
+      "start": 844.8,
+      "duration": 6.0
+    },
+    {
+      "text": "shouldn't really care about",
+      "start": 847.519,
+      "duration": 3.281
+    },
+    {
+      "text": "um so fairly involved manual process to",
+      "start": 850.959,
+      "duration": 5.521
+    },
+    {
+      "text": "do that in excel and you can only",
+      "start": 855.04,
+      "duration": 3.2
+    },
+    {
+      "text": "imagine you add additional cases you're",
+      "start": 856.48,
+      "duration": 3.44
+    },
+    {
+      "text": "just adding more and more",
+      "start": 858.24,
+      "duration": 3.52
+    },
+    {
+      "text": "nested if statements which becomes a",
+      "start": 859.92,
+      "duration": 4.56
+    },
+    {
+      "text": "little bit of a mess",
+      "start": 861.76,
+      "duration": 2.72
+    },
+    {
+      "text": "so let's look at how we can do that in",
+      "start": 864.56,
+      "duration": 5.519
+    },
+    {
+      "text": "python now",
+      "start": 866.88,
+      "duration": 5.92
+    },
+    {
+      "text": "um so here you know thinking about the",
+      "start": 870.079,
+      "duration": 3.2
+    },
+    {
+      "text": "same",
+      "start": 872.8,
+      "duration": 2.56
+    },
+    {
+      "text": "kind of thing choosing between recession",
+      "start": 873.279,
+      "duration": 3.761
+    },
+    {
+      "text": "normal expansion",
+      "start": 875.36,
+      "duration": 5.839
+    },
+    {
+      "text": "um and we want to just pick a case",
+      "start": 877.04,
+      "duration": 7.039
+    },
+    {
+      "text": "well we just uh take the cases and we",
+      "start": 881.199,
+      "duration": 5.121
+    },
+    {
+      "text": "take the probabilities of those cases",
+      "start": 884.079,
+      "duration": 4.88
+    },
+    {
+      "text": "and we pass those to random dot choices",
+      "start": 886.32,
+      "duration": 4.319
+    },
+    {
+      "text": "and that will be able to pick",
+      "start": 888.959,
+      "duration": 3.921
+    },
+    {
+      "text": "a random discrete value for us it really",
+      "start": 890.639,
+      "duration": 3.921
+    },
+    {
+      "text": "is that simple",
+      "start": 892.88,
+      "duration": 3.759
+    },
+    {
+      "text": "um there is one thing you'll notice with",
+      "start": 894.56,
+      "duration": 3.92
+    },
+    {
+      "text": "this random.choices function",
+      "start": 896.639,
+      "duration": 4.481
+    },
+    {
+      "text": "is it always returns a list that's why",
+      "start": 898.48,
+      "duration": 4.08
+    },
+    {
+      "text": "you see the brackets",
+      "start": 901.12,
+      "duration": 4.0
+    },
+    {
+      "text": "around the output in the result so if",
+      "start": 902.56,
+      "duration": 4.399
+    },
+    {
+      "text": "you just want a single value",
+      "start": 905.12,
+      "duration": 5.68
+    },
+    {
+      "text": "you can just put bracket 0 on the end",
+      "start": 906.959,
+      "duration": 6.081
+    },
+    {
+      "text": "that is going to pull the first value",
+      "start": 910.8,
+      "duration": 3.2
+    },
+    {
+      "text": "out of the list",
+      "start": 913.04,
+      "duration": 4.159
+    },
+    {
+      "text": "and now we have just the random value",
+      "start": 914.0,
+      "duration": 7.279
+    },
+    {
+      "text": "itself um",
+      "start": 917.199,
+      "duration": 7.041
+    },
+    {
+      "text": "and the random.choices function directly",
+      "start": 921.279,
+      "duration": 4.161
+    },
+    {
+      "text": "already supports",
+      "start": 924.24,
+      "duration": 4.8
+    },
+    {
+      "text": "picking uh random just multiple random",
+      "start": 925.44,
+      "duration": 6.48
+    },
+    {
+      "text": "discrete numbers you pass it this k",
+      "start": 929.04,
+      "duration": 3.84
+    },
+    {
+      "text": "parameter k",
+      "start": 931.92,
+      "duration": 3.68
+    },
+    {
+      "text": "equals however many you want to generate",
+      "start": 932.88,
+      "duration": 3.36
+    },
+    {
+      "text": "here k",
+      "start": 935.6,
+      "duration": 3.52
+    },
+    {
+      "text": "equals five we get five random numbers",
+      "start": 936.24,
+      "duration": 4.64
+    },
+    {
+      "text": "we can change it to 10.",
+      "start": 939.12,
+      "duration": 5.36
+    },
+    {
+      "text": "sorry not random numbers random cases um",
+      "start": 940.88,
+      "duration": 7.04
+    },
+    {
+      "text": "now we've got 10 different cases and it",
+      "start": 944.48,
+      "duration": 5.68
+    },
+    {
+      "text": "is really that simple to work with",
+      "start": 947.92,
+      "duration": 3.2
+    },
+    {
+      "text": "discrete",
+      "start": 950.16,
+      "duration": 5.679
+    },
+    {
+      "text": "uh random values in python",
+      "start": 951.12,
+      "duration": 4.719
+    },
+    {
+      "text": "so then there's also a lab exercise",
+      "start": 957.04,
+      "duration": 6.719
+    },
+    {
+      "text": "on the discrete random numbers in both",
+      "start": 960.639,
+      "duration": 5.041
+    },
+    {
+      "text": "excel and python",
+      "start": 963.759,
+      "duration": 4.721
+    },
+    {
+      "text": "and so this lab exercise we're building",
+      "start": 965.68,
+      "duration": 3.44
+    },
+    {
+      "text": "out a",
+      "start": 968.48,
+      "duration": 4.08
+    },
+    {
+      "text": "simple model of stock returns",
+      "start": 969.12,
+      "duration": 5.519
+    },
+    {
+      "text": "and basically the stock starts at a",
+      "start": 972.56,
+      "duration": 3.519
+    },
+    {
+      "text": "hundred dollars",
+      "start": 974.639,
+      "duration": 3.041
+    },
+    {
+      "text": "and then it goes through a number of",
+      "start": 976.079,
+      "duration": 3.281
+    },
+    {
+      "text": "different periods",
+      "start": 977.68,
+      "duration": 5.279
+    },
+    {
+      "text": "and a hundred periods here",
+      "start": 979.36,
+      "duration": 6.479
+    },
+    {
+      "text": "and each period it can either go up or",
+      "start": 982.959,
+      "duration": 3.521
+    },
+    {
+      "text": "down",
+      "start": 985.839,
+      "duration": 2.401
+    },
+    {
+      "text": "and it's going to go up or down by a",
+      "start": 986.48,
+      "duration": 3.44
+    },
+    {
+      "text": "fixed uh percentage",
+      "start": 988.24,
+      "duration": 5.279
+    },
+    {
+      "text": "one percent here so",
+      "start": 989.92,
+      "duration": 4.96
+    },
+    {
+      "text": "you're picking between these two",
+      "start": 993.519,
+      "duration": 3.521
+    },
+    {
+      "text": "different random discrete cases",
+      "start": 994.88,
+      "duration": 5.44
+    },
+    {
+      "text": "up and down and the uh one percent or",
+      "start": 997.04,
+      "duration": 5.039
+    },
+    {
+      "text": "negative one percent",
+      "start": 1000.32,
+      "duration": 4.879
+    },
+    {
+      "text": "that goes along with that and we have",
+      "start": 1002.079,
+      "duration": 5.12
+    },
+    {
+      "text": "probabilities here of the stock going up",
+      "start": 1005.199,
+      "duration": 5.921
+    },
+    {
+      "text": "and down sixty percent forty percent",
+      "start": 1007.199,
+      "duration": 6.241
+    },
+    {
+      "text": "and you want to visualize what happens",
+      "start": 1011.12,
+      "duration": 3.519
+    },
+    {
+      "text": "to that stock price",
+      "start": 1013.44,
+      "duration": 4.16
+    },
+    {
+      "text": "over time and we want to complete this",
+      "start": 1014.639,
+      "duration": 4.56
+    },
+    {
+      "text": "entire exercise",
+      "start": 1017.6,
+      "duration": 6.479
+    },
+    {
+      "text": "in both excel and python",
+      "start": 1019.199,
+      "duration": 8.161
+    },
+    {
+      "text": "so that's uh generating discrete random",
+      "start": 1024.079,
+      "duration": 4.161
+    },
+    {
+      "text": "numbers",
+      "start": 1027.36,
+      "duration": 4.24
+    },
+    {
+      "text": "in both excel and python",
+      "start": 1028.24,
+      "duration": 6.079
+    },
+    {
+      "text": "um thanks for listening uh next time",
+      "start": 1031.6,
+      "duration": 4.239
+    },
+    {
+      "text": "we're going to come back",
+      "start": 1034.319,
+      "duration": 4.081
+    },
+    {
+      "text": "and look at adding internal randomness",
+      "start": 1035.839,
+      "duration": 3.36
+    },
+    {
+      "text": "to an",
+      "start": 1038.4,
+      "duration": 3.279
+    },
+    {
+      "text": "existing excel model so thanks for",
+      "start": 1039.199,
+      "duration": 3.041
+    },
+    {
+      "text": "listening",
+      "start": 1041.679,
+      "duration": 5.681
+    },
+    {
+      "text": "and see you next time",
+      "start": 1042.24,
+      "duration": 5.12
+    }
+  ]
+}

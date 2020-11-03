@@ -1,0 +1,1954 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.199,
+      "duration": 2.16
+    },
+    {
+      "text": "nick dear burst here teaching you",
+      "start": 3.919,
+      "duration": 3.681
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.359,
+      "duration": 3.841
+    },
+    {
+      "text": "be talking about",
+      "start": 7.6,
+      "duration": 5.119
+    },
+    {
+      "text": "imports in python and installing python",
+      "start": 9.2,
+      "duration": 6.399
+    },
+    {
+      "text": "packages this is part of our lecture",
+      "start": 12.719,
+      "duration": 5.121
+    },
+    {
+      "text": "segment on exploring the parameter space",
+      "start": 15.599,
+      "duration": 5.361
+    },
+    {
+      "text": "with sensitivity analysis and the sub",
+      "start": 17.84,
+      "duration": 3.76
+    },
+    {
+      "text": "segment",
+      "start": 20.96,
+      "duration": 3.28
+    },
+    {
+      "text": "on additional python basics that we need",
+      "start": 21.6,
+      "duration": 4.32
+    },
+    {
+      "text": "to be able to",
+      "start": 24.24,
+      "duration": 6.48
+    },
+    {
+      "text": "attack sensitivity analysis in python",
+      "start": 25.92,
+      "duration": 8.08
+    },
+    {
+      "text": "so we're here in this extra python basic",
+      "start": 30.72,
+      "duration": 3.999
+    },
+    {
+      "text": "section",
+      "start": 34.0,
+      "duration": 4.559
+    },
+    {
+      "text": "of the sensitivity analysis lecture",
+      "start": 34.719,
+      "duration": 6.561
+    },
+    {
+      "text": "starting here with understanding imports",
+      "start": 38.559,
+      "duration": 4.641
+    },
+    {
+      "text": "in python",
+      "start": 41.28,
+      "duration": 4.4
+    },
+    {
+      "text": "so we've already used the import",
+      "start": 43.2,
+      "duration": 4.32
+    },
+    {
+      "text": "statement a little bit we've imported",
+      "start": 45.68,
+      "duration": 2.96
+    },
+    {
+      "text": "numpy we've",
+      "start": 47.52,
+      "duration": 4.24
+    },
+    {
+      "text": "imported pandas um",
+      "start": 48.64,
+      "duration": 6.32
+    },
+    {
+      "text": "and what that import is doing",
+      "start": 51.76,
+      "duration": 6.799
+    },
+    {
+      "text": "it is loading this external package",
+      "start": 54.96,
+      "duration": 7.36
+    },
+    {
+      "text": "which we can then use and",
+      "start": 58.559,
+      "duration": 6.481
+    },
+    {
+      "text": "that makes it sound and seem like these",
+      "start": 62.32,
+      "duration": 4.0
+    },
+    {
+      "text": "third-party packages",
+      "start": 65.04,
+      "duration": 4.16
+    },
+    {
+      "text": "numpy pandas and all the others that we",
+      "start": 66.32,
+      "duration": 4.72
+    },
+    {
+      "text": "can potentially use",
+      "start": 69.2,
+      "duration": 3.68
+    },
+    {
+      "text": "makes them sound like there's some kind",
+      "start": 71.04,
+      "duration": 3.52
+    },
+    {
+      "text": "of uh",
+      "start": 72.88,
+      "duration": 4.879
+    },
+    {
+      "text": "you know very structured special things",
+      "start": 74.56,
+      "duration": 5.199
+    },
+    {
+      "text": "um that you need to set it up in some",
+      "start": 77.759,
+      "duration": 3.68
+    },
+    {
+      "text": "really special way",
+      "start": 79.759,
+      "duration": 3.841
+    },
+    {
+      "text": "um but it's quite a bit simpler than",
+      "start": 81.439,
+      "duration": 3.201
+    },
+    {
+      "text": "that really it's",
+      "start": 83.6,
+      "duration": 3.92
+    },
+    {
+      "text": "they're just sets of python code and",
+      "start": 84.64,
+      "duration": 4.88
+    },
+    {
+      "text": "just a bunch of files",
+      "start": 87.52,
+      "duration": 4.239
+    },
+    {
+      "text": "and when you import it it's just loading",
+      "start": 89.52,
+      "duration": 4.48
+    },
+    {
+      "text": "the python code in those files",
+      "start": 91.759,
+      "duration": 4.241
+    },
+    {
+      "text": "into your notebook or wherever you're",
+      "start": 94.0,
+      "duration": 4.479
+    },
+    {
+      "text": "working",
+      "start": 96.0,
+      "duration": 2.479
+    },
+    {
+      "text": "and so just like the authors of numpy",
+      "start": 98.88,
+      "duration": 5.84
+    },
+    {
+      "text": "and pandas have written",
+      "start": 102.88,
+      "duration": 4.4
+    },
+    {
+      "text": "all these python files with functions",
+      "start": 104.72,
+      "duration": 4.96
+    },
+    {
+      "text": "and classes that you can use",
+      "start": 107.28,
+      "duration": 5.119
+    },
+    {
+      "text": "you can also write your own code and put",
+      "start": 109.68,
+      "duration": 4.56
+    },
+    {
+      "text": "them in python files",
+      "start": 112.399,
+      "duration": 4.881
+    },
+    {
+      "text": "and import your code from python files",
+      "start": 114.24,
+      "duration": 6.4
+    },
+    {
+      "text": "in the same exact way so the way that",
+      "start": 117.28,
+      "duration": 4.159
+    },
+    {
+      "text": "that works",
+      "start": 120.64,
+      "duration": 4.159
+    },
+    {
+      "text": "is you say import something",
+      "start": 121.439,
+      "duration": 6.561
+    },
+    {
+      "text": "what happens is python searches",
+      "start": 124.799,
+      "duration": 6.24
+    },
+    {
+      "text": "on your computer in certain spots to see",
+      "start": 128.0,
+      "duration": 4.72
+    },
+    {
+      "text": "if it can find",
+      "start": 131.039,
+      "duration": 4.801
+    },
+    {
+      "text": "uh something dot p y dot p",
+      "start": 132.72,
+      "duration": 7.12
+    },
+    {
+      "text": "y is a python file the plain text file",
+      "start": 135.84,
+      "duration": 7.28
+    },
+    {
+      "text": "with a dot py extension",
+      "start": 139.84,
+      "duration": 6.24
+    },
+    {
+      "text": "and so it's first it has a certain order",
+      "start": 143.12,
+      "duration": 4.64
+    },
+    {
+      "text": "that it goes and searches",
+      "start": 146.08,
+      "duration": 4.239
+    },
+    {
+      "text": "your computer in and the first place",
+      "start": 147.76,
+      "duration": 3.44
+    },
+    {
+      "text": "it's going to look",
+      "start": 150.319,
+      "duration": 4.321
+    },
+    {
+      "text": "is in your current folder",
+      "start": 151.2,
+      "duration": 6.08
+    },
+    {
+      "text": "so if you have right next to your",
+      "start": 154.64,
+      "duration": 5.679
+    },
+    {
+      "text": "jupiter notebook you have a something.py",
+      "start": 157.28,
+      "duration": 5.52
+    },
+    {
+      "text": "defined there and it has some functions",
+      "start": 160.319,
+      "duration": 4.081
+    },
+    {
+      "text": "there are classes in there",
+      "start": 162.8,
+      "duration": 3.28
+    },
+    {
+      "text": "when you import something it's going to",
+      "start": 164.4,
+      "duration": 3.44
+    },
+    {
+      "text": "bring in the code",
+      "start": 166.08,
+      "duration": 5.04
+    },
+    {
+      "text": "from that something.py",
+      "start": 167.84,
+      "duration": 6.399
+    },
+    {
+      "text": "file and then if",
+      "start": 171.12,
+      "duration": 5.839
+    },
+    {
+      "text": "it can't find any something there then",
+      "start": 174.239,
+      "duration": 3.681
+    },
+    {
+      "text": "it's going to go on",
+      "start": 176.959,
+      "duration": 2.64
+    },
+    {
+      "text": "and continue looking through the",
+      "start": 177.92,
+      "duration": 3.599
+    },
+    {
+      "text": "different locations that it has set up",
+      "start": 179.599,
+      "duration": 3.28
+    },
+    {
+      "text": "to search",
+      "start": 181.519,
+      "duration": 3.841
+    },
+    {
+      "text": "and beyond your current directory the",
+      "start": 182.879,
+      "duration": 5.201
+    },
+    {
+      "text": "main other locations are going to be",
+      "start": 185.36,
+      "duration": 4.879
+    },
+    {
+      "text": "a certain spot where it installs all",
+      "start": 188.08,
+      "duration": 3.68
+    },
+    {
+      "text": "your packages",
+      "start": 190.239,
+      "duration": 4.961
+    },
+    {
+      "text": "um and there's often a couple different",
+      "start": 191.76,
+      "duration": 5.04
+    },
+    {
+      "text": "spots that it can put the packages so",
+      "start": 195.2,
+      "duration": 2.959
+    },
+    {
+      "text": "those will be multiple different spots",
+      "start": 196.8,
+      "duration": 2.64
+    },
+    {
+      "text": "that it looks in",
+      "start": 198.159,
+      "duration": 4.321
+    },
+    {
+      "text": "and order so when you install a package",
+      "start": 199.44,
+      "duration": 5.6
+    },
+    {
+      "text": "it'll put it in this special spot",
+      "start": 202.48,
+      "duration": 5.839
+    },
+    {
+      "text": "so when you import then if you don't",
+      "start": 205.04,
+      "duration": 5.279
+    },
+    {
+      "text": "have a file defined with that name it'll",
+      "start": 208.319,
+      "duration": 2.56
+    },
+    {
+      "text": "go look",
+      "start": 210.319,
+      "duration": 2.241
+    },
+    {
+      "text": "where your packages are and then be able",
+      "start": 210.879,
+      "duration": 3.36
+    },
+    {
+      "text": "to import it from",
+      "start": 212.56,
+      "duration": 5.12
+    },
+    {
+      "text": "there so that is something to be",
+      "start": 214.239,
+      "duration": 6.161
+    },
+    {
+      "text": "mindful of because it does always look",
+      "start": 217.68,
+      "duration": 4.72
+    },
+    {
+      "text": "in the current directory first",
+      "start": 220.4,
+      "duration": 5.119
+    },
+    {
+      "text": "if you actually created a numpy.py",
+      "start": 222.4,
+      "duration": 6.559
+    },
+    {
+      "text": "file in the current directory then when",
+      "start": 225.519,
+      "duration": 4.481
+    },
+    {
+      "text": "you import numpy",
+      "start": 228.959,
+      "duration": 2.56
+    },
+    {
+      "text": "you're no longer getting the numpy",
+      "start": 230.0,
+      "duration": 3.319
+    },
+    {
+      "text": "package you're getting your",
+      "start": 231.519,
+      "duration": 5.761
+    },
+    {
+      "text": "numpy.py file and so that is something",
+      "start": 233.319,
+      "duration": 4.521
+    },
+    {
+      "text": "to be",
+      "start": 237.28,
+      "duration": 3.28
+    },
+    {
+      "text": "careful about that you don't want to",
+      "start": 237.84,
+      "duration": 3.36
+    },
+    {
+      "text": "define",
+      "start": 240.56,
+      "duration": 4.0
+    },
+    {
+      "text": "python files with the same names as",
+      "start": 241.2,
+      "duration": 5.28
+    },
+    {
+      "text": "packages that you might be meaning to",
+      "start": 244.56,
+      "duration": 3.599
+    },
+    {
+      "text": "import it could definitely cause a",
+      "start": 246.48,
+      "duration": 4.24
+    },
+    {
+      "text": "conflict",
+      "start": 248.159,
+      "duration": 2.561
+    },
+    {
+      "text": "so you can write your own custom code",
+      "start": 252.879,
+      "duration": 7.04
+    },
+    {
+      "text": "and you can then import it",
+      "start": 256.639,
+      "duration": 6.321
+    },
+    {
+      "text": "into your notebook later on so",
+      "start": 259.919,
+      "duration": 5.041
+    },
+    {
+      "text": "if you have any functions or classes",
+      "start": 262.96,
+      "duration": 3.12
+    },
+    {
+      "text": "that you create as",
+      "start": 264.96,
+      "duration": 3.519
+    },
+    {
+      "text": "as you're building out your models and",
+      "start": 266.08,
+      "duration": 4.24
+    },
+    {
+      "text": "you say hey that's actually a pretty",
+      "start": 268.479,
+      "duration": 4.321
+    },
+    {
+      "text": "generally useful thing that i just built",
+      "start": 270.32,
+      "duration": 3.68
+    },
+    {
+      "text": "i'm probably going to want to use that",
+      "start": 272.8,
+      "duration": 4.24
+    },
+    {
+      "text": "in my next model not just this model",
+      "start": 274.0,
+      "duration": 5.28
+    },
+    {
+      "text": "then you can take that function or take",
+      "start": 277.04,
+      "duration": 4.48
+    },
+    {
+      "text": "that class and you can offload it",
+      "start": 279.28,
+      "duration": 5.919
+    },
+    {
+      "text": "into the separate python file and then",
+      "start": 281.52,
+      "duration": 5.44
+    },
+    {
+      "text": "no matter how many notebooks you have",
+      "start": 285.199,
+      "duration": 4.161
+    },
+    {
+      "text": "you can just keep importing that same",
+      "start": 286.96,
+      "duration": 5.44
+    },
+    {
+      "text": "function or class in your notebook and",
+      "start": 289.36,
+      "duration": 3.36
+    },
+    {
+      "text": "then",
+      "start": 292.4,
+      "duration": 2.72
+    },
+    {
+      "text": "say that you wanted to add a new feature",
+      "start": 292.72,
+      "duration": 3.6
+    },
+    {
+      "text": "to that function",
+      "start": 295.12,
+      "duration": 4.72
+    },
+    {
+      "text": "it now gets a new default a new argument",
+      "start": 296.32,
+      "duration": 7.599
+    },
+    {
+      "text": "um and it can do additional things now",
+      "start": 299.84,
+      "duration": 6.799
+    },
+    {
+      "text": "um you make that change in one spot in",
+      "start": 303.919,
+      "duration": 4.641
+    },
+    {
+      "text": "your python file and that will carry",
+      "start": 306.639,
+      "duration": 3.601
+    },
+    {
+      "text": "through to all your notebooks that are",
+      "start": 308.56,
+      "duration": 2.56
+    },
+    {
+      "text": "using it",
+      "start": 310.24,
+      "duration": 3.28
+    },
+    {
+      "text": "so it goes even further in this code",
+      "start": 311.12,
+      "duration": 4.0
+    },
+    {
+      "text": "reuse direction",
+      "start": 313.52,
+      "duration": 6.08
+    },
+    {
+      "text": "to keep from having to repeat yourself",
+      "start": 315.12,
+      "duration": 8.0
+    },
+    {
+      "text": "so what happens",
+      "start": 319.6,
+      "duration": 7.599
+    },
+    {
+      "text": "when you import a file is it executes",
+      "start": 323.12,
+      "duration": 7.84
+    },
+    {
+      "text": "everything in that file so",
+      "start": 327.199,
+      "duration": 6.241
+    },
+    {
+      "text": "you can think of you know like executing",
+      "start": 330.96,
+      "duration": 3.519
+    },
+    {
+      "text": "a code cell",
+      "start": 333.44,
+      "duration": 3.039
+    },
+    {
+      "text": "in jupyter you can think of your python",
+      "start": 334.479,
+      "duration": 4.801
+    },
+    {
+      "text": "file as being the contents of one code",
+      "start": 336.479,
+      "duration": 3.841
+    },
+    {
+      "text": "cell",
+      "start": 339.28,
+      "duration": 4.0
+    },
+    {
+      "text": "and importing that file is the same as",
+      "start": 340.32,
+      "duration": 3.52
+    },
+    {
+      "text": "running",
+      "start": 343.28,
+      "duration": 4.72
+    },
+    {
+      "text": "that code cell so generally",
+      "start": 343.84,
+      "duration": 6.24
+    },
+    {
+      "text": "all that you want to have in there for",
+      "start": 348.0,
+      "duration": 3.68
+    },
+    {
+      "text": "the most part is going to be function",
+      "start": 350.08,
+      "duration": 2.24
+    },
+    {
+      "text": "and class",
+      "start": 351.68,
+      "duration": 2.32
+    },
+    {
+      "text": "definitions you don't want to generally",
+      "start": 352.32,
+      "duration": 3.52
+    },
+    {
+      "text": "be doing anything",
+      "start": 354.0,
+      "duration": 3.84
+    },
+    {
+      "text": "uh you just want the setup the",
+      "start": 355.84,
+      "duration": 3.359
+    },
+    {
+      "text": "definitions so that you",
+      "start": 357.84,
+      "duration": 4.24
+    },
+    {
+      "text": "can do something with those functions",
+      "start": 359.199,
+      "duration": 4.241
+    },
+    {
+      "text": "and classes",
+      "start": 362.08,
+      "duration": 4.72
+    },
+    {
+      "text": "um because uh",
+      "start": 363.44,
+      "duration": 5.84
+    },
+    {
+      "text": "weird things can happen if you you know",
+      "start": 366.8,
+      "duration": 4.88
+    },
+    {
+      "text": "are importing something multiple times",
+      "start": 369.28,
+      "duration": 4.479
+    },
+    {
+      "text": "and you're expecting it to do something",
+      "start": 371.68,
+      "duration": 4.32
+    },
+    {
+      "text": "python only imports it once and then",
+      "start": 373.759,
+      "duration": 3.921
+    },
+    {
+      "text": "it caches it so it doesn't have to keep",
+      "start": 376.0,
+      "duration": 3.68
+    },
+    {
+      "text": "importing it so",
+      "start": 377.68,
+      "duration": 3.68
+    },
+    {
+      "text": "you can run into unexpected behavior if",
+      "start": 379.68,
+      "duration": 3.68
+    },
+    {
+      "text": "you're trying to run logic",
+      "start": 381.36,
+      "duration": 4.48
+    },
+    {
+      "text": "when you import instead just have",
+      "start": 383.36,
+      "duration": 3.679
+    },
+    {
+      "text": "functions and classes",
+      "start": 385.84,
+      "duration": 5.04
+    },
+    {
+      "text": "for the most part and then",
+      "start": 387.039,
+      "duration": 3.841
+    },
+    {
+      "text": "then when you import it you'll have all",
+      "start": 391.759,
+      "duration": 4.481
+    },
+    {
+      "text": "those defines so that you can use them",
+      "start": 393.36,
+      "duration": 5.92
+    },
+    {
+      "text": "in your notebook",
+      "start": 396.24,
+      "duration": 5.04
+    },
+    {
+      "text": "and you know it's a little bit more",
+      "start": 399.28,
+      "duration": 3.68
+    },
+    {
+      "text": "advanced to go to the structure than",
+      "start": 401.28,
+      "duration": 3.199
+    },
+    {
+      "text": "just having everything all in one",
+      "start": 402.96,
+      "duration": 3.44
+    },
+    {
+      "text": "jupiter notebook of course",
+      "start": 404.479,
+      "duration": 5.201
+    },
+    {
+      "text": "but it is a more maintainable structure",
+      "start": 406.4,
+      "duration": 5.919
+    },
+    {
+      "text": "as you go to build larger and more",
+      "start": 409.68,
+      "duration": 5.28
+    },
+    {
+      "text": "complex models and as you go to build",
+      "start": 412.319,
+      "duration": 4.801
+    },
+    {
+      "text": "uh more and more different models where",
+      "start": 414.96,
+      "duration": 3.12
+    },
+    {
+      "text": "you might want to share",
+      "start": 417.12,
+      "duration": 5.519
+    },
+    {
+      "text": "code across your different models",
+      "start": 418.08,
+      "duration": 4.559
+    },
+    {
+      "text": "so it's a good thing to learn about",
+      "start": 423.36,
+      "duration": 5.839
+    },
+    {
+      "text": "you might not have to go there in this",
+      "start": 427.599,
+      "duration": 2.731
+    },
+    {
+      "text": "class",
+      "start": 429.199,
+      "duration": 3.361
+    },
+    {
+      "text": "[Music]",
+      "start": 430.33,
+      "duration": 4.309
+    },
+    {
+      "text": "as we get further in the course the",
+      "start": 432.56,
+      "duration": 4.16
+    },
+    {
+      "text": "fourth project in the course is the dcf",
+      "start": 434.639,
+      "duration": 3.521
+    },
+    {
+      "text": "model and the third project",
+      "start": 436.72,
+      "duration": 4.479
+    },
+    {
+      "text": "is a wac model which the whack is part",
+      "start": 438.16,
+      "duration": 6.0
+    },
+    {
+      "text": "of the dcf model and so i have seen",
+      "start": 441.199,
+      "duration": 3.681
+    },
+    {
+      "text": "students",
+      "start": 444.16,
+      "duration": 2.56
+    },
+    {
+      "text": "take their functions from the wac model",
+      "start": 444.88,
+      "duration": 3.36
+    },
+    {
+      "text": "and refactor them out",
+      "start": 446.72,
+      "duration": 3.44
+    },
+    {
+      "text": "into these separate python files and",
+      "start": 448.24,
+      "duration": 3.2
+    },
+    {
+      "text": "then use them",
+      "start": 450.16,
+      "duration": 3.28
+    },
+    {
+      "text": "in their dcf model so they don't have to",
+      "start": 451.44,
+      "duration": 4.08
+    },
+    {
+      "text": "like rewrite all the whack parts of the",
+      "start": 453.44,
+      "duration": 3.039
+    },
+    {
+      "text": "model so that's",
+      "start": 455.52,
+      "duration": 2.959
+    },
+    {
+      "text": "definitely a good application for this",
+      "start": 456.479,
+      "duration": 4.16
+    },
+    {
+      "text": "within this class",
+      "start": 458.479,
+      "duration": 3.761
+    },
+    {
+      "text": "but i'm mainly mentioning it here just",
+      "start": 460.639,
+      "duration": 3.601
+    },
+    {
+      "text": "so one that you understand",
+      "start": 462.24,
+      "duration": 3.519
+    },
+    {
+      "text": "what imports are and that they're not",
+      "start": 464.24,
+      "duration": 4.0
+    },
+    {
+      "text": "anything really special it's just",
+      "start": 465.759,
+      "duration": 4.241
+    },
+    {
+      "text": "running the contents of some file which",
+      "start": 468.24,
+      "duration": 4.16
+    },
+    {
+      "text": "has python code in it",
+      "start": 470.0,
+      "duration": 4.72
+    },
+    {
+      "text": "um and that's so also you can know about",
+      "start": 472.4,
+      "duration": 3.44
+    },
+    {
+      "text": "this as",
+      "start": 474.72,
+      "duration": 4.08
+    },
+    {
+      "text": "a way to grow into as you start to go",
+      "start": 475.84,
+      "duration": 4.96
+    },
+    {
+      "text": "and continue to apply this stuff",
+      "start": 478.8,
+      "duration": 3.44
+    },
+    {
+      "text": "out of the course and maybe you find",
+      "start": 480.8,
+      "duration": 2.799
+    },
+    {
+      "text": "your jupiter notebooks to be getting",
+      "start": 482.24,
+      "duration": 4.799
+    },
+    {
+      "text": "really long and unwieldy",
+      "start": 483.599,
+      "duration": 5.121
+    },
+    {
+      "text": "or maybe it's even just that you have a",
+      "start": 487.039,
+      "duration": 3.201
+    },
+    {
+      "text": "lot of code in your jupiter notebook and",
+      "start": 488.72,
+      "duration": 3.36
+    },
+    {
+      "text": "you really want it more focused on just",
+      "start": 490.24,
+      "duration": 2.959
+    },
+    {
+      "text": "the results",
+      "start": 492.08,
+      "duration": 2.72
+    },
+    {
+      "text": "and not showing so much code to the",
+      "start": 493.199,
+      "duration": 3.361
+    },
+    {
+      "text": "reader of the model",
+      "start": 494.8,
+      "duration": 4.16
+    },
+    {
+      "text": "for all these different use cases going",
+      "start": 496.56,
+      "duration": 4.16
+    },
+    {
+      "text": "to offloading your code",
+      "start": 498.96,
+      "duration": 5.88
+    },
+    {
+      "text": "into separate python files is a good",
+      "start": 500.72,
+      "duration": 7.12
+    },
+    {
+      "text": "solution",
+      "start": 504.84,
+      "duration": 6.199
+    },
+    {
+      "text": "so um as we mentioned",
+      "start": 507.84,
+      "duration": 4.96
+    },
+    {
+      "text": "these these packages that you can",
+      "start": 511.039,
+      "duration": 3.841
+    },
+    {
+      "text": "install all they are are just plain",
+      "start": 512.8,
+      "duration": 4.239
+    },
+    {
+      "text": "python files and defined functions and",
+      "start": 514.88,
+      "duration": 2.8
+    },
+    {
+      "text": "classes",
+      "start": 517.039,
+      "duration": 2.161
+    },
+    {
+      "text": "just like we've already learned how to",
+      "start": 517.68,
+      "duration": 4.159
+    },
+    {
+      "text": "do",
+      "start": 519.2,
+      "duration": 2.639
+    },
+    {
+      "text": "and going along with this course i had",
+      "start": 522.719,
+      "duration": 4.56
+    },
+    {
+      "text": "you install anaconda",
+      "start": 525.279,
+      "duration": 4.481
+    },
+    {
+      "text": "for your python distribution and that's",
+      "start": 527.279,
+      "duration": 3.521
+    },
+    {
+      "text": "because",
+      "start": 529.76,
+      "duration": 3.36
+    },
+    {
+      "text": "it comes with around 200 packages",
+      "start": 530.8,
+      "duration": 3.599
+    },
+    {
+      "text": "already pre-installed",
+      "start": 533.12,
+      "duration": 3.2
+    },
+    {
+      "text": "and it's most of the common ones that we",
+      "start": 534.399,
+      "duration": 4.401
+    },
+    {
+      "text": "would want to use so most of the time",
+      "start": 536.32,
+      "duration": 3.92
+    },
+    {
+      "text": "you don't need to install the package",
+      "start": 538.8,
+      "duration": 2.8
+    },
+    {
+      "text": "you already have it installed from",
+      "start": 540.24,
+      "duration": 3.039
+    },
+    {
+      "text": "anaconda",
+      "start": 541.6,
+      "duration": 4.32
+    },
+    {
+      "text": "but there's around 200 in anaconda and",
+      "start": 543.279,
+      "duration": 4.56
+    },
+    {
+      "text": "there's around",
+      "start": 545.92,
+      "duration": 4.56
+    },
+    {
+      "text": "000 packages out there that you could",
+      "start": 547.839,
+      "duration": 3.921
+    },
+    {
+      "text": "potentially use",
+      "start": 550.48,
+      "duration": 4.0
+    },
+    {
+      "text": "huge number of packages and this is one",
+      "start": 551.76,
+      "duration": 4.4
+    },
+    {
+      "text": "of those things that makes python so",
+      "start": 554.48,
+      "duration": 2.16
+    },
+    {
+      "text": "great",
+      "start": 556.16,
+      "duration": 2.239
+    },
+    {
+      "text": "there's a package out there for",
+      "start": 556.64,
+      "duration": 3.28
+    },
+    {
+      "text": "everything that you could want to do",
+      "start": 558.399,
+      "duration": 4.401
+    },
+    {
+      "text": "essentially um it'll make your life so",
+      "start": 559.92,
+      "duration": 4.4
+    },
+    {
+      "text": "much easier just finding the correct",
+      "start": 562.8,
+      "duration": 3.36
+    },
+    {
+      "text": "package to work with instead of having",
+      "start": 564.32,
+      "duration": 2.56
+    },
+    {
+      "text": "to",
+      "start": 566.16,
+      "duration": 4.96
+    },
+    {
+      "text": "recreate everything yourself so",
+      "start": 566.88,
+      "duration": 6.639
+    },
+    {
+      "text": "you find this package you googled about",
+      "start": 571.12,
+      "duration": 5.04
+    },
+    {
+      "text": "it you landed on some github page or",
+      "start": 573.519,
+      "duration": 4.561
+    },
+    {
+      "text": "pipi page or something",
+      "start": 576.16,
+      "duration": 4.239
+    },
+    {
+      "text": "explaining what this package is now you",
+      "start": 578.08,
+      "duration": 3.52
+    },
+    {
+      "text": "say i want to use this",
+      "start": 580.399,
+      "duration": 4.961
+    },
+    {
+      "text": "what's the next step so um",
+      "start": 581.6,
+      "duration": 7.04
+    },
+    {
+      "text": "the way to do this is with pip pip",
+      "start": 585.36,
+      "duration": 7.44
+    },
+    {
+      "text": "is the python package installer um",
+      "start": 588.64,
+      "duration": 6.56
+    },
+    {
+      "text": "and it's very simple it's just pip",
+      "start": 592.8,
+      "duration": 4.32
+    },
+    {
+      "text": "install and then the name of the package",
+      "start": 595.2,
+      "duration": 2.48
+    },
+    {
+      "text": "and that",
+      "start": 597.12,
+      "duration": 3.6
+    },
+    {
+      "text": "installs the package for you now where",
+      "start": 597.68,
+      "duration": 4.0
+    },
+    {
+      "text": "do you run this",
+      "start": 600.72,
+      "duration": 3.6
+    },
+    {
+      "text": "that happens in the terminal so that",
+      "start": 601.68,
+      "duration": 4.24
+    },
+    {
+      "text": "anaconda prompt",
+      "start": 604.32,
+      "duration": 4.56
+    },
+    {
+      "text": "would be a good place to run that uh but",
+      "start": 605.92,
+      "duration": 3.84
+    },
+    {
+      "text": "jupiter does",
+      "start": 608.88,
+      "duration": 2.639
+    },
+    {
+      "text": "actually have a shortcut where you can",
+      "start": 609.76,
+      "duration": 3.28
+    },
+    {
+      "text": "run terminal commands",
+      "start": 611.519,
+      "duration": 4.721
+    },
+    {
+      "text": "instead of just python code and you do",
+      "start": 613.04,
+      "duration": 5.28
+    },
+    {
+      "text": "that by just putting an exclamation mark",
+      "start": 616.24,
+      "duration": 4.08
+    },
+    {
+      "text": "before whatever you're running in the",
+      "start": 618.32,
+      "duration": 3.68
+    },
+    {
+      "text": "cell and that says",
+      "start": 620.32,
+      "duration": 3.6
+    },
+    {
+      "text": "hey jupiter i'm trying to run something",
+      "start": 622.0,
+      "duration": 4.079
+    },
+    {
+      "text": "in a terminal not",
+      "start": 623.92,
+      "duration": 5.919
+    },
+    {
+      "text": "in as python code um",
+      "start": 626.079,
+      "duration": 6.561
+    },
+    {
+      "text": "and so that would be exclamation park",
+      "start": 629.839,
+      "duration": 3.761
+    },
+    {
+      "text": "pip install",
+      "start": 632.64,
+      "duration": 3.52
+    },
+    {
+      "text": "and then the name of the package to",
+      "start": 633.6,
+      "duration": 3.76
+    },
+    {
+      "text": "install it from",
+      "start": 636.16,
+      "duration": 4.56
+    },
+    {
+      "text": "jupiter and you only need to install a",
+      "start": 637.36,
+      "duration": 4.159
+    },
+    {
+      "text": "package once",
+      "start": 640.72,
+      "duration": 2.799
+    },
+    {
+      "text": "once you install it you have it on your",
+      "start": 641.519,
+      "duration": 4.32
+    },
+    {
+      "text": "computer for as long as you have python",
+      "start": 643.519,
+      "duration": 4.081
+    },
+    {
+      "text": "installed",
+      "start": 645.839,
+      "duration": 3.44
+    },
+    {
+      "text": "the only time that you might want to run",
+      "start": 647.6,
+      "duration": 4.08
+    },
+    {
+      "text": "this again is",
+      "start": 649.279,
+      "duration": 4.481
+    },
+    {
+      "text": "to upgrade the package you can add an",
+      "start": 651.68,
+      "duration": 3.68
+    },
+    {
+      "text": "upgrade flag into that",
+      "start": 653.76,
+      "duration": 3.12
+    },
+    {
+      "text": "we'll talk about that a little bit later",
+      "start": 655.36,
+      "duration": 4.32
+    },
+    {
+      "text": "in the course when we need to use that",
+      "start": 656.88,
+      "duration": 4.56
+    },
+    {
+      "text": "but generally install it once you have",
+      "start": 659.68,
+      "duration": 3.36
+    },
+    {
+      "text": "it and you can just use it you just have",
+      "start": 661.44,
+      "duration": 2.959
+    },
+    {
+      "text": "to import it in each session",
+      "start": 663.04,
+      "duration": 3.12
+    },
+    {
+      "text": "but then you can keep using it just like",
+      "start": 664.399,
+      "duration": 3.921
+    },
+    {
+      "text": "we have been using numpy or pandas or",
+      "start": 666.16,
+      "duration": 3.28
+    },
+    {
+      "text": "anything you have",
+      "start": 668.32,
+      "duration": 4.0
+    },
+    {
+      "text": "already installed",
+      "start": 669.44,
+      "duration": 2.88
+    },
+    {
+      "text": "um so let's look at a quick",
+      "start": 672.839,
+      "duration": 5.24
+    },
+    {
+      "text": "example of that so let's jump over to",
+      "start": 675.76,
+      "duration": 3.36
+    },
+    {
+      "text": "the jupiter",
+      "start": 678.079,
+      "duration": 4.081
+    },
+    {
+      "text": "notebook and this is the same one with",
+      "start": 679.12,
+      "duration": 4.48
+    },
+    {
+      "text": "all the other additional basics",
+      "start": 682.16,
+      "duration": 3.76
+    },
+    {
+      "text": "dictionaries list comprehensions",
+      "start": 683.6,
+      "duration": 5.84
+    },
+    {
+      "text": "here we're um imports and installing",
+      "start": 685.92,
+      "duration": 5.68
+    },
+    {
+      "text": "packages",
+      "start": 689.44,
+      "duration": 5.2
+    },
+    {
+      "text": "and so um the reason that we're getting",
+      "start": 691.6,
+      "duration": 4.96
+    },
+    {
+      "text": "to installing packages now",
+      "start": 694.64,
+      "duration": 5.04
+    },
+    {
+      "text": "in the course is because",
+      "start": 696.56,
+      "duration": 5.839
+    },
+    {
+      "text": "uh we're going to go and do sensitivity",
+      "start": 699.68,
+      "duration": 3.52
+    },
+    {
+      "text": "analysis",
+      "start": 702.399,
+      "duration": 3.521
+    },
+    {
+      "text": "with a purpose-built package which is",
+      "start": 703.2,
+      "duration": 4.8
+    },
+    {
+      "text": "made for that purpose",
+      "start": 705.92,
+      "duration": 5.039
+    },
+    {
+      "text": "and the reason this is not an anaconda",
+      "start": 708.0,
+      "duration": 3.6
+    },
+    {
+      "text": "is because",
+      "start": 710.959,
+      "duration": 4.0
+    },
+    {
+      "text": "i actually wrote this package um",
+      "start": 711.6,
+      "duration": 5.44
+    },
+    {
+      "text": "and it doesn't hasn't gotten popular",
+      "start": 714.959,
+      "duration": 4.081
+    },
+    {
+      "text": "enough yet to make its way into anaconda",
+      "start": 717.04,
+      "duration": 3.12
+    },
+    {
+      "text": "it's got a long way to go",
+      "start": 719.04,
+      "duration": 3.84
+    },
+    {
+      "text": "until it gets there maybe someday uh but",
+      "start": 720.16,
+      "duration": 3.52
+    },
+    {
+      "text": "until then",
+      "start": 722.88,
+      "duration": 2.8
+    },
+    {
+      "text": "we're going to have to just install it",
+      "start": 723.68,
+      "duration": 3.12
+    },
+    {
+      "text": "manually",
+      "start": 725.68,
+      "duration": 4.64
+    },
+    {
+      "text": "uh to be able to use it so",
+      "start": 726.8,
+      "duration": 6.8
+    },
+    {
+      "text": "that's uh what we have here",
+      "start": 730.32,
+      "duration": 6.0
+    },
+    {
+      "text": "is pip install sensitivity is the name",
+      "start": 733.6,
+      "duration": 4.16
+    },
+    {
+      "text": "of the package",
+      "start": 736.32,
+      "duration": 3.519
+    },
+    {
+      "text": "i was amazed that this name was",
+      "start": 737.76,
+      "duration": 3.759
+    },
+    {
+      "text": "available for me to take",
+      "start": 739.839,
+      "duration": 3.761
+    },
+    {
+      "text": "uh it was the perfect name for the",
+      "start": 741.519,
+      "duration": 3.041
+    },
+    {
+      "text": "package",
+      "start": 743.6,
+      "duration": 4.0
+    },
+    {
+      "text": "um and all you do",
+      "start": 744.56,
+      "duration": 5.68
+    },
+    {
+      "text": "is just exclamation mark pip install and",
+      "start": 747.6,
+      "duration": 3.919
+    },
+    {
+      "text": "then the name of the package",
+      "start": 750.24,
+      "duration": 3.76
+    },
+    {
+      "text": "so let's go ahead and try to run that",
+      "start": 751.519,
+      "duration": 4.0
+    },
+    {
+      "text": "and when you do these exclamation mark",
+      "start": 754.0,
+      "duration": 2.48
+    },
+    {
+      "text": "commands",
+      "start": 755.519,
+      "duration": 2.961
+    },
+    {
+      "text": "uh it does it looks like it's doing",
+      "start": 756.48,
+      "duration": 3.599
+    },
+    {
+      "text": "nothing for a long time and then it",
+      "start": 758.48,
+      "duration": 2.72
+    },
+    {
+      "text": "spits out the result",
+      "start": 760.079,
+      "duration": 3.121
+    },
+    {
+      "text": "all at once when it's done you don't see",
+      "start": 761.2,
+      "duration": 3.12
+    },
+    {
+      "text": "it like stream",
+      "start": 763.2,
+      "duration": 3.68
+    },
+    {
+      "text": "the result as you go if you're running",
+      "start": 764.32,
+      "duration": 4.319
+    },
+    {
+      "text": "in the terminal you would see all this",
+      "start": 766.88,
+      "duration": 4.56
+    },
+    {
+      "text": "stuff happen line by line and jupiter",
+      "start": 768.639,
+      "duration": 5.281
+    },
+    {
+      "text": "just spits it all out at the end",
+      "start": 771.44,
+      "duration": 5.519
+    },
+    {
+      "text": "um and so you're going to see probably a",
+      "start": 773.92,
+      "duration": 5.12
+    },
+    {
+      "text": "lot of requirement already satisfied",
+      "start": 776.959,
+      "duration": 4.401
+    },
+    {
+      "text": "that's fine just ignore that just scroll",
+      "start": 779.04,
+      "duration": 5.28
+    },
+    {
+      "text": "all the way down to the end",
+      "start": 781.36,
+      "duration": 6.8
+    },
+    {
+      "text": "and here it looks like i even uh",
+      "start": 784.32,
+      "duration": 5.6
+    },
+    {
+      "text": "i actually already had the package",
+      "start": 788.16,
+      "duration": 4.08
+    },
+    {
+      "text": "installed and so the first one",
+      "start": 789.92,
+      "duration": 3.76
+    },
+    {
+      "text": "up here was requirement already",
+      "start": 792.24,
+      "duration": 4.0
+    },
+    {
+      "text": "satisfied sensitivity",
+      "start": 793.68,
+      "duration": 5.68
+    },
+    {
+      "text": "um but if you uh",
+      "start": 796.24,
+      "duration": 5.599
+    },
+    {
+      "text": "pick some other package that you don't",
+      "start": 799.36,
+      "duration": 4.159
+    },
+    {
+      "text": "have",
+      "start": 801.839,
+      "duration": 4.081
+    },
+    {
+      "text": "and you should see this for sensitivity",
+      "start": 803.519,
+      "duration": 5.12
+    },
+    {
+      "text": "when you go to install it",
+      "start": 805.92,
+      "duration": 4.56
+    },
+    {
+      "text": "you're going to see at the end",
+      "start": 808.639,
+      "duration": 3.361
+    },
+    {
+      "text": "successfully installed",
+      "start": 810.48,
+      "duration": 3.68
+    },
+    {
+      "text": "and then the name of the package and",
+      "start": 812.0,
+      "duration": 4.56
+    },
+    {
+      "text": "then the version of the package",
+      "start": 814.16,
+      "duration": 4.32
+    },
+    {
+      "text": "and then you can start using that",
+      "start": 816.56,
+      "duration": 4.32
+    },
+    {
+      "text": "package as soon as you want",
+      "start": 818.48,
+      "duration": 4.719
+    },
+    {
+      "text": "um so with sensitivity i can go ahead",
+      "start": 820.88,
+      "duration": 4.399
+    },
+    {
+      "text": "and import sensitivity",
+      "start": 823.199,
+      "duration": 4.32
+    },
+    {
+      "text": "and then i would be able to use the",
+      "start": 825.279,
+      "duration": 3.201
+    },
+    {
+      "text": "package",
+      "start": 827.519,
+      "duration": 3.44
+    },
+    {
+      "text": "so make sure to run that with",
+      "start": 828.48,
+      "duration": 3.28
+    },
+    {
+      "text": "sensitivity",
+      "start": 830.959,
+      "duration": 3.521
+    },
+    {
+      "text": "not this other package and then go ahead",
+      "start": 831.76,
+      "duration": 3.68
+    },
+    {
+      "text": "and try the import",
+      "start": 834.48,
+      "duration": 3.12
+    },
+    {
+      "text": "you should see it just execute and the",
+      "start": 835.44,
+      "duration": 3.199
+    },
+    {
+      "text": "number change here",
+      "start": 837.6,
+      "duration": 4.56
+    },
+    {
+      "text": "and nothing else happen and that means",
+      "start": 838.639,
+      "duration": 4.56
+    },
+    {
+      "text": "that you have",
+      "start": 842.16,
+      "duration": 4.4
+    },
+    {
+      "text": "installed it correctly",
+      "start": 843.199,
+      "duration": 3.361
+    },
+    {
+      "text": "so that's a quick overview on",
+      "start": 847.04,
+      "duration": 4.88
+    },
+    {
+      "text": "imports in python and installing",
+      "start": 850.24,
+      "duration": 3.839
+    },
+    {
+      "text": "packages we're going to come back",
+      "start": 851.92,
+      "duration": 4.56
+    },
+    {
+      "text": "next time to start implementing",
+      "start": 854.079,
+      "duration": 4.161
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 856.48,
+      "duration": 4.88
+    },
+    {
+      "text": "in python using the sensitivity",
+      "start": 858.24,
+      "duration": 6.48
+    },
+    {
+      "text": "package so thanks for listening and see",
+      "start": 861.36,
+      "duration": 8.8
+    },
+    {
+      "text": "you next time",
+      "start": 864.72,
+      "duration": 5.44
+    }
+  ]
+}

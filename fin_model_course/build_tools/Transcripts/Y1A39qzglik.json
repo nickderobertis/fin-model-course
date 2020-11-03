@@ -1,0 +1,554 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.04,
+      "duration": 2.319
+    },
+    {
+      "text": "nick dearmars here teaching you",
+      "start": 3.919,
+      "duration": 3.44
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 5.359,
+      "duration": 3.761
+    },
+    {
+      "text": "we're going to be solving the lab",
+      "start": 7.359,
+      "duration": 3.2
+    },
+    {
+      "text": "exercise on",
+      "start": 9.12,
+      "duration": 4.24
+    },
+    {
+      "text": "reading and writing to excel files using",
+      "start": 10.559,
+      "duration": 4.08
+    },
+    {
+      "text": "pandas",
+      "start": 13.36,
+      "duration": 3.12
+    },
+    {
+      "text": "this is part of our lecture series on",
+      "start": 14.639,
+      "duration": 4.961
+    },
+    {
+      "text": "combining excel and python",
+      "start": 16.48,
+      "duration": 5.44
+    },
+    {
+      "text": "so we covered all the pandas material",
+      "start": 19.6,
+      "duration": 3.839
+    },
+    {
+      "text": "and then you were tasked",
+      "start": 21.92,
+      "duration": 4.56
+    },
+    {
+      "text": "with uh",
+      "start": 23.439,
+      "duration": 4.961
+    },
+    {
+      "text": "two different labs that are required one",
+      "start": 26.48,
+      "duration": 4.16
+    },
+    {
+      "text": "optional lab",
+      "start": 28.4,
+      "duration": 6.56
+    },
+    {
+      "text": "on this material and so the first one",
+      "start": 30.64,
+      "duration": 6.24
+    },
+    {
+      "text": "asks you to take this microsoft",
+      "start": 34.96,
+      "duration": 3.919
+    },
+    {
+      "text": "financials spreadsheet",
+      "start": 36.88,
+      "duration": 4.32
+    },
+    {
+      "text": "read in the income statement income",
+      "start": 38.879,
+      "duration": 3.68
+    },
+    {
+      "text": "statement sheet",
+      "start": 41.2,
+      "duration": 4.92
+    },
+    {
+      "text": "and write that into a new workbook",
+      "start": 42.559,
+      "duration": 4.881
+    },
+    {
+      "text": "mydata.xlsx",
+      "start": 46.12,
+      "duration": 2.919
+    },
+    {
+      "text": "with again the sheet name income",
+      "start": 47.44,
+      "duration": 3.84
+    },
+    {
+      "text": "statement",
+      "start": 49.039,
+      "duration": 4.561
+    },
+    {
+      "text": "so i have a fresh jupyter notebook here",
+      "start": 51.28,
+      "duration": 5.119
+    },
+    {
+      "text": "i have the msftfinancials.xls",
+      "start": 53.6,
+      "duration": 5.439
+    },
+    {
+      "text": "in the same folder and so now i can",
+      "start": 56.399,
+      "duration": 4.0
+    },
+    {
+      "text": "import pandas as",
+      "start": 59.039,
+      "duration": 5.041
+    },
+    {
+      "text": "pd i can",
+      "start": 60.399,
+      "duration": 7.361
+    },
+    {
+      "text": "do read excel in order to pull",
+      "start": 64.08,
+      "duration": 6.399
+    },
+    {
+      "text": "that excel workbook in and i'm going to",
+      "start": 67.76,
+      "duration": 4.399
+    },
+    {
+      "text": "give it the msft",
+      "start": 70.479,
+      "duration": 5.601
+    },
+    {
+      "text": "financials xlsa xls there's no",
+      "start": 72.159,
+      "duration": 6.96
+    },
+    {
+      "text": "x on the end it's the old format",
+      "start": 76.08,
+      "duration": 6.719
+    },
+    {
+      "text": "and for the sheet i'm going to grab",
+      "start": 79.119,
+      "duration": 6.881
+    },
+    {
+      "text": "income statement",
+      "start": 82.799,
+      "duration": 4.561
+    },
+    {
+      "text": "and i just want to look at that data",
+      "start": 86.0,
+      "duration": 4.079
+    },
+    {
+      "text": "frame it does indeed seem to have pulled",
+      "start": 87.36,
+      "duration": 4.48
+    },
+    {
+      "text": "an income statement",
+      "start": 90.079,
+      "duration": 5.921
+    },
+    {
+      "text": "um and so now i want to",
+      "start": 91.84,
+      "duration": 8.16
+    },
+    {
+      "text": "write that back out to excel with 2xl",
+      "start": 96.0,
+      "duration": 7.2
+    },
+    {
+      "text": "what was i supposed to call it was to",
+      "start": 100.0,
+      "duration": 5.32
+    },
+    {
+      "text": "call it",
+      "start": 103.2,
+      "duration": 4.64
+    },
+    {
+      "text": "mydata.xlsx",
+      "start": 105.32,
+      "duration": 7.079
+    },
+    {
+      "text": "so my data slx",
+      "start": 107.84,
+      "duration": 6.559
+    },
+    {
+      "text": "and the sheet name is again going to be",
+      "start": 112.399,
+      "duration": 4.801
+    },
+    {
+      "text": "income statement",
+      "start": 114.399,
+      "duration": 2.801
+    },
+    {
+      "text": "okay um and",
+      "start": 117.759,
+      "duration": 7.521
+    },
+    {
+      "text": "now we should have um my data",
+      "start": 120.88,
+      "duration": 7.76
+    },
+    {
+      "text": "outputted to an excel workbook and you",
+      "start": 125.28,
+      "duration": 6.48
+    },
+    {
+      "text": "can see it's showing up there",
+      "start": 128.64,
+      "duration": 6.56
+    },
+    {
+      "text": "so that's the level one exercise and now",
+      "start": 131.76,
+      "duration": 4.96
+    },
+    {
+      "text": "for level two",
+      "start": 135.2,
+      "duration": 3.6
+    },
+    {
+      "text": "we're going to output to five separate",
+      "start": 136.72,
+      "duration": 3.76
+    },
+    {
+      "text": "workbooks named my data one",
+      "start": 138.8,
+      "duration": 3.92
+    },
+    {
+      "text": "nine out of 2 and so on without",
+      "start": 140.48,
+      "duration": 4.64
+    },
+    {
+      "text": "rewriting the 2 excel command",
+      "start": 142.72,
+      "duration": 4.879
+    },
+    {
+      "text": "so this can be accomplished simply with",
+      "start": 145.12,
+      "duration": 3.44
+    },
+    {
+      "text": "a for loop",
+      "start": 147.599,
+      "duration": 5.761
+    },
+    {
+      "text": "so for i and range we want 5 of them",
+      "start": 148.56,
+      "duration": 8.8
+    },
+    {
+      "text": "we can make the name uh is going to be",
+      "start": 153.36,
+      "duration": 8.159
+    },
+    {
+      "text": "uh my data and just say start from one",
+      "start": 157.36,
+      "duration": 7.28
+    },
+    {
+      "text": "yeah start from one so um",
+      "start": 161.519,
+      "duration": 6.8
+    },
+    {
+      "text": "it's going to be my data i plus one",
+      "start": 164.64,
+      "duration": 8.879
+    },
+    {
+      "text": "dot xlxx and then we can do df.2xl",
+      "start": 168.319,
+      "duration": 8.401
+    },
+    {
+      "text": "uh the name and again we're going to use",
+      "start": 173.519,
+      "duration": 3.921
+    },
+    {
+      "text": "the same",
+      "start": 176.72,
+      "duration": 3.84
+    },
+    {
+      "text": "sheet name um",
+      "start": 177.44,
+      "duration": 6.56
+    },
+    {
+      "text": "so we run that and now we see we",
+      "start": 180.56,
+      "duration": 5.44
+    },
+    {
+      "text": "have all these different my data",
+      "start": 184.0,
+      "duration": 6.319
+    },
+    {
+      "text": "workbooks so that worked appropriately",
+      "start": 186.0,
+      "duration": 4.319
+    },
+    {
+      "text": "um and level three is the advanced",
+      "start": 193.28,
+      "duration": 6.8
+    },
+    {
+      "text": "exercise so this is not a",
+      "start": 197.04,
+      "duration": 6.64
+    },
+    {
+      "text": "required exercise",
+      "start": 200.08,
+      "duration": 3.6
+    },
+    {
+      "text": "but here we're trying to output two",
+      "start": 204.0,
+      "duration": 6.319
+    },
+    {
+      "text": "um five different sheets",
+      "start": 207.12,
+      "duration": 6.399
+    },
+    {
+      "text": "in the same workbook um income statement",
+      "start": 210.319,
+      "duration": 4.64
+    },
+    {
+      "text": "one income statement two",
+      "start": 213.519,
+      "duration": 3.041
+    },
+    {
+      "text": "again without writing the two excel",
+      "start": 214.959,
+      "duration": 3.681
+    },
+    {
+      "text": "command multiple times",
+      "start": 216.56,
+      "duration": 4.56
+    },
+    {
+      "text": "um",
+      "start": 218.64,
+      "duration": 2.48
+    },
+    {
+      "text": "so um",
+      "start": 222.959,
+      "duration": 6.401
+    },
+    {
+      "text": "we have to use this excel writer",
+      "start": 226.159,
+      "duration": 6.72
+    },
+    {
+      "text": "in order to do this",
+      "start": 229.36,
+      "duration": 7.68
+    },
+    {
+      "text": "um so we can do",
+      "start": 232.879,
+      "duration": 7.601
+    },
+    {
+      "text": "um with um",
+      "start": 237.04,
+      "duration": 6.919
+    },
+    {
+      "text": "pd.excel writer this can go to",
+      "start": 240.48,
+      "duration": 5.44
+    },
+    {
+      "text": "mydata.xlsx",
+      "start": 243.959,
+      "duration": 5.721
+    },
+    {
+      "text": "um as um",
+      "start": 245.92,
+      "duration": 7.76
+    },
+    {
+      "text": "writer then on the writer",
+      "start": 249.68,
+      "duration": 7.119
+    },
+    {
+      "text": "or df.2 excel",
+      "start": 253.68,
+      "duration": 6.88
+    },
+    {
+      "text": "on the writer and give it the",
+      "start": 256.799,
+      "duration": 6.881
+    },
+    {
+      "text": "beat name which",
+      "start": 260.56,
+      "duration": 4.8
+    },
+    {
+      "text": "here we're going to want to do another",
+      "start": 263.68,
+      "duration": 3.04
+    },
+    {
+      "text": "for loop so",
+      "start": 265.36,
+      "duration": 4.48
+    },
+    {
+      "text": "4i and range 5 do a similar thing with",
+      "start": 266.72,
+      "duration": 3.84
+    },
+    {
+      "text": "the name",
+      "start": 269.84,
+      "duration": 4.96
+    },
+    {
+      "text": "but now it's going to be for the",
+      "start": 270.56,
+      "duration": 13.28
+    },
+    {
+      "text": "income statement",
+      "start": 274.8,
+      "duration": 9.04
+    },
+    {
+      "text": "and oh she name equals",
+      "start": 284.32,
+      "duration": 7.68
+    },
+    {
+      "text": "name and",
+      "start": 288.479,
+      "duration": 8.081
+    },
+    {
+      "text": "now we should have all of that um in",
+      "start": 292.0,
+      "duration": 8.88
+    },
+    {
+      "text": "the resulting workbook",
+      "start": 296.56,
+      "duration": 8.8
+    },
+    {
+      "text": "uh some my data we should now have",
+      "start": 300.88,
+      "duration": 6.879
+    },
+    {
+      "text": "yep income statement one two three four",
+      "start": 305.36,
+      "duration": 5.52
+    },
+    {
+      "text": "five it's all there",
+      "start": 307.759,
+      "duration": 6.801
+    },
+    {
+      "text": "so that covers the lab exercises",
+      "start": 310.88,
+      "duration": 7.039
+    },
+    {
+      "text": "for um reading and writing data",
+      "start": 314.56,
+      "duration": 6.56
+    },
+    {
+      "text": "from into excel with pandas",
+      "start": 317.919,
+      "duration": 5.28
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 321.12,
+      "duration": 4.72
+    },
+    {
+      "text": "time",
+      "start": 323.199,
+      "duration": 2.641
+    }
+  ]
+}

@@ -1,0 +1,1354 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.76,
+      "duration": 2.48
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 4.72,
+      "duration": 3.52
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 6.24,
+      "duration": 3.04
+    },
+    {
+      "text": "to be talking about",
+      "start": 8.24,
+      "duration": 4.16
+    },
+    {
+      "text": "structuring a complex python model",
+      "start": 9.28,
+      "duration": 5.519
+    },
+    {
+      "text": "as part of our lecture series on going",
+      "start": 12.4,
+      "duration": 4.0
+    },
+    {
+      "text": "beyond an initial python",
+      "start": 14.799,
+      "duration": 4.48
+    },
+    {
+      "text": "script learning python basics so that we",
+      "start": 16.4,
+      "duration": 4.799
+    },
+    {
+      "text": "can build out financial models",
+      "start": 19.279,
+      "duration": 5.681
+    },
+    {
+      "text": "using python so we've been working so",
+      "start": 21.199,
+      "duration": 5.281
+    },
+    {
+      "text": "far",
+      "start": 24.96,
+      "duration": 4.079
+    },
+    {
+      "text": "on this simple retirement model and we",
+      "start": 26.48,
+      "duration": 3.6
+    },
+    {
+      "text": "expanded it to",
+      "start": 29.039,
+      "duration": 3.921
+    },
+    {
+      "text": "a more dynamic salary retirement model",
+      "start": 30.08,
+      "duration": 4.319
+    },
+    {
+      "text": "in excel",
+      "start": 32.96,
+      "duration": 4.48
+    },
+    {
+      "text": "but so far as far as python is concerned",
+      "start": 34.399,
+      "duration": 4.48
+    },
+    {
+      "text": "all we've done is build out",
+      "start": 37.44,
+      "duration": 3.76
+    },
+    {
+      "text": "the most simplistic retirement model",
+      "start": 38.879,
+      "duration": 3.921
+    },
+    {
+      "text": "possible",
+      "start": 41.2,
+      "duration": 4.8
+    },
+    {
+      "text": "so we want to go to building the same uh",
+      "start": 42.8,
+      "duration": 6.16
+    },
+    {
+      "text": "dynamic salary retirement model in",
+      "start": 46.0,
+      "duration": 4.559
+    },
+    {
+      "text": "python as well",
+      "start": 48.96,
+      "duration": 3.599
+    },
+    {
+      "text": "uh but in order to do that we're gonna",
+      "start": 50.559,
+      "duration": 4.48
+    },
+    {
+      "text": "have to learn a little bit more of the",
+      "start": 52.559,
+      "duration": 6.241
+    },
+    {
+      "text": "python basics uh before we can really",
+      "start": 55.039,
+      "duration": 4.16
+    },
+    {
+      "text": "just",
+      "start": 58.8,
+      "duration": 3.68
+    },
+    {
+      "text": "jump right into that so that we don't",
+      "start": 59.199,
+      "duration": 4.16
+    },
+    {
+      "text": "get bogged down",
+      "start": 62.48,
+      "duration": 2.56
+    },
+    {
+      "text": "trying to learn everything all at once",
+      "start": 63.359,
+      "duration": 3.921
+    },
+    {
+      "text": "we can kind of learn the basic tools",
+      "start": 65.04,
+      "duration": 4.16
+    },
+    {
+      "text": "and then go and put together all those",
+      "start": 67.28,
+      "duration": 3.28
+    },
+    {
+      "text": "basic tools",
+      "start": 69.2,
+      "duration": 3.279
+    },
+    {
+      "text": "into the model that we're trying to",
+      "start": 70.56,
+      "duration": 4.16
+    },
+    {
+      "text": "build",
+      "start": 72.479,
+      "duration": 2.241
+    },
+    {
+      "text": "and then not only do we need to learn",
+      "start": 75.52,
+      "duration": 4.16
+    },
+    {
+      "text": "kind of you know the basic",
+      "start": 77.52,
+      "duration": 4.8
+    },
+    {
+      "text": "tools and and you know functions data",
+      "start": 79.68,
+      "duration": 3.6
+    },
+    {
+      "text": "types",
+      "start": 82.32,
+      "duration": 4.159
+    },
+    {
+      "text": "etc and python we also",
+      "start": 83.28,
+      "duration": 5.76
+    },
+    {
+      "text": "need to learn about a structure that we",
+      "start": 86.479,
+      "duration": 4.241
+    },
+    {
+      "text": "can use for our model",
+      "start": 89.04,
+      "duration": 3.84
+    },
+    {
+      "text": "uh that's going to make sense for",
+      "start": 90.72,
+      "duration": 4.16
+    },
+    {
+      "text": "someone that's coming to",
+      "start": 92.88,
+      "duration": 5.599
+    },
+    {
+      "text": "read your model that you know they can",
+      "start": 94.88,
+      "duration": 4.64
+    },
+    {
+      "text": "expect",
+      "start": 98.479,
+      "duration": 3.441
+    },
+    {
+      "text": "you know the inputs to be in a certain",
+      "start": 99.52,
+      "duration": 4.639
+    },
+    {
+      "text": "place outpost to be in a certain place",
+      "start": 101.92,
+      "duration": 4.0
+    },
+    {
+      "text": "and there would be a kind of a structure",
+      "start": 104.159,
+      "duration": 3.92
+    },
+    {
+      "text": "to it that is logical",
+      "start": 105.92,
+      "duration": 6.08
+    },
+    {
+      "text": "um so there's kind of",
+      "start": 108.079,
+      "duration": 7.04
+    },
+    {
+      "text": "um you know two layers to how",
+      "start": 112.0,
+      "duration": 6.32
+    },
+    {
+      "text": "we can structure our models",
+      "start": 115.119,
+      "duration": 6.401
+    },
+    {
+      "text": "in python so there's structure within",
+      "start": 118.32,
+      "duration": 6.24
+    },
+    {
+      "text": "basic python itself and we'll talk about",
+      "start": 121.52,
+      "duration": 4.0
+    },
+    {
+      "text": "how we can use",
+      "start": 124.56,
+      "duration": 4.24
+    },
+    {
+      "text": "functions to structure uh pieces of",
+      "start": 125.52,
+      "duration": 3.84
+    },
+    {
+      "text": "logic",
+      "start": 128.8,
+      "duration": 3.28
+    },
+    {
+      "text": "into kind of logical units and put those",
+      "start": 129.36,
+      "duration": 3.36
+    },
+    {
+      "text": "together",
+      "start": 132.08,
+      "duration": 3.519
+    },
+    {
+      "text": "to build the model but then also we're",
+      "start": 132.72,
+      "duration": 4.56
+    },
+    {
+      "text": "using jupiter",
+      "start": 135.599,
+      "duration": 4.161
+    },
+    {
+      "text": "on top of python to build out the models",
+      "start": 137.28,
+      "duration": 3.599
+    },
+    {
+      "text": "in this class",
+      "start": 139.76,
+      "duration": 3.199
+    },
+    {
+      "text": "so we can add additional structure to",
+      "start": 140.879,
+      "duration": 3.201
+    },
+    {
+      "text": "the model using",
+      "start": 142.959,
+      "duration": 3.521
+    },
+    {
+      "text": "jupiter because jupiter gives us that",
+      "start": 144.08,
+      "duration": 4.08
+    },
+    {
+      "text": "nicely formatted text",
+      "start": 146.48,
+      "duration": 4.8
+    },
+    {
+      "text": "we can basically create sections uh with",
+      "start": 148.16,
+      "duration": 4.48
+    },
+    {
+      "text": "that text",
+      "start": 151.28,
+      "duration": 3.039
+    },
+    {
+      "text": "to be able to differentiate the",
+      "start": 152.64,
+      "duration": 5.04
+    },
+    {
+      "text": "different parts of the model",
+      "start": 154.319,
+      "duration": 6.241
+    },
+    {
+      "text": "so when we build out a more complex",
+      "start": 157.68,
+      "duration": 5.04
+    },
+    {
+      "text": "financial model",
+      "start": 160.56,
+      "duration": 4.72
+    },
+    {
+      "text": "and this is you know a general kind of",
+      "start": 162.72,
+      "duration": 4.08
+    },
+    {
+      "text": "structure that we're looking at here",
+      "start": 165.28,
+      "duration": 2.88
+    },
+    {
+      "text": "it's not",
+      "start": 166.8,
+      "duration": 3.68
+    },
+    {
+      "text": "specific to python or excel or any other",
+      "start": 168.16,
+      "duration": 4.56
+    },
+    {
+      "text": "tool it's just kind of a logical",
+      "start": 170.48,
+      "duration": 5.759
+    },
+    {
+      "text": "structure we can use for our models so",
+      "start": 172.72,
+      "duration": 5.68
+    },
+    {
+      "text": "you know we've already talked about how",
+      "start": 176.239,
+      "duration": 3.041
+    },
+    {
+      "text": "you know a model",
+      "start": 178.4,
+      "duration": 3.199
+    },
+    {
+      "text": "basically just takes the inputs and",
+      "start": 179.28,
+      "duration": 4.0
+    },
+    {
+      "text": "ultimately converts them",
+      "start": 181.599,
+      "duration": 5.121
+    },
+    {
+      "text": "to outputs um and so",
+      "start": 183.28,
+      "duration": 5.52
+    },
+    {
+      "text": "up until now we just kind of think been",
+      "start": 186.72,
+      "duration": 3.439
+    },
+    {
+      "text": "thinking about the model as",
+      "start": 188.8,
+      "duration": 3.92
+    },
+    {
+      "text": "just this one block here without really",
+      "start": 190.159,
+      "duration": 4.481
+    },
+    {
+      "text": "thinking about how that model is",
+      "start": 192.72,
+      "duration": 5.68
+    },
+    {
+      "text": "broken down but as we dug into the",
+      "start": 194.64,
+      "duration": 7.44
+    },
+    {
+      "text": "uh excel dynamic salary model we",
+      "start": 198.4,
+      "duration": 5.36
+    },
+    {
+      "text": "found that really there were sub",
+      "start": 202.08,
+      "duration": 4.159
+    },
+    {
+      "text": "problems that we were solving",
+      "start": 203.76,
+      "duration": 5.44
+    },
+    {
+      "text": "inside the larger problem and so we",
+      "start": 206.239,
+      "duration": 3.521
+    },
+    {
+      "text": "formed",
+      "start": 209.2,
+      "duration": 3.52
+    },
+    {
+      "text": "uh you know sub models uh to deal with",
+      "start": 209.76,
+      "duration": 5.039
+    },
+    {
+      "text": "those individual parts of the problem",
+      "start": 212.72,
+      "duration": 4.48
+    },
+    {
+      "text": "and putting them all together uh made",
+      "start": 214.799,
+      "duration": 3.44
+    },
+    {
+      "text": "the entire",
+      "start": 217.2,
+      "duration": 3.599
+    },
+    {
+      "text": "model and then we can keep breaking it",
+      "start": 218.239,
+      "duration": 3.521
+    },
+    {
+      "text": "down even further",
+      "start": 220.799,
+      "duration": 2.961
+    },
+    {
+      "text": "you know within each of those sub models",
+      "start": 221.76,
+      "duration": 4.0
+    },
+    {
+      "text": "there were individual steps",
+      "start": 223.76,
+      "duration": 5.52
+    },
+    {
+      "text": "to carry out that part of the sub",
+      "start": 225.76,
+      "duration": 6.08
+    },
+    {
+      "text": "model so thinking about the dynamic",
+      "start": 229.28,
+      "duration": 4.0
+    },
+    {
+      "text": "salary model",
+      "start": 231.84,
+      "duration": 5.039
+    },
+    {
+      "text": "uh you know we uh ultimately our goal",
+      "start": 233.28,
+      "duration": 5.44
+    },
+    {
+      "text": "was to take",
+      "start": 236.879,
+      "duration": 3.841
+    },
+    {
+      "text": "you know things like the interest rate",
+      "start": 238.72,
+      "duration": 3.28
+    },
+    {
+      "text": "the savings rate",
+      "start": 240.72,
+      "duration": 3.519
+    },
+    {
+      "text": "uh you know the number of promotions et",
+      "start": 242.0,
+      "duration": 3.12
+    },
+    {
+      "text": "cetera",
+      "start": 244.239,
+      "duration": 3.761
+    },
+    {
+      "text": "um and convert that ultimately in a into",
+      "start": 245.12,
+      "duration": 5.6
+    },
+    {
+      "text": "a time until retirement",
+      "start": 248.0,
+      "duration": 5.519
+    },
+    {
+      "text": "and we broke that down into uh three",
+      "start": 250.72,
+      "duration": 3.68
+    },
+    {
+      "text": "parts",
+      "start": 253.519,
+      "duration": 3.12
+    },
+    {
+      "text": "uh one is to figure out the salaries",
+      "start": 254.4,
+      "duration": 3.2
+    },
+    {
+      "text": "over time",
+      "start": 256.639,
+      "duration": 2.88
+    },
+    {
+      "text": "one is to figure out the wealth over",
+      "start": 257.6,
+      "duration": 3.68
+    },
+    {
+      "text": "time and the last",
+      "start": 259.519,
+      "duration": 5.921
+    },
+    {
+      "text": "is to figure out the retirement details",
+      "start": 261.28,
+      "duration": 6.4
+    },
+    {
+      "text": "and so we split that down into three sub",
+      "start": 265.44,
+      "duration": 4.16
+    },
+    {
+      "text": "models just like is shown in this",
+      "start": 267.68,
+      "duration": 3.04
+    },
+    {
+      "text": "picture",
+      "start": 269.6,
+      "duration": 3.52
+    },
+    {
+      "text": "and then you know if we think about the",
+      "start": 270.72,
+      "duration": 4.08
+    },
+    {
+      "text": "um salary",
+      "start": 273.12,
+      "duration": 4.799
+    },
+    {
+      "text": "uh portion of the model that salary sub",
+      "start": 274.8,
+      "duration": 4.399
+    },
+    {
+      "text": "model",
+      "start": 277.919,
+      "duration": 4.161
+    },
+    {
+      "text": "we split that down into steps even",
+      "start": 279.199,
+      "duration": 4.321
+    },
+    {
+      "text": "further from there",
+      "start": 282.08,
+      "duration": 3.76
+    },
+    {
+      "text": "uh you know we calculated the cost of",
+      "start": 283.52,
+      "duration": 3.2
+    },
+    {
+      "text": "living factor",
+      "start": 285.84,
+      "duration": 2.72
+    },
+    {
+      "text": "separately we calculated the promotion",
+      "start": 286.72,
+      "duration": 3.36
+    },
+    {
+      "text": "factor separately",
+      "start": 288.56,
+      "duration": 3.68
+    },
+    {
+      "text": "and we ultimately got the salaries over",
+      "start": 290.08,
+      "duration": 5.52
+    },
+    {
+      "text": "time based on combining those two things",
+      "start": 292.24,
+      "duration": 6.8
+    },
+    {
+      "text": "so you know thinking of a model",
+      "start": 295.6,
+      "duration": 6.319
+    },
+    {
+      "text": "in this way is really helpful because",
+      "start": 299.04,
+      "duration": 4.32
+    },
+    {
+      "text": "you know when you just go",
+      "start": 301.919,
+      "duration": 3.361
+    },
+    {
+      "text": "and you have some problem and you need",
+      "start": 303.36,
+      "duration": 3.6
+    },
+    {
+      "text": "to go and build a model for it",
+      "start": 305.28,
+      "duration": 3.919
+    },
+    {
+      "text": "it can be very overwhelming on where do",
+      "start": 306.96,
+      "duration": 3.679
+    },
+    {
+      "text": "i even start on this thing",
+      "start": 309.199,
+      "duration": 4.081
+    },
+    {
+      "text": "there's you know so much involved here",
+      "start": 310.639,
+      "duration": 4.4
+    },
+    {
+      "text": "it's not clear to me how i get",
+      "start": 313.28,
+      "duration": 4.24
+    },
+    {
+      "text": "you know from the inputs to the ultimate",
+      "start": 315.039,
+      "duration": 3.521
+    },
+    {
+      "text": "solution",
+      "start": 317.52,
+      "duration": 2.64
+    },
+    {
+      "text": "well you just got to start breaking it",
+      "start": 318.56,
+      "duration": 4.16
+    },
+    {
+      "text": "down and try to",
+      "start": 320.16,
+      "duration": 4.8
+    },
+    {
+      "text": "work it into as many smaller sub",
+      "start": 322.72,
+      "duration": 4.08
+    },
+    {
+      "text": "problems as you can",
+      "start": 324.96,
+      "duration": 3.44
+    },
+    {
+      "text": "and then it all of a sudden becomes so",
+      "start": 326.8,
+      "duration": 3.76
+    },
+    {
+      "text": "much easier to solve these small",
+      "start": 328.4,
+      "duration": 4.4
+    },
+    {
+      "text": "sub problems like oh how do i calculate",
+      "start": 330.56,
+      "duration": 4.56
+    },
+    {
+      "text": "this you know cost of living",
+      "start": 332.8,
+      "duration": 4.88
+    },
+    {
+      "text": "adjustment factor that's a much smaller",
+      "start": 335.12,
+      "duration": 4.24
+    },
+    {
+      "text": "problem than this entire thing as a",
+      "start": 337.68,
+      "duration": 3.359
+    },
+    {
+      "text": "whole and so you can just take the small",
+      "start": 339.36,
+      "duration": 5.119
+    },
+    {
+      "text": "problems one at a time and that makes it",
+      "start": 341.039,
+      "duration": 7.6
+    },
+    {
+      "text": "easier to move forward on the model",
+      "start": 344.479,
+      "duration": 5.601
+    },
+    {
+      "text": "and then it's going to have a lot of",
+      "start": 348.639,
+      "duration": 3.041
+    },
+    {
+      "text": "benefits",
+      "start": 350.08,
+      "duration": 2.959
+    },
+    {
+      "text": "you know as i've mentioned people coming",
+      "start": 351.68,
+      "duration": 2.88
+    },
+    {
+      "text": "to read your model they can understand",
+      "start": 353.039,
+      "duration": 2.561
+    },
+    {
+      "text": "how it's laid out",
+      "start": 354.56,
+      "duration": 3.759
+    },
+    {
+      "text": "very easily and it becomes a lot easier",
+      "start": 355.6,
+      "duration": 3.039
+    },
+    {
+      "text": "to",
+      "start": 358.319,
+      "duration": 3.361
+    },
+    {
+      "text": "maintain the model going forward you",
+      "start": 358.639,
+      "duration": 4.241
+    },
+    {
+      "text": "know if someone",
+      "start": 361.68,
+      "duration": 4.88
+    },
+    {
+      "text": "needs to you know work on your",
+      "start": 362.88,
+      "duration": 6.8
+    },
+    {
+      "text": "uh salary portion of the model",
+      "start": 366.56,
+      "duration": 6.0
+    },
+    {
+      "text": "um you know now saying oh well there's",
+      "start": 369.68,
+      "duration": 3.44
+    },
+    {
+      "text": "gonna be",
+      "start": 372.56,
+      "duration": 2.4
+    },
+    {
+      "text": "uh recessions and whenever there's a",
+      "start": 373.12,
+      "duration": 3.6
+    },
+    {
+      "text": "recession they're going to stop doing",
+      "start": 374.96,
+      "duration": 3.519
+    },
+    {
+      "text": "the cost of living raises",
+      "start": 376.72,
+      "duration": 4.64
+    },
+    {
+      "text": "say that was our assumption uh then you",
+      "start": 378.479,
+      "duration": 4.401
+    },
+    {
+      "text": "know if you didn't have this structure",
+      "start": 381.36,
+      "duration": 3.679
+    },
+    {
+      "text": "everything was just kind of all in one",
+      "start": 382.88,
+      "duration": 4.159
+    },
+    {
+      "text": "then it would be not very clear where",
+      "start": 385.039,
+      "duration": 3.681
+    },
+    {
+      "text": "they would have to change things and if",
+      "start": 387.039,
+      "duration": 2.241
+    },
+    {
+      "text": "it would be",
+      "start": 388.72,
+      "duration": 2.0
+    },
+    {
+      "text": "you know breaking other things when they",
+      "start": 389.28,
+      "duration": 4.0
+    },
+    {
+      "text": "change it but if we've separated it to",
+      "start": 390.72,
+      "duration": 5.199
+    },
+    {
+      "text": "having the salary as its own sub model",
+      "start": 393.28,
+      "duration": 4.32
+    },
+    {
+      "text": "then they can just work on the salary",
+      "start": 395.919,
+      "duration": 3.921
+    },
+    {
+      "text": "portion of the model and not worry about",
+      "start": 397.6,
+      "duration": 4.08
+    },
+    {
+      "text": "how it's affecting the other parts",
+      "start": 399.84,
+      "duration": 4.079
+    },
+    {
+      "text": "as long as the inputs and the outputs",
+      "start": 401.68,
+      "duration": 4.56
+    },
+    {
+      "text": "remain in the same structure",
+      "start": 403.919,
+      "duration": 5.921
+    },
+    {
+      "text": "from that sub model so um",
+      "start": 406.24,
+      "duration": 5.92
+    },
+    {
+      "text": "a lot of benefits to using this kind of",
+      "start": 409.84,
+      "duration": 3.28
+    },
+    {
+      "text": "structure",
+      "start": 412.16,
+      "duration": 3.039
+    },
+    {
+      "text": "uh and so that's the structure we're",
+      "start": 413.12,
+      "duration": 3.76
+    },
+    {
+      "text": "going to follow in this class and i",
+      "start": 415.199,
+      "duration": 3.361
+    },
+    {
+      "text": "would recommend just in general",
+      "start": 416.88,
+      "duration": 5.12
+    },
+    {
+      "text": "for any financial model uh",
+      "start": 418.56,
+      "duration": 5.359
+    },
+    {
+      "text": "and then applying that to python we'll",
+      "start": 422.0,
+      "duration": 3.199
+    },
+    {
+      "text": "see uh",
+      "start": 423.919,
+      "duration": 4.321
+    },
+    {
+      "text": "more on the specifics as we uh",
+      "start": 425.199,
+      "duration": 4.961
+    },
+    {
+      "text": "you know dig into all these basics and",
+      "start": 428.24,
+      "duration": 3.679
+    },
+    {
+      "text": "then we actually go to",
+      "start": 430.16,
+      "duration": 4.24
+    },
+    {
+      "text": "implement that in the model but",
+      "start": 431.919,
+      "duration": 3.521
+    },
+    {
+      "text": "basically",
+      "start": 434.4,
+      "duration": 4.48
+    },
+    {
+      "text": "we can use functions to you to do this",
+      "start": 435.44,
+      "duration": 4.56
+    },
+    {
+      "text": "structure for us",
+      "start": 438.88,
+      "duration": 4.0
+    },
+    {
+      "text": "whereas in excel uh you know the model",
+      "start": 440.0,
+      "duration": 4.08
+    },
+    {
+      "text": "was the workbook",
+      "start": 442.88,
+      "duration": 3.52
+    },
+    {
+      "text": "right and then you know each sub model",
+      "start": 444.08,
+      "duration": 3.679
+    },
+    {
+      "text": "was a worksheet",
+      "start": 446.4,
+      "duration": 3.359
+    },
+    {
+      "text": "and each step was basically like a",
+      "start": 447.759,
+      "duration": 5.601
+    },
+    {
+      "text": "column and one of the tables",
+      "start": 449.759,
+      "duration": 6.961
+    },
+    {
+      "text": "for python it's all about functions",
+      "start": 453.36,
+      "duration": 6.72
+    },
+    {
+      "text": "so the entire model is going to be",
+      "start": 456.72,
+      "duration": 5.199
+    },
+    {
+      "text": "one single function you should be able",
+      "start": 460.08,
+      "duration": 3.36
+    },
+    {
+      "text": "to call a function",
+      "start": 461.919,
+      "duration": 3.521
+    },
+    {
+      "text": "give it your model inputs and get your",
+      "start": 463.44,
+      "duration": 3.439
+    },
+    {
+      "text": "model output",
+      "start": 465.44,
+      "duration": 4.08
+    },
+    {
+      "text": "but then each sub model is going to be",
+      "start": 466.879,
+      "duration": 4.561
+    },
+    {
+      "text": "its own function as well",
+      "start": 469.52,
+      "duration": 5.119
+    },
+    {
+      "text": "so then your main model function would",
+      "start": 471.44,
+      "duration": 4.96
+    },
+    {
+      "text": "basically just be calling",
+      "start": 474.639,
+      "duration": 4.321
+    },
+    {
+      "text": "each one of the sub model functions and",
+      "start": 476.4,
+      "duration": 3.04
+    },
+    {
+      "text": "then",
+      "start": 478.96,
+      "duration": 3.76
+    },
+    {
+      "text": "within each sub model function",
+      "start": 479.44,
+      "duration": 5.52
+    },
+    {
+      "text": "you can have a function for each step in",
+      "start": 482.72,
+      "duration": 3.199
+    },
+    {
+      "text": "the model",
+      "start": 484.96,
+      "duration": 4.0
+    },
+    {
+      "text": "so then each of these sub model",
+      "start": 485.919,
+      "duration": 3.601
+    },
+    {
+      "text": "functions",
+      "start": 488.96,
+      "duration": 2.32
+    },
+    {
+      "text": "is just calling each of the individual",
+      "start": 489.52,
+      "duration": 4.079
+    },
+    {
+      "text": "step functions to put it together",
+      "start": 491.28,
+      "duration": 4.639
+    },
+    {
+      "text": "and each of these individual steps",
+      "start": 493.599,
+      "duration": 3.201
+    },
+    {
+      "text": "functions",
+      "start": 495.919,
+      "duration": 2.72
+    },
+    {
+      "text": "actually have the main logic of your",
+      "start": 496.8,
+      "duration": 4.16
+    },
+    {
+      "text": "model and you can go to a dis",
+      "start": 498.639,
+      "duration": 5.441
+    },
+    {
+      "text": "additional levels of nesting if it makes",
+      "start": 500.96,
+      "duration": 5.12
+    },
+    {
+      "text": "sense for your problem you know you have",
+      "start": 504.08,
+      "duration": 3.679
+    },
+    {
+      "text": "you can break each of these steps down",
+      "start": 506.08,
+      "duration": 4.399
+    },
+    {
+      "text": "into even smaller sub steps",
+      "start": 507.759,
+      "duration": 7.121
+    },
+    {
+      "text": "and so on any number of layers is fine",
+      "start": 510.479,
+      "duration": 6.081
+    },
+    {
+      "text": "but this kind of functions inside",
+      "start": 514.88,
+      "duration": 3.519
+    },
+    {
+      "text": "functions",
+      "start": 516.56,
+      "duration": 4.88
+    },
+    {
+      "text": "is a nice way to structure things in",
+      "start": 518.399,
+      "duration": 4.0
+    },
+    {
+      "text": "python that",
+      "start": 521.44,
+      "duration": 3.92
+    },
+    {
+      "text": "that gets at this same kind of logical",
+      "start": 522.399,
+      "duration": 3.761
+    },
+    {
+      "text": "structure",
+      "start": 525.36,
+      "duration": 4.4
+    },
+    {
+      "text": "for the model so that's the basic idea",
+      "start": 526.16,
+      "duration": 5.2
+    },
+    {
+      "text": "behind structuring",
+      "start": 529.76,
+      "duration": 4.48
+    },
+    {
+      "text": "our python models and then you know you",
+      "start": 531.36,
+      "duration": 3.599
+    },
+    {
+      "text": "can also",
+      "start": 534.24,
+      "duration": 2.96
+    },
+    {
+      "text": "use jupiter to have you know the nice",
+      "start": 534.959,
+      "duration": 4.081
+    },
+    {
+      "text": "you know section headers and say you",
+      "start": 537.2,
+      "duration": 3.36
+    },
+    {
+      "text": "know this is the salary portion of the",
+      "start": 539.04,
+      "duration": 3.28
+    },
+    {
+      "text": "model and then it you know goes into all",
+      "start": 540.56,
+      "duration": 2.64
+    },
+    {
+      "text": "this part",
+      "start": 542.32,
+      "duration": 4.88
+    },
+    {
+      "text": "with the functions etc",
+      "start": 543.2,
+      "duration": 6.079
+    },
+    {
+      "text": "so with these ideas we'll make them a",
+      "start": 547.2,
+      "duration": 3.199
+    },
+    {
+      "text": "lot more concrete",
+      "start": 549.279,
+      "duration": 2.721
+    },
+    {
+      "text": "in the later lectures as we go to",
+      "start": 550.399,
+      "duration": 3.44
+    },
+    {
+      "text": "actually implement this",
+      "start": 552.0,
+      "duration": 3.92
+    },
+    {
+      "text": "um but that's where we'll leave it now",
+      "start": 553.839,
+      "duration": 3.68
+    },
+    {
+      "text": "for how to structure",
+      "start": 555.92,
+      "duration": 4.8
+    },
+    {
+      "text": "our python models so we'll come back",
+      "start": 557.519,
+      "duration": 6.641
+    },
+    {
+      "text": "next time to get started into the python",
+      "start": 560.72,
+      "duration": 5.28
+    },
+    {
+      "text": "basics as far as the syntax and",
+      "start": 564.16,
+      "duration": 3.84
+    },
+    {
+      "text": "different ways that we can work with",
+      "start": 566.0,
+      "duration": 2.88
+    },
+    {
+      "text": "python",
+      "start": 568.0,
+      "duration": 2.399
+    },
+    {
+      "text": "and we're going to be talking about",
+      "start": 568.88,
+      "duration": 3.2
+    },
+    {
+      "text": "conditionals in the next",
+      "start": 570.399,
+      "duration": 4.481
+    },
+    {
+      "text": "video so thanks for listening and see",
+      "start": 572.08,
+      "duration": 5.759
+    },
+    {
+      "text": "you next time",
+      "start": 574.88,
+      "duration": 2.959
+    }
+  ]
+}

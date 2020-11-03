@@ -1,0 +1,2344 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.8,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 3.76,
+      "duration": 3.599
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.2,
+      "duration": 3.12
+    },
+    {
+      "text": "be talking about",
+      "start": 7.359,
+      "duration": 4.001
+    },
+    {
+      "text": "how to structure a python model inside a",
+      "start": 8.32,
+      "duration": 4.72
+    },
+    {
+      "text": "jupiter notebook",
+      "start": 11.36,
+      "duration": 3.76
+    },
+    {
+      "text": "and this is the first video of our",
+      "start": 13.04,
+      "duration": 3.44
+    },
+    {
+      "text": "lecture series on",
+      "start": 15.12,
+      "duration": 3.6
+    },
+    {
+      "text": "building a dynamic salary retirement",
+      "start": 16.48,
+      "duration": 5.36
+    },
+    {
+      "text": "model in python",
+      "start": 18.72,
+      "duration": 6.799
+    },
+    {
+      "text": "so it can be a little bit",
+      "start": 21.84,
+      "duration": 7.519
+    },
+    {
+      "text": "difficult for you know new people in",
+      "start": 25.519,
+      "duration": 5.68
+    },
+    {
+      "text": "financial modeling in python to figure",
+      "start": 29.359,
+      "duration": 3.2
+    },
+    {
+      "text": "out how to structure their",
+      "start": 31.199,
+      "duration": 5.52
+    },
+    {
+      "text": "models um but certainly the organization",
+      "start": 32.559,
+      "duration": 6.241
+    },
+    {
+      "text": "is important uh because it's going to",
+      "start": 36.719,
+      "duration": 3.68
+    },
+    {
+      "text": "make it so much easier for other people",
+      "start": 38.8,
+      "duration": 2.48
+    },
+    {
+      "text": "to understand",
+      "start": 40.399,
+      "duration": 2.961
+    },
+    {
+      "text": "what is going on in your model and to be",
+      "start": 41.28,
+      "duration": 4.24
+    },
+    {
+      "text": "able to add to it",
+      "start": 43.36,
+      "duration": 4.64
+    },
+    {
+      "text": "so we've already seen how in excel",
+      "start": 45.52,
+      "duration": 3.199
+    },
+    {
+      "text": "models",
+      "start": 48.0,
+      "duration": 3.44
+    },
+    {
+      "text": "uh you know clearly defining input and",
+      "start": 48.719,
+      "duration": 4.16
+    },
+    {
+      "text": "output areas",
+      "start": 51.44,
+      "duration": 4.0
+    },
+    {
+      "text": "uh having different sheets for different",
+      "start": 52.879,
+      "duration": 5.2
+    },
+    {
+      "text": "parts of the model",
+      "start": 55.44,
+      "duration": 4.88
+    },
+    {
+      "text": "you know clear clear table headers and",
+      "start": 58.079,
+      "duration": 4.16
+    },
+    {
+      "text": "things like that are very important",
+      "start": 60.32,
+      "duration": 4.879
+    },
+    {
+      "text": "for making it a readable model and we",
+      "start": 62.239,
+      "duration": 5.121
+    },
+    {
+      "text": "can bring a similar kind of organization",
+      "start": 65.199,
+      "duration": 5.28
+    },
+    {
+      "text": "to our python models as well",
+      "start": 67.36,
+      "duration": 5.04
+    },
+    {
+      "text": "so we've already talked in the course",
+      "start": 70.479,
+      "duration": 3.201
+    },
+    {
+      "text": "about how",
+      "start": 72.4,
+      "duration": 3.2
+    },
+    {
+      "text": "it makes sense to use functions to",
+      "start": 73.68,
+      "duration": 4.32
+    },
+    {
+      "text": "organize your logic within a python",
+      "start": 75.6,
+      "duration": 6.0
+    },
+    {
+      "text": "model and in order to wrap all the",
+      "start": 78.0,
+      "duration": 6.08
+    },
+    {
+      "text": "model inputs up into a single data",
+      "start": 81.6,
+      "duration": 4.0
+    },
+    {
+      "text": "structure a data class",
+      "start": 84.08,
+      "duration": 5.12
+    },
+    {
+      "text": "is very helpful for that",
+      "start": 85.6,
+      "duration": 3.6
+    },
+    {
+      "text": "and the way that you would work with",
+      "start": 89.759,
+      "duration": 3.921
+    },
+    {
+      "text": "these functions in the model",
+      "start": 92.0,
+      "duration": 4.64
+    },
+    {
+      "text": "is basically any discrete step any",
+      "start": 93.68,
+      "duration": 4.079
+    },
+    {
+      "text": "logical step",
+      "start": 96.64,
+      "duration": 4.159
+    },
+    {
+      "text": "in the model becomes a function",
+      "start": 97.759,
+      "duration": 4.881
+    },
+    {
+      "text": "and then functions can call other",
+      "start": 100.799,
+      "duration": 3.68
+    },
+    {
+      "text": "functions so you kind of",
+      "start": 102.64,
+      "duration": 4.88
+    },
+    {
+      "text": "build up your model in layers uh going",
+      "start": 104.479,
+      "duration": 3.761
+    },
+    {
+      "text": "from",
+      "start": 107.52,
+      "duration": 3.279
+    },
+    {
+      "text": "very individual steps all the way up to",
+      "start": 108.24,
+      "duration": 5.28
+    },
+    {
+      "text": "you know run the entire model",
+      "start": 110.799,
+      "duration": 6.241
+    },
+    {
+      "text": "as a single function so you'll have you",
+      "start": 113.52,
+      "duration": 5.12
+    },
+    {
+      "text": "know your model function and that model",
+      "start": 117.04,
+      "duration": 2.079
+    },
+    {
+      "text": "function",
+      "start": 118.64,
+      "duration": 2.799
+    },
+    {
+      "text": "calls each of the sub model functions",
+      "start": 119.119,
+      "duration": 3.36
+    },
+    {
+      "text": "and then each of those",
+      "start": 121.439,
+      "duration": 4.481
+    },
+    {
+      "text": "sub model functions have their own uh",
+      "start": 122.479,
+      "duration": 5.441
+    },
+    {
+      "text": "functions for the individual steps you",
+      "start": 125.92,
+      "duration": 3.28
+    },
+    {
+      "text": "know something like that you can have",
+      "start": 127.92,
+      "duration": 4.24
+    },
+    {
+      "text": "any number of layers in here",
+      "start": 129.2,
+      "duration": 4.8
+    },
+    {
+      "text": "however you know complex your model is",
+      "start": 132.16,
+      "duration": 3.36
+    },
+    {
+      "text": "is going to determine how many layers",
+      "start": 134.0,
+      "duration": 3.92
+    },
+    {
+      "text": "you need",
+      "start": 135.52,
+      "duration": 2.4
+    },
+    {
+      "text": "um but you know just talking about all",
+      "start": 138.48,
+      "duration": 3.52
+    },
+    {
+      "text": "of that that's just",
+      "start": 140.56,
+      "duration": 4.08
+    },
+    {
+      "text": "you know playing python organization but",
+      "start": 142.0,
+      "duration": 4.239
+    },
+    {
+      "text": "then we're also working in",
+      "start": 144.64,
+      "duration": 4.88
+    },
+    {
+      "text": "jupiter to build our financial models",
+      "start": 146.239,
+      "duration": 5.681
+    },
+    {
+      "text": "so jupiter gives us a lot of additional",
+      "start": 149.52,
+      "duration": 4.32
+    },
+    {
+      "text": "tools that we can use to give even",
+      "start": 151.92,
+      "duration": 2.88
+    },
+    {
+      "text": "better structure",
+      "start": 153.84,
+      "duration": 4.24
+    },
+    {
+      "text": "even more organization to our python",
+      "start": 154.8,
+      "duration": 5.439
+    },
+    {
+      "text": "models",
+      "start": 158.08,
+      "duration": 4.799
+    },
+    {
+      "text": "so with jupiter you know we don't just",
+      "start": 160.239,
+      "duration": 3.121
+    },
+    {
+      "text": "have",
+      "start": 162.879,
+      "duration": 3.761
+    },
+    {
+      "text": "plain text code anymore",
+      "start": 163.36,
+      "duration": 5.599
+    },
+    {
+      "text": "uh not only can we have that code but we",
+      "start": 166.64,
+      "duration": 4.72
+    },
+    {
+      "text": "can have this you know nicely formatted",
+      "start": 168.959,
+      "duration": 5.441
+    },
+    {
+      "text": "text uh with headers and",
+      "start": 171.36,
+      "duration": 5.44
+    },
+    {
+      "text": "bold italics you know whatever you know",
+      "start": 174.4,
+      "duration": 4.16
+    },
+    {
+      "text": "kind of standard things you would want",
+      "start": 176.8,
+      "duration": 2.48
+    },
+    {
+      "text": "to see with",
+      "start": 178.56,
+      "duration": 3.039
+    },
+    {
+      "text": "nicely formatted text you can have",
+      "start": 179.28,
+      "duration": 4.16
+    },
+    {
+      "text": "equations in there",
+      "start": 181.599,
+      "duration": 4.801
+    },
+    {
+      "text": "you can have sections you can have links",
+      "start": 183.44,
+      "duration": 4.48
+    },
+    {
+      "text": "you can have graphics",
+      "start": 186.4,
+      "duration": 3.44
+    },
+    {
+      "text": "and everything is all in there right",
+      "start": 187.92,
+      "duration": 3.2
+    },
+    {
+      "text": "with the code",
+      "start": 189.84,
+      "duration": 3.44
+    },
+    {
+      "text": "so it's a really interesting way to",
+      "start": 191.12,
+      "duration": 3.119
+    },
+    {
+      "text": "present",
+      "start": 193.28,
+      "duration": 5.84
+    },
+    {
+      "text": "your results of a model",
+      "start": 194.239,
+      "duration": 8.0
+    },
+    {
+      "text": "uh this nicely formatted text jupiter",
+      "start": 199.12,
+      "duration": 4.24
+    },
+    {
+      "text": "uses something called",
+      "start": 202.239,
+      "duration": 4.161
+    },
+    {
+      "text": "markdown markdown is actually its own",
+      "start": 203.36,
+      "duration": 5.84
+    },
+    {
+      "text": "mini markup language it's not a jupiter",
+      "start": 206.4,
+      "duration": 4.08
+    },
+    {
+      "text": "specific thing",
+      "start": 209.2,
+      "duration": 3.599
+    },
+    {
+      "text": "it's there in a lot of different",
+      "start": 210.48,
+      "duration": 4.16
+    },
+    {
+      "text": "platforms",
+      "start": 212.799,
+      "duration": 3.36
+    },
+    {
+      "text": "and so you can look up just general",
+      "start": 214.64,
+      "duration": 3.92
+    },
+    {
+      "text": "resources on markdown",
+      "start": 216.159,
+      "duration": 4.321
+    },
+    {
+      "text": "and i've given a couple of those for you",
+      "start": 218.56,
+      "duration": 3.44
+    },
+    {
+      "text": "here and those will let you know",
+      "start": 220.48,
+      "duration": 3.119
+    },
+    {
+      "text": "all the different things that you can do",
+      "start": 222.0,
+      "duration": 3.519
+    },
+    {
+      "text": "in these nicely formatted",
+      "start": 223.599,
+      "duration": 5.521
+    },
+    {
+      "text": "cells uh but for the most part as far as",
+      "start": 225.519,
+      "duration": 4.561
+    },
+    {
+      "text": "what you're going to need",
+      "start": 229.12,
+      "duration": 3.6
+    },
+    {
+      "text": "you know on a daily basis it would be",
+      "start": 230.08,
+      "duration": 3.68
+    },
+    {
+      "text": "you know headers",
+      "start": 232.72,
+      "duration": 5.04
+    },
+    {
+      "text": "for sections uh bullet points are",
+      "start": 233.76,
+      "duration": 7.6
+    },
+    {
+      "text": "another good one to know offhand",
+      "start": 237.76,
+      "duration": 7.199
+    },
+    {
+      "text": "and you want to know also equations so",
+      "start": 241.36,
+      "duration": 4.159
+    },
+    {
+      "text": "you can",
+      "start": 244.959,
+      "duration": 2.321
+    },
+    {
+      "text": "speak about what you're doing in math",
+      "start": 245.519,
+      "duration": 3.44
+    },
+    {
+      "text": "terms",
+      "start": 247.28,
+      "duration": 3.36
+    },
+    {
+      "text": "and then the equations are actually not",
+      "start": 248.959,
+      "duration": 3.041
+    },
+    {
+      "text": "built into regular",
+      "start": 250.64,
+      "duration": 4.56
+    },
+    {
+      "text": "markdown jupiter actually has extended",
+      "start": 252.0,
+      "duration": 4.72
+    },
+    {
+      "text": "markdown to add",
+      "start": 255.2,
+      "duration": 4.64
+    },
+    {
+      "text": "equation support by using latex",
+      "start": 256.72,
+      "duration": 6.88
+    },
+    {
+      "text": "equations um so",
+      "start": 259.84,
+      "duration": 6.0
+    },
+    {
+      "text": "uh you know you can google about how to",
+      "start": 263.6,
+      "duration": 4.48
+    },
+    {
+      "text": "write latex equations uh",
+      "start": 265.84,
+      "duration": 4.639
+    },
+    {
+      "text": "in order to be able to add them to",
+      "start": 268.08,
+      "duration": 4.24
+    },
+    {
+      "text": "jupiter but we'll also look at an",
+      "start": 270.479,
+      "duration": 2.561
+    },
+    {
+      "text": "example",
+      "start": 272.32,
+      "duration": 4.08
+    },
+    {
+      "text": "as well um",
+      "start": 273.04,
+      "duration": 5.76
+    },
+    {
+      "text": "so with our jupiter organization we can",
+      "start": 276.4,
+      "duration": 3.2
+    },
+    {
+      "text": "think about",
+      "start": 278.8,
+      "duration": 3.839
+    },
+    {
+      "text": "you know how in excel we had worksheets",
+      "start": 279.6,
+      "duration": 5.039
+    },
+    {
+      "text": "within the workbook to represent",
+      "start": 282.639,
+      "duration": 4.401
+    },
+    {
+      "text": "different sections or sub models within",
+      "start": 284.639,
+      "duration": 3.441
+    },
+    {
+      "text": "the model",
+      "start": 287.04,
+      "duration": 3.68
+    },
+    {
+      "text": "here we can use you know the headers in",
+      "start": 288.08,
+      "duration": 3.52
+    },
+    {
+      "text": "jupiter",
+      "start": 290.72,
+      "duration": 4.08
+    },
+    {
+      "text": "to separate these sections and think of",
+      "start": 291.6,
+      "duration": 5.36
+    },
+    {
+      "text": "these sections as analogous to those",
+      "start": 294.8,
+      "duration": 2.72
+    },
+    {
+      "text": "excel",
+      "start": 296.96,
+      "duration": 3.2
+    },
+    {
+      "text": "worksheets",
+      "start": 297.52,
+      "duration": 2.64
+    },
+    {
+      "text": "um and it's always good with these",
+      "start": 300.72,
+      "duration": 4.56
+    },
+    {
+      "text": "sections to give some kind of overview",
+      "start": 302.479,
+      "duration": 4.401
+    },
+    {
+      "text": "uh you know what are we doing in this",
+      "start": 305.28,
+      "duration": 3.6
+    },
+    {
+      "text": "section",
+      "start": 306.88,
+      "duration": 4.96
+    },
+    {
+      "text": "and this really goes a long way to",
+      "start": 308.88,
+      "duration": 4.96
+    },
+    {
+      "text": "making your model a lot more readable",
+      "start": 311.84,
+      "duration": 4.639
+    },
+    {
+      "text": "especially for non-technical people who",
+      "start": 313.84,
+      "duration": 3.919
+    },
+    {
+      "text": "aren't necessarily going to be able to",
+      "start": 316.479,
+      "duration": 3.28
+    },
+    {
+      "text": "read the code very easily",
+      "start": 317.759,
+      "duration": 4.241
+    },
+    {
+      "text": "having this nicely formatted text in",
+      "start": 319.759,
+      "duration": 3.041
+    },
+    {
+      "text": "there",
+      "start": 322.0,
+      "duration": 4.08
+    },
+    {
+      "text": "then makes it so much easier to read",
+      "start": 322.8,
+      "duration": 5.679
+    },
+    {
+      "text": "without having to go and understand all",
+      "start": 326.08,
+      "duration": 4.72
+    },
+    {
+      "text": "of the code",
+      "start": 328.479,
+      "duration": 4.961
+    },
+    {
+      "text": "let's look at some examples of the",
+      "start": 330.8,
+      "duration": 4.16
+    },
+    {
+      "text": "things that we can do with this",
+      "start": 333.44,
+      "duration": 4.88
+    },
+    {
+      "text": "jupiter markdown",
+      "start": 334.96,
+      "duration": 5.36
+    },
+    {
+      "text": "so moving over to the jupiter notebook",
+      "start": 338.32,
+      "duration": 3.76
+    },
+    {
+      "text": "uh so the first thing",
+      "start": 340.32,
+      "duration": 5.04
+    },
+    {
+      "text": "that uh you'll see you know when i start",
+      "start": 342.08,
+      "duration": 7.119
+    },
+    {
+      "text": "uh typing i'm in edit mode",
+      "start": 345.36,
+      "duration": 7.04
+    },
+    {
+      "text": "um and when i hit escape i'm in command",
+      "start": 349.199,
+      "duration": 4.72
+    },
+    {
+      "text": "mode so you can see that",
+      "start": 352.4,
+      "duration": 4.239
+    },
+    {
+      "text": "here uh when i click in it switches to",
+      "start": 353.919,
+      "duration": 4.72
+    },
+    {
+      "text": "edit",
+      "start": 356.639,
+      "duration": 3.84
+    },
+    {
+      "text": "and the reason i'm talking about that is",
+      "start": 358.639,
+      "duration": 4.0
+    },
+    {
+      "text": "because when you're in command mode",
+      "start": 360.479,
+      "duration": 6.0
+    },
+    {
+      "text": "then you can switch the type of the cell",
+      "start": 362.639,
+      "duration": 7.201
+    },
+    {
+      "text": "with the keyboard so",
+      "start": 366.479,
+      "duration": 5.761
+    },
+    {
+      "text": "m is going to make it into a markdown",
+      "start": 369.84,
+      "duration": 3.919
+    },
+    {
+      "text": "cell and y",
+      "start": 372.24,
+      "duration": 5.28
+    },
+    {
+      "text": "is going to make it into a code cell",
+      "start": 373.759,
+      "duration": 5.761
+    },
+    {
+      "text": "now you can always just use this drop",
+      "start": 377.52,
+      "duration": 3.6
+    },
+    {
+      "text": "down to do the same thing",
+      "start": 379.52,
+      "duration": 3.6
+    },
+    {
+      "text": "uh but it's nice to know the keyboard",
+      "start": 381.12,
+      "duration": 4.96
+    },
+    {
+      "text": "shortcuts to make your life easier",
+      "start": 383.12,
+      "duration": 6.48
+    },
+    {
+      "text": "um so you know if we have a code cell",
+      "start": 386.08,
+      "duration": 4.8
+    },
+    {
+      "text": "then we can",
+      "start": 389.6,
+      "duration": 4.879
+    },
+    {
+      "text": "you know run whatever python code in it",
+      "start": 390.88,
+      "duration": 7.12
+    },
+    {
+      "text": "and then if we have a markdown cell uh",
+      "start": 394.479,
+      "duration": 6.0
+    },
+    {
+      "text": "you know you try to put code in it it's",
+      "start": 398.0,
+      "duration": 4.319
+    },
+    {
+      "text": "not going to run the code it's going to",
+      "start": 400.479,
+      "duration": 4.321
+    },
+    {
+      "text": "display that now as text because it is a",
+      "start": 402.319,
+      "duration": 5.121
+    },
+    {
+      "text": "markdown cell it does not run code it",
+      "start": 404.8,
+      "duration": 3.839
+    },
+    {
+      "text": "displays",
+      "start": 407.44,
+      "duration": 5.199
+    },
+    {
+      "text": "uh formatted text so what can we do",
+      "start": 408.639,
+      "duration": 6.96
+    },
+    {
+      "text": "in these markdown cells so uh you know",
+      "start": 412.639,
+      "duration": 3.441
+    },
+    {
+      "text": "most",
+      "start": 415.599,
+      "duration": 2.16
+    },
+    {
+      "text": "often the thing that you're gonna do is",
+      "start": 416.08,
+      "duration": 3.04
+    },
+    {
+      "text": "create headers",
+      "start": 417.759,
+      "duration": 3.121
+    },
+    {
+      "text": "so to create a header is with the hash",
+      "start": 419.12,
+      "duration": 3.68
+    },
+    {
+      "text": "sign",
+      "start": 420.88,
+      "duration": 6.4
+    },
+    {
+      "text": "so this would be a level one header",
+      "start": 422.8,
+      "duration": 6.799
+    },
+    {
+      "text": "and then as you add additional hash",
+      "start": 427.28,
+      "duration": 3.6
+    },
+    {
+      "text": "signs",
+      "start": 429.599,
+      "duration": 4.88
+    },
+    {
+      "text": "it makes additional smaller levels of",
+      "start": 430.88,
+      "duration": 4.24
+    },
+    {
+      "text": "headers",
+      "start": 434.479,
+      "duration": 4.241
+    },
+    {
+      "text": "so i think you have up to six um",
+      "start": 435.12,
+      "duration": 6.32
+    },
+    {
+      "text": "but you can see uh you notice the more",
+      "start": 438.72,
+      "duration": 3.52
+    },
+    {
+      "text": "hash",
+      "start": 441.44,
+      "duration": 4.159
+    },
+    {
+      "text": "signs that you have the smaller the uh",
+      "start": 442.24,
+      "duration": 5.76
+    },
+    {
+      "text": "header for the section is and so this is",
+      "start": 445.599,
+      "duration": 3.281
+    },
+    {
+      "text": "how you can",
+      "start": 448.0,
+      "duration": 3.759
+    },
+    {
+      "text": "represent subsections within the section",
+      "start": 448.88,
+      "duration": 4.48
+    },
+    {
+      "text": "uh you know you can have",
+      "start": 451.759,
+      "duration": 4.081
+    },
+    {
+      "text": "you know some things in between the",
+      "start": 453.36,
+      "duration": 3.6
+    },
+    {
+      "text": "sections",
+      "start": 455.84,
+      "duration": 3.68
+    },
+    {
+      "text": "uh and you know this would be like a sub",
+      "start": 456.96,
+      "duration": 3.76
+    },
+    {
+      "text": "section",
+      "start": 459.52,
+      "duration": 4.16
+    },
+    {
+      "text": "and then this would be like a sub sub",
+      "start": 460.72,
+      "duration": 4.08
+    },
+    {
+      "text": "section",
+      "start": 463.68,
+      "duration": 4.16
+    },
+    {
+      "text": "um so that you can you know have one",
+      "start": 464.8,
+      "duration": 3.76
+    },
+    {
+      "text": "overall",
+      "start": 467.84,
+      "duration": 2.24
+    },
+    {
+      "text": "header for your model describing what",
+      "start": 468.56,
+      "duration": 3.359
+    },
+    {
+      "text": "your model is and then you can have each",
+      "start": 470.08,
+      "duration": 4.48
+    },
+    {
+      "text": "you know sub model as the level two",
+      "start": 471.919,
+      "duration": 3.361
+    },
+    {
+      "text": "header",
+      "start": 474.56,
+      "duration": 2.4
+    },
+    {
+      "text": "and then you can even break that further",
+      "start": 475.28,
+      "duration": 3.12
+    },
+    {
+      "text": "up into parts and and",
+      "start": 476.96,
+      "duration": 3.679
+    },
+    {
+      "text": "keep going further down as you need to",
+      "start": 478.4,
+      "duration": 3.28
+    },
+    {
+      "text": "to really",
+      "start": 480.639,
+      "duration": 4.881
+    },
+    {
+      "text": "uh give a good structure to something",
+      "start": 481.68,
+      "duration": 5.519
+    },
+    {
+      "text": "so these headers are are going to be the",
+      "start": 485.52,
+      "duration": 5.6
+    },
+    {
+      "text": "biggest thing that we're going to use",
+      "start": 487.199,
+      "duration": 3.921
+    },
+    {
+      "text": "and then another one which is",
+      "start": 491.68,
+      "duration": 7.12
+    },
+    {
+      "text": "uh useful is uh to use",
+      "start": 494.96,
+      "duration": 6.959
+    },
+    {
+      "text": "uh bullet points so",
+      "start": 498.8,
+      "duration": 5.839
+    },
+    {
+      "text": "bullet points uh all it is is you just",
+      "start": 501.919,
+      "duration": 3.521
+    },
+    {
+      "text": "do",
+      "start": 504.639,
+      "duration": 3.441
+    },
+    {
+      "text": "a dash and then a space and then",
+      "start": 505.44,
+      "duration": 4.24
+    },
+    {
+      "text": "whatever you want to have in the bullet",
+      "start": 508.08,
+      "duration": 3.28
+    },
+    {
+      "text": "and then you know enter to go to the",
+      "start": 509.68,
+      "duration": 4.239
+    },
+    {
+      "text": "next line and repeat",
+      "start": 511.36,
+      "duration": 6.72
+    },
+    {
+      "text": "that way you're able to get bullets",
+      "start": 513.919,
+      "duration": 4.161
+    },
+    {
+      "text": "and then we can do equations as well so",
+      "start": 518.959,
+      "duration": 4.0
+    },
+    {
+      "text": "equations",
+      "start": 521.68,
+      "duration": 4.96
+    },
+    {
+      "text": "uh in order to do equation",
+      "start": 522.959,
+      "duration": 6.401
+    },
+    {
+      "text": "you're going to wrap the actual equation",
+      "start": 526.64,
+      "duration": 3.68
+    },
+    {
+      "text": "part of it",
+      "start": 529.36,
+      "duration": 3.919
+    },
+    {
+      "text": "in dollar signs so it could be that you",
+      "start": 530.32,
+      "duration": 3.76
+    },
+    {
+      "text": "have",
+      "start": 533.279,
+      "duration": 3.921
+    },
+    {
+      "text": "a sentence uh",
+      "start": 534.08,
+      "duration": 6.4
+    },
+    {
+      "text": "with an equation uh",
+      "start": 537.2,
+      "duration": 6.72
+    },
+    {
+      "text": "in the middle a equals b plus c",
+      "start": 540.48,
+      "duration": 6.96
+    },
+    {
+      "text": "uh and it would render",
+      "start": 543.92,
+      "duration": 6.72
+    },
+    {
+      "text": "like this so we see you know the nicely",
+      "start": 547.44,
+      "duration": 5.12
+    },
+    {
+      "text": "formatted equation coming here in the",
+      "start": 550.64,
+      "duration": 3.759
+    },
+    {
+      "text": "middle of the text",
+      "start": 552.56,
+      "duration": 4.32
+    },
+    {
+      "text": "um and it rendered that way because we",
+      "start": 554.399,
+      "duration": 4.081
+    },
+    {
+      "text": "added the dollar signs if we don't add",
+      "start": 556.88,
+      "duration": 2.88
+    },
+    {
+      "text": "the dollar signs",
+      "start": 558.48,
+      "duration": 3.44
+    },
+    {
+      "text": "then it doesn't know as an equation and",
+      "start": 559.76,
+      "duration": 3.759
+    },
+    {
+      "text": "you don't see like the",
+      "start": 561.92,
+      "duration": 4.32
+    },
+    {
+      "text": "uh you know nicer equation format there",
+      "start": 563.519,
+      "duration": 4.241
+    },
+    {
+      "text": "it doesn't look a lot different with",
+      "start": 566.24,
+      "duration": 4.32
+    },
+    {
+      "text": "you know this very simple equation but",
+      "start": 567.76,
+      "duration": 4.32
+    },
+    {
+      "text": "if we want to do something like",
+      "start": 570.56,
+      "duration": 5.279
+    },
+    {
+      "text": "say add a subscript let's say this is",
+      "start": 572.08,
+      "duration": 4.64
+    },
+    {
+      "text": "you know b1",
+      "start": 575.839,
+      "duration": 5.12
+    },
+    {
+      "text": "and this is c2 um then you can see that",
+      "start": 576.72,
+      "duration": 5.6
+    },
+    {
+      "text": "you know it looks very nice with the",
+      "start": 580.959,
+      "duration": 3.44
+    },
+    {
+      "text": "subscripts that way and if we didn't",
+      "start": 582.32,
+      "duration": 4.16
+    },
+    {
+      "text": "include the dollar signs then it's not",
+      "start": 584.399,
+      "duration": 3.921
+    },
+    {
+      "text": "rendering as an equation so it's just",
+      "start": 586.48,
+      "duration": 2.88
+    },
+    {
+      "text": "going to be",
+      "start": 588.32,
+      "duration": 4.24
+    },
+    {
+      "text": "you know raw with those uh underscores",
+      "start": 589.36,
+      "duration": 6.24
+    },
+    {
+      "text": "so there's there's a lot that you can do",
+      "start": 592.56,
+      "duration": 3.6
+    },
+    {
+      "text": "with this",
+      "start": 595.6,
+      "duration": 2.88
+    },
+    {
+      "text": "equation syntax and we're not really",
+      "start": 596.16,
+      "duration": 3.04
+    },
+    {
+      "text": "going to",
+      "start": 598.48,
+      "duration": 2.479
+    },
+    {
+      "text": "dig into it a whole lot in this course",
+      "start": 599.2,
+      "duration": 3.28
+    },
+    {
+      "text": "you can definitely take a look at",
+      "start": 600.959,
+      "duration": 4.401
+    },
+    {
+      "text": "latex references and i gave a reference",
+      "start": 602.48,
+      "duration": 3.919
+    },
+    {
+      "text": "along with the lecture",
+      "start": 605.36,
+      "duration": 4.719
+    },
+    {
+      "text": "you can look at but just know that",
+      "start": 606.399,
+      "duration": 5.921
+    },
+    {
+      "text": "you know kind of the basic math symbols",
+      "start": 610.079,
+      "duration": 4.481
+    },
+    {
+      "text": "work fine",
+      "start": 612.32,
+      "duration": 5.92
+    },
+    {
+      "text": "underscores uh do subscripts",
+      "start": 614.56,
+      "duration": 6.56
+    },
+    {
+      "text": "and then the uh carrot sign does a",
+      "start": 618.24,
+      "duration": 4.64
+    },
+    {
+      "text": "superscript",
+      "start": 621.12,
+      "duration": 3.68
+    },
+    {
+      "text": "and that's mostly what you're going to",
+      "start": 622.88,
+      "duration": 3.28
+    },
+    {
+      "text": "need to know to be able to write",
+      "start": 624.8,
+      "duration": 4.64
+    },
+    {
+      "text": "simple equations uh one other thing",
+      "start": 626.16,
+      "duration": 6.239
+    },
+    {
+      "text": "to note is you know this equation came",
+      "start": 629.44,
+      "duration": 5.12
+    },
+    {
+      "text": "in the middle of the text",
+      "start": 632.399,
+      "duration": 5.12
+    },
+    {
+      "text": "if we wanted it to be offset then you do",
+      "start": 634.56,
+      "duration": 4.08
+    },
+    {
+      "text": "two dollar signs",
+      "start": 637.519,
+      "duration": 3.361
+    },
+    {
+      "text": "on each side and then you can see it",
+      "start": 638.64,
+      "duration": 4.08
+    },
+    {
+      "text": "actually broke the sentence into two",
+      "start": 640.88,
+      "duration": 4.56
+    },
+    {
+      "text": "and it has now put the equation centered",
+      "start": 642.72,
+      "duration": 4.0
+    },
+    {
+      "text": "and on its own line",
+      "start": 645.44,
+      "duration": 3.519
+    },
+    {
+      "text": "so if you want your equation to really",
+      "start": 646.72,
+      "duration": 3.119
+    },
+    {
+      "text": "stand out",
+      "start": 648.959,
+      "duration": 2.32
+    },
+    {
+      "text": "then it makes sense to do the double",
+      "start": 649.839,
+      "duration": 3.921
+    },
+    {
+      "text": "dollar signs and if you want your",
+      "start": 651.279,
+      "duration": 3.521
+    },
+    {
+      "text": "equation to just",
+      "start": 653.76,
+      "duration": 3.519
+    },
+    {
+      "text": "flow in line with the text then do",
+      "start": 654.8,
+      "duration": 5.44
+    },
+    {
+      "text": "single dollar signs",
+      "start": 657.279,
+      "duration": 5.441
+    },
+    {
+      "text": "so these are going to be the main things",
+      "start": 660.24,
+      "duration": 4.24
+    },
+    {
+      "text": "that you would want to use",
+      "start": 662.72,
+      "duration": 5.28
+    },
+    {
+      "text": "and one other is",
+      "start": 664.48,
+      "duration": 5.359
+    },
+    {
+      "text": "we'll look at building a table of",
+      "start": 668.0,
+      "duration": 5.12
+    },
+    {
+      "text": "contents in jupiter",
+      "start": 669.839,
+      "duration": 7.361
+    },
+    {
+      "text": "and so a way we can do that um",
+      "start": 673.12,
+      "duration": 8.0
+    },
+    {
+      "text": "is we put um",
+      "start": 677.2,
+      "duration": 7.44
+    },
+    {
+      "text": "we put what we want to show",
+      "start": 681.12,
+      "duration": 7.76
+    },
+    {
+      "text": "as the um",
+      "start": 684.64,
+      "duration": 7.68
+    },
+    {
+      "text": "as the uh text which is going to display",
+      "start": 688.88,
+      "duration": 6.48
+    },
+    {
+      "text": "and then uh we're going to put",
+      "start": 692.32,
+      "duration": 7.12
+    },
+    {
+      "text": "the header um so let's go to sub sub",
+      "start": 695.36,
+      "duration": 6.4
+    },
+    {
+      "text": "section so if you sub",
+      "start": 699.44,
+      "duration": 5.92
+    },
+    {
+      "text": "sub section so when we do that",
+      "start": 701.76,
+      "duration": 5.36
+    },
+    {
+      "text": "then we click this link we can see it",
+      "start": 705.36,
+      "duration": 3.52
+    },
+    {
+      "text": "takes us right to that",
+      "start": 707.12,
+      "duration": 4.0
+    },
+    {
+      "text": "section so this will be really useful",
+      "start": 708.88,
+      "duration": 4.079
+    },
+    {
+      "text": "for building out a table of contents",
+      "start": 711.12,
+      "duration": 2.8
+    },
+    {
+      "text": "which we'll look at",
+      "start": 712.959,
+      "duration": 6.241
+    },
+    {
+      "text": "in the full uh python model example",
+      "start": 713.92,
+      "duration": 7.76
+    },
+    {
+      "text": "but what's going on here is to do this",
+      "start": 719.2,
+      "duration": 4.4
+    },
+    {
+      "text": "link and you'll see this in the markdown",
+      "start": 721.68,
+      "duration": 4.48
+    },
+    {
+      "text": "references as well but it's it's",
+      "start": 723.6,
+      "duration": 3.28
+    },
+    {
+      "text": "brackets",
+      "start": 726.16,
+      "duration": 3.119
+    },
+    {
+      "text": "square brackets and then you put",
+      "start": 726.88,
+      "duration": 3.12
+    },
+    {
+      "text": "whatever",
+      "start": 729.279,
+      "duration": 2.961
+    },
+    {
+      "text": "text you want to display and then it's",
+      "start": 730.0,
+      "duration": 3.279
+    },
+    {
+      "text": "parentheses",
+      "start": 732.24,
+      "duration": 2.8
+    },
+    {
+      "text": "and then we have the hash sign to say",
+      "start": 733.279,
+      "duration": 3.36
+    },
+    {
+      "text": "that this is going to be a header in the",
+      "start": 735.04,
+      "duration": 2.56
+    },
+    {
+      "text": "page",
+      "start": 736.639,
+      "duration": 3.601
+    },
+    {
+      "text": "and then it's the header text but",
+      "start": 737.6,
+      "duration": 4.0
+    },
+    {
+      "text": "wherever there are spaces",
+      "start": 740.24,
+      "duration": 4.159
+    },
+    {
+      "text": "you replace those spaces with dashes to",
+      "start": 741.6,
+      "duration": 5.76
+    },
+    {
+      "text": "get that to work",
+      "start": 744.399,
+      "duration": 2.961
+    },
+    {
+      "text": "so those are all the main jupiter",
+      "start": 747.92,
+      "duration": 3.52
+    },
+    {
+      "text": "features",
+      "start": 750.8,
+      "duration": 2.32
+    },
+    {
+      "text": "that we'll use and you can take a look",
+      "start": 751.44,
+      "duration": 4.079
+    },
+    {
+      "text": "at the references to see the other",
+      "start": 753.12,
+      "duration": 3.2
+    },
+    {
+      "text": "features",
+      "start": 755.519,
+      "duration": 4.32
+    },
+    {
+      "text": "which there are plenty of them",
+      "start": 756.32,
+      "duration": 3.519
+    },
+    {
+      "text": "and then you know thinking about how",
+      "start": 762.639,
+      "duration": 3.361
+    },
+    {
+      "text": "this all",
+      "start": 765.36,
+      "duration": 3.12
+    },
+    {
+      "text": "fits in with what we've talked about",
+      "start": 766.0,
+      "duration": 5.36
+    },
+    {
+      "text": "already about structuring a python model",
+      "start": 768.48,
+      "duration": 4.96
+    },
+    {
+      "text": "you know where the overall model is",
+      "start": 771.36,
+      "duration": 3.599
+    },
+    {
+      "text": "going to be a function",
+      "start": 773.44,
+      "duration": 4.0
+    },
+    {
+      "text": "uh each you know individual kind of main",
+      "start": 774.959,
+      "duration": 4.241
+    },
+    {
+      "text": "step in the model we'll call that a sub",
+      "start": 777.44,
+      "duration": 2.56
+    },
+    {
+      "text": "model",
+      "start": 779.2,
+      "duration": 3.52
+    },
+    {
+      "text": "is also going to be a function and then",
+      "start": 780.0,
+      "duration": 3.839
+    },
+    {
+      "text": "any",
+      "start": 782.72,
+      "duration": 3.6
+    },
+    {
+      "text": "steps involved in those sub models are",
+      "start": 783.839,
+      "duration": 5.521
+    },
+    {
+      "text": "going to be individual functions as well",
+      "start": 786.32,
+      "duration": 4.8
+    },
+    {
+      "text": "and this can keep going down as many",
+      "start": 789.36,
+      "duration": 3.2
+    },
+    {
+      "text": "layers as you need it to go",
+      "start": 791.12,
+      "duration": 4.56
+    },
+    {
+      "text": "for your organization",
+      "start": 792.56,
+      "duration": 3.12
+    },
+    {
+      "text": "but we want to work this into the",
+      "start": 795.92,
+      "duration": 3.039
+    },
+    {
+      "text": "jupiter structure as well",
+      "start": 797.04,
+      "duration": 5.12
+    },
+    {
+      "text": "so what i would generally recommend is",
+      "start": 798.959,
+      "duration": 5.521
+    },
+    {
+      "text": "you know follow a similar structure with",
+      "start": 802.16,
+      "duration": 3.52
+    },
+    {
+      "text": "your jupiter sections",
+      "start": 804.48,
+      "duration": 4.4
+    },
+    {
+      "text": "as you are with your functions so we'll",
+      "start": 805.68,
+      "duration": 3.839
+    },
+    {
+      "text": "have",
+      "start": 808.88,
+      "duration": 4.079
+    },
+    {
+      "text": "you know an overview header which talks",
+      "start": 809.519,
+      "duration": 4.481
+    },
+    {
+      "text": "about the main model",
+      "start": 812.959,
+      "duration": 2.961
+    },
+    {
+      "text": "and what the main it will have some",
+      "start": 814.0,
+      "duration": 3.6
+    },
+    {
+      "text": "description of the main model",
+      "start": 815.92,
+      "duration": 2.8
+    },
+    {
+      "text": "and then we'll have the table of",
+      "start": 817.6,
+      "duration": 4.0
+    },
+    {
+      "text": "contents and then each section",
+      "start": 818.72,
+      "duration": 5.119
+    },
+    {
+      "text": "will be one of the sub models and in",
+      "start": 821.6,
+      "duration": 3.44
+    },
+    {
+      "text": "each of those sections",
+      "start": 823.839,
+      "duration": 4.24
+    },
+    {
+      "text": "uh we define that function for the sub",
+      "start": 825.04,
+      "duration": 3.52
+    },
+    {
+      "text": "model",
+      "start": 828.079,
+      "duration": 2.88
+    },
+    {
+      "text": "and explain what it does and what we're",
+      "start": 828.56,
+      "duration": 3.76
+    },
+    {
+      "text": "doing",
+      "start": 830.959,
+      "duration": 4.0
+    },
+    {
+      "text": "um and you know any individual step",
+      "start": 832.32,
+      "duration": 4.4
+    },
+    {
+      "text": "functions and everything",
+      "start": 834.959,
+      "duration": 4.721
+    },
+    {
+      "text": "and then uh you know go on to the next",
+      "start": 836.72,
+      "duration": 4.16
+    },
+    {
+      "text": "jupiter section",
+      "start": 839.68,
+      "duration": 3.839
+    },
+    {
+      "text": "it has another uh function for the next",
+      "start": 840.88,
+      "duration": 4.24
+    },
+    {
+      "text": "sub model",
+      "start": 843.519,
+      "duration": 4.88
+    },
+    {
+      "text": "and if you know any of these areas got",
+      "start": 845.12,
+      "duration": 4.399
+    },
+    {
+      "text": "really involved",
+      "start": 848.399,
+      "duration": 2.88
+    },
+    {
+      "text": "uh you know you could further break them",
+      "start": 849.519,
+      "duration": 3.76
+    },
+    {
+      "text": "down you know with additional layers of",
+      "start": 851.279,
+      "duration": 5.201
+    },
+    {
+      "text": "functions or additional jupiter sections",
+      "start": 853.279,
+      "duration": 7.281
+    },
+    {
+      "text": "so that everything is very clear",
+      "start": 856.48,
+      "duration": 4.08
+    },
+    {
+      "text": "and one other thing to note about just",
+      "start": 861.92,
+      "duration": 4.24
+    },
+    {
+      "text": "the workflow",
+      "start": 865.12,
+      "duration": 3.92
+    },
+    {
+      "text": "in jupiter is you know when you're first",
+      "start": 866.16,
+      "duration": 4.479
+    },
+    {
+      "text": "filling things out in jupiter",
+      "start": 869.04,
+      "duration": 3.919
+    },
+    {
+      "text": "i've always found that i just have cells",
+      "start": 870.639,
+      "duration": 3.281
+    },
+    {
+      "text": "going everywhere",
+      "start": 872.959,
+      "duration": 3.041
+    },
+    {
+      "text": "with all these random bits of testing",
+      "start": 873.92,
+      "duration": 4.88
+    },
+    {
+      "text": "code just trying random little things",
+      "start": 876.0,
+      "duration": 5.519
+    },
+    {
+      "text": "uh which is totally fine but then once",
+      "start": 878.8,
+      "duration": 4.399
+    },
+    {
+      "text": "you get to the end of the project you",
+      "start": 881.519,
+      "duration": 3.521
+    },
+    {
+      "text": "want to make sure that you clean up",
+      "start": 883.199,
+      "duration": 3.841
+    },
+    {
+      "text": "all these little cells so that you know",
+      "start": 885.04,
+      "duration": 3.599
+    },
+    {
+      "text": "everything just goes in order from",
+      "start": 887.04,
+      "duration": 2.799
+    },
+    {
+      "text": "beginning to end",
+      "start": 888.639,
+      "duration": 3.281
+    },
+    {
+      "text": "and there's a logical flow all the way",
+      "start": 889.839,
+      "duration": 3.201
+    },
+    {
+      "text": "through",
+      "start": 891.92,
+      "duration": 4.24
+    },
+    {
+      "text": "and you can ensure that this is",
+      "start": 893.04,
+      "duration": 7.599
+    },
+    {
+      "text": "there by going into the kernel menu",
+      "start": 896.16,
+      "duration": 7.28
+    },
+    {
+      "text": "and hitting restart and run all cells",
+      "start": 900.639,
+      "duration": 3.921
+    },
+    {
+      "text": "what that's going to do",
+      "start": 903.44,
+      "duration": 2.72
+    },
+    {
+      "text": "is it's going to give you a totally new",
+      "start": 904.56,
+      "duration": 3.6
+    },
+    {
+      "text": "session in the notebook so nothing is",
+      "start": 906.16,
+      "duration": 3.28
+    },
+    {
+      "text": "defined at all",
+      "start": 908.16,
+      "duration": 2.56
+    },
+    {
+      "text": "and it's going to just start from the",
+      "start": 909.44,
+      "duration": 3.12
+    },
+    {
+      "text": "top and it's going to run everything in",
+      "start": 910.72,
+      "duration": 2.479
+    },
+    {
+      "text": "order",
+      "start": 912.56,
+      "duration": 2.719
+    },
+    {
+      "text": "and that way you know for sure that the",
+      "start": 913.199,
+      "duration": 3.361
+    },
+    {
+      "text": "thing runs from",
+      "start": 915.279,
+      "duration": 3.601
+    },
+    {
+      "text": "end to end appropriately and you get the",
+      "start": 916.56,
+      "duration": 5.68
+    },
+    {
+      "text": "results that you're expecting",
+      "start": 918.88,
+      "duration": 3.36
+    },
+    {
+      "text": "and you know once you're at this stage",
+      "start": 922.88,
+      "duration": 4.399
+    },
+    {
+      "text": "of everything seems to be working",
+      "start": 925.04,
+      "duration": 4.479
+    },
+    {
+      "text": "let me you know make sure you've",
+      "start": 927.279,
+      "duration": 4.0
+    },
+    {
+      "text": "restarted it run all the cells you got",
+      "start": 929.519,
+      "duration": 2.161
+    },
+    {
+      "text": "the",
+      "start": 931.279,
+      "duration": 2.321
+    },
+    {
+      "text": "result that you expected you want to",
+      "start": 931.68,
+      "duration": 3.68
+    },
+    {
+      "text": "keep going a step further",
+      "start": 933.6,
+      "duration": 3.599
+    },
+    {
+      "text": "and change around the inputs in your",
+      "start": 935.36,
+      "duration": 4.159
+    },
+    {
+      "text": "model and make sure that the outputs are",
+      "start": 937.199,
+      "duration": 2.88
+    },
+    {
+      "text": "changing",
+      "start": 939.519,
+      "duration": 3.361
+    },
+    {
+      "text": "as you would expect to for whatever",
+      "start": 940.079,
+      "duration": 4.56
+    },
+    {
+      "text": "change you made in the inputs",
+      "start": 942.88,
+      "duration": 4.48
+    },
+    {
+      "text": "so that way you can make sure that all",
+      "start": 944.639,
+      "duration": 4.401
+    },
+    {
+      "text": "of your inputs are being properly",
+      "start": 947.36,
+      "duration": 2.399
+    },
+    {
+      "text": "incorporated",
+      "start": 949.04,
+      "duration": 5.28
+    },
+    {
+      "text": "into the model um and",
+      "start": 949.759,
+      "duration": 7.281
+    },
+    {
+      "text": "you should have your your final output",
+      "start": 954.32,
+      "duration": 4.319
+    },
+    {
+      "text": "at the end of the notebook whatever your",
+      "start": 957.04,
+      "duration": 4.0
+    },
+    {
+      "text": "final answer from the model is so that",
+      "start": 958.639,
+      "duration": 4.161
+    },
+    {
+      "text": "you know someone who doesn't care so",
+      "start": 961.04,
+      "duration": 3.359
+    },
+    {
+      "text": "much about the details of the model can",
+      "start": 962.8,
+      "duration": 2.719
+    },
+    {
+      "text": "just scroll through and",
+      "start": 964.399,
+      "duration": 4.321
+    },
+    {
+      "text": "see the answer right at the end uh but",
+      "start": 965.519,
+      "duration": 5.201
+    },
+    {
+      "text": "it's also good to have",
+      "start": 968.72,
+      "duration": 4.88
+    },
+    {
+      "text": "outputs in each section if possible or",
+      "start": 970.72,
+      "duration": 4.799
+    },
+    {
+      "text": "just you know whatever the most",
+      "start": 973.6,
+      "duration": 4.799
+    },
+    {
+      "text": "uh useful tangible uh you know",
+      "start": 975.519,
+      "duration": 4.88
+    },
+    {
+      "text": "intermediate outputs to show you should",
+      "start": 978.399,
+      "duration": 2.961
+    },
+    {
+      "text": "show them",
+      "start": 980.399,
+      "duration": 3.12
+    },
+    {
+      "text": "you know unlike in excel where you know",
+      "start": 981.36,
+      "duration": 3.76
+    },
+    {
+      "text": "all your calculations are kind of shown",
+      "start": 983.519,
+      "duration": 3.201
+    },
+    {
+      "text": "automatically",
+      "start": 985.12,
+      "duration": 3.36
+    },
+    {
+      "text": "in python you have to be very explicit",
+      "start": 986.72,
+      "duration": 4.08
+    },
+    {
+      "text": "about what you want to show and not show",
+      "start": 988.48,
+      "duration": 6.08
+    },
+    {
+      "text": "and so you should show everything which",
+      "start": 990.8,
+      "duration": 4.24
+    },
+    {
+      "text": "is",
+      "start": 994.56,
+      "duration": 2.16
+    },
+    {
+      "text": "you know interesting or useful to",
+      "start": 995.04,
+      "duration": 3.919
+    },
+    {
+      "text": "understand the whole context",
+      "start": 996.72,
+      "duration": 4.96
+    },
+    {
+      "text": "of your model not just going all the way",
+      "start": 998.959,
+      "duration": 4.0
+    },
+    {
+      "text": "doing a bunch of calculations and",
+      "start": 1001.68,
+      "duration": 3.2
+    },
+    {
+      "text": "spitting out one number at the end",
+      "start": 1002.959,
+      "duration": 4.401
+    },
+    {
+      "text": "then it becomes way less clear how we",
+      "start": 1004.88,
+      "duration": 3.04
+    },
+    {
+      "text": "actually",
+      "start": 1007.36,
+      "duration": 4.399
+    },
+    {
+      "text": "got to that number versus",
+      "start": 1007.92,
+      "duration": 6.88
+    },
+    {
+      "text": "actually having a full um",
+      "start": 1011.759,
+      "duration": 5.44
+    },
+    {
+      "text": "you know step-by-step you know with the",
+      "start": 1014.8,
+      "duration": 3.279
+    },
+    {
+      "text": "retirement model",
+      "start": 1017.199,
+      "duration": 2.32
+    },
+    {
+      "text": "you know showing the salaries showing",
+      "start": 1018.079,
+      "duration": 3.041
+    },
+    {
+      "text": "the wealth before",
+      "start": 1019.519,
+      "duration": 3.361
+    },
+    {
+      "text": "ultimately getting to just a single",
+      "start": 1021.12,
+      "duration": 4.88
+    },
+    {
+      "text": "years to retirement number",
+      "start": 1022.88,
+      "duration": 4.64
+    },
+    {
+      "text": "so that's an overview of how to",
+      "start": 1026.0,
+      "duration": 3.12
+    },
+    {
+      "text": "structure python models",
+      "start": 1027.52,
+      "duration": 3.84
+    },
+    {
+      "text": "in jupiter notebooks thanks for",
+      "start": 1029.12,
+      "duration": 8.319
+    },
+    {
+      "text": "listening and we'll see you next time",
+      "start": 1031.36,
+      "duration": 6.079
+    }
+  ]
+}

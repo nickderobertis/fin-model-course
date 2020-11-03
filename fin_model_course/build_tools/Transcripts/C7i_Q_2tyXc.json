@@ -1,0 +1,4529 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.36,
+      "duration": 2.32
+    },
+    {
+      "text": "nick dear brotis here teaching you",
+      "start": 4.16,
+      "duration": 3.36
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 5.68,
+      "duration": 3.76
+    },
+    {
+      "text": "we're going to talk about basic data",
+      "start": 7.52,
+      "duration": 3.6
+    },
+    {
+      "text": "types in python",
+      "start": 9.44,
+      "duration": 3.92
+    },
+    {
+      "text": "as part of our segment on going beyond",
+      "start": 11.12,
+      "duration": 4.0
+    },
+    {
+      "text": "an initial python script",
+      "start": 13.36,
+      "duration": 4.48
+    },
+    {
+      "text": "how we can learn the python basic tools",
+      "start": 15.12,
+      "duration": 4.239
+    },
+    {
+      "text": "and skills so that we can go",
+      "start": 17.84,
+      "duration": 4.88
+    },
+    {
+      "text": "and build financial models using python",
+      "start": 19.359,
+      "duration": 6.561
+    },
+    {
+      "text": "so we've talked a little bit about data",
+      "start": 22.72,
+      "duration": 4.0
+    },
+    {
+      "text": "types",
+      "start": 25.92,
+      "duration": 4.08
+    },
+    {
+      "text": "kind of informally so far",
+      "start": 26.72,
+      "duration": 5.359
+    },
+    {
+      "text": "we've talked about a few different data",
+      "start": 30.0,
+      "duration": 4.96
+    },
+    {
+      "text": "types already",
+      "start": 32.079,
+      "duration": 4.561
+    },
+    {
+      "text": "we have learned about strings we've",
+      "start": 34.96,
+      "duration": 3.36
+    },
+    {
+      "text": "learned about numbers",
+      "start": 36.64,
+      "duration": 4.92
+    },
+    {
+      "text": "lists and booleans so far",
+      "start": 38.32,
+      "duration": 4.52
+    },
+    {
+      "text": "[Music]",
+      "start": 41.56,
+      "duration": 4.28
+    },
+    {
+      "text": "and everything in python",
+      "start": 42.84,
+      "duration": 6.12
+    },
+    {
+      "text": "is an object and every object has",
+      "start": 45.84,
+      "duration": 7.44
+    },
+    {
+      "text": "a type um so this type defines",
+      "start": 48.96,
+      "duration": 7.68
+    },
+    {
+      "text": "uh the data structure or",
+      "start": 53.28,
+      "duration": 6.56
+    },
+    {
+      "text": "whatever object this is as well as",
+      "start": 56.64,
+      "duration": 6.079
+    },
+    {
+      "text": "any functions uh which are attached to",
+      "start": 59.84,
+      "duration": 3.28
+    },
+    {
+      "text": "that",
+      "start": 62.719,
+      "duration": 3.281
+    },
+    {
+      "text": "object and when a function is attached",
+      "start": 63.12,
+      "duration": 3.84
+    },
+    {
+      "text": "to an object",
+      "start": 66.0,
+      "duration": 2.96
+    },
+    {
+      "text": "in python we call that a method but",
+      "start": 66.96,
+      "duration": 3.36
+    },
+    {
+      "text": "still you know basically",
+      "start": 68.96,
+      "duration": 5.6
+    },
+    {
+      "text": "just a function attached to an object",
+      "start": 70.32,
+      "duration": 8.0
+    },
+    {
+      "text": "um so in order to",
+      "start": 74.56,
+      "duration": 7.199
+    },
+    {
+      "text": "define how type",
+      "start": 78.32,
+      "duration": 5.439
+    },
+    {
+      "text": "uh you know what what functions are on",
+      "start": 81.759,
+      "duration": 3.68
+    },
+    {
+      "text": "the type what is the data structure for",
+      "start": 83.759,
+      "duration": 2.72
+    },
+    {
+      "text": "the type",
+      "start": 85.439,
+      "duration": 3.841
+    },
+    {
+      "text": "in order to define that we use a class",
+      "start": 86.479,
+      "duration": 3.761
+    },
+    {
+      "text": "and that's going to be",
+      "start": 89.28,
+      "duration": 4.08
+    },
+    {
+      "text": "the next video is focusing on classes",
+      "start": 90.24,
+      "duration": 4.4
+    },
+    {
+      "text": "and and how",
+      "start": 93.36,
+      "duration": 5.2
+    },
+    {
+      "text": "we can define custom types in python",
+      "start": 94.64,
+      "duration": 6.4
+    },
+    {
+      "text": "but for the purposes of this video we're",
+      "start": 98.56,
+      "duration": 4.32
+    },
+    {
+      "text": "just going to focus on",
+      "start": 101.04,
+      "duration": 3.759
+    },
+    {
+      "text": "the basic data types that are built into",
+      "start": 102.88,
+      "duration": 6.16
+    },
+    {
+      "text": "python and how we can work with them",
+      "start": 104.799,
+      "duration": 4.241
+    },
+    {
+      "text": "so um you know we already know about",
+      "start": 109.759,
+      "duration": 4.881
+    },
+    {
+      "text": "strings we've already used strings",
+      "start": 112.32,
+      "duration": 5.93
+    },
+    {
+      "text": "you know they represent text characters",
+      "start": 114.64,
+      "duration": 5.04
+    },
+    {
+      "text": "[Music]",
+      "start": 118.25,
+      "duration": 3.829
+    },
+    {
+      "text": "and now let's learn a little bit more",
+      "start": 119.68,
+      "duration": 3.92
+    },
+    {
+      "text": "about things that we can",
+      "start": 122.079,
+      "duration": 5.201
+    },
+    {
+      "text": "do with those strings so",
+      "start": 123.6,
+      "duration": 5.519
+    },
+    {
+      "text": "you might have noticed if you do some",
+      "start": 127.28,
+      "duration": 3.039
+    },
+    {
+      "text": "calculation",
+      "start": 129.119,
+      "duration": 2.961
+    },
+    {
+      "text": "uh you end up with a number there might",
+      "start": 130.319,
+      "duration": 3.441
+    },
+    {
+      "text": "be a lot of decimals",
+      "start": 132.08,
+      "duration": 5.36
+    },
+    {
+      "text": "on that number um or the idea that",
+      "start": 133.76,
+      "duration": 4.8
+    },
+    {
+      "text": "you know you can't just type a",
+      "start": 137.44,
+      "duration": 3.6
+    },
+    {
+      "text": "percentage into python right like you",
+      "start": 138.56,
+      "duration": 5.039
+    },
+    {
+      "text": "have to put it as a decimal",
+      "start": 141.04,
+      "duration": 4.16
+    },
+    {
+      "text": "but then you want to have that formatted",
+      "start": 143.599,
+      "duration": 4.801
+    },
+    {
+      "text": "as a percentage when you display it",
+      "start": 145.2,
+      "duration": 8.48
+    },
+    {
+      "text": "and all sorts of other formats",
+      "start": 148.4,
+      "duration": 5.28
+    },
+    {
+      "text": "these formatted uh strings are going to",
+      "start": 154.56,
+      "duration": 5.12
+    },
+    {
+      "text": "be useful to help us out with that",
+      "start": 157.04,
+      "duration": 6.4
+    },
+    {
+      "text": "um and also you know it can be including",
+      "start": 159.68,
+      "duration": 5.919
+    },
+    {
+      "text": "whatever your result is as part of a",
+      "start": 163.44,
+      "duration": 3.92
+    },
+    {
+      "text": "sentence",
+      "start": 165.599,
+      "duration": 4.64
+    },
+    {
+      "text": "you know mary has five years till",
+      "start": 167.36,
+      "duration": 3.92
+    },
+    {
+      "text": "retirement",
+      "start": 170.239,
+      "duration": 2.961
+    },
+    {
+      "text": "versus just putting the number five out",
+      "start": 171.28,
+      "duration": 3.599
+    },
+    {
+      "text": "there",
+      "start": 173.2,
+      "duration": 5.119
+    },
+    {
+      "text": "so the formatted strings also help with",
+      "start": 174.879,
+      "duration": 4.801
+    },
+    {
+      "text": "that",
+      "start": 178.319,
+      "duration": 4.64
+    },
+    {
+      "text": "and so these formatted or f strings",
+      "start": 179.68,
+      "duration": 5.919
+    },
+    {
+      "text": "is the same way that you define a string",
+      "start": 182.959,
+      "duration": 3.761
+    },
+    {
+      "text": "but then you just put this",
+      "start": 185.599,
+      "duration": 4.241
+    },
+    {
+      "text": "f on the beginning of it and that makes",
+      "start": 186.72,
+      "duration": 5.12
+    },
+    {
+      "text": "it into an s string or a format string",
+      "start": 189.84,
+      "duration": 2.64
+    },
+    {
+      "text": "and that",
+      "start": 191.84,
+      "duration": 3.28
+    },
+    {
+      "text": "gives it this extra functionality that",
+      "start": 192.48,
+      "duration": 3.839
+    },
+    {
+      "text": "we can",
+      "start": 195.12,
+      "duration": 4.0
+    },
+    {
+      "text": "just drop other variables or expressions",
+      "start": 196.319,
+      "duration": 3.761
+    },
+    {
+      "text": "into the string",
+      "start": 199.12,
+      "duration": 3.839
+    },
+    {
+      "text": "and also uh tell it how that we want",
+      "start": 200.08,
+      "duration": 3.28
+    },
+    {
+      "text": "those",
+      "start": 202.959,
+      "duration": 3.601
+    },
+    {
+      "text": "formatted in the ultimate output",
+      "start": 203.36,
+      "duration": 6.4
+    },
+    {
+      "text": "so here's a little example of that so",
+      "start": 206.56,
+      "duration": 6.08
+    },
+    {
+      "text": "first doing a short calculation here",
+      "start": 209.76,
+      "duration": 4.96
+    },
+    {
+      "text": "just doing five divided by six",
+      "start": 212.64,
+      "duration": 4.0
+    },
+    {
+      "text": "and then if you just print that you just",
+      "start": 214.72,
+      "duration": 3.519
+    },
+    {
+      "text": "show that result",
+      "start": 216.64,
+      "duration": 3.2
+    },
+    {
+      "text": "uh we're looking at point eight three",
+      "start": 218.239,
+      "duration": 3.041
+    },
+    {
+      "text": "three three three three",
+      "start": 219.84,
+      "duration": 4.24
+    },
+    {
+      "text": "uh you know repeating um and so",
+      "start": 221.28,
+      "duration": 4.319
+    },
+    {
+      "text": "obviously the output of that",
+      "start": 224.08,
+      "duration": 4.4
+    },
+    {
+      "text": "does not look great right we probably",
+      "start": 225.599,
+      "duration": 3.841
+    },
+    {
+      "text": "want to round that",
+      "start": 228.48,
+      "duration": 3.36
+    },
+    {
+      "text": "if we're going to display that to the",
+      "start": 229.44,
+      "duration": 5.6
+    },
+    {
+      "text": "consumer of our model",
+      "start": 231.84,
+      "duration": 4.8
+    },
+    {
+      "text": "and then also you know what is this",
+      "start": 235.04,
+      "duration": 3.68
+    },
+    {
+      "text": "number what is the context for that",
+      "start": 236.64,
+      "duration": 2.879
+    },
+    {
+      "text": "number",
+      "start": 238.72,
+      "duration": 2.4
+    },
+    {
+      "text": "it's definitely really helpful to",
+      "start": 239.519,
+      "duration": 3.041
+    },
+    {
+      "text": "include that in a sentence",
+      "start": 241.12,
+      "duration": 5.119
+    },
+    {
+      "text": "when we display it or some other kind of",
+      "start": 242.56,
+      "duration": 7.28
+    },
+    {
+      "text": "way to tell the person who's reading",
+      "start": 246.239,
+      "duration": 4.56
+    },
+    {
+      "text": "your model",
+      "start": 249.84,
+      "duration": 3.759
+    },
+    {
+      "text": "what that number actually means and here",
+      "start": 250.799,
+      "duration": 3.44
+    },
+    {
+      "text": "you know",
+      "start": 253.599,
+      "duration": 2.801
+    },
+    {
+      "text": "we're just saying my number is because",
+      "start": 254.239,
+      "duration": 3.361
+    },
+    {
+      "text": "you know it's just an example",
+      "start": 256.4,
+      "duration": 2.239
+    },
+    {
+      "text": "calculation but",
+      "start": 257.6,
+      "duration": 3.28
+    },
+    {
+      "text": "in reality you would want to actually",
+      "start": 258.639,
+      "duration": 4.56
+    },
+    {
+      "text": "describe what that number is",
+      "start": 260.88,
+      "duration": 5.599
+    },
+    {
+      "text": "um so you see the result of",
+      "start": 263.199,
+      "duration": 6.241
+    },
+    {
+      "text": "using this f string is ultimately we get",
+      "start": 266.479,
+      "duration": 4.72
+    },
+    {
+      "text": "this kind of",
+      "start": 269.44,
+      "duration": 5.039
+    },
+    {
+      "text": "output my number is 0.83 and now it does",
+      "start": 271.199,
+      "duration": 4.481
+    },
+    {
+      "text": "not have",
+      "start": 274.479,
+      "duration": 3.361
+    },
+    {
+      "text": "all these decimals on it we can see it",
+      "start": 275.68,
+      "duration": 3.519
+    },
+    {
+      "text": "only has two",
+      "start": 277.84,
+      "duration": 4.799
+    },
+    {
+      "text": "decimal places so we can break down how",
+      "start": 279.199,
+      "duration": 4.56
+    },
+    {
+      "text": "we did this",
+      "start": 282.639,
+      "duration": 3.921
+    },
+    {
+      "text": "so you'll notice uh with this f string",
+      "start": 283.759,
+      "duration": 3.201
+    },
+    {
+      "text": "uh",
+      "start": 286.56,
+      "duration": 2.56
+    },
+    {
+      "text": "you see we have we have that f and then",
+      "start": 286.96,
+      "duration": 4.0
+    },
+    {
+      "text": "the quotes so that's how we know it's a",
+      "start": 289.12,
+      "duration": 3.68
+    },
+    {
+      "text": "formatted or an f string and that means",
+      "start": 290.96,
+      "duration": 2.32
+    },
+    {
+      "text": "that",
+      "start": 292.8,
+      "duration": 3.119
+    },
+    {
+      "text": "we can do this it's not just a normal",
+      "start": 293.28,
+      "duration": 4.88
+    },
+    {
+      "text": "plane string",
+      "start": 295.919,
+      "duration": 4.321
+    },
+    {
+      "text": "um and then we have my number is you",
+      "start": 298.16,
+      "duration": 3.36
+    },
+    {
+      "text": "know just like we're going to see in the",
+      "start": 300.24,
+      "duration": 2.08
+    },
+    {
+      "text": "output",
+      "start": 301.52,
+      "duration": 3.28
+    },
+    {
+      "text": "and then here comes the special part so",
+      "start": 302.32,
+      "duration": 3.68
+    },
+    {
+      "text": "here we have",
+      "start": 304.8,
+      "duration": 4.72
+    },
+    {
+      "text": "um the curly braces",
+      "start": 306.0,
+      "duration": 6.56
+    },
+    {
+      "text": "and within the curly braces that's where",
+      "start": 309.52,
+      "duration": 3.76
+    },
+    {
+      "text": "we can do",
+      "start": 312.56,
+      "duration": 3.28
+    },
+    {
+      "text": "this variable substitution or expression",
+      "start": 313.28,
+      "duration": 3.919
+    },
+    {
+      "text": "substitution",
+      "start": 315.84,
+      "duration": 4.24
+    },
+    {
+      "text": "uh in order to drop our numbers into the",
+      "start": 317.199,
+      "duration": 4.56
+    },
+    {
+      "text": "middle of a string",
+      "start": 320.08,
+      "duration": 3.76
+    },
+    {
+      "text": "so whenever you do the curly braces",
+      "start": 321.759,
+      "duration": 3.44
+    },
+    {
+      "text": "that's going to say",
+      "start": 323.84,
+      "duration": 3.68
+    },
+    {
+      "text": "here is where i want to put whatever",
+      "start": 325.199,
+      "duration": 3.761
+    },
+    {
+      "text": "variable or expression",
+      "start": 327.52,
+      "duration": 3.44
+    },
+    {
+      "text": "you know you could even do simple math",
+      "start": 328.96,
+      "duration": 4.32
+    },
+    {
+      "text": "inside of here or whatever",
+      "start": 330.96,
+      "duration": 4.56
+    },
+    {
+      "text": "uh call a function or whatever you want",
+      "start": 333.28,
+      "duration": 3.6
+    },
+    {
+      "text": "to do valid but",
+      "start": 335.52,
+      "duration": 2.959
+    },
+    {
+      "text": "as long as it's valid python for the",
+      "start": 336.88,
+      "duration": 3.68
+    },
+    {
+      "text": "most part it should work in here",
+      "start": 338.479,
+      "duration": 5.841
+    },
+    {
+      "text": "um and then inside those curly braces is",
+      "start": 340.56,
+      "duration": 4.8
+    },
+    {
+      "text": "where we put",
+      "start": 344.32,
+      "duration": 2.96
+    },
+    {
+      "text": "you know what we actually want to put",
+      "start": 345.36,
+      "duration": 3.2
+    },
+    {
+      "text": "into the string",
+      "start": 347.28,
+      "duration": 3.04
+    },
+    {
+      "text": "and you'll notice you know here as well",
+      "start": 348.56,
+      "duration": 3.52
+    },
+    {
+      "text": "as you know jupiter and",
+      "start": 350.32,
+      "duration": 4.64
+    },
+    {
+      "text": "any other editor is going to help you",
+      "start": 352.08,
+      "duration": 3.679
+    },
+    {
+      "text": "out here",
+      "start": 354.96,
+      "duration": 3.6
+    },
+    {
+      "text": "and you notice that uh this changed",
+      "start": 355.759,
+      "duration": 4.56
+    },
+    {
+      "text": "color versus the rest of the string",
+      "start": 358.56,
+      "duration": 4.0
+    },
+    {
+      "text": "right the rest of the string is red",
+      "start": 360.319,
+      "duration": 4.88
+    },
+    {
+      "text": "signifying that it's just a string but",
+      "start": 362.56,
+      "duration": 3.52
+    },
+    {
+      "text": "then this part",
+      "start": 365.199,
+      "duration": 4.081
+    },
+    {
+      "text": "went black signifying that it's now",
+      "start": 366.08,
+      "duration": 5.92
+    },
+    {
+      "text": "looking at the variable mynum and not",
+      "start": 369.28,
+      "duration": 4.08
+    },
+    {
+      "text": "just a string",
+      "start": 372.0,
+      "duration": 5.199
+    },
+    {
+      "text": "mynum so we're going to take this value",
+      "start": 373.36,
+      "duration": 5.76
+    },
+    {
+      "text": "and we're putting it here in this point",
+      "start": 377.199,
+      "duration": 4.801
+    },
+    {
+      "text": "in the string so",
+      "start": 379.12,
+      "duration": 4.72
+    },
+    {
+      "text": "you know if without this extra part we",
+      "start": 382.0,
+      "duration": 3.44
+    },
+    {
+      "text": "would get my number is",
+      "start": 383.84,
+      "duration": 3.12
+    },
+    {
+      "text": "zero point eight three three three three",
+      "start": 385.44,
+      "duration": 3.44
+    },
+    {
+      "text": "through three uh and so on",
+      "start": 386.96,
+      "duration": 4.079
+    },
+    {
+      "text": "if you just did curly braces my num",
+      "start": 388.88,
+      "duration": 3.439
+    },
+    {
+      "text": "curly braces",
+      "start": 391.039,
+      "duration": 2.72
+    },
+    {
+      "text": "that's without doing any kind of",
+      "start": 392.319,
+      "duration": 3.681
+    },
+    {
+      "text": "formatting to it just put it in there",
+      "start": 393.759,
+      "duration": 4.88
+    },
+    {
+      "text": "exactly like it would print normally uh",
+      "start": 396.0,
+      "duration": 4.16
+    },
+    {
+      "text": "but then we also want to apply",
+      "start": 398.639,
+      "duration": 3.12
+    },
+    {
+      "text": "formatting to it",
+      "start": 400.16,
+      "duration": 4.4
+    },
+    {
+      "text": "so to apply formatting to it then we",
+      "start": 401.759,
+      "duration": 3.521
+    },
+    {
+      "text": "have this",
+      "start": 404.56,
+      "duration": 3.6
+    },
+    {
+      "text": "colon and then after the colon we",
+      "start": 405.28,
+      "duration": 3.68
+    },
+    {
+      "text": "specify",
+      "start": 408.16,
+      "duration": 4.479
+    },
+    {
+      "text": "a format code um which says",
+      "start": 408.96,
+      "duration": 5.28
+    },
+    {
+      "text": "you know how do we want to format this",
+      "start": 412.639,
+      "duration": 3.761
+    },
+    {
+      "text": "number uh so what this one",
+      "start": 414.24,
+      "duration": 5.84
+    },
+    {
+      "text": "here means is we want to have a decimal",
+      "start": 416.4,
+      "duration": 5.6
+    },
+    {
+      "text": "format we want to have two decimal",
+      "start": 420.08,
+      "duration": 4.88
+    },
+    {
+      "text": "places and we want that to be a fixed",
+      "start": 422.0,
+      "duration": 6.24
+    },
+    {
+      "text": "number of decimal places uh so even if",
+      "start": 424.96,
+      "duration": 4.4
+    },
+    {
+      "text": "you put like five",
+      "start": 428.24,
+      "duration": 3.2
+    },
+    {
+      "text": "just plain five in here it would come as",
+      "start": 429.36,
+      "duration": 3.76
+    },
+    {
+      "text": "five point zero zero",
+      "start": 431.44,
+      "duration": 5.67
+    },
+    {
+      "text": "because we have two fixed decimal places",
+      "start": 433.12,
+      "duration": 5.28
+    },
+    {
+      "text": "[Music]",
+      "start": 437.11,
+      "duration": 4.089
+    },
+    {
+      "text": "and there's a lot of different codes",
+      "start": 438.4,
+      "duration": 4.16
+    },
+    {
+      "text": "that you have there you know it goes",
+      "start": 441.199,
+      "duration": 2.241
+    },
+    {
+      "text": "beyond just",
+      "start": 442.56,
+      "duration": 3.919
+    },
+    {
+      "text": "basic numbers you can also have things",
+      "start": 443.44,
+      "duration": 5.599
+    },
+    {
+      "text": "like formatting a date",
+      "start": 446.479,
+      "duration": 5.761
+    },
+    {
+      "text": "or other things um and",
+      "start": 449.039,
+      "duration": 5.44
+    },
+    {
+      "text": "i have included in the resources a",
+      "start": 452.24,
+      "duration": 4.0
+    },
+    {
+      "text": "reference that you can look at",
+      "start": 454.479,
+      "duration": 4.241
+    },
+    {
+      "text": "uh for all the possible format codes but",
+      "start": 456.24,
+      "duration": 3.44
+    },
+    {
+      "text": "for the most part",
+      "start": 458.72,
+      "duration": 2.879
+    },
+    {
+      "text": "uh you know we're gonna use like this",
+      "start": 459.68,
+      "duration": 3.04
+    },
+    {
+      "text": "fixed uh",
+      "start": 461.599,
+      "duration": 3.361
+    },
+    {
+      "text": "you know just number of decimals or",
+      "start": 462.72,
+      "duration": 3.919
+    },
+    {
+      "text": "we're going to format it as a percentage",
+      "start": 464.96,
+      "duration": 3.2
+    },
+    {
+      "text": "those are going to be the main",
+      "start": 466.639,
+      "duration": 4.0
+    },
+    {
+      "text": "uh ways that we're going to use these as",
+      "start": 468.16,
+      "duration": 5.36
+    },
+    {
+      "text": "far as this class",
+      "start": 470.639,
+      "duration": 2.881
+    },
+    {
+      "text": "and when we jump into the jupiter",
+      "start": 474.16,
+      "duration": 3.84
+    },
+    {
+      "text": "example we'll look at a few other",
+      "start": 476.639,
+      "duration": 2.96
+    },
+    {
+      "text": "things that we can do with strings as",
+      "start": 478.0,
+      "duration": 3.84
+    },
+    {
+      "text": "well",
+      "start": 479.599,
+      "duration": 2.241
+    },
+    {
+      "text": "then jumping back over to numbers in",
+      "start": 482.0,
+      "duration": 4.56
+    },
+    {
+      "text": "python so we've already talked about",
+      "start": 484.319,
+      "duration": 3.841
+    },
+    {
+      "text": "numbers in python we've already used",
+      "start": 486.56,
+      "duration": 3.44
+    },
+    {
+      "text": "numbers in python",
+      "start": 488.16,
+      "duration": 4.64
+    },
+    {
+      "text": "um but you know i've been saying that",
+      "start": 490.0,
+      "duration": 4.08
+    },
+    {
+      "text": "numbers are type",
+      "start": 492.8,
+      "duration": 3.519
+    },
+    {
+      "text": "in python but that's actually a bit of a",
+      "start": 494.08,
+      "duration": 3.839
+    },
+    {
+      "text": "simplification",
+      "start": 496.319,
+      "duration": 4.241
+    },
+    {
+      "text": "uh there are actually two main types of",
+      "start": 497.919,
+      "duration": 3.28
+    },
+    {
+      "text": "numbers",
+      "start": 500.56,
+      "duration": 3.84
+    },
+    {
+      "text": "in python a floating point number and an",
+      "start": 501.199,
+      "duration": 4.4
+    },
+    {
+      "text": "integer",
+      "start": 504.4,
+      "duration": 5.359
+    },
+    {
+      "text": "or float and end would be these two",
+      "start": 505.599,
+      "duration": 7.841
+    },
+    {
+      "text": "main data types for numbers",
+      "start": 509.759,
+      "duration": 6.001
+    },
+    {
+      "text": "and the vast majority of the time you",
+      "start": 513.44,
+      "duration": 4.159
+    },
+    {
+      "text": "don't have to care",
+      "start": 515.76,
+      "duration": 4.0
+    },
+    {
+      "text": "whether it's a floating point number or",
+      "start": 517.599,
+      "duration": 3.201
+    },
+    {
+      "text": "an integer",
+      "start": 519.76,
+      "duration": 2.959
+    },
+    {
+      "text": "it really does not matter most the time",
+      "start": 520.8,
+      "duration": 3.039
+    },
+    {
+      "text": "and that's why i've",
+      "start": 522.719,
+      "duration": 2.8
+    },
+    {
+      "text": "you know just kind of simplified it so",
+      "start": 523.839,
+      "duration": 3.761
+    },
+    {
+      "text": "far",
+      "start": 525.519,
+      "duration": 4.561
+    },
+    {
+      "text": "but occasionally it does come up and so",
+      "start": 527.6,
+      "duration": 3.6
+    },
+    {
+      "text": "it's important to",
+      "start": 530.08,
+      "duration": 4.08
+    },
+    {
+      "text": "know about it still um and so the",
+      "start": 531.2,
+      "duration": 3.84
+    },
+    {
+      "text": "difference here",
+      "start": 534.16,
+      "duration": 3.04
+    },
+    {
+      "text": "is that you know an integer you know",
+      "start": 535.04,
+      "duration": 3.76
+    },
+    {
+      "text": "just like going back to",
+      "start": 537.2,
+      "duration": 3.52
+    },
+    {
+      "text": "you know plain old number theory an",
+      "start": 538.8,
+      "duration": 4.4
+    },
+    {
+      "text": "integer is you know a whole number",
+      "start": 540.72,
+      "duration": 4.96
+    },
+    {
+      "text": "uh you know one two three negative one",
+      "start": 543.2,
+      "duration": 3.12
+    },
+    {
+      "text": "two three",
+      "start": 545.68,
+      "duration": 4.48
+    },
+    {
+      "text": "zero uh it doesn't have any decimals",
+      "start": 546.32,
+      "duration": 6.24
+    },
+    {
+      "text": "whereas a floating point number does",
+      "start": 550.16,
+      "duration": 4.96
+    },
+    {
+      "text": "have decimals",
+      "start": 552.56,
+      "duration": 6.399
+    },
+    {
+      "text": "so even if it's zero",
+      "start": 555.12,
+      "duration": 5.92
+    },
+    {
+      "text": "even if all the decimals are zero if it",
+      "start": 558.959,
+      "duration": 3.44
+    },
+    {
+      "text": "has decimals",
+      "start": 561.04,
+      "duration": 5.04
+    },
+    {
+      "text": "it becomes a floating point number",
+      "start": 562.399,
+      "duration": 7.12
+    },
+    {
+      "text": "so that's why if you look at a couple",
+      "start": 566.08,
+      "duration": 4.64
+    },
+    {
+      "text": "examples here",
+      "start": 569.519,
+      "duration": 4.961
+    },
+    {
+      "text": "so 3.5 that's a floating point number a",
+      "start": 570.72,
+      "duration": 4.72
+    },
+    {
+      "text": "float",
+      "start": 574.48,
+      "duration": 3.84
+    },
+    {
+      "text": "3.0 you might think that's an integer",
+      "start": 575.44,
+      "duration": 4.8
+    },
+    {
+      "text": "but actually it's a float as well",
+      "start": 578.32,
+      "duration": 3.76
+    },
+    {
+      "text": "because we did point zero",
+      "start": 580.24,
+      "duration": 3.92
+    },
+    {
+      "text": "uh even though you know that's three",
+      "start": 582.08,
+      "duration": 4.8
+    },
+    {
+      "text": "it's the exact same value as the integer",
+      "start": 584.16,
+      "duration": 4.64
+    },
+    {
+      "text": "because we did that point zero that",
+      "start": 586.88,
+      "duration": 4.079
+    },
+    {
+      "text": "makes it actually change the data type",
+      "start": 588.8,
+      "duration": 4.56
+    },
+    {
+      "text": "to a floating point number rather than",
+      "start": 590.959,
+      "duration": 3.361
+    },
+    {
+      "text": "the integer",
+      "start": 593.36,
+      "duration": 3.68
+    },
+    {
+      "text": "it's only if we just put the integer",
+      "start": 594.32,
+      "duration": 4.4
+    },
+    {
+      "text": "part of it just a 3",
+      "start": 597.04,
+      "duration": 4.88
+    },
+    {
+      "text": "then it becomes an integer",
+      "start": 598.72,
+      "duration": 5.84
+    },
+    {
+      "text": "so uh and you know you can compare",
+      "start": 601.92,
+      "duration": 3.359
+    },
+    {
+      "text": "across",
+      "start": 604.56,
+      "duration": 3.36
+    },
+    {
+      "text": "uh floats and then just fine you know if",
+      "start": 605.279,
+      "duration": 4.161
+    },
+    {
+      "text": "we do 3.0",
+      "start": 607.92,
+      "duration": 3.68
+    },
+    {
+      "text": "is that equal to three that'll return",
+      "start": 609.44,
+      "duration": 4.72
+    },
+    {
+      "text": "true those are definitely equal",
+      "start": 611.6,
+      "duration": 5.6
+    },
+    {
+      "text": "and yet they have different data types",
+      "start": 614.16,
+      "duration": 5.919
+    },
+    {
+      "text": "um and so again most the time this",
+      "start": 617.2,
+      "duration": 4.4
+    },
+    {
+      "text": "doesn't matter",
+      "start": 620.079,
+      "duration": 4.0
+    },
+    {
+      "text": "but one instance where we are going to",
+      "start": 621.6,
+      "duration": 4.88
+    },
+    {
+      "text": "run in that it does matter",
+      "start": 624.079,
+      "duration": 5.2
+    },
+    {
+      "text": "is if you want to loop a certain number",
+      "start": 626.48,
+      "duration": 4.0
+    },
+    {
+      "text": "of times",
+      "start": 629.279,
+      "duration": 3.12
+    },
+    {
+      "text": "and we'll look at that in the jupiter",
+      "start": 630.48,
+      "duration": 3.76
+    },
+    {
+      "text": "example how we do that say we just want",
+      "start": 632.399,
+      "duration": 3.601
+    },
+    {
+      "text": "to loop five times",
+      "start": 634.24,
+      "duration": 3.76
+    },
+    {
+      "text": "uh you cannot give it a float you can",
+      "start": 636.0,
+      "duration": 3.04
+    },
+    {
+      "text": "only give it",
+      "start": 638.0,
+      "duration": 4.399
+    },
+    {
+      "text": "an integer uh because you know looping",
+      "start": 639.04,
+      "duration": 5.2
+    },
+    {
+      "text": "5.6 times",
+      "start": 642.399,
+      "duration": 4.0
+    },
+    {
+      "text": "doesn't mean anything right like what do",
+      "start": 644.24,
+      "duration": 3.76
+    },
+    {
+      "text": "you do for that point six",
+      "start": 646.399,
+      "duration": 4.641
+    },
+    {
+      "text": "loop um and so python has restricted it",
+      "start": 648.0,
+      "duration": 4.72
+    },
+    {
+      "text": "so that it only will take an integer",
+      "start": 651.04,
+      "duration": 3.28
+    },
+    {
+      "text": "because those would be the",
+      "start": 652.72,
+      "duration": 4.48
+    },
+    {
+      "text": "sensical values for that um so if you",
+      "start": 654.32,
+      "duration": 3.92
+    },
+    {
+      "text": "try to pass it",
+      "start": 657.2,
+      "duration": 4.079
+    },
+    {
+      "text": "afloat then you'll get an error",
+      "start": 658.24,
+      "duration": 5.279
+    },
+    {
+      "text": "about that and we'll see an example of",
+      "start": 661.279,
+      "duration": 6.081
+    },
+    {
+      "text": "that in the jupiter notebook",
+      "start": 663.519,
+      "duration": 3.841
+    },
+    {
+      "text": "and then we'll just introduce a couple",
+      "start": 668.56,
+      "duration": 4.8
+    },
+    {
+      "text": "additional built-in types",
+      "start": 670.399,
+      "duration": 5.281
+    },
+    {
+      "text": "and these are both like container types",
+      "start": 673.36,
+      "duration": 3.28
+    },
+    {
+      "text": "they hold other",
+      "start": 675.68,
+      "duration": 4.56
+    },
+    {
+      "text": "objects so one here is a tuple",
+      "start": 676.64,
+      "duration": 6.56
+    },
+    {
+      "text": "and a tuple you can think of as it's",
+      "start": 680.24,
+      "duration": 4.159
+    },
+    {
+      "text": "basically a list",
+      "start": 683.2,
+      "duration": 3.199
+    },
+    {
+      "text": "uh you know it holds items they're",
+      "start": 684.399,
+      "duration": 5.12
+    },
+    {
+      "text": "ordered you can look them up by index",
+      "start": 686.399,
+      "duration": 4.801
+    },
+    {
+      "text": "but the one main difference between a",
+      "start": 689.519,
+      "duration": 3.201
+    },
+    {
+      "text": "tuple and a list",
+      "start": 691.2,
+      "duration": 4.079
+    },
+    {
+      "text": "is that uh you know with the list you",
+      "start": 692.72,
+      "duration": 3.6
+    },
+    {
+      "text": "can create it with ever",
+      "start": 695.279,
+      "duration": 2.8
+    },
+    {
+      "text": "with whatever items and then you can add",
+      "start": 696.32,
+      "duration": 3.84
+    },
+    {
+      "text": "items you can remove items",
+      "start": 698.079,
+      "duration": 5.041
+    },
+    {
+      "text": "uh whereas the tuple cannot be changed",
+      "start": 700.16,
+      "duration": 3.359
+    },
+    {
+      "text": "after",
+      "start": 703.12,
+      "duration": 2.48
+    },
+    {
+      "text": "it's created whatever you have in there",
+      "start": 703.519,
+      "duration": 3.041
+    },
+    {
+      "text": "when you create it",
+      "start": 705.6,
+      "duration": 2.799
+    },
+    {
+      "text": "is going to be what's always in that",
+      "start": 706.56,
+      "duration": 3.6
+    },
+    {
+      "text": "tuple you cannot append",
+      "start": 708.399,
+      "duration": 5.521
+    },
+    {
+      "text": "you cannot insert you cannot remove",
+      "start": 710.16,
+      "duration": 6.96
+    },
+    {
+      "text": "and so it's always what you started with",
+      "start": 713.92,
+      "duration": 7.039
+    },
+    {
+      "text": "um and the difference in specifying it",
+      "start": 717.12,
+      "duration": 5.44
+    },
+    {
+      "text": "is that you're going to use parentheses",
+      "start": 720.959,
+      "duration": 4.801
+    },
+    {
+      "text": "instead of square brackets um so this",
+      "start": 722.56,
+      "duration": 8.959
+    },
+    {
+      "text": "here would be a tuple of a and b",
+      "start": 725.76,
+      "duration": 7.6
+    },
+    {
+      "text": "and you know generally you're just going",
+      "start": 731.519,
+      "duration": 3.361
+    },
+    {
+      "text": "to want to use tuples",
+      "start": 733.36,
+      "duration": 4.32
+    },
+    {
+      "text": "if it's some instance where you don't",
+      "start": 734.88,
+      "duration": 4.88
+    },
+    {
+      "text": "need to change the items",
+      "start": 737.68,
+      "duration": 3.92
+    },
+    {
+      "text": "and if it is some instance where you are",
+      "start": 739.76,
+      "duration": 3.12
+    },
+    {
+      "text": "going to need to change it",
+      "start": 741.6,
+      "duration": 3.6
+    },
+    {
+      "text": "as you go through your code then you",
+      "start": 742.88,
+      "duration": 3.44
+    },
+    {
+      "text": "want to use a list",
+      "start": 745.2,
+      "duration": 5.36
+    },
+    {
+      "text": "instead so you know not a not a huge",
+      "start": 746.32,
+      "duration": 4.8
+    },
+    {
+      "text": "difference",
+      "start": 750.56,
+      "duration": 3.92
+    },
+    {
+      "text": "but it's definitely a nice little extra",
+      "start": 751.12,
+      "duration": 5.04
+    },
+    {
+      "text": "protection that if you're",
+      "start": 754.48,
+      "duration": 4.799
+    },
+    {
+      "text": "expecting that this um you know it",
+      "start": 756.16,
+      "duration": 4.479
+    },
+    {
+      "text": "shouldn't change",
+      "start": 759.279,
+      "duration": 4.401
+    },
+    {
+      "text": "at all uh if you use a list for that you",
+      "start": 760.639,
+      "duration": 4.88
+    },
+    {
+      "text": "could accidentally append to it or",
+      "start": 763.68,
+      "duration": 3.36
+    },
+    {
+      "text": "remove from it and that could mess up",
+      "start": 765.519,
+      "duration": 2.801
+    },
+    {
+      "text": "all your other code",
+      "start": 767.04,
+      "duration": 3.28
+    },
+    {
+      "text": "so it's just a little bit safer to use",
+      "start": 768.32,
+      "duration": 3.759
+    },
+    {
+      "text": "tuples and they are more",
+      "start": 770.32,
+      "duration": 4.8
+    },
+    {
+      "text": "performant as well",
+      "start": 772.079,
+      "duration": 3.041
+    },
+    {
+      "text": "then the other data type that we're",
+      "start": 775.6,
+      "duration": 3.6
+    },
+    {
+      "text": "introducing here",
+      "start": 777.76,
+      "duration": 4.72
+    },
+    {
+      "text": "is a dictionary or dict",
+      "start": 779.2,
+      "duration": 6.639
+    },
+    {
+      "text": "and so that is a mapping of values to",
+      "start": 782.48,
+      "duration": 3.919
+    },
+    {
+      "text": "other",
+      "start": 785.839,
+      "duration": 4.321
+    },
+    {
+      "text": "values so you know you could",
+      "start": 786.399,
+      "duration": 6.721
+    },
+    {
+      "text": "map a to one and then you can go back to",
+      "start": 790.16,
+      "duration": 4.479
+    },
+    {
+      "text": "this dictionary and look up",
+      "start": 793.12,
+      "duration": 3.68
+    },
+    {
+      "text": "what's the value for a and you're going",
+      "start": 794.639,
+      "duration": 3.921
+    },
+    {
+      "text": "to get one",
+      "start": 796.8,
+      "duration": 5.36
+    },
+    {
+      "text": "is the basic idea behind them um",
+      "start": 798.56,
+      "duration": 5.12
+    },
+    {
+      "text": "and we're not going to use them",
+      "start": 802.16,
+      "duration": 3.119
+    },
+    {
+      "text": "immediately other than just you know",
+      "start": 803.68,
+      "duration": 3.04
+    },
+    {
+      "text": "introducing them and playing around with",
+      "start": 805.279,
+      "duration": 3.68
+    },
+    {
+      "text": "them understanding how to use them",
+      "start": 806.72,
+      "duration": 5.44
+    },
+    {
+      "text": "um but we will definitely use them as we",
+      "start": 808.959,
+      "duration": 4.481
+    },
+    {
+      "text": "proceed throughout the course",
+      "start": 812.16,
+      "duration": 3.679
+    },
+    {
+      "text": "so i wanted to introduce them now since",
+      "start": 813.44,
+      "duration": 4.399
+    },
+    {
+      "text": "they are a very fundamental data type",
+      "start": 815.839,
+      "duration": 5.041
+    },
+    {
+      "text": "in python",
+      "start": 817.839,
+      "duration": 3.041
+    },
+    {
+      "text": "so with that we can jump over to the",
+      "start": 820.959,
+      "duration": 7.521
+    },
+    {
+      "text": "jupiter example",
+      "start": 823.199,
+      "duration": 8.32
+    },
+    {
+      "text": "so uh first going back to strings",
+      "start": 828.48,
+      "duration": 6.799
+    },
+    {
+      "text": "here um so again uh",
+      "start": 831.519,
+      "duration": 5.921
+    },
+    {
+      "text": "you know you define it with quotes then",
+      "start": 835.279,
+      "duration": 3.36
+    },
+    {
+      "text": "you're going to get a string",
+      "start": 837.44,
+      "duration": 4.56
+    },
+    {
+      "text": "right so we have that string",
+      "start": 838.639,
+      "duration": 6.32
+    },
+    {
+      "text": "abc uh and we have the type of that",
+      "start": 842.0,
+      "duration": 3.6
+    },
+    {
+      "text": "being",
+      "start": 844.959,
+      "duration": 4.961
+    },
+    {
+      "text": "a string um and",
+      "start": 845.6,
+      "duration": 5.76
+    },
+    {
+      "text": "one thing which we haven't mentioned",
+      "start": 849.92,
+      "duration": 3.68
+    },
+    {
+      "text": "before is you do have an option",
+      "start": 851.36,
+      "duration": 5.12
+    },
+    {
+      "text": "of whether you want to use single quotes",
+      "start": 853.6,
+      "duration": 4.72
+    },
+    {
+      "text": "as i have been using",
+      "start": 856.48,
+      "duration": 4.96
+    },
+    {
+      "text": "or you can use double quotes for that as",
+      "start": 858.32,
+      "duration": 4.16
+    },
+    {
+      "text": "well",
+      "start": 861.44,
+      "duration": 4.72
+    },
+    {
+      "text": "it does the same thing and so it doesn't",
+      "start": 862.48,
+      "duration": 4.56
+    },
+    {
+      "text": "really matter",
+      "start": 866.16,
+      "duration": 4.56
+    },
+    {
+      "text": "which one you use now you don't want to",
+      "start": 867.04,
+      "duration": 5.359
+    },
+    {
+      "text": "mix them you don't want to do a single",
+      "start": 870.72,
+      "duration": 3.359
+    },
+    {
+      "text": "quote and then a double quote",
+      "start": 872.399,
+      "duration": 4.161
+    },
+    {
+      "text": "that is going to give you a syntax error",
+      "start": 874.079,
+      "duration": 3.76
+    },
+    {
+      "text": "so watch for that",
+      "start": 876.56,
+      "duration": 3.279
+    },
+    {
+      "text": "you know typically just pick one style",
+      "start": 877.839,
+      "duration": 3.36
+    },
+    {
+      "text": "and and stick with it",
+      "start": 879.839,
+      "duration": 3.761
+    },
+    {
+      "text": "it really doesn't matter too much the",
+      "start": 881.199,
+      "duration": 3.76
+    },
+    {
+      "text": "only time that",
+      "start": 883.6,
+      "duration": 3.52
+    },
+    {
+      "text": "i ever make a conscious decision of",
+      "start": 884.959,
+      "duration": 3.281
+    },
+    {
+      "text": "which one i'm going to use",
+      "start": 887.12,
+      "duration": 7.04
+    },
+    {
+      "text": "is if i want to use the other",
+      "start": 888.24,
+      "duration": 5.92
+    },
+    {
+      "text": "mark inside the string right so here i",
+      "start": 894.72,
+      "duration": 3.28
+    },
+    {
+      "text": "wanted to use",
+      "start": 897.12,
+      "duration": 4.0
+    },
+    {
+      "text": "a single uh quote inside the string and",
+      "start": 898.0,
+      "duration": 5.519
+    },
+    {
+      "text": "so i use double quotes on the outside",
+      "start": 901.12,
+      "duration": 4.32
+    },
+    {
+      "text": "if i use single quotes on the outside",
+      "start": 903.519,
+      "duration": 3.361
+    },
+    {
+      "text": "for that",
+      "start": 905.44,
+      "duration": 3.199
+    },
+    {
+      "text": "then i mean you can see already that",
+      "start": 906.88,
+      "duration": 3.199
+    },
+    {
+      "text": "it's messed up just looking at the",
+      "start": 908.639,
+      "duration": 3.2
+    },
+    {
+      "text": "coloring here",
+      "start": 910.079,
+      "duration": 3.361
+    },
+    {
+      "text": "and again we're going to get a syntax",
+      "start": 911.839,
+      "duration": 3.12
+    },
+    {
+      "text": "error because it interprets the string",
+      "start": 913.44,
+      "duration": 2.639
+    },
+    {
+      "text": "ending here",
+      "start": 914.959,
+      "duration": 2.401
+    },
+    {
+      "text": "and then from here it starts to",
+      "start": 916.079,
+      "duration": 3.44
+    },
+    {
+      "text": "interpret these as just variables and",
+      "start": 917.36,
+      "duration": 5.279
+    },
+    {
+      "text": "and yeah it can't uh this is not valid",
+      "start": 919.519,
+      "duration": 4.721
+    },
+    {
+      "text": "python at this point",
+      "start": 922.639,
+      "duration": 3.841
+    },
+    {
+      "text": "um you can work with that by putting a",
+      "start": 924.24,
+      "duration": 3.44
+    },
+    {
+      "text": "backslash there",
+      "start": 926.48,
+      "duration": 4.4
+    },
+    {
+      "text": "that escapes the uh",
+      "start": 927.68,
+      "duration": 6.32
+    },
+    {
+      "text": "the quote and then we're back to uh what",
+      "start": 930.88,
+      "duration": 4.56
+    },
+    {
+      "text": "we have before",
+      "start": 934.0,
+      "duration": 3.839
+    },
+    {
+      "text": "um but i think it's you know if you know",
+      "start": 935.44,
+      "duration": 4.0
+    },
+    {
+      "text": "you're going to use a single quote",
+      "start": 937.839,
+      "duration": 3.36
+    },
+    {
+      "text": "then just put double quotes on the",
+      "start": 939.44,
+      "duration": 4.8
+    },
+    {
+      "text": "outside that's a little bit clearer",
+      "start": 941.199,
+      "duration": 5.361
+    },
+    {
+      "text": "and then if you know you're going to",
+      "start": 944.24,
+      "duration": 4.399
+    },
+    {
+      "text": "have to use double quotes",
+      "start": 946.56,
+      "duration": 4.48
+    },
+    {
+      "text": "then again you would want single quotes",
+      "start": 948.639,
+      "duration": 4.56
+    },
+    {
+      "text": "on the outside to",
+      "start": 951.04,
+      "duration": 4.56
+    },
+    {
+      "text": "make sure that you don't have any issues",
+      "start": 953.199,
+      "duration": 4.241
+    },
+    {
+      "text": "there",
+      "start": 955.6,
+      "duration": 3.76
+    },
+    {
+      "text": "but beyond that it really does not",
+      "start": 957.44,
+      "duration": 3.6
+    },
+    {
+      "text": "matter just pick one",
+      "start": 959.36,
+      "duration": 4.159
+    },
+    {
+      "text": "and stick with it consistently make sure",
+      "start": 961.04,
+      "duration": 3.76
+    },
+    {
+      "text": "that you have the same",
+      "start": 963.519,
+      "duration": 2.961
+    },
+    {
+      "text": "character on both sides of the string",
+      "start": 964.8,
+      "duration": 5.039
+    },
+    {
+      "text": "for it to be valid",
+      "start": 966.48,
+      "duration": 3.359
+    },
+    {
+      "text": "so there's a lot that we can do with",
+      "start": 971.279,
+      "duration": 4.721
+    },
+    {
+      "text": "strings",
+      "start": 973.839,
+      "duration": 6.081
+    },
+    {
+      "text": "and so if you want to look at",
+      "start": 976.0,
+      "duration": 6.32
+    },
+    {
+      "text": "you know all the things that you can do",
+      "start": 979.92,
+      "duration": 3.039
+    },
+    {
+      "text": "um",
+      "start": 982.32,
+      "duration": 3.759
+    },
+    {
+      "text": "then you just can you know do dot",
+      "start": 982.959,
+      "duration": 6.32
+    },
+    {
+      "text": "after the string and then hit tab and",
+      "start": 986.079,
+      "duration": 3.68
+    },
+    {
+      "text": "then",
+      "start": 989.279,
+      "duration": 3.041
+    },
+    {
+      "text": "jupiter is gonna pop up all the possible",
+      "start": 989.759,
+      "duration": 3.281
+    },
+    {
+      "text": "things",
+      "start": 992.32,
+      "duration": 3.439
+    },
+    {
+      "text": "that you can do here um so there's tons",
+      "start": 993.04,
+      "duration": 3.599
+    },
+    {
+      "text": "here",
+      "start": 995.759,
+      "duration": 2.32
+    },
+    {
+      "text": "and we're not going to use the vast",
+      "start": 996.639,
+      "duration": 3.921
+    },
+    {
+      "text": "majority of it in the course",
+      "start": 998.079,
+      "duration": 5.12
+    },
+    {
+      "text": "but it's all there you know basically if",
+      "start": 1000.56,
+      "duration": 3.44
+    },
+    {
+      "text": "you think",
+      "start": 1003.199,
+      "duration": 5.2
+    },
+    {
+      "text": "uh how do i capitalize a string",
+      "start": 1004.0,
+      "duration": 6.8
+    },
+    {
+      "text": "well you can you know just just scroll",
+      "start": 1008.399,
+      "duration": 3.841
+    },
+    {
+      "text": "through these and look for what",
+      "start": 1010.8,
+      "duration": 2.959
+    },
+    {
+      "text": "you know makes sense oh a dot",
+      "start": 1012.24,
+      "duration": 3.76
+    },
+    {
+      "text": "capitalized yeah that sounds right",
+      "start": 1013.759,
+      "duration": 5.041
+    },
+    {
+      "text": "um now i can see that it got capitalized",
+      "start": 1016.0,
+      "duration": 4.079
+    },
+    {
+      "text": "at the beginning",
+      "start": 1018.8,
+      "duration": 5.999
+    },
+    {
+      "text": "um but what if uh you know",
+      "start": 1020.079,
+      "duration": 7.201
+    },
+    {
+      "text": "i don't know i want to get it to all",
+      "start": 1024.799,
+      "duration": 4.4
+    },
+    {
+      "text": "uppercase and i don't know",
+      "start": 1027.28,
+      "duration": 3.519
+    },
+    {
+      "text": "uh you know again i could look through",
+      "start": 1029.199,
+      "duration": 3.36
+    },
+    {
+      "text": "the methods and try and pick it out",
+      "start": 1030.799,
+      "duration": 4.481
+    },
+    {
+      "text": "um but definitely you know google is",
+      "start": 1032.559,
+      "duration": 3.681
+    },
+    {
+      "text": "your friend",
+      "start": 1035.28,
+      "duration": 4.08
+    },
+    {
+      "text": "uh python string uh",
+      "start": 1036.24,
+      "duration": 5.839
+    },
+    {
+      "text": "to all uppercase are all caps let's do",
+      "start": 1039.36,
+      "duration": 3.599
+    },
+    {
+      "text": "that",
+      "start": 1042.079,
+      "duration": 4.081
+    },
+    {
+      "text": "um so then um",
+      "start": 1042.959,
+      "duration": 5.36
+    },
+    {
+      "text": "we can see some results coming up oh",
+      "start": 1046.16,
+      "duration": 3.04
+    },
+    {
+      "text": "string dot",
+      "start": 1048.319,
+      "duration": 3.921
+    },
+    {
+      "text": "upper maybe that's uh what we need",
+      "start": 1049.2,
+      "duration": 5.44
+    },
+    {
+      "text": "oh string dot upper okay that's what we",
+      "start": 1052.24,
+      "duration": 3.36
+    },
+    {
+      "text": "can do",
+      "start": 1054.64,
+      "duration": 5.12
+    },
+    {
+      "text": "um so then we put upper there instead",
+      "start": 1055.6,
+      "duration": 7.52
+    },
+    {
+      "text": "and we can see that does indeed work",
+      "start": 1059.76,
+      "duration": 6.32
+    },
+    {
+      "text": "so definitely google is your friend for",
+      "start": 1063.12,
+      "duration": 4.72
+    },
+    {
+      "text": "finding out what you can do in python",
+      "start": 1066.08,
+      "duration": 4.16
+    },
+    {
+      "text": "there are so many resources out there",
+      "start": 1067.84,
+      "duration": 3.68
+    },
+    {
+      "text": "there are millions and millions of",
+      "start": 1070.24,
+      "duration": 4.08
+    },
+    {
+      "text": "people out there who work with python",
+      "start": 1071.52,
+      "duration": 6.159
+    },
+    {
+      "text": "and so it's really easy to find help uh",
+      "start": 1074.32,
+      "duration": 5.28
+    },
+    {
+      "text": "for you know how do i do this particular",
+      "start": 1077.679,
+      "duration": 3.681
+    },
+    {
+      "text": "thing just google it",
+      "start": 1079.6,
+      "duration": 3.439
+    },
+    {
+      "text": "you're most likely going to find some",
+      "start": 1081.36,
+      "duration": 4.08
+    },
+    {
+      "text": "kind of answer",
+      "start": 1083.039,
+      "duration": 4.88
+    },
+    {
+      "text": "um and then don't really worry about",
+      "start": 1085.44,
+      "duration": 4.0
+    },
+    {
+      "text": "this code this was just so that",
+      "start": 1087.919,
+      "duration": 3.521
+    },
+    {
+      "text": "in the notebook i could have printed out",
+      "start": 1089.44,
+      "duration": 4.4
+    },
+    {
+      "text": "all these different methods that we have",
+      "start": 1091.44,
+      "duration": 5.119
+    },
+    {
+      "text": "on the string",
+      "start": 1093.84,
+      "duration": 2.719
+    },
+    {
+      "text": "and then you know here my a",
+      "start": 1097.679,
+      "duration": 4.321
+    },
+    {
+      "text": "is all lowercase so you know is lower i",
+      "start": 1102.24,
+      "duration": 3.84
+    },
+    {
+      "text": "can check if it's all lowercase so you",
+      "start": 1104.24,
+      "duration": 3.6
+    },
+    {
+      "text": "know these are just more examples of",
+      "start": 1106.08,
+      "duration": 3.839
+    },
+    {
+      "text": "things you can do with the strings",
+      "start": 1107.84,
+      "duration": 4.16
+    },
+    {
+      "text": "but there's so many things here and you",
+      "start": 1109.919,
+      "duration": 4.0
+    },
+    {
+      "text": "can just google for whenever you need to",
+      "start": 1112.0,
+      "duration": 2.64
+    },
+    {
+      "text": "do anything",
+      "start": 1113.919,
+      "duration": 3.441
+    },
+    {
+      "text": "in particular",
+      "start": 1114.64,
+      "duration": 2.72
+    },
+    {
+      "text": "so moving on to numbers um",
+      "start": 1118.559,
+      "duration": 7.601
+    },
+    {
+      "text": "so again it's not just numbers we have",
+      "start": 1122.72,
+      "duration": 6.959
+    },
+    {
+      "text": "floats and ants in python so 3.5 is a",
+      "start": 1126.16,
+      "duration": 4.32
+    },
+    {
+      "text": "float",
+      "start": 1129.679,
+      "duration": 4.321
+    },
+    {
+      "text": "3.0 is a float 3 is an n",
+      "start": 1130.48,
+      "duration": 6.96
+    },
+    {
+      "text": "even though 3 is equal to 3.0",
+      "start": 1134.0,
+      "duration": 6.0
+    },
+    {
+      "text": "we can see that the types themselves are",
+      "start": 1137.44,
+      "duration": 3.68
+    },
+    {
+      "text": "not equal",
+      "start": 1140.0,
+      "duration": 5.84
+    },
+    {
+      "text": "even though the values are equal",
+      "start": 1141.12,
+      "duration": 4.72
+    },
+    {
+      "text": "so again it doesn't really matter most",
+      "start": 1145.919,
+      "duration": 4.241
+    },
+    {
+      "text": "of the time whether you have floats or",
+      "start": 1147.919,
+      "duration": 4.64
+    },
+    {
+      "text": "integers you know you can go and you can",
+      "start": 1150.16,
+      "duration": 3.519
+    },
+    {
+      "text": "do math",
+      "start": 1152.559,
+      "duration": 3.601
+    },
+    {
+      "text": "uh you know with with one being a float",
+      "start": 1153.679,
+      "duration": 4.0
+    },
+    {
+      "text": "and one being the integer",
+      "start": 1156.16,
+      "duration": 4.639
+    },
+    {
+      "text": "it doesn't matter um",
+      "start": 1157.679,
+      "duration": 4.88
+    },
+    {
+      "text": "where it does matter is when we want to",
+      "start": 1160.799,
+      "duration": 3.76
+    },
+    {
+      "text": "loop a certain number of times",
+      "start": 1162.559,
+      "duration": 4.081
+    },
+    {
+      "text": "um and there are other places as well",
+      "start": 1164.559,
+      "duration": 3.441
+    },
+    {
+      "text": "but you know probably",
+      "start": 1166.64,
+      "duration": 2.56
+    },
+    {
+      "text": "they're we're not really going to hit",
+      "start": 1168.0,
+      "duration": 3.12
+    },
+    {
+      "text": "them in the course this is the one that",
+      "start": 1169.2,
+      "duration": 5.04
+    },
+    {
+      "text": "i know is going to come up in the course",
+      "start": 1171.12,
+      "duration": 7.2
+    },
+    {
+      "text": "um so here is a basic way that we can do",
+      "start": 1174.24,
+      "duration": 4.72
+    },
+    {
+      "text": "a loop",
+      "start": 1178.32,
+      "duration": 2.56
+    },
+    {
+      "text": "for a number of times this is the",
+      "start": 1178.96,
+      "duration": 3.839
+    },
+    {
+      "text": "built-in function range",
+      "start": 1180.88,
+      "duration": 5.44
+    },
+    {
+      "text": "you give a range a number",
+      "start": 1182.799,
+      "duration": 8.0
+    },
+    {
+      "text": "and it's basically like making a list",
+      "start": 1186.32,
+      "duration": 7.76
+    },
+    {
+      "text": "in the background of all the numbers",
+      "start": 1190.799,
+      "duration": 5.281
+    },
+    {
+      "text": "leading up to that point",
+      "start": 1194.08,
+      "duration": 5.44
+    },
+    {
+      "text": "um not exactly it's not actually a list",
+      "start": 1196.08,
+      "duration": 4.959
+    },
+    {
+      "text": "it's a generator but we don't need to",
+      "start": 1199.52,
+      "duration": 3.84
+    },
+    {
+      "text": "worry about that we can think of it as a",
+      "start": 1201.039,
+      "duration": 3.12
+    },
+    {
+      "text": "list",
+      "start": 1203.36,
+      "duration": 2.96
+    },
+    {
+      "text": "uh and effectively for our purposes it",
+      "start": 1204.159,
+      "duration": 3.201
+    },
+    {
+      "text": "works uh",
+      "start": 1206.32,
+      "duration": 4.239
+    },
+    {
+      "text": "like creating a list with um here it",
+      "start": 1207.36,
+      "duration": 4.16
+    },
+    {
+      "text": "would be",
+      "start": 1210.559,
+      "duration": 4.641
+    },
+    {
+      "text": "zero one two three four um so again that",
+      "start": 1211.52,
+      "duration": 6.72
+    },
+    {
+      "text": "um zero based indexing um",
+      "start": 1215.2,
+      "duration": 5.2
+    },
+    {
+      "text": "it's gonna start from zero on the first",
+      "start": 1218.24,
+      "duration": 3.84
+    },
+    {
+      "text": "one and it's going to reach",
+      "start": 1220.4,
+      "duration": 4.32
+    },
+    {
+      "text": "ultimately the fifth number which is",
+      "start": 1222.08,
+      "duration": 4.479
+    },
+    {
+      "text": "four",
+      "start": 1224.72,
+      "duration": 4.88
+    },
+    {
+      "text": "um so then if we do want to get you know",
+      "start": 1226.559,
+      "duration": 4.0
+    },
+    {
+      "text": "starting from",
+      "start": 1229.6,
+      "duration": 4.8
+    },
+    {
+      "text": "one instead you can either you know just",
+      "start": 1230.559,
+      "duration": 4.641
+    },
+    {
+      "text": "add one",
+      "start": 1234.4,
+      "duration": 2.8
+    },
+    {
+      "text": "to the number you know here is also",
+      "start": 1235.2,
+      "duration": 4.16
+    },
+    {
+      "text": "showing that we can put an actual",
+      "start": 1237.2,
+      "duration": 3.12
+    },
+    {
+      "text": "expression",
+      "start": 1239.36,
+      "duration": 2.799
+    },
+    {
+      "text": "inside one of these f strings it doesn't",
+      "start": 1240.32,
+      "duration": 3.44
+    },
+    {
+      "text": "just have to be a variable",
+      "start": 1242.159,
+      "duration": 3.52
+    },
+    {
+      "text": "we also don't need to have the format",
+      "start": 1243.76,
+      "duration": 3.44
+    },
+    {
+      "text": "part we can have just",
+      "start": 1245.679,
+      "duration": 4.721
+    },
+    {
+      "text": "the uh the value itself here the value",
+      "start": 1247.2,
+      "duration": 4.64
+    },
+    {
+      "text": "didn't need formatting and so",
+      "start": 1250.4,
+      "duration": 4.56
+    },
+    {
+      "text": "we left it off um",
+      "start": 1251.84,
+      "duration": 6.48
+    },
+    {
+      "text": "and so you can do it that way",
+      "start": 1254.96,
+      "duration": 7.12
+    },
+    {
+      "text": "or you can",
+      "start": 1258.32,
+      "duration": 6.239
+    },
+    {
+      "text": "instead you know start the range from",
+      "start": 1262.08,
+      "duration": 4.16
+    },
+    {
+      "text": "one and then go to",
+      "start": 1264.559,
+      "duration": 3.441
+    },
+    {
+      "text": "one higher than where you actually want",
+      "start": 1266.24,
+      "duration": 3.52
+    },
+    {
+      "text": "to go that will also",
+      "start": 1268.0,
+      "duration": 6.48
+    },
+    {
+      "text": "uh get you the one based indexing there",
+      "start": 1269.76,
+      "duration": 4.72
+    },
+    {
+      "text": "um but anyway so that's you know how you",
+      "start": 1274.799,
+      "duration": 4.161
+    },
+    {
+      "text": "can run a loop for a certain number of",
+      "start": 1277.52,
+      "duration": 2.48
+    },
+    {
+      "text": "times",
+      "start": 1278.96,
+      "duration": 4.64
+    },
+    {
+      "text": "but you know let's say that we",
+      "start": 1280.0,
+      "duration": 8.4
+    },
+    {
+      "text": "um you know we had uh",
+      "start": 1283.6,
+      "duration": 4.8
+    },
+    {
+      "text": "let's see you know num loops um",
+      "start": 1288.48,
+      "duration": 6.4
+    },
+    {
+      "text": "equals 10 divided by two um and so okay",
+      "start": 1291.6,
+      "duration": 4.48
+    },
+    {
+      "text": "yeah that should be five",
+      "start": 1294.88,
+      "duration": 4.24
+    },
+    {
+      "text": "loops right um and then we put that",
+      "start": 1296.08,
+      "duration": 3.92
+    },
+    {
+      "text": "there",
+      "start": 1299.12,
+      "duration": 3.6
+    },
+    {
+      "text": "um we're gonna get this float object",
+      "start": 1300.0,
+      "duration": 5.44
+    },
+    {
+      "text": "cannot be interpreted as an integer",
+      "start": 1302.72,
+      "duration": 6.4
+    },
+    {
+      "text": "because this num num loops",
+      "start": 1305.44,
+      "duration": 6.64
+    },
+    {
+      "text": "came as a float any result of division",
+      "start": 1309.12,
+      "duration": 5.52
+    },
+    {
+      "text": "is going to be a float",
+      "start": 1312.08,
+      "duration": 5.12
+    },
+    {
+      "text": "and so this is not going to work you",
+      "start": 1314.64,
+      "duration": 4.24
+    },
+    {
+      "text": "need to pass an integer here",
+      "start": 1317.2,
+      "duration": 5.04
+    },
+    {
+      "text": "even though uh you know the value of",
+      "start": 1318.88,
+      "duration": 4.32
+    },
+    {
+      "text": "that",
+      "start": 1322.24,
+      "duration": 4.319
+    },
+    {
+      "text": "is five and we check",
+      "start": 1323.2,
+      "duration": 5.2
+    },
+    {
+      "text": "is it equal to five yeah why doesn't",
+      "start": 1326.559,
+      "duration": 3.521
+    },
+    {
+      "text": "this work right but it's because it's",
+      "start": 1328.4,
+      "duration": 2.0
+    },
+    {
+      "text": "not",
+      "start": 1330.08,
+      "duration": 3.44
+    },
+    {
+      "text": "an integer so",
+      "start": 1330.4,
+      "duration": 6.56
+    },
+    {
+      "text": "there is a very easy way to fix this",
+      "start": 1333.52,
+      "duration": 8.399
+    },
+    {
+      "text": "if you take this you know we have this",
+      "start": 1336.96,
+      "duration": 4.959
+    },
+    {
+      "text": "num loops which is a float but if we uh",
+      "start": 1342.159,
+      "duration": 9.041
+    },
+    {
+      "text": "take the integer of num loops",
+      "start": 1346.159,
+      "duration": 7.601
+    },
+    {
+      "text": "then that will get us back to having an",
+      "start": 1351.2,
+      "duration": 3.359
+    },
+    {
+      "text": "integer",
+      "start": 1353.76,
+      "duration": 3.44
+    },
+    {
+      "text": "so we just wrap it in int and then we're",
+      "start": 1354.559,
+      "duration": 4.0
+    },
+    {
+      "text": "going to have",
+      "start": 1357.2,
+      "duration": 4.16
+    },
+    {
+      "text": "an integer come out of that you do need",
+      "start": 1358.559,
+      "duration": 4.561
+    },
+    {
+      "text": "to be careful with that because that",
+      "start": 1361.36,
+      "duration": 3.439
+    },
+    {
+      "text": "will kind of do the floor",
+      "start": 1363.12,
+      "duration": 4.4
+    },
+    {
+      "text": "if you do n of 5.6 that's gonna give you",
+      "start": 1364.799,
+      "duration": 4.801
+    },
+    {
+      "text": "five right you are losing information",
+      "start": 1367.52,
+      "duration": 2.72
+    },
+    {
+      "text": "there",
+      "start": 1369.6,
+      "duration": 2.16
+    },
+    {
+      "text": "so you want to make sure to only do that",
+      "start": 1370.24,
+      "duration": 3.919
+    },
+    {
+      "text": "if you know that it's a whole number",
+      "start": 1371.76,
+      "duration": 4.48
+    },
+    {
+      "text": "anyway or you don't care about this part",
+      "start": 1374.159,
+      "duration": 3.281
+    },
+    {
+      "text": "of the number",
+      "start": 1376.24,
+      "duration": 4.319
+    },
+    {
+      "text": "um but it is a solution for this because",
+      "start": 1377.44,
+      "duration": 4.4
+    },
+    {
+      "text": "we know this is going to be a whole",
+      "start": 1380.559,
+      "duration": 1.761
+    },
+    {
+      "text": "number",
+      "start": 1381.84,
+      "duration": 3.199
+    },
+    {
+      "text": "it's just coming as a float we just put",
+      "start": 1382.32,
+      "duration": 3.359
+    },
+    {
+      "text": "this",
+      "start": 1385.039,
+      "duration": 4.401
+    },
+    {
+      "text": "in an n as well and now all of a sudden",
+      "start": 1385.679,
+      "duration": 7.201
+    },
+    {
+      "text": "this works just fine",
+      "start": 1389.44,
+      "duration": 3.44
+    },
+    {
+      "text": "so that's uh the additional material on",
+      "start": 1393.52,
+      "duration": 4.72
+    },
+    {
+      "text": "numbers and now let's look at",
+      "start": 1396.559,
+      "duration": 5.36
+    },
+    {
+      "text": "tuples so again tuples you know work a",
+      "start": 1398.24,
+      "duration": 5.84
+    },
+    {
+      "text": "lot like lists",
+      "start": 1401.919,
+      "duration": 4.721
+    },
+    {
+      "text": "you can index them you can loop through",
+      "start": 1404.08,
+      "duration": 5.36
+    },
+    {
+      "text": "them just like lists",
+      "start": 1406.64,
+      "duration": 5.519
+    },
+    {
+      "text": "but you just can't add or remove items",
+      "start": 1409.44,
+      "duration": 4.88
+    },
+    {
+      "text": "so here i'm going to define",
+      "start": 1412.159,
+      "duration": 5.921
+    },
+    {
+      "text": "my tube as one two three uh so we have",
+      "start": 1414.32,
+      "duration": 8.32
+    },
+    {
+      "text": "these three numbers into this tuple",
+      "start": 1418.08,
+      "duration": 7.12
+    },
+    {
+      "text": "um that's one way you can create a tuple",
+      "start": 1422.64,
+      "duration": 3.279
+    },
+    {
+      "text": "another way",
+      "start": 1425.2,
+      "duration": 2.719
+    },
+    {
+      "text": "is you know if you already had a list",
+      "start": 1425.919,
+      "duration": 4.24
+    },
+    {
+      "text": "you can convert that list into a tuple",
+      "start": 1427.919,
+      "duration": 5.681
+    },
+    {
+      "text": "so here i have a list abc and now i'm",
+      "start": 1430.159,
+      "duration": 3.841
+    },
+    {
+      "text": "doing",
+      "start": 1433.6,
+      "duration": 3.76
+    },
+    {
+      "text": "tuple of my list so here another",
+      "start": 1434.0,
+      "duration": 4.24
+    },
+    {
+      "text": "built-in function",
+      "start": 1437.36,
+      "duration": 3.919
+    },
+    {
+      "text": "tuple um",
+      "start": 1438.24,
+      "duration": 5.2
+    },
+    {
+      "text": "and that's converting that list into a",
+      "start": 1441.279,
+      "duration": 3.921
+    },
+    {
+      "text": "tuple now",
+      "start": 1443.44,
+      "duration": 4.64
+    },
+    {
+      "text": "now that list still exists you already",
+      "start": 1445.2,
+      "duration": 4.64
+    },
+    {
+      "text": "defined it it's still there",
+      "start": 1448.08,
+      "duration": 6.0
+    },
+    {
+      "text": "but you just now also have this tuple",
+      "start": 1449.84,
+      "duration": 6.719
+    },
+    {
+      "text": "separately which you're not going to be",
+      "start": 1454.08,
+      "duration": 5.28
+    },
+    {
+      "text": "able to add or remove items",
+      "start": 1456.559,
+      "duration": 4.641
+    },
+    {
+      "text": "and then you know the same thing works",
+      "start": 1459.36,
+      "duration": 4.319
+    },
+    {
+      "text": "for converting from tuples into lists",
+      "start": 1461.2,
+      "duration": 5.359
+    },
+    {
+      "text": "uh if you wrap you know whatever in list",
+      "start": 1463.679,
+      "duration": 4.961
+    },
+    {
+      "text": "then it's going to convert it to a list",
+      "start": 1466.559,
+      "duration": 4.961
+    },
+    {
+      "text": "so here we went from a list to a tuple",
+      "start": 1468.64,
+      "duration": 3.36
+    },
+    {
+      "text": "and back",
+      "start": 1471.52,
+      "duration": 2.96
+    },
+    {
+      "text": "to a list you know really just for sake",
+      "start": 1472.0,
+      "duration": 3.36
+    },
+    {
+      "text": "of example here",
+      "start": 1474.48,
+      "duration": 2.48
+    },
+    {
+      "text": "you wouldn't normally just be going back",
+      "start": 1475.36,
+      "duration": 3.199
+    },
+    {
+      "text": "and forth for no reason",
+      "start": 1476.96,
+      "duration": 4.8
+    },
+    {
+      "text": "but um just showing that you can easily",
+      "start": 1478.559,
+      "duration": 6.281
+    },
+    {
+      "text": "convert back and forth between lists and",
+      "start": 1481.76,
+      "duration": 4.799
+    },
+    {
+      "text": "tuples",
+      "start": 1484.84,
+      "duration": 5.319
+    },
+    {
+      "text": "um now we know that um",
+      "start": 1486.559,
+      "duration": 6.401
+    },
+    {
+      "text": "you know we define lists like uh we can",
+      "start": 1490.159,
+      "duration": 3.601
+    },
+    {
+      "text": "do a",
+      "start": 1492.96,
+      "duration": 3.199
+    },
+    {
+      "text": "equals you know five six seven or",
+      "start": 1493.76,
+      "duration": 3.039
+    },
+    {
+      "text": "whatever",
+      "start": 1496.159,
+      "duration": 2.321
+    },
+    {
+      "text": "and then that's you know gonna give us",
+      "start": 1496.799,
+      "duration": 4.161
+    },
+    {
+      "text": "five six seven also",
+      "start": 1498.48,
+      "duration": 4.64
+    },
+    {
+      "text": "uh if you just have that five in there",
+      "start": 1500.96,
+      "duration": 3.44
+    },
+    {
+      "text": "then that also",
+      "start": 1503.12,
+      "duration": 4.559
+    },
+    {
+      "text": "works just fine uh the type of that",
+      "start": 1504.4,
+      "duration": 6.08
+    },
+    {
+      "text": "is still going to be a list but you do",
+      "start": 1507.679,
+      "duration": 4.721
+    },
+    {
+      "text": "need to be careful with tuples",
+      "start": 1510.48,
+      "duration": 5.12
+    },
+    {
+      "text": "uh when you create a tuple um you know",
+      "start": 1512.4,
+      "duration": 4.24
+    },
+    {
+      "text": "also",
+      "start": 1515.6,
+      "duration": 2.4
+    },
+    {
+      "text": "if you have multiple items you don't",
+      "start": 1516.64,
+      "duration": 2.72
+    },
+    {
+      "text": "really have to think about it it'll work",
+      "start": 1518.0,
+      "duration": 2.32
+    },
+    {
+      "text": "fine",
+      "start": 1519.36,
+      "duration": 3.12
+    },
+    {
+      "text": "the issue is creating a tuple with a",
+      "start": 1520.32,
+      "duration": 3.68
+    },
+    {
+      "text": "single item in it",
+      "start": 1522.48,
+      "duration": 5.199
+    },
+    {
+      "text": "uh because if uh you want to create a",
+      "start": 1524.0,
+      "duration": 5.2
+    },
+    {
+      "text": "tuple with a single item you",
+      "start": 1527.679,
+      "duration": 4.641
+    },
+    {
+      "text": "do have to put a trailing comma on it",
+      "start": 1529.2,
+      "duration": 6.16
+    },
+    {
+      "text": "so that python knows that it's a tuple",
+      "start": 1532.32,
+      "duration": 6.64
+    },
+    {
+      "text": "so this here is going to create a tuple",
+      "start": 1535.36,
+      "duration": 6.64
+    },
+    {
+      "text": "um whereas this here is not going to",
+      "start": 1538.96,
+      "duration": 4.079
+    },
+    {
+      "text": "create a tuple",
+      "start": 1542.0,
+      "duration": 2.559
+    },
+    {
+      "text": "even though you think you know i put the",
+      "start": 1543.039,
+      "duration": 3.76
+    },
+    {
+      "text": "parentheses it should be a tuple",
+      "start": 1544.559,
+      "duration": 4.801
+    },
+    {
+      "text": "uh if there's only a single item you do",
+      "start": 1546.799,
+      "duration": 4.641
+    },
+    {
+      "text": "need that trailing comma",
+      "start": 1549.36,
+      "duration": 4.0
+    },
+    {
+      "text": "so you can see actually it's not coming",
+      "start": 1551.44,
+      "duration": 4.0
+    },
+    {
+      "text": "as the tuple of a anymore it's coming as",
+      "start": 1553.36,
+      "duration": 3.28
+    },
+    {
+      "text": "just a",
+      "start": 1555.44,
+      "duration": 4.239
+    },
+    {
+      "text": "and it's coming as just a string and",
+      "start": 1556.64,
+      "duration": 4.0
+    },
+    {
+      "text": "that's because",
+      "start": 1559.679,
+      "duration": 3.041
+    },
+    {
+      "text": "you know tuples are not the only meaning",
+      "start": 1560.64,
+      "duration": 4.08
+    },
+    {
+      "text": "of parentheses in python",
+      "start": 1562.72,
+      "duration": 4.4
+    },
+    {
+      "text": "parentheses and python can also be used",
+      "start": 1564.72,
+      "duration": 3.439
+    },
+    {
+      "text": "to group things",
+      "start": 1567.12,
+      "duration": 3.039
+    },
+    {
+      "text": "for you know like order of operations",
+      "start": 1568.159,
+      "duration": 3.12
+    },
+    {
+      "text": "purposes",
+      "start": 1570.159,
+      "duration": 3.601
+    },
+    {
+      "text": "um so here we basically made a group",
+      "start": 1571.279,
+      "duration": 3.921
+    },
+    {
+      "text": "which has just a in it",
+      "start": 1573.76,
+      "duration": 5.76
+    },
+    {
+      "text": "which just then again evaluates to a um",
+      "start": 1575.2,
+      "duration": 6.56
+    },
+    {
+      "text": "instead of uh what we intended to do",
+      "start": 1579.52,
+      "duration": 3.68
+    },
+    {
+      "text": "which was make a tuple",
+      "start": 1581.76,
+      "duration": 4.159
+    },
+    {
+      "text": "there you do need the comma to say that",
+      "start": 1583.2,
+      "duration": 5.359
+    },
+    {
+      "text": "it's tuple",
+      "start": 1585.919,
+      "duration": 2.64
+    },
+    {
+      "text": "um but you know just like lists you can",
+      "start": 1588.96,
+      "duration": 5.199
+    },
+    {
+      "text": "index them",
+      "start": 1591.919,
+      "duration": 6.321
+    },
+    {
+      "text": "so my second tuple again was abc",
+      "start": 1594.159,
+      "duration": 6.161
+    },
+    {
+      "text": "um so you know zero is going to give us",
+      "start": 1598.24,
+      "duration": 3.439
+    },
+    {
+      "text": "the first item",
+      "start": 1600.32,
+      "duration": 3.04
+    },
+    {
+      "text": "up until a negative one gives us",
+      "start": 1601.679,
+      "duration": 3.281
+    },
+    {
+      "text": "everyone with the last item so the",
+      "start": 1603.36,
+      "duration": 2.72
+    },
+    {
+      "text": "indexing",
+      "start": 1604.96,
+      "duration": 3.44
+    },
+    {
+      "text": "all works exactly the same as it does",
+      "start": 1606.08,
+      "duration": 3.52
+    },
+    {
+      "text": "for lists",
+      "start": 1608.4,
+      "duration": 5.04
+    },
+    {
+      "text": "um you can also uh loop through them",
+      "start": 1609.6,
+      "duration": 7.52
+    },
+    {
+      "text": "just like um just like this",
+      "start": 1613.44,
+      "duration": 7.359
+    },
+    {
+      "text": "um so that works just fine",
+      "start": 1617.12,
+      "duration": 6.72
+    },
+    {
+      "text": "um the one thing that you can't do",
+      "start": 1620.799,
+      "duration": 6.561
+    },
+    {
+      "text": "is you can't go and try uh and append to",
+      "start": 1623.84,
+      "duration": 4.079
+    },
+    {
+      "text": "it",
+      "start": 1627.36,
+      "duration": 4.88
+    },
+    {
+      "text": "um so let's try and append 10 oh wait",
+      "start": 1627.919,
+      "duration": 6.64
+    },
+    {
+      "text": "super object has no attribute append",
+      "start": 1632.24,
+      "duration": 4.4
+    },
+    {
+      "text": "right because you can't add",
+      "start": 1634.559,
+      "duration": 6.561
+    },
+    {
+      "text": "anything to an existing tuple",
+      "start": 1636.64,
+      "duration": 8.24
+    },
+    {
+      "text": "so that's tuples and then the other",
+      "start": 1641.12,
+      "duration": 5.52
+    },
+    {
+      "text": "totally new data type we're looking at",
+      "start": 1644.88,
+      "duration": 3.12
+    },
+    {
+      "text": "here",
+      "start": 1646.64,
+      "duration": 4.72
+    },
+    {
+      "text": "is uh dictionary so dictionaries i mean",
+      "start": 1648.0,
+      "duration": 4.96
+    },
+    {
+      "text": "it's going to be you know dict is",
+      "start": 1651.36,
+      "duration": 3.52
+    },
+    {
+      "text": "is how it's you know talked about in",
+      "start": 1652.96,
+      "duration": 3.36
+    },
+    {
+      "text": "python",
+      "start": 1654.88,
+      "duration": 4.32
+    },
+    {
+      "text": "so that's a mapping of items to other",
+      "start": 1656.32,
+      "duration": 3.839
+    },
+    {
+      "text": "items objects",
+      "start": 1659.2,
+      "duration": 4.479
+    },
+    {
+      "text": "other objects and so you know here's an",
+      "start": 1660.159,
+      "duration": 4.481
+    },
+    {
+      "text": "example",
+      "start": 1663.679,
+      "duration": 3.36
+    },
+    {
+      "text": "and you can define the dictionary with",
+      "start": 1664.64,
+      "duration": 4.96
+    },
+    {
+      "text": "these curly braces",
+      "start": 1667.039,
+      "duration": 5.601
+    },
+    {
+      "text": "so what this is saying is we have a",
+      "start": 1669.6,
+      "duration": 4.16
+    },
+    {
+      "text": "dictionary",
+      "start": 1672.64,
+      "duration": 4.8
+    },
+    {
+      "text": "and we have uh the key a",
+      "start": 1673.76,
+      "duration": 6.159
+    },
+    {
+      "text": "mapped to the value one and we have the",
+      "start": 1677.44,
+      "duration": 3.76
+    },
+    {
+      "text": "key b",
+      "start": 1679.919,
+      "duration": 4.801
+    },
+    {
+      "text": "mapped to the value two so it's whatever",
+      "start": 1681.2,
+      "duration": 5.199
+    },
+    {
+      "text": "you know two things you wanna associate",
+      "start": 1684.72,
+      "duration": 4.559
+    },
+    {
+      "text": "with each other you put the key first so",
+      "start": 1686.399,
+      "duration": 3.441
+    },
+    {
+      "text": "the key",
+      "start": 1689.279,
+      "duration": 2.4
+    },
+    {
+      "text": "is what we're gonna be able to look",
+      "start": 1689.84,
+      "duration": 3.839
+    },
+    {
+      "text": "things up by",
+      "start": 1691.679,
+      "duration": 4.48
+    },
+    {
+      "text": "and then you put a colon and then you",
+      "start": 1693.679,
+      "duration": 3.281
+    },
+    {
+      "text": "put",
+      "start": 1696.159,
+      "duration": 3.681
+    },
+    {
+      "text": "what you want the value or what is the",
+      "start": 1696.96,
+      "duration": 3.68
+    },
+    {
+      "text": "result",
+      "start": 1699.84,
+      "duration": 4.559
+    },
+    {
+      "text": "of looking up by the key so",
+      "start": 1700.64,
+      "duration": 5.2
+    },
+    {
+      "text": "let's make that a little bit more",
+      "start": 1704.399,
+      "duration": 6.801
+    },
+    {
+      "text": "concrete so i've got my dictionary here",
+      "start": 1705.84,
+      "duration": 7.6
+    },
+    {
+      "text": "a is associated with one b is associated",
+      "start": 1711.2,
+      "duration": 3.44
+    },
+    {
+      "text": "with two",
+      "start": 1713.44,
+      "duration": 3.92
+    },
+    {
+      "text": "that means we can go and we can look up",
+      "start": 1714.64,
+      "duration": 3.519
+    },
+    {
+      "text": "the value",
+      "start": 1717.36,
+      "duration": 3.52
+    },
+    {
+      "text": "for a and here you know we say give me",
+      "start": 1718.159,
+      "duration": 3.601
+    },
+    {
+      "text": "the value",
+      "start": 1720.88,
+      "duration": 3.519
+    },
+    {
+      "text": "for a out of my dictionary and we get 1",
+      "start": 1721.76,
+      "duration": 3.919
+    },
+    {
+      "text": "because 1",
+      "start": 1724.399,
+      "duration": 4.961
+    },
+    {
+      "text": "was associated with a similarly we can",
+      "start": 1725.679,
+      "duration": 4.961
+    },
+    {
+      "text": "look up b",
+      "start": 1729.36,
+      "duration": 5.039
+    },
+    {
+      "text": "and it's going to give us the value 2",
+      "start": 1730.64,
+      "duration": 5.759
+    },
+    {
+      "text": "because that was the value associated",
+      "start": 1734.399,
+      "duration": 4.321
+    },
+    {
+      "text": "with b",
+      "start": 1736.399,
+      "duration": 4.561
+    },
+    {
+      "text": "and if you try to look up a key which is",
+      "start": 1738.72,
+      "duration": 3.76
+    },
+    {
+      "text": "not there",
+      "start": 1740.96,
+      "duration": 3.92
+    },
+    {
+      "text": "then you're going to get a key error",
+      "start": 1742.48,
+      "duration": 4.559
+    },
+    {
+      "text": "because it cannot find that key",
+      "start": 1744.88,
+      "duration": 5.12
+    },
+    {
+      "text": "in the dictionary",
+      "start": 1747.039,
+      "duration": 2.961
+    },
+    {
+      "text": "and also you cannot look up by the value",
+      "start": 1750.159,
+      "duration": 5.52
+    },
+    {
+      "text": "you cannot look up one and expect",
+      "start": 1753.44,
+      "duration": 5.04
+    },
+    {
+      "text": "to get a uh you know there is there are",
+      "start": 1755.679,
+      "duration": 4.24
+    },
+    {
+      "text": "definitely ways to reverse the",
+      "start": 1758.48,
+      "duration": 2.4
+    },
+    {
+      "text": "dictionary and",
+      "start": 1759.919,
+      "duration": 3.041
+    },
+    {
+      "text": "and make it look up the opposite way but",
+      "start": 1760.88,
+      "duration": 3.919
+    },
+    {
+      "text": "you know just basic usage",
+      "start": 1762.96,
+      "duration": 3.76
+    },
+    {
+      "text": "you look up by the keys and you get the",
+      "start": 1764.799,
+      "duration": 4.081
+    },
+    {
+      "text": "values as a result look up by",
+      "start": 1766.72,
+      "duration": 5.36
+    },
+    {
+      "text": "a and b get one and two not the other",
+      "start": 1768.88,
+      "duration": 5.84
+    },
+    {
+      "text": "way around",
+      "start": 1772.08,
+      "duration": 5.92
+    },
+    {
+      "text": "um so we'll definitely do a fair amount",
+      "start": 1774.72,
+      "duration": 5.04
+    },
+    {
+      "text": "more with dictionaries as we go through",
+      "start": 1778.0,
+      "duration": 3.12
+    },
+    {
+      "text": "the course",
+      "start": 1779.76,
+      "duration": 3.12
+    },
+    {
+      "text": "but i just wanted to kind of introduce",
+      "start": 1781.12,
+      "duration": 3.679
+    },
+    {
+      "text": "them very quickly here",
+      "start": 1782.88,
+      "duration": 4.399
+    },
+    {
+      "text": "just so you're familiar with the idea of",
+      "start": 1784.799,
+      "duration": 4.48
+    },
+    {
+      "text": "them and we'll build on that more",
+      "start": 1787.279,
+      "duration": 4.321
+    },
+    {
+      "text": "later",
+      "start": 1789.279,
+      "duration": 2.321
+    },
+    {
+      "text": "uh so the last uh topic that i want to",
+      "start": 1793.2,
+      "duration": 3.52
+    },
+    {
+      "text": "talk about within",
+      "start": 1795.279,
+      "duration": 4.721
+    },
+    {
+      "text": "the basic data types is this concept",
+      "start": 1796.72,
+      "duration": 6.48
+    },
+    {
+      "text": "that um again everything in python is an",
+      "start": 1800.0,
+      "duration": 3.76
+    },
+    {
+      "text": "object",
+      "start": 1803.2,
+      "duration": 3.359
+    },
+    {
+      "text": "and so everything is kind of treated in",
+      "start": 1803.76,
+      "duration": 4.799
+    },
+    {
+      "text": "the same way and that",
+      "start": 1806.559,
+      "duration": 5.36
+    },
+    {
+      "text": "allows you to have any kind of nesting",
+      "start": 1808.559,
+      "duration": 5.36
+    },
+    {
+      "text": "of data types that you want you can have",
+      "start": 1811.919,
+      "duration": 3.201
+    },
+    {
+      "text": "very",
+      "start": 1813.919,
+      "duration": 4.161
+    },
+    {
+      "text": "you know complex nested data structures",
+      "start": 1815.12,
+      "duration": 6.72
+    },
+    {
+      "text": "just based out of these basic data",
+      "start": 1818.08,
+      "duration": 6.959
+    },
+    {
+      "text": "so for an example a very common",
+      "start": 1821.84,
+      "duration": 5.6
+    },
+    {
+      "text": "one of these types of data structures is",
+      "start": 1825.039,
+      "duration": 3.36
+    },
+    {
+      "text": "to have a list",
+      "start": 1827.44,
+      "duration": 4.239
+    },
+    {
+      "text": "of dictionaries so then",
+      "start": 1828.399,
+      "duration": 5.52
+    },
+    {
+      "text": "you know each dictionary is representing",
+      "start": 1831.679,
+      "duration": 4.161
+    },
+    {
+      "text": "like some kind of entity",
+      "start": 1833.919,
+      "duration": 5.681
+    },
+    {
+      "text": "here each dictionary is representing",
+      "start": 1835.84,
+      "duration": 7.28
+    },
+    {
+      "text": "a person and we have multiple people",
+      "start": 1839.6,
+      "duration": 6.799
+    },
+    {
+      "text": "so each dictionary is one person",
+      "start": 1843.12,
+      "duration": 6.4
+    },
+    {
+      "text": "and then we have multiple people in the",
+      "start": 1846.399,
+      "duration": 6.721
+    },
+    {
+      "text": "inputs list um and then within the",
+      "start": 1849.52,
+      "duration": 5.279
+    },
+    {
+      "text": "dictionary we have",
+      "start": 1853.12,
+      "duration": 3.439
+    },
+    {
+      "text": "you know some different characteristics",
+      "start": 1854.799,
+      "duration": 3.441
+    },
+    {
+      "text": "of this person",
+      "start": 1856.559,
+      "duration": 4.401
+    },
+    {
+      "text": "so uh name and weight are the two",
+      "start": 1858.24,
+      "duration": 5.279
+    },
+    {
+      "text": "characteristics that we're tracking here",
+      "start": 1860.96,
+      "duration": 5.76
+    },
+    {
+      "text": "um and so for john we have his name is",
+      "start": 1863.519,
+      "duration": 4.081
+    },
+    {
+      "text": "john of course",
+      "start": 1866.72,
+      "duration": 2.799
+    },
+    {
+      "text": "and then that his weight is 180 and for",
+      "start": 1867.6,
+      "duration": 3.36
+    },
+    {
+      "text": "the other one the name is sarah and the",
+      "start": 1869.519,
+      "duration": 3.121
+    },
+    {
+      "text": "weights 140.",
+      "start": 1870.96,
+      "duration": 6.0
+    },
+    {
+      "text": "um so then you can do something like",
+      "start": 1872.64,
+      "duration": 6.8
+    },
+    {
+      "text": "uh you know loop through this inputs",
+      "start": 1876.96,
+      "duration": 3.439
+    },
+    {
+      "text": "list so that",
+      "start": 1879.44,
+      "duration": 2.959
+    },
+    {
+      "text": "this input variable that we're getting",
+      "start": 1880.399,
+      "duration": 5.52
+    },
+    {
+      "text": "here is the entire dictionary itself",
+      "start": 1882.399,
+      "duration": 5.28
+    },
+    {
+      "text": "and then we want to pull the name out of",
+      "start": 1885.919,
+      "duration": 3.441
+    },
+    {
+      "text": "the dictionary and the weight",
+      "start": 1887.679,
+      "duration": 4.24
+    },
+    {
+      "text": "out of the dictionary to display details",
+      "start": 1889.36,
+      "duration": 5.28
+    },
+    {
+      "text": "about each of these people",
+      "start": 1891.919,
+      "duration": 4.48
+    },
+    {
+      "text": "so then you know this is each of these",
+      "start": 1894.64,
+      "duration": 3.039
+    },
+    {
+      "text": "people introducing",
+      "start": 1896.399,
+      "duration": 3.361
+    },
+    {
+      "text": "themselves for whatever reason they",
+      "start": 1897.679,
+      "duration": 3.681
+    },
+    {
+      "text": "introduce themselves by saying their",
+      "start": 1899.76,
+      "duration": 3.2
+    },
+    {
+      "text": "weight",
+      "start": 1901.36,
+      "duration": 4.88
+    },
+    {
+      "text": "but uh you know the basic idea here is",
+      "start": 1902.96,
+      "duration": 5.52
+    },
+    {
+      "text": "you can work with the any kind of nested",
+      "start": 1906.24,
+      "duration": 4.159
+    },
+    {
+      "text": "data structure",
+      "start": 1908.48,
+      "duration": 4.72
+    },
+    {
+      "text": "and uh you can take this to any level",
+      "start": 1910.399,
+      "duration": 3.52
+    },
+    {
+      "text": "that you want",
+      "start": 1913.2,
+      "duration": 4.079
+    },
+    {
+      "text": "so here's a more complicated example",
+      "start": 1913.919,
+      "duration": 6.081
+    },
+    {
+      "text": "um so again each it's a list of",
+      "start": 1917.279,
+      "duration": 4.721
+    },
+    {
+      "text": "dictionaries where each dictionary",
+      "start": 1920.0,
+      "duration": 5.679
+    },
+    {
+      "text": "represents a person uh but now also",
+      "start": 1922.0,
+      "duration": 6.88
+    },
+    {
+      "text": "each person has friends associated with",
+      "start": 1925.679,
+      "duration": 5.041
+    },
+    {
+      "text": "them and so then friends",
+      "start": 1928.88,
+      "duration": 5.519
+    },
+    {
+      "text": "is itself a list of",
+      "start": 1930.72,
+      "duration": 6.16
+    },
+    {
+      "text": "dictionaries which again represent more",
+      "start": 1934.399,
+      "duration": 3.841
+    },
+    {
+      "text": "people",
+      "start": 1936.88,
+      "duration": 3.76
+    },
+    {
+      "text": "and then for each of those people it",
+      "start": 1938.24,
+      "duration": 4.0
+    },
+    {
+      "text": "says the activities that they have",
+      "start": 1940.64,
+      "duration": 2.159
+    },
+    {
+      "text": "shared",
+      "start": 1942.24,
+      "duration": 5.679
+    },
+    {
+      "text": "with the original uh outer person here",
+      "start": 1942.799,
+      "duration": 7.201
+    },
+    {
+      "text": "so definitely a more complicated data",
+      "start": 1947.919,
+      "duration": 4.161
+    },
+    {
+      "text": "structure to work with here",
+      "start": 1950.0,
+      "duration": 3.919
+    },
+    {
+      "text": "but you know the idea that you can",
+      "start": 1952.08,
+      "duration": 3.52
+    },
+    {
+      "text": "continue to nest these things as many",
+      "start": 1953.919,
+      "duration": 3.841
+    },
+    {
+      "text": "times as you want for whatever",
+      "start": 1955.6,
+      "duration": 4.24
+    },
+    {
+      "text": "data structure makes sense for the",
+      "start": 1957.76,
+      "duration": 3.759
+    },
+    {
+      "text": "particular problem that you're working",
+      "start": 1959.84,
+      "duration": 3.199
+    },
+    {
+      "text": "on",
+      "start": 1961.519,
+      "duration": 4.64
+    },
+    {
+      "text": "um so here's you know",
+      "start": 1963.039,
+      "duration": 5.12
+    },
+    {
+      "text": "for the point that we're at uh in our",
+      "start": 1966.159,
+      "duration": 3.601
+    },
+    {
+      "text": "python learning this is kind of a lot",
+      "start": 1968.159,
+      "duration": 2.961
+    },
+    {
+      "text": "going on here",
+      "start": 1969.76,
+      "duration": 4.32
+    },
+    {
+      "text": "um i don't expect you to understand uh",
+      "start": 1971.12,
+      "duration": 4.399
+    },
+    {
+      "text": "this whole",
+      "start": 1974.08,
+      "duration": 3.199
+    },
+    {
+      "text": "block of code right now if you if you",
+      "start": 1975.519,
+      "duration": 3.28
+    },
+    {
+      "text": "take the time and really go through it",
+      "start": 1977.279,
+      "duration": 2.88
+    },
+    {
+      "text": "um you can definitely",
+      "start": 1978.799,
+      "duration": 4.161
+    },
+    {
+      "text": "figure it out um but mainly here i'm",
+      "start": 1980.159,
+      "duration": 4.321
+    },
+    {
+      "text": "just trying to highlight",
+      "start": 1982.96,
+      "duration": 3.12
+    },
+    {
+      "text": "uh that you can work with these nested",
+      "start": 1984.48,
+      "duration": 3.52
+    },
+    {
+      "text": "data structures um",
+      "start": 1986.08,
+      "duration": 4.64
+    },
+    {
+      "text": "and so here i'm ultimately uh printing",
+      "start": 1988.0,
+      "duration": 4.48
+    },
+    {
+      "text": "you know for each person",
+      "start": 1990.72,
+      "duration": 3.92
+    },
+    {
+      "text": "you know who who they hang out with and",
+      "start": 1992.48,
+      "duration": 3.6
+    },
+    {
+      "text": "what they do together",
+      "start": 1994.64,
+      "duration": 3.919
+    },
+    {
+      "text": "um and so you know sarah here has two",
+      "start": 1996.08,
+      "duration": 3.599
+    },
+    {
+      "text": "friends and we see",
+      "start": 1998.559,
+      "duration": 4.48
+    },
+    {
+      "text": "two statements for sarah um and then i",
+      "start": 1999.679,
+      "duration": 4.641
+    },
+    {
+      "text": "made it also",
+      "start": 2003.039,
+      "duration": 3.36
+    },
+    {
+      "text": "uh you know if it's not the first person",
+      "start": 2004.32,
+      "duration": 3.68
+    },
+    {
+      "text": "that it's gonna say they also",
+      "start": 2006.399,
+      "duration": 5.841
+    },
+    {
+      "text": "hang out with um so",
+      "start": 2008.0,
+      "duration": 7.6
+    },
+    {
+      "text": "yeah you can you know have any kind of",
+      "start": 2012.24,
+      "duration": 5.36
+    },
+    {
+      "text": "arbitrary logic that works with any kind",
+      "start": 2015.6,
+      "duration": 3.84
+    },
+    {
+      "text": "of data structure",
+      "start": 2017.6,
+      "duration": 4.24
+    },
+    {
+      "text": "things are very flexible in that sense",
+      "start": 2019.44,
+      "duration": 4.239
+    },
+    {
+      "text": "in python",
+      "start": 2021.84,
+      "duration": 5.76
+    },
+    {
+      "text": "so that finishes up the material for the",
+      "start": 2023.679,
+      "duration": 5.041
+    },
+    {
+      "text": "basic data types",
+      "start": 2027.6,
+      "duration": 3.439
+    },
+    {
+      "text": "in python next time we're going to talk",
+      "start": 2028.72,
+      "duration": 4.079
+    },
+    {
+      "text": "about creating our own",
+      "start": 2031.039,
+      "duration": 5.201
+    },
+    {
+      "text": "custom data types by using python",
+      "start": 2032.799,
+      "duration": 6.641
+    },
+    {
+      "text": "classes so thanks for listening and see",
+      "start": 2036.24,
+      "duration": 8.4
+    },
+    {
+      "text": "you next time",
+      "start": 2039.44,
+      "duration": 5.2
+    }
+  ]
+}

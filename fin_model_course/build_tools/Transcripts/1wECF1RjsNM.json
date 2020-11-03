@@ -1,0 +1,2369 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.48,
+      "duration": 2.4
+    },
+    {
+      "text": "nick derbert is here teaching you",
+      "start": 3.439,
+      "duration": 3.601
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 4.88,
+      "duration": 3.92
+    },
+    {
+      "text": "we're going to be looking at how to do",
+      "start": 7.04,
+      "duration": 3.2
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 8.8,
+      "duration": 4.24
+    },
+    {
+      "text": "in excel this is part of our lecture",
+      "start": 10.24,
+      "duration": 3.519
+    },
+    {
+      "text": "segment",
+      "start": 13.04,
+      "duration": 3.44
+    },
+    {
+      "text": "on exploring the parameter space with",
+      "start": 13.759,
+      "duration": 6.241
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 16.48,
+      "duration": 3.52
+    },
+    {
+      "text": "so in the last segment we went through",
+      "start": 20.08,
+      "duration": 3.52
+    },
+    {
+      "text": "all the",
+      "start": 22.8,
+      "duration": 3.84
+    },
+    {
+      "text": "theory behind sensitivity analysis and",
+      "start": 23.6,
+      "duration": 4.96
+    },
+    {
+      "text": "everything that's involved and kind of a",
+      "start": 26.64,
+      "duration": 4.08
+    },
+    {
+      "text": "simple example on how to do that",
+      "start": 28.56,
+      "duration": 4.56
+    },
+    {
+      "text": "now let's look at how we actually",
+      "start": 30.72,
+      "duration": 5.92
+    },
+    {
+      "text": "operationalize that in excel",
+      "start": 33.12,
+      "duration": 6.72
+    },
+    {
+      "text": "so excel has a nice built-in tool called",
+      "start": 36.64,
+      "duration": 4.72
+    },
+    {
+      "text": "a data table",
+      "start": 39.84,
+      "duration": 4.559
+    },
+    {
+      "text": "which makes this process fairly easy for",
+      "start": 41.36,
+      "duration": 3.84
+    },
+    {
+      "text": "us",
+      "start": 44.399,
+      "duration": 4.0
+    },
+    {
+      "text": "so a data table lets you look at the",
+      "start": 45.2,
+      "duration": 3.839
+    },
+    {
+      "text": "value",
+      "start": 48.399,
+      "duration": 3.921
+    },
+    {
+      "text": "of some cell while changing",
+      "start": 49.039,
+      "duration": 6.481
+    },
+    {
+      "text": "some different cells and so you can look",
+      "start": 52.32,
+      "duration": 4.96
+    },
+    {
+      "text": "at the value of an output",
+      "start": 55.52,
+      "duration": 4.559
+    },
+    {
+      "text": "of your model while changing around the",
+      "start": 57.28,
+      "duration": 3.52
+    },
+    {
+      "text": "inputs",
+      "start": 60.079,
+      "duration": 2.561
+    },
+    {
+      "text": "of your model without you having to go",
+      "start": 60.8,
+      "duration": 5.999
+    },
+    {
+      "text": "in and manually change those out",
+      "start": 62.64,
+      "duration": 7.2
+    },
+    {
+      "text": "and with data tables we have",
+      "start": 66.799,
+      "duration": 6.241
+    },
+    {
+      "text": "two different ways we can go about it",
+      "start": 69.84,
+      "duration": 5.2
+    },
+    {
+      "text": "one is a one-way data table and the",
+      "start": 73.04,
+      "duration": 4.56
+    },
+    {
+      "text": "other is a two-way data table",
+      "start": 75.04,
+      "duration": 5.36
+    },
+    {
+      "text": "so with a two-way data table we're",
+      "start": 77.6,
+      "duration": 5.44
+    },
+    {
+      "text": "looking at two different inputs at once",
+      "start": 80.4,
+      "duration": 4.88
+    },
+    {
+      "text": "and changing each of these two inputs",
+      "start": 83.04,
+      "duration": 4.48
+    },
+    {
+      "text": "and kind of the intersection",
+      "start": 85.28,
+      "duration": 5.44
+    },
+    {
+      "text": "of all those different",
+      "start": 87.52,
+      "duration": 5.36
+    },
+    {
+      "text": "outputs or runs of the model which",
+      "start": 90.72,
+      "duration": 4.56
+    },
+    {
+      "text": "produce those outputs",
+      "start": 92.88,
+      "duration": 4.4
+    },
+    {
+      "text": "and with the one-way data table we're",
+      "start": 95.28,
+      "duration": 3.839
+    },
+    {
+      "text": "looking only at a single",
+      "start": 97.28,
+      "duration": 5.28
+    },
+    {
+      "text": "input at once",
+      "start": 99.119,
+      "duration": 6.881
+    },
+    {
+      "text": "and that is sort of a limitation in",
+      "start": 102.56,
+      "duration": 4.08
+    },
+    {
+      "text": "excel",
+      "start": 106.0,
+      "duration": 3.52
+    },
+    {
+      "text": "that you basically can only really look",
+      "start": 106.64,
+      "duration": 3.28
+    },
+    {
+      "text": "at",
+      "start": 109.52,
+      "duration": 3.32
+    },
+    {
+      "text": "two variables at the same time in the",
+      "start": 109.92,
+      "duration": 4.479
+    },
+    {
+      "text": "analysis",
+      "start": 112.84,
+      "duration": 4.12
+    },
+    {
+      "text": "but it gets difficult to visualize more",
+      "start": 114.399,
+      "duration": 4.801
+    },
+    {
+      "text": "than two variables at once anyway",
+      "start": 116.96,
+      "duration": 6.159
+    },
+    {
+      "text": "so it's not a huge limitation",
+      "start": 119.2,
+      "duration": 6.32
+    },
+    {
+      "text": "even though uh it can be frustrating if",
+      "start": 123.119,
+      "duration": 3.6
+    },
+    {
+      "text": "you want to look at more",
+      "start": 125.52,
+      "duration": 3.439
+    },
+    {
+      "text": "variables you find yourself doing a lot",
+      "start": 126.719,
+      "duration": 4.001
+    },
+    {
+      "text": "of manual steps",
+      "start": 128.959,
+      "duration": 4.801
+    },
+    {
+      "text": "there is a way to to hack it into",
+      "start": 130.72,
+      "duration": 5.44
+    },
+    {
+      "text": "doing more than two variables at once if",
+      "start": 133.76,
+      "duration": 4.8
+    },
+    {
+      "text": "basically one of your variables",
+      "start": 136.16,
+      "duration": 5.68
+    },
+    {
+      "text": "was something like an identifier to",
+      "start": 138.56,
+      "duration": 5.52
+    },
+    {
+      "text": "do a vlookup on another table which has",
+      "start": 141.84,
+      "duration": 3.28
+    },
+    {
+      "text": "the real inputs",
+      "start": 144.08,
+      "duration": 4.0
+    },
+    {
+      "text": "you could set up something like that but",
+      "start": 145.12,
+      "duration": 4.64
+    },
+    {
+      "text": "that's a lot of effort",
+      "start": 148.08,
+      "duration": 4.0
+    },
+    {
+      "text": "and generally you're just going to be",
+      "start": 149.76,
+      "duration": 3.04
+    },
+    {
+      "text": "looking at",
+      "start": 152.08,
+      "duration": 2.76
+    },
+    {
+      "text": "two variables at once as a maximum in",
+      "start": 152.8,
+      "duration": 4.56
+    },
+    {
+      "text": "excel",
+      "start": 154.84,
+      "duration": 5.88
+    },
+    {
+      "text": "and you access this from the data tab",
+      "start": 157.36,
+      "duration": 6.72
+    },
+    {
+      "text": "and then what if analysis and then",
+      "start": 160.72,
+      "duration": 6.32
+    },
+    {
+      "text": "data table and then it asks for two",
+      "start": 164.08,
+      "duration": 3.68
+    },
+    {
+      "text": "inputs",
+      "start": 167.04,
+      "duration": 2.08
+    },
+    {
+      "text": "you're going to give it the row input",
+      "start": 167.76,
+      "duration": 3.28
+    },
+    {
+      "text": "cell that's any inputs you have going",
+      "start": 169.12,
+      "duration": 3.839
+    },
+    {
+      "text": "horizontally in a row",
+      "start": 171.04,
+      "duration": 4.64
+    },
+    {
+      "text": "and a column input cell that's any",
+      "start": 172.959,
+      "duration": 3.601
+    },
+    {
+      "text": "inputs you have",
+      "start": 175.68,
+      "duration": 3.68
+    },
+    {
+      "text": "going vertically down in a column and if",
+      "start": 176.56,
+      "duration": 4.24
+    },
+    {
+      "text": "it's a one-way data table you're only",
+      "start": 179.36,
+      "duration": 3.2
+    },
+    {
+      "text": "going to have one of the two filled in",
+      "start": 180.8,
+      "duration": 3.519
+    },
+    {
+      "text": "if it's two-way data table you're gonna",
+      "start": 182.56,
+      "duration": 3.12
+    },
+    {
+      "text": "have both filled in",
+      "start": 184.319,
+      "duration": 4.161
+    },
+    {
+      "text": "and we'll see that uh more precisely in",
+      "start": 185.68,
+      "duration": 6.0
+    },
+    {
+      "text": "an example here in a minute",
+      "start": 188.48,
+      "duration": 3.2
+    },
+    {
+      "text": "and then thinking about how we can",
+      "start": 191.92,
+      "duration": 3.92
+    },
+    {
+      "text": "visualize the results",
+      "start": 194.319,
+      "duration": 4.721
+    },
+    {
+      "text": "so there's two main ways",
+      "start": 195.84,
+      "duration": 5.92
+    },
+    {
+      "text": "in general to visualize sensitivity",
+      "start": 199.04,
+      "duration": 4.16
+    },
+    {
+      "text": "analysis",
+      "start": 201.76,
+      "duration": 4.96
+    },
+    {
+      "text": "and that's true for excel as well",
+      "start": 203.2,
+      "duration": 6.8
+    },
+    {
+      "text": "is that two approaches are graphing",
+      "start": 206.72,
+      "duration": 6.879
+    },
+    {
+      "text": "and conditional formatting so",
+      "start": 210.0,
+      "duration": 6.4
+    },
+    {
+      "text": "uh my rule of thumb is if it's a one-way",
+      "start": 213.599,
+      "duration": 4.161
+    },
+    {
+      "text": "data table you're looking at one",
+      "start": 216.4,
+      "duration": 2.399
+    },
+    {
+      "text": "variable at once",
+      "start": 217.76,
+      "duration": 4.0
+    },
+    {
+      "text": "a graph is going to be more effective",
+      "start": 218.799,
+      "duration": 4.641
+    },
+    {
+      "text": "and if you're looking at",
+      "start": 221.76,
+      "duration": 3.6
+    },
+    {
+      "text": "two variables that wants a two-way data",
+      "start": 223.44,
+      "duration": 3.359
+    },
+    {
+      "text": "table then",
+      "start": 225.36,
+      "duration": 3.28
+    },
+    {
+      "text": "conditional formatting is going to be",
+      "start": 226.799,
+      "duration": 3.921
+    },
+    {
+      "text": "the more effective approach",
+      "start": 228.64,
+      "duration": 4.239
+    },
+    {
+      "text": "that's not to say that you couldn't use",
+      "start": 230.72,
+      "duration": 3.68
+    },
+    {
+      "text": "conditional formatting with a one-way",
+      "start": 232.879,
+      "duration": 4.401
+    },
+    {
+      "text": "and you couldn't do a graph of a two-way",
+      "start": 234.4,
+      "duration": 5.119
+    },
+    {
+      "text": "but generally i think it makes the most",
+      "start": 237.28,
+      "duration": 5.36
+    },
+    {
+      "text": "sense to do it that way",
+      "start": 239.519,
+      "duration": 3.121
+    },
+    {
+      "text": "so here's an example of conditional",
+      "start": 243.28,
+      "duration": 3.44
+    },
+    {
+      "text": "formatting",
+      "start": 245.76,
+      "duration": 4.479
+    },
+    {
+      "text": "conditional formatting is just applying",
+      "start": 246.72,
+      "duration": 5.04
+    },
+    {
+      "text": "formatting to cells",
+      "start": 250.239,
+      "duration": 4.241
+    },
+    {
+      "text": "based on some conditions and what we're",
+      "start": 251.76,
+      "duration": 4.24
+    },
+    {
+      "text": "going to look at in this context",
+      "start": 254.48,
+      "duration": 4.24
+    },
+    {
+      "text": "is giving colors to higher and lower",
+      "start": 256.0,
+      "duration": 3.359
+    },
+    {
+      "text": "values",
+      "start": 258.72,
+      "duration": 3.199
+    },
+    {
+      "text": "so you can see in this table that the",
+      "start": 259.359,
+      "duration": 3.681
+    },
+    {
+      "text": "high values are red",
+      "start": 261.919,
+      "duration": 3.361
+    },
+    {
+      "text": "and the low values are green and that",
+      "start": 263.04,
+      "duration": 4.32
+    },
+    {
+      "text": "makes it very easy to just quickly look",
+      "start": 265.28,
+      "duration": 2.72
+    },
+    {
+      "text": "at this",
+      "start": 267.36,
+      "duration": 3.119
+    },
+    {
+      "text": "and understand where the higher and",
+      "start": 268.0,
+      "duration": 4.479
+    },
+    {
+      "text": "lower parts of this table are",
+      "start": 270.479,
+      "duration": 3.681
+    },
+    {
+      "text": "and that's going to be really useful for",
+      "start": 272.479,
+      "duration": 2.881
+    },
+    {
+      "text": "understanding the results of our",
+      "start": 274.16,
+      "duration": 4.08
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 275.36,
+      "duration": 7.119
+    },
+    {
+      "text": "so let's go ahead and work on an example",
+      "start": 278.24,
+      "duration": 6.64
+    },
+    {
+      "text": "so i'll be starting from the existing",
+      "start": 282.479,
+      "duration": 5.28
+    },
+    {
+      "text": "dynamic salary retirement model",
+      "start": 284.88,
+      "duration": 4.64
+    },
+    {
+      "text": "and now i'm going to be adding",
+      "start": 287.759,
+      "duration": 3.281
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 289.52,
+      "duration": 4.8
+    },
+    {
+      "text": "to it so uh",
+      "start": 291.04,
+      "duration": 5.52
+    },
+    {
+      "text": "and you can find the completed example",
+      "start": 294.32,
+      "duration": 3.84
+    },
+    {
+      "text": "of this on the course",
+      "start": 296.56,
+      "duration": 4.32
+    },
+    {
+      "text": "site which has everything in there",
+      "start": 298.16,
+      "duration": 4.879
+    },
+    {
+      "text": "already",
+      "start": 300.88,
+      "duration": 5.36
+    },
+    {
+      "text": "so let's first say what if",
+      "start": 303.039,
+      "duration": 7.6
+    },
+    {
+      "text": "the savings rate was different it's 25",
+      "start": 306.24,
+      "duration": 6.399
+    },
+    {
+      "text": "of course we can go in and we can change",
+      "start": 310.639,
+      "duration": 4.481
+    },
+    {
+      "text": "it and we can see the result of that",
+      "start": 312.639,
+      "duration": 5.681
+    },
+    {
+      "text": "but we want to have the values across a",
+      "start": 315.12,
+      "duration": 4.0
+    },
+    {
+      "text": "bunch of different",
+      "start": 318.32,
+      "duration": 2.4
+    },
+    {
+      "text": "values of saving rates we want to see",
+      "start": 319.12,
+      "duration": 3.28
+    },
+    {
+      "text": "all the years for retirement all at once",
+      "start": 320.72,
+      "duration": 2.319
+    },
+    {
+      "text": "in the model",
+      "start": 322.4,
+      "duration": 2.639
+    },
+    {
+      "text": "without having to go in and change the",
+      "start": 323.039,
+      "duration": 4.72
+    },
+    {
+      "text": "input values",
+      "start": 325.039,
+      "duration": 6.321
+    },
+    {
+      "text": "so we can do that with a data table",
+      "start": 327.759,
+      "duration": 5.28
+    },
+    {
+      "text": "so the first thing that we'll do to",
+      "start": 331.36,
+      "duration": 3.2
+    },
+    {
+      "text": "build out the data table",
+      "start": 333.039,
+      "duration": 4.16
+    },
+    {
+      "text": "is first you want to reference whatever",
+      "start": 334.56,
+      "duration": 4.8
+    },
+    {
+      "text": "cell it is that has the output",
+      "start": 337.199,
+      "duration": 3.761
+    },
+    {
+      "text": "that you're trying to look at you can",
+      "start": 339.36,
+      "duration": 4.08
+    },
+    {
+      "text": "only look at one output at once",
+      "start": 340.96,
+      "duration": 5.12
+    },
+    {
+      "text": "in a data table and so you may have to",
+      "start": 343.44,
+      "duration": 4.0
+    },
+    {
+      "text": "have multiple if you have multiple",
+      "start": 346.08,
+      "duration": 2.8
+    },
+    {
+      "text": "outputs from your model",
+      "start": 347.44,
+      "duration": 4.479
+    },
+    {
+      "text": "here we just have years to retirement as",
+      "start": 348.88,
+      "duration": 4.64
+    },
+    {
+      "text": "our output from the model so i'm going",
+      "start": 351.919,
+      "duration": 5.361
+    },
+    {
+      "text": "to reference that over to this cell",
+      "start": 353.52,
+      "duration": 3.76
+    },
+    {
+      "text": "then um we want to put the values of the",
+      "start": 357.36,
+      "duration": 5.92
+    },
+    {
+      "text": "inputs that we want to look at so that's",
+      "start": 361.039,
+      "duration": 2.641
+    },
+    {
+      "text": "the",
+      "start": 363.28,
+      "duration": 2.72
+    },
+    {
+      "text": "the step one and the formal sensitivity",
+      "start": 363.68,
+      "duration": 3.92
+    },
+    {
+      "text": "analysis process",
+      "start": 366.0,
+      "duration": 3.12
+    },
+    {
+      "text": "thinking about all the different values",
+      "start": 367.6,
+      "duration": 3.439
+    },
+    {
+      "text": "of the inputs we want to look at",
+      "start": 369.12,
+      "duration": 5.199
+    },
+    {
+      "text": "so for savings rate let's say let's",
+      "start": 371.039,
+      "duration": 5.521
+    },
+    {
+      "text": "start it at five percent and go up to 70",
+      "start": 374.319,
+      "duration": 3.201
+    },
+    {
+      "text": "percent",
+      "start": 376.56,
+      "duration": 3.759
+    },
+    {
+      "text": "in five percent increments so in excel",
+      "start": 377.52,
+      "duration": 4.08
+    },
+    {
+      "text": "once you type out",
+      "start": 380.319,
+      "duration": 4.32
+    },
+    {
+      "text": "uh two numbers they can",
+      "start": 381.6,
+      "duration": 5.92
+    },
+    {
+      "text": "deduce the pattern from that and keep",
+      "start": 384.639,
+      "duration": 4.241
+    },
+    {
+      "text": "increasing it from there",
+      "start": 387.52,
+      "duration": 3.679
+    },
+    {
+      "text": "so if you drag it then we'll continue to",
+      "start": 388.88,
+      "duration": 3.439
+    },
+    {
+      "text": "get five percent",
+      "start": 391.199,
+      "duration": 4.161
+    },
+    {
+      "text": "increments after that",
+      "start": 392.319,
+      "duration": 5.121
+    },
+    {
+      "text": "so now we have the setup to be able to",
+      "start": 395.36,
+      "duration": 3.2
+    },
+    {
+      "text": "create the",
+      "start": 397.44,
+      "duration": 5.12
+    },
+    {
+      "text": "data table and this is a one-way data",
+      "start": 398.56,
+      "duration": 6.0
+    },
+    {
+      "text": "table because we're looking at only",
+      "start": 402.56,
+      "duration": 5.919
+    },
+    {
+      "text": "one input at once and",
+      "start": 404.56,
+      "duration": 6.4
+    },
+    {
+      "text": "so we highlight the entire range here",
+      "start": 408.479,
+      "duration": 4.241
+    },
+    {
+      "text": "you want to make sure that you get",
+      "start": 410.96,
+      "duration": 3.92
+    },
+    {
+      "text": "the output cell as well as all of the",
+      "start": 412.72,
+      "duration": 4.0
+    },
+    {
+      "text": "inputs",
+      "start": 414.88,
+      "duration": 3.36
+    },
+    {
+      "text": "and you want to make sure that your",
+      "start": 416.72,
+      "duration": 3.44
+    },
+    {
+      "text": "output is to the right",
+      "start": 418.24,
+      "duration": 4.88
+    },
+    {
+      "text": "of all your inputs assuming you're doing",
+      "start": 420.16,
+      "duration": 4.0
+    },
+    {
+      "text": "a vertical",
+      "start": 423.12,
+      "duration": 4.56
+    },
+    {
+      "text": "one-way data table and so we highlight",
+      "start": 424.16,
+      "duration": 4.56
+    },
+    {
+      "text": "all this",
+      "start": 427.68,
+      "duration": 4.88
+    },
+    {
+      "text": "and then we can go to the data tab",
+      "start": 428.72,
+      "duration": 6.96
+    },
+    {
+      "text": "and then to what-if analysis",
+      "start": 432.56,
+      "duration": 6.56
+    },
+    {
+      "text": "and then to data table and that's when",
+      "start": 435.68,
+      "duration": 5.519
+    },
+    {
+      "text": "it pops up this thing which asks about",
+      "start": 439.12,
+      "duration": 4.24
+    },
+    {
+      "text": "the row input cell and the column input",
+      "start": 441.199,
+      "duration": 3.12
+    },
+    {
+      "text": "cell",
+      "start": 443.36,
+      "duration": 3.04
+    },
+    {
+      "text": "and for the one-way data table we're",
+      "start": 444.319,
+      "duration": 4.481
+    },
+    {
+      "text": "only going to fill in one of those",
+      "start": 446.4,
+      "duration": 5.199
+    },
+    {
+      "text": "so our inputs are arranged in a column",
+      "start": 448.8,
+      "duration": 4.959
+    },
+    {
+      "text": "and so we're going to use the column",
+      "start": 451.599,
+      "duration": 4.88
+    },
+    {
+      "text": "input cell and the cell that we want to",
+      "start": 453.759,
+      "duration": 3.521
+    },
+    {
+      "text": "target",
+      "start": 456.479,
+      "duration": 2.961
+    },
+    {
+      "text": "is the cell which contains the value of",
+      "start": 457.28,
+      "duration": 4.4
+    },
+    {
+      "text": "the input that we're trying to change",
+      "start": 459.44,
+      "duration": 3.68
+    },
+    {
+      "text": "here we're talking about the savings",
+      "start": 461.68,
+      "duration": 4.32
+    },
+    {
+      "text": "rate and so i'm going to",
+      "start": 463.12,
+      "duration": 4.96
+    },
+    {
+      "text": "reference the savings rate for the",
+      "start": 466.0,
+      "duration": 3.12
+    },
+    {
+      "text": "column",
+      "start": 468.08,
+      "duration": 4.64
+    },
+    {
+      "text": "input cell and that's it then once i hit",
+      "start": 469.12,
+      "duration": 4.96
+    },
+    {
+      "text": "ok",
+      "start": 472.72,
+      "duration": 3.68
+    },
+    {
+      "text": "we've got our results here so if you're",
+      "start": 474.08,
+      "duration": 3.679
+    },
+    {
+      "text": "able to save",
+      "start": 476.4,
+      "duration": 3.76
+    },
+    {
+      "text": "seventy percent every year your years",
+      "start": 477.759,
+      "duration": 4.56
+    },
+    {
+      "text": "retirement would drop from the baseline",
+      "start": 480.16,
+      "duration": 5.039
+    },
+    {
+      "text": "28 down to 17 years",
+      "start": 482.319,
+      "duration": 5.681
+    },
+    {
+      "text": "so that's a huge difference and then if",
+      "start": 485.199,
+      "duration": 3.601
+    },
+    {
+      "text": "you",
+      "start": 488.0,
+      "duration": 4.56
+    },
+    {
+      "text": "were able to save less it's gonna take",
+      "start": 488.8,
+      "duration": 8.0
+    },
+    {
+      "text": "substantially longer to retire as well",
+      "start": 492.56,
+      "duration": 7.68
+    },
+    {
+      "text": "um so then we",
+      "start": 496.8,
+      "duration": 7.2
+    },
+    {
+      "text": "would want to label this savings rate",
+      "start": 500.24,
+      "duration": 5.84
+    },
+    {
+      "text": "so it's clear what we're actually",
+      "start": 504.0,
+      "duration": 3.599
+    },
+    {
+      "text": "changing here",
+      "start": 506.08,
+      "duration": 4.72
+    },
+    {
+      "text": "um and we can",
+      "start": 507.599,
+      "duration": 6.32
+    },
+    {
+      "text": "uh put a uh merge",
+      "start": 510.8,
+      "duration": 7.2
+    },
+    {
+      "text": "sell here years retirement",
+      "start": 513.919,
+      "duration": 7.841
+    },
+    {
+      "text": "versus savings rate",
+      "start": 518.0,
+      "duration": 6.8
+    },
+    {
+      "text": "and wrap the text on that",
+      "start": 521.76,
+      "duration": 6.56
+    },
+    {
+      "text": "so now we've got nice table",
+      "start": 524.8,
+      "duration": 5.36
+    },
+    {
+      "text": "and you would want to you know apply",
+      "start": 528.32,
+      "duration": 3.04
+    },
+    {
+      "text": "some coloring to this",
+      "start": 530.16,
+      "duration": 3.28
+    },
+    {
+      "text": "and put nice borders around it and",
+      "start": 531.36,
+      "duration": 3.599
+    },
+    {
+      "text": "everything",
+      "start": 533.44,
+      "duration": 3.2
+    },
+    {
+      "text": "i'm going to leave it there for now you",
+      "start": 534.959,
+      "duration": 3.44
+    },
+    {
+      "text": "can look at the completed example for",
+      "start": 536.64,
+      "duration": 4.4
+    },
+    {
+      "text": "the full formatting on it",
+      "start": 538.399,
+      "duration": 4.961
+    },
+    {
+      "text": "but one other thing i do want to mention",
+      "start": 541.04,
+      "duration": 3.68
+    },
+    {
+      "text": "which is",
+      "start": 543.36,
+      "duration": 4.159
+    },
+    {
+      "text": "helpful for these sata tables is we do",
+      "start": 544.72,
+      "duration": 4.48
+    },
+    {
+      "text": "have to have this reference cell here",
+      "start": 547.519,
+      "duration": 4.561
+    },
+    {
+      "text": "but there's no actual uh calculation",
+      "start": 549.2,
+      "duration": 5.28
+    },
+    {
+      "text": "going here this is the baseline result",
+      "start": 552.08,
+      "duration": 4.48
+    },
+    {
+      "text": "so it's helpful to hide this because",
+      "start": 554.48,
+      "duration": 3.84
+    },
+    {
+      "text": "it's just kind of distracting",
+      "start": 556.56,
+      "duration": 3.839
+    },
+    {
+      "text": "and so i usually just go ahead and make",
+      "start": 558.32,
+      "duration": 3.44
+    },
+    {
+      "text": "the text for that",
+      "start": 560.399,
+      "duration": 3.44
+    },
+    {
+      "text": "white so that it hides that cell even",
+      "start": 561.76,
+      "duration": 3.84
+    },
+    {
+      "text": "though it has to be there",
+      "start": 563.839,
+      "duration": 4.641
+    },
+    {
+      "text": "and now we just see each of the values",
+      "start": 565.6,
+      "duration": 3.6
+    },
+    {
+      "text": "with",
+      "start": 568.48,
+      "duration": 4.0
+    },
+    {
+      "text": "uh the input",
+      "start": 569.2,
+      "duration": 5.12
+    },
+    {
+      "text": "so then to visualize this i mentioned",
+      "start": 572.48,
+      "duration": 4.56
+    },
+    {
+      "text": "that graphs make a lot of sense",
+      "start": 574.32,
+      "duration": 5.6
+    },
+    {
+      "text": "for one-way data tables so let's go",
+      "start": 577.04,
+      "duration": 5.2
+    },
+    {
+      "text": "ahead and insert and go to recommended",
+      "start": 579.92,
+      "duration": 5.52
+    },
+    {
+      "text": "charts and we can pick an appropriate",
+      "start": 582.24,
+      "duration": 6.159
+    },
+    {
+      "text": "chart type for this",
+      "start": 585.44,
+      "duration": 6.32
+    },
+    {
+      "text": "and this is going to be the",
+      "start": 588.399,
+      "duration": 6.481
+    },
+    {
+      "text": "years retirement",
+      "start": 591.76,
+      "duration": 3.12
+    },
+    {
+      "text": "versus the savings rate",
+      "start": 595.04,
+      "duration": 3.359
+    },
+    {
+      "text": "uh we would want to add access titles",
+      "start": 599.68,
+      "duration": 8.719
+    },
+    {
+      "text": "this is the savings rate",
+      "start": 604.24,
+      "duration": 4.159
+    },
+    {
+      "text": "this is the years for retirement",
+      "start": 609.36,
+      "duration": 3.84
+    },
+    {
+      "text": "and then it's very easy to see that",
+      "start": 614.24,
+      "duration": 5.599
+    },
+    {
+      "text": "of course as we save more we're able to",
+      "start": 618.079,
+      "duration": 3.44
+    },
+    {
+      "text": "retire quicker",
+      "start": 619.839,
+      "duration": 4.481
+    },
+    {
+      "text": "but also you can see that the initial",
+      "start": 621.519,
+      "duration": 4.241
+    },
+    {
+      "text": "changes in the savings rate",
+      "start": 624.32,
+      "duration": 3.84
+    },
+    {
+      "text": "have a greater impact than the later",
+      "start": 625.76,
+      "duration": 4.16
+    },
+    {
+      "text": "changes in the savings rate",
+      "start": 628.16,
+      "duration": 3.919
+    },
+    {
+      "text": "it looks sort of exponential here and",
+      "start": 629.92,
+      "duration": 3.359
+    },
+    {
+      "text": "then as you get",
+      "start": 632.079,
+      "duration": 4.641
+    },
+    {
+      "text": "further out it looks more linear",
+      "start": 633.279,
+      "duration": 6.321
+    },
+    {
+      "text": "and so going from a ten percent to a",
+      "start": 636.72,
+      "duration": 4.08
+    },
+    {
+      "text": "twenty percent",
+      "start": 639.6,
+      "duration": 4.32
+    },
+    {
+      "text": "savings rate is a much bigger impact",
+      "start": 640.8,
+      "duration": 6.32
+    },
+    {
+      "text": "than going from a sixty savings rate to",
+      "start": 643.92,
+      "duration": 4.159
+    },
+    {
+      "text": "a 70",
+      "start": 647.12,
+      "duration": 4.08
+    },
+    {
+      "text": "savings rate and it's not very clear",
+      "start": 648.079,
+      "duration": 5.041
+    },
+    {
+      "text": "just looking at the numbers to draw that",
+      "start": 651.2,
+      "duration": 3.12
+    },
+    {
+      "text": "conclusion",
+      "start": 653.12,
+      "duration": 3.68
+    },
+    {
+      "text": "but looking at the graph it becomes very",
+      "start": 654.32,
+      "duration": 3.84
+    },
+    {
+      "text": "clear",
+      "start": 656.8,
+      "duration": 3.76
+    },
+    {
+      "text": "another thing which you might have",
+      "start": 658.16,
+      "duration": 3.28
+    },
+    {
+      "text": "noticed already",
+      "start": 660.56,
+      "duration": 2.88
+    },
+    {
+      "text": "but becomes even more clear in the graph",
+      "start": 661.44,
+      "duration": 4.48
+    },
+    {
+      "text": "is that it caps out at 40 and that seems",
+      "start": 663.44,
+      "duration": 5.44
+    },
+    {
+      "text": "incorrect um why is there no difference",
+      "start": 665.92,
+      "duration": 4.32
+    },
+    {
+      "text": "between five and ten percent",
+      "start": 668.88,
+      "duration": 3.36
+    },
+    {
+      "text": "savings rate seems like it should keep",
+      "start": 670.24,
+      "duration": 4.24
+    },
+    {
+      "text": "going up and it should",
+      "start": 672.24,
+      "duration": 4.96
+    },
+    {
+      "text": "uh the issue is that our model is",
+      "start": 674.48,
+      "duration": 4.88
+    },
+    {
+      "text": "actually capped at 40 years",
+      "start": 677.2,
+      "duration": 5.44
+    },
+    {
+      "text": "and so it's maxed out the model here and",
+      "start": 679.36,
+      "duration": 3.84
+    },
+    {
+      "text": "so",
+      "start": 682.64,
+      "duration": 2.72
+    },
+    {
+      "text": "if you did really need to evaluate five",
+      "start": 683.2,
+      "duration": 3.759
+    },
+    {
+      "text": "and ten percent savings rate you would",
+      "start": 685.36,
+      "duration": 2.64
+    },
+    {
+      "text": "then want to expand",
+      "start": 686.959,
+      "duration": 4.56
+    },
+    {
+      "text": "out the model so um sensitive analysis",
+      "start": 688.0,
+      "duration": 5.04
+    },
+    {
+      "text": "is really helpful for kind of stressing",
+      "start": 691.519,
+      "duration": 2.641
+    },
+    {
+      "text": "your model",
+      "start": 693.04,
+      "duration": 3.28
+    },
+    {
+      "text": "at the far ends and seeing if it can",
+      "start": 694.16,
+      "duration": 4.08
+    },
+    {
+      "text": "handle the inputs that you're throwing",
+      "start": 696.32,
+      "duration": 4.24
+    },
+    {
+      "text": "at it",
+      "start": 698.24,
+      "duration": 2.32
+    },
+    {
+      "text": "so that's the one-way data table now",
+      "start": 700.64,
+      "duration": 3.439
+    },
+    {
+      "text": "let's look",
+      "start": 703.36,
+      "duration": 4.32
+    },
+    {
+      "text": "at a two-way data table so let's keep",
+      "start": 704.079,
+      "duration": 6.721
+    },
+    {
+      "text": "working with the savings rate but now",
+      "start": 707.68,
+      "duration": 5.44
+    },
+    {
+      "text": "let's also change the",
+      "start": 710.8,
+      "duration": 4.039
+    },
+    {
+      "text": "uh how often we're getting the",
+      "start": 713.12,
+      "duration": 3.12
+    },
+    {
+      "text": "promotions",
+      "start": 714.839,
+      "duration": 4.761
+    },
+    {
+      "text": "in the same analysis so we can take the",
+      "start": 716.24,
+      "duration": 5.2
+    },
+    {
+      "text": "same savings rates",
+      "start": 719.6,
+      "duration": 6.64
+    },
+    {
+      "text": "those were fine savings rates to use",
+      "start": 721.44,
+      "duration": 4.8
+    },
+    {
+      "text": "and now we want to also line up the",
+      "start": 726.72,
+      "duration": 3.84
+    },
+    {
+      "text": "values that we want to look at",
+      "start": 728.959,
+      "duration": 6.161
+    },
+    {
+      "text": "for how often the promotions occur so",
+      "start": 730.56,
+      "duration": 7.2
+    },
+    {
+      "text": "we can just go up one by one and you can",
+      "start": 735.12,
+      "duration": 4.32
+    },
+    {
+      "text": "drag those to go",
+      "start": 737.76,
+      "duration": 6.72
+    },
+    {
+      "text": "all the way let's go out every 10 years",
+      "start": 739.44,
+      "duration": 6.959
+    },
+    {
+      "text": "and now you can see kind of a table",
+      "start": 744.48,
+      "duration": 3.76
+    },
+    {
+      "text": "starting to form here",
+      "start": 746.399,
+      "duration": 5.44
+    },
+    {
+      "text": "and whereas with the one-way data table",
+      "start": 748.24,
+      "duration": 7.52
+    },
+    {
+      "text": "we put the uh output we want to look at",
+      "start": 751.839,
+      "duration": 6.961
+    },
+    {
+      "text": "reference to up and to the right",
+      "start": 755.76,
+      "duration": 6.72
+    },
+    {
+      "text": "of our first input here",
+      "start": 758.8,
+      "duration": 5.52
+    },
+    {
+      "text": "the output is going to go right here",
+      "start": 762.48,
+      "duration": 4.24
+    },
+    {
+      "text": "it's going to go in this empty cell",
+      "start": 764.32,
+      "duration": 6.24
+    },
+    {
+      "text": "in between our column and our row input",
+      "start": 766.72,
+      "duration": 5.919
+    },
+    {
+      "text": "here we're going to reference the year's",
+      "start": 770.56,
+      "duration": 4.24
+    },
+    {
+      "text": "retirement",
+      "start": 772.639,
+      "duration": 4.32
+    },
+    {
+      "text": "so then now we have the setup to where",
+      "start": 774.8,
+      "duration": 3.039
+    },
+    {
+      "text": "we can create",
+      "start": 776.959,
+      "duration": 3.44
+    },
+    {
+      "text": "the two-way data table so if i highlight",
+      "start": 777.839,
+      "duration": 4.401
+    },
+    {
+      "text": "this entire range",
+      "start": 780.399,
+      "duration": 4.641
+    },
+    {
+      "text": "now i can go again to data what-if",
+      "start": 782.24,
+      "duration": 4.08
+    },
+    {
+      "text": "analysis",
+      "start": 785.04,
+      "duration": 4.0
+    },
+    {
+      "text": "data table and now that it's a two-way",
+      "start": 786.32,
+      "duration": 4.319
+    },
+    {
+      "text": "data table i'm going to fill in",
+      "start": 789.04,
+      "duration": 4.72
+    },
+    {
+      "text": "both of these and so the the numbers",
+      "start": 790.639,
+      "duration": 6.161
+    },
+    {
+      "text": "the input which is going in a row is the",
+      "start": 793.76,
+      "duration": 6.16
+    },
+    {
+      "text": "promotions every n years and then the",
+      "start": 796.8,
+      "duration": 5.279
+    },
+    {
+      "text": "input that's going in the column",
+      "start": 799.92,
+      "duration": 5.2
+    },
+    {
+      "text": "is the savings rate and then when i hit",
+      "start": 802.079,
+      "duration": 5.601
+    },
+    {
+      "text": "okay it will calculate the model a whole",
+      "start": 805.12,
+      "duration": 3.6
+    },
+    {
+      "text": "bunch of times",
+      "start": 807.68,
+      "duration": 6.48
+    },
+    {
+      "text": "for us so now we've got",
+      "start": 808.72,
+      "duration": 11.44
+    },
+    {
+      "text": "14 times 9 different runs of the model",
+      "start": 814.16,
+      "duration": 8.16
+    },
+    {
+      "text": "all together without having to go and",
+      "start": 820.16,
+      "duration": 3.679
+    },
+    {
+      "text": "manually change out those",
+      "start": 822.32,
+      "duration": 4.079
+    },
+    {
+      "text": "inputs but you just look at this thing",
+      "start": 823.839,
+      "duration": 3.521
+    },
+    {
+      "text": "you know you can",
+      "start": 826.399,
+      "duration": 2.8
+    },
+    {
+      "text": "kind of see looking at it for a while",
+      "start": 827.36,
+      "duration": 3.68
+    },
+    {
+      "text": "okay lower values are over here",
+      "start": 829.199,
+      "duration": 5.121
+    },
+    {
+      "text": "higher values are over here but",
+      "start": 831.04,
+      "duration": 5.919
+    },
+    {
+      "text": "it's not so easy to just immediately get",
+      "start": 834.32,
+      "duration": 4.56
+    },
+    {
+      "text": "meaning out of that",
+      "start": 836.959,
+      "duration": 4.32
+    },
+    {
+      "text": "so the next step is then to add the",
+      "start": 838.88,
+      "duration": 3.199
+    },
+    {
+      "text": "conditional",
+      "start": 841.279,
+      "duration": 3.601
+    },
+    {
+      "text": "formatting so for conditional formatting",
+      "start": 842.079,
+      "duration": 4.0
+    },
+    {
+      "text": "it's on the home",
+      "start": 844.88,
+      "duration": 4.72
+    },
+    {
+      "text": "tab right here conditional formatting",
+      "start": 846.079,
+      "duration": 5.361
+    },
+    {
+      "text": "and there are a lot of things you can do",
+      "start": 849.6,
+      "duration": 3.28
+    },
+    {
+      "text": "with it but here we're just going to",
+      "start": 851.44,
+      "duration": 2.56
+    },
+    {
+      "text": "focus on the",
+      "start": 852.88,
+      "duration": 4.319
+    },
+    {
+      "text": "color scales and you can hover over the",
+      "start": 854.0,
+      "duration": 4.72
+    },
+    {
+      "text": "color scales to see what it's going to",
+      "start": 857.199,
+      "duration": 3.041
+    },
+    {
+      "text": "look like",
+      "start": 858.72,
+      "duration": 4.4
+    },
+    {
+      "text": "and i like to use the red and green",
+      "start": 860.24,
+      "duration": 3.839
+    },
+    {
+      "text": "color scales",
+      "start": 863.12,
+      "duration": 2.959
+    },
+    {
+      "text": "because people just intuitively",
+      "start": 864.079,
+      "duration": 3.281
+    },
+    {
+      "text": "associate green with good",
+      "start": 866.079,
+      "duration": 4.0
+    },
+    {
+      "text": "and red with bad if they're put together",
+      "start": 867.36,
+      "duration": 3.76
+    },
+    {
+      "text": "and so",
+      "start": 870.079,
+      "duration": 4.241
+    },
+    {
+      "text": "it makes a lot of sense whatever is",
+      "start": 871.12,
+      "duration": 6.24
+    },
+    {
+      "text": "uh whatever direction uh",
+      "start": 874.32,
+      "duration": 5.519
+    },
+    {
+      "text": "higher or lower is good in your model",
+      "start": 877.36,
+      "duration": 4.24
+    },
+    {
+      "text": "you would make that green",
+      "start": 879.839,
+      "duration": 5.12
+    },
+    {
+      "text": "and uh vice versa for red",
+      "start": 881.6,
+      "duration": 6.479
+    },
+    {
+      "text": "so here um looking at this first one",
+      "start": 884.959,
+      "duration": 4.641
+    },
+    {
+      "text": "it's actually highlighting the higher",
+      "start": 888.079,
+      "duration": 3.361
+    },
+    {
+      "text": "years to retirement in green",
+      "start": 889.6,
+      "duration": 3.679
+    },
+    {
+      "text": "but a low number of years until",
+      "start": 891.44,
+      "duration": 3.68
+    },
+    {
+      "text": "retirement is a good thing",
+      "start": 893.279,
+      "duration": 3.281
+    },
+    {
+      "text": "and so we want to go to this second",
+      "start": 895.12,
+      "duration": 3.6
+    },
+    {
+      "text": "color map and",
+      "start": 896.56,
+      "duration": 5.76
+    },
+    {
+      "text": "then we have the uh high years to",
+      "start": 898.72,
+      "duration": 5.44
+    },
+    {
+      "text": "retirement highlighted in red",
+      "start": 902.32,
+      "duration": 3.6
+    },
+    {
+      "text": "and the low years to retirement",
+      "start": 904.16,
+      "duration": 3.039
+    },
+    {
+      "text": "highlighted in",
+      "start": 905.92,
+      "duration": 4.32
+    },
+    {
+      "text": "green so",
+      "start": 907.199,
+      "duration": 5.2
+    },
+    {
+      "text": "then we can see now at a very easy",
+      "start": 910.24,
+      "duration": 3.36
+    },
+    {
+      "text": "glance",
+      "start": 912.399,
+      "duration": 3.44
+    },
+    {
+      "text": "uh where the low and high years to",
+      "start": 913.6,
+      "duration": 4.96
+    },
+    {
+      "text": "retirement are",
+      "start": 915.839,
+      "duration": 5.841
+    },
+    {
+      "text": "and that",
+      "start": 918.56,
+      "duration": 3.12
+    },
+    {
+      "text": "if you uh and we also see again this",
+      "start": 924.56,
+      "duration": 5.68
+    },
+    {
+      "text": "issue of it kind of maxing out the model",
+      "start": 927.12,
+      "duration": 7.44
+    },
+    {
+      "text": "in all these five and ten percent cases",
+      "start": 930.24,
+      "duration": 4.32
+    },
+    {
+      "text": "um so then you would want to add a",
+      "start": 934.72,
+      "duration": 4.32
+    },
+    {
+      "text": "little bit more",
+      "start": 938.32,
+      "duration": 2.879
+    },
+    {
+      "text": "formatting to this you would want to put",
+      "start": 939.04,
+      "duration": 4.4
+    },
+    {
+      "text": "labels promotions",
+      "start": 941.199,
+      "duration": 6.241
+    },
+    {
+      "text": "every number of years",
+      "start": 943.44,
+      "duration": 8.079
+    },
+    {
+      "text": "and we can then merge that",
+      "start": 947.44,
+      "duration": 4.079
+    },
+    {
+      "text": "and we would want to um",
+      "start": 952.0,
+      "duration": 6.399
+    },
+    {
+      "text": "merge over here as well and this can be",
+      "start": 956.399,
+      "duration": 4.88
+    },
+    {
+      "text": "the savings rate",
+      "start": 958.399,
+      "duration": 5.36
+    },
+    {
+      "text": "and to get that going vertically we can",
+      "start": 961.279,
+      "duration": 4.24
+    },
+    {
+      "text": "go into format cells",
+      "start": 963.759,
+      "duration": 5.361
+    },
+    {
+      "text": "change the alignment to 90 degrees",
+      "start": 965.519,
+      "duration": 6.721
+    },
+    {
+      "text": "and then center that",
+      "start": 969.12,
+      "duration": 3.12
+    },
+    {
+      "text": "and let's uh put that",
+      "start": 973.199,
+      "duration": 9.121
+    },
+    {
+      "text": "there and we can bold these things",
+      "start": 976.56,
+      "duration": 5.76
+    },
+    {
+      "text": "and then you know you would want to",
+      "start": 982.56,
+      "duration": 4.0
+    },
+    {
+      "text": "[Music]",
+      "start": 985.44,
+      "duration": 5.519
+    },
+    {
+      "text": "throw your title up here",
+      "start": 986.56,
+      "duration": 4.399
+    },
+    {
+      "text": "so this is going to be the ears to",
+      "start": 991.519,
+      "duration": 4.641
+    },
+    {
+      "text": "retirement",
+      "start": 994.839,
+      "duration": 5.721
+    },
+    {
+      "text": "or savings rate versus promotions",
+      "start": 996.16,
+      "duration": 8.239
+    },
+    {
+      "text": "every number of years",
+      "start": 1000.56,
+      "duration": 3.839
+    },
+    {
+      "text": "and then we have our data table",
+      "start": 1007.92,
+      "duration": 7.599
+    },
+    {
+      "text": "um so",
+      "start": 1012.079,
+      "duration": 5.44
+    },
+    {
+      "text": "and then just like with the one-way data",
+      "start": 1015.519,
+      "duration": 3.041
+    },
+    {
+      "text": "table",
+      "start": 1017.519,
+      "duration": 3.76
+    },
+    {
+      "text": "i like to hide this cell because it's",
+      "start": 1018.56,
+      "duration": 3.04
+    },
+    {
+      "text": "not",
+      "start": 1021.279,
+      "duration": 2.881
+    },
+    {
+      "text": "anything meaningful for us so i just",
+      "start": 1021.6,
+      "duration": 4.0
+    },
+    {
+      "text": "make that white",
+      "start": 1024.16,
+      "duration": 4.08
+    },
+    {
+      "text": "and then we're left with just what we",
+      "start": 1025.6,
+      "duration": 5.12
+    },
+    {
+      "text": "actually want to see",
+      "start": 1028.24,
+      "duration": 4.719
+    },
+    {
+      "text": "um and again you would want to apply",
+      "start": 1030.72,
+      "duration": 5.28
+    },
+    {
+      "text": "some coloring to the rest of this",
+      "start": 1032.959,
+      "duration": 5.521
+    },
+    {
+      "text": "to make it kind of stand out as a table",
+      "start": 1036.0,
+      "duration": 4.799
+    },
+    {
+      "text": "and you can see the full formatting of",
+      "start": 1038.48,
+      "duration": 2.88
+    },
+    {
+      "text": "that",
+      "start": 1040.799,
+      "duration": 3.681
+    },
+    {
+      "text": "in the completed excel example",
+      "start": 1041.36,
+      "duration": 5.04
+    },
+    {
+      "text": "but that's that's the idea here of how",
+      "start": 1044.48,
+      "duration": 3.599
+    },
+    {
+      "text": "to do a one-way data table",
+      "start": 1046.4,
+      "duration": 3.84
+    },
+    {
+      "text": "with visualization and a two-way data",
+      "start": 1048.079,
+      "duration": 3.041
+    },
+    {
+      "text": "table",
+      "start": 1050.24,
+      "duration": 4.88
+    },
+    {
+      "text": "with visualization in excel",
+      "start": 1051.12,
+      "duration": 7.439
+    },
+    {
+      "text": "and the lab exercise for",
+      "start": 1055.12,
+      "duration": 6.88
+    },
+    {
+      "text": "this portion of the lecture is then to",
+      "start": 1058.559,
+      "duration": 6.721
+    },
+    {
+      "text": "do this for your own project one",
+      "start": 1062.0,
+      "duration": 6.799
+    },
+    {
+      "text": "model um so take your excel model from",
+      "start": 1065.28,
+      "duration": 5.04
+    },
+    {
+      "text": "project one",
+      "start": 1068.799,
+      "duration": 5.281
+    },
+    {
+      "text": "and you're going to um",
+      "start": 1070.32,
+      "duration": 6.0
+    },
+    {
+      "text": "probably make a copy of it just in case",
+      "start": 1074.08,
+      "duration": 4.32
+    },
+    {
+      "text": "something you mess up something",
+      "start": 1076.32,
+      "duration": 4.08
+    },
+    {
+      "text": "but then you're going to implement a",
+      "start": 1078.4,
+      "duration": 3.92
+    },
+    {
+      "text": "similar kind of analysis to what i just",
+      "start": 1080.4,
+      "duration": 2.96
+    },
+    {
+      "text": "did",
+      "start": 1082.32,
+      "duration": 6.32
+    },
+    {
+      "text": "so you're going to add a one-way",
+      "start": 1083.36,
+      "duration": 5.28
+    },
+    {
+      "text": "data tables as well as a two-way data",
+      "start": 1088.72,
+      "duration": 3.92
+    },
+    {
+      "text": "table looking at",
+      "start": 1090.72,
+      "duration": 4.0
+    },
+    {
+      "text": "how the mpv changes in response to",
+      "start": 1092.64,
+      "duration": 4.0
+    },
+    {
+      "text": "changing the number of machines",
+      "start": 1094.72,
+      "duration": 5.28
+    },
+    {
+      "text": "and the initial demand so one way data",
+      "start": 1096.64,
+      "duration": 4.88
+    },
+    {
+      "text": "table for each of those as well as a",
+      "start": 1100.0,
+      "duration": 1.919
+    },
+    {
+      "text": "graph",
+      "start": 1101.52,
+      "duration": 1.92
+    },
+    {
+      "text": "for each of those and then a two-way",
+      "start": 1101.919,
+      "duration": 3.841
+    },
+    {
+      "text": "data table with conditional formatting",
+      "start": 1103.44,
+      "duration": 7.04
+    },
+    {
+      "text": "looking at both at the same time",
+      "start": 1105.76,
+      "duration": 4.72
+    },
+    {
+      "text": "so that sensitivity analysis in excel",
+      "start": 1110.799,
+      "duration": 6.481
+    },
+    {
+      "text": "next time we're going to come back and",
+      "start": 1114.88,
+      "duration": 3.2
+    },
+    {
+      "text": "cover some",
+      "start": 1117.28,
+      "duration": 4.0
+    },
+    {
+      "text": "extra python basics before we can get",
+      "start": 1118.08,
+      "duration": 4.0
+    },
+    {
+      "text": "into doing",
+      "start": 1121.28,
+      "duration": 4.0
+    },
+    {
+      "text": "sensitivity analysis in python so",
+      "start": 1122.08,
+      "duration": 6.36
+    },
+    {
+      "text": "thanks for listening and see you next",
+      "start": 1125.28,
+      "duration": 6.16
+    },
+    {
+      "text": "time",
+      "start": 1128.44,
+      "duration": 3.0
+    }
+  ]
+}

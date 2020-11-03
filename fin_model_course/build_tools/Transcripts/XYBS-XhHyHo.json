@@ -1,0 +1,899 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.639,
+      "duration": 2.401
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 3.52,
+      "duration": 3.92
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 5.04,
+      "duration": 3.76
+    },
+    {
+      "text": "to be going over",
+      "start": 7.44,
+      "duration": 4.56
+    },
+    {
+      "text": "the lab exercise solution for the first",
+      "start": 8.8,
+      "duration": 5.839
+    },
+    {
+      "text": "lab in the understanding complex results",
+      "start": 12.0,
+      "duration": 5.279
+    },
+    {
+      "text": "with visualization lecture series",
+      "start": 14.639,
+      "duration": 5.841
+    },
+    {
+      "text": "this lecture exercise is on getting",
+      "start": 17.279,
+      "duration": 4.08
+    },
+    {
+      "text": "started with",
+      "start": 20.48,
+      "duration": 4.0
+    },
+    {
+      "text": "pennis so all of the",
+      "start": 21.359,
+      "duration": 6.481
+    },
+    {
+      "text": "exercises for this segment are",
+      "start": 24.48,
+      "duration": 5.28
+    },
+    {
+      "text": "in this one jupiter notebook penis and",
+      "start": 27.84,
+      "duration": 4.0
+    },
+    {
+      "text": "visualization lab exercises",
+      "start": 29.76,
+      "duration": 3.76
+    },
+    {
+      "text": "and here we're doing the first section",
+      "start": 31.84,
+      "duration": 3.04
+    },
+    {
+      "text": "here on",
+      "start": 33.52,
+      "duration": 4.48
+    },
+    {
+      "text": "the intro to pandas material",
+      "start": 34.88,
+      "duration": 5.44
+    },
+    {
+      "text": "so the first exercise asks us create a",
+      "start": 38.0,
+      "duration": 4.32
+    },
+    {
+      "text": "data frame which has two columns",
+      "start": 40.32,
+      "duration": 4.48
+    },
+    {
+      "text": "item and price the data frame should",
+      "start": 42.32,
+      "duration": 3.84
+    },
+    {
+      "text": "have three rows",
+      "start": 44.8,
+      "duration": 3.84
+    },
+    {
+      "text": "first row item should be apple price",
+      "start": 46.16,
+      "duration": 4.8
+    },
+    {
+      "text": "should be 75 cents",
+      "start": 48.64,
+      "duration": 4.399
+    },
+    {
+      "text": "second row item should be banana price",
+      "start": 50.96,
+      "duration": 3.759
+    },
+    {
+      "text": "should be 42 cents",
+      "start": 53.039,
+      "duration": 4.081
+    },
+    {
+      "text": "and the third row item should be pair",
+      "start": 54.719,
+      "duration": 3.68
+    },
+    {
+      "text": "and the price should be",
+      "start": 57.12,
+      "duration": 4.64
+    },
+    {
+      "text": "84 cents so i'll go ahead and show two",
+      "start": 58.399,
+      "duration": 5.201
+    },
+    {
+      "text": "different ways that we can approach",
+      "start": 61.76,
+      "duration": 5.76
+    },
+    {
+      "text": "this first exercise so the first is",
+      "start": 63.6,
+      "duration": 6.24
+    },
+    {
+      "text": "well before we do anything we want to go",
+      "start": 67.52,
+      "duration": 4.16
+    },
+    {
+      "text": "ahead and",
+      "start": 69.84,
+      "duration": 5.04
+    },
+    {
+      "text": "import pandas as pd so that we can use",
+      "start": 71.68,
+      "duration": 3.52
+    },
+    {
+      "text": "it",
+      "start": 74.88,
+      "duration": 4.0
+    },
+    {
+      "text": "throughout the exercises and so the",
+      "start": 75.2,
+      "duration": 4.4
+    },
+    {
+      "text": "first",
+      "start": 78.88,
+      "duration": 2.879
+    },
+    {
+      "text": "way we can go about this is we create an",
+      "start": 79.6,
+      "duration": 3.519
+    },
+    {
+      "text": "empty data frame",
+      "start": 81.759,
+      "duration": 4.081
+    },
+    {
+      "text": "nothing in it but then we're going to",
+      "start": 83.119,
+      "duration": 4.801
+    },
+    {
+      "text": "add our columns individually",
+      "start": 85.84,
+      "duration": 4.88
+    },
+    {
+      "text": "so we can create an item column which we",
+      "start": 87.92,
+      "duration": 3.76
+    },
+    {
+      "text": "know that's going to have",
+      "start": 90.72,
+      "duration": 2.96
+    },
+    {
+      "text": "apple in the first and banana in the",
+      "start": 91.68,
+      "duration": 3.68
+    },
+    {
+      "text": "second so apple",
+      "start": 93.68,
+      "duration": 4.799
+    },
+    {
+      "text": "and then banana um",
+      "start": 95.36,
+      "duration": 5.2
+    },
+    {
+      "text": "and then we're going to create the price",
+      "start": 98.479,
+      "duration": 3.68
+    },
+    {
+      "text": "column and that",
+      "start": 100.56,
+      "duration": 3.44
+    },
+    {
+      "text": "we know should have 75 cents in the",
+      "start": 102.159,
+      "duration": 5.121
+    },
+    {
+      "text": "first row and 42 cents in the second row",
+      "start": 104.0,
+      "duration": 6.72
+    },
+    {
+      "text": "so going to add those values there",
+      "start": 107.28,
+      "duration": 5.76
+    },
+    {
+      "text": "and then we can see that that data frame",
+      "start": 110.72,
+      "duration": 4.96
+    },
+    {
+      "text": "has been created appropriately",
+      "start": 113.04,
+      "duration": 4.719
+    },
+    {
+      "text": "now the other way to go about it is to",
+      "start": 115.68,
+      "duration": 3.6
+    },
+    {
+      "text": "create the data frame",
+      "start": 117.759,
+      "duration": 3.921
+    },
+    {
+      "text": "all at once by passing in all the data",
+      "start": 119.28,
+      "duration": 3.76
+    },
+    {
+      "text": "so we could do",
+      "start": 121.68,
+      "duration": 5.84
+    },
+    {
+      "text": "a data frame and we're going to pass to",
+      "start": 123.04,
+      "duration": 5.04
+    },
+    {
+      "text": "that",
+      "start": 127.52,
+      "duration": 4.0
+    },
+    {
+      "text": "a list of tuples where each tuple",
+      "start": 128.08,
+      "duration": 6.56
+    },
+    {
+      "text": "has the rows values so the first row",
+      "start": 131.52,
+      "duration": 6.32
+    },
+    {
+      "text": "is apple with 75 cents and then the",
+      "start": 134.64,
+      "duration": 4.48
+    },
+    {
+      "text": "second row",
+      "start": 137.84,
+      "duration": 4.88
+    },
+    {
+      "text": "is banana with cents",
+      "start": 139.12,
+      "duration": 5.92
+    },
+    {
+      "text": "um oh and i missed the pair we should",
+      "start": 142.72,
+      "duration": 3.68
+    },
+    {
+      "text": "have a pair in here",
+      "start": 145.04,
+      "duration": 5.279
+    },
+    {
+      "text": "there uh 84 cents um",
+      "start": 146.4,
+      "duration": 7.36
+    },
+    {
+      "text": "so then third row also a",
+      "start": 150.319,
+      "duration": 7.92
+    },
+    {
+      "text": "pair and 84 cents",
+      "start": 153.76,
+      "duration": 6.72
+    },
+    {
+      "text": "and then we want to pass the columns",
+      "start": 158.239,
+      "duration": 4.401
+    },
+    {
+      "text": "separately and the columns are going to",
+      "start": 160.48,
+      "duration": 3.28
+    },
+    {
+      "text": "be item",
+      "start": 162.64,
+      "duration": 4.4
+    },
+    {
+      "text": "and price and then when we look at the",
+      "start": 163.76,
+      "duration": 4.08
+    },
+    {
+      "text": "data frame",
+      "start": 167.04,
+      "duration": 3.04
+    },
+    {
+      "text": "we've got the exact same thing out of it",
+      "start": 167.84,
+      "duration": 4.479
+    },
+    {
+      "text": "as the other approach",
+      "start": 170.08,
+      "duration": 5.76
+    },
+    {
+      "text": "adding the columns individually",
+      "start": 172.319,
+      "duration": 3.521
+    },
+    {
+      "text": "so coming to the second exercise then we",
+      "start": 176.64,
+      "duration": 4.64
+    },
+    {
+      "text": "want to print the min max and standard",
+      "start": 179.2,
+      "duration": 3.039
+    },
+    {
+      "text": "deviation",
+      "start": 181.28,
+      "duration": 4.4
+    },
+    {
+      "text": "of the prices so again here we have",
+      "start": 182.239,
+      "duration": 6.481
+    },
+    {
+      "text": "two main ways to go about this so one",
+      "start": 185.68,
+      "duration": 5.52
+    },
+    {
+      "text": "is kind of the shortcut which gives you",
+      "start": 188.72,
+      "duration": 3.92
+    },
+    {
+      "text": "all of these different",
+      "start": 191.2,
+      "duration": 5.52
+    },
+    {
+      "text": "summary statistics is the f dot describe",
+      "start": 192.64,
+      "duration": 7.44
+    },
+    {
+      "text": "we get the mean uh or",
+      "start": 196.72,
+      "duration": 4.879
+    },
+    {
+      "text": "it wants min max standard deviation we",
+      "start": 200.08,
+      "duration": 3.76
+    },
+    {
+      "text": "get the min we get the max",
+      "start": 201.599,
+      "duration": 4.401
+    },
+    {
+      "text": "and the standard deviation all given to",
+      "start": 203.84,
+      "duration": 3.84
+    },
+    {
+      "text": "us at once",
+      "start": 206.0,
+      "duration": 5.519
+    },
+    {
+      "text": "um or you can individually",
+      "start": 207.68,
+      "duration": 8.6
+    },
+    {
+      "text": "get each of those things df.min df.max",
+      "start": 211.519,
+      "duration": 6.241
+    },
+    {
+      "text": "df.std",
+      "start": 216.28,
+      "duration": 5.959
+    },
+    {
+      "text": "to get each one of those individually",
+      "start": 217.76,
+      "duration": 4.479
+    },
+    {
+      "text": "um and then coming to",
+      "start": 225.44,
+      "duration": 6.719
+    },
+    {
+      "text": "exercise three",
+      "start": 229.04,
+      "duration": 3.119
+    },
+    {
+      "text": "using the same data frame we want to add",
+      "start": 232.239,
+      "duration": 4.241
+    },
+    {
+      "text": "a new quantity column",
+      "start": 234.879,
+      "duration": 4.64
+    },
+    {
+      "text": "with the values 10 30 and 5 for",
+      "start": 236.48,
+      "duration": 5.44
+    },
+    {
+      "text": "our apple banana and pair and then we",
+      "start": 239.519,
+      "duration": 4.08
+    },
+    {
+      "text": "want to construct a revenue variable",
+      "start": 241.92,
+      "duration": 2.879
+    },
+    {
+      "text": "which is",
+      "start": 243.599,
+      "duration": 4.0
+    },
+    {
+      "text": "price times quantity so first step we",
+      "start": 244.799,
+      "duration": 3.601
+    },
+    {
+      "text": "want to",
+      "start": 247.599,
+      "duration": 4.241
+    },
+    {
+      "text": "add a quantity column",
+      "start": 248.4,
+      "duration": 4.88
+    },
+    {
+      "text": "so this is going to be you know the same",
+      "start": 251.84,
+      "duration": 3.52
+    },
+    {
+      "text": "as the approach we did here to create",
+      "start": 253.28,
+      "duration": 4.0
+    },
+    {
+      "text": "the data frame by adding a column by",
+      "start": 255.36,
+      "duration": 3.439
+    },
+    {
+      "text": "giving it a list of the values which",
+      "start": 257.28,
+      "duration": 2.0
+    },
+    {
+      "text": "should be",
+      "start": 258.799,
+      "duration": 4.241
+    },
+    {
+      "text": "in that column so we want to add a",
+      "start": 259.28,
+      "duration": 5.04
+    },
+    {
+      "text": "quantity column and it should have",
+      "start": 263.04,
+      "duration": 2.48
+    },
+    {
+      "text": "values of 10",
+      "start": 264.32,
+      "duration": 4.72
+    },
+    {
+      "text": "30 and 5. so just doing that",
+      "start": 265.52,
+      "duration": 5.36
+    },
+    {
+      "text": "then we have the quantity column",
+      "start": 269.04,
+      "duration": 4.0
+    },
+    {
+      "text": "included and the data frame",
+      "start": 270.88,
+      "duration": 4.319
+    },
+    {
+      "text": "then we want to construct the revenue",
+      "start": 273.04,
+      "duration": 3.28
+    },
+    {
+      "text": "variable",
+      "start": 275.199,
+      "duration": 4.481
+    },
+    {
+      "text": "revenue is going to be equal to the data",
+      "start": 276.32,
+      "duration": 4.48
+    },
+    {
+      "text": "frames",
+      "start": 279.68,
+      "duration": 4.959
+    },
+    {
+      "text": "uh price column times the data frames",
+      "start": 280.8,
+      "duration": 5.44
+    },
+    {
+      "text": "quantity column",
+      "start": 284.639,
+      "duration": 3.441
+    },
+    {
+      "text": "and so when we do that then we'll see",
+      "start": 286.24,
+      "duration": 3.519
+    },
+    {
+      "text": "that we get the revenue",
+      "start": 288.08,
+      "duration": 7.92
+    },
+    {
+      "text": "in there as well as price times quantity",
+      "start": 289.759,
+      "duration": 9.361
+    },
+    {
+      "text": "so then coming to exercise four",
+      "start": 296.0,
+      "duration": 6.24
+    },
+    {
+      "text": "now we have this data frame uh with",
+      "start": 299.12,
+      "duration": 4.56
+    },
+    {
+      "text": "price quantity revenue",
+      "start": 302.24,
+      "duration": 4.64
+    },
+    {
+      "text": "we want to select the item whose",
+      "start": 303.68,
+      "duration": 7.44
+    },
+    {
+      "text": "quantity is 30. and",
+      "start": 306.88,
+      "duration": 6.48
+    },
+    {
+      "text": "with the copy up that we want to get",
+      "start": 311.12,
+      "duration": 3.919
+    },
+    {
+      "text": "just the string banana",
+      "start": 313.36,
+      "duration": 4.8
+    },
+    {
+      "text": "and not the entire row or series which",
+      "start": 315.039,
+      "duration": 3.921
+    },
+    {
+      "text": "contains",
+      "start": 318.16,
+      "duration": 4.8
+    },
+    {
+      "text": "banana so",
+      "start": 318.96,
+      "duration": 8.0
+    },
+    {
+      "text": "we want to get the data frame",
+      "start": 322.96,
+      "duration": 7.44
+    },
+    {
+      "text": "uh where the",
+      "start": 326.96,
+      "duration": 6.799
+    },
+    {
+      "text": "quantity is 30. and so we talked about",
+      "start": 330.4,
+      "duration": 6.4
+    },
+    {
+      "text": "how you can select an entire row",
+      "start": 333.759,
+      "duration": 5.841
+    },
+    {
+      "text": "data frame where the data frames",
+      "start": 336.8,
+      "duration": 5.28
+    },
+    {
+      "text": "quantity",
+      "start": 339.6,
+      "duration": 2.48
+    },
+    {
+      "text": "is equal to 30 that's going to give us",
+      "start": 342.16,
+      "duration": 4.0
+    },
+    {
+      "text": "the entire",
+      "start": 345.039,
+      "duration": 3.121
+    },
+    {
+      "text": "row right but we don't want the entire",
+      "start": 346.16,
+      "duration": 4.8
+    },
+    {
+      "text": "row we want to get specifically",
+      "start": 348.16,
+      "duration": 5.599
+    },
+    {
+      "text": "banana out of this and we learned about",
+      "start": 350.96,
+      "duration": 4.4
+    },
+    {
+      "text": "how you can do that with",
+      "start": 353.759,
+      "duration": 4.56
+    },
+    {
+      "text": "low so dot loc you give it two arguments",
+      "start": 355.36,
+      "duration": 4.559
+    },
+    {
+      "text": "the first argument",
+      "start": 358.319,
+      "duration": 4.481
+    },
+    {
+      "text": "is how you want to select the rows so",
+      "start": 359.919,
+      "duration": 4.241
+    },
+    {
+      "text": "the same way that we were already doing",
+      "start": 362.8,
+      "duration": 2.08
+    },
+    {
+      "text": "that",
+      "start": 364.16,
+      "duration": 3.12
+    },
+    {
+      "text": "and then the second is what columns do",
+      "start": 364.88,
+      "duration": 5.28
+    },
+    {
+      "text": "we want so we just want the item column",
+      "start": 367.28,
+      "duration": 6.96
+    },
+    {
+      "text": "and so that way we get",
+      "start": 370.16,
+      "duration": 7.759
+    },
+    {
+      "text": "banana coming out here",
+      "start": 374.24,
+      "duration": 7.12
+    },
+    {
+      "text": "now that is still coming as a series",
+      "start": 377.919,
+      "duration": 5.441
+    },
+    {
+      "text": "i would consider this an acceptable",
+      "start": 381.36,
+      "duration": 3.44
+    },
+    {
+      "text": "answer because you did extract",
+      "start": 383.36,
+      "duration": 6.64
+    },
+    {
+      "text": "just the banana part but you can",
+      "start": 384.8,
+      "duration": 5.2
+    },
+    {
+      "text": "do values zero on",
+      "start": 390.08,
+      "duration": 6.8
+    },
+    {
+      "text": "any series with a single value in it to",
+      "start": 393.52,
+      "duration": 6.399
+    },
+    {
+      "text": "then get that actual value out so then",
+      "start": 396.88,
+      "duration": 5.039
+    },
+    {
+      "text": "the type of this whole thing",
+      "start": 399.919,
+      "duration": 6.0
+    },
+    {
+      "text": "is going to be a string instead of a",
+      "start": 401.919,
+      "duration": 8.481
+    },
+    {
+      "text": "series that we got for this part",
+      "start": 405.919,
+      "duration": 6.241
+    },
+    {
+      "text": "which was a series containing just",
+      "start": 410.4,
+      "duration": 4.079
+    },
+    {
+      "text": "banana so",
+      "start": 412.16,
+      "duration": 5.599
+    },
+    {
+      "text": "would accept either answer here",
+      "start": 414.479,
+      "duration": 5.921
+    },
+    {
+      "text": "actually pulling out the string or",
+      "start": 417.759,
+      "duration": 3.601
+    },
+    {
+      "text": "pulling out",
+      "start": 420.4,
+      "duration": 3.199
+    },
+    {
+      "text": "a series which has just that string in",
+      "start": 421.36,
+      "duration": 4.32
+    },
+    {
+      "text": "it",
+      "start": 423.599,
+      "duration": 2.081
+    },
+    {
+      "text": "so that finishes up the first set of lab",
+      "start": 426.8,
+      "duration": 4.0
+    },
+    {
+      "text": "exercises",
+      "start": 429.84,
+      "duration": 4.16
+    },
+    {
+      "text": "for uh understanding complex results",
+      "start": 430.8,
+      "duration": 4.48
+    },
+    {
+      "text": "with visualization",
+      "start": 434.0,
+      "duration": 4.8
+    },
+    {
+      "text": "we'll come back next time to tackle",
+      "start": 435.28,
+      "duration": 6.4
+    },
+    {
+      "text": "the styling exercises so thanks for",
+      "start": 438.8,
+      "duration": 3.36
+    },
+    {
+      "text": "listening",
+      "start": 441.68,
+      "duration": 5.2
+    },
+    {
+      "text": "and see you next time",
+      "start": 442.16,
+      "duration": 4.72
+    }
+  ]
+}

@@ -1,0 +1,1269 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.12,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.08,
+      "duration": 3.759
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.52,
+      "duration": 3.28
+    },
+    {
+      "text": "be solving the",
+      "start": 7.839,
+      "duration": 3.92
+    },
+    {
+      "text": "lab exercise on generating and",
+      "start": 8.8,
+      "duration": 4.48
+    },
+    {
+      "text": "visualizing",
+      "start": 11.759,
+      "duration": 5.28
+    },
+    {
+      "text": "continuous random numbers in python",
+      "start": 13.28,
+      "duration": 6.8
+    },
+    {
+      "text": "so we already completed this",
+      "start": 17.039,
+      "duration": 6.24
+    },
+    {
+      "text": "exercise for excel but now",
+      "start": 20.08,
+      "duration": 6.48
+    },
+    {
+      "text": "we are doing the same thing in python",
+      "start": 23.279,
+      "duration": 6.32
+    },
+    {
+      "text": "so generating",
+      "start": 26.56,
+      "duration": 5.2
+    },
+    {
+      "text": "numbers from uniform distribution from a",
+      "start": 29.599,
+      "duration": 3.921
+    },
+    {
+      "text": "normal distribution",
+      "start": 31.76,
+      "duration": 4.319
+    },
+    {
+      "text": "and visualizing the outputs of both of",
+      "start": 33.52,
+      "duration": 3.6
+    },
+    {
+      "text": "those",
+      "start": 36.079,
+      "duration": 3.041
+    },
+    {
+      "text": "and calculating the mean and standard",
+      "start": 37.12,
+      "duration": 4.32
+    },
+    {
+      "text": "deviation of each of those",
+      "start": 39.12,
+      "duration": 4.72
+    },
+    {
+      "text": "recalculating it number of times and",
+      "start": 41.44,
+      "duration": 4.799
+    },
+    {
+      "text": "noting the differences between using",
+      "start": 43.84,
+      "duration": 6.96
+    },
+    {
+      "text": "10 iterations and 1000 iterations",
+      "start": 46.239,
+      "duration": 7.441
+    },
+    {
+      "text": "so let's jump over to a fresh jupiter",
+      "start": 50.8,
+      "duration": 3.919
+    },
+    {
+      "text": "notebook",
+      "start": 53.68,
+      "duration": 4.64
+    },
+    {
+      "text": "so that we can work this out",
+      "start": 54.719,
+      "duration": 8.561
+    },
+    {
+      "text": "so um we want to work out this logic to",
+      "start": 58.32,
+      "duration": 6.559
+    },
+    {
+      "text": "generate random numbers the first thing",
+      "start": 63.28,
+      "duration": 3.12
+    },
+    {
+      "text": "we're going to need is to",
+      "start": 64.879,
+      "duration": 4.721
+    },
+    {
+      "text": "import the random module",
+      "start": 66.4,
+      "duration": 6.32
+    },
+    {
+      "text": "so then we can recall",
+      "start": 69.6,
+      "duration": 7.6
+    },
+    {
+      "text": "that that random.random",
+      "start": 72.72,
+      "duration": 6.64
+    },
+    {
+      "text": "gets us that between zero and one so",
+      "start": 77.2,
+      "duration": 5.52
+    },
+    {
+      "text": "that's all we need to do for that one",
+      "start": 79.36,
+      "duration": 6.399
+    },
+    {
+      "text": "and we have random.normalvariate which",
+      "start": 82.72,
+      "duration": 3.28
+    },
+    {
+      "text": "we",
+      "start": 85.759,
+      "duration": 3.04
+    },
+    {
+      "text": "can give a mean and a standard deviation",
+      "start": 86.0,
+      "duration": 5.2
+    },
+    {
+      "text": "to get the",
+      "start": 88.799,
+      "duration": 5.841
+    },
+    {
+      "text": "normal distribution random numbers",
+      "start": 91.2,
+      "duration": 6.28
+    },
+    {
+      "text": "so i'm going to",
+      "start": 94.64,
+      "duration": 4.64
+    },
+    {
+      "text": "[Music]",
+      "start": 97.48,
+      "duration": 4.999
+    },
+    {
+      "text": "set up some initial inputs here uh just",
+      "start": 99.28,
+      "duration": 6.72
+    },
+    {
+      "text": "for now just as individual variables um",
+      "start": 102.479,
+      "duration": 6.081
+    },
+    {
+      "text": "so i'm going to have n how many random",
+      "start": 106.0,
+      "duration": 4.24
+    },
+    {
+      "text": "numbers we're going to generate",
+      "start": 108.56,
+      "duration": 5.68
+    },
+    {
+      "text": "i'm going to have the mean as 0.5",
+      "start": 110.24,
+      "duration": 6.479
+    },
+    {
+      "text": "i'm gonna have the standard deviation as",
+      "start": 114.24,
+      "duration": 4.8
+    },
+    {
+      "text": "10.",
+      "start": 116.719,
+      "duration": 4.961
+    },
+    {
+      "text": "um so the first thing that we want to do",
+      "start": 119.04,
+      "duration": 3.92
+    },
+    {
+      "text": "is generate",
+      "start": 121.68,
+      "duration": 4.32
+    },
+    {
+      "text": "10 uh random uniform distribution",
+      "start": 122.96,
+      "duration": 6.56
+    },
+    {
+      "text": "numbers between zero and one so we can",
+      "start": 126.0,
+      "duration": 4.399
+    },
+    {
+      "text": "just put this",
+      "start": 129.52,
+      "duration": 4.88
+    },
+    {
+      "text": "in a list comprehension to do that",
+      "start": 130.399,
+      "duration": 4.001
+    },
+    {
+      "text": "and there we have ten different random",
+      "start": 135.12,
+      "duration": 4.4
+    },
+    {
+      "text": "numbers",
+      "start": 137.68,
+      "duration": 3.919
+    },
+    {
+      "text": "and similarly for the normal random",
+      "start": 139.52,
+      "duration": 4.079
+    },
+    {
+      "text": "normal variant",
+      "start": 141.599,
+      "duration": 4.0
+    },
+    {
+      "text": "we can do that with list comprehension",
+      "start": 143.599,
+      "duration": 3.601
+    },
+    {
+      "text": "as well it's going to be with the mean",
+      "start": 145.599,
+      "duration": 4.081
+    },
+    {
+      "text": "and the standard deviation",
+      "start": 147.2,
+      "duration": 6.48
+    },
+    {
+      "text": "again in the range of n so there we have",
+      "start": 149.68,
+      "duration": 8.16
+    },
+    {
+      "text": "our numbers generated for us",
+      "start": 153.68,
+      "duration": 4.16
+    },
+    {
+      "text": "so then we need to visualize these",
+      "start": 158.48,
+      "duration": 7.92
+    },
+    {
+      "text": "and produce some summary statistics",
+      "start": 163.2,
+      "duration": 6.319
+    },
+    {
+      "text": "so we know that data frames",
+      "start": 166.4,
+      "duration": 5.68
+    },
+    {
+      "text": "are perfect for doing both of those",
+      "start": 169.519,
+      "duration": 3.041
+    },
+    {
+      "text": "things",
+      "start": 172.08,
+      "duration": 3.68
+    },
+    {
+      "text": "so let's go ahead and also import",
+      "start": 172.56,
+      "duration": 6.48
+    },
+    {
+      "text": "pandas as pd",
+      "start": 175.76,
+      "duration": 3.28
+    },
+    {
+      "text": "so that we can form data frames out of",
+      "start": 179.36,
+      "duration": 5.2
+    },
+    {
+      "text": "these",
+      "start": 182.48,
+      "duration": 5.119
+    },
+    {
+      "text": "so then we can set it up so that we're",
+      "start": 184.56,
+      "duration": 4.399
+    },
+    {
+      "text": "going to create our",
+      "start": 187.599,
+      "duration": 4.481
+    },
+    {
+      "text": "initial data frame",
+      "start": 188.959,
+      "duration": 3.121
+    },
+    {
+      "text": "and then the f uniform is going to be",
+      "start": 192.72,
+      "duration": 4.56
+    },
+    {
+      "text": "equal to",
+      "start": 196.08,
+      "duration": 4.64
+    },
+    {
+      "text": "what we had calculated there",
+      "start": 197.28,
+      "duration": 3.44
+    },
+    {
+      "text": "and df normal is going to be equal to",
+      "start": 202.239,
+      "duration": 6.961
+    },
+    {
+      "text": "what we had calculated here and then we",
+      "start": 206.239,
+      "duration": 3.761
+    },
+    {
+      "text": "get a",
+      "start": 209.2,
+      "duration": 3.92
+    },
+    {
+      "text": "data frame with the 10 different uh",
+      "start": 210.0,
+      "duration": 6.08
+    },
+    {
+      "text": "values of uniform and normal",
+      "start": 213.12,
+      "duration": 6.16
+    },
+    {
+      "text": "distribution random numbers",
+      "start": 216.08,
+      "duration": 6.719
+    },
+    {
+      "text": "um this is a nice discrete step",
+      "start": 219.28,
+      "duration": 6.56
+    },
+    {
+      "text": "in the process we got the random numbers",
+      "start": 222.799,
+      "duration": 4.241
+    },
+    {
+      "text": "and then we want to",
+      "start": 225.84,
+      "duration": 3.039
+    },
+    {
+      "text": "visualize and take summary statistics",
+      "start": 227.04,
+      "duration": 3.839
+    },
+    {
+      "text": "after that so i'm going to go ahead and",
+      "start": 228.879,
+      "duration": 4.0
+    },
+    {
+      "text": "wrap this up in a function",
+      "start": 230.879,
+      "duration": 7.041
+    },
+    {
+      "text": "um so this can be um",
+      "start": 232.879,
+      "duration": 8.0
+    },
+    {
+      "text": "let's just say random df or let's do get",
+      "start": 237.92,
+      "duration": 4.399
+    },
+    {
+      "text": "random df",
+      "start": 240.879,
+      "duration": 5.601
+    },
+    {
+      "text": "um and so that is going to take",
+      "start": 242.319,
+      "duration": 9.601
+    },
+    {
+      "text": "um the n the mean and the standard",
+      "start": 246.48,
+      "duration": 5.44
+    },
+    {
+      "text": "deviation",
+      "start": 252.84,
+      "duration": 3.88
+    },
+    {
+      "text": "and then we're going to return the data",
+      "start": 254.239,
+      "duration": 3.28
+    },
+    {
+      "text": "frame at the end",
+      "start": 256.72,
+      "duration": 4.16
+    },
+    {
+      "text": "so now we can call that um",
+      "start": 257.519,
+      "duration": 4.881
+    },
+    {
+      "text": "with n the mean and the standard",
+      "start": 260.88,
+      "duration": 3.52
+    },
+    {
+      "text": "deviation and we get the same",
+      "start": 262.4,
+      "duration": 5.2
+    },
+    {
+      "text": "result um",
+      "start": 264.4,
+      "duration": 6.72
+    },
+    {
+      "text": "so next we want to then uh",
+      "start": 267.6,
+      "duration": 5.76
+    },
+    {
+      "text": "visualize this and get the summary",
+      "start": 271.12,
+      "duration": 3.6
+    },
+    {
+      "text": "statistics",
+      "start": 273.36,
+      "duration": 4.24
+    },
+    {
+      "text": "so here i'm going to go back to df is",
+      "start": 274.72,
+      "duration": 3.52
+    },
+    {
+      "text": "equal to",
+      "start": 277.6,
+      "duration": 4.879
+    },
+    {
+      "text": "get random df we have that data frame",
+      "start": 278.24,
+      "duration": 7.44
+    },
+    {
+      "text": "of course we can do df.mean to look at",
+      "start": 282.479,
+      "duration": 4.16
+    },
+    {
+      "text": "the mean",
+      "start": 285.68,
+      "duration": 4.0
+    },
+    {
+      "text": "and we can do df.std to",
+      "start": 286.639,
+      "duration": 7.681
+    },
+    {
+      "text": "look at the standard deviation um",
+      "start": 289.68,
+      "duration": 7.76
+    },
+    {
+      "text": "so we have those that we can do",
+      "start": 294.32,
+      "duration": 6.879
+    },
+    {
+      "text": "um and then we can also visualize this",
+      "start": 297.44,
+      "duration": 8.24
+    },
+    {
+      "text": "um so we can uh take the uniform",
+      "start": 301.199,
+      "duration": 10.641
+    },
+    {
+      "text": "and we can uh plot that as a histogram",
+      "start": 305.68,
+      "duration": 9.519
+    },
+    {
+      "text": "and we can do the same thing for the",
+      "start": 311.84,
+      "duration": 3.919
+    },
+    {
+      "text": "normal",
+      "start": 315.199,
+      "duration": 3.121
+    },
+    {
+      "text": "as well",
+      "start": 315.759,
+      "duration": 2.561
+    },
+    {
+      "text": "so then we can",
+      "start": 321.6,
+      "duration": 4.24
+    },
+    {
+      "text": "put all of this into a function as well",
+      "start": 326.16,
+      "duration": 3.759
+    },
+    {
+      "text": "this is kind of all of our",
+      "start": 328.4,
+      "duration": 5.12
+    },
+    {
+      "text": "analysis put that into a single function",
+      "start": 329.919,
+      "duration": 8.401
+    },
+    {
+      "text": "so we can say this is our",
+      "start": 333.52,
+      "duration": 7.76
+    },
+    {
+      "text": "random analysis we pass it the data",
+      "start": 338.32,
+      "duration": 4.8
+    },
+    {
+      "text": "frame",
+      "start": 341.28,
+      "duration": 4.32
+    },
+    {
+      "text": "and we're going to do all of these",
+      "start": 343.12,
+      "duration": 4.56
+    },
+    {
+      "text": "things",
+      "start": 345.6,
+      "duration": 4.4
+    },
+    {
+      "text": "the histogram of the uniform the",
+      "start": 347.68,
+      "duration": 3.12
+    },
+    {
+      "text": "histogram",
+      "start": 350.0,
+      "duration": 3.84
+    },
+    {
+      "text": "of the normal",
+      "start": 350.8,
+      "duration": 3.04
+    },
+    {
+      "text": "and the standard deviation and the mean",
+      "start": 355.919,
+      "duration": 4.4
+    },
+    {
+      "text": "i'm going to put all those in there and",
+      "start": 362.08,
+      "duration": 3.6
+    },
+    {
+      "text": "then we'll see",
+      "start": 364.96,
+      "duration": 2.079
+    },
+    {
+      "text": "some other adjustments that we're going",
+      "start": 365.68,
+      "duration": 3.68
+    },
+    {
+      "text": "to need to make for this to work",
+      "start": 367.039,
+      "duration": 5.121
+    },
+    {
+      "text": "appropriately",
+      "start": 369.36,
+      "duration": 2.8
+    },
+    {
+      "text": "so we call random analysis on the data",
+      "start": 373.039,
+      "duration": 3.6
+    },
+    {
+      "text": "frame",
+      "start": 375.759,
+      "duration": 4.0
+    },
+    {
+      "text": "and now we see",
+      "start": 376.639,
+      "duration": 5.68
+    },
+    {
+      "text": "not quite what we had expected to see we",
+      "start": 379.759,
+      "duration": 4.241
+    },
+    {
+      "text": "see both of these",
+      "start": 382.319,
+      "duration": 3.6
+    },
+    {
+      "text": "um getting combined into the same plot",
+      "start": 384.0,
+      "duration": 4.0
+    },
+    {
+      "text": "we also don't see the standard deviation",
+      "start": 385.919,
+      "duration": 2.961
+    },
+    {
+      "text": "or the mean",
+      "start": 388.0,
+      "duration": 4.8
+    },
+    {
+      "text": "uh getting shown so there's a couple",
+      "start": 388.88,
+      "duration": 7.68
+    },
+    {
+      "text": "a couple um extra steps here",
+      "start": 392.8,
+      "duration": 6.8
+    },
+    {
+      "text": "um so",
+      "start": 396.56,
+      "duration": 6.639
+    },
+    {
+      "text": "um we can",
+      "start": 399.6,
+      "duration": 5.28
+    },
+    {
+      "text": "this is where we we have to bring in a",
+      "start": 403.199,
+      "duration": 6.081
+    },
+    {
+      "text": "little bit of matplotlib matplotlib.pi",
+      "start": 404.88,
+      "duration": 6.719
+    },
+    {
+      "text": "plot",
+      "start": 409.28,
+      "duration": 8.08
+    },
+    {
+      "text": "add plt and we can do plt.show",
+      "start": 411.599,
+      "duration": 8.0
+    },
+    {
+      "text": "after each and that should be able to",
+      "start": 417.36,
+      "duration": 3.679
+    },
+    {
+      "text": "separate out",
+      "start": 419.599,
+      "duration": 4.16
+    },
+    {
+      "text": "uh these two graphs so now we see them",
+      "start": 421.039,
+      "duration": 4.0
+    },
+    {
+      "text": "separately because that's saying",
+      "start": 423.759,
+      "duration": 3.201
+    },
+    {
+      "text": "show everything that we've plotted kind",
+      "start": 425.039,
+      "duration": 3.201
+    },
+    {
+      "text": "of clear it out",
+      "start": 426.96,
+      "duration": 3.6
+    },
+    {
+      "text": "then do the new plot and show everything",
+      "start": 428.24,
+      "duration": 4.48
+    },
+    {
+      "text": "again so the two plots don't affect each",
+      "start": 430.56,
+      "duration": 3.28
+    },
+    {
+      "text": "other",
+      "start": 432.72,
+      "duration": 4.319
+    },
+    {
+      "text": "but we still don't have the standard",
+      "start": 433.84,
+      "duration": 5.44
+    },
+    {
+      "text": "deviation and the mean",
+      "start": 437.039,
+      "duration": 4.401
+    },
+    {
+      "text": "so all we have to do for those is print",
+      "start": 439.28,
+      "duration": 3.28
+    },
+    {
+      "text": "them to get them to",
+      "start": 441.44,
+      "duration": 4.8
+    },
+    {
+      "text": "show up so add the print statements",
+      "start": 442.56,
+      "duration": 5.68
+    },
+    {
+      "text": "around those",
+      "start": 446.24,
+      "duration": 5.44
+    },
+    {
+      "text": "and now we can see um those statistics",
+      "start": 448.24,
+      "duration": 4.959
+    },
+    {
+      "text": "coming up here",
+      "start": 451.68,
+      "duration": 2.799
+    },
+    {
+      "text": "though the one thing that's still kind",
+      "start": 453.199,
+      "duration": 3.44
+    },
+    {
+      "text": "of missing here is uh",
+      "start": 454.479,
+      "duration": 5.521
+    },
+    {
+      "text": "labels of what's going on",
+      "start": 456.639,
+      "duration": 6.481
+    },
+    {
+      "text": "um so uh",
+      "start": 460.0,
+      "duration": 7.759
+    },
+    {
+      "text": "i think we can we pass the title in here",
+      "start": 463.12,
+      "duration": 7.6
+    },
+    {
+      "text": "give that a try yeah that works um so",
+      "start": 467.759,
+      "duration": 5.201
+    },
+    {
+      "text": "you can pass the title in here",
+      "start": 470.72,
+      "duration": 5.68
+    },
+    {
+      "text": "um uniform and normal so now those are",
+      "start": 472.96,
+      "duration": 5.6
+    },
+    {
+      "text": "clear",
+      "start": 476.4,
+      "duration": 5.76
+    },
+    {
+      "text": "and we can also print a header for each",
+      "start": 478.56,
+      "duration": 5.28
+    },
+    {
+      "text": "of these standard",
+      "start": 482.16,
+      "duration": 6.879
+    },
+    {
+      "text": "deviations print",
+      "start": 483.84,
+      "duration": 5.199
+    },
+    {
+      "text": "means",
+      "start": 490.84,
+      "duration": 5.24
+    },
+    {
+      "text": "now and let me just throw a new line",
+      "start": 492.479,
+      "duration": 4.881
+    },
+    {
+      "text": "on the end of each of these you could",
+      "start": 496.08,
+      "duration": 3.119
+    },
+    {
+      "text": "also do a separate just print of an",
+      "start": 497.36,
+      "duration": 4.72
+    },
+    {
+      "text": "empty string to achieve the same thing",
+      "start": 499.199,
+      "duration": 6.0
+    },
+    {
+      "text": "um and let me do that before this one to",
+      "start": 502.08,
+      "duration": 5.76
+    },
+    {
+      "text": "separate them",
+      "start": 505.199,
+      "duration": 2.641
+    },
+    {
+      "text": "and now this is looking pretty good it's",
+      "start": 507.919,
+      "duration": 3.28
+    },
+    {
+      "text": "clear",
+      "start": 510.319,
+      "duration": 2.561
+    },
+    {
+      "text": "what are the standard deviations what",
+      "start": 511.199,
+      "duration": 4.481
+    },
+    {
+      "text": "are the means and what are the plots for",
+      "start": 512.88,
+      "duration": 6.159
+    },
+    {
+      "text": "the uniform and the normal",
+      "start": 515.68,
+      "duration": 3.359
+    },
+    {
+      "text": "so then um i'm going to",
+      "start": 519.36,
+      "duration": 8.0
+    },
+    {
+      "text": "um these together and i'm going to",
+      "start": 523.36,
+      "duration": 7.039
+    },
+    {
+      "text": "create one more function um which is",
+      "start": 527.36,
+      "duration": 6.96
+    },
+    {
+      "text": "going to be uh",
+      "start": 530.399,
+      "duration": 7.601
+    },
+    {
+      "text": "random df and analyze so that's just",
+      "start": 534.32,
+      "duration": 7.28
+    },
+    {
+      "text": "um going to put these two steps together",
+      "start": 538.0,
+      "duration": 6.48
+    },
+    {
+      "text": "um so i'm going to take this and put it",
+      "start": 541.6,
+      "duration": 5.2
+    },
+    {
+      "text": "in there",
+      "start": 544.48,
+      "duration": 5.039
+    },
+    {
+      "text": "and then going to call the random",
+      "start": 546.8,
+      "duration": 3.599
+    },
+    {
+      "text": "analysis",
+      "start": 549.519,
+      "duration": 2.641
+    },
+    {
+      "text": "on the data frame and then return the",
+      "start": 550.399,
+      "duration": 4.321
+    },
+    {
+      "text": "data frame at the end",
+      "start": 552.16,
+      "duration": 4.96
+    },
+    {
+      "text": "that means that now we can do random df",
+      "start": 554.72,
+      "duration": 3.92
+    },
+    {
+      "text": "and analyze",
+      "start": 557.12,
+      "duration": 4.96
+    },
+    {
+      "text": "um with whatever",
+      "start": 558.64,
+      "duration": 8.48
+    },
+    {
+      "text": "uh we want and it's going to",
+      "start": 562.08,
+      "duration": 7.12
+    },
+    {
+      "text": "create you know show all that analysis",
+      "start": 567.12,
+      "duration": 3.36
+    },
+    {
+      "text": "and then also",
+      "start": 569.2,
+      "duration": 3.84
+    },
+    {
+      "text": "give us that data frame that we could do",
+      "start": 570.48,
+      "duration": 4.16
+    },
+    {
+      "text": "additional things with",
+      "start": 573.04,
+      "duration": 3.44
+    },
+    {
+      "text": "so now this is all kind of together into",
+      "start": 574.64,
+      "duration": 4.319
+    },
+    {
+      "text": "one function",
+      "start": 576.48,
+      "duration": 5.84
+    },
+    {
+      "text": "um so now we can",
+      "start": 578.959,
+      "duration": 7.761
+    },
+    {
+      "text": "um let's just uh",
+      "start": 582.32,
+      "duration": 7.92
+    },
+    {
+      "text": "go down to here and we can run this",
+      "start": 586.72,
+      "duration": 6.32
+    },
+    {
+      "text": "a couple of times so this is with the n",
+      "start": 590.24,
+      "duration": 3.52
+    },
+    {
+      "text": "equals 10",
+      "start": 593.04,
+      "duration": 4.16
+    },
+    {
+      "text": "case and you can see you know kind of",
+      "start": 593.76,
+      "duration": 4.8
+    },
+    {
+      "text": "the same thing that we saw",
+      "start": 597.2,
+      "duration": 4.8
+    },
+    {
+      "text": "in excel that",
+      "start": 598.56,
+      "duration": 3.44
+    },
+    {
+      "text": "things are very blocky we're not getting",
+      "start": 602.32,
+      "duration": 3.92
+    },
+    {
+      "text": "a very good view of what the",
+      "start": 604.959,
+      "duration": 3.521
+    },
+    {
+      "text": "distributions actually are",
+      "start": 606.24,
+      "duration": 4.24
+    },
+    {
+      "text": "and when we look at the summary",
+      "start": 608.48,
+      "duration": 3.039
+    },
+    {
+      "text": "statistics",
+      "start": 610.48,
+      "duration": 5.599
+    },
+    {
+      "text": "they are jumping around quite a bit",
+      "start": 611.519,
+      "duration": 4.56
+    },
+    {
+      "text": "with only 10 observations but then if we",
+      "start": 616.8,
+      "duration": 4.88
+    },
+    {
+      "text": "switch this out and we do a thousand",
+      "start": 619.6,
+      "duration": 4.64
+    },
+    {
+      "text": "observations all of a sudden the uniform",
+      "start": 621.68,
+      "duration": 4.32
+    },
+    {
+      "text": "looks pretty uniform the normal",
+      "start": 624.24,
+      "duration": 4.88
+    },
+    {
+      "text": "looks pretty normal and uh",
+      "start": 626.0,
+      "duration": 4.959
+    },
+    {
+      "text": "the standard deviation here is close to",
+      "start": 629.12,
+      "duration": 3.279
+    },
+    {
+      "text": "the to the theoretical standard",
+      "start": 630.959,
+      "duration": 3.44
+    },
+    {
+      "text": "deviation the mean here is close to",
+      "start": 632.399,
+      "duration": 4.401
+    },
+    {
+      "text": "the theoretical mean and that's going to",
+      "start": 634.399,
+      "duration": 3.201
+    },
+    {
+      "text": "happen",
+      "start": 636.8,
+      "duration": 5.84
+    },
+    {
+      "text": "uh no matter how many times we run this",
+      "start": 637.6,
+      "duration": 6.72
+    },
+    {
+      "text": "it's always going to come up fairly",
+      "start": 642.64,
+      "duration": 3.36
+    },
+    {
+      "text": "close on all those because",
+      "start": 644.32,
+      "duration": 3.04
+    },
+    {
+      "text": "we're using a larger number of",
+      "start": 646.0,
+      "duration": 3.44
+    },
+    {
+      "text": "observations we can even",
+      "start": 647.36,
+      "duration": 4.159
+    },
+    {
+      "text": "take this even much further here to a",
+      "start": 649.44,
+      "duration": 3.68
+    },
+    {
+      "text": "hundred thousand observations",
+      "start": 651.519,
+      "duration": 3.44
+    },
+    {
+      "text": "you can see it's almost completely flat",
+      "start": 653.12,
+      "duration": 3.279
+    },
+    {
+      "text": "on the uniform",
+      "start": 654.959,
+      "duration": 4.161
+    },
+    {
+      "text": "the normal looks very normal and now",
+      "start": 656.399,
+      "duration": 4.481
+    },
+    {
+      "text": "we're like very very close",
+      "start": 659.12,
+      "duration": 4.399
+    },
+    {
+      "text": "to the standard deviation and mean that",
+      "start": 660.88,
+      "duration": 6.32
+    },
+    {
+      "text": "we had used to create this",
+      "start": 663.519,
+      "duration": 3.681
+    },
+    {
+      "text": "um so that is the lab exercise",
+      "start": 667.279,
+      "duration": 6.56
+    },
+    {
+      "text": "in python so thanks for listening and",
+      "start": 670.8,
+      "duration": 7.68
+    },
+    {
+      "text": "see you next time",
+      "start": 673.839,
+      "duration": 4.641
+    }
+  ]
+}

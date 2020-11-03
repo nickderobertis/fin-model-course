@@ -1,0 +1,534 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.6,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dear bird is here teaching you",
+      "start": 4.48,
+      "duration": 3.52
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 6.0,
+      "duration": 3.12
+    },
+    {
+      "text": "to talk about",
+      "start": 8.0,
+      "duration": 3.92
+    },
+    {
+      "text": "building a basic model in both excel and",
+      "start": 9.12,
+      "duration": 3.599
+    },
+    {
+      "text": "python",
+      "start": 11.92,
+      "duration": 2.96
+    },
+    {
+      "text": "in this first video in this series we're",
+      "start": 12.719,
+      "duration": 4.161
+    },
+    {
+      "text": "just going to introduce the basic",
+      "start": 14.88,
+      "duration": 4.319
+    },
+    {
+      "text": "model and talk about the structure",
+      "start": 16.88,
+      "duration": 4.479
+    },
+    {
+      "text": "before we dive into",
+      "start": 19.199,
+      "duration": 4.0
+    },
+    {
+      "text": "actually implementing that model in",
+      "start": 21.359,
+      "duration": 3.041
+    },
+    {
+      "text": "excel in python",
+      "start": 23.199,
+      "duration": 4.24
+    },
+    {
+      "text": "in the following videos so",
+      "start": 24.4,
+      "duration": 6.16
+    },
+    {
+      "text": "let's go ahead and look at what we're",
+      "start": 27.439,
+      "duration": 6.321
+    },
+    {
+      "text": "talking about with this basic model",
+      "start": 30.56,
+      "duration": 5.92
+    },
+    {
+      "text": "so really the focus here is that we want",
+      "start": 33.76,
+      "duration": 3.28
+    },
+    {
+      "text": "to get",
+      "start": 36.48,
+      "duration": 2.96
+    },
+    {
+      "text": "just familiar working in both excel and",
+      "start": 37.04,
+      "duration": 3.44
+    },
+    {
+      "text": "python",
+      "start": 39.44,
+      "duration": 3.52
+    },
+    {
+      "text": "and for the first part of the course",
+      "start": 40.48,
+      "duration": 3.52
+    },
+    {
+      "text": "we're going to just do",
+      "start": 42.96,
+      "duration": 4.0
+    },
+    {
+      "text": "everything the same things in both excel",
+      "start": 44.0,
+      "duration": 5.28
+    },
+    {
+      "text": "and python so you can get a good feel",
+      "start": 46.96,
+      "duration": 5.439
+    },
+    {
+      "text": "for both of the tools",
+      "start": 49.28,
+      "duration": 5.52
+    },
+    {
+      "text": "and then in the future we're going to go",
+      "start": 52.399,
+      "duration": 3.441
+    },
+    {
+      "text": "to actually",
+      "start": 54.8,
+      "duration": 4.48
+    },
+    {
+      "text": "combining excel in python and",
+      "start": 55.84,
+      "duration": 5.44
+    },
+    {
+      "text": "get more into you know how you should be",
+      "start": 59.28,
+      "duration": 3.68
+    },
+    {
+      "text": "choosing which of those tools you're",
+      "start": 61.28,
+      "duration": 3.44
+    },
+    {
+      "text": "using to solve a particular",
+      "start": 62.96,
+      "duration": 4.159
+    },
+    {
+      "text": "problem",
+      "start": 64.72,
+      "duration": 2.399
+    },
+    {
+      "text": "so the problem that we're going to look",
+      "start": 68.08,
+      "duration": 3.359
+    },
+    {
+      "text": "at to model",
+      "start": 69.52,
+      "duration": 4.959
+    },
+    {
+      "text": "is uh intentionally very simple",
+      "start": 71.439,
+      "duration": 5.68
+    },
+    {
+      "text": "it's basically the simplest finance",
+      "start": 74.479,
+      "duration": 4.481
+    },
+    {
+      "text": "problem out there just a time value of",
+      "start": 77.119,
+      "duration": 3.521
+    },
+    {
+      "text": "money problem",
+      "start": 78.96,
+      "duration": 4.72
+    },
+    {
+      "text": "and i've chosen this problem because it",
+      "start": 80.64,
+      "duration": 3.36
+    },
+    {
+      "text": "lets",
+      "start": 83.68,
+      "duration": 4.64
+    },
+    {
+      "text": "us not focus very much on the actual",
+      "start": 84.0,
+      "duration": 6.0
+    },
+    {
+      "text": "content of the model everyone should",
+      "start": 88.32,
+      "duration": 4.159
+    },
+    {
+      "text": "know basically what's involved",
+      "start": 90.0,
+      "duration": 4.56
+    },
+    {
+      "text": "with the calculations we're just going",
+      "start": 92.479,
+      "duration": 4.081
+    },
+    {
+      "text": "to focus on how you actually implement",
+      "start": 94.56,
+      "duration": 2.72
+    },
+    {
+      "text": "that",
+      "start": 96.56,
+      "duration": 4.16
+    },
+    {
+      "text": "in each of these two tools and how we",
+      "start": 97.28,
+      "duration": 5.519
+    },
+    {
+      "text": "make that a model rather than just doing",
+      "start": 100.72,
+      "duration": 5.12
+    },
+    {
+      "text": "a single calculation",
+      "start": 102.799,
+      "duration": 7.121
+    },
+    {
+      "text": "so you know for this kind of problem",
+      "start": 105.84,
+      "duration": 6.4
+    },
+    {
+      "text": "you may have used a calculator in the",
+      "start": 109.92,
+      "duration": 3.76
+    },
+    {
+      "text": "past",
+      "start": 112.24,
+      "duration": 4.64
+    },
+    {
+      "text": "thinking about a retirement problem",
+      "start": 113.68,
+      "duration": 6.719
+    },
+    {
+      "text": "how much how soon can someone",
+      "start": 116.88,
+      "duration": 6.879
+    },
+    {
+      "text": "retire given that they are earning a",
+      "start": 120.399,
+      "duration": 4.161
+    },
+    {
+      "text": "certain amount",
+      "start": 123.759,
+      "duration": 4.56
+    },
+    {
+      "text": "saving a certain amount and they",
+      "start": 124.56,
+      "duration": 5.759
+    },
+    {
+      "text": "have a certain amount of cash that they",
+      "start": 128.319,
+      "duration": 3.761
+    },
+    {
+      "text": "need to be able to retire",
+      "start": 130.319,
+      "duration": 4.961
+    },
+    {
+      "text": "um so this is kind of the traditional",
+      "start": 132.08,
+      "duration": 5.68
+    },
+    {
+      "text": "uh you know five keys on the financial",
+      "start": 135.28,
+      "duration": 3.44
+    },
+    {
+      "text": "calculator",
+      "start": 137.76,
+      "duration": 2.72
+    },
+    {
+      "text": "uh for those that are familiar with",
+      "start": 138.72,
+      "duration": 3.84
+    },
+    {
+      "text": "those",
+      "start": 140.48,
+      "duration": 3.92
+    },
+    {
+      "text": "you know that type of problem so",
+      "start": 142.56,
+      "duration": 3.28
+    },
+    {
+      "text": "certainly very easy to do on a",
+      "start": 144.4,
+      "duration": 2.479
+    },
+    {
+      "text": "calculator",
+      "start": 145.84,
+      "duration": 2.479
+    },
+    {
+      "text": "but we're going to look at how to",
+      "start": 146.879,
+      "duration": 5.44
+    },
+    {
+      "text": "actually build a model for this",
+      "start": 148.319,
+      "duration": 4.0
+    },
+    {
+      "text": "and so just to quickly break down what",
+      "start": 152.72,
+      "duration": 3.599
+    },
+    {
+      "text": "this model",
+      "start": 155.44,
+      "duration": 5.04
+    },
+    {
+      "text": "looks like so again going back to this",
+      "start": 156.319,
+      "duration": 6.881
+    },
+    {
+      "text": "idea that a model is just a",
+      "start": 160.48,
+      "duration": 3.839
+    },
+    {
+      "text": "representation",
+      "start": 163.2,
+      "duration": 4.16
+    },
+    {
+      "text": "of a real world process",
+      "start": 164.319,
+      "duration": 5.601
+    },
+    {
+      "text": "and the real world process here is that",
+      "start": 167.36,
+      "duration": 3.519
+    },
+    {
+      "text": "this individual",
+      "start": 169.92,
+      "duration": 3.679
+    },
+    {
+      "text": "is saving they have wages coming in and",
+      "start": 170.879,
+      "duration": 4.64
+    },
+    {
+      "text": "they save a certain amount of that",
+      "start": 173.599,
+      "duration": 4.64
+    },
+    {
+      "text": "and then they invest that money at a",
+      "start": 175.519,
+      "duration": 3.601
+    },
+    {
+      "text": "certain",
+      "start": 178.239,
+      "duration": 4.08
+    },
+    {
+      "text": "rate of return up until they reach",
+      "start": 179.12,
+      "duration": 6.32
+    },
+    {
+      "text": "however much cash they want to have",
+      "start": 182.319,
+      "duration": 5.121
+    },
+    {
+      "text": "and that's going to tell us what the",
+      "start": 185.44,
+      "duration": 3.68
+    },
+    {
+      "text": "number of years is",
+      "start": 187.44,
+      "duration": 5.04
+    },
+    {
+      "text": "um so in the model of this",
+      "start": 189.12,
+      "duration": 6.32
+    },
+    {
+      "text": "uh we're gonna bring in you know the the",
+      "start": 192.48,
+      "duration": 3.759
+    },
+    {
+      "text": "wages",
+      "start": 195.44,
+      "duration": 3.84
+    },
+    {
+      "text": "the cash coming from the wages um",
+      "start": 196.239,
+      "duration": 4.72
+    },
+    {
+      "text": "you know involving the savings rate we",
+      "start": 199.28,
+      "duration": 3.36
+    },
+    {
+      "text": "got to use the savings rate to determine",
+      "start": 200.959,
+      "duration": 2.161
+    },
+    {
+      "text": "how much",
+      "start": 202.64,
+      "duration": 3.28
+    },
+    {
+      "text": "actually um cash is going to be coming",
+      "start": 203.12,
+      "duration": 4.399
+    },
+    {
+      "text": "into the investment portfolio",
+      "start": 205.92,
+      "duration": 4.239
+    },
+    {
+      "text": "each year and of course we need the",
+      "start": 207.519,
+      "duration": 4.241
+    },
+    {
+      "text": "interest rates to determine",
+      "start": 210.159,
+      "duration": 3.36
+    },
+    {
+      "text": "how much is going to be earned on these",
+      "start": 211.76,
+      "duration": 3.119
+    },
+    {
+      "text": "investments",
+      "start": 213.519,
+      "duration": 3.521
+    },
+    {
+      "text": "and then the model is taking those",
+      "start": 214.879,
+      "duration": 4.241
+    },
+    {
+      "text": "inputs and converting that",
+      "start": 217.04,
+      "duration": 5.44
+    },
+    {
+      "text": "ultimately into the years",
+      "start": 219.12,
+      "duration": 6.8
+    },
+    {
+      "text": "until retirement so that's the basic",
+      "start": 222.48,
+      "duration": 4.319
+    },
+    {
+      "text": "model",
+      "start": 225.92,
+      "duration": 2.64
+    },
+    {
+      "text": "and in the next video we're going to",
+      "start": 226.799,
+      "duration": 4.401
+    },
+    {
+      "text": "look at how we can implement this basic",
+      "start": 228.56,
+      "duration": 3.44
+    },
+    {
+      "text": "model",
+      "start": 231.2,
+      "duration": 8.72
+    },
+    {
+      "text": "in excel thanks for listening",
+      "start": 232.0,
+      "duration": 7.92
+    }
+  ]
+}

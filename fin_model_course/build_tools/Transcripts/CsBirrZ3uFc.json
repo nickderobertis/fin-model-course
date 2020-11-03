@@ -1,0 +1,1304 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.6,
+      "duration": 2.32
+    },
+    {
+      "text": "nick duraburtis here teaching you",
+      "start": 4.4,
+      "duration": 3.68
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 5.92,
+      "duration": 4.4
+    },
+    {
+      "text": "is the first lecture in our next lecture",
+      "start": 8.08,
+      "duration": 4.32
+    },
+    {
+      "text": "series on understanding complex",
+      "start": 10.32,
+      "duration": 6.0
+    },
+    {
+      "text": "results digging into visualization",
+      "start": 12.4,
+      "duration": 7.039
+    },
+    {
+      "text": "so the lecture today is an introduction",
+      "start": 16.32,
+      "duration": 5.76
+    },
+    {
+      "text": "to visualization just generally talking",
+      "start": 19.439,
+      "duration": 3.521
+    },
+    {
+      "text": "about",
+      "start": 22.08,
+      "duration": 2.72
+    },
+    {
+      "text": "why we want to do visualization when",
+      "start": 22.96,
+      "duration": 3.04
+    },
+    {
+      "text": "it's useful",
+      "start": 24.8,
+      "duration": 3.36
+    },
+    {
+      "text": "and the overview of what it looks like",
+      "start": 26.0,
+      "duration": 5.119
+    },
+    {
+      "text": "in both excel and python",
+      "start": 28.16,
+      "duration": 7.36
+    },
+    {
+      "text": "so we when we think about visualization",
+      "start": 31.119,
+      "duration": 8.321
+    },
+    {
+      "text": "uh it's a way of getting understanding",
+      "start": 35.52,
+      "duration": 7.76
+    },
+    {
+      "text": "of more than one number at once",
+      "start": 39.44,
+      "duration": 6.799
+    },
+    {
+      "text": "and in our models so far we've just had",
+      "start": 43.28,
+      "duration": 4.48
+    },
+    {
+      "text": "one main output",
+      "start": 46.239,
+      "duration": 4.16
+    },
+    {
+      "text": "thinking about the salary model the",
+      "start": 47.76,
+      "duration": 4.16
+    },
+    {
+      "text": "dynamic salary retirement model that",
+      "start": 50.399,
+      "duration": 3.201
+    },
+    {
+      "text": "we've built out we've had the number of",
+      "start": 51.92,
+      "duration": 3.2
+    },
+    {
+      "text": "years to retirement",
+      "start": 53.6,
+      "duration": 5.119
+    },
+    {
+      "text": "as our main output from the model",
+      "start": 55.12,
+      "duration": 6.0
+    },
+    {
+      "text": "but we've also had salaries over time",
+      "start": 58.719,
+      "duration": 4.0
+    },
+    {
+      "text": "and wealth over time as",
+      "start": 61.12,
+      "duration": 4.88
+    },
+    {
+      "text": "outputs but each of those represents a",
+      "start": 62.719,
+      "duration": 4.72
+    },
+    {
+      "text": "lot of different numbers",
+      "start": 66.0,
+      "duration": 4.479
+    },
+    {
+      "text": "and so it's a little bit difficult to",
+      "start": 67.439,
+      "duration": 6.081
+    },
+    {
+      "text": "just uh only with the numbers",
+      "start": 70.479,
+      "duration": 5.68
+    },
+    {
+      "text": "present that in a way that someone can",
+      "start": 73.52,
+      "duration": 4.0
+    },
+    {
+      "text": "very easily",
+      "start": 76.159,
+      "duration": 4.561
+    },
+    {
+      "text": "understand what it looks like over time",
+      "start": 77.52,
+      "duration": 6.4
+    },
+    {
+      "text": "at a quick glance so that's where",
+      "start": 80.72,
+      "duration": 4.88
+    },
+    {
+      "text": "visualization becomes useful",
+      "start": 83.92,
+      "duration": 4.32
+    },
+    {
+      "text": "is any time where you have multiple",
+      "start": 85.6,
+      "duration": 3.12
+    },
+    {
+      "text": "different",
+      "start": 88.24,
+      "duration": 3.28
+    },
+    {
+      "text": "numbers that you want to show some kind",
+      "start": 88.72,
+      "duration": 4.24
+    },
+    {
+      "text": "of summarization",
+      "start": 91.52,
+      "duration": 4.32
+    },
+    {
+      "text": "of that information and you want it to",
+      "start": 92.96,
+      "duration": 3.28
+    },
+    {
+      "text": "be",
+      "start": 95.84,
+      "duration": 3.599
+    },
+    {
+      "text": "in a much more digestible format and",
+      "start": 96.24,
+      "duration": 4.48
+    },
+    {
+      "text": "these visualizations",
+      "start": 99.439,
+      "duration": 4.401
+    },
+    {
+      "text": "can be very powerful for getting very",
+      "start": 100.72,
+      "duration": 4.719
+    },
+    {
+      "text": "quick understanding",
+      "start": 103.84,
+      "duration": 5.12
+    },
+    {
+      "text": "of complex results",
+      "start": 105.439,
+      "duration": 6.32
+    },
+    {
+      "text": "so you know they say a picture is worth",
+      "start": 108.96,
+      "duration": 3.839
+    },
+    {
+      "text": "a thousand words",
+      "start": 111.759,
+      "duration": 4.161
+    },
+    {
+      "text": "and it definitely is true uh in the",
+      "start": 112.799,
+      "duration": 4.161
+    },
+    {
+      "text": "context of",
+      "start": 115.92,
+      "duration": 3.839
+    },
+    {
+      "text": "visual visualizing our results you know",
+      "start": 116.96,
+      "duration": 4.32
+    },
+    {
+      "text": "humans are just",
+      "start": 119.759,
+      "duration": 4.081
+    },
+    {
+      "text": "really bad in general at looking at a",
+      "start": 121.28,
+      "duration": 3.519
+    },
+    {
+      "text": "bunch of numbers",
+      "start": 123.84,
+      "duration": 3.599
+    },
+    {
+      "text": "and making some kind of interpretation",
+      "start": 124.799,
+      "duration": 3.281
+    },
+    {
+      "text": "out of it",
+      "start": 127.439,
+      "duration": 2.401
+    },
+    {
+      "text": "that's something that machines are very",
+      "start": 128.08,
+      "duration": 3.28
+    },
+    {
+      "text": "good at but",
+      "start": 129.84,
+      "duration": 4.96
+    },
+    {
+      "text": "humans are bad at and so humans",
+      "start": 131.36,
+      "duration": 6.64
+    },
+    {
+      "text": "we're visual creatures and so we have to",
+      "start": 134.8,
+      "duration": 5.84
+    },
+    {
+      "text": "display our data in a visual way that",
+      "start": 138.0,
+      "duration": 4.239
+    },
+    {
+      "text": "makes sense to",
+      "start": 140.64,
+      "duration": 5.2
+    },
+    {
+      "text": "a human so thinking about the",
+      "start": 142.239,
+      "duration": 6.08
+    },
+    {
+      "text": "the way that we have our results so far",
+      "start": 145.84,
+      "duration": 4.08
+    },
+    {
+      "text": "uh in excel",
+      "start": 148.319,
+      "duration": 4.881
+    },
+    {
+      "text": "we have something like this which shows",
+      "start": 149.92,
+      "duration": 6.319
+    },
+    {
+      "text": "our salaries and wealth over time in a",
+      "start": 153.2,
+      "duration": 4.16
+    },
+    {
+      "text": "tabular",
+      "start": 156.239,
+      "duration": 4.561
+    },
+    {
+      "text": "format so that is kind of the more basic",
+      "start": 157.36,
+      "duration": 6.159
+    },
+    {
+      "text": "form of visualization is just to lay the",
+      "start": 160.8,
+      "duration": 4.4
+    },
+    {
+      "text": "numbers out in a table",
+      "start": 163.519,
+      "duration": 4.641
+    },
+    {
+      "text": "you already get more context than just",
+      "start": 165.2,
+      "duration": 4.88
+    },
+    {
+      "text": "displaying the numbers at least they're",
+      "start": 168.16,
+      "duration": 4.96
+    },
+    {
+      "text": "laid out in a structured way and",
+      "start": 170.08,
+      "duration": 5.2
+    },
+    {
+      "text": "we can see you know the salaries and",
+      "start": 173.12,
+      "duration": 4.0
+    },
+    {
+      "text": "wells together they're aligned by the",
+      "start": 175.28,
+      "duration": 2.72
+    },
+    {
+      "text": "time",
+      "start": 177.12,
+      "duration": 3.52
+    },
+    {
+      "text": "so that already helps substantially in",
+      "start": 178.0,
+      "duration": 4.4
+    },
+    {
+      "text": "understanding what's going on here with",
+      "start": 180.64,
+      "duration": 3.36
+    },
+    {
+      "text": "the numbers",
+      "start": 182.4,
+      "duration": 4.88
+    },
+    {
+      "text": "we had this in excel basically because",
+      "start": 184.0,
+      "duration": 5.04
+    },
+    {
+      "text": "you're always kind of working in tables",
+      "start": 187.28,
+      "duration": 2.64
+    },
+    {
+      "text": "in excel",
+      "start": 189.04,
+      "duration": 3.199
+    },
+    {
+      "text": "but we didn't even get to a table format",
+      "start": 189.92,
+      "duration": 4.48
+    },
+    {
+      "text": "in python yet in python we've just been",
+      "start": 192.239,
+      "duration": 4.08
+    },
+    {
+      "text": "printing out sentences which say",
+      "start": 194.4,
+      "duration": 5.199
+    },
+    {
+      "text": "you know at year three you would have 63",
+      "start": 196.319,
+      "duration": 6.721
+    },
+    {
+      "text": "000 as a salary and so we haven't had a",
+      "start": 199.599,
+      "duration": 5.601
+    },
+    {
+      "text": "good way of displaying this information",
+      "start": 203.04,
+      "duration": 5.279
+    },
+    {
+      "text": "in python yet",
+      "start": 205.2,
+      "duration": 5.36
+    },
+    {
+      "text": "so looking at this table i mean",
+      "start": 208.319,
+      "duration": 3.2
+    },
+    {
+      "text": "certainly",
+      "start": 210.56,
+      "duration": 3.039
+    },
+    {
+      "text": "you can look at it and get some",
+      "start": 211.519,
+      "duration": 4.0
+    },
+    {
+      "text": "conclusions from it",
+      "start": 213.599,
+      "duration": 4.481
+    },
+    {
+      "text": "uh you know you can see looking at the",
+      "start": 215.519,
+      "duration": 4.321
+    },
+    {
+      "text": "salaries okay it's increasing a little",
+      "start": 218.08,
+      "duration": 3.04
+    },
+    {
+      "text": "bit year by year",
+      "start": 219.84,
+      "duration": 3.039
+    },
+    {
+      "text": "and then when we hit year five we have",
+      "start": 221.12,
+      "duration": 3.119
+    },
+    {
+      "text": "this jump here",
+      "start": 222.879,
+      "duration": 3.92
+    },
+    {
+      "text": "that jump representing a raise from a",
+      "start": 224.239,
+      "duration": 3.761
+    },
+    {
+      "text": "promotion",
+      "start": 226.799,
+      "duration": 3.601
+    },
+    {
+      "text": "uh versus the cost of living races that",
+      "start": 228.0,
+      "duration": 3.2
+    },
+    {
+      "text": "come",
+      "start": 230.4,
+      "duration": 3.839
+    },
+    {
+      "text": "every other year so",
+      "start": 231.2,
+      "duration": 5.52
+    },
+    {
+      "text": "you can definitely see that but it takes",
+      "start": 234.239,
+      "duration": 3.601
+    },
+    {
+      "text": "some time",
+      "start": 236.72,
+      "duration": 3.28
+    },
+    {
+      "text": "looking at the numbers to understand",
+      "start": 237.84,
+      "duration": 3.2
+    },
+    {
+      "text": "that",
+      "start": 240.0,
+      "duration": 2.799
+    },
+    {
+      "text": "you can't just immediately glance at",
+      "start": 241.04,
+      "duration": 3.68
+    },
+    {
+      "text": "this and understand okay every five",
+      "start": 242.799,
+      "duration": 2.72
+    },
+    {
+      "text": "years",
+      "start": 244.72,
+      "duration": 2.56
+    },
+    {
+      "text": "the there's a promotion the salary is",
+      "start": 245.519,
+      "duration": 3.601
+    },
+    {
+      "text": "going to jump for the promotion",
+      "start": 247.28,
+      "duration": 3.36
+    },
+    {
+      "text": "you can see that if you just look at the",
+      "start": 249.12,
+      "duration": 3.72
+    },
+    {
+      "text": "numbers one by one and identify these",
+      "start": 250.64,
+      "duration": 3.76
+    },
+    {
+      "text": "patterns but",
+      "start": 252.84,
+      "duration": 3.399
+    },
+    {
+      "text": "it's not immediately obvious just",
+      "start": 254.4,
+      "duration": 3.44
+    },
+    {
+      "text": "looking at the numbers",
+      "start": 256.239,
+      "duration": 3.84
+    },
+    {
+      "text": "and that's where visualization can be",
+      "start": 257.84,
+      "duration": 3.519
+    },
+    {
+      "text": "really helpful",
+      "start": 260.079,
+      "duration": 3.601
+    },
+    {
+      "text": "and we'll see examples of what this",
+      "start": 261.359,
+      "duration": 3.041
+    },
+    {
+      "text": "looks like",
+      "start": 263.68,
+      "duration": 4.32
+    },
+    {
+      "text": "visualized so when we think",
+      "start": 264.4,
+      "duration": 6.64
+    },
+    {
+      "text": "about how to visualize things in excel",
+      "start": 268.0,
+      "duration": 5.199
+    },
+    {
+      "text": "i mentioned that we're already working",
+      "start": 271.04,
+      "duration": 4.0
+    },
+    {
+      "text": "in tables we probably already have our",
+      "start": 273.199,
+      "duration": 2.72
+    },
+    {
+      "text": "numbers",
+      "start": 275.04,
+      "duration": 3.04
+    },
+    {
+      "text": "laid out in this kind of format so",
+      "start": 275.919,
+      "duration": 3.361
+    },
+    {
+      "text": "that's already",
+      "start": 278.08,
+      "duration": 3.6
+    },
+    {
+      "text": "going down the tabular direction of",
+      "start": 279.28,
+      "duration": 3.359
+    },
+    {
+      "text": "visualizing",
+      "start": 281.68,
+      "duration": 4.16
+    },
+    {
+      "text": "data so we have that in place",
+      "start": 282.639,
+      "duration": 5.041
+    },
+    {
+      "text": "then what we can add on top of that is",
+      "start": 285.84,
+      "duration": 3.76
+    },
+    {
+      "text": "charts and graphs and so",
+      "start": 287.68,
+      "duration": 4.32
+    },
+    {
+      "text": "in excel that really all lives in one",
+      "start": 289.6,
+      "duration": 3.12
+    },
+    {
+      "text": "spot",
+      "start": 292.0,
+      "duration": 4.0
+    },
+    {
+      "text": "you just go and hit insert chart and",
+      "start": 292.72,
+      "duration": 6.479
+    },
+    {
+      "text": "you pop into this kind of menu here and",
+      "start": 296.0,
+      "duration": 4.8
+    },
+    {
+      "text": "you just look through the different",
+      "start": 299.199,
+      "duration": 2.56
+    },
+    {
+      "text": "possible charts",
+      "start": 300.8,
+      "duration": 4.16
+    },
+    {
+      "text": "for your data and select the one that is",
+      "start": 301.759,
+      "duration": 4.321
+    },
+    {
+      "text": "appropriate",
+      "start": 304.96,
+      "duration": 3.28
+    },
+    {
+      "text": "and that's pretty much the end-all",
+      "start": 306.08,
+      "duration": 5.44
+    },
+    {
+      "text": "be-all of excel visualization",
+      "start": 308.24,
+      "duration": 4.88
+    },
+    {
+      "text": "there's quite a bit of customization",
+      "start": 311.52,
+      "duration": 3.519
+    },
+    {
+      "text": "that you can do within the charts but",
+      "start": 313.12,
+      "duration": 4.32
+    },
+    {
+      "text": "everything kind of lives within this",
+      "start": 315.039,
+      "duration": 3.44
+    },
+    {
+      "text": "insert chart",
+      "start": 317.44,
+      "duration": 3.199
+    },
+    {
+      "text": "and then modifying the chart that it",
+      "start": 318.479,
+      "duration": 4.56
+    },
+    {
+      "text": "generates",
+      "start": 320.639,
+      "duration": 5.12
+    },
+    {
+      "text": "in python things are not so",
+      "start": 323.039,
+      "duration": 4.241
+    },
+    {
+      "text": "straightforward",
+      "start": 325.759,
+      "duration": 4.641
+    },
+    {
+      "text": "there are a lot of options for how to",
+      "start": 327.28,
+      "duration": 6.0
+    },
+    {
+      "text": "visualize things in python and that's",
+      "start": 330.4,
+      "duration": 3.6
+    },
+    {
+      "text": "because",
+      "start": 333.28,
+      "duration": 3.199
+    },
+    {
+      "text": "python is an open source language which",
+      "start": 334.0,
+      "duration": 3.68
+    },
+    {
+      "text": "is developed",
+      "start": 336.479,
+      "duration": 3.681
+    },
+    {
+      "text": "by the community millions of people",
+      "start": 337.68,
+      "duration": 4.32
+    },
+    {
+      "text": "across the world",
+      "start": 340.16,
+      "duration": 4.0
+    },
+    {
+      "text": "uh are out there building different",
+      "start": 342.0,
+      "duration": 4.639
+    },
+    {
+      "text": "solutions for how to visualize",
+      "start": 344.16,
+      "duration": 4.879
+    },
+    {
+      "text": "anyone can go and create a new way to",
+      "start": 346.639,
+      "duration": 3.521
+    },
+    {
+      "text": "visualize things",
+      "start": 349.039,
+      "duration": 3.761
+    },
+    {
+      "text": "in python and so many people have done",
+      "start": 350.16,
+      "duration": 3.28
+    },
+    {
+      "text": "that",
+      "start": 352.8,
+      "duration": 2.16
+    },
+    {
+      "text": "and so you have all these different",
+      "start": 353.44,
+      "duration": 3.199
+    },
+    {
+      "text": "packages and all these different",
+      "start": 354.96,
+      "duration": 3.04
+    },
+    {
+      "text": "ecosystems",
+      "start": 356.639,
+      "duration": 3.68
+    },
+    {
+      "text": "of how to visualize things in python",
+      "start": 358.0,
+      "duration": 3.84
+    },
+    {
+      "text": "that have different advantages and",
+      "start": 360.319,
+      "duration": 2.801
+    },
+    {
+      "text": "disadvantages",
+      "start": 361.84,
+      "duration": 3.6
+    },
+    {
+      "text": "and the vast majority of this is",
+      "start": 363.12,
+      "duration": 3.919
+    },
+    {
+      "text": "definitely outside the scope",
+      "start": 365.44,
+      "duration": 3.92
+    },
+    {
+      "text": "of this class you know we could spend an",
+      "start": 367.039,
+      "duration": 3.521
+    },
+    {
+      "text": "entire semester",
+      "start": 369.36,
+      "duration": 4.72
+    },
+    {
+      "text": "just looking at visualization in python",
+      "start": 370.56,
+      "duration": 5.12
+    },
+    {
+      "text": "but we're trying to teach financial",
+      "start": 374.08,
+      "duration": 3.44
+    },
+    {
+      "text": "modeling here so we're going to take",
+      "start": 375.68,
+      "duration": 5.359
+    },
+    {
+      "text": "what is easy and can get us quickly",
+      "start": 377.52,
+      "duration": 6.64
+    },
+    {
+      "text": "to some reasonable charts and graphs and",
+      "start": 381.039,
+      "duration": 4.88
+    },
+    {
+      "text": "just kind of recognize that these other",
+      "start": 384.16,
+      "duration": 3.039
+    },
+    {
+      "text": "options are out there",
+      "start": 385.919,
+      "duration": 3.441
+    },
+    {
+      "text": "and you can expand into using them but",
+      "start": 387.199,
+      "duration": 4.961
+    },
+    {
+      "text": "you don't have to do that you can get",
+      "start": 389.36,
+      "duration": 4.88
+    },
+    {
+      "text": "pretty good results with just what we're",
+      "start": 392.16,
+      "duration": 3.92
+    },
+    {
+      "text": "focusing on this class",
+      "start": 394.24,
+      "duration": 4.88
+    },
+    {
+      "text": "which is going to be using pandas and",
+      "start": 396.08,
+      "duration": 7.119
+    },
+    {
+      "text": "matplotlib for our visualizations",
+      "start": 399.12,
+      "duration": 5.76
+    },
+    {
+      "text": "but there are a lot of other cool things",
+      "start": 403.199,
+      "duration": 4.0
+    },
+    {
+      "text": "you can do a number of these",
+      "start": 404.88,
+      "duration": 5.36
+    },
+    {
+      "text": "out here um are solving some",
+      "start": 407.199,
+      "duration": 4.881
+    },
+    {
+      "text": "interesting problems and presenting data",
+      "start": 410.24,
+      "duration": 3.6
+    },
+    {
+      "text": "in new and interesting ways",
+      "start": 412.08,
+      "duration": 4.08
+    },
+    {
+      "text": "such as interactive plots where you can",
+      "start": 413.84,
+      "duration": 3.84
+    },
+    {
+      "text": "actually like zoom in",
+      "start": 416.16,
+      "duration": 4.64
+    },
+    {
+      "text": "to the plot and maybe hover over points",
+      "start": 417.68,
+      "duration": 4.639
+    },
+    {
+      "text": "and it will show you more information",
+      "start": 420.8,
+      "duration": 2.56
+    },
+    {
+      "text": "about the point",
+      "start": 422.319,
+      "duration": 3.841
+    },
+    {
+      "text": "and other kinds of interactive features",
+      "start": 423.36,
+      "duration": 4.08
+    },
+    {
+      "text": "uh they're very",
+      "start": 426.16,
+      "duration": 3.52
+    },
+    {
+      "text": "very cool and very interesting ways to",
+      "start": 427.44,
+      "duration": 3.92
+    },
+    {
+      "text": "think about visualizing data that have a",
+      "start": 429.68,
+      "duration": 3.04
+    },
+    {
+      "text": "lot of advantages",
+      "start": 431.36,
+      "duration": 3.76
+    },
+    {
+      "text": "but we're not going to dig into all that",
+      "start": 432.72,
+      "duration": 3.52
+    },
+    {
+      "text": "in this course",
+      "start": 435.12,
+      "duration": 3.919
+    },
+    {
+      "text": "i would recommend you to take a look at",
+      "start": 436.24,
+      "duration": 3.679
+    },
+    {
+      "text": "some of those things",
+      "start": 439.039,
+      "duration": 3.44
+    },
+    {
+      "text": "outside this course such as bokeh and",
+      "start": 439.919,
+      "duration": 3.84
+    },
+    {
+      "text": "hollow views",
+      "start": 442.479,
+      "duration": 4.321
+    },
+    {
+      "text": "are to the ones that",
+      "start": 443.759,
+      "duration": 6.16
+    },
+    {
+      "text": "i've used for interactive plots and",
+      "start": 446.8,
+      "duration": 4.08
+    },
+    {
+      "text": "they're very",
+      "start": 449.919,
+      "duration": 4.241
+    },
+    {
+      "text": "useful but we're just going to focus on",
+      "start": 450.88,
+      "duration": 7.68
+    },
+    {
+      "text": "penis and matplotlib in this class",
+      "start": 454.16,
+      "duration": 4.4
+    },
+    {
+      "text": "and why are we focusing there so",
+      "start": 458.72,
+      "duration": 6.8
+    },
+    {
+      "text": "matplotlib is it was kind of one of the",
+      "start": 462.84,
+      "duration": 4.12
+    },
+    {
+      "text": "first",
+      "start": 465.52,
+      "duration": 5.2
+    },
+    {
+      "text": "ways to visualize data in python and",
+      "start": 466.96,
+      "duration": 6.0
+    },
+    {
+      "text": "a lot has been built around matplotlib",
+      "start": 470.72,
+      "duration": 3.68
+    },
+    {
+      "text": "as kind of a basic system",
+      "start": 472.96,
+      "duration": 5.2
+    },
+    {
+      "text": "for producing charts and graphs",
+      "start": 474.4,
+      "duration": 7.84
+    },
+    {
+      "text": "and matplotlib is going to kind of be in",
+      "start": 478.16,
+      "duration": 4.879
+    },
+    {
+      "text": "the background",
+      "start": 482.24,
+      "duration": 3.76
+    },
+    {
+      "text": "for us really we're going to use pandas",
+      "start": 483.039,
+      "duration": 3.361
+    },
+    {
+      "text": "to",
+      "start": 486.0,
+      "duration": 4.96
+    },
+    {
+      "text": "directly generate the plots and graphs",
+      "start": 486.4,
+      "duration": 8.32
+    },
+    {
+      "text": "whereas pennis actually uses matplotlib",
+      "start": 490.96,
+      "duration": 6.0
+    },
+    {
+      "text": "under the hood we generally don't need",
+      "start": 494.72,
+      "duration": 3.759
+    },
+    {
+      "text": "to think about that very much",
+      "start": 496.96,
+      "duration": 4.16
+    },
+    {
+      "text": "most of the time we're just using pandas",
+      "start": 498.479,
+      "duration": 3.761
+    },
+    {
+      "text": "but i do mention",
+      "start": 501.12,
+      "duration": 2.799
+    },
+    {
+      "text": "here that it's all based on my",
+      "start": 502.24,
+      "duration": 3.519
+    },
+    {
+      "text": "matplotlib because",
+      "start": 503.919,
+      "duration": 5.441
+    },
+    {
+      "text": "matplotlib is extremely customizable and",
+      "start": 505.759,
+      "duration": 6.16
+    },
+    {
+      "text": "you can do all the same customizations",
+      "start": 509.36,
+      "duration": 4.159
+    },
+    {
+      "text": "on your panties plots",
+      "start": 511.919,
+      "duration": 4.641
+    },
+    {
+      "text": "as you can with matplotlib so basically",
+      "start": 513.519,
+      "duration": 5.2
+    },
+    {
+      "text": "pandas is going to be our really simple",
+      "start": 516.56,
+      "duration": 2.64
+    },
+    {
+      "text": "way",
+      "start": 518.719,
+      "duration": 2.8
+    },
+    {
+      "text": "of just quickly creating some kind of",
+      "start": 519.2,
+      "duration": 4.48
+    },
+    {
+      "text": "graph to show off our data",
+      "start": 521.519,
+      "duration": 4.161
+    },
+    {
+      "text": "and then if you need to do absolutely",
+      "start": 523.68,
+      "duration": 4.08
+    },
+    {
+      "text": "anything with customizing it",
+      "start": 525.68,
+      "duration": 4.88
+    },
+    {
+      "text": "then you can go to using matplotlib to",
+      "start": 527.76,
+      "duration": 4.88
+    },
+    {
+      "text": "make those adjustments",
+      "start": 530.56,
+      "duration": 3.76
+    },
+    {
+      "text": "so most of the time you're not going to",
+      "start": 532.64,
+      "duration": 3.92
+    },
+    {
+      "text": "need to really think about matplotlib",
+      "start": 534.32,
+      "duration": 4.56
+    },
+    {
+      "text": "but if you want to customize your graph",
+      "start": 536.56,
+      "duration": 3.36
+    },
+    {
+      "text": "in some way",
+      "start": 538.88,
+      "duration": 3.04
+    },
+    {
+      "text": "then you can just google about how to do",
+      "start": 539.92,
+      "duration": 3.2
+    },
+    {
+      "text": "that in",
+      "start": 541.92,
+      "duration": 3.039
+    },
+    {
+      "text": "matplotlib and you'll be able to apply",
+      "start": 543.12,
+      "duration": 6.48
+    },
+    {
+      "text": "that to your pandas plot",
+      "start": 544.959,
+      "duration": 7.761
+    },
+    {
+      "text": "so that's the overview of financial",
+      "start": 549.6,
+      "duration": 4.72
+    },
+    {
+      "text": "modeling visualization and how we're",
+      "start": 552.72,
+      "duration": 3.76
+    },
+    {
+      "text": "going to focus in this course",
+      "start": 554.32,
+      "duration": 4.0
+    },
+    {
+      "text": "we'll come back next time to go through",
+      "start": 556.48,
+      "duration": 3.44
+    },
+    {
+      "text": "an example of",
+      "start": 558.32,
+      "duration": 4.72
+    },
+    {
+      "text": "doing visualization in excel so thanks",
+      "start": 559.92,
+      "duration": 4.0
+    },
+    {
+      "text": "for listening",
+      "start": 563.04,
+      "duration": 5.84
+    },
+    {
+      "text": "and see you next time",
+      "start": 563.92,
+      "duration": 4.96
+    }
+  ]
+}

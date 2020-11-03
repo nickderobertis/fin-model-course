@@ -1,0 +1,1519 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.84,
+      "duration": 2.32
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.64,
+      "duration": 3.6
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 6.16,
+      "duration": 3.12
+    },
+    {
+      "text": "talk about",
+      "start": 8.24,
+      "duration": 3.76
+    },
+    {
+      "text": "extending a basic python model to add",
+      "start": 9.28,
+      "duration": 3.68
+    },
+    {
+      "text": "iteration",
+      "start": 12.0,
+      "duration": 3.04
+    },
+    {
+      "text": "this is part of our getting started with",
+      "start": 12.96,
+      "duration": 3.52
+    },
+    {
+      "text": "python and excel",
+      "start": 15.04,
+      "duration": 4.159
+    },
+    {
+      "text": "segment where we've already built out a",
+      "start": 16.48,
+      "duration": 4.16
+    },
+    {
+      "text": "basic retirement model",
+      "start": 19.199,
+      "duration": 4.0
+    },
+    {
+      "text": "in both excel and python in the last",
+      "start": 20.64,
+      "duration": 3.36
+    },
+    {
+      "text": "video we",
+      "start": 23.199,
+      "duration": 4.801
+    },
+    {
+      "text": "added iteration to the excel model",
+      "start": 24.0,
+      "duration": 7.359
+    },
+    {
+      "text": "so we are now looking at how we can add",
+      "start": 28.0,
+      "duration": 4.32
+    },
+    {
+      "text": "this iteration",
+      "start": 31.359,
+      "duration": 4.081
+    },
+    {
+      "text": "to the python model so",
+      "start": 32.32,
+      "duration": 6.079
+    },
+    {
+      "text": "from uh you know the the prior video",
+      "start": 35.44,
+      "duration": 5.2
+    },
+    {
+      "text": "which went over the basic iteration",
+      "start": 38.399,
+      "duration": 5.201
+    },
+    {
+      "text": "we kind of compared the python iteration",
+      "start": 40.64,
+      "duration": 4.8
+    },
+    {
+      "text": "to the excel iteration",
+      "start": 43.6,
+      "duration": 3.76
+    },
+    {
+      "text": "uh you know in python you're going to",
+      "start": 45.44,
+      "duration": 4.08
+    },
+    {
+      "text": "use loops here we're looking at a",
+      "start": 47.36,
+      "duration": 5.359
+    },
+    {
+      "text": "for loop um and in excel",
+      "start": 49.52,
+      "duration": 5.92
+    },
+    {
+      "text": "you are dragging formulas so ultimately",
+      "start": 52.719,
+      "duration": 4.121
+    },
+    {
+      "text": "accomplishing the same",
+      "start": 55.44,
+      "duration": 4.4
+    },
+    {
+      "text": "result",
+      "start": 56.84,
+      "duration": 3.0
+    },
+    {
+      "text": "now the the python version is quite a",
+      "start": 60.64,
+      "duration": 4.72
+    },
+    {
+      "text": "bit more flexible because you can",
+      "start": 63.28,
+      "duration": 4.879
+    },
+    {
+      "text": "do absolutely anything under that loop",
+      "start": 65.36,
+      "duration": 3.68
+    },
+    {
+      "text": "uh",
+      "start": 68.159,
+      "duration": 3.041
+    },
+    {
+      "text": "whatever whatever operations you want to",
+      "start": 69.04,
+      "duration": 4.72
+    },
+    {
+      "text": "do you can do them whereas excel you",
+      "start": 71.2,
+      "duration": 3.36
+    },
+    {
+      "text": "know it's just",
+      "start": 73.76,
+      "duration": 3.039
+    },
+    {
+      "text": "uh you know taking one formula and",
+      "start": 74.56,
+      "duration": 4.16
+    },
+    {
+      "text": "repeating it so",
+      "start": 76.799,
+      "duration": 3.36
+    },
+    {
+      "text": "you know excel is maybe a little bit",
+      "start": 78.72,
+      "duration": 3.52
+    },
+    {
+      "text": "easier to get into for the iteration",
+      "start": 80.159,
+      "duration": 4.161
+    },
+    {
+      "text": "but python ultimately is a lot more",
+      "start": 82.24,
+      "duration": 3.519
+    },
+    {
+      "text": "flexible and powerful",
+      "start": 84.32,
+      "duration": 3.119
+    },
+    {
+      "text": "and we'll see that over time as the",
+      "start": 85.759,
+      "duration": 4.0
+    },
+    {
+      "text": "course progresses",
+      "start": 87.439,
+      "duration": 5.36
+    },
+    {
+      "text": "let's dig a little bit more into uh this",
+      "start": 89.759,
+      "duration": 4.161
+    },
+    {
+      "text": "python iteration",
+      "start": 92.799,
+      "duration": 3.841
+    },
+    {
+      "text": "and what all this stuff actually means",
+      "start": 93.92,
+      "duration": 3.199
+    },
+    {
+      "text": "um",
+      "start": 96.64,
+      "duration": 3.28
+    },
+    {
+      "text": "so there's a few different parts in here",
+      "start": 97.119,
+      "duration": 4.561
+    },
+    {
+      "text": "the first we kind of you know glossed",
+      "start": 99.92,
+      "duration": 2.72
+    },
+    {
+      "text": "over this a little bit",
+      "start": 101.68,
+      "duration": 4.079
+    },
+    {
+      "text": "last time in that we had this first line",
+      "start": 102.64,
+      "duration": 6.24
+    },
+    {
+      "text": "inputs equals uh you know left square",
+      "start": 105.759,
+      "duration": 3.841
+    },
+    {
+      "text": "bracket",
+      "start": 108.88,
+      "duration": 5.44
+    },
+    {
+      "text": "5 comma 10 comma 15 right square bracket",
+      "start": 109.6,
+      "duration": 8.159
+    },
+    {
+      "text": "so those square brackets there",
+      "start": 114.32,
+      "duration": 5.92
+    },
+    {
+      "text": "and putting commas in between things",
+      "start": 117.759,
+      "duration": 4.0
+    },
+    {
+      "text": "this is",
+      "start": 120.24,
+      "duration": 3.6
+    },
+    {
+      "text": "a new type of object that we hadn't",
+      "start": 121.759,
+      "duration": 4.0
+    },
+    {
+      "text": "worked with before",
+      "start": 123.84,
+      "duration": 5.039
+    },
+    {
+      "text": "it's not a string it's not a number this",
+      "start": 125.759,
+      "duration": 5.681
+    },
+    {
+      "text": "type of object is called a list",
+      "start": 128.879,
+      "duration": 5.121
+    },
+    {
+      "text": "so just by doing those brackets adding",
+      "start": 131.44,
+      "duration": 3.12
+    },
+    {
+      "text": "those",
+      "start": 134.0,
+      "duration": 3.36
+    },
+    {
+      "text": "commas potentially if there's multiple",
+      "start": 134.56,
+      "duration": 4.24
+    },
+    {
+      "text": "things in there",
+      "start": 137.36,
+      "duration": 4.239
+    },
+    {
+      "text": "you're making a list an object of type",
+      "start": 138.8,
+      "duration": 4.4
+    },
+    {
+      "text": "list",
+      "start": 141.599,
+      "duration": 4.801
+    },
+    {
+      "text": "so this inputs here we have as",
+      "start": 143.2,
+      "duration": 6.8
+    },
+    {
+      "text": "an objective type list and",
+      "start": 146.4,
+      "duration": 7.919
+    },
+    {
+      "text": "a list is one of the data types",
+      "start": 150.0,
+      "duration": 7.84
+    },
+    {
+      "text": "in python which can hold other objects",
+      "start": 154.319,
+      "duration": 4.0
+    },
+    {
+      "text": "within",
+      "start": 157.84,
+      "duration": 3.52
+    },
+    {
+      "text": "itself um so here",
+      "start": 158.319,
+      "duration": 5.041
+    },
+    {
+      "text": "this list is holding three different",
+      "start": 161.36,
+      "duration": 3.519
+    },
+    {
+      "text": "numbers five",
+      "start": 163.36,
+      "duration": 5.2
+    },
+    {
+      "text": "ten and fifteen um so certainly we're",
+      "start": 164.879,
+      "duration": 4.321
+    },
+    {
+      "text": "gonna dig",
+      "start": 168.56,
+      "duration": 3.84
+    },
+    {
+      "text": "a lot more in the list as we go on",
+      "start": 169.2,
+      "duration": 5.44
+    },
+    {
+      "text": "throughout the course",
+      "start": 172.4,
+      "duration": 4.16
+    },
+    {
+      "text": "but for now you can just know it's an",
+      "start": 174.64,
+      "duration": 5.599
+    },
+    {
+      "text": "object which holds other objects",
+      "start": 176.56,
+      "duration": 5.12
+    },
+    {
+      "text": "here we're using it to hold three",
+      "start": 180.239,
+      "duration": 3.28
+    },
+    {
+      "text": "different numbers",
+      "start": 181.68,
+      "duration": 4.16
+    },
+    {
+      "text": "and you can add or remove things from",
+      "start": 183.519,
+      "duration": 3.681
+    },
+    {
+      "text": "the list which we're not even going to",
+      "start": 185.84,
+      "duration": 3.92
+    },
+    {
+      "text": "do in this exercise",
+      "start": 187.2,
+      "duration": 5.2
+    },
+    {
+      "text": "but that's the basic idea behind a list",
+      "start": 189.76,
+      "duration": 3.199
+    },
+    {
+      "text": "you can",
+      "start": 192.4,
+      "duration": 2.479
+    },
+    {
+      "text": "hold multiple things you can add things",
+      "start": 192.959,
+      "duration": 3.521
+    },
+    {
+      "text": "you can remove things and you can look",
+      "start": 194.879,
+      "duration": 1.961
+    },
+    {
+      "text": "up",
+      "start": 196.48,
+      "duration": 4.479
+    },
+    {
+      "text": "specific uh items from the list",
+      "start": 196.84,
+      "duration": 6.119
+    },
+    {
+      "text": "or you can loop through and get each",
+      "start": 200.959,
+      "duration": 3.601
+    },
+    {
+      "text": "item one by one as we",
+      "start": 202.959,
+      "duration": 4.801
+    },
+    {
+      "text": "are doing here so",
+      "start": 204.56,
+      "duration": 5.44
+    },
+    {
+      "text": "we've got you know these three different",
+      "start": 207.76,
+      "duration": 4.8
+    },
+    {
+      "text": "numbers as our inputs 5 10 15 and we've",
+      "start": 210.0,
+      "duration": 5.2
+    },
+    {
+      "text": "stored those into a list",
+      "start": 212.56,
+      "duration": 4.319
+    },
+    {
+      "text": "now we come to the next line the second",
+      "start": 215.2,
+      "duration": 3.44
+    },
+    {
+      "text": "line here for item in",
+      "start": 216.879,
+      "duration": 5.601
+    },
+    {
+      "text": "inputs so this line is what defines the",
+      "start": 218.64,
+      "duration": 4.319
+    },
+    {
+      "text": "loop",
+      "start": 222.48,
+      "duration": 3.679
+    },
+    {
+      "text": "and this is a for loop so",
+      "start": 222.959,
+      "duration": 4.64
+    },
+    {
+      "text": "we know it's a for loop because the",
+      "start": 226.159,
+      "duration": 3.281
+    },
+    {
+      "text": "first word there is 4",
+      "start": 227.599,
+      "duration": 4.961
+    },
+    {
+      "text": "and it has this 4 in syntax",
+      "start": 229.44,
+      "duration": 6.159
+    },
+    {
+      "text": "so it's 4 and then",
+      "start": 232.56,
+      "duration": 5.759
+    },
+    {
+      "text": "whatever we want to call our loop",
+      "start": 235.599,
+      "duration": 4.081
+    },
+    {
+      "text": "variable so that could be",
+      "start": 238.319,
+      "duration": 4.64
+    },
+    {
+      "text": "whatever you want in uh",
+      "start": 239.68,
+      "duration": 5.36
+    },
+    {
+      "text": "and then whatever you want to iterate",
+      "start": 242.959,
+      "duration": 3.441
+    },
+    {
+      "text": "through so we want to iterate through",
+      "start": 245.04,
+      "duration": 3.199
+    },
+    {
+      "text": "this list of inputs",
+      "start": 246.4,
+      "duration": 5.039
+    },
+    {
+      "text": "so it's you know four item item is",
+      "start": 248.239,
+      "duration": 4.72
+    },
+    {
+      "text": "ultimately going to become each one of",
+      "start": 251.439,
+      "duration": 4.241
+    },
+    {
+      "text": "these as we go through",
+      "start": 252.959,
+      "duration": 5.52
+    },
+    {
+      "text": "in inputs that's referring back to this",
+      "start": 255.68,
+      "duration": 3.679
+    },
+    {
+      "text": "list of",
+      "start": 258.479,
+      "duration": 4.16
+    },
+    {
+      "text": "three numbers so",
+      "start": 259.359,
+      "duration": 4.881
+    },
+    {
+      "text": "then it's important that we end this",
+      "start": 262.639,
+      "duration": 3.921
+    },
+    {
+      "text": "line with a colon that's how",
+      "start": 264.24,
+      "duration": 5.2
+    },
+    {
+      "text": "python knows that we're going to start a",
+      "start": 266.56,
+      "duration": 3.919
+    },
+    {
+      "text": "new block here",
+      "start": 269.44,
+      "duration": 3.36
+    },
+    {
+      "text": "a block under the for loop the logic",
+      "start": 270.479,
+      "duration": 3.601
+    },
+    {
+      "text": "which should execute",
+      "start": 272.8,
+      "duration": 4.48
+    },
+    {
+      "text": "in each loop each iteration of the for",
+      "start": 274.08,
+      "duration": 5.2
+    },
+    {
+      "text": "loop",
+      "start": 277.28,
+      "duration": 4.8
+    },
+    {
+      "text": "and then we have the next important",
+      "start": 279.28,
+      "duration": 4.72
+    },
+    {
+      "text": "thing here is the indentation you need",
+      "start": 282.08,
+      "duration": 4.0
+    },
+    {
+      "text": "to have this indentation here",
+      "start": 284.0,
+      "duration": 4.88
+    },
+    {
+      "text": "for python to know we want this stuff to",
+      "start": 286.08,
+      "duration": 3.119
+    },
+    {
+      "text": "run",
+      "start": 288.88,
+      "duration": 2.24
+    },
+    {
+      "text": "under the for loop if we had another",
+      "start": 289.199,
+      "duration": 3.921
+    },
+    {
+      "text": "line of code out here",
+      "start": 291.12,
+      "duration": 3.44
+    },
+    {
+      "text": "that would not be under the loop that",
+      "start": 293.12,
+      "duration": 3.12
+    },
+    {
+      "text": "would run a single time",
+      "start": 294.56,
+      "duration": 5.04
+    },
+    {
+      "text": "after the loop has finished",
+      "start": 296.24,
+      "duration": 6.32
+    },
+    {
+      "text": "um so then you know within the loop",
+      "start": 299.6,
+      "duration": 4.159
+    },
+    {
+      "text": "we're doing two things",
+      "start": 302.56,
+      "duration": 3.44
+    },
+    {
+      "text": "one is we're doing our calculation here",
+      "start": 303.759,
+      "duration": 3.601
+    },
+    {
+      "text": "of adding two",
+      "start": 306.0,
+      "duration": 3.84
+    },
+    {
+      "text": "to whatever our item is either 5 10 or",
+      "start": 307.36,
+      "duration": 3.119
+    },
+    {
+      "text": "15",
+      "start": 309.84,
+      "duration": 4.16
+    },
+    {
+      "text": "as we go through assigning that to a new",
+      "start": 310.479,
+      "duration": 6.241
+    },
+    {
+      "text": "variable name new value and then",
+      "start": 314.0,
+      "duration": 3.68
+    },
+    {
+      "text": "printing out",
+      "start": 316.72,
+      "duration": 4.08
+    },
+    {
+      "text": "uh that new value and so that's how we",
+      "start": 317.68,
+      "duration": 3.6
+    },
+    {
+      "text": "get",
+      "start": 320.8,
+      "duration": 2.8
+    },
+    {
+      "text": "7 12 17 because first time it goes",
+      "start": 321.28,
+      "duration": 3.359
+    },
+    {
+      "text": "through with five as",
+      "start": 323.6,
+      "duration": 3.599
+    },
+    {
+      "text": "item five plus two is seven it prints",
+      "start": 324.639,
+      "duration": 3.361
+    },
+    {
+      "text": "that",
+      "start": 327.199,
+      "duration": 2.961
+    },
+    {
+      "text": "then ten comes through his item ten plus",
+      "start": 328.0,
+      "duration": 4.16
+    },
+    {
+      "text": "two is twelve it prints that",
+      "start": 330.16,
+      "duration": 3.759
+    },
+    {
+      "text": "then fifteen comes through on the last",
+      "start": 332.16,
+      "duration": 4.08
+    },
+    {
+      "text": "loop fifteen plus two is seventeen and",
+      "start": 333.919,
+      "duration": 3.84
+    },
+    {
+      "text": "then it will be done with this loop it",
+      "start": 336.24,
+      "duration": 1.76
+    },
+    {
+      "text": "would",
+      "start": 337.759,
+      "duration": 3.361
+    },
+    {
+      "text": "go on to any code which is beyond that",
+      "start": 338.0,
+      "duration": 5.68
+    },
+    {
+      "text": "uh or finish if that's the last code",
+      "start": 341.12,
+      "duration": 5.04
+    },
+    {
+      "text": "that you have",
+      "start": 343.68,
+      "duration": 2.48
+    },
+    {
+      "text": "so that's the basic idea let's go ahead",
+      "start": 347.28,
+      "duration": 3.44
+    },
+    {
+      "text": "and",
+      "start": 350.16,
+      "duration": 4.08
+    },
+    {
+      "text": "look at how we actually",
+      "start": 350.72,
+      "duration": 6.319
+    },
+    {
+      "text": "work with this in the context of our",
+      "start": 354.24,
+      "duration": 3.76
+    },
+    {
+      "text": "existing",
+      "start": 357.039,
+      "duration": 4.72
+    },
+    {
+      "text": "model so i have the python model that we",
+      "start": 358.0,
+      "duration": 5.28
+    },
+    {
+      "text": "built out",
+      "start": 361.759,
+      "duration": 4.641
+    },
+    {
+      "text": "in the last exercise here so",
+      "start": 363.28,
+      "duration": 5.759
+    },
+    {
+      "text": "we already have uh you know getting the",
+      "start": 366.4,
+      "duration": 4.72
+    },
+    {
+      "text": "years to retirement",
+      "start": 369.039,
+      "duration": 5.44
+    },
+    {
+      "text": "for martha based on this",
+      "start": 371.12,
+      "duration": 5.76
+    },
+    {
+      "text": "single uh investment rate of five",
+      "start": 374.479,
+      "duration": 3.921
+    },
+    {
+      "text": "percent here",
+      "start": 376.88,
+      "duration": 4.64
+    },
+    {
+      "text": "so now we want to look",
+      "start": 378.4,
+      "duration": 7.44
+    },
+    {
+      "text": "at multiple uh interest rates",
+      "start": 381.52,
+      "duration": 7.519
+    },
+    {
+      "text": "um and for that",
+      "start": 385.84,
+      "duration": 6.799
+    },
+    {
+      "text": "let's say we want to look at uh",
+      "start": 389.039,
+      "duration": 5.841
+    },
+    {
+      "text": "four or five or let's say five six and",
+      "start": 392.639,
+      "duration": 4.56
+    },
+    {
+      "text": "seven percent",
+      "start": 394.88,
+      "duration": 5.52
+    },
+    {
+      "text": "so we can say you know investment",
+      "start": 397.199,
+      "duration": 6.481
+    },
+    {
+      "text": "rates equals and then brackets and the",
+      "start": 400.4,
+      "duration": 5.44
+    },
+    {
+      "text": "brackets is how we're going to have a",
+      "start": 403.68,
+      "duration": 3.519
+    },
+    {
+      "text": "list here",
+      "start": 405.84,
+      "duration": 3.68
+    },
+    {
+      "text": "um so then we can do five percent six",
+      "start": 407.199,
+      "duration": 3.921
+    },
+    {
+      "text": "percent seven percent",
+      "start": 409.52,
+      "duration": 4.16
+    },
+    {
+      "text": "and you'll notice i'm putting commas uh",
+      "start": 411.12,
+      "duration": 3.28
+    },
+    {
+      "text": "in between",
+      "start": 413.68,
+      "duration": 3.04
+    },
+    {
+      "text": "each of the items the spaces are",
+      "start": 414.4,
+      "duration": 4.16
+    },
+    {
+      "text": "optional they just look nice and people",
+      "start": 416.72,
+      "duration": 2.96
+    },
+    {
+      "text": "normally do them",
+      "start": 418.56,
+      "duration": 3.039
+    },
+    {
+      "text": "um the important thing is that you have",
+      "start": 419.68,
+      "duration": 4.32
+    },
+    {
+      "text": "the commas to separate the items in the",
+      "start": 421.599,
+      "duration": 3.761
+    },
+    {
+      "text": "list",
+      "start": 424.0,
+      "duration": 4.08
+    },
+    {
+      "text": "so then you know we can look at our",
+      "start": 425.36,
+      "duration": 4.08
+    },
+    {
+      "text": "investment rates",
+      "start": 428.08,
+      "duration": 4.72
+    },
+    {
+      "text": "uh and you can see that we indeed get",
+      "start": 429.44,
+      "duration": 5.039
+    },
+    {
+      "text": "back that same list",
+      "start": 432.8,
+      "duration": 4.799
+    },
+    {
+      "text": "of these three numbers",
+      "start": 434.479,
+      "duration": 5.84
+    },
+    {
+      "text": "and so then that takes us to the for",
+      "start": 437.599,
+      "duration": 3.121
+    },
+    {
+      "text": "loop",
+      "start": 440.319,
+      "duration": 4.241
+    },
+    {
+      "text": "next um so we can say",
+      "start": 440.72,
+      "duration": 8.72
+    },
+    {
+      "text": "you know for i rate and investment rates",
+      "start": 444.56,
+      "duration": 8.32
+    },
+    {
+      "text": "let's just print out that um investment",
+      "start": 449.44,
+      "duration": 4.159
+    },
+    {
+      "text": "rate",
+      "start": 452.88,
+      "duration": 3.12
+    },
+    {
+      "text": "this is you know pretty much the",
+      "start": 453.599,
+      "duration": 5.121
+    },
+    {
+      "text": "simplest loop that you could have",
+      "start": 456.0,
+      "duration": 5.12
+    },
+    {
+      "text": "so we can see it prints five and then it",
+      "start": 458.72,
+      "duration": 4.64
+    },
+    {
+      "text": "prints six and then it prints seven",
+      "start": 461.12,
+      "duration": 4.639
+    },
+    {
+      "text": "and you know if we had some code out",
+      "start": 463.36,
+      "duration": 3.279
+    },
+    {
+      "text": "here",
+      "start": 465.759,
+      "duration": 4.0
+    },
+    {
+      "text": "uh then that's gonna run",
+      "start": 466.639,
+      "duration": 5.441
+    },
+    {
+      "text": "once at the end of the loop after it's",
+      "start": 469.759,
+      "duration": 3.201
+    },
+    {
+      "text": "done",
+      "start": 472.08,
+      "duration": 3.519
+    },
+    {
+      "text": "uh if we put that into the loop then",
+      "start": 472.96,
+      "duration": 3.679
+    },
+    {
+      "text": "it's going to run",
+      "start": 475.599,
+      "duration": 3.841
+    },
+    {
+      "text": "once per loop so that's you know where",
+      "start": 476.639,
+      "duration": 4.56
+    },
+    {
+      "text": "the importance of this indentation",
+      "start": 479.44,
+      "duration": 4.56
+    },
+    {
+      "text": "comes in anything which is indented is",
+      "start": 481.199,
+      "duration": 4.321
+    },
+    {
+      "text": "going to run as part of the loop so it's",
+      "start": 484.0,
+      "duration": 2.8
+    },
+    {
+      "text": "going to run over and over",
+      "start": 485.52,
+      "duration": 3.359
+    },
+    {
+      "text": "for as many inputs as you have that's",
+      "start": 486.8,
+      "duration": 4.079
+    },
+    {
+      "text": "why we have three dones here",
+      "start": 488.879,
+      "duration": 4.401
+    },
+    {
+      "text": "we move it back and we're back to one",
+      "start": 490.879,
+      "duration": 3.04
+    },
+    {
+      "text": "done",
+      "start": 493.28,
+      "duration": 2.4
+    },
+    {
+      "text": "because it does this print line three",
+      "start": 493.919,
+      "duration": 3.68
+    },
+    {
+      "text": "times and then this is not",
+      "start": 495.68,
+      "duration": 4.32
+    },
+    {
+      "text": "indented so then it does this after it",
+      "start": 497.599,
+      "duration": 3.6
+    },
+    {
+      "text": "has finished",
+      "start": 500.0,
+      "duration": 4.8
+    },
+    {
+      "text": "the for loop and if you try to have",
+      "start": 501.199,
+      "duration": 5.601
+    },
+    {
+      "text": "no indent at all it's going to give you",
+      "start": 504.8,
+      "duration": 3.839
+    },
+    {
+      "text": "an indentation error",
+      "start": 506.8,
+      "duration": 4.239
+    },
+    {
+      "text": "expected in indented block and that's",
+      "start": 508.639,
+      "duration": 4.241
+    },
+    {
+      "text": "because you know any time",
+      "start": 511.039,
+      "duration": 4.48
+    },
+    {
+      "text": "you're doing a colon like this in python",
+      "start": 512.88,
+      "duration": 4.48
+    },
+    {
+      "text": "it's expecting you to start a new",
+      "start": 515.519,
+      "duration": 3.76
+    },
+    {
+      "text": "indented block",
+      "start": 517.36,
+      "duration": 4.799
+    },
+    {
+      "text": "and so we need to have that for it to be",
+      "start": 519.279,
+      "duration": 5.761
+    },
+    {
+      "text": "valid python",
+      "start": 522.159,
+      "duration": 5.921
+    },
+    {
+      "text": "so that's the basic uh way to loop",
+      "start": 525.04,
+      "duration": 5.84
+    },
+    {
+      "text": "through these investment rates so now",
+      "start": 528.08,
+      "duration": 3.199
+    },
+    {
+      "text": "let's",
+      "start": 530.88,
+      "duration": 2.959
+    },
+    {
+      "text": "bring in the actual calculation that we",
+      "start": 531.279,
+      "duration": 4.881
+    },
+    {
+      "text": "want to do",
+      "start": 533.839,
+      "duration": 4.881
+    },
+    {
+      "text": "so we have our calculation here from",
+      "start": 536.16,
+      "duration": 5.119
+    },
+    {
+      "text": "before",
+      "start": 538.72,
+      "duration": 2.559
+    },
+    {
+      "text": "but we don't want to use the single",
+      "start": 541.839,
+      "duration": 3.201
+    },
+    {
+      "text": "investment rate",
+      "start": 543.519,
+      "duration": 3.921
+    },
+    {
+      "text": "from before we want to use this irate",
+      "start": 545.04,
+      "duration": 3.44
+    },
+    {
+      "text": "which is",
+      "start": 547.44,
+      "duration": 3.92
+    },
+    {
+      "text": "you know each uh investment rate so i",
+      "start": 548.48,
+      "duration": 3.76
+    },
+    {
+      "text": "run that",
+      "start": 551.36,
+      "duration": 3.039
+    },
+    {
+      "text": "and then you don't see any output right",
+      "start": 552.24,
+      "duration": 3.44
+    },
+    {
+      "text": "because again",
+      "start": 554.399,
+      "duration": 3.201
+    },
+    {
+      "text": "we have to actually tell python that we",
+      "start": 555.68,
+      "duration": 4.0
+    },
+    {
+      "text": "want to see what we calculated it is",
+      "start": 557.6,
+      "duration": 3.52
+    },
+    {
+      "text": "doing the calculations but",
+      "start": 559.68,
+      "duration": 4.32
+    },
+    {
+      "text": "it just doesn't show them by default so",
+      "start": 561.12,
+      "duration": 3.839
+    },
+    {
+      "text": "we're going to bring this",
+      "start": 564.0,
+      "duration": 5.04
+    },
+    {
+      "text": "print statement also into that loop",
+      "start": 564.959,
+      "duration": 6.721
+    },
+    {
+      "text": "and now you can see that we get the",
+      "start": 569.04,
+      "duration": 3.919
+    },
+    {
+      "text": "three different",
+      "start": 571.68,
+      "duration": 4.64
+    },
+    {
+      "text": "uh years to retirement here but uh",
+      "start": 572.959,
+      "duration": 7.121
+    },
+    {
+      "text": "it's you know not uh quite there yet",
+      "start": 576.32,
+      "duration": 4.56
+    },
+    {
+      "text": "because",
+      "start": 580.08,
+      "duration": 3.28
+    },
+    {
+      "text": "it's not clear which user retirement",
+      "start": 580.88,
+      "duration": 4.32
+    },
+    {
+      "text": "goes with which interest rate",
+      "start": 583.36,
+      "duration": 4.4
+    },
+    {
+      "text": "so let's include that into the message",
+      "start": 585.2,
+      "duration": 3.199
+    },
+    {
+      "text": "as well",
+      "start": 587.76,
+      "duration": 3.84
+    },
+    {
+      "text": "so if she earns a",
+      "start": 588.399,
+      "duration": 7.041
+    },
+    {
+      "text": "irate and then put the number formatting",
+      "start": 591.6,
+      "duration": 6.08
+    },
+    {
+      "text": "we'll go over more of what all this",
+      "start": 595.44,
+      "duration": 3.76
+    },
+    {
+      "text": "number formatting",
+      "start": 597.68,
+      "duration": 4.48
+    },
+    {
+      "text": "need means when we get into the python",
+      "start": 599.2,
+      "duration": 4.0
+    },
+    {
+      "text": "basics",
+      "start": 602.16,
+      "duration": 3.28
+    },
+    {
+      "text": "um but now we can see that that's",
+      "start": 603.2,
+      "duration": 4.079
+    },
+    {
+      "text": "included in the string as",
+      "start": 605.44,
+      "duration": 4.72
+    },
+    {
+      "text": "well so now we have you know same thing",
+      "start": 607.279,
+      "duration": 4.8
+    },
+    {
+      "text": "that we had in excel",
+      "start": 610.16,
+      "duration": 4.08
+    },
+    {
+      "text": "uh now we're using a loop we have the",
+      "start": 612.079,
+      "duration": 3.361
+    },
+    {
+      "text": "same code",
+      "start": 614.24,
+      "duration": 3.68
+    },
+    {
+      "text": "uh which which executes for all three",
+      "start": 615.44,
+      "duration": 5.12
+    },
+    {
+      "text": "iterations",
+      "start": 617.92,
+      "duration": 2.64
+    },
+    {
+      "text": "and we see the results for each one and",
+      "start": 620.72,
+      "duration": 4.32
+    },
+    {
+      "text": "again that",
+      "start": 623.839,
+      "duration": 3.041
+    },
+    {
+      "text": "indentation is important if we just put",
+      "start": 625.04,
+      "duration": 3.84
+    },
+    {
+      "text": "the print here it's only going to show",
+      "start": 626.88,
+      "duration": 2.24
+    },
+    {
+      "text": "us",
+      "start": 628.88,
+      "duration": 2.24
+    },
+    {
+      "text": "the last one because it finishes the",
+      "start": 629.12,
+      "duration": 3.839
+    },
+    {
+      "text": "loop and then it has everything set up",
+      "start": 631.12,
+      "duration": 3.2
+    },
+    {
+      "text": "from the last loop",
+      "start": 632.959,
+      "duration": 3.521
+    },
+    {
+      "text": "uh so make sure to pay a lot of",
+      "start": 634.32,
+      "duration": 4.32
+    },
+    {
+      "text": "attention to that indentation",
+      "start": 636.48,
+      "duration": 4.24
+    },
+    {
+      "text": "uh so that everything that you're",
+      "start": 638.64,
+      "duration": 4.0
+    },
+    {
+      "text": "executing as a part of the loop",
+      "start": 640.72,
+      "duration": 4.16
+    },
+    {
+      "text": "is indented and everything which you",
+      "start": 642.64,
+      "duration": 5.52
+    },
+    {
+      "text": "aren't is not",
+      "start": 644.88,
+      "duration": 3.28
+    },
+    {
+      "text": "so uh you know that's the uh",
+      "start": 648.32,
+      "duration": 6.639
+    },
+    {
+      "text": "way we can add iteration to our python",
+      "start": 651.76,
+      "duration": 6.319
+    },
+    {
+      "text": "models and functions we're going to come",
+      "start": 654.959,
+      "duration": 4.401
+    },
+    {
+      "text": "back",
+      "start": 658.079,
+      "duration": 4.961
+    },
+    {
+      "text": "next time to discuss the lab exercise",
+      "start": 659.36,
+      "duration": 6.159
+    },
+    {
+      "text": "for this material so thanks for",
+      "start": 663.04,
+      "duration": 3.12
+    },
+    {
+      "text": "listening",
+      "start": 665.519,
+      "duration": 6.56
+    },
+    {
+      "text": "and see you next time",
+      "start": 666.16,
+      "duration": 5.919
+    }
+  ]
+}

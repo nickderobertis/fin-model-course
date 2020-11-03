@@ -1,0 +1,1919 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.439,
+      "duration": 2.4
+    },
+    {
+      "text": "this is nick dierbertus teaching you",
+      "start": 4.24,
+      "duration": 4.0
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.839,
+      "duration": 3.121
+    },
+    {
+      "text": "be doing an",
+      "start": 8.24,
+      "duration": 3.84
+    },
+    {
+      "text": "introduction to internal randomness",
+      "start": 8.96,
+      "duration": 5.36
+    },
+    {
+      "text": "this is part of our lecture series on",
+      "start": 12.08,
+      "duration": 5.199
+    },
+    {
+      "text": "probabilistic modeling",
+      "start": 14.32,
+      "duration": 5.76
+    },
+    {
+      "text": "so we already talked about scenario",
+      "start": 17.279,
+      "duration": 4.241
+    },
+    {
+      "text": "modeling and some math",
+      "start": 20.08,
+      "duration": 3.359
+    },
+    {
+      "text": "math tools to work with probability in",
+      "start": 21.52,
+      "duration": 3.999
+    },
+    {
+      "text": "general in our models",
+      "start": 23.439,
+      "duration": 5.76
+    },
+    {
+      "text": "now let's move to internal randomness",
+      "start": 25.519,
+      "duration": 6.961
+    },
+    {
+      "text": "so internal randomness is",
+      "start": 29.199,
+      "duration": 6.001
+    },
+    {
+      "text": "just like the name sounds there is",
+      "start": 32.48,
+      "duration": 3.84
+    },
+    {
+      "text": "something",
+      "start": 35.2,
+      "duration": 4.879
+    },
+    {
+      "text": "internal to the model which is random",
+      "start": 36.32,
+      "duration": 7.44
+    },
+    {
+      "text": "and so that means that you might have",
+      "start": 40.079,
+      "duration": 7.281
+    },
+    {
+      "text": "something like a portfolio model",
+      "start": 43.76,
+      "duration": 7.52
+    },
+    {
+      "text": "um where each of the returns on each of",
+      "start": 47.36,
+      "duration": 6.24
+    },
+    {
+      "text": "the assets in your portfolio",
+      "start": 51.28,
+      "duration": 8.56
+    },
+    {
+      "text": "uh is random by some some measure",
+      "start": 53.6,
+      "duration": 9.36
+    },
+    {
+      "text": "so it's something that",
+      "start": 59.84,
+      "duration": 5.44
+    },
+    {
+      "text": "is within your model that is going to",
+      "start": 62.96,
+      "duration": 3.68
+    },
+    {
+      "text": "change",
+      "start": 65.28,
+      "duration": 3.76
+    },
+    {
+      "text": "to some other value each time that you",
+      "start": 66.64,
+      "duration": 4.64
+    },
+    {
+      "text": "run the model",
+      "start": 69.04,
+      "duration": 5.119
+    },
+    {
+      "text": "so this is not anymore taking just a",
+      "start": 71.28,
+      "duration": 4.0
+    },
+    {
+      "text": "single number",
+      "start": 74.159,
+      "duration": 3.761
+    },
+    {
+      "text": "for some input it's picking a random",
+      "start": 75.28,
+      "duration": 3.12
+    },
+    {
+      "text": "number",
+      "start": 77.92,
+      "duration": 2.8
+    },
+    {
+      "text": "each time and that doesn't mean",
+      "start": 78.4,
+      "duration": 4.24
+    },
+    {
+      "text": "necessarily totally random",
+      "start": 80.72,
+      "duration": 4.88
+    },
+    {
+      "text": "uh it usually means random from some",
+      "start": 82.64,
+      "duration": 3.44
+    },
+    {
+      "text": "kind of",
+      "start": 85.6,
+      "duration": 4.0
+    },
+    {
+      "text": "distribution um which we'll dig into",
+      "start": 86.08,
+      "duration": 6.16
+    },
+    {
+      "text": "in a little bit",
+      "start": 89.6,
+      "duration": 2.64
+    },
+    {
+      "text": "and that distribution",
+      "start": 92.88,
+      "duration": 5.559
+    },
+    {
+      "text": "can be for a discrete or continuous",
+      "start": 96.079,
+      "duration": 3.921
+    },
+    {
+      "text": "variable",
+      "start": 98.439,
+      "duration": 3.241
+    },
+    {
+      "text": "as we covered in the math review",
+      "start": 100.0,
+      "duration": 3.2
+    },
+    {
+      "text": "variable a continuous",
+      "start": 101.68,
+      "duration": 4.0
+    },
+    {
+      "text": "distribution is going to be defined by a",
+      "start": 103.2,
+      "duration": 4.08
+    },
+    {
+      "text": "function and a curve",
+      "start": 105.68,
+      "duration": 5.119
+    },
+    {
+      "text": "where as a discrete uh is going to be",
+      "start": 107.28,
+      "duration": 4.4
+    },
+    {
+      "text": "defined",
+      "start": 110.799,
+      "duration": 5.6
+    },
+    {
+      "text": "by a table of the probabilities",
+      "start": 111.68,
+      "duration": 8.079
+    },
+    {
+      "text": "so here's a quick graphic",
+      "start": 116.399,
+      "duration": 7.921
+    },
+    {
+      "text": "which uh visualizes internal randomness",
+      "start": 119.759,
+      "duration": 8.401
+    },
+    {
+      "text": "and the biggest change",
+      "start": 124.32,
+      "duration": 5.52
+    },
+    {
+      "text": "to the way that you work with your model",
+      "start": 128.16,
+      "duration": 4.4
+    },
+    {
+      "text": "relating to internal randomness",
+      "start": 129.84,
+      "duration": 6.479
+    },
+    {
+      "text": "so with internal randomness you",
+      "start": 132.56,
+      "duration": 7.2
+    },
+    {
+      "text": "have the same exact inputs to the model",
+      "start": 136.319,
+      "duration": 7.361
+    },
+    {
+      "text": "um you run it but each time that you run",
+      "start": 139.76,
+      "duration": 4.16
+    },
+    {
+      "text": "it",
+      "start": 143.68,
+      "duration": 3.68
+    },
+    {
+      "text": "you get different outputs so that is",
+      "start": 143.92,
+      "duration": 4.399
+    },
+    {
+      "text": "very different",
+      "start": 147.36,
+      "duration": 3.84
+    },
+    {
+      "text": "from everything we've done so far where",
+      "start": 148.319,
+      "duration": 4.241
+    },
+    {
+      "text": "the same inputs",
+      "start": 151.2,
+      "duration": 2.88
+    },
+    {
+      "text": "are always going to give the same",
+      "start": 152.56,
+      "duration": 3.44
+    },
+    {
+      "text": "outputs the outputs only",
+      "start": 154.08,
+      "duration": 4.48
+    },
+    {
+      "text": "change when you change the inputs that's",
+      "start": 156.0,
+      "duration": 4.8
+    },
+    {
+      "text": "a deterministic model",
+      "start": 158.56,
+      "duration": 4.16
+    },
+    {
+      "text": "our model is no longer deterministic",
+      "start": 160.8,
+      "duration": 3.04
+    },
+    {
+      "text": "here",
+      "start": 162.72,
+      "duration": 3.04
+    },
+    {
+      "text": "we keep running with the same inputs and",
+      "start": 163.84,
+      "duration": 3.2
+    },
+    {
+      "text": "we get different outputs",
+      "start": 165.76,
+      "duration": 5.199
+    },
+    {
+      "text": "every time so that's",
+      "start": 167.04,
+      "duration": 5.6
+    },
+    {
+      "text": "usually what you're going for when",
+      "start": 170.959,
+      "duration": 3.441
+    },
+    {
+      "text": "you're building internal randomness",
+      "start": 172.64,
+      "duration": 4.0
+    },
+    {
+      "text": "model but it's also something you have",
+      "start": 174.4,
+      "duration": 4.0
+    },
+    {
+      "text": "to carefully consider",
+      "start": 176.64,
+      "duration": 5.2
+    },
+    {
+      "text": "and be cautious of if you're thinking",
+      "start": 178.4,
+      "duration": 5.04
+    },
+    {
+      "text": "about building an internal randomness",
+      "start": 181.84,
+      "duration": 2.479
+    },
+    {
+      "text": "model",
+      "start": 183.44,
+      "duration": 4.24
+    },
+    {
+      "text": "because this concept does make it quite",
+      "start": 184.319,
+      "duration": 5.601
+    },
+    {
+      "text": "a bit more difficult to understand",
+      "start": 187.68,
+      "duration": 3.839
+    },
+    {
+      "text": "whether your model is working",
+      "start": 189.92,
+      "duration": 3.2
+    },
+    {
+      "text": "appropriately",
+      "start": 191.519,
+      "duration": 3.281
+    },
+    {
+      "text": "especially if you're you're going and",
+      "start": 193.12,
+      "duration": 4.399
+    },
+    {
+      "text": "making some changes to an existing model",
+      "start": 194.8,
+      "duration": 4.88
+    },
+    {
+      "text": "you now get a different result than you",
+      "start": 197.519,
+      "duration": 3.041
+    },
+    {
+      "text": "did before",
+      "start": 199.68,
+      "duration": 3.36
+    },
+    {
+      "text": "substantially is that difference just",
+      "start": 200.56,
+      "duration": 3.599
+    },
+    {
+      "text": "due to the randomness",
+      "start": 203.04,
+      "duration": 3.36
+    },
+    {
+      "text": "or is it due to a mistake that you made",
+      "start": 204.159,
+      "duration": 3.36
+    },
+    {
+      "text": "in your change",
+      "start": 206.4,
+      "duration": 2.96
+    },
+    {
+      "text": "and it can be difficult to determine",
+      "start": 207.519,
+      "duration": 4.881
+    },
+    {
+      "text": "that and there are ways uh",
+      "start": 209.36,
+      "duration": 5.76
+    },
+    {
+      "text": "to be able to get towards more",
+      "start": 212.4,
+      "duration": 4.559
+    },
+    {
+      "text": "consistent results out of an internal",
+      "start": 215.12,
+      "duration": 3.199
+    },
+    {
+      "text": "randomness model",
+      "start": 216.959,
+      "duration": 3.28
+    },
+    {
+      "text": "basically by running it a bunch of times",
+      "start": 218.319,
+      "duration": 4.321
+    },
+    {
+      "text": "and aggregating the output",
+      "start": 220.239,
+      "duration": 5.36
+    },
+    {
+      "text": "and we'll get into all of that within",
+      "start": 222.64,
+      "duration": 4.48
+    },
+    {
+      "text": "the examples",
+      "start": 225.599,
+      "duration": 3.601
+    },
+    {
+      "text": "but it is something to carefully",
+      "start": 227.12,
+      "duration": 3.199
+    },
+    {
+      "text": "consider that",
+      "start": 229.2,
+      "duration": 3.52
+    },
+    {
+      "text": "your model is going to become more",
+      "start": 230.319,
+      "duration": 3.521
+    },
+    {
+      "text": "complex",
+      "start": 232.72,
+      "duration": 3.92
+    },
+    {
+      "text": "just on the nature of you're not going",
+      "start": 233.84,
+      "duration": 4.56
+    },
+    {
+      "text": "to know necessarily what outputs to",
+      "start": 236.64,
+      "duration": 3.36
+    },
+    {
+      "text": "expect from your model",
+      "start": 238.4,
+      "duration": 3.36
+    },
+    {
+      "text": "it's going to be random within some kind",
+      "start": 240.0,
+      "duration": 4.239
+    },
+    {
+      "text": "of range",
+      "start": 241.76,
+      "duration": 2.479
+    },
+    {
+      "text": "so considering those kinds of drawbacks",
+      "start": 245.84,
+      "duration": 6.16
+    },
+    {
+      "text": "with internal randomness you really only",
+      "start": 249.36,
+      "duration": 4.799
+    },
+    {
+      "text": "want to use this technique",
+      "start": 252.0,
+      "duration": 5.359
+    },
+    {
+      "text": "when this randomness is very",
+      "start": 254.159,
+      "duration": 8.241
+    },
+    {
+      "text": "important and core within your model",
+      "start": 257.359,
+      "duration": 5.041
+    },
+    {
+      "text": "there are other ways you can add this",
+      "start": 263.04,
+      "duration": 6.32
+    },
+    {
+      "text": "kind of randomness to your model uh",
+      "start": 265.44,
+      "duration": 6.319
+    },
+    {
+      "text": "monte carlo simulation which will be our",
+      "start": 269.36,
+      "duration": 3.119
+    },
+    {
+      "text": "next",
+      "start": 271.759,
+      "duration": 2.801
+    },
+    {
+      "text": "main topic of exploring the parameter",
+      "start": 272.479,
+      "duration": 3.361
+    },
+    {
+      "text": "space",
+      "start": 274.56,
+      "duration": 4.72
+    },
+    {
+      "text": "is uh basically the external",
+      "start": 275.84,
+      "duration": 7.52
+    },
+    {
+      "text": "counterpart to internal randomness",
+      "start": 279.28,
+      "duration": 6.8
+    },
+    {
+      "text": "where internal randomness you're drawing",
+      "start": 283.36,
+      "duration": 4.32
+    },
+    {
+      "text": "inputs from some kind of distribution",
+      "start": 286.08,
+      "duration": 2.96
+    },
+    {
+      "text": "within the model",
+      "start": 287.68,
+      "duration": 3.04
+    },
+    {
+      "text": "monte carlo simulation you take a",
+      "start": 289.04,
+      "duration": 4.32
+    },
+    {
+      "text": "deterministic model and you extend it",
+      "start": 290.72,
+      "duration": 5.6
+    },
+    {
+      "text": "by drawing random values for the inputs",
+      "start": 293.36,
+      "duration": 3.76
+    },
+    {
+      "text": "uh",
+      "start": 296.32,
+      "duration": 3.84
+    },
+    {
+      "text": "so they can both accomplish",
+      "start": 297.12,
+      "duration": 6.079
+    },
+    {
+      "text": "a lot of the same goals but going with",
+      "start": 300.16,
+      "duration": 5.039
+    },
+    {
+      "text": "monte carlo simulation means that your",
+      "start": 303.199,
+      "duration": 2.641
+    },
+    {
+      "text": "original",
+      "start": 305.199,
+      "duration": 2.881
+    },
+    {
+      "text": "core model is still deterministic and so",
+      "start": 305.84,
+      "duration": 4.24
+    },
+    {
+      "text": "it's still easy to evaluate",
+      "start": 308.08,
+      "duration": 4.44
+    },
+    {
+      "text": "and check and understand",
+      "start": 310.08,
+      "duration": 3.92
+    },
+    {
+      "text": "[Music]",
+      "start": 312.52,
+      "duration": 5.239
+    },
+    {
+      "text": "and so for most situations",
+      "start": 314.0,
+      "duration": 3.759
+    },
+    {
+      "text": "i would recommend going towards monte",
+      "start": 317.919,
+      "duration": 3.601
+    },
+    {
+      "text": "carlo simulation",
+      "start": 319.84,
+      "duration": 4.079
+    },
+    {
+      "text": "but if it's really important for your",
+      "start": 321.52,
+      "duration": 3.28
+    },
+    {
+      "text": "model",
+      "start": 323.919,
+      "duration": 5.12
+    },
+    {
+      "text": "then internal randomness can make sense",
+      "start": 324.8,
+      "duration": 8.56
+    },
+    {
+      "text": "so a couple examples there",
+      "start": 329.039,
+      "duration": 8.72
+    },
+    {
+      "text": "for the retirement model an external",
+      "start": 333.36,
+      "duration": 6.559
+    },
+    {
+      "text": "method makes sense to vary the",
+      "start": 337.759,
+      "duration": 4.561
+    },
+    {
+      "text": "investment return in the model",
+      "start": 339.919,
+      "duration": 4.401
+    },
+    {
+      "text": "because we've already built out the core",
+      "start": 342.32,
+      "duration": 4.56
+    },
+    {
+      "text": "model it's already deterministic",
+      "start": 344.32,
+      "duration": 5.599
+    },
+    {
+      "text": "and so it's much easier to extend it by",
+      "start": 346.88,
+      "duration": 5.44
+    },
+    {
+      "text": "adding monte carlo simulation then to go",
+      "start": 349.919,
+      "duration": 3.84
+    },
+    {
+      "text": "and kind of rebuild it",
+      "start": 352.32,
+      "duration": 5.76
+    },
+    {
+      "text": "by using internal randomness",
+      "start": 353.759,
+      "duration": 4.321
+    },
+    {
+      "text": "and that that brings up another point",
+      "start": 358.639,
+      "duration": 3.361
+    },
+    {
+      "text": "which is generally",
+      "start": 360.319,
+      "duration": 2.801
+    },
+    {
+      "text": "if you want to go with internal",
+      "start": 362.0,
+      "duration": 3.759
+    },
+    {
+      "text": "randomness you should think about this",
+      "start": 363.12,
+      "duration": 4.48
+    },
+    {
+      "text": "before you build the model and",
+      "start": 365.759,
+      "duration": 4.481
+    },
+    {
+      "text": "build it in as you create the model it's",
+      "start": 367.6,
+      "duration": 3.36
+    },
+    {
+      "text": "typically",
+      "start": 370.24,
+      "duration": 3.519
+    },
+    {
+      "text": "more difficult to add internal",
+      "start": 370.96,
+      "duration": 4.72
+    },
+    {
+      "text": "randomness to an existing model than it",
+      "start": 373.759,
+      "duration": 3.28
+    },
+    {
+      "text": "is to build it",
+      "start": 375.68,
+      "duration": 5.84
+    },
+    {
+      "text": "uh from scratch the first time",
+      "start": 377.039,
+      "duration": 6.241
+    },
+    {
+      "text": "but as i mentioned a good example where",
+      "start": 381.52,
+      "duration": 3.36
+    },
+    {
+      "text": "you might want to use",
+      "start": 383.28,
+      "duration": 3.44
+    },
+    {
+      "text": "internal randomness is in a portfolio",
+      "start": 384.88,
+      "duration": 4.24
+    },
+    {
+      "text": "model because you're",
+      "start": 386.72,
+      "duration": 3.52
+    },
+    {
+      "text": "you know you can never know what to",
+      "start": 389.12,
+      "duration": 2.96
+    },
+    {
+      "text": "expect on investment returns of",
+      "start": 390.24,
+      "duration": 3.76
+    },
+    {
+      "text": "individual assets they may as well be",
+      "start": 392.08,
+      "duration": 3.119
+    },
+    {
+      "text": "random",
+      "start": 394.0,
+      "duration": 4.319
+    },
+    {
+      "text": "for modeling purposes and so building",
+      "start": 395.199,
+      "duration": 5.761
+    },
+    {
+      "text": "that randomness right into the model",
+      "start": 398.319,
+      "duration": 5.521
+    },
+    {
+      "text": "that means you'll be able to get you",
+      "start": 400.96,
+      "duration": 3.76
+    },
+    {
+      "text": "know different",
+      "start": 403.84,
+      "duration": 4.32
+    },
+    {
+      "text": "statistics relating to the variation",
+      "start": 404.72,
+      "duration": 6.64
+    },
+    {
+      "text": "in the portfolio returns within",
+      "start": 408.16,
+      "duration": 6.08
+    },
+    {
+      "text": "the core model",
+      "start": 411.36,
+      "duration": 2.88
+    },
+    {
+      "text": "so when you use internal randomness",
+      "start": 417.28,
+      "duration": 7.52
+    },
+    {
+      "text": "you can think of internal randomness",
+      "start": 422.24,
+      "duration": 5.519
+    },
+    {
+      "text": "versus monte carlo simulation",
+      "start": 424.8,
+      "duration": 5.839
+    },
+    {
+      "text": "in a lot of the same ways as internal",
+      "start": 427.759,
+      "duration": 4.0
+    },
+    {
+      "text": "versus external",
+      "start": 430.639,
+      "duration": 4.241
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 431.759,
+      "duration": 5.921
+    },
+    {
+      "text": "when we build it internally to the model",
+      "start": 434.88,
+      "duration": 5.039
+    },
+    {
+      "text": "the model itself becomes more complex",
+      "start": 437.68,
+      "duration": 3.519
+    },
+    {
+      "text": "the core model",
+      "start": 439.919,
+      "duration": 3.921
+    },
+    {
+      "text": "is more complicated than it was before",
+      "start": 441.199,
+      "duration": 4.56
+    },
+    {
+      "text": "but running the model is just as easy as",
+      "start": 443.84,
+      "duration": 3.28
+    },
+    {
+      "text": "it was before",
+      "start": 445.759,
+      "duration": 4.961
+    },
+    {
+      "text": "whereas when we add it externally",
+      "start": 447.12,
+      "duration": 5.44
+    },
+    {
+      "text": "then it becomes more complicated to run",
+      "start": 450.72,
+      "duration": 3.199
+    },
+    {
+      "text": "the model you might have to run the",
+      "start": 452.56,
+      "duration": 1.84
+    },
+    {
+      "text": "model",
+      "start": 453.919,
+      "duration": 2.641
+    },
+    {
+      "text": "multiple times associate the inputs with",
+      "start": 454.4,
+      "duration": 5.28
+    },
+    {
+      "text": "the outputs aggregate that in some way",
+      "start": 456.56,
+      "duration": 4.96
+    },
+    {
+      "text": "but the core model itself remains just",
+      "start": 459.68,
+      "duration": 3.359
+    },
+    {
+      "text": "as simple and so it's just",
+      "start": 461.52,
+      "duration": 3.92
+    },
+    {
+      "text": "as easy to make changes on the core",
+      "start": 463.039,
+      "duration": 5.44
+    },
+    {
+      "text": "model going forward",
+      "start": 465.44,
+      "duration": 3.039
+    },
+    {
+      "text": "um and as i've highlighted uh",
+      "start": 469.28,
+      "duration": 5.52
+    },
+    {
+      "text": "while this is typically the goal of",
+      "start": 472.96,
+      "duration": 3.44
+    },
+    {
+      "text": "internal randomness it's also the",
+      "start": 474.8,
+      "duration": 2.56
+    },
+    {
+      "text": "drawback",
+      "start": 476.4,
+      "duration": 2.72
+    },
+    {
+      "text": "which is that your model is not",
+      "start": 477.36,
+      "duration": 3.04
+    },
+    {
+      "text": "deterministic",
+      "start": 479.12,
+      "duration": 3.04
+    },
+    {
+      "text": "you run it multiple times with the same",
+      "start": 480.4,
+      "duration": 3.199
+    },
+    {
+      "text": "inputs you're going to get multiple",
+      "start": 482.16,
+      "duration": 4.159
+    },
+    {
+      "text": "different outputs",
+      "start": 483.599,
+      "duration": 2.72
+    },
+    {
+      "text": "and then looking at how we would",
+      "start": 488.56,
+      "duration": 4.0
+    },
+    {
+      "text": "implement internal randomness with",
+      "start": 490.4,
+      "duration": 2.96
+    },
+    {
+      "text": "continuous",
+      "start": 492.56,
+      "duration": 4.079
+    },
+    {
+      "text": "variables so again whether it's discrete",
+      "start": 493.36,
+      "duration": 5.04
+    },
+    {
+      "text": "or continuous you're going to be drawing",
+      "start": 496.639,
+      "duration": 2.56
+    },
+    {
+      "text": "that",
+      "start": 498.4,
+      "duration": 3.28
+    },
+    {
+      "text": "value from a distribution just here with",
+      "start": 499.199,
+      "duration": 3.361
+    },
+    {
+      "text": "continuous",
+      "start": 501.68,
+      "duration": 3.04
+    },
+    {
+      "text": "that distribution is defined by a",
+      "start": 502.56,
+      "duration": 5.28
+    },
+    {
+      "text": "function or a curve",
+      "start": 504.72,
+      "duration": 3.12
+    },
+    {
+      "text": "so then for whatever input you're",
+      "start": 508.4,
+      "duration": 5.04
+    },
+    {
+      "text": "thinking about you need to determine",
+      "start": 510.879,
+      "duration": 5.441
+    },
+    {
+      "text": "which distribution makes the most sense",
+      "start": 513.44,
+      "duration": 3.279
+    },
+    {
+      "text": "for",
+      "start": 516.32,
+      "duration": 4.399
+    },
+    {
+      "text": "your input and if you're not sure",
+      "start": 516.719,
+      "duration": 6.961
+    },
+    {
+      "text": "it will be the right choice in most of",
+      "start": 520.719,
+      "duration": 4.24
+    },
+    {
+      "text": "the cases for your inputs",
+      "start": 523.68,
+      "duration": 4.8
+    },
+    {
+      "text": "just use the normal distribution um",
+      "start": 524.959,
+      "duration": 6.401
+    },
+    {
+      "text": "as we discussed in the math review the",
+      "start": 528.48,
+      "duration": 4.4
+    },
+    {
+      "text": "central limit theorem",
+      "start": 531.36,
+      "duration": 4.56
+    },
+    {
+      "text": "makes it such that most of the things we",
+      "start": 532.88,
+      "duration": 4.079
+    },
+    {
+      "text": "observe",
+      "start": 535.92,
+      "duration": 4.64
+    },
+    {
+      "text": "are going to be normally distributed",
+      "start": 536.959,
+      "duration": 3.601
+    },
+    {
+      "text": "but it is important that you pick",
+      "start": 541.36,
+      "duration": 5.599
+    },
+    {
+      "text": "an appropriate mean and standard",
+      "start": 544.72,
+      "duration": 3.679
+    },
+    {
+      "text": "deviation",
+      "start": 546.959,
+      "duration": 4.721
+    },
+    {
+      "text": "for your normal distribution",
+      "start": 548.399,
+      "duration": 6.321
+    },
+    {
+      "text": "it can be very different",
+      "start": 551.68,
+      "duration": 6.159
+    },
+    {
+      "text": "values coming out as a result from two",
+      "start": 554.72,
+      "duration": 4.559
+    },
+    {
+      "text": "normal distributions if they have",
+      "start": 557.839,
+      "duration": 4.321
+    },
+    {
+      "text": "different means or standard deviations",
+      "start": 559.279,
+      "duration": 6.801
+    },
+    {
+      "text": "so when thinking about how should i pick",
+      "start": 562.16,
+      "duration": 7.04
+    },
+    {
+      "text": "the mean and standard deviation or the",
+      "start": 566.08,
+      "duration": 4.56
+    },
+    {
+      "text": "mean",
+      "start": 569.2,
+      "duration": 5.04
+    },
+    {
+      "text": "if you have historical data then",
+      "start": 570.64,
+      "duration": 6.0
+    },
+    {
+      "text": "use that historical data to take an",
+      "start": 574.24,
+      "duration": 3.44
+    },
+    {
+      "text": "average",
+      "start": 576.64,
+      "duration": 3.04
+    },
+    {
+      "text": "of the historical and use that as your",
+      "start": 577.68,
+      "duration": 3.279
+    },
+    {
+      "text": "estimate for",
+      "start": 579.68,
+      "duration": 5.68
+    },
+    {
+      "text": "the the mean of the normal distribution",
+      "start": 580.959,
+      "duration": 7.281
+    },
+    {
+      "text": "um if you don't have any historical data",
+      "start": 585.36,
+      "duration": 5.36
+    },
+    {
+      "text": "then just think of what a reasonable",
+      "start": 588.24,
+      "duration": 5.44
+    },
+    {
+      "text": "normal typical kind of value for this",
+      "start": 590.72,
+      "duration": 5.84
+    },
+    {
+      "text": "input would be",
+      "start": 593.68,
+      "duration": 2.88
+    },
+    {
+      "text": "as far as the standard deviation the way",
+      "start": 596.72,
+      "duration": 3.6
+    },
+    {
+      "text": "that you can",
+      "start": 599.6,
+      "duration": 5.28
+    },
+    {
+      "text": "think about it is in terms of how likely",
+      "start": 600.32,
+      "duration": 8.48
+    },
+    {
+      "text": "is it for this input to be that far",
+      "start": 604.88,
+      "duration": 6.8
+    },
+    {
+      "text": "from the mean so you want to think about",
+      "start": 608.8,
+      "duration": 3.92
+    },
+    {
+      "text": "it in terms of",
+      "start": 611.68,
+      "duration": 4.08
+    },
+    {
+      "text": "multiples of the standard deviation one",
+      "start": 612.72,
+      "duration": 3.679
+    },
+    {
+      "text": "two three",
+      "start": 615.76,
+      "duration": 4.96
+    },
+    {
+      "text": "four times the standard deviation",
+      "start": 616.399,
+      "duration": 4.321
+    },
+    {
+      "text": "so one times the standard deviation in",
+      "start": 620.88,
+      "duration": 3.92
+    },
+    {
+      "text": "either direction",
+      "start": 623.839,
+      "duration": 4.0
+    },
+    {
+      "text": "from the mean should be a common",
+      "start": 624.8,
+      "duration": 6.24
+    },
+    {
+      "text": "deviation so let's",
+      "start": 627.839,
+      "duration": 4.961
+    },
+    {
+      "text": "put an example that to this to make a",
+      "start": 631.04,
+      "duration": 3.12
+    },
+    {
+      "text": "little more concrete",
+      "start": 632.8,
+      "duration": 3.039
+    },
+    {
+      "text": "if you're thinking about an investment",
+      "start": 634.16,
+      "duration": 3.6
+    },
+    {
+      "text": "return say just an overall",
+      "start": 635.839,
+      "duration": 4.801
+    },
+    {
+      "text": "market return uh you might say seven",
+      "start": 637.76,
+      "duration": 3.84
+    },
+    {
+      "text": "percent",
+      "start": 640.64,
+      "duration": 3.52
+    },
+    {
+      "text": "is a reasonable average just based on",
+      "start": 641.6,
+      "duration": 4.4
+    },
+    {
+      "text": "historical data seven percent",
+      "start": 644.16,
+      "duration": 4.08
+    },
+    {
+      "text": "is a fairly reasonable estimate of an",
+      "start": 646.0,
+      "duration": 5.519
+    },
+    {
+      "text": "overall market return",
+      "start": 648.24,
+      "duration": 3.279
+    },
+    {
+      "text": "then we need to determine the standard",
+      "start": 651.6,
+      "duration": 3.359
+    },
+    {
+      "text": "deviation uh",
+      "start": 652.8,
+      "duration": 6.0
+    },
+    {
+      "text": "let's maybe pick uh three percent",
+      "start": 654.959,
+      "duration": 6.081
+    },
+    {
+      "text": "as an initial value to think about for",
+      "start": 658.8,
+      "duration": 3.68
+    },
+    {
+      "text": "the standard deviation",
+      "start": 661.04,
+      "duration": 4.32
+    },
+    {
+      "text": "and let's go through this logic of",
+      "start": 662.48,
+      "duration": 4.479
+    },
+    {
+      "text": "thinking about multiples of the standard",
+      "start": 665.36,
+      "duration": 4.96
+    },
+    {
+      "text": "deviation and how they relate",
+      "start": 666.959,
+      "duration": 5.88
+    },
+    {
+      "text": "so 1 times the standard deviation",
+      "start": 670.32,
+      "duration": 3.68
+    },
+    {
+      "text": "difference",
+      "start": 672.839,
+      "duration": 4.201
+    },
+    {
+      "text": "should be a common occurrence so that",
+      "start": 674.0,
+      "duration": 5.12
+    },
+    {
+      "text": "means that take that seven percent",
+      "start": 677.04,
+      "duration": 5.039
+    },
+    {
+      "text": "go up up to ten percent down to four",
+      "start": 679.12,
+      "duration": 3.839
+    },
+    {
+      "text": "percent",
+      "start": 682.079,
+      "duration": 3.2
+    },
+    {
+      "text": "that ten to four percent range should be",
+      "start": 682.959,
+      "duration": 3.44
+    },
+    {
+      "text": "common",
+      "start": 685.279,
+      "duration": 3.841
+    },
+    {
+      "text": "for uh the investment rate for that to",
+      "start": 686.399,
+      "duration": 4.401
+    },
+    {
+      "text": "be a valid standard deviation which four",
+      "start": 689.12,
+      "duration": 2.8
+    },
+    {
+      "text": "to ten percent",
+      "start": 690.8,
+      "duration": 3.92
+    },
+    {
+      "text": "definitely common kinds of market",
+      "start": 691.92,
+      "duration": 4.479
+    },
+    {
+      "text": "returns so we're already",
+      "start": 694.72,
+      "duration": 4.799
+    },
+    {
+      "text": "sounding reasonable two times the",
+      "start": 696.399,
+      "duration": 4.241
+    },
+    {
+      "text": "standard deviation",
+      "start": 699.519,
+      "duration": 4.161
+    },
+    {
+      "text": "in either direction should not happen",
+      "start": 700.64,
+      "duration": 4.0
+    },
+    {
+      "text": "often",
+      "start": 703.68,
+      "duration": 4.159
+    },
+    {
+      "text": "it should be relatively rare but",
+      "start": 704.64,
+      "duration": 6.879
+    },
+    {
+      "text": "still happens uh you know a substantial",
+      "start": 707.839,
+      "duration": 6.321
+    },
+    {
+      "text": "portion of the time",
+      "start": 711.519,
+      "duration": 5.681
+    },
+    {
+      "text": "so that would be with seven percent mean",
+      "start": 714.16,
+      "duration": 4.72
+    },
+    {
+      "text": "three percent standard deviation now",
+      "start": 717.2,
+      "duration": 3.439
+    },
+    {
+      "text": "two times the standard deviation is six",
+      "start": 718.88,
+      "duration": 3.92
+    },
+    {
+      "text": "percent so that would be going down to",
+      "start": 720.639,
+      "duration": 3.2
+    },
+    {
+      "text": "one percent",
+      "start": 722.8,
+      "duration": 3.68
+    },
+    {
+      "text": "and up to thirteen percent uh that",
+      "start": 723.839,
+      "duration": 3.44
+    },
+    {
+      "text": "should be",
+      "start": 726.48,
+      "duration": 3.84
+    },
+    {
+      "text": "a range of the",
+      "start": 727.279,
+      "duration": 6.721
+    },
+    {
+      "text": "investment return falls in here most of",
+      "start": 730.32,
+      "duration": 4.639
+    },
+    {
+      "text": "the time",
+      "start": 734.0,
+      "duration": 2.72
+    },
+    {
+      "text": "sometimes it'll go outside of that which",
+      "start": 734.959,
+      "duration": 3.601
+    },
+    {
+      "text": "one to eleven percent that sounds",
+      "start": 736.72,
+      "duration": 3.679
+    },
+    {
+      "text": "reasonable",
+      "start": 738.56,
+      "duration": 3.76
+    },
+    {
+      "text": "three times the standard deviation",
+      "start": 740.399,
+      "duration": 4.161
+    },
+    {
+      "text": "should be rare um",
+      "start": 742.32,
+      "duration": 4.24
+    },
+    {
+      "text": "so that's not to say it won't happen",
+      "start": 744.56,
+      "duration": 3.04
+    },
+    {
+      "text": "it's just",
+      "start": 746.56,
+      "duration": 4.8
+    },
+    {
+      "text": "uh very uncommon so um",
+      "start": 747.6,
+      "duration": 5.84
+    },
+    {
+      "text": "then we're looking at nine percent in",
+      "start": 751.36,
+      "duration": 4.24
+    },
+    {
+      "text": "either direction of that seven percent",
+      "start": 753.44,
+      "duration": 4.959
+    },
+    {
+      "text": "mean so that's negative two",
+      "start": 755.6,
+      "duration": 6.88
+    },
+    {
+      "text": "up until 16 um",
+      "start": 758.399,
+      "duration": 7.201
+    },
+    {
+      "text": "so that seems fairly appropriate",
+      "start": 762.48,
+      "duration": 5.359
+    },
+    {
+      "text": "we might be a little bit small on the",
+      "start": 765.6,
+      "duration": 4.08
+    },
+    {
+      "text": "standard deviation because",
+      "start": 767.839,
+      "duration": 4.56
+    },
+    {
+      "text": "certainly returns go lower than negative",
+      "start": 769.68,
+      "duration": 3.68
+    },
+    {
+      "text": "two",
+      "start": 772.399,
+      "duration": 4.161
+    },
+    {
+      "text": "with a decent uh degree of frequency",
+      "start": 773.36,
+      "duration": 5.84
+    },
+    {
+      "text": "so based on that we might want to",
+      "start": 776.56,
+      "duration": 3.6
+    },
+    {
+      "text": "increase",
+      "start": 779.2,
+      "duration": 2.8
+    },
+    {
+      "text": "uh the standard deviation maybe four",
+      "start": 780.16,
+      "duration": 4.72
+    },
+    {
+      "text": "percent is going to be more appropriate",
+      "start": 782.0,
+      "duration": 4.72
+    },
+    {
+      "text": "and then we're looking at four times",
+      "start": 784.88,
+      "duration": 3.84
+    },
+    {
+      "text": "three twelve percent down",
+      "start": 786.72,
+      "duration": 4.4
+    },
+    {
+      "text": "from the seven percent uh so that's down",
+      "start": 788.72,
+      "duration": 4.08
+    },
+    {
+      "text": "to negative five percent",
+      "start": 791.12,
+      "duration": 4.88
+    },
+    {
+      "text": "uh so that seems like a more reasonable",
+      "start": 792.8,
+      "duration": 4.0
+    },
+    {
+      "text": "range",
+      "start": 796.0,
+      "duration": 4.639
+    },
+    {
+      "text": "um for an annual market return",
+      "start": 796.8,
+      "duration": 7.039
+    },
+    {
+      "text": "and then a four times standard deviation",
+      "start": 800.639,
+      "duration": 6.64
+    },
+    {
+      "text": "change should be very very rare",
+      "start": 803.839,
+      "duration": 5.761
+    },
+    {
+      "text": "um almost never occur",
+      "start": 807.279,
+      "duration": 3.521
+    },
+    {
+      "text": "[Music]",
+      "start": 809.6,
+      "duration": 4.56
+    },
+    {
+      "text": "and so that is maybe where",
+      "start": 810.8,
+      "duration": 5.12
+    },
+    {
+      "text": "this gets a little bit weird with",
+      "start": 814.16,
+      "duration": 3.04
+    },
+    {
+      "text": "investment returns",
+      "start": 815.92,
+      "duration": 4.4
+    },
+    {
+      "text": "typically we use",
+      "start": 817.2,
+      "duration": 5.28
+    },
+    {
+      "text": "like a log normal distribution or",
+      "start": 820.32,
+      "duration": 4.079
+    },
+    {
+      "text": "something with heavier tails than a",
+      "start": 822.48,
+      "duration": 3.84
+    },
+    {
+      "text": "normal distribution",
+      "start": 824.399,
+      "duration": 4.961
+    },
+    {
+      "text": "for investment returns because",
+      "start": 826.32,
+      "duration": 5.12
+    },
+    {
+      "text": "we do have those extreme events like you",
+      "start": 829.36,
+      "duration": 3.919
+    },
+    {
+      "text": "know big recessions all of a sudden",
+      "start": 831.44,
+      "duration": 2.959
+    },
+    {
+      "text": "negative 40",
+      "start": 833.279,
+      "duration": 3.761
+    },
+    {
+      "text": "return on the market uh hopefully it",
+      "start": 834.399,
+      "duration": 4.401
+    },
+    {
+      "text": "recovers within the year",
+      "start": 837.04,
+      "duration": 4.64
+    },
+    {
+      "text": "but you do have these very negative",
+      "start": 838.8,
+      "duration": 4.64
+    },
+    {
+      "text": "market returns occasionally",
+      "start": 841.68,
+      "duration": 4.88
+    },
+    {
+      "text": "and more than you would expect from",
+      "start": 843.44,
+      "duration": 6.959
+    },
+    {
+      "text": "a normal distribution so",
+      "start": 846.56,
+      "duration": 5.12
+    },
+    {
+      "text": "you know if you really want to be more",
+      "start": 850.399,
+      "duration": 3.361
+    },
+    {
+      "text": "accurate you should probably pick a",
+      "start": 851.68,
+      "duration": 3.44
+    },
+    {
+      "text": "different distribution than normal for",
+      "start": 853.76,
+      "duration": 2.24
+    },
+    {
+      "text": "investment returns",
+      "start": 855.12,
+      "duration": 3.12
+    },
+    {
+      "text": "specifically but just thinking about the",
+      "start": 856.0,
+      "duration": 3.839
+    },
+    {
+      "text": "normal distribution",
+      "start": 858.24,
+      "duration": 2.88
+    },
+    {
+      "text": "and trying to get something that's going",
+      "start": 859.839,
+      "duration": 4.721
+    },
+    {
+      "text": "to be pretty close most the time",
+      "start": 861.12,
+      "duration": 3.44
+    },
+    {
+      "text": "that example we just talked through will",
+      "start": 864.959,
+      "duration": 3.44
+    },
+    {
+      "text": "give you",
+      "start": 867.839,
+      "duration": 2.481
+    },
+    {
+      "text": "a good way to think about it and for",
+      "start": 868.399,
+      "duration": 3.281
+    },
+    {
+      "text": "most inputs",
+      "start": 870.32,
+      "duration": 2.72
+    },
+    {
+      "text": "the normal distribution is going to be",
+      "start": 871.68,
+      "duration": 3.2
+    },
+    {
+      "text": "the right choice and so that's the",
+      "start": 873.04,
+      "duration": 3.2
+    },
+    {
+      "text": "kind of thinking that you would want to",
+      "start": 874.88,
+      "duration": 5.92
+    },
+    {
+      "text": "do to pick your standard deviation",
+      "start": 876.24,
+      "duration": 4.56
+    },
+    {
+      "text": "so that's the basic introduction to",
+      "start": 881.44,
+      "duration": 3.839
+    },
+    {
+      "text": "internal randomness",
+      "start": 884.16,
+      "duration": 2.96
+    },
+    {
+      "text": "we're going to come back next time to",
+      "start": 885.279,
+      "duration": 3.441
+    },
+    {
+      "text": "implement it in",
+      "start": 887.12,
+      "duration": 4.64
+    },
+    {
+      "text": "excel so thanks for listening",
+      "start": 888.72,
+      "duration": 9.76
+    },
+    {
+      "text": "and see you next time",
+      "start": 891.76,
+      "duration": 6.72
+    }
+  ]
+}

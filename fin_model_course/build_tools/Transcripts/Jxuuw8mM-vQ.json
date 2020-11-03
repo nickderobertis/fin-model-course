@@ -1,0 +1,2614 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.639,
+      "duration": 2.321
+    },
+    {
+      "text": "nick diabetis here teaching you",
+      "start": 3.52,
+      "duration": 3.279
+    },
+    {
+      "text": "financial modeling today",
+      "start": 4.96,
+      "duration": 4.559
+    },
+    {
+      "text": "we're going to be introducing the second",
+      "start": 6.799,
+      "duration": 3.361
+    },
+    {
+      "text": "project",
+      "start": 9.519,
+      "duration": 3.601
+    },
+    {
+      "text": "in the course on probabilistic loan",
+      "start": 10.16,
+      "duration": 4.72
+    },
+    {
+      "text": "pricing",
+      "start": 13.12,
+      "duration": 4.88
+    },
+    {
+      "text": "so this project has a couple of main",
+      "start": 14.88,
+      "duration": 6.559
+    },
+    {
+      "text": "goals for your learning objectives one",
+      "start": 18.0,
+      "duration": 7.039
+    },
+    {
+      "text": "is to have a model where probability",
+      "start": 21.439,
+      "duration": 5.84
+    },
+    {
+      "text": "is really a first-class citizen",
+      "start": 25.039,
+      "duration": 4.16
+    },
+    {
+      "text": "something that we're thinking about",
+      "start": 27.279,
+      "duration": 5.601
+    },
+    {
+      "text": "very deeply within the base model itself",
+      "start": 29.199,
+      "duration": 5.601
+    },
+    {
+      "text": "probability factors into so many",
+      "start": 32.88,
+      "duration": 3.839
+    },
+    {
+      "text": "financial models",
+      "start": 34.8,
+      "duration": 4.64
+    },
+    {
+      "text": "that it's good to hit that early in the",
+      "start": 36.719,
+      "duration": 4.881
+    },
+    {
+      "text": "course",
+      "start": 39.44,
+      "duration": 5.76
+    },
+    {
+      "text": "and then the other main",
+      "start": 41.6,
+      "duration": 6.4
+    },
+    {
+      "text": "area we're testing here in this project",
+      "start": 45.2,
+      "duration": 3.28
+    },
+    {
+      "text": "is",
+      "start": 48.0,
+      "duration": 3.76
+    },
+    {
+      "text": "then to be able to um",
+      "start": 48.48,
+      "duration": 6.64
+    },
+    {
+      "text": "extend the base model in different",
+      "start": 51.76,
+      "duration": 6.4
+    },
+    {
+      "text": "ways so here we're going to build out",
+      "start": 55.12,
+      "duration": 5.119
+    },
+    {
+      "text": "an initial model and we'll have to run",
+      "start": 58.16,
+      "duration": 4.399
+    },
+    {
+      "text": "that model a bunch of times",
+      "start": 60.239,
+      "duration": 5.521
+    },
+    {
+      "text": "to understand all the different ways",
+      "start": 62.559,
+      "duration": 5.761
+    },
+    {
+      "text": "that things could occur",
+      "start": 65.76,
+      "duration": 6.0
+    },
+    {
+      "text": "so let's talk about what this project",
+      "start": 68.32,
+      "duration": 4.88
+    },
+    {
+      "text": "actually is",
+      "start": 71.76,
+      "duration": 5.52
+    },
+    {
+      "text": "so the idea here is",
+      "start": 73.2,
+      "duration": 8.559
+    },
+    {
+      "text": "that you're an analyst within a bank",
+      "start": 77.28,
+      "duration": 7.519
+    },
+    {
+      "text": "and the bank is considering doing a loan",
+      "start": 81.759,
+      "duration": 7.121
+    },
+    {
+      "text": "to a small business so",
+      "start": 84.799,
+      "duration": 6.401
+    },
+    {
+      "text": "this also gets in the whole debt area",
+      "start": 88.88,
+      "duration": 3.52
+    },
+    {
+      "text": "and decisions",
+      "start": 91.2,
+      "duration": 4.16
+    },
+    {
+      "text": "of of lenders",
+      "start": 92.4,
+      "duration": 2.96
+    },
+    {
+      "text": "so the business needs to",
+      "start": 95.84,
+      "duration": 5.68
+    },
+    {
+      "text": "buy a machine they want to borrow money",
+      "start": 99.28,
+      "duration": 3.76
+    },
+    {
+      "text": "to buy the machine",
+      "start": 101.52,
+      "duration": 3.36
+    },
+    {
+      "text": "and then after some amount of time",
+      "start": 103.04,
+      "duration": 3.6
+    },
+    {
+      "text": "they're going to repay that loan",
+      "start": 104.88,
+      "duration": 7.199
+    },
+    {
+      "text": "in full the interest is paid annually",
+      "start": 106.64,
+      "duration": 8.24
+    },
+    {
+      "text": "at a certain rate based off of the",
+      "start": 112.079,
+      "duration": 6.0
+    },
+    {
+      "text": "amount that they borrowed",
+      "start": 114.88,
+      "duration": 6.64
+    },
+    {
+      "text": "and where the probability factors into",
+      "start": 118.079,
+      "duration": 4.4
+    },
+    {
+      "text": "this",
+      "start": 121.52,
+      "duration": 4.239
+    },
+    {
+      "text": "is that the business is not always going",
+      "start": 122.479,
+      "duration": 5.28
+    },
+    {
+      "text": "to be able to pay back the loan there is",
+      "start": 125.759,
+      "duration": 2.241
+    },
+    {
+      "text": "a",
+      "start": 127.759,
+      "duration": 2.64
+    },
+    {
+      "text": "chance that they're going to default on",
+      "start": 128.0,
+      "duration": 3.36
+    },
+    {
+      "text": "the loan",
+      "start": 130.399,
+      "duration": 4.641
+    },
+    {
+      "text": "and not be able to make their payments",
+      "start": 131.36,
+      "duration": 9.2
+    },
+    {
+      "text": "um so the probability of default here",
+      "start": 135.04,
+      "duration": 7.279
+    },
+    {
+      "text": "it starts at an initial probability of",
+      "start": 140.56,
+      "duration": 4.399
+    },
+    {
+      "text": "default and then it decreases over time",
+      "start": 142.319,
+      "duration": 4.161
+    },
+    {
+      "text": "because the business becomes",
+      "start": 144.959,
+      "duration": 4.561
+    },
+    {
+      "text": "more mature year over year and so it's",
+      "start": 146.48,
+      "duration": 4.08
+    },
+    {
+      "text": "less likely that they're going to",
+      "start": 149.52,
+      "duration": 1.999
+    },
+    {
+      "text": "default",
+      "start": 150.56,
+      "duration": 4.48
+    },
+    {
+      "text": "as each year goes by but",
+      "start": 151.519,
+      "duration": 5.121
+    },
+    {
+      "text": "in that final year when the loan is",
+      "start": 155.04,
+      "duration": 4.32
+    },
+    {
+      "text": "actually due the business",
+      "start": 156.64,
+      "duration": 5.679
+    },
+    {
+      "text": "doesn't just have to pay the interest",
+      "start": 159.36,
+      "duration": 4.239
+    },
+    {
+      "text": "payment they have to pay",
+      "start": 162.319,
+      "duration": 2.721
+    },
+    {
+      "text": "the full amount of the loan the",
+      "start": 163.599,
+      "duration": 3.601
+    },
+    {
+      "text": "principal in addition",
+      "start": 165.04,
+      "duration": 5.279
+    },
+    {
+      "text": "to the interest payment so that's a much",
+      "start": 167.2,
+      "duration": 3.679
+    },
+    {
+      "text": "bigger",
+      "start": 170.319,
+      "duration": 3.28
+    },
+    {
+      "text": "obligation for that final year and so",
+      "start": 170.879,
+      "duration": 3.681
+    },
+    {
+      "text": "the final year",
+      "start": 173.599,
+      "duration": 4.241
+    },
+    {
+      "text": "has a separate default probability which",
+      "start": 174.56,
+      "duration": 7.039
+    },
+    {
+      "text": "is going to be higher than their typical",
+      "start": 177.84,
+      "duration": 6.16
+    },
+    {
+      "text": "default probability as overtime would",
+      "start": 181.599,
+      "duration": 5.761
+    },
+    {
+      "text": "save for the interest payments",
+      "start": 184.0,
+      "duration": 3.36
+    },
+    {
+      "text": "and we need to model in",
+      "start": 189.92,
+      "duration": 6.48
+    },
+    {
+      "text": "what happens whether the borrower",
+      "start": 193.04,
+      "duration": 6.0
+    },
+    {
+      "text": "defaults or doesn't default",
+      "start": 196.4,
+      "duration": 5.119
+    },
+    {
+      "text": "and the borrower can default in any",
+      "start": 199.04,
+      "duration": 4.24
+    },
+    {
+      "text": "given year",
+      "start": 201.519,
+      "duration": 4.8
+    },
+    {
+      "text": "that they have to make a payment",
+      "start": 203.28,
+      "duration": 6.319
+    },
+    {
+      "text": "so whenever the borrower defaults then",
+      "start": 206.319,
+      "duration": 6.401
+    },
+    {
+      "text": "they're going to go into bankruptcy and",
+      "start": 209.599,
+      "duration": 4.56
+    },
+    {
+      "text": "we're going to say that the bankruptcy",
+      "start": 212.72,
+      "duration": 4.4
+    },
+    {
+      "text": "process always takes two years",
+      "start": 214.159,
+      "duration": 6.16
+    },
+    {
+      "text": "and then uh after bankruptcy the",
+      "start": 217.12,
+      "duration": 5.28
+    },
+    {
+      "text": "lender is going to collect a certain",
+      "start": 220.319,
+      "duration": 4.401
+    },
+    {
+      "text": "percentage of the original loan amount",
+      "start": 222.4,
+      "duration": 6.72
+    },
+    {
+      "text": "the recovery percentage um",
+      "start": 224.72,
+      "duration": 7.36
+    },
+    {
+      "text": "and so what that means as far as forming",
+      "start": 229.12,
+      "duration": 4.96
+    },
+    {
+      "text": "the cash flows",
+      "start": 232.08,
+      "duration": 4.48
+    },
+    {
+      "text": "uh in the year that the borrower",
+      "start": 234.08,
+      "duration": 4.32
+    },
+    {
+      "text": "defaults then there will be zero",
+      "start": 236.56,
+      "duration": 4.64
+    },
+    {
+      "text": "cash flow in that year it'll be zero",
+      "start": 238.4,
+      "duration": 4.399
+    },
+    {
+      "text": "cash flow",
+      "start": 241.2,
+      "duration": 4.959
+    },
+    {
+      "text": "um the next year and then two years",
+      "start": 242.799,
+      "duration": 5.841
+    },
+    {
+      "text": "after the default we're going to get the",
+      "start": 246.159,
+      "duration": 3.601
+    },
+    {
+      "text": "recovery payment",
+      "start": 248.64,
+      "duration": 4.879
+    },
+    {
+      "text": "as the lender recovery times the",
+      "start": 249.76,
+      "duration": 5.28
+    },
+    {
+      "text": "price of the machine which is equal to",
+      "start": 253.519,
+      "duration": 4.0
+    },
+    {
+      "text": "the loan amount",
+      "start": 255.04,
+      "duration": 5.28
+    },
+    {
+      "text": "um and so that does mean that the amount",
+      "start": 257.519,
+      "duration": 4.321
+    },
+    {
+      "text": "of cash flows",
+      "start": 260.32,
+      "duration": 2.96
+    },
+    {
+      "text": "could be greater than the amount of the",
+      "start": 261.84,
+      "duration": 3.28
+    },
+    {
+      "text": "loan if they defaulted in the last year",
+      "start": 263.28,
+      "duration": 2.16
+    },
+    {
+      "text": "then",
+      "start": 265.12,
+      "duration": 3.2
+    },
+    {
+      "text": "it's going to be two years more than the",
+      "start": 265.44,
+      "duration": 4.64
+    },
+    {
+      "text": "life alone that the final cash flow",
+      "start": 268.32,
+      "duration": 4.159
+    },
+    {
+      "text": "comes",
+      "start": 270.08,
+      "duration": 2.399
+    },
+    {
+      "text": "so this is a fairly realistic kind of",
+      "start": 274.8,
+      "duration": 6.88
+    },
+    {
+      "text": "model to determine basically what",
+      "start": 278.4,
+      "duration": 6.0
+    },
+    {
+      "text": "what terms should the bank offer on the",
+      "start": 281.68,
+      "duration": 4.959
+    },
+    {
+      "text": "loan",
+      "start": 284.4,
+      "duration": 5.76
+    },
+    {
+      "text": "um and so the main question here",
+      "start": 286.639,
+      "duration": 7.201
+    },
+    {
+      "text": "is uh you know you're you're the loan",
+      "start": 290.16,
+      "duration": 4.24
+    },
+    {
+      "text": "analyst",
+      "start": 293.84,
+      "duration": 2.32
+    },
+    {
+      "text": "trying to come up with what are the",
+      "start": 294.4,
+      "duration": 3.76
+    },
+    {
+      "text": "appropriate terms",
+      "start": 296.16,
+      "duration": 4.72
+    },
+    {
+      "text": "for this loan to this bank based on what",
+      "start": 298.16,
+      "duration": 4.879
+    },
+    {
+      "text": "we know about the bank",
+      "start": 300.88,
+      "duration": 5.52
+    },
+    {
+      "text": "um and so",
+      "start": 303.039,
+      "duration": 6.481
+    },
+    {
+      "text": "you're trying to give the loan officer",
+      "start": 306.4,
+      "duration": 4.56
+    },
+    {
+      "text": "all the information to make these",
+      "start": 309.52,
+      "duration": 3.2
+    },
+    {
+      "text": "decisions",
+      "start": 310.96,
+      "duration": 4.4
+    },
+    {
+      "text": "so you want to be able to say with your",
+      "start": 312.72,
+      "duration": 4.319
+    },
+    {
+      "text": "model for any given inputs",
+      "start": 315.36,
+      "duration": 5.92
+    },
+    {
+      "text": "what's the expected irr of the loan",
+      "start": 317.039,
+      "duration": 7.44
+    },
+    {
+      "text": "and what does that irr look like for",
+      "start": 321.28,
+      "duration": 6.639
+    },
+    {
+      "text": "some different interest rates um so",
+      "start": 324.479,
+      "duration": 6.72
+    },
+    {
+      "text": "here we're going to be looking at 30 35",
+      "start": 327.919,
+      "duration": 8.081
+    },
+    {
+      "text": "and 40 interest rates for the loan",
+      "start": 331.199,
+      "duration": 8.0
+    },
+    {
+      "text": "um and then",
+      "start": 336.0,
+      "duration": 6.479
+    },
+    {
+      "text": "it goes even further to say that",
+      "start": 339.199,
+      "duration": 6.081
+    },
+    {
+      "text": "um you know there's always a lot of",
+      "start": 342.479,
+      "duration": 4.16
+    },
+    {
+      "text": "uncertainty in estimating the",
+      "start": 345.28,
+      "duration": 2.639
+    },
+    {
+      "text": "probability of default",
+      "start": 346.639,
+      "duration": 4.081
+    },
+    {
+      "text": "you can never estimate that accurately",
+      "start": 347.919,
+      "duration": 3.681
+    },
+    {
+      "text": "so",
+      "start": 350.72,
+      "duration": 3.84
+    },
+    {
+      "text": "uh the lending officer wants to see what",
+      "start": 351.6,
+      "duration": 3.92
+    },
+    {
+      "text": "everything looks like",
+      "start": 354.56,
+      "duration": 4.16
+    },
+    {
+      "text": "with some different assumptions for",
+      "start": 355.52,
+      "duration": 6.959
+    },
+    {
+      "text": "the initial probability of default so",
+      "start": 358.72,
+      "duration": 7.36
+    },
+    {
+      "text": "uh base case is 20 per year",
+      "start": 362.479,
+      "duration": 5.921
+    },
+    {
+      "text": "but the lending officer also wants you",
+      "start": 366.08,
+      "duration": 3.52
+    },
+    {
+      "text": "to evaluate",
+      "start": 368.4,
+      "duration": 5.359
+    },
+    {
+      "text": "10 percent and 30 per year",
+      "start": 369.6,
+      "duration": 4.159
+    },
+    {
+      "text": "and then the other factor here",
+      "start": 375.199,
+      "duration": 7.041
+    },
+    {
+      "text": "is how long should the loan be and so",
+      "start": 379.199,
+      "duration": 4.801
+    },
+    {
+      "text": "the lending officer also wants to see",
+      "start": 382.24,
+      "duration": 3.2
+    },
+    {
+      "text": "all the results with 5",
+      "start": 384.0,
+      "duration": 4.35
+    },
+    {
+      "text": "10 and 20 years",
+      "start": 385.44,
+      "duration": 4.479
+    },
+    {
+      "text": "[Music]",
+      "start": 388.35,
+      "duration": 4.45
+    },
+    {
+      "text": "and important thing about how the",
+      "start": 389.919,
+      "duration": 4.641
+    },
+    {
+      "text": "results should be structured",
+      "start": 392.8,
+      "duration": 5.04
+    },
+    {
+      "text": "is that your model should show all of",
+      "start": 394.56,
+      "duration": 3.84
+    },
+    {
+      "text": "these",
+      "start": 397.84,
+      "duration": 2.56
+    },
+    {
+      "text": "results it shouldn't require going in",
+      "start": 398.4,
+      "duration": 3.84
+    },
+    {
+      "text": "and manually changing around numbers to",
+      "start": 400.4,
+      "duration": 3.919
+    },
+    {
+      "text": "produce these results",
+      "start": 402.24,
+      "duration": 3.92
+    },
+    {
+      "text": "just when i open up the model i should",
+      "start": 404.319,
+      "duration": 4.16
+    },
+    {
+      "text": "be able to see the answers for",
+      "start": 406.16,
+      "duration": 5.92
+    },
+    {
+      "text": "all of these different interest rates",
+      "start": 408.479,
+      "duration": 8.0
+    },
+    {
+      "text": "probabilities defaults and loan lifes",
+      "start": 412.08,
+      "duration": 4.399
+    },
+    {
+      "text": "and then it's also",
+      "start": 416.96,
+      "duration": 4.72
+    },
+    {
+      "text": "part of the main problem to then",
+      "start": 420.08,
+      "duration": 3.04
+    },
+    {
+      "text": "visualize",
+      "start": 421.68,
+      "duration": 4.56
+    },
+    {
+      "text": "your result there should be graphs and",
+      "start": 423.12,
+      "duration": 6.479
+    },
+    {
+      "text": "conditional formatting here",
+      "start": 426.24,
+      "duration": 3.359
+    },
+    {
+      "text": "um so a few notes and assumptions",
+      "start": 430.72,
+      "duration": 6.16
+    },
+    {
+      "text": "we can add into this to make things",
+      "start": 434.72,
+      "duration": 3.919
+    },
+    {
+      "text": "easier",
+      "start": 436.88,
+      "duration": 4.879
+    },
+    {
+      "text": "so first is that you can assume there's",
+      "start": 438.639,
+      "duration": 4.96
+    },
+    {
+      "text": "only going to be 20 years",
+      "start": 441.759,
+      "duration": 4.0
+    },
+    {
+      "text": "of loan life that's the maximum loan",
+      "start": 443.599,
+      "duration": 3.201
+    },
+    {
+      "text": "life",
+      "start": 445.759,
+      "duration": 3.681
+    },
+    {
+      "text": "um if your model can handle more that's",
+      "start": 446.8,
+      "duration": 3.28
+    },
+    {
+      "text": "great",
+      "start": 449.44,
+      "duration": 3.84
+    },
+    {
+      "text": "but um i'm not going to test anything",
+      "start": 450.08,
+      "duration": 6.8
+    },
+    {
+      "text": "longer than 20 years in your model",
+      "start": 453.28,
+      "duration": 3.6
+    },
+    {
+      "text": "but keep in mind that that could be up",
+      "start": 457.039,
+      "duration": 4.0
+    },
+    {
+      "text": "to 22 years of cash flows if the",
+      "start": 458.4,
+      "duration": 7.359
+    },
+    {
+      "text": "borrower defaults in that final year",
+      "start": 461.039,
+      "duration": 7.28
+    },
+    {
+      "text": "um and then as far as the general",
+      "start": 465.759,
+      "duration": 4.56
+    },
+    {
+      "text": "approach to build out the model",
+      "start": 468.319,
+      "duration": 4.641
+    },
+    {
+      "text": "i think it's easiest to go at this with",
+      "start": 470.319,
+      "duration": 3.44
+    },
+    {
+      "text": "an internal",
+      "start": 472.96,
+      "duration": 3.919
+    },
+    {
+      "text": "randomness approach um",
+      "start": 473.759,
+      "duration": 5.601
+    },
+    {
+      "text": "so with the basic structure being that",
+      "start": 476.879,
+      "duration": 3.44
+    },
+    {
+      "text": "you build out",
+      "start": 479.36,
+      "duration": 4.48
+    },
+    {
+      "text": "the base model which um",
+      "start": 480.319,
+      "duration": 5.761
+    },
+    {
+      "text": "just gets you the irr for one set of",
+      "start": 483.84,
+      "duration": 3.44
+    },
+    {
+      "text": "inputs",
+      "start": 486.08,
+      "duration": 5.119
+    },
+    {
+      "text": "and then you're going to um",
+      "start": 487.28,
+      "duration": 5.759
+    },
+    {
+      "text": "run that base model a bunch of different",
+      "start": 491.199,
+      "duration": 3.921
+    },
+    {
+      "text": "times with different",
+      "start": 493.039,
+      "duration": 7.44
+    },
+    {
+      "text": "uh randomly choosing the default cases",
+      "start": 495.12,
+      "duration": 8.56
+    },
+    {
+      "text": "um it is possible to do everything in",
+      "start": 500.479,
+      "duration": 5.681
+    },
+    {
+      "text": "terms of expected value and not actually",
+      "start": 503.68,
+      "duration": 4.32
+    },
+    {
+      "text": "have a random component",
+      "start": 506.16,
+      "duration": 4.8
+    },
+    {
+      "text": "in your model but that does take a lot",
+      "start": 508.0,
+      "duration": 4.64
+    },
+    {
+      "text": "of fairly complicated math",
+      "start": 510.96,
+      "duration": 3.68
+    },
+    {
+      "text": "to make that happen i've only ever seen",
+      "start": 512.64,
+      "duration": 4.079
+    },
+    {
+      "text": "a couple students do that",
+      "start": 514.64,
+      "duration": 3.92
+    },
+    {
+      "text": "and i think it's generally a much more",
+      "start": 516.719,
+      "duration": 3.281
+    },
+    {
+      "text": "difficult way to go about building",
+      "start": 518.56,
+      "duration": 4.479
+    },
+    {
+      "text": "this model and it also doesn't really",
+      "start": 520.0,
+      "duration": 3.36
+    },
+    {
+      "text": "hit",
+      "start": 523.039,
+      "duration": 1.761
+    },
+    {
+      "text": "on a lot of the things that i'm trying",
+      "start": 523.36,
+      "duration": 3.36
+    },
+    {
+      "text": "to test with this model going with the",
+      "start": 524.8,
+      "duration": 3.28
+    },
+    {
+      "text": "internal randomness approach you're",
+      "start": 526.72,
+      "duration": 3.44
+    },
+    {
+      "text": "going to get much more comfortable",
+      "start": 528.08,
+      "duration": 5.12
+    },
+    {
+      "text": "working with a random model and being",
+      "start": 530.16,
+      "duration": 3.84
+    },
+    {
+      "text": "able to extend",
+      "start": 533.2,
+      "duration": 3.44
+    },
+    {
+      "text": "an existing model so that's the approach",
+      "start": 534.0,
+      "duration": 6.0
+    },
+    {
+      "text": "i would recommend in general",
+      "start": 536.64,
+      "duration": 3.36
+    },
+    {
+      "text": "um so when you're doing the internal",
+      "start": 540.88,
+      "duration": 3.92
+    },
+    {
+      "text": "randomness approach",
+      "start": 542.959,
+      "duration": 2.961
+    },
+    {
+      "text": "now you're going to be running the model",
+      "start": 544.8,
+      "duration": 3.599
+    },
+    {
+      "text": "a bunch of times to",
+      "start": 545.92,
+      "duration": 5.44
+    },
+    {
+      "text": "discover what the true expected irr is",
+      "start": 548.399,
+      "duration": 4.961
+    },
+    {
+      "text": "for each set of inputs",
+      "start": 551.36,
+      "duration": 3.36
+    },
+    {
+      "text": "each time it's picking a different",
+      "start": 553.36,
+      "duration": 2.96
+    },
+    {
+      "text": "default case each time you're on the",
+      "start": 554.72,
+      "duration": 3.92
+    },
+    {
+      "text": "model",
+      "start": 556.32,
+      "duration": 2.32
+    },
+    {
+      "text": "so now that it's not a deterministic",
+      "start": 559.519,
+      "duration": 4.0
+    },
+    {
+      "text": "model",
+      "start": 562.72,
+      "duration": 2.08
+    },
+    {
+      "text": "you put the same inputs in and you're",
+      "start": 563.519,
+      "duration": 2.801
+    },
+    {
+      "text": "going to get different outputs each time",
+      "start": 564.8,
+      "duration": 2.88
+    },
+    {
+      "text": "so you've got to keep running it and",
+      "start": 566.32,
+      "duration": 2.56
+    },
+    {
+      "text": "then you've got to take the expected",
+      "start": 567.68,
+      "duration": 2.32
+    },
+    {
+      "text": "value",
+      "start": 568.88,
+      "duration": 4.56
+    },
+    {
+      "text": "across the iterations to get",
+      "start": 570.0,
+      "duration": 6.88
+    },
+    {
+      "text": "an actual estimate of the result",
+      "start": 573.44,
+      "duration": 5.6
+    },
+    {
+      "text": "and the greater number of iterations you",
+      "start": 576.88,
+      "duration": 3.76
+    },
+    {
+      "text": "use the more accurate",
+      "start": 579.04,
+      "duration": 4.0
+    },
+    {
+      "text": "that answer is going to be but the",
+      "start": 580.64,
+      "duration": 4.4
+    },
+    {
+      "text": "longer it's going to take to run your",
+      "start": 583.04,
+      "duration": 2.799
+    },
+    {
+      "text": "model",
+      "start": 585.04,
+      "duration": 3.919
+    },
+    {
+      "text": "so there is a trade-off there and what i",
+      "start": 585.839,
+      "duration": 3.841
+    },
+    {
+      "text": "would recommend",
+      "start": 588.959,
+      "duration": 2.961
+    },
+    {
+      "text": "is as you're building everything out",
+      "start": 589.68,
+      "duration": 4.48
+    },
+    {
+      "text": "keep the number of iterations low",
+      "start": 591.92,
+      "duration": 3.84
+    },
+    {
+      "text": "uh just so you can run everything",
+      "start": 594.16,
+      "duration": 3.44
+    },
+    {
+      "text": "quickly and then",
+      "start": 595.76,
+      "duration": 4.56
+    },
+    {
+      "text": "once you think you've got it right then",
+      "start": 597.6,
+      "duration": 4.4
+    },
+    {
+      "text": "increase the number of iterations",
+      "start": 600.32,
+      "duration": 3.36
+    },
+    {
+      "text": "so you can run it a couple of times and",
+      "start": 602.0,
+      "duration": 3.12
+    },
+    {
+      "text": "check against",
+      "start": 603.68,
+      "duration": 4.88
+    },
+    {
+      "text": "the provided answers",
+      "start": 605.12,
+      "duration": 7.6
+    },
+    {
+      "text": "um so",
+      "start": 608.56,
+      "duration": 5.839
+    },
+    {
+      "text": "and then when you actually submit the",
+      "start": 612.72,
+      "duration": 3.76
+    },
+    {
+      "text": "final you want to run it with a thousand",
+      "start": 614.399,
+      "duration": 4.56
+    },
+    {
+      "text": "iterations before you submit so you can",
+      "start": 616.48,
+      "duration": 5.68
+    },
+    {
+      "text": "get your final answers in there",
+      "start": 618.959,
+      "duration": 6.081
+    },
+    {
+      "text": "and if you've got an excel model or a",
+      "start": 622.16,
+      "duration": 4.32
+    },
+    {
+      "text": "combination model we'll talk more on",
+      "start": 625.04,
+      "duration": 2.72
+    },
+    {
+      "text": "that in a moment",
+      "start": 626.48,
+      "duration": 4.24
+    },
+    {
+      "text": "then it can take a substantial amount of",
+      "start": 627.76,
+      "duration": 4.48
+    },
+    {
+      "text": "time to run your model with all these",
+      "start": 630.72,
+      "duration": 3.2
+    },
+    {
+      "text": "iterations",
+      "start": 632.24,
+      "duration": 4.88
+    },
+    {
+      "text": "um so make sure that",
+      "start": 633.92,
+      "duration": 4.64
+    },
+    {
+      "text": "you're planning for that time and not",
+      "start": 637.12,
+      "duration": 3.839
+    },
+    {
+      "text": "just 11 55 pm you're done",
+      "start": 638.56,
+      "duration": 3.76
+    },
+    {
+      "text": "now let me try and run this thing with a",
+      "start": 640.959,
+      "duration": 3.041
+    },
+    {
+      "text": "thousand iterations oh wait it's taking",
+      "start": 642.32,
+      "duration": 4.8
+    },
+    {
+      "text": "way too long",
+      "start": 644.0,
+      "duration": 6.959
+    },
+    {
+      "text": "um so yeah the next point",
+      "start": 647.12,
+      "duration": 5.839
+    },
+    {
+      "text": "this is a big contrast from the last",
+      "start": 650.959,
+      "duration": 3.601
+    },
+    {
+      "text": "project",
+      "start": 652.959,
+      "duration": 4.56
+    },
+    {
+      "text": "now you have flexibility over the tools",
+      "start": 654.56,
+      "duration": 4.8
+    },
+    {
+      "text": "that you want to use to solve the",
+      "start": 657.519,
+      "duration": 2.56
+    },
+    {
+      "text": "problem",
+      "start": 659.36,
+      "duration": 4.56
+    },
+    {
+      "text": "i'm trying to really emphasize and",
+      "start": 660.079,
+      "duration": 6.0
+    },
+    {
+      "text": "you know build help you build a",
+      "start": 663.92,
+      "duration": 3.039
+    },
+    {
+      "text": "competency",
+      "start": 666.079,
+      "duration": 5.2
+    },
+    {
+      "text": "in uh coming to any arbitrary problem",
+      "start": 666.959,
+      "duration": 6.241
+    },
+    {
+      "text": "and using the tools which are best",
+      "start": 671.279,
+      "duration": 4.0
+    },
+    {
+      "text": "suited for the job",
+      "start": 673.2,
+      "duration": 5.36
+    },
+    {
+      "text": "um and so in some cases that might be",
+      "start": 675.279,
+      "duration": 5.12
+    },
+    {
+      "text": "excel in some cases it might be python",
+      "start": 678.56,
+      "duration": 4.0
+    },
+    {
+      "text": "in some cases it might be a combination",
+      "start": 680.399,
+      "duration": 5.921
+    },
+    {
+      "text": "of the two um so",
+      "start": 682.56,
+      "duration": 5.92
+    },
+    {
+      "text": "same thing for this project and the",
+      "start": 686.32,
+      "duration": 3.28
+    },
+    {
+      "text": "remaining projects",
+      "start": 688.48,
+      "duration": 3.919
+    },
+    {
+      "text": "in the course you're free to implement",
+      "start": 689.6,
+      "duration": 3.679
+    },
+    {
+      "text": "it in the way",
+      "start": 692.399,
+      "duration": 3.12
+    },
+    {
+      "text": "that you like you can submit a pure",
+      "start": 693.279,
+      "duration": 3.041
+    },
+    {
+      "text": "python model",
+      "start": 695.519,
+      "duration": 3.041
+    },
+    {
+      "text": "you can submit a peer excel model or you",
+      "start": 696.32,
+      "duration": 4.56
+    },
+    {
+      "text": "can submit a model which uses both tools",
+      "start": 698.56,
+      "duration": 5.279
+    },
+    {
+      "text": "together",
+      "start": 700.88,
+      "duration": 2.959
+    },
+    {
+      "text": "i am putting one restriction on it here",
+      "start": 704.48,
+      "duration": 3.039
+    },
+    {
+      "text": "that",
+      "start": 706.72,
+      "duration": 2.4
+    },
+    {
+      "text": "if you are submitting a combination",
+      "start": 707.519,
+      "duration": 4.081
+    },
+    {
+      "text": "model then your final answers",
+      "start": 709.12,
+      "duration": 5.6
+    },
+    {
+      "text": "should be in the python side",
+      "start": 711.6,
+      "duration": 5.359
+    },
+    {
+      "text": "which i think in general makes a lot",
+      "start": 714.72,
+      "duration": 3.28
+    },
+    {
+      "text": "more sense anyway",
+      "start": 716.959,
+      "duration": 3.281
+    },
+    {
+      "text": "because the like the most",
+      "start": 718.0,
+      "duration": 3.68
+    },
+    {
+      "text": "straightforward way to combine them is",
+      "start": 720.24,
+      "duration": 2.48
+    },
+    {
+      "text": "to build out",
+      "start": 721.68,
+      "duration": 3.44
+    },
+    {
+      "text": "the base model in excel and then use",
+      "start": 722.72,
+      "duration": 4.16
+    },
+    {
+      "text": "python to run all these different",
+      "start": 725.12,
+      "duration": 3.68
+    },
+    {
+      "text": "iterations on the model",
+      "start": 726.88,
+      "duration": 4.16
+    },
+    {
+      "text": "um so then you already have your results",
+      "start": 728.8,
+      "duration": 3.12
+    },
+    {
+      "text": "in python",
+      "start": 731.04,
+      "duration": 3.68
+    },
+    {
+      "text": "and then i can grade it from your python",
+      "start": 731.92,
+      "duration": 5.12
+    },
+    {
+      "text": "model",
+      "start": 734.72,
+      "duration": 2.32
+    },
+    {
+      "text": "um and",
+      "start": 738.32,
+      "duration": 3.92
+    },
+    {
+      "text": "you know some people really like to uh",
+      "start": 742.8,
+      "duration": 5.76
+    },
+    {
+      "text": "use excel because they're more familiar",
+      "start": 746.32,
+      "duration": 3.28
+    },
+    {
+      "text": "with it",
+      "start": 748.56,
+      "duration": 3.519
+    },
+    {
+      "text": "and python is it's definitely hard to",
+      "start": 749.6,
+      "duration": 4.56
+    },
+    {
+      "text": "learn in the beginning for sure like",
+      "start": 752.079,
+      "duration": 3.2
+    },
+    {
+      "text": "you get through that initial learning",
+      "start": 754.16,
+      "duration": 3.04
+    },
+    {
+      "text": "curve it gets easier",
+      "start": 755.279,
+      "duration": 3.761
+    },
+    {
+      "text": "but people in general are just more",
+      "start": 757.2,
+      "duration": 3.6
+    },
+    {
+      "text": "comfortable with excel at this point",
+      "start": 759.04,
+      "duration": 3.44
+    },
+    {
+      "text": "still i think",
+      "start": 760.8,
+      "duration": 4.08
+    },
+    {
+      "text": "um so you might have the thought cool i",
+      "start": 762.48,
+      "duration": 3.12
+    },
+    {
+      "text": "can use",
+      "start": 764.88,
+      "duration": 2.959
+    },
+    {
+      "text": "either one i'm going to just use excel",
+      "start": 765.6,
+      "duration": 4.64
+    },
+    {
+      "text": "for sure like i'm more comfortable there",
+      "start": 767.839,
+      "duration": 6.0
+    },
+    {
+      "text": "um but you're gonna run into",
+      "start": 770.24,
+      "duration": 5.599
+    },
+    {
+      "text": "issues this this project is",
+      "start": 773.839,
+      "duration": 4.401
+    },
+    {
+      "text": "substantially more difficult",
+      "start": 775.839,
+      "duration": 5.601
+    },
+    {
+      "text": "doing it with purely excel",
+      "start": 778.24,
+      "duration": 6.64
+    },
+    {
+      "text": "um mainly because you're gonna need to",
+      "start": 781.44,
+      "duration": 4.24
+    },
+    {
+      "text": "run your model",
+      "start": 784.88,
+      "duration": 4.32
+    },
+    {
+      "text": "27 000 times uh and that's changing",
+      "start": 785.68,
+      "duration": 5.68
+    },
+    {
+      "text": "three different inputs together",
+      "start": 789.2,
+      "duration": 3.6
+    },
+    {
+      "text": "because it's three inputs that kind of",
+      "start": 791.36,
+      "duration": 3.76
+    },
+    {
+      "text": "throws out the data table approach",
+      "start": 792.8,
+      "duration": 3.76
+    },
+    {
+      "text": "uh unless you're really hacking it",
+      "start": 795.12,
+      "duration": 3.44
+    },
+    {
+      "text": "together um",
+      "start": 796.56,
+      "duration": 3.92
+    },
+    {
+      "text": "and so this just becomes very difficult",
+      "start": 798.56,
+      "duration": 3.279
+    },
+    {
+      "text": "to do with",
+      "start": 800.48,
+      "duration": 5.039
+    },
+    {
+      "text": "only excel um and so",
+      "start": 801.839,
+      "duration": 6.56
+    },
+    {
+      "text": "if you really are struggling with python",
+      "start": 805.519,
+      "duration": 3.361
+    },
+    {
+      "text": "and",
+      "start": 808.399,
+      "duration": 2.081
+    },
+    {
+      "text": "you just want to do as much as possible",
+      "start": 808.88,
+      "duration": 3.04
+    },
+    {
+      "text": "with excel",
+      "start": 810.48,
+      "duration": 3.12
+    },
+    {
+      "text": "that's fine i would recommend building",
+      "start": 811.92,
+      "duration": 6.0
+    },
+    {
+      "text": "out the base model that gets you an irr",
+      "start": 813.6,
+      "duration": 7.679
+    },
+    {
+      "text": "from the given inputs and then",
+      "start": 817.92,
+      "duration": 6.32
+    },
+    {
+      "text": "using python to run the iterations side",
+      "start": 821.279,
+      "duration": 4.0
+    },
+    {
+      "text": "of this",
+      "start": 824.24,
+      "duration": 2.88
+    },
+    {
+      "text": "because it's really probably not going",
+      "start": 825.279,
+      "duration": 3.841
+    },
+    {
+      "text": "to be more than like 10 lines of code in",
+      "start": 827.12,
+      "duration": 4.57
+    },
+    {
+      "text": "python to do that part of it",
+      "start": 829.12,
+      "duration": 4.0
+    },
+    {
+      "text": "[Music]",
+      "start": 831.69,
+      "duration": 3.269
+    },
+    {
+      "text": "so then you can still work mostly in",
+      "start": 833.12,
+      "duration": 3.04
+    },
+    {
+      "text": "excel and",
+      "start": 834.959,
+      "duration": 5.201
+    },
+    {
+      "text": "use python for something that",
+      "start": 836.16,
+      "duration": 8.72
+    },
+    {
+      "text": "it really excels and um",
+      "start": 840.16,
+      "duration": 7.2
+    },
+    {
+      "text": "though i have seen many students just go",
+      "start": 844.88,
+      "duration": 3.68
+    },
+    {
+      "text": "with pure python",
+      "start": 847.36,
+      "duration": 4.32
+    },
+    {
+      "text": "on this project and i think that's a",
+      "start": 848.56,
+      "duration": 7.6
+    },
+    {
+      "text": "good choice as well",
+      "start": 851.68,
+      "duration": 6.0
+    },
+    {
+      "text": "another thing to note about the fact",
+      "start": 856.16,
+      "duration": 3.039
+    },
+    {
+      "text": "that this is a random model",
+      "start": 857.68,
+      "duration": 3.04
+    },
+    {
+      "text": "or at least if you're going with the",
+      "start": 859.199,
+      "duration": 3.2
+    },
+    {
+      "text": "internal randomness approach",
+      "start": 860.72,
+      "duration": 4.08
+    },
+    {
+      "text": "which the vast majority of students will",
+      "start": 862.399,
+      "duration": 4.321
+    },
+    {
+      "text": "do and should do",
+      "start": 864.8,
+      "duration": 4.159
+    },
+    {
+      "text": "uh is that i'll be providing solutions",
+      "start": 866.72,
+      "duration": 3.28
+    },
+    {
+      "text": "here we'll have them down below",
+      "start": 868.959,
+      "duration": 4.24
+    },
+    {
+      "text": "in this document but when you run your",
+      "start": 870.0,
+      "duration": 4.0
+    },
+    {
+      "text": "model even if",
+      "start": 873.199,
+      "duration": 2.88
+    },
+    {
+      "text": "everything is perfectly correct you're",
+      "start": 874.0,
+      "duration": 3.6
+    },
+    {
+      "text": "not going to match up exactly",
+      "start": 876.079,
+      "duration": 3.841
+    },
+    {
+      "text": "with the solutions because it's random",
+      "start": 877.6,
+      "duration": 3.919
+    },
+    {
+      "text": "the numbers are going to be different",
+      "start": 879.92,
+      "duration": 4.88
+    },
+    {
+      "text": "every time you run it so my",
+      "start": 881.519,
+      "duration": 4.721
+    },
+    {
+      "text": "tip there is to run the model with a",
+      "start": 884.8,
+      "duration": 3.279
+    },
+    {
+      "text": "thousand iterations check it",
+      "start": 886.24,
+      "duration": 4.32
+    },
+    {
+      "text": "against the solutions and basically",
+      "start": 888.079,
+      "duration": 4.641
+    },
+    {
+      "text": "every number should be pretty close",
+      "start": 890.56,
+      "duration": 5.68
+    },
+    {
+      "text": "nothing way off and save your results",
+      "start": 892.72,
+      "duration": 4.08
+    },
+    {
+      "text": "from that",
+      "start": 896.24,
+      "duration": 2.08
+    },
+    {
+      "text": "and then run the whole thing again",
+      "start": 896.8,
+      "duration": 3.12
+    },
+    {
+      "text": "thousand iterations again",
+      "start": 898.32,
+      "duration": 3.6
+    },
+    {
+      "text": "and now check your answers that time",
+      "start": 899.92,
+      "duration": 3.359
+    },
+    {
+      "text": "against the solutions again and",
+      "start": 901.92,
+      "duration": 2.479
+    },
+    {
+      "text": "everything should be close",
+      "start": 903.279,
+      "duration": 3.841
+    },
+    {
+      "text": "again and kind of all three numbers",
+      "start": 904.399,
+      "duration": 4.24
+    },
+    {
+      "text": "you're looking at should not be far from",
+      "start": 907.12,
+      "duration": 2.48
+    },
+    {
+      "text": "each other",
+      "start": 908.639,
+      "duration": 3.601
+    },
+    {
+      "text": "um and that will let you know that",
+      "start": 909.6,
+      "duration": 3.679
+    },
+    {
+      "text": "everything is",
+      "start": 912.24,
+      "duration": 3.76
+    },
+    {
+      "text": "working appropriately at least with the",
+      "start": 913.279,
+      "duration": 3.36
+    },
+    {
+      "text": "baseline",
+      "start": 916.0,
+      "duration": 3.68
+    },
+    {
+      "text": "inputs of course my",
+      "start": 916.639,
+      "duration": 5.041
+    },
+    {
+      "text": "general recommendations still apply that",
+      "start": 919.68,
+      "duration": 3.68
+    },
+    {
+      "text": "you only have the baseline",
+      "start": 921.68,
+      "duration": 3.36
+    },
+    {
+      "text": "solutions given to you and so you need",
+      "start": 923.36,
+      "duration": 4.0
+    },
+    {
+      "text": "to be messing around with different",
+      "start": 925.04,
+      "duration": 4.479
+    },
+    {
+      "text": "inputs in your model and making sure",
+      "start": 927.36,
+      "duration": 6.64
+    },
+    {
+      "text": "that your model can adjust appropriately",
+      "start": 929.519,
+      "duration": 4.481
+    },
+    {
+      "text": "and as with all the projects that have",
+      "start": 936.0,
+      "duration": 4.399
+    },
+    {
+      "text": "templates",
+      "start": 939.759,
+      "duration": 3.44
+    },
+    {
+      "text": "you don't want to move any of the input",
+      "start": 940.399,
+      "duration": 3.12
+    },
+    {
+      "text": "or",
+      "start": 943.199,
+      "duration": 3.601
+    },
+    {
+      "text": "output cells",
+      "start": 943.519,
+      "duration": 3.281
+    },
+    {
+      "text": "um and in python just like with first",
+      "start": 947.199,
+      "duration": 3.361
+    },
+    {
+      "text": "projects you're going to have certain",
+      "start": 949.279,
+      "duration": 3.36
+    },
+    {
+      "text": "variables that need to be defined",
+      "start": 950.56,
+      "duration": 5.76
+    },
+    {
+      "text": "to give your answers",
+      "start": 952.639,
+      "duration": 3.681
+    },
+    {
+      "text": "and then the bonus for this is in two",
+      "start": 960.32,
+      "duration": 4.079
+    },
+    {
+      "text": "parts first part",
+      "start": 962.16,
+      "duration": 5.359
+    },
+    {
+      "text": "is visualization is built into the basic",
+      "start": 964.399,
+      "duration": 4.321
+    },
+    {
+      "text": "problem you need to have some",
+      "start": 967.519,
+      "duration": 3.601
+    },
+    {
+      "text": "visualization to get the full credit",
+      "start": 968.72,
+      "duration": 6.0
+    },
+    {
+      "text": "uh on the accuracy portion readability",
+      "start": 971.12,
+      "duration": 5.04
+    },
+    {
+      "text": "portion",
+      "start": 974.72,
+      "duration": 5.2
+    },
+    {
+      "text": "um but if you do an especially good job",
+      "start": 976.16,
+      "duration": 5.359
+    },
+    {
+      "text": "on visualization",
+      "start": 979.92,
+      "duration": 3.44
+    },
+    {
+      "text": "then you're going to earn a bonus so",
+      "start": 981.519,
+      "duration": 4.88
+    },
+    {
+      "text": "half of that bonus",
+      "start": 983.36,
+      "duration": 3.039
+    },
+    {
+      "text": "comes from doing a really good job on",
+      "start": 986.639,
+      "duration": 4.88
+    },
+    {
+      "text": "visualization",
+      "start": 989.36,
+      "duration": 4.719
+    },
+    {
+      "text": "and the other half is an extension to",
+      "start": 991.519,
+      "duration": 3.44
+    },
+    {
+      "text": "the problem",
+      "start": 994.079,
+      "duration": 4.401
+    },
+    {
+      "text": "where instead of looking at",
+      "start": 994.959,
+      "duration": 7.041
+    },
+    {
+      "text": "10 20 30 as the",
+      "start": 998.48,
+      "duration": 6.64
+    },
+    {
+      "text": "probabilities of defaults uh",
+      "start": 1002.0,
+      "duration": 6.16
+    },
+    {
+      "text": "we want to evaluate",
+      "start": 1005.12,
+      "duration": 4.8
+    },
+    {
+      "text": "the probability of default being drawn",
+      "start": 1008.16,
+      "duration": 3.76
+    },
+    {
+      "text": "from a normal distribution",
+      "start": 1009.92,
+      "duration": 5.039
+    },
+    {
+      "text": "so what do the results look like",
+      "start": 1011.92,
+      "duration": 6.479
+    },
+    {
+      "text": "across all the different um",
+      "start": 1014.959,
+      "duration": 6.401
+    },
+    {
+      "text": "interest rate and lone life cases but",
+      "start": 1018.399,
+      "duration": 3.68
+    },
+    {
+      "text": "with this",
+      "start": 1021.36,
+      "duration": 3.52
+    },
+    {
+      "text": "randomly drawn default probability from",
+      "start": 1022.079,
+      "duration": 5.201
+    },
+    {
+      "text": "normal distribution with a mean of 20",
+      "start": 1024.88,
+      "duration": 6.0
+    },
+    {
+      "text": "and a standard deviation of 5",
+      "start": 1027.28,
+      "duration": 3.6
+    },
+    {
+      "text": "and then going further than that you",
+      "start": 1031.839,
+      "duration": 5.281
+    },
+    {
+      "text": "want to take a single",
+      "start": 1034.079,
+      "duration": 7.041
+    },
+    {
+      "text": "input case so single lone life",
+      "start": 1037.12,
+      "duration": 8.24
+    },
+    {
+      "text": "uh single interest rate um",
+      "start": 1041.12,
+      "duration": 7.6
+    },
+    {
+      "text": "single default probability and",
+      "start": 1045.36,
+      "duration": 5.04
+    },
+    {
+      "text": "look at what the result looks like with",
+      "start": 1048.72,
+      "duration": 3.28
+    },
+    {
+      "text": "different number of iterations",
+      "start": 1050.4,
+      "duration": 5.12
+    },
+    {
+      "text": "try it with ten hundred thousand",
+      "start": 1052.0,
+      "duration": 5.28
+    },
+    {
+      "text": "and you wanna produce the visualizations",
+      "start": 1055.52,
+      "duration": 4.32
+    },
+    {
+      "text": "of each summary statistics of each",
+      "start": 1057.28,
+      "duration": 6.24
+    },
+    {
+      "text": "um and the idea here",
+      "start": 1059.84,
+      "duration": 6.32
+    },
+    {
+      "text": "is you wanna be able to say how precise",
+      "start": 1063.52,
+      "duration": 3.92
+    },
+    {
+      "text": "are these estimates",
+      "start": 1066.16,
+      "duration": 3.519
+    },
+    {
+      "text": "when i run the model a thousand times",
+      "start": 1067.44,
+      "duration": 4.239
+    },
+    {
+      "text": "how far off can i expect to be with my",
+      "start": 1069.679,
+      "duration": 2.721
+    },
+    {
+      "text": "result",
+      "start": 1071.679,
+      "duration": 2.721
+    },
+    {
+      "text": "when i run it with 10 how far off can i",
+      "start": 1072.4,
+      "duration": 4.0
+    },
+    {
+      "text": "expect to be with my result",
+      "start": 1074.4,
+      "duration": 6.32
+    },
+    {
+      "text": "um so you want to do that by",
+      "start": 1076.4,
+      "duration": 5.92
+    },
+    {
+      "text": "for each number of iterations you're",
+      "start": 1080.72,
+      "duration": 3.76
+    },
+    {
+      "text": "going to run that in another",
+      "start": 1082.32,
+      "duration": 4.4
+    },
+    {
+      "text": "like meta number of iterations to see",
+      "start": 1084.48,
+      "duration": 4.16
+    },
+    {
+      "text": "across these different cases",
+      "start": 1086.72,
+      "duration": 4.0
+    },
+    {
+      "text": "with that number of iterations what's",
+      "start": 1088.64,
+      "duration": 3.12
+    },
+    {
+      "text": "the distribution",
+      "start": 1090.72,
+      "duration": 4.64
+    },
+    {
+      "text": "of the result um",
+      "start": 1091.76,
+      "duration": 6.48
+    },
+    {
+      "text": "so the realization part is up to two",
+      "start": 1095.36,
+      "duration": 3.36
+    },
+    {
+      "text": "points",
+      "start": 1098.24,
+      "duration": 3.6
+    },
+    {
+      "text": "bonus and then uh these things together",
+      "start": 1098.72,
+      "duration": 3.68
+    },
+    {
+      "text": "are up to",
+      "start": 1101.84,
+      "duration": 3.52
+    },
+    {
+      "text": "three points bonus",
+      "start": 1102.4,
+      "duration": 2.96
+    },
+    {
+      "text": "and then we have template files",
+      "start": 1107.52,
+      "duration": 7.2
+    },
+    {
+      "text": "for this as well um",
+      "start": 1110.96,
+      "duration": 6.64
+    },
+    {
+      "text": "and you have an excel template a python",
+      "start": 1114.72,
+      "duration": 5.12
+    },
+    {
+      "text": "template jupyter notebook template",
+      "start": 1117.6,
+      "duration": 4.4
+    },
+    {
+      "text": "um again it's up to you whether you want",
+      "start": 1119.84,
+      "duration": 3.839
+    },
+    {
+      "text": "to do pure python pure excel or a",
+      "start": 1122.0,
+      "duration": 2.72
+    },
+    {
+      "text": "combination",
+      "start": 1123.679,
+      "duration": 3.441
+    },
+    {
+      "text": "just whichever tools you choose to use",
+      "start": 1124.72,
+      "duration": 3.44
+    },
+    {
+      "text": "use the template",
+      "start": 1127.12,
+      "duration": 2.88
+    },
+    {
+      "text": "for that tool so if you have a",
+      "start": 1128.16,
+      "duration": 3.04
+    },
+    {
+      "text": "combination model you should be",
+      "start": 1130.0,
+      "duration": 2.32
+    },
+    {
+      "text": "submitting",
+      "start": 1131.2,
+      "duration": 3.12
+    },
+    {
+      "text": "both parts which are both based off the",
+      "start": 1132.32,
+      "duration": 4.08
+    },
+    {
+      "text": "two templates uh",
+      "start": 1134.32,
+      "duration": 4.08
+    },
+    {
+      "text": "pure python based off the python",
+      "start": 1136.4,
+      "duration": 3.76
+    },
+    {
+      "text": "template pair excel based off the excel",
+      "start": 1138.4,
+      "duration": 4.24
+    },
+    {
+      "text": "template",
+      "start": 1140.16,
+      "duration": 2.48
+    },
+    {
+      "text": "and just want to emphasize again if you",
+      "start": 1143.679,
+      "duration": 3.36
+    },
+    {
+      "text": "do the combo model",
+      "start": 1146.08,
+      "duration": 2.24
+    },
+    {
+      "text": "your final answer should be in the",
+      "start": 1147.039,
+      "duration": 4.801
+    },
+    {
+      "text": "jupyter notebook on the python side",
+      "start": 1148.32,
+      "duration": 3.52
+    },
+    {
+      "text": "and then here you can see the selected",
+      "start": 1154.16,
+      "duration": 4.16
+    },
+    {
+      "text": "solutions so it shows for each of the",
+      "start": 1156.4,
+      "duration": 3.36
+    },
+    {
+      "text": "different",
+      "start": 1158.32,
+      "duration": 2.8
+    },
+    {
+      "text": "interest rate loan life default",
+      "start": 1159.76,
+      "duration": 4.48
+    },
+    {
+      "text": "probability what is the expected irr",
+      "start": 1161.12,
+      "duration": 6.0
+    },
+    {
+      "text": "across a bunch of iterations looking at",
+      "start": 1164.24,
+      "duration": 5.92
+    },
+    {
+      "text": "the different default cases",
+      "start": 1167.12,
+      "duration": 6.08
+    },
+    {
+      "text": "um and",
+      "start": 1170.16,
+      "duration": 4.639
+    },
+    {
+      "text": "i went a little bit further to help you",
+      "start": 1173.2,
+      "duration": 3.12
+    },
+    {
+      "text": "out on this because",
+      "start": 1174.799,
+      "duration": 3.521
+    },
+    {
+      "text": "this takes you know running your model a",
+      "start": 1176.32,
+      "duration": 3.76
+    },
+    {
+      "text": "bunch of times to check it",
+      "start": 1178.32,
+      "duration": 5.2
+    },
+    {
+      "text": "i also gave you for the default",
+      "start": 1180.08,
+      "duration": 7.04
+    },
+    {
+      "text": "inputs um what the irr",
+      "start": 1183.52,
+      "duration": 6.88
+    },
+    {
+      "text": "is with the different default cases",
+      "start": 1187.12,
+      "duration": 5.04
+    },
+    {
+      "text": "so defaulting in year one two three four",
+      "start": 1190.4,
+      "duration": 3.279
+    },
+    {
+      "text": "five and no default",
+      "start": 1192.16,
+      "duration": 4.0
+    },
+    {
+      "text": "here are the irrs that you would earn in",
+      "start": 1193.679,
+      "duration": 3.761
+    },
+    {
+      "text": "each of those cases",
+      "start": 1196.16,
+      "duration": 3.36
+    },
+    {
+      "text": "so you should be checking this first",
+      "start": 1197.44,
+      "duration": 4.0
+    },
+    {
+      "text": "make sure you can match these numbers",
+      "start": 1199.52,
+      "duration": 4.08
+    },
+    {
+      "text": "with the different cases in your model",
+      "start": 1201.44,
+      "duration": 3.92
+    },
+    {
+      "text": "um and then once you",
+      "start": 1203.6,
+      "duration": 3.76
+    },
+    {
+      "text": "have all the iteration things built out",
+      "start": 1205.36,
+      "duration": 5.6
+    },
+    {
+      "text": "then you can check against this solution",
+      "start": 1207.36,
+      "duration": 3.6
+    },
+    {
+      "text": "um and the grading is the same as the",
+      "start": 1211.679,
+      "duration": 3.521
+    },
+    {
+      "text": "first project",
+      "start": 1214.4,
+      "duration": 4.56
+    },
+    {
+      "text": "60 accuracy 20 readability 10 formatting",
+      "start": 1215.2,
+      "duration": 6.4
+    },
+    {
+      "text": "ten percent properly using the template",
+      "start": 1218.96,
+      "duration": 6.719
+    },
+    {
+      "text": "and five percent on the bonus",
+      "start": 1221.6,
+      "duration": 6.72
+    },
+    {
+      "text": "so that is the overview of the second",
+      "start": 1225.679,
+      "duration": 3.201
+    },
+    {
+      "text": "project",
+      "start": 1228.32,
+      "duration": 3.68
+    },
+    {
+      "text": "on probabilistic loan pricing thanks for",
+      "start": 1228.88,
+      "duration": 3.84
+    },
+    {
+      "text": "listening",
+      "start": 1232.0,
+      "duration": 3.84
+    },
+    {
+      "text": "and see you next time",
+      "start": 1232.72,
+      "duration": 3.12
+    }
+  ]
+}

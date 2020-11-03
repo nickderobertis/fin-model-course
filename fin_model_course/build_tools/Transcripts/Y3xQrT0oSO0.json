@@ -1,0 +1,699 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.679,
+      "duration": 2.561
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.64,
+      "duration": 3.6
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 6.24,
+      "duration": 2.64
+    },
+    {
+      "text": "talk about",
+      "start": 8.24,
+      "duration": 5.04
+    },
+    {
+      "text": "installing python on your computer",
+      "start": 8.88,
+      "duration": 7.44
+    },
+    {
+      "text": "so should be a quick video",
+      "start": 13.28,
+      "duration": 5.839
+    },
+    {
+      "text": "just looking at the install process for",
+      "start": 16.32,
+      "duration": 4.719
+    },
+    {
+      "text": "python",
+      "start": 19.119,
+      "duration": 4.641
+    },
+    {
+      "text": "and so there's a lot of different ways",
+      "start": 21.039,
+      "duration": 5.841
+    },
+    {
+      "text": "to actually install python",
+      "start": 23.76,
+      "duration": 5.839
+    },
+    {
+      "text": "being that it's open source but the way",
+      "start": 26.88,
+      "duration": 3.12
+    },
+    {
+      "text": "that i'm",
+      "start": 29.599,
+      "duration": 2.721
+    },
+    {
+      "text": "recommending for the course is to use",
+      "start": 30.0,
+      "duration": 3.28
+    },
+    {
+      "text": "anaconda",
+      "start": 32.32,
+      "duration": 4.48
+    },
+    {
+      "text": "so anaconda is a package distribution",
+      "start": 33.28,
+      "duration": 4.72
+    },
+    {
+      "text": "that comes along",
+      "start": 36.8,
+      "duration": 5.2
+    },
+    {
+      "text": "with python and it gives you",
+      "start": 38.0,
+      "duration": 6.399
+    },
+    {
+      "text": "already pre-included already downloaded",
+      "start": 42.0,
+      "duration": 3.44
+    },
+    {
+      "text": "and set up",
+      "start": 44.399,
+      "duration": 4.881
+    },
+    {
+      "text": "uh most of the additional packages",
+      "start": 45.44,
+      "duration": 7.279
+    },
+    {
+      "text": "that you would want to add to python",
+      "start": 49.28,
+      "duration": 5.599
+    },
+    {
+      "text": "to be able to do financial modeling and",
+      "start": 52.719,
+      "duration": 4.721
+    },
+    {
+      "text": "general data analytics",
+      "start": 54.879,
+      "duration": 4.641
+    },
+    {
+      "text": "so it's a distribution focused on",
+      "start": 57.44,
+      "duration": 4.32
+    },
+    {
+      "text": "scientific computing and includes",
+      "start": 59.52,
+      "duration": 4.88
+    },
+    {
+      "text": "plenty of packages which help out with",
+      "start": 61.76,
+      "duration": 3.119
+    },
+    {
+      "text": "those",
+      "start": 64.4,
+      "duration": 4.32
+    },
+    {
+      "text": "objectives so you just",
+      "start": 64.879,
+      "duration": 8.56
+    },
+    {
+      "text": "go to the anaconda website here",
+      "start": 68.72,
+      "duration": 6.96
+    },
+    {
+      "text": "and that would bring you to this kind of",
+      "start": 73.439,
+      "duration": 4.32
+    },
+    {
+      "text": "page",
+      "start": 75.68,
+      "duration": 6.64
+    },
+    {
+      "text": "and take you to this page",
+      "start": 77.759,
+      "duration": 8.241
+    },
+    {
+      "text": "and so you just click download",
+      "start": 82.32,
+      "duration": 5.839
+    },
+    {
+      "text": "and then it'll bring you to the where",
+      "start": 86.0,
+      "duration": 4.159
+    },
+    {
+      "text": "you can download the installer",
+      "start": 88.159,
+      "duration": 4.0
+    },
+    {
+      "text": "so make sure that you pick the one for",
+      "start": 90.159,
+      "duration": 3.521
+    },
+    {
+      "text": "your appropriate system",
+      "start": 92.159,
+      "duration": 5.361
+    },
+    {
+      "text": "uh python38 here um",
+      "start": 93.68,
+      "duration": 6.399
+    },
+    {
+      "text": "and i already went ahead and downloaded",
+      "start": 97.52,
+      "duration": 4.639
+    },
+    {
+      "text": "this so we wouldn't have to wait",
+      "start": 100.079,
+      "duration": 5.04
+    },
+    {
+      "text": "um so then you can go to run the",
+      "start": 102.159,
+      "duration": 5.041
+    },
+    {
+      "text": "installer",
+      "start": 105.119,
+      "duration": 3.601
+    },
+    {
+      "text": "and you know this is gonna look slightly",
+      "start": 107.2,
+      "duration": 3.599
+    },
+    {
+      "text": "different on a mac but",
+      "start": 108.72,
+      "duration": 5.52
+    },
+    {
+      "text": "same basic process here so you just go",
+      "start": 110.799,
+      "duration": 4.64
+    },
+    {
+      "text": "through the installer",
+      "start": 114.24,
+      "duration": 3.36
+    },
+    {
+      "text": "and you know most the stuff you can just",
+      "start": 115.439,
+      "duration": 4.241
+    },
+    {
+      "text": "go through the defaults are going to be",
+      "start": 117.6,
+      "duration": 3.119
+    },
+    {
+      "text": "fine",
+      "start": 119.68,
+      "duration": 5.039
+    },
+    {
+      "text": "um you know i already",
+      "start": 120.719,
+      "duration": 6.561
+    },
+    {
+      "text": "have it installed so i had to pick a",
+      "start": 124.719,
+      "duration": 3.921
+    },
+    {
+      "text": "different path there but you won't have",
+      "start": 127.28,
+      "duration": 3.839
+    },
+    {
+      "text": "to do that",
+      "start": 128.64,
+      "duration": 2.479
+    },
+    {
+      "text": "but the one thing that you do have to do",
+      "start": 131.12,
+      "duration": 5.41
+    },
+    {
+      "text": "which",
+      "start": 135.52,
+      "duration": 3.12
+    },
+    {
+      "text": "[Music]",
+      "start": 136.53,
+      "duration": 3.87
+    },
+    {
+      "text": "is not there by default is you do have",
+      "start": 138.64,
+      "duration": 5.2
+    },
+    {
+      "text": "to check this option here add anaconda 3",
+      "start": 140.4,
+      "duration": 4.64
+    },
+    {
+      "text": "to my path",
+      "start": 143.84,
+      "duration": 4.56
+    },
+    {
+      "text": "environment variable and you know the",
+      "start": 145.04,
+      "duration": 4.16
+    },
+    {
+      "text": "installer",
+      "start": 148.4,
+      "duration": 3.04
+    },
+    {
+      "text": "generally does not recommend doing this",
+      "start": 149.2,
+      "duration": 3.84
+    },
+    {
+      "text": "but i promise you it's not going to",
+      "start": 151.44,
+      "duration": 3.2
+    },
+    {
+      "text": "break anything",
+      "start": 153.04,
+      "duration": 3.76
+    },
+    {
+      "text": "as far as the course it's going to be",
+      "start": 154.64,
+      "duration": 3.599
+    },
+    {
+      "text": "fine um",
+      "start": 156.8,
+      "duration": 4.64
+    },
+    {
+      "text": "and it is necessary for later on in the",
+      "start": 158.239,
+      "duration": 4.64
+    },
+    {
+      "text": "course when we're going to do the",
+      "start": 161.44,
+      "duration": 4.24
+    },
+    {
+      "text": "integration between python and excel",
+      "start": 162.879,
+      "duration": 4.961
+    },
+    {
+      "text": "so make sure that you have this checked",
+      "start": 165.68,
+      "duration": 4.16
+    },
+    {
+      "text": "as you go through",
+      "start": 167.84,
+      "duration": 4.32
+    },
+    {
+      "text": "otherwise you're probably going to need",
+      "start": 169.84,
+      "duration": 3.28
+    },
+    {
+      "text": "to actually",
+      "start": 172.16,
+      "duration": 3.359
+    },
+    {
+      "text": "reinstall python later on in the course",
+      "start": 173.12,
+      "duration": 4.24
+    },
+    {
+      "text": "once we need it",
+      "start": 175.519,
+      "duration": 3.601
+    },
+    {
+      "text": "and that's you know just an annoying",
+      "start": 177.36,
+      "duration": 3.519
+    },
+    {
+      "text": "extra step to go through",
+      "start": 179.12,
+      "duration": 4.64
+    },
+    {
+      "text": "whereas you check this option here then",
+      "start": 180.879,
+      "duration": 3.121
+    },
+    {
+      "text": "you",
+      "start": 183.76,
+      "duration": 2.0
+    },
+    {
+      "text": "just install python once you're going to",
+      "start": 184.0,
+      "duration": 3.519
+    },
+    {
+      "text": "have it for as long as you have that",
+      "start": 185.76,
+      "duration": 2.72
+    },
+    {
+      "text": "computer",
+      "start": 187.519,
+      "duration": 3.041
+    },
+    {
+      "text": "and you can use it for the course and",
+      "start": 188.48,
+      "duration": 5.44
+    },
+    {
+      "text": "for anything else that you want to do",
+      "start": 190.56,
+      "duration": 5.36
+    },
+    {
+      "text": "so then you know with both these boxes",
+      "start": 193.92,
+      "duration": 3.36
+    },
+    {
+      "text": "checked you would just go and hit",
+      "start": 195.92,
+      "duration": 4.8
+    },
+    {
+      "text": "install uh that's that's where i'm gonna",
+      "start": 197.28,
+      "duration": 5.039
+    },
+    {
+      "text": "finish here on this because i already",
+      "start": 200.72,
+      "duration": 4.32
+    },
+    {
+      "text": "have it installed on my machine",
+      "start": 202.319,
+      "duration": 4.241
+    },
+    {
+      "text": "but then you know it would just you know",
+      "start": 205.04,
+      "duration": 3.199
+    },
+    {
+      "text": "do the regular kind of progress bar",
+      "start": 206.56,
+      "duration": 3.039
+    },
+    {
+      "text": "across the screen and then when that",
+      "start": 208.239,
+      "duration": 2.241
+    },
+    {
+      "text": "finishes",
+      "start": 209.599,
+      "duration": 4.401
+    },
+    {
+      "text": "you'll have python installed so how can",
+      "start": 210.48,
+      "duration": 3.839
+    },
+    {
+      "text": "you",
+      "start": 214.0,
+      "duration": 3.28
+    },
+    {
+      "text": "check to make sure that you have python",
+      "start": 214.319,
+      "duration": 4.961
+    },
+    {
+      "text": "installed",
+      "start": 217.28,
+      "duration": 5.599
+    },
+    {
+      "text": "so on windows",
+      "start": 219.28,
+      "duration": 6.72
+    },
+    {
+      "text": "so you can go into the windows menu",
+      "start": 222.879,
+      "duration": 5.36
+    },
+    {
+      "text": "and type cmd and you're going to see",
+      "start": 226.0,
+      "duration": 3.519
+    },
+    {
+      "text": "command prompt",
+      "start": 228.239,
+      "duration": 5.28
+    },
+    {
+      "text": "come up there so if you click",
+      "start": 229.519,
+      "duration": 6.321
+    },
+    {
+      "text": "command prompt then you should be able",
+      "start": 233.519,
+      "duration": 3.681
+    },
+    {
+      "text": "to type python",
+      "start": 235.84,
+      "duration": 4.24
+    },
+    {
+      "text": "in the command prompt and then that",
+      "start": 237.2,
+      "duration": 5.44
+    },
+    {
+      "text": "should get you to this kind of screen",
+      "start": 240.08,
+      "duration": 5.12
+    },
+    {
+      "text": "here where it says python and the",
+      "start": 242.64,
+      "duration": 4.64
+    },
+    {
+      "text": "version it should say 3.8 point",
+      "start": 245.2,
+      "duration": 4.959
+    },
+    {
+      "text": "something for you",
+      "start": 247.28,
+      "duration": 2.879
+    },
+    {
+      "text": "and it's going to have these three lines",
+      "start": 250.239,
+      "duration": 4.241
+    },
+    {
+      "text": "or three um",
+      "start": 252.799,
+      "duration": 5.12
+    },
+    {
+      "text": "greater than signs um here and you can",
+      "start": 254.48,
+      "duration": 4.24
+    },
+    {
+      "text": "type things",
+      "start": 257.919,
+      "duration": 4.72
+    },
+    {
+      "text": "on this prompt so if you get to this",
+      "start": 258.72,
+      "duration": 7.039
+    },
+    {
+      "text": "um then the install",
+      "start": 262.639,
+      "duration": 5.921
+    },
+    {
+      "text": "has worked correctly if you're on a mac",
+      "start": 265.759,
+      "duration": 3.201
+    },
+    {
+      "text": "uh",
+      "start": 268.56,
+      "duration": 2.48
+    },
+    {
+      "text": "same exact process only instead of",
+      "start": 268.96,
+      "duration": 3.28
+    },
+    {
+      "text": "searching cmd",
+      "start": 271.04,
+      "duration": 3.599
+    },
+    {
+      "text": "you're going to search for terminal in",
+      "start": 272.24,
+      "duration": 3.84
+    },
+    {
+      "text": "your app search on",
+      "start": 274.639,
+      "duration": 3.761
+    },
+    {
+      "text": "mac so it's just instead of being called",
+      "start": 276.08,
+      "duration": 4.559
+    },
+    {
+      "text": "command prompt it's called terminal",
+      "start": 278.4,
+      "duration": 3.92
+    },
+    {
+      "text": "but then once you get into it you're",
+      "start": 280.639,
+      "duration": 3.361
+    },
+    {
+      "text": "again just going to type python",
+      "start": 282.32,
+      "duration": 3.92
+    },
+    {
+      "text": "hit enter and then it should take you to",
+      "start": 284.0,
+      "duration": 4.0
+    },
+    {
+      "text": "this kind of output here where it shows",
+      "start": 286.24,
+      "duration": 3.679
+    },
+    {
+      "text": "the python version",
+      "start": 288.0,
+      "duration": 5.84
+    },
+    {
+      "text": "as well as this prompt that you see here",
+      "start": 289.919,
+      "duration": 5.761
+    },
+    {
+      "text": "so if you can do that then you have",
+      "start": 293.84,
+      "duration": 4.0
+    },
+    {
+      "text": "python installed properly",
+      "start": 295.68,
+      "duration": 5.519
+    },
+    {
+      "text": "and next time we will look",
+      "start": 297.84,
+      "duration": 6.56
+    },
+    {
+      "text": "at how we can actually start applying",
+      "start": 301.199,
+      "duration": 4.0
+    },
+    {
+      "text": "some of this",
+      "start": 304.4,
+      "duration": 3.84
+    },
+    {
+      "text": "um we will start to get into",
+      "start": 305.199,
+      "duration": 8.801
+    },
+    {
+      "text": "the basics of excel and python",
+      "start": 308.24,
+      "duration": 5.76
+    },
+    {
+      "text": "so that concludes how to install python",
+      "start": 314.16,
+      "duration": 8.16
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 317.28,
+      "duration": 5.04
+    },
+    {
+      "text": "time",
+      "start": 322.759,
+      "duration": 3.0
+    }
+  ]
+}

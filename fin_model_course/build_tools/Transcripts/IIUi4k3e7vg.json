@@ -1,0 +1,1094 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.72,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dearbird is here teaching you",
+      "start": 3.679,
+      "duration": 3.921
+    },
+    {
+      "text": "financial modeling so today i'm going to",
+      "start": 5.12,
+      "duration": 4.08
+    },
+    {
+      "text": "be giving you an introduction",
+      "start": 7.6,
+      "duration": 4.72
+    },
+    {
+      "text": "on internal randomness in excel",
+      "start": 9.2,
+      "duration": 5.519
+    },
+    {
+      "text": "as part of our lecture series on",
+      "start": 12.32,
+      "duration": 4.56
+    },
+    {
+      "text": "probabilistic modeling",
+      "start": 14.719,
+      "duration": 4.4
+    },
+    {
+      "text": "so last time we had already done an",
+      "start": 16.88,
+      "duration": 3.36
+    },
+    {
+      "text": "introduction to",
+      "start": 19.119,
+      "duration": 4.24
+    },
+    {
+      "text": "internal randomness and now we're coming",
+      "start": 20.24,
+      "duration": 4.4
+    },
+    {
+      "text": "to implementing that",
+      "start": 23.359,
+      "duration": 4.801
+    },
+    {
+      "text": "in excel so in excel we have",
+      "start": 24.64,
+      "duration": 6.08
+    },
+    {
+      "text": "two main functions which generate",
+      "start": 28.16,
+      "duration": 3.359
+    },
+    {
+      "text": "randomness",
+      "start": 30.72,
+      "duration": 3.999
+    },
+    {
+      "text": "for us that is the brand and the rand",
+      "start": 31.519,
+      "duration": 4.001
+    },
+    {
+      "text": "between",
+      "start": 34.719,
+      "duration": 4.721
+    },
+    {
+      "text": "functions so rand will generate",
+      "start": 35.52,
+      "duration": 7.12
+    },
+    {
+      "text": "a number between zero and one anywhere",
+      "start": 39.44,
+      "duration": 5.68
+    },
+    {
+      "text": "in that range a continuous number while",
+      "start": 42.64,
+      "duration": 3.759
+    },
+    {
+      "text": "randbetween",
+      "start": 45.12,
+      "duration": 4.56
+    },
+    {
+      "text": "will give you a random integer between",
+      "start": 46.399,
+      "duration": 6.881
+    },
+    {
+      "text": "two integers that you pass to it",
+      "start": 49.68,
+      "duration": 7.039
+    },
+    {
+      "text": "so both of these are drawing from",
+      "start": 53.28,
+      "duration": 6.64
+    },
+    {
+      "text": "a uniform distribution which just",
+      "start": 56.719,
+      "duration": 6.401
+    },
+    {
+      "text": "means that each number in the range is",
+      "start": 59.92,
+      "duration": 6.48
+    },
+    {
+      "text": "equally likely",
+      "start": 63.12,
+      "duration": 3.28
+    },
+    {
+      "text": "then if we want to draw from any other",
+      "start": 66.96,
+      "duration": 3.36
+    },
+    {
+      "text": "distribution",
+      "start": 68.96,
+      "duration": 4.32
+    },
+    {
+      "text": "as we often will want to draw from",
+      "start": 70.32,
+      "duration": 4.4
+    },
+    {
+      "text": "normal distributions",
+      "start": 73.28,
+      "duration": 5.199
+    },
+    {
+      "text": "in our models uh we need to",
+      "start": 74.72,
+      "duration": 6.8
+    },
+    {
+      "text": "uh combine a couple different functions",
+      "start": 78.479,
+      "duration": 5.68
+    },
+    {
+      "text": "to make that happen in excel",
+      "start": 81.52,
+      "duration": 5.2
+    },
+    {
+      "text": "the tools for randomness in excel",
+      "start": 84.159,
+      "duration": 3.921
+    },
+    {
+      "text": "generally are a little bit",
+      "start": 86.72,
+      "duration": 3.439
+    },
+    {
+      "text": "primitive we kind of had to do some",
+      "start": 88.08,
+      "duration": 3.52
+    },
+    {
+      "text": "manual work",
+      "start": 90.159,
+      "duration": 5.201
+    },
+    {
+      "text": "to be able to get continuous numbers in",
+      "start": 91.6,
+      "duration": 5.04
+    },
+    {
+      "text": "some range draw from normal",
+      "start": 95.36,
+      "duration": 2.56
+    },
+    {
+      "text": "distributions",
+      "start": 96.64,
+      "duration": 3.92
+    },
+    {
+      "text": "work with discrete random variables et",
+      "start": 97.92,
+      "duration": 4.72
+    },
+    {
+      "text": "cetera",
+      "start": 100.56,
+      "duration": 4.239
+    },
+    {
+      "text": "and so we'll learn some patterns that",
+      "start": 102.64,
+      "duration": 3.759
+    },
+    {
+      "text": "you can apply",
+      "start": 104.799,
+      "duration": 5.521
+    },
+    {
+      "text": "to make that happen in python it tends",
+      "start": 106.399,
+      "duration": 4.4
+    },
+    {
+      "text": "to be",
+      "start": 110.32,
+      "duration": 1.92
+    },
+    {
+      "text": "more straightforward they're just",
+      "start": 110.799,
+      "duration": 3.6
+    },
+    {
+      "text": "functions directly made",
+      "start": 112.24,
+      "duration": 3.68
+    },
+    {
+      "text": "for each kind of randomness that we",
+      "start": 114.399,
+      "duration": 4.241
+    },
+    {
+      "text": "would want to do",
+      "start": 115.92,
+      "duration": 2.72
+    },
+    {
+      "text": "so in order to draw a number from",
+      "start": 118.96,
+      "duration": 6.799
+    },
+    {
+      "text": "a normal distribution in excel we can",
+      "start": 122.479,
+      "duration": 3.841
+    },
+    {
+      "text": "combine",
+      "start": 125.759,
+      "duration": 3.441
+    },
+    {
+      "text": "two different functions so we're going",
+      "start": 126.32,
+      "duration": 4.12
+    },
+    {
+      "text": "to bring in this",
+      "start": 129.2,
+      "duration": 4.24
+    },
+    {
+      "text": "norm.inv which is normal distribution",
+      "start": 130.44,
+      "duration": 3.799
+    },
+    {
+      "text": "inverse",
+      "start": 133.44,
+      "duration": 3.84
+    },
+    {
+      "text": "function which gives us",
+      "start": 134.239,
+      "duration": 6.881
+    },
+    {
+      "text": "the value on the normal distribution",
+      "start": 137.28,
+      "duration": 8.16
+    },
+    {
+      "text": "corresponding to a certain probability",
+      "start": 141.12,
+      "duration": 6.4
+    },
+    {
+      "text": "um and you have to give it the mean and",
+      "start": 145.44,
+      "duration": 3.519
+    },
+    {
+      "text": "the standard deviation of the",
+      "start": 147.52,
+      "duration": 2.24
+    },
+    {
+      "text": "distribution",
+      "start": 148.959,
+      "duration": 3.681
+    },
+    {
+      "text": "as well and this is not a random",
+      "start": 149.76,
+      "duration": 4.24
+    },
+    {
+      "text": "function",
+      "start": 152.64,
+      "duration": 4.959
+    },
+    {
+      "text": "if you say um give me",
+      "start": 154.0,
+      "duration": 6.72
+    },
+    {
+      "text": "uh the 50th percentile of the normal",
+      "start": 157.599,
+      "duration": 4.801
+    },
+    {
+      "text": "distribution with mean 10 and standard",
+      "start": 160.72,
+      "duration": 2.879
+    },
+    {
+      "text": "deviation 3",
+      "start": 162.4,
+      "duration": 3.36
+    },
+    {
+      "text": "it's going to give you 10 every single",
+      "start": 163.599,
+      "duration": 3.92
+    },
+    {
+      "text": "time no randomness",
+      "start": 165.76,
+      "duration": 4.08
+    },
+    {
+      "text": "you give it 0.6 it's going to give you a",
+      "start": 167.519,
+      "duration": 3.921
+    },
+    {
+      "text": "number higher than 10",
+      "start": 169.84,
+      "duration": 2.88
+    },
+    {
+      "text": "and it's going to give you that same",
+      "start": 171.44,
+      "duration": 3.36
+    },
+    {
+      "text": "number every time",
+      "start": 172.72,
+      "duration": 4.48
+    },
+    {
+      "text": "so we need to combine it with a source",
+      "start": 174.8,
+      "duration": 3.28
+    },
+    {
+      "text": "of randomness",
+      "start": 177.2,
+      "duration": 3.119
+    },
+    {
+      "text": "to be able to draw random numbers from",
+      "start": 178.08,
+      "duration": 3.36
+    },
+    {
+      "text": "the normal distribution",
+      "start": 180.319,
+      "duration": 5.041
+    },
+    {
+      "text": "in excel so we can use the",
+      "start": 181.44,
+      "duration": 6.96
+    },
+    {
+      "text": "the normal inverse function along with",
+      "start": 185.36,
+      "duration": 4.239
+    },
+    {
+      "text": "the rand function",
+      "start": 188.4,
+      "duration": 4.8
+    },
+    {
+      "text": "to make that happen so in this spot in",
+      "start": 189.599,
+      "duration": 5.28
+    },
+    {
+      "text": "the normal inverse function where we",
+      "start": 193.2,
+      "duration": 2.08
+    },
+    {
+      "text": "would",
+      "start": 194.879,
+      "duration": 3.121
+    },
+    {
+      "text": "be passing that probability we're going",
+      "start": 195.28,
+      "duration": 3.599
+    },
+    {
+      "text": "to put the rand",
+      "start": 198.0,
+      "duration": 4.08
+    },
+    {
+      "text": "function there because a probability has",
+      "start": 198.879,
+      "duration": 3.681
+    },
+    {
+      "text": "to be",
+      "start": 202.08,
+      "duration": 3.84
+    },
+    {
+      "text": "between 0 and 1 and the rand function",
+      "start": 202.56,
+      "duration": 5.44
+    },
+    {
+      "text": "generates a random number between 0 and",
+      "start": 205.92,
+      "duration": 4.92
+    },
+    {
+      "text": "1 so basically it's giving us a random",
+      "start": 208.0,
+      "duration": 5.28
+    },
+    {
+      "text": "probability and so then we can just put",
+      "start": 210.84,
+      "duration": 3.479
+    },
+    {
+      "text": "that in",
+      "start": 213.28,
+      "duration": 3.2
+    },
+    {
+      "text": "to the normal inverse function and now",
+      "start": 214.319,
+      "duration": 4.56
+    },
+    {
+      "text": "we have created this",
+      "start": 216.48,
+      "duration": 5.2
+    },
+    {
+      "text": "composite function which is able to",
+      "start": 218.879,
+      "duration": 3.601
+    },
+    {
+      "text": "generate",
+      "start": 221.68,
+      "duration": 2.32
+    },
+    {
+      "text": "random numbers from a normal",
+      "start": 222.48,
+      "duration": 3.92
+    },
+    {
+      "text": "distribution with whatever mean and",
+      "start": 224.0,
+      "duration": 6.4
+    },
+    {
+      "text": "standard deviation that you specify",
+      "start": 226.4,
+      "duration": 4.0
+    },
+    {
+      "text": "so let's look at a quick example of how",
+      "start": 231.12,
+      "duration": 4.319
+    },
+    {
+      "text": "we can implement this",
+      "start": 234.239,
+      "duration": 4.601
+    },
+    {
+      "text": "in excel",
+      "start": 235.439,
+      "duration": 6.88
+    },
+    {
+      "text": "um so",
+      "start": 238.84,
+      "duration": 3.479
+    },
+    {
+      "text": "here we've got a new excel workbook and",
+      "start": 244.799,
+      "duration": 5.121
+    },
+    {
+      "text": "this completed example is on the course",
+      "start": 247.92,
+      "duration": 2.56
+    },
+    {
+      "text": "site",
+      "start": 249.92,
+      "duration": 3.28
+    },
+    {
+      "text": "as well uh the continuous sheet of the",
+      "start": 250.48,
+      "duration": 4.24
+    },
+    {
+      "text": "generating random numbers",
+      "start": 253.2,
+      "duration": 4.64
+    },
+    {
+      "text": "example so first thing we want to do",
+      "start": 254.72,
+      "duration": 4.96
+    },
+    {
+      "text": "is get some numbers from the uniform",
+      "start": 257.84,
+      "duration": 4.48
+    },
+    {
+      "text": "distribution",
+      "start": 259.68,
+      "duration": 2.64
+    },
+    {
+      "text": "and all that we have to do there is rand",
+      "start": 263.12,
+      "duration": 5.04
+    },
+    {
+      "text": "that will give us a random number",
+      "start": 266.479,
+      "duration": 4.0
+    },
+    {
+      "text": "between zero and one",
+      "start": 268.16,
+      "duration": 5.44
+    },
+    {
+      "text": "and f9 is going to recalculate on",
+      "start": 270.479,
+      "duration": 5.761
+    },
+    {
+      "text": "windows and so if i keep pressing that",
+      "start": 273.6,
+      "duration": 4.72
+    },
+    {
+      "text": "f9 to recalculate we keep getting a",
+      "start": 276.24,
+      "duration": 2.8
+    },
+    {
+      "text": "different",
+      "start": 278.32,
+      "duration": 3.12
+    },
+    {
+      "text": "random number coming out as a result",
+      "start": 279.04,
+      "duration": 5.439
+    },
+    {
+      "text": "always between 0 and 1.",
+      "start": 281.44,
+      "duration": 4.88
+    },
+    {
+      "text": "and you want multiple you can simply",
+      "start": 284.479,
+      "duration": 3.121
+    },
+    {
+      "text": "just drag it",
+      "start": 286.32,
+      "duration": 5.12
+    },
+    {
+      "text": "and you'll have multiple of them",
+      "start": 287.6,
+      "duration": 3.84
+    },
+    {
+      "text": "but then you might say well how do i get",
+      "start": 291.919,
+      "duration": 4.321
+    },
+    {
+      "text": "a random number",
+      "start": 294.72,
+      "duration": 4.64
+    },
+    {
+      "text": "between zero and five",
+      "start": 296.24,
+      "duration": 6.0
+    },
+    {
+      "text": "well you just take rand and you multiply",
+      "start": 299.36,
+      "duration": 4.399
+    },
+    {
+      "text": "it by five",
+      "start": 302.24,
+      "duration": 3.92
+    },
+    {
+      "text": "now that's going to be pulling random",
+      "start": 303.759,
+      "duration": 3.361
+    },
+    {
+      "text": "numbers",
+      "start": 306.16,
+      "duration": 4.879
+    },
+    {
+      "text": "between uh zero and five",
+      "start": 307.12,
+      "duration": 5.28
+    },
+    {
+      "text": "well what if you want those random",
+      "start": 311.039,
+      "duration": 3.201
+    },
+    {
+      "text": "numbers to be between",
+      "start": 312.4,
+      "duration": 5.28
+    },
+    {
+      "text": "uh 10 and 15 well then just add",
+      "start": 314.24,
+      "duration": 6.56
+    },
+    {
+      "text": "10 on to the end of it and",
+      "start": 317.68,
+      "duration": 5.6
+    },
+    {
+      "text": "now this is going to be random numbers",
+      "start": 320.8,
+      "duration": 3.76
+    },
+    {
+      "text": "between 5",
+      "start": 323.28,
+      "duration": 4.479
+    },
+    {
+      "text": "and 15. so",
+      "start": 324.56,
+      "duration": 4.56
+    },
+    {
+      "text": "they are not the most straightforward",
+      "start": 327.759,
+      "duration": 2.961
+    },
+    {
+      "text": "how you have to do the math with it to",
+      "start": 329.12,
+      "duration": 3.76
+    },
+    {
+      "text": "make it happen",
+      "start": 330.72,
+      "duration": 6.12
+    },
+    {
+      "text": "but still not too difficult to",
+      "start": 332.88,
+      "duration": 6.72
+    },
+    {
+      "text": "draw random numbers from a uniform",
+      "start": 336.84,
+      "duration": 3.639
+    },
+    {
+      "text": "distribution",
+      "start": 339.6,
+      "duration": 3.84
+    },
+    {
+      "text": "in any range",
+      "start": 340.479,
+      "duration": 2.961
+    },
+    {
+      "text": "so that covers the uniform distributions",
+      "start": 343.84,
+      "duration": 6.799
+    },
+    {
+      "text": "now what if we want to draw numbers from",
+      "start": 348.08,
+      "duration": 5.76
+    },
+    {
+      "text": "a normal distribution",
+      "start": 350.639,
+      "duration": 3.201
+    },
+    {
+      "text": "so before we",
+      "start": 355.44,
+      "duration": 5.36
+    },
+    {
+      "text": "do that i'm going to define the mean and",
+      "start": 358.479,
+      "duration": 3.761
+    },
+    {
+      "text": "standard deviation",
+      "start": 360.8,
+      "duration": 4.399
+    },
+    {
+      "text": "of the distribution so the mean let's",
+      "start": 362.24,
+      "duration": 3.36
+    },
+    {
+      "text": "just",
+      "start": 365.199,
+      "duration": 3.12
+    },
+    {
+      "text": "say is 10 and the standard deviation is",
+      "start": 365.6,
+      "duration": 4.879
+    },
+    {
+      "text": "5.",
+      "start": 368.319,
+      "duration": 4.481
+    },
+    {
+      "text": "so now we can generate some random",
+      "start": 370.479,
+      "duration": 4.401
+    },
+    {
+      "text": "numbers",
+      "start": 372.8,
+      "duration": 4.8
+    },
+    {
+      "text": "but first before we do that let's just",
+      "start": 374.88,
+      "duration": 4.08
+    },
+    {
+      "text": "look at the plane",
+      "start": 377.6,
+      "duration": 5.2
+    },
+    {
+      "text": "norm.inv function and",
+      "start": 378.96,
+      "duration": 6.64
+    },
+    {
+      "text": "we're going to just put in for example",
+      "start": 382.8,
+      "duration": 3.6
+    },
+    {
+      "text": "purses the",
+      "start": 385.6,
+      "duration": 4.0
+    },
+    {
+      "text": "purposes the 0.5 probability and grab",
+      "start": 386.4,
+      "duration": 4.239
+    },
+    {
+      "text": "that mean",
+      "start": 389.6,
+      "duration": 3.28
+    },
+    {
+      "text": "grab that standard deviation you'll see",
+      "start": 390.639,
+      "duration": 4.241
+    },
+    {
+      "text": "we get 10 the mean coming back",
+      "start": 392.88,
+      "duration": 3.2
+    },
+    {
+      "text": "and no matter how many times i",
+      "start": 394.88,
+      "duration": 3.599
+    },
+    {
+      "text": "recalculate it it's always 10.",
+      "start": 396.08,
+      "duration": 5.6
+    },
+    {
+      "text": "um go and put 0.6 in there we've got a",
+      "start": 398.479,
+      "duration": 4.321
+    },
+    {
+      "text": "number higher",
+      "start": 401.68,
+      "duration": 4.32
+    },
+    {
+      "text": "which doesn't change 0.4 we've got a",
+      "start": 402.8,
+      "duration": 4.64
+    },
+    {
+      "text": "number that's lower",
+      "start": 406.0,
+      "duration": 4.72
+    },
+    {
+      "text": "and again does not change it's once we",
+      "start": 407.44,
+      "duration": 3.68
+    },
+    {
+      "text": "then",
+      "start": 410.72,
+      "duration": 3.84
+    },
+    {
+      "text": "put the rand into that spot",
+      "start": 411.12,
+      "duration": 6.479
+    },
+    {
+      "text": "that now we've got a random number",
+      "start": 414.56,
+      "duration": 3.759
+    },
+    {
+      "text": "generator",
+      "start": 417.599,
+      "duration": 3.841
+    },
+    {
+      "text": "from a normal distribution",
+      "start": 418.319,
+      "duration": 6.561
+    },
+    {
+      "text": "so to make it more clear um",
+      "start": 421.44,
+      "duration": 5.44
+    },
+    {
+      "text": "what's going on with these numbers i'm",
+      "start": 424.88,
+      "duration": 3.84
+    },
+    {
+      "text": "going to fix both of those",
+      "start": 426.88,
+      "duration": 6.879
+    },
+    {
+      "text": "and then i can generate a bunch of them",
+      "start": 428.72,
+      "duration": 5.039
+    },
+    {
+      "text": "so now when you see all these different",
+      "start": 434.24,
+      "duration": 3.28
+    },
+    {
+      "text": "numbers you can see that most of them",
+      "start": 435.68,
+      "duration": 5.76
+    },
+    {
+      "text": "are generally around 10. um",
+      "start": 437.52,
+      "duration": 7.2
+    },
+    {
+      "text": "and as we recalculate them you know",
+      "start": 441.44,
+      "duration": 5.199
+    },
+    {
+      "text": "occasionally they go negative that's",
+      "start": 444.72,
+      "duration": 4.08
+    },
+    {
+      "text": "uh you know two standard deviations more",
+      "start": 446.639,
+      "duration": 3.441
+    },
+    {
+      "text": "than two standard deviations",
+      "start": 448.8,
+      "duration": 4.48
+    },
+    {
+      "text": "below the mean occasionally they go",
+      "start": 450.08,
+      "duration": 7.44
+    },
+    {
+      "text": "above 20. sometimes here this one is",
+      "start": 453.28,
+      "duration": 5.68
+    },
+    {
+      "text": "even a little bit more than three",
+      "start": 457.52,
+      "duration": 4.079
+    },
+    {
+      "text": "standard deviations above the mean so",
+      "start": 458.96,
+      "duration": 5.2
+    },
+    {
+      "text": "uh you do observe that occasionally but",
+      "start": 461.599,
+      "duration": 4.401
+    },
+    {
+      "text": "it's rather rare",
+      "start": 464.16,
+      "duration": 3.92
+    },
+    {
+      "text": "most the time they're in this like 5 to",
+      "start": 466.0,
+      "duration": 3.12
+    },
+    {
+      "text": "15",
+      "start": 468.08,
+      "duration": 3.21
+    },
+    {
+      "text": "kind of range",
+      "start": 469.12,
+      "duration": 3.519
+    },
+    {
+      "text": "[Music]",
+      "start": 471.29,
+      "duration": 4.95
+    },
+    {
+      "text": "so that's how we can generate",
+      "start": 472.639,
+      "duration": 5.921
+    },
+    {
+      "text": "random numbers uh continuous random",
+      "start": 476.24,
+      "duration": 4.0
+    },
+    {
+      "text": "numbers from both uniform",
+      "start": 478.56,
+      "duration": 4.72
+    },
+    {
+      "text": "and normal distributions in excel um",
+      "start": 480.24,
+      "duration": 4.32
+    },
+    {
+      "text": "of course you can just change around",
+      "start": 483.28,
+      "duration": 3.84
+    },
+    {
+      "text": "these parameters to get different",
+      "start": 484.56,
+      "duration": 5.759
+    },
+    {
+      "text": "means on the distributions",
+      "start": 487.12,
+      "duration": 6.32
+    },
+    {
+      "text": "or different standard deviations",
+      "start": 490.319,
+      "duration": 7.121
+    },
+    {
+      "text": "can create quite a bit different results",
+      "start": 493.44,
+      "duration": 5.36
+    },
+    {
+      "text": "even though it's still a normal",
+      "start": 497.44,
+      "duration": 3.52
+    },
+    {
+      "text": "distribution",
+      "start": 498.8,
+      "duration": 5.2
+    },
+    {
+      "text": "so that's generating uniform and normal",
+      "start": 500.96,
+      "duration": 6.56
+    },
+    {
+      "text": "continuous random numbers in excel",
+      "start": 504.0,
+      "duration": 5.039
+    },
+    {
+      "text": "next time we're going to come back to",
+      "start": 507.52,
+      "duration": 3.92
+    },
+    {
+      "text": "look at how to do the same in python",
+      "start": 509.039,
+      "duration": 6.36
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 511.44,
+      "duration": 6.959
+    },
+    {
+      "text": "time",
+      "start": 515.399,
+      "duration": 3.0
+    }
+  ]
+}

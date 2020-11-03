@@ -1,0 +1,1564 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.52,
+      "duration": 2.239
+    },
+    {
+      "text": "nick diabetes here teaching you",
+      "start": 4.4,
+      "duration": 3.439
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 5.759,
+      "duration": 4.001
+    },
+    {
+      "text": "we're going to be talking about list",
+      "start": 7.839,
+      "duration": 3.041
+    },
+    {
+      "text": "comprehensions",
+      "start": 9.76,
+      "duration": 4.64
+    },
+    {
+      "text": "in python and this is part of our",
+      "start": 10.88,
+      "duration": 4.4
+    },
+    {
+      "text": "lecture series",
+      "start": 14.4,
+      "duration": 4.0
+    },
+    {
+      "text": "on exploring the parameter space and",
+      "start": 15.28,
+      "duration": 5.919
+    },
+    {
+      "text": "this section of the lecture series is",
+      "start": 18.4,
+      "duration": 4.879
+    },
+    {
+      "text": "covering some additional python basics",
+      "start": 21.199,
+      "duration": 3.041
+    },
+    {
+      "text": "that we need",
+      "start": 23.279,
+      "duration": 3.281
+    },
+    {
+      "text": "to be able to go implement sensitivity",
+      "start": 24.24,
+      "duration": 3.119
+    },
+    {
+      "text": "analysis",
+      "start": 26.56,
+      "duration": 4.879
+    },
+    {
+      "text": "in python so",
+      "start": 27.359,
+      "duration": 7.601
+    },
+    {
+      "text": "we um are picking up here",
+      "start": 31.439,
+      "duration": 6.721
+    },
+    {
+      "text": "in the lecture from how to do list",
+      "start": 34.96,
+      "duration": 4.08
+    },
+    {
+      "text": "comprehensions",
+      "start": 38.16,
+      "duration": 3.52
+    },
+    {
+      "text": "in python in the extra python basics",
+      "start": 39.04,
+      "duration": 4.56
+    },
+    {
+      "text": "section",
+      "start": 41.68,
+      "duration": 5.68
+    },
+    {
+      "text": "and so list comprehensions",
+      "start": 43.6,
+      "duration": 6.799
+    },
+    {
+      "text": "are not necessary at all",
+      "start": 47.36,
+      "duration": 6.879
+    },
+    {
+      "text": "they're something that we call syntactic",
+      "start": 50.399,
+      "duration": 7.84
+    },
+    {
+      "text": "sugar which means that it's something",
+      "start": 54.239,
+      "duration": 7.201
+    },
+    {
+      "text": "which makes things easier for you",
+      "start": 58.239,
+      "duration": 6.32
+    },
+    {
+      "text": "though it's not strictly necessary",
+      "start": 61.44,
+      "duration": 5.12
+    },
+    {
+      "text": "it's a feature of the language that",
+      "start": 64.559,
+      "duration": 3.441
+    },
+    {
+      "text": "makes writing the code",
+      "start": 66.56,
+      "duration": 3.919
+    },
+    {
+      "text": "sweeter",
+      "start": 68.0,
+      "duration": 2.479
+    },
+    {
+      "text": "even though it is completely possible",
+      "start": 71.04,
+      "duration": 5.759
+    },
+    {
+      "text": "to do it in a different way already it",
+      "start": 74.4,
+      "duration": 4.48
+    },
+    {
+      "text": "didn't actually extend the functionality",
+      "start": 76.799,
+      "duration": 3.281
+    },
+    {
+      "text": "of the language",
+      "start": 78.88,
+      "duration": 4.239
+    },
+    {
+      "text": "it just makes it easier to",
+      "start": 80.08,
+      "duration": 6.32
+    },
+    {
+      "text": "do certain things",
+      "start": 83.119,
+      "duration": 6.081
+    },
+    {
+      "text": "so what list comprehension basically",
+      "start": 86.4,
+      "duration": 3.84
+    },
+    {
+      "text": "does",
+      "start": 89.2,
+      "duration": 4.32
+    },
+    {
+      "text": "is it lets you do a for loop",
+      "start": 90.24,
+      "duration": 7.68
+    },
+    {
+      "text": "and create a list all in a single line",
+      "start": 93.52,
+      "duration": 7.84
+    },
+    {
+      "text": "so we've seen many times already in the",
+      "start": 97.92,
+      "duration": 4.0
+    },
+    {
+      "text": "course",
+      "start": 101.36,
+      "duration": 3.759
+    },
+    {
+      "text": "and it's a very very common pattern in",
+      "start": 101.92,
+      "duration": 6.879
+    },
+    {
+      "text": "programming to go through a loop",
+      "start": 105.119,
+      "duration": 6.481
+    },
+    {
+      "text": "and for each one of the loop you're",
+      "start": 108.799,
+      "duration": 3.501
+    },
+    {
+      "text": "going to",
+      "start": 111.6,
+      "duration": 2.32
+    },
+    {
+      "text": "[Music]",
+      "start": 112.3,
+      "duration": 3.459
+    },
+    {
+      "text": "do some kind of processing and create",
+      "start": 113.92,
+      "duration": 3.28
+    },
+    {
+      "text": "some kind of output",
+      "start": 115.759,
+      "duration": 4.081
+    },
+    {
+      "text": "and then put that output into the list",
+      "start": 117.2,
+      "duration": 4.32
+    },
+    {
+      "text": "and you're going to have one output into",
+      "start": 119.84,
+      "duration": 2.239
+    },
+    {
+      "text": "the list",
+      "start": 121.52,
+      "duration": 3.919
+    },
+    {
+      "text": "for each run of the loop",
+      "start": 122.079,
+      "duration": 7.121
+    },
+    {
+      "text": "um this comes up all the time",
+      "start": 125.439,
+      "duration": 6.721
+    },
+    {
+      "text": "and so you can see in the first block",
+      "start": 129.2,
+      "duration": 3.759
+    },
+    {
+      "text": "here",
+      "start": 132.16,
+      "duration": 3.04
+    },
+    {
+      "text": "how we know to do that right now and",
+      "start": 132.959,
+      "duration": 3.36
+    },
+    {
+      "text": "that's you first",
+      "start": 135.2,
+      "duration": 3.039
+    },
+    {
+      "text": "set up your output list before you start",
+      "start": 136.319,
+      "duration": 3.041
+    },
+    {
+      "text": "the loop",
+      "start": 138.239,
+      "duration": 4.401
+    },
+    {
+      "text": "then you have your loop and then within",
+      "start": 139.36,
+      "duration": 4.32
+    },
+    {
+      "text": "your loop",
+      "start": 142.64,
+      "duration": 4.239
+    },
+    {
+      "text": "you append to that list",
+      "start": 143.68,
+      "duration": 6.559
+    },
+    {
+      "text": "that you finally have all those results",
+      "start": 146.879,
+      "duration": 7.681
+    },
+    {
+      "text": "in a list so list comprehension",
+      "start": 150.239,
+      "duration": 7.441
+    },
+    {
+      "text": "lets you take these three lines",
+      "start": 154.56,
+      "duration": 6.319
+    },
+    {
+      "text": "and put it into one single line",
+      "start": 157.68,
+      "duration": 6.639
+    },
+    {
+      "text": "so here is the same exact loop with",
+      "start": 160.879,
+      "duration": 6.801
+    },
+    {
+      "text": "list comprehension and",
+      "start": 164.319,
+      "duration": 5.521
+    },
+    {
+      "text": "you can see that actually the loop",
+      "start": 167.68,
+      "duration": 3.279
+    },
+    {
+      "text": "statement itself",
+      "start": 169.84,
+      "duration": 3.759
+    },
+    {
+      "text": "four iron range five that comes over 100",
+      "start": 170.959,
+      "duration": 4.161
+    },
+    {
+      "text": "percent the same",
+      "start": 173.599,
+      "duration": 4.961
+    },
+    {
+      "text": "into the list comprehension and",
+      "start": 175.12,
+      "duration": 5.36
+    },
+    {
+      "text": "when you look at this the one other part",
+      "start": 178.56,
+      "duration": 3.759
+    },
+    {
+      "text": "that actually matters in here that's not",
+      "start": 180.48,
+      "duration": 2.32
+    },
+    {
+      "text": "just",
+      "start": 182.319,
+      "duration": 3.28
+    },
+    {
+      "text": "boilerplate of setting this all up is",
+      "start": 182.8,
+      "duration": 4.799
+    },
+    {
+      "text": "the actual computation part",
+      "start": 185.599,
+      "duration": 5.441
+    },
+    {
+      "text": "we're adding 10 to whatever the input",
+      "start": 187.599,
+      "duration": 4.72
+    },
+    {
+      "text": "value is",
+      "start": 191.04,
+      "duration": 3.839
+    },
+    {
+      "text": "and so that's the other part which comes",
+      "start": 192.319,
+      "duration": 3.28
+    },
+    {
+      "text": "over",
+      "start": 194.879,
+      "duration": 2.561
+    },
+    {
+      "text": "into the list comprehension so it's",
+      "start": 195.599,
+      "duration": 4.081
+    },
+    {
+      "text": "really minimized it down to",
+      "start": 197.44,
+      "duration": 4.48
+    },
+    {
+      "text": "just the things that we care about and",
+      "start": 199.68,
+      "duration": 3.919
+    },
+    {
+      "text": "not having to",
+      "start": 201.92,
+      "duration": 5.12
+    },
+    {
+      "text": "write all this other structure",
+      "start": 203.599,
+      "duration": 7.28
+    },
+    {
+      "text": "so it's whatever your output calculation",
+      "start": 207.04,
+      "duration": 6.4
+    },
+    {
+      "text": "is and then your loop statement",
+      "start": 210.879,
+      "duration": 5.121
+    },
+    {
+      "text": "and you just wrap that in brackets and",
+      "start": 213.44,
+      "duration": 4.719
+    },
+    {
+      "text": "that's a list comprehension",
+      "start": 216.0,
+      "duration": 4.799
+    },
+    {
+      "text": "and i think this is nice and readable as",
+      "start": 218.159,
+      "duration": 4.241
+    },
+    {
+      "text": "well this is just saying",
+      "start": 220.799,
+      "duration": 5.201
+    },
+    {
+      "text": "you know add 10 to each one of the",
+      "start": 222.4,
+      "duration": 6.72
+    },
+    {
+      "text": "inputs and the range up to five",
+      "start": 226.0,
+      "duration": 6.319
+    },
+    {
+      "text": "and make that into a list so i think it",
+      "start": 229.12,
+      "duration": 5.52
+    },
+    {
+      "text": "increases the readability on top of just",
+      "start": 232.319,
+      "duration": 4.401
+    },
+    {
+      "text": "making it easier and faster to write the",
+      "start": 234.64,
+      "duration": 3.04
+    },
+    {
+      "text": "code",
+      "start": 236.72,
+      "duration": 3.519
+    },
+    {
+      "text": "so a lot of advantages here with list",
+      "start": 237.68,
+      "duration": 4.0
+    },
+    {
+      "text": "comprehension",
+      "start": 240.239,
+      "duration": 4.56
+    },
+    {
+      "text": "if this feels overwhelming to you don't",
+      "start": 241.68,
+      "duration": 4.639
+    },
+    {
+      "text": "worry about it you can still write these",
+      "start": 244.799,
+      "duration": 2.8
+    },
+    {
+      "text": "loops just fine",
+      "start": 246.319,
+      "duration": 2.881
+    },
+    {
+      "text": "your code is going to function exactly",
+      "start": 247.599,
+      "duration": 3.121
+    },
+    {
+      "text": "the same",
+      "start": 249.2,
+      "duration": 4.72
+    },
+    {
+      "text": "it's just in my opinion a lot easier to",
+      "start": 250.72,
+      "duration": 3.84
+    },
+    {
+      "text": "write with",
+      "start": 253.92,
+      "duration": 2.4
+    },
+    {
+      "text": "list comprehensions than doing this",
+      "start": 254.56,
+      "duration": 3.919
+    },
+    {
+      "text": "full-on pattern",
+      "start": 256.32,
+      "duration": 3.84
+    },
+    {
+      "text": "now you don't want to abuse list",
+      "start": 258.479,
+      "duration": 3.6
+    },
+    {
+      "text": "comprehensions if you've got a",
+      "start": 260.16,
+      "duration": 3.28
+    },
+    {
+      "text": "complicated loop",
+      "start": 262.079,
+      "duration": 2.721
+    },
+    {
+      "text": "you probably don't want to make that",
+      "start": 263.44,
+      "duration": 3.28
+    },
+    {
+      "text": "into a list comprehension",
+      "start": 264.8,
+      "duration": 3.52
+    },
+    {
+      "text": "it's just going to become a really",
+      "start": 266.72,
+      "duration": 4.32
+    },
+    {
+      "text": "really complicated one-line statement",
+      "start": 268.32,
+      "duration": 4.96
+    },
+    {
+      "text": "but when you're doing simple things then",
+      "start": 271.04,
+      "duration": 3.439
+    },
+    {
+      "text": "a list comprehension",
+      "start": 273.28,
+      "duration": 4.32
+    },
+    {
+      "text": "makes a lot of sense",
+      "start": 274.479,
+      "duration": 3.121
+    },
+    {
+      "text": "so now let's go over and look at some",
+      "start": 277.84,
+      "duration": 5.2
+    },
+    {
+      "text": "examples of this and apply it in the",
+      "start": 281.04,
+      "duration": 4.8
+    },
+    {
+      "text": "jupiter notebook",
+      "start": 283.04,
+      "duration": 2.8
+    },
+    {
+      "text": "so still working on this additional",
+      "start": 287.52,
+      "duration": 3.52
+    },
+    {
+      "text": "python basics",
+      "start": 289.759,
+      "duration": 2.72
+    },
+    {
+      "text": "dictionaries list comprehensions",
+      "start": 291.04,
+      "duration": 4.32
+    },
+    {
+      "text": "notebook now in the list comprehensions",
+      "start": 292.479,
+      "duration": 6.801
+    },
+    {
+      "text": "section so first here i'm just",
+      "start": 295.36,
+      "duration": 6.32
+    },
+    {
+      "text": "showing the standard way that we've",
+      "start": 299.28,
+      "duration": 3.759
+    },
+    {
+      "text": "learned so far",
+      "start": 301.68,
+      "duration": 3.68
+    },
+    {
+      "text": "we've got an inputs list we want to add",
+      "start": 303.039,
+      "duration": 3.041
+    },
+    {
+      "text": "5",
+      "start": 305.36,
+      "duration": 2.399
+    },
+    {
+      "text": "to each of those inputs that's our",
+      "start": 306.08,
+      "duration": 3.6
+    },
+    {
+      "text": "calculation the calculation",
+      "start": 307.759,
+      "duration": 3.521
+    },
+    {
+      "text": "could be absolutely anything that you",
+      "start": 309.68,
+      "duration": 3.04
+    },
+    {
+      "text": "want it could be running your entire",
+      "start": 311.28,
+      "duration": 2.4
+    },
+    {
+      "text": "model",
+      "start": 312.72,
+      "duration": 3.44
+    },
+    {
+      "text": "or whatever here we're just adding five",
+      "start": 313.68,
+      "duration": 3.68
+    },
+    {
+      "text": "and so we get",
+      "start": 316.16,
+      "duration": 3.599
+    },
+    {
+      "text": "five added to each of these inputs as",
+      "start": 317.36,
+      "duration": 4.399
+    },
+    {
+      "text": "the output",
+      "start": 319.759,
+      "duration": 3.921
+    },
+    {
+      "text": "and again that's setting up our empty",
+      "start": 321.759,
+      "duration": 3.681
+    },
+    {
+      "text": "list doing the loop statement",
+      "start": 323.68,
+      "duration": 3.6
+    },
+    {
+      "text": "doing the calculation appending that",
+      "start": 325.44,
+      "duration": 4.64
+    },
+    {
+      "text": "result and then we have all that",
+      "start": 327.28,
+      "duration": 5.919
+    },
+    {
+      "text": "and now it becomes one line uh just",
+      "start": 330.08,
+      "duration": 4.0
+    },
+    {
+      "text": "adding five",
+      "start": 333.199,
+      "duration": 3.361
+    },
+    {
+      "text": "to each of the inputs for each of the",
+      "start": 334.08,
+      "duration": 3.28
+    },
+    {
+      "text": "inputs",
+      "start": 336.56,
+      "duration": 3.84
+    },
+    {
+      "text": "and we're done so much easier",
+      "start": 337.36,
+      "duration": 7.679
+    },
+    {
+      "text": "in my opinion um",
+      "start": 340.4,
+      "duration": 4.639
+    },
+    {
+      "text": "and like i said uh",
+      "start": 345.44,
+      "duration": 5.68
+    },
+    {
+      "text": "this is a really trivial example here",
+      "start": 349.12,
+      "duration": 3.2
+    },
+    {
+      "text": "we're just adding five",
+      "start": 351.12,
+      "duration": 3.919
+    },
+    {
+      "text": "it was really simple but you can do",
+      "start": 352.32,
+      "duration": 4.56
+    },
+    {
+      "text": "anything you want",
+      "start": 355.039,
+      "duration": 4.72
+    },
+    {
+      "text": "with the logic",
+      "start": 356.88,
+      "duration": 2.879
+    },
+    {
+      "text": "and if you use functions you",
+      "start": 360.4,
+      "duration": 5.68
+    },
+    {
+      "text": "can really do a whole lot here because",
+      "start": 363.68,
+      "duration": 5.04
+    },
+    {
+      "text": "you can put all your complex logic",
+      "start": 366.08,
+      "duration": 5.76
+    },
+    {
+      "text": "into a function and then",
+      "start": 368.72,
+      "duration": 6.16
+    },
+    {
+      "text": "what the loop itself becomes simple and",
+      "start": 371.84,
+      "duration": 4.72
+    },
+    {
+      "text": "so you can condense the loop",
+      "start": 374.88,
+      "duration": 4.8
+    },
+    {
+      "text": "into a list comprehension",
+      "start": 376.56,
+      "duration": 5.12
+    },
+    {
+      "text": "without the function this would be a lot",
+      "start": 379.68,
+      "duration": 4.239
+    },
+    {
+      "text": "of logic to try and cram",
+      "start": 381.68,
+      "duration": 4.72
+    },
+    {
+      "text": "into a list comprehension but with the",
+      "start": 383.919,
+      "duration": 3.041
+    },
+    {
+      "text": "function",
+      "start": 386.4,
+      "duration": 3.12
+    },
+    {
+      "text": "it becomes very simple so all this",
+      "start": 386.96,
+      "duration": 3.12
+    },
+    {
+      "text": "function",
+      "start": 389.52,
+      "duration": 4.959
+    },
+    {
+      "text": "is doing is uh taking a numeric value",
+      "start": 390.08,
+      "duration": 7.679
+    },
+    {
+      "text": "if it's less than two it returns low uh",
+      "start": 394.479,
+      "duration": 6.081
+    },
+    {
+      "text": "if it's between two and three it returns",
+      "start": 397.759,
+      "duration": 3.761
+    },
+    {
+      "text": "mid",
+      "start": 400.56,
+      "duration": 4.72
+    },
+    {
+      "text": "and otherwise it returns high",
+      "start": 401.52,
+      "duration": 7.36
+    },
+    {
+      "text": "so with the original way that we've",
+      "start": 405.28,
+      "duration": 4.08
+    },
+    {
+      "text": "learned",
+      "start": 408.88,
+      "duration": 4.159
+    },
+    {
+      "text": "the list building pattern um",
+      "start": 409.36,
+      "duration": 7.04
+    },
+    {
+      "text": "it basically looks the same as",
+      "start": 413.039,
+      "duration": 6.961
+    },
+    {
+      "text": "the last loop um but instead of adding",
+      "start": 416.4,
+      "duration": 5.28
+    },
+    {
+      "text": "five now we're calling",
+      "start": 420.0,
+      "duration": 4.16
+    },
+    {
+      "text": "the function here and we're passing in",
+      "start": 421.68,
+      "duration": 4.16
+    },
+    {
+      "text": "the input and getting the output as a",
+      "start": 424.16,
+      "duration": 3.36
+    },
+    {
+      "text": "result of that and appending that in the",
+      "start": 425.84,
+      "duration": 2.479
+    },
+    {
+      "text": "list",
+      "start": 427.52,
+      "duration": 3.92
+    },
+    {
+      "text": "so for our inputs um",
+      "start": 428.319,
+      "duration": 6.32
+    },
+    {
+      "text": "which were one two three one is low two",
+      "start": 431.44,
+      "duration": 7.759
+    },
+    {
+      "text": "is mid and 3 is high",
+      "start": 434.639,
+      "duration": 4.56
+    },
+    {
+      "text": "and with list comprehension we can still",
+      "start": 439.36,
+      "duration": 3.679
+    },
+    {
+      "text": "make this into a single",
+      "start": 441.12,
+      "duration": 5.359
+    },
+    {
+      "text": "line so",
+      "start": 443.039,
+      "duration": 5.6
+    },
+    {
+      "text": "you can really do very powerful things",
+      "start": 446.479,
+      "duration": 3.521
+    },
+    {
+      "text": "if you take",
+      "start": 448.639,
+      "duration": 3.68
+    },
+    {
+      "text": "your complicated logic and you wrap it",
+      "start": 450.0,
+      "duration": 4.0
+    },
+    {
+      "text": "in a function",
+      "start": 452.319,
+      "duration": 4.72
+    },
+    {
+      "text": "then doing a loop with that function",
+      "start": 454.0,
+      "duration": 4.88
+    },
+    {
+      "text": "across a bunch of different inputs",
+      "start": 457.039,
+      "duration": 3.041
+    },
+    {
+      "text": "collecting all those",
+      "start": 458.88,
+      "duration": 5.28
+    },
+    {
+      "text": "results into a list becomes a single",
+      "start": 460.08,
+      "duration": 8.88
+    },
+    {
+      "text": "line now so much easier than before",
+      "start": 464.16,
+      "duration": 4.8
+    },
+    {
+      "text": "um and so that's the basics of list",
+      "start": 469.039,
+      "duration": 5.44
+    },
+    {
+      "text": "comprehensions and the majority of the",
+      "start": 472.72,
+      "duration": 2.56
+    },
+    {
+      "text": "time",
+      "start": 474.479,
+      "duration": 4.321
+    },
+    {
+      "text": "that's all you'll ever need there are",
+      "start": 475.28,
+      "duration": 6.639
+    },
+    {
+      "text": "more advanced ways to use them as well",
+      "start": 478.8,
+      "duration": 4.32
+    },
+    {
+      "text": "let's just kind of",
+      "start": 481.919,
+      "duration": 4.4
+    },
+    {
+      "text": "quickly go over those",
+      "start": 483.12,
+      "duration": 3.199
+    },
+    {
+      "text": "so we can do conditionals",
+      "start": 486.96,
+      "duration": 7.44
+    },
+    {
+      "text": "in the list comprehensions as well",
+      "start": 491.12,
+      "duration": 6.4
+    },
+    {
+      "text": "and that's conditional around whether to",
+      "start": 494.4,
+      "duration": 5.28
+    },
+    {
+      "text": "append whether to add the output to the",
+      "start": 497.52,
+      "duration": 3.679
+    },
+    {
+      "text": "final list",
+      "start": 499.68,
+      "duration": 4.239
+    },
+    {
+      "text": "so here again we're looking at one two",
+      "start": 501.199,
+      "duration": 3.12
+    },
+    {
+      "text": "three",
+      "start": 503.919,
+      "duration": 2.161
+    },
+    {
+      "text": "and if the inputs less than three then",
+      "start": 504.319,
+      "duration": 3.44
+    },
+    {
+      "text": "we're going to add it to the list",
+      "start": 506.08,
+      "duration": 4.72
+    },
+    {
+      "text": "and so we get one and two out of that",
+      "start": 507.759,
+      "duration": 4.481
+    },
+    {
+      "text": "and then looking at the list",
+      "start": 510.8,
+      "duration": 3.359
+    },
+    {
+      "text": "comprehension so",
+      "start": 512.24,
+      "duration": 4.159
+    },
+    {
+      "text": "you know here's the basic uh list",
+      "start": 514.159,
+      "duration": 3.921
+    },
+    {
+      "text": "comprehension which gets us",
+      "start": 516.399,
+      "duration": 4.401
+    },
+    {
+      "text": "just the original inputs back and then",
+      "start": 518.08,
+      "duration": 3.68
+    },
+    {
+      "text": "we add",
+      "start": 520.8,
+      "duration": 4.08
+    },
+    {
+      "text": "our condition onto that and",
+      "start": 521.76,
+      "duration": 6.639
+    },
+    {
+      "text": "it's going to give us only the",
+      "start": 524.88,
+      "duration": 6.72
+    },
+    {
+      "text": "inputs which satisfy the condition in",
+      "start": 528.399,
+      "duration": 3.761
+    },
+    {
+      "text": "the final",
+      "start": 531.6,
+      "duration": 3.919
+    },
+    {
+      "text": "resulting list",
+      "start": 532.16,
+      "duration": 5.6
+    },
+    {
+      "text": "and you can do those same calculations",
+      "start": 535.519,
+      "duration": 4.32
+    },
+    {
+      "text": "on the inputs as well",
+      "start": 537.76,
+      "duration": 5.36
+    },
+    {
+      "text": "so here it it kept the one and the two",
+      "start": 539.839,
+      "duration": 7.521
+    },
+    {
+      "text": "but now it's adding five to it as well",
+      "start": 543.12,
+      "duration": 6.88
+    },
+    {
+      "text": "um so that's conditional for whether to",
+      "start": 547.36,
+      "duration": 4.32
+    },
+    {
+      "text": "include the value in the resulting list",
+      "start": 550.0,
+      "duration": 3.839
+    },
+    {
+      "text": "you can also do a conditional",
+      "start": 551.68,
+      "duration": 5.279
+    },
+    {
+      "text": "on the value itself so",
+      "start": 553.839,
+      "duration": 6.321
+    },
+    {
+      "text": "here is our long form loop where",
+      "start": 556.959,
+      "duration": 4.641
+    },
+    {
+      "text": "if the input's less than three we're",
+      "start": 560.16,
+      "duration": 3.84
+    },
+    {
+      "text": "gonna append it and otherwise it's too",
+      "start": 561.6,
+      "duration": 2.88
+    },
+    {
+      "text": "high",
+      "start": 564.0,
+      "duration": 3.839
+    },
+    {
+      "text": "we're gonna append too high to the list",
+      "start": 564.48,
+      "duration": 7.6
+    },
+    {
+      "text": "um and so here we run that",
+      "start": 567.839,
+      "duration": 7.281
+    },
+    {
+      "text": "and we're going to get uh one two and",
+      "start": 572.08,
+      "duration": 4.72
+    },
+    {
+      "text": "two high because three",
+      "start": 575.12,
+      "duration": 4.88
+    },
+    {
+      "text": "is not less than three and we can do all",
+      "start": 576.8,
+      "duration": 4.719
+    },
+    {
+      "text": "this in one line with a list",
+      "start": 580.0,
+      "duration": 3.2
+    },
+    {
+      "text": "comprehension",
+      "start": 581.519,
+      "duration": 4.32
+    },
+    {
+      "text": "so when you're doing a conditional on",
+      "start": 583.2,
+      "duration": 3.12
+    },
+    {
+      "text": "the",
+      "start": 585.839,
+      "duration": 3.761
+    },
+    {
+      "text": "value then that conditional comes",
+      "start": 586.32,
+      "duration": 5.76
+    },
+    {
+      "text": "onto the left side of the list",
+      "start": 589.6,
+      "duration": 4.56
+    },
+    {
+      "text": "comprehension whereas here",
+      "start": 592.08,
+      "duration": 3.92
+    },
+    {
+      "text": "or conditional on whether to keep the",
+      "start": 594.16,
+      "duration": 3.679
+    },
+    {
+      "text": "value was on the right side",
+      "start": 596.0,
+      "duration": 4.88
+    },
+    {
+      "text": "of the list comprehension",
+      "start": 597.839,
+      "duration": 8.24
+    },
+    {
+      "text": "and so here we're going to do um",
+      "start": 600.88,
+      "duration": 8.079
+    },
+    {
+      "text": "we're going to do the input if the input",
+      "start": 606.079,
+      "duration": 4.401
+    },
+    {
+      "text": "is less than 3",
+      "start": 608.959,
+      "duration": 4.081
+    },
+    {
+      "text": "otherwise we're going to get too high so",
+      "start": 610.48,
+      "duration": 4.16
+    },
+    {
+      "text": "this is an inline",
+      "start": 613.04,
+      "duration": 5.2
+    },
+    {
+      "text": "if else statement",
+      "start": 614.64,
+      "duration": 5.6
+    },
+    {
+      "text": "if it's less than three otherwise too",
+      "start": 618.24,
+      "duration": 3.44
+    },
+    {
+      "text": "high",
+      "start": 620.24,
+      "duration": 3.279
+    },
+    {
+      "text": "and we're doing that for each of the",
+      "start": 621.68,
+      "duration": 3.52
+    },
+    {
+      "text": "inputs and so that's",
+      "start": 623.519,
+      "duration": 4.0
+    },
+    {
+      "text": "how we get the same result as this",
+      "start": 625.2,
+      "duration": 4.4
+    },
+    {
+      "text": "longer form loop",
+      "start": 627.519,
+      "duration": 5.201
+    },
+    {
+      "text": "um and you can combine all three of",
+      "start": 629.6,
+      "duration": 5.04
+    },
+    {
+      "text": "those elements if you'd like",
+      "start": 632.72,
+      "duration": 4.48
+    },
+    {
+      "text": "so by the time you're doing that it's",
+      "start": 634.64,
+      "duration": 3.92
+    },
+    {
+      "text": "starting to get a little bit hard to",
+      "start": 637.2,
+      "duration": 3.12
+    },
+    {
+      "text": "read honestly so",
+      "start": 638.56,
+      "duration": 4.24
+    },
+    {
+      "text": "um it may at this point be better just",
+      "start": 640.32,
+      "duration": 4.4
+    },
+    {
+      "text": "to go back to a long form loop now that",
+      "start": 642.8,
+      "duration": 4.56
+    },
+    {
+      "text": "you've got multiple things going on",
+      "start": 644.72,
+      "duration": 4.72
+    },
+    {
+      "text": "but you can combine all these elements",
+      "start": 647.36,
+      "duration": 4.8
+    },
+    {
+      "text": "if you want to",
+      "start": 649.44,
+      "duration": 2.72
+    },
+    {
+      "text": "um and then just a quick mention for",
+      "start": 652.24,
+      "duration": 6.64
+    },
+    {
+      "text": "there are comprehensions for other data",
+      "start": 656.8,
+      "duration": 4.0
+    },
+    {
+      "text": "types and pythons",
+      "start": 658.88,
+      "duration": 4.8
+    },
+    {
+      "text": "uh we haven't even talked about sets and",
+      "start": 660.8,
+      "duration": 4.88
+    },
+    {
+      "text": "generators as data types",
+      "start": 663.68,
+      "duration": 3.68
+    },
+    {
+      "text": "we're not really gonna go there in this",
+      "start": 665.68,
+      "duration": 3.36
+    },
+    {
+      "text": "course they're not really necessary for",
+      "start": 667.36,
+      "duration": 3.28
+    },
+    {
+      "text": "what we're doing",
+      "start": 669.04,
+      "duration": 3.039
+    },
+    {
+      "text": "but for those and as well as",
+      "start": 670.64,
+      "duration": 3.04
+    },
+    {
+      "text": "dictionaries you can do dictionary",
+      "start": 672.079,
+      "duration": 4.561
+    },
+    {
+      "text": "comprehensions as well",
+      "start": 673.68,
+      "duration": 5.44
+    },
+    {
+      "text": "but that's a little bit more advanced",
+      "start": 676.64,
+      "duration": 3.439
+    },
+    {
+      "text": "you can check out",
+      "start": 679.12,
+      "duration": 3.44
+    },
+    {
+      "text": "uh this resource for more information on",
+      "start": 680.079,
+      "duration": 3.521
+    },
+    {
+      "text": "that if you're",
+      "start": 682.56,
+      "duration": 3.519
+    },
+    {
+      "text": "interested",
+      "start": 683.6,
+      "duration": 2.479
+    },
+    {
+      "text": "and then that wraps up the material on",
+      "start": 686.8,
+      "duration": 4.56
+    },
+    {
+      "text": "list comprehension",
+      "start": 689.839,
+      "duration": 4.641
+    },
+    {
+      "text": "and there are lab exercises on this",
+      "start": 691.36,
+      "duration": 5.599
+    },
+    {
+      "text": "as well and i forgot to mention at the",
+      "start": 694.48,
+      "duration": 4.08
+    },
+    {
+      "text": "end of the dictionaries video",
+      "start": 696.959,
+      "duration": 4.641
+    },
+    {
+      "text": "that there are also lab exercises for",
+      "start": 698.56,
+      "duration": 3.6
+    },
+    {
+      "text": "that",
+      "start": 701.6,
+      "duration": 2.72
+    },
+    {
+      "text": "and the same notebook so just go through",
+      "start": 702.16,
+      "duration": 3.2
+    },
+    {
+      "text": "that whole",
+      "start": 704.32,
+      "duration": 3.36
+    },
+    {
+      "text": "um jupiter notebook the dicks and list",
+      "start": 705.36,
+      "duration": 3.28
+    },
+    {
+      "text": "comprehension",
+      "start": 707.68,
+      "duration": 4.24
+    },
+    {
+      "text": "lab and just complete all the exercises",
+      "start": 708.64,
+      "duration": 5.04
+    },
+    {
+      "text": "in both the dictionaries and list",
+      "start": 711.92,
+      "duration": 3.52
+    },
+    {
+      "text": "comprehensions sections",
+      "start": 713.68,
+      "duration": 5.68
+    },
+    {
+      "text": "for the lab exercise so we're going to",
+      "start": 715.44,
+      "duration": 5.199
+    },
+    {
+      "text": "come back in the next video",
+      "start": 719.36,
+      "duration": 3.919
+    },
+    {
+      "text": "to talk about the python import system",
+      "start": 720.639,
+      "duration": 3.44
+    },
+    {
+      "text": "and how to",
+      "start": 723.279,
+      "duration": 3.841
+    },
+    {
+      "text": "install packages so thanks for listening",
+      "start": 724.079,
+      "duration": 7.76
+    },
+    {
+      "text": "and see you next time",
+      "start": 727.12,
+      "duration": 4.719
+    }
+  ]
+}

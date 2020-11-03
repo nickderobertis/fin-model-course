@@ -1,0 +1,2669 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.48,
+      "duration": 2.48
+    },
+    {
+      "text": "nick diabetis here teaching you",
+      "start": 3.439,
+      "duration": 3.36
+    },
+    {
+      "text": "financial modeling today",
+      "start": 4.96,
+      "duration": 4.32
+    },
+    {
+      "text": "we're going to be looking at an example",
+      "start": 6.799,
+      "duration": 4.641
+    },
+    {
+      "text": "of adding sensitivity analysis",
+      "start": 9.28,
+      "duration": 5.2
+    },
+    {
+      "text": "to an existing model this is part of our",
+      "start": 11.44,
+      "duration": 3.6
+    },
+    {
+      "text": "segment",
+      "start": 14.48,
+      "duration": 4.639
+    },
+    {
+      "text": "on exploring the parameter space",
+      "start": 15.04,
+      "duration": 7.28
+    },
+    {
+      "text": "so we left off last time having done",
+      "start": 19.119,
+      "duration": 6.4
+    },
+    {
+      "text": "an introduction on sensitivity analysis",
+      "start": 22.32,
+      "duration": 5.44
+    },
+    {
+      "text": "in python and looked at some of the",
+      "start": 25.519,
+      "duration": 3.441
+    },
+    {
+      "text": "different outputs we were going to",
+      "start": 27.76,
+      "duration": 2.56
+    },
+    {
+      "text": "produce and approaches",
+      "start": 28.96,
+      "duration": 4.72
+    },
+    {
+      "text": "we could use and now we're coming to",
+      "start": 30.32,
+      "duration": 5.36
+    },
+    {
+      "text": "actually apply that to our existing",
+      "start": 33.68,
+      "duration": 3.84
+    },
+    {
+      "text": "dynamic salary retirement",
+      "start": 35.68,
+      "duration": 5.36
+    },
+    {
+      "text": "model so let's go ahead and jump over to",
+      "start": 37.52,
+      "duration": 4.64
+    },
+    {
+      "text": "that model",
+      "start": 41.04,
+      "duration": 4.16
+    },
+    {
+      "text": "so we can build this extension to the",
+      "start": 42.16,
+      "duration": 5.2
+    },
+    {
+      "text": "model out",
+      "start": 45.2,
+      "duration": 6.16
+    },
+    {
+      "text": "and you can find the um completed",
+      "start": 47.36,
+      "duration": 6.64
+    },
+    {
+      "text": "extension from this exercise on the",
+      "start": 51.36,
+      "duration": 3.92
+    },
+    {
+      "text": "course site",
+      "start": 54.0,
+      "duration": 3.36
+    },
+    {
+      "text": "and i would recommend that you take a",
+      "start": 55.28,
+      "duration": 3.36
+    },
+    {
+      "text": "look at that",
+      "start": 57.36,
+      "duration": 4.8
+    },
+    {
+      "text": "completed example as you go to",
+      "start": 58.64,
+      "duration": 6.32
+    },
+    {
+      "text": "work the lab exercise for this and to",
+      "start": 62.16,
+      "duration": 4.639
+    },
+    {
+      "text": "add sensitivity analysis to your own",
+      "start": 64.96,
+      "duration": 7.76
+    },
+    {
+      "text": "models in the future so",
+      "start": 66.799,
+      "duration": 8.881
+    },
+    {
+      "text": "um we're gonna add sensitivity analysis",
+      "start": 72.72,
+      "duration": 4.079
+    },
+    {
+      "text": "so we can go ahead",
+      "start": 75.68,
+      "duration": 3.6
+    },
+    {
+      "text": "and make that as an additional section",
+      "start": 76.799,
+      "duration": 3.121
+    },
+    {
+      "text": "down here",
+      "start": 79.28,
+      "duration": 6.879
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 79.92,
+      "duration": 8.08
+    },
+    {
+      "text": "um and you would want to put a",
+      "start": 86.159,
+      "duration": 3.441
+    },
+    {
+      "text": "description of",
+      "start": 88.0,
+      "duration": 3.2
+    },
+    {
+      "text": "what you're going to be analyzing why",
+      "start": 89.6,
+      "duration": 3.199
+    },
+    {
+      "text": "what are the takeaways",
+      "start": 91.2,
+      "duration": 4.32
+    },
+    {
+      "text": "um but i'm going to leave that out for",
+      "start": 92.799,
+      "duration": 6.041
+    },
+    {
+      "text": "now for a second time",
+      "start": 95.52,
+      "duration": 6.4
+    },
+    {
+      "text": "um and",
+      "start": 98.84,
+      "duration": 4.599
+    },
+    {
+      "text": "i know that i'm going to need to use the",
+      "start": 101.92,
+      "duration": 3.519
+    },
+    {
+      "text": "sensitivity analyzer so i'm going to go",
+      "start": 103.439,
+      "duration": 2.481
+    },
+    {
+      "text": "ahead",
+      "start": 105.439,
+      "duration": 3.68
+    },
+    {
+      "text": "and add that import up here",
+      "start": 105.92,
+      "duration": 6.32
+    },
+    {
+      "text": "from sensitivity import",
+      "start": 109.119,
+      "duration": 6.721
+    },
+    {
+      "text": "sensitivity analyzer um",
+      "start": 112.24,
+      "duration": 5.68
+    },
+    {
+      "text": "sometimes yep if you tab complete",
+      "start": 115.84,
+      "duration": 3.599
+    },
+    {
+      "text": "sometimes they will tap complete it for",
+      "start": 117.92,
+      "duration": 2.64
+    },
+    {
+      "text": "you so that",
+      "start": 119.439,
+      "duration": 4.72
+    },
+    {
+      "text": "worked out for me then i'm going to",
+      "start": 120.56,
+      "duration": 4.559
+    },
+    {
+      "text": "restart kernel",
+      "start": 124.159,
+      "duration": 2.881
+    },
+    {
+      "text": "and run all cells so that we have",
+      "start": 125.119,
+      "duration": 3.92
+    },
+    {
+      "text": "everything from the model",
+      "start": 127.04,
+      "duration": 3.76
+    },
+    {
+      "text": "defined and then can just work with it",
+      "start": 129.039,
+      "duration": 3.441
+    },
+    {
+      "text": "below for the sensitivity",
+      "start": 130.8,
+      "duration": 4.32
+    },
+    {
+      "text": "analysis",
+      "start": 132.48,
+      "duration": 2.64
+    },
+    {
+      "text": "um now",
+      "start": 135.52,
+      "duration": 5.76
+    },
+    {
+      "text": "we're ready to start building out the",
+      "start": 139.44,
+      "duration": 3.2
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 141.28,
+      "duration": 4.48
+    },
+    {
+      "text": "but one thing that you may notice about",
+      "start": 142.64,
+      "duration": 4.959
+    },
+    {
+      "text": "my existing model function used to",
+      "start": 145.76,
+      "duration": 3.199
+    },
+    {
+      "text": "retirement",
+      "start": 147.599,
+      "duration": 4.401
+    },
+    {
+      "text": "is when i call it it prints out",
+      "start": 148.959,
+      "duration": 6.961
+    },
+    {
+      "text": "output and when we go to do sensitivity",
+      "start": 152.0,
+      "duration": 4.64
+    },
+    {
+      "text": "analysis",
+      "start": 155.92,
+      "duration": 2.8
+    },
+    {
+      "text": "basically this function is going to get",
+      "start": 156.64,
+      "duration": 4.0
+    },
+    {
+      "text": "right a bunch of times",
+      "start": 158.72,
+      "duration": 5.44
+    },
+    {
+      "text": "with different inputs and",
+      "start": 160.64,
+      "duration": 7.12
+    },
+    {
+      "text": "um we're going to see that",
+      "start": 164.16,
+      "duration": 6.24
+    },
+    {
+      "text": "doing that without any changes we would",
+      "start": 167.76,
+      "duration": 4.4
+    },
+    {
+      "text": "get this whole print output",
+      "start": 170.4,
+      "duration": 3.52
+    },
+    {
+      "text": "for as many times as we're running the",
+      "start": 172.16,
+      "duration": 3.52
+    },
+    {
+      "text": "model and we could be running the model",
+      "start": 173.92,
+      "duration": 3.2
+    },
+    {
+      "text": "thousands of times",
+      "start": 175.68,
+      "duration": 3.839
+    },
+    {
+      "text": "so we don't want to get thousands of",
+      "start": 177.12,
+      "duration": 3.44
+    },
+    {
+      "text": "copies of this",
+      "start": 179.519,
+      "duration": 3.761
+    },
+    {
+      "text": "print output for the different output",
+      "start": 180.56,
+      "duration": 3.599
+    },
+    {
+      "text": "cases",
+      "start": 183.28,
+      "duration": 2.08
+    },
+    {
+      "text": "we're already going to be storing the",
+      "start": 184.159,
+      "duration": 3.041
+    },
+    {
+      "text": "main output that we want to look at",
+      "start": 185.36,
+      "duration": 4.56
+    },
+    {
+      "text": "separately so before we can even add the",
+      "start": 187.2,
+      "duration": 4.48
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 189.92,
+      "duration": 3.52
+    },
+    {
+      "text": "i'm going to go back and make a",
+      "start": 191.68,
+      "duration": 4.32
+    },
+    {
+      "text": "modification to the existing model",
+      "start": 193.44,
+      "duration": 5.519
+    },
+    {
+      "text": "to make it optional whether it prints",
+      "start": 196.0,
+      "duration": 3.599
+    },
+    {
+      "text": "out",
+      "start": 198.959,
+      "duration": 3.92
+    },
+    {
+      "text": "the results um",
+      "start": 199.599,
+      "duration": 6.481
+    },
+    {
+      "text": "so we've already talked about um",
+      "start": 202.879,
+      "duration": 6.72
+    },
+    {
+      "text": "optional arguments before",
+      "start": 206.08,
+      "duration": 6.719
+    },
+    {
+      "text": "we can add an optional argument here uh",
+      "start": 209.599,
+      "duration": 6.72
+    },
+    {
+      "text": "print output equals false so it defaults",
+      "start": 212.799,
+      "duration": 6.72
+    },
+    {
+      "text": "to it should not print any output",
+      "start": 216.319,
+      "duration": 4.801
+    },
+    {
+      "text": "and now i'm just going to go to each of",
+      "start": 219.519,
+      "duration": 3.36
+    },
+    {
+      "text": "the print statements and say if print",
+      "start": 221.12,
+      "duration": 4.0
+    },
+    {
+      "text": "output",
+      "start": 222.879,
+      "duration": 4.961
+    },
+    {
+      "text": "then it's going to print otherwise it's",
+      "start": 225.12,
+      "duration": 4.56
+    },
+    {
+      "text": "not going to print",
+      "start": 227.84,
+      "duration": 4.64
+    },
+    {
+      "text": "so i'm just going to do the same thing",
+      "start": 229.68,
+      "duration": 11.6
+    },
+    {
+      "text": "uh with each of these",
+      "start": 232.48,
+      "duration": 11.44
+    },
+    {
+      "text": "and i'm going to rerun that to redefine",
+      "start": 241.28,
+      "duration": 5.36
+    },
+    {
+      "text": "that function",
+      "start": 243.92,
+      "duration": 5.12
+    },
+    {
+      "text": "and now you'll see that when i run this",
+      "start": 246.64,
+      "duration": 3.12
+    },
+    {
+      "text": "i don't get",
+      "start": 249.04,
+      "duration": 3.52
+    },
+    {
+      "text": "any output there i just have the final",
+      "start": 249.76,
+      "duration": 3.199
+    },
+    {
+      "text": "answer",
+      "start": 252.56,
+      "duration": 3.2
+    },
+    {
+      "text": "storm and the variable well with this",
+      "start": 252.959,
+      "duration": 4.96
+    },
+    {
+      "text": "usage we do actually want to",
+      "start": 255.76,
+      "duration": 3.92
+    },
+    {
+      "text": "print the output so i'm going to put",
+      "start": 257.919,
+      "duration": 3.761
+    },
+    {
+      "text": "print output equals true",
+      "start": 259.68,
+      "duration": 4.16
+    },
+    {
+      "text": "and now we're back to exactly what we",
+      "start": 261.68,
+      "duration": 4.64
+    },
+    {
+      "text": "had before for the original model",
+      "start": 263.84,
+      "duration": 5.76
+    },
+    {
+      "text": "but we're also able to call the model",
+      "start": 266.32,
+      "duration": 6.0
+    },
+    {
+      "text": "without producing all that print output",
+      "start": 269.6,
+      "duration": 4.159
+    },
+    {
+      "text": "which is what we're going to need",
+      "start": 272.32,
+      "duration": 5.52
+    },
+    {
+      "text": "to go into sensitivity analysis",
+      "start": 273.759,
+      "duration": 6.401
+    },
+    {
+      "text": "so now the model is ready for us to go",
+      "start": 277.84,
+      "duration": 6.0
+    },
+    {
+      "text": "and add sensitivity analysis",
+      "start": 280.16,
+      "duration": 3.68
+    },
+    {
+      "text": "so now we want to use the sensitivity",
+      "start": 285.199,
+      "duration": 5.201
+    },
+    {
+      "text": "analyzer",
+      "start": 287.68,
+      "duration": 2.72
+    },
+    {
+      "text": "but there's one other thing we have to",
+      "start": 290.639,
+      "duration": 3.521
+    },
+    {
+      "text": "do",
+      "start": 293.759,
+      "duration": 4.401
+    },
+    {
+      "text": "to prepare the model function",
+      "start": 294.16,
+      "duration": 6.56
+    },
+    {
+      "text": "before we can pass it to the sensitivity",
+      "start": 298.16,
+      "duration": 3.68
+    },
+    {
+      "text": "analyzer",
+      "start": 300.72,
+      "duration": 3.44
+    },
+    {
+      "text": "the sensitivity analyzer is expecting to",
+      "start": 301.84,
+      "duration": 3.12
+    },
+    {
+      "text": "be able to pass",
+      "start": 304.16,
+      "duration": 3.599
+    },
+    {
+      "text": "each argument separately to the function",
+      "start": 304.96,
+      "duration": 4.56
+    },
+    {
+      "text": "but the way that we structure our models",
+      "start": 307.759,
+      "duration": 3.28
+    },
+    {
+      "text": "is we use a data class",
+      "start": 309.52,
+      "duration": 3.84
+    },
+    {
+      "text": "we pass only a single data class into",
+      "start": 311.039,
+      "duration": 3.361
+    },
+    {
+      "text": "the function",
+      "start": 313.36,
+      "duration": 3.76
+    },
+    {
+      "text": "and not each of the separate arguments",
+      "start": 314.4,
+      "duration": 4.799
+    },
+    {
+      "text": "so we have to create a function",
+      "start": 317.12,
+      "duration": 4.48
+    },
+    {
+      "text": "that will take the separate arguments",
+      "start": 319.199,
+      "duration": 4.321
+    },
+    {
+      "text": "construct the data class from those",
+      "start": 321.6,
+      "duration": 3.2
+    },
+    {
+      "text": "arguments",
+      "start": 323.52,
+      "duration": 3.679
+    },
+    {
+      "text": "and then pass the data class into the",
+      "start": 324.8,
+      "duration": 3.44
+    },
+    {
+      "text": "function",
+      "start": 327.199,
+      "duration": 4.0
+    },
+    {
+      "text": "and return the result of that function",
+      "start": 328.24,
+      "duration": 4.64
+    },
+    {
+      "text": "so that it's basically a wrapper",
+      "start": 331.199,
+      "duration": 3.521
+    },
+    {
+      "text": "around the model function which allows",
+      "start": 332.88,
+      "duration": 3.599
+    },
+    {
+      "text": "it to take the input separately",
+      "start": 334.72,
+      "duration": 4.96
+    },
+    {
+      "text": "rather than as a data class so",
+      "start": 336.479,
+      "duration": 5.44
+    },
+    {
+      "text": "we can write that function so i'm going",
+      "start": 339.68,
+      "duration": 5.68
+    },
+    {
+      "text": "to call that year's retirement",
+      "start": 341.919,
+      "duration": 6.481
+    },
+    {
+      "text": "separate args",
+      "start": 345.36,
+      "duration": 3.04
+    },
+    {
+      "text": "and i'll come back to the arguments",
+      "start": 349.36,
+      "duration": 3.6
+    },
+    {
+      "text": "section in a moment",
+      "start": 350.96,
+      "duration": 4.72
+    },
+    {
+      "text": "um and then what we're going to do is",
+      "start": 352.96,
+      "duration": 4.799
+    },
+    {
+      "text": "we're going to",
+      "start": 355.68,
+      "duration": 4.72
+    },
+    {
+      "text": "create an instance of model inputs i'll",
+      "start": 357.759,
+      "duration": 3.121
+    },
+    {
+      "text": "also",
+      "start": 360.4,
+      "duration": 3.519
+    },
+    {
+      "text": "come back to this in a moment and then",
+      "start": 360.88,
+      "duration": 4.4
+    },
+    {
+      "text": "we're going to return",
+      "start": 363.919,
+      "duration": 3.521
+    },
+    {
+      "text": "calling the original years retirement",
+      "start": 365.28,
+      "duration": 3.6
+    },
+    {
+      "text": "function",
+      "start": 367.44,
+      "duration": 4.56
+    },
+    {
+      "text": "on that data",
+      "start": 368.88,
+      "duration": 5.599
+    },
+    {
+      "text": "now what we're going to do for the",
+      "start": 372.0,
+      "duration": 4.479
+    },
+    {
+      "text": "arguments themselves",
+      "start": 374.479,
+      "duration": 4.641
+    },
+    {
+      "text": "there's actually a shortcut in python",
+      "start": 376.479,
+      "duration": 4.241
+    },
+    {
+      "text": "which just says",
+      "start": 379.12,
+      "duration": 4.079
+    },
+    {
+      "text": "let me take any number of keyword",
+      "start": 380.72,
+      "duration": 3.28
+    },
+    {
+      "text": "arguments",
+      "start": 383.199,
+      "duration": 3.12
+    },
+    {
+      "text": "keyword being where you say like",
+      "start": 384.0,
+      "duration": 4.16
+    },
+    {
+      "text": "starting salary equals",
+      "start": 386.319,
+      "duration": 5.361
+    },
+    {
+      "text": "ten thousand or uh promo raise equals",
+      "start": 388.16,
+      "duration": 6.72
+    },
+    {
+      "text": "five percent so we can take any number",
+      "start": 391.68,
+      "duration": 4.959
+    },
+    {
+      "text": "of those",
+      "start": 394.88,
+      "duration": 3.36
+    },
+    {
+      "text": "and then it will just take all those and",
+      "start": 396.639,
+      "duration": 3.12
+    },
+    {
+      "text": "be able to pass them into the model",
+      "start": 398.24,
+      "duration": 2.72
+    },
+    {
+      "text": "inputs",
+      "start": 399.759,
+      "duration": 4.961
+    },
+    {
+      "text": "so that um shortcut",
+      "start": 400.96,
+      "duration": 7.44
+    },
+    {
+      "text": "here is a star star",
+      "start": 404.72,
+      "duration": 5.919
+    },
+    {
+      "text": "on a variable name and the convention is",
+      "start": 408.4,
+      "duration": 3.84
+    },
+    {
+      "text": "to do star star",
+      "start": 410.639,
+      "duration": 4.801
+    },
+    {
+      "text": "quarks so that just says any number of",
+      "start": 412.24,
+      "duration": 4.239
+    },
+    {
+      "text": "keyword arguments",
+      "start": 415.44,
+      "duration": 2.64
+    },
+    {
+      "text": "it's going to take those and it's going",
+      "start": 416.479,
+      "duration": 3.44
+    },
+    {
+      "text": "to put them into a dictionary",
+      "start": 418.08,
+      "duration": 3.119
+    },
+    {
+      "text": "coming into the function you have a",
+      "start": 419.919,
+      "duration": 3.28
+    },
+    {
+      "text": "quarks dictionary",
+      "start": 421.199,
+      "duration": 5.521
+    },
+    {
+      "text": "um so let me just print that to make",
+      "start": 423.199,
+      "duration": 5.921
+    },
+    {
+      "text": "that clear",
+      "start": 426.72,
+      "duration": 4.24
+    },
+    {
+      "text": "and then doing it again here it spreads",
+      "start": 429.12,
+      "duration": 3.359
+    },
+    {
+      "text": "it back out into",
+      "start": 430.96,
+      "duration": 4.48
+    },
+    {
+      "text": "the keyword arguments so this will take",
+      "start": 432.479,
+      "duration": 4.481
+    },
+    {
+      "text": "keyword arguments and collect them into",
+      "start": 435.44,
+      "duration": 2.479
+    },
+    {
+      "text": "a dictionary",
+      "start": 436.96,
+      "duration": 2.799
+    },
+    {
+      "text": "and then this will take that dictionary",
+      "start": 437.919,
+      "duration": 4.081
+    },
+    {
+      "text": "and spread it back out into the keyword",
+      "start": 439.759,
+      "duration": 3.361
+    },
+    {
+      "text": "arguments",
+      "start": 442.0,
+      "duration": 4.72
+    },
+    {
+      "text": "um so not expecting everyone to fully",
+      "start": 443.12,
+      "duration": 5.68
+    },
+    {
+      "text": "understand what's going on there",
+      "start": 446.72,
+      "duration": 4.4
+    },
+    {
+      "text": "you don't have to understand it you can",
+      "start": 448.8,
+      "duration": 4.56
+    },
+    {
+      "text": "just copy my code snippet and",
+      "start": 451.12,
+      "duration": 5.44
+    },
+    {
+      "text": "change out the model function",
+      "start": 453.36,
+      "duration": 5.6
+    },
+    {
+      "text": "and the name of the function and you'll",
+      "start": 456.56,
+      "duration": 4.16
+    },
+    {
+      "text": "be good to go to use the sensitivity",
+      "start": 458.96,
+      "duration": 3.519
+    },
+    {
+      "text": "analyzer",
+      "start": 460.72,
+      "duration": 4.24
+    },
+    {
+      "text": "so to show what this is doing i'm going",
+      "start": 462.479,
+      "duration": 3.761
+    },
+    {
+      "text": "to call this and i'm going to say",
+      "start": 464.96,
+      "duration": 5.76
+    },
+    {
+      "text": "starting salary equals 10 000",
+      "start": 466.24,
+      "duration": 6.88
+    },
+    {
+      "text": "and you'll see from the print output",
+      "start": 470.72,
+      "duration": 5.039
+    },
+    {
+      "text": "that it",
+      "start": 473.12,
+      "duration": 6.16
+    },
+    {
+      "text": "prints out the",
+      "start": 475.759,
+      "duration": 6.801
+    },
+    {
+      "text": "starting salary in a dictionary",
+      "start": 479.28,
+      "duration": 7.919
+    },
+    {
+      "text": "with this as the value and",
+      "start": 482.56,
+      "duration": 7.28
+    },
+    {
+      "text": "you can add other arguments here 30",
+      "start": 487.199,
+      "duration": 3.84
+    },
+    {
+      "text": "promotion raise",
+      "start": 489.84,
+      "duration": 3.52
+    },
+    {
+      "text": "we can see that also comes into the",
+      "start": 491.039,
+      "duration": 4.88
+    },
+    {
+      "text": "dictionary",
+      "start": 493.36,
+      "duration": 2.559
+    },
+    {
+      "text": "and then we ultimately get the result",
+      "start": 496.72,
+      "duration": 6.879
+    },
+    {
+      "text": "from that",
+      "start": 500.639,
+      "duration": 2.96
+    },
+    {
+      "text": "so",
+      "start": 505.52,
+      "duration": 2.32
+    },
+    {
+      "text": "this is our wrapper for the function",
+      "start": 509.12,
+      "duration": 8.24
+    },
+    {
+      "text": "which then is able to",
+      "start": 513.44,
+      "duration": 8.399
+    },
+    {
+      "text": "call the model and return the result",
+      "start": 517.36,
+      "duration": 4.479
+    },
+    {
+      "text": "so now that we have that working",
+      "start": 529.839,
+      "duration": 8.56
+    },
+    {
+      "text": "then we can go on to",
+      "start": 534.16,
+      "duration": 7.28
+    },
+    {
+      "text": "the next step which is to actually uh",
+      "start": 538.399,
+      "duration": 6.88
+    },
+    {
+      "text": "use the sensitivity analyzer",
+      "start": 541.44,
+      "duration": 7.6
+    },
+    {
+      "text": "um that's something weird is going on",
+      "start": 545.279,
+      "duration": 5.601
+    },
+    {
+      "text": "here because no matter what",
+      "start": 549.04,
+      "duration": 4.56
+    },
+    {
+      "text": "inputs i'm putting i'm still getting uh",
+      "start": 550.88,
+      "duration": 4.0
+    },
+    {
+      "text": "28 years to",
+      "start": 553.6,
+      "duration": 10.239
+    },
+    {
+      "text": "retirement um",
+      "start": 554.88,
+      "duration": 8.959
+    },
+    {
+      "text": "oh yeah i see the mistake here uh here",
+      "start": 564.399,
+      "duration": 4.401
+    },
+    {
+      "text": "and a lot of people may make these",
+      "start": 567.519,
+      "duration": 3.041
+    },
+    {
+      "text": "mistakes in their own models",
+      "start": 568.8,
+      "duration": 4.719
+    },
+    {
+      "text": "um here data was being passed to the",
+      "start": 570.56,
+      "duration": 4.24
+    },
+    {
+      "text": "function but here i used",
+      "start": 573.519,
+      "duration": 3.201
+    },
+    {
+      "text": "model data so it wasn't actually able to",
+      "start": 574.8,
+      "duration": 4.159
+    },
+    {
+      "text": "pick up the data which is being passed",
+      "start": 576.72,
+      "duration": 3.76
+    },
+    {
+      "text": "to the function it was just using the",
+      "start": 578.959,
+      "duration": 4.0
+    },
+    {
+      "text": "overall model data each time",
+      "start": 580.48,
+      "duration": 4.64
+    },
+    {
+      "text": "and so i'm going to make sure that that",
+      "start": 582.959,
+      "duration": 5.841
+    },
+    {
+      "text": "matches up with the function argument",
+      "start": 585.12,
+      "duration": 6.8
+    },
+    {
+      "text": "and now i'm going to restart and run",
+      "start": 588.8,
+      "duration": 3.599
+    },
+    {
+      "text": "this thing",
+      "start": 591.92,
+      "duration": 3.359
+    },
+    {
+      "text": "all again and now we should see a number",
+      "start": 592.399,
+      "duration": 6.88
+    },
+    {
+      "text": "other than 28 come up here hopefully",
+      "start": 595.279,
+      "duration": 4.0
+    },
+    {
+      "text": "yeah there we go now it's actually",
+      "start": 599.519,
+      "duration": 4.0
+    },
+    {
+      "text": "working if you make a million dollars",
+      "start": 601.04,
+      "duration": 3.76
+    },
+    {
+      "text": "off the bat then you'll be able to",
+      "start": 603.519,
+      "duration": 4.721
+    },
+    {
+      "text": "retire in only five years",
+      "start": 604.8,
+      "duration": 3.44
+    },
+    {
+      "text": "okay and then back without passing any",
+      "start": 609.04,
+      "duration": 5.2
+    },
+    {
+      "text": "arguments we're back to 28 so it looks",
+      "start": 612.399,
+      "duration": 6.88
+    },
+    {
+      "text": "like this is all working properly now",
+      "start": 614.24,
+      "duration": 7.92
+    },
+    {
+      "text": "um so next we want to create that",
+      "start": 619.279,
+      "duration": 4.081
+    },
+    {
+      "text": "dictionary",
+      "start": 622.16,
+      "duration": 4.239
+    },
+    {
+      "text": "of the inputs that we want to change",
+      "start": 623.36,
+      "duration": 4.24
+    },
+    {
+      "text": "around",
+      "start": 626.399,
+      "duration": 3.521
+    },
+    {
+      "text": "so i'm going to start it out simple and",
+      "start": 627.6,
+      "duration": 3.44
+    },
+    {
+      "text": "we'll expand on this",
+      "start": 629.92,
+      "duration": 4.4
+    },
+    {
+      "text": "so sensitivity values um so let me just",
+      "start": 631.04,
+      "duration": 6.32
+    },
+    {
+      "text": "look at starting salary",
+      "start": 634.32,
+      "duration": 7.12
+    },
+    {
+      "text": "let me look at you know as low as 40",
+      "start": 637.36,
+      "duration": 7.68
+    },
+    {
+      "text": "000 or as high as",
+      "start": 641.44,
+      "duration": 7.519
+    },
+    {
+      "text": "a hundred and twenty thousand and then",
+      "start": 645.04,
+      "duration": 8.32
+    },
+    {
+      "text": "let's look at the interest rate",
+      "start": 648.959,
+      "duration": 4.401
+    },
+    {
+      "text": "um and let's look at",
+      "start": 653.6,
+      "duration": 5.44
+    },
+    {
+      "text": "a three percent rate and a ten percent",
+      "start": 656.8,
+      "duration": 5.039
+    },
+    {
+      "text": "rate",
+      "start": 659.04,
+      "duration": 2.799
+    },
+    {
+      "text": "so then we have everything that we need",
+      "start": 664.0,
+      "duration": 4.399
+    },
+    {
+      "text": "to go ahead and run the sensitivity",
+      "start": 666.48,
+      "duration": 3.2
+    },
+    {
+      "text": "analyzer",
+      "start": 668.399,
+      "duration": 4.161
+    },
+    {
+      "text": "so then i'm going to create an instance",
+      "start": 669.68,
+      "duration": 5.599
+    },
+    {
+      "text": "of the sensitivity analyzer",
+      "start": 672.56,
+      "duration": 6.399
+    },
+    {
+      "text": "i'm going to pass it the sensitivity",
+      "start": 675.279,
+      "duration": 4.881
+    },
+    {
+      "text": "values",
+      "start": 678.959,
+      "duration": 3.921
+    },
+    {
+      "text": "and i'm going to pass it the model",
+      "start": 680.16,
+      "duration": 3.679
+    },
+    {
+      "text": "function",
+      "start": 682.88,
+      "duration": 2.24
+    },
+    {
+      "text": "the one that takes the separate",
+      "start": 683.839,
+      "duration": 3.68
+    },
+    {
+      "text": "arguments",
+      "start": 685.12,
+      "duration": 4.399
+    },
+    {
+      "text": "so then we see that it ran four",
+      "start": 687.519,
+      "duration": 4.56
+    },
+    {
+      "text": "different input cases here",
+      "start": 689.519,
+      "duration": 5.601
+    },
+    {
+      "text": "two times two and",
+      "start": 692.079,
+      "duration": 5.521
+    },
+    {
+      "text": "now we can look at the results so we can",
+      "start": 695.12,
+      "duration": 3.76
+    },
+    {
+      "text": "look at the full result",
+      "start": 697.6,
+      "duration": 4.479
+    },
+    {
+      "text": "data frame there each of the pairwise",
+      "start": 698.88,
+      "duration": 4.0
+    },
+    {
+      "text": "combinations",
+      "start": 702.079,
+      "duration": 3.921
+    },
+    {
+      "text": "and the user retirement",
+      "start": 702.88,
+      "duration": 6.72
+    },
+    {
+      "text": "um and we can",
+      "start": 706.0,
+      "duration": 6.8
+    },
+    {
+      "text": "create the resulting",
+      "start": 709.6,
+      "duration": 6.96
+    },
+    {
+      "text": "hexman plot",
+      "start": 712.8,
+      "duration": 8.32
+    },
+    {
+      "text": "and then we can um",
+      "start": 716.56,
+      "duration": 8.8
+    },
+    {
+      "text": "create the style data frames",
+      "start": 721.12,
+      "duration": 4.24
+    },
+    {
+      "text": "here just a single data frame for now",
+      "start": 728.16,
+      "duration": 5.52
+    },
+    {
+      "text": "um so that's pretty much what you would",
+      "start": 732.0,
+      "duration": 3.36
+    },
+    {
+      "text": "want to be seeing from sensitivity",
+      "start": 733.68,
+      "duration": 3.04
+    },
+    {
+      "text": "analysis as well as",
+      "start": 735.36,
+      "duration": 4.4
+    },
+    {
+      "text": "you know some description of the results",
+      "start": 736.72,
+      "duration": 4.0
+    },
+    {
+      "text": "that you found",
+      "start": 739.76,
+      "duration": 5.6
+    },
+    {
+      "text": "at the end um but there's a fair amount",
+      "start": 740.72,
+      "duration": 5.679
+    },
+    {
+      "text": "we can do here",
+      "start": 745.36,
+      "duration": 3.68
+    },
+    {
+      "text": "to clean things up and to make them more",
+      "start": 746.399,
+      "duration": 4.641
+    },
+    {
+      "text": "comprehensive",
+      "start": 749.04,
+      "duration": 5.359
+    },
+    {
+      "text": "so first thing is we can pass some",
+      "start": 751.04,
+      "duration": 5.359
+    },
+    {
+      "text": "additional options to sensitivity",
+      "start": 754.399,
+      "duration": 6.641
+    },
+    {
+      "text": "analyzer to clean up the output",
+      "start": 756.399,
+      "duration": 4.641
+    },
+    {
+      "text": "so some of those additional options",
+      "start": 761.36,
+      "duration": 4.719
+    },
+    {
+      "text": "would be",
+      "start": 764.16,
+      "duration": 4.96
+    },
+    {
+      "text": "that we want to",
+      "start": 766.079,
+      "duration": 3.041
+    },
+    {
+      "text": "label the results so we can do result",
+      "start": 769.6,
+      "duration": 5.359
+    },
+    {
+      "text": "name equals years to retirement because",
+      "start": 772.8,
+      "duration": 4.08
+    },
+    {
+      "text": "we can see right now it's just coming as",
+      "start": 774.959,
+      "duration": 3.041
+    },
+    {
+      "text": "result",
+      "start": 776.88,
+      "duration": 4.24
+    },
+    {
+      "text": "uh result",
+      "start": 778.0,
+      "duration": 3.12
+    },
+    {
+      "text": "result but we put years to retirement",
+      "start": 781.2,
+      "duration": 5.92
+    },
+    {
+      "text": "here as a result name and then we get",
+      "start": 784.0,
+      "duration": 6.399
+    },
+    {
+      "text": "uh years retirement years for retirement",
+      "start": 787.12,
+      "duration": 6.159
+    },
+    {
+      "text": "here's to retirement",
+      "start": 790.399,
+      "duration": 2.88
+    },
+    {
+      "text": "um and then we'll notice that",
+      "start": 795.279,
+      "duration": 5.601
+    },
+    {
+      "text": "right now it's highlighting the high",
+      "start": 798.72,
+      "duration": 3.919
+    },
+    {
+      "text": "years to retirement as bringing in the",
+      "start": 800.88,
+      "duration": 2.16
+    },
+    {
+      "text": "low",
+      "start": 802.639,
+      "duration": 2.961
+    },
+    {
+      "text": "as red that's the opposite of what we",
+      "start": 803.04,
+      "duration": 3.44
+    },
+    {
+      "text": "want",
+      "start": 805.6,
+      "duration": 4.16
+    },
+    {
+      "text": "so we want to reverse uh",
+      "start": 806.48,
+      "duration": 7.52
+    },
+    {
+      "text": "the colors reverse colors equals true",
+      "start": 809.76,
+      "duration": 8.0
+    },
+    {
+      "text": "um and then with that we will see",
+      "start": 814.0,
+      "duration": 8.0
+    },
+    {
+      "text": "um that now it's showing red for the",
+      "start": 817.76,
+      "duration": 5.92
+    },
+    {
+      "text": "high year's retirement that's bad we",
+      "start": 822.0,
+      "duration": 4.8
+    },
+    {
+      "text": "want to retire sooner",
+      "start": 823.68,
+      "duration": 3.12
+    },
+    {
+      "text": "um you'll notice that this grid is very",
+      "start": 827.04,
+      "duration": 4.56
+    },
+    {
+      "text": "sparse",
+      "start": 830.48,
+      "duration": 4.56
+    },
+    {
+      "text": "um so i'm going to pass a",
+      "start": 831.6,
+      "duration": 7.84
+    },
+    {
+      "text": "grid size of three and then you'll see",
+      "start": 835.04,
+      "duration": 6.56
+    },
+    {
+      "text": "now this will get more filled out as we",
+      "start": 839.44,
+      "duration": 4.32
+    },
+    {
+      "text": "add more inputs here in a moment but",
+      "start": 841.6,
+      "duration": 6.16
+    },
+    {
+      "text": "i think this makes more sense um",
+      "start": 843.76,
+      "duration": 7.04
+    },
+    {
+      "text": "for these data um",
+      "start": 847.76,
+      "duration": 4.72
+    },
+    {
+      "text": "and the other thing that we'll want to",
+      "start": 850.8,
+      "duration": 4.479
+    },
+    {
+      "text": "do is add some labels",
+      "start": 852.48,
+      "duration": 7.28
+    },
+    {
+      "text": "as well and it has to match up the keys",
+      "start": 855.279,
+      "duration": 7.92
+    },
+    {
+      "text": "match up again with the input names",
+      "start": 859.76,
+      "duration": 5.439
+    },
+    {
+      "text": "and then the values would be how you",
+      "start": 863.199,
+      "duration": 4.08
+    },
+    {
+      "text": "want it to look in the output so",
+      "start": 865.199,
+      "duration": 6.64
+    },
+    {
+      "text": "interest rate interest rate",
+      "start": 867.279,
+      "duration": 7.521
+    },
+    {
+      "text": "and then we can pass labels equals",
+      "start": 871.839,
+      "duration": 4.481
+    },
+    {
+      "text": "labels",
+      "start": 874.8,
+      "duration": 4.24
+    },
+    {
+      "text": "and we run these again now we can see in",
+      "start": 876.32,
+      "duration": 3.6
+    },
+    {
+      "text": "all the output",
+      "start": 879.04,
+      "duration": 4.239
+    },
+    {
+      "text": "that we're now getting the labels",
+      "start": 879.92,
+      "duration": 7.52
+    },
+    {
+      "text": "as well so it's starting to look clean",
+      "start": 883.279,
+      "duration": 7.761
+    },
+    {
+      "text": "um and the last thing we can do",
+      "start": 887.44,
+      "duration": 7.36
+    },
+    {
+      "text": "is add a number format um",
+      "start": 891.04,
+      "duration": 6.56
+    },
+    {
+      "text": "so here's your retirement not a currency",
+      "start": 894.8,
+      "duration": 5.92
+    },
+    {
+      "text": "we don't want a dollar sign",
+      "start": 897.6,
+      "duration": 3.12
+    },
+    {
+      "text": "and we can just have zero decimal places",
+      "start": 901.279,
+      "duration": 4.721
+    },
+    {
+      "text": "so then um we'll see now",
+      "start": 907.04,
+      "duration": 5.84
+    },
+    {
+      "text": "in the style data frames that we have no",
+      "start": 910.56,
+      "duration": 3.92
+    },
+    {
+      "text": "decimal places",
+      "start": 912.88,
+      "duration": 4.639
+    },
+    {
+      "text": "on the output",
+      "start": 914.48,
+      "duration": 3.039
+    },
+    {
+      "text": "so that looks good as far as the",
+      "start": 919.04,
+      "duration": 3.599
+    },
+    {
+      "text": "formatting",
+      "start": 921.92,
+      "duration": 4.24
+    },
+    {
+      "text": "options for the output now",
+      "start": 922.639,
+      "duration": 5.601
+    },
+    {
+      "text": "let's look at some more values of the",
+      "start": 926.16,
+      "duration": 6.0
+    },
+    {
+      "text": "inputs and look at more inputs",
+      "start": 928.24,
+      "duration": 3.92
+    },
+    {
+      "text": "so it can get tedious to type out all",
+      "start": 932.56,
+      "duration": 4.32
+    },
+    {
+      "text": "the different values that you might want",
+      "start": 935.12,
+      "duration": 2.079
+    },
+    {
+      "text": "to",
+      "start": 936.88,
+      "duration": 3.84
+    },
+    {
+      "text": "look at so that's why i like to use",
+      "start": 937.199,
+      "duration": 6.88
+    },
+    {
+      "text": "list comprehensions to uh write out the",
+      "start": 940.72,
+      "duration": 5.2
+    },
+    {
+      "text": "outputs",
+      "start": 944.079,
+      "duration": 5.12
+    },
+    {
+      "text": "so um if we want to look at",
+      "start": 945.92,
+      "duration": 6.96
+    },
+    {
+      "text": "um salaries and the range of",
+      "start": 949.199,
+      "duration": 6.88
+    },
+    {
+      "text": "say forty thousand to uh seventy",
+      "start": 952.88,
+      "duration": 4.24
+    },
+    {
+      "text": "thousand",
+      "start": 956.079,
+      "duration": 4.961
+    },
+    {
+      "text": "what we can do is uh",
+      "start": 957.12,
+      "duration": 3.92
+    },
+    {
+      "text": "we can just do a simple for i and range",
+      "start": 963.199,
+      "duration": 3.2
+    },
+    {
+      "text": "loop",
+      "start": 965.279,
+      "duration": 4.321
+    },
+    {
+      "text": "and multiply the result",
+      "start": 966.399,
+      "duration": 5.36
+    },
+    {
+      "text": "by ten thousand you know without the ten",
+      "start": 969.6,
+      "duration": 3.2
+    },
+    {
+      "text": "thousand it would be",
+      "start": 971.759,
+      "duration": 3.041
+    },
+    {
+      "text": "four five six seven then we just",
+      "start": 972.8,
+      "duration": 3.92
+    },
+    {
+      "text": "multiply it by ten thousand",
+      "start": 974.8,
+      "duration": 4.56
+    },
+    {
+      "text": "and then we have that range of salaries",
+      "start": 976.72,
+      "duration": 3.52
+    },
+    {
+      "text": "so i'm gonna put that",
+      "start": 979.36,
+      "duration": 4.8
+    },
+    {
+      "text": "in here as the starting salary",
+      "start": 980.24,
+      "duration": 8.48
+    },
+    {
+      "text": "then for interest rate um",
+      "start": 984.16,
+      "duration": 6.64
+    },
+    {
+      "text": "here we want to look at percentages so",
+      "start": 988.72,
+      "duration": 3.919
+    },
+    {
+      "text": "let's divide by 100",
+      "start": 990.8,
+      "duration": 5.2
+    },
+    {
+      "text": "and let's look from three to six",
+      "start": 992.639,
+      "duration": 6.56
+    },
+    {
+      "text": "percent so i'm going to take that and",
+      "start": 996.0,
+      "duration": 5.759
+    },
+    {
+      "text": "put that into the interest rate",
+      "start": 999.199,
+      "duration": 6.0
+    },
+    {
+      "text": "um and let's look at the other inputs as",
+      "start": 1001.759,
+      "duration": 4.0
+    },
+    {
+      "text": "well",
+      "start": 1005.199,
+      "duration": 5.2
+    },
+    {
+      "text": "uh so promos every and years and all",
+      "start": 1005.759,
+      "duration": 5.44
+    },
+    {
+      "text": "these things",
+      "start": 1010.399,
+      "duration": 3.281
+    },
+    {
+      "text": "should be matching up with the",
+      "start": 1011.199,
+      "duration": 3.44
+    },
+    {
+      "text": "attributes",
+      "start": 1013.68,
+      "duration": 4.079
+    },
+    {
+      "text": "on the model data",
+      "start": 1014.639,
+      "duration": 3.12
+    },
+    {
+      "text": "so promos every n years",
+      "start": 1018.32,
+      "duration": 3.92
+    },
+    {
+      "text": "let's look at um in the range",
+      "start": 1022.72,
+      "duration": 7.04
+    },
+    {
+      "text": "of um",
+      "start": 1026.72,
+      "duration": 6.4
+    },
+    {
+      "text": "how about from four to seven years",
+      "start": 1029.76,
+      "duration": 6.079
+    },
+    {
+      "text": "uh so i'll put that there for promos",
+      "start": 1033.12,
+      "duration": 5.6
+    },
+    {
+      "text": "everyone years",
+      "start": 1035.839,
+      "duration": 7.761
+    },
+    {
+      "text": "um let's add cost of living raise",
+      "start": 1038.72,
+      "duration": 7.52
+    },
+    {
+      "text": "um and cost of living raise that is",
+      "start": 1043.6,
+      "duration": 6.64
+    },
+    {
+      "text": "another percentage we can divide by 100",
+      "start": 1046.24,
+      "duration": 6.319
+    },
+    {
+      "text": "and let's go from a one percent to a",
+      "start": 1050.24,
+      "duration": 3.92
+    },
+    {
+      "text": "three percent",
+      "start": 1052.559,
+      "duration": 5.36
+    },
+    {
+      "text": "so i'm going to put that there um",
+      "start": 1054.16,
+      "duration": 6.32
+    },
+    {
+      "text": "and we can add the promotion raise promo",
+      "start": 1057.919,
+      "duration": 4.961
+    },
+    {
+      "text": "raise",
+      "start": 1060.48,
+      "duration": 2.4
+    },
+    {
+      "text": "um and for that one um",
+      "start": 1063.76,
+      "duration": 6.48
+    },
+    {
+      "text": "here we can look in increments of five",
+      "start": 1067.36,
+      "duration": 3.439
+    },
+    {
+      "text": "percent",
+      "start": 1070.24,
+      "duration": 2.08
+    },
+    {
+      "text": "let's look from ten percent to twenty",
+      "start": 1070.799,
+      "duration": 3.921
+    },
+    {
+      "text": "percent in five percent increments",
+      "start": 1072.32,
+      "duration": 4.0
+    },
+    {
+      "text": "um so let's keep that divided by a",
+      "start": 1074.72,
+      "duration": 3.04
+    },
+    {
+      "text": "hundred since it's",
+      "start": 1076.32,
+      "duration": 4.96
+    },
+    {
+      "text": "um a percentage and we're going to go",
+      "start": 1077.76,
+      "duration": 4.799
+    },
+    {
+      "text": "from 10",
+      "start": 1081.28,
+      "duration": 4.399
+    },
+    {
+      "text": "up to 25 but let's go in five",
+      "start": 1082.559,
+      "duration": 7.12
+    },
+    {
+      "text": "steps so this is 10 15 20",
+      "start": 1085.679,
+      "duration": 6.88
+    },
+    {
+      "text": "um of course you can write these out",
+      "start": 1089.679,
+      "duration": 3.521
+    },
+    {
+      "text": "manually",
+      "start": 1092.559,
+      "duration": 2.401
+    },
+    {
+      "text": "if you want just writing those numbers",
+      "start": 1093.2,
+      "duration": 3.44
+    },
+    {
+      "text": "in",
+      "start": 1094.96,
+      "duration": 3.44
+    },
+    {
+      "text": "but i like using the list comprehensions",
+      "start": 1096.64,
+      "duration": 3.44
+    },
+    {
+      "text": "because it's also easy to go and adjust",
+      "start": 1098.4,
+      "duration": 2.56
+    },
+    {
+      "text": "these ranges",
+      "start": 1100.08,
+      "duration": 4.8
+    },
+    {
+      "text": "as well um",
+      "start": 1100.96,
+      "duration": 7.36
+    },
+    {
+      "text": "let's see so let's also add the",
+      "start": 1104.88,
+      "duration": 8.159
+    },
+    {
+      "text": "savings rate savings rate",
+      "start": 1108.32,
+      "duration": 4.719
+    },
+    {
+      "text": "um and for savings rate let's go up to",
+      "start": 1113.28,
+      "duration": 4.72
+    },
+    {
+      "text": "from 10 to 40",
+      "start": 1116.16,
+      "duration": 5.84
+    },
+    {
+      "text": "and 10 increments um",
+      "start": 1118.0,
+      "duration": 8.48
+    },
+    {
+      "text": "so that would be this 20 30",
+      "start": 1122.0,
+      "duration": 4.48
+    },
+    {
+      "text": "um and let's look at the desire and cash",
+      "start": 1128.24,
+      "duration": 8.72
+    },
+    {
+      "text": "so for desired cash um",
+      "start": 1134.16,
+      "duration": 4.08
+    },
+    {
+      "text": "[Music]",
+      "start": 1136.96,
+      "duration": 4.32
+    },
+    {
+      "text": "let's look at from",
+      "start": 1138.24,
+      "duration": 7.439
+    },
+    {
+      "text": "a million dollars to 2.5 million dollars",
+      "start": 1141.28,
+      "duration": 7.84
+    },
+    {
+      "text": "um in 500 000 increments so that's going",
+      "start": 1145.679,
+      "duration": 4.561
+    },
+    {
+      "text": "to be uh",
+      "start": 1149.12,
+      "duration": 4.64
+    },
+    {
+      "text": "10 to 26 minutes of five",
+      "start": 1150.24,
+      "duration": 7.92
+    },
+    {
+      "text": "and multiplying by a hundred thousand",
+      "start": 1153.76,
+      "duration": 4.4
+    },
+    {
+      "text": "so that looks correct now we can take",
+      "start": 1158.72,
+      "duration": 6.16
+    },
+    {
+      "text": "that and put that in there as well",
+      "start": 1161.039,
+      "duration": 5.841
+    },
+    {
+      "text": "so then we have all these different",
+      "start": 1164.88,
+      "duration": 3.6
+    },
+    {
+      "text": "values of the inputs that we want to",
+      "start": 1166.88,
+      "duration": 3.2
+    },
+    {
+      "text": "look at",
+      "start": 1168.48,
+      "duration": 6.4
+    },
+    {
+      "text": "um let's add their labels as well",
+      "start": 1170.08,
+      "duration": 4.8
+    },
+    {
+      "text": "so promos every years",
+      "start": 1175.52,
+      "duration": 4.159
+    },
+    {
+      "text": "promos every and years",
+      "start": 1181.12,
+      "duration": 4.48
+    },
+    {
+      "text": "let's do the cost of living raise",
+      "start": 1186.88,
+      "duration": 6.96
+    },
+    {
+      "text": "cost of living raise",
+      "start": 1194.0,
+      "duration": 3.2
+    },
+    {
+      "text": "let's do the primaries",
+      "start": 1198.0,
+      "duration": 3.6
+    },
+    {
+      "text": "motion rays",
+      "start": 1202.88,
+      "duration": 6.159
+    },
+    {
+      "text": "i got interest rate already add savings",
+      "start": 1206.0,
+      "duration": 5.44
+    },
+    {
+      "text": "rate",
+      "start": 1209.039,
+      "duration": 2.401
+    },
+    {
+      "text": "savings rate and add desired cash",
+      "start": 1212.24,
+      "duration": 12.319
+    },
+    {
+      "text": "okay um now we've got a bunch of",
+      "start": 1221.679,
+      "duration": 4.161
+    },
+    {
+      "text": "different values of all these different",
+      "start": 1224.559,
+      "duration": 1.761
+    },
+    {
+      "text": "inputs",
+      "start": 1225.84,
+      "duration": 2.4
+    },
+    {
+      "text": "we've got all the labels we had all our",
+      "start": 1226.32,
+      "duration": 4.56
+    },
+    {
+      "text": "options from before to make it look good",
+      "start": 1228.24,
+      "duration": 4.88
+    },
+    {
+      "text": "let's go ahead and run this and now",
+      "start": 1230.88,
+      "duration": 4.0
+    },
+    {
+      "text": "you'll see we have a lot more inputs",
+      "start": 1233.12,
+      "duration": 3.679
+    },
+    {
+      "text": "that we're looking at we have 6 900",
+      "start": 1234.88,
+      "duration": 3.2
+    },
+    {
+      "text": "different cases",
+      "start": 1236.799,
+      "duration": 2.561
+    },
+    {
+      "text": "and now it actually takes some",
+      "start": 1238.08,
+      "duration": 3.599
+    },
+    {
+      "text": "substantial time to run the model",
+      "start": 1239.36,
+      "duration": 5.439
+    },
+    {
+      "text": "and we see that progress bar go by as",
+      "start": 1241.679,
+      "duration": 4.641
+    },
+    {
+      "text": "it's running all these different input",
+      "start": 1244.799,
+      "duration": 3.201
+    },
+    {
+      "text": "cases now it's",
+      "start": 1246.32,
+      "duration": 5.52
+    },
+    {
+      "text": "done we look at this data frame",
+      "start": 1248.0,
+      "duration": 4.33
+    },
+    {
+      "text": "um",
+      "start": 1251.84,
+      "duration": 3.6
+    },
+    {
+      "text": "[Music]",
+      "start": 1252.33,
+      "duration": 3.11
+    },
+    {
+      "text": "it's going to be",
+      "start": 1255.919,
+      "duration": 4.321
+    },
+    {
+      "text": "[Music]",
+      "start": 1258.39,
+      "duration": 3.21
+    },
+    {
+      "text": "you know having a lot more rows in it",
+      "start": 1260.24,
+      "duration": 3.679
+    },
+    {
+      "text": "this time",
+      "start": 1261.6,
+      "duration": 5.04
+    },
+    {
+      "text": "um and we should similarly see",
+      "start": 1263.919,
+      "duration": 4.561
+    },
+    {
+      "text": "additional plots and style",
+      "start": 1266.64,
+      "duration": 5.36
+    },
+    {
+      "text": "data frames all of this coming together",
+      "start": 1268.48,
+      "duration": 7.679
+    },
+    {
+      "text": "um so there's a big advantage",
+      "start": 1272.0,
+      "duration": 7.44
+    },
+    {
+      "text": "uh over excel in here in that you can",
+      "start": 1276.159,
+      "duration": 6.961
+    },
+    {
+      "text": "pass as many possible inputs as you want",
+      "start": 1279.44,
+      "duration": 5.28
+    },
+    {
+      "text": "you're not limited to just looking at",
+      "start": 1283.12,
+      "duration": 3.439
+    },
+    {
+      "text": "two at once",
+      "start": 1284.72,
+      "duration": 4.959
+    },
+    {
+      "text": "and it's going to be able to generate a",
+      "start": 1286.559,
+      "duration": 5.761
+    },
+    {
+      "text": "lot of different results for you",
+      "start": 1289.679,
+      "duration": 5.601
+    },
+    {
+      "text": "so now we've got",
+      "start": 1292.32,
+      "duration": 2.96
+    },
+    {
+      "text": "we have the 6900 different runs of the",
+      "start": 1295.52,
+      "duration": 5.84
+    },
+    {
+      "text": "model and data frame",
+      "start": 1298.0,
+      "duration": 5.039
+    },
+    {
+      "text": "and we've got all these different",
+      "start": 1301.36,
+      "duration": 3.52
+    },
+    {
+      "text": "combinations of the inputs",
+      "start": 1303.039,
+      "duration": 5.12
+    },
+    {
+      "text": "and these flops so we can take any pair",
+      "start": 1304.88,
+      "duration": 5.36
+    },
+    {
+      "text": "that we want to look at",
+      "start": 1308.159,
+      "duration": 3.52
+    },
+    {
+      "text": "here it's all about the promotions",
+      "start": 1310.24,
+      "duration": 3.2
+    },
+    {
+      "text": "promotional race promotions everyone",
+      "start": 1311.679,
+      "duration": 2.24
+    },
+    {
+      "text": "years",
+      "start": 1313.44,
+      "duration": 3.119
+    },
+    {
+      "text": "as you get quicker promotions we start",
+      "start": 1313.919,
+      "duration": 3.601
+    },
+    {
+      "text": "to hit",
+      "start": 1316.559,
+      "duration": 2.961
+    },
+    {
+      "text": "or sorry slower promotions than we get",
+      "start": 1317.52,
+      "duration": 4.56
+    },
+    {
+      "text": "to longer years to retirement up to 40",
+      "start": 1319.52,
+      "duration": 4.639
+    },
+    {
+      "text": "over here",
+      "start": 1322.08,
+      "duration": 4.56
+    },
+    {
+      "text": "and as we get higher promotion raises",
+      "start": 1324.159,
+      "duration": 5.201
+    },
+    {
+      "text": "then we get shorter years to retirement",
+      "start": 1326.64,
+      "duration": 4.64
+    },
+    {
+      "text": "but we can see in the range of inputs",
+      "start": 1329.36,
+      "duration": 3.199
+    },
+    {
+      "text": "that we're looking at",
+      "start": 1331.28,
+      "duration": 4.56
+    },
+    {
+      "text": "it's not a very huge impact on the years",
+      "start": 1332.559,
+      "duration": 5.921
+    },
+    {
+      "text": "to retirement",
+      "start": 1335.84,
+      "duration": 2.64
+    },
+    {
+      "text": "so then you have the same information",
+      "start": 1340.799,
+      "duration": 5.201
+    },
+    {
+      "text": "over here in the style",
+      "start": 1344.799,
+      "duration": 4.161
+    },
+    {
+      "text": "data frames so you can really pick",
+      "start": 1346.0,
+      "duration": 4.96
+    },
+    {
+      "text": "whichever one of the two",
+      "start": 1348.96,
+      "duration": 4.48
+    },
+    {
+      "text": "you like better for showing the results",
+      "start": 1350.96,
+      "duration": 4.0
+    },
+    {
+      "text": "you don't have to",
+      "start": 1353.44,
+      "duration": 5.44
+    },
+    {
+      "text": "show both like i'm doing here",
+      "start": 1354.96,
+      "duration": 5.92
+    },
+    {
+      "text": "and it would be good to at the end just",
+      "start": 1358.88,
+      "duration": 3.039
+    },
+    {
+      "text": "put a description",
+      "start": 1360.88,
+      "duration": 2.88
+    },
+    {
+      "text": "of your findings some of the notable",
+      "start": 1361.919,
+      "duration": 4.961
+    },
+    {
+      "text": "things from the sensitivity analysis",
+      "start": 1363.76,
+      "duration": 6.96
+    },
+    {
+      "text": "to kind of wrap everything together",
+      "start": 1366.88,
+      "duration": 7.279
+    },
+    {
+      "text": "so that's adding sensitivity analysis to",
+      "start": 1370.72,
+      "duration": 5.92
+    },
+    {
+      "text": "an existing model in python using the",
+      "start": 1374.159,
+      "duration": 3.601
+    },
+    {
+      "text": "sensitivity",
+      "start": 1376.64,
+      "duration": 4.399
+    },
+    {
+      "text": "package so that concludes",
+      "start": 1377.76,
+      "duration": 6.24
+    },
+    {
+      "text": "our segment on exploring the parameter",
+      "start": 1381.039,
+      "duration": 4.64
+    },
+    {
+      "text": "space",
+      "start": 1384.0,
+      "duration": 3.84
+    },
+    {
+      "text": "we will examine a couple other",
+      "start": 1385.679,
+      "duration": 3.36
+    },
+    {
+      "text": "techniques",
+      "start": 1387.84,
+      "duration": 3.52
+    },
+    {
+      "text": "which explore the parameter space in the",
+      "start": 1389.039,
+      "duration": 5.041
+    },
+    {
+      "text": "future lectures as well",
+      "start": 1391.36,
+      "duration": 5.04
+    },
+    {
+      "text": "so thanks for listening and i'll see you",
+      "start": 1394.08,
+      "duration": 8.56
+    },
+    {
+      "text": "next time",
+      "start": 1396.4,
+      "duration": 6.24
+    }
+  ]
+}

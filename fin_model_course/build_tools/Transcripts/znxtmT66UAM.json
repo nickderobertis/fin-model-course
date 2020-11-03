@@ -1,0 +1,1219 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.52,
+      "duration": 2.239
+    },
+    {
+      "text": "nick dierbert is here teaching you",
+      "start": 4.319,
+      "duration": 3.841
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 5.759,
+      "duration": 3.361
+    },
+    {
+      "text": "to be solving",
+      "start": 8.16,
+      "duration": 4.479
+    },
+    {
+      "text": "the lab exercise in the python basics",
+      "start": 9.12,
+      "duration": 7.36
+    },
+    {
+      "text": "section on using classes so the lab",
+      "start": 12.639,
+      "duration": 5.601
+    },
+    {
+      "text": "exercise that i'm talking about",
+      "start": 16.48,
+      "duration": 4.4
+    },
+    {
+      "text": "is here at the end of the classes",
+      "start": 18.24,
+      "duration": 3.6
+    },
+    {
+      "text": "section",
+      "start": 20.88,
+      "duration": 3.04
+    },
+    {
+      "text": "in the going beyond an initial python",
+      "start": 21.84,
+      "duration": 4.72
+    },
+    {
+      "text": "script lecture series",
+      "start": 23.92,
+      "duration": 4.88
+    },
+    {
+      "text": "and the actual exercise is contained",
+      "start": 26.56,
+      "duration": 4.24
+    },
+    {
+      "text": "within the python basics lab",
+      "start": 28.8,
+      "duration": 4.8
+    },
+    {
+      "text": "jupiter notebook and then the other",
+      "start": 30.8,
+      "duration": 4.4
+    },
+    {
+      "text": "thing that you want to make sure to",
+      "start": 33.6,
+      "duration": 3.52
+    },
+    {
+      "text": "complete this lab is that you have the",
+      "start": 35.2,
+      "duration": 5.76
+    },
+    {
+      "text": "car example.py file",
+      "start": 37.12,
+      "duration": 5.92
+    },
+    {
+      "text": "also downloaded and in the same folder",
+      "start": 40.96,
+      "duration": 3.04
+    },
+    {
+      "text": "as your python",
+      "start": 43.04,
+      "duration": 3.92
+    },
+    {
+      "text": "basic slab jupyter notebook let's go",
+      "start": 44.0,
+      "duration": 6.8
+    },
+    {
+      "text": "ahead and jump over to that notebook",
+      "start": 46.96,
+      "duration": 3.84
+    },
+    {
+      "text": "um so you can see i have the car example",
+      "start": 51.44,
+      "duration": 4.32
+    },
+    {
+      "text": "file",
+      "start": 55.199,
+      "duration": 3.761
+    },
+    {
+      "text": "here in the same folder so we'll",
+      "start": 55.76,
+      "duration": 6.479
+    },
+    {
+      "text": "actually be able to work with it",
+      "start": 58.96,
+      "duration": 7.36
+    },
+    {
+      "text": "so the first exercise here",
+      "start": 62.239,
+      "duration": 8.081
+    },
+    {
+      "text": "is asking for us to use this car class",
+      "start": 66.32,
+      "duration": 7.04
+    },
+    {
+      "text": "which is defined in the car example",
+      "start": 70.32,
+      "duration": 6.96
+    },
+    {
+      "text": "file and we want to drive the car",
+      "start": 73.36,
+      "duration": 5.92
+    },
+    {
+      "text": "until it runs out of gas and then we",
+      "start": 77.28,
+      "duration": 4.8
+    },
+    {
+      "text": "want to fill it up and drive some more",
+      "start": 79.28,
+      "duration": 6.72
+    },
+    {
+      "text": "so the first thing we can do is from a",
+      "start": 82.08,
+      "duration": 6.96
+    },
+    {
+      "text": "car example import",
+      "start": 86.0,
+      "duration": 7.759
+    },
+    {
+      "text": "car and then",
+      "start": 89.04,
+      "duration": 6.96
+    },
+    {
+      "text": "we can run that so then the car is",
+      "start": 93.759,
+      "duration": 3.921
+    },
+    {
+      "text": "defined",
+      "start": 96.0,
+      "duration": 5.52
+    },
+    {
+      "text": "so we can do my car equals car and then",
+      "start": 97.68,
+      "duration": 5.6
+    },
+    {
+      "text": "parentheses and then we can do shift tab",
+      "start": 101.52,
+      "duration": 3.36
+    },
+    {
+      "text": "in there to see",
+      "start": 103.28,
+      "duration": 4.32
+    },
+    {
+      "text": "what we're supposed to pass to it so",
+      "start": 104.88,
+      "duration": 4.32
+    },
+    {
+      "text": "we're supposed to pass it the make",
+      "start": 107.6,
+      "duration": 4.64
+    },
+    {
+      "text": "and the model so",
+      "start": 109.2,
+      "duration": 6.48
+    },
+    {
+      "text": "let's uh create here uh",
+      "start": 112.24,
+      "duration": 6.64
+    },
+    {
+      "text": "how about a",
+      "start": 115.68,
+      "duration": 3.2
+    },
+    {
+      "text": "nice wrx for us to drive",
+      "start": 118.96,
+      "duration": 3.92
+    },
+    {
+      "text": "and then we want to",
+      "start": 123.04,
+      "duration": 6.24
+    },
+    {
+      "text": "drive it so we call drive once and we",
+      "start": 126.24,
+      "duration": 5.76
+    },
+    {
+      "text": "get to 40 percent right",
+      "start": 129.28,
+      "duration": 5.76
+    },
+    {
+      "text": "so that's not uh quite there we haven't",
+      "start": 132.0,
+      "duration": 4.08
+    },
+    {
+      "text": "run out of gas yet",
+      "start": 135.04,
+      "duration": 4.16
+    },
+    {
+      "text": "two drives uh we get to 30",
+      "start": 136.08,
+      "duration": 4.96
+    },
+    {
+      "text": "um so it's already getting kind of",
+      "start": 139.2,
+      "duration": 3.6
+    },
+    {
+      "text": "repetitive to keep typing drive",
+      "start": 141.04,
+      "duration": 4.48
+    },
+    {
+      "text": "so maybe a better way of going about it",
+      "start": 142.8,
+      "duration": 3.12
+    },
+    {
+      "text": "is",
+      "start": 145.52,
+      "duration": 2.96
+    },
+    {
+      "text": "to you know run a certain number of",
+      "start": 145.92,
+      "duration": 4.399
+    },
+    {
+      "text": "loops",
+      "start": 148.48,
+      "duration": 5.28
+    },
+    {
+      "text": "where we drive within that loop",
+      "start": 150.319,
+      "duration": 6.0
+    },
+    {
+      "text": "so by doing that we are going to drive",
+      "start": 153.76,
+      "duration": 3.36
+    },
+    {
+      "text": "five times",
+      "start": 156.319,
+      "duration": 4.081
+    },
+    {
+      "text": "by doing range five here",
+      "start": 157.12,
+      "duration": 6.32
+    },
+    {
+      "text": "and so we do run out of gas there at the",
+      "start": 160.4,
+      "duration": 5.199
+    },
+    {
+      "text": "end",
+      "start": 163.44,
+      "duration": 2.159
+    },
+    {
+      "text": "so then we want to fill up the car",
+      "start": 165.68,
+      "duration": 6.4
+    },
+    {
+      "text": "um so we're going to call fill up so we",
+      "start": 168.959,
+      "duration": 4.801
+    },
+    {
+      "text": "run that and we can see we",
+      "start": 172.08,
+      "duration": 4.56
+    },
+    {
+      "text": "get down to zero and then it's filled up",
+      "start": 173.76,
+      "duration": 3.92
+    },
+    {
+      "text": "so then we can go",
+      "start": 176.64,
+      "duration": 5.12
+    },
+    {
+      "text": "driving again so we can then",
+      "start": 177.68,
+      "duration": 7.44
+    },
+    {
+      "text": "drive again so we ran out of gas",
+      "start": 181.76,
+      "duration": 5.119
+    },
+    {
+      "text": "we filled it up and then we started",
+      "start": 185.12,
+      "duration": 3.44
+    },
+    {
+      "text": "driving again so that is",
+      "start": 186.879,
+      "duration": 5.601
+    },
+    {
+      "text": "what the exercise requested",
+      "start": 188.56,
+      "duration": 3.92
+    },
+    {
+      "text": "then coming to exercise two so here we",
+      "start": 194.879,
+      "duration": 4.801
+    },
+    {
+      "text": "want to",
+      "start": 198.56,
+      "duration": 3.52
+    },
+    {
+      "text": "use data classes and we want to create a",
+      "start": 199.68,
+      "duration": 3.52
+    },
+    {
+      "text": "data class",
+      "start": 202.08,
+      "duration": 3.84
+    },
+    {
+      "text": "to represent a stock uh stock is going",
+      "start": 203.2,
+      "duration": 4.399
+    },
+    {
+      "text": "to have a price a ticker a name",
+      "start": 205.92,
+      "duration": 5.28
+    },
+    {
+      "text": "and industries in which it resides",
+      "start": 207.599,
+      "duration": 6.401
+    },
+    {
+      "text": "and we want to have default values for",
+      "start": 211.2,
+      "duration": 3.44
+    },
+    {
+      "text": "uh",
+      "start": 214.0,
+      "duration": 3.04
+    },
+    {
+      "text": "each of these as well and then go ahead",
+      "start": 214.64,
+      "duration": 5.36
+    },
+    {
+      "text": "and create an instance of that",
+      "start": 217.04,
+      "duration": 5.04
+    },
+    {
+      "text": "so um the first thing that we're going",
+      "start": 220.0,
+      "duration": 3.84
+    },
+    {
+      "text": "to do is from",
+      "start": 222.08,
+      "duration": 6.64
+    },
+    {
+      "text": "data classes import data class",
+      "start": 223.84,
+      "duration": 4.88
+    },
+    {
+      "text": "so that we can then use the data class",
+      "start": 228.879,
+      "duration": 6.0
+    },
+    {
+      "text": "decorator this app data class thing",
+      "start": 231.76,
+      "duration": 5.839
+    },
+    {
+      "text": "before defining our class so then we can",
+      "start": 234.879,
+      "duration": 3.92
+    },
+    {
+      "text": "define stock",
+      "start": 237.599,
+      "duration": 4.64
+    },
+    {
+      "text": "as our class and we're going to have the",
+      "start": 238.799,
+      "duration": 4.321
+    },
+    {
+      "text": "price",
+      "start": 242.239,
+      "duration": 3.521
+    },
+    {
+      "text": "uh be a float floating point number",
+      "start": 243.12,
+      "duration": 3.28
+    },
+    {
+      "text": "let's just",
+      "start": 245.76,
+      "duration": 3.36
+    },
+    {
+      "text": "say it's 100 by default we're going to",
+      "start": 246.4,
+      "duration": 3.119
+    },
+    {
+      "text": "have",
+      "start": 249.12,
+      "duration": 4.96
+    },
+    {
+      "text": "ticker uh is going to be a string let's",
+      "start": 249.519,
+      "duration": 5.121
+    },
+    {
+      "text": "say it's",
+      "start": 254.08,
+      "duration": 3.6
+    },
+    {
+      "text": "microsoft by default",
+      "start": 254.64,
+      "duration": 6.159
+    },
+    {
+      "text": "we're going to have name also a string",
+      "start": 257.68,
+      "duration": 7.44
+    },
+    {
+      "text": "so that is going to be microsoft",
+      "start": 260.799,
+      "duration": 4.321
+    },
+    {
+      "text": "and we're going to have industries",
+      "start": 265.44,
+      "duration": 7.6
+    },
+    {
+      "text": "is going to be",
+      "start": 269.919,
+      "duration": 6.241
+    },
+    {
+      "text": "here a um",
+      "start": 273.04,
+      "duration": 7.36
+    },
+    {
+      "text": "a tuple where",
+      "start": 276.16,
+      "duration": 7.84
+    },
+    {
+      "text": "you know they can be in the software",
+      "start": 280.4,
+      "duration": 6.96
+    },
+    {
+      "text": "industry um and",
+      "start": 284.0,
+      "duration": 6.72
+    },
+    {
+      "text": "they can also be uh in the computer",
+      "start": 287.36,
+      "duration": 4.48
+    },
+    {
+      "text": "hardware",
+      "start": 290.72,
+      "duration": 3.12
+    },
+    {
+      "text": "industry because of the service tablet",
+      "start": 291.84,
+      "duration": 5.68
+    },
+    {
+      "text": "and things like that",
+      "start": 293.84,
+      "duration": 6.48
+    },
+    {
+      "text": "so now we have this data class defined",
+      "start": 297.52,
+      "duration": 4.48
+    },
+    {
+      "text": "and you know just like functions",
+      "start": 300.32,
+      "duration": 4.08
+    },
+    {
+      "text": "just having that class definition",
+      "start": 302.0,
+      "duration": 4.0
+    },
+    {
+      "text": "doesn't do anything yet we have to",
+      "start": 304.4,
+      "duration": 4.4
+    },
+    {
+      "text": "actually use it",
+      "start": 306.0,
+      "duration": 2.8
+    },
+    {
+      "text": "so now let's create an instance of the",
+      "start": 309.039,
+      "duration": 3.761
+    },
+    {
+      "text": "stock",
+      "start": 312.08,
+      "duration": 4.24
+    },
+    {
+      "text": "uh for apple um and so",
+      "start": 312.8,
+      "duration": 5.119
+    },
+    {
+      "text": "you know again you hit shift tab you're",
+      "start": 316.32,
+      "duration": 3.68
+    },
+    {
+      "text": "gonna see uh you know what it is that",
+      "start": 317.919,
+      "duration": 3.601
+    },
+    {
+      "text": "you're supposed to pass",
+      "start": 320.0,
+      "duration": 4.56
+    },
+    {
+      "text": "uh price ticker name industries um so",
+      "start": 321.52,
+      "duration": 4.32
+    },
+    {
+      "text": "let's say their price is",
+      "start": 324.56,
+      "duration": 4.96
+    },
+    {
+      "text": "150 their tickle ticker is apple",
+      "start": 325.84,
+      "duration": 7.28
+    },
+    {
+      "text": "her name is apple",
+      "start": 329.52,
+      "duration": 3.6
+    },
+    {
+      "text": "if i can spell today and",
+      "start": 333.759,
+      "duration": 5.681
+    },
+    {
+      "text": "you know let's just take the existing",
+      "start": 337.52,
+      "duration": 3.6
+    },
+    {
+      "text": "industries because they're in the same",
+      "start": 339.44,
+      "duration": 3.12
+    },
+    {
+      "text": "industries right",
+      "start": 341.12,
+      "duration": 3.76
+    },
+    {
+      "text": "um so we don't have to pass anything for",
+      "start": 342.56,
+      "duration": 3.359
+    },
+    {
+      "text": "industries",
+      "start": 344.88,
+      "duration": 3.759
+    },
+    {
+      "text": "but then when we look at apple um we can",
+      "start": 345.919,
+      "duration": 4.161
+    },
+    {
+      "text": "see that apple",
+      "start": 348.639,
+      "duration": 3.12
+    },
+    {
+      "text": "uh it has the price that we passed it",
+      "start": 350.08,
+      "duration": 3.2
+    },
+    {
+      "text": "has the ticker has the name that we",
+      "start": 351.759,
+      "duration": 3.201
+    },
+    {
+      "text": "passed but it took the default",
+      "start": 353.28,
+      "duration": 4.88
+    },
+    {
+      "text": "industries of software and computer",
+      "start": 354.96,
+      "duration": 4.079
+    },
+    {
+      "text": "hardware",
+      "start": 358.16,
+      "duration": 3.039
+    },
+    {
+      "text": "um so we can get the industries like",
+      "start": 359.039,
+      "duration": 3.6
+    },
+    {
+      "text": "that um",
+      "start": 361.199,
+      "duration": 3.521
+    },
+    {
+      "text": "or we can get the name or whatever else",
+      "start": 362.639,
+      "duration": 6.161
+    },
+    {
+      "text": "we need out of these data",
+      "start": 364.72,
+      "duration": 4.08
+    },
+    {
+      "text": "so then coming to the third exercise we",
+      "start": 371.039,
+      "duration": 3.521
+    },
+    {
+      "text": "want to create a function",
+      "start": 373.28,
+      "duration": 2.88
+    },
+    {
+      "text": "which prints out the industries the",
+      "start": 374.56,
+      "duration": 4.4
+    },
+    {
+      "text": "company is in along with the ticker",
+      "start": 376.16,
+      "duration": 5.52
+    },
+    {
+      "text": "and this function should only accept a",
+      "start": 378.96,
+      "duration": 5.519
+    },
+    {
+      "text": "single argument that argument should be",
+      "start": 381.68,
+      "duration": 6.16
+    },
+    {
+      "text": "an object of the stock type",
+      "start": 384.479,
+      "duration": 6.16
+    },
+    {
+      "text": "um so you know often when i'm writing",
+      "start": 387.84,
+      "duration": 3.52
+    },
+    {
+      "text": "out a function",
+      "start": 390.639,
+      "duration": 3.28
+    },
+    {
+      "text": "i like to kind of just write the logic",
+      "start": 391.36,
+      "duration": 4.32
+    },
+    {
+      "text": "out in the cell so i can easily test it",
+      "start": 393.919,
+      "duration": 2.481
+    },
+    {
+      "text": "out",
+      "start": 395.68,
+      "duration": 2.639
+    },
+    {
+      "text": "and then wrap it into a function once",
+      "start": 396.4,
+      "duration": 4.48
+    },
+    {
+      "text": "it's working",
+      "start": 398.319,
+      "duration": 3.871
+    },
+    {
+      "text": "so",
+      "start": 400.88,
+      "duration": 3.039
+    },
+    {
+      "text": "[Music]",
+      "start": 402.19,
+      "duration": 3.33
+    },
+    {
+      "text": "you know let's say we're going to call",
+      "start": 403.919,
+      "duration": 4.801
+    },
+    {
+      "text": "the argument of our function stock",
+      "start": 405.52,
+      "duration": 6.079
+    },
+    {
+      "text": "so i'm just going to set stock equal to",
+      "start": 408.72,
+      "duration": 4.16
+    },
+    {
+      "text": "aapl so now",
+      "start": 411.599,
+      "duration": 4.561
+    },
+    {
+      "text": "stock has all of apple's information and",
+      "start": 412.88,
+      "duration": 5.759
+    },
+    {
+      "text": "that's because later we're going to have",
+      "start": 416.16,
+      "duration": 5.68
+    },
+    {
+      "text": "uh you know define uh you know show",
+      "start": 418.639,
+      "duration": 6.881
+    },
+    {
+      "text": "industries and it's going to take stock",
+      "start": 421.84,
+      "duration": 6.479
+    },
+    {
+      "text": "as an argument um so i'm just doing this",
+      "start": 425.52,
+      "duration": 3.519
+    },
+    {
+      "text": "so that",
+      "start": 428.319,
+      "duration": 2.16
+    },
+    {
+      "text": "you know the code that i'm about to",
+      "start": 429.039,
+      "duration": 2.88
+    },
+    {
+      "text": "write it will work out in a cell by",
+      "start": 430.479,
+      "duration": 3.601
+    },
+    {
+      "text": "being based off this stock variable",
+      "start": 431.919,
+      "duration": 3.361
+    },
+    {
+      "text": "and then when we put it into the",
+      "start": 434.08,
+      "duration": 3.6
+    },
+    {
+      "text": "function that's also expecting to have a",
+      "start": 435.28,
+      "duration": 4.16
+    },
+    {
+      "text": "variable named stock so we don't have to",
+      "start": 437.68,
+      "duration": 2.32
+    },
+    {
+      "text": "change",
+      "start": 439.44,
+      "duration": 3.92
+    },
+    {
+      "text": "things to be able to put that in",
+      "start": 440.0,
+      "duration": 8.08
+    },
+    {
+      "text": "um so what do we want to do here",
+      "start": 443.36,
+      "duration": 7.04
+    },
+    {
+      "text": "so we want for each industry we want to",
+      "start": 448.08,
+      "duration": 3.519
+    },
+    {
+      "text": "print out a string",
+      "start": 450.4,
+      "duration": 3.519
+    },
+    {
+      "text": "saying what the industry was as well as",
+      "start": 451.599,
+      "duration": 4.16
+    },
+    {
+      "text": "the ticker of the stock",
+      "start": 453.919,
+      "duration": 4.161
+    },
+    {
+      "text": "um so a for loop makes perfect sense",
+      "start": 455.759,
+      "duration": 4.481
+    },
+    {
+      "text": "here for industry",
+      "start": 458.08,
+      "duration": 6.32
+    },
+    {
+      "text": "in stock dot industries",
+      "start": 460.24,
+      "duration": 6.48
+    },
+    {
+      "text": "uh we're going to print a formatted",
+      "start": 464.4,
+      "duration": 3.76
+    },
+    {
+      "text": "string",
+      "start": 466.72,
+      "duration": 5.039
+    },
+    {
+      "text": "or that is going to first have uh",
+      "start": 468.16,
+      "duration": 6.64
+    },
+    {
+      "text": "the ticker for the stock and then it is",
+      "start": 471.759,
+      "duration": 6.241
+    },
+    {
+      "text": "in uh industry",
+      "start": 474.8,
+      "duration": 4.959
+    },
+    {
+      "text": "uh and then it's going to be the",
+      "start": 478.0,
+      "duration": 3.52
+    },
+    {
+      "text": "industry loot variable",
+      "start": 479.759,
+      "duration": 4.88
+    },
+    {
+      "text": "um so we can give that a try and we can",
+      "start": 481.52,
+      "duration": 3.6
+    },
+    {
+      "text": "see",
+      "start": 484.639,
+      "duration": 3.361
+    },
+    {
+      "text": "that um indeed it's working correctly it",
+      "start": 485.12,
+      "duration": 4.96
+    },
+    {
+      "text": "prints out for each industry",
+      "start": 488.0,
+      "duration": 4.879
+    },
+    {
+      "text": "it prints out the ticker is in the",
+      "start": 490.08,
+      "duration": 4.48
+    },
+    {
+      "text": "industry",
+      "start": 492.879,
+      "duration": 4.32
+    },
+    {
+      "text": "so now we know that this works um so",
+      "start": 494.56,
+      "duration": 4.56
+    },
+    {
+      "text": "let's put it into the function",
+      "start": 497.199,
+      "duration": 4.4
+    },
+    {
+      "text": "so we can just take that and put it",
+      "start": 499.12,
+      "duration": 3.6
+    },
+    {
+      "text": "under there",
+      "start": 501.599,
+      "duration": 5.04
+    },
+    {
+      "text": "um and let's put this in our um",
+      "start": 502.72,
+      "duration": 7.199
+    },
+    {
+      "text": "our answer section um",
+      "start": 506.639,
+      "duration": 5.601
+    },
+    {
+      "text": "and so now we have that of course when",
+      "start": 509.919,
+      "duration": 4.161
+    },
+    {
+      "text": "we define it it doesn't actually do",
+      "start": 512.24,
+      "duration": 3.52
+    },
+    {
+      "text": "anything",
+      "start": 514.08,
+      "duration": 5.04
+    },
+    {
+      "text": "but we can pass it uh apple as our stock",
+      "start": 515.76,
+      "duration": 7.04
+    },
+    {
+      "text": "and we see uh that it prints it out",
+      "start": 519.12,
+      "duration": 4.96
+    },
+    {
+      "text": "appropriately",
+      "start": 522.8,
+      "duration": 2.88
+    },
+    {
+      "text": "but because we made this a function it's",
+      "start": 524.08,
+      "duration": 3.199
+    },
+    {
+      "text": "going to work with any stock that we",
+      "start": 525.68,
+      "duration": 2.8
+    },
+    {
+      "text": "want",
+      "start": 527.279,
+      "duration": 4.721
+    },
+    {
+      "text": "so if we wanted to make uh",
+      "start": 528.48,
+      "duration": 6.4
+    },
+    {
+      "text": "you know say caterpillars stock that's",
+      "start": 532.0,
+      "duration": 5.2
+    },
+    {
+      "text": "going to be another stock",
+      "start": 534.88,
+      "duration": 5.519
+    },
+    {
+      "text": "and that's going to say have you know",
+      "start": 537.2,
+      "duration": 7.04
+    },
+    {
+      "text": "a 200 price it's going to have",
+      "start": 540.399,
+      "duration": 7.44
+    },
+    {
+      "text": "a cat as the ticker",
+      "start": 544.24,
+      "duration": 7.279
+    },
+    {
+      "text": "is going to have caterpillar as the",
+      "start": 547.839,
+      "duration": 6.721
+    },
+    {
+      "text": "um name and the industry would be you",
+      "start": 551.519,
+      "duration": 4.801
+    },
+    {
+      "text": "know construction",
+      "start": 554.56,
+      "duration": 4.88
+    },
+    {
+      "text": "um machinery uh",
+      "start": 556.32,
+      "duration": 6.88
+    },
+    {
+      "text": "things like that um and so then we can",
+      "start": 559.44,
+      "duration": 4.32
+    },
+    {
+      "text": "pass",
+      "start": 563.2,
+      "duration": 3.04
+    },
+    {
+      "text": "caterpillar to this and then we see we",
+      "start": 563.76,
+      "duration": 3.68
+    },
+    {
+      "text": "get those same",
+      "start": 566.24,
+      "duration": 3.68
+    },
+    {
+      "text": "uh kind of output now for caterpillar",
+      "start": 567.44,
+      "duration": 3.519
+    },
+    {
+      "text": "instead",
+      "start": 569.92,
+      "duration": 3.2
+    },
+    {
+      "text": "so we can see how using a function for",
+      "start": 570.959,
+      "duration": 3.681
+    },
+    {
+      "text": "this we didn't have to",
+      "start": 573.12,
+      "duration": 3.279
+    },
+    {
+      "text": "change this logic at all when we wanted",
+      "start": 574.64,
+      "duration": 3.6
+    },
+    {
+      "text": "to go and apply it to caterpillar",
+      "start": 576.399,
+      "duration": 5.521
+    },
+    {
+      "text": "as well so it allows us to reuse that",
+      "start": 578.24,
+      "duration": 4.159
+    },
+    {
+      "text": "code",
+      "start": 581.92,
+      "duration": 3.599
+    },
+    {
+      "text": "very easily so that",
+      "start": 582.399,
+      "duration": 6.481
+    },
+    {
+      "text": "wraps up our lab exercises on",
+      "start": 585.519,
+      "duration": 5.841
+    },
+    {
+      "text": "classes and that's the final lab",
+      "start": 588.88,
+      "duration": 3.28
+    },
+    {
+      "text": "exercise",
+      "start": 591.36,
+      "duration": 4.08
+    },
+    {
+      "text": "in the python basics section",
+      "start": 592.16,
+      "duration": 6.84
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 595.44,
+      "duration": 6.56
+    },
+    {
+      "text": "time",
+      "start": 599.0,
+      "duration": 3.0
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.879,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dearborn is here teaching you",
+      "start": 3.919,
+      "duration": 3.84
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.279,
+      "duration": 3.681
+    },
+    {
+      "text": "be going over",
+      "start": 7.759,
+      "duration": 4.321
+    },
+    {
+      "text": "the lab exercise to wrap up the internal",
+      "start": 8.96,
+      "duration": 4.96
+    },
+    {
+      "text": "randomness material",
+      "start": 12.08,
+      "duration": 3.84
+    },
+    {
+      "text": "this is part of our lecture series on",
+      "start": 13.92,
+      "duration": 5.359
+    },
+    {
+      "text": "probabilistic modeling",
+      "start": 15.92,
+      "duration": 5.519
+    },
+    {
+      "text": "so we covered all the internal",
+      "start": 19.279,
+      "duration": 4.401
+    },
+    {
+      "text": "randomness material already including",
+      "start": 21.439,
+      "duration": 4.801
+    },
+    {
+      "text": "examples of how to add it to excel in",
+      "start": 23.68,
+      "duration": 4.0
+    },
+    {
+      "text": "python models",
+      "start": 26.24,
+      "duration": 4.48
+    },
+    {
+      "text": "so the way we are going to wrap it up is",
+      "start": 27.68,
+      "duration": 4.16
+    },
+    {
+      "text": "for you to",
+      "start": 30.72,
+      "duration": 4.08
+    },
+    {
+      "text": "do the same with your own project one",
+      "start": 31.84,
+      "duration": 5.68
+    },
+    {
+      "text": "excel and python models",
+      "start": 34.8,
+      "duration": 6.16
+    },
+    {
+      "text": "so here we're going to make the interest",
+      "start": 37.52,
+      "duration": 4.08
+    },
+    {
+      "text": "rate",
+      "start": 40.96,
+      "duration": 3.68
+    },
+    {
+      "text": "and the model a continuous",
+      "start": 41.6,
+      "duration": 6.16
+    },
+    {
+      "text": "random variable",
+      "start": 44.64,
+      "duration": 3.12
+    },
+    {
+      "text": "so i selected the interest rate because",
+      "start": 48.16,
+      "duration": 6.64
+    },
+    {
+      "text": "it's not going to require much of a",
+      "start": 52.079,
+      "duration": 3.521
+    },
+    {
+      "text": "change",
+      "start": 54.8,
+      "duration": 4.079
+    },
+    {
+      "text": "to your existing models so",
+      "start": 55.6,
+      "duration": 6.4
+    },
+    {
+      "text": "nowhere near as involved as the examples",
+      "start": 58.879,
+      "duration": 4.32
+    },
+    {
+      "text": "i just showed",
+      "start": 62.0,
+      "duration": 4.56
+    },
+    {
+      "text": "with adding uh internal randomness to",
+      "start": 63.199,
+      "duration": 6.161
+    },
+    {
+      "text": "excel and python",
+      "start": 66.56,
+      "duration": 5.36
+    },
+    {
+      "text": "so the interest rate is only used in the",
+      "start": 69.36,
+      "duration": 4.72
+    },
+    {
+      "text": "mpv calculation in this model and so",
+      "start": 71.92,
+      "duration": 2.64
+    },
+    {
+      "text": "that's",
+      "start": 74.08,
+      "duration": 3.92
+    },
+    {
+      "text": "all that has to change as a result of",
+      "start": 74.56,
+      "duration": 5.44
+    },
+    {
+      "text": "this",
+      "start": 78.0,
+      "duration": 5.439
+    },
+    {
+      "text": "so here now instead of just",
+      "start": 80.0,
+      "duration": 6.799
+    },
+    {
+      "text": "taking the interest rate as is instead",
+      "start": 83.439,
+      "duration": 4.881
+    },
+    {
+      "text": "we're going to have a mean and standard",
+      "start": 86.799,
+      "duration": 3.68
+    },
+    {
+      "text": "deviation of that interest rate",
+      "start": 88.32,
+      "duration": 5.2
+    },
+    {
+      "text": "as model inputs and the model is going",
+      "start": 90.479,
+      "duration": 4.241
+    },
+    {
+      "text": "to draw",
+      "start": 93.52,
+      "duration": 4.239
+    },
+    {
+      "text": "a random interest rate from a normal",
+      "start": 94.72,
+      "duration": 4.079
+    },
+    {
+      "text": "distribution",
+      "start": 97.759,
+      "duration": 3.281
+    },
+    {
+      "text": "each time that you run the model so you",
+      "start": 98.799,
+      "duration": 3.521
+    },
+    {
+      "text": "should be able to run the model",
+      "start": 101.04,
+      "duration": 2.32
+    },
+    {
+      "text": "repeatedly",
+      "start": 102.32,
+      "duration": 4.32
+    },
+    {
+      "text": "and see different mpvs coming out as a",
+      "start": 103.36,
+      "duration": 5.039
+    },
+    {
+      "text": "result",
+      "start": 106.64,
+      "duration": 4.799
+    },
+    {
+      "text": "and i would recommend making a copy of",
+      "start": 108.399,
+      "duration": 3.841
+    },
+    {
+      "text": "your models",
+      "start": 111.439,
+      "duration": 4.0
+    },
+    {
+      "text": "to add this extension because",
+      "start": 112.24,
+      "duration": 6.32
+    },
+    {
+      "text": "adding randomness into a model does make",
+      "start": 115.439,
+      "duration": 3.601
+    },
+    {
+      "text": "it",
+      "start": 118.56,
+      "duration": 3.199
+    },
+    {
+      "text": "harder to work with going forward and",
+      "start": 119.04,
+      "duration": 4.48
+    },
+    {
+      "text": "this is not the last extension that",
+      "start": 121.759,
+      "duration": 2.72
+    },
+    {
+      "text": "we're going to look at",
+      "start": 123.52,
+      "duration": 5.04
+    },
+    {
+      "text": "for the project 1 model",
+      "start": 124.479,
+      "duration": 7.681
+    },
+    {
+      "text": "so that's the idea behind this exercise",
+      "start": 128.56,
+      "duration": 6.96
+    },
+    {
+      "text": "and that wraps up our lecture series on",
+      "start": 132.16,
+      "duration": 6.0
+    },
+    {
+      "text": "probability modeling so thanks for",
+      "start": 135.52,
+      "duration": 3.28
+    },
+    {
+      "text": "listening",
+      "start": 138.16,
+      "duration": 5.2
+    },
+    {
+      "text": "and see you next time",
+      "start": 138.8,
+      "duration": 4.56
+    }
+  ]
+}

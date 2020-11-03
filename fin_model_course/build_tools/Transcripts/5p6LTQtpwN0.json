@@ -1,0 +1,3549 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.12,
+      "duration": 2.48
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.0,
+      "duration": 3.04
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.6,
+      "duration": 3.6
+    },
+    {
+      "text": "today we're going to be looking at an",
+      "start": 7.04,
+      "duration": 4.16
+    },
+    {
+      "text": "example of how to apply",
+      "start": 9.2,
+      "duration": 4.88
+    },
+    {
+      "text": "monte carlo simulation and this is going",
+      "start": 11.2,
+      "duration": 3.28
+    },
+    {
+      "text": "to be",
+      "start": 14.08,
+      "duration": 3.36
+    },
+    {
+      "text": "in the context of a portfolio model",
+      "start": 14.48,
+      "duration": 4.24
+    },
+    {
+      "text": "where we're looking to",
+      "start": 17.44,
+      "duration": 4.48
+    },
+    {
+      "text": "allocate resources between two",
+      "start": 18.72,
+      "duration": 5.44
+    },
+    {
+      "text": "assets this is part of our lecture",
+      "start": 21.92,
+      "duration": 3.04
+    },
+    {
+      "text": "series on",
+      "start": 24.16,
+      "duration": 4.8
+    },
+    {
+      "text": "monte carlo simulation so",
+      "start": 24.96,
+      "duration": 7.439
+    },
+    {
+      "text": "we introduced the whole idea of what",
+      "start": 28.96,
+      "duration": 4.88
+    },
+    {
+      "text": "monte carlo simulation",
+      "start": 32.399,
+      "duration": 4.0
+    },
+    {
+      "text": "is and why we would want to go about it",
+      "start": 33.84,
+      "duration": 3.44
+    },
+    {
+      "text": "and",
+      "start": 36.399,
+      "duration": 3.041
+    },
+    {
+      "text": "i mentioned that we're going to look at",
+      "start": 37.28,
+      "duration": 4.48
+    },
+    {
+      "text": "an example of how to do it before",
+      "start": 39.44,
+      "duration": 5.2
+    },
+    {
+      "text": "getting into the more formal definition",
+      "start": 41.76,
+      "duration": 3.2
+    },
+    {
+      "text": "of",
+      "start": 44.64,
+      "duration": 2.56
+    },
+    {
+      "text": "what it is that we're doing i think it's",
+      "start": 44.96,
+      "duration": 5.04
+    },
+    {
+      "text": "easiest to learn this by example",
+      "start": 47.2,
+      "duration": 5.359
+    },
+    {
+      "text": "before we look at that example let's",
+      "start": 50.0,
+      "duration": 4.48
+    },
+    {
+      "text": "just quickly talk about",
+      "start": 52.559,
+      "duration": 5.121
+    },
+    {
+      "text": "how you would actually go and run this",
+      "start": 54.48,
+      "duration": 5.84
+    },
+    {
+      "text": "so monte carlo simulation can be applied",
+      "start": 57.68,
+      "duration": 3.519
+    },
+    {
+      "text": "to",
+      "start": 60.32,
+      "duration": 3.28
+    },
+    {
+      "text": "any model it doesn't matter if it's in",
+      "start": 61.199,
+      "duration": 4.24
+    },
+    {
+      "text": "python or excel",
+      "start": 63.6,
+      "duration": 5.12
+    },
+    {
+      "text": "but it is definitely easier to run monte",
+      "start": 65.439,
+      "duration": 4.561
+    },
+    {
+      "text": "carlo simulations",
+      "start": 68.72,
+      "duration": 5.52
+    },
+    {
+      "text": "in python if you want to do a pure",
+      "start": 70.0,
+      "duration": 7.28
+    },
+    {
+      "text": "excel monte carlo simulation",
+      "start": 74.24,
+      "duration": 4.96
+    },
+    {
+      "text": "unless you're getting some kind of",
+      "start": 77.28,
+      "duration": 3.519
+    },
+    {
+      "text": "add-in uh",
+      "start": 79.2,
+      "duration": 3.599
+    },
+    {
+      "text": "then you're going to be looking at doing",
+      "start": 80.799,
+      "duration": 3.041
+    },
+    {
+      "text": "some kind of",
+      "start": 82.799,
+      "duration": 3.521
+    },
+    {
+      "text": "data table approach which is going to be",
+      "start": 83.84,
+      "duration": 4.56
+    },
+    {
+      "text": "fairly complicated to work out",
+      "start": 86.32,
+      "duration": 5.119
+    },
+    {
+      "text": "for more than two inputs",
+      "start": 88.4,
+      "duration": 6.399
+    },
+    {
+      "text": "um so i generally wouldn't recommend",
+      "start": 91.439,
+      "duration": 4.081
+    },
+    {
+      "text": "that",
+      "start": 94.799,
+      "duration": 4.0
+    },
+    {
+      "text": "you can also go to vba but",
+      "start": 95.52,
+      "duration": 5.2
+    },
+    {
+      "text": "it's generally easier to just handle",
+      "start": 98.799,
+      "duration": 3.761
+    },
+    {
+      "text": "this with python",
+      "start": 100.72,
+      "duration": 4.88
+    },
+    {
+      "text": "uh because in python you just do a loop",
+      "start": 102.56,
+      "duration": 5.36
+    },
+    {
+      "text": "over the number of iterations each time",
+      "start": 105.6,
+      "duration": 4.159
+    },
+    {
+      "text": "you draw the random inputs you run the",
+      "start": 107.92,
+      "duration": 2.32
+    },
+    {
+      "text": "model",
+      "start": 109.759,
+      "duration": 2.32
+    },
+    {
+      "text": "and then you collect the output so it's",
+      "start": 110.24,
+      "duration": 4.32
+    },
+    {
+      "text": "really not more than a few lines of code",
+      "start": 112.079,
+      "duration": 3.04
+    },
+    {
+      "text": "to",
+      "start": 114.56,
+      "duration": 4.239
+    },
+    {
+      "text": "make this happen in python",
+      "start": 115.119,
+      "duration": 3.68
+    },
+    {
+      "text": "so we're going to look first at the",
+      "start": 119.439,
+      "duration": 3.601
+    },
+    {
+      "text": "python example",
+      "start": 121.2,
+      "duration": 4.879
+    },
+    {
+      "text": "of how to do this",
+      "start": 123.04,
+      "duration": 5.68
+    },
+    {
+      "text": "because it's more straightforward since",
+      "start": 126.079,
+      "duration": 3.921
+    },
+    {
+      "text": "ultimately we're going to run the monte",
+      "start": 128.72,
+      "duration": 3.36
+    },
+    {
+      "text": "carlo simulation in python so if the",
+      "start": 130.0,
+      "duration": 4.239
+    },
+    {
+      "text": "model is already in python",
+      "start": 132.08,
+      "duration": 4.799
+    },
+    {
+      "text": "it's very straightforward and then when",
+      "start": 134.239,
+      "duration": 4.321
+    },
+    {
+      "text": "we go over to",
+      "start": 136.879,
+      "duration": 4.0
+    },
+    {
+      "text": "running a monte carlo simulation on an",
+      "start": 138.56,
+      "duration": 3.6
+    },
+    {
+      "text": "excel model",
+      "start": 140.879,
+      "duration": 4.401
+    },
+    {
+      "text": "in a future video then we're going to",
+      "start": 142.16,
+      "duration": 3.439
+    },
+    {
+      "text": "use",
+      "start": 145.28,
+      "duration": 3.039
+    },
+    {
+      "text": "excel wings to go back and forth between",
+      "start": 145.599,
+      "duration": 5.121
+    },
+    {
+      "text": "python and excel and have python",
+      "start": 148.319,
+      "duration": 5.28
+    },
+    {
+      "text": "orchestrate the monte carlo simulation",
+      "start": 150.72,
+      "duration": 4.12
+    },
+    {
+      "text": "on the excel",
+      "start": 153.599,
+      "duration": 4.241
+    },
+    {
+      "text": "model",
+      "start": 154.84,
+      "duration": 3.0
+    },
+    {
+      "text": "so the problem that we're going to look",
+      "start": 158.08,
+      "duration": 3.28
+    },
+    {
+      "text": "at here",
+      "start": 160.08,
+      "duration": 3.68
+    },
+    {
+      "text": "which is good application for monte",
+      "start": 161.36,
+      "duration": 4.08
+    },
+    {
+      "text": "carlo simulation",
+      "start": 163.76,
+      "duration": 4.24
+    },
+    {
+      "text": "is an investment problem we have a",
+      "start": 165.44,
+      "duration": 3.76
+    },
+    {
+      "text": "thousand dollars now",
+      "start": 168.0,
+      "duration": 3.519
+    },
+    {
+      "text": "we need a thousand and fifty a year from",
+      "start": 169.2,
+      "duration": 3.52
+    },
+    {
+      "text": "now",
+      "start": 171.519,
+      "duration": 3.36
+    },
+    {
+      "text": "and we have a choice of investing in two",
+      "start": 172.72,
+      "duration": 4.799
+    },
+    {
+      "text": "different assets a risk-free asset",
+      "start": 174.879,
+      "duration": 6.08
+    },
+    {
+      "text": "and a stock and the risk-free asset",
+      "start": 177.519,
+      "duration": 5.041
+    },
+    {
+      "text": "being that it's risk-free it always",
+      "start": 180.959,
+      "duration": 3.761
+    },
+    {
+      "text": "returns the same percentage",
+      "start": 182.56,
+      "duration": 5.52
+    },
+    {
+      "text": "whereas the stock the return is going to",
+      "start": 184.72,
+      "duration": 3.92
+    },
+    {
+      "text": "be drawn",
+      "start": 188.08,
+      "duration": 4.48
+    },
+    {
+      "text": "from a normal distribution",
+      "start": 188.64,
+      "duration": 6.48
+    },
+    {
+      "text": "with a 10 average and 20 standard",
+      "start": 192.56,
+      "duration": 4.88
+    },
+    {
+      "text": "deviation",
+      "start": 195.12,
+      "duration": 5.68
+    },
+    {
+      "text": "so the question here is how much should",
+      "start": 197.44,
+      "duration": 4.4
+    },
+    {
+      "text": "we allocate",
+      "start": 200.8,
+      "duration": 4.079
+    },
+    {
+      "text": "to the risk free and to the stock",
+      "start": 201.84,
+      "duration": 5.759
+    },
+    {
+      "text": "in order to maximize our chance of",
+      "start": 204.879,
+      "duration": 3.92
+    },
+    {
+      "text": "meeting our objective",
+      "start": 207.599,
+      "duration": 5.761
+    },
+    {
+      "text": "of having 1050 in one year",
+      "start": 208.799,
+      "duration": 7.041
+    },
+    {
+      "text": "i'm gonna intentionally set up the",
+      "start": 213.36,
+      "duration": 3.92
+    },
+    {
+      "text": "values of the inputs this way so that",
+      "start": 215.84,
+      "duration": 3.36
+    },
+    {
+      "text": "you couldn't just put 100 in the risk",
+      "start": 217.28,
+      "duration": 2.4
+    },
+    {
+      "text": "free",
+      "start": 219.2,
+      "duration": 2.319
+    },
+    {
+      "text": "that is not going to be able to get you",
+      "start": 219.68,
+      "duration": 3.199
+    },
+    {
+      "text": "to the goal of",
+      "start": 221.519,
+      "duration": 3.041
+    },
+    {
+      "text": "a thousand and fifty dollars so you do",
+      "start": 222.879,
+      "duration": 4.401
+    },
+    {
+      "text": "have to put some amount into the stock",
+      "start": 224.56,
+      "duration": 4.64
+    },
+    {
+      "text": "but how much should you put into the",
+      "start": 227.28,
+      "duration": 4.0
+    },
+    {
+      "text": "stock",
+      "start": 229.2,
+      "duration": 3.599
+    },
+    {
+      "text": "so the way we're going to approach this",
+      "start": 231.28,
+      "duration": 3.519
+    },
+    {
+      "text": "is first we're going to",
+      "start": 232.799,
+      "duration": 6.0
+    },
+    {
+      "text": "build out the basic model",
+      "start": 234.799,
+      "duration": 7.281
+    },
+    {
+      "text": "to get the portfolio value for given",
+      "start": 238.799,
+      "duration": 5.121
+    },
+    {
+      "text": "returns",
+      "start": 242.08,
+      "duration": 3.68
+    },
+    {
+      "text": "and then we're going to",
+      "start": 243.92,
+      "duration": 3.44
+    },
+    {
+      "text": "[Music]",
+      "start": 245.76,
+      "duration": 4.479
+    },
+    {
+      "text": "get that stock return from a normal",
+      "start": 247.36,
+      "duration": 4.48
+    },
+    {
+      "text": "distribution",
+      "start": 250.239,
+      "duration": 4.72
+    },
+    {
+      "text": "and re-run the model for a number of",
+      "start": 251.84,
+      "duration": 4.08
+    },
+    {
+      "text": "iterations",
+      "start": 254.959,
+      "duration": 3.52
+    },
+    {
+      "text": "and put this all together to analyze and",
+      "start": 255.92,
+      "duration": 4.48
+    },
+    {
+      "text": "visualize",
+      "start": 258.479,
+      "duration": 4.561
+    },
+    {
+      "text": "and then uh because we're trying to",
+      "start": 260.4,
+      "duration": 3.6
+    },
+    {
+      "text": "evaluate",
+      "start": 263.04,
+      "duration": 2.48
+    },
+    {
+      "text": "what's the best weight we're going to",
+      "start": 264.0,
+      "duration": 3.199
+    },
+    {
+      "text": "then repeat",
+      "start": 265.52,
+      "duration": 5.84
+    },
+    {
+      "text": "this whole process or a number of",
+      "start": 267.199,
+      "duration": 5.201
+    },
+    {
+      "text": "different weights",
+      "start": 271.36,
+      "duration": 3.839
+    },
+    {
+      "text": "into the two assets and then pick the",
+      "start": 272.4,
+      "duration": 3.12
+    },
+    {
+      "text": "one",
+      "start": 275.199,
+      "duration": 3.601
+    },
+    {
+      "text": "which has the highest probability of",
+      "start": 275.52,
+      "duration": 5.28
+    },
+    {
+      "text": "achieving the objective of a thousand",
+      "start": 278.8,
+      "duration": 4.72
+    },
+    {
+      "text": "fifty dollars",
+      "start": 280.8,
+      "duration": 5.52
+    },
+    {
+      "text": "so let's go ahead and jump over to the",
+      "start": 283.52,
+      "duration": 3.679
+    },
+    {
+      "text": "jupiter notebook",
+      "start": 286.32,
+      "duration": 2.64
+    },
+    {
+      "text": "example for this there's already a",
+      "start": 287.199,
+      "duration": 3.28
+    },
+    {
+      "text": "completed example",
+      "start": 288.96,
+      "duration": 3.519
+    },
+    {
+      "text": "on the course site that you can download",
+      "start": 290.479,
+      "duration": 7.361
+    },
+    {
+      "text": "and take a look at",
+      "start": 292.479,
+      "duration": 5.361
+    },
+    {
+      "text": "so this is that jupiter notebook and",
+      "start": 299.12,
+      "duration": 3.44
+    },
+    {
+      "text": "here at the beginning",
+      "start": 301.52,
+      "duration": 5.36
+    },
+    {
+      "text": "it again describes uh the problem",
+      "start": 302.56,
+      "duration": 7.12
+    },
+    {
+      "text": "and our general approach for going about",
+      "start": 306.88,
+      "duration": 4.319
+    },
+    {
+      "text": "it",
+      "start": 309.68,
+      "duration": 3.92
+    },
+    {
+      "text": "so let's go ahead and jump into the code",
+      "start": 311.199,
+      "duration": 3.121
+    },
+    {
+      "text": "since we've",
+      "start": 313.6,
+      "duration": 2.64
+    },
+    {
+      "text": "already kind of covered this well",
+      "start": 314.32,
+      "duration": 3.599
+    },
+    {
+      "text": "quickly i'll just talk about the math",
+      "start": 316.24,
+      "duration": 4.399
+    },
+    {
+      "text": "going on here",
+      "start": 317.919,
+      "duration": 2.72
+    },
+    {
+      "text": "so in order to get the return on the",
+      "start": 320.72,
+      "duration": 5.84
+    },
+    {
+      "text": "portfolio of these two assets",
+      "start": 324.16,
+      "duration": 4.72
+    },
+    {
+      "text": "we take a weighted average of the",
+      "start": 326.56,
+      "duration": 4.32
+    },
+    {
+      "text": "returns on each of the assets",
+      "start": 328.88,
+      "duration": 4.0
+    },
+    {
+      "text": "so it's the weight the weight and the",
+      "start": 330.88,
+      "duration": 3.599
+    },
+    {
+      "text": "risk free times the return in the risk",
+      "start": 332.88,
+      "duration": 2.319
+    },
+    {
+      "text": "free",
+      "start": 334.479,
+      "duration": 3.28
+    },
+    {
+      "text": "plus the weight in the stock times the",
+      "start": 335.199,
+      "duration": 5.601
+    },
+    {
+      "text": "return on the stock",
+      "start": 337.759,
+      "duration": 6.241
+    },
+    {
+      "text": "um but we can simplify this a little bit",
+      "start": 340.8,
+      "duration": 4.0
+    },
+    {
+      "text": "to remove",
+      "start": 344.0,
+      "duration": 3.759
+    },
+    {
+      "text": "one input from the model uh because we",
+      "start": 344.8,
+      "duration": 4.399
+    },
+    {
+      "text": "only have two assets",
+      "start": 347.759,
+      "duration": 3.44
+    },
+    {
+      "text": "the weights must sum up to one we must",
+      "start": 349.199,
+      "duration": 3.601
+    },
+    {
+      "text": "be 100 invested",
+      "start": 351.199,
+      "duration": 4.161
+    },
+    {
+      "text": "in total and so then the weight on the",
+      "start": 352.8,
+      "duration": 4.16
+    },
+    {
+      "text": "risk free is one minus",
+      "start": 355.36,
+      "duration": 3.679
+    },
+    {
+      "text": "the weight on the stock so we can",
+      "start": 356.96,
+      "duration": 4.239
+    },
+    {
+      "text": "eliminate that weight on the risk free",
+      "start": 359.039,
+      "duration": 4.961
+    },
+    {
+      "text": "and we have the return on the portfolio",
+      "start": 361.199,
+      "duration": 4.401
+    },
+    {
+      "text": "being the risk-free",
+      "start": 364.0,
+      "duration": 4.24
+    },
+    {
+      "text": "times one minus the stock weight plus",
+      "start": 365.6,
+      "duration": 3.28
+    },
+    {
+      "text": "the",
+      "start": 368.24,
+      "duration": 3.36
+    },
+    {
+      "text": "stock return times the weight on the",
+      "start": 368.88,
+      "duration": 4.96
+    },
+    {
+      "text": "stock",
+      "start": 371.6,
+      "duration": 4.719
+    },
+    {
+      "text": "so translating that over into python",
+      "start": 373.84,
+      "duration": 5.44
+    },
+    {
+      "text": "code we can define some variables here",
+      "start": 376.319,
+      "duration": 5.6
+    },
+    {
+      "text": "for the stock return the risk free and",
+      "start": 379.28,
+      "duration": 4.4
+    },
+    {
+      "text": "the weight on the stock",
+      "start": 381.919,
+      "duration": 4.241
+    },
+    {
+      "text": "and we can create this formula here",
+      "start": 383.68,
+      "duration": 4.799
+    },
+    {
+      "text": "which gets us the portfolio return",
+      "start": 386.16,
+      "duration": 4.56
+    },
+    {
+      "text": "so that's just taking this formula and",
+      "start": 388.479,
+      "duration": 3.041
+    },
+    {
+      "text": "implementing it",
+      "start": 390.72,
+      "duration": 3.84
+    },
+    {
+      "text": "in python risk-free times one minus",
+      "start": 391.52,
+      "duration": 4.08
+    },
+    {
+      "text": "stock weight",
+      "start": 394.56,
+      "duration": 3.12
+    },
+    {
+      "text": "uh plus the stock return times the stock",
+      "start": 395.6,
+      "duration": 3.92
+    },
+    {
+      "text": "weight",
+      "start": 397.68,
+      "duration": 4.079
+    },
+    {
+      "text": "and with these baseline values we get a",
+      "start": 399.52,
+      "duration": 6.799
+    },
+    {
+      "text": "6.5 percent portfolio return",
+      "start": 401.759,
+      "duration": 4.56
+    },
+    {
+      "text": "so then we can take the initial value on",
+      "start": 407.44,
+      "duration": 4.96
+    },
+    {
+      "text": "the portfolio",
+      "start": 411.039,
+      "duration": 3.28
+    },
+    {
+      "text": "and multiply it by one plus the",
+      "start": 412.4,
+      "duration": 4.32
+    },
+    {
+      "text": "portfolio return this is a one-year",
+      "start": 414.319,
+      "duration": 4.961
+    },
+    {
+      "text": "model so we can multiply by one plus the",
+      "start": 416.72,
+      "duration": 4.08
+    },
+    {
+      "text": "portfolio return",
+      "start": 419.28,
+      "duration": 3.28
+    },
+    {
+      "text": "and get the ending value on the",
+      "start": 420.8,
+      "duration": 3.76
+    },
+    {
+      "text": "portfolio",
+      "start": 422.56,
+      "duration": 5.28
+    },
+    {
+      "text": "so this is basically our entire",
+      "start": 424.56,
+      "duration": 7.039
+    },
+    {
+      "text": "core model here i wanted to keep this as",
+      "start": 427.84,
+      "duration": 6.56
+    },
+    {
+      "text": "as very simple so we can focus on the",
+      "start": 431.599,
+      "duration": 4.961
+    },
+    {
+      "text": "monte carlo simulation",
+      "start": 434.4,
+      "duration": 5.76
+    },
+    {
+      "text": "so we can just put that all into a",
+      "start": 436.56,
+      "duration": 5.68
+    },
+    {
+      "text": "function",
+      "start": 440.16,
+      "duration": 4.72
+    },
+    {
+      "text": "we want to definitely have a function",
+      "start": 442.24,
+      "duration": 4.56
+    },
+    {
+      "text": "that runs our core model",
+      "start": 444.88,
+      "duration": 5.28
+    },
+    {
+      "text": "as we go into the monte carlo simulation",
+      "start": 446.8,
+      "duration": 5.76
+    },
+    {
+      "text": "so this is just taking that logic we",
+      "start": 450.16,
+      "duration": 4.319
+    },
+    {
+      "text": "worked out getting the portfolio return",
+      "start": 452.56,
+      "duration": 4.4
+    },
+    {
+      "text": "and then applying that return to the",
+      "start": 454.479,
+      "duration": 5.201
+    },
+    {
+      "text": "initial value on the portfolio",
+      "start": 456.96,
+      "duration": 5.6
+    },
+    {
+      "text": "to get the end value and we can pass any",
+      "start": 459.68,
+      "duration": 3.359
+    },
+    {
+      "text": "of these",
+      "start": 462.56,
+      "duration": 4.56
+    },
+    {
+      "text": "as inputs so we can say what if the",
+      "start": 463.039,
+      "duration": 7.121
+    },
+    {
+      "text": "uh stock return was instead 20",
+      "start": 467.12,
+      "duration": 7.44
+    },
+    {
+      "text": "then we would be getting even more money",
+      "start": 470.16,
+      "duration": 4.4
+    },
+    {
+      "text": "so yeah here just showing trying with",
+      "start": 474.96,
+      "duration": 5.04
+    },
+    {
+      "text": "some other inputs",
+      "start": 477.039,
+      "duration": 2.961
+    },
+    {
+      "text": "so our core model is done we have one",
+      "start": 480.639,
+      "duration": 5.28
+    },
+    {
+      "text": "function that runs the core model",
+      "start": 482.72,
+      "duration": 6.0
+    },
+    {
+      "text": "and you would want to have this kind of",
+      "start": 485.919,
+      "duration": 3.441
+    },
+    {
+      "text": "structure",
+      "start": 488.72,
+      "duration": 2.879
+    },
+    {
+      "text": "for any model any python model that",
+      "start": 489.36,
+      "duration": 3.6
+    },
+    {
+      "text": "you're going to go and do monte carlo",
+      "start": 491.599,
+      "duration": 3.04
+    },
+    {
+      "text": "simulations on you want to have one",
+      "start": 492.96,
+      "duration": 2.72
+    },
+    {
+      "text": "function",
+      "start": 494.639,
+      "duration": 2.801
+    },
+    {
+      "text": "which can take the model inputs and",
+      "start": 495.68,
+      "duration": 5.44
+    },
+    {
+      "text": "return the outputs from your model",
+      "start": 497.44,
+      "duration": 3.68
+    },
+    {
+      "text": "so we want to get into running the",
+      "start": 502.319,
+      "duration": 5.28
+    },
+    {
+      "text": "simulation now",
+      "start": 505.12,
+      "duration": 4.88
+    },
+    {
+      "text": "and recall that the first step in the",
+      "start": 507.599,
+      "duration": 5.041
+    },
+    {
+      "text": "monte carlo simulation process",
+      "start": 510.0,
+      "duration": 6.159
+    },
+    {
+      "text": "is to randomly pick the values of our",
+      "start": 512.64,
+      "duration": 6.0
+    },
+    {
+      "text": "inputs and so we've got to set it up so",
+      "start": 516.159,
+      "duration": 3.921
+    },
+    {
+      "text": "that we can randomly pick those",
+      "start": 518.64,
+      "duration": 5.199
+    },
+    {
+      "text": "values so we already covered in the",
+      "start": 520.08,
+      "duration": 6.8
+    },
+    {
+      "text": "continuous random variable material",
+      "start": 523.839,
+      "duration": 5.041
+    },
+    {
+      "text": "that we can use the python's random",
+      "start": 526.88,
+      "duration": 4.32
+    },
+    {
+      "text": "library and random.normal variant",
+      "start": 528.88,
+      "duration": 4.24
+    },
+    {
+      "text": "to pull numbers from a normal",
+      "start": 531.2,
+      "duration": 3.04
+    },
+    {
+      "text": "distribution",
+      "start": 533.12,
+      "duration": 2.8
+    },
+    {
+      "text": "so you'll see as i've run this multiple",
+      "start": 534.24,
+      "duration": 3.599
+    },
+    {
+      "text": "times i get different values",
+      "start": 535.92,
+      "duration": 4.479
+    },
+    {
+      "text": "uh according to pulling random numbers",
+      "start": 537.839,
+      "duration": 3.201
+    },
+    {
+      "text": "from",
+      "start": 540.399,
+      "duration": 3.841
+    },
+    {
+      "text": "a distribution which has a 10 percent",
+      "start": 541.04,
+      "duration": 8.799
+    },
+    {
+      "text": "mean and a 20 standard deviation",
+      "start": 544.24,
+      "duration": 5.599
+    },
+    {
+      "text": "so then we can put this together",
+      "start": 551.44,
+      "duration": 6.959
+    },
+    {
+      "text": "with the",
+      "start": 555.279,
+      "duration": 6.401
+    },
+    {
+      "text": "function which runs our model to now",
+      "start": 558.399,
+      "duration": 6.56
+    },
+    {
+      "text": "run the model along with a random",
+      "start": 561.68,
+      "duration": 7.2
+    },
+    {
+      "text": "uh rate of return on the stock so",
+      "start": 564.959,
+      "duration": 6.56
+    },
+    {
+      "text": "you're just that same uh logic to get",
+      "start": 568.88,
+      "duration": 4.32
+    },
+    {
+      "text": "the random stock return then i'm just",
+      "start": 571.519,
+      "duration": 2.801
+    },
+    {
+      "text": "printing out",
+      "start": 573.2,
+      "duration": 5.6
+    },
+    {
+      "text": "what that stock return is uh before",
+      "start": 574.32,
+      "duration": 7.12
+    },
+    {
+      "text": "running it through the model so you can",
+      "start": 578.8,
+      "duration": 4.56
+    },
+    {
+      "text": "see each time that i run it we get",
+      "start": 581.44,
+      "duration": 3.76
+    },
+    {
+      "text": "different stock returns",
+      "start": 583.36,
+      "duration": 4.08
+    },
+    {
+      "text": "and we get different portfolio in values",
+      "start": 585.2,
+      "duration": 4.4
+    },
+    {
+      "text": "as a result",
+      "start": 587.44,
+      "duration": 5.519
+    },
+    {
+      "text": "and this kind of gets into the core",
+      "start": 589.6,
+      "duration": 5.84
+    },
+    {
+      "text": "of why we need to do a model like this",
+      "start": 592.959,
+      "duration": 3.361
+    },
+    {
+      "text": "you can see that",
+      "start": 595.44,
+      "duration": 2.56
+    },
+    {
+      "text": "we're getting quite different portfolio",
+      "start": 596.32,
+      "duration": 3.199
+    },
+    {
+      "text": "values each time",
+      "start": 598.0,
+      "duration": 3.36
+    },
+    {
+      "text": "and a number of them are not meeting our",
+      "start": 599.519,
+      "duration": 5.44
+    },
+    {
+      "text": "goal of 1050 and so this definitely",
+      "start": 601.36,
+      "duration": 6.32
+    },
+    {
+      "text": "is um something we need to carefully",
+      "start": 604.959,
+      "duration": 3.361
+    },
+    {
+      "text": "consider",
+      "start": 607.68,
+      "duration": 3.04
+    },
+    {
+      "text": "if we have that goal of getting a",
+      "start": 608.32,
+      "duration": 5.84
+    },
+    {
+      "text": "thousand and fifty dollars in a year",
+      "start": 610.72,
+      "duration": 3.44
+    },
+    {
+      "text": "so that's how you can run one simulation",
+      "start": 614.32,
+      "duration": 4.32
+    },
+    {
+      "text": "at a time",
+      "start": 617.279,
+      "duration": 5.361
+    },
+    {
+      "text": "now let's run as many simulations as we",
+      "start": 618.64,
+      "duration": 4.879
+    },
+    {
+      "text": "want",
+      "start": 622.64,
+      "duration": 3.52
+    },
+    {
+      "text": "so we basically take that same exact",
+      "start": 623.519,
+      "duration": 4.56
+    },
+    {
+      "text": "thing that we just did",
+      "start": 626.16,
+      "duration": 5.119
+    },
+    {
+      "text": "uh getting the random stock return and",
+      "start": 628.079,
+      "duration": 4.32
+    },
+    {
+      "text": "then",
+      "start": 631.279,
+      "duration": 2.881
+    },
+    {
+      "text": "running the model with that random stock",
+      "start": 632.399,
+      "duration": 4.081
+    },
+    {
+      "text": "return and we just put it into a loop",
+      "start": 634.16,
+      "duration": 5.359
+    },
+    {
+      "text": "a loop over the number of iterations",
+      "start": 636.48,
+      "duration": 5.28
+    },
+    {
+      "text": "we set up an outputs list we append our",
+      "start": 639.519,
+      "duration": 5.601
+    },
+    {
+      "text": "result to that outputs list",
+      "start": 641.76,
+      "duration": 3.36
+    },
+    {
+      "text": "and that allows us to run the model as",
+      "start": 645.279,
+      "duration": 4.081
+    },
+    {
+      "text": "many times",
+      "start": 648.56,
+      "duration": 3.279
+    },
+    {
+      "text": "as we want or as many simulations as we",
+      "start": 649.36,
+      "duration": 4.8
+    },
+    {
+      "text": "want on the model",
+      "start": 651.839,
+      "duration": 4.161
+    },
+    {
+      "text": "so we can see here's three simulations",
+      "start": 654.16,
+      "duration": 3.44
+    },
+    {
+      "text": "we could change it to five",
+      "start": 656.0,
+      "duration": 4.64
+    },
+    {
+      "text": "and have five simulations there",
+      "start": 657.6,
+      "duration": 6.08
+    },
+    {
+      "text": "so we'll just take that same logic and",
+      "start": 660.64,
+      "duration": 3.36
+    },
+    {
+      "text": "just",
+      "start": 663.68,
+      "duration": 3.12
+    },
+    {
+      "text": "wrap it up into a function of course you",
+      "start": 664.0,
+      "duration": 3.839
+    },
+    {
+      "text": "know if you're doing this in your own",
+      "start": 666.8,
+      "duration": 2.24
+    },
+    {
+      "text": "model you wouldn't want to have both",
+      "start": 667.839,
+      "duration": 2.161
+    },
+    {
+      "text": "still sitting around",
+      "start": 669.04,
+      "duration": 2.72
+    },
+    {
+      "text": "you would just convert this into that",
+      "start": 670.0,
+      "duration": 3.6
+    },
+    {
+      "text": "but they're shown separately to",
+      "start": 671.76,
+      "duration": 5.04
+    },
+    {
+      "text": "show how you can kind of build it out",
+      "start": 673.6,
+      "duration": 6.08
+    },
+    {
+      "text": "um and so this is just that same logic",
+      "start": 676.8,
+      "duration": 4.0
+    },
+    {
+      "text": "now in a function",
+      "start": 679.68,
+      "duration": 4.64
+    },
+    {
+      "text": "format so",
+      "start": 680.8,
+      "duration": 3.52
+    },
+    {
+      "text": "and this now runs with a thousand",
+      "start": 684.64,
+      "duration": 3.439
+    },
+    {
+      "text": "iterations by default",
+      "start": 686.079,
+      "duration": 4.641
+    },
+    {
+      "text": "and here we're just showing uh how many",
+      "start": 688.079,
+      "duration": 3.681
+    },
+    {
+      "text": "results there were",
+      "start": 690.72,
+      "duration": 4.48
+    },
+    {
+      "text": "and the first five results so now",
+      "start": 691.76,
+      "duration": 6.24
+    },
+    {
+      "text": "this function we are running a thousand",
+      "start": 695.2,
+      "duration": 4.319
+    },
+    {
+      "text": "simulations",
+      "start": 698.0,
+      "duration": 5.839
+    },
+    {
+      "text": "on the model and we could change that",
+      "start": 699.519,
+      "duration": 7.361
+    },
+    {
+      "text": "uh number of simulations to whatever we",
+      "start": 703.839,
+      "duration": 5.361
+    },
+    {
+      "text": "want",
+      "start": 706.88,
+      "duration": 2.32
+    },
+    {
+      "text": "so um you know this is where i mentioned",
+      "start": 710.56,
+      "duration": 6.56
+    },
+    {
+      "text": "that uh you can run that you can run the",
+      "start": 714.32,
+      "duration": 4.639
+    },
+    {
+      "text": "simulation and you get some results but",
+      "start": 717.12,
+      "duration": 2.959
+    },
+    {
+      "text": "you really have to",
+      "start": 718.959,
+      "duration": 3.041
+    },
+    {
+      "text": "analyze and visualize them to get any",
+      "start": 720.079,
+      "duration": 4.481
+    },
+    {
+      "text": "kind of meaning out of that",
+      "start": 722.0,
+      "duration": 6.0
+    },
+    {
+      "text": "so a good first",
+      "start": 724.56,
+      "duration": 5.6
+    },
+    {
+      "text": "approach for the visualization is to",
+      "start": 728.0,
+      "duration": 4.32
+    },
+    {
+      "text": "create a histogram",
+      "start": 730.16,
+      "duration": 5.76
+    },
+    {
+      "text": "of the outputs",
+      "start": 732.32,
+      "duration": 6.24
+    },
+    {
+      "text": "so i'm just going to make a data frame",
+      "start": 735.92,
+      "duration": 4.24
+    },
+    {
+      "text": "and then",
+      "start": 738.56,
+      "duration": 5.12
+    },
+    {
+      "text": "put those results into the data frame as",
+      "start": 740.16,
+      "duration": 5.6
+    },
+    {
+      "text": "the portfolio in values",
+      "start": 743.68,
+      "duration": 4.56
+    },
+    {
+      "text": "and then do a histogram over those",
+      "start": 745.76,
+      "duration": 3.74
+    },
+    {
+      "text": "values",
+      "start": 748.24,
+      "duration": 2.56
+    },
+    {
+      "text": "[Music]",
+      "start": 749.5,
+      "duration": 5.62
+    },
+    {
+      "text": "and we can now see",
+      "start": 750.8,
+      "duration": 6.159
+    },
+    {
+      "text": "a distribution of the outputs the",
+      "start": 755.12,
+      "duration": 3.68
+    },
+    {
+      "text": "outputs also themselves",
+      "start": 756.959,
+      "duration": 4.56
+    },
+    {
+      "text": "look normal the portfolio in values we",
+      "start": 758.8,
+      "duration": 4.4
+    },
+    {
+      "text": "can see that it's kind of centered",
+      "start": 761.519,
+      "duration": 3.361
+    },
+    {
+      "text": "around",
+      "start": 763.2,
+      "duration": 3.92
+    },
+    {
+      "text": "this is maybe somewhere around 10 and",
+      "start": 764.88,
+      "duration": 4.639
+    },
+    {
+      "text": "50.",
+      "start": 767.12,
+      "duration": 2.399
+    },
+    {
+      "text": "and we can see some values are",
+      "start": 770.079,
+      "duration": 6.641
+    },
+    {
+      "text": "as low as almost down to 600 more",
+      "start": 773.68,
+      "duration": 5.36
+    },
+    {
+      "text": "commonly down to 800",
+      "start": 776.72,
+      "duration": 5.359
+    },
+    {
+      "text": "and for getting as high as over 1500",
+      "start": 779.04,
+      "duration": 7.039
+    },
+    {
+      "text": "or over 1400 and more commonly we're",
+      "start": 782.079,
+      "duration": 5.44
+    },
+    {
+      "text": "getting high values in the",
+      "start": 786.079,
+      "duration": 4.641
+    },
+    {
+      "text": "12 to 1400 range and",
+      "start": 787.519,
+      "duration": 5.921
+    },
+    {
+      "text": "you can also the kde is an alternative",
+      "start": 790.72,
+      "duration": 4.799
+    },
+    {
+      "text": "to the histogram",
+      "start": 793.44,
+      "duration": 6.24
+    },
+    {
+      "text": "which basically gets at the same concept",
+      "start": 795.519,
+      "duration": 6.0
+    },
+    {
+      "text": "but it just tries to kind of smooth out",
+      "start": 799.68,
+      "duration": 4.399
+    },
+    {
+      "text": "the curve",
+      "start": 801.519,
+      "duration": 2.56
+    },
+    {
+      "text": "so another way to look at this",
+      "start": 805.12,
+      "duration": 3.36
+    },
+    {
+      "text": "distribution",
+      "start": 807.2,
+      "duration": 5.68
+    },
+    {
+      "text": "is to say well you know five percent",
+      "start": 808.48,
+      "duration": 7.599
+    },
+    {
+      "text": "of the time we're going to uh get at",
+      "start": 812.88,
+      "duration": 5.12
+    },
+    {
+      "text": "least this value and 95",
+      "start": 816.079,
+      "duration": 3.281
+    },
+    {
+      "text": "of the time we're going to get at least",
+      "start": 818.0,
+      "duration": 4.48
+    },
+    {
+      "text": "this value um",
+      "start": 819.36,
+      "duration": 6.159
+    },
+    {
+      "text": "so we can do that with a table",
+      "start": 822.48,
+      "duration": 6.96
+    },
+    {
+      "text": "of the probabilities and the percentiles",
+      "start": 825.519,
+      "duration": 5.76
+    },
+    {
+      "text": "of the distribution",
+      "start": 829.44,
+      "duration": 5.68
+    },
+    {
+      "text": "so to get there first we can form the",
+      "start": 831.279,
+      "duration": 5.68
+    },
+    {
+      "text": "percentiles that we want to look at here",
+      "start": 835.12,
+      "duration": 4.48
+    },
+    {
+      "text": "just doing five percent increments",
+      "start": 836.959,
+      "duration": 4.161
+    },
+    {
+      "text": "throughout the whole range of",
+      "start": 839.6,
+      "duration": 4.0
+    },
+    {
+      "text": "percentiles",
+      "start": 841.12,
+      "duration": 6.32
+    },
+    {
+      "text": "and we can use the uh quantile",
+      "start": 843.6,
+      "duration": 8.0
+    },
+    {
+      "text": "method on the data frame",
+      "start": 847.44,
+      "duration": 7.199
+    },
+    {
+      "text": "column in order to see that so we just",
+      "start": 851.6,
+      "duration": 3.599
+    },
+    {
+      "text": "pass",
+      "start": 854.639,
+      "duration": 3.841
+    },
+    {
+      "text": "these percentiles this list of",
+      "start": 855.199,
+      "duration": 6.721
+    },
+    {
+      "text": "uh the percentiles to the quantile",
+      "start": 858.48,
+      "duration": 6.96
+    },
+    {
+      "text": "method and with that we get uh these",
+      "start": 861.92,
+      "duration": 4.08
+    },
+    {
+      "text": "results",
+      "start": 865.44,
+      "duration": 4.639
+    },
+    {
+      "text": "saying that um in 95",
+      "start": 866.0,
+      "duration": 8.12
+    },
+    {
+      "text": "of cases you're going to have less than",
+      "start": 870.079,
+      "duration": 7.2
+    },
+    {
+      "text": "1231. so only in five percent of cases",
+      "start": 874.12,
+      "duration": 4.12
+    },
+    {
+      "text": "do you get",
+      "start": 877.279,
+      "duration": 4.961
+    },
+    {
+      "text": "at least 1231. um",
+      "start": 878.24,
+      "duration": 6.56
+    },
+    {
+      "text": "and in five percent of cases you get",
+      "start": 882.24,
+      "duration": 3.44
+    },
+    {
+      "text": "lower than",
+      "start": 884.8,
+      "duration": 4.64
+    },
+    {
+      "text": "900 so we're already starting to",
+      "start": 885.68,
+      "duration": 7.279
+    },
+    {
+      "text": "get out what we want here we can see",
+      "start": 889.44,
+      "duration": 6.8
+    },
+    {
+      "text": "you know somewhere in the 40s chance",
+      "start": 892.959,
+      "duration": 6.641
+    },
+    {
+      "text": "of being lower than our objective",
+      "start": 896.24,
+      "duration": 5.36
+    },
+    {
+      "text": "so there's a 50-something percent chance",
+      "start": 899.6,
+      "duration": 4.08
+    },
+    {
+      "text": "of meeting our objective",
+      "start": 901.6,
+      "duration": 5.28
+    },
+    {
+      "text": "um but there's a more direct way to get",
+      "start": 903.68,
+      "duration": 5.04
+    },
+    {
+      "text": "at this probability of meeting the",
+      "start": 906.88,
+      "duration": 3.04
+    },
+    {
+      "text": "objective",
+      "start": 908.72,
+      "duration": 2.96
+    },
+    {
+      "text": "another note is you don't have to do",
+      "start": 909.92,
+      "duration": 3.44
+    },
+    {
+      "text": "this on the column you can do it on the",
+      "start": 911.68,
+      "duration": 2.959
+    },
+    {
+      "text": "data frame",
+      "start": 913.36,
+      "duration": 4.08
+    },
+    {
+      "text": "itself um and that achieves the same",
+      "start": 914.639,
+      "duration": 4.401
+    },
+    {
+      "text": "thing and then if you have",
+      "start": 917.44,
+      "duration": 4.079
+    },
+    {
+      "text": "other if you have your input values in",
+      "start": 919.04,
+      "duration": 4.32
+    },
+    {
+      "text": "the data frame as well then you'll see",
+      "start": 921.519,
+      "duration": 6.32
+    },
+    {
+      "text": "percentiles of those as well",
+      "start": 923.36,
+      "duration": 4.479
+    },
+    {
+      "text": "um so now we're getting to the",
+      "start": 928.16,
+      "duration": 4.239
+    },
+    {
+      "text": "probability of achieving a certain",
+      "start": 930.56,
+      "duration": 4.0
+    },
+    {
+      "text": "objective which makes a lot of sense to",
+      "start": 932.399,
+      "duration": 5.281
+    },
+    {
+      "text": "evaluate in this model where our",
+      "start": 934.56,
+      "duration": 4.48
+    },
+    {
+      "text": "objective is to have a thousand and",
+      "start": 937.68,
+      "duration": 2.48
+    },
+    {
+      "text": "fifty and we're trying",
+      "start": 939.04,
+      "duration": 4.0
+    },
+    {
+      "text": "to allocate to meet that objective and",
+      "start": 940.16,
+      "duration": 4.4
+    },
+    {
+      "text": "so this is kind of the main output for",
+      "start": 943.04,
+      "duration": 3.039
+    },
+    {
+      "text": "this model",
+      "start": 944.56,
+      "duration": 3.839
+    },
+    {
+      "text": "now in some other models you might not",
+      "start": 946.079,
+      "duration": 3.521
+    },
+    {
+      "text": "have an objective",
+      "start": 948.399,
+      "duration": 5.12
+    },
+    {
+      "text": "specific objective that makes sense",
+      "start": 949.6,
+      "duration": 5.599
+    },
+    {
+      "text": "in which case you don't need to do this",
+      "start": 953.519,
+      "duration": 3.041
+    },
+    {
+      "text": "analysis",
+      "start": 955.199,
+      "duration": 3.601
+    },
+    {
+      "text": "but it's useful in cases where you have",
+      "start": 956.56,
+      "duration": 3.76
+    },
+    {
+      "text": "some kind of target number that you're",
+      "start": 958.8,
+      "duration": 2.8
+    },
+    {
+      "text": "trying to achieve",
+      "start": 960.32,
+      "duration": 3.36
+    },
+    {
+      "text": "and you want to evaluate the probability",
+      "start": 961.6,
+      "duration": 4.88
+    },
+    {
+      "text": "of achieving that",
+      "start": 963.68,
+      "duration": 6.32
+    },
+    {
+      "text": "um so unfortunately there's not like a",
+      "start": 966.48,
+      "duration": 4.08
+    },
+    {
+      "text": "direct",
+      "start": 970.0,
+      "duration": 3.519
+    },
+    {
+      "text": "function in pandas to do this analysis",
+      "start": 970.56,
+      "duration": 4.0
+    },
+    {
+      "text": "but",
+      "start": 973.519,
+      "duration": 3.44
+    },
+    {
+      "text": "here's a simple one-liner which will",
+      "start": 974.56,
+      "duration": 3.36
+    },
+    {
+      "text": "accomplish that",
+      "start": 976.959,
+      "duration": 4.401
+    },
+    {
+      "text": "for you um so you can't feel free to",
+      "start": 977.92,
+      "duration": 5.039
+    },
+    {
+      "text": "just copy paste this",
+      "start": 981.36,
+      "duration": 4.64
+    },
+    {
+      "text": "into your model and change out you know",
+      "start": 982.959,
+      "duration": 3.761
+    },
+    {
+      "text": "whatever",
+      "start": 986.0,
+      "duration": 2.399
+    },
+    {
+      "text": "output you're looking at in the data",
+      "start": 986.72,
+      "duration": 4.0
+    },
+    {
+      "text": "frame",
+      "start": 988.399,
+      "duration": 2.321
+    },
+    {
+      "text": "but we'll break this down now so you can",
+      "start": 991.92,
+      "duration": 3.76
+    },
+    {
+      "text": "understand",
+      "start": 994.8,
+      "duration": 4.08
+    },
+    {
+      "text": "what's going on here",
+      "start": 995.68,
+      "duration": 3.2
+    },
+    {
+      "text": "so the first part going on here",
+      "start": 999.279,
+      "duration": 6.961
+    },
+    {
+      "text": "is we're checking which of the values",
+      "start": 1002.639,
+      "duration": 6.0
+    },
+    {
+      "text": "which of our simulations met the",
+      "start": 1006.24,
+      "duration": 3.12
+    },
+    {
+      "text": "objective",
+      "start": 1008.639,
+      "duration": 3.841
+    },
+    {
+      "text": "that we're trying to achieve so we can",
+      "start": 1009.36,
+      "duration": 3.76
+    },
+    {
+      "text": "compare",
+      "start": 1012.48,
+      "duration": 3.76
+    },
+    {
+      "text": "a column of data frame to a number or",
+      "start": 1013.12,
+      "duration": 4.56
+    },
+    {
+      "text": "whatever else",
+      "start": 1016.24,
+      "duration": 4.0
+    },
+    {
+      "text": "and it will give us true a column of",
+      "start": 1017.68,
+      "duration": 4.079
+    },
+    {
+      "text": "true false",
+      "start": 1020.24,
+      "duration": 4.64
+    },
+    {
+      "text": "um representing we did meet the",
+      "start": 1021.759,
+      "duration": 4.241
+    },
+    {
+      "text": "objective",
+      "start": 1024.88,
+      "duration": 3.76
+    },
+    {
+      "text": "or we didn't meet the objective and just",
+      "start": 1026.0,
+      "duration": 3.199
+    },
+    {
+      "text": "to see",
+      "start": 1028.64,
+      "duration": 4.159
+    },
+    {
+      "text": "what values that's based on um",
+      "start": 1029.199,
+      "duration": 7.36
+    },
+    {
+      "text": "you can see for these first four rows",
+      "start": 1032.799,
+      "duration": 5.601
+    },
+    {
+      "text": "indeed they're above 10 50. we met the",
+      "start": 1036.559,
+      "duration": 3.041
+    },
+    {
+      "text": "objective",
+      "start": 1038.4,
+      "duration": 4.24
+    },
+    {
+      "text": "and then we get to this uh fifth row",
+      "start": 1039.6,
+      "duration": 5.599
+    },
+    {
+      "text": "which it was below 10.50 and so we did",
+      "start": 1042.64,
+      "duration": 5.76
+    },
+    {
+      "text": "not meet the objective",
+      "start": 1045.199,
+      "duration": 3.201
+    },
+    {
+      "text": "so we we can't",
+      "start": 1049.919,
+      "duration": 7.041
+    },
+    {
+      "text": "immediately do math with um boolean true",
+      "start": 1053.36,
+      "duration": 4.559
+    },
+    {
+      "text": "false",
+      "start": 1056.96,
+      "duration": 3.52
+    },
+    {
+      "text": "so then we convert this into ones and",
+      "start": 1057.919,
+      "duration": 3.521
+    },
+    {
+      "text": "zeros",
+      "start": 1060.48,
+      "duration": 4.48
+    },
+    {
+      "text": "so that we can do math with it um",
+      "start": 1061.44,
+      "duration": 6.8
+    },
+    {
+      "text": "so now this is the same thing",
+      "start": 1064.96,
+      "duration": 5.92
+    },
+    {
+      "text": "uh but we've just converted it into one",
+      "start": 1068.24,
+      "duration": 3.76
+    },
+    {
+      "text": "means",
+      "start": 1070.88,
+      "duration": 3.36
+    },
+    {
+      "text": "uh that we have met the objective and",
+      "start": 1072.0,
+      "duration": 4.64
+    },
+    {
+      "text": "zero means we have not met the objective",
+      "start": 1074.24,
+      "duration": 4.6
+    },
+    {
+      "text": "so now that covers this part of the",
+      "start": 1076.64,
+      "duration": 3.76
+    },
+    {
+      "text": "expression",
+      "start": 1078.84,
+      "duration": 3.4
+    },
+    {
+      "text": "and the last part is then just taking",
+      "start": 1080.4,
+      "duration": 3.04
+    },
+    {
+      "text": "the average",
+      "start": 1082.24,
+      "duration": 5.04
+    },
+    {
+      "text": "so when we take the average",
+      "start": 1083.44,
+      "duration": 8.0
+    },
+    {
+      "text": "of one for yes we met the objective zero",
+      "start": 1087.28,
+      "duration": 7.2
+    },
+    {
+      "text": "for no we did not meet the objective",
+      "start": 1091.44,
+      "duration": 6.32
+    },
+    {
+      "text": "that gets us to the",
+      "start": 1094.48,
+      "duration": 6.64
+    },
+    {
+      "text": "probability based on these simulation",
+      "start": 1097.76,
+      "duration": 4.48
+    },
+    {
+      "text": "results",
+      "start": 1101.12,
+      "duration": 4.08
+    },
+    {
+      "text": "of meeting the objective so that'll be",
+      "start": 1102.24,
+      "duration": 3.92
+    },
+    {
+      "text": "explained",
+      "start": 1105.2,
+      "duration": 4.24
+    },
+    {
+      "text": "in greater detail in the next video",
+      "start": 1106.16,
+      "duration": 4.72
+    },
+    {
+      "text": "where we formally go over",
+      "start": 1109.44,
+      "duration": 3.92
+    },
+    {
+      "text": "everything that we're doing um but just",
+      "start": 1110.88,
+      "duration": 4.32
+    },
+    {
+      "text": "know for now that taking the average of",
+      "start": 1113.36,
+      "duration": 2.559
+    },
+    {
+      "text": "this",
+      "start": 1115.2,
+      "duration": 3.92
+    },
+    {
+      "text": "um one for we met the objective zero we",
+      "start": 1115.919,
+      "duration": 4.88
+    },
+    {
+      "text": "didn't meet the objective",
+      "start": 1119.12,
+      "duration": 3.84
+    },
+    {
+      "text": "will get you to an estimate of the",
+      "start": 1120.799,
+      "duration": 5.841
+    },
+    {
+      "text": "probability of meeting the objective",
+      "start": 1122.96,
+      "duration": 3.68
+    },
+    {
+      "text": "so now we have a few different results",
+      "start": 1128.799,
+      "duration": 7.681
+    },
+    {
+      "text": "and analysis and visualization of the",
+      "start": 1132.4,
+      "duration": 5.68
+    },
+    {
+      "text": "simulation",
+      "start": 1136.48,
+      "duration": 4.16
+    },
+    {
+      "text": "but we mentioned in our approach to this",
+      "start": 1138.08,
+      "duration": 4.08
+    },
+    {
+      "text": "that now we're going to have to evaluate",
+      "start": 1140.64,
+      "duration": 2.88
+    },
+    {
+      "text": "this for the different",
+      "start": 1142.16,
+      "duration": 4.399
+    },
+    {
+      "text": "weights that we can put into the stock",
+      "start": 1143.52,
+      "duration": 5.76
+    },
+    {
+      "text": "so let's go ahead and wrap this up into",
+      "start": 1146.559,
+      "duration": 3.521
+    },
+    {
+      "text": "functions",
+      "start": 1149.28,
+      "duration": 3.92
+    },
+    {
+      "text": "so that we can easily reuse that logic",
+      "start": 1150.08,
+      "duration": 5.68
+    },
+    {
+      "text": "across a number of different uh weights",
+      "start": 1153.2,
+      "duration": 4.96
+    },
+    {
+      "text": "in the stock",
+      "start": 1155.76,
+      "duration": 5.36
+    },
+    {
+      "text": "so here i've created functions for all",
+      "start": 1158.16,
+      "duration": 4.0
+    },
+    {
+      "text": "these things",
+      "start": 1161.12,
+      "duration": 4.16
+    },
+    {
+      "text": "that we just looked at um so",
+      "start": 1162.16,
+      "duration": 6.639
+    },
+    {
+      "text": "first um here you'll see i made a",
+      "start": 1165.28,
+      "duration": 4.56
+    },
+    {
+      "text": "function that",
+      "start": 1168.799,
+      "duration": 2.88
+    },
+    {
+      "text": "takes the results from the simulation",
+      "start": 1169.84,
+      "duration": 3.6
+    },
+    {
+      "text": "and creates a data frame",
+      "start": 1171.679,
+      "duration": 5.681
+    },
+    {
+      "text": "uh from them i created a function",
+      "start": 1173.44,
+      "duration": 6.96
+    },
+    {
+      "text": "which takes the data frame and",
+      "start": 1177.36,
+      "duration": 6.319
+    },
+    {
+      "text": "does the histogram",
+      "start": 1180.4,
+      "duration": 7.2
+    },
+    {
+      "text": "of the results and",
+      "start": 1183.679,
+      "duration": 5.36
+    },
+    {
+      "text": "as you go to start putting",
+      "start": 1187.6,
+      "duration": 4.0
+    },
+    {
+      "text": "visualizations into functions",
+      "start": 1189.039,
+      "duration": 5.601
+    },
+    {
+      "text": "you should get familiar with this plt",
+      "start": 1191.6,
+      "duration": 3.36
+    },
+    {
+      "text": "dot",
+      "start": 1194.64,
+      "duration": 2.399
+    },
+    {
+      "text": "show like normally when you're doing a",
+      "start": 1194.96,
+      "duration": 3.839
+    },
+    {
+      "text": "visualization out in a cell it doesn't",
+      "start": 1197.039,
+      "duration": 2.64
+    },
+    {
+      "text": "matter",
+      "start": 1198.799,
+      "duration": 3.201
+    },
+    {
+      "text": "but when you're running it in a function",
+      "start": 1199.679,
+      "duration": 4.401
+    },
+    {
+      "text": "you generally want the visualization to",
+      "start": 1202.0,
+      "duration": 2.559
+    },
+    {
+      "text": "show up",
+      "start": 1204.08,
+      "duration": 2.4
+    },
+    {
+      "text": "as soon as you run it so that all the",
+      "start": 1204.559,
+      "duration": 3.681
+    },
+    {
+      "text": "output can stay in order",
+      "start": 1206.48,
+      "duration": 5.04
+    },
+    {
+      "text": "and this plt.show is going to ensure",
+      "start": 1208.24,
+      "duration": 4.64
+    },
+    {
+      "text": "that",
+      "start": 1211.52,
+      "duration": 4.24
+    },
+    {
+      "text": "so you just import matplotlib.piplot as",
+      "start": 1212.88,
+      "duration": 5.279
+    },
+    {
+      "text": "plt that's the convention",
+      "start": 1215.76,
+      "duration": 4.48
+    },
+    {
+      "text": "remember that matplotlib is the plotting",
+      "start": 1218.159,
+      "duration": 5.921
+    },
+    {
+      "text": "library under the hood for pandas",
+      "start": 1220.24,
+      "duration": 6.799
+    },
+    {
+      "text": "and then we just put this plt.show after",
+      "start": 1224.08,
+      "duration": 4.479
+    },
+    {
+      "text": "any spot that we're doing",
+      "start": 1227.039,
+      "duration": 4.401
+    },
+    {
+      "text": "a plot and this is a general practice",
+      "start": 1228.559,
+      "duration": 5.041
+    },
+    {
+      "text": "that you should follow for",
+      "start": 1231.44,
+      "duration": 6.479
+    },
+    {
+      "text": "any visualizations you have in functions",
+      "start": 1233.6,
+      "duration": 4.319
+    },
+    {
+      "text": "and then we have another function here",
+      "start": 1238.799,
+      "duration": 3.921
+    },
+    {
+      "text": "to produce that",
+      "start": 1241.52,
+      "duration": 2.8
+    },
+    {
+      "text": "table of the probabilities that creates",
+      "start": 1242.72,
+      "duration": 3.04
+    },
+    {
+      "text": "the percentile and then",
+      "start": 1244.32,
+      "duration": 3.12
+    },
+    {
+      "text": "does quantile on the data frame with",
+      "start": 1245.76,
+      "duration": 3.68
+    },
+    {
+      "text": "those percentiles",
+      "start": 1247.44,
+      "duration": 4.16
+    },
+    {
+      "text": "and we have a function which gets us the",
+      "start": 1249.44,
+      "duration": 3.04
+    },
+    {
+      "text": "probability",
+      "start": 1251.6,
+      "duration": 4.079
+    },
+    {
+      "text": "of the objective and",
+      "start": 1252.48,
+      "duration": 6.64
+    },
+    {
+      "text": "then another function which",
+      "start": 1255.679,
+      "duration": 6.081
+    },
+    {
+      "text": "puts all of this together all the",
+      "start": 1259.12,
+      "duration": 4.24
+    },
+    {
+      "text": "outputs",
+      "start": 1261.76,
+      "duration": 3.76
+    },
+    {
+      "text": "so it takes the results creates the data",
+      "start": 1263.36,
+      "duration": 4.16
+    },
+    {
+      "text": "frame it visualizes those results of the",
+      "start": 1265.52,
+      "duration": 2.88
+    },
+    {
+      "text": "histogram",
+      "start": 1267.52,
+      "duration": 3.12
+    },
+    {
+      "text": "it creates the probability table and it",
+      "start": 1268.4,
+      "duration": 3.92
+    },
+    {
+      "text": "creates the probability of achieving the",
+      "start": 1270.64,
+      "duration": 2.399
+    },
+    {
+      "text": "objective",
+      "start": 1272.32,
+      "duration": 3.2
+    },
+    {
+      "text": "and then it returns the probability",
+      "start": 1273.039,
+      "duration": 3.201
+    },
+    {
+      "text": "table and",
+      "start": 1275.52,
+      "duration": 3.36
+    },
+    {
+      "text": "probability of achieving the objective",
+      "start": 1276.24,
+      "duration": 3.36
+    },
+    {
+      "text": "finally",
+      "start": 1278.88,
+      "duration": 3.679
+    },
+    {
+      "text": "one last function which does the whole",
+      "start": 1279.6,
+      "duration": 3.84
+    },
+    {
+      "text": "summarization",
+      "start": 1282.559,
+      "duration": 3.281
+    },
+    {
+      "text": "of the analysis it calls this function",
+      "start": 1283.44,
+      "duration": 3.2
+    },
+    {
+      "text": "to get the",
+      "start": 1285.84,
+      "duration": 3.0
+    },
+    {
+      "text": "probability table and probability",
+      "start": 1286.64,
+      "duration": 3.84
+    },
+    {
+      "text": "objective",
+      "start": 1288.84,
+      "duration": 3.8
+    },
+    {
+      "text": "and the plot is already going to be",
+      "start": 1290.48,
+      "duration": 3.12
+    },
+    {
+      "text": "shown",
+      "start": 1292.64,
+      "duration": 2.399
+    },
+    {
+      "text": "the histogram is going to be shown while",
+      "start": 1293.6,
+      "duration": 3.6
+    },
+    {
+      "text": "we call this",
+      "start": 1295.039,
+      "duration": 5.601
+    },
+    {
+      "text": "and then we can",
+      "start": 1297.2,
+      "duration": 5.28
+    },
+    {
+      "text": "add some other output here to kind of",
+      "start": 1300.64,
+      "duration": 3.919
+    },
+    {
+      "text": "separate things out so a header here to",
+      "start": 1302.48,
+      "duration": 3.84
+    },
+    {
+      "text": "show the probability table and then",
+      "start": 1304.559,
+      "duration": 2.881
+    },
+    {
+      "text": "formatting",
+      "start": 1306.32,
+      "duration": 3.44
+    },
+    {
+      "text": "the probability table and then some",
+      "start": 1307.44,
+      "duration": 3.359
+    },
+    {
+      "text": "space",
+      "start": 1309.76,
+      "duration": 2.72
+    },
+    {
+      "text": "and then a sentence about the",
+      "start": 1310.799,
+      "duration": 3.12
+    },
+    {
+      "text": "probability of",
+      "start": 1312.48,
+      "duration": 5.04
+    },
+    {
+      "text": "meeting the objective and another space",
+      "start": 1313.919,
+      "duration": 6.801
+    },
+    {
+      "text": "uh when i call this you can see",
+      "start": 1317.52,
+      "duration": 5.68
+    },
+    {
+      "text": "now i'm taking the results from our",
+      "start": 1320.72,
+      "duration": 4.8
+    },
+    {
+      "text": "prior simulation",
+      "start": 1323.2,
+      "duration": 4.479
+    },
+    {
+      "text": "then we can see it shows the histogram",
+      "start": 1325.52,
+      "duration": 4.24
+    },
+    {
+      "text": "it shows the probability table",
+      "start": 1327.679,
+      "duration": 4.48
+    },
+    {
+      "text": "and it shows the probability of meeting",
+      "start": 1329.76,
+      "duration": 3.279
+    },
+    {
+      "text": "our objective",
+      "start": 1332.159,
+      "duration": 4.481
+    },
+    {
+      "text": "all in one function call",
+      "start": 1333.039,
+      "duration": 3.601
+    },
+    {
+      "text": "so next we're going to get into okay now",
+      "start": 1338.32,
+      "duration": 4.479
+    },
+    {
+      "text": "let's run this with the different stock",
+      "start": 1341.36,
+      "duration": 2.16
+    },
+    {
+      "text": "plates and",
+      "start": 1342.799,
+      "duration": 4.641
+    },
+    {
+      "text": "try to pick which is the most",
+      "start": 1343.52,
+      "duration": 5.84
+    },
+    {
+      "text": "appropriate allocation based upon the",
+      "start": 1347.44,
+      "duration": 3.84
+    },
+    {
+      "text": "simulation results",
+      "start": 1349.36,
+      "duration": 5.04
+    },
+    {
+      "text": "um but before we get there i just want",
+      "start": 1351.28,
+      "duration": 3.519
+    },
+    {
+      "text": "to show",
+      "start": 1354.4,
+      "duration": 2.88
+    },
+    {
+      "text": "one other thing we can do to format the",
+      "start": 1354.799,
+      "duration": 4.641
+    },
+    {
+      "text": "output",
+      "start": 1357.28,
+      "duration": 6.32
+    },
+    {
+      "text": "and that's that um super notebooks",
+      "start": 1359.44,
+      "duration": 8.16
+    },
+    {
+      "text": "work uh by using html and css",
+      "start": 1363.6,
+      "duration": 5.6
+    },
+    {
+      "text": "and we can use that to our advantage we",
+      "start": 1367.6,
+      "duration": 3.68
+    },
+    {
+      "text": "can actually put html",
+      "start": 1369.2,
+      "duration": 5.359
+    },
+    {
+      "text": "in the notebook and display it and have",
+      "start": 1371.28,
+      "duration": 4.639
+    },
+    {
+      "text": "whatever kind of formatting of the",
+      "start": 1374.559,
+      "duration": 3.041
+    },
+    {
+      "text": "output that we want",
+      "start": 1375.919,
+      "duration": 5.681
+    },
+    {
+      "text": "so i'm showing you a little",
+      "start": 1377.6,
+      "duration": 6.64
+    },
+    {
+      "text": "snippet here we can use the ipython",
+      "start": 1381.6,
+      "duration": 3.68
+    },
+    {
+      "text": "library",
+      "start": 1384.24,
+      "duration": 4.799
+    },
+    {
+      "text": "and the display module of that library",
+      "start": 1385.28,
+      "duration": 6.96
+    },
+    {
+      "text": "and we can import html and display from",
+      "start": 1389.039,
+      "duration": 4.801
+    },
+    {
+      "text": "there and then when you do display",
+      "start": 1392.24,
+      "duration": 5.28
+    },
+    {
+      "text": "html then it's going to",
+      "start": 1393.84,
+      "duration": 6.4
+    },
+    {
+      "text": "show it's going to format as html",
+      "start": 1397.52,
+      "duration": 5.039
+    },
+    {
+      "text": "whatever you have in there",
+      "start": 1400.24,
+      "duration": 5.919
+    },
+    {
+      "text": "so you can um",
+      "start": 1402.559,
+      "duration": 6.321
+    },
+    {
+      "text": "create whatever kind of output you want",
+      "start": 1406.159,
+      "duration": 4.481
+    },
+    {
+      "text": "with html",
+      "start": 1408.88,
+      "duration": 4.88
+    },
+    {
+      "text": "um here and this is not",
+      "start": 1410.64,
+      "duration": 6.96
+    },
+    {
+      "text": "we're not teaching html in this class",
+      "start": 1413.76,
+      "duration": 5.919
+    },
+    {
+      "text": "but just know this h2 thing that's a",
+      "start": 1417.6,
+      "duration": 4.8
+    },
+    {
+      "text": "level two header",
+      "start": 1419.679,
+      "duration": 5.12
+    },
+    {
+      "text": "and so you can use this function you can",
+      "start": 1422.4,
+      "duration": 5.04
+    },
+    {
+      "text": "just copy paste this into your own model",
+      "start": 1424.799,
+      "duration": 4.721
+    },
+    {
+      "text": "you can change these twos to anything",
+      "start": 1427.44,
+      "duration": 3.04
+    },
+    {
+      "text": "from one to six",
+      "start": 1429.52,
+      "duration": 3.92
+    },
+    {
+      "text": "for different levels of headings and if",
+      "start": 1430.48,
+      "duration": 4.319
+    },
+    {
+      "text": "you just use this function",
+      "start": 1433.44,
+      "duration": 4.56
+    },
+    {
+      "text": "then you just now have a function which",
+      "start": 1434.799,
+      "duration": 4.561
+    },
+    {
+      "text": "displays a header",
+      "start": 1438.0,
+      "duration": 3.12
+    },
+    {
+      "text": "so you can just pass whatever string",
+      "start": 1439.36,
+      "duration": 4.0
+    },
+    {
+      "text": "that you want there and it's going to",
+      "start": 1441.12,
+      "duration": 4.4
+    },
+    {
+      "text": "show a header",
+      "start": 1443.36,
+      "duration": 4.0
+    },
+    {
+      "text": "that's going to be useful because i mean",
+      "start": 1445.52,
+      "duration": 3.68
+    },
+    {
+      "text": "you see how much output we had just from",
+      "start": 1447.36,
+      "duration": 2.24
+    },
+    {
+      "text": "one",
+      "start": 1449.2,
+      "duration": 2.079
+    },
+    {
+      "text": "run here now we're going to have a bunch",
+      "start": 1449.6,
+      "duration": 3.6
+    },
+    {
+      "text": "of different runs and we want to make",
+      "start": 1451.279,
+      "duration": 2.961
+    },
+    {
+      "text": "sure we know",
+      "start": 1453.2,
+      "duration": 5.52
+    },
+    {
+      "text": "what output corresponds to what",
+      "start": 1454.24,
+      "duration": 7.84
+    },
+    {
+      "text": "so now we're coming to choosing",
+      "start": 1458.72,
+      "duration": 6.0
+    },
+    {
+      "text": "uh the appropriate weight and so let's",
+      "start": 1462.08,
+      "duration": 3.92
+    },
+    {
+      "text": "look at",
+      "start": 1464.72,
+      "duration": 3.76
+    },
+    {
+      "text": "uh 10 increments and the stock weight",
+      "start": 1466.0,
+      "duration": 4.96
+    },
+    {
+      "text": "going from 10 to 90",
+      "start": 1468.48,
+      "duration": 6.0
+    },
+    {
+      "text": "um and then we're just going to do a",
+      "start": 1470.96,
+      "duration": 3.839
+    },
+    {
+      "text": "loop",
+      "start": 1474.48,
+      "duration": 3.199
+    },
+    {
+      "text": "over those weights we're going to use",
+      "start": 1474.799,
+      "duration": 4.081
+    },
+    {
+      "text": "that display header",
+      "start": 1477.679,
+      "duration": 3.841
+    },
+    {
+      "text": "functionality we just built out to",
+      "start": 1478.88,
+      "duration": 3.76
+    },
+    {
+      "text": "separate it out",
+      "start": 1481.52,
+      "duration": 3.759
+    },
+    {
+      "text": "um to whatever weight that we're looking",
+      "start": 1482.64,
+      "duration": 3.6
+    },
+    {
+      "text": "at",
+      "start": 1485.279,
+      "duration": 4.161
+    },
+    {
+      "text": "and then use our simulation function to",
+      "start": 1486.24,
+      "duration": 4.24
+    },
+    {
+      "text": "get the results",
+      "start": 1489.44,
+      "duration": 3.92
+    },
+    {
+      "text": "with whatever stock weight and then",
+      "start": 1490.48,
+      "duration": 4.319
+    },
+    {
+      "text": "display the results",
+      "start": 1493.36,
+      "duration": 3.12
+    },
+    {
+      "text": "and because we've wrapped everything",
+      "start": 1494.799,
+      "duration": 4.081
+    },
+    {
+      "text": "nicely up in functions",
+      "start": 1496.48,
+      "duration": 5.28
+    },
+    {
+      "text": "this code ultimately becomes very simple",
+      "start": 1498.88,
+      "duration": 4.56
+    },
+    {
+      "text": "and that's how you can kind of build",
+      "start": 1501.76,
+      "duration": 2.799
+    },
+    {
+      "text": "layers on layers",
+      "start": 1503.44,
+      "duration": 2.96
+    },
+    {
+      "text": "with python and do quite complicated",
+      "start": 1504.559,
+      "duration": 4.48
+    },
+    {
+      "text": "things without ever having to write",
+      "start": 1506.4,
+      "duration": 4.56
+    },
+    {
+      "text": "complicated code",
+      "start": 1509.039,
+      "duration": 4.64
+    },
+    {
+      "text": "so now we see we have the results for",
+      "start": 1510.96,
+      "duration": 6.48
+    },
+    {
+      "text": "all these different weights on the stock",
+      "start": 1513.679,
+      "duration": 3.761
+    },
+    {
+      "text": "so we can kind of look through that and",
+      "start": 1517.919,
+      "duration": 3.76
+    },
+    {
+      "text": "see",
+      "start": 1520.64,
+      "duration": 2.72
+    },
+    {
+      "text": "i mean really the most important output",
+      "start": 1521.679,
+      "duration": 3.12
+    },
+    {
+      "text": "here is the probability of getting the",
+      "start": 1523.36,
+      "duration": 2.799
+    },
+    {
+      "text": "objective",
+      "start": 1524.799,
+      "duration": 2.641
+    },
+    {
+      "text": "but you can also get a better",
+      "start": 1526.159,
+      "duration": 3.12
+    },
+    {
+      "text": "understanding of what's going on by",
+      "start": 1527.44,
+      "duration": 3.44
+    },
+    {
+      "text": "looking at the other",
+      "start": 1529.279,
+      "duration": 5.52
+    },
+    {
+      "text": "values um so when we're 10 in the stock",
+      "start": 1530.88,
+      "duration": 6.32
+    },
+    {
+      "text": "you can see there's not a very big range",
+      "start": 1534.799,
+      "duration": 3.041
+    },
+    {
+      "text": "of",
+      "start": 1537.2,
+      "duration": 3.839
+    },
+    {
+      "text": "the possible values uh but we also only",
+      "start": 1537.84,
+      "duration": 4.079
+    },
+    {
+      "text": "have a 20",
+      "start": 1541.039,
+      "duration": 3.601
+    },
+    {
+      "text": "chance of meeting our objective whereas",
+      "start": 1541.919,
+      "duration": 4.161
+    },
+    {
+      "text": "we come all the way to 90",
+      "start": 1544.64,
+      "duration": 4.08
+    },
+    {
+      "text": "in the stock and you can see we have a",
+      "start": 1546.08,
+      "duration": 4.479
+    },
+    {
+      "text": "much larger range here",
+      "start": 1548.72,
+      "duration": 4.88
+    },
+    {
+      "text": "uh in the distribution but we do have a",
+      "start": 1550.559,
+      "duration": 3.921
+    },
+    {
+      "text": "higher",
+      "start": 1553.6,
+      "duration": 4.24
+    },
+    {
+      "text": "probability of meeting that objective",
+      "start": 1554.48,
+      "duration": 5.28
+    },
+    {
+      "text": "then we go back to eighty percent and",
+      "start": 1557.84,
+      "duration": 3.12
+    },
+    {
+      "text": "the probability goes",
+      "start": 1559.76,
+      "duration": 4.48
+    },
+    {
+      "text": "up and seventy percent it went down a",
+      "start": 1560.96,
+      "duration": 4.319
+    },
+    {
+      "text": "little bit",
+      "start": 1564.24,
+      "duration": 4.48
+    },
+    {
+      "text": "sixty percent it was back up um so",
+      "start": 1565.279,
+      "duration": 7.76
+    },
+    {
+      "text": "it looks like you know between um",
+      "start": 1568.72,
+      "duration": 7.439
+    },
+    {
+      "text": "and by the time we get to uh 40",
+      "start": 1573.039,
+      "duration": 6.401
+    },
+    {
+      "text": "it's going substantially down um so we",
+      "start": 1576.159,
+      "duration": 4.961
+    },
+    {
+      "text": "know that the proper range in the stock",
+      "start": 1579.44,
+      "duration": 3.599
+    },
+    {
+      "text": "is going to be somewhere between 50 and",
+      "start": 1581.12,
+      "duration": 3.679
+    },
+    {
+      "text": "80 percent",
+      "start": 1583.039,
+      "duration": 5.361
+    },
+    {
+      "text": "and you can run this with additional",
+      "start": 1584.799,
+      "duration": 5.441
+    },
+    {
+      "text": "simulations maybe run it with 10",
+      "start": 1588.4,
+      "duration": 5.519
+    },
+    {
+      "text": "000 or 50 000 simulations instead of a",
+      "start": 1590.24,
+      "duration": 4.64
+    },
+    {
+      "text": "thousand",
+      "start": 1593.919,
+      "duration": 2.64
+    },
+    {
+      "text": "and that will get you better stability",
+      "start": 1594.88,
+      "duration": 4.96
+    },
+    {
+      "text": "in the results",
+      "start": 1596.559,
+      "duration": 3.281
+    },
+    {
+      "text": "but this is the main idea here of",
+      "start": 1600.08,
+      "duration": 5.36
+    },
+    {
+      "text": "we wanted to evaluate different weights",
+      "start": 1603.919,
+      "duration": 3.921
+    },
+    {
+      "text": "the probability of getting the objective",
+      "start": 1605.44,
+      "duration": 4.239
+    },
+    {
+      "text": "with each of those weights",
+      "start": 1607.84,
+      "duration": 5.28
+    },
+    {
+      "text": "and setting up the functions and",
+      "start": 1609.679,
+      "duration": 5.12
+    },
+    {
+      "text": "everything in a clean way",
+      "start": 1613.12,
+      "duration": 5.84
+    },
+    {
+      "text": "that we can repeat all this analysis for",
+      "start": 1614.799,
+      "duration": 6.081
+    },
+    {
+      "text": "the different weights without having to",
+      "start": 1618.96,
+      "duration": 4.64
+    },
+    {
+      "text": "repeat the code",
+      "start": 1620.88,
+      "duration": 6.24
+    },
+    {
+      "text": "so that's an overview of how we can",
+      "start": 1623.6,
+      "duration": 6.72
+    },
+    {
+      "text": "apply monte carlo simulation in a simple",
+      "start": 1627.12,
+      "duration": 4.159
+    },
+    {
+      "text": "model",
+      "start": 1630.32,
+      "duration": 3.04
+    },
+    {
+      "text": "um in the other videos in this segment",
+      "start": 1631.279,
+      "duration": 3.76
+    },
+    {
+      "text": "we'll look at applying monte carlo",
+      "start": 1633.36,
+      "duration": 3.76
+    },
+    {
+      "text": "simulation to an existing model",
+      "start": 1635.039,
+      "duration": 5.76
+    },
+    {
+      "text": "and also applying it to an excel model",
+      "start": 1637.12,
+      "duration": 7.08
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 1640.799,
+      "duration": 6.401
+    },
+    {
+      "text": "time",
+      "start": 1644.2,
+      "duration": 3.0
+    }
+  ]
+}

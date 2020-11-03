@@ -1,0 +1,594 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick d roberts",
+      "start": 2.8,
+      "duration": 4.16
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 4.799,
+      "duration": 3.76
+    },
+    {
+      "text": "and today we're going to be solving the",
+      "start": 6.96,
+      "duration": 3.84
+    },
+    {
+      "text": "lab exercise on adding internal",
+      "start": 8.559,
+      "duration": 3.921
+    },
+    {
+      "text": "randomness to the project",
+      "start": 10.8,
+      "duration": 5.12
+    },
+    {
+      "text": "1 python and excel models this is part",
+      "start": 12.48,
+      "duration": 5.6
+    },
+    {
+      "text": "of our lecture series on probabilistic",
+      "start": 15.92,
+      "duration": 4.0
+    },
+    {
+      "text": "modeling",
+      "start": 18.08,
+      "duration": 4.16
+    },
+    {
+      "text": "so we reached the end of the internal",
+      "start": 19.92,
+      "duration": 4.56
+    },
+    {
+      "text": "randomness material i had already added",
+      "start": 22.24,
+      "duration": 2.959
+    },
+    {
+      "text": "the",
+      "start": 24.48,
+      "duration": 4.16
+    },
+    {
+      "text": "uh internal randomness to the",
+      "start": 25.199,
+      "duration": 5.84
+    },
+    {
+      "text": "dynamic salary retirement model in",
+      "start": 28.64,
+      "duration": 3.84
+    },
+    {
+      "text": "python and excel",
+      "start": 31.039,
+      "duration": 3.68
+    },
+    {
+      "text": "and here we're looking at adding it to",
+      "start": 32.48,
+      "duration": 4.64
+    },
+    {
+      "text": "the project one model",
+      "start": 34.719,
+      "duration": 4.481
+    },
+    {
+      "text": "and all we're doing is randomizing the",
+      "start": 37.12,
+      "duration": 3.68
+    },
+    {
+      "text": "interest rate gonna be drawing that from",
+      "start": 39.2,
+      "duration": 4.0
+    },
+    {
+      "text": "a normal distribution",
+      "start": 40.8,
+      "duration": 5.68
+    },
+    {
+      "text": "and we should be able to see the npv",
+      "start": 43.2,
+      "duration": 6.0
+    },
+    {
+      "text": "changing each time that we run the model",
+      "start": 46.48,
+      "duration": 4.48
+    },
+    {
+      "text": "so let's look at doing this",
+      "start": 49.2,
+      "duration": 5.28
+    },
+    {
+      "text": "in excel first and",
+      "start": 50.96,
+      "duration": 6.239
+    },
+    {
+      "text": "we have the time value of money inputs",
+      "start": 54.48,
+      "duration": 5.04
+    },
+    {
+      "text": "here so let's go ahead",
+      "start": 57.199,
+      "duration": 5.84
+    },
+    {
+      "text": "and add additional inputs",
+      "start": 59.52,
+      "duration": 6.72
+    },
+    {
+      "text": "now we're going to have",
+      "start": 63.039,
+      "duration": 7.44
+    },
+    {
+      "text": "the interest rate mean",
+      "start": 66.24,
+      "duration": 4.239
+    },
+    {
+      "text": "and the interest rate standard deviation",
+      "start": 70.64,
+      "duration": 5.76
+    },
+    {
+      "text": "um and we said four percent mean three",
+      "start": 76.72,
+      "duration": 4.48
+    },
+    {
+      "text": "percent standard deviation",
+      "start": 78.88,
+      "duration": 4.16
+    },
+    {
+      "text": "so since all we're doing here is",
+      "start": 81.2,
+      "duration": 3.76
+    },
+    {
+      "text": "randomizing an input",
+      "start": 83.04,
+      "duration": 5.28
+    },
+    {
+      "text": "it's as simple as uh just",
+      "start": 84.96,
+      "duration": 5.68
+    },
+    {
+      "text": "replacing what we have in the hard-coded",
+      "start": 88.32,
+      "duration": 5.2
+    },
+    {
+      "text": "input here with the randomized value",
+      "start": 90.64,
+      "duration": 5.96
+    },
+    {
+      "text": "so we can do the uh",
+      "start": 93.52,
+      "duration": 6.4
+    },
+    {
+      "text": "norm.inv function of rand the same",
+      "start": 96.6,
+      "duration": 5.0
+    },
+    {
+      "text": "pattern that we've seen for drawing",
+      "start": 99.92,
+      "duration": 2.64
+    },
+    {
+      "text": "continuous",
+      "start": 101.6,
+      "duration": 2.479
+    },
+    {
+      "text": "random variables from normal",
+      "start": 102.56,
+      "duration": 3.68
+    },
+    {
+      "text": "distributions in excel past the mean is",
+      "start": 104.079,
+      "duration": 3.921
+    },
+    {
+      "text": "standard deviation",
+      "start": 106.24,
+      "duration": 4.8
+    },
+    {
+      "text": "and there we go now as we recalculate",
+      "start": 108.0,
+      "duration": 4.84
+    },
+    {
+      "text": "the model we get different interest",
+      "start": 111.04,
+      "duration": 3.6
+    },
+    {
+      "text": "rates",
+      "start": 112.84,
+      "duration": 4.76
+    },
+    {
+      "text": "and we should see the mpv changing as a",
+      "start": 114.64,
+      "duration": 3.519
+    },
+    {
+      "text": "result",
+      "start": 117.6,
+      "duration": 3.68
+    },
+    {
+      "text": "as well which we do",
+      "start": 118.159,
+      "duration": 5.841
+    },
+    {
+      "text": "when the interest rate is higher then",
+      "start": 121.28,
+      "duration": 3.839
+    },
+    {
+      "text": "we're seeing",
+      "start": 124.0,
+      "duration": 3.68
+    },
+    {
+      "text": "a lower net present value because we're",
+      "start": 125.119,
+      "duration": 3.681
+    },
+    {
+      "text": "discounting those",
+      "start": 127.68,
+      "duration": 4.48
+    },
+    {
+      "text": "cash flows more so everything looks good",
+      "start": 128.8,
+      "duration": 4.48
+    },
+    {
+      "text": "here",
+      "start": 132.16,
+      "duration": 4.32
+    },
+    {
+      "text": "now let's come over to the python side",
+      "start": 133.28,
+      "duration": 7.039
+    },
+    {
+      "text": "and in python",
+      "start": 136.48,
+      "duration": 6.0
+    },
+    {
+      "text": "there is a way that we could modify the",
+      "start": 140.319,
+      "duration": 3.201
+    },
+    {
+      "text": "inputs of the model",
+      "start": 142.48,
+      "duration": 3.92
+    },
+    {
+      "text": "to do exactly what we did in excel and",
+      "start": 143.52,
+      "duration": 4.56
+    },
+    {
+      "text": "not have to change any of the model",
+      "start": 146.4,
+      "duration": 2.8
+    },
+    {
+      "text": "logic",
+      "start": 148.08,
+      "duration": 5.04
+    },
+    {
+      "text": "um but it does get to be",
+      "start": 149.2,
+      "duration": 6.96
+    },
+    {
+      "text": "uh using some features of python that",
+      "start": 153.12,
+      "duration": 6.08
+    },
+    {
+      "text": "we are not covering in the course um",
+      "start": 156.16,
+      "duration": 6.079
+    },
+    {
+      "text": "so instead we'll look at um",
+      "start": 159.2,
+      "duration": 4.96
+    },
+    {
+      "text": "just actually modifying the logic of the",
+      "start": 162.239,
+      "duration": 3.921
+    },
+    {
+      "text": "model to",
+      "start": 164.16,
+      "duration": 4.56
+    },
+    {
+      "text": "calculate the interest rate drawing it",
+      "start": 166.16,
+      "duration": 5.68
+    },
+    {
+      "text": "from the random normal distribution",
+      "start": 168.72,
+      "duration": 3.12
+    },
+    {
+      "text": "um so we're going to need the random",
+      "start": 171.92,
+      "duration": 3.28
+    },
+    {
+      "text": "module for sure",
+      "start": 173.76,
+      "duration": 5.04
+    },
+    {
+      "text": "we can import random and we can go",
+      "start": 175.2,
+      "duration": 7.36
+    },
+    {
+      "text": "and add the",
+      "start": 178.8,
+      "duration": 7.04
+    },
+    {
+      "text": "interest mean",
+      "start": 182.56,
+      "duration": 3.28
+    },
+    {
+      "text": "and the interests",
+      "start": 187.2,
+      "duration": 6.88
+    },
+    {
+      "text": "standard deviation as inputs here",
+      "start": 190.8,
+      "duration": 6.96
+    },
+    {
+      "text": "and we can remove the interest input",
+      "start": 194.08,
+      "duration": 6.64
+    },
+    {
+      "text": "so now i'm just going to restart kernel",
+      "start": 197.76,
+      "duration": 3.92
+    },
+    {
+      "text": "and run all cells",
+      "start": 200.72,
+      "duration": 2.48
+    },
+    {
+      "text": "and ultimately there's going to be an",
+      "start": 201.68,
+      "duration": 3.839
+    },
+    {
+      "text": "error in here somewhere",
+      "start": 203.2,
+      "duration": 4.08
+    },
+    {
+      "text": "because it's not going to have that",
+      "start": 205.519,
+      "duration": 3.521
+    },
+    {
+      "text": "interest input anymore",
+      "start": 207.28,
+      "duration": 3.36
+    },
+    {
+      "text": "so i'm going to go to the mpv section",
+      "start": 209.04,
+      "duration": 3.36
+    },
+    {
+      "text": "because i know that's where it is we can",
+      "start": 210.64,
+      "duration": 3.599
+    },
+    {
+      "text": "see it's having an error no attribute",
+      "start": 212.4,
+      "duration": 3.119
+    },
+    {
+      "text": "interest",
+      "start": 214.239,
+      "duration": 4.801
+    },
+    {
+      "text": "and all we have to do is now i",
+      "start": 215.519,
+      "duration": 5.44
+    },
+    {
+      "text": "draw that interest from a normal",
+      "start": 219.04,
+      "duration": 5.119
+    },
+    {
+      "text": "distribution so if we do random dot",
+      "start": 220.959,
+      "duration": 7.761
+    },
+    {
+      "text": "normal variate and we give it our",
+      "start": 224.159,
+      "duration": 8.8
+    },
+    {
+      "text": "mean and standard deviation um",
+      "start": 228.72,
+      "duration": 7.84
+    },
+    {
+      "text": "interest mean uh",
+      "start": 232.959,
+      "duration": 6.321
+    },
+    {
+      "text": "interest standard deviation then we're",
+      "start": 236.56,
+      "duration": 3.52
+    },
+    {
+      "text": "able to get",
+      "start": 239.28,
+      "duration": 4.159
+    },
+    {
+      "text": "random interest rates from that",
+      "start": 240.08,
+      "duration": 6.079
+    },
+    {
+      "text": "so we can just bring that into here",
+      "start": 243.439,
+      "duration": 3.44
+    },
+    {
+      "text": "interest",
+      "start": 246.159,
+      "duration": 4.08
+    },
+    {
+      "text": "equals put this back at data instead",
+      "start": 246.879,
+      "duration": 7.201
+    },
+    {
+      "text": "of model data um",
+      "start": 250.239,
+      "duration": 6.84
+    },
+    {
+      "text": "and then use interest here instead of",
+      "start": 254.08,
+      "duration": 4.719
+    },
+    {
+      "text": "data.interest",
+      "start": 257.079,
+      "duration": 5.961
+    },
+    {
+      "text": "um and then when we restart and run all",
+      "start": 258.799,
+      "duration": 5.12
+    },
+    {
+      "text": "again",
+      "start": 263.04,
+      "duration": 3.599
+    },
+    {
+      "text": "um then we should see that this starts",
+      "start": 263.919,
+      "duration": 5.921
+    },
+    {
+      "text": "working appropriately which it does",
+      "start": 266.639,
+      "duration": 4.881
+    },
+    {
+      "text": "and we should also see that as we run",
+      "start": 269.84,
+      "duration": 3.28
+    },
+    {
+      "text": "this we get different",
+      "start": 271.52,
+      "duration": 4.8
+    },
+    {
+      "text": "mpvs as an output",
+      "start": 273.12,
+      "duration": 5.76
+    },
+    {
+      "text": "which we are so it looks like everything",
+      "start": 276.32,
+      "duration": 3.439
+    },
+    {
+      "text": "is working",
+      "start": 278.88,
+      "duration": 4.72
+    },
+    {
+      "text": "appropriately so that covers adding",
+      "start": 279.759,
+      "duration": 6.961
+    },
+    {
+      "text": "uh a random interest rate",
+      "start": 283.6,
+      "duration": 5.92
+    },
+    {
+      "text": "internal randomness into the project one",
+      "start": 286.72,
+      "duration": 3.919
+    },
+    {
+      "text": "python and excel",
+      "start": 289.52,
+      "duration": 3.52
+    },
+    {
+      "text": "models thanks for listening and see you",
+      "start": 290.639,
+      "duration": 7.201
+    },
+    {
+      "text": "next time",
+      "start": 293.04,
+      "duration": 4.8
+    }
+  ]
+}

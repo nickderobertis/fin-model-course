@@ -1,0 +1,1829 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.879,
+      "duration": 2.321
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 3.76,
+      "duration": 3.28
+    },
+    {
+      "text": "financial modeling today",
+      "start": 5.2,
+      "duration": 4.16
+    },
+    {
+      "text": "we're going to be talking about some",
+      "start": 7.04,
+      "duration": 3.04
+    },
+    {
+      "text": "additional",
+      "start": 9.36,
+      "duration": 3.92
+    },
+    {
+      "text": "python basics focusing on using",
+      "start": 10.08,
+      "duration": 6.32
+    },
+    {
+      "text": "python dictionaries this is part of our",
+      "start": 13.28,
+      "duration": 4.4
+    },
+    {
+      "text": "lecture series on",
+      "start": 16.4,
+      "duration": 4.16
+    },
+    {
+      "text": "exploring the parameter space and this",
+      "start": 17.68,
+      "duration": 4.64
+    },
+    {
+      "text": "is covered during this lecture series",
+      "start": 20.56,
+      "duration": 3.76
+    },
+    {
+      "text": "because we're going to need to use",
+      "start": 22.32,
+      "duration": 4.64
+    },
+    {
+      "text": "dictionaries to complete sensitivity",
+      "start": 24.32,
+      "duration": 3.36
+    },
+    {
+      "text": "analysis",
+      "start": 26.96,
+      "duration": 4.719
+    },
+    {
+      "text": "in python so",
+      "start": 27.68,
+      "duration": 7.52
+    },
+    {
+      "text": "we um like i just said we just need to",
+      "start": 31.679,
+      "duration": 4.641
+    },
+    {
+      "text": "cover a little bit of",
+      "start": 35.2,
+      "duration": 4.96
+    },
+    {
+      "text": "extra python basics before we can",
+      "start": 36.32,
+      "duration": 6.72
+    },
+    {
+      "text": "get into doing sensitivity analysis in",
+      "start": 40.16,
+      "duration": 4.559
+    },
+    {
+      "text": "python",
+      "start": 43.04,
+      "duration": 5.28
+    },
+    {
+      "text": "so let's look first at dictionaries",
+      "start": 44.719,
+      "duration": 5.601
+    },
+    {
+      "text": "and then the other topics we're going to",
+      "start": 48.32,
+      "duration": 3.68
+    },
+    {
+      "text": "look at in the",
+      "start": 50.32,
+      "duration": 5.12
+    },
+    {
+      "text": "follow-on videos within this extra basic",
+      "start": 52.0,
+      "duration": 4.0
+    },
+    {
+      "text": "segment",
+      "start": 55.44,
+      "duration": 3.68
+    },
+    {
+      "text": "are about list comprehensions and",
+      "start": 56.0,
+      "duration": 6.879
+    },
+    {
+      "text": "uh the python imports and",
+      "start": 59.12,
+      "duration": 7.2
+    },
+    {
+      "text": "installing packages but we're focusing",
+      "start": 62.879,
+      "duration": 4.881
+    },
+    {
+      "text": "in this video on",
+      "start": 66.32,
+      "duration": 3.36
+    },
+    {
+      "text": "dictionaries and we covered dictionaries",
+      "start": 67.76,
+      "duration": 4.16
+    },
+    {
+      "text": "before so",
+      "start": 69.68,
+      "duration": 4.16
+    },
+    {
+      "text": "if you forgot that or didn't see that",
+      "start": 71.92,
+      "duration": 3.12
+    },
+    {
+      "text": "video go back",
+      "start": 73.84,
+      "duration": 3.36
+    },
+    {
+      "text": "and look at the original video on",
+      "start": 75.04,
+      "duration": 5.28
+    },
+    {
+      "text": "dictionaries to get a quick introduction",
+      "start": 77.2,
+      "duration": 6.16
+    },
+    {
+      "text": "within the python basics segment",
+      "start": 80.32,
+      "duration": 6.159
+    },
+    {
+      "text": "but here we're going to dig more into",
+      "start": 83.36,
+      "duration": 5.28
+    },
+    {
+      "text": "using them",
+      "start": 86.479,
+      "duration": 5.201
+    },
+    {
+      "text": "so but we'll give just a quick recap on",
+      "start": 88.64,
+      "duration": 4.88
+    },
+    {
+      "text": "what a dictionary is",
+      "start": 91.68,
+      "duration": 5.28
+    },
+    {
+      "text": "and it's a basic python data type",
+      "start": 93.52,
+      "duration": 7.52
+    },
+    {
+      "text": "just like a list numbers floats integers",
+      "start": 96.96,
+      "duration": 7.68
+    },
+    {
+      "text": "uh strings all the basic data types",
+      "start": 101.04,
+      "duration": 4.88
+    },
+    {
+      "text": "booleans",
+      "start": 104.64,
+      "duration": 5.839
+    },
+    {
+      "text": "etc dictionary is one of the basics",
+      "start": 105.92,
+      "duration": 8.239
+    },
+    {
+      "text": "and like a list it holds other objects",
+      "start": 110.479,
+      "duration": 7.521
+    },
+    {
+      "text": "within it analysts",
+      "start": 114.159,
+      "duration": 6.24
+    },
+    {
+      "text": "you know is an ordered you just hold",
+      "start": 118.0,
+      "duration": 4.479
+    },
+    {
+      "text": "things in order",
+      "start": 120.399,
+      "duration": 5.04
+    },
+    {
+      "text": "for a dictionary it's key value pairs so",
+      "start": 122.479,
+      "duration": 3.28
+    },
+    {
+      "text": "it's",
+      "start": 125.439,
+      "duration": 3.361
+    },
+    {
+      "text": "you're storing your object",
+      "start": 125.759,
+      "duration": 5.521
+    },
+    {
+      "text": "under some key where you want to be able",
+      "start": 128.8,
+      "duration": 4.56
+    },
+    {
+      "text": "to look up the object by that",
+      "start": 131.28,
+      "duration": 5.44
+    },
+    {
+      "text": "key at a later time",
+      "start": 133.36,
+      "duration": 3.36
+    },
+    {
+      "text": "so here's an example of",
+      "start": 137.36,
+      "duration": 6.879
+    },
+    {
+      "text": "finding a dictionary looking up um",
+      "start": 141.04,
+      "duration": 6.08
+    },
+    {
+      "text": "values from the dictionary and looping",
+      "start": 144.239,
+      "duration": 3.36
+    },
+    {
+      "text": "through",
+      "start": 147.12,
+      "duration": 3.52
+    },
+    {
+      "text": "the dictionary so looping looping",
+      "start": 147.599,
+      "duration": 4.081
+    },
+    {
+      "text": "through the dictionary",
+      "start": 150.64,
+      "duration": 4.239
+    },
+    {
+      "text": "is totally new for us so",
+      "start": 151.68,
+      "duration": 5.76
+    },
+    {
+      "text": "here first i'm defining the dictionary",
+      "start": 154.879,
+      "duration": 4.321
+    },
+    {
+      "text": "and whenever you define a dictionary",
+      "start": 157.44,
+      "duration": 2.56
+    },
+    {
+      "text": "you're using",
+      "start": 159.2,
+      "duration": 3.679
+    },
+    {
+      "text": "the curly braces to do that that's the",
+      "start": 160.0,
+      "duration": 3.44
+    },
+    {
+      "text": "easy",
+      "start": 162.879,
+      "duration": 4.801
+    },
+    {
+      "text": "built-in way and",
+      "start": 163.44,
+      "duration": 7.68
+    },
+    {
+      "text": "you're going to have then the keys",
+      "start": 167.68,
+      "duration": 5.76
+    },
+    {
+      "text": "a key and then a colon and then the",
+      "start": 171.12,
+      "duration": 4.399
+    },
+    {
+      "text": "value and then a comma",
+      "start": 173.44,
+      "duration": 4.56
+    },
+    {
+      "text": "and then coming to the next key colon",
+      "start": 175.519,
+      "duration": 3.201
+    },
+    {
+      "text": "value",
+      "start": 178.0,
+      "duration": 4.159
+    },
+    {
+      "text": "comma and so on and",
+      "start": 178.72,
+      "duration": 6.72
+    },
+    {
+      "text": "so the example here is",
+      "start": 182.159,
+      "duration": 6.8
+    },
+    {
+      "text": "a dictionary of what level",
+      "start": 185.44,
+      "duration": 6.719
+    },
+    {
+      "text": "my coffee is at and how i'm feeling",
+      "start": 188.959,
+      "duration": 6.481
+    },
+    {
+      "text": "in relation to that so",
+      "start": 192.159,
+      "duration": 6.881
+    },
+    {
+      "text": "um when my coffee is at a high level",
+      "start": 195.44,
+      "duration": 5.76
+    },
+    {
+      "text": "i'm happy it's pretty high i'm still",
+      "start": 199.04,
+      "duration": 3.119
+    },
+    {
+      "text": "happy",
+      "start": 201.2,
+      "duration": 3.44
+    },
+    {
+      "text": "as it starts to drop to medium then",
+      "start": 202.159,
+      "duration": 4.08
+    },
+    {
+      "text": "feeling neutral",
+      "start": 204.64,
+      "duration": 4.72
+    },
+    {
+      "text": "if it's low then i'm getting sad i want",
+      "start": 206.239,
+      "duration": 4.401
+    },
+    {
+      "text": "more coffee",
+      "start": 209.36,
+      "duration": 3.439
+    },
+    {
+      "text": "if there's no coffee then i really gotta",
+      "start": 210.64,
+      "duration": 5.12
+    },
+    {
+      "text": "get some more and so i'm desperate",
+      "start": 212.799,
+      "duration": 5.681
+    },
+    {
+      "text": "and so in that dictionary you put its",
+      "start": 215.76,
+      "duration": 3.36
+    },
+    {
+      "text": "name",
+      "start": 218.48,
+      "duration": 3.2
+    },
+    {
+      "text": "and then you put brackets and you put a",
+      "start": 219.12,
+      "duration": 3.44
+    },
+    {
+      "text": "key",
+      "start": 221.68,
+      "duration": 2.88
+    },
+    {
+      "text": "here we're putting the pretty high key",
+      "start": 222.56,
+      "duration": 4.0
+    },
+    {
+      "text": "and so we're going to get the happy",
+      "start": 224.56,
+      "duration": 4.8
+    },
+    {
+      "text": "value as a result so that's how you can",
+      "start": 226.56,
+      "duration": 3.44
+    },
+    {
+      "text": "look up",
+      "start": 229.36,
+      "duration": 2.64
+    },
+    {
+      "text": "any item in the dictionary you look it",
+      "start": 230.0,
+      "duration": 4.72
+    },
+    {
+      "text": "up by its key",
+      "start": 232.0,
+      "duration": 5.519
+    },
+    {
+      "text": "so what's new for us is then looping",
+      "start": 234.72,
+      "duration": 4.719
+    },
+    {
+      "text": "through the dictionary",
+      "start": 237.519,
+      "duration": 4.241
+    },
+    {
+      "text": "and there are three different ways to",
+      "start": 239.439,
+      "duration": 4.401
+    },
+    {
+      "text": "loop through a dictionary",
+      "start": 241.76,
+      "duration": 3.839
+    },
+    {
+      "text": "which is part of why we didn't cover",
+      "start": 243.84,
+      "duration": 3.28
+    },
+    {
+      "text": "that yet because it's a little more",
+      "start": 245.599,
+      "duration": 5.121
+    },
+    {
+      "text": "complicated than looping through lists",
+      "start": 247.12,
+      "duration": 5.44
+    },
+    {
+      "text": "um the three ways you can loop through",
+      "start": 250.72,
+      "duration": 3.68
+    },
+    {
+      "text": "it are you can loop through the keys",
+      "start": 252.56,
+      "duration": 3.679
+    },
+    {
+      "text": "you can loop through the values or you",
+      "start": 254.4,
+      "duration": 3.44
+    },
+    {
+      "text": "can loop through both the keys and",
+      "start": 256.239,
+      "duration": 3.441
+    },
+    {
+      "text": "values at once",
+      "start": 257.84,
+      "duration": 3.519
+    },
+    {
+      "text": "and if you just want one way to do",
+      "start": 259.68,
+      "duration": 4.48
+    },
+    {
+      "text": "things you say why do we have three ways",
+      "start": 261.359,
+      "duration": 5.28
+    },
+    {
+      "text": "can we just always do one way to loop",
+      "start": 264.16,
+      "duration": 3.84
+    },
+    {
+      "text": "through dictionaries",
+      "start": 266.639,
+      "duration": 4.721
+    },
+    {
+      "text": "i would say just always do",
+      "start": 268.0,
+      "duration": 5.28
+    },
+    {
+      "text": "looping through both keys and values at",
+      "start": 271.36,
+      "duration": 3.44
+    },
+    {
+      "text": "once through calling",
+      "start": 273.28,
+      "duration": 4.8
+    },
+    {
+      "text": "dot items on the dictionary because that",
+      "start": 274.8,
+      "duration": 5.2
+    },
+    {
+      "text": "way you have access to both",
+      "start": 278.08,
+      "duration": 4.24
+    },
+    {
+      "text": "you don't necessarily have to use both",
+      "start": 280.0,
+      "duration": 3.84
+    },
+    {
+      "text": "um and that's why",
+      "start": 282.32,
+      "duration": 3.439
+    },
+    {
+      "text": "if you just want one way to do things",
+      "start": 283.84,
+      "duration": 3.04
+    },
+    {
+      "text": "then",
+      "start": 285.759,
+      "duration": 2.88
+    },
+    {
+      "text": "always do it with items it'll get you",
+      "start": 286.88,
+      "duration": 3.68
+    },
+    {
+      "text": "both the key and the value",
+      "start": 288.639,
+      "duration": 4.961
+    },
+    {
+      "text": "at the same time in the loop",
+      "start": 290.56,
+      "duration": 6.56
+    },
+    {
+      "text": "so the way that you do that with",
+      "start": 293.6,
+      "duration": 6.56
+    },
+    {
+      "text": "dot items so we have our familiar for",
+      "start": 297.12,
+      "duration": 3.919
+    },
+    {
+      "text": "loop here",
+      "start": 300.16,
+      "duration": 5.759
+    },
+    {
+      "text": "or something in something colon indi",
+      "start": 301.039,
+      "duration": 6.801
+    },
+    {
+      "text": "but here we're putting the dictionary's",
+      "start": 305.919,
+      "duration": 3.361
+    },
+    {
+      "text": "name but we're not just looping through",
+      "start": 307.84,
+      "duration": 2.639
+    },
+    {
+      "text": "the dictionary",
+      "start": 309.28,
+      "duration": 4.4
+    },
+    {
+      "text": "we're looping through dot items of",
+      "start": 310.479,
+      "duration": 5.041
+    },
+    {
+      "text": "the dictionary and that's what allows us",
+      "start": 313.68,
+      "duration": 3.68
+    },
+    {
+      "text": "to loop through both the key",
+      "start": 315.52,
+      "duration": 5.2
+    },
+    {
+      "text": "and the value at the same time",
+      "start": 317.36,
+      "duration": 6.88
+    },
+    {
+      "text": "and then over here we have not just a",
+      "start": 320.72,
+      "duration": 4.8
+    },
+    {
+      "text": "single value that we're looping through",
+      "start": 324.24,
+      "duration": 3.2
+    },
+    {
+      "text": "we're looping through two values at once",
+      "start": 325.52,
+      "duration": 3.119
+    },
+    {
+      "text": "the key",
+      "start": 327.44,
+      "duration": 5.68
+    },
+    {
+      "text": "and the value and so",
+      "start": 328.639,
+      "duration": 8.4
+    },
+    {
+      "text": "um you whatever you put first",
+      "start": 333.12,
+      "duration": 6.799
+    },
+    {
+      "text": "is in reference to the key and whatever",
+      "start": 337.039,
+      "duration": 4.481
+    },
+    {
+      "text": "you put after the comma",
+      "start": 339.919,
+      "duration": 4.481
+    },
+    {
+      "text": "you put it second that's in reference to",
+      "start": 341.52,
+      "duration": 4.239
+    },
+    {
+      "text": "the value",
+      "start": 344.4,
+      "duration": 5.12
+    },
+    {
+      "text": "so that's why uh here the copy levels",
+      "start": 345.759,
+      "duration": 5.28
+    },
+    {
+      "text": "are the keys and the emotions are the",
+      "start": 349.52,
+      "duration": 3.36
+    },
+    {
+      "text": "values and so that's why it's",
+      "start": 351.039,
+      "duration": 4.561
+    },
+    {
+      "text": "four copy level comma emotion because",
+      "start": 352.88,
+      "duration": 4.0
+    },
+    {
+      "text": "this is the key",
+      "start": 355.6,
+      "duration": 4.719
+    },
+    {
+      "text": "and this is the value and this is",
+      "start": 356.88,
+      "duration": 4.48
+    },
+    {
+      "text": "picking good names",
+      "start": 360.319,
+      "duration": 2.72
+    },
+    {
+      "text": "for each of those that correspond to",
+      "start": 361.36,
+      "duration": 4.16
+    },
+    {
+      "text": "what they actually are",
+      "start": 363.039,
+      "duration": 4.081
+    },
+    {
+      "text": "and then here i'm just putting out a",
+      "start": 365.52,
+      "duration": 4.08
+    },
+    {
+      "text": "sentence which explains",
+      "start": 367.12,
+      "duration": 4.96
+    },
+    {
+      "text": "how i'm feeling in relation to my coffee",
+      "start": 369.6,
+      "duration": 3.439
+    },
+    {
+      "text": "level so",
+      "start": 372.08,
+      "duration": 2.88
+    },
+    {
+      "text": "what i just said before when i got a lot",
+      "start": 373.039,
+      "duration": 3.921
+    },
+    {
+      "text": "of coffee i'm happy",
+      "start": 374.96,
+      "duration": 5.519
+    },
+    {
+      "text": "uh when it's out then i am not feeling",
+      "start": 376.96,
+      "duration": 5.76
+    },
+    {
+      "text": "great",
+      "start": 380.479,
+      "duration": 2.241
+    },
+    {
+      "text": "so that's the basic example and now we",
+      "start": 382.8,
+      "duration": 4.08
+    },
+    {
+      "text": "can",
+      "start": 385.68,
+      "duration": 4.639
+    },
+    {
+      "text": "look at how we can add and delete items",
+      "start": 386.88,
+      "duration": 5.92
+    },
+    {
+      "text": "from dictionaries after it has already",
+      "start": 390.319,
+      "duration": 4.32
+    },
+    {
+      "text": "been created",
+      "start": 392.8,
+      "duration": 4.32
+    },
+    {
+      "text": "so we have this coffee levels emotions",
+      "start": 394.639,
+      "duration": 4.881
+    },
+    {
+      "text": "dictionaries",
+      "start": 397.12,
+      "duration": 4.639
+    },
+    {
+      "text": "um and there's two way that we can add",
+      "start": 399.52,
+      "duration": 4.48
+    },
+    {
+      "text": "items one is we can take an entirely",
+      "start": 401.759,
+      "duration": 3.28
+    },
+    {
+      "text": "separate dictionary",
+      "start": 404.0,
+      "duration": 3.52
+    },
+    {
+      "text": "and bring all of it all of its items",
+      "start": 405.039,
+      "duration": 4.321
+    },
+    {
+      "text": "into this dictionary",
+      "start": 407.52,
+      "duration": 4.079
+    },
+    {
+      "text": "that's through the update method so you",
+      "start": 409.36,
+      "duration": 3.6
+    },
+    {
+      "text": "call dot update",
+      "start": 411.599,
+      "duration": 3.44
+    },
+    {
+      "text": "on the dictionary and you pass it",
+      "start": 412.96,
+      "duration": 3.6
+    },
+    {
+      "text": "another dictionary",
+      "start": 415.039,
+      "duration": 3.121
+    },
+    {
+      "text": "and that's going to take that second",
+      "start": 416.56,
+      "duration": 4.079
+    },
+    {
+      "text": "dictionaries items and bring them into",
+      "start": 418.16,
+      "duration": 4.0
+    },
+    {
+      "text": "the first",
+      "start": 420.639,
+      "duration": 5.361
+    },
+    {
+      "text": "so after the first now if the coffee is",
+      "start": 422.16,
+      "duration": 6.72
+    },
+    {
+      "text": "overflowing then i'm feeling burned",
+      "start": 426.0,
+      "duration": 5.44
+    },
+    {
+      "text": "and now that has come into the",
+      "start": 428.88,
+      "duration": 3.28
+    },
+    {
+      "text": "dictionary",
+      "start": 431.44,
+      "duration": 4.56
+    },
+    {
+      "text": "as well and then we can assign",
+      "start": 432.16,
+      "duration": 7.439
+    },
+    {
+      "text": "a single key value pair at once",
+      "start": 436.0,
+      "duration": 7.039
+    },
+    {
+      "text": "by uh basically doing what we would to",
+      "start": 439.599,
+      "duration": 4.801
+    },
+    {
+      "text": "look up a value",
+      "start": 443.039,
+      "duration": 4.081
+    },
+    {
+      "text": "by the key but then just putting equals",
+      "start": 444.4,
+      "duration": 5.04
+    },
+    {
+      "text": "and assigning the value",
+      "start": 447.12,
+      "duration": 5.199
+    },
+    {
+      "text": "so here i'm assigning the negative key",
+      "start": 449.44,
+      "duration": 5.36
+    },
+    {
+      "text": "to have the value of confused",
+      "start": 452.319,
+      "duration": 4.72
+    },
+    {
+      "text": "and so if there's a negative amount of",
+      "start": 454.8,
+      "duration": 3.36
+    },
+    {
+      "text": "coffee",
+      "start": 457.039,
+      "duration": 4.401
+    },
+    {
+      "text": "in my cup then i am confused because i",
+      "start": 458.16,
+      "duration": 4.68
+    },
+    {
+      "text": "don't know how that's",
+      "start": 461.44,
+      "duration": 5.439
+    },
+    {
+      "text": "possible so then",
+      "start": 462.84,
+      "duration": 4.039
+    },
+    {
+      "text": "we can remove items from the dictionary",
+      "start": 467.44,
+      "duration": 3.199
+    },
+    {
+      "text": "as well",
+      "start": 469.919,
+      "duration": 3.441
+    },
+    {
+      "text": "and we do that through the dot pop",
+      "start": 470.639,
+      "duration": 3.84
+    },
+    {
+      "text": "method",
+      "start": 473.36,
+      "duration": 4.8
+    },
+    {
+      "text": "so the dot pop you give it the key",
+      "start": 474.479,
+      "duration": 6.961
+    },
+    {
+      "text": "and then as a result it will give you",
+      "start": 478.16,
+      "duration": 7.12
+    },
+    {
+      "text": "the value you may or may not",
+      "start": 481.44,
+      "duration": 6.4
+    },
+    {
+      "text": "care what that value is sometimes you",
+      "start": 485.28,
+      "duration": 3.84
+    },
+    {
+      "text": "just call this",
+      "start": 487.84,
+      "duration": 4.16
+    },
+    {
+      "text": "and don't even assign it to anything",
+      "start": 489.12,
+      "duration": 4.56
+    },
+    {
+      "text": "just this would be your line of code",
+      "start": 492.0,
+      "duration": 3.759
+    },
+    {
+      "text": "if you really don't care about the value",
+      "start": 493.68,
+      "duration": 3.519
+    },
+    {
+      "text": "you just want to get this thing out of",
+      "start": 495.759,
+      "duration": 3.361
+    },
+    {
+      "text": "the dictionary",
+      "start": 497.199,
+      "duration": 4.961
+    },
+    {
+      "text": "but you can also save the value coming",
+      "start": 499.12,
+      "duration": 5.72
+    },
+    {
+      "text": "out of pop as well",
+      "start": 502.16,
+      "duration": 5.599
+    },
+    {
+      "text": "um so that's the quick overview on how",
+      "start": 504.84,
+      "duration": 4.199
+    },
+    {
+      "text": "to add and delete items from",
+      "start": 507.759,
+      "duration": 3.12
+    },
+    {
+      "text": "dictionaries",
+      "start": 509.039,
+      "duration": 4.161
+    },
+    {
+      "text": "let's go ahead and look at the jupyter",
+      "start": 510.879,
+      "duration": 4.08
+    },
+    {
+      "text": "notebook example",
+      "start": 513.2,
+      "duration": 3.6
+    },
+    {
+      "text": "so you see this actually happening in",
+      "start": 514.959,
+      "duration": 5.841
+    },
+    {
+      "text": "the code",
+      "start": 516.8,
+      "duration": 6.4
+    },
+    {
+      "text": "so here i'm just defining a dictionary",
+      "start": 520.8,
+      "duration": 4.24
+    },
+    {
+      "text": "again with curly braces",
+      "start": 523.2,
+      "duration": 5.36
+    },
+    {
+      "text": "um and with the key value pairs",
+      "start": 525.04,
+      "duration": 7.04
+    },
+    {
+      "text": "um key then colon then value",
+      "start": 528.56,
+      "duration": 6.399
+    },
+    {
+      "text": "and i like to write these on multiple",
+      "start": 532.08,
+      "duration": 3.92
+    },
+    {
+      "text": "lines",
+      "start": 534.959,
+      "duration": 3.361
+    },
+    {
+      "text": "uh but you can do it on a single line as",
+      "start": 536.0,
+      "duration": 4.24
+    },
+    {
+      "text": "well it's the same thing",
+      "start": 538.32,
+      "duration": 4.48
+    },
+    {
+      "text": "uh once you're inside those curly braces",
+      "start": 540.24,
+      "duration": 3.84
+    },
+    {
+      "text": "then you can have",
+      "start": 542.8,
+      "duration": 4.479
+    },
+    {
+      "text": "as many uh extra lines as you want",
+      "start": 544.08,
+      "duration": 7.759
+    },
+    {
+      "text": "you could do this if you felt like it",
+      "start": 547.279,
+      "duration": 4.56
+    },
+    {
+      "text": "it's only when you're outside of curly",
+      "start": 552.08,
+      "duration": 2.96
+    },
+    {
+      "text": "braces or parentheses or anything like",
+      "start": 553.6,
+      "duration": 2.4
+    },
+    {
+      "text": "that you can't just",
+      "start": 555.04,
+      "duration": 4.32
+    },
+    {
+      "text": "arbitrarily make lines",
+      "start": 556.0,
+      "duration": 3.36
+    },
+    {
+      "text": "and so i mentioned we have three",
+      "start": 561.36,
+      "duration": 3.919
+    },
+    {
+      "text": "different ways to",
+      "start": 564.24,
+      "duration": 3.12
+    },
+    {
+      "text": "loop through the dictionary through the",
+      "start": 565.279,
+      "duration": 3.361
+    },
+    {
+      "text": "keys through the values",
+      "start": 567.36,
+      "duration": 3.84
+    },
+    {
+      "text": "and through both at once and that's",
+      "start": 568.64,
+      "duration": 4.0
+    },
+    {
+      "text": "coming out of",
+      "start": 571.2,
+      "duration": 5.28
+    },
+    {
+      "text": "these keys values and items which gives",
+      "start": 572.64,
+      "duration": 4.24
+    },
+    {
+      "text": "you",
+      "start": 576.48,
+      "duration": 4.08
+    },
+    {
+      "text": "both at once so a and b are our keys",
+      "start": 576.88,
+      "duration": 6.639
+    },
+    {
+      "text": "one and two are our values and having",
+      "start": 580.56,
+      "duration": 5.279
+    },
+    {
+      "text": "those associated together",
+      "start": 583.519,
+      "duration": 5.521
+    },
+    {
+      "text": "is the items",
+      "start": 585.839,
+      "duration": 3.201
+    },
+    {
+      "text": "and so with dictionaries we can look up",
+      "start": 589.6,
+      "duration": 3.28
+    },
+    {
+      "text": "any value by",
+      "start": 591.92,
+      "duration": 3.28
+    },
+    {
+      "text": "its key so a and b are the keys one and",
+      "start": 592.88,
+      "duration": 3.6
+    },
+    {
+      "text": "two are the values",
+      "start": 595.2,
+      "duration": 4.0
+    },
+    {
+      "text": "and so we can look up one and two by a",
+      "start": 596.48,
+      "duration": 3.2
+    },
+    {
+      "text": "and b",
+      "start": 599.2,
+      "duration": 3.639
+    },
+    {
+      "text": "because that's the way we've set up the",
+      "start": 599.68,
+      "duration": 4.88
+    },
+    {
+      "text": "dictionary",
+      "start": 602.839,
+      "duration": 4.44
+    },
+    {
+      "text": "and then we can add a single item at",
+      "start": 604.56,
+      "duration": 3.6
+    },
+    {
+      "text": "once",
+      "start": 607.279,
+      "duration": 4.0
+    },
+    {
+      "text": "by basically doing the same",
+      "start": 608.16,
+      "duration": 6.16
+    },
+    {
+      "text": "way we would look up a key but then",
+      "start": 611.279,
+      "duration": 6.8
+    },
+    {
+      "text": "assigning afterwards and so here",
+      "start": 614.32,
+      "duration": 7.199
+    },
+    {
+      "text": "we've now added c the key c",
+      "start": 618.079,
+      "duration": 8.241
+    },
+    {
+      "text": "map to the value 10 into this dictionary",
+      "start": 621.519,
+      "duration": 4.801
+    },
+    {
+      "text": "and with the update method we can give",
+      "start": 626.64,
+      "duration": 4.4
+    },
+    {
+      "text": "it an entire second dictionary at once",
+      "start": 628.72,
+      "duration": 3.92
+    },
+    {
+      "text": "here we're going to add the d and e",
+      "start": 631.04,
+      "duration": 3.76
+    },
+    {
+      "text": "items into the dictionary",
+      "start": 632.64,
+      "duration": 5.28
+    },
+    {
+      "text": "and now we've got a b c d and e all",
+      "start": 634.8,
+      "duration": 6.56
+    },
+    {
+      "text": "in my dictionary",
+      "start": 637.92,
+      "duration": 3.44
+    },
+    {
+      "text": "and then you can also remove with pop",
+      "start": 642.16,
+      "duration": 5.84
+    },
+    {
+      "text": "and so here we're going to",
+      "start": 645.92,
+      "duration": 5.359
+    },
+    {
+      "text": "remove this a1 item out of the",
+      "start": 648.0,
+      "duration": 4.399
+    },
+    {
+      "text": "dictionary",
+      "start": 651.279,
+      "duration": 4.56
+    },
+    {
+      "text": "and the a value is going to be the one",
+      "start": 652.399,
+      "duration": 5.601
+    },
+    {
+      "text": "so that's what this print statement is",
+      "start": 655.839,
+      "duration": 4.24
+    },
+    {
+      "text": "showing you that",
+      "start": 658.0,
+      "duration": 4.72
+    },
+    {
+      "text": "we got the one out as a result of the",
+      "start": 660.079,
+      "duration": 3.44
+    },
+    {
+      "text": "pop",
+      "start": 662.72,
+      "duration": 4.16
+    },
+    {
+      "text": "and now that a associated one is",
+      "start": 663.519,
+      "duration": 6.88
+    },
+    {
+      "text": "no longer in the dictionary",
+      "start": 666.88,
+      "duration": 7.199
+    },
+    {
+      "text": "so um you don't necessarily",
+      "start": 670.399,
+      "duration": 6.401
+    },
+    {
+      "text": "need to do that assignment um here we're",
+      "start": 674.079,
+      "duration": 3.521
+    },
+    {
+      "text": "just gonna",
+      "start": 676.8,
+      "duration": 3.84
+    },
+    {
+      "text": "take b the b key associated to the two",
+      "start": 677.6,
+      "duration": 3.84
+    },
+    {
+      "text": "value",
+      "start": 680.64,
+      "duration": 2.96
+    },
+    {
+      "text": "out of the dictionary without assigning",
+      "start": 681.44,
+      "duration": 3.28
+    },
+    {
+      "text": "or anything",
+      "start": 683.6,
+      "duration": 6.239
+    },
+    {
+      "text": "and now we're left with just c d and e",
+      "start": 684.72,
+      "duration": 5.119
+    },
+    {
+      "text": "so looking at looping through dictionary",
+      "start": 689.92,
+      "duration": 5.68
+    },
+    {
+      "text": "what you would probably try to do in the",
+      "start": 693.12,
+      "duration": 4.08
+    },
+    {
+      "text": "first case is just to loop",
+      "start": 695.6,
+      "duration": 3.12
+    },
+    {
+      "text": "right through the dictionary without",
+      "start": 697.2,
+      "duration": 3.84
+    },
+    {
+      "text": "calling any method on it",
+      "start": 698.72,
+      "duration": 4.64
+    },
+    {
+      "text": "and what that does by default is it",
+      "start": 701.04,
+      "duration": 4.88
+    },
+    {
+      "text": "actually loops through just the keys",
+      "start": 703.36,
+      "duration": 4.88
+    },
+    {
+      "text": "so if you're trying to get at the values",
+      "start": 705.92,
+      "duration": 3.52
+    },
+    {
+      "text": "you're not going to get them directly",
+      "start": 708.24,
+      "duration": 2.719
+    },
+    {
+      "text": "that way",
+      "start": 709.44,
+      "duration": 4.88
+    },
+    {
+      "text": "um so this is basically implicitly doing",
+      "start": 710.959,
+      "duration": 4.32
+    },
+    {
+      "text": "the same thing",
+      "start": 714.32,
+      "duration": 4.72
+    },
+    {
+      "text": "as calling dot keys on the end of this",
+      "start": 715.279,
+      "duration": 6.081
+    },
+    {
+      "text": "but we saw we had not just dot keys we",
+      "start": 719.04,
+      "duration": 3.12
+    },
+    {
+      "text": "also had dot",
+      "start": 721.36,
+      "duration": 4.8
+    },
+    {
+      "text": "values and dot items and so when you",
+      "start": 722.16,
+      "duration": 7.119
+    },
+    {
+      "text": "go through values then",
+      "start": 726.16,
+      "duration": 6.799
+    },
+    {
+      "text": "it's going to go and print each one of",
+      "start": 729.279,
+      "duration": 5.761
+    },
+    {
+      "text": "the values and just to remind you what's",
+      "start": 732.959,
+      "duration": 3.921
+    },
+    {
+      "text": "in this dictionary",
+      "start": 735.04,
+      "duration": 5.039
+    },
+    {
+      "text": "10 510 those are the three values",
+      "start": 736.88,
+      "duration": 6.16
+    },
+    {
+      "text": "in the dictionary",
+      "start": 740.079,
+      "duration": 2.961
+    },
+    {
+      "text": "and here without items then we can loop",
+      "start": 743.279,
+      "duration": 7.68
+    },
+    {
+      "text": "through both at once there you do need",
+      "start": 747.44,
+      "duration": 4.24
+    },
+    {
+      "text": "to",
+      "start": 750.959,
+      "duration": 3.361
+    },
+    {
+      "text": "put this comma whatever comes before the",
+      "start": 751.68,
+      "duration": 3.36
+    },
+    {
+      "text": "comma",
+      "start": 754.32,
+      "duration": 1.84
+    },
+    {
+      "text": "is going to be the variable that",
+      "start": 755.04,
+      "duration": 3.76
+    },
+    {
+      "text": "represents the key whatever comes after",
+      "start": 756.16,
+      "duration": 4.64
+    },
+    {
+      "text": "is the variable that represents the",
+      "start": 758.8,
+      "duration": 3.12
+    },
+    {
+      "text": "value",
+      "start": 760.8,
+      "duration": 4.24
+    },
+    {
+      "text": "and so we can use both of them at once",
+      "start": 761.92,
+      "duration": 6.0
+    },
+    {
+      "text": "in the loop so here we're saying both",
+      "start": 765.04,
+      "duration": 3.76
+    },
+    {
+      "text": "what the key is",
+      "start": 767.92,
+      "duration": 5.919
+    },
+    {
+      "text": "and what the value is in our sentence",
+      "start": 768.8,
+      "duration": 5.039
+    },
+    {
+      "text": "um and just to give you a little more",
+      "start": 775.04,
+      "duration": 4.08
+    },
+    {
+      "text": "context",
+      "start": 778.48,
+      "duration": 2.56
+    },
+    {
+      "text": "into what's going on in the background",
+      "start": 779.12,
+      "duration": 4.159
+    },
+    {
+      "text": "there",
+      "start": 781.04,
+      "duration": 2.239
+    },
+    {
+      "text": "if you look at what my dicks dot items",
+      "start": 783.68,
+      "duration": 7.52
+    },
+    {
+      "text": "is what we actually have in here",
+      "start": 787.36,
+      "duration": 7.599
+    },
+    {
+      "text": "is a list of tuples basically",
+      "start": 791.2,
+      "duration": 7.6
+    },
+    {
+      "text": "um and so what's actually coming",
+      "start": 794.959,
+      "duration": 6.88
+    },
+    {
+      "text": "if you loop here you're actually",
+      "start": 798.8,
+      "duration": 4.56
+    },
+    {
+      "text": "getting for items you're actually",
+      "start": 801.839,
+      "duration": 3.12
+    },
+    {
+      "text": "getting a tuple",
+      "start": 803.36,
+      "duration": 5.2
+    },
+    {
+      "text": "um as that value",
+      "start": 804.959,
+      "duration": 6.88
+    },
+    {
+      "text": "and a nice thing you can do in python is",
+      "start": 808.56,
+      "duration": 4.24
+    },
+    {
+      "text": "you can",
+      "start": 811.839,
+      "duration": 3.361
+    },
+    {
+      "text": "spread out a tuple if tuple has two",
+      "start": 812.8,
+      "duration": 3.76
+    },
+    {
+      "text": "items you can split it into two",
+      "start": 815.2,
+      "duration": 2.4
+    },
+    {
+      "text": "variables",
+      "start": 816.56,
+      "duration": 3.36
+    },
+    {
+      "text": "and that's exactly what we're doing here",
+      "start": 817.6,
+      "duration": 4.239
+    },
+    {
+      "text": "so we're taking this tuple",
+      "start": 819.92,
+      "duration": 3.44
+    },
+    {
+      "text": "of the key and the value and we're",
+      "start": 821.839,
+      "duration": 4.161
+    },
+    {
+      "text": "splitting it into separate variables",
+      "start": 823.36,
+      "duration": 5.76
+    },
+    {
+      "text": "by using this nice little shortcut um",
+      "start": 826.0,
+      "duration": 4.72
+    },
+    {
+      "text": "so that's just a little background to",
+      "start": 829.12,
+      "duration": 3.519
+    },
+    {
+      "text": "understand where the syntax",
+      "start": 830.72,
+      "duration": 4.479
+    },
+    {
+      "text": "comes from but you don't really need to",
+      "start": 832.639,
+      "duration": 3.601
+    },
+    {
+      "text": "worry about this",
+      "start": 835.199,
+      "duration": 3.44
+    },
+    {
+      "text": "just do this you can just copy this and",
+      "start": 836.24,
+      "duration": 3.68
+    },
+    {
+      "text": "work from this",
+      "start": 838.639,
+      "duration": 3.361
+    },
+    {
+      "text": "uh whenever you want to loop through a",
+      "start": 839.92,
+      "duration": 4.64
+    },
+    {
+      "text": "dictionary",
+      "start": 842.0,
+      "duration": 2.56
+    },
+    {
+      "text": "so that's the uh",
+      "start": 844.88,
+      "duration": 6.48
+    },
+    {
+      "text": "more more advanced than we touched on",
+      "start": 848.32,
+      "duration": 4.56
+    },
+    {
+      "text": "originally usage of",
+      "start": 851.36,
+      "duration": 4.719
+    },
+    {
+      "text": "dictionaries still basic but now kind of",
+      "start": 852.88,
+      "duration": 4.319
+    },
+    {
+      "text": "the full basics",
+      "start": 856.079,
+      "duration": 4.401
+    },
+    {
+      "text": "of dictionaries and we're going to come",
+      "start": 857.199,
+      "duration": 5.44
+    },
+    {
+      "text": "back next time to talk about",
+      "start": 860.48,
+      "duration": 5.2
+    },
+    {
+      "text": "list comprehensions in python so thanks",
+      "start": 862.639,
+      "duration": 3.76
+    },
+    {
+      "text": "for listening",
+      "start": 865.68,
+      "duration": 4.48
+    },
+    {
+      "text": "and see you next time",
+      "start": 866.399,
+      "duration": 5.841
+    },
+    {
+      "text": "you",
+      "start": 870.16,
+      "duration": 2.08
+    }
+  ]
+}

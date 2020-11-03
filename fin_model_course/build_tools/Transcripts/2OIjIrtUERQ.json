@@ -1,0 +1,1739 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.879,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 3.84,
+      "duration": 3.68
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.279,
+      "duration": 2.801
+    },
+    {
+      "text": "be doing",
+      "start": 7.52,
+      "duration": 3.999
+    },
+    {
+      "text": "a math review as we get into our",
+      "start": 8.08,
+      "duration": 6.84
+    },
+    {
+      "text": "lecture segment on probabilistic",
+      "start": 11.519,
+      "duration": 5.361
+    },
+    {
+      "text": "modeling so",
+      "start": 14.92,
+      "duration": 5.16
+    },
+    {
+      "text": "we talked last time about the",
+      "start": 16.88,
+      "duration": 4.8
+    },
+    {
+      "text": "introduction to probabilistic modeling",
+      "start": 20.08,
+      "duration": 3.199
+    },
+    {
+      "text": "what's it all about why do we want to do",
+      "start": 21.68,
+      "duration": 2.48
+    },
+    {
+      "text": "it",
+      "start": 23.279,
+      "duration": 2.801
+    },
+    {
+      "text": "now let's look at some mathematical",
+      "start": 24.16,
+      "duration": 3.359
+    },
+    {
+      "text": "tools that we need",
+      "start": 26.08,
+      "duration": 4.16
+    },
+    {
+      "text": "to be able to carry out this",
+      "start": 27.519,
+      "duration": 4.321
+    },
+    {
+      "text": "probabilistic modeling adding",
+      "start": 30.24,
+      "duration": 5.44
+    },
+    {
+      "text": "probability to our financial models",
+      "start": 31.84,
+      "duration": 7.2
+    },
+    {
+      "text": "so the first concept we'll look at here",
+      "start": 35.68,
+      "duration": 4.8
+    },
+    {
+      "text": "is",
+      "start": 39.04,
+      "duration": 5.28
+    },
+    {
+      "text": "about random variables and whether that",
+      "start": 40.48,
+      "duration": 5.04
+    },
+    {
+      "text": "random variable is",
+      "start": 44.32,
+      "duration": 4.239
+    },
+    {
+      "text": "discrete or continuous",
+      "start": 45.52,
+      "duration": 6.32
+    },
+    {
+      "text": "so discrete variables are",
+      "start": 48.559,
+      "duration": 6.081
+    },
+    {
+      "text": "having a certain set of values it's it's",
+      "start": 51.84,
+      "duration": 5.44
+    },
+    {
+      "text": "one of a certain set of values",
+      "start": 54.64,
+      "duration": 5.28
+    },
+    {
+      "text": "whereas continuous variables are defined",
+      "start": 57.28,
+      "duration": 3.599
+    },
+    {
+      "text": "by a range",
+      "start": 59.92,
+      "duration": 4.16
+    },
+    {
+      "text": "it's between two values",
+      "start": 60.879,
+      "duration": 5.681
+    },
+    {
+      "text": "and it can be any number between those",
+      "start": 64.08,
+      "duration": 4.32
+    },
+    {
+      "text": "two values",
+      "start": 66.56,
+      "duration": 5.44
+    },
+    {
+      "text": "um so you know something like",
+      "start": 68.4,
+      "duration": 6.0
+    },
+    {
+      "text": "an interest rate you can think of as",
+      "start": 72.0,
+      "duration": 3.28
+    },
+    {
+      "text": "continuous",
+      "start": 74.4,
+      "duration": 3.68
+    },
+    {
+      "text": "the rate could be six six percent it",
+      "start": 75.28,
+      "duration": 4.24
+    },
+    {
+      "text": "could be six point one percent it could",
+      "start": 78.08,
+      "duration": 3.2
+    },
+    {
+      "text": "be six point one one percent",
+      "start": 79.52,
+      "duration": 4.239
+    },
+    {
+      "text": "six point one one one one et cetera you",
+      "start": 81.28,
+      "duration": 3.04
+    },
+    {
+      "text": "can keep",
+      "start": 83.759,
+      "duration": 2.561
+    },
+    {
+      "text": "uh finding additional numbers in that",
+      "start": 84.32,
+      "duration": 4.0
+    },
+    {
+      "text": "range it can be any number",
+      "start": 86.32,
+      "duration": 4.72
+    },
+    {
+      "text": "in the range of of possible reasonable",
+      "start": 88.32,
+      "duration": 4.21
+    },
+    {
+      "text": "percentages",
+      "start": 91.04,
+      "duration": 3.2
+    },
+    {
+      "text": "[Music]",
+      "start": 92.53,
+      "duration": 4.99
+    },
+    {
+      "text": "so and then discrete variables",
+      "start": 94.24,
+      "duration": 6.4
+    },
+    {
+      "text": "um taking one of a specific set",
+      "start": 97.52,
+      "duration": 5.45
+    },
+    {
+      "text": "of values um",
+      "start": 100.64,
+      "duration": 3.68
+    },
+    {
+      "text": "[Music]",
+      "start": 102.97,
+      "duration": 5.91
+    },
+    {
+      "text": "so it could be something like um",
+      "start": 104.32,
+      "duration": 6.88
+    },
+    {
+      "text": "an example is maybe a boolean variable",
+      "start": 108.88,
+      "duration": 3.36
+    },
+    {
+      "text": "like uh",
+      "start": 111.2,
+      "duration": 2.32
+    },
+    {
+      "text": "take the project or don't take the",
+      "start": 112.24,
+      "duration": 2.96
+    },
+    {
+      "text": "project that only has two possible",
+      "start": 113.52,
+      "duration": 3.04
+    },
+    {
+      "text": "values",
+      "start": 115.2,
+      "duration": 3.199
+    },
+    {
+      "text": "uh yes i'm taking it or no i'm not",
+      "start": 116.56,
+      "duration": 3.28
+    },
+    {
+      "text": "taking it",
+      "start": 118.399,
+      "duration": 3.68
+    },
+    {
+      "text": "[Music]",
+      "start": 119.84,
+      "duration": 6.4
+    },
+    {
+      "text": "and then you can",
+      "start": 122.079,
+      "duration": 8.4
+    },
+    {
+      "text": "read continuous variables as discrete",
+      "start": 126.24,
+      "duration": 6.56
+    },
+    {
+      "text": "in your model if it's helpful to",
+      "start": 130.479,
+      "duration": 4.161
+    },
+    {
+      "text": "simplify things",
+      "start": 132.8,
+      "duration": 4.48
+    },
+    {
+      "text": "like even though interest rate is",
+      "start": 134.64,
+      "duration": 3.84
+    },
+    {
+      "text": "continuous",
+      "start": 137.28,
+      "duration": 3.84
+    },
+    {
+      "text": "you might say uh it's only going to take",
+      "start": 138.48,
+      "duration": 3.839
+    },
+    {
+      "text": "the values of five six",
+      "start": 141.12,
+      "duration": 3.36
+    },
+    {
+      "text": "or seven percent and then all of a",
+      "start": 142.319,
+      "duration": 4.0
+    },
+    {
+      "text": "sudden it becomes a discrete variable",
+      "start": 144.48,
+      "duration": 4.479
+    },
+    {
+      "text": "in your model even though it's truly a",
+      "start": 146.319,
+      "duration": 4.64
+    },
+    {
+      "text": "continuous variable",
+      "start": 148.959,
+      "duration": 3.92
+    },
+    {
+      "text": "um but you cannot go in the other",
+      "start": 150.959,
+      "duration": 3.92
+    },
+    {
+      "text": "direction you cannot take a discrete",
+      "start": 152.879,
+      "duration": 2.64
+    },
+    {
+      "text": "variable",
+      "start": 154.879,
+      "duration": 3.601
+    },
+    {
+      "text": "and make it into a continuous variable",
+      "start": 155.519,
+      "duration": 5.681
+    },
+    {
+      "text": "in your model",
+      "start": 158.48,
+      "duration": 2.72
+    },
+    {
+      "text": "then thinking about expected value",
+      "start": 163.36,
+      "duration": 4.0
+    },
+    {
+      "text": "expected value",
+      "start": 166.16,
+      "duration": 4.64
+    },
+    {
+      "text": "is the average outcome over repeated",
+      "start": 167.36,
+      "duration": 6.08
+    },
+    {
+      "text": "trials so it's the way that we can think",
+      "start": 170.8,
+      "duration": 3.76
+    },
+    {
+      "text": "of",
+      "start": 173.44,
+      "duration": 5.36
+    },
+    {
+      "text": "the outcome that we expect to happen um",
+      "start": 174.56,
+      "duration": 6.8
+    },
+    {
+      "text": "you know if you want to be able to put",
+      "start": 178.8,
+      "duration": 4.0
+    },
+    {
+      "text": "what's going to happen into a single",
+      "start": 181.36,
+      "duration": 2.0
+    },
+    {
+      "text": "number",
+      "start": 182.8,
+      "duration": 3.84
+    },
+    {
+      "text": "that's the expected value now it's not",
+      "start": 183.36,
+      "duration": 4.64
+    },
+    {
+      "text": "going to be able to capture",
+      "start": 186.64,
+      "duration": 5.519
+    },
+    {
+      "text": "the risk of that result at all",
+      "start": 188.0,
+      "duration": 5.76
+    },
+    {
+      "text": "you know kind of what we've got coming",
+      "start": 192.159,
+      "duration": 3.121
+    },
+    {
+      "text": "out of our",
+      "start": 193.76,
+      "duration": 3.28
+    },
+    {
+      "text": "original determine original",
+      "start": 195.28,
+      "duration": 3.84
+    },
+    {
+      "text": "deterministic models is basically like",
+      "start": 197.04,
+      "duration": 4.0
+    },
+    {
+      "text": "an expected value",
+      "start": 199.12,
+      "duration": 4.88
+    },
+    {
+      "text": "um but it only gives us a very small",
+      "start": 201.04,
+      "duration": 3.919
+    },
+    {
+      "text": "understanding",
+      "start": 204.0,
+      "duration": 4.08
+    },
+    {
+      "text": "of the distribution of possible results",
+      "start": 204.959,
+      "duration": 4.881
+    },
+    {
+      "text": "but it's still very helpful to be able",
+      "start": 208.08,
+      "duration": 3.28
+    },
+    {
+      "text": "to give a single number",
+      "start": 209.84,
+      "duration": 3.759
+    },
+    {
+      "text": "which sums up the outcome that we're",
+      "start": 211.36,
+      "duration": 4.799
+    },
+    {
+      "text": "expecting",
+      "start": 213.599,
+      "duration": 2.56
+    },
+    {
+      "text": "so the calculation of it is a little bit",
+      "start": 216.239,
+      "duration": 3.841
+    },
+    {
+      "text": "different",
+      "start": 219.599,
+      "duration": 2.56
+    },
+    {
+      "text": "depending on whether the variable is",
+      "start": 220.08,
+      "duration": 4.48
+    },
+    {
+      "text": "discrete or continuous",
+      "start": 222.159,
+      "duration": 5.521
+    },
+    {
+      "text": "so with a discrete variable you take",
+      "start": 224.56,
+      "duration": 6.16
+    },
+    {
+      "text": "each possible outcome and you multiply",
+      "start": 227.68,
+      "duration": 4.8
+    },
+    {
+      "text": "it by the probability",
+      "start": 230.72,
+      "duration": 4.879
+    },
+    {
+      "text": "of that outcome and then you sum each of",
+      "start": 232.48,
+      "duration": 4.959
+    },
+    {
+      "text": "those terms up",
+      "start": 235.599,
+      "duration": 4.881
+    },
+    {
+      "text": "whereas with continuous it's just an",
+      "start": 237.439,
+      "duration": 3.841
+    },
+    {
+      "text": "average",
+      "start": 240.48,
+      "duration": 6.319
+    },
+    {
+      "text": "across the outcomes which have occurred",
+      "start": 241.28,
+      "duration": 8.72
+    },
+    {
+      "text": "um so we'll look at applying",
+      "start": 246.799,
+      "duration": 6.64
+    },
+    {
+      "text": "both of these in our models throughout",
+      "start": 250.0,
+      "duration": 5.84
+    },
+    {
+      "text": "the course",
+      "start": 253.439,
+      "duration": 2.401
+    },
+    {
+      "text": "um and then thinking about variance",
+      "start": 257.919,
+      "duration": 6.961
+    },
+    {
+      "text": "so variance is what we're usually",
+      "start": 261.199,
+      "duration": 5.44
+    },
+    {
+      "text": "talking about when we think about the",
+      "start": 264.88,
+      "duration": 2.56
+    },
+    {
+      "text": "risk",
+      "start": 266.639,
+      "duration": 4.161
+    },
+    {
+      "text": "of a result so variance is about how",
+      "start": 267.44,
+      "duration": 3.759
+    },
+    {
+      "text": "much",
+      "start": 270.8,
+      "duration": 3.679
+    },
+    {
+      "text": "the result is moving around how much",
+      "start": 271.199,
+      "duration": 4.161
+    },
+    {
+      "text": "does it change",
+      "start": 274.479,
+      "duration": 4.961
+    },
+    {
+      "text": "from one occurrence to the next etc",
+      "start": 275.36,
+      "duration": 6.48
+    },
+    {
+      "text": "so this picture i think captures the",
+      "start": 279.44,
+      "duration": 4.96
+    },
+    {
+      "text": "concept of variance very well",
+      "start": 281.84,
+      "duration": 4.56
+    },
+    {
+      "text": "and that we have two different random",
+      "start": 284.4,
+      "duration": 3.84
+    },
+    {
+      "text": "variables here",
+      "start": 286.4,
+      "duration": 4.799
+    },
+    {
+      "text": "plotted across the different instances",
+      "start": 288.24,
+      "duration": 3.76
+    },
+    {
+      "text": "occurrences",
+      "start": 291.199,
+      "duration": 3.921
+    },
+    {
+      "text": "of the random variable and",
+      "start": 292.0,
+      "duration": 6.24
+    },
+    {
+      "text": "those two variables have the same exact",
+      "start": 295.12,
+      "duration": 6.24
+    },
+    {
+      "text": "mean or average or expected value",
+      "start": 298.24,
+      "duration": 4.959
+    },
+    {
+      "text": "where they differ is they have different",
+      "start": 301.36,
+      "duration": 3.839
+    },
+    {
+      "text": "variances and you can look at that and",
+      "start": 303.199,
+      "duration": 3.761
+    },
+    {
+      "text": "you can clearly see those two lines look",
+      "start": 305.199,
+      "duration": 3.041
+    },
+    {
+      "text": "different",
+      "start": 306.96,
+      "duration": 3.679
+    },
+    {
+      "text": "but you can also see on average they're",
+      "start": 308.24,
+      "duration": 3.04
+    },
+    {
+      "text": "both",
+      "start": 310.639,
+      "duration": 4.081
+    },
+    {
+      "text": "basically around zero uh the orange line",
+      "start": 311.28,
+      "duration": 4.08
+    },
+    {
+      "text": "is of course",
+      "start": 314.72,
+      "duration": 3.199
+    },
+    {
+      "text": "moving up and down a lot more but it's",
+      "start": 315.36,
+      "duration": 4.64
+    },
+    {
+      "text": "still basically centered around zero",
+      "start": 317.919,
+      "duration": 4.241
+    },
+    {
+      "text": "so where is centered that's the average",
+      "start": 320.0,
+      "duration": 5.199
+    },
+    {
+      "text": "or expected value that's the mean",
+      "start": 322.16,
+      "duration": 4.64
+    },
+    {
+      "text": "and then the variance is how much it",
+      "start": 325.199,
+      "duration": 3.521
+    },
+    {
+      "text": "moves around that mean so the orange",
+      "start": 326.8,
+      "duration": 3.679
+    },
+    {
+      "text": "line is moving a lot around it",
+      "start": 328.72,
+      "duration": 3.919
+    },
+    {
+      "text": "as a high variance the blue line is",
+      "start": 330.479,
+      "duration": 3.921
+    },
+    {
+      "text": "moving a small around around it it has a",
+      "start": 332.639,
+      "duration": 5.521
+    },
+    {
+      "text": "small variance",
+      "start": 334.4,
+      "duration": 7.44
+    },
+    {
+      "text": "and then as far as the calculation",
+      "start": 338.16,
+      "duration": 7.68
+    },
+    {
+      "text": "um so for",
+      "start": 341.84,
+      "duration": 8.079
+    },
+    {
+      "text": "a uh we'll just look at a continuous",
+      "start": 345.84,
+      "duration": 6.0
+    },
+    {
+      "text": "variable here that's typically where",
+      "start": 349.919,
+      "duration": 4.961
+    },
+    {
+      "text": "you're going to need to do that",
+      "start": 351.84,
+      "duration": 6.4
+    },
+    {
+      "text": "um so there's the formula there for",
+      "start": 354.88,
+      "duration": 6.0
+    },
+    {
+      "text": "the variance of a continuous variable",
+      "start": 358.24,
+      "duration": 3.76
+    },
+    {
+      "text": "each",
+      "start": 360.88,
+      "duration": 5.039
+    },
+    {
+      "text": "occurrence minus the average summed up",
+      "start": 362.0,
+      "duration": 5.28
+    },
+    {
+      "text": "and then multiplying that",
+      "start": 365.919,
+      "duration": 3.601
+    },
+    {
+      "text": "by one over n minus one is going to get",
+      "start": 367.28,
+      "duration": 5.12
+    },
+    {
+      "text": "us the variance",
+      "start": 369.52,
+      "duration": 6.799
+    },
+    {
+      "text": "um and then",
+      "start": 372.4,
+      "duration": 6.32
+    },
+    {
+      "text": "we typically talk about variance in",
+      "start": 376.319,
+      "duration": 4.0
+    },
+    {
+      "text": "terms of",
+      "start": 378.72,
+      "duration": 4.96
+    },
+    {
+      "text": "standard deviation rather than",
+      "start": 380.319,
+      "duration": 7.681
+    },
+    {
+      "text": "the variance",
+      "start": 383.68,
+      "duration": 8.56
+    },
+    {
+      "text": "and that's because the variance",
+      "start": 388.0,
+      "duration": 7.44
+    },
+    {
+      "text": "actually has units in",
+      "start": 392.24,
+      "duration": 6.399
+    },
+    {
+      "text": "squared terms of the original variable",
+      "start": 395.44,
+      "duration": 7.039
+    },
+    {
+      "text": "whereas the standard deviation has units",
+      "start": 398.639,
+      "duration": 9.521
+    },
+    {
+      "text": "in the original terms of the variable um",
+      "start": 402.479,
+      "duration": 10.16
+    },
+    {
+      "text": "so the um",
+      "start": 408.16,
+      "duration": 4.479
+    },
+    {
+      "text": "the reason you know being that um",
+      "start": 412.8,
+      "duration": 4.64
+    },
+    {
+      "text": "you think about you've got like an",
+      "start": 415.919,
+      "duration": 3.201
+    },
+    {
+      "text": "investment return",
+      "start": 417.44,
+      "duration": 6.159
+    },
+    {
+      "text": "um say it has an average of six percent",
+      "start": 419.12,
+      "duration": 7.12
+    },
+    {
+      "text": "um it's going to be moving around that",
+      "start": 423.599,
+      "duration": 3.521
+    },
+    {
+      "text": "six percent",
+      "start": 426.24,
+      "duration": 3.44
+    },
+    {
+      "text": "with ease observation based on the",
+      "start": 427.12,
+      "duration": 4.88
+    },
+    {
+      "text": "variance or standard deviation",
+      "start": 429.68,
+      "duration": 3.519
+    },
+    {
+      "text": "and you might say it has a standard",
+      "start": 432.0,
+      "duration": 3.36
+    },
+    {
+      "text": "deviation of two percent",
+      "start": 433.199,
+      "duration": 3.921
+    },
+    {
+      "text": "and so then you would expect most of the",
+      "start": 435.36,
+      "duration": 3.6
+    },
+    {
+      "text": "values to lie between like four and",
+      "start": 437.12,
+      "duration": 3.12
+    },
+    {
+      "text": "eight percent",
+      "start": 438.96,
+      "duration": 4.0
+    },
+    {
+      "text": "um sometimes they're going out to like",
+      "start": 440.24,
+      "duration": 4.16
+    },
+    {
+      "text": "two to ten percent",
+      "start": 442.96,
+      "duration": 4.959
+    },
+    {
+      "text": "and rarely they're going out to zero to",
+      "start": 444.4,
+      "duration": 6.72
+    },
+    {
+      "text": "uh twelve percent",
+      "start": 447.919,
+      "duration": 6.241
+    },
+    {
+      "text": "whereas the uh variance for that would",
+      "start": 451.12,
+      "duration": 3.84
+    },
+    {
+      "text": "then be like",
+      "start": 454.16,
+      "duration": 3.759
+    },
+    {
+      "text": "point zero zero zero four because it's",
+      "start": 454.96,
+      "duration": 5.04
+    },
+    {
+      "text": "squared percentage",
+      "start": 457.919,
+      "duration": 4.961
+    },
+    {
+      "text": "uh which is a weird unit to work with",
+      "start": 460.0,
+      "duration": 3.36
+    },
+    {
+      "text": "and",
+      "start": 462.88,
+      "duration": 2.879
+    },
+    {
+      "text": "is hard to understand in terms of our",
+      "start": 463.36,
+      "duration": 3.839
+    },
+    {
+      "text": "original variable",
+      "start": 465.759,
+      "duration": 2.88
+    },
+    {
+      "text": "so that's why we just take the square",
+      "start": 467.199,
+      "duration": 4.081
+    },
+    {
+      "text": "root of variance and that gets us",
+      "start": 468.639,
+      "duration": 6.0
+    },
+    {
+      "text": "the standard deviation",
+      "start": 471.28,
+      "duration": 3.359
+    },
+    {
+      "text": "and there is actually a squared term",
+      "start": 475.52,
+      "duration": 4.16
+    },
+    {
+      "text": "missing on this formula there should be",
+      "start": 478.0,
+      "duration": 3.599
+    },
+    {
+      "text": "a squared there",
+      "start": 479.68,
+      "duration": 5.84
+    },
+    {
+      "text": "and that's why we get the squared units",
+      "start": 481.599,
+      "duration": 3.921
+    },
+    {
+      "text": "so then moving on to the",
+      "start": 486.879,
+      "duration": 5.921
+    },
+    {
+      "text": "probability distributions is the next",
+      "start": 490.72,
+      "duration": 3.52
+    },
+    {
+      "text": "concept",
+      "start": 492.8,
+      "duration": 4.48
+    },
+    {
+      "text": "so probability distributions tell you",
+      "start": 494.24,
+      "duration": 5.679
+    },
+    {
+      "text": "about the likelihood of different",
+      "start": 497.28,
+      "duration": 3.359
+    },
+    {
+      "text": "outcomes",
+      "start": 499.919,
+      "duration": 3.761
+    },
+    {
+      "text": "of a given random variable",
+      "start": 500.639,
+      "duration": 4.321
+    },
+    {
+      "text": "[Music]",
+      "start": 503.68,
+      "duration": 3.76
+    },
+    {
+      "text": "and the way that it looks is different",
+      "start": 504.96,
+      "duration": 4.56
+    },
+    {
+      "text": "depending on whether it's a discrete",
+      "start": 507.44,
+      "duration": 5.2
+    },
+    {
+      "text": "or a continuous variable so",
+      "start": 509.52,
+      "duration": 4.879
+    },
+    {
+      "text": "for a discrete variable you can",
+      "start": 512.64,
+      "duration": 3.36
+    },
+    {
+      "text": "basically think of",
+      "start": 514.399,
+      "duration": 3.681
+    },
+    {
+      "text": "the probability distribution being a",
+      "start": 516.0,
+      "duration": 3.279
+    },
+    {
+      "text": "table",
+      "start": 518.08,
+      "duration": 3.28
+    },
+    {
+      "text": "where we have each possible outcome in",
+      "start": 519.279,
+      "duration": 4.161
+    },
+    {
+      "text": "the table and then each probability",
+      "start": 521.36,
+      "duration": 5.919
+    },
+    {
+      "text": "associated with each of those outcomes",
+      "start": 523.44,
+      "duration": 5.68
+    },
+    {
+      "text": "and that defines the probability",
+      "start": 527.279,
+      "duration": 3.521
+    },
+    {
+      "text": "distribution because there's only a",
+      "start": 529.12,
+      "duration": 3.6
+    },
+    {
+      "text": "fixed number of possible values you just",
+      "start": 530.8,
+      "duration": 2.32
+    },
+    {
+      "text": "put",
+      "start": 532.72,
+      "duration": 4.08
+    },
+    {
+      "text": "a percentage to each and then you have a",
+      "start": 533.12,
+      "duration": 6.48
+    },
+    {
+      "text": "probability distribution",
+      "start": 536.8,
+      "duration": 5.36
+    },
+    {
+      "text": "for continuous variables it's going to",
+      "start": 539.6,
+      "duration": 4.239
+    },
+    {
+      "text": "be in the form of a curve",
+      "start": 542.16,
+      "duration": 3.6
+    },
+    {
+      "text": "instead and so typically those are",
+      "start": 543.839,
+      "duration": 3.601
+    },
+    {
+      "text": "represented by a graph",
+      "start": 545.76,
+      "duration": 4.4
+    },
+    {
+      "text": "rather than with a table because there's",
+      "start": 547.44,
+      "duration": 4.32
+    },
+    {
+      "text": "actually a",
+      "start": 550.16,
+      "duration": 5.28
+    },
+    {
+      "text": "function which takes the",
+      "start": 551.76,
+      "duration": 7.28
+    },
+    {
+      "text": "which converts the probability into the",
+      "start": 555.44,
+      "duration": 5.36
+    },
+    {
+      "text": "outcome",
+      "start": 559.04,
+      "duration": 4.4
+    },
+    {
+      "text": "and that's what defines the probability",
+      "start": 560.8,
+      "duration": 4.32
+    },
+    {
+      "text": "distribution",
+      "start": 563.44,
+      "duration": 5.36
+    },
+    {
+      "text": "um but you can just know that it's",
+      "start": 565.12,
+      "duration": 5.36
+    },
+    {
+      "text": "continuous it's going to be formed by a",
+      "start": 568.8,
+      "duration": 3.76
+    },
+    {
+      "text": "curve um",
+      "start": 570.48,
+      "duration": 4.96
+    },
+    {
+      "text": "and higher points on that curve means a",
+      "start": 572.56,
+      "duration": 5.2
+    },
+    {
+      "text": "more likely",
+      "start": 575.44,
+      "duration": 4.72
+    },
+    {
+      "text": "outcome",
+      "start": 577.76,
+      "duration": 2.4
+    },
+    {
+      "text": "so then we're talking specifically about",
+      "start": 582.48,
+      "duration": 5.68
+    },
+    {
+      "text": "the normal distribution as a type of",
+      "start": 586.08,
+      "duration": 3.52
+    },
+    {
+      "text": "probability distribution",
+      "start": 588.16,
+      "duration": 4.56
+    },
+    {
+      "text": "for continuous variables and you've",
+      "start": 589.6,
+      "duration": 4.239
+    },
+    {
+      "text": "probably heard about the normal",
+      "start": 592.72,
+      "duration": 2.96
+    },
+    {
+      "text": "distribution before",
+      "start": 593.839,
+      "duration": 5.12
+    },
+    {
+      "text": "because it's very common in nature",
+      "start": 595.68,
+      "duration": 5.599
+    },
+    {
+      "text": "and that's because of the central limit",
+      "start": 598.959,
+      "duration": 3.681
+    },
+    {
+      "text": "theorem which is",
+      "start": 601.279,
+      "duration": 4.081
+    },
+    {
+      "text": "extremely powerful and important which",
+      "start": 602.64,
+      "duration": 3.12
+    },
+    {
+      "text": "says",
+      "start": 605.36,
+      "duration": 5.2
+    },
+    {
+      "text": "that any average of random variables",
+      "start": 605.76,
+      "duration": 6.96
+    },
+    {
+      "text": "is going to be normally distributed",
+      "start": 610.56,
+      "duration": 3.2
+    },
+    {
+      "text": "regardless",
+      "start": 612.72,
+      "duration": 3.6
+    },
+    {
+      "text": "of the distribution of those original",
+      "start": 613.76,
+      "duration": 5.36
+    },
+    {
+      "text": "random variables that you averaged",
+      "start": 616.32,
+      "duration": 4.639
+    },
+    {
+      "text": "and that's that's very very powerful",
+      "start": 619.12,
+      "duration": 3.52
+    },
+    {
+      "text": "because all of a sudden",
+      "start": 620.959,
+      "duration": 3.521
+    },
+    {
+      "text": "no matter what that crazy distribution",
+      "start": 622.64,
+      "duration": 3.92
+    },
+    {
+      "text": "there is in the original variable",
+      "start": 624.48,
+      "duration": 3.76
+    },
+    {
+      "text": "you just average it across a few",
+      "start": 626.56,
+      "duration": 3.2
+    },
+    {
+      "text": "different",
+      "start": 628.24,
+      "duration": 4.08
+    },
+    {
+      "text": "sets and then you've got a normal",
+      "start": 629.76,
+      "duration": 4.56
+    },
+    {
+      "text": "distribution",
+      "start": 632.32,
+      "duration": 5.04
+    },
+    {
+      "text": "which we know how to work with um",
+      "start": 634.32,
+      "duration": 4.56
+    },
+    {
+      "text": "so this has tons and tons of",
+      "start": 637.36,
+      "duration": 3.28
+    },
+    {
+      "text": "applications",
+      "start": 638.88,
+      "duration": 4.16
+    },
+    {
+      "text": "for example thinking about an investment",
+      "start": 640.64,
+      "duration": 4.199
+    },
+    {
+      "text": "return",
+      "start": 643.04,
+      "duration": 4.56
+    },
+    {
+      "text": "um you know what's the true distribution",
+      "start": 644.839,
+      "duration": 4.12
+    },
+    {
+      "text": "of any individual",
+      "start": 647.6,
+      "duration": 4.4
+    },
+    {
+      "text": "investment it's really hard to say",
+      "start": 648.959,
+      "duration": 6.081
+    },
+    {
+      "text": "but for an investment return we can view",
+      "start": 652.0,
+      "duration": 5.2
+    },
+    {
+      "text": "that as the return on a portfolio of",
+      "start": 655.04,
+      "duration": 3.12
+    },
+    {
+      "text": "investments",
+      "start": 657.2,
+      "duration": 2.72
+    },
+    {
+      "text": "where each of those individual",
+      "start": 658.16,
+      "duration": 3.44
+    },
+    {
+      "text": "investments is itself",
+      "start": 659.92,
+      "duration": 4.72
+    },
+    {
+      "text": "a random variable and",
+      "start": 661.6,
+      "duration": 4.799
+    },
+    {
+      "text": "those distributions can be whatever they",
+      "start": 664.64,
+      "duration": 3.84
+    },
+    {
+      "text": "are but by the time we take those all",
+      "start": 666.399,
+      "duration": 4.0
+    },
+    {
+      "text": "and put them into a portfolio return",
+      "start": 668.48,
+      "duration": 3.68
+    },
+    {
+      "text": "it's averaging across the individual",
+      "start": 670.399,
+      "duration": 3.361
+    },
+    {
+      "text": "investments",
+      "start": 672.16,
+      "duration": 3.28
+    },
+    {
+      "text": "now our portfolio return has a normal",
+      "start": 673.76,
+      "duration": 3.199
+    },
+    {
+      "text": "distribution regardless",
+      "start": 675.44,
+      "duration": 4.32
+    },
+    {
+      "text": "of the distributions of the original",
+      "start": 676.959,
+      "duration": 4.641
+    },
+    {
+      "text": "returns",
+      "start": 679.76,
+      "duration": 5.92
+    },
+    {
+      "text": "so kind of the outcome from that is that",
+      "start": 681.6,
+      "duration": 6.4
+    },
+    {
+      "text": "the majority of the time we can use a",
+      "start": 685.68,
+      "duration": 4.159
+    },
+    {
+      "text": "normal distribution and it's going to be",
+      "start": 688.0,
+      "duration": 3.2
+    },
+    {
+      "text": "a good",
+      "start": 689.839,
+      "duration": 3.761
+    },
+    {
+      "text": "choice of distribution or whatever",
+      "start": 691.2,
+      "duration": 3.44
+    },
+    {
+      "text": "random variable",
+      "start": 693.6,
+      "duration": 3.359
+    },
+    {
+      "text": "that we're looking at because most",
+      "start": 694.64,
+      "duration": 3.92
+    },
+    {
+      "text": "variables can be thought of",
+      "start": 696.959,
+      "duration": 4.721
+    },
+    {
+      "text": "an aggregation of uh",
+      "start": 698.56,
+      "duration": 6.88
+    },
+    {
+      "text": "more individual random variables",
+      "start": 701.68,
+      "duration": 5.68
+    },
+    {
+      "text": "so if you're not sure what distribution",
+      "start": 705.44,
+      "duration": 3.6
+    },
+    {
+      "text": "to pick just pick the normal",
+      "start": 707.36,
+      "duration": 2.88
+    },
+    {
+      "text": "distribution",
+      "start": 709.04,
+      "duration": 3.2
+    },
+    {
+      "text": "and most the time that's going to be a",
+      "start": 710.24,
+      "duration": 6.64
+    },
+    {
+      "text": "reasonable assumption",
+      "start": 712.24,
+      "duration": 8.32
+    },
+    {
+      "text": "um so then this this uh slide",
+      "start": 716.88,
+      "duration": 7.12
+    },
+    {
+      "text": "is just um hitting home",
+      "start": 720.56,
+      "duration": 5.12
+    },
+    {
+      "text": "this concept of discrete versus",
+      "start": 724.0,
+      "duration": 3.519
+    },
+    {
+      "text": "continuous and how you can",
+      "start": 725.68,
+      "duration": 4.24
+    },
+    {
+      "text": "treat a continuous variable as discrete",
+      "start": 727.519,
+      "duration": 3.921
+    },
+    {
+      "text": "within your model",
+      "start": 729.92,
+      "duration": 4.96
+    },
+    {
+      "text": "or you can treat it as continuous",
+      "start": 731.44,
+      "duration": 5.12
+    },
+    {
+      "text": "and this is basically saying that we",
+      "start": 734.88,
+      "duration": 3.36
+    },
+    {
+      "text": "would take our existing",
+      "start": 736.56,
+      "duration": 3.44
+    },
+    {
+      "text": "retirement model instead of just having",
+      "start": 738.24,
+      "duration": 3.039
+    },
+    {
+      "text": "interest rate",
+      "start": 740.0,
+      "duration": 5.76
+    },
+    {
+      "text": "as an input one particular value",
+      "start": 741.279,
+      "duration": 6.56
+    },
+    {
+      "text": "we can make it a random variable in the",
+      "start": 745.76,
+      "duration": 3.92
+    },
+    {
+      "text": "model so we can either",
+      "start": 747.839,
+      "duration": 5.841
+    },
+    {
+      "text": "treat it as continuous and draw that",
+      "start": 749.68,
+      "duration": 6.24
+    },
+    {
+      "text": "return from a normal distribution with a",
+      "start": 753.68,
+      "duration": 3.279
+    },
+    {
+      "text": "certain average",
+      "start": 755.92,
+      "duration": 3.919
+    },
+    {
+      "text": "and a certain uh variance or standard",
+      "start": 756.959,
+      "duration": 4.401
+    },
+    {
+      "text": "deviation",
+      "start": 759.839,
+      "duration": 2.881
+    },
+    {
+      "text": "so we could say it's it's going to be",
+      "start": 761.36,
+      "duration": 3.2
+    },
+    {
+      "text": "five percent with a two percent",
+      "start": 762.72,
+      "duration": 3.52
+    },
+    {
+      "text": "five percent mean two percent standard",
+      "start": 764.56,
+      "duration": 4.24
+    },
+    {
+      "text": "deviation normal distribution",
+      "start": 766.24,
+      "duration": 5.039
+    },
+    {
+      "text": "um or we can treat it as a discrete",
+      "start": 768.8,
+      "duration": 3.76
+    },
+    {
+      "text": "variable",
+      "start": 771.279,
+      "duration": 3.68
+    },
+    {
+      "text": "here we've got three different possible",
+      "start": 772.56,
+      "duration": 3.76
+    },
+    {
+      "text": "values for the interest rate",
+      "start": 774.959,
+      "duration": 3.281
+    },
+    {
+      "text": "and three different probabilities for",
+      "start": 776.32,
+      "duration": 4.72
+    },
+    {
+      "text": "each so this is also",
+      "start": 778.24,
+      "duration": 4.8
+    },
+    {
+      "text": "showing you how the difference in the",
+      "start": 781.04,
+      "duration": 3.84
+    },
+    {
+      "text": "probability distributions are when you",
+      "start": 783.04,
+      "duration": 4.4
+    },
+    {
+      "text": "treat it as continuous versus discrete",
+      "start": 784.88,
+      "duration": 4.48
+    },
+    {
+      "text": "discrete we've got a table with the",
+      "start": 787.44,
+      "duration": 3.6
+    },
+    {
+      "text": "probabilities associated with the",
+      "start": 789.36,
+      "duration": 4.8
+    },
+    {
+      "text": "outcomes and continuous it's defined by",
+      "start": 791.04,
+      "duration": 6.08
+    },
+    {
+      "text": "a distribution",
+      "start": 794.16,
+      "duration": 2.96
+    },
+    {
+      "text": "so that concludes the math review for",
+      "start": 797.68,
+      "duration": 3.279
+    },
+    {
+      "text": "probabilistic",
+      "start": 800.079,
+      "duration": 3.121
+    },
+    {
+      "text": "modeling we'll come back next time to",
+      "start": 800.959,
+      "duration": 5.041
+    },
+    {
+      "text": "talk about scenario analysis",
+      "start": 803.2,
+      "duration": 6.28
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 806.0,
+      "duration": 6.48
+    },
+    {
+      "text": "time",
+      "start": 809.48,
+      "duration": 3.0
+    }
+  ]
+}

@@ -1,0 +1,1079 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.439,
+      "duration": 2.241
+    },
+    {
+      "text": "nick duraburtis here teaching you",
+      "start": 4.24,
+      "duration": 3.84
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.68,
+      "duration": 2.72
+    },
+    {
+      "text": "be",
+      "start": 8.08,
+      "duration": 2.32
+    },
+    {
+      "text": "talking about an introduction to",
+      "start": 8.4,
+      "duration": 4.159
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 10.4,
+      "duration": 4.48
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 12.559,
+      "duration": 5.521
+    },
+    {
+      "text": "exploring the parameter space",
+      "start": 14.88,
+      "duration": 6.559
+    },
+    {
+      "text": "so we introduced last time",
+      "start": 18.08,
+      "duration": 5.76
+    },
+    {
+      "text": "what exploring the parameter space means",
+      "start": 21.439,
+      "duration": 3.76
+    },
+    {
+      "text": "basically",
+      "start": 23.84,
+      "duration": 2.8
+    },
+    {
+      "text": "trying a bunch of different inputs in",
+      "start": 25.199,
+      "duration": 3.84
+    },
+    {
+      "text": "our model and looking at",
+      "start": 26.64,
+      "duration": 4.399
+    },
+    {
+      "text": "how that affects all the outputs and",
+      "start": 29.039,
+      "duration": 3.761
+    },
+    {
+      "text": "trying to",
+      "start": 31.039,
+      "duration": 4.241
+    },
+    {
+      "text": "gain a deeper understanding of the",
+      "start": 32.8,
+      "duration": 4.0
+    },
+    {
+      "text": "problem that we're modeling",
+      "start": 35.28,
+      "duration": 4.64
+    },
+    {
+      "text": "through that process so",
+      "start": 36.8,
+      "duration": 6.0
+    },
+    {
+      "text": "sensitivity analysis is one of the three",
+      "start": 39.92,
+      "duration": 4.479
+    },
+    {
+      "text": "approaches we're looking at",
+      "start": 42.8,
+      "duration": 3.599
+    },
+    {
+      "text": "in this course along with scenario",
+      "start": 44.399,
+      "duration": 5.441
+    },
+    {
+      "text": "analysis and monte carlo simulation",
+      "start": 46.399,
+      "duration": 6.401
+    },
+    {
+      "text": "and we're going to dig into formally",
+      "start": 49.84,
+      "duration": 4.64
+    },
+    {
+      "text": "what sensitivity analysis",
+      "start": 52.8,
+      "duration": 4.8
+    },
+    {
+      "text": "is so",
+      "start": 54.48,
+      "duration": 5.36
+    },
+    {
+      "text": "as with all the methods the general",
+      "start": 57.6,
+      "duration": 3.68
+    },
+    {
+      "text": "process is",
+      "start": 59.84,
+      "duration": 2.879
+    },
+    {
+      "text": "we're running the model a bunch of",
+      "start": 61.28,
+      "duration": 4.08
+    },
+    {
+      "text": "different times with different inputs",
+      "start": 62.719,
+      "duration": 4.881
+    },
+    {
+      "text": "uh and we're gonna get the outputs from",
+      "start": 65.36,
+      "duration": 3.68
+    },
+    {
+      "text": "each of those runs",
+      "start": 67.6,
+      "duration": 3.44
+    },
+    {
+      "text": "keep them all linked together and then",
+      "start": 69.04,
+      "duration": 3.119
+    },
+    {
+      "text": "visualize all that",
+      "start": 71.04,
+      "duration": 4.24
+    },
+    {
+      "text": "at the end that's true for all the three",
+      "start": 72.159,
+      "duration": 4.481
+    },
+    {
+      "text": "approaches",
+      "start": 75.28,
+      "duration": 4.8
+    },
+    {
+      "text": "but there are uh differences with each",
+      "start": 76.64,
+      "duration": 4.56
+    },
+    {
+      "text": "of the approaches and how they're",
+      "start": 80.08,
+      "duration": 3.52
+    },
+    {
+      "text": "carried out",
+      "start": 81.2,
+      "duration": 5.68
+    },
+    {
+      "text": "so for sensitivity analysis",
+      "start": 83.6,
+      "duration": 6.32
+    },
+    {
+      "text": "here would be the formal definition",
+      "start": 86.88,
+      "duration": 6.32
+    },
+    {
+      "text": "and just reading this it may look scary",
+      "start": 89.92,
+      "duration": 6.48
+    },
+    {
+      "text": "but really it's just a process that you",
+      "start": 93.2,
+      "duration": 4.4
+    },
+    {
+      "text": "have to follow",
+      "start": 96.4,
+      "duration": 4.0
+    },
+    {
+      "text": "and it's fairly straightforward once we",
+      "start": 97.6,
+      "duration": 4.879
+    },
+    {
+      "text": "actually get into how to apply it",
+      "start": 100.4,
+      "duration": 3.679
+    },
+    {
+      "text": "it just looks a little bit more",
+      "start": 102.479,
+      "duration": 3.28
+    },
+    {
+      "text": "complicated in like",
+      "start": 104.079,
+      "duration": 4.801
+    },
+    {
+      "text": "math and algorithmic terms",
+      "start": 105.759,
+      "duration": 4.801
+    },
+    {
+      "text": "so what we're doing in sensitivity",
+      "start": 108.88,
+      "duration": 3.12
+    },
+    {
+      "text": "analysis",
+      "start": 110.56,
+      "duration": 5.36
+    },
+    {
+      "text": "is for each one of the inputs",
+      "start": 112.0,
+      "duration": 6.079
+    },
+    {
+      "text": "we're going to choose a set of possible",
+      "start": 115.92,
+      "duration": 4.08
+    },
+    {
+      "text": "values for that input",
+      "start": 118.079,
+      "duration": 5.121
+    },
+    {
+      "text": "so say it's interest rate you might say",
+      "start": 120.0,
+      "duration": 4.719
+    },
+    {
+      "text": "it could be anywhere from three to ten",
+      "start": 123.2,
+      "duration": 3.279
+    },
+    {
+      "text": "percent three four five six seven eight",
+      "start": 124.719,
+      "duration": 2.881
+    },
+    {
+      "text": "nine ten percent",
+      "start": 126.479,
+      "duration": 4.241
+    },
+    {
+      "text": "those would be your values and you would",
+      "start": 127.6,
+      "duration": 4.32
+    },
+    {
+      "text": "want to do that for",
+      "start": 130.72,
+      "duration": 4.64
+    },
+    {
+      "text": "multiple different inputs uh whatever",
+      "start": 131.92,
+      "duration": 4.88
+    },
+    {
+      "text": "uh makes sense to analyze in your",
+      "start": 135.36,
+      "duration": 3.44
+    },
+    {
+      "text": "problem",
+      "start": 136.8,
+      "duration": 5.439
+    },
+    {
+      "text": "step two is then to",
+      "start": 138.8,
+      "duration": 6.24
+    },
+    {
+      "text": "look at all the different ways that you",
+      "start": 142.239,
+      "duration": 6.08
+    },
+    {
+      "text": "can combine each of these input values",
+      "start": 145.04,
+      "duration": 5.44
+    },
+    {
+      "text": "so formally that's called a cartesian",
+      "start": 148.319,
+      "duration": 3.041
+    },
+    {
+      "text": "product",
+      "start": 150.48,
+      "duration": 3.839
+    },
+    {
+      "text": "and that just means so say let's let's",
+      "start": 151.36,
+      "duration": 4.56
+    },
+    {
+      "text": "make a little bit smaller and say you're",
+      "start": 154.319,
+      "duration": 2.401
+    },
+    {
+      "text": "looking at",
+      "start": 155.92,
+      "duration": 3.76
+    },
+    {
+      "text": "five six seven percent interest rate and",
+      "start": 156.72,
+      "duration": 3.92
+    },
+    {
+      "text": "then",
+      "start": 159.68,
+      "duration": 4.08
+    },
+    {
+      "text": "uh we're going to look at uh",
+      "start": 160.64,
+      "duration": 6.319
+    },
+    {
+      "text": "demand of a thousand units",
+      "start": 163.76,
+      "duration": 5.6
+    },
+    {
+      "text": "five thousand units ten thousand units",
+      "start": 166.959,
+      "duration": 3.92
+    },
+    {
+      "text": "so it would be the",
+      "start": 169.36,
+      "duration": 5.04
+    },
+    {
+      "text": "five percent rate with the thousand",
+      "start": 170.879,
+      "duration": 5.681
+    },
+    {
+      "text": "uh demand and then the five percent rate",
+      "start": 174.4,
+      "duration": 3.68
+    },
+    {
+      "text": "with the five thousand demand and then",
+      "start": 176.56,
+      "duration": 2.88
+    },
+    {
+      "text": "the five percent rate went to ten",
+      "start": 178.08,
+      "duration": 2.64
+    },
+    {
+      "text": "thousand demand",
+      "start": 179.44,
+      "duration": 2.799
+    },
+    {
+      "text": "and then the six percent rate which",
+      "start": 180.72,
+      "duration": 3.599
+    },
+    {
+      "text": "either with each of the three demands",
+      "start": 182.239,
+      "duration": 2.401
+    },
+    {
+      "text": "and",
+      "start": 184.319,
+      "duration": 2.161
+    },
+    {
+      "text": "the seven percent rate which the with",
+      "start": 184.64,
+      "duration": 3.2
+    },
+    {
+      "text": "each of the three demands",
+      "start": 186.48,
+      "duration": 4.479
+    },
+    {
+      "text": "so nine uh sets of inputs all together",
+      "start": 187.84,
+      "duration": 7.2
+    },
+    {
+      "text": "for three of the interest rate and three",
+      "start": 190.959,
+      "duration": 7.681
+    },
+    {
+      "text": "of the demand so however many values of",
+      "start": 195.04,
+      "duration": 4.4
+    },
+    {
+      "text": "each of the inputs",
+      "start": 198.64,
+      "duration": 3.44
+    },
+    {
+      "text": "if you just multiply the number together",
+      "start": 199.44,
+      "duration": 4.64
+    },
+    {
+      "text": "that should be how many",
+      "start": 202.08,
+      "duration": 3.6
+    },
+    {
+      "text": "runs of the model you have in the end",
+      "start": 204.08,
+      "duration": 3.04
+    },
+    {
+      "text": "sets of inputs and",
+      "start": 205.68,
+      "duration": 4.559
+    },
+    {
+      "text": "outputs so",
+      "start": 207.12,
+      "duration": 4.8
+    },
+    {
+      "text": "you've got all those values combined",
+      "start": 210.239,
+      "duration": 3.28
+    },
+    {
+      "text": "together",
+      "start": 211.92,
+      "duration": 4.08
+    },
+    {
+      "text": "so then step three is to run the model",
+      "start": 213.519,
+      "duration": 4.8
+    },
+    {
+      "text": "and it's saying just run the model",
+      "start": 216.0,
+      "duration": 4.0
+    },
+    {
+      "text": "for each one of these different sets of",
+      "start": 218.319,
+      "duration": 3.28
+    },
+    {
+      "text": "inputs",
+      "start": 220.0,
+      "duration": 4.84
+    },
+    {
+      "text": "then step four is as you're running the",
+      "start": 221.599,
+      "duration": 4.64
+    },
+    {
+      "text": "model",
+      "start": 224.84,
+      "duration": 4.28
+    },
+    {
+      "text": "store the output from the model along",
+      "start": 226.239,
+      "duration": 3.441
+    },
+    {
+      "text": "with",
+      "start": 229.12,
+      "duration": 2.72
+    },
+    {
+      "text": "the inputs since we're running it so",
+      "start": 229.68,
+      "duration": 3.279
+    },
+    {
+      "text": "many different times with different",
+      "start": 231.84,
+      "duration": 1.679
+    },
+    {
+      "text": "inputs",
+      "start": 232.959,
+      "duration": 1.681
+    },
+    {
+      "text": "you got to keep everything linked",
+      "start": 233.519,
+      "duration": 4.64
+    },
+    {
+      "text": "together and then number five here",
+      "start": 234.64,
+      "duration": 7.679
+    },
+    {
+      "text": "is then to visualize the results",
+      "start": 238.159,
+      "duration": 7.521
+    },
+    {
+      "text": "so we have a bunch of numbers coming out",
+      "start": 242.319,
+      "duration": 6.081
+    },
+    {
+      "text": "we have to make that more easily",
+      "start": 245.68,
+      "duration": 4.24
+    },
+    {
+      "text": "understandable",
+      "start": 248.4,
+      "duration": 6.24
+    },
+    {
+      "text": "and so we do that through visualization",
+      "start": 249.92,
+      "duration": 8.48
+    },
+    {
+      "text": "so hopefully just talking through it",
+      "start": 254.64,
+      "duration": 5.76
+    },
+    {
+      "text": "made that a little bit more concrete but",
+      "start": 258.4,
+      "duration": 4.32
+    },
+    {
+      "text": "let's look at an actual example problem",
+      "start": 260.4,
+      "duration": 4.4
+    },
+    {
+      "text": "and how we would apply it",
+      "start": 262.72,
+      "duration": 4.32
+    },
+    {
+      "text": "to go even further in that concrete",
+      "start": 264.8,
+      "duration": 3.6
+    },
+    {
+      "text": "direction",
+      "start": 267.04,
+      "duration": 4.0
+    },
+    {
+      "text": "so let's keep talking about demand here",
+      "start": 268.4,
+      "duration": 4.4
+    },
+    {
+      "text": "we have a simple demand model so the",
+      "start": 271.04,
+      "duration": 2.879
+    },
+    {
+      "text": "entire",
+      "start": 272.8,
+      "duration": 3.6
+    },
+    {
+      "text": "model is a single equation here just",
+      "start": 273.919,
+      "duration": 3.121
+    },
+    {
+      "text": "demand",
+      "start": 276.4,
+      "duration": 4.72
+    },
+    {
+      "text": "equals the constant minus the elasticity",
+      "start": 277.04,
+      "duration": 6.8
+    },
+    {
+      "text": "of demand times the price and that's",
+      "start": 281.12,
+      "duration": 6.16
+    },
+    {
+      "text": "kind of a standard demand equation",
+      "start": 283.84,
+      "duration": 6.88
+    },
+    {
+      "text": "so here we had on this slide x's are",
+      "start": 287.28,
+      "duration": 5.919
+    },
+    {
+      "text": "our inputs right and so here x is going",
+      "start": 290.72,
+      "duration": 3.12
+    },
+    {
+      "text": "to be",
+      "start": 293.199,
+      "duration": 2.56
+    },
+    {
+      "text": "the demand constant the elasticity of",
+      "start": 293.84,
+      "duration": 3.919
+    },
+    {
+      "text": "demand and the price those are our three",
+      "start": 295.759,
+      "duration": 2.561
+    },
+    {
+      "text": "inputs",
+      "start": 297.759,
+      "duration": 3.681
+    },
+    {
+      "text": "into the demand model and the output of",
+      "start": 298.32,
+      "duration": 4.319
+    },
+    {
+      "text": "course is the demand",
+      "start": 301.44,
+      "duration": 4.24
+    },
+    {
+      "text": "itself so",
+      "start": 302.639,
+      "duration": 5.441
+    },
+    {
+      "text": "let's go through those five steps now or",
+      "start": 305.68,
+      "duration": 3.519
+    },
+    {
+      "text": "at least the first four",
+      "start": 308.08,
+      "duration": 5.44
+    },
+    {
+      "text": "so the first step uh is",
+      "start": 309.199,
+      "duration": 7.121
+    },
+    {
+      "text": "to choose values of each of these inputs",
+      "start": 313.52,
+      "duration": 4.64
+    },
+    {
+      "text": "that we want to look at whatever is the",
+      "start": 316.32,
+      "duration": 3.76
+    },
+    {
+      "text": "range of reasonable values",
+      "start": 318.16,
+      "duration": 4.96
+    },
+    {
+      "text": "for the inputs you typically want to go",
+      "start": 320.08,
+      "duration": 4.0
+    },
+    {
+      "text": "for whatever the full",
+      "start": 323.12,
+      "duration": 3.919
+    },
+    {
+      "text": "range of reasonable values are take kind",
+      "start": 324.08,
+      "duration": 4.32
+    },
+    {
+      "text": "of the lowest",
+      "start": 327.039,
+      "duration": 4.961
+    },
+    {
+      "text": "and the highest values that you think",
+      "start": 328.4,
+      "duration": 5.359
+    },
+    {
+      "text": "would be reasonable to see in the real",
+      "start": 332.0,
+      "duration": 4.08
+    },
+    {
+      "text": "world and then you can see the whole",
+      "start": 333.759,
+      "duration": 4.481
+    },
+    {
+      "text": "range between them",
+      "start": 336.08,
+      "duration": 5.119
+    },
+    {
+      "text": "so here uh just taking two demand",
+      "start": 338.24,
+      "duration": 3.92
+    },
+    {
+      "text": "constants to",
+      "start": 341.199,
+      "duration": 4.241
+    },
+    {
+      "text": "elasticities and two prices",
+      "start": 342.16,
+      "duration": 6.879
+    },
+    {
+      "text": "and those are our values we're going to",
+      "start": 345.44,
+      "duration": 6.24
+    },
+    {
+      "text": "use in the sensitivity analysis",
+      "start": 349.039,
+      "duration": 5.841
+    },
+    {
+      "text": "then step number two in that cartesian",
+      "start": 351.68,
+      "duration": 4.0
+    },
+    {
+      "text": "product",
+      "start": 354.88,
+      "duration": 2.879
+    },
+    {
+      "text": "or in simpler terms just combining all",
+      "start": 355.68,
+      "duration": 4.88
+    },
+    {
+      "text": "the inputs in every way that you can",
+      "start": 357.759,
+      "duration": 5.28
+    },
+    {
+      "text": "and so we get that table there at the",
+      "start": 360.56,
+      "duration": 3.359
+    },
+    {
+      "text": "bottom",
+      "start": 363.039,
+      "duration": 4.641
+    },
+    {
+      "text": "so it has for the 60 000",
+      "start": 363.919,
+      "duration": 6.0
+    },
+    {
+      "text": "uh demand constant we're going to see",
+      "start": 367.68,
+      "duration": 4.48
+    },
+    {
+      "text": "every other possible combination of",
+      "start": 369.919,
+      "duration": 4.881
+    },
+    {
+      "text": "input values it's with both the 200 and",
+      "start": 372.16,
+      "duration": 3.599
+    },
+    {
+      "text": "the 500",
+      "start": 374.8,
+      "duration": 3.679
+    },
+    {
+      "text": "it's with both the 50 and 100 and so we",
+      "start": 375.759,
+      "duration": 4.641
+    },
+    {
+      "text": "have all those combinations",
+      "start": 378.479,
+      "duration": 3.201
+    },
+    {
+      "text": "same thing for the hundred thousand",
+      "start": 380.4,
+      "duration": 4.48
+    },
+    {
+      "text": "domain constant and you can see that",
+      "start": 381.68,
+      "duration": 5.12
+    },
+    {
+      "text": "we've got it right because we've got two",
+      "start": 384.88,
+      "duration": 3.28
+    },
+    {
+      "text": "of each input",
+      "start": 386.8,
+      "duration": 3.44
+    },
+    {
+      "text": "two of each input and so it's two times",
+      "start": 388.16,
+      "duration": 3.44
+    },
+    {
+      "text": "two times two",
+      "start": 390.24,
+      "duration": 4.32
+    },
+    {
+      "text": "is eight total input cases and that's",
+      "start": 391.6,
+      "duration": 6.159
+    },
+    {
+      "text": "indeed what we have here",
+      "start": 394.56,
+      "duration": 3.199
+    },
+    {
+      "text": "so then going to step three is to run",
+      "start": 398.319,
+      "duration": 3.681
+    },
+    {
+      "text": "the model",
+      "start": 401.36,
+      "duration": 3.279
+    },
+    {
+      "text": "and step four is to keep those things",
+      "start": 402.0,
+      "duration": 4.639
+    },
+    {
+      "text": "linked together so we can kind of do all",
+      "start": 404.639,
+      "duration": 2.321
+    },
+    {
+      "text": "that",
+      "start": 406.639,
+      "duration": 4.4
+    },
+    {
+      "text": "here in this table and now we have",
+      "start": 406.96,
+      "duration": 6.799
+    },
+    {
+      "text": "calculated this equation for each one of",
+      "start": 411.039,
+      "duration": 3.28
+    },
+    {
+      "text": "these",
+      "start": 413.759,
+      "duration": 4.16
+    },
+    {
+      "text": "sets of inputs and by using this table",
+      "start": 414.319,
+      "duration": 4.481
+    },
+    {
+      "text": "we've kept them",
+      "start": 417.919,
+      "duration": 4.161
+    },
+    {
+      "text": "mapped together which inputs go to which",
+      "start": 418.8,
+      "duration": 6.88
+    },
+    {
+      "text": "output so",
+      "start": 422.08,
+      "duration": 6.08
+    },
+    {
+      "text": "that was our whole sensitivity analysis",
+      "start": 425.68,
+      "duration": 3.6
+    },
+    {
+      "text": "process right there",
+      "start": 428.16,
+      "duration": 3.68
+    },
+    {
+      "text": "really not complicated the only",
+      "start": 429.28,
+      "duration": 3.759
+    },
+    {
+      "text": "remaining step",
+      "start": 431.84,
+      "duration": 4.16
+    },
+    {
+      "text": "is then to visualize that it's kind of",
+      "start": 433.039,
+      "duration": 3.841
+    },
+    {
+      "text": "hard to just",
+      "start": 436.0,
+      "duration": 3.36
+    },
+    {
+      "text": "look at this and be able to extrapolate",
+      "start": 436.88,
+      "duration": 3.36
+    },
+    {
+      "text": "meaning out of it",
+      "start": 439.36,
+      "duration": 2.399
+    },
+    {
+      "text": "immediately because it's a bunch of",
+      "start": 440.24,
+      "duration": 4.239
+    },
+    {
+      "text": "numbers so we're going to look at ways",
+      "start": 441.759,
+      "duration": 3.761
+    },
+    {
+      "text": "we can",
+      "start": 444.479,
+      "duration": 3.361
+    },
+    {
+      "text": "make this easily understandable to where",
+      "start": 445.52,
+      "duration": 4.0
+    },
+    {
+      "text": "you can just glance at it",
+      "start": 447.84,
+      "duration": 5.28
+    },
+    {
+      "text": "and immediately see uh",
+      "start": 449.52,
+      "duration": 5.92
+    },
+    {
+      "text": "meaning out of the out of those large",
+      "start": 453.12,
+      "duration": 4.799
+    },
+    {
+      "text": "amounts of numbers",
+      "start": 455.44,
+      "duration": 6.4
+    },
+    {
+      "text": "so we'll come back and actually",
+      "start": 457.919,
+      "duration": 4.961
+    },
+    {
+      "text": "visualize that",
+      "start": 461.84,
+      "duration": 3.44
+    },
+    {
+      "text": "when we look at the applied examples in",
+      "start": 462.88,
+      "duration": 4.719
+    },
+    {
+      "text": "excel and python",
+      "start": 465.28,
+      "duration": 4.08
+    },
+    {
+      "text": "and that's going to be the focus of the",
+      "start": 467.599,
+      "duration": 3.6
+    },
+    {
+      "text": "next lecture video is to actually",
+      "start": 469.36,
+      "duration": 5.279
+    },
+    {
+      "text": "implement sensitivity analysis in excel",
+      "start": 471.199,
+      "duration": 5.641
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 474.639,
+      "duration": 5.201
+    },
+    {
+      "text": "time",
+      "start": 476.84,
+      "duration": 3.0
+    }
+  ]
+}

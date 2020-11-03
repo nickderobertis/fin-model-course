@@ -1,0 +1,294 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.679,
+      "duration": 2.321
+    },
+    {
+      "text": "nick derbertus here teaching you",
+      "start": 4.56,
+      "duration": 3.52
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 6.0,
+      "duration": 3.679
+    },
+    {
+      "text": "we're going to talk about the lab",
+      "start": 8.08,
+      "duration": 3.28
+    },
+    {
+      "text": "exercise for the",
+      "start": 9.679,
+      "duration": 4.321
+    },
+    {
+      "text": "section of the course on the depth of a",
+      "start": 11.36,
+      "duration": 3.6
+    },
+    {
+      "text": "financial model",
+      "start": 14.0,
+      "duration": 3.279
+    },
+    {
+      "text": "in python where we focused on building",
+      "start": 14.96,
+      "duration": 4.239
+    },
+    {
+      "text": "out the dynamic salary model",
+      "start": 17.279,
+      "duration": 6.08
+    },
+    {
+      "text": "in python so the lab exercise here",
+      "start": 19.199,
+      "duration": 7.121
+    },
+    {
+      "text": "is the same as the one that we did for",
+      "start": 23.359,
+      "duration": 3.601
+    },
+    {
+      "text": "excel",
+      "start": 26.32,
+      "duration": 3.6
+    },
+    {
+      "text": "in the section on building out the excel",
+      "start": 26.96,
+      "duration": 5.759
+    },
+    {
+      "text": "dynamic salary retirement model",
+      "start": 29.92,
+      "duration": 4.799
+    },
+    {
+      "text": "and here what we want to do is we want",
+      "start": 32.719,
+      "duration": 3.121
+    },
+    {
+      "text": "to",
+      "start": 34.719,
+      "duration": 3.68
+    },
+    {
+      "text": "relax this assumption that there's some",
+      "start": 35.84,
+      "duration": 4.64
+    },
+    {
+      "text": "fixed amount of desired cash",
+      "start": 38.399,
+      "duration": 4.32
+    },
+    {
+      "text": "that we need for retirement and the way",
+      "start": 40.48,
+      "duration": 3.68
+    },
+    {
+      "text": "that we talked about",
+      "start": 42.719,
+      "duration": 4.0
+    },
+    {
+      "text": "relaxing that was that we're going to",
+      "start": 44.16,
+      "duration": 3.68
+    },
+    {
+      "text": "think about instead of",
+      "start": 46.719,
+      "duration": 3.041
+    },
+    {
+      "text": "just having a certain number instead",
+      "start": 47.84,
+      "duration": 3.28
+    },
+    {
+      "text": "we're going to have",
+      "start": 49.76,
+      "duration": 3.279
+    },
+    {
+      "text": "an amount that we want to spend each",
+      "start": 51.12,
+      "duration": 3.919
+    },
+    {
+      "text": "year in retirement as an input",
+      "start": 53.039,
+      "duration": 4.721
+    },
+    {
+      "text": "as well as the length of time that this",
+      "start": 55.039,
+      "duration": 3.441
+    },
+    {
+      "text": "individual",
+      "start": 57.76,
+      "duration": 3.92
+    },
+    {
+      "text": "is in retirement until they die",
+      "start": 58.48,
+      "duration": 6.48
+    },
+    {
+      "text": "so then based off of those inputs",
+      "start": 61.68,
+      "duration": 6.4
+    },
+    {
+      "text": "we can then calculate the desired cash",
+      "start": 64.96,
+      "duration": 6.08
+    },
+    {
+      "text": "within the model and plug that through",
+      "start": 68.08,
+      "duration": 4.8
+    },
+    {
+      "text": "into the existing structure",
+      "start": 71.04,
+      "duration": 3.84
+    },
+    {
+      "text": "so that the rest of the model works the",
+      "start": 72.88,
+      "duration": 3.44
+    },
+    {
+      "text": "same way that it did",
+      "start": 74.88,
+      "duration": 5.76
+    },
+    {
+      "text": "before so that's the basic idea",
+      "start": 76.32,
+      "duration": 7.839
+    },
+    {
+      "text": "and to accomplish this um something",
+      "start": 80.64,
+      "duration": 6.4
+    },
+    {
+      "text": "a way you might want to go about it is",
+      "start": 84.159,
+      "duration": 3.521
+    },
+    {
+      "text": "go ahead",
+      "start": 87.04,
+      "duration": 4.0
+    },
+    {
+      "text": "and remove the desired cache from the",
+      "start": 87.68,
+      "duration": 6.88
+    },
+    {
+      "text": "model inputs in the model",
+      "start": 91.04,
+      "duration": 6.719
+    },
+    {
+      "text": "and add these two new inputs",
+      "start": 94.56,
+      "duration": 4.879
+    },
+    {
+      "text": "and then it makes sense to create a",
+      "start": 97.759,
+      "duration": 4.4
+    },
+    {
+      "text": "function which is able to",
+      "start": 99.439,
+      "duration": 5.04
+    },
+    {
+      "text": "calculate the desired cache from the",
+      "start": 102.159,
+      "duration": 3.521
+    },
+    {
+      "text": "model inputs",
+      "start": 104.479,
+      "duration": 3.361
+    },
+    {
+      "text": "and then you'll just take uh calling",
+      "start": 105.68,
+      "duration": 3.119
+    },
+    {
+      "text": "that function",
+      "start": 107.84,
+      "duration": 3.2
+    },
+    {
+      "text": "and put it in the place of where you",
+      "start": 108.799,
+      "duration": 3.521
+    },
+    {
+      "text": "were just directly",
+      "start": 111.04,
+      "duration": 4.24
+    },
+    {
+      "text": "using the desired cache before and then",
+      "start": 112.32,
+      "duration": 4.88
+    },
+    {
+      "text": "you really won't have to change much at",
+      "start": 115.28,
+      "duration": 2.4
+    },
+    {
+      "text": "all",
+      "start": 117.2,
+      "duration": 2.72
+    },
+    {
+      "text": "about the existing model and it will",
+      "start": 117.68,
+      "duration": 4.0
+    },
+    {
+      "text": "just start working with this new",
+      "start": 119.92,
+      "duration": 4.96
+    },
+    {
+      "text": "desired cache calculation",
+      "start": 121.68,
+      "duration": 5.68
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 124.88,
+      "duration": 4.96
+    },
+    {
+      "text": "time",
+      "start": 127.36,
+      "duration": 2.48
+    }
+  ]
+}

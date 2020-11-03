@@ -1,0 +1,3184 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.639,
+      "duration": 2.401
+    },
+    {
+      "text": "nick dear versus here teaching you",
+      "start": 3.52,
+      "duration": 3.68
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.04,
+      "duration": 3.04
+    },
+    {
+      "text": "be talking about",
+      "start": 7.2,
+      "duration": 4.0
+    },
+    {
+      "text": "styling pandas data frames as part of",
+      "start": 8.08,
+      "duration": 4.479
+    },
+    {
+      "text": "our lecture series on",
+      "start": 11.2,
+      "duration": 3.72
+    },
+    {
+      "text": "understanding complex results with",
+      "start": 12.559,
+      "duration": 4.081
+    },
+    {
+      "text": "visualization",
+      "start": 14.92,
+      "duration": 4.359
+    },
+    {
+      "text": "so we learned last time about these",
+      "start": 16.64,
+      "duration": 3.28
+    },
+    {
+      "text": "pandas",
+      "start": 19.279,
+      "duration": 3.681
+    },
+    {
+      "text": "data frames which",
+      "start": 19.92,
+      "duration": 6.32
+    },
+    {
+      "text": "let you get a tabular representation of",
+      "start": 22.96,
+      "duration": 4.159
+    },
+    {
+      "text": "your data",
+      "start": 26.24,
+      "duration": 4.799
+    },
+    {
+      "text": "in python and",
+      "start": 27.119,
+      "duration": 6.241
+    },
+    {
+      "text": "we just had kind of the basic default",
+      "start": 31.039,
+      "duration": 4.561
+    },
+    {
+      "text": "way that these things looked",
+      "start": 33.36,
+      "duration": 4.16
+    },
+    {
+      "text": "and now we're going to learn how we can",
+      "start": 35.6,
+      "duration": 3.52
+    },
+    {
+      "text": "add our own custom",
+      "start": 37.52,
+      "duration": 6.48
+    },
+    {
+      "text": "styles and formatting to our data frames",
+      "start": 39.12,
+      "duration": 6.959
+    },
+    {
+      "text": "so where this is important is you",
+      "start": 44.0,
+      "duration": 3.12
+    },
+    {
+      "text": "definitely want to have",
+      "start": 46.079,
+      "duration": 4.081
+    },
+    {
+      "text": "number formatting when you display",
+      "start": 47.12,
+      "duration": 6.64
+    },
+    {
+      "text": "any tables to the reader of your model",
+      "start": 50.16,
+      "duration": 5.919
+    },
+    {
+      "text": "so that it's much easier to understand",
+      "start": 53.76,
+      "duration": 4.4
+    },
+    {
+      "text": "what those numbers mean",
+      "start": 56.079,
+      "duration": 4.561
+    },
+    {
+      "text": "and you may want to add additional",
+      "start": 58.16,
+      "duration": 3.84
+    },
+    {
+      "text": "styles",
+      "start": 60.64,
+      "duration": 3.36
+    },
+    {
+      "text": "especially something like conditional",
+      "start": 62.0,
+      "duration": 3.519
+    },
+    {
+      "text": "formatting where",
+      "start": 64.0,
+      "duration": 3.84
+    },
+    {
+      "text": "you highlight certain values based on",
+      "start": 65.519,
+      "duration": 4.081
+    },
+    {
+      "text": "some conditions",
+      "start": 67.84,
+      "duration": 4.72
+    },
+    {
+      "text": "to make it easier for the reader to",
+      "start": 69.6,
+      "duration": 4.24
+    },
+    {
+      "text": "understand the",
+      "start": 72.56,
+      "duration": 4.559
+    },
+    {
+      "text": "data in your table",
+      "start": 73.84,
+      "duration": 3.279
+    },
+    {
+      "text": "now most people probably already are",
+      "start": 77.92,
+      "duration": 5.92
+    },
+    {
+      "text": "very familiar with styling",
+      "start": 81.6,
+      "duration": 5.44
+    },
+    {
+      "text": "tables in excel you know you can change",
+      "start": 83.84,
+      "duration": 5.52
+    },
+    {
+      "text": "the number formatting you can change",
+      "start": 87.04,
+      "duration": 7.439
+    },
+    {
+      "text": "uh add borders you can change colors",
+      "start": 89.36,
+      "duration": 6.64
+    },
+    {
+      "text": "all these kind of things are just up",
+      "start": 94.479,
+      "duration": 4.401
+    },
+    {
+      "text": "there available in the ribbon",
+      "start": 96.0,
+      "duration": 6.079
+    },
+    {
+      "text": "with pandas uh of course you're using",
+      "start": 98.88,
+      "duration": 4.239
+    },
+    {
+      "text": "lines of code",
+      "start": 102.079,
+      "duration": 4.881
+    },
+    {
+      "text": "to do this formatting uh",
+      "start": 103.119,
+      "duration": 6.561
+    },
+    {
+      "text": "but it's a lot more flexible than the",
+      "start": 106.96,
+      "duration": 3.68
+    },
+    {
+      "text": "formatting",
+      "start": 109.68,
+      "duration": 4.24
+    },
+    {
+      "text": "in excel and the reason that",
+      "start": 110.64,
+      "duration": 6.479
+    },
+    {
+      "text": "it's more flexible is",
+      "start": 113.92,
+      "duration": 6.879
+    },
+    {
+      "text": "the way that it's built so",
+      "start": 117.119,
+      "duration": 7.841
+    },
+    {
+      "text": "when you see that table representation",
+      "start": 120.799,
+      "duration": 7.201
+    },
+    {
+      "text": "of the data the way that",
+      "start": 124.96,
+      "duration": 5.439
+    },
+    {
+      "text": "pandas the authors of pandas have made",
+      "start": 128.0,
+      "duration": 3.68
+    },
+    {
+      "text": "this happen",
+      "start": 130.399,
+      "duration": 4.641
+    },
+    {
+      "text": "is it actually produces",
+      "start": 131.68,
+      "duration": 6.88
+    },
+    {
+      "text": "html and css for",
+      "start": 135.04,
+      "duration": 7.04
+    },
+    {
+      "text": "this data to display this data frame",
+      "start": 138.56,
+      "duration": 6.88
+    },
+    {
+      "text": "and html and css for people that aren't",
+      "start": 142.08,
+      "duration": 4.879
+    },
+    {
+      "text": "familiar",
+      "start": 145.44,
+      "duration": 4.96
+    },
+    {
+      "text": "uh together make up the markup language",
+      "start": 146.959,
+      "duration": 7.121
+    },
+    {
+      "text": "which describes how any web page",
+      "start": 150.4,
+      "duration": 6.88
+    },
+    {
+      "text": "looks so anything that you've ever seen",
+      "start": 154.08,
+      "duration": 4.879
+    },
+    {
+      "text": "on any website",
+      "start": 157.28,
+      "duration": 3.2
+    },
+    {
+      "text": "you could potentially make your data",
+      "start": 158.959,
+      "duration": 3.121
+    },
+    {
+      "text": "frame look like that",
+      "start": 160.48,
+      "duration": 4.08
+    },
+    {
+      "text": "and basically anything at all because of",
+      "start": 162.08,
+      "duration": 3.6
+    },
+    {
+      "text": "how flexible",
+      "start": 164.56,
+      "duration": 4.24
+    },
+    {
+      "text": "html and css are",
+      "start": 165.68,
+      "duration": 6.24
+    },
+    {
+      "text": "and so you can go all the way to",
+      "start": 168.8,
+      "duration": 5.84
+    },
+    {
+      "text": "that complete control by directly",
+      "start": 171.92,
+      "duration": 5.84
+    },
+    {
+      "text": "manipulating the html and css",
+      "start": 174.64,
+      "duration": 6.72
+    },
+    {
+      "text": "of the representation of your data frame",
+      "start": 177.76,
+      "duration": 5.08
+    },
+    {
+      "text": "but that is definitely a little bit more",
+      "start": 181.36,
+      "duration": 3.2
+    },
+    {
+      "text": "advanced",
+      "start": 182.84,
+      "duration": 3.56
+    },
+    {
+      "text": "they've also added a lot of more",
+      "start": 184.56,
+      "duration": 3.599
+    },
+    {
+      "text": "convenient things that you can just",
+      "start": 186.4,
+      "duration": 3.52
+    },
+    {
+      "text": "easily do out of the box with simple",
+      "start": 188.159,
+      "duration": 3.041
+    },
+    {
+      "text": "commands",
+      "start": 189.92,
+      "duration": 3.039
+    },
+    {
+      "text": "that represent some of the most common",
+      "start": 191.2,
+      "duration": 3.52
+    },
+    {
+      "text": "things that you would want to do",
+      "start": 192.959,
+      "duration": 5.28
+    },
+    {
+      "text": "with your formatting so things like",
+      "start": 194.72,
+      "duration": 6.64
+    },
+    {
+      "text": "changing colors size positioning of text",
+      "start": 198.239,
+      "duration": 4.72
+    },
+    {
+      "text": "adding captions to your table",
+      "start": 201.36,
+      "duration": 3.519
+    },
+    {
+      "text": "conditional formatting",
+      "start": 202.959,
+      "duration": 5.041
+    },
+    {
+      "text": "and uh drawing a bar graph within the",
+      "start": 204.879,
+      "duration": 4.161
+    },
+    {
+      "text": "table",
+      "start": 208.0,
+      "duration": 4.239
+    },
+    {
+      "text": "these things are all uh kind of well",
+      "start": 209.04,
+      "duration": 4.96
+    },
+    {
+      "text": "explained and easily there out of the",
+      "start": 212.239,
+      "duration": 2.241
+    },
+    {
+      "text": "box",
+      "start": 214.0,
+      "duration": 2.879
+    },
+    {
+      "text": "but anything that you can possibly",
+      "start": 214.48,
+      "duration": 3.44
+    },
+    {
+      "text": "imagine",
+      "start": 216.879,
+      "duration": 6.08
+    },
+    {
+      "text": "you can do that with styling data frames",
+      "start": 217.92,
+      "duration": 7.76
+    },
+    {
+      "text": "so let's go ahead and take a look at the",
+      "start": 222.959,
+      "duration": 3.28
+    },
+    {
+      "text": "example",
+      "start": 225.68,
+      "duration": 4.16
+    },
+    {
+      "text": "notebook on what we can do so",
+      "start": 226.239,
+      "duration": 6.401
+    },
+    {
+      "text": "first let's talk about number formatting",
+      "start": 229.84,
+      "duration": 3.119
+    },
+    {
+      "text": "so",
+      "start": 232.64,
+      "duration": 2.159
+    },
+    {
+      "text": "we've already learned about number",
+      "start": 232.959,
+      "duration": 4.161
+    },
+    {
+      "text": "formatting with just plain numbers",
+      "start": 234.799,
+      "duration": 4.72
+    },
+    {
+      "text": "and python and we've been doing that",
+      "start": 237.12,
+      "duration": 4.24
+    },
+    {
+      "text": "using f strings",
+      "start": 239.519,
+      "duration": 5.121
+    },
+    {
+      "text": "so with the f strings uh we take",
+      "start": 241.36,
+      "duration": 6.64
+    },
+    {
+      "text": "the number and we put it in this",
+      "start": 244.64,
+      "duration": 6.319
+    },
+    {
+      "text": "quote quoted string with an f on the",
+      "start": 248.0,
+      "duration": 4.56
+    },
+    {
+      "text": "beginning",
+      "start": 250.959,
+      "duration": 3.84
+    },
+    {
+      "text": "and then inside that we do the curly",
+      "start": 252.56,
+      "duration": 3.519
+    },
+    {
+      "text": "braces",
+      "start": 254.799,
+      "duration": 4.0
+    },
+    {
+      "text": "and then within the curly braces we put",
+      "start": 256.079,
+      "duration": 3.921
+    },
+    {
+      "text": "our variable",
+      "start": 258.799,
+      "duration": 3.921
+    },
+    {
+      "text": "on the left and then a colon and then we",
+      "start": 260.0,
+      "duration": 3.84
+    },
+    {
+      "text": "put the format",
+      "start": 262.72,
+      "duration": 4.72
+    },
+    {
+      "text": "code that we want to use to describe the",
+      "start": 263.84,
+      "duration": 6.0
+    },
+    {
+      "text": "data",
+      "start": 267.44,
+      "duration": 2.4
+    },
+    {
+      "text": "and so we're going to take that same",
+      "start": 271.919,
+      "duration": 4.161
+    },
+    {
+      "text": "concept over to pandas",
+      "start": 273.68,
+      "duration": 6.239
+    },
+    {
+      "text": "as well now before we actually",
+      "start": 276.08,
+      "duration": 5.839
+    },
+    {
+      "text": "style our first data frame i do want to",
+      "start": 279.919,
+      "duration": 4.401
+    },
+    {
+      "text": "mention kind of a philosophical",
+      "start": 281.919,
+      "duration": 6.161
+    },
+    {
+      "text": "difference between the formatting",
+      "start": 284.32,
+      "duration": 6.8
+    },
+    {
+      "text": "in excel and the formatting of pandas",
+      "start": 288.08,
+      "duration": 5.36
+    },
+    {
+      "text": "data frames and python",
+      "start": 291.12,
+      "duration": 4.56
+    },
+    {
+      "text": "so in excel you have your data in a",
+      "start": 293.44,
+      "duration": 4.24
+    },
+    {
+      "text": "table and then you go and you format",
+      "start": 295.68,
+      "duration": 3.44
+    },
+    {
+      "text": "that table and now",
+      "start": 297.68,
+      "duration": 5.6
+    },
+    {
+      "text": "the original data is formatted",
+      "start": 299.12,
+      "duration": 7.519
+    },
+    {
+      "text": "but in python with pandas",
+      "start": 303.28,
+      "duration": 6.8
+    },
+    {
+      "text": "we have a separation of the data and the",
+      "start": 306.639,
+      "duration": 4.56
+    },
+    {
+      "text": "display",
+      "start": 310.08,
+      "duration": 4.32
+    },
+    {
+      "text": "of the data instead of directly styling",
+      "start": 311.199,
+      "duration": 4.881
+    },
+    {
+      "text": "the original data",
+      "start": 314.4,
+      "duration": 5.84
+    },
+    {
+      "text": "we actually create a separate object a",
+      "start": 316.08,
+      "duration": 5.2
+    },
+    {
+      "text": "style",
+      "start": 320.24,
+      "duration": 4.48
+    },
+    {
+      "text": "object which",
+      "start": 321.28,
+      "duration": 5.52
+    },
+    {
+      "text": "is the formatted representation of the",
+      "start": 324.72,
+      "duration": 3.199
+    },
+    {
+      "text": "data",
+      "start": 326.8,
+      "duration": 3.28
+    },
+    {
+      "text": "but that does not carry those changes",
+      "start": 327.919,
+      "duration": 3.28
+    },
+    {
+      "text": "back to",
+      "start": 330.08,
+      "duration": 3.2
+    },
+    {
+      "text": "the original data the original data is",
+      "start": 331.199,
+      "duration": 4.161
+    },
+    {
+      "text": "still unformatted",
+      "start": 333.28,
+      "duration": 4.8
+    },
+    {
+      "text": "so we only apply this formatting just as",
+      "start": 335.36,
+      "duration": 4.96
+    },
+    {
+      "text": "we're about to display",
+      "start": 338.08,
+      "duration": 4.72
+    },
+    {
+      "text": "this information to the reader of the",
+      "start": 340.32,
+      "duration": 4.0
+    },
+    {
+      "text": "model",
+      "start": 342.8,
+      "duration": 4.239
+    },
+    {
+      "text": "and that's the same way that things are",
+      "start": 344.32,
+      "duration": 4.8
+    },
+    {
+      "text": "working here with the f strings",
+      "start": 347.039,
+      "duration": 5.44
+    },
+    {
+      "text": "and formatting numbers in python",
+      "start": 349.12,
+      "duration": 6.799
+    },
+    {
+      "text": "you know we did this but my num",
+      "start": 352.479,
+      "duration": 5.921
+    },
+    {
+      "text": "is still the same exact number it",
+      "start": 355.919,
+      "duration": 3.521
+    },
+    {
+      "text": "doesn't have this",
+      "start": 358.4,
+      "duration": 3.44
+    },
+    {
+      "text": "formatting on it it was just as soon as",
+      "start": 359.44,
+      "duration": 4.4
+    },
+    {
+      "text": "we were ready to display that to the",
+      "start": 361.84,
+      "duration": 3.44
+    },
+    {
+      "text": "reader of the model",
+      "start": 363.84,
+      "duration": 3.28
+    },
+    {
+      "text": "then we added the formatting just in",
+      "start": 365.28,
+      "duration": 4.0
+    },
+    {
+      "text": "that spot it did not carry back",
+      "start": 367.12,
+      "duration": 4.72
+    },
+    {
+      "text": "to the original data and it's going to",
+      "start": 369.28,
+      "duration": 4.639
+    },
+    {
+      "text": "be the same exact concept",
+      "start": 371.84,
+      "duration": 5.6
+    },
+    {
+      "text": "with our pandas styling",
+      "start": 373.919,
+      "duration": 6.961
+    },
+    {
+      "text": "so now let's look at we were able to",
+      "start": 377.44,
+      "duration": 5.68
+    },
+    {
+      "text": "apply you know two decimal place",
+      "start": 380.88,
+      "duration": 5.52
+    },
+    {
+      "text": "formatting here if we have more decimals",
+      "start": 383.12,
+      "duration": 5.359
+    },
+    {
+      "text": "then it cuts it off at two because of",
+      "start": 386.4,
+      "duration": 4.799
+    },
+    {
+      "text": "this formatting",
+      "start": 388.479,
+      "duration": 6.16
+    },
+    {
+      "text": "let's look at applying that to the data",
+      "start": 391.199,
+      "duration": 6.0
+    },
+    {
+      "text": "frame as well",
+      "start": 394.639,
+      "duration": 4.881
+    },
+    {
+      "text": "so most of the things that we're going",
+      "start": 397.199,
+      "duration": 4.0
+    },
+    {
+      "text": "to do",
+      "start": 399.52,
+      "duration": 3.44
+    },
+    {
+      "text": "with styling data frames it's going to",
+      "start": 401.199,
+      "duration": 4.081
+    },
+    {
+      "text": "be dot style",
+      "start": 402.96,
+      "duration": 5.359
+    },
+    {
+      "text": "on the data frame and a lot of them are",
+      "start": 405.28,
+      "duration": 3.6
+    },
+    {
+      "text": "through this",
+      "start": 408.319,
+      "duration": 4.241
+    },
+    {
+      "text": "dot format then uh under the dot style",
+      "start": 408.88,
+      "duration": 7.759
+    },
+    {
+      "text": "so df.style.format and",
+      "start": 412.56,
+      "duration": 6.639
+    },
+    {
+      "text": "then for the number formatting we pass",
+      "start": 416.639,
+      "duration": 4.201
+    },
+    {
+      "text": "it to this format and we give it a",
+      "start": 419.199,
+      "duration": 4.881
+    },
+    {
+      "text": "dictionary and the dictionary should",
+      "start": 420.84,
+      "duration": 3.799
+    },
+    {
+      "text": "have",
+      "start": 424.08,
+      "duration": 2.64
+    },
+    {
+      "text": "the keys of the dictionary should be the",
+      "start": 424.639,
+      "duration": 3.521
+    },
+    {
+      "text": "names of the columns",
+      "start": 426.72,
+      "duration": 3.199
+    },
+    {
+      "text": "that we want to format so here we're",
+      "start": 428.16,
+      "duration": 3.599
+    },
+    {
+      "text": "formatting the reservation",
+      "start": 429.919,
+      "duration": 4.881
+    },
+    {
+      "text": "price column and the values",
+      "start": 431.759,
+      "duration": 7.201
+    },
+    {
+      "text": "should be this format",
+      "start": 434.8,
+      "duration": 5.6
+    },
+    {
+      "text": "you know very similar to what we did",
+      "start": 438.96,
+      "duration": 3.44
+    },
+    {
+      "text": "here a format string",
+      "start": 440.4,
+      "duration": 4.079
+    },
+    {
+      "text": "for how we want to format the data now",
+      "start": 442.4,
+      "duration": 3.84
+    },
+    {
+      "text": "the one difference that you'll see",
+      "start": 444.479,
+      "duration": 4.241
+    },
+    {
+      "text": "in what we had here versus what we have",
+      "start": 446.24,
+      "duration": 3.12
+    },
+    {
+      "text": "here",
+      "start": 448.72,
+      "duration": 2.8
+    },
+    {
+      "text": "is this one does not one does not",
+      "start": 449.36,
+      "duration": 3.36
+    },
+    {
+      "text": "include the f",
+      "start": 451.52,
+      "duration": 3.44
+    },
+    {
+      "text": "and two it does not include the variable",
+      "start": 452.72,
+      "duration": 3.36
+    },
+    {
+      "text": "itself",
+      "start": 454.96,
+      "duration": 3.92
+    },
+    {
+      "text": "so after your braces you then start with",
+      "start": 456.08,
+      "duration": 3.519
+    },
+    {
+      "text": "the colon",
+      "start": 458.88,
+      "duration": 3.52
+    },
+    {
+      "text": "as the first thing it knows that",
+      "start": 459.599,
+      "duration": 4.481
+    },
+    {
+      "text": "basically the variable is going to get",
+      "start": 462.4,
+      "duration": 3.6
+    },
+    {
+      "text": "inputted in here",
+      "start": 464.08,
+      "duration": 4.799
+    },
+    {
+      "text": "and then colon and then the same exact",
+      "start": 466.0,
+      "duration": 4.319
+    },
+    {
+      "text": "format code",
+      "start": 468.879,
+      "duration": 4.481
+    },
+    {
+      "text": "that you use for the f strings",
+      "start": 470.319,
+      "duration": 6.72
+    },
+    {
+      "text": "so when we run this then we see",
+      "start": 473.36,
+      "duration": 6.559
+    },
+    {
+      "text": "uh that it has put that dollar sign and",
+      "start": 477.039,
+      "duration": 4.16
+    },
+    {
+      "text": "the two decimal place",
+      "start": 479.919,
+      "duration": 4.56
+    },
+    {
+      "text": "formatting on there just to show the",
+      "start": 481.199,
+      "duration": 4.641
+    },
+    {
+      "text": "decimals if we put one",
+      "start": 484.479,
+      "duration": 3.201
+    },
+    {
+      "text": "then it would only be a single decimal",
+      "start": 485.84,
+      "duration": 5.12
+    },
+    {
+      "text": "place showing up there",
+      "start": 487.68,
+      "duration": 3.28
+    },
+    {
+      "text": "now we created this s variable",
+      "start": 491.36,
+      "duration": 7.36
+    },
+    {
+      "text": "as df.style.format the result of that",
+      "start": 495.28,
+      "duration": 5.68
+    },
+    {
+      "text": "and when we look at s it looks like a",
+      "start": 498.72,
+      "duration": 3.12
+    },
+    {
+      "text": "data frame",
+      "start": 500.96,
+      "duration": 4.0
+    },
+    {
+      "text": "right so you might include that you know",
+      "start": 501.84,
+      "duration": 3.68
+    },
+    {
+      "text": "now this",
+      "start": 504.96,
+      "duration": 3.76
+    },
+    {
+      "text": "s is our data we just have a formatted",
+      "start": 505.52,
+      "duration": 5.519
+    },
+    {
+      "text": "version of the data like we do in excel",
+      "start": 508.72,
+      "duration": 4.48
+    },
+    {
+      "text": "but actually if we check the type of",
+      "start": 511.039,
+      "duration": 3.92
+    },
+    {
+      "text": "this it's a",
+      "start": 513.2,
+      "duration": 6.719
+    },
+    {
+      "text": "styler object no longer a data frame",
+      "start": 514.959,
+      "duration": 8.56
+    },
+    {
+      "text": "and all of a sudden we can't do",
+      "start": 519.919,
+      "duration": 5.281
+    },
+    {
+      "text": "some of the things that we did before",
+      "start": 523.519,
+      "duration": 3.76
+    },
+    {
+      "text": "with it because it's not a data frame",
+      "start": 525.2,
+      "duration": 2.56
+    },
+    {
+      "text": "anymore",
+      "start": 527.279,
+      "duration": 3.281
+    },
+    {
+      "text": "it's a styler and so that's why i say",
+      "start": 527.76,
+      "duration": 4.24
+    },
+    {
+      "text": "you always just want to",
+      "start": 530.56,
+      "duration": 3.6
+    },
+    {
+      "text": "apply this formatting immediately before",
+      "start": 532.0,
+      "duration": 4.399
+    },
+    {
+      "text": "you're going to display it",
+      "start": 534.16,
+      "duration": 5.359
+    },
+    {
+      "text": "and not try to format your existing",
+      "start": 536.399,
+      "duration": 5.681
+    },
+    {
+      "text": "data frame because that's just not the",
+      "start": 539.519,
+      "duration": 5.121
+    },
+    {
+      "text": "way this works",
+      "start": 542.08,
+      "duration": 5.199
+    },
+    {
+      "text": "and we'll look at a pattern of what i",
+      "start": 544.64,
+      "duration": 3.36
+    },
+    {
+      "text": "think is a nice",
+      "start": 547.279,
+      "duration": 3.521
+    },
+    {
+      "text": "way to apply this formatting in your",
+      "start": 548.0,
+      "duration": 4.88
+    },
+    {
+      "text": "models",
+      "start": 550.8,
+      "duration": 4.88
+    },
+    {
+      "text": "but let's look through the other",
+      "start": 552.88,
+      "duration": 5.519
+    },
+    {
+      "text": "formatting methods first",
+      "start": 555.68,
+      "duration": 5.76
+    },
+    {
+      "text": "so we can apply that say percentage",
+      "start": 558.399,
+      "duration": 3.921
+    },
+    {
+      "text": "formatting",
+      "start": 561.44,
+      "duration": 3.76
+    },
+    {
+      "text": "to percentage active here uh zero",
+      "start": 562.32,
+      "duration": 3.76
+    },
+    {
+      "text": "decimal place",
+      "start": 565.2,
+      "duration": 4.16
+    },
+    {
+      "text": "percent formatting um",
+      "start": 566.08,
+      "duration": 6.16
+    },
+    {
+      "text": "and you can continue to chain additional",
+      "start": 569.36,
+      "duration": 4.64
+    },
+    {
+      "text": "formatting on a styler",
+      "start": 572.24,
+      "duration": 5.039
+    },
+    {
+      "text": "object so you can style stylers you can",
+      "start": 574.0,
+      "duration": 5.04
+    },
+    {
+      "text": "style data frames",
+      "start": 577.279,
+      "duration": 4.401
+    },
+    {
+      "text": "but you can only do math and other",
+      "start": 579.04,
+      "duration": 3.76
+    },
+    {
+      "text": "operations with",
+      "start": 581.68,
+      "duration": 4.719
+    },
+    {
+      "text": "data frames um",
+      "start": 582.8,
+      "duration": 5.76
+    },
+    {
+      "text": "so here we're adding additional",
+      "start": 586.399,
+      "duration": 4.0
+    },
+    {
+      "text": "formatting of we also want to format the",
+      "start": 588.56,
+      "duration": 3.12
+    },
+    {
+      "text": "percentage active volume",
+      "start": 590.399,
+      "duration": 3.201
+    },
+    {
+      "text": "column with the percentages so now we",
+      "start": 591.68,
+      "duration": 6.24
+    },
+    {
+      "text": "have both of these two columns formatted",
+      "start": 593.6,
+      "duration": 6.48
+    },
+    {
+      "text": "um but you could have also just directly",
+      "start": 597.92,
+      "duration": 3.44
+    },
+    {
+      "text": "done it from the data frame",
+      "start": 600.08,
+      "duration": 2.96
+    },
+    {
+      "text": "in the first place by giving it both of",
+      "start": 601.36,
+      "duration": 3.44
+    },
+    {
+      "text": "these number formats",
+      "start": 603.04,
+      "duration": 5.2
+    },
+    {
+      "text": "at the same time just passing both those",
+      "start": 604.8,
+      "duration": 6.32
+    },
+    {
+      "text": "in the dictionary",
+      "start": 608.24,
+      "duration": 2.88
+    },
+    {
+      "text": "so that's number formatting now let's",
+      "start": 611.44,
+      "duration": 5.68
+    },
+    {
+      "text": "look at cell formatting",
+      "start": 613.68,
+      "duration": 3.44
+    },
+    {
+      "text": "so cell formatting we can do with again",
+      "start": 617.2,
+      "duration": 6.56
+    },
+    {
+      "text": "pretty much everything is on dot style",
+      "start": 621.12,
+      "duration": 3.92
+    },
+    {
+      "text": "and then",
+      "start": 623.76,
+      "duration": 3.36
+    },
+    {
+      "text": "just as we looked at how we can do apply",
+      "start": 625.04,
+      "duration": 4.32
+    },
+    {
+      "text": "map to apply a function",
+      "start": 627.12,
+      "duration": 5.44
+    },
+    {
+      "text": "to every cell of the data frame",
+      "start": 629.36,
+      "duration": 6.24
+    },
+    {
+      "text": "we can similarly use dot style dot apply",
+      "start": 632.56,
+      "duration": 3.839
+    },
+    {
+      "text": "map",
+      "start": 635.6,
+      "duration": 3.84
+    },
+    {
+      "text": "to apply formatting to each cell",
+      "start": 636.399,
+      "duration": 7.841
+    },
+    {
+      "text": "of the data frame of the styler object",
+      "start": 639.44,
+      "duration": 8.399
+    },
+    {
+      "text": "um so",
+      "start": 644.24,
+      "duration": 6.0
+    },
+    {
+      "text": "we can see here what this is doing we",
+      "start": 647.839,
+      "duration": 4.081
+    },
+    {
+      "text": "can already see the result of this this",
+      "start": 650.24,
+      "duration": 5.2
+    },
+    {
+      "text": "made all the cells values blue",
+      "start": 651.92,
+      "duration": 7.44
+    },
+    {
+      "text": "and so what we did here was we created",
+      "start": 655.44,
+      "duration": 7.28
+    },
+    {
+      "text": "a function that returns",
+      "start": 659.36,
+      "duration": 7.76
+    },
+    {
+      "text": "the style that we want for each cell",
+      "start": 662.72,
+      "duration": 6.239
+    },
+    {
+      "text": "so this is the general structure of how",
+      "start": 667.12,
+      "duration": 4.32
+    },
+    {
+      "text": "to format cells in pandas you write",
+      "start": 668.959,
+      "duration": 5.761
+    },
+    {
+      "text": "functions which return the styles you",
+      "start": 671.44,
+      "duration": 4.8
+    },
+    {
+      "text": "want to apply",
+      "start": 674.72,
+      "duration": 4.08
+    },
+    {
+      "text": "and then you use apply map to apply",
+      "start": 676.24,
+      "duration": 4.4
+    },
+    {
+      "text": "those styles",
+      "start": 678.8,
+      "duration": 4.719
+    },
+    {
+      "text": "so here we're setting the color to blue",
+      "start": 680.64,
+      "duration": 3.36
+    },
+    {
+      "text": "for",
+      "start": 683.519,
+      "duration": 5.121
+    },
+    {
+      "text": "each one of these cells",
+      "start": 684.0,
+      "duration": 7.839
+    },
+    {
+      "text": "and this color blue this is actually",
+      "start": 688.64,
+      "duration": 6.639
+    },
+    {
+      "text": "uh css as i mentioned uh",
+      "start": 691.839,
+      "duration": 5.921
+    },
+    {
+      "text": "html and css is all what's going on in",
+      "start": 695.279,
+      "duration": 4.0
+    },
+    {
+      "text": "the background here",
+      "start": 697.76,
+      "duration": 5.36
+    },
+    {
+      "text": "so uh you can take a look at um",
+      "start": 699.279,
+      "duration": 5.921
+    },
+    {
+      "text": "you know here's a color picker where you",
+      "start": 703.12,
+      "duration": 3.2
+    },
+    {
+      "text": "can",
+      "start": 705.2,
+      "duration": 3.84
+    },
+    {
+      "text": "look at different colors and you can",
+      "start": 706.32,
+      "duration": 3.519
+    },
+    {
+      "text": "grab",
+      "start": 709.04,
+      "duration": 4.08
+    },
+    {
+      "text": "the value that you want for",
+      "start": 709.839,
+      "duration": 7.521
+    },
+    {
+      "text": "your formatting and put that in there",
+      "start": 713.12,
+      "duration": 7.68
+    },
+    {
+      "text": "whatever color that you want",
+      "start": 717.36,
+      "duration": 3.44
+    },
+    {
+      "text": "or there are just you know predefined",
+      "start": 720.88,
+      "duration": 4.639
+    },
+    {
+      "text": "names",
+      "start": 724.32,
+      "duration": 4.56
+    },
+    {
+      "text": "for a lot of common colors as well and",
+      "start": 725.519,
+      "duration": 5.12
+    },
+    {
+      "text": "you can just google about",
+      "start": 728.88,
+      "duration": 6.959
+    },
+    {
+      "text": "css colors to learn more about all this",
+      "start": 730.639,
+      "duration": 5.2
+    },
+    {
+      "text": "um so then color",
+      "start": 737.68,
+      "duration": 5.52
+    },
+    {
+      "text": "is about the text color and background",
+      "start": 740.88,
+      "duration": 3.28
+    },
+    {
+      "text": "color",
+      "start": 743.2,
+      "duration": 3.04
+    },
+    {
+      "text": "is about the background color of the",
+      "start": 744.16,
+      "duration": 3.2
+    },
+    {
+      "text": "cells",
+      "start": 746.24,
+      "duration": 2.8
+    },
+    {
+      "text": "so similarly here we've created a",
+      "start": 747.36,
+      "duration": 3.599
+    },
+    {
+      "text": "function which returns this background",
+      "start": 749.04,
+      "duration": 3.039
+    },
+    {
+      "text": "color",
+      "start": 750.959,
+      "duration": 4.161
+    },
+    {
+      "text": "um of light green and we're applying",
+      "start": 752.079,
+      "duration": 5.041
+    },
+    {
+      "text": "that to all the cells and so we see them",
+      "start": 755.12,
+      "duration": 5.6
+    },
+    {
+      "text": "all highlighted in light green",
+      "start": 757.12,
+      "duration": 3.6
+    },
+    {
+      "text": "text align will let you control the",
+      "start": 760.88,
+      "duration": 3.199
+    },
+    {
+      "text": "alignment",
+      "start": 763.36,
+      "duration": 2.8
+    },
+    {
+      "text": "of the text within the cells so here",
+      "start": 764.079,
+      "duration": 4.161
+    },
+    {
+      "text": "we're now centering",
+      "start": 766.16,
+      "duration": 6.0
+    },
+    {
+      "text": "each of these values",
+      "start": 768.24,
+      "duration": 7.68
+    },
+    {
+      "text": "and you can do multiple at once",
+      "start": 772.16,
+      "duration": 6.88
+    },
+    {
+      "text": "by just putting semicolons uh",
+      "start": 775.92,
+      "duration": 6.56
+    },
+    {
+      "text": "between each of these definitions so",
+      "start": 779.04,
+      "duration": 4.96
+    },
+    {
+      "text": "you should always be returning a single",
+      "start": 782.48,
+      "duration": 4.72
+    },
+    {
+      "text": "string but",
+      "start": 784.0,
+      "duration": 6.079
+    },
+    {
+      "text": "each style is going to be the name of",
+      "start": 787.2,
+      "duration": 3.68
+    },
+    {
+      "text": "what you want",
+      "start": 790.079,
+      "duration": 4.641
+    },
+    {
+      "text": "to affect and then a colon",
+      "start": 790.88,
+      "duration": 7.6
+    },
+    {
+      "text": "and then the style you want to apply",
+      "start": 794.72,
+      "duration": 5.52
+    },
+    {
+      "text": "and then for any additional ones you put",
+      "start": 798.48,
+      "duration": 3.919
+    },
+    {
+      "text": "a semicolon and then repeat the same",
+      "start": 800.24,
+      "duration": 4.159
+    },
+    {
+      "text": "kind of thing again",
+      "start": 802.399,
+      "duration": 4.961
+    },
+    {
+      "text": "so here text color to white uh",
+      "start": 804.399,
+      "duration": 4.56
+    },
+    {
+      "text": "background color to black",
+      "start": 807.36,
+      "duration": 4.08
+    },
+    {
+      "text": "alignment to center and we see all of",
+      "start": 808.959,
+      "duration": 6.88
+    },
+    {
+      "text": "that happening here at once",
+      "start": 811.44,
+      "duration": 4.399
+    },
+    {
+      "text": "so that leads us into thinking about",
+      "start": 815.92,
+      "duration": 3.279
+    },
+    {
+      "text": "conditional formatting where conditional",
+      "start": 817.519,
+      "duration": 2.801
+    },
+    {
+      "text": "formatting is",
+      "start": 819.199,
+      "duration": 4.0
+    },
+    {
+      "text": "we want to apply formatting to some",
+      "start": 820.32,
+      "duration": 3.759
+    },
+    {
+      "text": "subset",
+      "start": 823.199,
+      "duration": 4.161
+    },
+    {
+      "text": "of the cells whatever cells meet",
+      "start": 824.079,
+      "duration": 5.521
+    },
+    {
+      "text": "some certain condition that we want to",
+      "start": 827.36,
+      "duration": 4.64
+    },
+    {
+      "text": "apply",
+      "start": 829.6,
+      "duration": 7.44
+    },
+    {
+      "text": "so here let's think about",
+      "start": 832.0,
+      "duration": 7.04
+    },
+    {
+      "text": "you know this is a very short simple",
+      "start": 837.04,
+      "duration": 3.76
+    },
+    {
+      "text": "example we only have three people it's",
+      "start": 839.04,
+      "duration": 2.96
+    },
+    {
+      "text": "easy to just look through",
+      "start": 840.8,
+      "duration": 2.719
+    },
+    {
+      "text": "the values for three people but you",
+      "start": 842.0,
+      "duration": 3.04
+    },
+    {
+      "text": "could imagine you could have",
+      "start": 843.519,
+      "duration": 3.76
+    },
+    {
+      "text": "hundreds thousands of people in this",
+      "start": 845.04,
+      "duration": 4.08
+    },
+    {
+      "text": "table",
+      "start": 847.279,
+      "duration": 4.0
+    },
+    {
+      "text": "and what we want to try and do here is",
+      "start": 849.12,
+      "duration": 3.839
+    },
+    {
+      "text": "highlight the people who are not very",
+      "start": 851.279,
+      "duration": 3.201
+    },
+    {
+      "text": "active",
+      "start": 852.959,
+      "duration": 3.761
+    },
+    {
+      "text": "and so if their activity percentage is",
+      "start": 854.48,
+      "duration": 3.76
+    },
+    {
+      "text": "less than 50",
+      "start": 856.72,
+      "duration": 4.64
+    },
+    {
+      "text": "then we want to highlight that",
+      "start": 858.24,
+      "duration": 7.039
+    },
+    {
+      "text": "cell so the way that we can do that",
+      "start": 861.36,
+      "duration": 6.719
+    },
+    {
+      "text": "is just adding that conditional logic",
+      "start": 865.279,
+      "duration": 3.92
+    },
+    {
+      "text": "into our function",
+      "start": 868.079,
+      "duration": 4.0
+    },
+    {
+      "text": "which returns the style and knowing that",
+      "start": 869.199,
+      "duration": 5.121
+    },
+    {
+      "text": "if we return an empty string",
+      "start": 872.079,
+      "duration": 5.361
+    },
+    {
+      "text": "then it's not going to apply any style",
+      "start": 874.32,
+      "duration": 5.44
+    },
+    {
+      "text": "but if we return that string with the",
+      "start": 877.44,
+      "duration": 3.28
+    },
+    {
+      "text": "value",
+      "start": 879.76,
+      "duration": 4.0
+    },
+    {
+      "text": "then it is going to apply that style",
+      "start": 880.72,
+      "duration": 6.799
+    },
+    {
+      "text": "so here the function does two things",
+      "start": 883.76,
+      "duration": 7.04
+    },
+    {
+      "text": "so first um it checks",
+      "start": 887.519,
+      "duration": 5.44
+    },
+    {
+      "text": "if the value we're getting is a string",
+      "start": 890.8,
+      "duration": 3.039
+    },
+    {
+      "text": "so this is",
+      "start": 892.959,
+      "duration": 2.401
+    },
+    {
+      "text": "something we haven't seen before is",
+      "start": 893.839,
+      "duration": 4.881
+    },
+    {
+      "text": "instance is a way of checking the type",
+      "start": 895.36,
+      "duration": 6.8
+    },
+    {
+      "text": "of some object so here we're checking",
+      "start": 898.72,
+      "duration": 5.44
+    },
+    {
+      "text": "is the value that we're getting a string",
+      "start": 902.16,
+      "duration": 4.32
+    },
+    {
+      "text": "if so we're not going to format it",
+      "start": 904.16,
+      "duration": 4.799
+    },
+    {
+      "text": "and the reason we've added this let me",
+      "start": 906.48,
+      "duration": 5.12
+    },
+    {
+      "text": "go ahead and comment this out",
+      "start": 908.959,
+      "duration": 4.88
+    },
+    {
+      "text": "so that now this is all that is",
+      "start": 911.6,
+      "duration": 4.08
+    },
+    {
+      "text": "executing in the function",
+      "start": 913.839,
+      "duration": 4.081
+    },
+    {
+      "text": "we run that and we see we get an error",
+      "start": 915.68,
+      "duration": 3.279
+    },
+    {
+      "text": "right away",
+      "start": 917.92,
+      "duration": 4.32
+    },
+    {
+      "text": "type error because less than",
+      "start": 918.959,
+      "duration": 6.32
+    },
+    {
+      "text": "is not supported between a string and",
+      "start": 922.24,
+      "duration": 6.56
+    },
+    {
+      "text": "float and that's because uh",
+      "start": 925.279,
+      "duration": 5.92
+    },
+    {
+      "text": "we're checking if value is less than 0.5",
+      "start": 928.8,
+      "duration": 3.68
+    },
+    {
+      "text": "and we have jim",
+      "start": 931.199,
+      "duration": 4.0
+    },
+    {
+      "text": "joe and mary as values in there and so",
+      "start": 932.48,
+      "duration": 4.24
+    },
+    {
+      "text": "now it's trying to say",
+      "start": 935.199,
+      "duration": 5.121
+    },
+    {
+      "text": "uh you know like like joe",
+      "start": 936.72,
+      "duration": 6.559
+    },
+    {
+      "text": "is joe less than point five we see that",
+      "start": 940.32,
+      "duration": 3.68
+    },
+    {
+      "text": "same exact",
+      "start": 943.279,
+      "duration": 2.321
+    },
+    {
+      "text": "error so that's that's the problem",
+      "start": 944.0,
+      "duration": 3.44
+    },
+    {
+      "text": "that's going on here we don't want to",
+      "start": 945.6,
+      "duration": 3.599
+    },
+    {
+      "text": "compare the strings we never want to",
+      "start": 947.44,
+      "duration": 3.519
+    },
+    {
+      "text": "highlight the strings we just want to",
+      "start": 949.199,
+      "duration": 3.281
+    },
+    {
+      "text": "ignore them",
+      "start": 950.959,
+      "duration": 3.361
+    },
+    {
+      "text": "we do want to take the numeric values",
+      "start": 952.48,
+      "duration": 4.24
+    },
+    {
+      "text": "and do that comparison",
+      "start": 954.32,
+      "duration": 4.8
+    },
+    {
+      "text": "so that's all that this first part means",
+      "start": 956.72,
+      "duration": 4.32
+    },
+    {
+      "text": "is just basically skip",
+      "start": 959.12,
+      "duration": 5.279
+    },
+    {
+      "text": "the string values just return no style",
+      "start": 961.04,
+      "duration": 6.719
+    },
+    {
+      "text": "for the string values then we come to we",
+      "start": 964.399,
+      "duration": 4.721
+    },
+    {
+      "text": "know we've got a number now",
+      "start": 967.759,
+      "duration": 3.52
+    },
+    {
+      "text": "so now we're comparing is that number",
+      "start": 969.12,
+      "duration": 3.68
+    },
+    {
+      "text": "less than 0.5",
+      "start": 971.279,
+      "duration": 3.68
+    },
+    {
+      "text": "if so we're gonna make the background",
+      "start": 972.8,
+      "duration": 3.2
+    },
+    {
+      "text": "pink",
+      "start": 974.959,
+      "duration": 4.481
+    },
+    {
+      "text": "um otherwise the value is greater than",
+      "start": 976.0,
+      "duration": 6.0
+    },
+    {
+      "text": "0.5 and so we're going to",
+      "start": 979.44,
+      "duration": 6.079
+    },
+    {
+      "text": "just return no style and so that's why",
+      "start": 982.0,
+      "duration": 4.16
+    },
+    {
+      "text": "we see",
+      "start": 985.519,
+      "duration": 3.44
+    },
+    {
+      "text": "after we apply this style to the data",
+      "start": 986.16,
+      "duration": 3.28
+    },
+    {
+      "text": "frame",
+      "start": 988.959,
+      "duration": 4.0
+    },
+    {
+      "text": "that only this one jim",
+      "start": 989.44,
+      "duration": 5.6
+    },
+    {
+      "text": "jim value is highlighted because jim is",
+      "start": 992.959,
+      "duration": 3.12
+    },
+    {
+      "text": "the only",
+      "start": 995.04,
+      "duration": 5.52
+    },
+    {
+      "text": "inactive individual in the data frame",
+      "start": 996.079,
+      "duration": 4.481
+    },
+    {
+      "text": "um and you know say you're trying to",
+      "start": 1001.68,
+      "duration": 4.719
+    },
+    {
+      "text": "develop this function",
+      "start": 1005.12,
+      "duration": 3.12
+    },
+    {
+      "text": "and things are not working out the way",
+      "start": 1006.399,
+      "duration": 3.841
+    },
+    {
+      "text": "that you expected",
+      "start": 1008.24,
+      "duration": 5.599
+    },
+    {
+      "text": "one shortcut or pattern you can use to",
+      "start": 1010.24,
+      "duration": 4.959
+    },
+    {
+      "text": "be able to test out",
+      "start": 1013.839,
+      "duration": 3.36
+    },
+    {
+      "text": "you know what what am i actually getting",
+      "start": 1015.199,
+      "duration": 3.601
+    },
+    {
+      "text": "in each of these cells as far as the",
+      "start": 1017.199,
+      "duration": 3.44
+    },
+    {
+      "text": "styling",
+      "start": 1018.8,
+      "duration": 5.12
+    },
+    {
+      "text": "if instead of doing df.style.applymap",
+      "start": 1020.639,
+      "duration": 5.521
+    },
+    {
+      "text": "you just do df.applymap remember we",
+      "start": 1023.92,
+      "duration": 3.68
+    },
+    {
+      "text": "learned that's taking each cell and",
+      "start": 1026.16,
+      "duration": 3.12
+    },
+    {
+      "text": "applying a function to it",
+      "start": 1027.6,
+      "duration": 3.839
+    },
+    {
+      "text": "then you can see what styles are going",
+      "start": 1029.28,
+      "duration": 3.679
+    },
+    {
+      "text": "to get applied in each cell",
+      "start": 1031.439,
+      "duration": 4.48
+    },
+    {
+      "text": "so here no styles to each of these cells",
+      "start": 1032.959,
+      "duration": 4.641
+    },
+    {
+      "text": "and here this one is getting",
+      "start": 1035.919,
+      "duration": 4.64
+    },
+    {
+      "text": "background color pink so a nice way if",
+      "start": 1037.6,
+      "duration": 4.56
+    },
+    {
+      "text": "your styles just are not coming out the",
+      "start": 1040.559,
+      "duration": 3.041
+    },
+    {
+      "text": "way you expected",
+      "start": 1042.16,
+      "duration": 3.519
+    },
+    {
+      "text": "see what am i actually getting in each",
+      "start": 1043.6,
+      "duration": 4.719
+    },
+    {
+      "text": "of these cells",
+      "start": 1045.679,
+      "duration": 2.64
+    },
+    {
+      "text": "and that's formatting individual cells",
+      "start": 1050.0,
+      "duration": 3.52
+    },
+    {
+      "text": "we can also do formatting with the",
+      "start": 1052.08,
+      "duration": 2.64
+    },
+    {
+      "text": "entire table",
+      "start": 1053.52,
+      "duration": 5.039
+    },
+    {
+      "text": "at once so you can hide the index the",
+      "start": 1054.72,
+      "duration": 4.56
+    },
+    {
+      "text": "index",
+      "start": 1058.559,
+      "duration": 2.881
+    },
+    {
+      "text": "uh is this zero one two thing that goes",
+      "start": 1059.28,
+      "duration": 3.36
+    },
+    {
+      "text": "down the side",
+      "start": 1061.44,
+      "duration": 4.239
+    },
+    {
+      "text": "um so you don't wanna see that then you",
+      "start": 1062.64,
+      "duration": 5.279
+    },
+    {
+      "text": "can just hide that",
+      "start": 1065.679,
+      "duration": 4.561
+    },
+    {
+      "text": "you can hide individual columns if you",
+      "start": 1067.919,
+      "duration": 3.921
+    },
+    {
+      "text": "want to exclude those just for the",
+      "start": 1070.24,
+      "duration": 3.84
+    },
+    {
+      "text": "display purposes",
+      "start": 1071.84,
+      "duration": 5.28
+    },
+    {
+      "text": "you can add a caption or title to the",
+      "start": 1074.08,
+      "duration": 4.88
+    },
+    {
+      "text": "table",
+      "start": 1077.12,
+      "duration": 5.04
+    },
+    {
+      "text": "um and there's a whole lot more that you",
+      "start": 1078.96,
+      "duration": 3.68
+    },
+    {
+      "text": "can do",
+      "start": 1082.16,
+      "duration": 3.68
+    },
+    {
+      "text": "this gets into uh how you can",
+      "start": 1082.64,
+      "duration": 7.039
+    },
+    {
+      "text": "basically um do whatever you want",
+      "start": 1085.84,
+      "duration": 6.959
+    },
+    {
+      "text": "with data frames and this example comes",
+      "start": 1089.679,
+      "duration": 4.401
+    },
+    {
+      "text": "right out of the pandas",
+      "start": 1092.799,
+      "duration": 4.641
+    },
+    {
+      "text": "documentation actually here is adding",
+      "start": 1094.08,
+      "duration": 6.4
+    },
+    {
+      "text": "a hover style to the data frame so it",
+      "start": 1097.44,
+      "duration": 4.56
+    },
+    {
+      "text": "does something different",
+      "start": 1100.48,
+      "duration": 4.88
+    },
+    {
+      "text": "when you hover over it",
+      "start": 1102.0,
+      "duration": 5.28
+    },
+    {
+      "text": "so we're not going to go into the",
+      "start": 1105.36,
+      "duration": 3.52
+    },
+    {
+      "text": "details here this",
+      "start": 1107.28,
+      "duration": 3.2
+    },
+    {
+      "text": "is really getting outside the scope of",
+      "start": 1108.88,
+      "duration": 3.84
+    },
+    {
+      "text": "the course but i'm just showing this to",
+      "start": 1110.48,
+      "duration": 3.84
+    },
+    {
+      "text": "kind of highlight you can do whatever",
+      "start": 1112.72,
+      "duration": 2.56
+    },
+    {
+      "text": "you want",
+      "start": 1114.32,
+      "duration": 5.04
+    },
+    {
+      "text": "with these uh styling of the data frames",
+      "start": 1115.28,
+      "duration": 4.639
+    },
+    {
+      "text": "really",
+      "start": 1119.36,
+      "duration": 2.88
+    },
+    {
+      "text": "the limit is only your imagination and",
+      "start": 1119.919,
+      "duration": 3.601
+    },
+    {
+      "text": "willingness to",
+      "start": 1122.24,
+      "duration": 2.96
+    },
+    {
+      "text": "figure out the specific code to make",
+      "start": 1123.52,
+      "duration": 4.32
+    },
+    {
+      "text": "that happen",
+      "start": 1125.2,
+      "duration": 2.64
+    },
+    {
+      "text": "one other nice uh thing that we can do",
+      "start": 1131.2,
+      "duration": 3.599
+    },
+    {
+      "text": "very easily",
+      "start": 1133.52,
+      "duration": 5.519
+    },
+    {
+      "text": "with these styling of data frames",
+      "start": 1134.799,
+      "duration": 7.601
+    },
+    {
+      "text": "is it has this style.bar",
+      "start": 1139.039,
+      "duration": 7.041
+    },
+    {
+      "text": "method which draws bar",
+      "start": 1142.4,
+      "duration": 7.84
+    },
+    {
+      "text": "bar plots within the individual cells",
+      "start": 1146.08,
+      "duration": 7.52
+    },
+    {
+      "text": "of the data frame and so if",
+      "start": 1150.24,
+      "duration": 5.36
+    },
+    {
+      "text": "obviously we just have three rows it was",
+      "start": 1153.6,
+      "duration": 3.439
+    },
+    {
+      "text": "already fairly easy to see but if you",
+      "start": 1155.6,
+      "duration": 2.72
+    },
+    {
+      "text": "have a lot more this is",
+      "start": 1157.039,
+      "duration": 4.401
+    },
+    {
+      "text": "getting a lot more useful uh from this",
+      "start": 1158.32,
+      "duration": 5.04
+    },
+    {
+      "text": "we can easily see what are the smallest",
+      "start": 1161.44,
+      "duration": 3.599
+    },
+    {
+      "text": "values in each of the columns what the",
+      "start": 1163.36,
+      "duration": 4.319
+    },
+    {
+      "text": "largest values in each of the columns",
+      "start": 1165.039,
+      "duration": 6.321
+    },
+    {
+      "text": "based off of those bars and you can",
+      "start": 1167.679,
+      "duration": 5.12
+    },
+    {
+      "text": "change the color of those",
+      "start": 1171.36,
+      "duration": 4.4
+    },
+    {
+      "text": "by passing a color argument and there",
+      "start": 1172.799,
+      "duration": 4.641
+    },
+    {
+      "text": "are three different ways that we can",
+      "start": 1175.76,
+      "duration": 2.64
+    },
+    {
+      "text": "align",
+      "start": 1177.44,
+      "duration": 4.08
+    },
+    {
+      "text": "those bars as well",
+      "start": 1178.4,
+      "duration": 7.519
+    },
+    {
+      "text": "so this is the",
+      "start": 1181.52,
+      "duration": 7.76
+    },
+    {
+      "text": "default alignment of it",
+      "start": 1185.919,
+      "duration": 6.401
+    },
+    {
+      "text": "which is the left alignment",
+      "start": 1189.28,
+      "duration": 4.56
+    },
+    {
+      "text": "and so that's saying that the lowest",
+      "start": 1192.32,
+      "duration": 3.04
+    },
+    {
+      "text": "value is not going to show up",
+      "start": 1193.84,
+      "duration": 3.76
+    },
+    {
+      "text": "the highest value is going to be full",
+      "start": 1195.36,
+      "duration": 3.28
+    },
+    {
+      "text": "and the rest are",
+      "start": 1197.6,
+      "duration": 4.16
+    },
+    {
+      "text": "kind of spread in between",
+      "start": 1198.64,
+      "duration": 3.12
+    },
+    {
+      "text": "or you can align from zero meaning that",
+      "start": 1201.84,
+      "duration": 7.36
+    },
+    {
+      "text": "empty bar is representing 0",
+      "start": 1205.36,
+      "duration": 3.84
+    },
+    {
+      "text": "and a full bar is",
+      "start": 1209.28,
+      "duration": 7.36
+    },
+    {
+      "text": "again the max",
+      "start": 1213.84,
+      "duration": 2.8
+    },
+    {
+      "text": "and we also have this mid alignment",
+      "start": 1217.679,
+      "duration": 7.041
+    },
+    {
+      "text": "which puts zero",
+      "start": 1221.44,
+      "duration": 6.32
+    },
+    {
+      "text": "at the middle negative values are going",
+      "start": 1224.72,
+      "duration": 4.24
+    },
+    {
+      "text": "to be below that",
+      "start": 1227.76,
+      "duration": 2.96
+    },
+    {
+      "text": "and positive values are going to be",
+      "start": 1228.96,
+      "duration": 4.56
+    },
+    {
+      "text": "above that and we can also pass a subset",
+      "start": 1230.72,
+      "duration": 3.76
+    },
+    {
+      "text": "to give it",
+      "start": 1233.52,
+      "duration": 3.2
+    },
+    {
+      "text": "only certain columns that we want to",
+      "start": 1234.48,
+      "duration": 4.079
+    },
+    {
+      "text": "apply this to instead of applying it to",
+      "start": 1236.72,
+      "duration": 4.959
+    },
+    {
+      "text": "every numeric column",
+      "start": 1238.559,
+      "duration": 3.12
+    },
+    {
+      "text": "so i mentioned i would show you a",
+      "start": 1242.4,
+      "duration": 4.0
+    },
+    {
+      "text": "pattern on the best way",
+      "start": 1243.76,
+      "duration": 5.76
+    },
+    {
+      "text": "to organize yourself with this styling",
+      "start": 1246.4,
+      "duration": 6.32
+    },
+    {
+      "text": "because again you don't apply styling to",
+      "start": 1249.52,
+      "duration": 4.88
+    },
+    {
+      "text": "the original data frame",
+      "start": 1252.72,
+      "duration": 4.079
+    },
+    {
+      "text": "you're creating a new object a styler",
+      "start": 1254.4,
+      "duration": 4.48
+    },
+    {
+      "text": "object which has the formatting which is",
+      "start": 1256.799,
+      "duration": 3.041
+    },
+    {
+      "text": "separate",
+      "start": 1258.88,
+      "duration": 4.56
+    },
+    {
+      "text": "from your original data so",
+      "start": 1259.84,
+      "duration": 6.319
+    },
+    {
+      "text": "that df there does not have any of this",
+      "start": 1263.44,
+      "duration": 3.92
+    },
+    {
+      "text": "styling that we just",
+      "start": 1266.159,
+      "duration": 2.801
+    },
+    {
+      "text": "played around with in all these prior",
+      "start": 1267.36,
+      "duration": 4.16
+    },
+    {
+      "text": "sections the original data is still as",
+      "start": 1268.96,
+      "duration": 5.04
+    },
+    {
+      "text": "it was",
+      "start": 1271.52,
+      "duration": 5.76
+    },
+    {
+      "text": "um and so the way that we can work with",
+      "start": 1274.0,
+      "duration": 4.559
+    },
+    {
+      "text": "this in a nice way",
+      "start": 1277.28,
+      "duration": 4.48
+    },
+    {
+      "text": "is by creating styler functions",
+      "start": 1278.559,
+      "duration": 6.161
+    },
+    {
+      "text": "so you create a function which takes the",
+      "start": 1281.76,
+      "duration": 3.76
+    },
+    {
+      "text": "data frame",
+      "start": 1284.72,
+      "duration": 4.12
+    },
+    {
+      "text": "as the input and returns the styler",
+      "start": 1285.52,
+      "duration": 7.039
+    },
+    {
+      "text": "object and that way all your",
+      "start": 1288.84,
+      "duration": 6.6
+    },
+    {
+      "text": "formatting code is totally separate from",
+      "start": 1292.559,
+      "duration": 4.961
+    },
+    {
+      "text": "all your data logic",
+      "start": 1295.44,
+      "duration": 4.4
+    },
+    {
+      "text": "and you can potentially style multiple",
+      "start": 1297.52,
+      "duration": 3.44
+    },
+    {
+      "text": "different data frames",
+      "start": 1299.84,
+      "duration": 3.68
+    },
+    {
+      "text": "in the same way by just passing them to",
+      "start": 1300.96,
+      "duration": 3.04
+    },
+    {
+      "text": "the same",
+      "start": 1303.52,
+      "duration": 3.92
+    },
+    {
+      "text": "styler function this also shows you how",
+      "start": 1304.0,
+      "duration": 4.64
+    },
+    {
+      "text": "you can",
+      "start": 1307.44,
+      "duration": 4.0
+    },
+    {
+      "text": "chain a bunch of different uh formatting",
+      "start": 1308.64,
+      "duration": 3.44
+    },
+    {
+      "text": "commands",
+      "start": 1311.44,
+      "duration": 4.08
+    },
+    {
+      "text": "in one go uh if you use the parentheses",
+      "start": 1312.08,
+      "duration": 5.12
+    },
+    {
+      "text": "that you can break this onto multiple",
+      "start": 1315.52,
+      "duration": 3.84
+    },
+    {
+      "text": "lines then it looks pretty nice",
+      "start": 1317.2,
+      "duration": 4.719
+    },
+    {
+      "text": "as well that first we're going to format",
+      "start": 1319.36,
+      "duration": 3.76
+    },
+    {
+      "text": "the numbers",
+      "start": 1321.919,
+      "duration": 2.64
+    },
+    {
+      "text": "with for the two columns and the ways",
+      "start": 1323.12,
+      "duration": 3.52
+    },
+    {
+      "text": "that we talked about and then i want to",
+      "start": 1324.559,
+      "duration": 4.0
+    },
+    {
+      "text": "highlight the inactive ones",
+      "start": 1326.64,
+      "duration": 4.56
+    },
+    {
+      "text": "and i want to center the values and i",
+      "start": 1328.559,
+      "duration": 4.0
+    },
+    {
+      "text": "want to hide the index",
+      "start": 1331.2,
+      "duration": 2.719
+    },
+    {
+      "text": "and i want to give it a title of",
+      "start": 1332.559,
+      "duration": 4.081
+    },
+    {
+      "text": "personal info and i want to draw the",
+      "start": 1333.919,
+      "duration": 5.041
+    },
+    {
+      "text": "bars",
+      "start": 1336.64,
+      "duration": 4.8
+    },
+    {
+      "text": "for the reservation price column so",
+      "start": 1338.96,
+      "duration": 4.16
+    },
+    {
+      "text": "defining that function",
+      "start": 1341.44,
+      "duration": 4.88
+    },
+    {
+      "text": "then we can call that on any data frame",
+      "start": 1343.12,
+      "duration": 6.799
+    },
+    {
+      "text": "that we want so now we see the result",
+      "start": 1346.32,
+      "duration": 6.479
+    },
+    {
+      "text": "of all those changes all together",
+      "start": 1349.919,
+      "duration": 3.841
+    },
+    {
+      "text": "caption",
+      "start": 1352.799,
+      "duration": 3.12
+    },
+    {
+      "text": "the centering the bar the highlighting",
+      "start": 1353.76,
+      "duration": 3.039
+    },
+    {
+      "text": "the inactive",
+      "start": 1355.919,
+      "duration": 3.76
+    },
+    {
+      "text": "the number formatting and now it all",
+      "start": 1356.799,
+      "duration": 3.841
+    },
+    {
+      "text": "happens from",
+      "start": 1359.679,
+      "duration": 4.401
+    },
+    {
+      "text": "one single function and because we have",
+      "start": 1360.64,
+      "duration": 4.96
+    },
+    {
+      "text": "that as a function we can apply it to",
+      "start": 1364.08,
+      "duration": 2.56
+    },
+    {
+      "text": "any data frame",
+      "start": 1365.6,
+      "duration": 4.559
+    },
+    {
+      "text": "that we want um and so you know here",
+      "start": 1366.64,
+      "duration": 4.08
+    },
+    {
+      "text": "we're",
+      "start": 1370.159,
+      "duration": 2.561
+    },
+    {
+      "text": "we're making a new data frame which is",
+      "start": 1370.72,
+      "duration": 4.88
+    },
+    {
+      "text": "just pulling out the reservation price",
+      "start": 1372.72,
+      "duration": 4.56
+    },
+    {
+      "text": "and percentage active columns and",
+      "start": 1375.6,
+      "duration": 3.76
+    },
+    {
+      "text": "multiplying them by 0.8",
+      "start": 1377.28,
+      "duration": 3.92
+    },
+    {
+      "text": "we can take that same one and we can",
+      "start": 1379.36,
+      "duration": 3.36
+    },
+    {
+      "text": "pass it to the same",
+      "start": 1381.2,
+      "duration": 4.4
+    },
+    {
+      "text": "stylor function and we see that style",
+      "start": 1382.72,
+      "duration": 7.12
+    },
+    {
+      "text": "now in the same way",
+      "start": 1385.6,
+      "duration": 4.24
+    },
+    {
+      "text": "then there are also a few other",
+      "start": 1390.72,
+      "duration": 4.4
+    },
+    {
+      "text": "shortcuts that pandas has",
+      "start": 1392.559,
+      "duration": 5.521
+    },
+    {
+      "text": "added that are nice to know about you",
+      "start": 1395.12,
+      "duration": 3.36
+    },
+    {
+      "text": "can",
+      "start": 1398.08,
+      "duration": 2.959
+    },
+    {
+      "text": "easily highlight the maximum value in a",
+      "start": 1398.48,
+      "duration": 4.0
+    },
+    {
+      "text": "column",
+      "start": 1401.039,
+      "duration": 5.201
+    },
+    {
+      "text": "or the minimum value and you can",
+      "start": 1402.48,
+      "duration": 5.439
+    },
+    {
+      "text": "pass similar arguments like we did for",
+      "start": 1406.24,
+      "duration": 3.28
+    },
+    {
+      "text": "the bars color",
+      "start": 1407.919,
+      "duration": 4.24
+    },
+    {
+      "text": "a subset",
+      "start": 1409.52,
+      "duration": 2.639
+    },
+    {
+      "text": "same thing on the minimum you can pass",
+      "start": 1412.64,
+      "duration": 4.24
+    },
+    {
+      "text": "those same kind of values",
+      "start": 1414.08,
+      "duration": 4.88
+    },
+    {
+      "text": "background gradient is a really nice one",
+      "start": 1416.88,
+      "duration": 3.52
+    },
+    {
+      "text": "for",
+      "start": 1418.96,
+      "duration": 4.8
+    },
+    {
+      "text": "just giving a color map",
+      "start": 1420.4,
+      "duration": 6.0
+    },
+    {
+      "text": "to the cells highlighting them based on",
+      "start": 1423.76,
+      "duration": 5.12
+    },
+    {
+      "text": "their values",
+      "start": 1426.4,
+      "duration": 5.68
+    },
+    {
+      "text": "and you can pass what specific type",
+      "start": 1428.88,
+      "duration": 6.159
+    },
+    {
+      "text": "of color map that you want i mean if you",
+      "start": 1432.08,
+      "duration": 4.479
+    },
+    {
+      "text": "want to figure out what",
+      "start": 1435.039,
+      "duration": 4.561
+    },
+    {
+      "text": "are the possible",
+      "start": 1436.559,
+      "duration": 3.041
+    },
+    {
+      "text": "values that i can use in that you can",
+      "start": 1440.72,
+      "duration": 3.28
+    },
+    {
+      "text": "google matplotlib color",
+      "start": 1442.559,
+      "duration": 3.681
+    },
+    {
+      "text": "maps again remember that pandas uses",
+      "start": 1444.0,
+      "duration": 5.12
+    },
+    {
+      "text": "matplotlib under the hood for",
+      "start": 1446.24,
+      "duration": 6.16
+    },
+    {
+      "text": "all these things and you can see",
+      "start": 1449.12,
+      "duration": 5.76
+    },
+    {
+      "text": "this lists out all the pop all the",
+      "start": 1452.4,
+      "duration": 3.759
+    },
+    {
+      "text": "possible",
+      "start": 1454.88,
+      "duration": 4.399
+    },
+    {
+      "text": "color maps that you can use but the one",
+      "start": 1456.159,
+      "duration": 4.161
+    },
+    {
+      "text": "that we'll",
+      "start": 1459.279,
+      "duration": 3.681
+    },
+    {
+      "text": "focus on here and of course most often",
+      "start": 1460.32,
+      "duration": 3.12
+    },
+    {
+      "text": "is",
+      "start": 1462.96,
+      "duration": 4.0
+    },
+    {
+      "text": "this uh red yellow green color map",
+      "start": 1463.44,
+      "duration": 6.56
+    },
+    {
+      "text": "um and you can do underscore r to",
+      "start": 1466.96,
+      "duration": 5.04
+    },
+    {
+      "text": "reverse any color map",
+      "start": 1470.0,
+      "duration": 5.279
+    },
+    {
+      "text": "so uh red yellow green",
+      "start": 1472.0,
+      "duration": 5.2
+    },
+    {
+      "text": "is going to be the highest values in",
+      "start": 1475.279,
+      "duration": 4.241
+    },
+    {
+      "text": "green the lowest values in red and a",
+      "start": 1477.2,
+      "duration": 4.56
+    },
+    {
+      "text": "gradient in between",
+      "start": 1479.52,
+      "duration": 4.08
+    },
+    {
+      "text": "and with the underscore r then it's the",
+      "start": 1481.76,
+      "duration": 4.48
+    },
+    {
+      "text": "opposite highest values in red lowest",
+      "start": 1483.6,
+      "duration": 3.679
+    },
+    {
+      "text": "values in green",
+      "start": 1486.24,
+      "duration": 4.16
+    },
+    {
+      "text": "and a gradient in between",
+      "start": 1487.279,
+      "duration": 5.201
+    },
+    {
+      "text": "and we'll see this definitely is a",
+      "start": 1490.4,
+      "duration": 4.639
+    },
+    {
+      "text": "really nice way to be able to get",
+      "start": 1492.48,
+      "duration": 5.52
+    },
+    {
+      "text": "a nice quick way to see where the",
+      "start": 1495.039,
+      "duration": 5.041
+    },
+    {
+      "text": "largest and smallest values in a table",
+      "start": 1498.0,
+      "duration": 5.6
+    },
+    {
+      "text": "are so that's an overview",
+      "start": 1500.08,
+      "duration": 6.479
+    },
+    {
+      "text": "on pandas styling we're going to come",
+      "start": 1503.6,
+      "duration": 3.84
+    },
+    {
+      "text": "back next time",
+      "start": 1506.559,
+      "duration": 3.921
+    },
+    {
+      "text": "to learn about graphing with pandas",
+      "start": 1507.44,
+      "duration": 5.76
+    },
+    {
+      "text": "and python so thanks for listening and",
+      "start": 1510.48,
+      "duration": 5.36
+    },
+    {
+      "text": "see you next time",
+      "start": 1513.2,
+      "duration": 2.64
+    }
+  ]
+}

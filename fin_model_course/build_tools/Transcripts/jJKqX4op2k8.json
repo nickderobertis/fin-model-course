@@ -1,0 +1,1484 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.639,
+      "duration": 2.321
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 3.52,
+      "duration": 3.839
+    },
+    {
+      "text": "financial modeling and today we're",
+      "start": 4.96,
+      "duration": 4.639
+    },
+    {
+      "text": "going to go over an example of doing",
+      "start": 7.359,
+      "duration": 3.36
+    },
+    {
+      "text": "visualization",
+      "start": 9.599,
+      "duration": 3.92
+    },
+    {
+      "text": "in excel as part of our lecture series",
+      "start": 10.719,
+      "duration": 3.361
+    },
+    {
+      "text": "on",
+      "start": 13.519,
+      "duration": 2.961
+    },
+    {
+      "text": "visualization and understanding complex",
+      "start": 14.08,
+      "duration": 3.76
+    },
+    {
+      "text": "results",
+      "start": 16.48,
+      "duration": 4.32
+    },
+    {
+      "text": "so we're going to work with the dynamic",
+      "start": 17.84,
+      "duration": 4.56
+    },
+    {
+      "text": "salary retirement model",
+      "start": 20.8,
+      "duration": 3.68
+    },
+    {
+      "text": "that we've built out in the first part",
+      "start": 22.4,
+      "duration": 3.6
+    },
+    {
+      "text": "of this course",
+      "start": 24.48,
+      "duration": 4.32
+    },
+    {
+      "text": "and we're going to now add visualization",
+      "start": 26.0,
+      "duration": 4.24
+    },
+    {
+      "text": "to the excel side",
+      "start": 28.8,
+      "duration": 4.32
+    },
+    {
+      "text": "of that model so i'm going to jump over",
+      "start": 30.24,
+      "duration": 3.68
+    },
+    {
+      "text": "to",
+      "start": 33.12,
+      "duration": 3.279
+    },
+    {
+      "text": "the excel for the dynamic salary",
+      "start": 33.92,
+      "duration": 5.28
+    },
+    {
+      "text": "retirement model",
+      "start": 36.399,
+      "duration": 2.801
+    },
+    {
+      "text": "so we already have our main output",
+      "start": 39.44,
+      "duration": 5.04
+    },
+    {
+      "text": "coming here used to retirement but it",
+      "start": 42.64,
+      "duration": 3.36
+    },
+    {
+      "text": "would be nice to be able to see here",
+      "start": 44.48,
+      "duration": 2.399
+    },
+    {
+      "text": "also",
+      "start": 46.0,
+      "duration": 2.399
+    },
+    {
+      "text": "what the salaries look like over the",
+      "start": 46.879,
+      "duration": 3.68
+    },
+    {
+      "text": "time what do the wealth look like",
+      "start": 48.399,
+      "duration": 5.521
+    },
+    {
+      "text": "over time and being able to see that",
+      "start": 50.559,
+      "duration": 6.561
+    },
+    {
+      "text": "very quickly in a very digestible format",
+      "start": 53.92,
+      "duration": 6.319
+    },
+    {
+      "text": "of course we could just bring over",
+      "start": 57.12,
+      "duration": 5.759
+    },
+    {
+      "text": "the salaries and the wealth into a table",
+      "start": 60.239,
+      "duration": 3.041
+    },
+    {
+      "text": "and",
+      "start": 62.879,
+      "duration": 3.841
+    },
+    {
+      "text": "show that on the inputs and outputs tab",
+      "start": 63.28,
+      "duration": 6.48
+    },
+    {
+      "text": "as well but it's not going to be easy to",
+      "start": 66.72,
+      "duration": 4.0
+    },
+    {
+      "text": "just glance",
+      "start": 69.76,
+      "duration": 3.679
+    },
+    {
+      "text": "at these numbers and understand patterns",
+      "start": 70.72,
+      "duration": 5.12
+    },
+    {
+      "text": "in those numbers over time",
+      "start": 73.439,
+      "duration": 5.841
+    },
+    {
+      "text": "it would take a lot of really closely",
+      "start": 75.84,
+      "duration": 5.04
+    },
+    {
+      "text": "looking at the numbers to understand",
+      "start": 79.28,
+      "duration": 2.96
+    },
+    {
+      "text": "those patterns",
+      "start": 80.88,
+      "duration": 3.279
+    },
+    {
+      "text": "so instead let's produce some",
+      "start": 82.24,
+      "duration": 4.72
+    },
+    {
+      "text": "visualizations of those numbers",
+      "start": 84.159,
+      "duration": 6.0
+    },
+    {
+      "text": "so looking at the salary we want to make",
+      "start": 86.96,
+      "duration": 5.76
+    },
+    {
+      "text": "a plot of the salary over time",
+      "start": 90.159,
+      "duration": 5.841
+    },
+    {
+      "text": "and all of that is going to come from",
+      "start": 92.72,
+      "duration": 6.24
+    },
+    {
+      "text": "insert and then this charts section of",
+      "start": 96.0,
+      "duration": 4.64
+    },
+    {
+      "text": "the insert",
+      "start": 98.96,
+      "duration": 5.199
+    },
+    {
+      "text": "tab in the ribbon and the first thing",
+      "start": 100.64,
+      "duration": 4.24
+    },
+    {
+      "text": "that we want to do",
+      "start": 104.159,
+      "duration": 2.96
+    },
+    {
+      "text": "is we want to highlight the data that we",
+      "start": 104.88,
+      "duration": 3.519
+    },
+    {
+      "text": "want to plot",
+      "start": 107.119,
+      "duration": 3.761
+    },
+    {
+      "text": "so we want to plot the salaries we don't",
+      "start": 108.399,
+      "duration": 3.281
+    },
+    {
+      "text": "care",
+      "start": 110.88,
+      "duration": 2.8
+    },
+    {
+      "text": "about any of these intermediate",
+      "start": 111.68,
+      "duration": 4.88
+    },
+    {
+      "text": "calculations we just want the time",
+      "start": 113.68,
+      "duration": 6.0
+    },
+    {
+      "text": "and the salaries so one way to go about",
+      "start": 116.56,
+      "duration": 3.519
+    },
+    {
+      "text": "that",
+      "start": 119.68,
+      "duration": 2.799
+    },
+    {
+      "text": "is to just select those two columns",
+      "start": 120.079,
+      "duration": 5.04
+    },
+    {
+      "text": "before you go to create the chart",
+      "start": 122.479,
+      "duration": 6.081
+    },
+    {
+      "text": "so the easiest way to do that start over",
+      "start": 125.119,
+      "duration": 4.081
+    },
+    {
+      "text": "here",
+      "start": 128.56,
+      "duration": 2.72
+    },
+    {
+      "text": "and then on windows it's going to be",
+      "start": 129.2,
+      "duration": 3.28
+    },
+    {
+      "text": "holding shift and",
+      "start": 131.28,
+      "duration": 3.92
+    },
+    {
+      "text": "control on mac i believe it's shift and",
+      "start": 132.48,
+      "duration": 3.68
+    },
+    {
+      "text": "command",
+      "start": 135.2,
+      "duration": 3.119
+    },
+    {
+      "text": "and then you press down and it's going",
+      "start": 136.16,
+      "duration": 5.76
+    },
+    {
+      "text": "to highlight that entire column for you",
+      "start": 138.319,
+      "duration": 5.201
+    },
+    {
+      "text": "and then you can come over",
+      "start": 141.92,
+      "duration": 4.399
+    },
+    {
+      "text": "here to the salary cell hold control",
+      "start": 143.52,
+      "duration": 4.64
+    },
+    {
+      "text": "that would be command on mac",
+      "start": 146.319,
+      "duration": 3.841
+    },
+    {
+      "text": "and click and now you can see we've got",
+      "start": 148.16,
+      "duration": 3.68
+    },
+    {
+      "text": "this whole column as well",
+      "start": 150.16,
+      "duration": 4.4
+    },
+    {
+      "text": "as this cell and now that our last",
+      "start": 151.84,
+      "duration": 4.479
+    },
+    {
+      "text": "selection was on this cell we can do",
+      "start": 154.56,
+      "duration": 2.399
+    },
+    {
+      "text": "that same",
+      "start": 156.319,
+      "duration": 3.28
+    },
+    {
+      "text": "shift and control or command trick hit",
+      "start": 156.959,
+      "duration": 3.681
+    },
+    {
+      "text": "down again",
+      "start": 159.599,
+      "duration": 2.881
+    },
+    {
+      "text": "and now we have both of these two",
+      "start": 160.64,
+      "duration": 4.16
+    },
+    {
+      "text": "columns selected",
+      "start": 162.48,
+      "duration": 4.72
+    },
+    {
+      "text": "so from there i always like to go to",
+      "start": 164.8,
+      "duration": 4.04
+    },
+    {
+      "text": "recommended charts",
+      "start": 167.2,
+      "duration": 4.72
+    },
+    {
+      "text": "first because that will usually tell you",
+      "start": 168.84,
+      "duration": 4.28
+    },
+    {
+      "text": "the best charts",
+      "start": 171.92,
+      "duration": 5.039
+    },
+    {
+      "text": "for your particular data",
+      "start": 173.12,
+      "duration": 3.839
+    },
+    {
+      "text": "and you can look through the recommended",
+      "start": 177.04,
+      "duration": 4.08
+    },
+    {
+      "text": "charts for what you think",
+      "start": 179.519,
+      "duration": 5.281
+    },
+    {
+      "text": "is appropriate for your data",
+      "start": 181.12,
+      "duration": 5.36
+    },
+    {
+      "text": "but then if you don't see something that",
+      "start": 184.8,
+      "duration": 3.92
+    },
+    {
+      "text": "you like then you can go over to this",
+      "start": 186.48,
+      "duration": 3.679
+    },
+    {
+      "text": "all charts tab",
+      "start": 188.72,
+      "duration": 3.36
+    },
+    {
+      "text": "and explore through all the different",
+      "start": 190.159,
+      "duration": 4.881
+    },
+    {
+      "text": "options that you have",
+      "start": 192.08,
+      "duration": 5.92
+    },
+    {
+      "text": "but here the recommended chart did bring",
+      "start": 195.04,
+      "duration": 3.839
+    },
+    {
+      "text": "up",
+      "start": 198.0,
+      "duration": 2.959
+    },
+    {
+      "text": "a nice representation for this data",
+      "start": 198.879,
+      "duration": 3.36
+    },
+    {
+      "text": "which is a simple",
+      "start": 200.959,
+      "duration": 3.92
+    },
+    {
+      "text": "line chart so here we can see the",
+      "start": 202.239,
+      "duration": 3.521
+    },
+    {
+      "text": "salaries",
+      "start": 204.879,
+      "duration": 5.121
+    },
+    {
+      "text": "over time going up so let's go ahead and",
+      "start": 205.76,
+      "duration": 4.88
+    },
+    {
+      "text": "hit ok",
+      "start": 210.0,
+      "duration": 3.92
+    },
+    {
+      "text": "to insert that chart so now we can see",
+      "start": 210.64,
+      "duration": 6.8
+    },
+    {
+      "text": "we have this chart over here",
+      "start": 213.92,
+      "duration": 6.08
+    },
+    {
+      "text": "now i said that we wanted to have the",
+      "start": 217.44,
+      "duration": 4.879
+    },
+    {
+      "text": "chart over on the inputs and outputs tab",
+      "start": 220.0,
+      "duration": 4.319
+    },
+    {
+      "text": "but now i have it on the salary tab",
+      "start": 222.319,
+      "duration": 4.401
+    },
+    {
+      "text": "because that's where the salaries were",
+      "start": 224.319,
+      "duration": 5.601
+    },
+    {
+      "text": "so the reason that i made it over here",
+      "start": 226.72,
+      "duration": 5.2
+    },
+    {
+      "text": "is because it's very easy now to just",
+      "start": 229.92,
+      "duration": 3.28
+    },
+    {
+      "text": "click this",
+      "start": 231.92,
+      "duration": 4.56
+    },
+    {
+      "text": "and i'm going to hit control x that",
+      "start": 233.2,
+      "duration": 5.039
+    },
+    {
+      "text": "would be command x on mac",
+      "start": 236.48,
+      "duration": 3.6
+    },
+    {
+      "text": "you can see it disappears because i have",
+      "start": 238.239,
+      "duration": 3.041
+    },
+    {
+      "text": "now cut",
+      "start": 240.08,
+      "duration": 4.239
+    },
+    {
+      "text": "the plot and now i can paste it",
+      "start": 241.28,
+      "duration": 5.599
+    },
+    {
+      "text": "controller command v over here and",
+      "start": 244.319,
+      "duration": 3.681
+    },
+    {
+      "text": "everything stays",
+      "start": 246.879,
+      "duration": 3.761
+    },
+    {
+      "text": "linked together so you know now if i",
+      "start": 248.0,
+      "duration": 3.28
+    },
+    {
+      "text": "change",
+      "start": 250.64,
+      "duration": 2.959
+    },
+    {
+      "text": "how often the promotions are then you'll",
+      "start": 251.28,
+      "duration": 3.92
+    },
+    {
+      "text": "see that immediately changing in the",
+      "start": 253.599,
+      "duration": 2.801
+    },
+    {
+      "text": "graph as well",
+      "start": 255.2,
+      "duration": 4.559
+    },
+    {
+      "text": "everything is still linked together",
+      "start": 256.4,
+      "duration": 5.6
+    },
+    {
+      "text": "and this i think is generally easier",
+      "start": 259.759,
+      "duration": 3.44
+    },
+    {
+      "text": "than trying to",
+      "start": 262.0,
+      "duration": 2.96
+    },
+    {
+      "text": "start a chart on this page and then",
+      "start": 263.199,
+      "duration": 3.121
+    },
+    {
+      "text": "reference over",
+      "start": 264.96,
+      "duration": 4.48
+    },
+    {
+      "text": "to another page to get the data",
+      "start": 266.32,
+      "duration": 5.439
+    },
+    {
+      "text": "uh one other way that we could have",
+      "start": 269.44,
+      "duration": 3.52
+    },
+    {
+      "text": "selected the data",
+      "start": 271.759,
+      "duration": 3.521
+    },
+    {
+      "text": "to produce the plot is just to select",
+      "start": 272.96,
+      "duration": 3.44
+    },
+    {
+      "text": "everything",
+      "start": 275.28,
+      "duration": 4.72
+    },
+    {
+      "text": "and then uh insert the chart and then",
+      "start": 276.4,
+      "duration": 6.799
+    },
+    {
+      "text": "just let it be created and then after",
+      "start": 280.0,
+      "duration": 4.4
+    },
+    {
+      "text": "it's been created",
+      "start": 283.199,
+      "duration": 4.961
+    },
+    {
+      "text": "you can then see uh",
+      "start": 284.4,
+      "duration": 6.4
+    },
+    {
+      "text": "here where we can actually adjust the",
+      "start": 288.16,
+      "duration": 4.16
+    },
+    {
+      "text": "data which is included",
+      "start": 290.8,
+      "duration": 4.56
+    },
+    {
+      "text": "so now same way it also only includes",
+      "start": 292.32,
+      "duration": 5.52
+    },
+    {
+      "text": "the salary",
+      "start": 295.36,
+      "duration": 2.48
+    },
+    {
+      "text": "so now we have this chart of salary and",
+      "start": 300.56,
+      "duration": 7.359
+    },
+    {
+      "text": "we can see the salary over time this is",
+      "start": 304.4,
+      "duration": 5.28
+    },
+    {
+      "text": "already a lot more clear what's going on",
+      "start": 307.919,
+      "duration": 3.681
+    },
+    {
+      "text": "we can see those discrete jumps",
+      "start": 309.68,
+      "duration": 5.2
+    },
+    {
+      "text": "every time that there's a promotion",
+      "start": 311.6,
+      "duration": 4.8
+    },
+    {
+      "text": "one thing that's not so clear just",
+      "start": 314.88,
+      "duration": 3.28
+    },
+    {
+      "text": "looking at this is",
+      "start": 316.4,
+      "duration": 6.079
+    },
+    {
+      "text": "what what this axis means",
+      "start": 318.16,
+      "duration": 6.96
+    },
+    {
+      "text": "since the plot says this is salary it's",
+      "start": 322.479,
+      "duration": 4.321
+    },
+    {
+      "text": "fairly clear that this is a line of",
+      "start": 325.12,
+      "duration": 2.4
+    },
+    {
+      "text": "salary",
+      "start": 326.8,
+      "duration": 2.64
+    },
+    {
+      "text": "and these values represent the amount of",
+      "start": 327.52,
+      "duration": 3.36
+    },
+    {
+      "text": "the salary",
+      "start": 329.44,
+      "duration": 3.12
+    },
+    {
+      "text": "but here it's not clear what these",
+      "start": 330.88,
+      "duration": 3.599
+    },
+    {
+      "text": "numbers mean so",
+      "start": 332.56,
+      "duration": 4.479
+    },
+    {
+      "text": "you definitely want to add an axis title",
+      "start": 334.479,
+      "duration": 3.601
+    },
+    {
+      "text": "for this",
+      "start": 337.039,
+      "duration": 3.44
+    },
+    {
+      "text": "so this plus over here that comes up",
+      "start": 338.08,
+      "duration": 3.92
+    },
+    {
+      "text": "whenever you click on the graph",
+      "start": 340.479,
+      "duration": 4.56
+    },
+    {
+      "text": "is how you can easily add additional",
+      "start": 342.0,
+      "duration": 4.88
+    },
+    {
+      "text": "elements to the chart and here the",
+      "start": 345.039,
+      "duration": 3.44
+    },
+    {
+      "text": "element we want to add",
+      "start": 346.88,
+      "duration": 5.2
+    },
+    {
+      "text": "is going to be a primary horizontal axis",
+      "start": 348.479,
+      "duration": 7.041
+    },
+    {
+      "text": "title so we add that and then we can",
+      "start": 352.08,
+      "duration": 5.2
+    },
+    {
+      "text": "double click in here",
+      "start": 355.52,
+      "duration": 4.72
+    },
+    {
+      "text": "to change out the name of that and this",
+      "start": 357.28,
+      "duration": 4.72
+    },
+    {
+      "text": "is going to be",
+      "start": 360.24,
+      "duration": 5.84
+    },
+    {
+      "text": "uh time in years",
+      "start": 362.0,
+      "duration": 6.56
+    },
+    {
+      "text": "and that way it's a lot more clear what",
+      "start": 366.08,
+      "duration": 3.6
+    },
+    {
+      "text": "this actually",
+      "start": 368.56,
+      "duration": 4.479
+    },
+    {
+      "text": "represents so",
+      "start": 369.68,
+      "duration": 4.88
+    },
+    {
+      "text": "now this looks like a pretty good plot",
+      "start": 373.039,
+      "duration": 3.121
+    },
+    {
+      "text": "for salary",
+      "start": 374.56,
+      "duration": 3.84
+    },
+    {
+      "text": "but maybe we wanted to display this in a",
+      "start": 376.16,
+      "duration": 3.44
+    },
+    {
+      "text": "different way",
+      "start": 378.4,
+      "duration": 3.12
+    },
+    {
+      "text": "so it is possible to change the chart",
+      "start": 379.6,
+      "duration": 4.08
+    },
+    {
+      "text": "type after you've created it",
+      "start": 381.52,
+      "duration": 5.519
+    },
+    {
+      "text": "also uh it's possible to copy plots",
+      "start": 383.68,
+      "duration": 5.6
+    },
+    {
+      "text": "so that you can you know play around",
+      "start": 387.039,
+      "duration": 3.44
+    },
+    {
+      "text": "with different versions",
+      "start": 389.28,
+      "duration": 2.72
+    },
+    {
+      "text": "until you settle on something that you",
+      "start": 390.479,
+      "duration": 4.241
+    },
+    {
+      "text": "like so i'm going to go ahead and just",
+      "start": 392.0,
+      "duration": 3.759
+    },
+    {
+      "text": "copy ctrl",
+      "start": 394.72,
+      "duration": 5.039
+    },
+    {
+      "text": "c and then paste ctrl v this plot",
+      "start": 395.759,
+      "duration": 5.761
+    },
+    {
+      "text": "now we can see we have the same exact",
+      "start": 399.759,
+      "duration": 3.361
+    },
+    {
+      "text": "plot everything",
+      "start": 401.52,
+      "duration": 4.08
+    },
+    {
+      "text": "is still going to be linked together to",
+      "start": 403.12,
+      "duration": 4.96
+    },
+    {
+      "text": "the model",
+      "start": 405.6,
+      "duration": 5.52
+    },
+    {
+      "text": "and now we can click on this plot and we",
+      "start": 408.08,
+      "duration": 5.04
+    },
+    {
+      "text": "can go to the chart design tab",
+      "start": 411.12,
+      "duration": 4.56
+    },
+    {
+      "text": "and that allows us a few different",
+      "start": 413.12,
+      "duration": 3.199
+    },
+    {
+      "text": "things here",
+      "start": 415.68,
+      "duration": 2.72
+    },
+    {
+      "text": "one it's very easy to pick a different",
+      "start": 416.319,
+      "duration": 3.121
+    },
+    {
+      "text": "style",
+      "start": 418.4,
+      "duration": 4.88
+    },
+    {
+      "text": "for the plot just up here",
+      "start": 419.44,
+      "duration": 6.879
+    },
+    {
+      "text": "and the other is uh you can change the",
+      "start": 423.28,
+      "duration": 5.039
+    },
+    {
+      "text": "chart type here as well",
+      "start": 426.319,
+      "duration": 4.561
+    },
+    {
+      "text": "so you know instead of a line maybe we",
+      "start": 428.319,
+      "duration": 4.241
+    },
+    {
+      "text": "want a scatter plot",
+      "start": 430.88,
+      "duration": 4.719
+    },
+    {
+      "text": "with a with connected",
+      "start": 432.56,
+      "duration": 5.199
+    },
+    {
+      "text": "lines then it's more clear that we have",
+      "start": 435.599,
+      "duration": 4.32
+    },
+    {
+      "text": "observations for each year",
+      "start": 437.759,
+      "duration": 4.88
+    },
+    {
+      "text": "and not necessarily you know completely",
+      "start": 439.919,
+      "duration": 3.28
+    },
+    {
+      "text": "filled out",
+      "start": 442.639,
+      "duration": 4.241
+    },
+    {
+      "text": "in this axis um or maybe",
+      "start": 443.199,
+      "duration": 6.481
+    },
+    {
+      "text": "instead you wanted to represent this",
+      "start": 446.88,
+      "duration": 4.96
+    },
+    {
+      "text": "with",
+      "start": 449.68,
+      "duration": 2.16
+    },
+    {
+      "text": "maybe something like",
+      "start": 452.72,
+      "duration": 7.599
+    },
+    {
+      "text": "columns instead that can get at the same",
+      "start": 456.96,
+      "duration": 3.92
+    },
+    {
+      "text": "exact",
+      "start": 460.319,
+      "duration": 3.681
+    },
+    {
+      "text": "kind of concept so it's",
+      "start": 460.88,
+      "duration": 4.719
+    },
+    {
+      "text": "easy after you've already created the",
+      "start": 464.0,
+      "duration": 3.919
+    },
+    {
+      "text": "chart to go back and switch",
+      "start": 465.599,
+      "duration": 6.16
+    },
+    {
+      "text": "the type of chart as well",
+      "start": 467.919,
+      "duration": 3.84
+    },
+    {
+      "text": "so now that we've seen how to do that",
+      "start": 472.0,
+      "duration": 3.68
+    },
+    {
+      "text": "let's go ahead",
+      "start": 474.639,
+      "duration": 4.081
+    },
+    {
+      "text": "and bring over the chart for",
+      "start": 475.68,
+      "duration": 5.44
+    },
+    {
+      "text": "wealth as well so coming over to the",
+      "start": 478.72,
+      "duration": 3.599
+    },
+    {
+      "text": "wealth tab",
+      "start": 481.12,
+      "duration": 4.079
+    },
+    {
+      "text": "then we just do the same thing that we",
+      "start": 482.319,
+      "duration": 3.28
+    },
+    {
+      "text": "did",
+      "start": 485.199,
+      "duration": 3.761
+    },
+    {
+      "text": "previously we're just going to",
+      "start": 485.599,
+      "duration": 6.561
+    },
+    {
+      "text": "grab these two columns here the time",
+      "start": 488.96,
+      "duration": 4.0
+    },
+    {
+      "text": "column",
+      "start": 492.16,
+      "duration": 3.759
+    },
+    {
+      "text": "and the wealth column once again to",
+      "start": 492.96,
+      "duration": 4.0
+    },
+    {
+      "text": "insert",
+      "start": 495.919,
+      "duration": 3.84
+    },
+    {
+      "text": "recommended charts here and let's go",
+      "start": 496.96,
+      "duration": 4.959
+    },
+    {
+      "text": "with the line chart here",
+      "start": 499.759,
+      "duration": 5.761
+    },
+    {
+      "text": "and we can see also the wealth over time",
+      "start": 501.919,
+      "duration": 6.96
+    },
+    {
+      "text": "i'm going to add that title for the",
+      "start": 505.52,
+      "duration": 6.959
+    },
+    {
+      "text": "horizontal axis that this is",
+      "start": 508.879,
+      "duration": 7.28
+    },
+    {
+      "text": "time and years",
+      "start": 512.479,
+      "duration": 3.68
+    },
+    {
+      "text": "and then going to cut this so we can",
+      "start": 516.479,
+      "duration": 4.161
+    },
+    {
+      "text": "bring it over",
+      "start": 519.919,
+      "duration": 3.92
+    },
+    {
+      "text": "to the inputs and outputs tab",
+      "start": 520.64,
+      "duration": 5.12
+    },
+    {
+      "text": "so now we have both the salary and",
+      "start": 523.839,
+      "duration": 5.201
+    },
+    {
+      "text": "wealth and of course you can",
+      "start": 525.76,
+      "duration": 6.16
+    },
+    {
+      "text": "you know drag these to change the size",
+      "start": 529.04,
+      "duration": 4.4
+    },
+    {
+      "text": "so that everything will fit",
+      "start": 531.92,
+      "duration": 4.96
+    },
+    {
+      "text": "on the screen appropriately",
+      "start": 533.44,
+      "duration": 6.0
+    },
+    {
+      "text": "and now we can see everything will",
+      "start": 536.88,
+      "duration": 3.92
+    },
+    {
+      "text": "change together",
+      "start": 539.44,
+      "duration": 3.12
+    },
+    {
+      "text": "so it's a much easier way to get a quick",
+      "start": 540.8,
+      "duration": 5.52
+    },
+    {
+      "text": "overview of what's going on in the model",
+      "start": 542.56,
+      "duration": 5.92
+    },
+    {
+      "text": "and one other way we could have gone",
+      "start": 546.32,
+      "duration": 3.76
+    },
+    {
+      "text": "about this is",
+      "start": 548.48,
+      "duration": 3.76
+    },
+    {
+      "text": "right now we have separate graphs for",
+      "start": 550.08,
+      "duration": 3.92
+    },
+    {
+      "text": "the salary and the wealth",
+      "start": 552.24,
+      "duration": 4.24
+    },
+    {
+      "text": "we could have potentially combined them",
+      "start": 554.0,
+      "duration": 3.04
+    },
+    {
+      "text": "into",
+      "start": 556.48,
+      "duration": 4.32
+    },
+    {
+      "text": "the same plot because they have the same",
+      "start": 557.04,
+      "duration": 5.12
+    },
+    {
+      "text": "axes right they're both",
+      "start": 560.8,
+      "duration": 4.0
+    },
+    {
+      "text": "over time they're both talking about a",
+      "start": 562.16,
+      "duration": 3.76
+    },
+    {
+      "text": "dollar amount",
+      "start": 564.8,
+      "duration": 3.36
+    },
+    {
+      "text": "and the y-axis so it could make sense to",
+      "start": 565.92,
+      "duration": 4.16
+    },
+    {
+      "text": "have them on the same plot",
+      "start": 568.16,
+      "duration": 4.48
+    },
+    {
+      "text": "now the reason that i didn't do that is",
+      "start": 570.08,
+      "duration": 3.12
+    },
+    {
+      "text": "because",
+      "start": 572.64,
+      "duration": 3.6
+    },
+    {
+      "text": "the scale of these axes is quite",
+      "start": 573.2,
+      "duration": 3.6
+    },
+    {
+      "text": "different",
+      "start": 576.24,
+      "duration": 3.12
+    },
+    {
+      "text": "for for the x it's the same but for the",
+      "start": 576.8,
+      "duration": 3.28
+    },
+    {
+      "text": "y",
+      "start": 579.36,
+      "duration": 3.36
+    },
+    {
+      "text": "you can see the wealth axis here is",
+      "start": 580.08,
+      "duration": 4.24
+    },
+    {
+      "text": "actually 10 times as large",
+      "start": 582.72,
+      "duration": 4.48
+    },
+    {
+      "text": "as the salary axis so if we plot these",
+      "start": 584.32,
+      "duration": 3.68
+    },
+    {
+      "text": "two",
+      "start": 587.2,
+      "duration": 3.92
+    },
+    {
+      "text": "on the same plot then we're barely going",
+      "start": 588.0,
+      "duration": 4.0
+    },
+    {
+      "text": "to be able to see",
+      "start": 591.12,
+      "duration": 3.36
+    },
+    {
+      "text": "the salary line so we can just quickly",
+      "start": 592.0,
+      "duration": 3.2
+    },
+    {
+      "text": "see",
+      "start": 594.48,
+      "duration": 4.0
+    },
+    {
+      "text": "uh the example of that if i just grab",
+      "start": 595.2,
+      "duration": 6.8
+    },
+    {
+      "text": "the salary and the wealth uh here",
+      "start": 598.48,
+      "duration": 7.2
+    },
+    {
+      "text": "to put onto one chart that",
+      "start": 602.0,
+      "duration": 6.72
+    },
+    {
+      "text": "um we create that chart and it basically",
+      "start": 605.68,
+      "duration": 4.8
+    },
+    {
+      "text": "looks like the salary doesn't really do",
+      "start": 608.72,
+      "duration": 2.799
+    },
+    {
+      "text": "anything",
+      "start": 610.48,
+      "duration": 2.88
+    },
+    {
+      "text": "it increases but it looks almost like",
+      "start": 611.519,
+      "duration": 3.601
+    },
+    {
+      "text": "it's totally linear you can barely tell",
+      "start": 613.36,
+      "duration": 3.36
+    },
+    {
+      "text": "that the promotions are going on in",
+      "start": 615.12,
+      "duration": 2.399
+    },
+    {
+      "text": "there",
+      "start": 616.72,
+      "duration": 2.88
+    },
+    {
+      "text": "whereas the wealth just totally eclipses",
+      "start": 617.519,
+      "duration": 3.121
+    },
+    {
+      "text": "that by the end",
+      "start": 619.6,
+      "duration": 4.4
+    },
+    {
+      "text": "so um doesn't really make sense to put",
+      "start": 620.64,
+      "duration": 3.92
+    },
+    {
+      "text": "these two",
+      "start": 624.0,
+      "duration": 2.959
+    },
+    {
+      "text": "on the same plot when it's so much more",
+      "start": 624.56,
+      "duration": 3.839
+    },
+    {
+      "text": "clear what's going on",
+      "start": 626.959,
+      "duration": 3.761
+    },
+    {
+      "text": "when they're on separate plots because",
+      "start": 628.399,
+      "duration": 3.68
+    },
+    {
+      "text": "of the different scale",
+      "start": 630.72,
+      "duration": 4.96
+    },
+    {
+      "text": "of the axes so that's",
+      "start": 632.079,
+      "duration": 6.481
+    },
+    {
+      "text": "an overview of how to do visualization",
+      "start": 635.68,
+      "duration": 4.159
+    },
+    {
+      "text": "in excel",
+      "start": 638.56,
+      "duration": 3.279
+    },
+    {
+      "text": "next time we're going to come back and",
+      "start": 639.839,
+      "duration": 3.12
+    },
+    {
+      "text": "learn about",
+      "start": 641.839,
+      "duration": 4.161
+    },
+    {
+      "text": "pandas and python which is going to give",
+      "start": 642.959,
+      "duration": 5.521
+    },
+    {
+      "text": "us a table kind of data structure and",
+      "start": 646.0,
+      "duration": 3.92
+    },
+    {
+      "text": "we're going to start working towards",
+      "start": 648.48,
+      "duration": 2.4
+    },
+    {
+      "text": "visualization",
+      "start": 649.92,
+      "duration": 3.919
+    },
+    {
+      "text": "in python so thanks for listening and",
+      "start": 650.88,
+      "duration": 8.399
+    },
+    {
+      "text": "see you next time",
+      "start": 653.839,
+      "duration": 5.44
+    }
+  ]
+}

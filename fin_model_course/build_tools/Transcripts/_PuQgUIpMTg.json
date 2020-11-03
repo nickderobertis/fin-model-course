@@ -1,0 +1,1249 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.439,
+      "duration": 2.481
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 4.48,
+      "duration": 3.76
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.92,
+      "duration": 4.24
+    },
+    {
+      "text": "talk about relaxing the salary",
+      "start": 8.24,
+      "duration": 2.72
+    },
+    {
+      "text": "assumption",
+      "start": 10.16,
+      "duration": 3.599
+    },
+    {
+      "text": "in our simple retirement model as part",
+      "start": 10.96,
+      "duration": 5.84
+    },
+    {
+      "text": "of the depth of a financial model series",
+      "start": 13.759,
+      "duration": 5.921
+    },
+    {
+      "text": "focusing on building out a more involved",
+      "start": 16.8,
+      "duration": 3.44
+    },
+    {
+      "text": "excel",
+      "start": 19.68,
+      "duration": 3.599
+    },
+    {
+      "text": "model so",
+      "start": 20.24,
+      "duration": 5.68
+    },
+    {
+      "text": "we've been working on this basic",
+      "start": 23.279,
+      "duration": 4.721
+    },
+    {
+      "text": "retirement problem",
+      "start": 25.92,
+      "duration": 5.759
+    },
+    {
+      "text": "and uh we talked about how",
+      "start": 28.0,
+      "duration": 5.12
+    },
+    {
+      "text": "uh basically we made a lot of",
+      "start": 31.679,
+      "duration": 3.921
+    },
+    {
+      "text": "assumptions in this original",
+      "start": 33.12,
+      "duration": 4.88
+    },
+    {
+      "text": "model um which made it a very simple",
+      "start": 35.6,
+      "duration": 3.279
+    },
+    {
+      "text": "calculation",
+      "start": 38.0,
+      "duration": 4.079
+    },
+    {
+      "text": "but also not very realistic",
+      "start": 38.879,
+      "duration": 6.721
+    },
+    {
+      "text": "and so we um can try to",
+      "start": 42.079,
+      "duration": 6.8
+    },
+    {
+      "text": "relax an assumption to get closer to the",
+      "start": 45.6,
+      "duration": 4.72
+    },
+    {
+      "text": "real world",
+      "start": 48.879,
+      "duration": 4.881
+    },
+    {
+      "text": "um so most of the time",
+      "start": 50.32,
+      "duration": 5.28
+    },
+    {
+      "text": "you're not able to completely get rid of",
+      "start": 53.76,
+      "duration": 3.6
+    },
+    {
+      "text": "an assumption uh you're just going to",
+      "start": 55.6,
+      "duration": 2.88
+    },
+    {
+      "text": "replace it",
+      "start": 57.36,
+      "duration": 4.24
+    },
+    {
+      "text": "with an assumption which is closer to",
+      "start": 58.48,
+      "duration": 6.96
+    },
+    {
+      "text": "how the real world works",
+      "start": 61.6,
+      "duration": 3.84
+    },
+    {
+      "text": "so the one that we're going to look at",
+      "start": 65.68,
+      "duration": 3.36
+    },
+    {
+      "text": "relaxing here",
+      "start": 67.68,
+      "duration": 4.96
+    },
+    {
+      "text": "is the salary assumption",
+      "start": 69.04,
+      "duration": 7.119
+    },
+    {
+      "text": "whereas before we said that",
+      "start": 72.64,
+      "duration": 6.479
+    },
+    {
+      "text": "the salary is just constant it's you",
+      "start": 76.159,
+      "duration": 4.161
+    },
+    {
+      "text": "know 50 000",
+      "start": 79.119,
+      "duration": 3.441
+    },
+    {
+      "text": "or whatever and that's going to be the",
+      "start": 80.32,
+      "duration": 3.36
+    },
+    {
+      "text": "salary for",
+      "start": 82.56,
+      "duration": 4.239
+    },
+    {
+      "text": "the entire life of this individual but",
+      "start": 83.68,
+      "duration": 3.84
+    },
+    {
+      "text": "of course",
+      "start": 86.799,
+      "duration": 4.32
+    },
+    {
+      "text": "that's not very realistic um and so",
+      "start": 87.52,
+      "duration": 5.68
+    },
+    {
+      "text": "we're going to replace it with something",
+      "start": 91.119,
+      "duration": 3.761
+    },
+    {
+      "text": "which gets fairly close",
+      "start": 93.2,
+      "duration": 5.36
+    },
+    {
+      "text": "to reality and that's that",
+      "start": 94.88,
+      "duration": 5.12
+    },
+    {
+      "text": "you know we want to work in the idea",
+      "start": 98.56,
+      "duration": 3.599
+    },
+    {
+      "text": "that people's salary grows over time",
+      "start": 100.0,
+      "duration": 3.52
+    },
+    {
+      "text": "throughout their career right",
+      "start": 102.159,
+      "duration": 4.561
+    },
+    {
+      "text": "as they uh you know get promotions",
+      "start": 103.52,
+      "duration": 6.239
+    },
+    {
+      "text": "or you know change companies uh",
+      "start": 106.72,
+      "duration": 5.28
+    },
+    {
+      "text": "you know they're going to get a raise",
+      "start": 109.759,
+      "duration": 3.68
+    },
+    {
+      "text": "associated with that",
+      "start": 112.0,
+      "duration": 4.56
+    },
+    {
+      "text": "most of the time and you know such that",
+      "start": 113.439,
+      "duration": 4.0
+    },
+    {
+      "text": "at the end of their career they're",
+      "start": 116.56,
+      "duration": 2.559
+    },
+    {
+      "text": "making substantially more than the",
+      "start": 117.439,
+      "duration": 3.921
+    },
+    {
+      "text": "beginning of their career",
+      "start": 119.119,
+      "duration": 5.921
+    },
+    {
+      "text": "and not only that but also",
+      "start": 121.36,
+      "duration": 5.92
+    },
+    {
+      "text": "typically most companies will give a",
+      "start": 125.04,
+      "duration": 3.04
+    },
+    {
+      "text": "cost of living",
+      "start": 127.28,
+      "duration": 4.0
+    },
+    {
+      "text": "raise every year uh regardless",
+      "start": 128.08,
+      "duration": 4.879
+    },
+    {
+      "text": "of whether you're getting a promotion or",
+      "start": 131.28,
+      "duration": 3.039
+    },
+    {
+      "text": "anything else",
+      "start": 132.959,
+      "duration": 2.801
+    },
+    {
+      "text": "you know they're just going to give you",
+      "start": 134.319,
+      "duration": 3.441
+    },
+    {
+      "text": "you know one two percent something like",
+      "start": 135.76,
+      "duration": 2.72
+    },
+    {
+      "text": "that",
+      "start": 137.76,
+      "duration": 3.76
+    },
+    {
+      "text": "uh raised just to account for inflation",
+      "start": 138.48,
+      "duration": 6.64
+    },
+    {
+      "text": "over time so",
+      "start": 141.52,
+      "duration": 5.68
+    },
+    {
+      "text": "we're going to work both of these things",
+      "start": 145.12,
+      "duration": 3.28
+    },
+    {
+      "text": "into our assumption",
+      "start": 147.2,
+      "duration": 2.96
+    },
+    {
+      "text": "that you know every certain number of",
+      "start": 148.4,
+      "duration": 3.04
+    },
+    {
+      "text": "years",
+      "start": 150.16,
+      "duration": 3.28
+    },
+    {
+      "text": "this individual gets a promotion and",
+      "start": 151.44,
+      "duration": 3.04
+    },
+    {
+      "text": "they get a raise",
+      "start": 153.44,
+      "duration": 2.64
+    },
+    {
+      "text": "associated with that a certain",
+      "start": 154.48,
+      "duration": 3.759
+    },
+    {
+      "text": "percentage raise",
+      "start": 156.08,
+      "duration": 4.32
+    },
+    {
+      "text": "and then every year they're also getting",
+      "start": 158.239,
+      "duration": 3.601
+    },
+    {
+      "text": "a certain percentage",
+      "start": 160.4,
+      "duration": 5.6
+    },
+    {
+      "text": "cost of living raise now",
+      "start": 161.84,
+      "duration": 6.72
+    },
+    {
+      "text": "this is definitely a lot closer to how",
+      "start": 166.0,
+      "duration": 3.599
+    },
+    {
+      "text": "the real world works",
+      "start": 168.56,
+      "duration": 3.84
+    },
+    {
+      "text": "but of course we're not getting all the",
+      "start": 169.599,
+      "duration": 4.64
+    },
+    {
+      "text": "way there there's a lot more that we",
+      "start": 172.4,
+      "duration": 3.44
+    },
+    {
+      "text": "could potentially do",
+      "start": 174.239,
+      "duration": 4.881
+    },
+    {
+      "text": "with this salary assumption but i think",
+      "start": 175.84,
+      "duration": 5.92
+    },
+    {
+      "text": "what we have here is already getting you",
+      "start": 179.12,
+      "duration": 4.399
+    },
+    {
+      "text": "know fairly close such that the results",
+      "start": 181.76,
+      "duration": 2.24
+    },
+    {
+      "text": "are probably",
+      "start": 183.519,
+      "duration": 3.121
+    },
+    {
+      "text": "not going to be all that different going",
+      "start": 184.0,
+      "duration": 4.0
+    },
+    {
+      "text": "to more realistic",
+      "start": 186.64,
+      "duration": 4.08
+    },
+    {
+      "text": "situations of course to make this more",
+      "start": 188.0,
+      "duration": 3.519
+    },
+    {
+      "text": "realistic",
+      "start": 190.72,
+      "duration": 2.879
+    },
+    {
+      "text": "uh you know one key thing to think about",
+      "start": 191.519,
+      "duration": 3.521
+    },
+    {
+      "text": "would be",
+      "start": 193.599,
+      "duration": 4.64
+    },
+    {
+      "text": "the business cycle you know where is the",
+      "start": 195.04,
+      "duration": 4.0
+    },
+    {
+      "text": "economy",
+      "start": 198.239,
+      "duration": 2.801
+    },
+    {
+      "text": "in any given year are we in a recession",
+      "start": 199.04,
+      "duration": 3.68
+    },
+    {
+      "text": "are we in an expansion period",
+      "start": 201.04,
+      "duration": 4.4
+    },
+    {
+      "text": "is it kind of a normal uh just baseline",
+      "start": 202.72,
+      "duration": 3.84
+    },
+    {
+      "text": "kind of year",
+      "start": 205.44,
+      "duration": 4.079
+    },
+    {
+      "text": "um and you would think that uh you would",
+      "start": 206.56,
+      "duration": 5.12
+    },
+    {
+      "text": "be less likely to get a promotion",
+      "start": 209.519,
+      "duration": 4.8
+    },
+    {
+      "text": "in a recession more likely in an",
+      "start": 211.68,
+      "duration": 3.36
+    },
+    {
+      "text": "expansion",
+      "start": 214.319,
+      "duration": 2.961
+    },
+    {
+      "text": "and also you know given that you do get",
+      "start": 215.04,
+      "duration": 4.479
+    },
+    {
+      "text": "a promotion you would expect it to be",
+      "start": 217.28,
+      "duration": 6.08
+    },
+    {
+      "text": "a larger raise in an expansionary period",
+      "start": 219.519,
+      "duration": 7.44
+    },
+    {
+      "text": "versus a recession and then also with",
+      "start": 223.36,
+      "duration": 5.28
+    },
+    {
+      "text": "our current assumption we're assuming",
+      "start": 226.959,
+      "duration": 4.081
+    },
+    {
+      "text": "you know every five years or whatever a",
+      "start": 228.64,
+      "duration": 3.28
+    },
+    {
+      "text": "fixed interval",
+      "start": 231.04,
+      "duration": 3.839
+    },
+    {
+      "text": "in between uh the promotions but in",
+      "start": 231.92,
+      "duration": 3.599
+    },
+    {
+      "text": "reality",
+      "start": 234.879,
+      "duration": 3.521
+    },
+    {
+      "text": "that would be uh more random than that",
+      "start": 235.519,
+      "duration": 3.681
+    },
+    {
+      "text": "there would be",
+      "start": 238.4,
+      "duration": 2.72
+    },
+    {
+      "text": "you know sometimes you get a promotion",
+      "start": 239.2,
+      "duration": 3.759
+    },
+    {
+      "text": "quickly sometimes it's going to take",
+      "start": 241.12,
+      "duration": 4.64
+    },
+    {
+      "text": "longer but also there's going to be a",
+      "start": 242.959,
+      "duration": 4.401
+    },
+    {
+      "text": "trend for most people that",
+      "start": 245.76,
+      "duration": 3.44
+    },
+    {
+      "text": "the promotions are going to come slower",
+      "start": 247.36,
+      "duration": 3.92
+    },
+    {
+      "text": "the later you get into your career",
+      "start": 249.2,
+      "duration": 4.08
+    },
+    {
+      "text": "you know as you get higher up on the",
+      "start": 251.28,
+      "duration": 4.56
+    },
+    {
+      "text": "ladder there are less steps to go and so",
+      "start": 253.28,
+      "duration": 5.919
+    },
+    {
+      "text": "uh you get promotions less often so",
+      "start": 255.84,
+      "duration": 5.679
+    },
+    {
+      "text": "um you know that would be getting even",
+      "start": 259.199,
+      "duration": 4.641
+    },
+    {
+      "text": "more realistic building in the the",
+      "start": 261.519,
+      "duration": 3.841
+    },
+    {
+      "text": "economic",
+      "start": 263.84,
+      "duration": 4.96
+    },
+    {
+      "text": "conditions as well as you know trying to",
+      "start": 265.36,
+      "duration": 5.52
+    },
+    {
+      "text": "get this trend of less promotions over",
+      "start": 268.8,
+      "duration": 2.88
+    },
+    {
+      "text": "time",
+      "start": 270.88,
+      "duration": 3.599
+    },
+    {
+      "text": "and you know giving some randomness to",
+      "start": 271.68,
+      "duration": 4.239
+    },
+    {
+      "text": "when the promotions are actually going",
+      "start": 274.479,
+      "duration": 2.16
+    },
+    {
+      "text": "to occur",
+      "start": 275.919,
+      "duration": 3.201
+    },
+    {
+      "text": "you could also add some randomness to",
+      "start": 276.639,
+      "duration": 4.801
+    },
+    {
+      "text": "the the level of the raise that you're",
+      "start": 279.12,
+      "duration": 3.2
+    },
+    {
+      "text": "going to get",
+      "start": 281.44,
+      "duration": 3.759
+    },
+    {
+      "text": "and a promotion so there's a lot that we",
+      "start": 282.32,
+      "duration": 3.76
+    },
+    {
+      "text": "could do",
+      "start": 285.199,
+      "duration": 3.521
+    },
+    {
+      "text": "to try and go even further and get even",
+      "start": 286.08,
+      "duration": 4.16
+    },
+    {
+      "text": "more realistic",
+      "start": 288.72,
+      "duration": 3.44
+    },
+    {
+      "text": "but you always have to kind of cut it",
+      "start": 290.24,
+      "duration": 3.679
+    },
+    {
+      "text": "off at some point",
+      "start": 292.16,
+      "duration": 4.24
+    },
+    {
+      "text": "we talked in the last video we would be",
+      "start": 293.919,
+      "duration": 3.041
+    },
+    {
+      "text": "you know",
+      "start": 296.4,
+      "duration": 2.4
+    },
+    {
+      "text": "spending weeks and weeks on this model",
+      "start": 296.96,
+      "duration": 3.44
+    },
+    {
+      "text": "if we tried to",
+      "start": 298.8,
+      "duration": 4.0
+    },
+    {
+      "text": "uh you know go after you know everything",
+      "start": 300.4,
+      "duration": 4.32
+    },
+    {
+      "text": "to make it as realistic as possible",
+      "start": 302.8,
+      "duration": 3.28
+    },
+    {
+      "text": "everywhere",
+      "start": 304.72,
+      "duration": 2.88
+    },
+    {
+      "text": "and that's really just not going to be",
+      "start": 306.08,
+      "duration": 3.839
+    },
+    {
+      "text": "feasible for most models there just",
+      "start": 307.6,
+      "duration": 3.92
+    },
+    {
+      "text": "isn't enough time",
+      "start": 309.919,
+      "duration": 3.84
+    },
+    {
+      "text": "to approximate the real world that",
+      "start": 311.52,
+      "duration": 3.36
+    },
+    {
+      "text": "closely",
+      "start": 313.759,
+      "duration": 3.041
+    },
+    {
+      "text": "and so we just have to find a nice",
+      "start": 314.88,
+      "duration": 3.12
+    },
+    {
+      "text": "balance of",
+      "start": 316.8,
+      "duration": 2.56
+    },
+    {
+      "text": "we're getting pretty close to the real",
+      "start": 318.0,
+      "duration": 3.12
+    },
+    {
+      "text": "world uh",
+      "start": 319.36,
+      "duration": 3.6
+    },
+    {
+      "text": "and we're not going to need to be any",
+      "start": 321.12,
+      "duration": 4.4
+    },
+    {
+      "text": "closer for the purposes of the decision",
+      "start": 322.96,
+      "duration": 6.0
+    },
+    {
+      "text": "that we're making based off the model so",
+      "start": 325.52,
+      "duration": 7.119
+    },
+    {
+      "text": "with that we'll stick with this constant",
+      "start": 328.96,
+      "duration": 6.079
+    },
+    {
+      "text": "cost of living raise growth every year",
+      "start": 332.639,
+      "duration": 3.28
+    },
+    {
+      "text": "every",
+      "start": 335.039,
+      "duration": 2.401
+    },
+    {
+      "text": "x number of years we're going to get a",
+      "start": 335.919,
+      "duration": 3.601
+    },
+    {
+      "text": "promotion and it's going to be",
+      "start": 337.44,
+      "duration": 5.039
+    },
+    {
+      "text": "a fixed percentage raise with each one",
+      "start": 339.52,
+      "duration": 6.0
+    },
+    {
+      "text": "of those promotions",
+      "start": 342.479,
+      "duration": 3.041
+    },
+    {
+      "text": "so you know i mentioned how",
+      "start": 345.759,
+      "duration": 5.041
+    },
+    {
+      "text": "[Music]",
+      "start": 348.57,
+      "duration": 4.79
+    },
+    {
+      "text": "when modeling you know you kind of start",
+      "start": 350.8,
+      "duration": 4.32
+    },
+    {
+      "text": "with the assumptions and then you get",
+      "start": 353.36,
+      "duration": 3.36
+    },
+    {
+      "text": "the logic and the equations",
+      "start": 355.12,
+      "duration": 3.519
+    },
+    {
+      "text": "out of that assumption right so we just",
+      "start": 356.72,
+      "duration": 4.319
+    },
+    {
+      "text": "came up with a new assumption here about",
+      "start": 358.639,
+      "duration": 4.721
+    },
+    {
+      "text": "how the salary should work",
+      "start": 361.039,
+      "duration": 5.28
+    },
+    {
+      "text": "and so that brings us then to the",
+      "start": 363.36,
+      "duration": 3.6
+    },
+    {
+      "text": "equation",
+      "start": 366.319,
+      "duration": 4.641
+    },
+    {
+      "text": "which represents that salary over time",
+      "start": 366.96,
+      "duration": 7.28
+    },
+    {
+      "text": "so breaking down this equation here",
+      "start": 370.96,
+      "duration": 5.519
+    },
+    {
+      "text": "uh we can think of it kind of in three",
+      "start": 374.24,
+      "duration": 3.28
+    },
+    {
+      "text": "parts",
+      "start": 376.479,
+      "duration": 4.881
+    },
+    {
+      "text": "so uh the first part here is",
+      "start": 377.52,
+      "duration": 7.76
+    },
+    {
+      "text": "um the initial salary whatever",
+      "start": 381.36,
+      "duration": 6.559
+    },
+    {
+      "text": "salary you started at uh at the",
+      "start": 385.28,
+      "duration": 4.56
+    },
+    {
+      "text": "beginning of your career",
+      "start": 387.919,
+      "duration": 3.761
+    },
+    {
+      "text": "and this is ultimately to get you know",
+      "start": 389.84,
+      "duration": 4.16
+    },
+    {
+      "text": "the salary in any given year",
+      "start": 391.68,
+      "duration": 4.56
+    },
+    {
+      "text": "so whatever salary you started from and",
+      "start": 394.0,
+      "duration": 3.6
+    },
+    {
+      "text": "then the next part",
+      "start": 396.24,
+      "duration": 4.88
+    },
+    {
+      "text": "is the um",
+      "start": 397.6,
+      "duration": 6.8
+    },
+    {
+      "text": "the cost of living raised",
+      "start": 401.12,
+      "duration": 7.76
+    },
+    {
+      "text": "so it's you know one plus whatever the",
+      "start": 404.4,
+      "duration": 6.239
+    },
+    {
+      "text": "return for cost of living is you know",
+      "start": 408.88,
+      "duration": 3.599
+    },
+    {
+      "text": "one or two percent or whatever",
+      "start": 410.639,
+      "duration": 4.0
+    },
+    {
+      "text": "uh the company gives for cost of living",
+      "start": 412.479,
+      "duration": 5.041
+    },
+    {
+      "text": "raise uh to the power of however many",
+      "start": 414.639,
+      "duration": 3.84
+    },
+    {
+      "text": "years",
+      "start": 417.52,
+      "duration": 4.56
+    },
+    {
+      "text": "uh you've gotten the raise so you know",
+      "start": 418.479,
+      "duration": 5.681
+    },
+    {
+      "text": "then just thinking about this part of",
+      "start": 422.08,
+      "duration": 4.239
+    },
+    {
+      "text": "the equation",
+      "start": 424.16,
+      "duration": 4.0
+    },
+    {
+      "text": "and you're going to start out at your",
+      "start": 426.319,
+      "duration": 3.44
+    },
+    {
+      "text": "initial salary",
+      "start": 428.16,
+      "duration": 2.8
+    },
+    {
+      "text": "and then this is going to be to the",
+      "start": 429.759,
+      "duration": 2.961
+    },
+    {
+      "text": "power 0. so you'll just have your",
+      "start": 430.96,
+      "duration": 4.079
+    },
+    {
+      "text": "initial salary and your 0",
+      "start": 432.72,
+      "duration": 4.96
+    },
+    {
+      "text": "but then coming to one year um then",
+      "start": 435.039,
+      "duration": 3.841
+    },
+    {
+      "text": "you're gonna have",
+      "start": 437.68,
+      "duration": 4.32
+    },
+    {
+      "text": "your initial salary plus you know one or",
+      "start": 438.88,
+      "duration": 4.319
+    },
+    {
+      "text": "times 1.02",
+      "start": 442.0,
+      "duration": 4.319
+    },
+    {
+      "text": "if it's a two percent um",
+      "start": 443.199,
+      "duration": 5.361
+    },
+    {
+      "text": "cost of living raise and then that's",
+      "start": 446.319,
+      "duration": 3.681
+    },
+    {
+      "text": "just going to compound year over",
+      "start": 448.56,
+      "duration": 4.72
+    },
+    {
+      "text": "year uh going forward uh so",
+      "start": 450.0,
+      "duration": 6.72
+    },
+    {
+      "text": "kind of common uh just compound interest",
+      "start": 453.28,
+      "duration": 6.0
+    },
+    {
+      "text": "kind of logic that went into forming",
+      "start": 456.72,
+      "duration": 4.479
+    },
+    {
+      "text": "this equation",
+      "start": 459.28,
+      "duration": 4.24
+    },
+    {
+      "text": "and then the last part here is the",
+      "start": 461.199,
+      "duration": 3.761
+    },
+    {
+      "text": "promotion raises",
+      "start": 463.52,
+      "duration": 4.16
+    },
+    {
+      "text": "so again we can think of uh you know the",
+      "start": 464.96,
+      "duration": 5.28
+    },
+    {
+      "text": "promotions as being an additional return",
+      "start": 467.68,
+      "duration": 7.04
+    },
+    {
+      "text": "on the salary uh cumulative",
+      "start": 470.24,
+      "duration": 4.48
+    },
+    {
+      "text": "return here so you know just",
+      "start": 474.8,
+      "duration": 5.519
+    },
+    {
+      "text": "like the cost of living raised part it's",
+      "start": 478.0,
+      "duration": 3.28
+    },
+    {
+      "text": "going to be",
+      "start": 480.319,
+      "duration": 3.121
+    },
+    {
+      "text": "uh you know you're getting one plus the",
+      "start": 481.28,
+      "duration": 3.039
+    },
+    {
+      "text": "promotion",
+      "start": 483.44,
+      "duration": 3.199
+    },
+    {
+      "text": "return you know the the percentage raise",
+      "start": 484.319,
+      "duration": 3.201
+    },
+    {
+      "text": "that you get",
+      "start": 486.639,
+      "duration": 3.601
+    },
+    {
+      "text": "as part of a promotion and you're going",
+      "start": 487.52,
+      "duration": 4.079
+    },
+    {
+      "text": "to get that",
+      "start": 490.24,
+      "duration": 4.399
+    },
+    {
+      "text": "for as many promotions as you've had",
+      "start": 491.599,
+      "duration": 6.88
+    },
+    {
+      "text": "up until that point so",
+      "start": 494.639,
+      "duration": 5.361
+    },
+    {
+      "text": "we can think of it in these three parts",
+      "start": 498.479,
+      "duration": 3.041
+    },
+    {
+      "text": "the initial salary",
+      "start": 500.0,
+      "duration": 3.36
+    },
+    {
+      "text": "and then we can call this part the cost",
+      "start": 501.52,
+      "duration": 3.679
+    },
+    {
+      "text": "of living factor",
+      "start": 503.36,
+      "duration": 3.76
+    },
+    {
+      "text": "and then we can call this part the",
+      "start": 505.199,
+      "duration": 4.161
+    },
+    {
+      "text": "promotion factor so we can kind of",
+      "start": 507.12,
+      "duration": 3.28
+    },
+    {
+      "text": "decompose this",
+      "start": 509.36,
+      "duration": 3.359
+    },
+    {
+      "text": "into three parts that we can think about",
+      "start": 510.4,
+      "duration": 4.639
+    },
+    {
+      "text": "separately",
+      "start": 512.719,
+      "duration": 6.401
+    },
+    {
+      "text": "so that's an overview of uh",
+      "start": 515.039,
+      "duration": 6.321
+    },
+    {
+      "text": "you know the the new logic and equations",
+      "start": 519.12,
+      "duration": 3.039
+    },
+    {
+      "text": "that are going to go",
+      "start": 521.36,
+      "duration": 4.08
+    },
+    {
+      "text": "into the new model um and we're going to",
+      "start": 522.159,
+      "duration": 4.961
+    },
+    {
+      "text": "come back next time to cover",
+      "start": 525.44,
+      "duration": 4.24
+    },
+    {
+      "text": "some skills that we need to actually",
+      "start": 527.12,
+      "duration": 3.2
+    },
+    {
+      "text": "implement",
+      "start": 529.68,
+      "duration": 3.839
+    },
+    {
+      "text": "the new model and excel before we go and",
+      "start": 530.32,
+      "duration": 3.68
+    },
+    {
+      "text": "implement",
+      "start": 533.519,
+      "duration": 3.361
+    },
+    {
+      "text": "it and the video after that so thanks",
+      "start": 534.0,
+      "duration": 3.68
+    },
+    {
+      "text": "for listening",
+      "start": 536.88,
+      "duration": 6.079
+    },
+    {
+      "text": "and see you next time",
+      "start": 537.68,
+      "duration": 5.279
+    }
+  ]
+}

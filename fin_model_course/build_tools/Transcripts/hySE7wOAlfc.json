@@ -1,0 +1,1334 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 4.48,
+      "duration": 2.399
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 5.359,
+      "duration": 3.441
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 6.879,
+      "duration": 3.84
+    },
+    {
+      "text": "we're going to talk about implementing a",
+      "start": 8.8,
+      "duration": 3.52
+    },
+    {
+      "text": "basic financial model",
+      "start": 10.719,
+      "duration": 5.281
+    },
+    {
+      "text": "in excel so we left off last time just",
+      "start": 12.32,
+      "duration": 4.719
+    },
+    {
+      "text": "talking about",
+      "start": 16.0,
+      "duration": 2.48
+    },
+    {
+      "text": "uh you know the kind of model that we're",
+      "start": 17.039,
+      "duration": 3.521
+    },
+    {
+      "text": "gonna implement here a basic retirement",
+      "start": 18.48,
+      "duration": 2.799
+    },
+    {
+      "text": "model",
+      "start": 20.56,
+      "duration": 2.639
+    },
+    {
+      "text": "uh but here we're gonna just jump right",
+      "start": 21.279,
+      "duration": 4.961
+    },
+    {
+      "text": "into building this out in excel",
+      "start": 23.199,
+      "duration": 6.4
+    },
+    {
+      "text": "so uh you know it's easy to use excel",
+      "start": 26.24,
+      "duration": 5.839
+    },
+    {
+      "text": "and just kind of type the numbers right",
+      "start": 29.599,
+      "duration": 3.441
+    },
+    {
+      "text": "into",
+      "start": 32.079,
+      "duration": 4.0
+    },
+    {
+      "text": "your functions but if you use it that",
+      "start": 33.04,
+      "duration": 5.039
+    },
+    {
+      "text": "way you're basically just treating excel",
+      "start": 36.079,
+      "duration": 4.241
+    },
+    {
+      "text": "as a calculator rather than building a",
+      "start": 38.079,
+      "duration": 5.361
+    },
+    {
+      "text": "model with a model",
+      "start": 40.32,
+      "duration": 5.28
+    },
+    {
+      "text": "everything should flow from the inputs",
+      "start": 43.44,
+      "duration": 3.119
+    },
+    {
+      "text": "to the outputs",
+      "start": 45.6,
+      "duration": 3.04
+    },
+    {
+      "text": "so you change an input and you should",
+      "start": 46.559,
+      "duration": 3.041
+    },
+    {
+      "text": "see the change",
+      "start": 48.64,
+      "duration": 3.36
+    },
+    {
+      "text": "in the output uh of course if you just",
+      "start": 49.6,
+      "duration": 3.68
+    },
+    {
+      "text": "hard code the numbers",
+      "start": 52.0,
+      "duration": 4.48
+    },
+    {
+      "text": "into the formulas themselves",
+      "start": 53.28,
+      "duration": 5.119
+    },
+    {
+      "text": "then you're not going to have that",
+      "start": 56.48,
+      "duration": 4.64
+    },
+    {
+      "text": "flexibility of being able to",
+      "start": 58.399,
+      "duration": 4.32
+    },
+    {
+      "text": "look at a bunch of different inputs and",
+      "start": 61.12,
+      "duration": 3.439
+    },
+    {
+      "text": "understand the different",
+      "start": 62.719,
+      "duration": 4.961
+    },
+    {
+      "text": "outputs that come out as a result",
+      "start": 64.559,
+      "duration": 4.721
+    },
+    {
+      "text": "so the way that you can make sure that",
+      "start": 67.68,
+      "duration": 3.119
+    },
+    {
+      "text": "everything stays linked",
+      "start": 69.28,
+      "duration": 4.48
+    },
+    {
+      "text": "together in excel is to use cell",
+      "start": 70.799,
+      "duration": 3.761
+    },
+    {
+      "text": "references",
+      "start": 73.76,
+      "duration": 3.2
+    },
+    {
+      "text": "rather than just typing the numbers in",
+      "start": 74.56,
+      "duration": 5.36
+    },
+    {
+      "text": "for your formulas",
+      "start": 76.96,
+      "duration": 6.08
+    },
+    {
+      "text": "so you know those are like you know",
+      "start": 79.92,
+      "duration": 7.12
+    },
+    {
+      "text": "a2 or whatever is a cell reference",
+      "start": 83.04,
+      "duration": 6.96
+    },
+    {
+      "text": "and then we also have fixed versus",
+      "start": 87.04,
+      "duration": 3.68
+    },
+    {
+      "text": "relative",
+      "start": 90.0,
+      "duration": 4.4
+    },
+    {
+      "text": "references and that comes into play",
+      "start": 90.72,
+      "duration": 6.88
+    },
+    {
+      "text": "when you want to drag the formula",
+      "start": 94.4,
+      "duration": 6.32
+    },
+    {
+      "text": "to have it repeat iterate across",
+      "start": 97.6,
+      "duration": 5.92
+    },
+    {
+      "text": "multiple different cells when you do",
+      "start": 100.72,
+      "duration": 3.759
+    },
+    {
+      "text": "that drag",
+      "start": 103.52,
+      "duration": 3.52
+    },
+    {
+      "text": "for fixed references the reference is",
+      "start": 104.479,
+      "duration": 4.721
+    },
+    {
+      "text": "not going to move as you drag it",
+      "start": 107.04,
+      "duration": 4.719
+    },
+    {
+      "text": "and for relative references it is going",
+      "start": 109.2,
+      "duration": 4.72
+    },
+    {
+      "text": "to move as you drag it and relative",
+      "start": 111.759,
+      "duration": 2.961
+    },
+    {
+      "text": "references",
+      "start": 113.92,
+      "duration": 4.4
+    },
+    {
+      "text": "are the default so that should become a",
+      "start": 114.72,
+      "duration": 4.719
+    },
+    {
+      "text": "lot more clear",
+      "start": 118.32,
+      "duration": 4.799
+    },
+    {
+      "text": "as we get into the extension",
+      "start": 119.439,
+      "duration": 6.72
+    },
+    {
+      "text": "of the excel model with iteration",
+      "start": 123.119,
+      "duration": 6.881
+    },
+    {
+      "text": "that we'll do in a follow-on video",
+      "start": 126.159,
+      "duration": 7.521
+    },
+    {
+      "text": "um but for now we can just uh look at",
+      "start": 130.0,
+      "duration": 5.92
+    },
+    {
+      "text": "how to implement the basic model",
+      "start": 133.68,
+      "duration": 5.68
+    },
+    {
+      "text": "in excel of solving this retirement",
+      "start": 135.92,
+      "duration": 7.28
+    },
+    {
+      "text": "problem um so",
+      "start": 139.36,
+      "duration": 7.92
+    },
+    {
+      "text": "we can uh pull up excel here",
+      "start": 143.2,
+      "duration": 7.039
+    },
+    {
+      "text": "and so you know the first thing that you",
+      "start": 147.28,
+      "duration": 4.0
+    },
+    {
+      "text": "usually want to do",
+      "start": 150.239,
+      "duration": 4.161
+    },
+    {
+      "text": "with your model is you want to lay out",
+      "start": 151.28,
+      "duration": 6.64
+    },
+    {
+      "text": "all the different inputs that you have",
+      "start": 154.4,
+      "duration": 7.36
+    },
+    {
+      "text": "so in this problem we",
+      "start": 157.92,
+      "duration": 8.08
+    },
+    {
+      "text": "had the salary we had the savings rate",
+      "start": 161.76,
+      "duration": 7.759
+    },
+    {
+      "text": "we have the interest rate",
+      "start": 166.0,
+      "duration": 7.84
+    },
+    {
+      "text": "um and we have the desired cash",
+      "start": 169.519,
+      "duration": 4.321
+    },
+    {
+      "text": "and so um we can go ahead and put in",
+      "start": 174.239,
+      "duration": 4.961
+    },
+    {
+      "text": "those default numbers",
+      "start": 177.519,
+      "duration": 4.321
+    },
+    {
+      "text": "for those inputs from the problem so the",
+      "start": 179.2,
+      "duration": 3.679
+    },
+    {
+      "text": "salary",
+      "start": 181.84,
+      "duration": 4.16
+    },
+    {
+      "text": "was 60 000 the savings rate",
+      "start": 182.879,
+      "duration": 6.241
+    },
+    {
+      "text": "25 the interest rate is",
+      "start": 186.0,
+      "duration": 6.879
+    },
+    {
+      "text": "5 and the desired cash",
+      "start": 189.12,
+      "duration": 7.28
+    },
+    {
+      "text": "is 1.5 million",
+      "start": 192.879,
+      "duration": 6.321
+    },
+    {
+      "text": "um and when you're structuring your",
+      "start": 196.4,
+      "duration": 4.08
+    },
+    {
+      "text": "excel models",
+      "start": 199.2,
+      "duration": 4.319
+    },
+    {
+      "text": "you definitely want to keep your inputs",
+      "start": 200.48,
+      "duration": 5.92
+    },
+    {
+      "text": "separate from your outputs that way it",
+      "start": 203.519,
+      "duration": 3.521
+    },
+    {
+      "text": "becomes",
+      "start": 206.4,
+      "duration": 3.52
+    },
+    {
+      "text": "very clear as a user of the model what",
+      "start": 207.04,
+      "duration": 4.479
+    },
+    {
+      "text": "you can change around",
+      "start": 209.92,
+      "duration": 4.16
+    },
+    {
+      "text": "and what is going to be the result of",
+      "start": 211.519,
+      "duration": 5.121
+    },
+    {
+      "text": "changing those inputs around",
+      "start": 214.08,
+      "duration": 4.56
+    },
+    {
+      "text": "it makes it a lot easier to consume your",
+      "start": 216.64,
+      "duration": 3.44
+    },
+    {
+      "text": "model",
+      "start": 218.64,
+      "duration": 3.92
+    },
+    {
+      "text": "so here we'll make a separate outputs",
+      "start": 220.08,
+      "duration": 3.519
+    },
+    {
+      "text": "section",
+      "start": 222.56,
+      "duration": 3.679
+    },
+    {
+      "text": "and in that outputs section then we can",
+      "start": 223.599,
+      "duration": 3.761
+    },
+    {
+      "text": "do our actual",
+      "start": 226.239,
+      "duration": 3.441
+    },
+    {
+      "text": "calculations now if you're building a",
+      "start": 227.36,
+      "duration": 3.599
+    },
+    {
+      "text": "more complex model",
+      "start": 229.68,
+      "duration": 2.96
+    },
+    {
+      "text": "you can kind of break this out more and",
+      "start": 230.959,
+      "duration": 3.521
+    },
+    {
+      "text": "have different spots for calculations",
+      "start": 232.64,
+      "duration": 2.319
+    },
+    {
+      "text": "and",
+      "start": 234.48,
+      "duration": 2.64
+    },
+    {
+      "text": "and one spot for final outputs and and",
+      "start": 234.959,
+      "duration": 3.92
+    },
+    {
+      "text": "we'll get into that structure",
+      "start": 237.12,
+      "duration": 3.839
+    },
+    {
+      "text": "as we go on in the course but for now",
+      "start": 238.879,
+      "duration": 3.28
+    },
+    {
+      "text": "this is very simple",
+      "start": 240.959,
+      "duration": 3.601
+    },
+    {
+      "text": "let's just put all the uh calculations",
+      "start": 242.159,
+      "duration": 3.201
+    },
+    {
+      "text": "and outputs",
+      "start": 244.56,
+      "duration": 2.879
+    },
+    {
+      "text": "in the outputs section the biggest thing",
+      "start": 245.36,
+      "duration": 3.84
+    },
+    {
+      "text": "is just keeping your inputs",
+      "start": 247.439,
+      "duration": 5.401
+    },
+    {
+      "text": "separate from everything else so for our",
+      "start": 249.2,
+      "duration": 5.039
+    },
+    {
+      "text": "outputs um",
+      "start": 252.84,
+      "duration": 4.44
+    },
+    {
+      "text": "we could go directly to uh",
+      "start": 254.239,
+      "duration": 5.361
+    },
+    {
+      "text": "doing the actual main calculation of the",
+      "start": 257.28,
+      "duration": 4.0
+    },
+    {
+      "text": "model getting the number of years to",
+      "start": 259.6,
+      "duration": 2.8
+    },
+    {
+      "text": "retirement",
+      "start": 261.28,
+      "duration": 2.88
+    },
+    {
+      "text": "um but i'm going to do first an",
+      "start": 262.4,
+      "duration": 3.44
+    },
+    {
+      "text": "intermediate calculation",
+      "start": 264.16,
+      "duration": 3.84
+    },
+    {
+      "text": "and that intermediate calculation is",
+      "start": 265.84,
+      "duration": 3.359
+    },
+    {
+      "text": "going to be",
+      "start": 268.0,
+      "duration": 4.8
+    },
+    {
+      "text": "the annual cash saved",
+      "start": 269.199,
+      "duration": 5.44
+    },
+    {
+      "text": "which is simply going to be you know",
+      "start": 272.8,
+      "duration": 3.28
+    },
+    {
+      "text": "taking the salary",
+      "start": 274.639,
+      "duration": 3.761
+    },
+    {
+      "text": "and what percentage of that salary are",
+      "start": 276.08,
+      "duration": 3.44
+    },
+    {
+      "text": "we saving",
+      "start": 278.4,
+      "duration": 5.28
+    },
+    {
+      "text": "each year um and so",
+      "start": 279.52,
+      "duration": 7.44
+    },
+    {
+      "text": "you know you might uh people who are not",
+      "start": 283.68,
+      "duration": 4.88
+    },
+    {
+      "text": "experienced with excel might think to",
+      "start": 286.96,
+      "duration": 3.76
+    },
+    {
+      "text": "just you know type in",
+      "start": 288.56,
+      "duration": 5.52
+    },
+    {
+      "text": "uh 60 000 times you know 0.25 or",
+      "start": 290.72,
+      "duration": 4.88
+    },
+    {
+      "text": "something like that and that does get",
+      "start": 294.08,
+      "duration": 2.8
+    },
+    {
+      "text": "you to the right",
+      "start": 295.6,
+      "duration": 4.4
+    },
+    {
+      "text": "answer but the problem is if you change",
+      "start": 296.88,
+      "duration": 6.0
+    },
+    {
+      "text": "uh the salary here then that does not",
+      "start": 300.0,
+      "duration": 5.44
+    },
+    {
+      "text": "change the cash saved",
+      "start": 302.88,
+      "duration": 5.599
+    },
+    {
+      "text": "so what we want to do instead is we want",
+      "start": 305.44,
+      "duration": 4.96
+    },
+    {
+      "text": "to reference the cells",
+      "start": 308.479,
+      "duration": 4.401
+    },
+    {
+      "text": "that are used in the calculation never",
+      "start": 310.4,
+      "duration": 3.04
+    },
+    {
+      "text": "typing",
+      "start": 312.88,
+      "duration": 3.52
+    },
+    {
+      "text": "the actual values within the calculation",
+      "start": 313.44,
+      "duration": 4.479
+    },
+    {
+      "text": "part",
+      "start": 316.4,
+      "duration": 4.0
+    },
+    {
+      "text": "so we're going to reference the salary",
+      "start": 317.919,
+      "duration": 4.241
+    },
+    {
+      "text": "and we're going to take that salary and",
+      "start": 320.4,
+      "duration": 3.12
+    },
+    {
+      "text": "multiply it by",
+      "start": 322.16,
+      "duration": 4.479
+    },
+    {
+      "text": "this savings rate and then we get the",
+      "start": 323.52,
+      "duration": 4.56
+    },
+    {
+      "text": "same 15 000",
+      "start": 326.639,
+      "duration": 4.241
+    },
+    {
+      "text": "but if we change the salary then we see",
+      "start": 328.08,
+      "duration": 4.8
+    },
+    {
+      "text": "that the annual cash saved",
+      "start": 330.88,
+      "duration": 5.039
+    },
+    {
+      "text": "updates as well and then we're going to",
+      "start": 332.88,
+      "duration": 3.759
+    },
+    {
+      "text": "go ahead",
+      "start": 335.919,
+      "duration": 3.921
+    },
+    {
+      "text": "and do our actual main calculation next",
+      "start": 336.639,
+      "duration": 5.28
+    },
+    {
+      "text": "which is figuring out the",
+      "start": 339.84,
+      "duration": 6.16
+    },
+    {
+      "text": "years to retirement so for",
+      "start": 341.919,
+      "duration": 6.72
+    },
+    {
+      "text": "the years to retirement excel has you",
+      "start": 346.0,
+      "duration": 3.68
+    },
+    {
+      "text": "know all those",
+      "start": 348.639,
+      "duration": 3.84
+    },
+    {
+      "text": "uh functions corresponding to those",
+      "start": 349.68,
+      "duration": 4.16
+    },
+    {
+      "text": "typical five keys",
+      "start": 352.479,
+      "duration": 4.241
+    },
+    {
+      "text": "on the financial calculators uh so to",
+      "start": 353.84,
+      "duration": 4.4
+    },
+    {
+      "text": "figure out the number of",
+      "start": 356.72,
+      "duration": 4.96
+    },
+    {
+      "text": "periods for this standard uh problem",
+      "start": 358.24,
+      "duration": 6.799
+    },
+    {
+      "text": "there is an nper function number of",
+      "start": 361.68,
+      "duration": 4.48
+    },
+    {
+      "text": "periods",
+      "start": 365.039,
+      "duration": 4.16
+    },
+    {
+      "text": "um and so into that uh mper",
+      "start": 366.16,
+      "duration": 5.84
+    },
+    {
+      "text": "function you can see it pops up uh you",
+      "start": 369.199,
+      "duration": 4.481
+    },
+    {
+      "text": "know the things that we need to input",
+      "start": 372.0,
+      "duration": 3.36
+    },
+    {
+      "text": "so the first thing that we need to input",
+      "start": 373.68,
+      "duration": 4.88
+    },
+    {
+      "text": "is the rate uh so i'm going to reference",
+      "start": 375.36,
+      "duration": 6.24
+    },
+    {
+      "text": "the interest rate and then next",
+      "start": 378.56,
+      "duration": 5.52
+    },
+    {
+      "text": "it needs the payment so that would be",
+      "start": 381.6,
+      "duration": 3.84
+    },
+    {
+      "text": "the annual",
+      "start": 384.08,
+      "duration": 7.04
+    },
+    {
+      "text": "cash saved and then we need the",
+      "start": 385.44,
+      "duration": 9.28
+    },
+    {
+      "text": "present value and the present",
+      "start": 391.12,
+      "duration": 5.68
+    },
+    {
+      "text": "value is going to be zero we're not",
+      "start": 394.72,
+      "duration": 5.199
+    },
+    {
+      "text": "starting with any cash",
+      "start": 396.8,
+      "duration": 6.0
+    },
+    {
+      "text": "and then the future value uh is going to",
+      "start": 399.919,
+      "duration": 3.681
+    },
+    {
+      "text": "be",
+      "start": 402.8,
+      "duration": 3.92
+    },
+    {
+      "text": "our desired cash now",
+      "start": 403.6,
+      "duration": 5.92
+    },
+    {
+      "text": "this will give not an answer because you",
+      "start": 406.72,
+      "duration": 4.879
+    },
+    {
+      "text": "do need to be careful about the signs of",
+      "start": 409.52,
+      "duration": 3.04
+    },
+    {
+      "text": "things",
+      "start": 411.599,
+      "duration": 4.641
+    },
+    {
+      "text": "um that it should be a negative payment",
+      "start": 412.56,
+      "duration": 4.88
+    },
+    {
+      "text": "here",
+      "start": 416.24,
+      "duration": 4.399
+    },
+    {
+      "text": "because you're paying in to",
+      "start": 417.44,
+      "duration": 5.039
+    },
+    {
+      "text": "this investment and then you're gonna",
+      "start": 420.639,
+      "duration": 3.28
+    },
+    {
+      "text": "have a positive",
+      "start": 422.479,
+      "duration": 4.72
+    },
+    {
+      "text": "cash at the end as a result so once we",
+      "start": 423.919,
+      "duration": 4.881
+    },
+    {
+      "text": "have that negative in there",
+      "start": 427.199,
+      "duration": 4.12
+    },
+    {
+      "text": "then we indeed get to an answer here of",
+      "start": 428.8,
+      "duration": 3.679
+    },
+    {
+      "text": "36.7",
+      "start": 431.319,
+      "duration": 4.201
+    },
+    {
+      "text": "years to retirement and because",
+      "start": 432.479,
+      "duration": 5.84
+    },
+    {
+      "text": "we linked everything together uh we have",
+      "start": 435.52,
+      "duration": 3.92
+    },
+    {
+      "text": "an actual model",
+      "start": 438.319,
+      "duration": 4.16
+    },
+    {
+      "text": "and not just a calculation and so then",
+      "start": 439.44,
+      "duration": 3.68
+    },
+    {
+      "text": "we go",
+      "start": 442.479,
+      "duration": 3.28
+    },
+    {
+      "text": "and we update the salary um that's a",
+      "start": 443.12,
+      "duration": 4.0
+    },
+    {
+      "text": "really low salary",
+      "start": 445.759,
+      "duration": 4.081
+    },
+    {
+      "text": "uh update the salary we can see if we",
+      "start": 447.12,
+      "duration": 4.799
+    },
+    {
+      "text": "earn ten thousand dollars less",
+      "start": 449.84,
+      "duration": 4.799
+    },
+    {
+      "text": "it takes us you know three years longer",
+      "start": 451.919,
+      "duration": 4.4
+    },
+    {
+      "text": "to retire",
+      "start": 454.639,
+      "duration": 4.321
+    },
+    {
+      "text": "um and we can play around with the",
+      "start": 456.319,
+      "duration": 4.241
+    },
+    {
+      "text": "savings rate as well",
+      "start": 458.96,
+      "duration": 3.6
+    },
+    {
+      "text": "um let's say we could save ten percent",
+      "start": 460.56,
+      "duration": 3.68
+    },
+    {
+      "text": "more that actually uh",
+      "start": 462.56,
+      "duration": 3.919
+    },
+    {
+      "text": "is able to bring up or bring down the",
+      "start": 464.24,
+      "duration": 4.72
+    },
+    {
+      "text": "years to retirement by about five years",
+      "start": 466.479,
+      "duration": 4.881
+    },
+    {
+      "text": "um so already we're getting a lot more",
+      "start": 468.96,
+      "duration": 3.04
+    },
+    {
+      "text": "insight",
+      "start": 471.36,
+      "duration": 2.8
+    },
+    {
+      "text": "than you know just doing a single",
+      "start": 472.0,
+      "duration": 3.36
+    },
+    {
+      "text": "calculation",
+      "start": 474.16,
+      "duration": 3.28
+    },
+    {
+      "text": "and it's very easy to change around the",
+      "start": 475.36,
+      "duration": 4.959
+    },
+    {
+      "text": "inputs and see the result",
+      "start": 477.44,
+      "duration": 4.72
+    },
+    {
+      "text": "so that's the implementation of the",
+      "start": 480.319,
+      "duration": 3.521
+    },
+    {
+      "text": "model the other thing",
+      "start": 482.16,
+      "duration": 3.84
+    },
+    {
+      "text": "you would want to generally do is add",
+      "start": 483.84,
+      "duration": 3.359
+    },
+    {
+      "text": "some formatting",
+      "start": 486.0,
+      "duration": 4.72
+    },
+    {
+      "text": "to the model and",
+      "start": 487.199,
+      "duration": 6.081
+    },
+    {
+      "text": "you know everything that i'm posting um",
+      "start": 490.72,
+      "duration": 3.599
+    },
+    {
+      "text": "as the examples",
+      "start": 493.28,
+      "duration": 2.72
+    },
+    {
+      "text": "on the site is going to have the full",
+      "start": 494.319,
+      "duration": 3.121
+    },
+    {
+      "text": "formatting",
+      "start": 496.0,
+      "duration": 3.199
+    },
+    {
+      "text": "i'll just quickly show you know some",
+      "start": 497.44,
+      "duration": 3.039
+    },
+    {
+      "text": "formatting for",
+      "start": 499.199,
+      "duration": 4.4
+    },
+    {
+      "text": "this top table but you can look",
+      "start": 500.479,
+      "duration": 6.321
+    },
+    {
+      "text": "take a look at the examples for",
+      "start": 503.599,
+      "duration": 7.04
+    },
+    {
+      "text": "how to do some of the formatting",
+      "start": 506.8,
+      "duration": 3.839
+    },
+    {
+      "text": "so here you know this inputs is",
+      "start": 511.12,
+      "duration": 6.32
+    },
+    {
+      "text": "you know really a header for both of",
+      "start": 514.959,
+      "duration": 3.281
+    },
+    {
+      "text": "these columns",
+      "start": 517.44,
+      "duration": 3.599
+    },
+    {
+      "text": "so i'm going to highlight both and merge",
+      "start": 518.24,
+      "duration": 3.679
+    },
+    {
+      "text": "and center",
+      "start": 521.039,
+      "duration": 3.92
+    },
+    {
+      "text": "now that inputs is over the entire thing",
+      "start": 521.919,
+      "duration": 5.281
+    },
+    {
+      "text": "there",
+      "start": 524.959,
+      "duration": 2.241
+    },
+    {
+      "text": "you might want to you know put some kind",
+      "start": 527.36,
+      "duration": 4.96
+    },
+    {
+      "text": "of color",
+      "start": 529.76,
+      "duration": 6.4
+    },
+    {
+      "text": "on that and might want to go",
+      "start": 532.32,
+      "duration": 7.6
+    },
+    {
+      "text": "and say you know put outside borders on",
+      "start": 536.16,
+      "duration": 6.16
+    },
+    {
+      "text": "all of it so it's really clear",
+      "start": 539.92,
+      "duration": 5.599
+    },
+    {
+      "text": "uh and then all borders on this and now",
+      "start": 542.32,
+      "duration": 5.12
+    },
+    {
+      "text": "you know we have a nice box uh",
+      "start": 545.519,
+      "duration": 3.681
+    },
+    {
+      "text": "containing all of the inputs it's very",
+      "start": 547.44,
+      "duration": 2.72
+    },
+    {
+      "text": "clear",
+      "start": 549.2,
+      "duration": 3.36
+    },
+    {
+      "text": "what's an input and what is not and you",
+      "start": 550.16,
+      "duration": 3.44
+    },
+    {
+      "text": "know you would want to do something",
+      "start": 552.56,
+      "duration": 2.0
+    },
+    {
+      "text": "similar",
+      "start": 553.6,
+      "duration": 4.48
+    },
+    {
+      "text": "for the outputs as well um",
+      "start": 554.56,
+      "duration": 4.719
+    },
+    {
+      "text": "and the other thing you want to pay",
+      "start": 558.08,
+      "duration": 2.72
+    },
+    {
+      "text": "attention to excel is the number",
+      "start": 559.279,
+      "duration": 2.24
+    },
+    {
+      "text": "formatting",
+      "start": 560.8,
+      "duration": 4.0
+    },
+    {
+      "text": "as well so for the number",
+      "start": 561.519,
+      "duration": 6.32
+    },
+    {
+      "text": "formatting um all that is",
+      "start": 564.8,
+      "duration": 6.4
+    },
+    {
+      "text": "up here and so for this we can use",
+      "start": 567.839,
+      "duration": 4.0
+    },
+    {
+      "text": "currency",
+      "start": 571.2,
+      "duration": 3.36
+    },
+    {
+      "text": "formatting for these and we can take it",
+      "start": 571.839,
+      "duration": 4.241
+    },
+    {
+      "text": "down to zero",
+      "start": 574.56,
+      "duration": 4.56
+    },
+    {
+      "text": "uh decimal places so",
+      "start": 576.08,
+      "duration": 5.28
+    },
+    {
+      "text": "you know this is kind of a level of",
+      "start": 579.12,
+      "duration": 4.719
+    },
+    {
+      "text": "formatting that you would probably want",
+      "start": 581.36,
+      "duration": 4.8
+    },
+    {
+      "text": "uh at a minimum you know you can always",
+      "start": 583.839,
+      "duration": 4.481
+    },
+    {
+      "text": "do more with the formatting but you want",
+      "start": 586.16,
+      "duration": 2.64
+    },
+    {
+      "text": "to have",
+      "start": 588.32,
+      "duration": 4.079
+    },
+    {
+      "text": "enough that is very clear uh you know",
+      "start": 588.8,
+      "duration": 5.68
+    },
+    {
+      "text": "what each of these values really mean is",
+      "start": 592.399,
+      "duration": 3.841
+    },
+    {
+      "text": "it a dollar amount is a percentage",
+      "start": 594.48,
+      "duration": 5.28
+    },
+    {
+      "text": "etc and be able to clearly separate the",
+      "start": 596.24,
+      "duration": 3.92
+    },
+    {
+      "text": "different",
+      "start": 599.76,
+      "duration": 3.92
+    },
+    {
+      "text": "sections of your model",
+      "start": 600.16,
+      "duration": 6.239
+    },
+    {
+      "text": "so we'll come back next time to then",
+      "start": 603.68,
+      "duration": 3.2
+    },
+    {
+      "text": "build",
+      "start": 606.399,
+      "duration": 5.041
+    },
+    {
+      "text": "out the basic python model thanks for",
+      "start": 606.88,
+      "duration": 4.56
+    },
+    {
+      "text": "listening",
+      "start": 612.76,
+      "duration": 3.0
+    }
+  ]
+}

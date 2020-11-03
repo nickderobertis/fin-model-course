@@ -1,0 +1,3089 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.8,
+      "duration": 2.32
+    },
+    {
+      "text": "nick duraburtis here teaching you",
+      "start": 3.679,
+      "duration": 3.6
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 5.12,
+      "duration": 4.8
+    },
+    {
+      "text": "we're going to do an introduction to",
+      "start": 7.279,
+      "duration": 4.081
+    },
+    {
+      "text": "pandas",
+      "start": 9.92,
+      "duration": 3.839
+    },
+    {
+      "text": "and this is part of our lecture series",
+      "start": 11.36,
+      "duration": 4.08
+    },
+    {
+      "text": "on understanding complex",
+      "start": 13.759,
+      "duration": 5.121
+    },
+    {
+      "text": "results using visualization",
+      "start": 15.44,
+      "duration": 6.4
+    },
+    {
+      "text": "so we want to get to be able to",
+      "start": 18.88,
+      "duration": 5.36
+    },
+    {
+      "text": "visualize our results in python",
+      "start": 21.84,
+      "duration": 3.759
+    },
+    {
+      "text": "but there's a little bit more that we've",
+      "start": 24.24,
+      "duration": 3.92
+    },
+    {
+      "text": "got to learn before we can get there",
+      "start": 25.599,
+      "duration": 6.321
+    },
+    {
+      "text": "so in python um",
+      "start": 28.16,
+      "duration": 5.52
+    },
+    {
+      "text": "we talked about how there's lots of",
+      "start": 31.92,
+      "duration": 3.04
+    },
+    {
+      "text": "different options",
+      "start": 33.68,
+      "duration": 5.039
+    },
+    {
+      "text": "for how we can visualize the data",
+      "start": 34.96,
+      "duration": 6.8
+    },
+    {
+      "text": "but we're going to focus on using pandas",
+      "start": 38.719,
+      "duration": 5.68
+    },
+    {
+      "text": "which uses matplotlib under the hood to",
+      "start": 41.76,
+      "duration": 3.279
+    },
+    {
+      "text": "do our",
+      "start": 44.399,
+      "duration": 3.361
+    },
+    {
+      "text": "visualizations so we've got to go and",
+      "start": 45.039,
+      "duration": 4.561
+    },
+    {
+      "text": "learn about how to use pandas",
+      "start": 47.76,
+      "duration": 4.88
+    },
+    {
+      "text": "in the first place because it does",
+      "start": 49.6,
+      "duration": 6.4
+    },
+    {
+      "text": "a lot more than just plotting",
+      "start": 52.64,
+      "duration": 6.8
+    },
+    {
+      "text": "and tables um",
+      "start": 56.0,
+      "duration": 6.8
+    },
+    {
+      "text": "but we gotta learn panda's basics",
+      "start": 59.44,
+      "duration": 6.64
+    },
+    {
+      "text": "and the basics really resolve around",
+      "start": 62.8,
+      "duration": 7.52
+    },
+    {
+      "text": "the pandas data frame so the data frame",
+      "start": 66.08,
+      "duration": 7.12
+    },
+    {
+      "text": "is this new type of object that we",
+      "start": 70.32,
+      "duration": 4.72
+    },
+    {
+      "text": "haven't worked with before",
+      "start": 73.2,
+      "duration": 4.08
+    },
+    {
+      "text": "you know we've worked with lists numbers",
+      "start": 75.04,
+      "duration": 3.6
+    },
+    {
+      "text": "strings",
+      "start": 77.28,
+      "duration": 4.4
+    },
+    {
+      "text": "all the basic kinds of data types",
+      "start": 78.64,
+      "duration": 6.32
+    },
+    {
+      "text": "uh but i've mentioned how anyone can",
+      "start": 81.68,
+      "duration": 3.759
+    },
+    {
+      "text": "create",
+      "start": 84.96,
+      "duration": 4.159
+    },
+    {
+      "text": "their own data type by writing a class",
+      "start": 85.439,
+      "duration": 6.561
+    },
+    {
+      "text": "and lots of third-party packages out",
+      "start": 89.119,
+      "duration": 4.081
+    },
+    {
+      "text": "there",
+      "start": 92.0,
+      "duration": 4.0
+    },
+    {
+      "text": "create these custom classes for you to",
+      "start": 93.2,
+      "duration": 3.279
+    },
+    {
+      "text": "use",
+      "start": 96.0,
+      "duration": 3.36
+    },
+    {
+      "text": "which give all sorts of functionality so",
+      "start": 96.479,
+      "duration": 3.521
+    },
+    {
+      "text": "that has been",
+      "start": 99.36,
+      "duration": 2.56
+    },
+    {
+      "text": "done in the panus library they've",
+      "start": 100.0,
+      "duration": 3.2
+    },
+    {
+      "text": "created the data frame",
+      "start": 101.92,
+      "duration": 3.92
+    },
+    {
+      "text": "class and so that defines this data",
+      "start": 103.2,
+      "duration": 3.84
+    },
+    {
+      "text": "frame type",
+      "start": 105.84,
+      "duration": 4.72
+    },
+    {
+      "text": "that we can use and when you think of a",
+      "start": 107.04,
+      "duration": 4.8
+    },
+    {
+      "text": "data frame",
+      "start": 110.56,
+      "duration": 4.64
+    },
+    {
+      "text": "think of basically a table so",
+      "start": 111.84,
+      "duration": 6.4
+    },
+    {
+      "text": "you know with lists numbers",
+      "start": 115.2,
+      "duration": 4.879
+    },
+    {
+      "text": "all the dictionaries all the data types",
+      "start": 118.24,
+      "duration": 4.159
+    },
+    {
+      "text": "we've thought about so far in python",
+      "start": 120.079,
+      "duration": 6.0
+    },
+    {
+      "text": "nothing really is like a table",
+      "start": 122.399,
+      "duration": 6.321
+    },
+    {
+      "text": "but we have these data frames that can",
+      "start": 126.079,
+      "duration": 5.761
+    },
+    {
+      "text": "fulfill that role for us",
+      "start": 128.72,
+      "duration": 5.12
+    },
+    {
+      "text": "so before we even get into the graphing",
+      "start": 131.84,
+      "duration": 3.36
+    },
+    {
+      "text": "side we've got to learn about how to",
+      "start": 133.84,
+      "duration": 2.88
+    },
+    {
+      "text": "work with data frames",
+      "start": 135.2,
+      "duration": 4.0
+    },
+    {
+      "text": "with these tabular representations of",
+      "start": 136.72,
+      "duration": 3.92
+    },
+    {
+      "text": "the data",
+      "start": 139.2,
+      "duration": 3.52
+    },
+    {
+      "text": "and there's quite a lot that we can do",
+      "start": 140.64,
+      "duration": 3.12
+    },
+    {
+      "text": "there",
+      "start": 142.72,
+      "duration": 4.64
+    },
+    {
+      "text": "and i will really become a basic tool",
+      "start": 143.76,
+      "duration": 6.32
+    },
+    {
+      "text": "in your toolkit for solving problems in",
+      "start": 147.36,
+      "duration": 3.84
+    },
+    {
+      "text": "python",
+      "start": 150.08,
+      "duration": 4.159
+    },
+    {
+      "text": "a lot of people use data frames",
+      "start": 151.2,
+      "duration": 5.2
+    },
+    {
+      "text": "as a very fundamental building block in",
+      "start": 154.239,
+      "duration": 4.241
+    },
+    {
+      "text": "their models as a way of storing and",
+      "start": 156.4,
+      "duration": 2.88
+    },
+    {
+      "text": "working with",
+      "start": 158.48,
+      "duration": 4.399
+    },
+    {
+      "text": "data so what we're learning here has a",
+      "start": 159.28,
+      "duration": 6.0
+    },
+    {
+      "text": "lot of applications beyond even just the",
+      "start": 162.879,
+      "duration": 5.201
+    },
+    {
+      "text": "visualization",
+      "start": 165.28,
+      "duration": 2.8
+    },
+    {
+      "text": "so what is this data frame thing that",
+      "start": 168.72,
+      "duration": 4.32
+    },
+    {
+      "text": "we're about to learn about",
+      "start": 171.28,
+      "duration": 3.28
+    },
+    {
+      "text": "again essentially you can just think of",
+      "start": 173.04,
+      "duration": 3.36
+    },
+    {
+      "text": "it as a table",
+      "start": 174.56,
+      "duration": 4.959
+    },
+    {
+      "text": "it has rows it has columns but there's a",
+      "start": 176.4,
+      "duration": 4.559
+    },
+    {
+      "text": "lot that we can",
+      "start": 179.519,
+      "duration": 4.161
+    },
+    {
+      "text": "do with them so some of the features",
+      "start": 180.959,
+      "duration": 3.2
+    },
+    {
+      "text": "that",
+      "start": 183.68,
+      "duration": 3.52
+    },
+    {
+      "text": "data frames have you can",
+      "start": 184.159,
+      "duration": 4.72
+    },
+    {
+      "text": "you know even after it's created you can",
+      "start": 187.2,
+      "duration": 3.2
+    },
+    {
+      "text": "add or remove rows and",
+      "start": 188.879,
+      "duration": 4.561
+    },
+    {
+      "text": "rows and columns you can aggregate",
+      "start": 190.4,
+      "duration": 5.04
+    },
+    {
+      "text": "that data in a lot of different ways",
+      "start": 193.44,
+      "duration": 4.32
+    },
+    {
+      "text": "with summary statistics and grouping by",
+      "start": 195.44,
+      "duration": 4.64
+    },
+    {
+      "text": "different things",
+      "start": 197.76,
+      "duration": 6.08
+    },
+    {
+      "text": "you can go to and from different",
+      "start": 200.08,
+      "duration": 6.0
+    },
+    {
+      "text": "data formats like excel files you can",
+      "start": 203.84,
+      "duration": 4.399
+    },
+    {
+      "text": "read in excel files export to excel",
+      "start": 206.08,
+      "duration": 3.28
+    },
+    {
+      "text": "files",
+      "start": 208.239,
+      "duration": 4.241
+    },
+    {
+      "text": "as well as working with databases",
+      "start": 209.36,
+      "duration": 7.68
+    },
+    {
+      "text": "and lots of other output formats",
+      "start": 212.48,
+      "duration": 5.92
+    },
+    {
+      "text": "you can take multiple different data",
+      "start": 217.04,
+      "duration": 3.36
+    },
+    {
+      "text": "sets and you can put them together by",
+      "start": 218.4,
+      "duration": 5.119
+    },
+    {
+      "text": "joining and merging and concatenating",
+      "start": 220.4,
+      "duration": 7.28
+    },
+    {
+      "text": "you can re re-sample and reshape",
+      "start": 223.519,
+      "duration": 7.601
+    },
+    {
+      "text": "your data thinking about you know",
+      "start": 227.68,
+      "duration": 5.119
+    },
+    {
+      "text": "different frequencies you have monthly",
+      "start": 231.12,
+      "duration": 3.119
+    },
+    {
+      "text": "data you want to take it to",
+      "start": 232.799,
+      "duration": 4.64
+    },
+    {
+      "text": "annual data or",
+      "start": 234.239,
+      "duration": 7.601
+    },
+    {
+      "text": "other ways of reformatting your data",
+      "start": 237.439,
+      "duration": 6.961
+    },
+    {
+      "text": "you can slice and dice and query from",
+      "start": 241.84,
+      "duration": 3.36
+    },
+    {
+      "text": "your data",
+      "start": 244.4,
+      "duration": 4.0
+    },
+    {
+      "text": "in any sorts of ways maybe",
+      "start": 245.2,
+      "duration": 5.679
+    },
+    {
+      "text": "you have data on countries and you just",
+      "start": 248.4,
+      "duration": 4.399
+    },
+    {
+      "text": "want to get the data for the us well you",
+      "start": 250.879,
+      "duration": 3.44
+    },
+    {
+      "text": "can just query for that",
+      "start": 252.799,
+      "duration": 7.041
+    },
+    {
+      "text": "us data and you can deal with",
+      "start": 254.319,
+      "duration": 7.921
+    },
+    {
+      "text": "different patterns in your data such as",
+      "start": 259.84,
+      "duration": 3.68
+    },
+    {
+      "text": "duplicates",
+      "start": 262.24,
+      "duration": 4.48
+    },
+    {
+      "text": "you can remove those duplicates you can",
+      "start": 263.52,
+      "duration": 5.119
+    },
+    {
+      "text": "remove missing values you can fill in",
+      "start": 266.72,
+      "duration": 3.44
+    },
+    {
+      "text": "missing values",
+      "start": 268.639,
+      "duration": 3.201
+    },
+    {
+      "text": "lots of different things you can do to",
+      "start": 270.16,
+      "duration": 3.039
+    },
+    {
+      "text": "manipulate the data",
+      "start": 271.84,
+      "duration": 4.56
+    },
+    {
+      "text": "which you have in your data frames",
+      "start": 273.199,
+      "duration": 5.521
+    },
+    {
+      "text": "so this is why i mentioned that this is",
+      "start": 276.4,
+      "duration": 3.44
+    },
+    {
+      "text": "really a fundamental",
+      "start": 278.72,
+      "duration": 3.84
+    },
+    {
+      "text": "building block for most people as they",
+      "start": 279.84,
+      "duration": 4.32
+    },
+    {
+      "text": "build out their models",
+      "start": 282.56,
+      "duration": 2.96
+    },
+    {
+      "text": "because there's so much that you can do",
+      "start": 284.16,
+      "duration": 3.039
+    },
+    {
+      "text": "with it and this is",
+      "start": 285.52,
+      "duration": 4.72
+    },
+    {
+      "text": "really the gold standard library for",
+      "start": 287.199,
+      "duration": 6.481
+    },
+    {
+      "text": "working with tabular data in python it's",
+      "start": 290.24,
+      "duration": 4.88
+    },
+    {
+      "text": "very very popular",
+      "start": 293.68,
+      "duration": 4.239
+    },
+    {
+      "text": "it's used all across finance and the",
+      "start": 295.12,
+      "duration": 4.16
+    },
+    {
+      "text": "data science",
+      "start": 297.919,
+      "duration": 4.961
+    },
+    {
+      "text": "industries so most people who",
+      "start": 299.28,
+      "duration": 5.68
+    },
+    {
+      "text": "work in python are at least familiar",
+      "start": 302.88,
+      "duration": 3.2
+    },
+    {
+      "text": "with pandas",
+      "start": 304.96,
+      "duration": 3.28
+    },
+    {
+      "text": "and a lot of them use it on a daily",
+      "start": 306.08,
+      "duration": 5.76
+    },
+    {
+      "text": "basis i definitely do",
+      "start": 308.24,
+      "duration": 3.6
+    },
+    {
+      "text": "so what does this data frame basically",
+      "start": 312.16,
+      "duration": 4.319
+    },
+    {
+      "text": "look like how do we create one how do we",
+      "start": 314.639,
+      "duration": 2.721
+    },
+    {
+      "text": "work with it",
+      "start": 316.479,
+      "duration": 4.081
+    },
+    {
+      "text": "so here's a very simple example",
+      "start": 317.36,
+      "duration": 6.32
+    },
+    {
+      "text": "of how you can create a data frame we'll",
+      "start": 320.56,
+      "duration": 4.079
+    },
+    {
+      "text": "talk about",
+      "start": 323.68,
+      "duration": 2.32
+    },
+    {
+      "text": "a few different ways that we're going to",
+      "start": 324.639,
+      "duration": 4.241
+    },
+    {
+      "text": "create data frames in this course",
+      "start": 326.0,
+      "duration": 5.12
+    },
+    {
+      "text": "but here's what i think is the easiest",
+      "start": 328.88,
+      "duration": 3.759
+    },
+    {
+      "text": "way to get started with one",
+      "start": 331.12,
+      "duration": 5.2
+    },
+    {
+      "text": "is of course this is a third party",
+      "start": 332.639,
+      "duration": 4.321
+    },
+    {
+      "text": "package",
+      "start": 336.32,
+      "duration": 3.12
+    },
+    {
+      "text": "that we're using so we do have to import",
+      "start": 336.96,
+      "duration": 3.679
+    },
+    {
+      "text": "that so",
+      "start": 339.44,
+      "duration": 3.44
+    },
+    {
+      "text": "we're going to import pandas and the",
+      "start": 340.639,
+      "duration": 4.721
+    },
+    {
+      "text": "convention that everybody uses",
+      "start": 342.88,
+      "duration": 4.319
+    },
+    {
+      "text": "if you google anything about pandas",
+      "start": 345.36,
+      "duration": 3.04
+    },
+    {
+      "text": "you're going to see people using the",
+      "start": 347.199,
+      "duration": 2.56
+    },
+    {
+      "text": "same convention",
+      "start": 348.4,
+      "duration": 3.68
+    },
+    {
+      "text": "is to import pandas as pd and then you",
+      "start": 349.759,
+      "duration": 4.081
+    },
+    {
+      "text": "always do pd dot",
+      "start": 352.08,
+      "duration": 4.72
+    },
+    {
+      "text": "whatever you want to use from pandas so",
+      "start": 353.84,
+      "duration": 4.56
+    },
+    {
+      "text": "to create this data frame it's going to",
+      "start": 356.8,
+      "duration": 2.08
+    },
+    {
+      "text": "be",
+      "start": 358.4,
+      "duration": 3.2
+    },
+    {
+      "text": "pd.data frame and we're going to assign",
+      "start": 358.88,
+      "duration": 4.08
+    },
+    {
+      "text": "that to a df",
+      "start": 361.6,
+      "duration": 4.0
+    },
+    {
+      "text": "variable so that we can use that going",
+      "start": 362.96,
+      "duration": 4.72
+    },
+    {
+      "text": "forward",
+      "start": 365.6,
+      "duration": 5.2
+    },
+    {
+      "text": "now i had everyone install python",
+      "start": 367.68,
+      "duration": 5.519
+    },
+    {
+      "text": "with anaconda in this class and so",
+      "start": 370.8,
+      "duration": 3.44
+    },
+    {
+      "text": "pandas",
+      "start": 373.199,
+      "duration": 4.481
+    },
+    {
+      "text": "is already installed within anaconda so",
+      "start": 374.24,
+      "duration": 4.48
+    },
+    {
+      "text": "you don't have to go",
+      "start": 377.68,
+      "duration": 4.16
+    },
+    {
+      "text": "and install that but if you",
+      "start": 378.72,
+      "duration": 5.919
+    },
+    {
+      "text": "did not use anaconda you have some other",
+      "start": 381.84,
+      "duration": 4.639
+    },
+    {
+      "text": "python distribution that does not have",
+      "start": 384.639,
+      "duration": 3.761
+    },
+    {
+      "text": "pandas included then you will have to go",
+      "start": 386.479,
+      "duration": 2.641
+    },
+    {
+      "text": "and",
+      "start": 388.4,
+      "duration": 2.88
+    },
+    {
+      "text": "install that package before you can use",
+      "start": 389.12,
+      "duration": 4.24
+    },
+    {
+      "text": "it but as long as you installed anaconda",
+      "start": 391.28,
+      "duration": 5.759
+    },
+    {
+      "text": "it should be there already for you",
+      "start": 393.36,
+      "duration": 3.679
+    },
+    {
+      "text": "so we have this data frame and right now",
+      "start": 397.12,
+      "duration": 6.4
+    },
+    {
+      "text": "it's uh an empty data frame we didn't",
+      "start": 400.24,
+      "duration": 5.12
+    },
+    {
+      "text": "give it any data to start with",
+      "start": 403.52,
+      "duration": 3.6
+    },
+    {
+      "text": "so that's where we are as of here an",
+      "start": 405.36,
+      "duration": 4.399
+    },
+    {
+      "text": "empty data frame no data in it",
+      "start": 407.12,
+      "duration": 4.4
+    },
+    {
+      "text": "so then what we can do is we can add",
+      "start": 409.759,
+      "duration": 3.84
+    },
+    {
+      "text": "some columns to this data frame",
+      "start": 411.52,
+      "duration": 4.16
+    },
+    {
+      "text": "so we're going to add a sales column",
+      "start": 413.599,
+      "duration": 3.521
+    },
+    {
+      "text": "with these values",
+      "start": 415.68,
+      "duration": 3.68
+    },
+    {
+      "text": "and we're going to add a category column",
+      "start": 417.12,
+      "duration": 4.079
+    },
+    {
+      "text": "with these values",
+      "start": 419.36,
+      "duration": 3.6
+    },
+    {
+      "text": "and then when we look at the data frame",
+      "start": 421.199,
+      "duration": 4.161
+    },
+    {
+      "text": "we'll see something like this",
+      "start": 422.96,
+      "duration": 5.28
+    },
+    {
+      "text": "a tabular representation of the data",
+      "start": 425.36,
+      "duration": 3.92
+    },
+    {
+      "text": "where we have",
+      "start": 428.24,
+      "duration": 3.92
+    },
+    {
+      "text": "sales and category as our columns and",
+      "start": 429.28,
+      "duration": 5.12
+    },
+    {
+      "text": "then we have the rows of this data",
+      "start": 432.16,
+      "duration": 6.08
+    },
+    {
+      "text": "that we passed in so that's a basic way",
+      "start": 434.4,
+      "duration": 5.6
+    },
+    {
+      "text": "of creating a data frame first you make",
+      "start": 438.24,
+      "duration": 3.28
+    },
+    {
+      "text": "an empty data frame",
+      "start": 440.0,
+      "duration": 5.52
+    },
+    {
+      "text": "then you assign the columns one by one",
+      "start": 441.52,
+      "duration": 6.64
+    },
+    {
+      "text": "and we'll look at two other ways that we",
+      "start": 445.52,
+      "duration": 3.36
+    },
+    {
+      "text": "generally make",
+      "start": 448.16,
+      "duration": 4.879
+    },
+    {
+      "text": "data frames uh being that you can create",
+      "start": 448.88,
+      "duration": 6.159
+    },
+    {
+      "text": "it all at once with the data",
+      "start": 453.039,
+      "duration": 5.041
+    },
+    {
+      "text": "all within a single command",
+      "start": 455.039,
+      "duration": 5.361
+    },
+    {
+      "text": "and the other main way is to load from",
+      "start": 458.08,
+      "duration": 3.76
+    },
+    {
+      "text": "some kind of external source like",
+      "start": 460.4,
+      "duration": 3.76
+    },
+    {
+      "text": "reading in an excel file to create your",
+      "start": 461.84,
+      "duration": 4.88
+    },
+    {
+      "text": "data frame",
+      "start": 464.16,
+      "duration": 2.56
+    },
+    {
+      "text": "so then let's jump over to the jupyter",
+      "start": 467.36,
+      "duration": 8.08
+    },
+    {
+      "text": "notebook example on how we can",
+      "start": 470.96,
+      "duration": 8.0
+    },
+    {
+      "text": "work with these data frames",
+      "start": 475.44,
+      "duration": 5.84
+    },
+    {
+      "text": "so",
+      "start": 478.96,
+      "duration": 2.32
+    },
+    {
+      "text": "we're over here on the intro to pandas",
+      "start": 482.639,
+      "duration": 3.361
+    },
+    {
+      "text": "and",
+      "start": 485.599,
+      "duration": 5.201
+    },
+    {
+      "text": "visualization notebook and",
+      "start": 486.0,
+      "duration": 7.36
+    },
+    {
+      "text": "so first the thing that we're gonna do",
+      "start": 490.8,
+      "duration": 4.56
+    },
+    {
+      "text": "as always is we're gonna import what we",
+      "start": 493.36,
+      "duration": 3.76
+    },
+    {
+      "text": "need so we're gonna import",
+      "start": 495.36,
+      "duration": 4.8
+    },
+    {
+      "text": "pandas as pd so that we can use that",
+      "start": 497.12,
+      "duration": 6.4
+    },
+    {
+      "text": "throughout and so the first way that",
+      "start": 500.16,
+      "duration": 4.719
+    },
+    {
+      "text": "we're talking about creating a data",
+      "start": 503.52,
+      "duration": 1.76
+    },
+    {
+      "text": "frame",
+      "start": 504.879,
+      "duration": 3.04
+    },
+    {
+      "text": "we create it first assign columns later",
+      "start": 505.28,
+      "duration": 3.52
+    },
+    {
+      "text": "so here",
+      "start": 507.919,
+      "duration": 2.56
+    },
+    {
+      "text": "you make the empty data frame and if you",
+      "start": 508.8,
+      "duration": 3.359
+    },
+    {
+      "text": "look at the empty data frame",
+      "start": 510.479,
+      "duration": 4.48
+    },
+    {
+      "text": "you basically see nothing because",
+      "start": 512.159,
+      "duration": 5.281
+    },
+    {
+      "text": "there's no data in there",
+      "start": 514.959,
+      "duration": 4.56
+    },
+    {
+      "text": "then we can go and we can assign a",
+      "start": 517.44,
+      "duration": 3.44
+    },
+    {
+      "text": "column to it",
+      "start": 519.519,
+      "duration": 3.2
+    },
+    {
+      "text": "so this is going to be assigning the",
+      "start": 520.88,
+      "duration": 3.12
+    },
+    {
+      "text": "name column",
+      "start": 522.719,
+      "duration": 3.761
+    },
+    {
+      "text": "and it's giving the values joe jim and",
+      "start": 524.0,
+      "duration": 3.12
+    },
+    {
+      "text": "mary",
+      "start": 526.48,
+      "duration": 3.039
+    },
+    {
+      "text": "so then when we run that then we see",
+      "start": 527.12,
+      "duration": 3.36
+    },
+    {
+      "text": "this table",
+      "start": 529.519,
+      "duration": 4.801
+    },
+    {
+      "text": "representation with the column name name",
+      "start": 530.48,
+      "duration": 8.64
+    },
+    {
+      "text": "and the values joe jim and mary",
+      "start": 534.32,
+      "duration": 4.8
+    },
+    {
+      "text": "and",
+      "start": 539.279,
+      "duration": 2.481
+    },
+    {
+      "text": "the reason that we use brackets here",
+      "start": 543.44,
+      "duration": 5.28
+    },
+    {
+      "text": "whereas you know before we've just",
+      "start": 547.2,
+      "duration": 3.92
+    },
+    {
+      "text": "looked at brackets being able to look up",
+      "start": 548.72,
+      "duration": 3.679
+    },
+    {
+      "text": "something in a dictionary",
+      "start": 551.12,
+      "duration": 4.88
+    },
+    {
+      "text": "or look up something in a list",
+      "start": 552.399,
+      "duration": 3.601
+    },
+    {
+      "text": "classes in python define the way you",
+      "start": 557.92,
+      "duration": 3.599
+    },
+    {
+      "text": "work with objects",
+      "start": 560.16,
+      "duration": 3.76
+    },
+    {
+      "text": "and the way that pandas has defined",
+      "start": 561.519,
+      "duration": 4.161
+    },
+    {
+      "text": "their data frame class",
+      "start": 563.92,
+      "duration": 4.479
+    },
+    {
+      "text": "is why you work with it in this way so",
+      "start": 565.68,
+      "duration": 3.279
+    },
+    {
+      "text": "it's all",
+      "start": 568.399,
+      "duration": 2.801
+    },
+    {
+      "text": "in the particulars of the implementation",
+      "start": 568.959,
+      "duration": 5.361
+    },
+    {
+      "text": "of the class",
+      "start": 571.2,
+      "duration": 3.12
+    },
+    {
+      "text": "so in order to get something useful in",
+      "start": 575.04,
+      "duration": 4.64
+    },
+    {
+      "text": "this data let's assign a few more",
+      "start": 577.92,
+      "duration": 2.479
+    },
+    {
+      "text": "columns",
+      "start": 579.68,
+      "duration": 3.44
+    },
+    {
+      "text": "uh so for each of these people now we",
+      "start": 580.399,
+      "duration": 4.161
+    },
+    {
+      "text": "have a weight",
+      "start": 583.12,
+      "duration": 4.0
+    },
+    {
+      "text": "uh we have a price that they're willing",
+      "start": 584.56,
+      "duration": 3.279
+    },
+    {
+      "text": "to pay",
+      "start": 587.12,
+      "duration": 4.159
+    },
+    {
+      "text": "for some good the reservation price and",
+      "start": 587.839,
+      "duration": 6.081
+    },
+    {
+      "text": "we have a percentage of the time that",
+      "start": 591.279,
+      "duration": 3.68
+    },
+    {
+      "text": "they",
+      "start": 593.92,
+      "duration": 4.08
+    },
+    {
+      "text": "spend doing activity like outdoor",
+      "start": 594.959,
+      "duration": 6.161
+    },
+    {
+      "text": "activity or something like that",
+      "start": 598.0,
+      "duration": 3.12
+    },
+    {
+      "text": "so now we can see all of that laid out",
+      "start": 601.76,
+      "duration": 3.759
+    },
+    {
+      "text": "in a table",
+      "start": 603.839,
+      "duration": 4.641
+    },
+    {
+      "text": "in a nice clean way",
+      "start": 605.519,
+      "duration": 2.961
+    },
+    {
+      "text": "so the other main way to create a data",
+      "start": 608.88,
+      "duration": 4.72
+    },
+    {
+      "text": "frame is give it all the data at once",
+      "start": 610.64,
+      "duration": 6.4
+    },
+    {
+      "text": "give it all the columns at once and",
+      "start": 613.6,
+      "duration": 5.359
+    },
+    {
+      "text": "it's definitely a little more",
+      "start": 617.04,
+      "duration": 4.4
+    },
+    {
+      "text": "complicated syntax to do that",
+      "start": 618.959,
+      "duration": 5.601
+    },
+    {
+      "text": "but it can be useful in some cases",
+      "start": 621.44,
+      "duration": 6.56
+    },
+    {
+      "text": "so here we're passing",
+      "start": 624.56,
+      "duration": 6.88
+    },
+    {
+      "text": "to the data frame a list of tuples",
+      "start": 628.0,
+      "duration": 5.92
+    },
+    {
+      "text": "so here's the outer list and then each",
+      "start": 631.44,
+      "duration": 3.36
+    },
+    {
+      "text": "item in the list",
+      "start": 633.92,
+      "duration": 4.08
+    },
+    {
+      "text": "is itself a tuple",
+      "start": 634.8,
+      "duration": 6.56
+    },
+    {
+      "text": "and each of those tuples has the data",
+      "start": 638.0,
+      "duration": 7.279
+    },
+    {
+      "text": "for a single row in the data frame",
+      "start": 641.36,
+      "duration": 6.08
+    },
+    {
+      "text": "so here's all of joe's values here's all",
+      "start": 645.279,
+      "duration": 4.161
+    },
+    {
+      "text": "of jim's values here's all of mary's",
+      "start": 647.44,
+      "duration": 3.92
+    },
+    {
+      "text": "values",
+      "start": 649.44,
+      "duration": 4.56
+    },
+    {
+      "text": "and then after this first argument of",
+      "start": 651.36,
+      "duration": 5.039
+    },
+    {
+      "text": "the list of tuples of the data",
+      "start": 654.0,
+      "duration": 5.04
+    },
+    {
+      "text": "then it's a comma and then we can say",
+      "start": 656.399,
+      "duration": 4.56
+    },
+    {
+      "text": "columns equals",
+      "start": 659.04,
+      "duration": 4.239
+    },
+    {
+      "text": "and we can give it a list of the names",
+      "start": 660.959,
+      "duration": 3.681
+    },
+    {
+      "text": "of the columns",
+      "start": 663.279,
+      "duration": 4.881
+    },
+    {
+      "text": "for the data frame so those columns come",
+      "start": 664.64,
+      "duration": 4.16
+    },
+    {
+      "text": "directly",
+      "start": 668.16,
+      "duration": 4.4
+    },
+    {
+      "text": "to be the names of the columns and so",
+      "start": 668.8,
+      "duration": 6.88
+    },
+    {
+      "text": "doing this we can create the same data",
+      "start": 672.56,
+      "duration": 4.399
+    },
+    {
+      "text": "frame that we made above",
+      "start": 675.68,
+      "duration": 3.44
+    },
+    {
+      "text": "by assigning the columns individually",
+      "start": 676.959,
+      "duration": 3.281
+    },
+    {
+      "text": "just all at once",
+      "start": 679.12,
+      "duration": 4.399
+    },
+    {
+      "text": "in a single command",
+      "start": 680.24,
+      "duration": 3.279
+    },
+    {
+      "text": "so now we have uh this data frame which",
+      "start": 686.0,
+      "duration": 5.04
+    },
+    {
+      "text": "has a few different people",
+      "start": 689.839,
+      "duration": 3.201
+    },
+    {
+      "text": "and some characteristics of those people",
+      "start": 691.04,
+      "duration": 3.28
+    },
+    {
+      "text": "how do we",
+      "start": 693.04,
+      "duration": 2.96
+    },
+    {
+      "text": "now just saying we have that data frame",
+      "start": 694.32,
+      "duration": 4.24
+    },
+    {
+      "text": "ready how do we pull out what we want",
+      "start": 696.0,
+      "duration": 5.6
+    },
+    {
+      "text": "from that data frame so",
+      "start": 698.56,
+      "duration": 6.16
+    },
+    {
+      "text": "similar to a dictionary we can put the",
+      "start": 701.6,
+      "duration": 5.2
+    },
+    {
+      "text": "name of the column",
+      "start": 704.72,
+      "duration": 4.64
+    },
+    {
+      "text": "as a string into the brackets and that",
+      "start": 706.8,
+      "duration": 4.32
+    },
+    {
+      "text": "will pull that column",
+      "start": 709.36,
+      "duration": 3.84
+    },
+    {
+      "text": "out of the dictionary so this",
+      "start": 711.12,
+      "duration": 3.68
+    },
+    {
+      "text": "reservation price",
+      "start": 713.2,
+      "duration": 4.56
+    },
+    {
+      "text": "each of these values have now come out",
+      "start": 714.8,
+      "duration": 4.159
+    },
+    {
+      "text": "when we access",
+      "start": 717.76,
+      "duration": 4.96
+    },
+    {
+      "text": "the reservation price",
+      "start": 718.959,
+      "duration": 3.761
+    },
+    {
+      "text": "and what we have here is actually a",
+      "start": 723.04,
+      "duration": 3.28
+    },
+    {
+      "text": "series",
+      "start": 725.12,
+      "duration": 5.2
+    },
+    {
+      "text": "a series is the other main",
+      "start": 726.32,
+      "duration": 6.48
+    },
+    {
+      "text": "class within pandas and it represents a",
+      "start": 730.32,
+      "duration": 4.72
+    },
+    {
+      "text": "single row or a single column",
+      "start": 732.8,
+      "duration": 5.68
+    },
+    {
+      "text": "of a data frame",
+      "start": 735.04,
+      "duration": 6.479
+    },
+    {
+      "text": "so that's how we get one column",
+      "start": 738.48,
+      "duration": 4.96
+    },
+    {
+      "text": "you can also select multiple columns at",
+      "start": 741.519,
+      "duration": 3.12
+    },
+    {
+      "text": "a time",
+      "start": 743.44,
+      "duration": 4.88
+    },
+    {
+      "text": "by passing it the list of the columns",
+      "start": 744.639,
+      "duration": 6.401
+    },
+    {
+      "text": "that you want so do notice that we have",
+      "start": 748.32,
+      "duration": 4.56
+    },
+    {
+      "text": "the double brackets here",
+      "start": 751.04,
+      "duration": 3.84
+    },
+    {
+      "text": "because the outer bracket means i want",
+      "start": 752.88,
+      "duration": 4.16
+    },
+    {
+      "text": "to look something up in the data frame",
+      "start": 754.88,
+      "duration": 4.079
+    },
+    {
+      "text": "and then the inner bracket means i want",
+      "start": 757.04,
+      "duration": 3.44
+    },
+    {
+      "text": "to look up this list",
+      "start": 758.959,
+      "duration": 4.88
+    },
+    {
+      "text": "of columns so if you omit",
+      "start": 760.48,
+      "duration": 6.72
+    },
+    {
+      "text": "that uh brackets the inner brackets",
+      "start": 763.839,
+      "duration": 4.641
+    },
+    {
+      "text": "then it's not going to work",
+      "start": 767.2,
+      "duration": 2.879
+    },
+    {
+      "text": "appropriately you're going to get a key",
+      "start": 768.48,
+      "duration": 2.4
+    },
+    {
+      "text": "error",
+      "start": 770.079,
+      "duration": 3.361
+    },
+    {
+      "text": "because it's trying to now look up a",
+      "start": 770.88,
+      "duration": 3.6
+    },
+    {
+      "text": "single column",
+      "start": 773.44,
+      "duration": 3.6
+    },
+    {
+      "text": "with the name of this whole thing which",
+      "start": 774.48,
+      "duration": 3.76
+    },
+    {
+      "text": "doesn't exist",
+      "start": 777.04,
+      "duration": 3.359
+    },
+    {
+      "text": "you do need to have that second set of",
+      "start": 778.24,
+      "duration": 3.68
+    },
+    {
+      "text": "brackets so that it's saying",
+      "start": 780.399,
+      "duration": 4.961
+    },
+    {
+      "text": "i want to look up a list of columns and",
+      "start": 781.92,
+      "duration": 4.719
+    },
+    {
+      "text": "give me each of those columns",
+      "start": 785.36,
+      "duration": 4.0
+    },
+    {
+      "text": "individually",
+      "start": 786.639,
+      "duration": 2.721
+    },
+    {
+      "text": "so that's selecting columns now how do",
+      "start": 789.44,
+      "duration": 3.36
+    },
+    {
+      "text": "we select",
+      "start": 791.839,
+      "duration": 4.161
+    },
+    {
+      "text": "rows so there's uh",
+      "start": 792.8,
+      "duration": 6.56
+    },
+    {
+      "text": "this i look we can do on the data frame",
+      "start": 796.0,
+      "duration": 6.399
+    },
+    {
+      "text": "that's integer location so that's",
+      "start": 799.36,
+      "duration": 6.08
+    },
+    {
+      "text": "just uh saying zero would be saying give",
+      "start": 802.399,
+      "duration": 4.081
+    },
+    {
+      "text": "me the first row",
+      "start": 805.44,
+      "duration": 4.16
+    },
+    {
+      "text": "once again zero based indexing as with",
+      "start": 806.48,
+      "duration": 5.039
+    },
+    {
+      "text": "nearly everything in python",
+      "start": 809.6,
+      "duration": 4.96
+    },
+    {
+      "text": "so zeros give me the first row so we can",
+      "start": 811.519,
+      "duration": 4.081
+    },
+    {
+      "text": "see",
+      "start": 814.56,
+      "duration": 3.68
+    },
+    {
+      "text": "again this is another series that we're",
+      "start": 815.6,
+      "duration": 3.52
+    },
+    {
+      "text": "getting",
+      "start": 818.24,
+      "duration": 4.0
+    },
+    {
+      "text": "because any individual row or column of",
+      "start": 819.12,
+      "duration": 5.04
+    },
+    {
+      "text": "data frame is a series",
+      "start": 822.24,
+      "duration": 3.719
+    },
+    {
+      "text": "and that's why it displays a little bit",
+      "start": 824.16,
+      "duration": 4.479
+    },
+    {
+      "text": "differently um",
+      "start": 825.959,
+      "duration": 4.921
+    },
+    {
+      "text": "but we can see we have all of joe's",
+      "start": 828.639,
+      "duration": 3.2
+    },
+    {
+      "text": "values",
+      "start": 830.88,
+      "duration": 3.759
+    },
+    {
+      "text": "joe had the 150 weight and that's what",
+      "start": 831.839,
+      "duration": 3.601
+    },
+    {
+      "text": "we're indeed",
+      "start": 834.639,
+      "duration": 4.241
+    },
+    {
+      "text": "getting here so and you know if we went",
+      "start": 835.44,
+      "duration": 5.12
+    },
+    {
+      "text": "to one then that would be",
+      "start": 838.88,
+      "duration": 4.079
+    },
+    {
+      "text": "getting jim's values and two gets merry",
+      "start": 840.56,
+      "duration": 3.92
+    },
+    {
+      "text": "values",
+      "start": 842.959,
+      "duration": 3.281
+    },
+    {
+      "text": "and if we try to go above that we would",
+      "start": 844.48,
+      "duration": 3.68
+    },
+    {
+      "text": "get an index error because there are not",
+      "start": 846.24,
+      "duration": 3.36
+    },
+    {
+      "text": "that many rows",
+      "start": 848.16,
+      "duration": 2.88
+    },
+    {
+      "text": "in the data frame and that's where you",
+      "start": 849.6,
+      "duration": 4.16
+    },
+    {
+      "text": "get this single position indexers out of",
+      "start": 851.04,
+      "duration": 3.359
+    },
+    {
+      "text": "bounds",
+      "start": 853.76,
+      "duration": 2.96
+    },
+    {
+      "text": "you know you should see index error out",
+      "start": 854.399,
+      "duration": 3.841
+    },
+    {
+      "text": "of bounds you should know that you're",
+      "start": 856.72,
+      "duration": 2.88
+    },
+    {
+      "text": "trying to go",
+      "start": 858.24,
+      "duration": 6.399
+    },
+    {
+      "text": "further than exists in the data frame",
+      "start": 859.6,
+      "duration": 5.039
+    },
+    {
+      "text": "we can also pull out something by both",
+      "start": 865.76,
+      "duration": 4.879
+    },
+    {
+      "text": "rows and columns",
+      "start": 868.639,
+      "duration": 5.44
+    },
+    {
+      "text": "so that we can do with loc so",
+      "start": 870.639,
+      "duration": 6.801
+    },
+    {
+      "text": "loc uh you can give it two arguments",
+      "start": 874.079,
+      "duration": 8.081
+    },
+    {
+      "text": "in contrast to the ilok and so with loc",
+      "start": 877.44,
+      "duration": 7.12
+    },
+    {
+      "text": "we tell it first what row we want to",
+      "start": 882.16,
+      "duration": 3.919
+    },
+    {
+      "text": "look up and then what column",
+      "start": 884.56,
+      "duration": 2.88
+    },
+    {
+      "text": "we want to look up so we're going to",
+      "start": 886.079,
+      "duration": 3.12
+    },
+    {
+      "text": "look up the first row",
+      "start": 887.44,
+      "duration": 2.72
+    },
+    {
+      "text": "and we're going to look up the",
+      "start": 889.199,
+      "duration": 3.281
+    },
+    {
+      "text": "reservation price column so here's the",
+      "start": 890.16,
+      "duration": 4.56
+    },
+    {
+      "text": "data frame again just for reference",
+      "start": 892.48,
+      "duration": 4.56
+    },
+    {
+      "text": "so we want to go to the first row here",
+      "start": 894.72,
+      "duration": 4.0
+    },
+    {
+      "text": "and we want to look up the reservation",
+      "start": 897.04,
+      "duration": 2.479
+    },
+    {
+      "text": "price column",
+      "start": 898.72,
+      "duration": 3.64
+    },
+    {
+      "text": "so that's why we get the single value of",
+      "start": 899.519,
+      "duration": 5.841
+    },
+    {
+      "text": "10.12",
+      "start": 902.36,
+      "duration": 3.0
+    },
+    {
+      "text": "and then we can also query for whatever",
+      "start": 905.44,
+      "duration": 4.48
+    },
+    {
+      "text": "rows or columns of the data frame that",
+      "start": 907.44,
+      "duration": 3.44
+    },
+    {
+      "text": "we want",
+      "start": 909.92,
+      "duration": 4.0
+    },
+    {
+      "text": "so here we're going to get any rows",
+      "start": 910.88,
+      "duration": 4.72
+    },
+    {
+      "text": "which have a reservation price",
+      "start": 913.92,
+      "duration": 4.719
+    },
+    {
+      "text": "which is less than 14. so we can see the",
+      "start": 915.6,
+      "duration": 3.679
+    },
+    {
+      "text": "row",
+      "start": 918.639,
+      "duration": 3.361
+    },
+    {
+      "text": "the gym row which had a 15 reservation",
+      "start": 919.279,
+      "duration": 5.041
+    },
+    {
+      "text": "price is no longer here in this",
+      "start": 922.0,
+      "duration": 5.6
+    },
+    {
+      "text": "query result of the data frame but we do",
+      "start": 924.32,
+      "duration": 4.48
+    },
+    {
+      "text": "have the other rows because their",
+      "start": 927.6,
+      "duration": 4.56
+    },
+    {
+      "text": "reservation price was less than 14.",
+      "start": 928.8,
+      "duration": 6.159
+    },
+    {
+      "text": "um so you can kind of read this syntax",
+      "start": 932.16,
+      "duration": 3.2
+    },
+    {
+      "text": "as",
+      "start": 934.959,
+      "duration": 3.521
+    },
+    {
+      "text": "give me the data frame where",
+      "start": 935.36,
+      "duration": 6.8
+    },
+    {
+      "text": "uh the data frames reservation price",
+      "start": 938.48,
+      "duration": 6.719
+    },
+    {
+      "text": "is less than 14.",
+      "start": 942.16,
+      "duration": 5.679
+    },
+    {
+      "text": "so you do have to like repeat this data",
+      "start": 945.199,
+      "duration": 3.921
+    },
+    {
+      "text": "frame variable",
+      "start": 947.839,
+      "duration": 5.12
+    },
+    {
+      "text": "uh you can't just do something like",
+      "start": 949.12,
+      "duration": 6.639
+    },
+    {
+      "text": "that it's not going to understand that",
+      "start": 952.959,
+      "duration": 3.521
+    },
+    {
+      "text": "um",
+      "start": 955.759,
+      "duration": 3.44
+    },
+    {
+      "text": "it does have to be look up the data",
+      "start": 956.48,
+      "duration": 3.279
+    },
+    {
+      "text": "frame",
+      "start": 959.199,
+      "duration": 4.161
+    },
+    {
+      "text": "where the data frames reservation price",
+      "start": 959.759,
+      "duration": 10.08
+    },
+    {
+      "text": "is less than 14 and then it can work",
+      "start": 963.36,
+      "duration": 6.479
+    },
+    {
+      "text": "so we can do multiple queries",
+      "start": 971.839,
+      "duration": 6.8
+    },
+    {
+      "text": "at once as well you just have to",
+      "start": 974.88,
+      "duration": 6.8
+    },
+    {
+      "text": "separate them with an ampersand and put",
+      "start": 978.639,
+      "duration": 3.841
+    },
+    {
+      "text": "parentheses",
+      "start": 981.68,
+      "duration": 4.32
+    },
+    {
+      "text": "around each one of your queries so",
+      "start": 982.48,
+      "duration": 5.68
+    },
+    {
+      "text": "here we're doing what we did before and",
+      "start": 986.0,
+      "duration": 3.92
+    },
+    {
+      "text": "getting the reservation prices which are",
+      "start": 988.16,
+      "duration": 3.44
+    },
+    {
+      "text": "less than 14.",
+      "start": 989.92,
+      "duration": 4.64
+    },
+    {
+      "text": "but we're also going to get only those",
+      "start": 991.6,
+      "duration": 3.76
+    },
+    {
+      "text": "rows",
+      "start": 994.56,
+      "duration": 3.76
+    },
+    {
+      "text": "which have the percentage active greater",
+      "start": 995.36,
+      "duration": 3.44
+    },
+    {
+      "text": "than",
+      "start": 998.32,
+      "duration": 3.6
+    },
+    {
+      "text": "sixty percent so joe had sixty percent",
+      "start": 998.8,
+      "duration": 5.36
+    },
+    {
+      "text": "that's not greater than sixty percent",
+      "start": 1001.92,
+      "duration": 4.64
+    },
+    {
+      "text": "and so that's why when we run this we're",
+      "start": 1004.16,
+      "duration": 3.44
+    },
+    {
+      "text": "left only with",
+      "start": 1006.56,
+      "duration": 2.88
+    },
+    {
+      "text": "the mary row that's the only one that",
+      "start": 1007.6,
+      "duration": 3.039
+    },
+    {
+      "text": "satisfies",
+      "start": 1009.44,
+      "duration": 2.8
+    },
+    {
+      "text": "all of the conditions that we've given",
+      "start": 1010.639,
+      "duration": 3.2
+    },
+    {
+      "text": "to it",
+      "start": 1012.24,
+      "duration": 3.36
+    },
+    {
+      "text": "but it's very important to include the",
+      "start": 1013.839,
+      "duration": 4.721
+    },
+    {
+      "text": "parentheses if you omit any of those",
+      "start": 1015.6,
+      "duration": 4.4
+    },
+    {
+      "text": "then it's not going to work",
+      "start": 1018.56,
+      "duration": 3.279
+    },
+    {
+      "text": "appropriately",
+      "start": 1020.0,
+      "duration": 4.079
+    },
+    {
+      "text": "you don't need them in this special case",
+      "start": 1021.839,
+      "duration": 4.0
+    },
+    {
+      "text": "of just doing a single query",
+      "start": 1024.079,
+      "duration": 4.88
+    },
+    {
+      "text": "they don't hurt but you don't need them",
+      "start": 1025.839,
+      "duration": 4.96
+    },
+    {
+      "text": "whereas with multiple queries you",
+      "start": 1028.959,
+      "duration": 9.041
+    },
+    {
+      "text": "definitely do need them",
+      "start": 1030.799,
+      "duration": 10.88
+    },
+    {
+      "text": "um and then we can pass these same kind",
+      "start": 1038.0,
+      "duration": 4.4
+    },
+    {
+      "text": "of queries",
+      "start": 1041.679,
+      "duration": 4.321
+    },
+    {
+      "text": "into the loc command as well",
+      "start": 1042.4,
+      "duration": 6.96
+    },
+    {
+      "text": "and for that um",
+      "start": 1046.0,
+      "duration": 6.24
+    },
+    {
+      "text": "we do the same kind of syntax for the",
+      "start": 1049.36,
+      "duration": 3.92
+    },
+    {
+      "text": "row part",
+      "start": 1052.24,
+      "duration": 4.08
+    },
+    {
+      "text": "of the loc and then we can also pass it",
+      "start": 1053.28,
+      "duration": 5.04
+    },
+    {
+      "text": "whatever columns that we want to get",
+      "start": 1056.32,
+      "duration": 3.84
+    },
+    {
+      "text": "so we can take this same exact query",
+      "start": 1058.32,
+      "duration": 3.28
+    },
+    {
+      "text": "that we had here to get this",
+      "start": 1060.16,
+      "duration": 4.16
+    },
+    {
+      "text": "mary row and that comes as the first",
+      "start": 1061.6,
+      "duration": 3.439
+    },
+    {
+      "text": "argument",
+      "start": 1064.32,
+      "duration": 4.0
+    },
+    {
+      "text": "in loc and then the second argument is",
+      "start": 1065.039,
+      "duration": 5.201
+    },
+    {
+      "text": "what columns we want to get",
+      "start": 1068.32,
+      "duration": 3.44
+    },
+    {
+      "text": "so here we're getting just the name and",
+      "start": 1070.24,
+      "duration": 4.08
+    },
+    {
+      "text": "the weight columns and that's why we see",
+      "start": 1071.76,
+      "duration": 5.039
+    },
+    {
+      "text": "just mary's name and weight",
+      "start": 1074.32,
+      "duration": 4.8
+    },
+    {
+      "text": "and you also could give it just a single",
+      "start": 1076.799,
+      "duration": 4.321
+    },
+    {
+      "text": "column as well",
+      "start": 1079.12,
+      "duration": 3.919
+    },
+    {
+      "text": "and that is going to just give you that",
+      "start": 1081.12,
+      "duration": 4.32
+    },
+    {
+      "text": "value",
+      "start": 1083.039,
+      "duration": 2.401
+    },
+    {
+      "text": "so that's selecting things out of data",
+      "start": 1087.36,
+      "duration": 3.679
+    },
+    {
+      "text": "frames",
+      "start": 1090.559,
+      "duration": 3.281
+    },
+    {
+      "text": "let's look at some basic math we can do",
+      "start": 1091.039,
+      "duration": 3.841
+    },
+    {
+      "text": "so",
+      "start": 1093.84,
+      "duration": 4.32
+    },
+    {
+      "text": "you can take an entire column at once",
+      "start": 1094.88,
+      "duration": 5.52
+    },
+    {
+      "text": "from a data frame and do math with it",
+      "start": 1098.16,
+      "duration": 4.639
+    },
+    {
+      "text": "which definitely simplifies things",
+      "start": 1100.4,
+      "duration": 4.0
+    },
+    {
+      "text": "whereas before we would have always had",
+      "start": 1102.799,
+      "duration": 2.641
+    },
+    {
+      "text": "to create loops",
+      "start": 1104.4,
+      "duration": 3.76
+    },
+    {
+      "text": "to be able to apply these operations",
+      "start": 1105.44,
+      "duration": 4.4
+    },
+    {
+      "text": "across all the different values of our",
+      "start": 1108.16,
+      "duration": 2.639
+    },
+    {
+      "text": "data",
+      "start": 1109.84,
+      "duration": 3.44
+    },
+    {
+      "text": "here it's one simple expression in",
+      "start": 1110.799,
+      "duration": 3.76
+    },
+    {
+      "text": "pandas",
+      "start": 1113.28,
+      "duration": 4.32
+    },
+    {
+      "text": "so we can just add 10",
+      "start": 1114.559,
+      "duration": 5.12
+    },
+    {
+      "text": "to the reservation price column and we",
+      "start": 1117.6,
+      "duration": 3.92
+    },
+    {
+      "text": "get a new column which has 10",
+      "start": 1119.679,
+      "duration": 4.641
+    },
+    {
+      "text": "added to each of the values we can also",
+      "start": 1121.52,
+      "duration": 4.72
+    },
+    {
+      "text": "do math with multiple different columns",
+      "start": 1124.32,
+      "duration": 3.28
+    },
+    {
+      "text": "of the data frame",
+      "start": 1126.24,
+      "duration": 3.52
+    },
+    {
+      "text": "we could multiply this price by the",
+      "start": 1127.6,
+      "duration": 3.68
+    },
+    {
+      "text": "percentage active",
+      "start": 1129.76,
+      "duration": 4.799
+    },
+    {
+      "text": "and get the result of that here",
+      "start": 1131.28,
+      "duration": 6.399
+    },
+    {
+      "text": "and we can um",
+      "start": 1134.559,
+      "duration": 5.681
+    },
+    {
+      "text": "any data frame which has just numbers we",
+      "start": 1137.679,
+      "duration": 3.041
+    },
+    {
+      "text": "can",
+      "start": 1140.24,
+      "duration": 4.0
+    },
+    {
+      "text": "do math with that as well so here",
+      "start": 1140.72,
+      "duration": 5.28
+    },
+    {
+      "text": "taking the reservation price and weight",
+      "start": 1144.24,
+      "duration": 3.76
+    },
+    {
+      "text": "columns out of the data frame",
+      "start": 1146.0,
+      "duration": 5.12
+    },
+    {
+      "text": "we can multiply those both by 10 all at",
+      "start": 1148.0,
+      "duration": 4.24
+    },
+    {
+      "text": "once",
+      "start": 1151.12,
+      "duration": 4.24
+    },
+    {
+      "text": "um and",
+      "start": 1152.24,
+      "duration": 6.0
+    },
+    {
+      "text": "you can also you know take the result of",
+      "start": 1155.36,
+      "duration": 4.48
+    },
+    {
+      "text": "these things and assign them back",
+      "start": 1158.24,
+      "duration": 4.72
+    },
+    {
+      "text": "into the data frame as as new columns",
+      "start": 1159.84,
+      "duration": 6.0
+    },
+    {
+      "text": "if you would like",
+      "start": 1162.96,
+      "duration": 2.88
+    },
+    {
+      "text": "we can also do some summary statistics",
+      "start": 1166.559,
+      "duration": 3.761
+    },
+    {
+      "text": "very easily",
+      "start": 1169.28,
+      "duration": 4.24
+    },
+    {
+      "text": "with data frames so",
+      "start": 1170.32,
+      "duration": 5.2
+    },
+    {
+      "text": "dot describe kind of gives you the",
+      "start": 1173.52,
+      "duration": 3.36
+    },
+    {
+      "text": "overview of all the different",
+      "start": 1175.52,
+      "duration": 4.64
+    },
+    {
+      "text": "summary statistics you get how many",
+      "start": 1176.88,
+      "duration": 5.12
+    },
+    {
+      "text": "there are of each you get the average",
+      "start": 1180.16,
+      "duration": 4.639
+    },
+    {
+      "text": "standard deviation minimum different uh",
+      "start": 1182.0,
+      "duration": 5.52
+    },
+    {
+      "text": "percentiles",
+      "start": 1184.799,
+      "duration": 4.401
+    },
+    {
+      "text": "or you can do each these things",
+      "start": 1187.52,
+      "duration": 3.76
+    },
+    {
+      "text": "individually so",
+      "start": 1189.2,
+      "duration": 4.64
+    },
+    {
+      "text": "you know dot mean to get the averages",
+      "start": 1191.28,
+      "duration": 5.36
+    },
+    {
+      "text": "dot std to get the standard deviations",
+      "start": 1193.84,
+      "duration": 5.36
+    },
+    {
+      "text": "dot quantile to get here would be the",
+      "start": 1196.64,
+      "duration": 4.24
+    },
+    {
+      "text": "50th percentile",
+      "start": 1199.2,
+      "duration": 3.839
+    },
+    {
+      "text": "which is the median and you can do",
+      "start": 1200.88,
+      "duration": 4.32
+    },
+    {
+      "text": "whatever percentile that you want in",
+      "start": 1203.039,
+      "duration": 4.321
+    },
+    {
+      "text": "this",
+      "start": 1205.2,
+      "duration": 5.28
+    },
+    {
+      "text": "min to get the minimum max to get the",
+      "start": 1207.36,
+      "duration": 4.96
+    },
+    {
+      "text": "maximum",
+      "start": 1210.48,
+      "duration": 5.439
+    },
+    {
+      "text": "and any of these operations you can",
+      "start": 1212.32,
+      "duration": 6.239
+    },
+    {
+      "text": "apply it across the row instead of the",
+      "start": 1215.919,
+      "duration": 3.361
+    },
+    {
+      "text": "column",
+      "start": 1218.559,
+      "duration": 3.761
+    },
+    {
+      "text": "if you would like um and so",
+      "start": 1219.28,
+      "duration": 5.92
+    },
+    {
+      "text": "this is taking an average of all the",
+      "start": 1222.32,
+      "duration": 4.239
+    },
+    {
+      "text": "numerical values",
+      "start": 1225.2,
+      "duration": 3.92
+    },
+    {
+      "text": "in a given row and so this is saying",
+      "start": 1226.559,
+      "duration": 4.961
+    },
+    {
+      "text": "this is the average of joe's values",
+      "start": 1229.12,
+      "duration": 4.799
+    },
+    {
+      "text": "this is the average of james values and",
+      "start": 1231.52,
+      "duration": 3.2
+    },
+    {
+      "text": "so on",
+      "start": 1233.919,
+      "duration": 3.281
+    },
+    {
+      "text": "and so you just pass this axis equals",
+      "start": 1234.72,
+      "duration": 4.079
+    },
+    {
+      "text": "one argument",
+      "start": 1237.2,
+      "duration": 4.4
+    },
+    {
+      "text": "to one of these summary functions to be",
+      "start": 1238.799,
+      "duration": 4.401
+    },
+    {
+      "text": "able to do that",
+      "start": 1241.6,
+      "duration": 4.079
+    },
+    {
+      "text": "and axis equals one just means work over",
+      "start": 1243.2,
+      "duration": 3.92
+    },
+    {
+      "text": "the rows instead of working over the",
+      "start": 1245.679,
+      "duration": 4.161
+    },
+    {
+      "text": "columns",
+      "start": 1247.12,
+      "duration": 2.72
+    },
+    {
+      "text": "and then you know these are all the kind",
+      "start": 1251.28,
+      "duration": 4.399
+    },
+    {
+      "text": "of built-in things but panus also has a",
+      "start": 1253.52,
+      "duration": 3.039
+    },
+    {
+      "text": "way that",
+      "start": 1255.679,
+      "duration": 3.521
+    },
+    {
+      "text": "you can apply any function you want",
+      "start": 1256.559,
+      "duration": 3.36
+    },
+    {
+      "text": "across",
+      "start": 1259.2,
+      "duration": 3.28
+    },
+    {
+      "text": "a data frames values so here's another",
+      "start": 1259.919,
+      "duration": 3.681
+    },
+    {
+      "text": "application where",
+      "start": 1262.48,
+      "duration": 3.199
+    },
+    {
+      "text": "creating functions for all our different",
+      "start": 1263.6,
+      "duration": 4.24
+    },
+    {
+      "text": "logical steps becomes very useful",
+      "start": 1265.679,
+      "duration": 3.681
+    },
+    {
+      "text": "because then we can take this function",
+      "start": 1267.84,
+      "duration": 3.44
+    },
+    {
+      "text": "we created and apply it",
+      "start": 1269.36,
+      "duration": 4.88
+    },
+    {
+      "text": "to every single cell in the data frame",
+      "start": 1271.28,
+      "duration": 3.36
+    },
+    {
+      "text": "um",
+      "start": 1274.24,
+      "duration": 2.799
+    },
+    {
+      "text": "and so here this is a simple function",
+      "start": 1274.64,
+      "duration": 4.08
+    },
+    {
+      "text": "that just takes the value",
+      "start": 1277.039,
+      "duration": 3.921
+    },
+    {
+      "text": "and multiplies it by 100 and returns the",
+      "start": 1278.72,
+      "duration": 3.68
+    },
+    {
+      "text": "result",
+      "start": 1280.96,
+      "duration": 5.28
+    },
+    {
+      "text": "and it's this apply map that is able to",
+      "start": 1282.4,
+      "duration": 7.04
+    },
+    {
+      "text": "take a function and apply it",
+      "start": 1286.24,
+      "duration": 5.52
+    },
+    {
+      "text": "to each individual cell in the data",
+      "start": 1289.44,
+      "duration": 3.119
+    },
+    {
+      "text": "frame",
+      "start": 1291.76,
+      "duration": 3.12
+    },
+    {
+      "text": "and return a new data frame which has",
+      "start": 1292.559,
+      "duration": 5.441
+    },
+    {
+      "text": "the result of all those calculations",
+      "start": 1294.88,
+      "duration": 7.36
+    },
+    {
+      "text": "so we run that and we can see we get 100",
+      "start": 1298.0,
+      "duration": 6.08
+    },
+    {
+      "text": "times each of the values that were there",
+      "start": 1302.24,
+      "duration": 3.36
+    },
+    {
+      "text": "before",
+      "start": 1304.08,
+      "duration": 4.079
+    },
+    {
+      "text": "and even for the strings we get uh those",
+      "start": 1305.6,
+      "duration": 4.559
+    },
+    {
+      "text": "repeated 100 times",
+      "start": 1308.159,
+      "duration": 4.081
+    },
+    {
+      "text": "so it was able to take this and apply it",
+      "start": 1310.159,
+      "duration": 3.441
+    },
+    {
+      "text": "to all the different",
+      "start": 1312.24,
+      "duration": 3.919
+    },
+    {
+      "text": "cells in the data frame now one thing",
+      "start": 1313.6,
+      "duration": 3.84
+    },
+    {
+      "text": "that you'll notice",
+      "start": 1316.159,
+      "duration": 5.121
+    },
+    {
+      "text": "is there's no open close parenthesis",
+      "start": 1317.44,
+      "duration": 6.32
+    },
+    {
+      "text": "and passing some kind of number or",
+      "start": 1321.28,
+      "duration": 4.08
+    },
+    {
+      "text": "arguments that you would expect to",
+      "start": 1323.76,
+      "duration": 2.32
+    },
+    {
+      "text": "normally see",
+      "start": 1325.36,
+      "duration": 3.84
+    },
+    {
+      "text": "with a function and that's because",
+      "start": 1326.08,
+      "duration": 6.479
+    },
+    {
+      "text": "when we um",
+      "start": 1329.2,
+      "duration": 5.28
+    },
+    {
+      "text": "do that we're calling the function right",
+      "start": 1332.559,
+      "duration": 4.721
+    },
+    {
+      "text": "so we pass it a 5 and we get 500",
+      "start": 1334.48,
+      "duration": 4.64
+    },
+    {
+      "text": "and now the result of this is just that",
+      "start": 1337.28,
+      "duration": 3.04
+    },
+    {
+      "text": "500",
+      "start": 1339.12,
+      "duration": 3.679
+    },
+    {
+      "text": "this function has been called it's been",
+      "start": 1340.32,
+      "duration": 4.479
+    },
+    {
+      "text": "evaluated it's gone now we're just left",
+      "start": 1342.799,
+      "duration": 3.441
+    },
+    {
+      "text": "with 500.",
+      "start": 1344.799,
+      "duration": 4.321
+    },
+    {
+      "text": "when we don't do the parentheses that's",
+      "start": 1346.24,
+      "duration": 3.84
+    },
+    {
+      "text": "the function",
+      "start": 1349.12,
+      "duration": 3.439
+    },
+    {
+      "text": "a reference to the function itself so",
+      "start": 1350.08,
+      "duration": 3.76
+    },
+    {
+      "text": "that's why we see",
+      "start": 1352.559,
+      "duration": 3.841
+    },
+    {
+      "text": "what is this thing it's a function it's",
+      "start": 1353.84,
+      "duration": 5.199
+    },
+    {
+      "text": "the function multiplied by hundred",
+      "start": 1356.4,
+      "duration": 4.639
+    },
+    {
+      "text": "and so with this structure we're passing",
+      "start": 1359.039,
+      "duration": 4.0
+    },
+    {
+      "text": "the function itself",
+      "start": 1361.039,
+      "duration": 5.52
+    },
+    {
+      "text": "into this other function apply map",
+      "start": 1363.039,
+      "duration": 5.201
+    },
+    {
+      "text": "so that apply map can take this and",
+      "start": 1366.559,
+      "duration": 3.521
+    },
+    {
+      "text": "apply it to each of the cells we have to",
+      "start": 1368.24,
+      "duration": 2.96
+    },
+    {
+      "text": "pass the function",
+      "start": 1370.08,
+      "duration": 4.719
+    },
+    {
+      "text": "itself and not the result of calling",
+      "start": 1371.2,
+      "duration": 6.719
+    },
+    {
+      "text": "that function so this definitely is a",
+      "start": 1374.799,
+      "duration": 4.721
+    },
+    {
+      "text": "concept that a lot of people struggle",
+      "start": 1377.919,
+      "duration": 1.921
+    },
+    {
+      "text": "with",
+      "start": 1379.52,
+      "duration": 3.6
+    },
+    {
+      "text": "in the beginning uh but we want to pass",
+      "start": 1379.84,
+      "duration": 5.44
+    },
+    {
+      "text": "the function itself and so we don't put",
+      "start": 1383.12,
+      "duration": 3.36
+    },
+    {
+      "text": "the parentheses",
+      "start": 1385.28,
+      "duration": 3.44
+    },
+    {
+      "text": "whereas essentially other every other",
+      "start": 1386.48,
+      "duration": 3.439
+    },
+    {
+      "text": "use case of functions",
+      "start": 1388.72,
+      "duration": 3.04
+    },
+    {
+      "text": "you do want to call it and get the",
+      "start": 1389.919,
+      "duration": 3.601
+    },
+    {
+      "text": "result of that",
+      "start": 1391.76,
+      "duration": 4.32
+    },
+    {
+      "text": "and so you use the parentheses and pass",
+      "start": 1393.52,
+      "duration": 5.44
+    },
+    {
+      "text": "whatever arguments",
+      "start": 1396.08,
+      "duration": 2.88
+    },
+    {
+      "text": "so that's a quick overview on pandas",
+      "start": 1399.12,
+      "duration": 5.84
+    },
+    {
+      "text": "and data frames and we're going to come",
+      "start": 1402.48,
+      "duration": 3.04
+    },
+    {
+      "text": "back",
+      "start": 1404.96,
+      "duration": 3.92
+    },
+    {
+      "text": "next time to look at some ways that we",
+      "start": 1405.52,
+      "duration": 4.56
+    },
+    {
+      "text": "can style",
+      "start": 1408.88,
+      "duration": 4.48
+    },
+    {
+      "text": "our data frames to make them look better",
+      "start": 1410.08,
+      "duration": 5.599
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 1413.36,
+      "duration": 4.48
+    },
+    {
+      "text": "time",
+      "start": 1415.679,
+      "duration": 2.161
+    }
+  ]
+}

@@ -1,0 +1,4039 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.96,
+      "duration": 2.72
+    },
+    {
+      "text": "this is nick dearmardis teaching you",
+      "start": 3.919,
+      "duration": 3.201
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.68,
+      "duration": 3.2
+    },
+    {
+      "text": "today we're going to be talking about",
+      "start": 7.12,
+      "duration": 3.92
+    },
+    {
+      "text": "combining excel and python",
+      "start": 8.88,
+      "duration": 5.52
+    },
+    {
+      "text": "using excel wings this is part of our",
+      "start": 11.04,
+      "duration": 5.36
+    },
+    {
+      "text": "lecture segment on combining excel in",
+      "start": 14.4,
+      "duration": 3.92
+    },
+    {
+      "text": "python",
+      "start": 16.4,
+      "duration": 5.36
+    },
+    {
+      "text": "so we already explored how to use",
+      "start": 18.32,
+      "duration": 5.84
+    },
+    {
+      "text": "pandas to do simpler integrations of",
+      "start": 21.76,
+      "duration": 4.0
+    },
+    {
+      "text": "excel in python",
+      "start": 24.16,
+      "duration": 4.24
+    },
+    {
+      "text": "now we're going to look at the full",
+      "start": 25.76,
+      "duration": 4.64
+    },
+    {
+      "text": "possible connection between the two",
+      "start": 28.4,
+      "duration": 5.839
+    },
+    {
+      "text": "using the excel wings library",
+      "start": 30.4,
+      "duration": 6.88
+    },
+    {
+      "text": "so excel wings gives",
+      "start": 34.239,
+      "duration": 6.801
+    },
+    {
+      "text": "us a nice convenient way that we can",
+      "start": 37.28,
+      "duration": 6.24
+    },
+    {
+      "text": "use excel from python and use python",
+      "start": 41.04,
+      "duration": 3.28
+    },
+    {
+      "text": "from excel",
+      "start": 43.52,
+      "duration": 4.559
+    },
+    {
+      "text": "and go back and forth between the two",
+      "start": 44.32,
+      "duration": 6.48
+    },
+    {
+      "text": "so you don't actually need to use excel",
+      "start": 48.079,
+      "duration": 3.441
+    },
+    {
+      "text": "wings it's",
+      "start": 50.8,
+      "duration": 4.16
+    },
+    {
+      "text": "it's built on top of uh",
+      "start": 51.52,
+      "duration": 6.719
+    },
+    {
+      "text": "the microsoft com api",
+      "start": 54.96,
+      "duration": 6.64
+    },
+    {
+      "text": "so that's an api that microsoft",
+      "start": 58.239,
+      "duration": 6.721
+    },
+    {
+      "text": "releases so that other software can",
+      "start": 61.6,
+      "duration": 4.32
+    },
+    {
+      "text": "interact",
+      "start": 64.96,
+      "duration": 5.76
+    },
+    {
+      "text": "with microsoft office products",
+      "start": 65.92,
+      "duration": 4.8
+    },
+    {
+      "text": "but it's kind of a pain to use",
+      "start": 71.119,
+      "duration": 6.64
+    },
+    {
+      "text": "uh directly in python",
+      "start": 74.4,
+      "duration": 7.039
+    },
+    {
+      "text": "i uh was doing that myself before this",
+      "start": 77.759,
+      "duration": 6.801
+    },
+    {
+      "text": "xl wings library really became a thing",
+      "start": 81.439,
+      "duration": 6.881
+    },
+    {
+      "text": "uh years back i had to",
+      "start": 84.56,
+      "duration": 7.44
+    },
+    {
+      "text": "build out some code that um was",
+      "start": 88.32,
+      "duration": 5.6
+    },
+    {
+      "text": "i was driving an excel plugin from",
+      "start": 92.0,
+      "duration": 3.759
+    },
+    {
+      "text": "python i was basically using",
+      "start": 93.92,
+      "duration": 3.839
+    },
+    {
+      "text": "excel plugin to pull some data and then",
+      "start": 95.759,
+      "duration": 4.4
+    },
+    {
+      "text": "i would use python to",
+      "start": 97.759,
+      "duration": 3.921
+    },
+    {
+      "text": "switch it out for different companies",
+      "start": 100.159,
+      "duration": 3.6
+    },
+    {
+      "text": "and keep re-running the plug-in",
+      "start": 101.68,
+      "duration": 5.439
+    },
+    {
+      "text": "relaunching excel and all these things",
+      "start": 103.759,
+      "duration": 5.201
+    },
+    {
+      "text": "so that was all possible without excel",
+      "start": 107.119,
+      "duration": 3.36
+    },
+    {
+      "text": "wings but",
+      "start": 108.96,
+      "duration": 2.96
+    },
+    {
+      "text": "it sure would have been quite a bit",
+      "start": 110.479,
+      "duration": 3.121
+    },
+    {
+      "text": "easier had",
+      "start": 111.92,
+      "duration": 5.44
+    },
+    {
+      "text": "excel wings been where it is today",
+      "start": 113.6,
+      "duration": 7.44
+    },
+    {
+      "text": "when i had built out that project",
+      "start": 117.36,
+      "duration": 3.68
+    },
+    {
+      "text": "so it is still under active development",
+      "start": 121.52,
+      "duration": 4.639
+    },
+    {
+      "text": "just like",
+      "start": 124.96,
+      "duration": 3.999
+    },
+    {
+      "text": "any of the um third-party packages that",
+      "start": 126.159,
+      "duration": 3.361
+    },
+    {
+      "text": "we",
+      "start": 128.959,
+      "duration": 4.161
+    },
+    {
+      "text": "use in the class um and",
+      "start": 129.52,
+      "duration": 5.52
+    },
+    {
+      "text": "some parts of it are more stable than",
+      "start": 133.12,
+      "duration": 3.52
+    },
+    {
+      "text": "others the part",
+      "start": 135.04,
+      "duration": 3.12
+    },
+    {
+      "text": "that we're going to look at and use in",
+      "start": 136.64,
+      "duration": 3.52
+    },
+    {
+      "text": "this course is very stable",
+      "start": 138.16,
+      "duration": 5.04
+    },
+    {
+      "text": "uh i've never had any issues with it and",
+      "start": 140.16,
+      "duration": 5.2
+    },
+    {
+      "text": "neither have i heard any issues from",
+      "start": 143.2,
+      "duration": 3.92
+    },
+    {
+      "text": "anyone in the classes",
+      "start": 145.36,
+      "duration": 5.04
+    },
+    {
+      "text": "um there are other ways to use it which",
+      "start": 147.12,
+      "duration": 6.399
+    },
+    {
+      "text": "we'll talk about briefly and",
+      "start": 150.4,
+      "duration": 5.839
+    },
+    {
+      "text": "some of those are newer and less stable",
+      "start": 153.519,
+      "duration": 3.521
+    },
+    {
+      "text": "but",
+      "start": 156.239,
+      "duration": 2.64
+    },
+    {
+      "text": "really interesting ways to integrate the",
+      "start": 157.04,
+      "duration": 4.08
+    },
+    {
+      "text": "two",
+      "start": 158.879,
+      "duration": 2.241
+    },
+    {
+      "text": "but the things are moving quickly in",
+      "start": 161.36,
+      "duration": 3.04
+    },
+    {
+      "text": "this space",
+      "start": 163.44,
+      "duration": 4.159
+    },
+    {
+      "text": "every day there are improvements",
+      "start": 164.4,
+      "duration": 5.76
+    },
+    {
+      "text": "and so over time i expect all these to",
+      "start": 167.599,
+      "duration": 3.041
+    },
+    {
+      "text": "become",
+      "start": 170.16,
+      "duration": 2.159
+    },
+    {
+      "text": "stable and well accepted ways of",
+      "start": 170.64,
+      "duration": 4.4
+    },
+    {
+      "text": "combining the two",
+      "start": 172.319,
+      "duration": 4.961
+    },
+    {
+      "text": "so i keep saying there are different",
+      "start": 175.04,
+      "duration": 3.839
+    },
+    {
+      "text": "ways to use excel wings",
+      "start": 177.28,
+      "duration": 3.84
+    },
+    {
+      "text": "and combine the two so what are those",
+      "start": 178.879,
+      "duration": 7.041
+    },
+    {
+      "text": "different ways so",
+      "start": 181.12,
+      "duration": 7.92
+    },
+    {
+      "text": "of two main categories of ways that we",
+      "start": 185.92,
+      "duration": 4.16
+    },
+    {
+      "text": "can",
+      "start": 189.04,
+      "duration": 4.08
+    },
+    {
+      "text": "uh integrate excel in python one of cell",
+      "start": 190.08,
+      "duration": 4.64
+    },
+    {
+      "text": "wings",
+      "start": 193.12,
+      "duration": 4.479
+    },
+    {
+      "text": "the first here is manipulating excel",
+      "start": 194.72,
+      "duration": 3.36
+    },
+    {
+      "text": "from",
+      "start": 197.599,
+      "duration": 3.92
+    },
+    {
+      "text": "python so that's writing python code",
+      "start": 198.08,
+      "duration": 6.56
+    },
+    {
+      "text": "to make excel do things",
+      "start": 201.519,
+      "duration": 5.921
+    },
+    {
+      "text": "and that is where we're going to focus",
+      "start": 204.64,
+      "duration": 5.599
+    },
+    {
+      "text": "in this course",
+      "start": 207.44,
+      "duration": 2.799
+    },
+    {
+      "text": "and we're even focusing on a subset of",
+      "start": 210.4,
+      "duration": 3.52
+    },
+    {
+      "text": "that",
+      "start": 213.2,
+      "duration": 2.56
+    },
+    {
+      "text": "we're gonna focus on just bringing data",
+      "start": 213.92,
+      "duration": 3.679
+    },
+    {
+      "text": "back and forth between excel",
+      "start": 215.76,
+      "duration": 5.199
+    },
+    {
+      "text": "and python um and",
+      "start": 217.599,
+      "duration": 6.72
+    },
+    {
+      "text": "orchestrating that from python",
+      "start": 220.959,
+      "duration": 6.64
+    },
+    {
+      "text": "um but you can also",
+      "start": 224.319,
+      "duration": 6.321
+    },
+    {
+      "text": "use this integration to do absolutely",
+      "start": 227.599,
+      "duration": 4.081
+    },
+    {
+      "text": "anything that you would",
+      "start": 230.64,
+      "duration": 5.92
+    },
+    {
+      "text": "be able to do in excel uh you want to",
+      "start": 231.68,
+      "duration": 7.839
+    },
+    {
+      "text": "you know run run a create a data table",
+      "start": 236.56,
+      "duration": 4.879
+    },
+    {
+      "text": "or",
+      "start": 239.519,
+      "duration": 5.28
+    },
+    {
+      "text": "you know make a pivot table or whatever",
+      "start": 241.439,
+      "duration": 5.52
+    },
+    {
+      "text": "anything that you can do in excel you",
+      "start": 244.799,
+      "duration": 4.401
+    },
+    {
+      "text": "can do it from python",
+      "start": 246.959,
+      "duration": 4.881
+    },
+    {
+      "text": "execute some python code and excel will",
+      "start": 249.2,
+      "duration": 3.28
+    },
+    {
+      "text": "respond",
+      "start": 251.84,
+      "duration": 4.0
+    },
+    {
+      "text": "in turn",
+      "start": 252.48,
+      "duration": 3.36
+    },
+    {
+      "text": "the other main way that we can combine",
+      "start": 256.239,
+      "duration": 4.0
+    },
+    {
+      "text": "the two is to run",
+      "start": 258.479,
+      "duration": 5.201
+    },
+    {
+      "text": "python from excel so that's",
+      "start": 260.239,
+      "duration": 5.52
+    },
+    {
+      "text": "using excel to orchestrate things and",
+      "start": 263.68,
+      "duration": 4.0
+    },
+    {
+      "text": "running python code",
+      "start": 265.759,
+      "duration": 4.16
+    },
+    {
+      "text": "and within that we have two different",
+      "start": 267.68,
+      "duration": 4.0
+    },
+    {
+      "text": "categories here that are supported",
+      "start": 269.919,
+      "duration": 4.881
+    },
+    {
+      "text": "in the excel wings library so one is",
+      "start": 271.68,
+      "duration": 6.079
+    },
+    {
+      "text": "python as a vba replacement and the",
+      "start": 274.8,
+      "duration": 3.28
+    },
+    {
+      "text": "other",
+      "start": 277.759,
+      "duration": 3.681
+    },
+    {
+      "text": "is user defined functions so python is a",
+      "start": 278.08,
+      "duration": 3.839
+    },
+    {
+      "text": "vba",
+      "start": 281.44,
+      "duration": 4.0
+    },
+    {
+      "text": "replacement that means you know you have",
+      "start": 281.919,
+      "duration": 5.041
+    },
+    {
+      "text": "an excel model",
+      "start": 285.44,
+      "duration": 4.16
+    },
+    {
+      "text": "and you've hit the limits of what you're",
+      "start": 286.96,
+      "duration": 4.16
+    },
+    {
+      "text": "able to do with basic cell you're",
+      "start": 289.6,
+      "duration": 3.44
+    },
+    {
+      "text": "thinking okay i've got to write some vba",
+      "start": 291.12,
+      "duration": 2.799
+    },
+    {
+      "text": "code",
+      "start": 293.04,
+      "duration": 2.32
+    },
+    {
+      "text": "to accomplish what i'm trying to",
+      "start": 293.919,
+      "duration": 3.201
+    },
+    {
+      "text": "accomplish well",
+      "start": 295.36,
+      "duration": 4.72
+    },
+    {
+      "text": "this lets you write python code instead",
+      "start": 297.12,
+      "duration": 3.919
+    },
+    {
+      "text": "and",
+      "start": 300.08,
+      "duration": 4.16
+    },
+    {
+      "text": "just use that in place of using vba for",
+      "start": 301.039,
+      "duration": 6.0
+    },
+    {
+      "text": "whatever you are going to do",
+      "start": 304.24,
+      "duration": 5.84
+    },
+    {
+      "text": "so it basically gives you a vba function",
+      "start": 307.039,
+      "duration": 6.321
+    },
+    {
+      "text": "run python which then will run python",
+      "start": 310.08,
+      "duration": 3.76
+    },
+    {
+      "text": "code",
+      "start": 313.36,
+      "duration": 4.16
+    },
+    {
+      "text": "in the background uh the other",
+      "start": 313.84,
+      "duration": 6.24
+    },
+    {
+      "text": "main way of running python from excel is",
+      "start": 317.52,
+      "duration": 4.88
+    },
+    {
+      "text": "using user-defined functions",
+      "start": 320.08,
+      "duration": 5.36
+    },
+    {
+      "text": "and with user-defined functions",
+      "start": 322.4,
+      "duration": 6.16
+    },
+    {
+      "text": "uh you basically create",
+      "start": 325.44,
+      "duration": 6.16
+    },
+    {
+      "text": "a function in python",
+      "start": 328.56,
+      "duration": 6.639
+    },
+    {
+      "text": "and you're able to call it from excel",
+      "start": 331.6,
+      "duration": 7.039
+    },
+    {
+      "text": "so just like you have equals average in",
+      "start": 335.199,
+      "duration": 4.241
+    },
+    {
+      "text": "excel",
+      "start": 338.639,
+      "duration": 3.84
+    },
+    {
+      "text": "you can now have equals my function",
+      "start": 339.44,
+      "duration": 5.759
+    },
+    {
+      "text": "and that my function is defined in",
+      "start": 342.479,
+      "duration": 4.961
+    },
+    {
+      "text": "python code and it runs python code",
+      "start": 345.199,
+      "duration": 4.961
+    },
+    {
+      "text": "it'll take the inputs from excel",
+      "start": 347.44,
+      "duration": 4.479
+    },
+    {
+      "text": "run it through the python code and then",
+      "start": 350.16,
+      "duration": 3.039
+    },
+    {
+      "text": "it will return",
+      "start": 351.919,
+      "duration": 2.641
+    },
+    {
+      "text": "whatever you're returning it will take",
+      "start": 353.199,
+      "duration": 3.681
+    },
+    {
+      "text": "that and bring it back into excel and",
+      "start": 354.56,
+      "duration": 4.479
+    },
+    {
+      "text": "put the result in the cell so",
+      "start": 356.88,
+      "duration": 5.2
+    },
+    {
+      "text": "really cool way of combining the two",
+      "start": 359.039,
+      "duration": 6.241
+    },
+    {
+      "text": "and i think that um can really give you",
+      "start": 362.08,
+      "duration": 4.48
+    },
+    {
+      "text": "the most power",
+      "start": 365.28,
+      "duration": 5.039
+    },
+    {
+      "text": "um but those user-defined functions",
+      "start": 366.56,
+      "duration": 6.16
+    },
+    {
+      "text": "are where uh there's still a lot of",
+      "start": 370.319,
+      "duration": 4.0
+    },
+    {
+      "text": "active development going on",
+      "start": 372.72,
+      "duration": 4.319
+    },
+    {
+      "text": "there's still um some bugs that they're",
+      "start": 374.319,
+      "duration": 4.521
+    },
+    {
+      "text": "working through with them",
+      "start": 377.039,
+      "duration": 5.121
+    },
+    {
+      "text": "and it's",
+      "start": 378.84,
+      "duration": 6.199
+    },
+    {
+      "text": "uh something that you know i think a",
+      "start": 382.16,
+      "duration": 4.319
+    },
+    {
+      "text": "couple years down the road they're going",
+      "start": 385.039,
+      "duration": 2.0
+    },
+    {
+      "text": "to be",
+      "start": 386.479,
+      "duration": 3.201
+    },
+    {
+      "text": "a lot more widespread but it's still",
+      "start": 387.039,
+      "duration": 4.241
+    },
+    {
+      "text": "kind of the early days for the user to",
+      "start": 389.68,
+      "duration": 3.2
+    },
+    {
+      "text": "find functions",
+      "start": 391.28,
+      "duration": 6.08
+    },
+    {
+      "text": "um so lots of cool applications there",
+      "start": 392.88,
+      "duration": 6.64
+    },
+    {
+      "text": "but we're just going to be focusing in",
+      "start": 397.36,
+      "duration": 3.2
+    },
+    {
+      "text": "this course",
+      "start": 399.52,
+      "duration": 3.119
+    },
+    {
+      "text": "on bringing data back and forth between",
+      "start": 400.56,
+      "duration": 3.44
+    },
+    {
+      "text": "excel and python",
+      "start": 402.639,
+      "duration": 3.201
+    },
+    {
+      "text": "because that is going to cover the vast",
+      "start": 404.0,
+      "duration": 3.36
+    },
+    {
+      "text": "majority of",
+      "start": 405.84,
+      "duration": 5.52
+    },
+    {
+      "text": "use cases for combining the two",
+      "start": 407.36,
+      "duration": 4.0
+    },
+    {
+      "text": "and i would encourage you to google",
+      "start": 413.36,
+      "duration": 4.08
+    },
+    {
+      "text": "excel wings documentation",
+      "start": 415.84,
+      "duration": 3.04
+    },
+    {
+      "text": "and you can take a look at the other",
+      "start": 417.44,
+      "duration": 3.36
+    },
+    {
+      "text": "approaches and give them a try on your",
+      "start": 418.88,
+      "duration": 4.96
+    },
+    {
+      "text": "own as well",
+      "start": 420.8,
+      "duration": 3.04
+    },
+    {
+      "text": "so the main integration that we're using",
+      "start": 425.52,
+      "duration": 4.399
+    },
+    {
+      "text": "in this course",
+      "start": 429.039,
+      "duration": 4.801
+    },
+    {
+      "text": "is that we can take",
+      "start": 429.919,
+      "duration": 7.601
+    },
+    {
+      "text": "values numbers or data frames that we",
+      "start": 433.84,
+      "duration": 4.079
+    },
+    {
+      "text": "have",
+      "start": 437.52,
+      "duration": 4.56
+    },
+    {
+      "text": "lists numbers data frames strings",
+      "start": 437.919,
+      "duration": 7.201
+    },
+    {
+      "text": "that we have in python and we can bring",
+      "start": 442.08,
+      "duration": 3.519
+    },
+    {
+      "text": "those",
+      "start": 445.12,
+      "duration": 3.6
+    },
+    {
+      "text": "into excel and we can take",
+      "start": 445.599,
+      "duration": 5.281
+    },
+    {
+      "text": "data which we have in excel your",
+      "start": 448.72,
+      "duration": 4.0
+    },
+    {
+      "text": "individual cells or whole tables",
+      "start": 450.88,
+      "duration": 4.24
+    },
+    {
+      "text": "columns rows we can take that and we can",
+      "start": 452.72,
+      "duration": 3.759
+    },
+    {
+      "text": "bring it into python",
+      "start": 455.12,
+      "duration": 3.84
+    },
+    {
+      "text": "as lists or individual values or data",
+      "start": 456.479,
+      "duration": 4.881
+    },
+    {
+      "text": "frames",
+      "start": 458.96,
+      "duration": 2.4
+    },
+    {
+      "text": "um so we'll also just",
+      "start": 461.68,
+      "duration": 6.72
+    },
+    {
+      "text": "briefly touch on uh you know one bit of",
+      "start": 464.879,
+      "duration": 7.44
+    },
+    {
+      "text": "functionality that we'll use which um",
+      "start": 468.4,
+      "duration": 6.96
+    },
+    {
+      "text": "the vba api that we have in python",
+      "start": 472.319,
+      "duration": 6.16
+    },
+    {
+      "text": "um so this means that you can do",
+      "start": 475.36,
+      "duration": 4.32
+    },
+    {
+      "text": "anything",
+      "start": 478.479,
+      "duration": 4.321
+    },
+    {
+      "text": "in excel from your python code and we'll",
+      "start": 479.68,
+      "duration": 4.639
+    },
+    {
+      "text": "we'll just look at recalculating the",
+      "start": 482.8,
+      "duration": 2.32
+    },
+    {
+      "text": "workbook",
+      "start": 484.319,
+      "duration": 3.841
+    },
+    {
+      "text": "as the one application here",
+      "start": 485.12,
+      "duration": 5.84
+    },
+    {
+      "text": "but you can expand that to any possible",
+      "start": 488.16,
+      "duration": 4.0
+    },
+    {
+      "text": "thing that you can do in excel",
+      "start": 490.96,
+      "duration": 3.76
+    },
+    {
+      "text": "you can make your python code trigger",
+      "start": 492.16,
+      "duration": 5.439
+    },
+    {
+      "text": "that in excel",
+      "start": 494.72,
+      "duration": 2.879
+    },
+    {
+      "text": "and we'll look at how we can work with",
+      "start": 499.199,
+      "duration": 3.361
+    },
+    {
+      "text": "entire tables at once",
+      "start": 500.72,
+      "duration": 5.68
+    },
+    {
+      "text": "for convenience so here's a quick",
+      "start": 502.56,
+      "duration": 4.8
+    },
+    {
+      "text": "example",
+      "start": 506.4,
+      "duration": 4.0
+    },
+    {
+      "text": "of reading and writing values",
+      "start": 507.36,
+      "duration": 7.359
+    },
+    {
+      "text": "um to and from excel so first",
+      "start": 510.4,
+      "duration": 6.48
+    },
+    {
+      "text": "we have reading values from excel into",
+      "start": 514.719,
+      "duration": 3.521
+    },
+    {
+      "text": "python and all of this is going to be",
+      "start": 516.88,
+      "duration": 3.279
+    },
+    {
+      "text": "python code because we're talking about",
+      "start": 518.24,
+      "duration": 5.039
+    },
+    {
+      "text": "doing all this from the python side",
+      "start": 520.159,
+      "duration": 4.561
+    },
+    {
+      "text": "doing things from the excel side would",
+      "start": 523.279,
+      "duration": 5.761
+    },
+    {
+      "text": "be the other way of integrating the two",
+      "start": 524.72,
+      "duration": 6.96
+    },
+    {
+      "text": "and so here looking at reading values",
+      "start": 529.04,
+      "duration": 4.0
+    },
+    {
+      "text": "from excel",
+      "start": 531.68,
+      "duration": 4.48
+    },
+    {
+      "text": "here's the simplest example",
+      "start": 533.04,
+      "duration": 6.64
+    },
+    {
+      "text": "um so we'll talk about this this sheet",
+      "start": 536.16,
+      "duration": 6.32
+    },
+    {
+      "text": "object in the full jupiter notebook",
+      "start": 539.68,
+      "duration": 3.52
+    },
+    {
+      "text": "example",
+      "start": 542.48,
+      "duration": 2.4
+    },
+    {
+      "text": "we'll see how we get that but just",
+      "start": 543.2,
+      "duration": 3.68
+    },
+    {
+      "text": "assume you have that already",
+      "start": 544.88,
+      "duration": 4.56
+    },
+    {
+      "text": "then it's just dot range and you give it",
+      "start": 546.88,
+      "duration": 3.92
+    },
+    {
+      "text": "whatever cell range",
+      "start": 549.44,
+      "duration": 4.56
+    },
+    {
+      "text": "you want to get and then dot value and",
+      "start": 550.8,
+      "duration": 4.88
+    },
+    {
+      "text": "that's going to get the value",
+      "start": 554.0,
+      "duration": 4.72
+    },
+    {
+      "text": "from that cell in excel",
+      "start": 555.68,
+      "duration": 5.12
+    },
+    {
+      "text": "and then you can save that into a",
+      "start": 558.72,
+      "duration": 4.48
+    },
+    {
+      "text": "variable just like you can with any",
+      "start": 560.8,
+      "duration": 3.039
+    },
+    {
+      "text": "other",
+      "start": 563.2,
+      "duration": 4.16
+    },
+    {
+      "text": "expression um and",
+      "start": 563.839,
+      "duration": 7.041
+    },
+    {
+      "text": "if you uh give it a range you know just",
+      "start": 567.36,
+      "duration": 5.2
+    },
+    {
+      "text": "like you would type that range in excel",
+      "start": 570.88,
+      "duration": 2.56
+    },
+    {
+      "text": "with the colon",
+      "start": 572.56,
+      "duration": 4.399
+    },
+    {
+      "text": "and the cells on each side then",
+      "start": 573.44,
+      "duration": 6.64
+    },
+    {
+      "text": "it will give you all the values which",
+      "start": 576.959,
+      "duration": 4.401
+    },
+    {
+      "text": "exist in that range",
+      "start": 580.08,
+      "duration": 2.72
+    },
+    {
+      "text": "and in the jupiter notebook example",
+      "start": 581.36,
+      "duration": 3.28
+    },
+    {
+      "text": "we'll look at the format we get those",
+      "start": 582.8,
+      "duration": 2.24
+    },
+    {
+      "text": "back",
+      "start": 584.64,
+      "duration": 4.8
+    },
+    {
+      "text": "in and",
+      "start": 585.04,
+      "duration": 6.4
+    },
+    {
+      "text": "we it also has a nice shortcut this",
+      "start": 589.44,
+      "duration": 3.2
+    },
+    {
+      "text": "expand",
+      "start": 591.44,
+      "duration": 4.399
+    },
+    {
+      "text": "function which basically says",
+      "start": 592.64,
+      "duration": 5.44
+    },
+    {
+      "text": "you know start from g11 and then go",
+      "start": 595.839,
+      "duration": 3.601
+    },
+    {
+      "text": "right and go down",
+      "start": 598.08,
+      "duration": 3.68
+    },
+    {
+      "text": "until you reach the end of the table so",
+      "start": 599.44,
+      "duration": 3.68
+    },
+    {
+      "text": "that lets you just take the",
+      "start": 601.76,
+      "duration": 3.84
+    },
+    {
+      "text": "top left cell of a table and grab the",
+      "start": 603.12,
+      "duration": 3.92
+    },
+    {
+      "text": "entire table",
+      "start": 605.6,
+      "duration": 4.56
+    },
+    {
+      "text": "using expand",
+      "start": 607.04,
+      "duration": 3.12
+    },
+    {
+      "text": "and then looking at writing values we",
+      "start": 610.399,
+      "duration": 4.321
+    },
+    {
+      "text": "have numbers in python we want to bring",
+      "start": 612.399,
+      "duration": 5.041
+    },
+    {
+      "text": "them into excel",
+      "start": 614.72,
+      "duration": 5.04
+    },
+    {
+      "text": "so then it's just taking this expression",
+      "start": 617.44,
+      "duration": 3.839
+    },
+    {
+      "text": "and and flipping it",
+      "start": 619.76,
+      "duration": 4.4
+    },
+    {
+      "text": "so same thing that we did to pull the",
+      "start": 621.279,
+      "duration": 4.8
+    },
+    {
+      "text": "value from excel now we have that on the",
+      "start": 624.16,
+      "duration": 3.04
+    },
+    {
+      "text": "left hand side",
+      "start": 626.079,
+      "duration": 4.401
+    },
+    {
+      "text": "of the equals we're assigning to it",
+      "start": 627.2,
+      "duration": 5.199
+    },
+    {
+      "text": "and we just assign whatever value and",
+      "start": 630.48,
+      "duration": 4.4
+    },
+    {
+      "text": "that's going to come into excel",
+      "start": 632.399,
+      "duration": 6.081
+    },
+    {
+      "text": "and if we give it a",
+      "start": 634.88,
+      "duration": 5.76
+    },
+    {
+      "text": "list then it's going to put multiple",
+      "start": 638.48,
+      "duration": 4.479
+    },
+    {
+      "text": "values in multiple cells so 10 would go",
+      "start": 640.64,
+      "duration": 3.759
+    },
+    {
+      "text": "in g11",
+      "start": 642.959,
+      "duration": 5.12
+    },
+    {
+      "text": "and then 11 would go in h11 it would go",
+      "start": 644.399,
+      "duration": 5.521
+    },
+    {
+      "text": "horizontally",
+      "start": 648.079,
+      "duration": 5.281
+    },
+    {
+      "text": "to the next column",
+      "start": 649.92,
+      "duration": 6.159
+    },
+    {
+      "text": "and then if you specify that range as a",
+      "start": 653.36,
+      "duration": 4.64
+    },
+    {
+      "text": "vertical range then that will make that",
+      "start": 656.079,
+      "duration": 3.041
+    },
+    {
+      "text": "same",
+      "start": 658.0,
+      "duration": 4.24
+    },
+    {
+      "text": "so same values go vertically g11 and g12",
+      "start": 659.12,
+      "duration": 5.839
+    },
+    {
+      "text": "will have those values and then if you",
+      "start": 662.24,
+      "duration": 4.159
+    },
+    {
+      "text": "already have a data frame",
+      "start": 664.959,
+      "duration": 4.241
+    },
+    {
+      "text": "it's already set up to work very nicely",
+      "start": 666.399,
+      "duration": 4.081
+    },
+    {
+      "text": "with data frames",
+      "start": 669.2,
+      "duration": 3.6
+    },
+    {
+      "text": "and so you can just assign a data frame",
+      "start": 670.48,
+      "duration": 4.16
+    },
+    {
+      "text": "into a cell and then it's going to put",
+      "start": 672.8,
+      "duration": 3.44
+    },
+    {
+      "text": "the entire table there",
+      "start": 674.64,
+      "duration": 5.6
+    },
+    {
+      "text": "expanding outward from that cell",
+      "start": 676.24,
+      "duration": 6.08
+    },
+    {
+      "text": "so that's the basic idea now let's go",
+      "start": 680.24,
+      "duration": 4.08
+    },
+    {
+      "text": "ahead and take a look at the full",
+      "start": 682.32,
+      "duration": 2.639
+    },
+    {
+      "text": "example",
+      "start": 684.32,
+      "duration": 4.24
+    },
+    {
+      "text": "in the jupiter notebook um",
+      "start": 684.959,
+      "duration": 6.481
+    },
+    {
+      "text": "so in addition to importing pandas we're",
+      "start": 688.56,
+      "duration": 4.48
+    },
+    {
+      "text": "gonna need to work with data frames now",
+      "start": 691.44,
+      "duration": 4.0
+    },
+    {
+      "text": "we also import excel wings",
+      "start": 693.04,
+      "duration": 4.799
+    },
+    {
+      "text": "and there's one of these conventions",
+      "start": 695.44,
+      "duration": 3.12
+    },
+    {
+      "text": "here for",
+      "start": 697.839,
+      "duration": 3.281
+    },
+    {
+      "text": "excel wings as well people typically",
+      "start": 698.56,
+      "duration": 4.0
+    },
+    {
+      "text": "import excel wings as",
+      "start": 701.12,
+      "duration": 4.08
+    },
+    {
+      "text": "xw",
+      "start": 702.56,
+      "duration": 2.64
+    },
+    {
+      "text": "um so what we didn't show in that",
+      "start": 706.0,
+      "duration": 4.0
+    },
+    {
+      "text": "example is how you initially",
+      "start": 708.32,
+      "duration": 3.199
+    },
+    {
+      "text": "get connected to the workbook in the",
+      "start": 710.0,
+      "duration": 3.12
+    },
+    {
+      "text": "worksheet so",
+      "start": 711.519,
+      "duration": 5.521
+    },
+    {
+      "text": "now we're going to look at that so",
+      "start": 713.12,
+      "duration": 6.959
+    },
+    {
+      "text": "now that we have xw we can do xw.book to",
+      "start": 717.04,
+      "duration": 5.039
+    },
+    {
+      "text": "get a workbook",
+      "start": 720.079,
+      "duration": 4.241
+    },
+    {
+      "text": "and you give it the name of the workbook",
+      "start": 722.079,
+      "duration": 3.681
+    },
+    {
+      "text": "or the full file path",
+      "start": 724.32,
+      "duration": 4.639
+    },
+    {
+      "text": "if it's in a different folder",
+      "start": 725.76,
+      "duration": 5.759
+    },
+    {
+      "text": "and if you don't already have the",
+      "start": 728.959,
+      "duration": 4.721
+    },
+    {
+      "text": "workbook open it's automatically going",
+      "start": 731.519,
+      "duration": 3.361
+    },
+    {
+      "text": "to open it",
+      "start": 733.68,
+      "duration": 4.64
+    },
+    {
+      "text": "for you um so i can see now",
+      "start": 734.88,
+      "duration": 6.72
+    },
+    {
+      "text": "that opened example workbook for me",
+      "start": 738.32,
+      "duration": 7.12
+    },
+    {
+      "text": "and this is the example workbook that",
+      "start": 741.6,
+      "duration": 4.239
+    },
+    {
+      "text": "we're",
+      "start": 745.44,
+      "duration": 2.8
+    },
+    {
+      "text": "working with so i'm just going to put",
+      "start": 745.839,
+      "duration": 4.8
+    },
+    {
+      "text": "that over there so we can see",
+      "start": 748.24,
+      "duration": 5.12
+    },
+    {
+      "text": "what's going on",
+      "start": 750.639,
+      "duration": 2.721
+    },
+    {
+      "text": "in the excel as well as the python so we",
+      "start": 754.56,
+      "duration": 5.76
+    },
+    {
+      "text": "look at that book object it's a book",
+      "start": 758.16,
+      "duration": 4.08
+    },
+    {
+      "text": "object and we can see the name of the",
+      "start": 760.32,
+      "duration": 3.68
+    },
+    {
+      "text": "workbook",
+      "start": 762.24,
+      "duration": 5.12
+    },
+    {
+      "text": "um and that's",
+      "start": 764.0,
+      "duration": 6.959
+    },
+    {
+      "text": "an excel wings book object",
+      "start": 767.36,
+      "duration": 6.159
+    },
+    {
+      "text": "um so now we're connected to the",
+      "start": 770.959,
+      "duration": 4.401
+    },
+    {
+      "text": "workbook we want to connect to the",
+      "start": 773.519,
+      "duration": 3.12
+    },
+    {
+      "text": "worksheet",
+      "start": 775.36,
+      "duration": 4.0
+    },
+    {
+      "text": "um so if you do book doc sheets you can",
+      "start": 776.639,
+      "duration": 3.361
+    },
+    {
+      "text": "see",
+      "start": 779.36,
+      "duration": 3.44
+    },
+    {
+      "text": "uh the sheets which are in there here",
+      "start": 780.0,
+      "duration": 6.8
+    },
+    {
+      "text": "example workbook has sheet one",
+      "start": 782.8,
+      "duration": 7.52
+    },
+    {
+      "text": "and you can a neat way that they've set",
+      "start": 786.8,
+      "duration": 4.159
+    },
+    {
+      "text": "up",
+      "start": 790.32,
+      "duration": 4.24
+    },
+    {
+      "text": "uh these sheets and book objects",
+      "start": 790.959,
+      "duration": 7.44
+    },
+    {
+      "text": "in uh xl wings is that they kind of work",
+      "start": 794.56,
+      "duration": 5.92
+    },
+    {
+      "text": "both like lists and like dictionaries",
+      "start": 798.399,
+      "duration": 4.88
+    },
+    {
+      "text": "you can access it either way",
+      "start": 800.48,
+      "duration": 5.52
+    },
+    {
+      "text": "so if you give it a numerical index then",
+      "start": 803.279,
+      "duration": 5.521
+    },
+    {
+      "text": "it's going to",
+      "start": 806.0,
+      "duration": 5.2
+    },
+    {
+      "text": "pull it out by the order so here this is",
+      "start": 808.8,
+      "duration": 3.76
+    },
+    {
+      "text": "going to get the first",
+      "start": 811.2,
+      "duration": 3.6
+    },
+    {
+      "text": "worksheet from the workbook so now we",
+      "start": 812.56,
+      "duration": 3.519
+    },
+    {
+      "text": "have that sheet1",
+      "start": 814.8,
+      "duration": 4.88
+    },
+    {
+      "text": "worksheet or you can look it up by the",
+      "start": 816.079,
+      "duration": 6.241
+    },
+    {
+      "text": "name like you would with a dictionary",
+      "start": 819.68,
+      "duration": 5.76
+    },
+    {
+      "text": "and that will also get us to sheet1",
+      "start": 822.32,
+      "duration": 5.199
+    },
+    {
+      "text": "and this is a sheet object that we have",
+      "start": 825.44,
+      "duration": 4.399
+    },
+    {
+      "text": "here",
+      "start": 827.519,
+      "duration": 2.32
+    },
+    {
+      "text": "um so typically",
+      "start": 829.92,
+      "duration": 5.039
+    },
+    {
+      "text": "you're just going to have those two",
+      "start": 833.6,
+      "duration": 3.039
+    },
+    {
+      "text": "things together",
+      "start": 834.959,
+      "duration": 3.041
+    },
+    {
+      "text": "you would get the workbook and then you",
+      "start": 836.639,
+      "duration": 3.76
+    },
+    {
+      "text": "would get the sheet from the workbook",
+      "start": 838.0,
+      "duration": 4.399
+    },
+    {
+      "text": "and then everything else you would just",
+      "start": 840.399,
+      "duration": 5.041
+    },
+    {
+      "text": "work with the sheet",
+      "start": 842.399,
+      "duration": 3.041
+    },
+    {
+      "text": "so let's see what we can do with this",
+      "start": 847.44,
+      "duration": 6.16
+    },
+    {
+      "text": "so we can see we have this something",
+      "start": 851.279,
+      "duration": 3.281
+    },
+    {
+      "text": "over here",
+      "start": 853.6,
+      "duration": 5.52
+    },
+    {
+      "text": "in a1 and if we look up from a1",
+      "start": 854.56,
+      "duration": 6.32
+    },
+    {
+      "text": "uh in that sheet we want to get the",
+      "start": 859.12,
+      "duration": 4.0
+    },
+    {
+      "text": "value that's going to give us that",
+      "start": 860.88,
+      "duration": 2.959
+    },
+    {
+      "text": "something",
+      "start": 863.12,
+      "duration": 4.48
+    },
+    {
+      "text": "right there and just to prove that's",
+      "start": 863.839,
+      "duration": 6.8
+    },
+    {
+      "text": "working we can move over to a2",
+      "start": 867.6,
+      "duration": 4.96
+    },
+    {
+      "text": "and that's getting nothing right because",
+      "start": 870.639,
+      "duration": 4.0
+    },
+    {
+      "text": "there's nothing in that cell",
+      "start": 872.56,
+      "duration": 4.079
+    },
+    {
+      "text": "but we can look at b1 and that's going",
+      "start": 874.639,
+      "duration": 4.241
+    },
+    {
+      "text": "to get else so we are indeed pulling",
+      "start": 876.639,
+      "duration": 3.2
+    },
+    {
+      "text": "values",
+      "start": 878.88,
+      "duration": 4.56
+    },
+    {
+      "text": "from that excel workbook",
+      "start": 879.839,
+      "duration": 6.961
+    },
+    {
+      "text": "and when we pull from a cell which has",
+      "start": 883.44,
+      "duration": 5.36
+    },
+    {
+      "text": "no value we're going to get none",
+      "start": 886.8,
+      "duration": 3.92
+    },
+    {
+      "text": "as a result so we can see that what",
+      "start": 888.8,
+      "duration": 3.44
+    },
+    {
+      "text": "we're getting is none",
+      "start": 890.72,
+      "duration": 4.96
+    },
+    {
+      "text": "that is indeed true because c1",
+      "start": 892.24,
+      "duration": 6.64
+    },
+    {
+      "text": "has no value",
+      "start": 895.68,
+      "duration": 5.599
+    },
+    {
+      "text": "so that's reading a single value now we",
+      "start": 898.88,
+      "duration": 4.16
+    },
+    {
+      "text": "can write a single value so we're going",
+      "start": 901.279,
+      "duration": 3.92
+    },
+    {
+      "text": "to write into a2 now we want to take the",
+      "start": 903.04,
+      "duration": 4.32
+    },
+    {
+      "text": "value of 10 and write it in there",
+      "start": 905.199,
+      "duration": 4.481
+    },
+    {
+      "text": "and we run this and we can see that has",
+      "start": 907.36,
+      "duration": 3.52
+    },
+    {
+      "text": "now showed up",
+      "start": 909.68,
+      "duration": 4.24
+    },
+    {
+      "text": "in the excel workbook so pretty neat to",
+      "start": 910.88,
+      "duration": 3.44
+    },
+    {
+      "text": "see",
+      "start": 913.92,
+      "duration": 3.68
+    },
+    {
+      "text": "all that happening live",
+      "start": 914.32,
+      "duration": 7.44
+    },
+    {
+      "text": "um and then we can read multiple values",
+      "start": 917.6,
+      "duration": 6.16
+    },
+    {
+      "text": "at once so we can give a range",
+      "start": 921.76,
+      "duration": 5.6
+    },
+    {
+      "text": "of cells here a1 to a2 and we want to",
+      "start": 923.76,
+      "duration": 4.639
+    },
+    {
+      "text": "get that value",
+      "start": 927.36,
+      "duration": 2.88
+    },
+    {
+      "text": "and that's going to get us those values",
+      "start": 928.399,
+      "duration": 3.041
+    },
+    {
+      "text": "in a list first",
+      "start": 930.24,
+      "duration": 4.8
+    },
+    {
+      "text": "something and then the 10.",
+      "start": 931.44,
+      "duration": 7.28
+    },
+    {
+      "text": "um and we can target this a1 to b1",
+      "start": 935.04,
+      "duration": 5.359
+    },
+    {
+      "text": "instead and we'll get something",
+      "start": 938.72,
+      "duration": 4.239
+    },
+    {
+      "text": "else uh each of those coming as an item",
+      "start": 940.399,
+      "duration": 4.721
+    },
+    {
+      "text": "in the list",
+      "start": 942.959,
+      "duration": 4.0
+    },
+    {
+      "text": "now it does get a little bit more",
+      "start": 945.12,
+      "duration": 3.68
+    },
+    {
+      "text": "complicated when we want to do a",
+      "start": 946.959,
+      "duration": 3.281
+    },
+    {
+      "text": "two-dimensional range",
+      "start": 948.8,
+      "duration": 5.279
+    },
+    {
+      "text": "so here a1 to b2 that's",
+      "start": 950.24,
+      "duration": 6.399
+    },
+    {
+      "text": "getting all four of these cells so the",
+      "start": 954.079,
+      "duration": 3.2
+    },
+    {
+      "text": "way that",
+      "start": 956.639,
+      "duration": 3.041
+    },
+    {
+      "text": "excel wings is going to represent that",
+      "start": 957.279,
+      "duration": 3.521
+    },
+    {
+      "text": "by default",
+      "start": 959.68,
+      "duration": 4.8
+    },
+    {
+      "text": "is with a list of lists so within this",
+      "start": 960.8,
+      "duration": 4.88
+    },
+    {
+      "text": "outer list",
+      "start": 964.48,
+      "duration": 4.0
+    },
+    {
+      "text": "we have lists and each one of these",
+      "start": 965.68,
+      "duration": 3.2
+    },
+    {
+      "text": "lists",
+      "start": 968.48,
+      "duration": 3.84
+    },
+    {
+      "text": "is representative of a row um",
+      "start": 968.88,
+      "duration": 5.759
+    },
+    {
+      "text": "so we can see the first row something",
+      "start": 972.32,
+      "duration": 3.92
+    },
+    {
+      "text": "else and then we can see",
+      "start": 974.639,
+      "duration": 4.32
+    },
+    {
+      "text": "the second row 10 and then a blank cell",
+      "start": 976.24,
+      "duration": 4.599
+    },
+    {
+      "text": "so none",
+      "start": 978.959,
+      "duration": 3.841
+    },
+    {
+      "text": "um and it can be a little bit",
+      "start": 980.839,
+      "duration": 3.401
+    },
+    {
+      "text": "complicated to work with that",
+      "start": 982.8,
+      "duration": 4.56
+    },
+    {
+      "text": "and the creators of excel wings realize",
+      "start": 984.24,
+      "duration": 4.159
+    },
+    {
+      "text": "this",
+      "start": 987.36,
+      "duration": 4.24
+    },
+    {
+      "text": "so we can also pass",
+      "start": 988.399,
+      "duration": 6.721
+    },
+    {
+      "text": "options to this and we can pass the",
+      "start": 991.6,
+      "duration": 5.359
+    },
+    {
+      "text": "option that we would like to get a data",
+      "start": 995.12,
+      "duration": 2.32
+    },
+    {
+      "text": "frame",
+      "start": 996.959,
+      "duration": 2.961
+    },
+    {
+      "text": "with the result instead of a list of",
+      "start": 997.44,
+      "duration": 3.519
+    },
+    {
+      "text": "lists",
+      "start": 999.92,
+      "duration": 4.24
+    },
+    {
+      "text": "so if we just do the same thing",
+      "start": 1000.959,
+      "duration": 6.641
+    },
+    {
+      "text": "but put this options data frame before",
+      "start": 1004.16,
+      "duration": 6.56
+    },
+    {
+      "text": "the value now you can see it comes",
+      "start": 1007.6,
+      "duration": 6.159
+    },
+    {
+      "text": "as a data frame but there is",
+      "start": 1010.72,
+      "duration": 6.16
+    },
+    {
+      "text": "uh something weird here that",
+      "start": 1013.759,
+      "duration": 6.561
+    },
+    {
+      "text": "um we have else here",
+      "start": 1016.88,
+      "duration": 6.56
+    },
+    {
+      "text": "as the name of a column and then we have",
+      "start": 1020.32,
+      "duration": 5.519
+    },
+    {
+      "text": "something as the name of the index and",
+      "start": 1023.44,
+      "duration": 3.359
+    },
+    {
+      "text": "then we have 10",
+      "start": 1025.839,
+      "duration": 2.96
+    },
+    {
+      "text": "as a value of the index and we have a",
+      "start": 1026.799,
+      "duration": 4.16
+    },
+    {
+      "text": "single cell data frame which has none in",
+      "start": 1028.799,
+      "duration": 2.88
+    },
+    {
+      "text": "it",
+      "start": 1030.959,
+      "duration": 3.521
+    },
+    {
+      "text": "so maybe not quite what we wanted um",
+      "start": 1031.679,
+      "duration": 4.16
+    },
+    {
+      "text": "maybe it is",
+      "start": 1034.48,
+      "duration": 3.68
+    },
+    {
+      "text": "but we have options to control how we",
+      "start": 1035.839,
+      "duration": 4.321
+    },
+    {
+      "text": "pull it in",
+      "start": 1038.16,
+      "duration": 4.24
+    },
+    {
+      "text": "so pulling from that same range again",
+      "start": 1040.16,
+      "duration": 3.2
+    },
+    {
+      "text": "with data frame",
+      "start": 1042.4,
+      "duration": 2.639
+    },
+    {
+      "text": "just now additionally in options we're",
+      "start": 1043.36,
+      "duration": 3.839
+    },
+    {
+      "text": "passing index equals false",
+      "start": 1045.039,
+      "duration": 4.561
+    },
+    {
+      "text": "that means assume that the data in excel",
+      "start": 1047.199,
+      "duration": 3.681
+    },
+    {
+      "text": "does not have",
+      "start": 1049.6,
+      "duration": 4.24
+    },
+    {
+      "text": "an index column on it um you can go",
+      "start": 1050.88,
+      "duration": 3.52
+    },
+    {
+      "text": "ahead and just",
+      "start": 1053.84,
+      "duration": 3.12
+    },
+    {
+      "text": "automatically make the index be this 0 1",
+      "start": 1054.4,
+      "duration": 3.2
+    },
+    {
+      "text": "2",
+      "start": 1056.96,
+      "duration": 3.12
+    },
+    {
+      "text": "auto incrementing thing and when we do",
+      "start": 1057.6,
+      "duration": 4.72
+    },
+    {
+      "text": "that then we see that something and else",
+      "start": 1060.08,
+      "duration": 6.0
+    },
+    {
+      "text": "come as the columns and 10 and none",
+      "start": 1062.32,
+      "duration": 8.4
+    },
+    {
+      "text": "come as the values for those",
+      "start": 1066.08,
+      "duration": 9.04
+    },
+    {
+      "text": "um and we can also pass",
+      "start": 1070.72,
+      "duration": 7.839
+    },
+    {
+      "text": "header equals false so that these",
+      "start": 1075.12,
+      "duration": 6.24
+    },
+    {
+      "text": "uh the first values which are there are",
+      "start": 1078.559,
+      "duration": 3.36
+    },
+    {
+      "text": "going to come",
+      "start": 1081.36,
+      "duration": 2.559
+    },
+    {
+      "text": "into the data frame rather than as",
+      "start": 1081.919,
+      "duration": 5.361
+    },
+    {
+      "text": "columns of the data frame",
+      "start": 1083.919,
+      "duration": 6.961
+    },
+    {
+      "text": "so now it auto named the column is zero",
+      "start": 1087.28,
+      "duration": 6.48
+    },
+    {
+      "text": "and we have something else as values",
+      "start": 1090.88,
+      "duration": 4.64
+    },
+    {
+      "text": "though something in 10 did come back",
+      "start": 1093.76,
+      "duration": 3.279
+    },
+    {
+      "text": "over to the index because we didn't",
+      "start": 1095.52,
+      "duration": 3.68
+    },
+    {
+      "text": "include index equals false",
+      "start": 1097.039,
+      "duration": 4.401
+    },
+    {
+      "text": "so if we include both of those then we",
+      "start": 1099.2,
+      "duration": 3.599
+    },
+    {
+      "text": "see the index is auto",
+      "start": 1101.44,
+      "duration": 4.56
+    },
+    {
+      "text": "0 1 the columns are auto 0 1 and we have",
+      "start": 1102.799,
+      "duration": 4.401
+    },
+    {
+      "text": "those four values",
+      "start": 1106.0,
+      "duration": 4.0
+    },
+    {
+      "text": "as cells of the data frame so which you",
+      "start": 1107.2,
+      "duration": 3.92
+    },
+    {
+      "text": "pick in between these",
+      "start": 1110.0,
+      "duration": 2.72
+    },
+    {
+      "text": "is just going to depend on how you have",
+      "start": 1111.12,
+      "duration": 4.32
+    },
+    {
+      "text": "your data in excel if it has headers",
+      "start": 1112.72,
+      "duration": 5.36
+    },
+    {
+      "text": "um then you would want to leave it as it",
+      "start": 1115.44,
+      "duration": 4.239
+    },
+    {
+      "text": "is if it doesn't have headers you would",
+      "start": 1118.08,
+      "duration": 5.04
+    },
+    {
+      "text": "want to pass header equals false",
+      "start": 1119.679,
+      "duration": 4.481
+    },
+    {
+      "text": "and generally you're going to want to",
+      "start": 1123.12,
+      "duration": 3.12
+    },
+    {
+      "text": "pass index equals false unless you want",
+      "start": 1124.16,
+      "duration": 2.879
+    },
+    {
+      "text": "to have",
+      "start": 1126.24,
+      "duration": 3.12
+    },
+    {
+      "text": "your left most values as the mx of the",
+      "start": 1127.039,
+      "duration": 3.52
+    },
+    {
+      "text": "data frame and then",
+      "start": 1129.36,
+      "duration": 4.319
+    },
+    {
+      "text": "you can exclude that",
+      "start": 1130.559,
+      "duration": 3.12
+    },
+    {
+      "text": "so um then we can look at writing",
+      "start": 1135.52,
+      "duration": 3.92
+    },
+    {
+      "text": "multiple values",
+      "start": 1138.16,
+      "duration": 5.04
+    },
+    {
+      "text": "so um here if we just take a single",
+      "start": 1139.44,
+      "duration": 5.28
+    },
+    {
+      "text": "value and we assign it",
+      "start": 1143.2,
+      "duration": 4.32
+    },
+    {
+      "text": "across a range here d1 to d2 we're going",
+      "start": 1144.72,
+      "duration": 4.319
+    },
+    {
+      "text": "to see that that same value",
+      "start": 1147.52,
+      "duration": 3.92
+    },
+    {
+      "text": "comes into each one of the cells in that",
+      "start": 1149.039,
+      "duration": 3.921
+    },
+    {
+      "text": "range",
+      "start": 1151.44,
+      "duration": 4.72
+    },
+    {
+      "text": "um and then uh",
+      "start": 1152.96,
+      "duration": 7.76
+    },
+    {
+      "text": "so a5 to b5 a5 to b5 that's here",
+      "start": 1156.16,
+      "duration": 7.92
+    },
+    {
+      "text": "we want to put the 10 and 11 to there",
+      "start": 1160.72,
+      "duration": 6.4
+    },
+    {
+      "text": "so same size range one dimensional",
+      "start": 1164.08,
+      "duration": 4.56
+    },
+    {
+      "text": "it's going to be able to put those",
+      "start": 1167.12,
+      "duration": 4.24
+    },
+    {
+      "text": "values there",
+      "start": 1168.64,
+      "duration": 2.72
+    },
+    {
+      "text": "and then if you did a vertical range uh",
+      "start": 1171.919,
+      "duration": 5.841
+    },
+    {
+      "text": "that would work as well so we can go a7",
+      "start": 1175.28,
+      "duration": 3.84
+    },
+    {
+      "text": "to a8",
+      "start": 1177.76,
+      "duration": 4.72
+    },
+    {
+      "text": "and that should uh oh that does",
+      "start": 1179.12,
+      "duration": 6.32
+    },
+    {
+      "text": "it does always go horizontally you",
+      "start": 1182.48,
+      "duration": 5.28
+    },
+    {
+      "text": "cannot just write vertically like that",
+      "start": 1185.44,
+      "duration": 5.359
+    },
+    {
+      "text": "um if you want to write vertically",
+      "start": 1187.76,
+      "duration": 6.159
+    },
+    {
+      "text": "what you have to do is go to this list",
+      "start": 1190.799,
+      "duration": 3.921
+    },
+    {
+      "text": "of lists",
+      "start": 1193.919,
+      "duration": 4.401
+    },
+    {
+      "text": "pattern and put each of these values",
+      "start": 1194.72,
+      "duration": 7.28
+    },
+    {
+      "text": "in lists so then",
+      "start": 1198.32,
+      "duration": 6.52
+    },
+    {
+      "text": "we can see that the values come",
+      "start": 1202.0,
+      "duration": 5.76
+    },
+    {
+      "text": "vertically um",
+      "start": 1204.84,
+      "duration": 2.92
+    },
+    {
+      "text": "and as a",
+      "start": 1207.919,
+      "duration": 5.921
+    },
+    {
+      "text": "one-liner for that uh i'm just double",
+      "start": 1211.039,
+      "duration": 4.241
+    },
+    {
+      "text": "checking we don't have that later in",
+      "start": 1213.84,
+      "duration": 3.12
+    },
+    {
+      "text": "here",
+      "start": 1215.28,
+      "duration": 4.72
+    },
+    {
+      "text": "nope so one liner for that if you",
+      "start": 1216.96,
+      "duration": 4.959
+    },
+    {
+      "text": "already have your 10 and 11 lists",
+      "start": 1220.0,
+      "duration": 4.159
+    },
+    {
+      "text": "and you want to put it vertically",
+      "start": 1221.919,
+      "duration": 3.841
+    },
+    {
+      "text": "starting at",
+      "start": 1224.159,
+      "duration": 4.801
+    },
+    {
+      "text": "a10 so",
+      "start": 1225.76,
+      "duration": 7.44
+    },
+    {
+      "text": "my list is 10 12.",
+      "start": 1228.96,
+      "duration": 6.8
+    },
+    {
+      "text": "then you can use a list comprehension to",
+      "start": 1233.2,
+      "duration": 4.8
+    },
+    {
+      "text": "convert it into that structure",
+      "start": 1235.76,
+      "duration": 6.08
+    },
+    {
+      "text": "um so you're just taking each element of",
+      "start": 1238.0,
+      "duration": 5.12
+    },
+    {
+      "text": "the list and wrapping it",
+      "start": 1241.84,
+      "duration": 4.48
+    },
+    {
+      "text": "into a list and then we should see from",
+      "start": 1243.12,
+      "duration": 6.24
+    },
+    {
+      "text": "a 10 down to a11 that these numbers",
+      "start": 1246.32,
+      "duration": 5.839
+    },
+    {
+      "text": "then come there so you can use this",
+      "start": 1249.36,
+      "duration": 3.84
+    },
+    {
+      "text": "pattern",
+      "start": 1252.159,
+      "duration": 5.121
+    },
+    {
+      "text": "if you want to output vertically",
+      "start": 1253.2,
+      "duration": 7.68
+    },
+    {
+      "text": "um and then to output to an entire",
+      "start": 1257.28,
+      "duration": 5.04
+    },
+    {
+      "text": "two two-dimensional range then we do",
+      "start": 1260.88,
+      "duration": 3.919
+    },
+    {
+      "text": "this list of list patterns so here",
+      "start": 1262.32,
+      "duration": 6.4
+    },
+    {
+      "text": "going from a7 to b8",
+      "start": 1264.799,
+      "duration": 5.76
+    },
+    {
+      "text": "and you'll notice also that whatever is",
+      "start": 1268.72,
+      "duration": 3.439
+    },
+    {
+      "text": "there it's going to overwrite it",
+      "start": 1270.559,
+      "duration": 5.201
+    },
+    {
+      "text": "as well so now we have",
+      "start": 1272.159,
+      "duration": 6.801
+    },
+    {
+      "text": "this 12 13 14 15 12 and 13 in the first",
+      "start": 1275.76,
+      "duration": 6.08
+    },
+    {
+      "text": "row 14 and 15 in the second row",
+      "start": 1278.96,
+      "duration": 6.8
+    },
+    {
+      "text": "in that a7 and b8 range",
+      "start": 1281.84,
+      "duration": 3.92
+    },
+    {
+      "text": "so then um we can read entire",
+      "start": 1287.679,
+      "duration": 7.601
+    },
+    {
+      "text": "rows or columns",
+      "start": 1291.84,
+      "duration": 6.4
+    },
+    {
+      "text": "using the expand functionality in excel",
+      "start": 1295.28,
+      "duration": 4.0
+    },
+    {
+      "text": "wings",
+      "start": 1298.24,
+      "duration": 4.799
+    },
+    {
+      "text": "so expand it can automat if you don't",
+      "start": 1299.28,
+      "duration": 5.6
+    },
+    {
+      "text": "pass anything it automatically goes",
+      "start": 1303.039,
+      "duration": 3.841
+    },
+    {
+      "text": "down and right but you can also pass",
+      "start": 1304.88,
+      "duration": 3.679
+    },
+    {
+      "text": "right or down to just go in that",
+      "start": 1306.88,
+      "duration": 3.039
+    },
+    {
+      "text": "direction",
+      "start": 1308.559,
+      "duration": 4.401
+    },
+    {
+      "text": "um so starting from this a7 if we expand",
+      "start": 1309.919,
+      "duration": 4.081
+    },
+    {
+      "text": "to the right",
+      "start": 1312.96,
+      "duration": 2.88
+    },
+    {
+      "text": "then we're going to get the 12 and the",
+      "start": 1314.0,
+      "duration": 3.679
+    },
+    {
+      "text": "13 because it started from here and",
+      "start": 1315.84,
+      "duration": 4.959
+    },
+    {
+      "text": "expanded right to get both of those",
+      "start": 1317.679,
+      "duration": 4.961
+    },
+    {
+      "text": "but if we target the same cell but",
+      "start": 1320.799,
+      "duration": 3.201
+    },
+    {
+      "text": "expand down",
+      "start": 1322.64,
+      "duration": 3.44
+    },
+    {
+      "text": "then we're going to get 12 and 14",
+      "start": 1324.0,
+      "duration": 3.44
+    },
+    {
+      "text": "because it's going to start from here",
+      "start": 1326.08,
+      "duration": 3.04
+    },
+    {
+      "text": "and expand down",
+      "start": 1327.44,
+      "duration": 3.599
+    },
+    {
+      "text": "and if you don't pass anything into",
+      "start": 1329.12,
+      "duration": 3.84
+    },
+    {
+      "text": "expand then it's going to get all of",
+      "start": 1331.039,
+      "duration": 3.361
+    },
+    {
+      "text": "this",
+      "start": 1332.96,
+      "duration": 3.76
+    },
+    {
+      "text": "with the list of lists kind of data",
+      "start": 1334.4,
+      "duration": 4.32
+    },
+    {
+      "text": "structure",
+      "start": 1336.72,
+      "duration": 4.88
+    },
+    {
+      "text": "but you can combine expand with options",
+      "start": 1338.72,
+      "duration": 4.72
+    },
+    {
+      "text": "um",
+      "start": 1341.6,
+      "duration": 4.959
+    },
+    {
+      "text": "and that lets us put this",
+      "start": 1343.44,
+      "duration": 5.52
+    },
+    {
+      "text": "two-dimensional data into a data frame",
+      "start": 1346.559,
+      "duration": 3.6
+    },
+    {
+      "text": "so using the same",
+      "start": 1348.96,
+      "duration": 3.599
+    },
+    {
+      "text": "stuff we learned from the above section",
+      "start": 1350.159,
+      "duration": 4.0
+    },
+    {
+      "text": "we're making that a data frame",
+      "start": 1352.559,
+      "duration": 5.12
+    },
+    {
+      "text": "excluding the index excluding the header",
+      "start": 1354.159,
+      "duration": 7.361
+    },
+    {
+      "text": "and we can see that we get",
+      "start": 1357.679,
+      "duration": 6.48
+    },
+    {
+      "text": "the 12 13 14 15 with the auto",
+      "start": 1361.52,
+      "duration": 4.0
+    },
+    {
+      "text": "incrementing",
+      "start": 1364.159,
+      "duration": 4.321
+    },
+    {
+      "text": "columns and",
+      "start": 1365.52,
+      "duration": 2.96
+    },
+    {
+      "text": "index",
+      "start": 1369.039,
+      "duration": 2.401
+    },
+    {
+      "text": "so we can take an entire table from",
+      "start": 1372.4,
+      "duration": 5.6
+    },
+    {
+      "text": "python we can take a python data frame",
+      "start": 1375.039,
+      "duration": 6.481
+    },
+    {
+      "text": "um and we can write that into",
+      "start": 1378.0,
+      "duration": 6.72
+    },
+    {
+      "text": "excel as well it just directly works",
+      "start": 1381.52,
+      "duration": 6.0
+    },
+    {
+      "text": "uh here i already have something in a10",
+      "start": 1384.72,
+      "duration": 3.68
+    },
+    {
+      "text": "i didn't need to",
+      "start": 1387.52,
+      "duration": 4.159
+    },
+    {
+      "text": "delete it out but just so it's clear",
+      "start": 1388.4,
+      "duration": 5.6
+    },
+    {
+      "text": "i'm going to write into a10 there with",
+      "start": 1391.679,
+      "duration": 3.921
+    },
+    {
+      "text": "data frame",
+      "start": 1394.0,
+      "duration": 3.679
+    },
+    {
+      "text": "and we can see that all of that comes in",
+      "start": 1395.6,
+      "duration": 3.439
+    },
+    {
+      "text": "there",
+      "start": 1397.679,
+      "duration": 3.601
+    },
+    {
+      "text": "now you will notice you know just like",
+      "start": 1399.039,
+      "duration": 3.441
+    },
+    {
+      "text": "when we're",
+      "start": 1401.28,
+      "duration": 5.519
+    },
+    {
+      "text": "reading into a data frame from excel",
+      "start": 1402.48,
+      "duration": 8.079
+    },
+    {
+      "text": "that there are options around",
+      "start": 1406.799,
+      "duration": 7.201
+    },
+    {
+      "text": "the index and the header",
+      "start": 1410.559,
+      "duration": 3.441
+    },
+    {
+      "text": "because by default it's going to put the",
+      "start": 1414.48,
+      "duration": 3.28
+    },
+    {
+      "text": "index",
+      "start": 1417.2,
+      "duration": 3.28
+    },
+    {
+      "text": "and the columns there so we said start",
+      "start": 1417.76,
+      "duration": 4.64
+    },
+    {
+      "text": "from a 10 we want to output this",
+      "start": 1420.48,
+      "duration": 5.28
+    },
+    {
+      "text": "16 17 18 19 but it also took this",
+      "start": 1422.4,
+      "duration": 6.879
+    },
+    {
+      "text": "0 and 1 uh index and column names and",
+      "start": 1425.76,
+      "duration": 6.08
+    },
+    {
+      "text": "brought them in here as well",
+      "start": 1429.279,
+      "duration": 6.0
+    },
+    {
+      "text": "um so now we're going to try here at 8",
+      "start": 1431.84,
+      "duration": 4.079
+    },
+    {
+      "text": "14",
+      "start": 1435.279,
+      "duration": 2.4
+    },
+    {
+      "text": "and if we exclude the index and the",
+      "start": 1435.919,
+      "duration": 4.801
+    },
+    {
+      "text": "header assign that data frame again",
+      "start": 1437.679,
+      "duration": 5.521
+    },
+    {
+      "text": "now it's just going to take those values",
+      "start": 1440.72,
+      "duration": 3.439
+    },
+    {
+      "text": "from the data frame",
+      "start": 1443.2,
+      "duration": 4.56
+    },
+    {
+      "text": "rather than including the um",
+      "start": 1444.159,
+      "duration": 7.281
+    },
+    {
+      "text": "index and column names",
+      "start": 1447.76,
+      "duration": 3.68
+    },
+    {
+      "text": "so um there's an important",
+      "start": 1454.08,
+      "duration": 6.0
+    },
+    {
+      "text": "gotcha when you want to work with",
+      "start": 1457.44,
+      "duration": 3.76
+    },
+    {
+      "text": "integers",
+      "start": 1460.08,
+      "duration": 3.839
+    },
+    {
+      "text": "uh and pulling them from excel into",
+      "start": 1461.2,
+      "duration": 4.24
+    },
+    {
+      "text": "python",
+      "start": 1463.919,
+      "duration": 3.12
+    },
+    {
+      "text": "and most of the time in python we don't",
+      "start": 1465.44,
+      "duration": 3.359
+    },
+    {
+      "text": "really care whether it's an integer",
+      "start": 1467.039,
+      "duration": 5.201
+    },
+    {
+      "text": "or a floating point number but",
+      "start": 1468.799,
+      "duration": 5.521
+    },
+    {
+      "text": "in certain cases such as when we want to",
+      "start": 1472.24,
+      "duration": 3.12
+    },
+    {
+      "text": "do a number of",
+      "start": 1474.32,
+      "duration": 4.4
+    },
+    {
+      "text": "loops we do care whether it's",
+      "start": 1475.36,
+      "duration": 7.439
+    },
+    {
+      "text": "an integer or a floating point number",
+      "start": 1478.72,
+      "duration": 7.439
+    },
+    {
+      "text": "so um we're gonna pull in",
+      "start": 1482.799,
+      "duration": 7.36
+    },
+    {
+      "text": "from f5 so f5 is this five here",
+      "start": 1486.159,
+      "duration": 7.361
+    },
+    {
+      "text": "and we're going to um pull in",
+      "start": 1490.159,
+      "duration": 5.441
+    },
+    {
+      "text": "the value from there as our number of",
+      "start": 1493.52,
+      "duration": 3.36
+    },
+    {
+      "text": "loops variable",
+      "start": 1495.6,
+      "duration": 2.959
+    },
+    {
+      "text": "and you can see it's just a plain five",
+      "start": 1496.88,
+      "duration": 3.44
+    },
+    {
+      "text": "there's no decimals on it or anything",
+      "start": 1498.559,
+      "duration": 2.24
+    },
+    {
+      "text": "here",
+      "start": 1500.32,
+      "duration": 4.32
+    },
+    {
+      "text": "but we can see when it came into uh",
+      "start": 1500.799,
+      "duration": 7.601
+    },
+    {
+      "text": "python that we got 5.0",
+      "start": 1504.64,
+      "duration": 6.96
+    },
+    {
+      "text": "and we look at the type it is indeed a",
+      "start": 1508.4,
+      "duration": 5.2
+    },
+    {
+      "text": "float not an integer",
+      "start": 1511.6,
+      "duration": 3.679
+    },
+    {
+      "text": "and so that means if you just take that",
+      "start": 1513.6,
+      "duration": 3.52
+    },
+    {
+      "text": "and you just try and loop with it",
+      "start": 1515.279,
+      "duration": 3.681
+    },
+    {
+      "text": "then we're going to get this error float",
+      "start": 1517.12,
+      "duration": 3.36
+    },
+    {
+      "text": "object cannot be interpreted as an",
+      "start": 1518.96,
+      "duration": 2.64
+    },
+    {
+      "text": "integer",
+      "start": 1520.48,
+      "duration": 5.04
+    },
+    {
+      "text": "um so what we have to do is convert that",
+      "start": 1521.6,
+      "duration": 6.959
+    },
+    {
+      "text": "into an integer before we can loop over",
+      "start": 1525.52,
+      "duration": 3.6
+    },
+    {
+      "text": "it",
+      "start": 1528.559,
+      "duration": 4.081
+    },
+    {
+      "text": "so we just wrap that num loops in and in",
+      "start": 1529.12,
+      "duration": 7.439
+    },
+    {
+      "text": "and then now it's an integer and so",
+      "start": 1532.64,
+      "duration": 10.72
+    },
+    {
+      "text": "we can do our loops and everything on it",
+      "start": 1536.559,
+      "duration": 10.48
+    },
+    {
+      "text": "um there are also some gotchas",
+      "start": 1543.36,
+      "duration": 6.4
+    },
+    {
+      "text": "around formatting in excel when you try",
+      "start": 1547.039,
+      "duration": 5.041
+    },
+    {
+      "text": "and read that back into python",
+      "start": 1549.76,
+      "duration": 6.08
+    },
+    {
+      "text": "um so here let's look at the f1 value",
+      "start": 1552.08,
+      "duration": 5.52
+    },
+    {
+      "text": "it's formatted as currency",
+      "start": 1555.84,
+      "duration": 4.88
+    },
+    {
+      "text": "in excel let's pull that into python",
+      "start": 1557.6,
+      "duration": 7.76
+    },
+    {
+      "text": "you can see it comes in as decimal 10.25",
+      "start": 1560.72,
+      "duration": 7.68
+    },
+    {
+      "text": "and if you just try and add a number",
+      "start": 1565.36,
+      "duration": 4.799
+    },
+    {
+      "text": "to this decimal we're going to get",
+      "start": 1568.4,
+      "duration": 4.0
+    },
+    {
+      "text": "unsupported operand type",
+      "start": 1570.159,
+      "duration": 6.481
+    },
+    {
+      "text": "decimal and float so what we can do",
+      "start": 1572.4,
+      "duration": 6.24
+    },
+    {
+      "text": "same thing as we did with the integers",
+      "start": 1576.64,
+      "duration": 3.919
+    },
+    {
+      "text": "you just convert it",
+      "start": 1578.64,
+      "duration": 4.72
+    },
+    {
+      "text": "so just convert that to a float and then",
+      "start": 1580.559,
+      "duration": 6.72
+    },
+    {
+      "text": "we can do the math with it just fine",
+      "start": 1583.36,
+      "duration": 3.919
+    },
+    {
+      "text": "um and then",
+      "start": 1587.76,
+      "duration": 5.44
+    },
+    {
+      "text": "f3 there we have the accounting",
+      "start": 1591.2,
+      "duration": 3.12
+    },
+    {
+      "text": "formatting",
+      "start": 1593.2,
+      "duration": 3.2
+    },
+    {
+      "text": "it's going to be the same thing but if",
+      "start": 1594.32,
+      "duration": 4.64
+    },
+    {
+      "text": "you just take the float of that",
+      "start": 1596.4,
+      "duration": 3.68
+    },
+    {
+      "text": "you're going to be able to get the",
+      "start": 1598.96,
+      "duration": 4.8
+    },
+    {
+      "text": "number back from the decimal",
+      "start": 1600.08,
+      "duration": 6.719
+    },
+    {
+      "text": "um and",
+      "start": 1603.76,
+      "duration": 5.279
+    },
+    {
+      "text": "percentages do thankfully just work out",
+      "start": 1606.799,
+      "duration": 3.441
+    },
+    {
+      "text": "of the box just fine",
+      "start": 1609.039,
+      "duration": 4.161
+    },
+    {
+      "text": "it pulls it in as a float in the correct",
+      "start": 1610.24,
+      "duration": 5.439
+    },
+    {
+      "text": "format",
+      "start": 1613.2,
+      "duration": 2.479
+    },
+    {
+      "text": "and then if you have a date it's going",
+      "start": 1616.159,
+      "duration": 3.441
+    },
+    {
+      "text": "to pull it",
+      "start": 1618.559,
+      "duration": 3.681
+    },
+    {
+      "text": "as the date time type in python so",
+      "start": 1619.6,
+      "duration": 3.76
+    },
+    {
+      "text": "that's a built-in",
+      "start": 1622.24,
+      "duration": 2.96
+    },
+    {
+      "text": "type that we haven't talked about in the",
+      "start": 1623.36,
+      "duration": 3.52
+    },
+    {
+      "text": "course",
+      "start": 1625.2,
+      "duration": 3.839
+    },
+    {
+      "text": "but this is a standard way to work with",
+      "start": 1626.88,
+      "duration": 4.08
+    },
+    {
+      "text": "dates in python",
+      "start": 1629.039,
+      "duration": 4.321
+    },
+    {
+      "text": "and it works perfectly fine with pandas",
+      "start": 1630.96,
+      "duration": 4.959
+    },
+    {
+      "text": "as well",
+      "start": 1633.36,
+      "duration": 2.559
+    },
+    {
+      "text": "so the last thing that we're going to",
+      "start": 1638.0,
+      "duration": 4.32
+    },
+    {
+      "text": "look at here um",
+      "start": 1639.36,
+      "duration": 6.64
+    },
+    {
+      "text": "is recalculating the workbook",
+      "start": 1642.32,
+      "duration": 7.599
+    },
+    {
+      "text": "so typically you're not going to need to",
+      "start": 1646.0,
+      "duration": 5.919
+    },
+    {
+      "text": "do this",
+      "start": 1649.919,
+      "duration": 6.321
+    },
+    {
+      "text": "because when you",
+      "start": 1651.919,
+      "duration": 4.321
+    },
+    {
+      "text": "write an input into excel it's going to",
+      "start": 1656.96,
+      "duration": 5.199
+    },
+    {
+      "text": "recalculate",
+      "start": 1660.799,
+      "duration": 5.201
+    },
+    {
+      "text": "the workbook automatically",
+      "start": 1662.159,
+      "duration": 7.361
+    },
+    {
+      "text": "so let me just write a value here",
+      "start": 1666.0,
+      "duration": 7.2
+    },
+    {
+      "text": "um a2 let's make that 11.",
+      "start": 1669.52,
+      "duration": 5.519
+    },
+    {
+      "text": "you can see that the random value over",
+      "start": 1673.2,
+      "duration": 3.359
+    },
+    {
+      "text": "here recalculated",
+      "start": 1675.039,
+      "duration": 3.36
+    },
+    {
+      "text": "when i did that i'm just running this",
+      "start": 1676.559,
+      "duration": 3.441
+    },
+    {
+      "text": "python code over here",
+      "start": 1678.399,
+      "duration": 3.361
+    },
+    {
+      "text": "and you can see the excel workbook",
+      "start": 1680.0,
+      "duration": 3.52
+    },
+    {
+      "text": "recalculating over there",
+      "start": 1681.76,
+      "duration": 4.72
+    },
+    {
+      "text": "so anytime that you write something into",
+      "start": 1683.52,
+      "duration": 3.44
+    },
+    {
+      "text": "excel",
+      "start": 1686.48,
+      "duration": 3.36
+    },
+    {
+      "text": "it's going to recalculate um and so you",
+      "start": 1686.96,
+      "duration": 4.56
+    },
+    {
+      "text": "don't normally need to explicitly",
+      "start": 1689.84,
+      "duration": 3.04
+    },
+    {
+      "text": "recalculate",
+      "start": 1691.52,
+      "duration": 3.36
+    },
+    {
+      "text": "um the only time where you're going to",
+      "start": 1692.88,
+      "duration": 3.2
+    },
+    {
+      "text": "need to do that",
+      "start": 1694.88,
+      "duration": 3.36
+    },
+    {
+      "text": "is if you want to keep re-running the",
+      "start": 1696.08,
+      "duration": 3.199
+    },
+    {
+      "text": "excel model",
+      "start": 1698.24,
+      "duration": 4.24
+    },
+    {
+      "text": "when you're not changing any inputs and",
+      "start": 1699.279,
+      "duration": 4.321
+    },
+    {
+      "text": "the case where that",
+      "start": 1702.48,
+      "duration": 2.799
+    },
+    {
+      "text": "generally applies is when you have",
+      "start": 1703.6,
+      "duration": 3.199
+    },
+    {
+      "text": "internal randomness",
+      "start": 1705.279,
+      "duration": 4.0
+    },
+    {
+      "text": "in your excel model such that each time",
+      "start": 1706.799,
+      "duration": 4.081
+    },
+    {
+      "text": "you run the excel model with the same",
+      "start": 1709.279,
+      "duration": 2.081
+    },
+    {
+      "text": "inputs",
+      "start": 1710.88,
+      "duration": 2.32
+    },
+    {
+      "text": "you're getting a different output each",
+      "start": 1711.36,
+      "duration": 3.919
+    },
+    {
+      "text": "time so in that case",
+      "start": 1713.2,
+      "duration": 4.24
+    },
+    {
+      "text": "you might want to have your python code",
+      "start": 1715.279,
+      "duration": 3.201
+    },
+    {
+      "text": "do a loop",
+      "start": 1717.44,
+      "duration": 4.56
+    },
+    {
+      "text": "where it uh you know recalculates the",
+      "start": 1718.48,
+      "duration": 5.439
+    },
+    {
+      "text": "workbook and then extracts the output",
+      "start": 1722.0,
+      "duration": 2.64
+    },
+    {
+      "text": "from excel",
+      "start": 1723.919,
+      "duration": 2.161
+    },
+    {
+      "text": "and saves that in the list and then",
+      "start": 1724.64,
+      "duration": 3.279
+    },
+    {
+      "text": "recalculates the workbook extracts it",
+      "start": 1726.08,
+      "duration": 3.52
+    },
+    {
+      "text": "from excel saves it in the list and does",
+      "start": 1727.919,
+      "duration": 5.201
+    },
+    {
+      "text": "that for some number of iterations",
+      "start": 1729.6,
+      "duration": 7.52
+    },
+    {
+      "text": "so how can we do this recalculation so",
+      "start": 1733.12,
+      "duration": 7.12
+    },
+    {
+      "text": "we do have to work with the app object",
+      "start": 1737.12,
+      "duration": 6.72
+    },
+    {
+      "text": "instead of the book or sheet object um",
+      "start": 1740.24,
+      "duration": 6.319
+    },
+    {
+      "text": "so this one liner here can get us access",
+      "start": 1743.84,
+      "duration": 4.16
+    },
+    {
+      "text": "to the current",
+      "start": 1746.559,
+      "duration": 6.081
+    },
+    {
+      "text": "uh application object excel app",
+      "start": 1748.0,
+      "duration": 8.24
+    },
+    {
+      "text": "and then on that you can do app.api",
+      "start": 1752.64,
+      "duration": 7.12
+    },
+    {
+      "text": "dot recalculate full and you notice when",
+      "start": 1756.24,
+      "duration": 6.0
+    },
+    {
+      "text": "i run that that the random value in the",
+      "start": 1759.76,
+      "duration": 3.6
+    },
+    {
+      "text": "excel sheet",
+      "start": 1762.24,
+      "duration": 4.24
+    },
+    {
+      "text": "keeps recalculating",
+      "start": 1763.36,
+      "duration": 6.48
+    },
+    {
+      "text": "um and",
+      "start": 1766.48,
+      "duration": 3.36
+    },
+    {
+      "text": "you might try this on your machine and",
+      "start": 1770.559,
+      "duration": 4.0
+    },
+    {
+      "text": "find it doesn't work",
+      "start": 1772.08,
+      "duration": 5.36
+    },
+    {
+      "text": "and that's because the api is actually",
+      "start": 1774.559,
+      "duration": 4.281
+    },
+    {
+      "text": "slightly different",
+      "start": 1777.44,
+      "duration": 4.64
+    },
+    {
+      "text": "on x on",
+      "start": 1778.84,
+      "duration": 6.12
+    },
+    {
+      "text": "mac versus windows so this command",
+      "start": 1782.08,
+      "duration": 4.88
+    },
+    {
+      "text": "should work on mac while this one works",
+      "start": 1784.96,
+      "duration": 4.4
+    },
+    {
+      "text": "on windows",
+      "start": 1786.96,
+      "duration": 4.4
+    },
+    {
+      "text": "so in case you need to do this in your",
+      "start": 1789.36,
+      "duration": 3.28
+    },
+    {
+      "text": "model",
+      "start": 1791.36,
+      "duration": 4.0
+    },
+    {
+      "text": "i included a convenience function for",
+      "start": 1792.64,
+      "duration": 3.519
+    },
+    {
+      "text": "you",
+      "start": 1795.36,
+      "duration": 3.039
+    },
+    {
+      "text": "uh recalculate workbook you can just",
+      "start": 1796.159,
+      "duration": 3.361
+    },
+    {
+      "text": "copy this function",
+      "start": 1798.399,
+      "duration": 3.841
+    },
+    {
+      "text": "into your model um and you just call",
+      "start": 1799.52,
+      "duration": 4.159
+    },
+    {
+      "text": "recalculate workbook",
+      "start": 1802.24,
+      "duration": 2.799
+    },
+    {
+      "text": "and you see i call that it is",
+      "start": 1803.679,
+      "duration": 4.161
+    },
+    {
+      "text": "recalculating and what this does is that",
+      "start": 1805.039,
+      "duration": 3.76
+    },
+    {
+      "text": "it gets the app",
+      "start": 1807.84,
+      "duration": 3.6
+    },
+    {
+      "text": "excel wings app um and then it's going",
+      "start": 1808.799,
+      "duration": 3.041
+    },
+    {
+      "text": "to check",
+      "start": 1811.44,
+      "duration": 2.08
+    },
+    {
+      "text": "what operating system you're on if",
+      "start": 1811.84,
+      "duration": 3.04
+    },
+    {
+      "text": "you're on windows it's going to call",
+      "start": 1813.52,
+      "duration": 1.84
+    },
+    {
+      "text": "that",
+      "start": 1814.88,
+      "duration": 3.279
+    },
+    {
+      "text": "first calculate full if you're on mac",
+      "start": 1815.36,
+      "duration": 5.439
+    },
+    {
+      "text": "it's going to call that just calculate",
+      "start": 1818.159,
+      "duration": 4.961
+    },
+    {
+      "text": "and otherwise it's it's going to raise",
+      "start": 1820.799,
+      "duration": 4.081
+    },
+    {
+      "text": "an error if it can't properly detect",
+      "start": 1823.12,
+      "duration": 3.76
+    },
+    {
+      "text": "your operating system",
+      "start": 1824.88,
+      "duration": 5.36
+    },
+    {
+      "text": "um so you can just take this into your",
+      "start": 1826.88,
+      "duration": 5.12
+    },
+    {
+      "text": "model and use it should you need to",
+      "start": 1830.24,
+      "duration": 3.039
+    },
+    {
+      "text": "recalculate",
+      "start": 1832.0,
+      "duration": 3.36
+    },
+    {
+      "text": "uh your model because it's an internal",
+      "start": 1833.279,
+      "duration": 3.52
+    },
+    {
+      "text": "randomness excel model that you're",
+      "start": 1835.36,
+      "duration": 2.24
+    },
+    {
+      "text": "trying to run",
+      "start": 1836.799,
+      "duration": 4.48
+    },
+    {
+      "text": "repeatedly from python",
+      "start": 1837.6,
+      "duration": 3.679
+    },
+    {
+      "text": "that covers how to integrate uh python",
+      "start": 1841.44,
+      "duration": 6.32
+    },
+    {
+      "text": "and excel using excel wings",
+      "start": 1844.32,
+      "duration": 6.56
+    },
+    {
+      "text": "and there is a lab exercise multiple lab",
+      "start": 1847.76,
+      "duration": 4.88
+    },
+    {
+      "text": "exercises on this material",
+      "start": 1850.88,
+      "duration": 5.12
+    },
+    {
+      "text": "as well so",
+      "start": 1852.64,
+      "duration": 6.879
+    },
+    {
+      "text": "there are actually four lab exercises",
+      "start": 1856.0,
+      "duration": 5.36
+    },
+    {
+      "text": "here the different levels",
+      "start": 1859.519,
+      "duration": 4.961
+    },
+    {
+      "text": "um and the fourth one is",
+      "start": 1861.36,
+      "duration": 5.439
+    },
+    {
+      "text": "optional one two and three are what's",
+      "start": 1864.48,
+      "duration": 5.679
+    },
+    {
+      "text": "required to submit for the course",
+      "start": 1866.799,
+      "duration": 6.561
+    },
+    {
+      "text": "and number one here and with all the",
+      "start": 1870.159,
+      "duration": 4.081
+    },
+    {
+      "text": "exercises",
+      "start": 1873.36,
+      "duration": 2.799
+    },
+    {
+      "text": "you're going to download this uh excel",
+      "start": 1874.24,
+      "duration": 3.919
+    },
+    {
+      "text": "wings lab file from the course site or",
+      "start": 1876.159,
+      "duration": 4.801
+    },
+    {
+      "text": "from the resources slide here this",
+      "start": 1878.159,
+      "duration": 6.161
+    },
+    {
+      "text": "directory will let you download it",
+      "start": 1880.96,
+      "duration": 3.36
+    },
+    {
+      "text": "and the first exercise is to read",
+      "start": 1884.799,
+      "duration": 5.76
+    },
+    {
+      "text": "the values in the workbook or the",
+      "start": 1888.88,
+      "duration": 3.12
+    },
+    {
+      "text": "worksheet from column a",
+      "start": 1890.559,
+      "duration": 4.72
+    },
+    {
+      "text": "and then write them into column b using",
+      "start": 1892.0,
+      "duration": 6.159
+    },
+    {
+      "text": "python and excel wings the second",
+      "start": 1895.279,
+      "duration": 4.88
+    },
+    {
+      "text": "exercise is to get the value",
+      "start": 1898.159,
+      "duration": 5.601
+    },
+    {
+      "text": "from c9 and multiply it by 2.5",
+      "start": 1900.159,
+      "duration": 6.4
+    },
+    {
+      "text": "in python and show the result and the",
+      "start": 1903.76,
+      "duration": 4.24
+    },
+    {
+      "text": "third exercise",
+      "start": 1906.559,
+      "duration": 4.161
+    },
+    {
+      "text": "is to read this table in a python do",
+      "start": 1908.0,
+      "duration": 4.08
+    },
+    {
+      "text": "some math on it",
+      "start": 1910.72,
+      "duration": 4.799
+    },
+    {
+      "text": "and output it back into excel and",
+      "start": 1912.08,
+      "duration": 6.319
+    },
+    {
+      "text": "make sure that you can uh match up the",
+      "start": 1915.519,
+      "duration": 5.76
+    },
+    {
+      "text": "index and header to the same format as",
+      "start": 1918.399,
+      "duration": 3.76
+    },
+    {
+      "text": "the original",
+      "start": 1921.279,
+      "duration": 4.961
+    },
+    {
+      "text": "table so that covers",
+      "start": 1922.159,
+      "duration": 6.64
+    },
+    {
+      "text": "uh everything we're going to look at in",
+      "start": 1926.24,
+      "duration": 4.48
+    },
+    {
+      "text": "the course with combining excel",
+      "start": 1928.799,
+      "duration": 5.281
+    },
+    {
+      "text": "and python and this also concludes",
+      "start": 1930.72,
+      "duration": 6.88
+    },
+    {
+      "text": "all the material um that you would need",
+      "start": 1934.08,
+      "duration": 4.88
+    },
+    {
+      "text": "that everyone should need for every",
+      "start": 1937.6,
+      "duration": 4.64
+    },
+    {
+      "text": "possible variation of the project 2",
+      "start": 1938.96,
+      "duration": 7.12
+    },
+    {
+      "text": "model so thanks for listening",
+      "start": 1942.24,
+      "duration": 7.6
+    },
+    {
+      "text": "and see you next time",
+      "start": 1946.08,
+      "duration": 3.76
+    }
+  ]
+}

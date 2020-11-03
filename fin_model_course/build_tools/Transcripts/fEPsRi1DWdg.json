@@ -1,0 +1,544 @@
+{
+  "entries": [
+    {
+      "text": "everyone",
+      "start": 2.8,
+      "duration": 2.08
+    },
+    {
+      "text": "nick derbertus here teaching you",
+      "start": 3.36,
+      "duration": 3.919
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 4.88,
+      "duration": 3.12
+    },
+    {
+      "text": "solve the",
+      "start": 7.279,
+      "duration": 4.001
+    },
+    {
+      "text": "lab exercise on list comprehensions",
+      "start": 8.0,
+      "duration": 5.519
+    },
+    {
+      "text": "this is part of the lecture series on",
+      "start": 11.28,
+      "duration": 4.319
+    },
+    {
+      "text": "exploring the parameter space",
+      "start": 13.519,
+      "duration": 5.52
+    },
+    {
+      "text": "and the sub series on extra python",
+      "start": 15.599,
+      "duration": 5.6
+    },
+    {
+      "text": "basics that we need for sensitivity",
+      "start": 19.039,
+      "duration": 3.681
+    },
+    {
+      "text": "analysis",
+      "start": 21.199,
+      "duration": 4.881
+    },
+    {
+      "text": "so here we are working in this set of",
+      "start": 22.72,
+      "duration": 4.399
+    },
+    {
+      "text": "slides",
+      "start": 26.08,
+      "duration": 4.4
+    },
+    {
+      "text": "and it's this lab exercise here where",
+      "start": 27.119,
+      "duration": 6.321
+    },
+    {
+      "text": "we are working on the jupiter notebook",
+      "start": 30.48,
+      "duration": 4.32
+    },
+    {
+      "text": "which we had already done the dictionary",
+      "start": 33.44,
+      "duration": 2.799
+    },
+    {
+      "text": "exercise in",
+      "start": 34.8,
+      "duration": 3.279
+    },
+    {
+      "text": "now we're going to go and complete the",
+      "start": 36.239,
+      "duration": 3.681
+    },
+    {
+      "text": "list comprehensive section",
+      "start": 38.079,
+      "duration": 4.8
+    },
+    {
+      "text": "list comprehensive section of that",
+      "start": 39.92,
+      "duration": 4.4
+    },
+    {
+      "text": "notebook",
+      "start": 42.879,
+      "duration": 3.441
+    },
+    {
+      "text": "so coming over to that notebook we",
+      "start": 44.32,
+      "duration": 3.759
+    },
+    {
+      "text": "already did the dictionaries part",
+      "start": 46.32,
+      "duration": 4.48
+    },
+    {
+      "text": "now we're into the list comprehensions",
+      "start": 48.079,
+      "duration": 3.761
+    },
+    {
+      "text": "so",
+      "start": 50.8,
+      "duration": 4.96
+    },
+    {
+      "text": "the first exercise here it's giving you",
+      "start": 51.84,
+      "duration": 7.68
+    },
+    {
+      "text": "a full written out loop and you want to",
+      "start": 55.76,
+      "duration": 5.68
+    },
+    {
+      "text": "create the list comprehension which is",
+      "start": 59.52,
+      "duration": 3.12
+    },
+    {
+      "text": "equivalent to",
+      "start": 61.44,
+      "duration": 4.96
+    },
+    {
+      "text": "this loop so",
+      "start": 62.64,
+      "duration": 3.76
+    },
+    {
+      "text": "the loop starts with 4 10 and 12",
+      "start": 68.159,
+      "duration": 5.521
+    },
+    {
+      "text": "and it's taking these numbers which are",
+      "start": 71.2,
+      "duration": 5.04
+    },
+    {
+      "text": "in millions and converting them into",
+      "start": 73.68,
+      "duration": 5.759
+    },
+    {
+      "text": "numbers in thousands um so it's going to",
+      "start": 76.24,
+      "duration": 4.8
+    },
+    {
+      "text": "multiply each of those numbers",
+      "start": 79.439,
+      "duration": 5.36
+    },
+    {
+      "text": "by a thousand so",
+      "start": 81.04,
+      "duration": 7.04
+    },
+    {
+      "text": "that's all we're doing here um is",
+      "start": 84.799,
+      "duration": 7.36
+    },
+    {
+      "text": "we're going to take uh the million",
+      "start": 88.08,
+      "duration": 9.12
+    },
+    {
+      "text": "times a thousand four mil and millions",
+      "start": 92.159,
+      "duration": 7.201
+    },
+    {
+      "text": "so that's all we need to do and we've",
+      "start": 97.2,
+      "duration": 3.12
+    },
+    {
+      "text": "recreated",
+      "start": 99.36,
+      "duration": 5.84
+    },
+    {
+      "text": "all that logic here in a single line",
+      "start": 100.32,
+      "duration": 4.88
+    },
+    {
+      "text": "moving on to exercise two",
+      "start": 106.32,
+      "duration": 3.68
+    },
+    {
+      "text": "now we're going to rewrite this loop",
+      "start": 111.36,
+      "duration": 6.32
+    },
+    {
+      "text": "as a list comprehension",
+      "start": 114.64,
+      "duration": 8.479
+    },
+    {
+      "text": "and this loop is taking a list of tuples",
+      "start": 117.68,
+      "duration": 8.56
+    },
+    {
+      "text": "uh each two plus three elements whatever",
+      "start": 123.119,
+      "duration": 6.321
+    },
+    {
+      "text": "the item is and then a price and then a",
+      "start": 126.24,
+      "duration": 5.359
+    },
+    {
+      "text": "quantity",
+      "start": 129.44,
+      "duration": 5.36
+    },
+    {
+      "text": "um and so it's",
+      "start": 131.599,
+      "duration": 4.72
+    },
+    {
+      "text": "getting the revenue as the price times",
+      "start": 134.8,
+      "duration": 3.84
+    },
+    {
+      "text": "quantity um",
+      "start": 136.319,
+      "duration": 4.081
+    },
+    {
+      "text": "and there's a max revenue if it's above",
+      "start": 138.64,
+      "duration": 3.84
+    },
+    {
+      "text": "that then it's saying it's too much to",
+      "start": 140.4,
+      "duration": 3.199
+    },
+    {
+      "text": "pay for that",
+      "start": 142.48,
+      "duration": 4.56
+    },
+    {
+      "text": "otherwise it's saying sure i'll pay that",
+      "start": 143.599,
+      "duration": 5.041
+    },
+    {
+      "text": "and then it's a pending the amount of",
+      "start": 147.04,
+      "duration": 3.52
+    },
+    {
+      "text": "the revenues so",
+      "start": 148.64,
+      "duration": 3.28
+    },
+    {
+      "text": "two different things going on in this",
+      "start": 150.56,
+      "duration": 3.759
+    },
+    {
+      "text": "loop and we want to refactor this",
+      "start": 151.92,
+      "duration": 4.959
+    },
+    {
+      "text": "into a list comprehension and it gives",
+      "start": 154.319,
+      "duration": 3.361
+    },
+    {
+      "text": "you the hint",
+      "start": 156.879,
+      "duration": 4.241
+    },
+    {
+      "text": "that uh you want to take that main logic",
+      "start": 157.68,
+      "duration": 6.4
+    },
+    {
+      "text": "and put it into a function because",
+      "start": 161.12,
+      "duration": 4.0
+    },
+    {
+      "text": "you're not going to be able to write a",
+      "start": 164.08,
+      "duration": 2.4
+    },
+    {
+      "text": "clean list comprehension which",
+      "start": 165.12,
+      "duration": 5.36
+    },
+    {
+      "text": "does all these things without that",
+      "start": 166.48,
+      "duration": 7.52
+    },
+    {
+      "text": "um so",
+      "start": 170.48,
+      "duration": 7.28
+    },
+    {
+      "text": "we can write the function um",
+      "start": 174.0,
+      "duration": 7.84
+    },
+    {
+      "text": "which this is going to be um",
+      "start": 177.76,
+      "duration": 8.08
+    },
+    {
+      "text": "we'll say",
+      "start": 181.84,
+      "duration": 4.0
+    },
+    {
+      "text": "get revenue print",
+      "start": 186.08,
+      "duration": 10.079
+    },
+    {
+      "text": "size is it bigger small revenue",
+      "start": 190.959,
+      "duration": 5.2
+    },
+    {
+      "text": "and that should take uh",
+      "start": 197.12,
+      "duration": 8.08
+    },
+    {
+      "text": "this price quantity tuple as an argument",
+      "start": 201.68,
+      "duration": 7.199
+    },
+    {
+      "text": "and we're just gonna take all this logic",
+      "start": 205.2,
+      "duration": 7.039
+    },
+    {
+      "text": "um and throw it into the function",
+      "start": 208.879,
+      "duration": 6.161
+    },
+    {
+      "text": "so now this function splits that tuple",
+      "start": 212.239,
+      "duration": 4.401
+    },
+    {
+      "text": "up into the item price and quantity it",
+      "start": 215.04,
+      "duration": 3.279
+    },
+    {
+      "text": "calculates the revenue",
+      "start": 216.64,
+      "duration": 3.519
+    },
+    {
+      "text": "and then we're just going to return the",
+      "start": 218.319,
+      "duration": 3.041
+    },
+    {
+      "text": "revenue",
+      "start": 220.159,
+      "duration": 6.16
+    },
+    {
+      "text": "at the end um",
+      "start": 221.36,
+      "duration": 8.0
+    },
+    {
+      "text": "and it would be good to",
+      "start": 226.319,
+      "duration": 6.161
+    },
+    {
+      "text": "also include the max revenue as an",
+      "start": 229.36,
+      "duration": 4.239
+    },
+    {
+      "text": "argument",
+      "start": 232.48,
+      "duration": 6.24
+    },
+    {
+      "text": "since we are using that in here as well",
+      "start": 233.599,
+      "duration": 8.321
+    },
+    {
+      "text": "um so then we have the function defined",
+      "start": 238.72,
+      "duration": 5.519
+    },
+    {
+      "text": "so then we can go to write our list",
+      "start": 241.92,
+      "duration": 3.679
+    },
+    {
+      "text": "comprehension",
+      "start": 244.239,
+      "duration": 3.681
+    },
+    {
+      "text": "so now it's going to be get revenue",
+      "start": 245.599,
+      "duration": 3.681
+    },
+    {
+      "text": "print size",
+      "start": 247.92,
+      "duration": 6.56
+    },
+    {
+      "text": "or pq2 max revenue",
+      "start": 249.28,
+      "duration": 8.72
+    },
+    {
+      "text": "and before pq2",
+      "start": 254.48,
+      "duration": 7.439
+    },
+    {
+      "text": "in price quantities um",
+      "start": 258.0,
+      "duration": 6.16
+    },
+    {
+      "text": "and i think yep that should get us the",
+      "start": 261.919,
+      "duration": 3.201
+    },
+    {
+      "text": "same result",
+      "start": 264.16,
+      "duration": 5.599
+    },
+    {
+      "text": "as we had above because we took all that",
+      "start": 265.12,
+      "duration": 6.639
+    },
+    {
+      "text": "logic wrapped into a single function and",
+      "start": 269.759,
+      "duration": 4.321
+    },
+    {
+      "text": "so that made it very easy to call",
+      "start": 271.759,
+      "duration": 5.44
+    },
+    {
+      "text": "in a list comprehension this exercise is",
+      "start": 274.08,
+      "duration": 4.72
+    },
+    {
+      "text": "really trying to hit home that you can",
+      "start": 277.199,
+      "duration": 3.601
+    },
+    {
+      "text": "refactor complicated loops",
+      "start": 278.8,
+      "duration": 4.08
+    },
+    {
+      "text": "into list comprehensions if you put that",
+      "start": 280.8,
+      "duration": 3.28
+    },
+    {
+      "text": "main logic",
+      "start": 282.88,
+      "duration": 5.039
+    },
+    {
+      "text": "into a function that wraps up",
+      "start": 284.08,
+      "duration": 7.92
+    },
+    {
+      "text": "the lab exercises on list comprehensions",
+      "start": 287.919,
+      "duration": 6.921
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 292.0,
+      "duration": 5.84
+    },
+    {
+      "text": "time",
+      "start": 294.84,
+      "duration": 3.0
+    }
+  ]
+}

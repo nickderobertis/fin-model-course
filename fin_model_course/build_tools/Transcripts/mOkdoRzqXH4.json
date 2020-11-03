@@ -1,0 +1,2644 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.84,
+      "duration": 2.479
+    },
+    {
+      "text": "nick dear birdis here teaching you",
+      "start": 4.799,
+      "duration": 3.521
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 6.319,
+      "duration": 4.24
+    },
+    {
+      "text": "to be talking about branching logic with",
+      "start": 8.32,
+      "duration": 4.08
+    },
+    {
+      "text": "python conditionals",
+      "start": 10.559,
+      "duration": 4.08
+    },
+    {
+      "text": "as part of our segment of going beyond",
+      "start": 12.4,
+      "duration": 4.32
+    },
+    {
+      "text": "an initial python script",
+      "start": 14.639,
+      "duration": 4.081
+    },
+    {
+      "text": "how we're going to learn the python",
+      "start": 16.72,
+      "duration": 4.24
+    },
+    {
+      "text": "basics so we can build out complex",
+      "start": 18.72,
+      "duration": 2.96
+    },
+    {
+      "text": "financial",
+      "start": 20.96,
+      "duration": 4.0
+    },
+    {
+      "text": "models so we have",
+      "start": 21.68,
+      "duration": 5.839
+    },
+    {
+      "text": "talked a little bit about conditionals",
+      "start": 24.96,
+      "duration": 5.04
+    },
+    {
+      "text": "before in the class and that was in the",
+      "start": 27.519,
+      "duration": 5.921
+    },
+    {
+      "text": "context of excel before",
+      "start": 30.0,
+      "duration": 6.079
+    },
+    {
+      "text": "and we talked about the if function in",
+      "start": 33.44,
+      "duration": 3.76
+    },
+    {
+      "text": "excel",
+      "start": 36.079,
+      "duration": 3.841
+    },
+    {
+      "text": "and how that lets us basically check",
+      "start": 37.2,
+      "duration": 4.8
+    },
+    {
+      "text": "some kind of logical condition",
+      "start": 39.92,
+      "duration": 5.2
+    },
+    {
+      "text": "and then return one value if it that",
+      "start": 42.0,
+      "duration": 5.28
+    },
+    {
+      "text": "condition is true and return another",
+      "start": 45.12,
+      "duration": 5.279
+    },
+    {
+      "text": "value if that condition is false",
+      "start": 47.28,
+      "duration": 6.72
+    },
+    {
+      "text": "we have the same kind of um concept",
+      "start": 50.399,
+      "duration": 6.961
+    },
+    {
+      "text": "in python as well uh but it's even",
+      "start": 54.0,
+      "duration": 7.84
+    },
+    {
+      "text": "definitely more flexible in python",
+      "start": 57.36,
+      "duration": 8.48
+    },
+    {
+      "text": "um and you can do a lot more with it",
+      "start": 61.84,
+      "duration": 5.92
+    },
+    {
+      "text": "but it's the same basic concept we're",
+      "start": 65.84,
+      "duration": 3.599
+    },
+    {
+      "text": "gonna be checking some kind of",
+      "start": 67.76,
+      "duration": 3.44
+    },
+    {
+      "text": "logical condition and then we're going",
+      "start": 69.439,
+      "duration": 3.68
+    },
+    {
+      "text": "to do one thing if it's true and we're",
+      "start": 71.2,
+      "duration": 3.44
+    },
+    {
+      "text": "going to do something else",
+      "start": 73.119,
+      "duration": 5.121
+    },
+    {
+      "text": "if it's false so we can see",
+      "start": 74.64,
+      "duration": 6.64
+    },
+    {
+      "text": "um an example here on",
+      "start": 78.24,
+      "duration": 6.4
+    },
+    {
+      "text": "the slide and",
+      "start": 81.28,
+      "duration": 6.64
+    },
+    {
+      "text": "we can see um here",
+      "start": 84.64,
+      "duration": 7.92
+    },
+    {
+      "text": "an if statement if 5 is equal to 6",
+      "start": 87.92,
+      "duration": 7.519
+    },
+    {
+      "text": "then it's going to print not true",
+      "start": 92.56,
+      "duration": 4.08
+    },
+    {
+      "text": "otherwise",
+      "start": 95.439,
+      "duration": 4.32
+    },
+    {
+      "text": "else it's going to print",
+      "start": 96.64,
+      "duration": 6.32
+    },
+    {
+      "text": "else claws and",
+      "start": 99.759,
+      "duration": 6.32
+    },
+    {
+      "text": "it's a little bit covered here in the",
+      "start": 102.96,
+      "duration": 5.6
+    },
+    {
+      "text": "video",
+      "start": 106.079,
+      "duration": 2.481
+    },
+    {
+      "text": "but",
+      "start": 109.6,
+      "duration": 2.24
+    },
+    {
+      "text": "you can see that it gets else clause",
+      "start": 113.04,
+      "duration": 6.96
+    },
+    {
+      "text": "here uh coming up",
+      "start": 116.32,
+      "duration": 5.839
+    },
+    {
+      "text": "and that's because this logical",
+      "start": 120.0,
+      "duration": 3.04
+    },
+    {
+      "text": "condition here",
+      "start": 122.159,
+      "duration": 5.201
+    },
+    {
+      "text": "this 5 is equal to 6 that is not true",
+      "start": 123.04,
+      "duration": 5.76
+    },
+    {
+      "text": "right that's false",
+      "start": 127.36,
+      "duration": 4.239
+    },
+    {
+      "text": "that five is equal to six and because",
+      "start": 128.8,
+      "duration": 3.439
+    },
+    {
+      "text": "it's false",
+      "start": 131.599,
+      "duration": 3.28
+    },
+    {
+      "text": "it's not going to go into the if part of",
+      "start": 132.239,
+      "duration": 3.281
+    },
+    {
+      "text": "the logic",
+      "start": 134.879,
+      "duration": 3.521
+    },
+    {
+      "text": "it's instead going to go into the else",
+      "start": 135.52,
+      "duration": 4.24
+    },
+    {
+      "text": "part of the logic",
+      "start": 138.4,
+      "duration": 4.8
+    },
+    {
+      "text": "and that's why we get else claws here",
+      "start": 139.76,
+      "duration": 6.08
+    },
+    {
+      "text": "so this is the basic structure and",
+      "start": 143.2,
+      "duration": 3.44
+    },
+    {
+      "text": "you'll notice",
+      "start": 145.84,
+      "duration": 3.68
+    },
+    {
+      "text": "you know just like when we did the for",
+      "start": 146.64,
+      "duration": 3.28
+    },
+    {
+      "text": "loop",
+      "start": 149.52,
+      "duration": 4.32
+    },
+    {
+      "text": "in python that it has the same kind of",
+      "start": 149.92,
+      "duration": 6.88
+    },
+    {
+      "text": "structure here uh that we have the if",
+      "start": 153.84,
+      "duration": 4.24
+    },
+    {
+      "text": "and then we have",
+      "start": 156.8,
+      "duration": 4.079
+    },
+    {
+      "text": "a colon and then after that colon we",
+      "start": 158.08,
+      "duration": 5.2
+    },
+    {
+      "text": "have a level of indentation",
+      "start": 160.879,
+      "duration": 4.561
+    },
+    {
+      "text": "and then under that we have the logic",
+      "start": 163.28,
+      "duration": 4.88
+    },
+    {
+      "text": "which actually runs under the if",
+      "start": 165.44,
+      "duration": 5.92
+    },
+    {
+      "text": "part of the statement and then",
+      "start": 168.16,
+      "duration": 5.52
+    },
+    {
+      "text": "coming over to the else it's back over",
+      "start": 171.36,
+      "duration": 3.28
+    },
+    {
+      "text": "at the original",
+      "start": 173.68,
+      "duration": 3.279
+    },
+    {
+      "text": "level of indentation and then we have",
+      "start": 174.64,
+      "duration": 3.599
+    },
+    {
+      "text": "another colon",
+      "start": 176.959,
+      "duration": 4.161
+    },
+    {
+      "text": "and then uh another level of indentation",
+      "start": 178.239,
+      "duration": 4.0
+    },
+    {
+      "text": "back to",
+      "start": 181.12,
+      "duration": 4.64
+    },
+    {
+      "text": "indentation level one um or the logic",
+      "start": 182.239,
+      "duration": 6.0
+    },
+    {
+      "text": "that runs under the else clause",
+      "start": 185.76,
+      "duration": 5.36
+    },
+    {
+      "text": "the logic which runs if the logical",
+      "start": 188.239,
+      "duration": 3.92
+    },
+    {
+      "text": "condition",
+      "start": 191.12,
+      "duration": 4.24
+    },
+    {
+      "text": "evaluates to false",
+      "start": 192.159,
+      "duration": 6.241
+    },
+    {
+      "text": "so just like before you know we had four",
+      "start": 195.36,
+      "duration": 6.32
+    },
+    {
+      "text": "you know loop variable in uh list or",
+      "start": 198.4,
+      "duration": 4.32
+    },
+    {
+      "text": "whatever",
+      "start": 201.68,
+      "duration": 3.36
+    },
+    {
+      "text": "colon indentation and then the logic",
+      "start": 202.72,
+      "duration": 4.0
+    },
+    {
+      "text": "which runs under the four",
+      "start": 205.04,
+      "duration": 3.919
+    },
+    {
+      "text": "same thing here with the if this is just",
+      "start": 206.72,
+      "duration": 4.239
+    },
+    {
+      "text": "generally how you have",
+      "start": 208.959,
+      "duration": 4.401
+    },
+    {
+      "text": "uh you know blocks of logic in python",
+      "start": 210.959,
+      "duration": 3.681
+    },
+    {
+      "text": "it's going to be",
+      "start": 213.36,
+      "duration": 3.439
+    },
+    {
+      "text": "a colon to start that block and then an",
+      "start": 214.64,
+      "duration": 3.44
+    },
+    {
+      "text": "end in uh",
+      "start": 216.799,
+      "duration": 3.681
+    },
+    {
+      "text": "for all the logic which runs inside of",
+      "start": 218.08,
+      "duration": 4.96
+    },
+    {
+      "text": "that block",
+      "start": 220.48,
+      "duration": 2.56
+    },
+    {
+      "text": "so um you know obviously just comparing",
+      "start": 223.12,
+      "duration": 5.199
+    },
+    {
+      "text": "five to six directly",
+      "start": 226.879,
+      "duration": 3.601
+    },
+    {
+      "text": "is pretty meaningless right like that's",
+      "start": 228.319,
+      "duration": 4.881
+    },
+    {
+      "text": "always going to evaluate to false",
+      "start": 230.48,
+      "duration": 4.319
+    },
+    {
+      "text": "if it's always going to evaluate to",
+      "start": 233.2,
+      "duration": 3.44
+    },
+    {
+      "text": "false this uh",
+      "start": 234.799,
+      "duration": 4.401
+    },
+    {
+      "text": "code here will never run it will always",
+      "start": 236.64,
+      "duration": 3.92
+    },
+    {
+      "text": "just go to the else clause",
+      "start": 239.2,
+      "duration": 3.119
+    },
+    {
+      "text": "so we might as well have just not even",
+      "start": 240.56,
+      "duration": 4.0
+    },
+    {
+      "text": "had the if and just had the else clause",
+      "start": 242.319,
+      "duration": 2.64
+    },
+    {
+      "text": "right",
+      "start": 244.56,
+      "duration": 2.56
+    },
+    {
+      "text": "just just print else clause it would",
+      "start": 244.959,
+      "duration": 4.321
+    },
+    {
+      "text": "have been effectively the same thing",
+      "start": 247.12,
+      "duration": 6.0
+    },
+    {
+      "text": "uh but where it becomes more valuable is",
+      "start": 249.28,
+      "duration": 6.319
+    },
+    {
+      "text": "when you're actually using variables",
+      "start": 253.12,
+      "duration": 4.56
+    },
+    {
+      "text": "in these conditions and those variables",
+      "start": 255.599,
+      "duration": 3.681
+    },
+    {
+      "text": "could be coming through with different",
+      "start": 257.68,
+      "duration": 2.799
+    },
+    {
+      "text": "values",
+      "start": 259.28,
+      "duration": 4.88
+    },
+    {
+      "text": "so uh you know here we can do",
+      "start": 260.479,
+      "duration": 6.0
+    },
+    {
+      "text": "uh you know if this equals that and this",
+      "start": 264.16,
+      "duration": 4.08
+    },
+    {
+      "text": "and that are two different variables",
+      "start": 266.479,
+      "duration": 3.28
+    },
+    {
+      "text": "that we've defined",
+      "start": 268.24,
+      "duration": 4.239
+    },
+    {
+      "text": "and for now we would find them both uh",
+      "start": 269.759,
+      "duration": 5.201
+    },
+    {
+      "text": "to be the same value",
+      "start": 272.479,
+      "duration": 5.28
+    },
+    {
+      "text": "but you know setting it up this way you",
+      "start": 274.96,
+      "duration": 4.239
+    },
+    {
+      "text": "know you could easily define",
+      "start": 277.759,
+      "duration": 3.361
+    },
+    {
+      "text": "these as other values and then that",
+      "start": 279.199,
+      "duration": 3.841
+    },
+    {
+      "text": "would change what the logic",
+      "start": 281.12,
+      "duration": 5.519
+    },
+    {
+      "text": "is going to do down here",
+      "start": 283.04,
+      "duration": 8.4
+    },
+    {
+      "text": "so with here we have if this equals that",
+      "start": 286.639,
+      "duration": 7.361
+    },
+    {
+      "text": "and for now this and that have the same",
+      "start": 291.44,
+      "duration": 3.52
+    },
+    {
+      "text": "value",
+      "start": 294.0,
+      "duration": 4.16
+    },
+    {
+      "text": "and so indeed it's going to run the",
+      "start": 294.96,
+      "duration": 5.519
+    },
+    {
+      "text": "logic which is under this if the yes",
+      "start": 298.16,
+      "duration": 6.24
+    },
+    {
+      "text": "print me um and you'll notice for this",
+      "start": 300.479,
+      "duration": 5.28
+    },
+    {
+      "text": "one we don't have",
+      "start": 304.4,
+      "duration": 4.079
+    },
+    {
+      "text": "any else clause and that's fine the else",
+      "start": 305.759,
+      "duration": 3.28
+    },
+    {
+      "text": "clause",
+      "start": 308.479,
+      "duration": 3.681
+    },
+    {
+      "text": "is optional in python so",
+      "start": 309.039,
+      "duration": 5.521
+    },
+    {
+      "text": "you can just do an if and then run some",
+      "start": 312.16,
+      "duration": 3.68
+    },
+    {
+      "text": "code if it's true",
+      "start": 314.56,
+      "duration": 3.199
+    },
+    {
+      "text": "and then otherwise it's just going to go",
+      "start": 315.84,
+      "duration": 4.48
+    },
+    {
+      "text": "on it's not",
+      "start": 317.759,
+      "duration": 4.561
+    },
+    {
+      "text": "it doesn't have any alternative logic to",
+      "start": 320.32,
+      "duration": 4.159
+    },
+    {
+      "text": "use it's just going to continue on with",
+      "start": 322.32,
+      "duration": 5.28
+    },
+    {
+      "text": "whatever the next code is",
+      "start": 324.479,
+      "duration": 3.121
+    },
+    {
+      "text": "and then here we're looking at um you",
+      "start": 328.479,
+      "duration": 4.081
+    },
+    {
+      "text": "know if this equals 5",
+      "start": 331.28,
+      "duration": 3.68
+    },
+    {
+      "text": "this was defined the woo so it is not",
+      "start": 332.56,
+      "duration": 3.6
+    },
+    {
+      "text": "equal to 5",
+      "start": 334.96,
+      "duration": 4.239
+    },
+    {
+      "text": "and so it's not going to print this last",
+      "start": 336.16,
+      "duration": 4.24
+    },
+    {
+      "text": "statement here",
+      "start": 339.199,
+      "duration": 4.321
+    },
+    {
+      "text": "um it's just going to go on and",
+      "start": 340.4,
+      "duration": 5.04
+    },
+    {
+      "text": "you know continue with whatever code we",
+      "start": 343.52,
+      "duration": 4.56
+    },
+    {
+      "text": "have left in the program",
+      "start": 345.44,
+      "duration": 5.599
+    },
+    {
+      "text": "so that's the basic way that you use",
+      "start": 348.08,
+      "duration": 4.32
+    },
+    {
+      "text": "these conditionals",
+      "start": 351.039,
+      "duration": 4.321
+    },
+    {
+      "text": "in python and you know of course most",
+      "start": 352.4,
+      "duration": 4.32
+    },
+    {
+      "text": "the time you would probably be doing",
+      "start": 355.36,
+      "duration": 2.48
+    },
+    {
+      "text": "something more",
+      "start": 356.72,
+      "duration": 3.44
+    },
+    {
+      "text": "than just printing you can have as many",
+      "start": 357.84,
+      "duration": 4.32
+    },
+    {
+      "text": "lines of code as you want",
+      "start": 360.16,
+      "duration": 4.72
+    },
+    {
+      "text": "under any one of these as long as they",
+      "start": 362.16,
+      "duration": 4.56
+    },
+    {
+      "text": "just all keep that",
+      "start": 364.88,
+      "duration": 5.36
+    },
+    {
+      "text": "level of indentation um",
+      "start": 366.72,
+      "duration": 6.24
+    },
+    {
+      "text": "so arbitrarily any kind of code that you",
+      "start": 370.24,
+      "duration": 3.44
+    },
+    {
+      "text": "want to run",
+      "start": 372.96,
+      "duration": 2.72
+    },
+    {
+      "text": "under whatever conditions you can do",
+      "start": 373.68,
+      "duration": 3.44
+    },
+    {
+      "text": "that using",
+      "start": 375.68,
+      "duration": 5.76
+    },
+    {
+      "text": "these conditionals",
+      "start": 377.12,
+      "duration": 7.04
+    },
+    {
+      "text": "and you may have noticed that here we",
+      "start": 381.44,
+      "duration": 3.599
+    },
+    {
+      "text": "are using",
+      "start": 384.16,
+      "duration": 4.08
+    },
+    {
+      "text": "two equals whereas when we had",
+      "start": 385.039,
+      "duration": 6.241
+    },
+    {
+      "text": "assigned variables we are using one",
+      "start": 388.24,
+      "duration": 3.92
+    },
+    {
+      "text": "equals",
+      "start": 391.28,
+      "duration": 3.6
+    },
+    {
+      "text": "so that's the difference here in python",
+      "start": 392.16,
+      "duration": 5.12
+    },
+    {
+      "text": "a single equals assigns",
+      "start": 394.88,
+      "duration": 6.319
+    },
+    {
+      "text": "two equals compares so this is saying",
+      "start": 397.28,
+      "duration": 7.039
+    },
+    {
+      "text": "is five equal to six and this is saying",
+      "start": 401.199,
+      "duration": 6.801
+    },
+    {
+      "text": "this is equal to wu so subtle difference",
+      "start": 404.319,
+      "duration": 6.081
+    },
+    {
+      "text": "but it's just assignment versus",
+      "start": 408.0,
+      "duration": 3.599
+    },
+    {
+      "text": "comparison",
+      "start": 410.4,
+      "duration": 2.72
+    },
+    {
+      "text": "and you want to be careful about that",
+      "start": 411.599,
+      "duration": 3.361
+    },
+    {
+      "text": "because if you use the wrong one",
+      "start": 413.12,
+      "duration": 3.84
+    },
+    {
+      "text": "you're probably going to get a syntax",
+      "start": 414.96,
+      "duration": 3.359
+    },
+    {
+      "text": "error and then you're going to be",
+      "start": 416.96,
+      "duration": 2.4
+    },
+    {
+      "text": "scratching your head",
+      "start": 418.319,
+      "duration": 4.401
+    },
+    {
+      "text": "why is this not working single equals",
+      "start": 419.36,
+      "duration": 7.679
+    },
+    {
+      "text": "to assign double equals to compare",
+      "start": 422.72,
+      "duration": 4.319
+    },
+    {
+      "text": "so then",
+      "start": 428.4,
+      "duration": 2.48
+    },
+    {
+      "text": "we now have this else condition",
+      "start": 432.16,
+      "duration": 6.4
+    },
+    {
+      "text": "which we talked about here um",
+      "start": 435.28,
+      "duration": 5.6
+    },
+    {
+      "text": "and that we can think of just like in",
+      "start": 438.56,
+      "duration": 3.199
+    },
+    {
+      "text": "excel how",
+      "start": 440.88,
+      "duration": 3.28
+    },
+    {
+      "text": "you know in excel we had if logical",
+      "start": 441.759,
+      "duration": 4.241
+    },
+    {
+      "text": "condition and then value if true and",
+      "start": 444.16,
+      "duration": 3.439
+    },
+    {
+      "text": "then value at false",
+      "start": 446.0,
+      "duration": 3.84
+    },
+    {
+      "text": "so the else here is like the value if",
+      "start": 447.599,
+      "duration": 4.16
+    },
+    {
+      "text": "false in excel",
+      "start": 449.84,
+      "duration": 3.6
+    },
+    {
+      "text": "it's the logic which is going to run if",
+      "start": 451.759,
+      "duration": 5.921
+    },
+    {
+      "text": "the condition evaluates to false",
+      "start": 453.44,
+      "duration": 4.24
+    },
+    {
+      "text": "and unlike excel where we're bounded by",
+      "start": 458.16,
+      "duration": 3.92
+    },
+    {
+      "text": "you know you just",
+      "start": 460.96,
+      "duration": 2.959
+    },
+    {
+      "text": "get one value or you get another value",
+      "start": 462.08,
+      "duration": 3.92
+    },
+    {
+      "text": "here it's running any kind of arbitrary",
+      "start": 463.919,
+      "duration": 3.201
+    },
+    {
+      "text": "logic",
+      "start": 466.0,
+      "duration": 3.84
+    },
+    {
+      "text": "um so that you know can be absolutely",
+      "start": 467.12,
+      "duration": 4.56
+    },
+    {
+      "text": "anything and that gives us a lot more",
+      "start": 469.84,
+      "duration": 3.12
+    },
+    {
+      "text": "flexibility",
+      "start": 471.68,
+      "duration": 3.359
+    },
+    {
+      "text": "with the way that things are going to",
+      "start": 472.96,
+      "duration": 5.2
+    },
+    {
+      "text": "work in our models",
+      "start": 475.039,
+      "duration": 5.761
+    },
+    {
+      "text": "and then one other way to use these",
+      "start": 478.16,
+      "duration": 4.64
+    },
+    {
+      "text": "conditionals that we didn't look at here",
+      "start": 480.8,
+      "duration": 4.56
+    },
+    {
+      "text": "but we will look at uh when we go to the",
+      "start": 482.8,
+      "duration": 3.36
+    },
+    {
+      "text": "example",
+      "start": 485.36,
+      "duration": 4.72
+    },
+    {
+      "text": "in the jupiter notebook uh is elif",
+      "start": 486.16,
+      "duration": 7.039
+    },
+    {
+      "text": "which is shorthand for elsif um",
+      "start": 490.08,
+      "duration": 5.2
+    },
+    {
+      "text": "so that's saying you know that's you",
+      "start": 493.199,
+      "duration": 3.761
+    },
+    {
+      "text": "would put that after an if",
+      "start": 495.28,
+      "duration": 4.88
+    },
+    {
+      "text": "then next it would be elif or elsif um",
+      "start": 496.96,
+      "duration": 4.16
+    },
+    {
+      "text": "and that's just saying",
+      "start": 500.16,
+      "duration": 3.52
+    },
+    {
+      "text": "you know if that first condition was not",
+      "start": 501.12,
+      "duration": 3.519
+    },
+    {
+      "text": "true",
+      "start": 503.68,
+      "duration": 3.199
+    },
+    {
+      "text": "but i'm giving you another condition now",
+      "start": 504.639,
+      "duration": 4.081
+    },
+    {
+      "text": "if that one is true",
+      "start": 506.879,
+      "duration": 4.88
+    },
+    {
+      "text": "then uh execute this logic and we'll",
+      "start": 508.72,
+      "duration": 4.72
+    },
+    {
+      "text": "make that a lot more concrete here in a",
+      "start": 511.759,
+      "duration": 3.441
+    },
+    {
+      "text": "moment as we go through",
+      "start": 513.44,
+      "duration": 5.599
+    },
+    {
+      "text": "the example in the jupiter notebook",
+      "start": 515.2,
+      "duration": 6.24
+    },
+    {
+      "text": "so that's where we'll um jump off to",
+      "start": 519.039,
+      "duration": 3.041
+    },
+    {
+      "text": "that",
+      "start": 521.44,
+      "duration": 3.92
+    },
+    {
+      "text": "um we're gonna go into the python basics",
+      "start": 522.08,
+      "duration": 6.879
+    },
+    {
+      "text": "uh jupiter notebook which has",
+      "start": 525.36,
+      "duration": 6.32
+    },
+    {
+      "text": "uh you know more drawn out examples on",
+      "start": 528.959,
+      "duration": 4.161
+    },
+    {
+      "text": "all of this",
+      "start": 531.68,
+      "duration": 5.279
+    },
+    {
+      "text": "um so",
+      "start": 533.12,
+      "duration": 7.2
+    },
+    {
+      "text": "moving over to that um and this you know",
+      "start": 536.959,
+      "duration": 5.281
+    },
+    {
+      "text": "is broken up into sections matching the",
+      "start": 540.32,
+      "duration": 3.68
+    },
+    {
+      "text": "sections of the lecture",
+      "start": 542.24,
+      "duration": 2.96
+    },
+    {
+      "text": "we're going to use it in all the",
+      "start": 544.0,
+      "duration": 3.76
+    },
+    {
+      "text": "lectures in this segment",
+      "start": 545.2,
+      "duration": 4.16
+    },
+    {
+      "text": "so first here we're talking about",
+      "start": 547.76,
+      "duration": 3.92
+    },
+    {
+      "text": "conditionals",
+      "start": 549.36,
+      "duration": 5.599
+    },
+    {
+      "text": "so for conditionals um",
+      "start": 551.68,
+      "duration": 5.12
+    },
+    {
+      "text": "you know this is a little bit of review",
+      "start": 554.959,
+      "duration": 4.241
+    },
+    {
+      "text": "of what we just looked at",
+      "start": 556.8,
+      "duration": 5.039
+    },
+    {
+      "text": "but you know basically if whatever",
+      "start": 559.2,
+      "duration": 3.28
+    },
+    {
+      "text": "condition",
+      "start": 561.839,
+      "duration": 3.12
+    },
+    {
+      "text": "evaluates to true then it's going to run",
+      "start": 562.48,
+      "duration": 3.2
+    },
+    {
+      "text": "the logic",
+      "start": 564.959,
+      "duration": 4.0
+    },
+    {
+      "text": "which is under the if statement",
+      "start": 565.68,
+      "duration": 5.44
+    },
+    {
+      "text": "again that indentation is important if",
+      "start": 568.959,
+      "duration": 3.281
+    },
+    {
+      "text": "we leave that out",
+      "start": 571.12,
+      "duration": 3.2
+    },
+    {
+      "text": "we're going to get an indentation error",
+      "start": 572.24,
+      "duration": 4.56
+    },
+    {
+      "text": "expected and indented block",
+      "start": 574.32,
+      "duration": 4.639
+    },
+    {
+      "text": "because we had that colon we got to have",
+      "start": 576.8,
+      "duration": 3.44
+    },
+    {
+      "text": "the indent coming",
+      "start": 578.959,
+      "duration": 3.921
+    },
+    {
+      "text": "after that",
+      "start": 580.24,
+      "duration": 2.64
+    },
+    {
+      "text": "and of course if the condition evaluates",
+      "start": 583.44,
+      "duration": 4.0
+    },
+    {
+      "text": "to false",
+      "start": 586.32,
+      "duration": 3.92
+    },
+    {
+      "text": "then we're not going to get whatever",
+      "start": 587.44,
+      "duration": 3.2
+    },
+    {
+      "text": "code",
+      "start": 590.24,
+      "duration": 4.88
+    },
+    {
+      "text": "under here run um and here also show",
+      "start": 590.64,
+      "duration": 7.84
+    },
+    {
+      "text": "uh that you can have",
+      "start": 595.12,
+      "duration": 8.159
+    },
+    {
+      "text": "uh you know multiple um",
+      "start": 598.48,
+      "duration": 4.799
+    },
+    {
+      "text": "statements under here and they'll all",
+      "start": 603.36,
+      "duration": 4.159
+    },
+    {
+      "text": "execute you can have as many",
+      "start": 605.76,
+      "duration": 5.84
+    },
+    {
+      "text": "things as you want going on under here",
+      "start": 607.519,
+      "duration": 4.081
+    },
+    {
+      "text": "um so what's kind of going on in the",
+      "start": 612.16,
+      "duration": 4.56
+    },
+    {
+      "text": "background here",
+      "start": 615.68,
+      "duration": 3.52
+    },
+    {
+      "text": "is it always evaluates that logical",
+      "start": 616.72,
+      "duration": 3.119
+    },
+    {
+      "text": "condition",
+      "start": 619.2,
+      "duration": 3.44
+    },
+    {
+      "text": "first and evaluates that into either",
+      "start": 619.839,
+      "duration": 3.281
+    },
+    {
+      "text": "true",
+      "start": 622.64,
+      "duration": 3.52
+    },
+    {
+      "text": "or false so we can actually pull out",
+      "start": 623.12,
+      "duration": 5.6
+    },
+    {
+      "text": "that condition itself and see what",
+      "start": 626.16,
+      "duration": 3.2
+    },
+    {
+      "text": "happens",
+      "start": 628.72,
+      "duration": 3.679
+    },
+    {
+      "text": "when it's evaluated uh if we look at",
+      "start": 629.36,
+      "duration": 6.719
+    },
+    {
+      "text": "cat uh is he is you know comparing that",
+      "start": 632.399,
+      "duration": 7.201
+    },
+    {
+      "text": "cat that evaluates to true whereas we if",
+      "start": 636.079,
+      "duration": 5.76
+    },
+    {
+      "text": "we compare it to dog then that evaluates",
+      "start": 639.6,
+      "duration": 2.56
+    },
+    {
+      "text": "to",
+      "start": 641.839,
+      "duration": 4.961
+    },
+    {
+      "text": "false um so these true or false",
+      "start": 642.16,
+      "duration": 7.919
+    },
+    {
+      "text": "are what we call booleans that's another",
+      "start": 646.8,
+      "duration": 4.24
+    },
+    {
+      "text": "data type",
+      "start": 650.079,
+      "duration": 3.76
+    },
+    {
+      "text": "in python and it's just it takes on",
+      "start": 651.04,
+      "duration": 4.479
+    },
+    {
+      "text": "values of either true or false",
+      "start": 653.839,
+      "duration": 5.0
+    },
+    {
+      "text": "are the only two possible values for a",
+      "start": 655.519,
+      "duration": 5.921
+    },
+    {
+      "text": "boolean",
+      "start": 658.839,
+      "duration": 6.44
+    },
+    {
+      "text": "and so basically python evaluates this",
+      "start": 661.44,
+      "duration": 5.76
+    },
+    {
+      "text": "and then you know as it's executing it",
+      "start": 665.279,
+      "duration": 2.8
+    },
+    {
+      "text": "it basically",
+      "start": 667.2,
+      "duration": 3.68
+    },
+    {
+      "text": "substitutes that and so now we're down",
+      "start": 668.079,
+      "duration": 4.801
+    },
+    {
+      "text": "to if true",
+      "start": 670.88,
+      "duration": 4.24
+    },
+    {
+      "text": "which it will always execute this it's",
+      "start": 672.88,
+      "duration": 4.16
+    },
+    {
+      "text": "gonna print got a cat or",
+      "start": 675.12,
+      "duration": 3.68
+    },
+    {
+      "text": "uh you know in this case it was",
+      "start": 677.04,
+      "duration": 3.039
+    },
+    {
+      "text": "evaluating cat",
+      "start": 678.8,
+      "duration": 3.279
+    },
+    {
+      "text": "is that equal to dog that evaluates to",
+      "start": 680.079,
+      "duration": 4.88
+    },
+    {
+      "text": "false and so it's not going to print",
+      "start": 682.079,
+      "duration": 6.801
+    },
+    {
+      "text": "uh got a cat",
+      "start": 684.959,
+      "duration": 7.361
+    },
+    {
+      "text": "um and again as i mentioned before uh",
+      "start": 688.88,
+      "duration": 6.8
+    },
+    {
+      "text": "single equals uh defines",
+      "start": 692.32,
+      "duration": 6.0
+    },
+    {
+      "text": "double equals compares so here we use",
+      "start": 695.68,
+      "duration": 3.839
+    },
+    {
+      "text": "the single equals",
+      "start": 698.32,
+      "duration": 5.36
+    },
+    {
+      "text": "and that's defining a to be equal to 5",
+      "start": 699.519,
+      "duration": 7.121
+    },
+    {
+      "text": "whereas double equals is comparing this",
+      "start": 703.68,
+      "duration": 3.52
+    },
+    {
+      "text": "is saying",
+      "start": 706.64,
+      "duration": 4.4
+    },
+    {
+      "text": "is a equal to 5 yes that is true",
+      "start": 707.2,
+      "duration": 6.319
+    },
+    {
+      "text": "is a equal to 6 no that's false because",
+      "start": 711.04,
+      "duration": 4.64
+    },
+    {
+      "text": "a is equal to 5",
+      "start": 713.519,
+      "duration": 5.12
+    },
+    {
+      "text": "which you see here",
+      "start": 715.68,
+      "duration": 2.959
+    },
+    {
+      "text": "and if you try to use just a single",
+      "start": 719.6,
+      "duration": 6.799
+    },
+    {
+      "text": "equals in the condition",
+      "start": 722.72,
+      "duration": 6.16
+    },
+    {
+      "text": "then it's going to give you a syntax",
+      "start": 726.399,
+      "duration": 3.68
+    },
+    {
+      "text": "error",
+      "start": 728.88,
+      "duration": 3.36
+    },
+    {
+      "text": "again a syntax error just means python",
+      "start": 730.079,
+      "duration": 3.44
+    },
+    {
+      "text": "doesn't understand",
+      "start": 732.24,
+      "duration": 3.36
+    },
+    {
+      "text": "what you're trying to do you didn't",
+      "start": 733.519,
+      "duration": 4.161
+    },
+    {
+      "text": "specify things in the correct way",
+      "start": 735.6,
+      "duration": 5.359
+    },
+    {
+      "text": "for python to understand it so because",
+      "start": 737.68,
+      "duration": 3.92
+    },
+    {
+      "text": "you're saying",
+      "start": 740.959,
+      "duration": 4.0
+    },
+    {
+      "text": "if a is equal is defined to equal five",
+      "start": 741.6,
+      "duration": 5.039
+    },
+    {
+      "text": "that doesn't make sense it's expecting",
+      "start": 744.959,
+      "duration": 4.401
+    },
+    {
+      "text": "to see a logical condition",
+      "start": 746.639,
+      "duration": 6.0
+    },
+    {
+      "text": "not an assignment um and so that's why",
+      "start": 749.36,
+      "duration": 6.159
+    },
+    {
+      "text": "it breaks here uh if you just use a",
+      "start": 752.639,
+      "duration": 4.0
+    },
+    {
+      "text": "single equals",
+      "start": 755.519,
+      "duration": 3.601
+    },
+    {
+      "text": "as soon as we put that double equals i",
+      "start": 756.639,
+      "duration": 3.76
+    },
+    {
+      "text": "have it right here",
+      "start": 759.12,
+      "duration": 5.76
+    },
+    {
+      "text": "uh then it will execute just fine",
+      "start": 760.399,
+      "duration": 4.481
+    },
+    {
+      "text": "so that's the basic if then we can go to",
+      "start": 765.839,
+      "duration": 4.721
+    },
+    {
+      "text": "using else",
+      "start": 769.519,
+      "duration": 5.76
+    },
+    {
+      "text": "as well so",
+      "start": 770.56,
+      "duration": 7.12
+    },
+    {
+      "text": "you know the else is going to run if the",
+      "start": 775.279,
+      "duration": 3.041
+    },
+    {
+      "text": "condition",
+      "start": 777.68,
+      "duration": 3.839
+    },
+    {
+      "text": "is false so",
+      "start": 778.32,
+      "duration": 5.6
+    },
+    {
+      "text": "here i'm defining my my variable to be",
+      "start": 781.519,
+      "duration": 3.76
+    },
+    {
+      "text": "abc",
+      "start": 783.92,
+      "duration": 3.76
+    },
+    {
+      "text": "if it's equal to nope which it's not",
+      "start": 785.279,
+      "duration": 4.24
+    },
+    {
+      "text": "that evaluates to false",
+      "start": 787.68,
+      "duration": 4.32
+    },
+    {
+      "text": "uh since it's false it's going to go",
+      "start": 789.519,
+      "duration": 4.081
+    },
+    {
+      "text": "into the else clause instead of",
+      "start": 792.0,
+      "duration": 4.8
+    },
+    {
+      "text": "into the if clause so that's why we get",
+      "start": 793.6,
+      "duration": 5.6
+    },
+    {
+      "text": "runs if condition is false from the",
+      "start": 796.8,
+      "duration": 4.159
+    },
+    {
+      "text": "output",
+      "start": 799.2,
+      "duration": 4.24
+    },
+    {
+      "text": "um and again pay attention to those",
+      "start": 800.959,
+      "duration": 4.32
+    },
+    {
+      "text": "levels of indentation",
+      "start": 803.44,
+      "duration": 4.88
+    },
+    {
+      "text": "it's you know if colon",
+      "start": 805.279,
+      "duration": 6.0
+    },
+    {
+      "text": "indentation logic that runs under the if",
+      "start": 808.32,
+      "duration": 3.44
+    },
+    {
+      "text": "and then",
+      "start": 811.279,
+      "duration": 4.0
+    },
+    {
+      "text": "back on to the last level of indentation",
+      "start": 811.76,
+      "duration": 6.72
+    },
+    {
+      "text": "else colon and then",
+      "start": 815.279,
+      "duration": 5.601
+    },
+    {
+      "text": "up into another level of indentation for",
+      "start": 818.48,
+      "duration": 5.039
+    },
+    {
+      "text": "the logic which runs as part of the else",
+      "start": 820.88,
+      "duration": 5.28
+    },
+    {
+      "text": "uh if you mess up any of these you know",
+      "start": 823.519,
+      "duration": 4.081
+    },
+    {
+      "text": "say you forgot that else",
+      "start": 826.16,
+      "duration": 4.32
+    },
+    {
+      "text": "should come back um you're going to",
+      "start": 827.6,
+      "duration": 4.32
+    },
+    {
+      "text": "again get a syntax",
+      "start": 830.48,
+      "duration": 3.68
+    },
+    {
+      "text": "error because it does not understand",
+      "start": 831.92,
+      "duration": 3.84
+    },
+    {
+      "text": "what you're trying to do basically this",
+      "start": 834.16,
+      "duration": 2.479
+    },
+    {
+      "text": "else is now",
+      "start": 835.76,
+      "duration": 2.24
+    },
+    {
+      "text": "coming from nowhere it doesn't",
+      "start": 836.639,
+      "duration": 3.041
+    },
+    {
+      "text": "understand that it's related to this",
+      "start": 838.0,
+      "duration": 4.959
+    },
+    {
+      "text": "if by having them on the same indication",
+      "start": 839.68,
+      "duration": 4.0
+    },
+    {
+      "text": "level",
+      "start": 842.959,
+      "duration": 3.281
+    },
+    {
+      "text": "then it is able to understand that uh",
+      "start": 843.68,
+      "duration": 4.159
+    },
+    {
+      "text": "this else is attached",
+      "start": 846.24,
+      "duration": 4.64
+    },
+    {
+      "text": "to this if",
+      "start": 847.839,
+      "duration": 3.041
+    },
+    {
+      "text": "um and so",
+      "start": 851.6,
+      "duration": 6.479
+    },
+    {
+      "text": "you know here same thing uh now looking",
+      "start": 854.639,
+      "duration": 6.56
+    },
+    {
+      "text": "at if it's abc which it was we defined",
+      "start": 858.079,
+      "duration": 4.721
+    },
+    {
+      "text": "it to be abc",
+      "start": 861.199,
+      "duration": 3.601
+    },
+    {
+      "text": "um so that's why we go into the if",
+      "start": 862.8,
+      "duration": 3.599
+    },
+    {
+      "text": "clause logic now",
+      "start": 864.8,
+      "duration": 4.0
+    },
+    {
+      "text": "rather than the else clause that we did",
+      "start": 866.399,
+      "duration": 5.44
+    },
+    {
+      "text": "back here",
+      "start": 868.8,
+      "duration": 3.039
+    },
+    {
+      "text": "so then this uh section here",
+      "start": 872.959,
+      "duration": 7.201
+    },
+    {
+      "text": "is about elif or elsif",
+      "start": 876.8,
+      "duration": 6.88
+    },
+    {
+      "text": "and so you don't really ever necessarily",
+      "start": 880.16,
+      "duration": 3.84
+    },
+    {
+      "text": "need",
+      "start": 883.68,
+      "duration": 3.599
+    },
+    {
+      "text": "to use e-lif it's really just",
+      "start": 884.0,
+      "duration": 6.639
+    },
+    {
+      "text": "a convenience thing um to make yourself",
+      "start": 887.279,
+      "duration": 6.481
+    },
+    {
+      "text": "not have to write as much logic",
+      "start": 890.639,
+      "duration": 5.44
+    },
+    {
+      "text": "and so here's the basic idea of an",
+      "start": 893.76,
+      "duration": 3.759
+    },
+    {
+      "text": "example where you might",
+      "start": 896.079,
+      "duration": 4.481
+    },
+    {
+      "text": "want to use elif",
+      "start": 897.519,
+      "duration": 6.081
+    },
+    {
+      "text": "and that's you know we've got uh you",
+      "start": 900.56,
+      "duration": 4.0
+    },
+    {
+      "text": "know",
+      "start": 903.6,
+      "duration": 3.919
+    },
+    {
+      "text": "whatever possible prices coming in we",
+      "start": 904.56,
+      "duration": 5.2
+    },
+    {
+      "text": "want to basically classify that",
+      "start": 907.519,
+      "duration": 5.921
+    },
+    {
+      "text": "into uh you know is it cheap is it",
+      "start": 909.76,
+      "duration": 6.639
+    },
+    {
+      "text": "mid-range is it expensive uh is it",
+      "start": 913.44,
+      "duration": 4.88
+    },
+    {
+      "text": "negative such that they're actually",
+      "start": 916.399,
+      "duration": 4.56
+    },
+    {
+      "text": "uh paying me rather than me paying them",
+      "start": 918.32,
+      "duration": 3.199
+    },
+    {
+      "text": "um",
+      "start": 920.959,
+      "duration": 5.041
+    },
+    {
+      "text": "so that's the idea here so um",
+      "start": 921.519,
+      "duration": 7.601
+    },
+    {
+      "text": "we run this uh price is a hundred and we",
+      "start": 926.0,
+      "duration": 4.959
+    },
+    {
+      "text": "get it's priced into the mid-range",
+      "start": 929.12,
+      "duration": 4.48
+    },
+    {
+      "text": "so how do we get there so it first",
+      "start": 930.959,
+      "duration": 4.641
+    },
+    {
+      "text": "starts if price is equal to zero",
+      "start": 933.6,
+      "duration": 5.12
+    },
+    {
+      "text": "well 100 or is less than zero price is a",
+      "start": 935.6,
+      "duration": 4.4
+    },
+    {
+      "text": "hundred so that's not",
+      "start": 938.72,
+      "duration": 3.919
+    },
+    {
+      "text": "less than zero that's false and so it's",
+      "start": 940.0,
+      "duration": 4.56
+    },
+    {
+      "text": "going to go to the next condition",
+      "start": 942.639,
+      "duration": 4.721
+    },
+    {
+      "text": "so now we have elif so that works kind",
+      "start": 944.56,
+      "duration": 3.279
+    },
+    {
+      "text": "of like an",
+      "start": 947.36,
+      "duration": 2.56
+    },
+    {
+      "text": "else that it builds off of the previous",
+      "start": 947.839,
+      "duration": 5.521
+    },
+    {
+      "text": "if but also it checks another condition",
+      "start": 949.92,
+      "duration": 6.8
+    },
+    {
+      "text": "so uh the price was not less than zero",
+      "start": 953.36,
+      "duration": 6.0
+    },
+    {
+      "text": "and so we're going to come here and then",
+      "start": 956.72,
+      "duration": 3.359
+    },
+    {
+      "text": "we're checking",
+      "start": 959.36,
+      "duration": 2.88
+    },
+    {
+      "text": "is the price less than 50. so that's",
+      "start": 960.079,
+      "duration": 3.841
+    },
+    {
+      "text": "basically saying that the price is now",
+      "start": 962.24,
+      "duration": 3.36
+    },
+    {
+      "text": "greater than zero",
+      "start": 963.92,
+      "duration": 4.24
+    },
+    {
+      "text": "greater than or equal to zero but less",
+      "start": 965.6,
+      "duration": 3.52
+    },
+    {
+      "text": "than fifty",
+      "start": 968.16,
+      "duration": 4.239
+    },
+    {
+      "text": "it's in that range of zero to fifty and",
+      "start": 969.12,
+      "duration": 4.48
+    },
+    {
+      "text": "if that were true",
+      "start": 972.399,
+      "duration": 3.201
+    },
+    {
+      "text": "then it would print it's pretty cheap",
+      "start": 973.6,
+      "duration": 4.159
+    },
+    {
+      "text": "but again a hundred is not less than",
+      "start": 975.6,
+      "duration": 4.4
+    },
+    {
+      "text": "fifty this evaluates to false",
+      "start": 977.759,
+      "duration": 4.241
+    },
+    {
+      "text": "and so it's again going to go on to the",
+      "start": 980.0,
+      "duration": 3.519
+    },
+    {
+      "text": "next statement",
+      "start": 982.0,
+      "duration": 4.72
+    },
+    {
+      "text": "um here you know else",
+      "start": 983.519,
+      "duration": 6.721
+    },
+    {
+      "text": "going off of this uh if and",
+      "start": 986.72,
+      "duration": 5.76
+    },
+    {
+      "text": "now it's saying you know else basically",
+      "start": 990.24,
+      "duration": 3.36
+    },
+    {
+      "text": "the price is",
+      "start": 992.48,
+      "duration": 3.359
+    },
+    {
+      "text": "greater than or equal to 50 because it",
+      "start": 993.6,
+      "duration": 4.72
+    },
+    {
+      "text": "has failed both of these conditions",
+      "start": 995.839,
+      "duration": 5.601
+    },
+    {
+      "text": "uh then also if",
+      "start": 998.32,
+      "duration": 6.48
+    },
+    {
+      "text": "that price is less than 150 then it's",
+      "start": 1001.44,
+      "duration": 6.24
+    },
+    {
+      "text": "going to be priced in the mid-range",
+      "start": 1004.8,
+      "duration": 7.2
+    },
+    {
+      "text": "so 100 now actually is less than 150",
+      "start": 1007.68,
+      "duration": 6.8
+    },
+    {
+      "text": "and so that's why we're going to end up",
+      "start": 1012.0,
+      "duration": 3.199
+    },
+    {
+      "text": "in this",
+      "start": 1014.48,
+      "duration": 2.88
+    },
+    {
+      "text": "statement and then you'll notice that we",
+      "start": 1015.199,
+      "duration": 3.601
+    },
+    {
+      "text": "only get that statement",
+      "start": 1017.36,
+      "duration": 4.88
+    },
+    {
+      "text": "because now this if has evaluated to",
+      "start": 1018.8,
+      "duration": 4.24
+    },
+    {
+      "text": "true",
+      "start": 1022.24,
+      "duration": 3.439
+    },
+    {
+      "text": "and so the else clause is not going to",
+      "start": 1023.04,
+      "duration": 4.08
+    },
+    {
+      "text": "execute",
+      "start": 1025.679,
+      "duration": 3.52
+    },
+    {
+      "text": "because now we did get a condition that",
+      "start": 1027.12,
+      "duration": 3.04
+    },
+    {
+      "text": "was true",
+      "start": 1029.199,
+      "duration": 2.561
+    },
+    {
+      "text": "and so it's not going to go into the",
+      "start": 1030.16,
+      "duration": 3.36
+    },
+    {
+      "text": "else the else is only",
+      "start": 1031.76,
+      "duration": 5.36
+    },
+    {
+      "text": "if the conditions were false",
+      "start": 1033.52,
+      "duration": 3.6
+    },
+    {
+      "text": "so if we did put the price as 200 then",
+      "start": 1037.36,
+      "duration": 4.319
+    },
+    {
+      "text": "we are going to get up here",
+      "start": 1040.4,
+      "duration": 3.439
+    },
+    {
+      "text": "into the else clause because here it",
+      "start": 1041.679,
+      "duration": 3.921
+    },
+    {
+      "text": "wasn't less than zero it wasn't less",
+      "start": 1043.839,
+      "duration": 2.401
+    },
+    {
+      "text": "than 50",
+      "start": 1045.6,
+      "duration": 3.28
+    },
+    {
+      "text": "it wasn't less than 150 all those",
+      "start": 1046.24,
+      "duration": 4.16
+    },
+    {
+      "text": "evaluated to false",
+      "start": 1048.88,
+      "duration": 3.44
+    },
+    {
+      "text": "and because they have all evaluated to",
+      "start": 1050.4,
+      "duration": 6.0
+    },
+    {
+      "text": "false we came into the else clause",
+      "start": 1052.32,
+      "duration": 8.0
+    },
+    {
+      "text": "or it could be negative we end up here",
+      "start": 1056.4,
+      "duration": 6.24
+    },
+    {
+      "text": "because we hit this first if condition",
+      "start": 1060.32,
+      "duration": 4.16
+    },
+    {
+      "text": "the price is less than zero",
+      "start": 1062.64,
+      "duration": 4.72
+    },
+    {
+      "text": "so we're here and then all of these are",
+      "start": 1064.48,
+      "duration": 4.24
+    },
+    {
+      "text": "else based",
+      "start": 1067.36,
+      "duration": 4.48
+    },
+    {
+      "text": "and so they're not going to run if the",
+      "start": 1068.72,
+      "duration": 3.839
+    },
+    {
+      "text": "first",
+      "start": 1071.84,
+      "duration": 3.44
+    },
+    {
+      "text": "if the prior condition was true um and",
+      "start": 1072.559,
+      "duration": 4.801
+    },
+    {
+      "text": "because the first condition was true",
+      "start": 1075.28,
+      "duration": 4.88
+    },
+    {
+      "text": "then we don't even evaluate any of these",
+      "start": 1077.36,
+      "duration": 4.0
+    },
+    {
+      "text": "we just hit here",
+      "start": 1080.16,
+      "duration": 3.519
+    },
+    {
+      "text": "and then it goes on after this block",
+      "start": 1081.36,
+      "duration": 3.84
+    },
+    {
+      "text": "after that",
+      "start": 1083.679,
+      "duration": 4.0
+    },
+    {
+      "text": "the else and the e-lift are only going",
+      "start": 1085.2,
+      "duration": 3.28
+    },
+    {
+      "text": "to execute",
+      "start": 1087.679,
+      "duration": 4.721
+    },
+    {
+      "text": "if the prior condition is false",
+      "start": 1088.48,
+      "duration": 5.439
+    },
+    {
+      "text": "so the reason that i say that this is",
+      "start": 1092.4,
+      "duration": 3.12
+    },
+    {
+      "text": "really more of a convenience thing to",
+      "start": 1093.919,
+      "duration": 2.961
+    },
+    {
+      "text": "make your code simpler",
+      "start": 1095.52,
+      "duration": 4.64
+    },
+    {
+      "text": "uh is that uh you know this code here",
+      "start": 1096.88,
+      "duration": 5.36
+    },
+    {
+      "text": "does the exact same thing we can see a",
+      "start": 1100.16,
+      "duration": 3.92
+    },
+    {
+      "text": "hundred gets into the mid-range",
+      "start": 1102.24,
+      "duration": 4.319
+    },
+    {
+      "text": "we can see that 200 uh gets too",
+      "start": 1104.08,
+      "duration": 3.2
+    },
+    {
+      "text": "expensive",
+      "start": 1106.559,
+      "duration": 4.561
+    },
+    {
+      "text": "we can see that negative 10 gets us to",
+      "start": 1107.28,
+      "duration": 7.44
+    },
+    {
+      "text": "you're going to pay me et cetera",
+      "start": 1111.12,
+      "duration": 5.36
+    },
+    {
+      "text": "but we can see that the code is a little",
+      "start": 1114.72,
+      "duration": 4.0
+    },
+    {
+      "text": "bit longer here so here we didn't use",
+      "start": 1116.48,
+      "duration": 3.68
+    },
+    {
+      "text": "any else",
+      "start": 1118.72,
+      "duration": 4.319
+    },
+    {
+      "text": "any e-lif we just did it all with plain",
+      "start": 1120.16,
+      "duration": 4.8
+    },
+    {
+      "text": "if conditions",
+      "start": 1123.039,
+      "duration": 4.241
+    },
+    {
+      "text": "but what we had to do here was here we",
+      "start": 1124.96,
+      "duration": 3.28
+    },
+    {
+      "text": "could just",
+      "start": 1127.28,
+      "duration": 3.44
+    },
+    {
+      "text": "you know knowing that it was already not",
+      "start": 1128.24,
+      "duration": 4.0
+    },
+    {
+      "text": "less than zero",
+      "start": 1130.72,
+      "duration": 3.12
+    },
+    {
+      "text": "we could just check if it's less than",
+      "start": 1132.24,
+      "duration": 3.28
+    },
+    {
+      "text": "50. but here",
+      "start": 1133.84,
+      "duration": 3.839
+    },
+    {
+      "text": "each if is totally separate it knows",
+      "start": 1135.52,
+      "duration": 3.2
+    },
+    {
+      "text": "nothing about",
+      "start": 1137.679,
+      "duration": 3.441
+    },
+    {
+      "text": "any of the prior ifs and so we need to",
+      "start": 1138.72,
+      "duration": 5.6
+    },
+    {
+      "text": "check all the conditions in each one",
+      "start": 1141.12,
+      "duration": 6.24
+    },
+    {
+      "text": "so here now this has to be",
+      "start": 1144.32,
+      "duration": 5.28
+    },
+    {
+      "text": "if the price is greater than zero and",
+      "start": 1147.36,
+      "duration": 3.679
+    },
+    {
+      "text": "it's less than 50",
+      "start": 1149.6,
+      "duration": 3.28
+    },
+    {
+      "text": "in other words it's in this zero to 50",
+      "start": 1151.039,
+      "duration": 4.561
+    },
+    {
+      "text": "range then we're going to print that",
+      "start": 1152.88,
+      "duration": 4.56
+    },
+    {
+      "text": "so you need to put both sides of this",
+      "start": 1155.6,
+      "duration": 3.84
+    },
+    {
+      "text": "condition because we can't",
+      "start": 1157.44,
+      "duration": 4.479
+    },
+    {
+      "text": "count on it's only going to get here if",
+      "start": 1159.44,
+      "duration": 4.16
+    },
+    {
+      "text": "the prior condition failed",
+      "start": 1161.919,
+      "duration": 4.081
+    },
+    {
+      "text": "because it's going to actually execute",
+      "start": 1163.6,
+      "duration": 4.56
+    },
+    {
+      "text": "all of these conditions and potentially",
+      "start": 1166.0,
+      "duration": 3.84
+    },
+    {
+      "text": "all of the",
+      "start": 1168.16,
+      "duration": 6.16
+    },
+    {
+      "text": "statements if those evaluate to true",
+      "start": 1169.84,
+      "duration": 7.04
+    },
+    {
+      "text": "um so that's you know kind of the basics",
+      "start": 1174.32,
+      "duration": 3.76
+    },
+    {
+      "text": "on conditionals",
+      "start": 1176.88,
+      "duration": 4.4
+    },
+    {
+      "text": "in python and then looking at the lab",
+      "start": 1178.08,
+      "duration": 4.959
+    },
+    {
+      "text": "exercises so you're going to be using",
+      "start": 1181.28,
+      "duration": 2.88
+    },
+    {
+      "text": "this same",
+      "start": 1183.039,
+      "duration": 2.88
+    },
+    {
+      "text": "jupiter notebook for all the lab",
+      "start": 1184.16,
+      "duration": 3.519
+    },
+    {
+      "text": "exercises in this",
+      "start": 1185.919,
+      "duration": 5.76
+    },
+    {
+      "text": "segment and so here",
+      "start": 1187.679,
+      "duration": 7.12
+    },
+    {
+      "text": "we have three exercises on the",
+      "start": 1191.679,
+      "duration": 5.441
+    },
+    {
+      "text": "conditionals",
+      "start": 1194.799,
+      "duration": 5.361
+    },
+    {
+      "text": "and these exercises",
+      "start": 1197.12,
+      "duration": 4.96
+    },
+    {
+      "text": "you'll notice also build off of some of",
+      "start": 1200.16,
+      "duration": 3.519
+    },
+    {
+      "text": "the material that we've already learned",
+      "start": 1202.08,
+      "duration": 4.079
+    },
+    {
+      "text": "you're going to have to you know use a",
+      "start": 1203.679,
+      "duration": 6.0
+    },
+    {
+      "text": "for loop for some of these exercises",
+      "start": 1206.159,
+      "duration": 5.041
+    },
+    {
+      "text": "so you know everything in the course",
+      "start": 1209.679,
+      "duration": 3.921
+    },
+    {
+      "text": "kind of builds on each other until",
+      "start": 1211.2,
+      "duration": 3.599
+    },
+    {
+      "text": "ultimately we can",
+      "start": 1213.6,
+      "duration": 4.559
+    },
+    {
+      "text": "build complex financial models",
+      "start": 1214.799,
+      "duration": 5.521
+    },
+    {
+      "text": "so you know that concludes uh the",
+      "start": 1218.159,
+      "duration": 4.4
+    },
+    {
+      "text": "material on conditionals",
+      "start": 1220.32,
+      "duration": 4.96
+    },
+    {
+      "text": "and we're going to come back next time",
+      "start": 1222.559,
+      "duration": 3.12
+    },
+    {
+      "text": "to",
+      "start": 1225.28,
+      "duration": 2.96
+    },
+    {
+      "text": "talk about grouping objects together",
+      "start": 1225.679,
+      "duration": 3.12
+    },
+    {
+      "text": "using",
+      "start": 1228.24,
+      "duration": 3.28
+    },
+    {
+      "text": "lists so thank you for listening and see",
+      "start": 1228.799,
+      "duration": 7.041
+    },
+    {
+      "text": "you next time",
+      "start": 1231.52,
+      "duration": 4.32
+    }
+  ]
+}

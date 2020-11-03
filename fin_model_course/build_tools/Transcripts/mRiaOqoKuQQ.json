@@ -1,0 +1,1679 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.04,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 4.0,
+      "duration": 3.759
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.44,
+      "duration": 4.96
+    },
+    {
+      "text": "be solving the lab exercise on how to",
+      "start": 7.759,
+      "duration": 4.081
+    },
+    {
+      "text": "build a simple model",
+      "start": 10.4,
+      "duration": 4.88
+    },
+    {
+      "text": "of stock returns and this we're covering",
+      "start": 11.84,
+      "duration": 3.839
+    },
+    {
+      "text": "as",
+      "start": 15.28,
+      "duration": 3.44
+    },
+    {
+      "text": "part of the internal randomness material",
+      "start": 15.679,
+      "duration": 6.241
+    },
+    {
+      "text": "uh looking at discrete variables",
+      "start": 18.72,
+      "duration": 6.96
+    },
+    {
+      "text": "so uh in this lab",
+      "start": 21.92,
+      "duration": 5.679
+    },
+    {
+      "text": "and this is going to be in both excel",
+      "start": 25.68,
+      "duration": 3.439
+    },
+    {
+      "text": "and python",
+      "start": 27.599,
+      "duration": 3.92
+    },
+    {
+      "text": "the idea is to build a simple stock",
+      "start": 29.119,
+      "duration": 4.241
+    },
+    {
+      "text": "model where the stock starts at some",
+      "start": 31.519,
+      "duration": 2.56
+    },
+    {
+      "text": "price",
+      "start": 33.36,
+      "duration": 2.96
+    },
+    {
+      "text": "it goes through a number of periods and",
+      "start": 34.079,
+      "duration": 3.601
+    },
+    {
+      "text": "it just goes up or down",
+      "start": 36.32,
+      "duration": 4.559
+    },
+    {
+      "text": "by a fixed amount each period",
+      "start": 37.68,
+      "duration": 5.44
+    },
+    {
+      "text": "so here going up by one percent or down",
+      "start": 40.879,
+      "duration": 3.441
+    },
+    {
+      "text": "by one percent",
+      "start": 43.12,
+      "duration": 5.439
+    },
+    {
+      "text": "in each period and it's going to be",
+      "start": 44.32,
+      "duration": 7.04
+    },
+    {
+      "text": "uh certain probabilities that the stock",
+      "start": 48.559,
+      "duration": 4.241
+    },
+    {
+      "text": "is going to go up or down here",
+      "start": 51.36,
+      "duration": 4.48
+    },
+    {
+      "text": "60 percent up 40 down",
+      "start": 52.8,
+      "duration": 5.12
+    },
+    {
+      "text": "and we want to visualize what happens to",
+      "start": 55.84,
+      "duration": 3.039
+    },
+    {
+      "text": "the stock price",
+      "start": 57.92,
+      "duration": 4.72
+    },
+    {
+      "text": "over time so let's come first to the",
+      "start": 58.879,
+      "duration": 5.441
+    },
+    {
+      "text": "excel model",
+      "start": 62.64,
+      "duration": 5.28
+    },
+    {
+      "text": "um so we want to",
+      "start": 64.32,
+      "duration": 8.32
+    },
+    {
+      "text": "first make our inputs as we always do",
+      "start": 67.92,
+      "duration": 8.239
+    },
+    {
+      "text": "and we're going to have here",
+      "start": 72.64,
+      "duration": 7.2
+    },
+    {
+      "text": "the probabilities so we can have the",
+      "start": 76.159,
+      "duration": 6.721
+    },
+    {
+      "text": "up probability",
+      "start": 79.84,
+      "duration": 3.04
+    },
+    {
+      "text": "and that is 60",
+      "start": 85.36,
+      "duration": 6.079
+    },
+    {
+      "text": "um and we don't need to put the down",
+      "start": 88.64,
+      "duration": 4.159
+    },
+    {
+      "text": "probability because that's going to be",
+      "start": 91.439,
+      "duration": 2.32
+    },
+    {
+      "text": "one minus",
+      "start": 92.799,
+      "duration": 4.081
+    },
+    {
+      "text": "the up probability uh so we can",
+      "start": 93.759,
+      "duration": 5.601
+    },
+    {
+      "text": "even have that as an output down",
+      "start": 96.88,
+      "duration": 4.879
+    },
+    {
+      "text": "probability",
+      "start": 99.36,
+      "duration": 4.56
+    },
+    {
+      "text": "is going to equal one minus the uh",
+      "start": 101.759,
+      "duration": 4.801
+    },
+    {
+      "text": "probability",
+      "start": 103.92,
+      "duration": 2.64
+    },
+    {
+      "text": "um and then we need the up",
+      "start": 107.6,
+      "duration": 7.519
+    },
+    {
+      "text": "percentage or the up return",
+      "start": 110.88,
+      "duration": 7.279
+    },
+    {
+      "text": "is one percent the down",
+      "start": 115.119,
+      "duration": 8.32
+    },
+    {
+      "text": "return is going to be minus one percent",
+      "start": 118.159,
+      "duration": 5.28
+    },
+    {
+      "text": "um and then we want to make",
+      "start": 123.52,
+      "duration": 6.879
+    },
+    {
+      "text": "a hundred periods so we can have t",
+      "start": 126.799,
+      "duration": 6.401
+    },
+    {
+      "text": "and we can have the price and the price",
+      "start": 130.399,
+      "duration": 7.121
+    },
+    {
+      "text": "of so another input is the initial price",
+      "start": 133.2,
+      "duration": 4.32
+    },
+    {
+      "text": "100 not a percentage that's going to be",
+      "start": 137.68,
+      "duration": 6.8
+    },
+    {
+      "text": "general 100",
+      "start": 141.04,
+      "duration": 5.919
+    },
+    {
+      "text": "we can reference that for the initial",
+      "start": 144.48,
+      "duration": 3.2
+    },
+    {
+      "text": "price",
+      "start": 146.959,
+      "duration": 2.801
+    },
+    {
+      "text": "and t is going to start at zero then go",
+      "start": 147.68,
+      "duration": 4.4
+    },
+    {
+      "text": "to one",
+      "start": 149.76,
+      "duration": 3.6
+    },
+    {
+      "text": "[Music]",
+      "start": 152.08,
+      "duration": 5.28
+    },
+    {
+      "text": "and so the other thing we need",
+      "start": 153.36,
+      "duration": 5.84
+    },
+    {
+      "text": "besides the price so i'm gonna actually",
+      "start": 157.36,
+      "duration": 3.519
+    },
+    {
+      "text": "move the price over",
+      "start": 159.2,
+      "duration": 6.88
+    },
+    {
+      "text": "is uh up or down",
+      "start": 160.879,
+      "duration": 5.201
+    },
+    {
+      "text": "um since we only have",
+      "start": 166.48,
+      "duration": 8.8
+    },
+    {
+      "text": "uh two cases here it's easy just do this",
+      "start": 171.36,
+      "duration": 6.799
+    },
+    {
+      "text": "with a one or zero so i'm going to say",
+      "start": 175.28,
+      "duration": 5.2
+    },
+    {
+      "text": "uh stock going up so that's going to be",
+      "start": 178.159,
+      "duration": 3.681
+    },
+    {
+      "text": "one when the stock goes up",
+      "start": 180.48,
+      "duration": 5.839
+    },
+    {
+      "text": "and zero when it is going down",
+      "start": 181.84,
+      "duration": 7.92
+    },
+    {
+      "text": "um so here is where",
+      "start": 186.319,
+      "duration": 6.721
+    },
+    {
+      "text": "we can use that discrete random variable",
+      "start": 189.76,
+      "duration": 5.759
+    },
+    {
+      "text": "approach that we learned about for excel",
+      "start": 193.04,
+      "duration": 5.52
+    },
+    {
+      "text": "now we only have two values",
+      "start": 195.519,
+      "duration": 6.08
+    },
+    {
+      "text": "to pick from and so",
+      "start": 198.56,
+      "duration": 6.08
+    },
+    {
+      "text": "it's actually much simpler than what we",
+      "start": 201.599,
+      "duration": 4.241
+    },
+    {
+      "text": "looked at in the example",
+      "start": 204.64,
+      "duration": 4.319
+    },
+    {
+      "text": "so it's just if and we can even",
+      "start": 205.84,
+      "duration": 5.52
+    },
+    {
+      "text": "put the rand in here because we only",
+      "start": 208.959,
+      "duration": 3.36
+    },
+    {
+      "text": "have a single check",
+      "start": 211.36,
+      "duration": 3.28
+    },
+    {
+      "text": "you can't do this when you have multiple",
+      "start": 212.319,
+      "duration": 3.92
+    },
+    {
+      "text": "conditions you need to check because you",
+      "start": 214.64,
+      "duration": 2.319
+    },
+    {
+      "text": "have more than",
+      "start": 216.239,
+      "duration": 3.28
+    },
+    {
+      "text": "two values you're choosing from but if",
+      "start": 216.959,
+      "duration": 4.321
+    },
+    {
+      "text": "there's only one value",
+      "start": 219.519,
+      "duration": 3.921
+    },
+    {
+      "text": "then uh or only two values you're",
+      "start": 221.28,
+      "duration": 3.2
+    },
+    {
+      "text": "choosing from",
+      "start": 223.44,
+      "duration": 4.48
+    },
+    {
+      "text": "then if rand is less than uh",
+      "start": 224.48,
+      "duration": 6.96
+    },
+    {
+      "text": "sixty percent uh so that's the sixty",
+      "start": 227.92,
+      "duration": 5.2
+    },
+    {
+      "text": "percent range that's going to correspond",
+      "start": 231.44,
+      "duration": 2.64
+    },
+    {
+      "text": "to up",
+      "start": 233.12,
+      "duration": 4.8
+    },
+    {
+      "text": "and otherwise it's gonna be down um",
+      "start": 234.08,
+      "duration": 6.48
+    },
+    {
+      "text": "so that's all that's necessary here to",
+      "start": 237.92,
+      "duration": 4.0
+    },
+    {
+      "text": "get it going up sometimes",
+      "start": 240.56,
+      "duration": 5.599
+    },
+    {
+      "text": "down sometimes based on that probability",
+      "start": 241.92,
+      "duration": 4.239
+    },
+    {
+      "text": "so then um we can",
+      "start": 246.319,
+      "duration": 5.2
+    },
+    {
+      "text": "select the return based upon that",
+      "start": 252.159,
+      "duration": 6.961
+    },
+    {
+      "text": "so if this and because it's one or zero",
+      "start": 255.439,
+      "duration": 7.121
+    },
+    {
+      "text": "we can just leave it at if that um",
+      "start": 259.12,
+      "duration": 6.639
+    },
+    {
+      "text": "then it's going to be the upper turn",
+      "start": 262.56,
+      "duration": 5.76
+    },
+    {
+      "text": "if true and we want to fix that and it's",
+      "start": 265.759,
+      "duration": 4.481
+    },
+    {
+      "text": "going to be the down return if false",
+      "start": 268.32,
+      "duration": 5.36
+    },
+    {
+      "text": "also fixed um we can format that as",
+      "start": 270.24,
+      "duration": 5.28
+    },
+    {
+      "text": "percentage",
+      "start": 273.68,
+      "duration": 4.959
+    },
+    {
+      "text": "so now we can see that it's",
+      "start": 275.52,
+      "duration": 4.399
+    },
+    {
+      "text": "when the stock's going up we're getting",
+      "start": 278.639,
+      "duration": 3.041
+    },
+    {
+      "text": "one percent and when it's going down",
+      "start": 279.919,
+      "duration": 4.161
+    },
+    {
+      "text": "we're getting negative one percent",
+      "start": 281.68,
+      "duration": 5.6
+    },
+    {
+      "text": "um so then we can go ahead and calculate",
+      "start": 284.08,
+      "duration": 4.48
+    },
+    {
+      "text": "our new prices",
+      "start": 287.28,
+      "duration": 3.12
+    },
+    {
+      "text": "so the new price is always going to be",
+      "start": 288.56,
+      "duration": 3.199
+    },
+    {
+      "text": "the last price",
+      "start": 290.4,
+      "duration": 5.92
+    },
+    {
+      "text": "times one plus the return",
+      "start": 291.759,
+      "duration": 4.561
+    },
+    {
+      "text": "so then um",
+      "start": 297.12,
+      "duration": 4.799
+    },
+    {
+      "text": "we should be able to just drag this down",
+      "start": 303.6,
+      "duration": 5.12
+    },
+    {
+      "text": "to 100 periods",
+      "start": 305.52,
+      "duration": 3.2
+    },
+    {
+      "text": "more than enough and i can delete off",
+      "start": 308.88,
+      "duration": 5.12
+    },
+    {
+      "text": "the excess",
+      "start": 311.36,
+      "duration": 2.64
+    },
+    {
+      "text": "so there we have it going to a hundred",
+      "start": 316.479,
+      "duration": 3.44
+    },
+    {
+      "text": "periods",
+      "start": 318.56,
+      "duration": 4.079
+    },
+    {
+      "text": "um so then the last thing that we want",
+      "start": 319.919,
+      "duration": 3.361
+    },
+    {
+      "text": "to do",
+      "start": 322.639,
+      "duration": 4.0
+    },
+    {
+      "text": "is graph this so i'm going to highlight",
+      "start": 323.28,
+      "duration": 5.28
+    },
+    {
+      "text": "everything and i'll get the headers as",
+      "start": 326.639,
+      "duration": 4.161
+    },
+    {
+      "text": "well",
+      "start": 328.56,
+      "duration": 2.24
+    },
+    {
+      "text": "and i want to insert recommended charts",
+      "start": 332.56,
+      "duration": 6.56
+    },
+    {
+      "text": "um so yeah i'll do a line chart but i'm",
+      "start": 336.32,
+      "duration": 4.8
+    },
+    {
+      "text": "going to have to",
+      "start": 339.12,
+      "duration": 6.16
+    },
+    {
+      "text": "then um change the data selection",
+      "start": 341.12,
+      "duration": 5.919
+    },
+    {
+      "text": "let me just do it by dragging we only",
+      "start": 345.28,
+      "duration": 4.0
+    },
+    {
+      "text": "want the price out of that",
+      "start": 347.039,
+      "duration": 5.761
+    },
+    {
+      "text": "um so there we go now we have",
+      "start": 349.28,
+      "duration": 7.12
+    },
+    {
+      "text": "um c here on the",
+      "start": 352.8,
+      "duration": 7.519
+    },
+    {
+      "text": "x axis and and price on the y axis",
+      "start": 356.4,
+      "duration": 8.88
+    },
+    {
+      "text": "so then as we recalculate the model",
+      "start": 360.319,
+      "duration": 8.32
+    },
+    {
+      "text": "then we will see everything",
+      "start": 365.28,
+      "duration": 16.4
+    },
+    {
+      "text": "update which",
+      "start": 368.639,
+      "duration": 16.481
+    },
+    {
+      "text": "seems to be going down a lot um i think",
+      "start": 381.68,
+      "duration": 4.32
+    },
+    {
+      "text": "there may be an",
+      "start": 385.12,
+      "duration": 3.199
+    },
+    {
+      "text": "issue",
+      "start": 386.0,
+      "duration": 2.319
+    },
+    {
+      "text": "yep so it was always going down i knew",
+      "start": 390.0,
+      "duration": 4.96
+    },
+    {
+      "text": "that was a bad sign",
+      "start": 393.039,
+      "duration": 4.16
+    },
+    {
+      "text": "it's because i forgot to fix this up",
+      "start": 394.96,
+      "duration": 3.6
+    },
+    {
+      "text": "probability here",
+      "start": 397.199,
+      "duration": 3.44
+    },
+    {
+      "text": "so i'll go ahead and fix that then i",
+      "start": 398.56,
+      "duration": 3.359
+    },
+    {
+      "text": "should be able to just double click this",
+      "start": 400.639,
+      "duration": 3.521
+    },
+    {
+      "text": "to complete everywhere",
+      "start": 401.919,
+      "duration": 6.0
+    },
+    {
+      "text": "now we see some other price patterns",
+      "start": 404.16,
+      "duration": 7.039
+    },
+    {
+      "text": "so now as i recalculate this okay",
+      "start": 407.919,
+      "duration": 6.241
+    },
+    {
+      "text": "now it's changing it should be usually",
+      "start": 411.199,
+      "duration": 5.041
+    },
+    {
+      "text": "up because there's a higher up",
+      "start": 414.16,
+      "duration": 5.28
+    },
+    {
+      "text": "probability and now we are",
+      "start": 416.24,
+      "duration": 6.73
+    },
+    {
+      "text": "indeed seeing that is the case",
+      "start": 419.44,
+      "duration": 5.28
+    },
+    {
+      "text": "[Music]",
+      "start": 422.97,
+      "duration": 5.99
+    },
+    {
+      "text": "so there we go that's the exercise",
+      "start": 424.72,
+      "duration": 7.36
+    },
+    {
+      "text": "in excel we got it up to 100 periods and",
+      "start": 428.96,
+      "duration": 4.72
+    },
+    {
+      "text": "visualizing what's happening",
+      "start": 432.08,
+      "duration": 4.88
+    },
+    {
+      "text": "with the price so now let's move",
+      "start": 433.68,
+      "duration": 6.48
+    },
+    {
+      "text": "over to the implementation in python",
+      "start": 436.96,
+      "duration": 5.2
+    },
+    {
+      "text": "so let's work with a blank jupiter",
+      "start": 440.16,
+      "duration": 3.039
+    },
+    {
+      "text": "notebook here",
+      "start": 442.16,
+      "duration": 3.84
+    },
+    {
+      "text": "and we're going to have a lot of those",
+      "start": 443.199,
+      "duration": 4.641
+    },
+    {
+      "text": "same inputs that we just",
+      "start": 446.0,
+      "duration": 4.319
+    },
+    {
+      "text": "talked about and i know i'm going to",
+      "start": 447.84,
+      "duration": 4.24
+    },
+    {
+      "text": "want to use pandas for this so i'm just",
+      "start": 450.319,
+      "duration": 3.121
+    },
+    {
+      "text": "going to go ahead",
+      "start": 452.08,
+      "duration": 4.32
+    },
+    {
+      "text": "and import that",
+      "start": 453.44,
+      "duration": 2.96
+    },
+    {
+      "text": "and let's line up some of our inputs so",
+      "start": 456.479,
+      "duration": 5.521
+    },
+    {
+      "text": "we're going to have 100 periods",
+      "start": 458.72,
+      "duration": 7.28
+    },
+    {
+      "text": "and we're going to um",
+      "start": 462.0,
+      "duration": 7.28
+    },
+    {
+      "text": "have the up probability as 60",
+      "start": 466.0,
+      "duration": 6.72
+    },
+    {
+      "text": "and uh the up return",
+      "start": 469.28,
+      "duration": 6.56
+    },
+    {
+      "text": "is going to be 1",
+      "start": 472.72,
+      "duration": 6.159
+    },
+    {
+      "text": "the down return is going to be minus",
+      "start": 475.84,
+      "duration": 6.16
+    },
+    {
+      "text": "one percent um",
+      "start": 478.879,
+      "duration": 8.0
+    },
+    {
+      "text": "those are inputs and then the uh",
+      "start": 482.0,
+      "duration": 4.879
+    },
+    {
+      "text": "down probability",
+      "start": 488.16,
+      "duration": 8.8
+    },
+    {
+      "text": "uh is just one minus the up probability",
+      "start": 492.0,
+      "duration": 4.96
+    },
+    {
+      "text": "and we can print that out as an output",
+      "start": 501.039,
+      "duration": 6.801
+    },
+    {
+      "text": "down probability and percentage",
+      "start": 510.879,
+      "duration": 5.6
+    },
+    {
+      "text": "formatting",
+      "start": 513.919,
+      "duration": 2.56
+    },
+    {
+      "text": "um so then we want to also",
+      "start": 516.56,
+      "duration": 4.959
+    },
+    {
+      "text": "go ahead and build out the actual stock",
+      "start": 519.839,
+      "duration": 3.041
+    },
+    {
+      "text": "model part",
+      "start": 521.519,
+      "duration": 5.44
+    },
+    {
+      "text": "so we need to pick for each period",
+      "start": 522.88,
+      "duration": 5.76
+    },
+    {
+      "text": "whether it's going to be going up or",
+      "start": 526.959,
+      "duration": 3.681
+    },
+    {
+      "text": "down",
+      "start": 528.64,
+      "duration": 5.44
+    },
+    {
+      "text": "um so a",
+      "start": 530.64,
+      "duration": 5.6
+    },
+    {
+      "text": "there's a few different ways we can go",
+      "start": 534.08,
+      "duration": 3.92
+    },
+    {
+      "text": "about this",
+      "start": 536.24,
+      "duration": 4.24
+    },
+    {
+      "text": "um i'm going to look at an approach",
+      "start": 538.0,
+      "duration": 3.04
+    },
+    {
+      "text": "using",
+      "start": 540.48,
+      "duration": 4.32
+    },
+    {
+      "text": "a loop so um",
+      "start": 541.04,
+      "duration": 6.96
+    },
+    {
+      "text": "i'm going to say 4i and range m so we're",
+      "start": 544.8,
+      "duration": 6.24
+    },
+    {
+      "text": "going to have 100 loops",
+      "start": 548.0,
+      "duration": 3.04
+    },
+    {
+      "text": "and oh i forgot the input of initial",
+      "start": 551.279,
+      "duration": 3.521
+    },
+    {
+      "text": "price",
+      "start": 554.32,
+      "duration": 4.079
+    },
+    {
+      "text": "is going to equal 100 and here we're",
+      "start": 554.8,
+      "duration": 6.039
+    },
+    {
+      "text": "going to initialize price to the initial",
+      "start": 558.399,
+      "duration": 5.44
+    },
+    {
+      "text": "price",
+      "start": 560.839,
+      "duration": 3.0
+    },
+    {
+      "text": "i didn't rerun that that's why it was",
+      "start": 566.0,
+      "duration": 3.6
+    },
+    {
+      "text": "complaining",
+      "start": 568.32,
+      "duration": 4.56
+    },
+    {
+      "text": "so uh initialized price to the initial",
+      "start": 569.6,
+      "duration": 4.88
+    },
+    {
+      "text": "price",
+      "start": 572.88,
+      "duration": 5.36
+    },
+    {
+      "text": "and then for each period well we can say",
+      "start": 574.48,
+      "duration": 4.24
+    },
+    {
+      "text": "that",
+      "start": 578.24,
+      "duration": 4.4
+    },
+    {
+      "text": "here is going to equal i plus one um",
+      "start": 578.72,
+      "duration": 7.52
+    },
+    {
+      "text": "and we then want to",
+      "start": 582.64,
+      "duration": 6.16
+    },
+    {
+      "text": "uh pick whether the stock is going up or",
+      "start": 586.24,
+      "duration": 3.92
+    },
+    {
+      "text": "down so we're going to also need to",
+      "start": 588.8,
+      "duration": 4.24
+    },
+    {
+      "text": "import random",
+      "start": 590.16,
+      "duration": 8.08
+    },
+    {
+      "text": "and now we can say",
+      "start": 593.04,
+      "duration": 5.2
+    },
+    {
+      "text": "up or down equals random.choices",
+      "start": 599.12,
+      "duration": 9.52
+    },
+    {
+      "text": "and we're going to give it up or down",
+      "start": 604.16,
+      "duration": 7.6
+    },
+    {
+      "text": "and it's going to be",
+      "start": 608.64,
+      "duration": 3.12
+    },
+    {
+      "text": "we'll move this to before this because",
+      "start": 611.92,
+      "duration": 3.28
+    },
+    {
+      "text": "uh",
+      "start": 614.8,
+      "duration": 2.56
+    },
+    {
+      "text": "we're going to use that it's going to be",
+      "start": 615.2,
+      "duration": 4.4
+    },
+    {
+      "text": "the up prob and the down",
+      "start": 617.36,
+      "duration": 5.36
+    },
+    {
+      "text": "probability and don't forget the",
+      "start": 619.6,
+      "duration": 3.76
+    },
+    {
+      "text": "brackets",
+      "start": 622.72,
+      "duration": 3.679
+    },
+    {
+      "text": "0 at the end of that to pull it out of",
+      "start": 623.36,
+      "duration": 3.599
+    },
+    {
+      "text": "the list",
+      "start": 626.399,
+      "duration": 4.641
+    },
+    {
+      "text": "since we're just getting a single value",
+      "start": 626.959,
+      "duration": 4.081
+    },
+    {
+      "text": "so then we're going to set the",
+      "start": 631.2,
+      "duration": 6.879
+    },
+    {
+      "text": "return so if up or down",
+      "start": 634.88,
+      "duration": 6.079
+    },
+    {
+      "text": "equals up",
+      "start": 638.079,
+      "duration": 2.88
+    },
+    {
+      "text": "then return and we don't want to use",
+      "start": 641.12,
+      "duration": 5.44
+    },
+    {
+      "text": "the word return because that's special",
+      "start": 644.72,
+      "duration": 4.0
+    },
+    {
+      "text": "in python we're going to use ret",
+      "start": 646.56,
+      "duration": 5.36
+    },
+    {
+      "text": "red equals uprep else",
+      "start": 648.72,
+      "duration": 6.4
+    },
+    {
+      "text": "red equals downrav",
+      "start": 651.92,
+      "duration": 6.4
+    },
+    {
+      "text": "okay so now we have the return and now",
+      "start": 655.12,
+      "duration": 4.159
+    },
+    {
+      "text": "we can",
+      "start": 658.32,
+      "duration": 4.4
+    },
+    {
+      "text": "also calculate the new price so price",
+      "start": 659.279,
+      "duration": 7.12
+    },
+    {
+      "text": "is going to equal price",
+      "start": 662.72,
+      "duration": 7.84
+    },
+    {
+      "text": "times one last return",
+      "start": 666.399,
+      "duration": 4.161
+    },
+    {
+      "text": "um and so the last thing",
+      "start": 670.72,
+      "duration": 6.16
+    },
+    {
+      "text": "that we'll want to do here is store",
+      "start": 674.399,
+      "duration": 3.281
+    },
+    {
+      "text": "these values",
+      "start": 676.88,
+      "duration": 3.76
+    },
+    {
+      "text": "so that we can uh put them into a data",
+      "start": 677.68,
+      "duration": 3.68
+    },
+    {
+      "text": "frame",
+      "start": 680.64,
+      "duration": 4.24
+    },
+    {
+      "text": "so i'm going to create a list",
+      "start": 681.36,
+      "duration": 6.64
+    },
+    {
+      "text": "uh df data",
+      "start": 684.88,
+      "duration": 5.6
+    },
+    {
+      "text": "and then i'm going to append to that at",
+      "start": 688.0,
+      "duration": 4.8
+    },
+    {
+      "text": "the end so i'm going to append a tuple",
+      "start": 690.48,
+      "duration": 5.52
+    },
+    {
+      "text": "which has the year",
+      "start": 692.8,
+      "duration": 3.2
+    },
+    {
+      "text": "and it has up or down",
+      "start": 696.079,
+      "duration": 7.44
+    },
+    {
+      "text": "and it has the uh",
+      "start": 700.079,
+      "duration": 7.601
+    },
+    {
+      "text": "price and then i can create",
+      "start": 703.519,
+      "duration": 8.0
+    },
+    {
+      "text": "the data frame from the df data",
+      "start": 707.68,
+      "duration": 7.68
+    },
+    {
+      "text": "and the columns are going to be a year",
+      "start": 711.519,
+      "duration": 8.961
+    },
+    {
+      "text": "up four down and the price",
+      "start": 715.36,
+      "duration": 5.12
+    },
+    {
+      "text": "and there we have it we have 100 periods",
+      "start": 720.88,
+      "duration": 4.959
+    },
+    {
+      "text": "we have it going up or down in each",
+      "start": 724.399,
+      "duration": 3.44
+    },
+    {
+      "text": "period and we have it",
+      "start": 725.839,
+      "duration": 5.44
+    },
+    {
+      "text": "reaching a final price by the end so all",
+      "start": 727.839,
+      "duration": 3.761
+    },
+    {
+      "text": "this",
+      "start": 731.279,
+      "duration": 4.0
+    },
+    {
+      "text": "looks like it's working appropriately",
+      "start": 731.6,
+      "duration": 5.52
+    },
+    {
+      "text": "so i'm going to go ahead and put this",
+      "start": 735.279,
+      "duration": 4.0
+    },
+    {
+      "text": "into a function",
+      "start": 737.12,
+      "duration": 7.04
+    },
+    {
+      "text": "so this would be get price df um",
+      "start": 739.279,
+      "duration": 8.481
+    },
+    {
+      "text": "and that is going to take the",
+      "start": 744.16,
+      "duration": 6.799
+    },
+    {
+      "text": "n the up prob it's going to take",
+      "start": 747.76,
+      "duration": 5.36
+    },
+    {
+      "text": "the upper end it's going to take the",
+      "start": 750.959,
+      "duration": 3.761
+    },
+    {
+      "text": "downrap",
+      "start": 753.12,
+      "duration": 4.48
+    },
+    {
+      "text": "and the initial price so this is where",
+      "start": 754.72,
+      "duration": 3.359
+    },
+    {
+      "text": "like",
+      "start": 757.6,
+      "duration": 3.679
+    },
+    {
+      "text": "uh doing the model inputs type structure",
+      "start": 758.079,
+      "duration": 4.721
+    },
+    {
+      "text": "with the data class starts to",
+      "start": 761.279,
+      "duration": 3.761
+    },
+    {
+      "text": "help a lot i'm passing so many different",
+      "start": 762.8,
+      "duration": 3.839
+    },
+    {
+      "text": "separate things here that could have all",
+      "start": 765.04,
+      "duration": 3.599
+    },
+    {
+      "text": "just been a single variable",
+      "start": 766.639,
+      "duration": 6.64
+    },
+    {
+      "text": "um but i'll just stick with that for now",
+      "start": 768.639,
+      "duration": 7.681
+    },
+    {
+      "text": "so now uh when i call get price df",
+      "start": 773.279,
+      "duration": 6.8
+    },
+    {
+      "text": "on the end up prob upred down rat",
+      "start": 776.32,
+      "duration": 6.959
+    },
+    {
+      "text": "and initial price um",
+      "start": 780.079,
+      "duration": 5.2
+    },
+    {
+      "text": "then i get a syntax error because i",
+      "start": 783.279,
+      "duration": 3.921
+    },
+    {
+      "text": "forgot a colon up here",
+      "start": 785.279,
+      "duration": 5.281
+    },
+    {
+      "text": "and now it works appropriately",
+      "start": 787.2,
+      "duration": 5.52
+    },
+    {
+      "text": "so i can keep rerunning that and we see",
+      "start": 790.56,
+      "duration": 4.0
+    },
+    {
+      "text": "different ending stock values coming",
+      "start": 792.72,
+      "duration": 4.08
+    },
+    {
+      "text": "there",
+      "start": 794.56,
+      "duration": 5.519
+    },
+    {
+      "text": "so we have that data frame now",
+      "start": 796.8,
+      "duration": 6.88
+    },
+    {
+      "text": "and we want to then",
+      "start": 800.079,
+      "duration": 7.601
+    },
+    {
+      "text": "plot the values over time",
+      "start": 803.68,
+      "duration": 8.719
+    },
+    {
+      "text": "so we can do df.plot.line",
+      "start": 807.68,
+      "duration": 4.719
+    },
+    {
+      "text": "and this is close to what we want but we",
+      "start": 813.04,
+      "duration": 3.2
+    },
+    {
+      "text": "don't want the year",
+      "start": 814.88,
+      "duration": 4.72
+    },
+    {
+      "text": "plotted like that right we want the x",
+      "start": 816.24,
+      "duration": 6.399
+    },
+    {
+      "text": "to be equal to the year um and now we",
+      "start": 819.6,
+      "duration": 3.919
+    },
+    {
+      "text": "have the price",
+      "start": 822.639,
+      "duration": 2.961
+    },
+    {
+      "text": "going in the years on the x so that's",
+      "start": 823.519,
+      "duration": 4.56
+    },
+    {
+      "text": "what we want",
+      "start": 825.6,
+      "duration": 6.08
+    },
+    {
+      "text": "um so",
+      "start": 828.079,
+      "duration": 3.601
+    },
+    {
+      "text": "then we can um",
+      "start": 832.0,
+      "duration": 6.32
+    },
+    {
+      "text": "create one more function",
+      "start": 835.199,
+      "duration": 3.121
+    },
+    {
+      "text": "get prices and display",
+      "start": 838.8,
+      "duration": 8.0
+    },
+    {
+      "text": "um again taking the same inputs",
+      "start": 842.079,
+      "duration": 4.721
+    },
+    {
+      "text": "and here we're just going to do this",
+      "start": 848.88,
+      "duration": 3.199
+    },
+    {
+      "text": "same",
+      "start": 851.279,
+      "duration": 4.0
+    },
+    {
+      "text": "df equals get price cf and then we're",
+      "start": 852.079,
+      "duration": 5.841
+    },
+    {
+      "text": "going to take this df.line",
+      "start": 855.279,
+      "duration": 5.36
+    },
+    {
+      "text": "x equals here so then when we call git",
+      "start": 857.92,
+      "duration": 4.88
+    },
+    {
+      "text": "prices and display",
+      "start": 860.639,
+      "duration": 5.601
+    },
+    {
+      "text": "on those same inputs",
+      "start": 862.8,
+      "duration": 3.44
+    },
+    {
+      "text": "now we have a single function which",
+      "start": 867.92,
+      "duration": 4.08
+    },
+    {
+      "text": "gives us this graph we can also make it",
+      "start": 869.68,
+      "duration": 4.719
+    },
+    {
+      "text": "return the data frame",
+      "start": 872.0,
+      "duration": 4.72
+    },
+    {
+      "text": "so we can get both there from a single",
+      "start": 874.399,
+      "duration": 3.521
+    },
+    {
+      "text": "function",
+      "start": 876.72,
+      "duration": 5.679
+    },
+    {
+      "text": "um and since we have it all",
+      "start": 877.92,
+      "duration": 7.359
+    },
+    {
+      "text": "as a function you know we can easily uh",
+      "start": 882.399,
+      "duration": 4.961
+    },
+    {
+      "text": "change things out what if we want 10 000",
+      "start": 885.279,
+      "duration": 3.201
+    },
+    {
+      "text": "periods",
+      "start": 887.36,
+      "duration": 3.12
+    },
+    {
+      "text": "not a problem at all it's going to go",
+      "start": 888.48,
+      "duration": 3.919
+    },
+    {
+      "text": "quite high in price by the end of 10 000",
+      "start": 890.48,
+      "duration": 3.919
+    },
+    {
+      "text": "periods",
+      "start": 892.399,
+      "duration": 6.56
+    },
+    {
+      "text": "but not if we change it out so that the",
+      "start": 894.399,
+      "duration": 7.201
+    },
+    {
+      "text": "the up probability was only one percent",
+      "start": 898.959,
+      "duration": 3.12
+    },
+    {
+      "text": "now",
+      "start": 901.6,
+      "duration": 2.32
+    },
+    {
+      "text": "it's going to tank really quickly",
+      "start": 902.079,
+      "duration": 3.521
+    },
+    {
+      "text": "because it's almost always",
+      "start": 903.92,
+      "duration": 4.96
+    },
+    {
+      "text": "going down so we create the function and",
+      "start": 905.6,
+      "duration": 4.16
+    },
+    {
+      "text": "then we can",
+      "start": 908.88,
+      "duration": 3.92
+    },
+    {
+      "text": "play around with it in any way um",
+      "start": 909.76,
+      "duration": 5.92
+    },
+    {
+      "text": "you know what if the upper turn was",
+      "start": 912.8,
+      "duration": 4.399
+    },
+    {
+      "text": "really really high",
+      "start": 915.68,
+      "duration": 4.399
+    },
+    {
+      "text": "um well then it basically is low low low",
+      "start": 917.199,
+      "duration": 4.161
+    },
+    {
+      "text": "and then it hits that one period where",
+      "start": 920.079,
+      "duration": 5.041
+    },
+    {
+      "text": "it goes high and then goes super high",
+      "start": 921.36,
+      "duration": 3.76
+    },
+    {
+      "text": "so you can play around with it easily",
+      "start": 925.44,
+      "duration": 6.0
+    },
+    {
+      "text": "once you've built out that function",
+      "start": 927.76,
+      "duration": 6.319
+    },
+    {
+      "text": "so that covers the lab exercise on",
+      "start": 931.44,
+      "duration": 4.24
+    },
+    {
+      "text": "building out a simple stock model in",
+      "start": 934.079,
+      "duration": 2.081
+    },
+    {
+      "text": "excel",
+      "start": 935.68,
+      "duration": 3.2
+    },
+    {
+      "text": "and python thanks for listening and see",
+      "start": 936.16,
+      "duration": 5.679
+    },
+    {
+      "text": "you next time",
+      "start": 938.88,
+      "duration": 2.959
+    }
+  ]
+}

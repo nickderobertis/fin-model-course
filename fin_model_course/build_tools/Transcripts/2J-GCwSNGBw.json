@@ -1,0 +1,669 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.76,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dear british here teaching you",
+      "start": 4.64,
+      "duration": 3.76
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 6.16,
+      "duration": 2.88
+    },
+    {
+      "text": "talk about",
+      "start": 8.4,
+      "duration": 3.279
+    },
+    {
+      "text": "the lab exercise to go along with the",
+      "start": 9.04,
+      "duration": 4.88
+    },
+    {
+      "text": "getting started with python and excel",
+      "start": 11.679,
+      "duration": 5.68
+    },
+    {
+      "text": "segment of the course so",
+      "start": 13.92,
+      "duration": 6.48
+    },
+    {
+      "text": "the lab exercise and this is our first",
+      "start": 17.359,
+      "duration": 6.08
+    },
+    {
+      "text": "uh lab exercise where you actually have",
+      "start": 20.4,
+      "duration": 3.68
+    },
+    {
+      "text": "something to",
+      "start": 23.439,
+      "duration": 4.16
+    },
+    {
+      "text": "submit so the idea here is we're going",
+      "start": 24.08,
+      "duration": 4.88
+    },
+    {
+      "text": "to go a little bit further",
+      "start": 27.599,
+      "duration": 4.08
+    },
+    {
+      "text": "with this concept of adding iteration to",
+      "start": 28.96,
+      "duration": 3.04
+    },
+    {
+      "text": "our",
+      "start": 31.679,
+      "duration": 3.121
+    },
+    {
+      "text": "models so we already looked at you know",
+      "start": 32.0,
+      "duration": 4.32
+    },
+    {
+      "text": "how to vary the",
+      "start": 34.8,
+      "duration": 5.279
+    },
+    {
+      "text": "uh the interest rate uh",
+      "start": 36.32,
+      "duration": 7.28
+    },
+    {
+      "text": "for both our excel and python models",
+      "start": 40.079,
+      "duration": 6.721
+    },
+    {
+      "text": "so now this is about let's not only vary",
+      "start": 43.6,
+      "duration": 4.32
+    },
+    {
+      "text": "the interest rate",
+      "start": 46.8,
+      "duration": 3.68
+    },
+    {
+      "text": "but let's also vary the savings rate at",
+      "start": 47.92,
+      "duration": 4.0
+    },
+    {
+      "text": "the same time",
+      "start": 50.48,
+      "duration": 2.88
+    },
+    {
+      "text": "so not only are we going to look at",
+      "start": 51.92,
+      "duration": 2.88
+    },
+    {
+      "text": "these three different interest rate",
+      "start": 53.36,
+      "duration": 2.08
+    },
+    {
+      "text": "cases",
+      "start": 54.8,
+      "duration": 2.079
+    },
+    {
+      "text": "we're also going to look at three",
+      "start": 55.44,
+      "duration": 3.2
+    },
+    {
+      "text": "different savings rate cases",
+      "start": 56.879,
+      "duration": 4.081
+    },
+    {
+      "text": "and every pairwise combination of those",
+      "start": 58.64,
+      "duration": 3.04
+    },
+    {
+      "text": "two",
+      "start": 60.96,
+      "duration": 2.64
+    },
+    {
+      "text": "so there should ultimately be nine",
+      "start": 61.68,
+      "duration": 3.28
+    },
+    {
+      "text": "values uh",
+      "start": 63.6,
+      "duration": 4.4
+    },
+    {
+      "text": "for uh the model for you know ten",
+      "start": 64.96,
+      "duration": 4.8
+    },
+    {
+      "text": "percent savings rate with four percent",
+      "start": 68.0,
+      "duration": 2.72
+    },
+    {
+      "text": "interest rate",
+      "start": 69.76,
+      "duration": 2.32
+    },
+    {
+      "text": "ten percent savings rate with five",
+      "start": 70.72,
+      "duration": 3.52
+    },
+    {
+      "text": "percent interest rate uh ten percent",
+      "start": 72.08,
+      "duration": 2.96
+    },
+    {
+      "text": "with six percent",
+      "start": 74.24,
+      "duration": 2.32
+    },
+    {
+      "text": "then twenty five percent with four",
+      "start": 75.04,
+      "duration": 3.52
+    },
+    {
+      "text": "twenty five with five and so on",
+      "start": 76.56,
+      "duration": 5.68
+    },
+    {
+      "text": "um nine different cases and",
+      "start": 78.56,
+      "duration": 6.08
+    },
+    {
+      "text": "you're going to need to implement this",
+      "start": 82.24,
+      "duration": 3.44
+    },
+    {
+      "text": "entire thing",
+      "start": 84.64,
+      "duration": 5.6
+    },
+    {
+      "text": "and both excel and python",
+      "start": 85.68,
+      "duration": 6.72
+    },
+    {
+      "text": "so as far as implementing it you can go",
+      "start": 90.24,
+      "duration": 3.36
+    },
+    {
+      "text": "ahead and",
+      "start": 92.4,
+      "duration": 4.48
+    },
+    {
+      "text": "you know download the completed example",
+      "start": 93.6,
+      "duration": 6.08
+    },
+    {
+      "text": "model and start to work from that and",
+      "start": 96.88,
+      "duration": 3.599
+    },
+    {
+      "text": "then just go",
+      "start": 99.68,
+      "duration": 4.079
+    },
+    {
+      "text": "and add this additional iteration",
+      "start": 100.479,
+      "duration": 7.28
+    },
+    {
+      "text": "on the savings rate um",
+      "start": 103.759,
+      "duration": 6.801
+    },
+    {
+      "text": "and uh as far as giving you a little bit",
+      "start": 107.759,
+      "duration": 3.36
+    },
+    {
+      "text": "of help",
+      "start": 110.56,
+      "duration": 4.239
+    },
+    {
+      "text": "on getting started um so for excel",
+      "start": 111.119,
+      "duration": 6.801
+    },
+    {
+      "text": "hopefully things are fairly clear on",
+      "start": 114.799,
+      "duration": 5.041
+    },
+    {
+      "text": "what you need to do there",
+      "start": 117.92,
+      "duration": 5.199
+    },
+    {
+      "text": "but i will say there is a nice way that",
+      "start": 119.84,
+      "duration": 3.68
+    },
+    {
+      "text": "you",
+      "start": 123.119,
+      "duration": 3.761
+    },
+    {
+      "text": "can lay everything out",
+      "start": 123.52,
+      "duration": 3.36
+    },
+    {
+      "text": "where you still only need to type the",
+      "start": 126.96,
+      "duration": 4.079
+    },
+    {
+      "text": "formula once and you can drag it in both",
+      "start": 129.039,
+      "duration": 3.2
+    },
+    {
+      "text": "directions",
+      "start": 131.039,
+      "duration": 4.161
+    },
+    {
+      "text": "uh to get all nine different values uh",
+      "start": 132.239,
+      "duration": 4.401
+    },
+    {
+      "text": "and that's going to require",
+      "start": 135.2,
+      "duration": 4.64
+    },
+    {
+      "text": "using uh you know some fixed references",
+      "start": 136.64,
+      "duration": 5.52
+    },
+    {
+      "text": "which are fixed only on the column and",
+      "start": 139.84,
+      "duration": 6.16
+    },
+    {
+      "text": "some which are fixed only on the row",
+      "start": 142.16,
+      "duration": 3.84
+    },
+    {
+      "text": "then on the python side",
+      "start": 146.239,
+      "duration": 6.961
+    },
+    {
+      "text": "uh the uh you know one good way to go",
+      "start": 149.36,
+      "duration": 4.959
+    },
+    {
+      "text": "about this",
+      "start": 153.2,
+      "duration": 4.24
+    },
+    {
+      "text": "is to do a nested for loop",
+      "start": 154.319,
+      "duration": 6.961
+    },
+    {
+      "text": "so that uh definitely trips a lot of um",
+      "start": 157.44,
+      "duration": 6.96
+    },
+    {
+      "text": "beginners up so let's take a look at",
+      "start": 161.28,
+      "duration": 6.72
+    },
+    {
+      "text": "uh what that looks like um",
+      "start": 164.4,
+      "duration": 6.16
+    },
+    {
+      "text": "so let's say you know we have you know",
+      "start": 168.0,
+      "duration": 3.36
+    },
+    {
+      "text": "one",
+      "start": 170.56,
+      "duration": 3.84
+    },
+    {
+      "text": "uh list here and then we have",
+      "start": 171.36,
+      "duration": 7.04
+    },
+    {
+      "text": "another list here um",
+      "start": 174.4,
+      "duration": 6.64
+    },
+    {
+      "text": "one list of numbers one list of strings",
+      "start": 178.4,
+      "duration": 4.44
+    },
+    {
+      "text": "so you can",
+      "start": 181.04,
+      "duration": 4.8
+    },
+    {
+      "text": "uh right",
+      "start": 182.84,
+      "duration": 5.8
+    },
+    {
+      "text": "two loops",
+      "start": 185.84,
+      "duration": 2.8
+    },
+    {
+      "text": "inside of each other",
+      "start": 191.28,
+      "duration": 3.2
+    },
+    {
+      "text": "so um or sorry this would be print",
+      "start": 197.92,
+      "duration": 7.36
+    },
+    {
+      "text": "a item print the item to get the actual",
+      "start": 201.76,
+      "duration": 5.039
+    },
+    {
+      "text": "loop variable",
+      "start": 205.28,
+      "duration": 5.28
+    },
+    {
+      "text": "um so there you can see we get the same",
+      "start": 206.799,
+      "duration": 6.401
+    },
+    {
+      "text": "kind of effect that we're going for",
+      "start": 210.56,
+      "duration": 5.36
+    },
+    {
+      "text": "with this model right we get uh you know",
+      "start": 213.2,
+      "duration": 3.119
+    },
+    {
+      "text": "one",
+      "start": 215.92,
+      "duration": 3.28
+    },
+    {
+      "text": "with a and then we get one with b and",
+      "start": 216.319,
+      "duration": 4.56
+    },
+    {
+      "text": "then we get one with c",
+      "start": 219.2,
+      "duration": 3.679
+    },
+    {
+      "text": "and then we get two with a and then two",
+      "start": 220.879,
+      "duration": 3.92
+    },
+    {
+      "text": "of b two and so on",
+      "start": 222.879,
+      "duration": 3.841
+    },
+    {
+      "text": "so this is the same kind of you know",
+      "start": 224.799,
+      "duration": 3.281
+    },
+    {
+      "text": "pairwise combination",
+      "start": 226.72,
+      "duration": 4.48
+    },
+    {
+      "text": "that we're looking for with this model",
+      "start": 228.08,
+      "duration": 4.56
+    },
+    {
+      "text": "and then of course you know rather than",
+      "start": 231.2,
+      "duration": 3.84
+    },
+    {
+      "text": "just printing you would want to actually",
+      "start": 232.64,
+      "duration": 5.76
+    },
+    {
+      "text": "put your logic inside of that inner loop",
+      "start": 235.04,
+      "duration": 6.08
+    },
+    {
+      "text": "and you will notice you know each for",
+      "start": 238.4,
+      "duration": 4.0
+    },
+    {
+      "text": "loop needs its own",
+      "start": 241.12,
+      "duration": 3.759
+    },
+    {
+      "text": "indentation right so we write the",
+      "start": 242.4,
+      "duration": 3.759
+    },
+    {
+      "text": "original for loop",
+      "start": 244.879,
+      "duration": 4.321
+    },
+    {
+      "text": "and then we have that four loops ending",
+      "start": 246.159,
+      "duration": 4.8
+    },
+    {
+      "text": "and now we write another for loop and",
+      "start": 249.2,
+      "duration": 3.599
+    },
+    {
+      "text": "then we have that for loops indent on",
+      "start": 250.959,
+      "duration": 3.521
+    },
+    {
+      "text": "top of that so two",
+      "start": 252.799,
+      "duration": 4.641
+    },
+    {
+      "text": "levels of indentation here to ultimately",
+      "start": 254.48,
+      "duration": 3.68
+    },
+    {
+      "text": "write",
+      "start": 257.44,
+      "duration": 3.919
+    },
+    {
+      "text": "our main logic so hopefully",
+      "start": 258.16,
+      "duration": 5.44
+    },
+    {
+      "text": "with you know what we've covered as well",
+      "start": 261.359,
+      "duration": 3.441
+    },
+    {
+      "text": "as this information",
+      "start": 263.6,
+      "duration": 2.96
+    },
+    {
+      "text": "that should be everything you need to be",
+      "start": 264.8,
+      "duration": 3.76
+    },
+    {
+      "text": "able to complete these labs",
+      "start": 266.56,
+      "duration": 3.919
+    },
+    {
+      "text": "now they are meant to you know challenge",
+      "start": 268.56,
+      "duration": 3.359
+    },
+    {
+      "text": "you a little bit and going just a little",
+      "start": 270.479,
+      "duration": 2.561
+    },
+    {
+      "text": "bit farther",
+      "start": 271.919,
+      "duration": 4.161
+    },
+    {
+      "text": "than the material that we covered but",
+      "start": 273.04,
+      "duration": 4.719
+    },
+    {
+      "text": "that's why we also have",
+      "start": 276.08,
+      "duration": 4.16
+    },
+    {
+      "text": "the uh you know lab sessions where you",
+      "start": 277.759,
+      "duration": 3.921
+    },
+    {
+      "text": "know you can come and you can ask",
+      "start": 280.24,
+      "duration": 2.0
+    },
+    {
+      "text": "questions",
+      "start": 281.68,
+      "duration": 2.56
+    },
+    {
+      "text": "and get feedback on everything so you're",
+      "start": 282.24,
+      "duration": 3.2
+    },
+    {
+      "text": "not going this",
+      "start": 284.24,
+      "duration": 5.28
+    },
+    {
+      "text": "100 alone so",
+      "start": 285.44,
+      "duration": 6.319
+    },
+    {
+      "text": "that's how we will wrap up this getting",
+      "start": 289.52,
+      "duration": 4.399
+    },
+    {
+      "text": "started with python and excel",
+      "start": 291.759,
+      "duration": 5.601
+    },
+    {
+      "text": "segment next time uh the whole next",
+      "start": 293.919,
+      "duration": 5.441
+    },
+    {
+      "text": "segment is going to be about",
+      "start": 297.36,
+      "duration": 5.279
+    },
+    {
+      "text": "uh you know building a more in-depth",
+      "start": 299.36,
+      "duration": 7.119
+    },
+    {
+      "text": "excel model and what that looks like",
+      "start": 302.639,
+      "duration": 6.241
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 306.479,
+      "duration": 5.361
+    },
+    {
+      "text": "time",
+      "start": 308.88,
+      "duration": 2.96
+    }
+  ]
+}

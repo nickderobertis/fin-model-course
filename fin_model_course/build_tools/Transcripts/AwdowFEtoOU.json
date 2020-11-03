@@ -1,0 +1,449 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.36,
+      "duration": 2.959
+    },
+    {
+      "text": "dear burtis here teaching you financial",
+      "start": 4.56,
+      "duration": 4.24
+    },
+    {
+      "text": "modeling today we're going to be solving",
+      "start": 6.319,
+      "duration": 2.801
+    },
+    {
+      "text": "the",
+      "start": 8.8,
+      "duration": 3.36
+    },
+    {
+      "text": "lab exercise on using dictionaries",
+      "start": 9.12,
+      "duration": 6.08
+    },
+    {
+      "text": "in python as part of the lecture segment",
+      "start": 12.16,
+      "duration": 5.92
+    },
+    {
+      "text": "on exploring the parameter space and the",
+      "start": 15.2,
+      "duration": 3.68
+    },
+    {
+      "text": "sub segment",
+      "start": 18.08,
+      "duration": 4.56
+    },
+    {
+      "text": "on extra python basics so",
+      "start": 18.88,
+      "duration": 6.559
+    },
+    {
+      "text": "it's here in these slides in the extra",
+      "start": 22.64,
+      "duration": 4.0
+    },
+    {
+      "text": "python basic",
+      "start": 25.439,
+      "duration": 4.16
+    },
+    {
+      "text": "section and here the exercise is just to",
+      "start": 26.64,
+      "duration": 4.0
+    },
+    {
+      "text": "complete",
+      "start": 29.599,
+      "duration": 4.241
+    },
+    {
+      "text": "all the exercises and the dixon list",
+      "start": 30.64,
+      "duration": 4.32
+    },
+    {
+      "text": "comprehension",
+      "start": 33.84,
+      "duration": 4.08
+    },
+    {
+      "text": "lab jupiter notebook so let's head over",
+      "start": 34.96,
+      "duration": 5.36
+    },
+    {
+      "text": "to that",
+      "start": 37.92,
+      "duration": 2.4
+    },
+    {
+      "text": "and this is the notebook we're talking",
+      "start": 40.559,
+      "duration": 4.32
+    },
+    {
+      "text": "about",
+      "start": 42.96,
+      "duration": 5.2
+    },
+    {
+      "text": "so here the first exercise is",
+      "start": 44.879,
+      "duration": 5.68
+    },
+    {
+      "text": "giving you a dictionary and asking you",
+      "start": 48.16,
+      "duration": 3.28
+    },
+    {
+      "text": "to remove this",
+      "start": 50.559,
+      "duration": 4.721
+    },
+    {
+      "text": "oops bad item from the dictionary",
+      "start": 51.44,
+      "duration": 6.56
+    },
+    {
+      "text": "not only that but also add a price key",
+      "start": 55.28,
+      "duration": 4.0
+    },
+    {
+      "text": "and give it the value",
+      "start": 58.0,
+      "duration": 6.08
+    },
+    {
+      "text": "of 184.71 and to do all this without",
+      "start": 59.28,
+      "duration": 8.0
+    },
+    {
+      "text": "changing anything up here you want to",
+      "start": 64.08,
+      "duration": 4.16
+    },
+    {
+      "text": "take the existing",
+      "start": 67.28,
+      "duration": 4.4
+    },
+    {
+      "text": "dictionary and modify it",
+      "start": 68.24,
+      "duration": 6.32
+    },
+    {
+      "text": "so to remove an item from the dictionary",
+      "start": 71.68,
+      "duration": 3.36
+    },
+    {
+      "text": "uh",
+      "start": 74.56,
+      "duration": 3.68
+    },
+    {
+      "text": "we use pop and you give pop the",
+      "start": 75.04,
+      "duration": 5.68
+    },
+    {
+      "text": "key and that will pop the item from the",
+      "start": 78.24,
+      "duration": 3.28
+    },
+    {
+      "text": "dictionary",
+      "start": 80.72,
+      "duration": 3.759
+    },
+    {
+      "text": "so oops here is the key and then if we",
+      "start": 81.52,
+      "duration": 3.599
+    },
+    {
+      "text": "look",
+      "start": 84.479,
+      "duration": 4.081
+    },
+    {
+      "text": "at the value of my dict after doing that",
+      "start": 85.119,
+      "duration": 6.241
+    },
+    {
+      "text": "then we get that item removed and we",
+      "start": 88.56,
+      "duration": 3.68
+    },
+    {
+      "text": "just have",
+      "start": 91.36,
+      "duration": 3.68
+    },
+    {
+      "text": "the name and ticker items and the",
+      "start": 92.24,
+      "duration": 4.8
+    },
+    {
+      "text": "dictionary",
+      "start": 95.04,
+      "duration": 4.56
+    },
+    {
+      "text": "so then the other step is then to add",
+      "start": 97.04,
+      "duration": 3.439
+    },
+    {
+      "text": "the",
+      "start": 99.6,
+      "duration": 3.28
+    },
+    {
+      "text": "new item into the dictionary the price",
+      "start": 100.479,
+      "duration": 4.081
+    },
+    {
+      "text": "uh item with the key price",
+      "start": 102.88,
+      "duration": 5.279
+    },
+    {
+      "text": "and the value 184.71 so here",
+      "start": 104.56,
+      "duration": 6.8
+    },
+    {
+      "text": "um if you do like you're going to look",
+      "start": 108.159,
+      "duration": 4.481
+    },
+    {
+      "text": "up the key",
+      "start": 111.36,
+      "duration": 3.52
+    },
+    {
+      "text": "but then you do an assignment on the",
+      "start": 112.64,
+      "duration": 3.759
+    },
+    {
+      "text": "right hand side",
+      "start": 114.88,
+      "duration": 4.64
+    },
+    {
+      "text": "so um just like that",
+      "start": 116.399,
+      "duration": 6.08
+    },
+    {
+      "text": "and now we can see that we've gotten the",
+      "start": 119.52,
+      "duration": 3.68
+    },
+    {
+      "text": "price",
+      "start": 122.479,
+      "duration": 3.041
+    },
+    {
+      "text": "into the dictionary instead of this oops",
+      "start": 123.2,
+      "duration": 3.199
+    },
+    {
+      "text": "bad",
+      "start": 125.52,
+      "duration": 3.68
+    },
+    {
+      "text": "item and so that is the answer to",
+      "start": 126.399,
+      "duration": 5.681
+    },
+    {
+      "text": "exercise one",
+      "start": 129.2,
+      "duration": 2.88
+    },
+    {
+      "text": "coming to exercise two it's still",
+      "start": 133.04,
+      "duration": 3.04
+    },
+    {
+      "text": "working",
+      "start": 135.44,
+      "duration": 4.799
+    },
+    {
+      "text": "with the existing dictionary um",
+      "start": 136.08,
+      "duration": 8.239
+    },
+    {
+      "text": "but now we want to uh loop through it",
+      "start": 140.239,
+      "duration": 7.201
+    },
+    {
+      "text": "and print out the key and the value",
+      "start": 144.319,
+      "duration": 5.521
+    },
+    {
+      "text": "in a formatted string so it gives you an",
+      "start": 147.44,
+      "duration": 3.28
+    },
+    {
+      "text": "example string",
+      "start": 149.84,
+      "duration": 3.6
+    },
+    {
+      "text": "the name for this company is microsoft",
+      "start": 150.72,
+      "duration": 3.92
+    },
+    {
+      "text": "i'm going to stick with that",
+      "start": 153.44,
+      "duration": 4.64
+    },
+    {
+      "text": "string for my output so",
+      "start": 154.64,
+      "duration": 4.879
+    },
+    {
+      "text": "uh we want to loop through the",
+      "start": 158.08,
+      "duration": 3.04
+    },
+    {
+      "text": "dictionary and",
+      "start": 159.519,
+      "duration": 2.881
+    },
+    {
+      "text": "we're going to need to use both the key",
+      "start": 161.12,
+      "duration": 3.28
+    },
+    {
+      "text": "and the value so i'm going to do a loop",
+      "start": 162.4,
+      "duration": 5.28
+    },
+    {
+      "text": "on dot items to get both at once",
+      "start": 164.4,
+      "duration": 7.119
+    },
+    {
+      "text": "and so this is going to be for key",
+      "start": 167.68,
+      "duration": 8.72
+    },
+    {
+      "text": "uh value in uh my dick",
+      "start": 171.519,
+      "duration": 8.961
+    },
+    {
+      "text": "items we're going to print",
+      "start": 176.4,
+      "duration": 7.36
+    },
+    {
+      "text": "with formatted string the key",
+      "start": 180.48,
+      "duration": 6.8
+    },
+    {
+      "text": "for this company is",
+      "start": 183.76,
+      "duration": 7.36
+    },
+    {
+      "text": "value and then when we do that",
+      "start": 187.28,
+      "duration": 5.36
+    },
+    {
+      "text": "we get that the name of the company is",
+      "start": 191.12,
+      "duration": 3.36
+    },
+    {
+      "text": "microsoft the ticker",
+      "start": 192.64,
+      "duration": 6.319
+    },
+    {
+      "text": "is msft and the price is 184.6",
+      "start": 194.48,
+      "duration": 6.479
+    },
+    {
+      "text": "so that's the output you should be",
+      "start": 198.959,
+      "duration": 5.92
+    },
+    {
+      "text": "expecting when you complete the exercise",
+      "start": 200.959,
+      "duration": 7.041
+    },
+    {
+      "text": "so that wraps up the exercises",
+      "start": 204.879,
+      "duration": 6.321
+    },
+    {
+      "text": "on using dictionaries uh",
+      "start": 208.0,
+      "duration": 5.2
+    },
+    {
+      "text": "we'll come back next time to solve the",
+      "start": 211.2,
+      "duration": 3.28
+    },
+    {
+      "text": "exercises on",
+      "start": 213.2,
+      "duration": 3.679
+    },
+    {
+      "text": "list comprehensions thanks for listening",
+      "start": 214.48,
+      "duration": 7.119
+    },
+    {
+      "text": "and see you next time",
+      "start": 216.879,
+      "duration": 4.72
+    }
+  ]
+}

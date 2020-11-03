@@ -1,0 +1,1029 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.36,
+      "duration": 2.32
+    },
+    {
+      "text": "nick dear verdict here teaching you",
+      "start": 4.24,
+      "duration": 3.519
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.68,
+      "duration": 3.04
+    },
+    {
+      "text": "be talking about",
+      "start": 7.759,
+      "duration": 3.441
+    },
+    {
+      "text": "probabilistic modeling this is an",
+      "start": 8.72,
+      "duration": 3.2
+    },
+    {
+      "text": "introduction",
+      "start": 11.2,
+      "duration": 3.12
+    },
+    {
+      "text": "to the topic at the start of our lecture",
+      "start": 11.92,
+      "duration": 4.96
+    },
+    {
+      "text": "series on a topic",
+      "start": 14.32,
+      "duration": 5.6
+    },
+    {
+      "text": "so thus far",
+      "start": 16.88,
+      "duration": 6.159
+    },
+    {
+      "text": "we have built out models that have been",
+      "start": 19.92,
+      "duration": 6.88
+    },
+    {
+      "text": "completely deterministic",
+      "start": 23.039,
+      "duration": 3.761
+    },
+    {
+      "text": "whatever inputs you pass you're going to",
+      "start": 27.039,
+      "duration": 3.441
+    },
+    {
+      "text": "get a certain answer",
+      "start": 29.039,
+      "duration": 3.841
+    },
+    {
+      "text": "as a result and as long as you're",
+      "start": 30.48,
+      "duration": 3.919
+    },
+    {
+      "text": "passing those same inputs you're going",
+      "start": 32.88,
+      "duration": 3.28
+    },
+    {
+      "text": "to get that same output",
+      "start": 34.399,
+      "duration": 6.32
+    },
+    {
+      "text": "as a result further we get one",
+      "start": 36.16,
+      "duration": 7.44
+    },
+    {
+      "text": "result from our model and we don't have",
+      "start": 40.719,
+      "duration": 4.721
+    },
+    {
+      "text": "any understanding",
+      "start": 43.6,
+      "duration": 4.799
+    },
+    {
+      "text": "of the probability of achieving that",
+      "start": 45.44,
+      "duration": 3.68
+    },
+    {
+      "text": "outcome",
+      "start": 48.399,
+      "duration": 5.521
+    },
+    {
+      "text": "it's just kind of the expected outcome",
+      "start": 49.12,
+      "duration": 8.959
+    },
+    {
+      "text": "but it is important um to think about",
+      "start": 53.92,
+      "duration": 7.6
+    },
+    {
+      "text": "the probability of your result",
+      "start": 58.079,
+      "duration": 6.08
+    },
+    {
+      "text": "because probability is strongly related",
+      "start": 61.52,
+      "duration": 3.2
+    },
+    {
+      "text": "to",
+      "start": 64.159,
+      "duration": 3.601
+    },
+    {
+      "text": "risk in finance we're always concerned",
+      "start": 64.72,
+      "duration": 3.84
+    },
+    {
+      "text": "about the",
+      "start": 67.76,
+      "duration": 3.12
+    },
+    {
+      "text": "risk return trade-off we should be",
+      "start": 68.56,
+      "duration": 4.32
+    },
+    {
+      "text": "compensated with additional return",
+      "start": 70.88,
+      "duration": 4.4
+    },
+    {
+      "text": "if we take on additional risk and we",
+      "start": 72.88,
+      "duration": 3.44
+    },
+    {
+      "text": "want to minimize",
+      "start": 75.28,
+      "duration": 5.199
+    },
+    {
+      "text": "risk for a given amount of return",
+      "start": 76.32,
+      "duration": 6.799
+    },
+    {
+      "text": "so thinking about only the baseline",
+      "start": 80.479,
+      "duration": 3.201
+    },
+    {
+      "text": "result",
+      "start": 83.119,
+      "duration": 2.401
+    },
+    {
+      "text": "is kind of like thinking about only the",
+      "start": 83.68,
+      "duration": 3.6
+    },
+    {
+      "text": "return side of things and not",
+      "start": 85.52,
+      "duration": 5.599
+    },
+    {
+      "text": "the risk side of things so",
+      "start": 87.28,
+      "duration": 6.159
+    },
+    {
+      "text": "with probability modeling we can analyze",
+      "start": 91.119,
+      "duration": 4.481
+    },
+    {
+      "text": "the risk of our result the probability",
+      "start": 93.439,
+      "duration": 6.961
+    },
+    {
+      "text": "of different outcomes from our model",
+      "start": 95.6,
+      "duration": 8.24
+    },
+    {
+      "text": "and an example of why you",
+      "start": 100.4,
+      "duration": 5.44
+    },
+    {
+      "text": "should care about this think about a",
+      "start": 103.84,
+      "duration": 3.04
+    },
+    {
+      "text": "situation",
+      "start": 105.84,
+      "duration": 3.44
+    },
+    {
+      "text": "where you have some capital budgeting",
+      "start": 106.88,
+      "duration": 3.599
+    },
+    {
+      "text": "project",
+      "start": 109.28,
+      "duration": 4.24
+    },
+    {
+      "text": "and you have calculated the mpv of that",
+      "start": 110.479,
+      "duration": 4.0
+    },
+    {
+      "text": "project",
+      "start": 113.52,
+      "duration": 4.48
+    },
+    {
+      "text": "and ultimately you see that the mpv",
+      "start": 114.479,
+      "duration": 6.161
+    },
+    {
+      "text": "is positive so you think okay i should",
+      "start": 118.0,
+      "duration": 4.399
+    },
+    {
+      "text": "take the project",
+      "start": 120.64,
+      "duration": 4.72
+    },
+    {
+      "text": "but now you start analyzing the",
+      "start": 122.399,
+      "duration": 3.68
+    },
+    {
+      "text": "different",
+      "start": 125.36,
+      "duration": 2.56
+    },
+    {
+      "text": "possibilities for the inputs in your",
+      "start": 126.079,
+      "duration": 3.841
+    },
+    {
+      "text": "model and you ultimately are able to",
+      "start": 127.92,
+      "duration": 2.64
+    },
+    {
+      "text": "come up",
+      "start": 129.92,
+      "duration": 3.52
+    },
+    {
+      "text": "with a probability distribution of the",
+      "start": 130.56,
+      "duration": 4.16
+    },
+    {
+      "text": "result",
+      "start": 133.44,
+      "duration": 4.799
+    },
+    {
+      "text": "and you find that 98 of the time the npv",
+      "start": 134.72,
+      "duration": 4.8
+    },
+    {
+      "text": "is negative",
+      "start": 138.239,
+      "duration": 3.601
+    },
+    {
+      "text": "two percent of the time the mpv is",
+      "start": 139.52,
+      "duration": 3.28
+    },
+    {
+      "text": "positive enough",
+      "start": 141.84,
+      "duration": 3.92
+    },
+    {
+      "text": "that it makes the overall expected mpv",
+      "start": 142.8,
+      "duration": 4.56
+    },
+    {
+      "text": "positive",
+      "start": 145.76,
+      "duration": 3.119
+    },
+    {
+      "text": "is this still a project that you want to",
+      "start": 147.36,
+      "duration": 4.0
+    },
+    {
+      "text": "take on when 98 of the time",
+      "start": 148.879,
+      "duration": 4.401
+    },
+    {
+      "text": "it's going to be a value losing",
+      "start": 151.36,
+      "duration": 3.599
+    },
+    {
+      "text": "proposition",
+      "start": 153.28,
+      "duration": 3.44
+    },
+    {
+      "text": "maybe maybe not but that's something",
+      "start": 154.959,
+      "duration": 4.0
+    },
+    {
+      "text": "that you should be considering",
+      "start": 156.72,
+      "duration": 4.0
+    },
+    {
+      "text": "when you decide whether to take the",
+      "start": 158.959,
+      "duration": 4.0
+    },
+    {
+      "text": "project not only",
+      "start": 160.72,
+      "duration": 5.68
+    },
+    {
+      "text": "just the baseline uh npv expected",
+      "start": 162.959,
+      "duration": 7.28
+    },
+    {
+      "text": "from the baseline model",
+      "start": 166.4,
+      "duration": 6.96
+    },
+    {
+      "text": "and then going even further with this",
+      "start": 170.239,
+      "duration": 6.481
+    },
+    {
+      "text": "we can also think about not only just",
+      "start": 173.36,
+      "duration": 6.0
+    },
+    {
+      "text": "uh the expected outcome or a probability",
+      "start": 176.72,
+      "duration": 3.599
+    },
+    {
+      "text": "distribution",
+      "start": 179.36,
+      "duration": 4.08
+    },
+    {
+      "text": "of outcomes from our model we can also",
+      "start": 180.319,
+      "duration": 5.041
+    },
+    {
+      "text": "think about different scenarios and that",
+      "start": 183.44,
+      "duration": 4.079
+    },
+    {
+      "text": "can be powerful to understand",
+      "start": 185.36,
+      "duration": 4.4
+    },
+    {
+      "text": "different situations that we could end",
+      "start": 187.519,
+      "duration": 3.681
+    },
+    {
+      "text": "up in",
+      "start": 189.76,
+      "duration": 4.24
+    },
+    {
+      "text": "so the most common application of",
+      "start": 191.2,
+      "duration": 4.64
+    },
+    {
+      "text": "looking at scenarios",
+      "start": 194.0,
+      "duration": 5.12
+    },
+    {
+      "text": "is to think about uh the state of the",
+      "start": 195.84,
+      "duration": 3.92
+    },
+    {
+      "text": "economy",
+      "start": 199.12,
+      "duration": 2.96
+    },
+    {
+      "text": "are we in a recession are we in a normal",
+      "start": 199.76,
+      "duration": 5.52
+    },
+    {
+      "text": "economy or are we an expansionary period",
+      "start": 202.08,
+      "duration": 5.76
+    },
+    {
+      "text": "and that can have a lot of effect on the",
+      "start": 205.28,
+      "duration": 4.319
+    },
+    {
+      "text": "outcome from a financial",
+      "start": 207.84,
+      "duration": 4.319
+    },
+    {
+      "text": "model so it can be useful to think about",
+      "start": 209.599,
+      "duration": 4.241
+    },
+    {
+      "text": "these cases separately",
+      "start": 212.159,
+      "duration": 3.281
+    },
+    {
+      "text": "that you can say well if we had a",
+      "start": 213.84,
+      "duration": 3.28
+    },
+    {
+      "text": "recession then we can expect this kind",
+      "start": 215.44,
+      "duration": 2.879
+    },
+    {
+      "text": "of outcome",
+      "start": 217.12,
+      "duration": 2.96
+    },
+    {
+      "text": "but if we stay in this normal economy",
+      "start": 218.319,
+      "duration": 3.681
+    },
+    {
+      "text": "then we're going to expect this kind of",
+      "start": 220.08,
+      "duration": 3.519
+    },
+    {
+      "text": "outcome so it can help you frame your",
+      "start": 222.0,
+      "duration": 3.76
+    },
+    {
+      "text": "thinking about the problem in different",
+      "start": 223.599,
+      "duration": 5.841
+    },
+    {
+      "text": "situations or scenarios",
+      "start": 225.76,
+      "duration": 7.759
+    },
+    {
+      "text": "um and uh",
+      "start": 229.44,
+      "duration": 6.56
+    },
+    {
+      "text": "yeah the reason we care so much about",
+      "start": 233.519,
+      "duration": 4.321
+    },
+    {
+      "text": "risk and finance is because",
+      "start": 236.0,
+      "duration": 3.519
+    },
+    {
+      "text": "there's a lot of randomness going on in",
+      "start": 237.84,
+      "duration": 3.44
+    },
+    {
+      "text": "the real world you never",
+      "start": 239.519,
+      "duration": 5.041
+    },
+    {
+      "text": "know truly what is going to happen and",
+      "start": 241.28,
+      "duration": 4.72
+    },
+    {
+      "text": "really there's not going to be one",
+      "start": 244.56,
+      "duration": 2.959
+    },
+    {
+      "text": "outcome that's just always going to",
+      "start": 246.0,
+      "duration": 2.64
+    },
+    {
+      "text": "occur",
+      "start": 247.519,
+      "duration": 4.161
+    },
+    {
+      "text": "it can be any set of outcomes um and you",
+      "start": 248.64,
+      "duration": 4.799
+    },
+    {
+      "text": "want to understand the chance of each of",
+      "start": 251.68,
+      "duration": 2.479
+    },
+    {
+      "text": "those outcomes",
+      "start": 253.439,
+      "duration": 3.36
+    },
+    {
+      "text": "and not only the one that you expect to",
+      "start": 254.159,
+      "duration": 4.961
+    },
+    {
+      "text": "happen",
+      "start": 256.799,
+      "duration": 2.321
+    },
+    {
+      "text": "so there's a few different ways that we",
+      "start": 260.079,
+      "duration": 3.041
+    },
+    {
+      "text": "can incorporate",
+      "start": 261.759,
+      "duration": 5.281
+    },
+    {
+      "text": "probability into our financial models",
+      "start": 263.12,
+      "duration": 6.639
+    },
+    {
+      "text": "so we started to already touch on a",
+      "start": 267.04,
+      "duration": 5.04
+    },
+    {
+      "text": "little bit scenario modeling",
+      "start": 269.759,
+      "duration": 4.801
+    },
+    {
+      "text": "where we think about different possible",
+      "start": 272.08,
+      "duration": 4.8
+    },
+    {
+      "text": "situations we could end up in",
+      "start": 274.56,
+      "duration": 4.88
+    },
+    {
+      "text": "a recession neutral economy expansion",
+      "start": 276.88,
+      "duration": 3.28
+    },
+    {
+      "text": "economy",
+      "start": 279.44,
+      "duration": 3.52
+    },
+    {
+      "text": "or whatever other different scenarios",
+      "start": 280.16,
+      "duration": 5.12
+    },
+    {
+      "text": "you want to think about",
+      "start": 282.96,
+      "duration": 5.76
+    },
+    {
+      "text": "and we basically take all the inputs of",
+      "start": 285.28,
+      "duration": 4.24
+    },
+    {
+      "text": "the model",
+      "start": 288.72,
+      "duration": 3.12
+    },
+    {
+      "text": "and think about what would be the values",
+      "start": 289.52,
+      "duration": 3.6
+    },
+    {
+      "text": "of these inputs",
+      "start": 291.84,
+      "duration": 4.079
+    },
+    {
+      "text": "in each of these situations or scenarios",
+      "start": 293.12,
+      "duration": 4.72
+    },
+    {
+      "text": "so in a bad economy",
+      "start": 295.919,
+      "duration": 3.521
+    },
+    {
+      "text": "what's going to be interest rate what's",
+      "start": 297.84,
+      "duration": 3.12
+    },
+    {
+      "text": "going to be the savings rate",
+      "start": 299.44,
+      "duration": 3.52
+    },
+    {
+      "text": "etc whatever inputs are relevant to your",
+      "start": 300.96,
+      "duration": 3.12
+    },
+    {
+      "text": "model",
+      "start": 302.96,
+      "duration": 4.0
+    },
+    {
+      "text": "and kind of lining up all the inputs for",
+      "start": 304.08,
+      "duration": 4.0
+    },
+    {
+      "text": "that situation",
+      "start": 306.96,
+      "duration": 2.959
+    },
+    {
+      "text": "to see what the outcome is when all",
+      "start": 308.08,
+      "duration": 5.76
+    },
+    {
+      "text": "those inputs align with that situation",
+      "start": 309.919,
+      "duration": 6.641
+    },
+    {
+      "text": "and then you can assign probabilities to",
+      "start": 313.84,
+      "duration": 4.24
+    },
+    {
+      "text": "each of these cases",
+      "start": 316.56,
+      "duration": 3.28
+    },
+    {
+      "text": "and you can take an expected value to",
+      "start": 318.08,
+      "duration": 3.2
+    },
+    {
+      "text": "determine uh",
+      "start": 319.84,
+      "duration": 3.84
+    },
+    {
+      "text": "what you expect to happen based off of",
+      "start": 321.28,
+      "duration": 5.359
+    },
+    {
+      "text": "your scenarios",
+      "start": 323.68,
+      "duration": 2.959
+    },
+    {
+      "text": "so then the next method we'll talk about",
+      "start": 327.52,
+      "duration": 4.08
+    },
+    {
+      "text": "is internal randomness",
+      "start": 329.919,
+      "duration": 5.28
+    },
+    {
+      "text": "and internal randomness the",
+      "start": 331.6,
+      "duration": 6.48
+    },
+    {
+      "text": "randomness or probability is included",
+      "start": 335.199,
+      "duration": 5.681
+    },
+    {
+      "text": "directly into the model itself",
+      "start": 338.08,
+      "duration": 5.04
+    },
+    {
+      "text": "there's something core about the model",
+      "start": 340.88,
+      "duration": 3.2
+    },
+    {
+      "text": "which uses",
+      "start": 343.12,
+      "duration": 5.28
+    },
+    {
+      "text": "this randomness or chance",
+      "start": 344.08,
+      "duration": 7.6
+    },
+    {
+      "text": "maybe you have like an investment model",
+      "start": 348.4,
+      "duration": 4.96
+    },
+    {
+      "text": "where the investment return is going to",
+      "start": 351.68,
+      "duration": 4.079
+    },
+    {
+      "text": "be random each year",
+      "start": 353.36,
+      "duration": 5.279
+    },
+    {
+      "text": "with some parameters",
+      "start": 355.759,
+      "duration": 2.88
+    },
+    {
+      "text": "or something like that so it's built",
+      "start": 358.88,
+      "duration": 4.56
+    },
+    {
+      "text": "into the main model itself",
+      "start": 360.8,
+      "duration": 4.399
+    },
+    {
+      "text": "and the last that we'll talk about in",
+      "start": 363.44,
+      "duration": 4.72
+    },
+    {
+      "text": "the course is monte carlo simulation",
+      "start": 365.199,
+      "duration": 6.161
+    },
+    {
+      "text": "and monte carlo simulation we'll dig",
+      "start": 368.16,
+      "duration": 5.52
+    },
+    {
+      "text": "into that a lot more in a future lecture",
+      "start": 371.36,
+      "duration": 5.839
+    },
+    {
+      "text": "but uh the basic idea is for each one of",
+      "start": 373.68,
+      "duration": 4.959
+    },
+    {
+      "text": "our inputs we're going to assign a",
+      "start": 377.199,
+      "duration": 3.041
+    },
+    {
+      "text": "probability distribution",
+      "start": 378.639,
+      "duration": 3.361
+    },
+    {
+      "text": "to each of those inputs so that each",
+      "start": 380.24,
+      "duration": 2.88
+    },
+    {
+      "text": "time you run the model you get a",
+      "start": 382.0,
+      "duration": 2.639
+    },
+    {
+      "text": "different value of each one of those",
+      "start": 383.12,
+      "duration": 2.48
+    },
+    {
+      "text": "inputs",
+      "start": 384.639,
+      "duration": 4.081
+    },
+    {
+      "text": "based on the distributions and",
+      "start": 385.6,
+      "duration": 5.2
+    },
+    {
+      "text": "then by doing that we run the model a",
+      "start": 388.72,
+      "duration": 3.28
+    },
+    {
+      "text": "whole bunch of times",
+      "start": 390.8,
+      "duration": 4.16
+    },
+    {
+      "text": "and we get the results from all those",
+      "start": 392.0,
+      "duration": 4.8
+    },
+    {
+      "text": "and that allows us to get a probability",
+      "start": 394.96,
+      "duration": 2.72
+    },
+    {
+      "text": "distribution",
+      "start": 396.8,
+      "duration": 4.16
+    },
+    {
+      "text": "of the results from the model as well",
+      "start": 397.68,
+      "duration": 5.68
+    },
+    {
+      "text": "so that is what will allow us to say you",
+      "start": 400.96,
+      "duration": 3.04
+    },
+    {
+      "text": "know there's",
+      "start": 403.36,
+      "duration": 4.08
+    },
+    {
+      "text": "a 37 chance that we'll have a positive",
+      "start": 404.0,
+      "duration": 5.44
+    },
+    {
+      "text": "mpv",
+      "start": 407.44,
+      "duration": 6.319
+    },
+    {
+      "text": "and statements like that so",
+      "start": 409.44,
+      "duration": 6.64
+    },
+    {
+      "text": "and then monte carlo simulation and",
+      "start": 413.759,
+      "duration": 3.921
+    },
+    {
+      "text": "scenario modeling",
+      "start": 416.08,
+      "duration": 4.559
+    },
+    {
+      "text": "are both other methods of exploring the",
+      "start": 417.68,
+      "duration": 4.16
+    },
+    {
+      "text": "parameter space",
+      "start": 420.639,
+      "duration": 4.241
+    },
+    {
+      "text": "just like sensitivity analysis",
+      "start": 421.84,
+      "duration": 5.359
+    },
+    {
+      "text": "whereas internal randomness is just a",
+      "start": 424.88,
+      "duration": 3.439
+    },
+    {
+      "text": "particular feature",
+      "start": 427.199,
+      "duration": 3.521
+    },
+    {
+      "text": "of the model that you're building it's",
+      "start": 428.319,
+      "duration": 3.841
+    },
+    {
+      "text": "actually built into the base model",
+      "start": 430.72,
+      "duration": 2.479
+    },
+    {
+      "text": "itself",
+      "start": 432.16,
+      "duration": 5.599
+    },
+    {
+      "text": "rather than be an extension of the model",
+      "start": 433.199,
+      "duration": 7.12
+    },
+    {
+      "text": "so that's a quick overview of",
+      "start": 437.759,
+      "duration": 3.521
+    },
+    {
+      "text": "probabilistic",
+      "start": 440.319,
+      "duration": 3.841
+    },
+    {
+      "text": "modeling and how it relates to financial",
+      "start": 441.28,
+      "duration": 3.84
+    },
+    {
+      "text": "models",
+      "start": 444.16,
+      "duration": 3.92
+    },
+    {
+      "text": "we'll come back next time to do a quick",
+      "start": 445.12,
+      "duration": 4.0
+    },
+    {
+      "text": "math review",
+      "start": 448.08,
+      "duration": 3.28
+    },
+    {
+      "text": "um on the mathematical tools that we",
+      "start": 449.12,
+      "duration": 3.04
+    },
+    {
+      "text": "need",
+      "start": 451.36,
+      "duration": 4.239
+    },
+    {
+      "text": "to work with probability and our models",
+      "start": 452.16,
+      "duration": 7.08
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 455.599,
+      "duration": 6.641
+    },
+    {
+      "text": "time",
+      "start": 459.24,
+      "duration": 3.0
+    }
+  ]
+}

@@ -1,0 +1,1484 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.199,
+      "duration": 2.321
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.08,
+      "duration": 3.759
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.52,
+      "duration": 4.079
+    },
+    {
+      "text": "be doing an introduction",
+      "start": 7.839,
+      "duration": 5.201
+    },
+    {
+      "text": "to scenario analysis this is part of our",
+      "start": 9.599,
+      "duration": 5.841
+    },
+    {
+      "text": "lecture segment on probabilistic",
+      "start": 13.04,
+      "duration": 3.76
+    },
+    {
+      "text": "modeling",
+      "start": 15.44,
+      "duration": 4.56
+    },
+    {
+      "text": "so last time we finished up the math",
+      "start": 16.8,
+      "duration": 3.84
+    },
+    {
+      "text": "review",
+      "start": 20.0,
+      "duration": 3.199
+    },
+    {
+      "text": "which is allowing us to work with",
+      "start": 20.64,
+      "duration": 4.479
+    },
+    {
+      "text": "probability in our models",
+      "start": 23.199,
+      "duration": 3.761
+    },
+    {
+      "text": "and now we're going to look at the first",
+      "start": 25.119,
+      "duration": 4.32
+    },
+    {
+      "text": "application of probability modeling",
+      "start": 26.96,
+      "duration": 4.8
+    },
+    {
+      "text": "which is scenario modeling or scenario",
+      "start": 29.439,
+      "duration": 4.96
+    },
+    {
+      "text": "analysis",
+      "start": 31.76,
+      "duration": 2.639
+    },
+    {
+      "text": "so the whole idea behind scenario",
+      "start": 34.559,
+      "duration": 3.601
+    },
+    {
+      "text": "modeling",
+      "start": 37.52,
+      "duration": 2.16
+    },
+    {
+      "text": "is you want to come up with different",
+      "start": 38.16,
+      "duration": 3.2
+    },
+    {
+      "text": "situations",
+      "start": 39.68,
+      "duration": 4.399
+    },
+    {
+      "text": "or scenarios which are relevant to your",
+      "start": 41.36,
+      "duration": 4.08
+    },
+    {
+      "text": "model",
+      "start": 44.079,
+      "duration": 4.721
+    },
+    {
+      "text": "and kind of the classic example for",
+      "start": 45.44,
+      "duration": 6.0
+    },
+    {
+      "text": "scenario analysis is to think about the",
+      "start": 48.8,
+      "duration": 4.64
+    },
+    {
+      "text": "state of the economy",
+      "start": 51.44,
+      "duration": 3.84
+    },
+    {
+      "text": "are we in a recession are we in a normal",
+      "start": 53.44,
+      "duration": 5.279
+    },
+    {
+      "text": "period are we an expansion period",
+      "start": 55.28,
+      "duration": 6.32
+    },
+    {
+      "text": "and that's the classic example because",
+      "start": 58.719,
+      "duration": 5.201
+    },
+    {
+      "text": "the state of the economy will affect",
+      "start": 61.6,
+      "duration": 6.0
+    },
+    {
+      "text": "nearly every financial model and so it's",
+      "start": 63.92,
+      "duration": 5.04
+    },
+    {
+      "text": "a natural choice",
+      "start": 67.6,
+      "duration": 3.76
+    },
+    {
+      "text": "a natural thing to look at in scenario",
+      "start": 68.96,
+      "duration": 3.839
+    },
+    {
+      "text": "analysis",
+      "start": 71.36,
+      "duration": 3.759
+    },
+    {
+      "text": "now you can also pick other scenarios",
+      "start": 72.799,
+      "duration": 4.481
+    },
+    {
+      "text": "which are relevant to whatever you're",
+      "start": 75.119,
+      "duration": 3.761
+    },
+    {
+      "text": "analyzing",
+      "start": 77.28,
+      "duration": 3.68
+    },
+    {
+      "text": "maybe it's some project some capital",
+      "start": 78.88,
+      "duration": 3.12
+    },
+    {
+      "text": "budgeting",
+      "start": 80.96,
+      "duration": 4.24
+    },
+    {
+      "text": "model you're evaluating some project and",
+      "start": 82.0,
+      "duration": 5.04
+    },
+    {
+      "text": "there is different things that could",
+      "start": 85.2,
+      "duration": 3.44
+    },
+    {
+      "text": "occur once you are working on the",
+      "start": 87.04,
+      "duration": 2.719
+    },
+    {
+      "text": "project",
+      "start": 88.64,
+      "duration": 5.36
+    },
+    {
+      "text": "um you know maybe you're a",
+      "start": 89.759,
+      "duration": 7.36
+    },
+    {
+      "text": "firm that's that's mining a mine and",
+      "start": 94.0,
+      "duration": 5.439
+    },
+    {
+      "text": "there are different scenarios for",
+      "start": 97.119,
+      "duration": 5.841
+    },
+    {
+      "text": "uh how much gold you find in the mine",
+      "start": 99.439,
+      "duration": 6.081
+    },
+    {
+      "text": "or you know whatever is appropriate for",
+      "start": 102.96,
+      "duration": 3.6
+    },
+    {
+      "text": "the problem that you're working on",
+      "start": 105.52,
+      "duration": 2.16
+    },
+    {
+      "text": "whatever is relevant",
+      "start": 106.56,
+      "duration": 3.199
+    },
+    {
+      "text": "to think about as far as different",
+      "start": 107.68,
+      "duration": 4.399
+    },
+    {
+      "text": "situations",
+      "start": 109.759,
+      "duration": 3.761
+    },
+    {
+      "text": "but here looking at the city of the",
+      "start": 112.079,
+      "duration": 3.441
+    },
+    {
+      "text": "economy is going to apply to",
+      "start": 113.52,
+      "duration": 4.72
+    },
+    {
+      "text": "most models",
+      "start": 115.52,
+      "duration": 2.72
+    },
+    {
+      "text": "and so the idea behind scenario analysis",
+      "start": 118.56,
+      "duration": 5.44
+    },
+    {
+      "text": "is that we're going to think about each",
+      "start": 122.719,
+      "duration": 3.921
+    },
+    {
+      "text": "one of these different situations",
+      "start": 124.0,
+      "duration": 6.16
+    },
+    {
+      "text": "here recession normal expansion economy",
+      "start": 126.64,
+      "duration": 5.44
+    },
+    {
+      "text": "and we're going to say let's look at all",
+      "start": 130.16,
+      "duration": 4.0
+    },
+    {
+      "text": "the different inputs of the model",
+      "start": 132.08,
+      "duration": 5.04
+    },
+    {
+      "text": "and what values of the inputs make sense",
+      "start": 134.16,
+      "duration": 5.28
+    },
+    {
+      "text": "in that situation",
+      "start": 137.12,
+      "duration": 4.56
+    },
+    {
+      "text": "so in a recession you're going to be",
+      "start": 139.44,
+      "duration": 4.72
+    },
+    {
+      "text": "earning a",
+      "start": 141.68,
+      "duration": 5.36
+    },
+    {
+      "text": "lower interest rate",
+      "start": 144.16,
+      "duration": 2.88
+    },
+    {
+      "text": "and then here it really depends on the",
+      "start": 147.76,
+      "duration": 5.52
+    },
+    {
+      "text": "individual",
+      "start": 152.08,
+      "duration": 2.72
+    },
+    {
+      "text": "whether they would be saving more or",
+      "start": 153.28,
+      "duration": 3.52
+    },
+    {
+      "text": "saving less in a recession",
+      "start": 154.8,
+      "duration": 3.6
+    },
+    {
+      "text": "if you're very financially constrained",
+      "start": 156.8,
+      "duration": 2.96
+    },
+    {
+      "text": "you would probably be saving less",
+      "start": 158.4,
+      "duration": 3.199
+    },
+    {
+      "text": "because you're probably earning less and",
+      "start": 159.76,
+      "duration": 4.16
+    },
+    {
+      "text": "you need to pay your expenses",
+      "start": 161.599,
+      "duration": 5.36
+    },
+    {
+      "text": "um but if you're more financially well",
+      "start": 163.92,
+      "duration": 4.959
+    },
+    {
+      "text": "off you might save more in a recession",
+      "start": 166.959,
+      "duration": 3.201
+    },
+    {
+      "text": "just because",
+      "start": 168.879,
+      "duration": 3.601
+    },
+    {
+      "text": "uh you're kind of worried about the",
+      "start": 170.16,
+      "duration": 3.04
+    },
+    {
+      "text": "state of things",
+      "start": 172.48,
+      "duration": 2.56
+    },
+    {
+      "text": "so you're going to save in response to",
+      "start": 173.2,
+      "duration": 3.039
+    },
+    {
+      "text": "that",
+      "start": 175.04,
+      "duration": 5.04
+    },
+    {
+      "text": "so let's go with that case and say that",
+      "start": 176.239,
+      "duration": 3.841
+    },
+    {
+      "text": "that for this person that we're modeling",
+      "start": 180.4,
+      "duration": 4.88
+    },
+    {
+      "text": "the savings rate is also going to be",
+      "start": 183.599,
+      "duration": 4.241
+    },
+    {
+      "text": "higher during a recession",
+      "start": 185.28,
+      "duration": 3.92
+    },
+    {
+      "text": "and you would want to do that for all",
+      "start": 187.84,
+      "duration": 3.6
+    },
+    {
+      "text": "the other inputs in the model as well",
+      "start": 189.2,
+      "duration": 4.56
+    },
+    {
+      "text": "what makes sense in a recession and line",
+      "start": 191.44,
+      "duration": 3.84
+    },
+    {
+      "text": "all those up",
+      "start": 193.76,
+      "duration": 2.88
+    },
+    {
+      "text": "and then go to thinking about the normal",
+      "start": 195.28,
+      "duration": 3.76
+    },
+    {
+      "text": "economy interest rates going to go up",
+      "start": 196.64,
+      "duration": 4.4
+    },
+    {
+      "text": "savings rates going to go down and think",
+      "start": 199.04,
+      "duration": 3.919
+    },
+    {
+      "text": "about all the other inputs as well",
+      "start": 201.04,
+      "duration": 4.08
+    },
+    {
+      "text": "same thing for the expansion economy",
+      "start": 202.959,
+      "duration": 4.721
+    },
+    {
+      "text": "whatever situations that you have",
+      "start": 205.12,
+      "duration": 4.08
+    },
+    {
+      "text": "think about them separately and all the",
+      "start": 207.68,
+      "duration": 3.279
+    },
+    {
+      "text": "inputs that make sense",
+      "start": 209.2,
+      "duration": 5.28
+    },
+    {
+      "text": "for that particular situation",
+      "start": 210.959,
+      "duration": 3.521
+    },
+    {
+      "text": "um and then the idea is then to run the",
+      "start": 214.64,
+      "duration": 3.599
+    },
+    {
+      "text": "model",
+      "start": 217.599,
+      "duration": 2.161
+    },
+    {
+      "text": "with each of these different sets of the",
+      "start": 218.239,
+      "duration": 4.481
+    },
+    {
+      "text": "inputs and look at the outcomes",
+      "start": 219.76,
+      "duration": 6.559
+    },
+    {
+      "text": "and you can stop there and not",
+      "start": 222.72,
+      "duration": 5.68
+    },
+    {
+      "text": "uh work the probability modeling side of",
+      "start": 226.319,
+      "duration": 3.84
+    },
+    {
+      "text": "it you can just say",
+      "start": 228.4,
+      "duration": 4.0
+    },
+    {
+      "text": "this is my number for a recession this",
+      "start": 230.159,
+      "duration": 3.121
+    },
+    {
+      "text": "is my normal",
+      "start": 232.4,
+      "duration": 2.559
+    },
+    {
+      "text": "number for a normal economy this is it",
+      "start": 233.28,
+      "duration": 4.0
+    },
+    {
+      "text": "for the expansion economy",
+      "start": 234.959,
+      "duration": 4.161
+    },
+    {
+      "text": "uh but where we can work probability in",
+      "start": 237.28,
+      "duration": 3.679
+    },
+    {
+      "text": "here is then we can also assign a",
+      "start": 239.12,
+      "duration": 4.88
+    },
+    {
+      "text": "probability to each one of these cases",
+      "start": 240.959,
+      "duration": 6.241
+    },
+    {
+      "text": "so then the different scenarios",
+      "start": 244.0,
+      "duration": 6.319
+    },
+    {
+      "text": "are a discrete variable here and we",
+      "start": 247.2,
+      "duration": 5.52
+    },
+    {
+      "text": "now have a probability distribution for",
+      "start": 250.319,
+      "duration": 4.161
+    },
+    {
+      "text": "those scenarios",
+      "start": 252.72,
+      "duration": 3.84
+    },
+    {
+      "text": "by just assigning a probability to each",
+      "start": 254.48,
+      "duration": 3.039
+    },
+    {
+      "text": "case",
+      "start": 256.56,
+      "duration": 3.6
+    },
+    {
+      "text": "here we're saying 30 recession 50 normal",
+      "start": 257.519,
+      "duration": 3.201
+    },
+    {
+      "text": "economy",
+      "start": 260.16,
+      "duration": 4.24
+    },
+    {
+      "text": "20 expansion economy",
+      "start": 260.72,
+      "duration": 5.28
+    },
+    {
+      "text": "and what that allows you to do is then",
+      "start": 264.4,
+      "duration": 3.44
+    },
+    {
+      "text": "take an expected value",
+      "start": 266.0,
+      "duration": 4.72
+    },
+    {
+      "text": "across the different cases to get an",
+      "start": 267.84,
+      "duration": 5.04
+    },
+    {
+      "text": "expected outcome from your model that's",
+      "start": 270.72,
+      "duration": 5.12
+    },
+    {
+      "text": "uh separate from the baseline result but",
+      "start": 272.88,
+      "duration": 4.0
+    },
+    {
+      "text": "maybe more realistic",
+      "start": 275.84,
+      "duration": 3.68
+    },
+    {
+      "text": "because you've thought about scenarios",
+      "start": 276.88,
+      "duration": 3.2
+    },
+    {
+      "text": "rather than",
+      "start": 279.52,
+      "duration": 4.88
+    },
+    {
+      "text": "just the most likely value of each input",
+      "start": 280.08,
+      "duration": 4.32
+    },
+    {
+      "text": "so",
+      "start": 287.84,
+      "duration": 3.76
+    },
+    {
+      "text": "[Music]",
+      "start": 290.09,
+      "duration": 3.669
+    },
+    {
+      "text": "then as far as implementing scenario",
+      "start": 291.6,
+      "duration": 3.84
+    },
+    {
+      "text": "modeling so there's two main",
+      "start": 293.759,
+      "duration": 4.72
+    },
+    {
+      "text": "approaches here to go about it whether",
+      "start": 295.44,
+      "duration": 4.319
+    },
+    {
+      "text": "you implement it",
+      "start": 298.479,
+      "duration": 4.481
+    },
+    {
+      "text": "internally or externally to your",
+      "start": 299.759,
+      "duration": 6.801
+    },
+    {
+      "text": "model and the distinction here",
+      "start": 302.96,
+      "duration": 6.799
+    },
+    {
+      "text": "is just about we've already been talking",
+      "start": 306.56,
+      "duration": 3.44
+    },
+    {
+      "text": "about",
+      "start": 309.759,
+      "duration": 2.241
+    },
+    {
+      "text": "this concept of the base model which",
+      "start": 310.0,
+      "duration": 3.84
+    },
+    {
+      "text": "gives you the basic result",
+      "start": 312.0,
+      "duration": 4.0
+    },
+    {
+      "text": "and then extensions to the model where",
+      "start": 313.84,
+      "duration": 3.84
+    },
+    {
+      "text": "you can explore the parameter space and",
+      "start": 316.0,
+      "duration": 3.039
+    },
+    {
+      "text": "do other things",
+      "start": 317.68,
+      "duration": 3.84
+    },
+    {
+      "text": "um to get a better understanding of the",
+      "start": 319.039,
+      "duration": 4.641
+    },
+    {
+      "text": "results from your model",
+      "start": 321.52,
+      "duration": 5.28
+    },
+    {
+      "text": "so internal means put it in the base",
+      "start": 323.68,
+      "duration": 4.0
+    },
+    {
+      "text": "model itself",
+      "start": 326.8,
+      "duration": 3.44
+    },
+    {
+      "text": "external means do it as part of those",
+      "start": 327.68,
+      "duration": 3.44
+    },
+    {
+      "text": "extensions",
+      "start": 330.24,
+      "duration": 4.32
+    },
+    {
+      "text": "to the existing model",
+      "start": 331.12,
+      "duration": 3.44
+    },
+    {
+      "text": "so if it's internal then you have",
+      "start": 335.36,
+      "duration": 5.92
+    },
+    {
+      "text": "these different situations cases of the",
+      "start": 338.639,
+      "duration": 5.441
+    },
+    {
+      "text": "inputs within the model itself",
+      "start": 341.28,
+      "duration": 4.24
+    },
+    {
+      "text": "and then within the model it's going to",
+      "start": 344.08,
+      "duration": 3.04
+    },
+    {
+      "text": "take an expected value",
+      "start": 345.52,
+      "duration": 5.6
+    },
+    {
+      "text": "across those and now",
+      "start": 347.12,
+      "duration": 5.6
+    },
+    {
+      "text": "depends on where you're using it it",
+      "start": 351.12,
+      "duration": 3.84
+    },
+    {
+      "text": "could be that um",
+      "start": 352.72,
+      "duration": 3.68
+    },
+    {
+      "text": "it's doing that for the inputs and now",
+      "start": 354.96,
+      "duration": 3.679
+    },
+    {
+      "text": "you get an expected value of each input",
+      "start": 356.4,
+      "duration": 3.76
+    },
+    {
+      "text": "or it could be at the end of the model",
+      "start": 358.639,
+      "duration": 3.28
+    },
+    {
+      "text": "and you're getting expected value across",
+      "start": 360.16,
+      "duration": 2.64
+    },
+    {
+      "text": "the different cases",
+      "start": 361.919,
+      "duration": 4.241
+    },
+    {
+      "text": "as your output from the model um",
+      "start": 362.8,
+      "duration": 4.48
+    },
+    {
+      "text": "there's a number of different ways to",
+      "start": 366.16,
+      "duration": 3.92
+    },
+    {
+      "text": "apply it but the key distinction is that",
+      "start": 367.28,
+      "duration": 5.6
+    },
+    {
+      "text": "it's within your basic model any other",
+      "start": 370.08,
+      "duration": 4.48
+    },
+    {
+      "text": "extensions to your model",
+      "start": 372.88,
+      "duration": 5.2
+    },
+    {
+      "text": "are now going to be uh",
+      "start": 374.56,
+      "duration": 5.919
+    },
+    {
+      "text": "outside of that scenario analysis as in",
+      "start": 378.08,
+      "duration": 4.08
+    },
+    {
+      "text": "there's going to be scenario analysis",
+      "start": 380.479,
+      "duration": 2.881
+    },
+    {
+      "text": "included within",
+      "start": 382.16,
+      "duration": 2.96
+    },
+    {
+      "text": "any other extensions to the model as",
+      "start": 383.36,
+      "duration": 4.0
+    },
+    {
+      "text": "well",
+      "start": 385.12,
+      "duration": 2.24
+    },
+    {
+      "text": "whereas with the external implementation",
+      "start": 388.0,
+      "duration": 5.12
+    },
+    {
+      "text": "you take that base model and you don't",
+      "start": 391.12,
+      "duration": 4.88
+    },
+    {
+      "text": "change anything about it",
+      "start": 393.12,
+      "duration": 5.519
+    },
+    {
+      "text": "you then extend it with scenario",
+      "start": 396.0,
+      "duration": 3.36
+    },
+    {
+      "text": "analysis",
+      "start": 398.639,
+      "duration": 4.721
+    },
+    {
+      "text": "separately so there your basic model",
+      "start": 399.36,
+      "duration": 6.8
+    },
+    {
+      "text": "just takes the inputs and returns the",
+      "start": 403.36,
+      "duration": 4.8
+    },
+    {
+      "text": "outputs corresponding those inputs",
+      "start": 406.16,
+      "duration": 4.479
+    },
+    {
+      "text": "but now you look at the different cases",
+      "start": 408.16,
+      "duration": 6.0
+    },
+    {
+      "text": "different situation scenarios",
+      "start": 410.639,
+      "duration": 5.201
+    },
+    {
+      "text": "and run the model with each of those",
+      "start": 414.16,
+      "duration": 4.08
+    },
+    {
+      "text": "different scenarios and get the results",
+      "start": 415.84,
+      "duration": 6.4
+    },
+    {
+      "text": "from that",
+      "start": 418.24,
+      "duration": 8.239
+    },
+    {
+      "text": "and then here's um",
+      "start": 422.24,
+      "duration": 7.359
+    },
+    {
+      "text": "sort of the pros and cons of",
+      "start": 426.479,
+      "duration": 5.44
+    },
+    {
+      "text": "internal versus external scenario",
+      "start": 429.599,
+      "duration": 4.081
+    },
+    {
+      "text": "analysis",
+      "start": 431.919,
+      "duration": 4.881
+    },
+    {
+      "text": "um this is talking about",
+      "start": 433.68,
+      "duration": 5.359
+    },
+    {
+      "text": "taking an existing model and then adding",
+      "start": 436.8,
+      "duration": 4.88
+    },
+    {
+      "text": "scenario analysis to it",
+      "start": 439.039,
+      "duration": 6.401
+    },
+    {
+      "text": "um so for internal",
+      "start": 441.68,
+      "duration": 6.88
+    },
+    {
+      "text": "um an advantage to the external",
+      "start": 445.44,
+      "duration": 5.44
+    },
+    {
+      "text": "approach is that the original model is",
+      "start": 448.56,
+      "duration": 3.84
+    },
+    {
+      "text": "still as it was",
+      "start": 450.88,
+      "duration": 3.28
+    },
+    {
+      "text": "you can still use it as you were before",
+      "start": 452.4,
+      "duration": 3.12
+    },
+    {
+      "text": "doing the scenario analysis",
+      "start": 454.16,
+      "duration": 4.0
+    },
+    {
+      "text": "you can do other extensions which are",
+      "start": 455.52,
+      "duration": 3.04
+    },
+    {
+      "text": "not",
+      "start": 458.16,
+      "duration": 4.24
+    },
+    {
+      "text": "having to also run the scenario analysis",
+      "start": 458.56,
+      "duration": 6.96
+    },
+    {
+      "text": "so it's more kind of flexible and",
+      "start": 462.4,
+      "duration": 6.479
+    },
+    {
+      "text": "extensible that way whereas you go with",
+      "start": 465.52,
+      "duration": 4.56
+    },
+    {
+      "text": "the internal",
+      "start": 468.879,
+      "duration": 3.921
+    },
+    {
+      "text": "then what you have before is now an old",
+      "start": 470.08,
+      "duration": 3.519
+    },
+    {
+      "text": "version of the model",
+      "start": 472.8,
+      "duration": 2.56
+    },
+    {
+      "text": "now you have this new version which has",
+      "start": 473.599,
+      "duration": 3.201
+    },
+    {
+      "text": "the scenario analysis",
+      "start": 475.36,
+      "duration": 4.399
+    },
+    {
+      "text": "baked in and now those two things are",
+      "start": 476.8,
+      "duration": 4.799
+    },
+    {
+      "text": "inherently entwined and anything else",
+      "start": 479.759,
+      "duration": 3.201
+    },
+    {
+      "text": "you do with the model is going to be",
+      "start": 481.599,
+      "duration": 2.961
+    },
+    {
+      "text": "running that scenario analysis",
+      "start": 482.96,
+      "duration": 4.079
+    },
+    {
+      "text": "as well",
+      "start": 484.56,
+      "duration": 2.479
+    },
+    {
+      "text": "um then next is an advantage to",
+      "start": 487.68,
+      "duration": 8.239
+    },
+    {
+      "text": "internal scenario analysis where",
+      "start": 492.319,
+      "duration": 5.28
+    },
+    {
+      "text": "you don't have to do anything different",
+      "start": 495.919,
+      "duration": 3.761
+    },
+    {
+      "text": "about running the model",
+      "start": 497.599,
+      "duration": 4.32
+    },
+    {
+      "text": "uh you just pass in the inputs as you",
+      "start": 499.68,
+      "duration": 4.079
+    },
+    {
+      "text": "were before you get the output as you",
+      "start": 501.919,
+      "duration": 2.56
+    },
+    {
+      "text": "were before",
+      "start": 503.759,
+      "duration": 2.961
+    },
+    {
+      "text": "and now it has sensitivity analysis",
+      "start": 504.479,
+      "duration": 4.321
+    },
+    {
+      "text": "running within it",
+      "start": 506.72,
+      "duration": 3.919
+    },
+    {
+      "text": "whereas with the external now you're",
+      "start": 508.8,
+      "duration": 4.0
+    },
+    {
+      "text": "talking about running the model multiple",
+      "start": 510.639,
+      "duration": 2.88
+    },
+    {
+      "text": "times",
+      "start": 512.8,
+      "duration": 2.32
+    },
+    {
+      "text": "with each of these different sets of",
+      "start": 513.519,
+      "duration": 3.76
+    },
+    {
+      "text": "inputs and collecting the output",
+      "start": 515.12,
+      "duration": 4.719
+    },
+    {
+      "text": "and associating that together so it",
+      "start": 517.279,
+      "duration": 4.32
+    },
+    {
+      "text": "becomes a little more complicated to",
+      "start": 519.839,
+      "duration": 5.201
+    },
+    {
+      "text": "run the model with external scenario",
+      "start": 521.599,
+      "duration": 5.661
+    },
+    {
+      "text": "analysis",
+      "start": 525.04,
+      "duration": 3.52
+    },
+    {
+      "text": "[Music]",
+      "start": 527.26,
+      "duration": 4.18
+    },
+    {
+      "text": "and then the next one is an advantage to",
+      "start": 528.56,
+      "duration": 3.92
+    },
+    {
+      "text": "external where",
+      "start": 531.44,
+      "duration": 4.079
+    },
+    {
+      "text": "the base model is completely unchanged",
+      "start": 532.48,
+      "duration": 6.72
+    },
+    {
+      "text": "it's exactly as complex as it was before",
+      "start": 535.519,
+      "duration": 6.081
+    },
+    {
+      "text": "whereas adding sensitivity analysis into",
+      "start": 539.2,
+      "duration": 3.199
+    },
+    {
+      "text": "the base model",
+      "start": 541.6,
+      "duration": 2.96
+    },
+    {
+      "text": "is making it more complex there's more",
+      "start": 542.399,
+      "duration": 3.681
+    },
+    {
+      "text": "things going on",
+      "start": 544.56,
+      "duration": 3.12
+    },
+    {
+      "text": "within the model and that can make it",
+      "start": 546.08,
+      "duration": 4.08
+    },
+    {
+      "text": "more difficult to work on the base model",
+      "start": 547.68,
+      "duration": 5.279
+    },
+    {
+      "text": "going forward",
+      "start": 550.16,
+      "duration": 2.799
+    },
+    {
+      "text": "um and then the last is an advantage to",
+      "start": 553.6,
+      "duration": 7.84
+    },
+    {
+      "text": "internal um where",
+      "start": 558.0,
+      "duration": 6.08
+    },
+    {
+      "text": "this you know pretty much is um very",
+      "start": 561.44,
+      "duration": 4.72
+    },
+    {
+      "text": "similar to this point it's more complex",
+      "start": 564.08,
+      "duration": 3.6
+    },
+    {
+      "text": "to run the model",
+      "start": 566.16,
+      "duration": 5.28
+    },
+    {
+      "text": "uh with external and exactly the same to",
+      "start": 567.68,
+      "duration": 4.96
+    },
+    {
+      "text": "run it as before",
+      "start": 571.44,
+      "duration": 5.839
+    },
+    {
+      "text": "with internal and so",
+      "start": 572.64,
+      "duration": 6.72
+    },
+    {
+      "text": "kind of my main recommendations here",
+      "start": 577.279,
+      "duration": 3.68
+    },
+    {
+      "text": "you're gonna go",
+      "start": 579.36,
+      "duration": 3.28
+    },
+    {
+      "text": "and build scenario analysis in your",
+      "start": 580.959,
+      "duration": 3.761
+    },
+    {
+      "text": "model should it be internal should it be",
+      "start": 582.64,
+      "duration": 4.08
+    },
+    {
+      "text": "external",
+      "start": 584.72,
+      "duration": 4.08
+    },
+    {
+      "text": "the main considerations to me are if",
+      "start": 586.72,
+      "duration": 4.4
+    },
+    {
+      "text": "you've already built out the full model",
+      "start": 588.8,
+      "duration": 4.24
+    },
+    {
+      "text": "that's already like a big push towards",
+      "start": 591.12,
+      "duration": 3.6
+    },
+    {
+      "text": "doing external because your",
+      "start": 593.04,
+      "duration": 3.6
+    },
+    {
+      "text": "original model works you don't want to",
+      "start": 594.72,
+      "duration": 4.32
+    },
+    {
+      "text": "go and have to rework the whole thing",
+      "start": 596.64,
+      "duration": 5.28
+    },
+    {
+      "text": "it's much easier to add external on top",
+      "start": 599.04,
+      "duration": 3.2
+    },
+    {
+      "text": "of",
+      "start": 601.92,
+      "duration": 3.44
+    },
+    {
+      "text": "your existing model",
+      "start": 602.24,
+      "duration": 6.8
+    },
+    {
+      "text": "um and then where i would say you should",
+      "start": 605.36,
+      "duration": 4.719
+    },
+    {
+      "text": "use internal",
+      "start": 609.04,
+      "duration": 4.799
+    },
+    {
+      "text": "is um well you should go more in that",
+      "start": 610.079,
+      "duration": 5.361
+    },
+    {
+      "text": "direction if you're starting the model",
+      "start": 613.839,
+      "duration": 2.961
+    },
+    {
+      "text": "from scratch and you know you want to",
+      "start": 615.44,
+      "duration": 2.56
+    },
+    {
+      "text": "have scenario analysis",
+      "start": 616.8,
+      "duration": 2.719
+    },
+    {
+      "text": "it could make sense to put it into the",
+      "start": 618.0,
+      "duration": 3.04
+    },
+    {
+      "text": "base model",
+      "start": 619.519,
+      "duration": 4.88
+    },
+    {
+      "text": "um but i would also only do that",
+      "start": 621.04,
+      "duration": 5.76
+    },
+    {
+      "text": "if you think that scenario analysis is",
+      "start": 624.399,
+      "duration": 3.841
+    },
+    {
+      "text": "very core",
+      "start": 626.8,
+      "duration": 2.96
+    },
+    {
+      "text": "to the problem that you're trying to",
+      "start": 628.24,
+      "duration": 4.159
+    },
+    {
+      "text": "solve you know if uh",
+      "start": 629.76,
+      "duration": 4.4
+    },
+    {
+      "text": "thinking about states of the economy is",
+      "start": 632.399,
+      "duration": 3.68
+    },
+    {
+      "text": "very important for the outcomes of your",
+      "start": 634.16,
+      "duration": 2.96
+    },
+    {
+      "text": "model",
+      "start": 636.079,
+      "duration": 2.561
+    },
+    {
+      "text": "maybe it makes sense to build that in",
+      "start": 637.12,
+      "duration": 3.6
+    },
+    {
+      "text": "from the get go whereas",
+      "start": 638.64,
+      "duration": 4.879
+    },
+    {
+      "text": "for a standard model it's probably fine",
+      "start": 640.72,
+      "duration": 5.44
+    },
+    {
+      "text": "to just have that externally as kind of",
+      "start": 643.519,
+      "duration": 5.44
+    },
+    {
+      "text": "a check on things and looking at it in",
+      "start": 646.16,
+      "duration": 5.76
+    },
+    {
+      "text": "different situations",
+      "start": 648.959,
+      "duration": 2.961
+    },
+    {
+      "text": "so that gives an overview of scenario",
+      "start": 654.16,
+      "duration": 4.4
+    },
+    {
+      "text": "analysis",
+      "start": 657.76,
+      "duration": 3.199
+    },
+    {
+      "text": "and we'll come back next time to look at",
+      "start": 658.56,
+      "duration": 3.12
+    },
+    {
+      "text": "implementing",
+      "start": 660.959,
+      "duration": 4.241
+    },
+    {
+      "text": "scenario analysis in excel so thanks for",
+      "start": 661.68,
+      "duration": 4.08
+    },
+    {
+      "text": "listening",
+      "start": 665.2,
+      "duration": 5.04
+    },
+    {
+      "text": "and see you next time",
+      "start": 665.76,
+      "duration": 4.48
+    }
+  ]
+}

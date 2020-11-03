@@ -1,0 +1,2094 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.679,
+      "duration": 2.241
+    },
+    {
+      "text": "nick deird is here teaching you",
+      "start": 4.48,
+      "duration": 3.68
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.92,
+      "duration": 3.2
+    },
+    {
+      "text": "be covering",
+      "start": 8.16,
+      "duration": 4.16
+    },
+    {
+      "text": "scenario analysis in python",
+      "start": 9.12,
+      "duration": 5.439
+    },
+    {
+      "text": "this is part of our lecture series on",
+      "start": 12.32,
+      "duration": 3.199
+    },
+    {
+      "text": "probabilistic",
+      "start": 14.559,
+      "duration": 4.48
+    },
+    {
+      "text": "modeling so previously we already",
+      "start": 15.519,
+      "duration": 6.721
+    },
+    {
+      "text": "covered the intro to scenario modeling",
+      "start": 19.039,
+      "duration": 6.0
+    },
+    {
+      "text": "and we also covered how to complete that",
+      "start": 22.24,
+      "duration": 4.08
+    },
+    {
+      "text": "in excel",
+      "start": 25.039,
+      "duration": 3.521
+    },
+    {
+      "text": "so now we're moving on to just the",
+      "start": 26.32,
+      "duration": 3.359
+    },
+    {
+      "text": "python side",
+      "start": 28.56,
+      "duration": 5.839
+    },
+    {
+      "text": "of the implementation and for that",
+      "start": 29.679,
+      "duration": 6.641
+    },
+    {
+      "text": "when looking at internal scenario",
+      "start": 34.399,
+      "duration": 3.441
+    },
+    {
+      "text": "analysis",
+      "start": 36.32,
+      "duration": 3.6
+    },
+    {
+      "text": "uh you're mainly just setting it up",
+      "start": 37.84,
+      "duration": 4.08
+    },
+    {
+      "text": "within the core model",
+      "start": 39.92,
+      "duration": 4.72
+    },
+    {
+      "text": "so that you can have these different",
+      "start": 41.92,
+      "duration": 3.44
+    },
+    {
+      "text": "cases",
+      "start": 44.64,
+      "duration": 2.56
+    },
+    {
+      "text": "for the inputs and then you're going to",
+      "start": 45.36,
+      "duration": 3.76
+    },
+    {
+      "text": "take the expected value",
+      "start": 47.2,
+      "duration": 4.64
+    },
+    {
+      "text": "across those cases to come up with the",
+      "start": 49.12,
+      "duration": 3.52
+    },
+    {
+      "text": "new",
+      "start": 51.84,
+      "duration": 4.48
+    },
+    {
+      "text": "inputs for your model so uh",
+      "start": 52.64,
+      "duration": 6.0
+    },
+    {
+      "text": "same kind of process as excel",
+      "start": 56.32,
+      "duration": 3.68
+    },
+    {
+      "text": "conceptually",
+      "start": 58.64,
+      "duration": 3.439
+    },
+    {
+      "text": "just here we would be completing that",
+      "start": 60.0,
+      "duration": 3.199
+    },
+    {
+      "text": "using a",
+      "start": 62.079,
+      "duration": 3.521
+    },
+    {
+      "text": "dictionary and some looping over the",
+      "start": 63.199,
+      "duration": 4.24
+    },
+    {
+      "text": "dictionary and summing",
+      "start": 65.6,
+      "duration": 3.76
+    },
+    {
+      "text": "uh the different values to take the",
+      "start": 67.439,
+      "duration": 3.04
+    },
+    {
+      "text": "expected value",
+      "start": 69.36,
+      "duration": 3.92
+    },
+    {
+      "text": "or we could do that in a data frame as",
+      "start": 70.479,
+      "duration": 4.96
+    },
+    {
+      "text": "well",
+      "start": 73.28,
+      "duration": 4.4
+    },
+    {
+      "text": "and then looking at external scenario",
+      "start": 75.439,
+      "duration": 3.36
+    },
+    {
+      "text": "analysis",
+      "start": 77.68,
+      "duration": 4.56
+    },
+    {
+      "text": "so assuming with the external setup",
+      "start": 78.799,
+      "duration": 6.64
+    },
+    {
+      "text": "that uh we have one function that we can",
+      "start": 82.24,
+      "duration": 4.08
+    },
+    {
+      "text": "use to",
+      "start": 85.439,
+      "duration": 4.401
+    },
+    {
+      "text": "run the entire model then you just",
+      "start": 86.32,
+      "duration": 5.68
+    },
+    {
+      "text": "set up your different cases and you loop",
+      "start": 89.84,
+      "duration": 3.919
+    },
+    {
+      "text": "through the different cases",
+      "start": 92.0,
+      "duration": 4.479
+    },
+    {
+      "text": "you call the model function each time",
+      "start": 93.759,
+      "duration": 4.561
+    },
+    {
+      "text": "with that input case",
+      "start": 96.479,
+      "duration": 4.561
+    },
+    {
+      "text": "keep the outputs associated with those",
+      "start": 98.32,
+      "duration": 4.0
+    },
+    {
+      "text": "inputs",
+      "start": 101.04,
+      "duration": 3.119
+    },
+    {
+      "text": "uh and then you'll have the results for",
+      "start": 102.32,
+      "duration": 4.64
+    },
+    {
+      "text": "each case and you can go a step further",
+      "start": 104.159,
+      "duration": 3.521
+    },
+    {
+      "text": "to also",
+      "start": 106.96,
+      "duration": 3.28
+    },
+    {
+      "text": "assign probabilities to those cases so",
+      "start": 107.68,
+      "duration": 4.799
+    },
+    {
+      "text": "that you can take an expected value",
+      "start": 110.24,
+      "duration": 4.48
+    },
+    {
+      "text": "and get an expected result from the",
+      "start": 112.479,
+      "duration": 5.6
+    },
+    {
+      "text": "scenario analysis",
+      "start": 114.72,
+      "duration": 3.359
+    },
+    {
+      "text": "so the important thing to note for",
+      "start": 118.24,
+      "duration": 4.479
+    },
+    {
+      "text": "external scenario analysis",
+      "start": 120.96,
+      "duration": 4.96
+    },
+    {
+      "text": "just like uh sensitivity analysis and",
+      "start": 122.719,
+      "duration": 4.321
+    },
+    {
+      "text": "any other",
+      "start": 125.92,
+      "duration": 4.0
+    },
+    {
+      "text": "extension we're making to the core",
+      "start": 127.04,
+      "duration": 4.32
+    },
+    {
+      "text": "python model",
+      "start": 129.92,
+      "duration": 4.08
+    },
+    {
+      "text": "you do have to set your model up in a",
+      "start": 131.36,
+      "duration": 4.239
+    },
+    {
+      "text": "way that it's going to be able to be",
+      "start": 134.0,
+      "duration": 3.12
+    },
+    {
+      "text": "extended",
+      "start": 135.599,
+      "duration": 4.961
+    },
+    {
+      "text": "so that means that basically everything",
+      "start": 137.12,
+      "duration": 5.199
+    },
+    {
+      "text": "should be in functions",
+      "start": 140.56,
+      "duration": 4.0
+    },
+    {
+      "text": "and the functions should call each other",
+      "start": 142.319,
+      "duration": 3.361
+    },
+    {
+      "text": "in order to",
+      "start": 144.56,
+      "duration": 3.36
+    },
+    {
+      "text": "get the various pieces of information",
+      "start": 145.68,
+      "duration": 3.12
+    },
+    {
+      "text": "and you shouldn't",
+      "start": 147.92,
+      "duration": 4.16
+    },
+    {
+      "text": "have calculations going on outside in",
+      "start": 148.8,
+      "duration": 3.92
+    },
+    {
+      "text": "the cells",
+      "start": 152.08,
+      "duration": 3.439
+    },
+    {
+      "text": "outside of functions because those are",
+      "start": 152.72,
+      "duration": 5.12
+    },
+    {
+      "text": "not going to be able to properly adapt",
+      "start": 155.519,
+      "duration": 5.761
+    },
+    {
+      "text": "when you pass in the new data or the",
+      "start": 157.84,
+      "duration": 5.92
+    },
+    {
+      "text": "scenario or sensitivity analysis monte",
+      "start": 161.28,
+      "duration": 4.72
+    },
+    {
+      "text": "carlo simulation any of these other",
+      "start": 163.76,
+      "duration": 4.16
+    },
+    {
+      "text": "any of the extensions we're looking at",
+      "start": 166.0,
+      "duration": 4.72
+    },
+    {
+      "text": "for our models",
+      "start": 167.92,
+      "duration": 5.84
+    },
+    {
+      "text": "so if you were able to get your scenario",
+      "start": 170.72,
+      "duration": 6.4
+    },
+    {
+      "text": "or sorry sensitivity analysis python",
+      "start": 173.76,
+      "duration": 5.44
+    },
+    {
+      "text": "lab working appropriately extending the",
+      "start": 177.12,
+      "duration": 3.68
+    },
+    {
+      "text": "project one model",
+      "start": 179.2,
+      "duration": 3.36
+    },
+    {
+      "text": "then it should be set up appropriately",
+      "start": 180.8,
+      "duration": 4.0
+    },
+    {
+      "text": "to do all the future extensions as well",
+      "start": 182.56,
+      "duration": 3.52
+    },
+    {
+      "text": "so make sure",
+      "start": 184.8,
+      "duration": 5.2
+    },
+    {
+      "text": "that you have that project one",
+      "start": 186.08,
+      "duration": 6.56
+    },
+    {
+      "text": "sensitivity analysis python exercise",
+      "start": 190.0,
+      "duration": 4.879
+    },
+    {
+      "text": "correct before you keep moving on with",
+      "start": 192.64,
+      "duration": 5.519
+    },
+    {
+      "text": "the material",
+      "start": 194.879,
+      "duration": 6.401
+    },
+    {
+      "text": "so let's look at an example of how we",
+      "start": 198.159,
+      "duration": 4.16
+    },
+    {
+      "text": "can add",
+      "start": 201.28,
+      "duration": 4.48
+    },
+    {
+      "text": "this scenario analysis external scenario",
+      "start": 202.319,
+      "duration": 4.241
+    },
+    {
+      "text": "analysis",
+      "start": 205.76,
+      "duration": 4.0
+    },
+    {
+      "text": "to an existing python model so we'll",
+      "start": 206.56,
+      "duration": 4.72
+    },
+    {
+      "text": "work with the",
+      "start": 209.76,
+      "duration": 4.0
+    },
+    {
+      "text": "dynamic salary retirement model as we",
+      "start": 211.28,
+      "duration": 3.84
+    },
+    {
+      "text": "have been",
+      "start": 213.76,
+      "duration": 4.64
+    },
+    {
+      "text": "and uh we'll work here from the one that",
+      "start": 215.12,
+      "duration": 6.64
+    },
+    {
+      "text": "already has the sensitivity analysis",
+      "start": 218.4,
+      "duration": 6.479
+    },
+    {
+      "text": "incorporated in it and",
+      "start": 221.76,
+      "duration": 6.96
+    },
+    {
+      "text": "we'll go after the end of that um",
+      "start": 224.879,
+      "duration": 6.0
+    },
+    {
+      "text": "so first i'm just going to restart the",
+      "start": 228.72,
+      "duration": 4.0
+    },
+    {
+      "text": "kernel and run all the cells",
+      "start": 230.879,
+      "duration": 4.481
+    },
+    {
+      "text": "so that we have everything defined to be",
+      "start": 232.72,
+      "duration": 3.36
+    },
+    {
+      "text": "able to",
+      "start": 235.36,
+      "duration": 5.519
+    },
+    {
+      "text": "work with it",
+      "start": 236.08,
+      "duration": 8.719
+    },
+    {
+      "text": "as that runs um",
+      "start": 240.879,
+      "duration": 6.961
+    },
+    {
+      "text": "then we're going to",
+      "start": 244.799,
+      "duration": 6.881
+    },
+    {
+      "text": "start building out the",
+      "start": 247.84,
+      "duration": 3.84
+    },
+    {
+      "text": "scenario analysis section oh it looks",
+      "start": 252.0,
+      "duration": 3.36
+    },
+    {
+      "text": "like",
+      "start": 254.799,
+      "duration": 4.081
+    },
+    {
+      "text": "um i need to upgrade my sensitivity",
+      "start": 255.36,
+      "duration": 6.559
+    },
+    {
+      "text": "package here um if you get an error like",
+      "start": 258.88,
+      "duration": 3.759
+    },
+    {
+      "text": "this",
+      "start": 261.919,
+      "duration": 2.56
+    },
+    {
+      "text": "that's indicative that you need to",
+      "start": 262.639,
+      "duration": 4.641
+    },
+    {
+      "text": "update the sensitivity package",
+      "start": 264.479,
+      "duration": 6.0
+    },
+    {
+      "text": "so i'm just going to quickly",
+      "start": 267.28,
+      "duration": 3.199
+    },
+    {
+      "text": "upgrade that",
+      "start": 270.8,
+      "duration": 2.72
+    },
+    {
+      "text": "and that should take a few seconds and",
+      "start": 274.479,
+      "duration": 4.0
+    },
+    {
+      "text": "then it should be",
+      "start": 276.32,
+      "duration": 7.2
+    },
+    {
+      "text": "upgraded yep looks good",
+      "start": 278.479,
+      "duration": 7.841
+    },
+    {
+      "text": "successfully installed i got the upgrade",
+      "start": 283.52,
+      "duration": 4.399
+    },
+    {
+      "text": "now i can delete that cell",
+      "start": 286.32,
+      "duration": 3.439
+    },
+    {
+      "text": "i'm just going to restart and run",
+      "start": 287.919,
+      "duration": 3.681
+    },
+    {
+      "text": "everything again so that",
+      "start": 289.759,
+      "duration": 5.081
+    },
+    {
+      "text": "we'll be all set up to add the scenario",
+      "start": 291.6,
+      "duration": 5.68
+    },
+    {
+      "text": "analysis",
+      "start": 294.84,
+      "duration": 4.52
+    },
+    {
+      "text": "so now everything seems to be running",
+      "start": 297.28,
+      "duration": 3.919
+    },
+    {
+      "text": "appropriately here",
+      "start": 299.36,
+      "duration": 3.279
+    },
+    {
+      "text": "so i'm going to go ahead and start",
+      "start": 301.199,
+      "duration": 8.801
+    },
+    {
+      "text": "adding the scenario analysis now",
+      "start": 302.639,
+      "duration": 11.361
+    },
+    {
+      "text": "um so with the scenario analysis",
+      "start": 310.0,
+      "duration": 7.28
+    },
+    {
+      "text": "um we basically want to set up",
+      "start": 314.0,
+      "duration": 6.8
+    },
+    {
+      "text": "these different input cases and we want",
+      "start": 317.28,
+      "duration": 5.56
+    },
+    {
+      "text": "to have those cases associated with the",
+      "start": 320.8,
+      "duration": 3.36
+    },
+    {
+      "text": "scenarios",
+      "start": 322.84,
+      "duration": 4.6
+    },
+    {
+      "text": "so a dictionary is a natural",
+      "start": 324.16,
+      "duration": 5.68
+    },
+    {
+      "text": "data structure where we can have the",
+      "start": 327.44,
+      "duration": 3.52
+    },
+    {
+      "text": "keys",
+      "start": 329.84,
+      "duration": 3.68
+    },
+    {
+      "text": "be the names of the cases the the",
+      "start": 330.96,
+      "duration": 4.56
+    },
+    {
+      "text": "scenarios that we're looking at",
+      "start": 333.52,
+      "duration": 5.36
+    },
+    {
+      "text": "and the values can be the",
+      "start": 335.52,
+      "duration": 6.88
+    },
+    {
+      "text": "values of the inputs so the first thing",
+      "start": 338.88,
+      "duration": 4.319
+    },
+    {
+      "text": "that we want to do",
+      "start": 342.4,
+      "duration": 4.079
+    },
+    {
+      "text": "is create these different cases of the",
+      "start": 343.199,
+      "duration": 8.081
+    },
+    {
+      "text": "inputs so i can create bad economy",
+      "start": 346.479,
+      "duration": 7.201
+    },
+    {
+      "text": "data here we're just going to look at",
+      "start": 351.28,
+      "duration": 3.52
+    },
+    {
+      "text": "bad normal good",
+      "start": 353.68,
+      "duration": 3.92
+    },
+    {
+      "text": "economy and how that affects the model",
+      "start": 354.8,
+      "duration": 4.72
+    },
+    {
+      "text": "and that is a very standard thing to",
+      "start": 357.6,
+      "duration": 5.76
+    },
+    {
+      "text": "look at in scenario analysis",
+      "start": 359.52,
+      "duration": 3.84
+    },
+    {
+      "text": "[Music]",
+      "start": 363.38,
+      "duration": 4.06
+    },
+    {
+      "text": "so in order to set up all the inputs i'm",
+      "start": 364.479,
+      "duration": 4.241
+    },
+    {
+      "text": "going to create",
+      "start": 367.44,
+      "duration": 5.28
+    },
+    {
+      "text": "a new instance of the model inputs class",
+      "start": 368.72,
+      "duration": 7.36
+    },
+    {
+      "text": "um which will contain all of our input",
+      "start": 372.72,
+      "duration": 5.12
+    },
+    {
+      "text": "data",
+      "start": 376.08,
+      "duration": 4.64
+    },
+    {
+      "text": "um so i can set the starting salary to a",
+      "start": 377.84,
+      "duration": 3.68
+    },
+    {
+      "text": "lower rate",
+      "start": 380.72,
+      "duration": 3.84
+    },
+    {
+      "text": "forty thousand um i can set the",
+      "start": 381.52,
+      "duration": 5.36
+    },
+    {
+      "text": "promotions to occur less frequently",
+      "start": 384.56,
+      "duration": 4.0
+    },
+    {
+      "text": "every eight years",
+      "start": 386.88,
+      "duration": 4.879
+    },
+    {
+      "text": "uh i can set the cost of living raise",
+      "start": 388.56,
+      "duration": 6.72
+    },
+    {
+      "text": "to be only one percent",
+      "start": 391.759,
+      "duration": 7.28
+    },
+    {
+      "text": "the promotion raise i can take to",
+      "start": 395.28,
+      "duration": 7.68
+    },
+    {
+      "text": "um seven percent down from 15",
+      "start": 399.039,
+      "duration": 7.361
+    },
+    {
+      "text": "um the savings rate then",
+      "start": 402.96,
+      "duration": 6.4
+    },
+    {
+      "text": "we can bring that down to 15 we're",
+      "start": 406.4,
+      "duration": 4.4
+    },
+    {
+      "text": "saying this is a more financially",
+      "start": 409.36,
+      "duration": 2.48
+    },
+    {
+      "text": "constrained person",
+      "start": 410.8,
+      "duration": 2.959
+    },
+    {
+      "text": "not able to save as much in the",
+      "start": 411.84,
+      "duration": 3.359
+    },
+    {
+      "text": "recession",
+      "start": 413.759,
+      "duration": 4.641
+    },
+    {
+      "text": "um and the interest rate we can",
+      "start": 415.199,
+      "duration": 6.4
+    },
+    {
+      "text": "put at three percent",
+      "start": 418.4,
+      "duration": 6.56
+    },
+    {
+      "text": "and then we can assume that our",
+      "start": 421.599,
+      "duration": 7.841
+    },
+    {
+      "text": "um normal inputs that we have",
+      "start": 424.96,
+      "duration": 7.6
+    },
+    {
+      "text": "as the defaults here at the top",
+      "start": 429.44,
+      "duration": 4.64
+    },
+    {
+      "text": "we can assume that those are",
+      "start": 432.56,
+      "duration": 3.52
+    },
+    {
+      "text": "representative of a normal economy",
+      "start": 434.08,
+      "duration": 4.64
+    },
+    {
+      "text": "so we don't have to separately create",
+      "start": 436.08,
+      "duration": 3.04
+    },
+    {
+      "text": "the",
+      "start": 438.72,
+      "duration": 2.96
+    },
+    {
+      "text": "normal economy case we can just go on to",
+      "start": 439.12,
+      "duration": 3.84
+    },
+    {
+      "text": "the good economy",
+      "start": 441.68,
+      "duration": 4.32
+    },
+    {
+      "text": "case so again",
+      "start": 442.96,
+      "duration": 5.28
+    },
+    {
+      "text": "creating an instance of model inputs",
+      "start": 446.0,
+      "duration": 3.52
+    },
+    {
+      "text": "just here",
+      "start": 448.24,
+      "duration": 5.76
+    },
+    {
+      "text": "now giving values which are going to",
+      "start": 449.52,
+      "duration": 7.76
+    },
+    {
+      "text": "line up with a good economy an",
+      "start": 454.0,
+      "duration": 5.919
+    },
+    {
+      "text": "expansionary economy",
+      "start": 457.28,
+      "duration": 5.84
+    },
+    {
+      "text": "so typically you know more salary",
+      "start": 459.919,
+      "duration": 5.361
+    },
+    {
+      "text": "promotions are going to occur quicker",
+      "start": 463.12,
+      "duration": 3.44
+    },
+    {
+      "text": "there's going to be bigger",
+      "start": 465.28,
+      "duration": 4.56
+    },
+    {
+      "text": "raises for both the cost of living and",
+      "start": 466.56,
+      "duration": 3.6
+    },
+    {
+      "text": "the",
+      "start": 469.84,
+      "duration": 3.199
+    },
+    {
+      "text": "promotions uh the savings rate is going",
+      "start": 470.16,
+      "duration": 4.4
+    },
+    {
+      "text": "to be more because they're bringing in",
+      "start": 473.039,
+      "duration": 3.28
+    },
+    {
+      "text": "more they can save more",
+      "start": 474.56,
+      "duration": 4.4
+    },
+    {
+      "text": "and the interest rate is going to be",
+      "start": 476.319,
+      "duration": 3.121
+    },
+    {
+      "text": "higher",
+      "start": 478.96,
+      "duration": 4.4
+    },
+    {
+      "text": "as well so",
+      "start": 479.44,
+      "duration": 5.92
+    },
+    {
+      "text": "then this is where the dictionary comes",
+      "start": 483.36,
+      "duration": 3.2
+    },
+    {
+      "text": "in uh",
+      "start": 485.36,
+      "duration": 3.92
+    },
+    {
+      "text": "we can use that to keep all these things",
+      "start": 486.56,
+      "duration": 3.84
+    },
+    {
+      "text": "associated together",
+      "start": 489.28,
+      "duration": 4.639
+    },
+    {
+      "text": "so we can",
+      "start": 490.4,
+      "duration": 7.44
+    },
+    {
+      "text": "do the recession case",
+      "start": 493.919,
+      "duration": 6.801
+    },
+    {
+      "text": "and that's going to be bad economy data",
+      "start": 497.84,
+      "duration": 4.079
+    },
+    {
+      "text": "we can do the",
+      "start": 500.72,
+      "duration": 4.24
+    },
+    {
+      "text": "normal case and that is going to be",
+      "start": 501.919,
+      "duration": 6.481
+    },
+    {
+      "text": "our model data and we can have the",
+      "start": 504.96,
+      "duration": 7.6
+    },
+    {
+      "text": "expansion case which will be the good",
+      "start": 508.4,
+      "duration": 6.4
+    },
+    {
+      "text": "economy data",
+      "start": 512.56,
+      "duration": 6.0
+    },
+    {
+      "text": "so then we have all the data set up",
+      "start": 514.8,
+      "duration": 7.359
+    },
+    {
+      "text": "so that we can uh go and do these",
+      "start": 518.56,
+      "duration": 6.719
+    },
+    {
+      "text": "these scenario analysis",
+      "start": 522.159,
+      "duration": 7.201
+    },
+    {
+      "text": "so then um we want to look at",
+      "start": 525.279,
+      "duration": 7.281
+    },
+    {
+      "text": "what is the main output",
+      "start": 529.36,
+      "duration": 5.2
+    },
+    {
+      "text": "in each of these different scenarios so",
+      "start": 532.56,
+      "duration": 3.68
+    },
+    {
+      "text": "that's years to retirement for this",
+      "start": 534.56,
+      "duration": 4.719
+    },
+    {
+      "text": "model um so we can loop through the",
+      "start": 536.24,
+      "duration": 4.159
+    },
+    {
+      "text": "dictionary",
+      "start": 539.279,
+      "duration": 4.56
+    },
+    {
+      "text": "and if you recall from our uh lecture",
+      "start": 540.399,
+      "duration": 6.641
+    },
+    {
+      "text": "on dictionaries and using them",
+      "start": 543.839,
+      "duration": 6.321
+    },
+    {
+      "text": "more in python i'm going to loop through",
+      "start": 547.04,
+      "duration": 5.359
+    },
+    {
+      "text": "both the keys and values at the same",
+      "start": 550.16,
+      "duration": 2.799
+    },
+    {
+      "text": "time",
+      "start": 552.399,
+      "duration": 4.0
+    },
+    {
+      "text": "using the dot items method of the",
+      "start": 552.959,
+      "duration": 4.241
+    },
+    {
+      "text": "dictionary",
+      "start": 556.399,
+      "duration": 5.761
+    },
+    {
+      "text": "so i'm going to do for case type",
+      "start": 557.2,
+      "duration": 10.639
+    },
+    {
+      "text": "case inputs in cases dot items",
+      "start": 562.16,
+      "duration": 5.679
+    },
+    {
+      "text": "so let me quickly just print that to see",
+      "start": 569.68,
+      "duration": 5.52
+    },
+    {
+      "text": "what i'm getting",
+      "start": 572.959,
+      "duration": 4.081
+    },
+    {
+      "text": "and you can see i get the name of the",
+      "start": 575.2,
+      "duration": 3.199
+    },
+    {
+      "text": "case and then i get",
+      "start": 577.04,
+      "duration": 3.359
+    },
+    {
+      "text": "the inputs which align with that name of",
+      "start": 578.399,
+      "duration": 4.241
+    },
+    {
+      "text": "the case inputs which align with that so",
+      "start": 580.399,
+      "duration": 5.281
+    },
+    {
+      "text": "that's what i'm expecting to get",
+      "start": 582.64,
+      "duration": 4.16
+    },
+    {
+      "text": "now we want to actually do the",
+      "start": 585.68,
+      "duration": 5.279
+    },
+    {
+      "text": "calculation so i'm going to",
+      "start": 586.8,
+      "duration": 8.08
+    },
+    {
+      "text": "call the years retirement function",
+      "start": 590.959,
+      "duration": 6.641
+    },
+    {
+      "text": "with the case inputs and i'm going to",
+      "start": 594.88,
+      "duration": 4.8
+    },
+    {
+      "text": "make sure that it's not",
+      "start": 597.6,
+      "duration": 5.6
+    },
+    {
+      "text": "printing a whole bunch of output",
+      "start": 599.68,
+      "duration": 5.92
+    },
+    {
+      "text": "and then i'm going to have a print",
+      "start": 603.2,
+      "duration": 4.079
+    },
+    {
+      "text": "statement so i can have the nicely",
+      "start": 605.6,
+      "duration": 4.4
+    },
+    {
+      "text": "formatted string containing the result",
+      "start": 607.279,
+      "duration": 3.041
+    },
+    {
+      "text": "uh",
+      "start": 610.0,
+      "duration": 4.959
+    },
+    {
+      "text": "so it would take uh ytr",
+      "start": 610.32,
+      "duration": 7.759
+    },
+    {
+      "text": "years to retire",
+      "start": 614.959,
+      "duration": 7.361
+    },
+    {
+      "text": "in a case type",
+      "start": 618.079,
+      "duration": 6.801
+    },
+    {
+      "text": "economy",
+      "start": 622.32,
+      "duration": 2.56
+    },
+    {
+      "text": "i run that and we can see for these",
+      "start": 626.16,
+      "duration": 6.16
+    },
+    {
+      "text": "three different cases we can see the",
+      "start": 629.36,
+      "duration": 4.64
+    },
+    {
+      "text": "years to retirement",
+      "start": 632.32,
+      "duration": 6.16
+    },
+    {
+      "text": "in each of those cases so that's already",
+      "start": 634.0,
+      "duration": 4.48
+    },
+    {
+      "text": "one of the main outputs from the",
+      "start": 639.44,
+      "duration": 4.24
+    },
+    {
+      "text": "scenario analysis is just the results in",
+      "start": 641.279,
+      "duration": 3.68
+    },
+    {
+      "text": "each case",
+      "start": 643.68,
+      "duration": 2.96
+    },
+    {
+      "text": "now you can use that to guide your",
+      "start": 644.959,
+      "duration": 3.44
+    },
+    {
+      "text": "thinking in that",
+      "start": 646.64,
+      "duration": 4.48
+    },
+    {
+      "text": "um you know it's going to be much faster",
+      "start": 648.399,
+      "duration": 3.521
+    },
+    {
+      "text": "if everything",
+      "start": 651.12,
+      "duration": 3.839
+    },
+    {
+      "text": "lines up with an expansionary economy",
+      "start": 651.92,
+      "duration": 4.72
+    },
+    {
+      "text": "and much slower",
+      "start": 654.959,
+      "duration": 3.44
+    },
+    {
+      "text": "for the recession economy and you can",
+      "start": 656.64,
+      "duration": 3.36
+    },
+    {
+      "text": "frame your thinking about",
+      "start": 658.399,
+      "duration": 3.44
+    },
+    {
+      "text": "you know maybe this is the normal case",
+      "start": 660.0,
+      "duration": 3.76
+    },
+    {
+      "text": "but it could trend in either direction",
+      "start": 661.839,
+      "duration": 6.24
+    },
+    {
+      "text": "based on the state of the economy",
+      "start": 663.76,
+      "duration": 4.319
+    },
+    {
+      "text": "so then the last thing that we can",
+      "start": 668.56,
+      "duration": 6.08
+    },
+    {
+      "text": "do with scenario analysis is also to",
+      "start": 672.48,
+      "duration": 4.24
+    },
+    {
+      "text": "take an expected value",
+      "start": 674.64,
+      "duration": 5.28
+    },
+    {
+      "text": "across the different",
+      "start": 676.72,
+      "duration": 5.92
+    },
+    {
+      "text": "uh scenarios and their results so we",
+      "start": 679.92,
+      "duration": 4.159
+    },
+    {
+      "text": "have to assign",
+      "start": 682.64,
+      "duration": 4.8
+    },
+    {
+      "text": "probabilities to each of those scenarios",
+      "start": 684.079,
+      "duration": 7.041
+    },
+    {
+      "text": "and then we can get an expected value",
+      "start": 687.44,
+      "duration": 3.68
+    },
+    {
+      "text": "so i'm going to create here another",
+      "start": 691.2,
+      "duration": 4.96
+    },
+    {
+      "text": "dictionary",
+      "start": 693.839,
+      "duration": 5.201
+    },
+    {
+      "text": "which is going to associate the same",
+      "start": 696.16,
+      "duration": 3.52
+    },
+    {
+      "text": "names",
+      "start": 699.04,
+      "duration": 3.52
+    },
+    {
+      "text": "of the cases now with probabilities as",
+      "start": 699.68,
+      "duration": 3.92
+    },
+    {
+      "text": "well",
+      "start": 702.56,
+      "duration": 4.64
+    },
+    {
+      "text": "um so the recession i'm going to say 20",
+      "start": 703.6,
+      "duration": 7.52
+    },
+    {
+      "text": "the normal i'm going to say 50",
+      "start": 707.2,
+      "duration": 7.04
+    },
+    {
+      "text": "and the good economy i'm going to put at",
+      "start": 711.12,
+      "duration": 4.08
+    },
+    {
+      "text": "30",
+      "start": 714.24,
+      "duration": 2.96
+    },
+    {
+      "text": "of course with probabilities you would",
+      "start": 715.2,
+      "duration": 4.079
+    },
+    {
+      "text": "want them to sum up to one",
+      "start": 717.2,
+      "duration": 5.199
+    },
+    {
+      "text": "which these do um",
+      "start": 719.279,
+      "duration": 5.201
+    },
+    {
+      "text": "and now i'm going to take the expected",
+      "start": 722.399,
+      "duration": 3.12
+    },
+    {
+      "text": "value",
+      "start": 724.48,
+      "duration": 3.2
+    },
+    {
+      "text": "based on these probabilities and those",
+      "start": 725.519,
+      "duration": 3.44
+    },
+    {
+      "text": "results",
+      "start": 727.68,
+      "duration": 5.2
+    },
+    {
+      "text": "um so i can start from this loop which",
+      "start": 728.959,
+      "duration": 5.041
+    },
+    {
+      "text": "is already",
+      "start": 732.88,
+      "duration": 6.639
+    },
+    {
+      "text": "um getting the user timing for each",
+      "start": 734.0,
+      "duration": 5.519
+    },
+    {
+      "text": "i don't need to print that out anymore",
+      "start": 740.079,
+      "duration": 2.76
+    },
+    {
+      "text": "i'm just going to take that years",
+      "start": 741.6,
+      "duration": 3.76
+    },
+    {
+      "text": "retirement",
+      "start": 742.839,
+      "duration": 3.881
+    },
+    {
+      "text": "and now we want to calculate the",
+      "start": 745.36,
+      "duration": 4.719
+    },
+    {
+      "text": "expected value so the expected value",
+      "start": 746.72,
+      "duration": 6.239
+    },
+    {
+      "text": "we multiply each of the probabilities by",
+      "start": 750.079,
+      "duration": 3.281
+    },
+    {
+      "text": "the",
+      "start": 752.959,
+      "duration": 3.761
+    },
+    {
+      "text": "outputs and we sum them all up",
+      "start": 753.36,
+      "duration": 5.68
+    },
+    {
+      "text": "so the easy way to do that in python",
+      "start": 756.72,
+      "duration": 4.239
+    },
+    {
+      "text": "with a loop is you want to create a",
+      "start": 759.04,
+      "duration": 4.88
+    },
+    {
+      "text": "running total type of variable so you",
+      "start": 760.959,
+      "duration": 4.481
+    },
+    {
+      "text": "can keep adding to that",
+      "start": 763.92,
+      "duration": 3.2
+    },
+    {
+      "text": "with each case multiplied by its",
+      "start": 765.44,
+      "duration": 3.28
+    },
+    {
+      "text": "probability so",
+      "start": 767.12,
+      "duration": 4.56
+    },
+    {
+      "text": "we're going to start with the expected",
+      "start": 768.72,
+      "duration": 4.32
+    },
+    {
+      "text": "years to retirement",
+      "start": 771.68,
+      "duration": 4.399
+    },
+    {
+      "text": "is going to be zero representing that",
+      "start": 773.04,
+      "duration": 5.039
+    },
+    {
+      "text": "uh this is just a number we're going to",
+      "start": 776.079,
+      "duration": 4.0
+    },
+    {
+      "text": "keep adding to over time and so",
+      "start": 778.079,
+      "duration": 5.041
+    },
+    {
+      "text": "it starts at zero",
+      "start": 780.079,
+      "duration": 3.041
+    },
+    {
+      "text": "so then we want to take the probability",
+      "start": 784.16,
+      "duration": 7.04
+    },
+    {
+      "text": "and multiply it by the",
+      "start": 787.92,
+      "duration": 7.039
+    },
+    {
+      "text": "um years to retirement for that case",
+      "start": 791.2,
+      "duration": 6.639
+    },
+    {
+      "text": "and so we can call that the weighted",
+      "start": 794.959,
+      "duration": 4.801
+    },
+    {
+      "text": "years to retirement",
+      "start": 797.839,
+      "duration": 3.841
+    },
+    {
+      "text": "and for that we're going to multiply the",
+      "start": 799.76,
+      "duration": 3.28
+    },
+    {
+      "text": "years to retirement that we just",
+      "start": 801.68,
+      "duration": 2.719
+    },
+    {
+      "text": "calculated",
+      "start": 803.04,
+      "duration": 4.64
+    },
+    {
+      "text": "by the appropriate",
+      "start": 804.399,
+      "duration": 6.481
+    },
+    {
+      "text": "case probability",
+      "start": 807.68,
+      "duration": 3.2
+    },
+    {
+      "text": "so case probabilities and remember that",
+      "start": 811.44,
+      "duration": 4.48
+    },
+    {
+      "text": "case type here",
+      "start": 814.32,
+      "duration": 4.879
+    },
+    {
+      "text": "is the same key and so i'm able to look",
+      "start": 815.92,
+      "duration": 4.08
+    },
+    {
+      "text": "up",
+      "start": 819.199,
+      "duration": 4.0
+    },
+    {
+      "text": "the appropriate probability",
+      "start": 820.0,
+      "duration": 5.44
+    },
+    {
+      "text": "in the other dictionary by passing it",
+      "start": 823.199,
+      "duration": 6.161
+    },
+    {
+      "text": "the case type",
+      "start": 825.44,
+      "duration": 6.32
+    },
+    {
+      "text": "so we can look at what we're getting",
+      "start": 829.36,
+      "duration": 4.64
+    },
+    {
+      "text": "there",
+      "start": 831.76,
+      "duration": 2.24
+    },
+    {
+      "text": "and here you can definitely see a",
+      "start": 835.199,
+      "duration": 3.76
+    },
+    {
+      "text": "pitfall with this approach you do have",
+      "start": 837.44,
+      "duration": 2.8
+    },
+    {
+      "text": "to make sure",
+      "start": 838.959,
+      "duration": 4.081
+    },
+    {
+      "text": "that your keys match up across the two",
+      "start": 840.24,
+      "duration": 4.399
+    },
+    {
+      "text": "dictionaries or you're going to hit a",
+      "start": 843.04,
+      "duration": 2.479
+    },
+    {
+      "text": "key error",
+      "start": 844.639,
+      "duration": 3.521
+    },
+    {
+      "text": "here i called it expansion in these",
+      "start": 845.519,
+      "duration": 4.88
+    },
+    {
+      "text": "cases and here i called it good",
+      "start": 848.16,
+      "duration": 4.4
+    },
+    {
+      "text": "in these cases and so i get a key error",
+      "start": 850.399,
+      "duration": 3.201
+    },
+    {
+      "text": "about expansion",
+      "start": 852.56,
+      "duration": 2.8
+    },
+    {
+      "text": "so i just need to make sure that those",
+      "start": 853.6,
+      "duration": 3.2
+    },
+    {
+      "text": "match",
+      "start": 855.36,
+      "duration": 3.039
+    },
+    {
+      "text": "and now it's able to calculate",
+      "start": 856.8,
+      "duration": 4.24
+    },
+    {
+      "text": "appropriately",
+      "start": 858.399,
+      "duration": 2.641
+    },
+    {
+      "text": "so these are weighted numbers they're",
+      "start": 861.36,
+      "duration": 3.52
+    },
+    {
+      "text": "not going to mean a lot until we",
+      "start": 863.519,
+      "duration": 2.961
+    },
+    {
+      "text": "actually add them",
+      "start": 864.88,
+      "duration": 4.8
+    },
+    {
+      "text": "to the expected user retirement running",
+      "start": 866.48,
+      "duration": 4.719
+    },
+    {
+      "text": "some variable",
+      "start": 869.68,
+      "duration": 4.56
+    },
+    {
+      "text": "so then um",
+      "start": 871.199,
+      "duration": 5.281
+    },
+    {
+      "text": "we're just going to do expected ytr",
+      "start": 874.24,
+      "duration": 4.159
+    },
+    {
+      "text": "equals expected",
+      "start": 876.48,
+      "duration": 7.919
+    },
+    {
+      "text": "ytr plus weighted ytr",
+      "start": 878.399,
+      "duration": 8.161
+    },
+    {
+      "text": "and then i can add a print statement at",
+      "start": 884.399,
+      "duration": 3.201
+    },
+    {
+      "text": "the end",
+      "start": 886.56,
+      "duration": 6.32
+    },
+    {
+      "text": "it would take expected ytr",
+      "start": 887.6,
+      "duration": 9.12
+    },
+    {
+      "text": "um decimal places",
+      "start": 892.88,
+      "duration": 6.959
+    },
+    {
+      "text": "years to retire",
+      "start": 896.72,
+      "duration": 3.119
+    },
+    {
+      "text": "and we can also put in this sentence the",
+      "start": 903.44,
+      "duration": 7.399
+    },
+    {
+      "text": "probabilities as well considering",
+      "start": 906.88,
+      "duration": 6.639
+    },
+    {
+      "text": "a",
+      "start": 910.839,
+      "duration": 5.881
+    },
+    {
+      "text": "case probabilities",
+      "start": 913.519,
+      "duration": 3.201
+    },
+    {
+      "text": "[Music]",
+      "start": 916.74,
+      "duration": 3.179
+    },
+    {
+      "text": "recession",
+      "start": 920.079,
+      "duration": 2.641
+    },
+    {
+      "text": "answer assassin",
+      "start": 923.6,
+      "duration": 4.239
+    },
+    {
+      "text": "and uh and i can format this",
+      "start": 929.92,
+      "duration": 10.32
+    },
+    {
+      "text": "as a percent",
+      "start": 934.399,
+      "duration": 8.24
+    },
+    {
+      "text": "and",
+      "start": 940.24,
+      "duration": 2.399
+    },
+    {
+      "text": "then the same thing over here with the",
+      "start": 943.519,
+      "duration": 4.401
+    },
+    {
+      "text": "expansion",
+      "start": 952.839,
+      "duration": 7.161
+    },
+    {
+      "text": "change of an expansionary economy",
+      "start": 955.759,
+      "duration": 4.241
+    },
+    {
+      "text": "so it would take 32 years to retire",
+      "start": 962.72,
+      "duration": 3.919
+    },
+    {
+      "text": "considering a 20 chance of recession and",
+      "start": 964.399,
+      "duration": 2.88
+    },
+    {
+      "text": "30",
+      "start": 966.639,
+      "duration": 3.76
+    },
+    {
+      "text": "chance of an expansionary economy",
+      "start": 967.279,
+      "duration": 5.841
+    },
+    {
+      "text": "um and a couple things to note in what i",
+      "start": 970.399,
+      "duration": 5.281
+    },
+    {
+      "text": "just did there",
+      "start": 973.12,
+      "duration": 2.56
+    },
+    {
+      "text": "notice that my outer string was single",
+      "start": 975.839,
+      "duration": 4.961
+    },
+    {
+      "text": "quotes and now when i'm looking up the",
+      "start": 979.36,
+      "duration": 3.599
+    },
+    {
+      "text": "keys i'm using double quotes",
+      "start": 980.8,
+      "duration": 5.279
+    },
+    {
+      "text": "i did that intentionally because if you",
+      "start": 982.959,
+      "duration": 5.44
+    },
+    {
+      "text": "try and use single quotes here",
+      "start": 986.079,
+      "duration": 6.0
+    },
+    {
+      "text": "um but that may actually no yeah",
+      "start": 988.399,
+      "duration": 6.401
+    },
+    {
+      "text": "it uh it gets confused it basically",
+      "start": 992.079,
+      "duration": 3.921
+    },
+    {
+      "text": "thinks that the string",
+      "start": 994.8,
+      "duration": 4.0
+    },
+    {
+      "text": "ends uh the string that started here now",
+      "start": 996.0,
+      "duration": 3.6
+    },
+    {
+      "text": "ends here",
+      "start": 998.8,
+      "duration": 2.8
+    },
+    {
+      "text": "and so it gets messed up and so if you",
+      "start": 999.6,
+      "duration": 3.679
+    },
+    {
+      "text": "just make sure that",
+      "start": 1001.6,
+      "duration": 3.679
+    },
+    {
+      "text": "uh you use the opposite quotes whatever",
+      "start": 1003.279,
+      "duration": 3.92
+    },
+    {
+      "text": "you used on the outside",
+      "start": 1005.279,
+      "duration": 3.841
+    },
+    {
+      "text": "uh for the inside then you won't run",
+      "start": 1007.199,
+      "duration": 4.961
+    },
+    {
+      "text": "into any conflict",
+      "start": 1009.12,
+      "duration": 3.04
+    },
+    {
+      "text": "the other thing is that this line is now",
+      "start": 1012.56,
+      "duration": 4.24
+    },
+    {
+      "text": "quite long",
+      "start": 1015.36,
+      "duration": 3.68
+    },
+    {
+      "text": "so for readability purposes it makes",
+      "start": 1016.8,
+      "duration": 3.52
+    },
+    {
+      "text": "sense to",
+      "start": 1019.04,
+      "duration": 6.799
+    },
+    {
+      "text": "actually split that onto multiple lines",
+      "start": 1020.32,
+      "duration": 5.519
+    },
+    {
+      "text": "and with strings if it's somewhere",
+      "start": 1026.64,
+      "duration": 4.08
+    },
+    {
+      "text": "within parentheses",
+      "start": 1028.72,
+      "duration": 4.88
+    },
+    {
+      "text": "uh then you can just combine them like",
+      "start": 1030.72,
+      "duration": 3.359
+    },
+    {
+      "text": "this",
+      "start": 1033.6,
+      "duration": 2.719
+    },
+    {
+      "text": "where strings on multiple lines will",
+      "start": 1034.079,
+      "duration": 6.24
+    },
+    {
+      "text": "just automatically get combined",
+      "start": 1036.319,
+      "duration": 6.081
+    },
+    {
+      "text": "so now that is definitely more readable",
+      "start": 1040.319,
+      "duration": 3.441
+    },
+    {
+      "text": "because you don't have to",
+      "start": 1042.4,
+      "duration": 4.559
+    },
+    {
+      "text": "scroll over to see all the contents of",
+      "start": 1043.76,
+      "duration": 8.88
+    },
+    {
+      "text": "that print statement",
+      "start": 1046.959,
+      "duration": 9.281
+    },
+    {
+      "text": "um so that is how to implement",
+      "start": 1052.64,
+      "duration": 6.88
+    },
+    {
+      "text": "scenario analysis in python so thanks",
+      "start": 1056.24,
+      "duration": 4.24
+    },
+    {
+      "text": "for listening",
+      "start": 1059.52,
+      "duration": 8.32
+    },
+    {
+      "text": "and see you next time",
+      "start": 1060.48,
+      "duration": 7.36
+    }
+  ]
+}

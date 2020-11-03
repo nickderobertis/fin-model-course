@@ -1,0 +1,1119 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick dearbertis",
+      "start": 2.8,
+      "duration": 3.68
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 4.64,
+      "duration": 4.08
+    },
+    {
+      "text": "today we're going to be solving the lab",
+      "start": 6.48,
+      "duration": 3.36
+    },
+    {
+      "text": "exercise",
+      "start": 8.72,
+      "duration": 4.48
+    },
+    {
+      "text": "on generating and visualizing random",
+      "start": 9.84,
+      "duration": 4.16
+    },
+    {
+      "text": "continuous",
+      "start": 13.2,
+      "duration": 5.36
+    },
+    {
+      "text": "numbers in excel so",
+      "start": 14.0,
+      "duration": 7.279
+    },
+    {
+      "text": "this is the lab exercise the first one",
+      "start": 18.56,
+      "duration": 4.479
+    },
+    {
+      "text": "in the internal randomness",
+      "start": 21.279,
+      "duration": 5.281
+    },
+    {
+      "text": "section um and this is",
+      "start": 23.039,
+      "duration": 6.48
+    },
+    {
+      "text": "focusing on excel first we're going to",
+      "start": 26.56,
+      "duration": 4.639
+    },
+    {
+      "text": "complete the same exercise for",
+      "start": 29.519,
+      "duration": 5.2
+    },
+    {
+      "text": "python in the following video",
+      "start": 31.199,
+      "duration": 6.561
+    },
+    {
+      "text": "so the exercise just to quickly recap on",
+      "start": 34.719,
+      "duration": 4.0
+    },
+    {
+      "text": "it",
+      "start": 37.76,
+      "duration": 4.0
+    },
+    {
+      "text": "we're generating um",
+      "start": 38.719,
+      "duration": 5.121
+    },
+    {
+      "text": "we're doing the whole exercise for ten",
+      "start": 41.76,
+      "duration": 3.52
+    },
+    {
+      "text": "thousand different numbers we're going",
+      "start": 43.84,
+      "duration": 3.44
+    },
+    {
+      "text": "to generate the random numbers",
+      "start": 45.28,
+      "duration": 5.04
+    },
+    {
+      "text": "uh between zero and one uniform we're",
+      "start": 47.28,
+      "duration": 4.16
+    },
+    {
+      "text": "gonna generate",
+      "start": 50.32,
+      "duration": 3.68
+    },
+    {
+      "text": "from a normal distribution as well we're",
+      "start": 51.44,
+      "duration": 3.36
+    },
+    {
+      "text": "going to",
+      "start": 54.0,
+      "duration": 3.44
+    },
+    {
+      "text": "visualize those with a histogram",
+      "start": 54.8,
+      "duration": 3.2
+    },
+    {
+      "text": "calculate",
+      "start": 57.44,
+      "duration": 3.2
+    },
+    {
+      "text": "the mean and standard deviation of each",
+      "start": 58.0,
+      "duration": 3.28
+    },
+    {
+      "text": "of those",
+      "start": 60.64,
+      "duration": 3.919
+    },
+    {
+      "text": "sets of numbers and recalculate it and",
+      "start": 61.28,
+      "duration": 6.8
+    },
+    {
+      "text": "see how much things change",
+      "start": 64.559,
+      "duration": 3.521
+    },
+    {
+      "text": "so we're going to",
+      "start": 69.6,
+      "duration": 6.48
+    },
+    {
+      "text": "first need to generate those",
+      "start": 72.64,
+      "duration": 8.0
+    },
+    {
+      "text": "um 10 random numbers",
+      "start": 76.08,
+      "duration": 7.679
+    },
+    {
+      "text": "of uniform and continuous",
+      "start": 80.64,
+      "duration": 9.04
+    },
+    {
+      "text": "so we can uniform and continuous",
+      "start": 83.759,
+      "duration": 9.441
+    },
+    {
+      "text": "it's our uniform and normal um",
+      "start": 89.68,
+      "duration": 7.68
+    },
+    {
+      "text": "and so uniform we just want it to be",
+      "start": 93.2,
+      "duration": 7.04
+    },
+    {
+      "text": "between 0 and 1 so all we have to do for",
+      "start": 97.36,
+      "duration": 3.84
+    },
+    {
+      "text": "that in excel",
+      "start": 100.24,
+      "duration": 4.08
+    },
+    {
+      "text": "is the rand function",
+      "start": 101.2,
+      "duration": 7.04
+    },
+    {
+      "text": "um and uh",
+      "start": 104.32,
+      "duration": 6.4
+    },
+    {
+      "text": "let's see here i'm also just going to",
+      "start": 108.24,
+      "duration": 3.76
+    },
+    {
+      "text": "put a counter",
+      "start": 110.72,
+      "duration": 4.96
+    },
+    {
+      "text": "for uh how many numbers we have",
+      "start": 112.0,
+      "duration": 6.479
+    },
+    {
+      "text": "um then here it's going to be the normal",
+      "start": 115.68,
+      "duration": 3.92
+    },
+    {
+      "text": "inverse function",
+      "start": 118.479,
+      "duration": 4.801
+    },
+    {
+      "text": "of rand and then uh",
+      "start": 119.6,
+      "duration": 7.36
+    },
+    {
+      "text": "0.5 mean what does it say 0.5 mean",
+      "start": 123.28,
+      "duration": 8.24
+    },
+    {
+      "text": "and a 10 standard deviation",
+      "start": 126.96,
+      "duration": 4.56
+    },
+    {
+      "text": "and as is always a good idea in a model",
+      "start": 134.959,
+      "duration": 5.521
+    },
+    {
+      "text": "i'm going to make those actually",
+      "start": 138.879,
+      "duration": 5.201
+    },
+    {
+      "text": "inputs the mean and standard deviation",
+      "start": 140.48,
+      "duration": 6.64
+    },
+    {
+      "text": "uh 0.5 and 10",
+      "start": 144.08,
+      "duration": 5.28
+    },
+    {
+      "text": "so that those can be referenced from",
+      "start": 147.12,
+      "duration": 3.68
+    },
+    {
+      "text": "there",
+      "start": 149.36,
+      "duration": 3.84
+    },
+    {
+      "text": "and we could update that if we wish and",
+      "start": 150.8,
+      "duration": 4.24
+    },
+    {
+      "text": "i'm going to fix those",
+      "start": 153.2,
+      "duration": 5.28
+    },
+    {
+      "text": "so that as we drag it it's going to",
+      "start": 155.04,
+      "duration": 6.32
+    },
+    {
+      "text": "keep that reference",
+      "start": 158.48,
+      "duration": 2.88
+    },
+    {
+      "text": "so then uh dragging this down so we get",
+      "start": 161.92,
+      "duration": 3.09
+    },
+    {
+      "text": "10",
+      "start": 164.64,
+      "duration": 1.52
+    },
+    {
+      "text": "[Music]",
+      "start": 165.01,
+      "duration": 3.869
+    },
+    {
+      "text": "random numbers there of each type and",
+      "start": 166.16,
+      "duration": 4.159
+    },
+    {
+      "text": "then the next step is",
+      "start": 168.879,
+      "duration": 5.041
+    },
+    {
+      "text": "to visualize those with a histogram",
+      "start": 170.319,
+      "duration": 5.681
+    },
+    {
+      "text": "so first i'll go for the normal",
+      "start": 173.92,
+      "duration": 2.8
+    },
+    {
+      "text": "distribution",
+      "start": 176.0,
+      "duration": 2.959
+    },
+    {
+      "text": "[Music]",
+      "start": 176.72,
+      "duration": 5.92
+    },
+    {
+      "text": "and we can",
+      "start": 178.959,
+      "duration": 8.401
+    },
+    {
+      "text": "go to all charts to get a histogram",
+      "start": 182.64,
+      "duration": 8.8
+    },
+    {
+      "text": "um hit okay um",
+      "start": 187.36,
+      "duration": 6.88
+    },
+    {
+      "text": "we're going to want to",
+      "start": 191.44,
+      "duration": 5.68
+    },
+    {
+      "text": "[Music]",
+      "start": 194.24,
+      "duration": 6.639
+    },
+    {
+      "text": "modify uh the options for this",
+      "start": 197.12,
+      "duration": 7.119
+    },
+    {
+      "text": "um because we want to",
+      "start": 200.879,
+      "duration": 7.28
+    },
+    {
+      "text": "change the number of",
+      "start": 204.239,
+      "duration": 8.08
+    },
+    {
+      "text": "um different",
+      "start": 208.159,
+      "duration": 9.841
+    },
+    {
+      "text": "um bins that we have in the histogram",
+      "start": 212.319,
+      "duration": 5.681
+    },
+    {
+      "text": "so that um",
+      "start": 219.12,
+      "duration": 4.479
+    },
+    {
+      "text": "let's see is",
+      "start": 223.92,
+      "duration": 6.16
+    },
+    {
+      "text": "i think uh maybe format the axis is that",
+      "start": 227.44,
+      "duration": 4.4
+    },
+    {
+      "text": "yep so formatting the axis",
+      "start": 230.08,
+      "duration": 3.76
+    },
+    {
+      "text": "is how you get to these options for the",
+      "start": 231.84,
+      "duration": 3.84
+    },
+    {
+      "text": "histogram in excel",
+      "start": 233.84,
+      "duration": 4.8
+    },
+    {
+      "text": "so there we can set a number of bins um",
+      "start": 235.68,
+      "duration": 6.8
+    },
+    {
+      "text": "i'm going to say 10 bins",
+      "start": 238.64,
+      "duration": 3.84
+    },
+    {
+      "text": "and hit enter and now we can see",
+      "start": 243.439,
+      "duration": 5.121
+    },
+    {
+      "text": "this is",
+      "start": 248.64,
+      "duration": 2.959
+    },
+    {
+      "text": "uniform uh n equals 10.",
+      "start": 253.2,
+      "duration": 5.52
+    },
+    {
+      "text": "and then i can go ahead and do the same",
+      "start": 260.32,
+      "duration": 3.76
+    },
+    {
+      "text": "with the histogram",
+      "start": 262.72,
+      "duration": 4.8
+    },
+    {
+      "text": "as well insert chart",
+      "start": 264.08,
+      "duration": 6.96
+    },
+    {
+      "text": "go to the histogram",
+      "start": 267.52,
+      "duration": 3.52
+    },
+    {
+      "text": "i'm going to move that down",
+      "start": 271.919,
+      "duration": 4.321
+    },
+    {
+      "text": "[Music]",
+      "start": 273.44,
+      "duration": 9.759
+    },
+    {
+      "text": "so that we can get both of them in here",
+      "start": 276.24,
+      "duration": 10.0
+    },
+    {
+      "text": "um and here",
+      "start": 283.199,
+      "duration": 7.201
+    },
+    {
+      "text": "again going to format that axis",
+      "start": 286.24,
+      "duration": 6.32
+    },
+    {
+      "text": "with number of bins let's again do 10",
+      "start": 290.4,
+      "duration": 3.519
+    },
+    {
+      "text": "bins",
+      "start": 292.56,
+      "duration": 2.96
+    },
+    {
+      "text": "you want to pick a number of bins that",
+      "start": 293.919,
+      "duration": 3.601
+    },
+    {
+      "text": "makes sense for your data let me",
+      "start": 295.52,
+      "duration": 4.239
+    },
+    {
+      "text": "do actually 20 here to get a little bit",
+      "start": 297.52,
+      "duration": 3.36
+    },
+    {
+      "text": "smoother",
+      "start": 299.759,
+      "duration": 4.401
+    },
+    {
+      "text": "representation um now of course they're",
+      "start": 300.88,
+      "duration": 3.84
+    },
+    {
+      "text": "only done",
+      "start": 304.16,
+      "duration": 2.64
+    },
+    {
+      "text": "10 data points and 20 bins so we have a",
+      "start": 304.72,
+      "duration": 4.4
+    },
+    {
+      "text": "lot of empty bins here",
+      "start": 306.8,
+      "duration": 5.28
+    },
+    {
+      "text": "um and then the other thing we want to",
+      "start": 309.12,
+      "duration": 4.48
+    },
+    {
+      "text": "do is we want to calculate",
+      "start": 312.08,
+      "duration": 4.64
+    },
+    {
+      "text": "the uh the mean",
+      "start": 313.6,
+      "duration": 5.52
+    },
+    {
+      "text": "and the standard deviation of the",
+      "start": 316.72,
+      "duration": 4.08
+    },
+    {
+      "text": "generated numbers",
+      "start": 319.12,
+      "duration": 5.04
+    },
+    {
+      "text": "um so that's average",
+      "start": 320.8,
+      "duration": 6.48
+    },
+    {
+      "text": "for the mean we're going to average this",
+      "start": 324.16,
+      "duration": 5.92
+    },
+    {
+      "text": "range of numbers",
+      "start": 327.28,
+      "duration": 2.8
+    },
+    {
+      "text": "and then for the standard deviation",
+      "start": 331.68,
+      "duration": 8.16
+    },
+    {
+      "text": "scdev dot s it's a sample",
+      "start": 335.44,
+      "duration": 4.4
+    },
+    {
+      "text": "of that same range of numbers and then i",
+      "start": 340.24,
+      "duration": 4.88
+    },
+    {
+      "text": "can drag that over",
+      "start": 343.6,
+      "duration": 3.92
+    },
+    {
+      "text": "to get that for the normal distribution",
+      "start": 345.12,
+      "duration": 4.799
+    },
+    {
+      "text": "as well",
+      "start": 347.52,
+      "duration": 4.48
+    },
+    {
+      "text": "but i'm actually going to move this over",
+      "start": 349.919,
+      "duration": 3.28
+    },
+    {
+      "text": "to here",
+      "start": 352.0,
+      "duration": 3.36
+    },
+    {
+      "text": "um just because later we're going to",
+      "start": 353.199,
+      "duration": 4.161
+    },
+    {
+      "text": "expand this to a thousand observations",
+      "start": 355.36,
+      "duration": 4.959
+    },
+    {
+      "text": "going down over there",
+      "start": 357.36,
+      "duration": 2.959
+    },
+    {
+      "text": "um so now the exercise says we want to",
+      "start": 360.479,
+      "duration": 6.321
+    },
+    {
+      "text": "recalculate this thing a few times",
+      "start": 364.4,
+      "duration": 4.799
+    },
+    {
+      "text": "uh so you can see as we calculate it",
+      "start": 366.8,
+      "duration": 4.239
+    },
+    {
+      "text": "distributions look very different",
+      "start": 369.199,
+      "duration": 5.28
+    },
+    {
+      "text": "each time that you run this",
+      "start": 371.039,
+      "duration": 5.681
+    },
+    {
+      "text": "and the means and standard deviations",
+      "start": 374.479,
+      "duration": 3.44
+    },
+    {
+      "text": "that we see also",
+      "start": 376.72,
+      "duration": 5.039
+    },
+    {
+      "text": "similarly jump around quite a bit",
+      "start": 377.919,
+      "duration": 7.84
+    },
+    {
+      "text": "so now this is our",
+      "start": 381.759,
+      "duration": 4.0
+    },
+    {
+      "text": "n equals 10 sheet now we can",
+      "start": 385.84,
+      "duration": 6.479
+    },
+    {
+      "text": "copy this sheet",
+      "start": 389.44,
+      "duration": 2.879
+    },
+    {
+      "text": "of course this is an advantage of the",
+      "start": 392.88,
+      "duration": 3.84
+    },
+    {
+      "text": "way you",
+      "start": 395.199,
+      "duration": 3.28
+    },
+    {
+      "text": "have to go about this in excel",
+      "start": 396.72,
+      "duration": 3.36
+    },
+    {
+      "text": "disadvantage uh",
+      "start": 398.479,
+      "duration": 4.0
+    },
+    {
+      "text": "because if we wanted to make any more",
+      "start": 400.08,
+      "duration": 3.6
+    },
+    {
+      "text": "changes to this",
+      "start": 402.479,
+      "duration": 3.361
+    },
+    {
+      "text": "it'll require re-going through this copy",
+      "start": 403.68,
+      "duration": 3.6
+    },
+    {
+      "text": "sheet process",
+      "start": 405.84,
+      "duration": 5.6
+    },
+    {
+      "text": "and redoing this but now i'm going to",
+      "start": 407.28,
+      "duration": 7.28
+    },
+    {
+      "text": "take this down to a thousand",
+      "start": 411.44,
+      "duration": 6.08
+    },
+    {
+      "text": "observations of drawing from these",
+      "start": 414.56,
+      "duration": 5.199
+    },
+    {
+      "text": "distributions",
+      "start": 417.52,
+      "duration": 5.84
+    },
+    {
+      "text": "so i'll cut it off at a 1000 here",
+      "start": 419.759,
+      "duration": 5.571
+    },
+    {
+      "text": "and go back up",
+      "start": 423.36,
+      "duration": 3.279
+    },
+    {
+      "text": "[Music]",
+      "start": 425.33,
+      "duration": 3.79
+    },
+    {
+      "text": "and now",
+      "start": 426.639,
+      "duration": 2.481
+    },
+    {
+      "text": "we can",
+      "start": 429.68,
+      "duration": 2.72
+    },
+    {
+      "text": "adjust the ranges of these charts as",
+      "start": 432.96,
+      "duration": 5.6
+    },
+    {
+      "text": "well",
+      "start": 436.319,
+      "duration": 2.241
+    },
+    {
+      "text": "so you can drag it all the way",
+      "start": 439.199,
+      "duration": 6.081
+    },
+    {
+      "text": "to the bottom there's only a thousand so",
+      "start": 442.639,
+      "duration": 3.201
+    },
+    {
+      "text": "it's not",
+      "start": 445.28,
+      "duration": 4.0
+    },
+    {
+      "text": "too bad to do that you can also go in",
+      "start": 445.84,
+      "duration": 5.84
+    },
+    {
+      "text": "into the options and manually edit the",
+      "start": 449.28,
+      "duration": 3.61
+    },
+    {
+      "text": "range",
+      "start": 451.68,
+      "duration": 2.56
+    },
+    {
+      "text": "[Music]",
+      "start": 452.89,
+      "duration": 4.95
+    },
+    {
+      "text": "just change it to be 1004",
+      "start": 454.24,
+      "duration": 9.76
+    },
+    {
+      "text": "for the end",
+      "start": 457.84,
+      "duration": 10.479
+    },
+    {
+      "text": "so i've done that",
+      "start": 464.0,
+      "duration": 6.319
+    },
+    {
+      "text": "and now we can see it actually with",
+      "start": 468.319,
+      "duration": 3.28
+    },
+    {
+      "text": "thousand it does look",
+      "start": 470.319,
+      "duration": 4.241
+    },
+    {
+      "text": "fairly uniform it's all the bars here",
+      "start": 471.599,
+      "duration": 5.761
+    },
+    {
+      "text": "are fairly even",
+      "start": 474.56,
+      "duration": 7.12
+    },
+    {
+      "text": "um now let's make this change over here",
+      "start": 477.36,
+      "duration": 6.959
+    },
+    {
+      "text": "um so over here i'm gonna go into select",
+      "start": 481.68,
+      "duration": 4.32
+    },
+    {
+      "text": "data for the other approach that i",
+      "start": 484.319,
+      "duration": 2.801
+    },
+    {
+      "text": "mentioned",
+      "start": 486.0,
+      "duration": 4.72
+    },
+    {
+      "text": "um i think i said that a thousand",
+      "start": 487.12,
+      "duration": 6.639
+    },
+    {
+      "text": "four was our last room there so i'm just",
+      "start": 490.72,
+      "duration": 5.68
+    },
+    {
+      "text": "going to manually edit it like that",
+      "start": 493.759,
+      "duration": 4.641
+    },
+    {
+      "text": "and you'll see that allows it to pick up",
+      "start": 496.4,
+      "duration": 4.16
+    },
+    {
+      "text": "all the data",
+      "start": 498.4,
+      "duration": 3.919
+    },
+    {
+      "text": "so there now we're seeing something that",
+      "start": 500.56,
+      "duration": 3.759
+    },
+    {
+      "text": "looks like a normal distribution",
+      "start": 502.319,
+      "duration": 4.641
+    },
+    {
+      "text": "come up from the histogram and contrast",
+      "start": 504.319,
+      "duration": 4.16
+    },
+    {
+      "text": "to that equals 10",
+      "start": 506.96,
+      "duration": 3.6
+    },
+    {
+      "text": "you it's very hard to discern what",
+      "start": 508.479,
+      "duration": 5.12
+    },
+    {
+      "text": "distribution is going on here",
+      "start": 510.56,
+      "duration": 5.68
+    },
+    {
+      "text": "i'm going to also",
+      "start": 513.599,
+      "duration": 2.641
+    },
+    {
+      "text": "expand these 2004 by manually editing",
+      "start": 517.2,
+      "duration": 5.12
+    },
+    {
+      "text": "the range",
+      "start": 519.76,
+      "duration": 2.56
+    },
+    {
+      "text": "and then drag these over",
+      "start": 523.68,
+      "duration": 6.96
+    },
+    {
+      "text": "and then you what you can see",
+      "start": 526.959,
+      "duration": 7.521
+    },
+    {
+      "text": "with the mean standard deviation",
+      "start": 530.64,
+      "duration": 6.879
+    },
+    {
+      "text": "um now when we as we recalculate it",
+      "start": 534.48,
+      "duration": 4.4
+    },
+    {
+      "text": "it's going to be quite a bit more",
+      "start": 537.519,
+      "duration": 4.081
+    },
+    {
+      "text": "consistent",
+      "start": 538.88,
+      "duration": 2.72
+    },
+    {
+      "text": "that the mean",
+      "start": 541.92,
+      "duration": 3.76
+    },
+    {
+      "text": "of the normal distribution is usually",
+      "start": 546.08,
+      "duration": 3.84
+    },
+    {
+      "text": "not going to be too different",
+      "start": 548.56,
+      "duration": 4.0
+    },
+    {
+      "text": "from 0.5 it does move around that but",
+      "start": 549.92,
+      "duration": 4.4
+    },
+    {
+      "text": "not very different",
+      "start": 552.56,
+      "duration": 4.16
+    },
+    {
+      "text": "the mean of the uniform is always coming",
+      "start": 554.32,
+      "duration": 4.24
+    },
+    {
+      "text": "up near 0.5",
+      "start": 556.72,
+      "duration": 4.16
+    },
+    {
+      "text": "and the standard deviation of the normal",
+      "start": 558.56,
+      "duration": 3.2
+    },
+    {
+      "text": "distribution",
+      "start": 560.88,
+      "duration": 4.16
+    },
+    {
+      "text": "is coming up towards 10 every time",
+      "start": 561.76,
+      "duration": 5.92
+    },
+    {
+      "text": "whereas in the n equals 10 case these",
+      "start": 565.04,
+      "duration": 4.16
+    },
+    {
+      "text": "numbers are jumping around",
+      "start": 567.68,
+      "duration": 4.56
+    },
+    {
+      "text": "quite a bit more um",
+      "start": 569.2,
+      "duration": 4.88
+    },
+    {
+      "text": "so that is the difference that the",
+      "start": 572.24,
+      "duration": 4.8
+    },
+    {
+      "text": "number of observations",
+      "start": 574.08,
+      "duration": 6.72
+    },
+    {
+      "text": "makes your estimates get a lot more",
+      "start": 577.04,
+      "duration": 4.64
+    },
+    {
+      "text": "consistent",
+      "start": 580.8,
+      "duration": 4.719
+    },
+    {
+      "text": "and closer to the actuals",
+      "start": 581.68,
+      "duration": 6.56
+    },
+    {
+      "text": "so as we expand into doing more stuff",
+      "start": 585.519,
+      "duration": 4.161
+    },
+    {
+      "text": "with randomness",
+      "start": 588.24,
+      "duration": 3.36
+    },
+    {
+      "text": "keep in mind that the number of",
+      "start": 589.68,
+      "duration": 4.32
+    },
+    {
+      "text": "iterations is a very important factor",
+      "start": 591.6,
+      "duration": 4.0
+    },
+    {
+      "text": "in determining the results that you're",
+      "start": 594.0,
+      "duration": 4.8
+    },
+    {
+      "text": "going to get from your model",
+      "start": 595.6,
+      "duration": 3.2
+    },
+    {
+      "text": "so that's the exercise in excel we'll",
+      "start": 598.88,
+      "duration": 4.16
+    },
+    {
+      "text": "come back next time to complete this",
+      "start": 601.279,
+      "duration": 3.841
+    },
+    {
+      "text": "exercise in python",
+      "start": 603.04,
+      "duration": 6.16
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 605.12,
+      "duration": 4.08
+    },
+    {
+      "text": "time",
+      "start": 609.48,
+      "duration": 3.0
+    }
+  ]
+}

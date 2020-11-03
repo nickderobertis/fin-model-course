@@ -1,0 +1,1239 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.679,
+      "duration": 2.481
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.64,
+      "duration": 3.04
+    },
+    {
+      "text": "financial modeling",
+      "start": 6.16,
+      "duration": 3.439
+    },
+    {
+      "text": "and today we're going to talk about",
+      "start": 7.68,
+      "duration": 3.52
+    },
+    {
+      "text": "skills to build out a more",
+      "start": 9.599,
+      "duration": 4.401
+    },
+    {
+      "text": "advanced excel model and this is part of",
+      "start": 11.2,
+      "duration": 4.88
+    },
+    {
+      "text": "our segment on the depth of a financial",
+      "start": 14.0,
+      "duration": 4.48
+    },
+    {
+      "text": "model and extending a simple retirement",
+      "start": 16.08,
+      "duration": 4.8
+    },
+    {
+      "text": "model in excel",
+      "start": 18.48,
+      "duration": 5.52
+    },
+    {
+      "text": "so in the prior videos we talked about",
+      "start": 20.88,
+      "duration": 5.04
+    },
+    {
+      "text": "this simple retirement model and how",
+      "start": 24.0,
+      "duration": 2.88
+    },
+    {
+      "text": "we're going to add this",
+      "start": 25.92,
+      "duration": 3.679
+    },
+    {
+      "text": "assumption to it that the salary should",
+      "start": 26.88,
+      "duration": 5.04
+    },
+    {
+      "text": "grow with promotions as well as cost of",
+      "start": 29.599,
+      "duration": 3.441
+    },
+    {
+      "text": "living raises",
+      "start": 31.92,
+      "duration": 4.479
+    },
+    {
+      "text": "so now let's look at some skills that we",
+      "start": 33.04,
+      "duration": 4.08
+    },
+    {
+      "text": "need",
+      "start": 36.399,
+      "duration": 5.601
+    },
+    {
+      "text": "to build out the excel model for this",
+      "start": 37.12,
+      "duration": 4.88
+    },
+    {
+      "text": "so one thing that we need to pay a lot",
+      "start": 42.079,
+      "duration": 4.241
+    },
+    {
+      "text": "of attention to now",
+      "start": 44.559,
+      "duration": 4.32
+    },
+    {
+      "text": "uh that this is gonna be a bit larger",
+      "start": 46.32,
+      "duration": 3.68
+    },
+    {
+      "text": "excel model",
+      "start": 48.879,
+      "duration": 3.281
+    },
+    {
+      "text": "is we have to pay a lot of attention to",
+      "start": 50.0,
+      "duration": 3.6
+    },
+    {
+      "text": "the structure",
+      "start": 52.16,
+      "duration": 5.36
+    },
+    {
+      "text": "and organization of the model with excel",
+      "start": 53.6,
+      "duration": 7.759
+    },
+    {
+      "text": "you can very quickly uh get into a spot",
+      "start": 57.52,
+      "duration": 4.16
+    },
+    {
+      "text": "where",
+      "start": 61.359,
+      "duration": 3.12
+    },
+    {
+      "text": "it's very difficult to understand how",
+      "start": 61.68,
+      "duration": 4.96
+    },
+    {
+      "text": "everything flows through the model",
+      "start": 64.479,
+      "duration": 4.64
+    },
+    {
+      "text": "where your inputs where your outputs",
+      "start": 66.64,
+      "duration": 3.2
+    },
+    {
+      "text": "where does that",
+      "start": 69.119,
+      "duration": 2.481
+    },
+    {
+      "text": "where does one calculation go to the",
+      "start": 69.84,
+      "duration": 3.04
+    },
+    {
+      "text": "next",
+      "start": 71.6,
+      "duration": 3.12
+    },
+    {
+      "text": "since it's all very free form and you",
+      "start": 72.88,
+      "duration": 4.64
+    },
+    {
+      "text": "can kind of put anything anywhere",
+      "start": 74.72,
+      "duration": 6.56
+    },
+    {
+      "text": "as far as the layout then it's not",
+      "start": 77.52,
+      "duration": 5.44
+    },
+    {
+      "text": "very clear as someone just coming into",
+      "start": 81.28,
+      "duration": 3.36
+    },
+    {
+      "text": "the model",
+      "start": 82.96,
+      "duration": 3.92
+    },
+    {
+      "text": "you know how everything flows through",
+      "start": 84.64,
+      "duration": 3.04
+    },
+    {
+      "text": "unless",
+      "start": 86.88,
+      "duration": 4.16
+    },
+    {
+      "text": "you take the time to structure it very",
+      "start": 87.68,
+      "duration": 4.16
+    },
+    {
+      "text": "well",
+      "start": 91.04,
+      "duration": 3.759
+    },
+    {
+      "text": "so that it's easy for any uh consumer of",
+      "start": 91.84,
+      "duration": 4.4
+    },
+    {
+      "text": "your model or someone who's going to",
+      "start": 94.799,
+      "duration": 3.761
+    },
+    {
+      "text": "come and work on your model later",
+      "start": 96.24,
+      "duration": 4.239
+    },
+    {
+      "text": "which may even be you you know later",
+      "start": 98.56,
+      "duration": 3.44
+    },
+    {
+      "text": "down the road after you haven't worked",
+      "start": 100.479,
+      "duration": 2.721
+    },
+    {
+      "text": "on it for a while",
+      "start": 102.0,
+      "duration": 4.32
+    },
+    {
+      "text": "um this structure is very helpful for",
+      "start": 103.2,
+      "duration": 3.919
+    },
+    {
+      "text": "that",
+      "start": 106.32,
+      "duration": 4.079
+    },
+    {
+      "text": "um so the structure that i'm talking",
+      "start": 107.119,
+      "duration": 4.0
+    },
+    {
+      "text": "about",
+      "start": 110.399,
+      "duration": 3.281
+    },
+    {
+      "text": "um you know is a little bit what we've",
+      "start": 111.119,
+      "duration": 4.0
+    },
+    {
+      "text": "talked about before",
+      "start": 113.68,
+      "duration": 3.28
+    },
+    {
+      "text": "and that you want to have clear",
+      "start": 115.119,
+      "duration": 3.04
+    },
+    {
+      "text": "separation",
+      "start": 116.96,
+      "duration": 3.439
+    },
+    {
+      "text": "of your inputs and outputs that's the",
+      "start": 118.159,
+      "duration": 3.441
+    },
+    {
+      "text": "biggest thing",
+      "start": 120.399,
+      "duration": 4.881
+    },
+    {
+      "text": "is you know you have to know what is",
+      "start": 121.6,
+      "duration": 6.0
+    },
+    {
+      "text": "the coming into the model what can the",
+      "start": 125.28,
+      "duration": 4.319
+    },
+    {
+      "text": "the user of the model change around as",
+      "start": 127.6,
+      "duration": 3.12
+    },
+    {
+      "text": "the inputs",
+      "start": 129.599,
+      "duration": 3.761
+    },
+    {
+      "text": "and what are the main outputs from the",
+      "start": 130.72,
+      "duration": 4.72
+    },
+    {
+      "text": "model and having those presented in a",
+      "start": 133.36,
+      "duration": 4.4
+    },
+    {
+      "text": "clear way",
+      "start": 135.44,
+      "duration": 4.32
+    },
+    {
+      "text": "and that's true for any excel model you",
+      "start": 137.76,
+      "duration": 3.36
+    },
+    {
+      "text": "should have that",
+      "start": 139.76,
+      "duration": 4.0
+    },
+    {
+      "text": "but as we get to a larger model we also",
+      "start": 141.12,
+      "duration": 3.839
+    },
+    {
+      "text": "need to think about",
+      "start": 143.76,
+      "duration": 3.44
+    },
+    {
+      "text": "you know basically we're not just doing",
+      "start": 144.959,
+      "duration": 3.681
+    },
+    {
+      "text": "one single calculation",
+      "start": 147.2,
+      "duration": 5.039
+    },
+    {
+      "text": "anymore in a larger model there's going",
+      "start": 148.64,
+      "duration": 4.319
+    },
+    {
+      "text": "to be",
+      "start": 152.239,
+      "duration": 3.761
+    },
+    {
+      "text": "really multiple different sub problems",
+      "start": 152.959,
+      "duration": 5.28
+    },
+    {
+      "text": "that you're solving as part of the",
+      "start": 156.0,
+      "duration": 3.36
+    },
+    {
+      "text": "larger",
+      "start": 158.239,
+      "duration": 5.041
+    },
+    {
+      "text": "problem and so we want to take",
+      "start": 159.36,
+      "duration": 6.32
+    },
+    {
+      "text": "break it down into these sub problems",
+      "start": 163.28,
+      "duration": 4.16
+    },
+    {
+      "text": "and we can put each of these sub",
+      "start": 165.68,
+      "duration": 3.04
+    },
+    {
+      "text": "problems on its own",
+      "start": 167.44,
+      "duration": 5.36
+    },
+    {
+      "text": "sheet of the excel model",
+      "start": 168.72,
+      "duration": 6.96
+    },
+    {
+      "text": "and then each sheet we can kind of treat",
+      "start": 172.8,
+      "duration": 4.32
+    },
+    {
+      "text": "as its own mini",
+      "start": 175.68,
+      "duration": 3.839
+    },
+    {
+      "text": "sub model and within that sheet you",
+      "start": 177.12,
+      "duration": 4.0
+    },
+    {
+      "text": "should have the inputs",
+      "start": 179.519,
+      "duration": 3.44
+    },
+    {
+      "text": "going into that calculation you should",
+      "start": 181.12,
+      "duration": 3.199
+    },
+    {
+      "text": "have the outputs",
+      "start": 182.959,
+      "duration": 4.56
+    },
+    {
+      "text": "from that calculation clearly separated",
+      "start": 184.319,
+      "duration": 5.121
+    },
+    {
+      "text": "and then you should have an overview",
+      "start": 187.519,
+      "duration": 3.36
+    },
+    {
+      "text": "page for the model which has",
+      "start": 189.44,
+      "duration": 4.719
+    },
+    {
+      "text": "all the inputs and the main outputs from",
+      "start": 190.879,
+      "duration": 4.72
+    },
+    {
+      "text": "the model and everything should be",
+      "start": 194.159,
+      "duration": 2.641
+    },
+    {
+      "text": "linked together",
+      "start": 195.599,
+      "duration": 3.28
+    },
+    {
+      "text": "all through the different sheets and",
+      "start": 196.8,
+      "duration": 4.0
+    },
+    {
+      "text": "this is the way that you can stay very",
+      "start": 198.879,
+      "duration": 2.64
+    },
+    {
+      "text": "organized",
+      "start": 200.8,
+      "duration": 5.2
+    },
+    {
+      "text": "even with a larger excel model",
+      "start": 201.519,
+      "duration": 4.481
+    },
+    {
+      "text": "um so that's the structure",
+      "start": 206.239,
+      "duration": 6.801
+    },
+    {
+      "text": "now let's look at a few different",
+      "start": 209.519,
+      "duration": 5.841
+    },
+    {
+      "text": "functions that we're going to use to",
+      "start": 213.04,
+      "duration": 3.839
+    },
+    {
+      "text": "actually build out",
+      "start": 215.36,
+      "duration": 5.599
+    },
+    {
+      "text": "this dynamic salary retirement model",
+      "start": 216.879,
+      "duration": 7.681
+    },
+    {
+      "text": "so conditionals",
+      "start": 220.959,
+      "duration": 6.241
+    },
+    {
+      "text": "are very important in financial modeling",
+      "start": 224.56,
+      "duration": 3.28
+    },
+    {
+      "text": "as well",
+      "start": 227.2,
+      "duration": 4.0
+    },
+    {
+      "text": "as general programming you know",
+      "start": 227.84,
+      "duration": 6.08
+    },
+    {
+      "text": "if something is true then you want to do",
+      "start": 231.2,
+      "duration": 5.92
+    },
+    {
+      "text": "something or get some value",
+      "start": 233.92,
+      "duration": 6.64
+    },
+    {
+      "text": "and so we have the if function in excel",
+      "start": 237.12,
+      "duration": 6.319
+    },
+    {
+      "text": "which accomplishes that we can also use",
+      "start": 240.56,
+      "duration": 3.679
+    },
+    {
+      "text": "that",
+      "start": 243.439,
+      "duration": 2.961
+    },
+    {
+      "text": "in combination with other logical",
+      "start": 244.239,
+      "duration": 3.121
+    },
+    {
+      "text": "operators like",
+      "start": 246.4,
+      "duration": 4.08
+    },
+    {
+      "text": "and and or you know and so we can look",
+      "start": 247.36,
+      "duration": 5.12
+    },
+    {
+      "text": "at multiple different conditions",
+      "start": 250.48,
+      "duration": 5.2
+    },
+    {
+      "text": "at once in a single if statement",
+      "start": 252.48,
+      "duration": 6.319
+    },
+    {
+      "text": "um and",
+      "start": 255.68,
+      "duration": 5.279
+    },
+    {
+      "text": "let's look at some examples of how this",
+      "start": 258.799,
+      "duration": 4.001
+    },
+    {
+      "text": "works in excel",
+      "start": 260.959,
+      "duration": 4.8
+    },
+    {
+      "text": "so looking at how we would actually call",
+      "start": 262.8,
+      "duration": 4.24
+    },
+    {
+      "text": "the if function",
+      "start": 265.759,
+      "duration": 4.72
+    },
+    {
+      "text": "you know first we have our logical test",
+      "start": 267.04,
+      "duration": 6.96
+    },
+    {
+      "text": "so that's the condition that we want to",
+      "start": 270.479,
+      "duration": 4.16
+    },
+    {
+      "text": "determine",
+      "start": 274.0,
+      "duration": 4.0
+    },
+    {
+      "text": "whether it's true or false",
+      "start": 274.639,
+      "duration": 6.721
+    },
+    {
+      "text": "and so in my first example here i have",
+      "start": 278.0,
+      "duration": 6.88
+    },
+    {
+      "text": "if five equals five five does equal five",
+      "start": 281.36,
+      "duration": 7.44
+    },
+    {
+      "text": "that's true um and so",
+      "start": 284.88,
+      "duration": 7.52
+    },
+    {
+      "text": "uh we're going to go into then the value",
+      "start": 288.8,
+      "duration": 6.88
+    },
+    {
+      "text": "if true and so that's why uh here",
+      "start": 292.4,
+      "duration": 5.28
+    },
+    {
+      "text": "second argument we have the value of",
+      "start": 295.68,
+      "duration": 4.48
+    },
+    {
+      "text": "true and third we have the value if",
+      "start": 297.68,
+      "duration": 4.239
+    },
+    {
+      "text": "false",
+      "start": 300.16,
+      "duration": 4.4
+    },
+    {
+      "text": "and so what this function is doing is",
+      "start": 301.919,
+      "duration": 3.761
+    },
+    {
+      "text": "just",
+      "start": 304.56,
+      "duration": 4.32
+    },
+    {
+      "text": "if this condition is",
+      "start": 305.68,
+      "duration": 6.239
+    },
+    {
+      "text": "true then it's going to give you this",
+      "start": 308.88,
+      "duration": 4.879
+    },
+    {
+      "text": "value",
+      "start": 311.919,
+      "duration": 4.241
+    },
+    {
+      "text": "if it is false then it's going to give",
+      "start": 313.759,
+      "duration": 4.0
+    },
+    {
+      "text": "you the other value",
+      "start": 316.16,
+      "duration": 4.64
+    },
+    {
+      "text": "and so that's why this call here uh",
+      "start": 317.759,
+      "duration": 5.521
+    },
+    {
+      "text": "if 5 equals 5 it does it's going to give",
+      "start": 320.8,
+      "duration": 4.16
+    },
+    {
+      "text": "you this",
+      "start": 323.28,
+      "duration": 4.72
+    },
+    {
+      "text": "but then if we called it again if 4",
+      "start": 324.96,
+      "duration": 4.0
+    },
+    {
+      "text": "equals 5",
+      "start": 328.0,
+      "duration": 3.919
+    },
+    {
+      "text": "of course it does not that's false then",
+      "start": 328.96,
+      "duration": 4.32
+    },
+    {
+      "text": "it's going to give us",
+      "start": 331.919,
+      "duration": 3.12
+    },
+    {
+      "text": "that it's going to give us the other",
+      "start": 333.28,
+      "duration": 5.04
+    },
+    {
+      "text": "value here the value of false",
+      "start": 335.039,
+      "duration": 6.0
+    },
+    {
+      "text": "and so this if command is basically just",
+      "start": 338.32,
+      "duration": 4.64
+    },
+    {
+      "text": "allows us to choose from two different",
+      "start": 341.039,
+      "duration": 5.681
+    },
+    {
+      "text": "values based on some kind of condition",
+      "start": 342.96,
+      "duration": 5.44
+    },
+    {
+      "text": "and we'll definitely look at the",
+      "start": 346.72,
+      "duration": 3.84
+    },
+    {
+      "text": "applications of that as we go to build",
+      "start": 348.4,
+      "duration": 4.96
+    },
+    {
+      "text": "out the model",
+      "start": 350.56,
+      "duration": 6.079
+    },
+    {
+      "text": "then modulo is",
+      "start": 353.36,
+      "duration": 6.64
+    },
+    {
+      "text": "another function or concept which is",
+      "start": 356.639,
+      "duration": 7.28
+    },
+    {
+      "text": "used a lot in general programming",
+      "start": 360.0,
+      "duration": 5.52
+    },
+    {
+      "text": "it's you know probably not going to come",
+      "start": 363.919,
+      "duration": 3.361
+    },
+    {
+      "text": "up and you know just everyday",
+      "start": 365.52,
+      "duration": 4.16
+    },
+    {
+      "text": "financial modeling but it is i think",
+      "start": 367.28,
+      "duration": 3.759
+    },
+    {
+      "text": "very useful to build",
+      "start": 369.68,
+      "duration": 4.079
+    },
+    {
+      "text": "out this specific problem that we're",
+      "start": 371.039,
+      "duration": 3.521
+    },
+    {
+      "text": "looking at",
+      "start": 373.759,
+      "duration": 3.681
+    },
+    {
+      "text": "uh where we have the promotions coming",
+      "start": 374.56,
+      "duration": 3.6
+    },
+    {
+      "text": "every",
+      "start": 377.44,
+      "duration": 4.0
+    },
+    {
+      "text": "uh number of years uh the modulo is",
+      "start": 378.16,
+      "duration": 4.64
+    },
+    {
+      "text": "helpful to",
+      "start": 381.44,
+      "duration": 4.4
+    },
+    {
+      "text": "uh work with that so the modulo uh",
+      "start": 382.8,
+      "duration": 6.16
+    },
+    {
+      "text": "is basically just the remainder of doing",
+      "start": 385.84,
+      "duration": 4.24
+    },
+    {
+      "text": "division",
+      "start": 388.96,
+      "duration": 5.28
+    },
+    {
+      "text": "um and so you know if you think about",
+      "start": 390.08,
+      "duration": 5.839
+    },
+    {
+      "text": "three divided by four what's the",
+      "start": 394.24,
+      "duration": 3.2
+    },
+    {
+      "text": "remainder uh",
+      "start": 395.919,
+      "duration": 5.12
+    },
+    {
+      "text": "the remainder is three and so that's",
+      "start": 397.44,
+      "duration": 6.72
+    },
+    {
+      "text": "what uh this mod function is doing is",
+      "start": 401.039,
+      "duration": 4.72
+    },
+    {
+      "text": "just giving you the remainder",
+      "start": 404.16,
+      "duration": 4.879
+    },
+    {
+      "text": "of a division uh and then if you think",
+      "start": 405.759,
+      "duration": 5.201
+    },
+    {
+      "text": "you know seven over two what's the",
+      "start": 409.039,
+      "duration": 3.361
+    },
+    {
+      "text": "remainder of that",
+      "start": 410.96,
+      "duration": 4.56
+    },
+    {
+      "text": "uh that becomes uh three",
+      "start": 412.4,
+      "duration": 6.32
+    },
+    {
+      "text": "and one half and so one is the remainder",
+      "start": 415.52,
+      "duration": 6.239
+    },
+    {
+      "text": "from that um so it's just giving us the",
+      "start": 418.72,
+      "duration": 3.919
+    },
+    {
+      "text": "remainder",
+      "start": 421.759,
+      "duration": 2.641
+    },
+    {
+      "text": "and this is going to be useful for",
+      "start": 422.639,
+      "duration": 3.361
+    },
+    {
+      "text": "seeing you know how many years",
+      "start": 424.4,
+      "duration": 5.919
+    },
+    {
+      "text": "we have left until the promotion",
+      "start": 426.0,
+      "duration": 4.319
+    },
+    {
+      "text": "and then uh the other function we're",
+      "start": 431.68,
+      "duration": 4.0
+    },
+    {
+      "text": "looking at",
+      "start": 434.319,
+      "duration": 4.081
+    },
+    {
+      "text": "to help us build out this model beyond",
+      "start": 435.68,
+      "duration": 4.32
+    },
+    {
+      "text": "you know the basic ones that i would",
+      "start": 438.4,
+      "duration": 3.359
+    },
+    {
+      "text": "expect you to know just coming into the",
+      "start": 440.0,
+      "duration": 2.72
+    },
+    {
+      "text": "class",
+      "start": 441.759,
+      "duration": 5.28
+    },
+    {
+      "text": "is vlookup so vlookup",
+      "start": 442.72,
+      "duration": 6.08
+    },
+    {
+      "text": "is a little bit more advanced and it",
+      "start": 447.039,
+      "duration": 3.201
+    },
+    {
+      "text": "helps you find",
+      "start": 448.8,
+      "duration": 6.0
+    },
+    {
+      "text": "things in a table uh by the row",
+      "start": 450.24,
+      "duration": 7.84
+    },
+    {
+      "text": "so we can look at an example here uh we",
+      "start": 454.8,
+      "duration": 4.72
+    },
+    {
+      "text": "have a little table",
+      "start": 458.08,
+      "duration": 5.119
+    },
+    {
+      "text": "of uh you know four different",
+      "start": 459.52,
+      "duration": 7.2
+    },
+    {
+      "text": "um foods here and then in the second",
+      "start": 463.199,
+      "duration": 4.241
+    },
+    {
+      "text": "column",
+      "start": 466.72,
+      "duration": 3.12
+    },
+    {
+      "text": "we have the food group that that food",
+      "start": 467.44,
+      "duration": 4.56
+    },
+    {
+      "text": "belongs to it's either a vegetable",
+      "start": 469.84,
+      "duration": 5.68
+    },
+    {
+      "text": "or a fruit so uh",
+      "start": 472.0,
+      "duration": 7.039
+    },
+    {
+      "text": "with vlookup we can say you know we know",
+      "start": 475.52,
+      "duration": 4.399
+    },
+    {
+      "text": "we want to",
+      "start": 479.039,
+      "duration": 4.56
+    },
+    {
+      "text": "figure out whether celery is a fruit or",
+      "start": 479.919,
+      "duration": 5.921
+    },
+    {
+      "text": "a vegetable",
+      "start": 483.599,
+      "duration": 5.361
+    },
+    {
+      "text": "and so we can pass celery to",
+      "start": 485.84,
+      "duration": 6.4
+    },
+    {
+      "text": "vlookup and we give it the",
+      "start": 488.96,
+      "duration": 6.959
+    },
+    {
+      "text": "range of the table and then we say",
+      "start": 492.24,
+      "duration": 5.519
+    },
+    {
+      "text": "we want to look up the value from the",
+      "start": 495.919,
+      "duration": 3.201
+    },
+    {
+      "text": "second column",
+      "start": 497.759,
+      "duration": 3.28
+    },
+    {
+      "text": "and then that's going to give us",
+      "start": 499.12,
+      "duration": 3.519
+    },
+    {
+      "text": "vegetable",
+      "start": 501.039,
+      "duration": 5.6
+    },
+    {
+      "text": "um so um",
+      "start": 502.639,
+      "duration": 5.361
+    },
+    {
+      "text": "that's the basic idea you're just",
+      "start": 506.639,
+      "duration": 3.921
+    },
+    {
+      "text": "looking up a certain column's value",
+      "start": 508.0,
+      "duration": 5.919
+    },
+    {
+      "text": "by uh the first columns",
+      "start": 510.56,
+      "duration": 6.719
+    },
+    {
+      "text": "rows value um is",
+      "start": 513.919,
+      "duration": 7.441
+    },
+    {
+      "text": "how vlookup works",
+      "start": 517.279,
+      "duration": 7.521
+    },
+    {
+      "text": "and the lookup it does have to be the",
+      "start": 521.36,
+      "duration": 4.32
+    },
+    {
+      "text": "first",
+      "start": 524.8,
+      "duration": 3.92
+    },
+    {
+      "text": "column of the table or at least that you",
+      "start": 525.68,
+      "duration": 3.92
+    },
+    {
+      "text": "know the range",
+      "start": 528.72,
+      "duration": 4.64
+    },
+    {
+      "text": "that you're targeting here and you do",
+      "start": 529.6,
+      "duration": 4.88
+    },
+    {
+      "text": "have to sort",
+      "start": 533.36,
+      "duration": 4.32
+    },
+    {
+      "text": "the items in ascending order uh",
+      "start": 534.48,
+      "duration": 4.88
+    },
+    {
+      "text": "in order to ensure that you're going to",
+      "start": 537.68,
+      "duration": 3.839
+    },
+    {
+      "text": "get the correct lookup so those are the",
+      "start": 539.36,
+      "duration": 2.96
+    },
+    {
+      "text": "two",
+      "start": 541.519,
+      "duration": 4.401
+    },
+    {
+      "text": "kind of gotchas with using vlookup",
+      "start": 542.32,
+      "duration": 5.12
+    },
+    {
+      "text": "but basically you know you're just",
+      "start": 545.92,
+      "duration": 4.08
+    },
+    {
+      "text": "looking up something in a table",
+      "start": 547.44,
+      "duration": 6.079
+    },
+    {
+      "text": "uh by the first columns",
+      "start": 550.0,
+      "duration": 5.92
+    },
+    {
+      "text": "value",
+      "start": 553.519,
+      "duration": 2.401
+    },
+    {
+      "text": "so those are all the additional skills",
+      "start": 558.08,
+      "duration": 6.319
+    },
+    {
+      "text": "um and and patterns that we're thinking",
+      "start": 561.44,
+      "duration": 5.04
+    },
+    {
+      "text": "about as we go into building",
+      "start": 564.399,
+      "duration": 4.88
+    },
+    {
+      "text": "this more advanced dynamic salary excel",
+      "start": 566.48,
+      "duration": 3.6
+    },
+    {
+      "text": "model",
+      "start": 569.279,
+      "duration": 3.361
+    },
+    {
+      "text": "next uh video we're going to come back",
+      "start": 570.08,
+      "duration": 3.52
+    },
+    {
+      "text": "and actually",
+      "start": 572.64,
+      "duration": 3.6
+    },
+    {
+      "text": "build out that model so thanks for",
+      "start": 573.6,
+      "duration": 3.28
+    },
+    {
+      "text": "listening",
+      "start": 576.24,
+      "duration": 6.4
+    },
+    {
+      "text": "and see you next time",
+      "start": 576.88,
+      "duration": 5.76
+    }
+  ]
+}

@@ -1,0 +1,1799 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.199,
+      "duration": 2.481
+    },
+    {
+      "text": "this is nick dear burtis teaching you",
+      "start": 4.0,
+      "duration": 3.2
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.68,
+      "duration": 3.919
+    },
+    {
+      "text": "today we're going to be doing a formal",
+      "start": 7.2,
+      "duration": 3.359
+    },
+    {
+      "text": "introduction",
+      "start": 9.599,
+      "duration": 4.401
+    },
+    {
+      "text": "to monte carlo simulation and the",
+      "start": 10.559,
+      "duration": 4.481
+    },
+    {
+      "text": "analysis",
+      "start": 14.0,
+      "duration": 3.52
+    },
+    {
+      "text": "of the outputs this is part of our",
+      "start": 15.04,
+      "duration": 3.44
+    },
+    {
+      "text": "lecture series",
+      "start": 17.52,
+      "duration": 4.08
+    },
+    {
+      "text": "on monte carlo simulation",
+      "start": 18.48,
+      "duration": 6.0
+    },
+    {
+      "text": "so we already ran through a general",
+      "start": 21.6,
+      "duration": 3.599
+    },
+    {
+      "text": "introduction",
+      "start": 24.48,
+      "duration": 4.08
+    },
+    {
+      "text": "of what monte carlo simulation is why we",
+      "start": 25.199,
+      "duration": 5.521
+    },
+    {
+      "text": "might want to go about it",
+      "start": 28.56,
+      "duration": 5.679
+    },
+    {
+      "text": "and then we kind of flip the structure",
+      "start": 30.72,
+      "duration": 6.24
+    },
+    {
+      "text": "on its head to first go through an",
+      "start": 34.239,
+      "duration": 3.681
+    },
+    {
+      "text": "example",
+      "start": 36.96,
+      "duration": 6.0
+    },
+    {
+      "text": "of how to do monte carlo simulation",
+      "start": 37.92,
+      "duration": 5.04
+    },
+    {
+      "text": "and i flipped it because i think it's",
+      "start": 43.04,
+      "duration": 4.32
+    },
+    {
+      "text": "easier to see by example",
+      "start": 45.2,
+      "duration": 6.48
+    },
+    {
+      "text": "um before getting formally introduced to",
+      "start": 47.36,
+      "duration": 5.76
+    },
+    {
+      "text": "it because it can sound a little bit",
+      "start": 51.68,
+      "duration": 4.48
+    },
+    {
+      "text": "complicated when you look at it formally",
+      "start": 53.12,
+      "duration": 5.279
+    },
+    {
+      "text": "but really it's a fairly simple process",
+      "start": 56.16,
+      "duration": 4.16
+    },
+    {
+      "text": "and seeing the example makes that clear",
+      "start": 58.399,
+      "duration": 4.16
+    },
+    {
+      "text": "so if you haven't viewed the video on",
+      "start": 60.32,
+      "duration": 4.559
+    },
+    {
+      "text": "the example go back and look at that",
+      "start": 62.559,
+      "duration": 4.64
+    },
+    {
+      "text": "first",
+      "start": 64.879,
+      "duration": 2.32
+    },
+    {
+      "text": "so we're now looking",
+      "start": 67.36,
+      "duration": 7.119
+    },
+    {
+      "text": "at theoretically what is monte carlo",
+      "start": 70.84,
+      "duration": 6.68
+    },
+    {
+      "text": "simulation and what is the process",
+      "start": 74.479,
+      "duration": 5.601
+    },
+    {
+      "text": "and as you look at this if you've seen",
+      "start": 77.52,
+      "duration": 3.919
+    },
+    {
+      "text": "the prior videos",
+      "start": 80.08,
+      "duration": 4.8
+    },
+    {
+      "text": "on sensitivity analysis you'll",
+      "start": 81.439,
+      "duration": 6.0
+    },
+    {
+      "text": "notice that the process here and the",
+      "start": 84.88,
+      "duration": 7.04
+    },
+    {
+      "text": "setup is almost exactly the same",
+      "start": 87.439,
+      "duration": 7.04
+    },
+    {
+      "text": "we have some model here we're",
+      "start": 91.92,
+      "duration": 3.68
+    },
+    {
+      "text": "representing the model",
+      "start": 94.479,
+      "duration": 4.561
+    },
+    {
+      "text": "mathematically as we get some output",
+      "start": 95.6,
+      "duration": 5.04
+    },
+    {
+      "text": "model is some function which converts",
+      "start": 99.04,
+      "duration": 4.0
+    },
+    {
+      "text": "the inputs to the output",
+      "start": 100.64,
+      "duration": 7.68
+    },
+    {
+      "text": "and we have multiple different inputs",
+      "start": 103.04,
+      "duration": 5.28
+    },
+    {
+      "text": "and in order to run these simulations",
+      "start": 108.799,
+      "duration": 6.161
+    },
+    {
+      "text": "we first assign a probability",
+      "start": 112.24,
+      "duration": 3.6
+    },
+    {
+      "text": "distribution",
+      "start": 114.96,
+      "duration": 4.08
+    },
+    {
+      "text": "to each input and then",
+      "start": 115.84,
+      "duration": 7.44
+    },
+    {
+      "text": "for each input we're going to randomly",
+      "start": 119.04,
+      "duration": 8.48
+    },
+    {
+      "text": "pick values from their distributions",
+      "start": 123.28,
+      "duration": 7.36
+    },
+    {
+      "text": "and we're going to repeat that previous",
+      "start": 127.52,
+      "duration": 4.16
+    },
+    {
+      "text": "step",
+      "start": 130.64,
+      "duration": 4.16
+    },
+    {
+      "text": "for n times n is our number of",
+      "start": 131.68,
+      "duration": 6.0
+    },
+    {
+      "text": "iterations number of simulations",
+      "start": 134.8,
+      "duration": 5.2
+    },
+    {
+      "text": "um and so then we're going to have all",
+      "start": 137.68,
+      "duration": 4.96
+    },
+    {
+      "text": "the random inputs and",
+      "start": 140.0,
+      "duration": 5.52
+    },
+    {
+      "text": "then you want to calculate the model run",
+      "start": 142.64,
+      "duration": 4.64
+    },
+    {
+      "text": "the model",
+      "start": 145.52,
+      "duration": 5.12
+    },
+    {
+      "text": "with those simulated input values",
+      "start": 147.28,
+      "duration": 6.8
+    },
+    {
+      "text": "so for each simulation",
+      "start": 150.64,
+      "duration": 6.08
+    },
+    {
+      "text": "you've got each random input you pass it",
+      "start": 154.08,
+      "duration": 3.92
+    },
+    {
+      "text": "into the model",
+      "start": 156.72,
+      "duration": 5.68
+    },
+    {
+      "text": "and you get the result then we want to",
+      "start": 158.0,
+      "duration": 7.04
+    },
+    {
+      "text": "keep the inputs associated to the",
+      "start": 162.4,
+      "duration": 4.479
+    },
+    {
+      "text": "outputs so you know which inputs",
+      "start": 165.04,
+      "duration": 4.64
+    },
+    {
+      "text": "produced which outputs and the final",
+      "start": 166.879,
+      "duration": 3.36
+    },
+    {
+      "text": "step",
+      "start": 169.68,
+      "duration": 5.12
+    },
+    {
+      "text": "is to visualize and analyze the results",
+      "start": 170.239,
+      "duration": 8.481
+    },
+    {
+      "text": "so basically",
+      "start": 174.8,
+      "duration": 3.92
+    },
+    {
+      "text": "all these last steps are",
+      "start": 178.959,
+      "duration": 7.041
+    },
+    {
+      "text": "all these last three steps are the same",
+      "start": 182.239,
+      "duration": 5.601
+    },
+    {
+      "text": "as sensitivity analysis running the",
+      "start": 186.0,
+      "duration": 3.04
+    },
+    {
+      "text": "model with each of the inputs",
+      "start": 187.84,
+      "duration": 3.039
+    },
+    {
+      "text": "keeping the model uh the inputs",
+      "start": 189.04,
+      "duration": 3.6
+    },
+    {
+      "text": "associated with the outputs",
+      "start": 190.879,
+      "duration": 6.241
+    },
+    {
+      "text": "analyzing the resulting outputs um",
+      "start": 192.64,
+      "duration": 6.239
+    },
+    {
+      "text": "the only thing that's different here is",
+      "start": 197.12,
+      "duration": 3.759
+    },
+    {
+      "text": "this random piece so",
+      "start": 198.879,
+      "duration": 3.761
+    },
+    {
+      "text": "assigning a probability distribution to",
+      "start": 200.879,
+      "duration": 4.08
+    },
+    {
+      "text": "each input and we're going to randomly",
+      "start": 202.64,
+      "duration": 4.0
+    },
+    {
+      "text": "pick the value of the input from the",
+      "start": 204.959,
+      "duration": 2.881
+    },
+    {
+      "text": "distribution",
+      "start": 206.64,
+      "duration": 7.2
+    },
+    {
+      "text": "each time that we want to run the model",
+      "start": 207.84,
+      "duration": 6.0
+    },
+    {
+      "text": "so let's say now we've run the",
+      "start": 214.56,
+      "duration": 4.399
+    },
+    {
+      "text": "simulation",
+      "start": 217.68,
+      "duration": 4.0
+    },
+    {
+      "text": "we've got our 10 000 different results",
+      "start": 218.959,
+      "duration": 4.56
+    },
+    {
+      "text": "from the model",
+      "start": 221.68,
+      "duration": 4.479
+    },
+    {
+      "text": "now what can we do with those results so",
+      "start": 223.519,
+      "duration": 3.921
+    },
+    {
+      "text": "there are a few outputs",
+      "start": 226.159,
+      "duration": 4.321
+    },
+    {
+      "text": "from the analysis and visualization",
+      "start": 227.44,
+      "duration": 6.64
+    },
+    {
+      "text": "that we can gather",
+      "start": 230.48,
+      "duration": 7.28
+    },
+    {
+      "text": "so the first category here is",
+      "start": 234.08,
+      "duration": 7.04
+    },
+    {
+      "text": "probability distributions of the output",
+      "start": 237.76,
+      "duration": 5.36
+    },
+    {
+      "text": "and we looked at two different ways in",
+      "start": 241.12,
+      "duration": 3.6
+    },
+    {
+      "text": "the prior example",
+      "start": 243.12,
+      "duration": 5.92
+    },
+    {
+      "text": "of how we can get at this",
+      "start": 244.72,
+      "duration": 6.64
+    },
+    {
+      "text": "one is with a histogram over all the",
+      "start": 249.04,
+      "duration": 3.119
+    },
+    {
+      "text": "results",
+      "start": 251.36,
+      "duration": 3.68
+    },
+    {
+      "text": "and then the other is with a table of",
+      "start": 252.159,
+      "duration": 3.201
+    },
+    {
+      "text": "the",
+      "start": 255.04,
+      "duration": 3.039
+    },
+    {
+      "text": "probabilities the percentiles of the",
+      "start": 255.36,
+      "duration": 4.559
+    },
+    {
+      "text": "probability distribution",
+      "start": 258.079,
+      "duration": 5.041
+    },
+    {
+      "text": "um and the value",
+      "start": 259.919,
+      "duration": 6.161
+    },
+    {
+      "text": "of the variable at that percentile in",
+      "start": 263.12,
+      "duration": 3.72
+    },
+    {
+      "text": "the",
+      "start": 266.08,
+      "duration": 3.52
+    },
+    {
+      "text": "distribution um",
+      "start": 266.84,
+      "duration": 4.44
+    },
+    {
+      "text": "so in the investment returns example",
+      "start": 269.6,
+      "duration": 3.52
+    },
+    {
+      "text": "that was you know saying that",
+      "start": 271.28,
+      "duration": 5.12
+    },
+    {
+      "text": "45 of uh",
+      "start": 273.12,
+      "duration": 6.72
+    },
+    {
+      "text": "cases we got less than a thousand and",
+      "start": 276.4,
+      "duration": 4.88
+    },
+    {
+      "text": "twenty dollars and having that",
+      "start": 279.84,
+      "duration": 6.4
+    },
+    {
+      "text": "for the range of different percentiles",
+      "start": 281.28,
+      "duration": 4.96
+    },
+    {
+      "text": "then we also have the probability of a",
+      "start": 286.72,
+      "duration": 4.24
+    },
+    {
+      "text": "certain outcome",
+      "start": 289.52,
+      "duration": 4.0
+    },
+    {
+      "text": "so this i mean it is kind of within this",
+      "start": 290.96,
+      "duration": 4.48
+    },
+    {
+      "text": "idea of looking at the probability",
+      "start": 293.52,
+      "duration": 3.84
+    },
+    {
+      "text": "distribution of the outputs",
+      "start": 295.44,
+      "duration": 3.52
+    },
+    {
+      "text": "but it's just looking at a one",
+      "start": 297.36,
+      "duration": 3.36
+    },
+    {
+      "text": "particular point on the probability",
+      "start": 298.96,
+      "duration": 3.12
+    },
+    {
+      "text": "distribution",
+      "start": 300.72,
+      "duration": 4.479
+    },
+    {
+      "text": "and that particular point is some",
+      "start": 302.08,
+      "duration": 6.08
+    },
+    {
+      "text": "goal or objective that we care about and",
+      "start": 305.199,
+      "duration": 4.481
+    },
+    {
+      "text": "so we want to",
+      "start": 308.16,
+      "duration": 3.84
+    },
+    {
+      "text": "evaluate the probability of achieving",
+      "start": 309.68,
+      "duration": 5.68
+    },
+    {
+      "text": "that objective or outcome",
+      "start": 312.0,
+      "duration": 3.36
+    },
+    {
+      "text": "so in our investment returns model that",
+      "start": 317.28,
+      "duration": 3.84
+    },
+    {
+      "text": "was what's the chance that we're gonna",
+      "start": 319.28,
+      "duration": 3.52
+    },
+    {
+      "text": "get the thousand fifty dollars that we",
+      "start": 321.12,
+      "duration": 2.88
+    },
+    {
+      "text": "need to satisfy our",
+      "start": 322.8,
+      "duration": 5.119
+    },
+    {
+      "text": "obligation and then the last",
+      "start": 324.0,
+      "duration": 6.32
+    },
+    {
+      "text": "uh main output which we haven't looked",
+      "start": 327.919,
+      "duration": 5.84
+    },
+    {
+      "text": "at calculating yet and we're going to do",
+      "start": 330.32,
+      "duration": 6.159
+    },
+    {
+      "text": "in the next video where we add monte",
+      "start": 333.759,
+      "duration": 4.561
+    },
+    {
+      "text": "carlo simulation to the dynamic salary",
+      "start": 336.479,
+      "duration": 3.601
+    },
+    {
+      "text": "retirement model",
+      "start": 338.32,
+      "duration": 3.92
+    },
+    {
+      "text": "is we can look at the relationship",
+      "start": 340.08,
+      "duration": 6.24
+    },
+    {
+      "text": "between the inputs and the outputs",
+      "start": 342.24,
+      "duration": 8.239
+    },
+    {
+      "text": "so monte carlo simulation",
+      "start": 346.32,
+      "duration": 7.84
+    },
+    {
+      "text": "we can use similarly to",
+      "start": 350.479,
+      "duration": 5.44
+    },
+    {
+      "text": "sensitivity analysis where we're trying",
+      "start": 354.16,
+      "duration": 4.159
+    },
+    {
+      "text": "to see what changing an input does to",
+      "start": 355.919,
+      "duration": 3.361
+    },
+    {
+      "text": "the model",
+      "start": 358.319,
+      "duration": 2.401
+    },
+    {
+      "text": "we can get at the same kinds of",
+      "start": 359.28,
+      "duration": 3.759
+    },
+    {
+      "text": "questions with monte carlo simulation as",
+      "start": 360.72,
+      "duration": 3.599
+    },
+    {
+      "text": "well trying to understand",
+      "start": 363.039,
+      "duration": 4.641
+    },
+    {
+      "text": "how the inputs affect the outputs",
+      "start": 364.319,
+      "duration": 6.041
+    },
+    {
+      "text": "and in order to",
+      "start": 367.68,
+      "duration": 2.83
+    },
+    {
+      "text": "[Applause]",
+      "start": 370.36,
+      "duration": 1.559
+    },
+    {
+      "text": "[Music]",
+      "start": 370.51,
+      "duration": 4.37
+    },
+    {
+      "text": "analyze this the two main methods that",
+      "start": 371.919,
+      "duration": 4.0
+    },
+    {
+      "text": "we'll look at are",
+      "start": 374.88,
+      "duration": 4.319
+    },
+    {
+      "text": "visualizing it via a scatter plot",
+      "start": 375.919,
+      "duration": 6.321
+    },
+    {
+      "text": "and using a multivariate regression to",
+      "start": 379.199,
+      "duration": 6.401
+    },
+    {
+      "text": "get at it quantitatively",
+      "start": 382.24,
+      "duration": 3.36
+    },
+    {
+      "text": "so digging into the outcome probability",
+      "start": 387.36,
+      "duration": 5.119
+    },
+    {
+      "text": "distributions",
+      "start": 390.88,
+      "duration": 5.039
+    },
+    {
+      "text": "so uh you can see on the left here",
+      "start": 392.479,
+      "duration": 6.241
+    },
+    {
+      "text": "uh the kind of outputs that we had from",
+      "start": 395.919,
+      "duration": 3.201
+    },
+    {
+      "text": "our",
+      "start": 398.72,
+      "duration": 3.12
+    },
+    {
+      "text": "investment returns example we have a",
+      "start": 399.12,
+      "duration": 3.44
+    },
+    {
+      "text": "histogram",
+      "start": 401.84,
+      "duration": 3.919
+    },
+    {
+      "text": "distribution of the",
+      "start": 402.56,
+      "duration": 5.44
+    },
+    {
+      "text": "whole of all the outputs all the",
+      "start": 405.759,
+      "duration": 3.121
+    },
+    {
+      "text": "different",
+      "start": 408.0,
+      "duration": 3.52
+    },
+    {
+      "text": "portfolio and values and then we have",
+      "start": 408.88,
+      "duration": 4.319
+    },
+    {
+      "text": "this probability table",
+      "start": 411.52,
+      "duration": 4.239
+    },
+    {
+      "text": "as well as a quantitative way of showing",
+      "start": 413.199,
+      "duration": 5.12
+    },
+    {
+      "text": "that information",
+      "start": 415.759,
+      "duration": 4.56
+    },
+    {
+      "text": "these are both getting at just the",
+      "start": 418.319,
+      "duration": 4.32
+    },
+    {
+      "text": "chance of having different outcomes",
+      "start": 420.319,
+      "duration": 6.401
+    },
+    {
+      "text": "in your model so",
+      "start": 422.639,
+      "duration": 6.081
+    },
+    {
+      "text": "uh you can visualize this with a plot in",
+      "start": 426.72,
+      "duration": 3.919
+    },
+    {
+      "text": "a table and with a plot",
+      "start": 428.72,
+      "duration": 4.16
+    },
+    {
+      "text": "usually use a histogram you can also use",
+      "start": 430.639,
+      "duration": 3.84
+    },
+    {
+      "text": "a kde",
+      "start": 432.88,
+      "duration": 3.84
+    },
+    {
+      "text": "kernel density estimation plot as the",
+      "start": 434.479,
+      "duration": 3.28
+    },
+    {
+      "text": "other",
+      "start": 436.72,
+      "duration": 4.16
+    },
+    {
+      "text": "potential way to visualize this uh",
+      "start": 437.759,
+      "duration": 4.72
+    },
+    {
+      "text": "which just gives a smoother looking",
+      "start": 440.88,
+      "duration": 3.2
+    },
+    {
+      "text": "output",
+      "start": 442.479,
+      "duration": 6.481
+    },
+    {
+      "text": "um and this helps you understand",
+      "start": 444.08,
+      "duration": 6.559
+    },
+    {
+      "text": "at a high level what the distribution",
+      "start": 448.96,
+      "duration": 3.359
+    },
+    {
+      "text": "looks like is it basically a normal",
+      "start": 450.639,
+      "duration": 2.4
+    },
+    {
+      "text": "distribution",
+      "start": 452.319,
+      "duration": 3.681
+    },
+    {
+      "text": "as is the case here what's kind of the",
+      "start": 453.039,
+      "duration": 5.121
+    },
+    {
+      "text": "the range of the distribution",
+      "start": 456.0,
+      "duration": 4.319
+    },
+    {
+      "text": "um and just understanding at a high",
+      "start": 458.16,
+      "duration": 4.24
+    },
+    {
+      "text": "level are there heavy tails",
+      "start": 460.319,
+      "duration": 6.081
+    },
+    {
+      "text": "is it you know non-normal et cetera",
+      "start": 462.4,
+      "duration": 5.68
+    },
+    {
+      "text": "and then the probability table helps you",
+      "start": 466.4,
+      "duration": 3.76
+    },
+    {
+      "text": "quantify some of this and think about",
+      "start": 468.08,
+      "duration": 2.88
+    },
+    {
+      "text": "the chance",
+      "start": 470.16,
+      "duration": 4.319
+    },
+    {
+      "text": "of hitting certain values in the model",
+      "start": 470.96,
+      "duration": 6.56
+    },
+    {
+      "text": "so what this probability table says is",
+      "start": 474.479,
+      "duration": 3.84
+    },
+    {
+      "text": "that",
+      "start": 477.52,
+      "duration": 2.88
+    },
+    {
+      "text": "in 25 percent of cases we're gonna have",
+      "start": 478.319,
+      "duration": 3.041
+    },
+    {
+      "text": "less than",
+      "start": 480.4,
+      "duration": 3.28
+    },
+    {
+      "text": "a thousand and twenty dollars and fifty",
+      "start": 481.36,
+      "duration": 3.519
+    },
+    {
+      "text": "percent of cases we're going to have",
+      "start": 483.68,
+      "duration": 1.919
+    },
+    {
+      "text": "less than",
+      "start": 484.879,
+      "duration": 4.32
+    },
+    {
+      "text": "1039 dollars and in 75 percent of cases",
+      "start": 485.599,
+      "duration": 5.241
+    },
+    {
+      "text": "we're going to have less than",
+      "start": 489.199,
+      "duration": 4.961
+    },
+    {
+      "text": "1053 dollars",
+      "start": 490.84,
+      "duration": 3.32
+    },
+    {
+      "text": "and then i just wanted to note here that",
+      "start": 497.44,
+      "duration": 4.96
+    },
+    {
+      "text": "the value at risk is a common",
+      "start": 502.639,
+      "duration": 6.4
+    },
+    {
+      "text": "measure that's used in the industry and",
+      "start": 506.08,
+      "duration": 4.559
+    },
+    {
+      "text": "the value at risk",
+      "start": 509.039,
+      "duration": 5.201
+    },
+    {
+      "text": "is typically looking at a portfolio",
+      "start": 510.639,
+      "duration": 7.601
+    },
+    {
+      "text": "but it evaluates at a certain",
+      "start": 514.24,
+      "duration": 7.679
+    },
+    {
+      "text": "confidence level or certain probability",
+      "start": 518.24,
+      "duration": 7.039
+    },
+    {
+      "text": "uh the the minimum amount",
+      "start": 521.919,
+      "duration": 7.04
+    },
+    {
+      "text": "that you're going to lose so",
+      "start": 525.279,
+      "duration": 7.12
+    },
+    {
+      "text": "it's saying like we're in 95 percent of",
+      "start": 528.959,
+      "duration": 4.0
+    },
+    {
+      "text": "days",
+      "start": 532.399,
+      "duration": 1.841
+    },
+    {
+      "text": "we're not going to lose more than a",
+      "start": 532.959,
+      "duration": 3.121
+    },
+    {
+      "text": "thousand dollars",
+      "start": 534.24,
+      "duration": 6.4
+    },
+    {
+      "text": "or yeah at 95 percent of days",
+      "start": 536.08,
+      "duration": 6.56
+    },
+    {
+      "text": "we're going to lose less than a thousand",
+      "start": 540.64,
+      "duration": 3.36
+    },
+    {
+      "text": "dollars",
+      "start": 542.64,
+      "duration": 3.84
+    },
+    {
+      "text": "and those other five percent of days it",
+      "start": 544.0,
+      "duration": 3.92
+    },
+    {
+      "text": "doesn't say anything about that it could",
+      "start": 546.48,
+      "duration": 2.08
+    },
+    {
+      "text": "be",
+      "start": 547.92,
+      "duration": 4.4
+    },
+    {
+      "text": "10 000 could be a million loss just that",
+      "start": 548.56,
+      "duration": 5.839
+    },
+    {
+      "text": "95 of the time the loss is going to be",
+      "start": 552.32,
+      "duration": 3.12
+    },
+    {
+      "text": "less than",
+      "start": 554.399,
+      "duration": 3.841
+    },
+    {
+      "text": "uh a thousand dollars so this",
+      "start": 555.44,
+      "duration": 5.399
+    },
+    {
+      "text": "probability table",
+      "start": 558.24,
+      "duration": 6.719
+    },
+    {
+      "text": "um it actually gets at the same",
+      "start": 560.839,
+      "duration": 6.44
+    },
+    {
+      "text": "concept so the probability table is",
+      "start": 564.959,
+      "duration": 3.121
+    },
+    {
+      "text": "actually a more",
+      "start": 567.279,
+      "duration": 3.841
+    },
+    {
+      "text": "general version of the value at risk",
+      "start": 568.08,
+      "duration": 4.16
+    },
+    {
+      "text": "measure which",
+      "start": 571.12,
+      "duration": 3.04
+    },
+    {
+      "text": "probability table tells you all these",
+      "start": 572.24,
+      "duration": 3.2
+    },
+    {
+      "text": "different",
+      "start": 574.16,
+      "duration": 3.119
+    },
+    {
+      "text": "values and as general to whatever kind",
+      "start": 575.44,
+      "duration": 3.44
+    },
+    {
+      "text": "of output you want to look at",
+      "start": 577.279,
+      "duration": 3.761
+    },
+    {
+      "text": "whereas value at risk is specifically",
+      "start": 578.88,
+      "duration": 4.24
+    },
+    {
+      "text": "talking about some kind of loss",
+      "start": 581.04,
+      "duration": 6.96
+    },
+    {
+      "text": "in your model and usually",
+      "start": 583.12,
+      "duration": 8.719
+    },
+    {
+      "text": "most commonly to look at 90 95 or 99",
+      "start": 588.0,
+      "duration": 7.12
+    },
+    {
+      "text": "um percentiles so if you need to",
+      "start": 591.839,
+      "duration": 4.961
+    },
+    {
+      "text": "calculate the var",
+      "start": 595.12,
+      "duration": 5.04
+    },
+    {
+      "text": "from a monte carlo simulation look no",
+      "start": 596.8,
+      "duration": 3.84
+    },
+    {
+      "text": "further",
+      "start": 600.16,
+      "duration": 3.679
+    },
+    {
+      "text": "than the probability table there are",
+      "start": 600.64,
+      "duration": 4.8
+    },
+    {
+      "text": "other ways to calculate var",
+      "start": 603.839,
+      "duration": 5.201
+    },
+    {
+      "text": "in other situations but it's getting at",
+      "start": 605.44,
+      "duration": 5.519
+    },
+    {
+      "text": "the same concept as this probability",
+      "start": 609.04,
+      "duration": 4.239
+    },
+    {
+      "text": "table",
+      "start": 610.959,
+      "duration": 2.32
+    },
+    {
+      "text": "so then coming to the probability of a",
+      "start": 614.079,
+      "duration": 3.041
+    },
+    {
+      "text": "certain",
+      "start": 616.56,
+      "duration": 3.68
+    },
+    {
+      "text": "outcome um",
+      "start": 617.12,
+      "duration": 6.399
+    },
+    {
+      "text": "so this was where we were saying uh",
+      "start": 620.24,
+      "duration": 5.2
+    },
+    {
+      "text": "what's the chance of getting a thousand",
+      "start": 623.519,
+      "duration": 3.041
+    },
+    {
+      "text": "fifty dollars",
+      "start": 625.44,
+      "duration": 4.24
+    },
+    {
+      "text": "in our portfolio",
+      "start": 626.56,
+      "duration": 7.04
+    },
+    {
+      "text": "so in order to understand how this works",
+      "start": 629.68,
+      "duration": 7.92
+    },
+    {
+      "text": "let's look at a very simple example",
+      "start": 633.6,
+      "duration": 7.52
+    },
+    {
+      "text": "so you have some box here and this box",
+      "start": 637.6,
+      "duration": 6.72
+    },
+    {
+      "text": "has red and blue balls on the inside",
+      "start": 641.12,
+      "duration": 6.959
+    },
+    {
+      "text": "and you can't see what's inside the box",
+      "start": 644.32,
+      "duration": 5.12
+    },
+    {
+      "text": "you don't know",
+      "start": 648.079,
+      "duration": 3.2
+    },
+    {
+      "text": "how many red balls and how many blue",
+      "start": 649.44,
+      "duration": 5.12
+    },
+    {
+      "text": "balls there are in the box",
+      "start": 651.279,
+      "duration": 3.281
+    },
+    {
+      "text": "and what you want to get is an estimate",
+      "start": 654.88,
+      "duration": 4.16
+    },
+    {
+      "text": "of what is the chance",
+      "start": 657.12,
+      "duration": 4.24
+    },
+    {
+      "text": "when i reach in to pull out a ball that",
+      "start": 659.04,
+      "duration": 3.84
+    },
+    {
+      "text": "i'm going to get a blue ball",
+      "start": 661.36,
+      "duration": 4.24
+    },
+    {
+      "text": "when i do that",
+      "start": 662.88,
+      "duration": 2.72
+    },
+    {
+      "text": "so what's the process you might go",
+      "start": 666.32,
+      "duration": 3.28
+    },
+    {
+      "text": "through",
+      "start": 669.2,
+      "duration": 3.6
+    },
+    {
+      "text": "to figure this out",
+      "start": 669.6,
+      "duration": 6.16
+    },
+    {
+      "text": "well just reach in grab a ball so i get",
+      "start": 672.8,
+      "duration": 5.36
+    },
+    {
+      "text": "red or blue let me write it down",
+      "start": 675.76,
+      "duration": 5.6
+    },
+    {
+      "text": "put it back in take the box up mix it up",
+      "start": 678.16,
+      "duration": 5.28
+    },
+    {
+      "text": "whatever so it's random",
+      "start": 681.36,
+      "duration": 4.24
+    },
+    {
+      "text": "and pull another one out write down its",
+      "start": 683.44,
+      "duration": 4.399
+    },
+    {
+      "text": "color and just keep doing the same thing",
+      "start": 685.6,
+      "duration": 5.28
+    },
+    {
+      "text": "a thousand times",
+      "start": 687.839,
+      "duration": 3.041
+    },
+    {
+      "text": "and so you get a blue ball 350",
+      "start": 691.04,
+      "duration": 7.28
+    },
+    {
+      "text": "out of 1000 times so then what is your",
+      "start": 694.8,
+      "duration": 4.719
+    },
+    {
+      "text": "probability",
+      "start": 698.32,
+      "duration": 5.6
+    },
+    {
+      "text": "of getting a blue ball and so",
+      "start": 699.519,
+      "duration": 6.32
+    },
+    {
+      "text": "a decent amount of people will probably",
+      "start": 703.92,
+      "duration": 4.4
+    },
+    {
+      "text": "just kind of intuitively",
+      "start": 705.839,
+      "duration": 4.8
+    },
+    {
+      "text": "understand this and say well that's",
+      "start": 708.32,
+      "duration": 3.519
+    },
+    {
+      "text": "that's 35",
+      "start": 710.639,
+      "duration": 5.2
+    },
+    {
+      "text": "chance of getting a blue ball",
+      "start": 711.839,
+      "duration": 8.401
+    },
+    {
+      "text": "how do we get there so",
+      "start": 715.839,
+      "duration": 8.081
+    },
+    {
+      "text": "we can estimate the probability of",
+      "start": 720.24,
+      "duration": 7.68
+    },
+    {
+      "text": "some outcome by basically trying a bunch",
+      "start": 723.92,
+      "duration": 6.56
+    },
+    {
+      "text": "of times and",
+      "start": 727.92,
+      "duration": 4.56
+    },
+    {
+      "text": "seeing how many of those times we",
+      "start": 730.48,
+      "duration": 4.88
+    },
+    {
+      "text": "achieve the objective that we want",
+      "start": 732.48,
+      "duration": 4.72
+    },
+    {
+      "text": "and you just divide the number of times",
+      "start": 735.36,
+      "duration": 3.12
+    },
+    {
+      "text": "you hit the objective",
+      "start": 737.2,
+      "duration": 3.759
+    },
+    {
+      "text": "by the total number of times and that's",
+      "start": 738.48,
+      "duration": 3.599
+    },
+    {
+      "text": "going to be an estimate of the",
+      "start": 740.959,
+      "duration": 4.721
+    },
+    {
+      "text": "probability of achieving that objective",
+      "start": 742.079,
+      "duration": 6.961
+    },
+    {
+      "text": "so in the ball situation three 350 blue",
+      "start": 745.68,
+      "duration": 4.719
+    },
+    {
+      "text": "balls",
+      "start": 749.04,
+      "duration": 4.56
+    },
+    {
+      "text": "um when whenever we draw a blue ball",
+      "start": 750.399,
+      "duration": 4.961
+    },
+    {
+      "text": "that's meaning our objective",
+      "start": 753.6,
+      "duration": 3.76
+    },
+    {
+      "text": "of getting a blue ball whenever we draw",
+      "start": 755.36,
+      "duration": 3.44
+    },
+    {
+      "text": "a red ball that's",
+      "start": 757.36,
+      "duration": 2.96
+    },
+    {
+      "text": "not meeting that objective and so it",
+      "start": 758.8,
+      "duration": 4.0
+    },
+    {
+      "text": "doesn't enter into the numerator",
+      "start": 760.32,
+      "duration": 5.68
+    },
+    {
+      "text": "so uh we get 350",
+      "start": 762.8,
+      "duration": 5.44
+    },
+    {
+      "text": "times where the trial was successful we",
+      "start": 766.0,
+      "duration": 3.76
+    },
+    {
+      "text": "pulled the blue ball",
+      "start": 768.24,
+      "duration": 3.36
+    },
+    {
+      "text": "and so that's the numerator and we had a",
+      "start": 769.76,
+      "duration": 3.84
+    },
+    {
+      "text": "thousand times that we pulled balls",
+      "start": 771.6,
+      "duration": 4.32
+    },
+    {
+      "text": "in total and so that's the denominator",
+      "start": 773.6,
+      "duration": 4.799
+    },
+    {
+      "text": "and so we get that 35 percent",
+      "start": 775.92,
+      "duration": 5.599
+    },
+    {
+      "text": "estimate of the probability of getting a",
+      "start": 778.399,
+      "duration": 5.601
+    },
+    {
+      "text": "blue ball",
+      "start": 781.519,
+      "duration": 2.481
+    },
+    {
+      "text": "and when we apply this in the investment",
+      "start": 784.16,
+      "duration": 3.6
+    },
+    {
+      "text": "investment example",
+      "start": 786.56,
+      "duration": 4.64
+    },
+    {
+      "text": "it was the same exact logic",
+      "start": 787.76,
+      "duration": 4.48
+    },
+    {
+      "text": "it may have looked a little bit",
+      "start": 791.2,
+      "duration": 3.36
+    },
+    {
+      "text": "complicated what we did in pandas",
+      "start": 792.24,
+      "duration": 5.2
+    },
+    {
+      "text": "but all that we did was convert it into",
+      "start": 794.56,
+      "duration": 4.279
+    },
+    {
+      "text": "this kind of format",
+      "start": 797.44,
+      "duration": 6.0
+    },
+    {
+      "text": "where we assigned a one or a zero",
+      "start": 798.839,
+      "duration": 7.081
+    },
+    {
+      "text": "based on whether we met the objective if",
+      "start": 803.44,
+      "duration": 3.92
+    },
+    {
+      "text": "we got at least a thousand and fifty",
+      "start": 805.92,
+      "duration": 3.2
+    },
+    {
+      "text": "dollars it became a one",
+      "start": 807.36,
+      "duration": 3.44
+    },
+    {
+      "text": "if we got less than that then it became",
+      "start": 809.12,
+      "duration": 3.6
+    },
+    {
+      "text": "a zero so that's the same",
+      "start": 810.8,
+      "duration": 5.68
+    },
+    {
+      "text": "as here when we get a blue ball we make",
+      "start": 812.72,
+      "duration": 4.08
+    },
+    {
+      "text": "it",
+      "start": 816.48,
+      "duration": 3.2
+    },
+    {
+      "text": "one and when we get a red ball we make",
+      "start": 816.8,
+      "duration": 4.88
+    },
+    {
+      "text": "it zero",
+      "start": 819.68,
+      "duration": 4.8
+    },
+    {
+      "text": "and then sum it all up and that's going",
+      "start": 821.68,
+      "duration": 4.399
+    },
+    {
+      "text": "to be",
+      "start": 824.48,
+      "duration": 3.919
+    },
+    {
+      "text": "just the count of how many times that",
+      "start": 826.079,
+      "duration": 3.601
+    },
+    {
+      "text": "you got the blue ball",
+      "start": 828.399,
+      "duration": 3.44
+    },
+    {
+      "text": "or just the count of how many times that",
+      "start": 829.68,
+      "duration": 5.76
+    },
+    {
+      "text": "we got a thousand and fifty dollars",
+      "start": 831.839,
+      "duration": 6.8
+    },
+    {
+      "text": "so then that's the numerator and the",
+      "start": 835.44,
+      "duration": 5.68
+    },
+    {
+      "text": "denominator is just the total",
+      "start": 838.639,
+      "duration": 5.601
+    },
+    {
+      "text": "number of trials",
+      "start": 841.12,
+      "duration": 6.56
+    },
+    {
+      "text": "number of simulations",
+      "start": 844.24,
+      "duration": 3.44
+    },
+    {
+      "text": "and that you know taking",
+      "start": 847.76,
+      "duration": 7.28
+    },
+    {
+      "text": "the sum of all that divided by the count",
+      "start": 851.279,
+      "duration": 6.881
+    },
+    {
+      "text": "that is an average right so really",
+      "start": 855.04,
+      "duration": 5.599
+    },
+    {
+      "text": "it's just getting a one for the positive",
+      "start": 858.16,
+      "duration": 4.32
+    },
+    {
+      "text": "outcome a zero for the negative outcome",
+      "start": 860.639,
+      "duration": 3.841
+    },
+    {
+      "text": "and then taking the average",
+      "start": 862.48,
+      "duration": 4.64
+    },
+    {
+      "text": "of that and that will give you an",
+      "start": 864.48,
+      "duration": 5.12
+    },
+    {
+      "text": "estimate of the probability of achieving",
+      "start": 867.12,
+      "duration": 3.519
+    },
+    {
+      "text": "the objective",
+      "start": 869.6,
+      "duration": 3.919
+    },
+    {
+      "text": "that you desire",
+      "start": 870.639,
+      "duration": 2.88
+    },
+    {
+      "text": "so that's a formal introduction",
+      "start": 873.76,
+      "duration": 6.56
+    },
+    {
+      "text": "to monte carlo simulation",
+      "start": 877.04,
+      "duration": 4.88
+    },
+    {
+      "text": "we're going to come back next time to",
+      "start": 880.32,
+      "duration": 4.24
+    },
+    {
+      "text": "discuss how we can analyze",
+      "start": 881.92,
+      "duration": 5.84
+    },
+    {
+      "text": "the relationship between the inputs and",
+      "start": 884.56,
+      "duration": 4.56
+    },
+    {
+      "text": "the outputs",
+      "start": 887.76,
+      "duration": 3.96
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 889.12,
+      "duration": 5.6
+    },
+    {
+      "text": "time",
+      "start": 891.72,
+      "duration": 3.0
+    }
+  ]
+}

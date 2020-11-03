@@ -1,0 +1,1309 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.36,
+      "duration": 2.24
+    },
+    {
+      "text": "nick dierbert is here teaching you",
+      "start": 4.16,
+      "duration": 3.36
+    },
+    {
+      "text": "financial modeling and today we're going",
+      "start": 5.6,
+      "duration": 4.079
+    },
+    {
+      "text": "to talk about the depth of a financial",
+      "start": 7.52,
+      "duration": 2.88
+    },
+    {
+      "text": "model",
+      "start": 9.679,
+      "duration": 3.201
+    },
+    {
+      "text": "and extending a simple retirement model",
+      "start": 10.4,
+      "duration": 4.72
+    },
+    {
+      "text": "in excel",
+      "start": 12.88,
+      "duration": 6.0
+    },
+    {
+      "text": "so we started out in this class",
+      "start": 15.12,
+      "duration": 6.4
+    },
+    {
+      "text": "with a very simple model to work with",
+      "start": 18.88,
+      "duration": 4.08
+    },
+    {
+      "text": "just a very basic",
+      "start": 21.52,
+      "duration": 3.2
+    },
+    {
+      "text": "retirement model that most people would",
+      "start": 22.96,
+      "duration": 3.92
+    },
+    {
+      "text": "solve on a calculator",
+      "start": 24.72,
+      "duration": 5.28
+    },
+    {
+      "text": "and you know part of that was so that",
+      "start": 26.88,
+      "duration": 5.359
+    },
+    {
+      "text": "you know we can focus more on the",
+      "start": 30.0,
+      "duration": 3.92
+    },
+    {
+      "text": "modeling part rather than",
+      "start": 32.239,
+      "duration": 4.241
+    },
+    {
+      "text": "having to know any you know complex",
+      "start": 33.92,
+      "duration": 3.2
+    },
+    {
+      "text": "finance",
+      "start": 36.48,
+      "duration": 3.599
+    },
+    {
+      "text": "concepts to get started but the other",
+      "start": 37.12,
+      "duration": 3.439
+    },
+    {
+      "text": "reason",
+      "start": 40.079,
+      "duration": 3.921
+    },
+    {
+      "text": "was to really highlight just how complex",
+      "start": 40.559,
+      "duration": 6.641
+    },
+    {
+      "text": "the world is and that even a simple",
+      "start": 44.0,
+      "duration": 3.92
+    },
+    {
+      "text": "model",
+      "start": 47.2,
+      "duration": 4.4
+    },
+    {
+      "text": "actually uh can become very very complex",
+      "start": 47.92,
+      "duration": 6.4
+    },
+    {
+      "text": "once you really try to bring in all the",
+      "start": 51.6,
+      "duration": 3.52
+    },
+    {
+      "text": "particulars",
+      "start": 54.32,
+      "duration": 4.239
+    },
+    {
+      "text": "of the real world and so with every",
+      "start": 55.12,
+      "duration": 6.239
+    },
+    {
+      "text": "model there's always a trade-off",
+      "start": 58.559,
+      "duration": 4.401
+    },
+    {
+      "text": "you can keep making it more and more",
+      "start": 61.359,
+      "duration": 4.08
+    },
+    {
+      "text": "realistic and that makes it more and",
+      "start": 62.96,
+      "duration": 4.159
+    },
+    {
+      "text": "more complex",
+      "start": 65.439,
+      "duration": 4.481
+    },
+    {
+      "text": "and so you ultimately have to make a",
+      "start": 67.119,
+      "duration": 3.521
+    },
+    {
+      "text": "decision",
+      "start": 69.92,
+      "duration": 2.559
+    },
+    {
+      "text": "about you know what you're using the",
+      "start": 70.64,
+      "duration": 4.159
+    },
+    {
+      "text": "model for how accurate does it need to",
+      "start": 72.479,
+      "duration": 3.441
+    },
+    {
+      "text": "be",
+      "start": 74.799,
+      "duration": 4.0
+    },
+    {
+      "text": "for how much you're going to really try",
+      "start": 75.92,
+      "duration": 5.12
+    },
+    {
+      "text": "to get close to the real world",
+      "start": 78.799,
+      "duration": 4.64
+    },
+    {
+      "text": "ultimately the real world is just too",
+      "start": 81.04,
+      "duration": 3.119
+    },
+    {
+      "text": "complex",
+      "start": 83.439,
+      "duration": 4.32
+    },
+    {
+      "text": "to be able to model every single aspect",
+      "start": 84.159,
+      "duration": 6.32
+    },
+    {
+      "text": "of the real world and so ultimately",
+      "start": 87.759,
+      "duration": 3.921
+    },
+    {
+      "text": "we're always",
+      "start": 90.479,
+      "duration": 3.441
+    },
+    {
+      "text": "making some simplifications to make our",
+      "start": 91.68,
+      "duration": 3.2
+    },
+    {
+      "text": "lives",
+      "start": 93.92,
+      "duration": 3.6
+    },
+    {
+      "text": "easier and keep the complexity of the",
+      "start": 94.88,
+      "duration": 5.52
+    },
+    {
+      "text": "model down",
+      "start": 97.52,
+      "duration": 6.559
+    },
+    {
+      "text": "so we're going to",
+      "start": 100.4,
+      "duration": 6.16
+    },
+    {
+      "text": "just extend this retirement model that",
+      "start": 104.079,
+      "duration": 3.841
+    },
+    {
+      "text": "we've been working with already",
+      "start": 106.56,
+      "duration": 3.519
+    },
+    {
+      "text": "ultimately solving basically the same",
+      "start": 107.92,
+      "duration": 2.96
+    },
+    {
+      "text": "problem",
+      "start": 110.079,
+      "duration": 3.841
+    },
+    {
+      "text": "but trying to get at some more realistic",
+      "start": 110.88,
+      "duration": 3.919
+    },
+    {
+      "text": "assumptions",
+      "start": 113.92,
+      "duration": 3.92
+    },
+    {
+      "text": "going along with that",
+      "start": 114.799,
+      "duration": 3.041
+    },
+    {
+      "text": "so when we break down any model",
+      "start": 118.399,
+      "duration": 6.641
+    },
+    {
+      "text": "it has a few conceptual parts to it",
+      "start": 121.52,
+      "duration": 6.239
+    },
+    {
+      "text": "so we have the equations the logic and",
+      "start": 125.04,
+      "duration": 3.76
+    },
+    {
+      "text": "the assumptions",
+      "start": 127.759,
+      "duration": 4.48
+    },
+    {
+      "text": "going into the model and really the",
+      "start": 128.8,
+      "duration": 4.48
+    },
+    {
+      "text": "assumptions",
+      "start": 132.239,
+      "duration": 4.321
+    },
+    {
+      "text": "are the base of the model once you",
+      "start": 133.28,
+      "duration": 4.24
+    },
+    {
+      "text": "decide",
+      "start": 136.56,
+      "duration": 3.679
+    },
+    {
+      "text": "what your assumptions are then you can",
+      "start": 137.52,
+      "duration": 4.24
+    },
+    {
+      "text": "go and figure out",
+      "start": 140.239,
+      "duration": 4.481
+    },
+    {
+      "text": "what the actual logic and equations",
+      "start": 141.76,
+      "duration": 5.44
+    },
+    {
+      "text": "involved in the model are going to be",
+      "start": 144.72,
+      "duration": 5.519
+    },
+    {
+      "text": "and those assumptions are really where",
+      "start": 147.2,
+      "duration": 4.16
+    },
+    {
+      "text": "we're thinking about",
+      "start": 150.239,
+      "duration": 2.72
+    },
+    {
+      "text": "you know how close do we want to be to",
+      "start": 151.36,
+      "duration": 4.879
+    },
+    {
+      "text": "the real world what do we want to assume",
+      "start": 152.959,
+      "duration": 5.841
+    },
+    {
+      "text": "to make our lives easier uh and make the",
+      "start": 156.239,
+      "duration": 4.241
+    },
+    {
+      "text": "model less complex",
+      "start": 158.8,
+      "duration": 4.079
+    },
+    {
+      "text": "uh so that we can actually get to the",
+      "start": 160.48,
+      "duration": 5.52
+    },
+    {
+      "text": "solution in a reasonable amount of time",
+      "start": 162.879,
+      "duration": 5.521
+    },
+    {
+      "text": "and then once you've decided on you know",
+      "start": 166.0,
+      "duration": 4.64
+    },
+    {
+      "text": "these are the things uh that i'm going",
+      "start": 168.4,
+      "duration": 3.199
+    },
+    {
+      "text": "to assume",
+      "start": 170.64,
+      "duration": 2.879
+    },
+    {
+      "text": "then out of those assumptions you can",
+      "start": 171.599,
+      "duration": 4.401
+    },
+    {
+      "text": "create these logic and equations which",
+      "start": 173.519,
+      "duration": 3.201
+    },
+    {
+      "text": "actually",
+      "start": 176.0,
+      "duration": 5.28
+    },
+    {
+      "text": "drive the model and so",
+      "start": 176.72,
+      "duration": 6.32
+    },
+    {
+      "text": "you know we already built out this very",
+      "start": 181.28,
+      "duration": 3.52
+    },
+    {
+      "text": "simple retirement model where we just",
+      "start": 183.04,
+      "duration": 2.559
+    },
+    {
+      "text": "said",
+      "start": 184.8,
+      "duration": 2.24
+    },
+    {
+      "text": "you know this person has a certain",
+      "start": 185.599,
+      "duration": 3.441
+    },
+    {
+      "text": "amount of desired cash",
+      "start": 187.04,
+      "duration": 3.36
+    },
+    {
+      "text": "we want to know how long it's going to",
+      "start": 189.04,
+      "duration": 3.6
+    },
+    {
+      "text": "take to retire they can",
+      "start": 190.4,
+      "duration": 4.64
+    },
+    {
+      "text": "you know save a certain amount each year",
+      "start": 192.64,
+      "duration": 4.72
+    },
+    {
+      "text": "and they invest it at a certain rate",
+      "start": 195.04,
+      "duration": 5.6
+    },
+    {
+      "text": "uh how long does it take",
+      "start": 197.36,
+      "duration": 4.72
+    },
+    {
+      "text": "so when we're thinking about the more",
+      "start": 200.64,
+      "duration": 3.04
+    },
+    {
+      "text": "general question of just",
+      "start": 202.08,
+      "duration": 5.519
+    },
+    {
+      "text": "how long does it take to retire uh",
+      "start": 203.68,
+      "duration": 5.919
+    },
+    {
+      "text": "simplifying it down to the problem that",
+      "start": 207.599,
+      "duration": 3.601
+    },
+    {
+      "text": "we looked at last time there were",
+      "start": 209.599,
+      "duration": 2.481
+    },
+    {
+      "text": "actually quite a few",
+      "start": 211.2,
+      "duration": 4.08
+    },
+    {
+      "text": "assumptions that went into that so let's",
+      "start": 212.08,
+      "duration": 6.719
+    },
+    {
+      "text": "break that down a little bit uh",
+      "start": 215.28,
+      "duration": 6.64
+    },
+    {
+      "text": "so we see",
+      "start": 218.799,
+      "duration": 6.0
+    },
+    {
+      "text": "a few assumptions here on a slide one",
+      "start": 221.92,
+      "duration": 4.72
+    },
+    {
+      "text": "here is that the salary",
+      "start": 224.799,
+      "duration": 5.121
+    },
+    {
+      "text": "is constant over time and",
+      "start": 226.64,
+      "duration": 6.319
+    },
+    {
+      "text": "uh you know that is definitely not",
+      "start": 229.92,
+      "duration": 5.76
+    },
+    {
+      "text": "a very realistic assumption right as you",
+      "start": 232.959,
+      "duration": 4.48
+    },
+    {
+      "text": "go through your career",
+      "start": 235.68,
+      "duration": 3.6
+    },
+    {
+      "text": "you're going to get promotions you're",
+      "start": 237.439,
+      "duration": 3.281
+    },
+    {
+      "text": "going to switch jobs",
+      "start": 239.28,
+      "duration": 3.84
+    },
+    {
+      "text": "and that is going to increase your wage",
+      "start": 240.72,
+      "duration": 3.84
+    },
+    {
+      "text": "typically people earn",
+      "start": 243.12,
+      "duration": 3.6
+    },
+    {
+      "text": "higher salaries as they get later into",
+      "start": 244.56,
+      "duration": 4.48
+    },
+    {
+      "text": "their career",
+      "start": 246.72,
+      "duration": 4.48
+    },
+    {
+      "text": "and so just having one constant salary",
+      "start": 249.04,
+      "duration": 3.04
+    },
+    {
+      "text": "really does not",
+      "start": 251.2,
+      "duration": 4.48
+    },
+    {
+      "text": "capture that very well and then",
+      "start": 252.08,
+      "duration": 6.719
+    },
+    {
+      "text": "going to number two the savings rate",
+      "start": 255.68,
+      "duration": 6.16
+    },
+    {
+      "text": "we just had a single consistent savings",
+      "start": 258.799,
+      "duration": 3.441
+    },
+    {
+      "text": "rate",
+      "start": 261.84,
+      "duration": 3.919
+    },
+    {
+      "text": "in the original model but really",
+      "start": 262.24,
+      "duration": 6.08
+    },
+    {
+      "text": "the savings rate is also going to change",
+      "start": 265.759,
+      "duration": 3.761
+    },
+    {
+      "text": "over time",
+      "start": 268.32,
+      "duration": 3.52
+    },
+    {
+      "text": "uh you know you think about if you're",
+      "start": 269.52,
+      "duration": 4.0
+    },
+    {
+      "text": "bringing more money in",
+      "start": 271.84,
+      "duration": 3.12
+    },
+    {
+      "text": "then it's likely that you'll be able to",
+      "start": 273.52,
+      "duration": 4.16
+    },
+    {
+      "text": "save a larger percentage of that",
+      "start": 274.96,
+      "duration": 5.28
+    },
+    {
+      "text": "um and other things can affect that you",
+      "start": 277.68,
+      "duration": 3.519
+    },
+    {
+      "text": "know if it's a",
+      "start": 280.24,
+      "duration": 3.6
+    },
+    {
+      "text": "recession uh you might not be able to",
+      "start": 281.199,
+      "duration": 4.641
+    },
+    {
+      "text": "save as much",
+      "start": 283.84,
+      "duration": 5.359
+    },
+    {
+      "text": "etc and then going to number three",
+      "start": 285.84,
+      "duration": 4.4
+    },
+    {
+      "text": "thinking about the",
+      "start": 289.199,
+      "duration": 4.481
+    },
+    {
+      "text": "investment returns so the investment",
+      "start": 290.24,
+      "duration": 4.16
+    },
+    {
+      "text": "returns",
+      "start": 293.68,
+      "duration": 3.519
+    },
+    {
+      "text": "uh we just had a single constant rate uh",
+      "start": 294.4,
+      "duration": 4.56
+    },
+    {
+      "text": "but really we know that",
+      "start": 297.199,
+      "duration": 3.361
+    },
+    {
+      "text": "investments you know they're going to",
+      "start": 298.96,
+      "duration": 3.04
+    },
+    {
+      "text": "return",
+      "start": 300.56,
+      "duration": 2.96
+    },
+    {
+      "text": "different risky investments are going to",
+      "start": 302.0,
+      "duration": 3.36
+    },
+    {
+      "text": "return different amounts",
+      "start": 303.52,
+      "duration": 4.88
+    },
+    {
+      "text": "each year and so just having a single",
+      "start": 305.36,
+      "duration": 4.72
+    },
+    {
+      "text": "constant investment rate is not going to",
+      "start": 308.4,
+      "duration": 3.28
+    },
+    {
+      "text": "be able to capture that",
+      "start": 310.08,
+      "duration": 4.24
+    },
+    {
+      "text": "very well um you know really there",
+      "start": 311.68,
+      "duration": 4.0
+    },
+    {
+      "text": "should be you know some kind of",
+      "start": 314.32,
+      "duration": 2.24
+    },
+    {
+      "text": "randomness",
+      "start": 315.68,
+      "duration": 4.48
+    },
+    {
+      "text": "to that investment rate and",
+      "start": 316.56,
+      "duration": 6.24
+    },
+    {
+      "text": "you know ideally it could be affected by",
+      "start": 320.16,
+      "duration": 3.84
+    },
+    {
+      "text": "you know expansionary",
+      "start": 322.8,
+      "duration": 3.28
+    },
+    {
+      "text": "periods and recessionary periods should",
+      "start": 324.0,
+      "duration": 3.6
+    },
+    {
+      "text": "have lower returns",
+      "start": 326.08,
+      "duration": 4.48
+    },
+    {
+      "text": "during a recession so there's a lot more",
+      "start": 327.6,
+      "duration": 3.92
+    },
+    {
+      "text": "that we could do",
+      "start": 330.56,
+      "duration": 3.44
+    },
+    {
+      "text": "with the investment rate you could",
+      "start": 331.52,
+      "duration": 4.0
+    },
+    {
+      "text": "really even take that",
+      "start": 334.0,
+      "duration": 3.84
+    },
+    {
+      "text": "even further you could build out an",
+      "start": 335.52,
+      "duration": 4.16
+    },
+    {
+      "text": "entire portfolio model",
+      "start": 337.84,
+      "duration": 3.359
+    },
+    {
+      "text": "uh you know say all the different",
+      "start": 339.68,
+      "duration": 3.2
+    },
+    {
+      "text": "investments that this person is",
+      "start": 341.199,
+      "duration": 3.361
+    },
+    {
+      "text": "investing in",
+      "start": 342.88,
+      "duration": 3.2
+    },
+    {
+      "text": "and then calculate the returns on each",
+      "start": 344.56,
+      "duration": 3.199
+    },
+    {
+      "text": "one of those individual investments and",
+      "start": 346.08,
+      "duration": 4.08
+    },
+    {
+      "text": "aggregate those all into a portfolio",
+      "start": 347.759,
+      "duration": 4.16
+    },
+    {
+      "text": "uh to ultimately determine the",
+      "start": 350.16,
+      "duration": 4.72
+    },
+    {
+      "text": "investment return in each year",
+      "start": 351.919,
+      "duration": 6.321
+    },
+    {
+      "text": "uh and then going to number four uh",
+      "start": 354.88,
+      "duration": 5.36
+    },
+    {
+      "text": "the amount needed into retirement is",
+      "start": 358.24,
+      "duration": 4.64
+    },
+    {
+      "text": "given by a fixed amount of desired cash",
+      "start": 360.24,
+      "duration": 5.44
+    },
+    {
+      "text": "we just said you know 1.5 million that's",
+      "start": 362.88,
+      "duration": 4.8
+    },
+    {
+      "text": "how much we're going to need to retire",
+      "start": 365.68,
+      "duration": 3.92
+    },
+    {
+      "text": "uh but they're you know where did that",
+      "start": 367.68,
+      "duration": 3.92
+    },
+    {
+      "text": "1.5 million come from",
+      "start": 369.6,
+      "duration": 3.68
+    },
+    {
+      "text": "you know really it should be driven by",
+      "start": 371.6,
+      "duration": 3.439
+    },
+    {
+      "text": "you know what are your expenses going to",
+      "start": 373.28,
+      "duration": 2.88
+    },
+    {
+      "text": "be in retirement",
+      "start": 375.039,
+      "duration": 3.121
+    },
+    {
+      "text": "how long are you expecting to live you",
+      "start": 376.16,
+      "duration": 3.68
+    },
+    {
+      "text": "know under you know what different",
+      "start": 378.16,
+      "duration": 4.0
+    },
+    {
+      "text": "scenarios of if you live longer how much",
+      "start": 379.84,
+      "duration": 2.72
+    },
+    {
+      "text": "more",
+      "start": 382.16,
+      "duration": 2.64
+    },
+    {
+      "text": "money are you going to need um and",
+      "start": 382.56,
+      "duration": 4.079
+    },
+    {
+      "text": "thinking about all of these kinds of",
+      "start": 384.8,
+      "duration": 3.44
+    },
+    {
+      "text": "issues",
+      "start": 386.639,
+      "duration": 5.12
+    },
+    {
+      "text": "and then uh the the the last one five",
+      "start": 388.24,
+      "duration": 5.36
+    },
+    {
+      "text": "kind of ties in here with with what i",
+      "start": 391.759,
+      "duration": 3.041
+    },
+    {
+      "text": "just said that",
+      "start": 393.6,
+      "duration": 4.319
+    },
+    {
+      "text": "uh the retirement uh",
+      "start": 394.8,
+      "duration": 5.28
+    },
+    {
+      "text": "cash needed was just a totally fixed",
+      "start": 397.919,
+      "duration": 4.961
+    },
+    {
+      "text": "number in the model there was nothing",
+      "start": 400.08,
+      "duration": 4.48
+    },
+    {
+      "text": "uh internal to the model that was",
+      "start": 402.88,
+      "duration": 3.68
+    },
+    {
+      "text": "driving that such as",
+      "start": 404.56,
+      "duration": 4.32
+    },
+    {
+      "text": "you know what if right when you retire",
+      "start": 406.56,
+      "duration": 4.24
+    },
+    {
+      "text": "uh we just hit a recession",
+      "start": 408.88,
+      "duration": 3.36
+    },
+    {
+      "text": "right at that point and so all your",
+      "start": 410.8,
+      "duration": 3.2
+    },
+    {
+      "text": "investments have gone down",
+      "start": 412.24,
+      "duration": 4.079
+    },
+    {
+      "text": "just as you're going into retirement how",
+      "start": 414.0,
+      "duration": 4.4
+    },
+    {
+      "text": "does that ultimately affect things you",
+      "start": 416.319,
+      "duration": 3.361
+    },
+    {
+      "text": "then you know probably would need to",
+      "start": 418.4,
+      "duration": 3.68
+    },
+    {
+      "text": "keep working until",
+      "start": 419.68,
+      "duration": 4.56
+    },
+    {
+      "text": "the market can rebound or you would",
+      "start": 422.08,
+      "duration": 4.32
+    },
+    {
+      "text": "evaluate you know if you are drawing on",
+      "start": 424.24,
+      "duration": 3.44
+    },
+    {
+      "text": "the portfolio",
+      "start": 426.4,
+      "duration": 3.76
+    },
+    {
+      "text": "uh while it's down then uh you know how",
+      "start": 427.68,
+      "duration": 3.359
+    },
+    {
+      "text": "much is that",
+      "start": 430.16,
+      "duration": 3.68
+    },
+    {
+      "text": "going to hurt your position overall so",
+      "start": 431.039,
+      "duration": 3.921
+    },
+    {
+      "text": "there's a lot",
+      "start": 433.84,
+      "duration": 3.759
+    },
+    {
+      "text": "a lot that we could consider and you",
+      "start": 434.96,
+      "duration": 3.28
+    },
+    {
+      "text": "know what",
+      "start": 437.599,
+      "duration": 2.561
+    },
+    {
+      "text": "seemed on the surface like a very simple",
+      "start": 438.24,
+      "duration": 3.44
+    },
+    {
+      "text": "problem uh",
+      "start": 440.16,
+      "duration": 3.68
+    },
+    {
+      "text": "you know just oh five keys on the top of",
+      "start": 441.68,
+      "duration": 4.0
+    },
+    {
+      "text": "the financial calculator and we're done",
+      "start": 443.84,
+      "duration": 2.96
+    },
+    {
+      "text": "right",
+      "start": 445.68,
+      "duration": 2.72
+    },
+    {
+      "text": "or a single function in excel or a",
+      "start": 446.8,
+      "duration": 3.679
+    },
+    {
+      "text": "single function in python we're done",
+      "start": 448.4,
+      "duration": 4.0
+    },
+    {
+      "text": "but no there's there's so many things",
+      "start": 450.479,
+      "duration": 3.201
+    },
+    {
+      "text": "that we assumed",
+      "start": 452.4,
+      "duration": 4.16
+    },
+    {
+      "text": "in going to that simple problem when in",
+      "start": 453.68,
+      "duration": 3.76
+    },
+    {
+      "text": "reality",
+      "start": 456.56,
+      "duration": 3.039
+    },
+    {
+      "text": "the real world is much much more complex",
+      "start": 457.44,
+      "duration": 3.599
+    },
+    {
+      "text": "than that there are so many different",
+      "start": 459.599,
+      "duration": 2.16
+    },
+    {
+      "text": "factors",
+      "start": 461.039,
+      "duration": 4.0
+    },
+    {
+      "text": "going on and bringing all the things",
+      "start": 461.759,
+      "duration": 4.56
+    },
+    {
+      "text": "that i just mentioned",
+      "start": 465.039,
+      "duration": 3.521
+    },
+    {
+      "text": "into one single model i mean that that",
+      "start": 466.319,
+      "duration": 3.921
+    },
+    {
+      "text": "would be a very massive",
+      "start": 468.56,
+      "duration": 5.039
+    },
+    {
+      "text": "model and so there's always a trade-off",
+      "start": 470.24,
+      "duration": 3.84
+    },
+    {
+      "text": "here",
+      "start": 473.599,
+      "duration": 3.44
+    },
+    {
+      "text": "uh you know if you just need to get a",
+      "start": 474.08,
+      "duration": 3.92
+    },
+    {
+      "text": "rough idea",
+      "start": 477.039,
+      "duration": 2.641
+    },
+    {
+      "text": "you know am i going to retire somewhere",
+      "start": 478.0,
+      "duration": 3.52
+    },
+    {
+      "text": "between 30 and 35 years",
+      "start": 479.68,
+      "duration": 4.239
+    },
+    {
+      "text": "like in that case your model really does",
+      "start": 481.52,
+      "duration": 4.16
+    },
+    {
+      "text": "not need to be that accurate",
+      "start": 483.919,
+      "duration": 3.921
+    },
+    {
+      "text": "and you can have all these assumptions",
+      "start": 485.68,
+      "duration": 3.919
+    },
+    {
+      "text": "because you don't need a very accurate",
+      "start": 487.84,
+      "duration": 3.0
+    },
+    {
+      "text": "result",
+      "start": 489.599,
+      "duration": 4.081
+    },
+    {
+      "text": "um but you know in another situation",
+      "start": 490.84,
+      "duration": 3.639
+    },
+    {
+      "text": "where",
+      "start": 493.68,
+      "duration": 2.799
+    },
+    {
+      "text": "uh you know maybe you're a large company",
+      "start": 494.479,
+      "duration": 3.28
+    },
+    {
+      "text": "building out a model that's",
+      "start": 496.479,
+      "duration": 2.881
+    },
+    {
+      "text": "you know making decisions for the",
+      "start": 497.759,
+      "duration": 2.961
+    },
+    {
+      "text": "company that's moving billions of",
+      "start": 499.36,
+      "duration": 2.559
+    },
+    {
+      "text": "dollars around and",
+      "start": 500.72,
+      "duration": 3.039
+    },
+    {
+      "text": "being off by one percent is going to be",
+      "start": 501.919,
+      "duration": 3.761
+    },
+    {
+      "text": "you know millions of dollars of",
+      "start": 503.759,
+      "duration": 3.921
+    },
+    {
+      "text": "profit difference in that case you know",
+      "start": 505.68,
+      "duration": 3.919
+    },
+    {
+      "text": "you care a lot about accuracy and then",
+      "start": 507.68,
+      "duration": 3.76
+    },
+    {
+      "text": "you you do want to build in",
+      "start": 509.599,
+      "duration": 5.041
+    },
+    {
+      "text": "as many uh uh",
+      "start": 511.44,
+      "duration": 5.2
+    },
+    {
+      "text": "approximations of the real world as you",
+      "start": 514.64,
+      "duration": 4.0
+    },
+    {
+      "text": "can rather than simplifying them",
+      "start": 516.64,
+      "duration": 5.04
+    },
+    {
+      "text": "with assumptions so we're going to come",
+      "start": 518.64,
+      "duration": 4.8
+    },
+    {
+      "text": "back next time to talk",
+      "start": 521.68,
+      "duration": 4.56
+    },
+    {
+      "text": "more specifically about the assumption",
+      "start": 523.44,
+      "duration": 4.399
+    },
+    {
+      "text": "that we're going to relax",
+      "start": 526.24,
+      "duration": 3.84
+    },
+    {
+      "text": "in the salary model to make it more",
+      "start": 527.839,
+      "duration": 3.44
+    },
+    {
+      "text": "realistic",
+      "start": 530.08,
+      "duration": 3.759
+    },
+    {
+      "text": "and after that we'll go into actually",
+      "start": 531.279,
+      "duration": 3.201
+    },
+    {
+      "text": "building",
+      "start": 533.839,
+      "duration": 3.361
+    },
+    {
+      "text": "the model out in excel so thanks for",
+      "start": 534.48,
+      "duration": 3.28
+    },
+    {
+      "text": "listening",
+      "start": 537.2,
+      "duration": 6.56
+    },
+    {
+      "text": "and see you next time",
+      "start": 537.76,
+      "duration": 6.0
+    }
+  ]
+}

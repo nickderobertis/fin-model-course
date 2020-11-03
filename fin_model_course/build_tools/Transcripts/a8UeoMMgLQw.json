@@ -1,0 +1,2269 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.199,
+      "duration": 2.481
+    },
+    {
+      "text": "nick dierbert is here teaching you",
+      "start": 4.16,
+      "duration": 3.04
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.68,
+      "duration": 3.6
+    },
+    {
+      "text": "today we're talking about grouping",
+      "start": 7.2,
+      "duration": 3.12
+    },
+    {
+      "text": "objects together",
+      "start": 9.28,
+      "duration": 4.239
+    },
+    {
+      "text": "with python lists this is part of our",
+      "start": 10.32,
+      "duration": 5.279
+    },
+    {
+      "text": "segment on going beyond an initial",
+      "start": 13.519,
+      "duration": 2.561
+    },
+    {
+      "text": "python",
+      "start": 15.599,
+      "duration": 3.44
+    },
+    {
+      "text": "script how to uh you know learn the",
+      "start": 16.08,
+      "duration": 5.039
+    },
+    {
+      "text": "python basics so that we can go",
+      "start": 19.039,
+      "duration": 4.801
+    },
+    {
+      "text": "and build out financial models using",
+      "start": 21.119,
+      "duration": 4.24
+    },
+    {
+      "text": "python",
+      "start": 23.84,
+      "duration": 4.32
+    },
+    {
+      "text": "so we have talked a little bit about",
+      "start": 25.359,
+      "duration": 3.281
+    },
+    {
+      "text": "lists",
+      "start": 28.16,
+      "duration": 3.84
+    },
+    {
+      "text": "in the course already but now we're",
+      "start": 28.64,
+      "duration": 3.919
+    },
+    {
+      "text": "going to",
+      "start": 32.0,
+      "duration": 2.32
+    },
+    {
+      "text": "learn a little bit more about working",
+      "start": 32.559,
+      "duration": 3.281
+    },
+    {
+      "text": "with them",
+      "start": 34.32,
+      "duration": 4.48
+    },
+    {
+      "text": "and some of the useful patterns uh using",
+      "start": 35.84,
+      "duration": 4.239
+    },
+    {
+      "text": "lists",
+      "start": 38.8,
+      "duration": 5.2
+    },
+    {
+      "text": "so um we already learned that",
+      "start": 40.079,
+      "duration": 6.0
+    },
+    {
+      "text": "lists are one of these uh kind of",
+      "start": 44.0,
+      "duration": 4.0
+    },
+    {
+      "text": "container data types",
+      "start": 46.079,
+      "duration": 4.561
+    },
+    {
+      "text": "in other words it's uh an object that",
+      "start": 48.0,
+      "duration": 3.12
+    },
+    {
+      "text": "holds",
+      "start": 50.64,
+      "duration": 3.919
+    },
+    {
+      "text": "other objects within it um",
+      "start": 51.12,
+      "duration": 7.2
+    },
+    {
+      "text": "and so here uh you know as we start to",
+      "start": 54.559,
+      "duration": 4.241
+    },
+    {
+      "text": "look",
+      "start": 58.32,
+      "duration": 3.12
+    },
+    {
+      "text": "at this example uh we can see here the",
+      "start": 58.8,
+      "duration": 3.599
+    },
+    {
+      "text": "inputs",
+      "start": 61.44,
+      "duration": 3.999
+    },
+    {
+      "text": "uh one two three we have the uh",
+      "start": 62.399,
+      "duration": 5.681
+    },
+    {
+      "text": "numbers one two and three stored within",
+      "start": 65.439,
+      "duration": 3.761
+    },
+    {
+      "text": "this list",
+      "start": 68.08,
+      "duration": 5.039
+    },
+    {
+      "text": "uh which we're calling inputs",
+      "start": 69.2,
+      "duration": 6.8
+    },
+    {
+      "text": "and so these lists allow us to group uh",
+      "start": 73.119,
+      "duration": 4.881
+    },
+    {
+      "text": "this one two and three together",
+      "start": 76.0,
+      "duration": 5.28
+    },
+    {
+      "text": "into a single variable that we can then",
+      "start": 78.0,
+      "duration": 6.64
+    },
+    {
+      "text": "uh you know do other things with and",
+      "start": 81.28,
+      "duration": 7.12
+    },
+    {
+      "text": "so a very common pattern in python",
+      "start": 84.64,
+      "duration": 7.36
+    },
+    {
+      "text": "and in a lot of programming languages is",
+      "start": 88.4,
+      "duration": 6.64
+    },
+    {
+      "text": "uh to create",
+      "start": 92.0,
+      "duration": 6.56
+    },
+    {
+      "text": "a list an empty list before",
+      "start": 95.04,
+      "duration": 6.079
+    },
+    {
+      "text": "a loop and then as you go through the",
+      "start": 98.56,
+      "duration": 3.199
+    },
+    {
+      "text": "loop",
+      "start": 101.119,
+      "duration": 3.921
+    },
+    {
+      "text": "you add items to the list to build up",
+      "start": 101.759,
+      "duration": 4.161
+    },
+    {
+      "text": "the list",
+      "start": 105.04,
+      "duration": 4.399
+    },
+    {
+      "text": "through the loop so",
+      "start": 105.92,
+      "duration": 5.68
+    },
+    {
+      "text": "you know here we're looking at you know",
+      "start": 109.439,
+      "duration": 3.201
+    },
+    {
+      "text": "basically",
+      "start": 111.6,
+      "duration": 3.04
+    },
+    {
+      "text": "we want to take our inputs and we want",
+      "start": 112.64,
+      "duration": 3.6
+    },
+    {
+      "text": "to add 10",
+      "start": 114.64,
+      "duration": 4.799
+    },
+    {
+      "text": "to the inputs and",
+      "start": 116.24,
+      "duration": 5.44
+    },
+    {
+      "text": "have the outputs be just you know each",
+      "start": 119.439,
+      "duration": 3.04
+    },
+    {
+      "text": "of the inputs",
+      "start": 121.68,
+      "duration": 4.0
+    },
+    {
+      "text": "with 10 added to them",
+      "start": 122.479,
+      "duration": 7.521
+    },
+    {
+      "text": "and so this pattern accomplishes that",
+      "start": 125.68,
+      "duration": 7.44
+    },
+    {
+      "text": "and that we have the for loop here and",
+      "start": 130.0,
+      "duration": 3.92
+    },
+    {
+      "text": "the for loop",
+      "start": 133.12,
+      "duration": 2.479
+    },
+    {
+      "text": "is going to go through each one of these",
+      "start": 133.92,
+      "duration": 4.16
+    },
+    {
+      "text": "inputs one at a time",
+      "start": 135.599,
+      "duration": 5.921
+    },
+    {
+      "text": "pulling each one out and as we go",
+      "start": 138.08,
+      "duration": 6.08
+    },
+    {
+      "text": "through we're going to be adding 10",
+      "start": 141.52,
+      "duration": 6.079
+    },
+    {
+      "text": "to whatever that input is and then",
+      "start": 144.16,
+      "duration": 7.439
+    },
+    {
+      "text": "we're going to be appending that value",
+      "start": 147.599,
+      "duration": 8.161
+    },
+    {
+      "text": "onto the outputs list so this append",
+      "start": 151.599,
+      "duration": 6.561
+    },
+    {
+      "text": "is a new function that we're learning",
+      "start": 155.76,
+      "duration": 3.6
+    },
+    {
+      "text": "about here",
+      "start": 158.16,
+      "duration": 4.48
+    },
+    {
+      "text": "a pin just adds an item onto the end",
+      "start": 159.36,
+      "duration": 6.239
+    },
+    {
+      "text": "of a list so this list was empty to",
+      "start": 162.64,
+      "duration": 3.679
+    },
+    {
+      "text": "start with",
+      "start": 165.599,
+      "duration": 3.201
+    },
+    {
+      "text": "but as we go through we're going to add",
+      "start": 166.319,
+      "duration": 3.761
+    },
+    {
+      "text": "each input",
+      "start": 168.8,
+      "duration": 5.519
+    },
+    {
+      "text": "plus 10 into the output list",
+      "start": 170.08,
+      "duration": 6.48
+    },
+    {
+      "text": "so then at the end of that we would have",
+      "start": 174.319,
+      "duration": 3.121
+    },
+    {
+      "text": "11 12",
+      "start": 176.56,
+      "duration": 4.88
+    },
+    {
+      "text": "13 in the list and then this last part",
+      "start": 177.44,
+      "duration": 4.48
+    },
+    {
+      "text": "here",
+      "start": 181.44,
+      "duration": 3.28
+    },
+    {
+      "text": "is just showing another way that you can",
+      "start": 181.92,
+      "duration": 4.16
+    },
+    {
+      "text": "add items into a list",
+      "start": 184.72,
+      "duration": 3.84
+    },
+    {
+      "text": "because append will always put the item",
+      "start": 186.08,
+      "duration": 4.159
+    },
+    {
+      "text": "at the end of the list",
+      "start": 188.56,
+      "duration": 4.88
+    },
+    {
+      "text": "insert allows you to put the item at any",
+      "start": 190.239,
+      "duration": 4.321
+    },
+    {
+      "text": "position",
+      "start": 193.44,
+      "duration": 5.76
+    },
+    {
+      "text": "in the list so here we want to insert",
+      "start": 194.56,
+      "duration": 8.48
+    },
+    {
+      "text": "the this a as the first value here in",
+      "start": 199.2,
+      "duration": 4.8
+    },
+    {
+      "text": "the list",
+      "start": 203.04,
+      "duration": 3.279
+    },
+    {
+      "text": "and so that's why when we take a look at",
+      "start": 204.0,
+      "duration": 3.2
+    },
+    {
+      "text": "what",
+      "start": 206.319,
+      "duration": 3.92
+    },
+    {
+      "text": "the resulting list is",
+      "start": 207.2,
+      "duration": 7.28
+    },
+    {
+      "text": "then we get uh a first and then",
+      "start": 210.239,
+      "duration": 6.881
+    },
+    {
+      "text": "11 12 13 which was the original list we",
+      "start": 214.48,
+      "duration": 3.52
+    },
+    {
+      "text": "had",
+      "start": 217.12,
+      "duration": 4.16
+    },
+    {
+      "text": "from this part of the code",
+      "start": 218.0,
+      "duration": 6.4
+    },
+    {
+      "text": "and you may be wondering why it's zero",
+      "start": 221.28,
+      "duration": 7.599
+    },
+    {
+      "text": "to insert this a at the beginning",
+      "start": 224.4,
+      "duration": 6.88
+    },
+    {
+      "text": "and that gets into zero based indexing",
+      "start": 228.879,
+      "duration": 4.481
+    },
+    {
+      "text": "in python which we'll talk about",
+      "start": 231.28,
+      "duration": 4.959
+    },
+    {
+      "text": "here in a moment",
+      "start": 233.36,
+      "duration": 2.879
+    },
+    {
+      "text": "so uh you know one other very",
+      "start": 236.959,
+      "duration": 6.48
+    },
+    {
+      "text": "commonly used functionality of lists is",
+      "start": 240.319,
+      "duration": 5.041
+    },
+    {
+      "text": "indexing and slicing lists",
+      "start": 243.439,
+      "duration": 5.681
+    },
+    {
+      "text": "so that allows you to pull certain items",
+      "start": 245.36,
+      "duration": 6.56
+    },
+    {
+      "text": "out of the list so you can either pull a",
+      "start": 249.12,
+      "duration": 3.92
+    },
+    {
+      "text": "single item",
+      "start": 251.92,
+      "duration": 3.92
+    },
+    {
+      "text": "out of the list by its position in the",
+      "start": 253.04,
+      "duration": 3.759
+    },
+    {
+      "text": "list",
+      "start": 255.84,
+      "duration": 3.84
+    },
+    {
+      "text": "or you can pull out a whole uh you know",
+      "start": 256.799,
+      "duration": 4.72
+    },
+    {
+      "text": "sequence of items",
+      "start": 259.68,
+      "duration": 5.519
+    },
+    {
+      "text": "uh by again their their indices",
+      "start": 261.519,
+      "duration": 6.801
+    },
+    {
+      "text": "in the list um",
+      "start": 265.199,
+      "duration": 5.041
+    },
+    {
+      "text": "so here you know we're looking at an",
+      "start": 268.32,
+      "duration": 3.28
+    },
+    {
+      "text": "example of",
+      "start": 270.24,
+      "duration": 5.44
+    },
+    {
+      "text": "my list having a b c and d in it",
+      "start": 271.6,
+      "duration": 5.76
+    },
+    {
+      "text": "and now we're going to look at how we",
+      "start": 275.68,
+      "duration": 3.6
+    },
+    {
+      "text": "can index that list to pull certain",
+      "start": 277.36,
+      "duration": 3.52
+    },
+    {
+      "text": "items out of it",
+      "start": 279.28,
+      "duration": 3.84
+    },
+    {
+      "text": "and so here's where i'm coming back",
+      "start": 280.88,
+      "duration": 3.68
+    },
+    {
+      "text": "around to the",
+      "start": 283.12,
+      "duration": 4.56
+    },
+    {
+      "text": "zero based indexing in python",
+      "start": 284.56,
+      "duration": 6.16
+    },
+    {
+      "text": "so zero is going to get us the first",
+      "start": 287.68,
+      "duration": 3.68
+    },
+    {
+      "text": "item",
+      "start": 290.72,
+      "duration": 3.12
+    },
+    {
+      "text": "in the list here if we do my list",
+      "start": 291.36,
+      "duration": 4.24
+    },
+    {
+      "text": "bracket zero",
+      "start": 293.84,
+      "duration": 4.32
+    },
+    {
+      "text": "that gets us a if we do my list brackets",
+      "start": 295.6,
+      "duration": 3.44
+    },
+    {
+      "text": "one",
+      "start": 298.16,
+      "duration": 4.4
+    },
+    {
+      "text": "that gets us b and so that is definitely",
+      "start": 299.04,
+      "duration": 4.719
+    },
+    {
+      "text": "counter-intuitive",
+      "start": 302.56,
+      "duration": 4.24
+    },
+    {
+      "text": "um for a lot of people but this is the",
+      "start": 303.759,
+      "duration": 4.88
+    },
+    {
+      "text": "way that the majority of pro",
+      "start": 306.8,
+      "duration": 4.239
+    },
+    {
+      "text": "programming languages work that indexing",
+      "start": 308.639,
+      "duration": 3.84
+    },
+    {
+      "text": "is zero based",
+      "start": 311.039,
+      "duration": 3.6
+    },
+    {
+      "text": "zero is going to give you the first item",
+      "start": 312.479,
+      "duration": 4.16
+    },
+    {
+      "text": "one is going to give you the second item",
+      "start": 314.639,
+      "duration": 5.201
+    },
+    {
+      "text": "and so on um",
+      "start": 316.639,
+      "duration": 5.601
+    },
+    {
+      "text": "and we'll talk a little bit more about",
+      "start": 319.84,
+      "duration": 3.52
+    },
+    {
+      "text": "that",
+      "start": 322.24,
+      "duration": 2.799
+    },
+    {
+      "text": "when we look at the jupiter notebook",
+      "start": 323.36,
+      "duration": 3.6
+    },
+    {
+      "text": "example",
+      "start": 325.039,
+      "duration": 5.44
+    },
+    {
+      "text": "then also you can count backwards from",
+      "start": 326.96,
+      "duration": 4.959
+    },
+    {
+      "text": "the end of the list",
+      "start": 330.479,
+      "duration": 4.72
+    },
+    {
+      "text": "um so -1 any negative number is going to",
+      "start": 331.919,
+      "duration": 4.961
+    },
+    {
+      "text": "be counting from the end",
+      "start": 335.199,
+      "duration": 4.481
+    },
+    {
+      "text": "of the list so minus one is going to get",
+      "start": 336.88,
+      "duration": 4.24
+    },
+    {
+      "text": "you the last item in the list",
+      "start": 339.68,
+      "duration": 4.4
+    },
+    {
+      "text": "here that's going to be d um if you did",
+      "start": 341.12,
+      "duration": 4.799
+    },
+    {
+      "text": "minus two that would be the second to",
+      "start": 344.08,
+      "duration": 2.399
+    },
+    {
+      "text": "last",
+      "start": 345.919,
+      "duration": 2.641
+    },
+    {
+      "text": "item in the list so that would give you",
+      "start": 346.479,
+      "duration": 3.761
+    },
+    {
+      "text": "the c",
+      "start": 348.56,
+      "duration": 5.28
+    },
+    {
+      "text": "and then uh that's indexing and then the",
+      "start": 350.24,
+      "duration": 5.679
+    },
+    {
+      "text": "other part is slicing we're slicing we",
+      "start": 353.84,
+      "duration": 2.96
+    },
+    {
+      "text": "grab",
+      "start": 355.919,
+      "duration": 3.12
+    },
+    {
+      "text": "multiple things out of the list at once",
+      "start": 356.8,
+      "duration": 3.92
+    },
+    {
+      "text": "and it gives us a new list",
+      "start": 359.039,
+      "duration": 4.401
+    },
+    {
+      "text": "which has a subset of the objects which",
+      "start": 360.72,
+      "duration": 4.12
+    },
+    {
+      "text": "were in the original",
+      "start": 363.44,
+      "duration": 5.039
+    },
+    {
+      "text": "list so here",
+      "start": 364.84,
+      "duration": 6.76
+    },
+    {
+      "text": "the slice is defined by the colon",
+      "start": 368.479,
+      "duration": 6.401
+    },
+    {
+      "text": "having a colon in here and so",
+      "start": 371.6,
+      "duration": 6.4
+    },
+    {
+      "text": "when you slice it's uh",
+      "start": 374.88,
+      "duration": 6.24
+    },
+    {
+      "text": "you know the full format is um",
+      "start": 378.0,
+      "duration": 6.639
+    },
+    {
+      "text": "you know from this item uh up to",
+      "start": 381.12,
+      "duration": 6.88
+    },
+    {
+      "text": "but not including this item uh before",
+      "start": 384.639,
+      "duration": 4.0
+    },
+    {
+      "text": "and after",
+      "start": 388.0,
+      "duration": 4.479
+    },
+    {
+      "text": "the column so slicing from",
+      "start": 388.639,
+      "duration": 6.881
+    },
+    {
+      "text": "one to three again one",
+      "start": 392.479,
+      "duration": 5.681
+    },
+    {
+      "text": "is uh talking about the second item",
+      "start": 395.52,
+      "duration": 4.239
+    },
+    {
+      "text": "remember because of that",
+      "start": 398.16,
+      "duration": 4.72
+    },
+    {
+      "text": "uh zero based indexing",
+      "start": 399.759,
+      "duration": 4.88
+    },
+    {
+      "text": "and three is talking about the fourth",
+      "start": 402.88,
+      "duration": 3.439
+    },
+    {
+      "text": "item so it's",
+      "start": 404.639,
+      "duration": 4.4
+    },
+    {
+      "text": "from the second and up two but not",
+      "start": 406.319,
+      "duration": 3.521
+    },
+    {
+      "text": "including",
+      "start": 409.039,
+      "duration": 3.841
+    },
+    {
+      "text": "the fourth item so that means we get the",
+      "start": 409.84,
+      "duration": 4.799
+    },
+    {
+      "text": "second and the third item",
+      "start": 412.88,
+      "duration": 4.879
+    },
+    {
+      "text": "as a result",
+      "start": 414.639,
+      "duration": 3.12
+    },
+    {
+      "text": "but either side of this",
+      "start": 418.319,
+      "duration": 6.401
+    },
+    {
+      "text": "slice is optional and",
+      "start": 421.599,
+      "duration": 5.121
+    },
+    {
+      "text": "if you exclude it it's just going to go",
+      "start": 424.72,
+      "duration": 4.879
+    },
+    {
+      "text": "to the end of the list in that direction",
+      "start": 426.72,
+      "duration": 5.919
+    },
+    {
+      "text": "so having nothing on this side",
+      "start": 429.599,
+      "duration": 5.921
+    },
+    {
+      "text": "and then up until but not including the",
+      "start": 432.639,
+      "duration": 4.0
+    },
+    {
+      "text": "last item",
+      "start": 435.52,
+      "duration": 2.56
+    },
+    {
+      "text": "that's going to be every item in the",
+      "start": 436.639,
+      "duration": 3.84
+    },
+    {
+      "text": "list up until the last item so just",
+      "start": 438.08,
+      "duration": 4.0
+    },
+    {
+      "text": "chopping the last item",
+      "start": 440.479,
+      "duration": 5.601
+    },
+    {
+      "text": "off of this list whereas",
+      "start": 442.08,
+      "duration": 6.64
+    },
+    {
+      "text": "if we uh you know before the colon we",
+      "start": 446.08,
+      "duration": 3.92
+    },
+    {
+      "text": "specify it but after",
+      "start": 448.72,
+      "duration": 3.52
+    },
+    {
+      "text": "the colon we don't that means it's going",
+      "start": 450.0,
+      "duration": 5.199
+    },
+    {
+      "text": "to go all the way to the end of the list",
+      "start": 452.24,
+      "duration": 6.0
+    },
+    {
+      "text": "for the right hand side but for here",
+      "start": 455.199,
+      "duration": 5.521
+    },
+    {
+      "text": "we're going to start from index 1 which",
+      "start": 458.24,
+      "duration": 3.2
+    },
+    {
+      "text": "is the second",
+      "start": 460.72,
+      "duration": 3.36
+    },
+    {
+      "text": "item so this is going to be every item",
+      "start": 461.44,
+      "duration": 3.439
+    },
+    {
+      "text": "from the second",
+      "start": 464.08,
+      "duration": 2.559
+    },
+    {
+      "text": "going all the way until the end of the",
+      "start": 464.879,
+      "duration": 3.6
+    },
+    {
+      "text": "list so that's why we get",
+      "start": 466.639,
+      "duration": 5.441
+    },
+    {
+      "text": "bcd as a result of this",
+      "start": 468.479,
+      "duration": 6.72
+    },
+    {
+      "text": "so you can use this to grab whatever",
+      "start": 472.08,
+      "duration": 6.959
+    },
+    {
+      "text": "objects you want out of your list",
+      "start": 475.199,
+      "duration": 6.0
+    },
+    {
+      "text": "so let's go ahead and jump over to the",
+      "start": 479.039,
+      "duration": 3.761
+    },
+    {
+      "text": "jupyter notebook example where we'll",
+      "start": 481.199,
+      "duration": 2.881
+    },
+    {
+      "text": "look at these things in a little bit",
+      "start": 482.8,
+      "duration": 2.079
+    },
+    {
+      "text": "more",
+      "start": 484.08,
+      "duration": 5.36
+    },
+    {
+      "text": "detail so",
+      "start": 484.879,
+      "duration": 8.0
+    },
+    {
+      "text": "um you know first let's hear just look",
+      "start": 489.44,
+      "duration": 7.039
+    },
+    {
+      "text": "at a list um and so",
+      "start": 492.879,
+      "duration": 6.561
+    },
+    {
+      "text": "we define lists using these brackets uh",
+      "start": 496.479,
+      "duration": 4.4
+    },
+    {
+      "text": "when you just have",
+      "start": 499.44,
+      "duration": 4.319
+    },
+    {
+      "text": "brackets out here on an assignment uh",
+      "start": 500.879,
+      "duration": 5.6
+    },
+    {
+      "text": "that's saying i want to make a list",
+      "start": 503.759,
+      "duration": 6.321
+    },
+    {
+      "text": "and when we look at what that list is",
+      "start": 506.479,
+      "duration": 5.44
+    },
+    {
+      "text": "we just see brackets here again",
+      "start": 510.08,
+      "duration": 3.199
+    },
+    {
+      "text": "representing that that",
+      "start": 511.919,
+      "duration": 4.56
+    },
+    {
+      "text": "is a list and if we check the",
+      "start": 513.279,
+      "duration": 6.24
+    },
+    {
+      "text": "type of that then we are and",
+      "start": 516.479,
+      "duration": 8.24
+    },
+    {
+      "text": "going to indeed see that it is a list",
+      "start": 519.519,
+      "duration": 5.2
+    },
+    {
+      "text": "um and so",
+      "start": 525.44,
+      "duration": 6.0
+    },
+    {
+      "text": "you know we have this list and we know",
+      "start": 528.88,
+      "duration": 3.76
+    },
+    {
+      "text": "that it's empty",
+      "start": 531.44,
+      "duration": 4.399
+    },
+    {
+      "text": "right now but we can",
+      "start": 532.64,
+      "duration": 6.8
+    },
+    {
+      "text": "add items onto a list",
+      "start": 535.839,
+      "duration": 6.161
+    },
+    {
+      "text": "using append so here we're going to",
+      "start": 539.44,
+      "duration": 3.12
+    },
+    {
+      "text": "append",
+      "start": 542.0,
+      "duration": 2.8
+    },
+    {
+      "text": "five and then we're going to look at the",
+      "start": 542.56,
+      "duration": 4.0
+    },
+    {
+      "text": "list again",
+      "start": 544.8,
+      "duration": 3.68
+    },
+    {
+      "text": "and now what might be a little",
+      "start": 546.56,
+      "duration": 3.36
+    },
+    {
+      "text": "counter-intuitive to people",
+      "start": 548.48,
+      "duration": 4.0
+    },
+    {
+      "text": "is now you come back over here and you",
+      "start": 549.92,
+      "duration": 3.68
+    },
+    {
+      "text": "check this again",
+      "start": 552.48,
+      "duration": 2.88
+    },
+    {
+      "text": "now all of a sudden it's changed now it",
+      "start": 553.6,
+      "duration": 3.919
+    },
+    {
+      "text": "has five in it and that's because",
+      "start": 555.36,
+      "duration": 5.76
+    },
+    {
+      "text": "we modified the same list to add five to",
+      "start": 557.519,
+      "duration": 4.641
+    },
+    {
+      "text": "it we didn't",
+      "start": 561.12,
+      "duration": 3.92
+    },
+    {
+      "text": "uh redefine a different list uh which is",
+      "start": 562.16,
+      "duration": 4.16
+    },
+    {
+      "text": "going to be separate from what was up",
+      "start": 565.04,
+      "duration": 2.56
+    },
+    {
+      "text": "here it's the same list",
+      "start": 566.32,
+      "duration": 3.92
+    },
+    {
+      "text": "and so if we just run that code again",
+      "start": 567.6,
+      "duration": 4.16
+    },
+    {
+      "text": "then we're going to see it's actually",
+      "start": 570.24,
+      "duration": 3.44
+    },
+    {
+      "text": "changed and now has a five",
+      "start": 571.76,
+      "duration": 5.28
+    },
+    {
+      "text": "in it and then as we go and add",
+      "start": 573.68,
+      "duration": 4.56
+    },
+    {
+      "text": "additional items",
+      "start": 577.04,
+      "duration": 3.52
+    },
+    {
+      "text": "they always add on to the end so we",
+      "start": 578.24,
+      "duration": 4.64
+    },
+    {
+      "text": "append six and then we append seven",
+      "start": 580.56,
+      "duration": 4.719
+    },
+    {
+      "text": "now we have five six and seven and the",
+      "start": 582.88,
+      "duration": 3.04
+    },
+    {
+      "text": "list",
+      "start": 585.279,
+      "duration": 3.281
+    },
+    {
+      "text": "which again you know carries through to",
+      "start": 585.92,
+      "duration": 4.24
+    },
+    {
+      "text": "anywhere that you're using",
+      "start": 588.56,
+      "duration": 4.8
+    },
+    {
+      "text": "this same list",
+      "start": 590.16,
+      "duration": 3.2
+    },
+    {
+      "text": "um so that's also gets into another",
+      "start": 595.839,
+      "duration": 5.601
+    },
+    {
+      "text": "pitfall that a lot of people hit",
+      "start": 599.519,
+      "duration": 4.481
+    },
+    {
+      "text": "as they begin to build things out in",
+      "start": 601.44,
+      "duration": 4.24
+    },
+    {
+      "text": "python and jupiter",
+      "start": 604.0,
+      "duration": 4.8
+    },
+    {
+      "text": "is the execution order of your cells",
+      "start": 605.68,
+      "duration": 5.04
+    },
+    {
+      "text": "can actually change the results that",
+      "start": 608.8,
+      "duration": 3.12
+    },
+    {
+      "text": "you're gonna get",
+      "start": 610.72,
+      "duration": 3.92
+    },
+    {
+      "text": "uh as you saw before when i first went",
+      "start": 611.92,
+      "duration": 3.28
+    },
+    {
+      "text": "through",
+      "start": 614.64,
+      "duration": 3.36
+    },
+    {
+      "text": "and i ran this my list was empty and now",
+      "start": 615.2,
+      "duration": 4.319
+    },
+    {
+      "text": "that i come back and run it",
+      "start": 618.0,
+      "duration": 4.64
+    },
+    {
+      "text": "my list is 567 and so if you run your",
+      "start": 619.519,
+      "duration": 3.841
+    },
+    {
+      "text": "cells",
+      "start": 622.64,
+      "duration": 2.4
+    },
+    {
+      "text": "in different orders you get different",
+      "start": 623.36,
+      "duration": 3.84
+    },
+    {
+      "text": "results and so",
+      "start": 625.04,
+      "duration": 5.84
+    },
+    {
+      "text": "um you know definitely as you uh",
+      "start": 627.2,
+      "duration": 4.879
+    },
+    {
+      "text": "you know get things working in your",
+      "start": 630.88,
+      "duration": 3.199
+    },
+    {
+      "text": "model you want to often just",
+      "start": 632.079,
+      "duration": 5.2
+    },
+    {
+      "text": "restart kernel and uh run all cells",
+      "start": 634.079,
+      "duration": 5.281
+    },
+    {
+      "text": "that's gonna give you a new session and",
+      "start": 637.279,
+      "duration": 3.201
+    },
+    {
+      "text": "just start everything",
+      "start": 639.36,
+      "duration": 3.12
+    },
+    {
+      "text": "run everything in order and that way",
+      "start": 640.48,
+      "duration": 4.32
+    },
+    {
+      "text": "you'll be sure that it's gonna execute",
+      "start": 642.48,
+      "duration": 4.4
+    },
+    {
+      "text": "exactly like when someone else is going",
+      "start": 644.8,
+      "duration": 5.039
+    },
+    {
+      "text": "to be running your model",
+      "start": 646.88,
+      "duration": 2.959
+    },
+    {
+      "text": "so then getting",
+      "start": 652.8,
+      "duration": 7.12
+    },
+    {
+      "text": "into uh talking a little bit more about",
+      "start": 656.72,
+      "duration": 4.88
+    },
+    {
+      "text": "indexing again we have this",
+      "start": 659.92,
+      "duration": 4.56
+    },
+    {
+      "text": "zero based indexing zero gets you the",
+      "start": 661.6,
+      "duration": 4.08
+    },
+    {
+      "text": "first item",
+      "start": 664.48,
+      "duration": 5.359
+    },
+    {
+      "text": "one gets you the second item um etc",
+      "start": 665.68,
+      "duration": 6.32
+    },
+    {
+      "text": "uh you know going all on to whatever",
+      "start": 669.839,
+      "duration": 4.321
+    },
+    {
+      "text": "number when i get the 10th item just put",
+      "start": 672.0,
+      "duration": 4.8
+    },
+    {
+      "text": "in x9 just subtract one from whatever",
+      "start": 674.16,
+      "duration": 6.08
+    },
+    {
+      "text": "the index is and if you want to",
+      "start": 676.8,
+      "duration": 5.36
+    },
+    {
+      "text": "understand more why most programming",
+      "start": 680.24,
+      "duration": 2.96
+    },
+    {
+      "text": "languages",
+      "start": 682.16,
+      "duration": 3.6
+    },
+    {
+      "text": "uh set it up this way i've included a",
+      "start": 683.2,
+      "duration": 3.36
+    },
+    {
+      "text": "resource",
+      "start": 685.76,
+      "duration": 3.44
+    },
+    {
+      "text": "here where you can read a lot more about",
+      "start": 686.56,
+      "duration": 3.36
+    },
+    {
+      "text": "that",
+      "start": 689.2,
+      "duration": 2.56
+    },
+    {
+      "text": "but that's definitely outside of the",
+      "start": 689.92,
+      "duration": 3.28
+    },
+    {
+      "text": "scope of this class that's more of a",
+      "start": 691.76,
+      "duration": 3.28
+    },
+    {
+      "text": "computer science concept",
+      "start": 693.2,
+      "duration": 4.879
+    },
+    {
+      "text": "uh all we need to know is that it is",
+      "start": 695.04,
+      "duration": 4.239
+    },
+    {
+      "text": "zero based indexing",
+      "start": 698.079,
+      "duration": 2.88
+    },
+    {
+      "text": "we do put a zero if we want to look up",
+      "start": 699.279,
+      "duration": 3.12
+    },
+    {
+      "text": "the first item",
+      "start": 700.959,
+      "duration": 3.361
+    },
+    {
+      "text": "for our purposes we don't really need to",
+      "start": 702.399,
+      "duration": 4.161
+    },
+    {
+      "text": "know why but for the curious people i",
+      "start": 704.32,
+      "duration": 5.04
+    },
+    {
+      "text": "just added that here",
+      "start": 706.56,
+      "duration": 2.8
+    },
+    {
+      "text": "um so then we're jumping back into",
+      "start": 710.88,
+      "duration": 6.0
+    },
+    {
+      "text": "adding items to lists but looking at the",
+      "start": 714.399,
+      "duration": 3.521
+    },
+    {
+      "text": "insert",
+      "start": 716.88,
+      "duration": 4.399
+    },
+    {
+      "text": "function method instead of the",
+      "start": 717.92,
+      "duration": 6.64
+    },
+    {
+      "text": "append method of the list",
+      "start": 721.279,
+      "duration": 5.68
+    },
+    {
+      "text": "so append again always puts the item at",
+      "start": 724.56,
+      "duration": 4.399
+    },
+    {
+      "text": "the length at the end of the list",
+      "start": 726.959,
+      "duration": 4.401
+    },
+    {
+      "text": "whereas insert will add it into any",
+      "start": 728.959,
+      "duration": 3.601
+    },
+    {
+      "text": "position",
+      "start": 731.36,
+      "duration": 4.0
+    },
+    {
+      "text": "um so again we're working with this same",
+      "start": 732.56,
+      "duration": 3.279
+    },
+    {
+      "text": "uh",
+      "start": 735.36,
+      "duration": 3.68
+    },
+    {
+      "text": "my list that we had from before",
+      "start": 735.839,
+      "duration": 6.24
+    },
+    {
+      "text": "567 in it right now",
+      "start": 739.04,
+      "duration": 6.239
+    },
+    {
+      "text": "and now we're going to insert uh",
+      "start": 742.079,
+      "duration": 6.641
+    },
+    {
+      "text": "at the position 0 at index 0 which would",
+      "start": 745.279,
+      "duration": 5.041
+    },
+    {
+      "text": "be the first item",
+      "start": 748.72,
+      "duration": 4.4
+    },
+    {
+      "text": "we're going to insert woo and so then",
+      "start": 750.32,
+      "duration": 4.56
+    },
+    {
+      "text": "when we do that and we look at the",
+      "start": 753.12,
+      "duration": 2.48
+    },
+    {
+      "text": "result",
+      "start": 754.88,
+      "duration": 2.8
+    },
+    {
+      "text": "then we're going to have first woo and",
+      "start": 755.6,
+      "duration": 3.28
+    },
+    {
+      "text": "then our original",
+      "start": 757.68,
+      "duration": 4.24
+    },
+    {
+      "text": "567 and you can insert",
+      "start": 758.88,
+      "duration": 6.56
+    },
+    {
+      "text": "at any position within the list so here",
+      "start": 761.92,
+      "duration": 6.96
+    },
+    {
+      "text": "i want to insert at the second",
+      "start": 765.44,
+      "duration": 6.32
+    },
+    {
+      "text": "position or sorry index two which would",
+      "start": 768.88,
+      "duration": 4.079
+    },
+    {
+      "text": "be the third",
+      "start": 771.76,
+      "duration": 3.759
+    },
+    {
+      "text": "uh object in the list i'm gonna insert a",
+      "start": 772.959,
+      "duration": 3.281
+    },
+    {
+      "text": "ten",
+      "start": 775.519,
+      "duration": 2.56
+    },
+    {
+      "text": "and so indeed then you see the third",
+      "start": 776.24,
+      "duration": 3.44
+    },
+    {
+      "text": "item in the list here",
+      "start": 778.079,
+      "duration": 4.641
+    },
+    {
+      "text": "is indeed a ten so whatever uh",
+      "start": 779.68,
+      "duration": 4.88
+    },
+    {
+      "text": "index you put here it's going to put",
+      "start": 782.72,
+      "duration": 3.6
+    },
+    {
+      "text": "that",
+      "start": 784.56,
+      "duration": 5.04
+    },
+    {
+      "text": "item that object at that position",
+      "start": 786.32,
+      "duration": 5.92
+    },
+    {
+      "text": "in the list",
+      "start": 789.6,
+      "duration": 2.64
+    },
+    {
+      "text": "so then we can look at using indexing",
+      "start": 797.279,
+      "duration": 4.401
+    },
+    {
+      "text": "and slicing to look up items within the",
+      "start": 799.36,
+      "duration": 3.76
+    },
+    {
+      "text": "list",
+      "start": 801.68,
+      "duration": 4.719
+    },
+    {
+      "text": "so again 0 is going to give us the first",
+      "start": 803.12,
+      "duration": 3.839
+    },
+    {
+      "text": "item",
+      "start": 806.399,
+      "duration": 4.481
+    },
+    {
+      "text": "here the woo 4 should give us the fifth",
+      "start": 806.959,
+      "duration": 4.641
+    },
+    {
+      "text": "item",
+      "start": 810.88,
+      "duration": 4.88
+    },
+    {
+      "text": "in the list which indeed it does",
+      "start": 811.6,
+      "duration": 7.84
+    },
+    {
+      "text": "um now if you put an index",
+      "start": 815.76,
+      "duration": 6.48
+    },
+    {
+      "text": "that does not exist in the list then",
+      "start": 819.44,
+      "duration": 4.24
+    },
+    {
+      "text": "we're actually going to get an",
+      "start": 822.24,
+      "duration": 3.839
+    },
+    {
+      "text": "error from that so here i'm trying to",
+      "start": 823.68,
+      "duration": 3.2
+    },
+    {
+      "text": "look up these",
+      "start": 826.079,
+      "duration": 5.12
+    },
+    {
+      "text": "the thousand and one item in the list",
+      "start": 826.88,
+      "duration": 6.399
+    },
+    {
+      "text": "and when i do that then i get index",
+      "start": 831.199,
+      "duration": 3.681
+    },
+    {
+      "text": "error list index",
+      "start": 833.279,
+      "duration": 3.601
+    },
+    {
+      "text": "out of range so the error is telling you",
+      "start": 834.88,
+      "duration": 3.759
+    },
+    {
+      "text": "exactly what happened here",
+      "start": 836.88,
+      "duration": 5.68
+    },
+    {
+      "text": "the index that you passed on this list",
+      "start": 838.639,
+      "duration": 7.2
+    },
+    {
+      "text": "is out of the range of possible",
+      "start": 842.56,
+      "duration": 6.32
+    },
+    {
+      "text": "indexes on this list right zero",
+      "start": 845.839,
+      "duration": 5.12
+    },
+    {
+      "text": "should work one should work two three",
+      "start": 848.88,
+      "duration": 3.199
+    },
+    {
+      "text": "and four",
+      "start": 850.959,
+      "duration": 4.0
+    },
+    {
+      "text": "are the possible indexes here as soon as",
+      "start": 852.079,
+      "duration": 3.601
+    },
+    {
+      "text": "i go to",
+      "start": 854.959,
+      "duration": 4.0
+    },
+    {
+      "text": "five then i'm going to start getting",
+      "start": 855.68,
+      "duration": 6.719
+    },
+    {
+      "text": "that index error",
+      "start": 858.959,
+      "duration": 3.44
+    },
+    {
+      "text": "so you have to actually put an index",
+      "start": 862.639,
+      "duration": 5.76
+    },
+    {
+      "text": "which exists within the list",
+      "start": 864.639,
+      "duration": 3.76
+    },
+    {
+      "text": "or otherwise you're going to get this",
+      "start": 869.36,
+      "duration": 3.76
+    },
+    {
+      "text": "index error now the one you know",
+      "start": 870.88,
+      "duration": 4.24
+    },
+    {
+      "text": "somewhat exception to that is you can",
+      "start": 873.12,
+      "duration": 3.68
+    },
+    {
+      "text": "use negative numbers",
+      "start": 875.12,
+      "duration": 4.88
+    },
+    {
+      "text": "um to index the list as well",
+      "start": 876.8,
+      "duration": 5.599
+    },
+    {
+      "text": "and that's going to count from the end",
+      "start": 880.0,
+      "duration": 3.68
+    },
+    {
+      "text": "of the list",
+      "start": 882.399,
+      "duration": 2.961
+    },
+    {
+      "text": "so minus one is going to get you the",
+      "start": 883.68,
+      "duration": 3.44
+    },
+    {
+      "text": "last item in the list",
+      "start": 885.36,
+      "duration": 4.719
+    },
+    {
+      "text": "which again my list looks like that we",
+      "start": 887.12,
+      "duration": 5.6
+    },
+    {
+      "text": "are getting the last item here",
+      "start": 890.079,
+      "duration": 4.56
+    },
+    {
+      "text": "and negative two is going to give us the",
+      "start": 892.72,
+      "duration": 4.0
+    },
+    {
+      "text": "the next last item",
+      "start": 894.639,
+      "duration": 5.681
+    },
+    {
+      "text": "in the list um and",
+      "start": 896.72,
+      "duration": 5.919
+    },
+    {
+      "text": "this index error can come up in the",
+      "start": 900.32,
+      "duration": 3.44
+    },
+    {
+      "text": "other direction as well",
+      "start": 902.639,
+      "duration": 4.401
+    },
+    {
+      "text": "we try to look at you know a thousand",
+      "start": 903.76,
+      "duration": 6.48
+    },
+    {
+      "text": "uh items before the end of the list",
+      "start": 907.04,
+      "duration": 4.96
+    },
+    {
+      "text": "that's you know way beyond the beginning",
+      "start": 910.24,
+      "duration": 4.0
+    },
+    {
+      "text": "of this list so once again we're out of",
+      "start": 912.0,
+      "duration": 2.72
+    },
+    {
+      "text": "range",
+      "start": 914.24,
+      "duration": 4.159
+    },
+    {
+      "text": "and we get an index error",
+      "start": 914.72,
+      "duration": 3.679
+    },
+    {
+      "text": "so that's indexing about pulling a",
+      "start": 920.24,
+      "duration": 3.2
+    },
+    {
+      "text": "single item",
+      "start": 922.399,
+      "duration": 3.921
+    },
+    {
+      "text": "out of the list now we have slicing",
+      "start": 923.44,
+      "duration": 4.16
+    },
+    {
+      "text": "which pulls multiple",
+      "start": 926.32,
+      "duration": 4.16
+    },
+    {
+      "text": "objects out of this list and creates a",
+      "start": 927.6,
+      "duration": 4.0
+    },
+    {
+      "text": "new list",
+      "start": 930.48,
+      "duration": 4.88
+    },
+    {
+      "text": "from those objects so here",
+      "start": 931.6,
+      "duration": 6.88
+    },
+    {
+      "text": "remember again slicing is really defined",
+      "start": 935.36,
+      "duration": 5.12
+    },
+    {
+      "text": "by this colon",
+      "start": 938.48,
+      "duration": 5.84
+    },
+    {
+      "text": "and that colon means i want to get from",
+      "start": 940.48,
+      "duration": 7.68
+    },
+    {
+      "text": "index one up until not including",
+      "start": 944.32,
+      "duration": 6.0
+    },
+    {
+      "text": "index three and so that's from the",
+      "start": 948.16,
+      "duration": 3.52
+    },
+    {
+      "text": "second item",
+      "start": 950.32,
+      "duration": 3.68
+    },
+    {
+      "text": "up until but not including the fourth",
+      "start": 951.68,
+      "duration": 3.68
+    },
+    {
+      "text": "item",
+      "start": 954.0,
+      "duration": 4.88
+    },
+    {
+      "text": "so again showing what my list is here",
+      "start": 955.36,
+      "duration": 6.08
+    },
+    {
+      "text": "and i run this so i want to get from the",
+      "start": 958.88,
+      "duration": 3.36
+    },
+    {
+      "text": "second item",
+      "start": 961.44,
+      "duration": 2.399
+    },
+    {
+      "text": "up until we're not including the fourth",
+      "start": 962.24,
+      "duration": 4.32
+    },
+    {
+      "text": "item i get the second item",
+      "start": 963.839,
+      "duration": 5.521
+    },
+    {
+      "text": "up until but not including the fourth",
+      "start": 966.56,
+      "duration": 4.639
+    },
+    {
+      "text": "item so that's why we get",
+      "start": 969.36,
+      "duration": 5.2
+    },
+    {
+      "text": "five and ten here",
+      "start": 971.199,
+      "duration": 6.721
+    },
+    {
+      "text": "um and leaving either side of the colon",
+      "start": 974.56,
+      "duration": 4.719
+    },
+    {
+      "text": "empty again we'll just",
+      "start": 977.92,
+      "duration": 3.68
+    },
+    {
+      "text": "uh you know let it continue all the way",
+      "start": 979.279,
+      "duration": 4.721
+    },
+    {
+      "text": "to the end of the list",
+      "start": 981.6,
+      "duration": 4.72
+    },
+    {
+      "text": "in whatever direction so leaving the",
+      "start": 984.0,
+      "duration": 3.839
+    },
+    {
+      "text": "right side of the colon",
+      "start": 986.32,
+      "duration": 3.12
+    },
+    {
+      "text": "empty will go all the way to the end of",
+      "start": 987.839,
+      "duration": 4.081
+    },
+    {
+      "text": "the list leaving the left side of the",
+      "start": 989.44,
+      "duration": 4.079
+    },
+    {
+      "text": "colon empty we'll go all the way to the",
+      "start": 991.92,
+      "duration": 3.52
+    },
+    {
+      "text": "beginning of the list",
+      "start": 993.519,
+      "duration": 4.721
+    },
+    {
+      "text": "and so this is saying from index one",
+      "start": 995.44,
+      "duration": 3.759
+    },
+    {
+      "text": "until the end",
+      "start": 998.24,
+      "duration": 3.839
+    },
+    {
+      "text": "which means from the second item until",
+      "start": 999.199,
+      "duration": 3.76
+    },
+    {
+      "text": "the end",
+      "start": 1002.079,
+      "duration": 3.68
+    },
+    {
+      "text": "and that's why we get this portion of",
+      "start": 1002.959,
+      "duration": 5.041
+    },
+    {
+      "text": "the list",
+      "start": 1005.759,
+      "duration": 5.52
+    },
+    {
+      "text": "and then this one says uh",
+      "start": 1008.0,
+      "duration": 4.88
+    },
+    {
+      "text": "you know all the way from the beginning",
+      "start": 1011.279,
+      "duration": 4.161
+    },
+    {
+      "text": "of the list up until",
+      "start": 1012.88,
+      "duration": 5.68
+    },
+    {
+      "text": "the but not including the last item in",
+      "start": 1015.44,
+      "duration": 4.0
+    },
+    {
+      "text": "the list",
+      "start": 1018.56,
+      "duration": 2.719
+    },
+    {
+      "text": "and so that's why we get everything",
+      "start": 1019.44,
+      "duration": 3.36
+    },
+    {
+      "text": "except for this last",
+      "start": 1021.279,
+      "duration": 5.201
+    },
+    {
+      "text": "seven in the list here",
+      "start": 1022.8,
+      "duration": 5.44
+    },
+    {
+      "text": "[Music]",
+      "start": 1026.48,
+      "duration": 5.839
+    },
+    {
+      "text": "and then the lab exercises here",
+      "start": 1028.24,
+      "duration": 6.64
+    },
+    {
+      "text": "would be the working with lists section",
+      "start": 1032.319,
+      "duration": 3.36
+    },
+    {
+      "text": "of the",
+      "start": 1034.88,
+      "duration": 5.12
+    },
+    {
+      "text": "lab exercises and so",
+      "start": 1035.679,
+      "duration": 6.64
+    },
+    {
+      "text": "this is going to test a few different",
+      "start": 1040.0,
+      "duration": 3.28
+    },
+    {
+      "text": "things uh",
+      "start": 1042.319,
+      "duration": 3.52
+    },
+    {
+      "text": "the loop building pattern uh adding",
+      "start": 1043.28,
+      "duration": 3.2
+    },
+    {
+      "text": "objects",
+      "start": 1045.839,
+      "duration": 4.321
+    },
+    {
+      "text": "in the list and also indexing and",
+      "start": 1046.48,
+      "duration": 4.4
+    },
+    {
+      "text": "slicing",
+      "start": 1050.16,
+      "duration": 4.16
+    },
+    {
+      "text": "of the list as well um",
+      "start": 1050.88,
+      "duration": 6.88
+    },
+    {
+      "text": "so that concludes our section",
+      "start": 1054.32,
+      "duration": 6.64
+    },
+    {
+      "text": "on python lists and grouping",
+      "start": 1057.76,
+      "duration": 6.159
+    },
+    {
+      "text": "objects together using them next time",
+      "start": 1060.96,
+      "duration": 4.4
+    },
+    {
+      "text": "we're going to come back to",
+      "start": 1063.919,
+      "duration": 4.481
+    },
+    {
+      "text": "instead group logic together instead",
+      "start": 1065.36,
+      "duration": 6.16
+    },
+    {
+      "text": "using functions thanks for listening and",
+      "start": 1068.4,
+      "duration": 9.68
+    },
+    {
+      "text": "see you next time",
+      "start": 1071.52,
+      "duration": 6.56
+    }
+  ]
+}

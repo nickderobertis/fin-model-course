@@ -1,0 +1,1199 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.52,
+      "duration": 2.4
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.48,
+      "duration": 3.68
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.92,
+      "duration": 3.12
+    },
+    {
+      "text": "be solving",
+      "start": 8.16,
+      "duration": 4.08
+    },
+    {
+      "text": "the second lab exercise on relaxing the",
+      "start": 9.04,
+      "duration": 4.719
+    },
+    {
+      "text": "static desired cash",
+      "start": 12.24,
+      "duration": 3.84
+    },
+    {
+      "text": "assumption in the dynamic salary",
+      "start": 13.759,
+      "duration": 3.6
+    },
+    {
+      "text": "retirement model",
+      "start": 16.08,
+      "duration": 4.64
+    },
+    {
+      "text": "in excel so",
+      "start": 17.359,
+      "duration": 5.201
+    },
+    {
+      "text": "this is the lab exercise that i'm",
+      "start": 20.72,
+      "duration": 4.399
+    },
+    {
+      "text": "talking about here in the third",
+      "start": 22.56,
+      "duration": 4.24
+    },
+    {
+      "text": "set of slides on the depth of a",
+      "start": 25.119,
+      "duration": 3.201
+    },
+    {
+      "text": "financial model",
+      "start": 26.8,
+      "duration": 5.04
+    },
+    {
+      "text": "focusing on excel and the idea here",
+      "start": 28.32,
+      "duration": 6.72
+    },
+    {
+      "text": "is that we want to uh have a",
+      "start": 31.84,
+      "duration": 6.32
+    },
+    {
+      "text": "better assumption about how much cash",
+      "start": 35.04,
+      "duration": 5.12
+    },
+    {
+      "text": "this person needs to retire",
+      "start": 38.16,
+      "duration": 4.399
+    },
+    {
+      "text": "because right now uh you know we just",
+      "start": 40.16,
+      "duration": 4.239
+    },
+    {
+      "text": "put in a fixed number you know",
+      "start": 42.559,
+      "duration": 4.961
+    },
+    {
+      "text": "for example we put 1.5 million dollars",
+      "start": 44.399,
+      "duration": 5.361
+    },
+    {
+      "text": "as how much this individual needs to be",
+      "start": 47.52,
+      "duration": 3.84
+    },
+    {
+      "text": "able to retire",
+      "start": 49.76,
+      "duration": 4.4
+    },
+    {
+      "text": "but uh that was just a number that we",
+      "start": 51.36,
+      "duration": 4.64
+    },
+    {
+      "text": "threw in there like it wasn't actually",
+      "start": 54.16,
+      "duration": 4.079
+    },
+    {
+      "text": "based off of any kind of analysis",
+      "start": 56.0,
+      "duration": 5.28
+    },
+    {
+      "text": "of how much they would really need so",
+      "start": 58.239,
+      "duration": 4.561
+    },
+    {
+      "text": "now we're going to go ahead and build",
+      "start": 61.28,
+      "duration": 2.48
+    },
+    {
+      "text": "that in",
+      "start": 62.8,
+      "duration": 4.4
+    },
+    {
+      "text": "so instead of having desired cache as",
+      "start": 63.76,
+      "duration": 5.52
+    },
+    {
+      "text": "an input to the model it's going to",
+      "start": 67.2,
+      "duration": 3.599
+    },
+    {
+      "text": "become an output",
+      "start": 69.28,
+      "duration": 3.6
+    },
+    {
+      "text": "and it's going to be an output based on",
+      "start": 70.799,
+      "duration": 5.041
+    },
+    {
+      "text": "a few new inputs",
+      "start": 72.88,
+      "duration": 5.76
+    },
+    {
+      "text": "how much this person is going to spend",
+      "start": 75.84,
+      "duration": 4.24
+    },
+    {
+      "text": "during retirement",
+      "start": 78.64,
+      "duration": 4.0
+    },
+    {
+      "text": "and how long do they expect to be in",
+      "start": 80.08,
+      "duration": 3.52
+    },
+    {
+      "text": "retirement their",
+      "start": 82.64,
+      "duration": 5.2
+    },
+    {
+      "text": "basically life expectancy in retirement",
+      "start": 83.6,
+      "duration": 4.24
+    },
+    {
+      "text": "so let's go ahead and add that into the",
+      "start": 88.159,
+      "duration": 3.761
+    },
+    {
+      "text": "excel model",
+      "start": 90.64,
+      "duration": 3.439
+    },
+    {
+      "text": "and you know the idea being here that we",
+      "start": 91.92,
+      "duration": 3.68
+    },
+    {
+      "text": "don't want to have to rework",
+      "start": 94.079,
+      "duration": 4.321
+    },
+    {
+      "text": "a lot of the excel model uh we want to",
+      "start": 95.6,
+      "duration": 4.479
+    },
+    {
+      "text": "try and do this in a way that",
+      "start": 98.4,
+      "duration": 3.52
+    },
+    {
+      "text": "we can basically leave everything that's",
+      "start": 100.079,
+      "duration": 3.04
+    },
+    {
+      "text": "there intact",
+      "start": 101.92,
+      "duration": 3.36
+    },
+    {
+      "text": "and just kind of add on this additional",
+      "start": 103.119,
+      "duration": 6.32
+    },
+    {
+      "text": "part let's look at how we can do that",
+      "start": 105.28,
+      "duration": 4.159
+    },
+    {
+      "text": "so we'll work off of this existing",
+      "start": 110.479,
+      "duration": 3.92
+    },
+    {
+      "text": "dynamic salary retirement model",
+      "start": 112.159,
+      "duration": 4.56
+    },
+    {
+      "text": "that you can download from the course",
+      "start": 114.399,
+      "duration": 4.241
+    },
+    {
+      "text": "website",
+      "start": 116.719,
+      "duration": 5.44
+    },
+    {
+      "text": "and uh you know we already have this set",
+      "start": 118.64,
+      "duration": 4.159
+    },
+    {
+      "text": "up",
+      "start": 122.159,
+      "duration": 2.96
+    },
+    {
+      "text": "uh with all the inputs and determining",
+      "start": 122.799,
+      "duration": 3.761
+    },
+    {
+      "text": "the retirement over here",
+      "start": 125.119,
+      "duration": 5.041
+    },
+    {
+      "text": "on this sheet based off of",
+      "start": 126.56,
+      "duration": 5.759
+    },
+    {
+      "text": "the static desired cache which is just",
+      "start": 130.16,
+      "duration": 5.28
+    },
+    {
+      "text": "referenced from the inputs",
+      "start": 132.319,
+      "duration": 5.841
+    },
+    {
+      "text": "so now this desired cache is going to be",
+      "start": 135.44,
+      "duration": 4.56
+    },
+    {
+      "text": "an output rather than an input",
+      "start": 138.16,
+      "duration": 5.36
+    },
+    {
+      "text": "so a nice first step that we can do is",
+      "start": 140.0,
+      "duration": 6.959
+    },
+    {
+      "text": "move it over to the outputs so first i'm",
+      "start": 143.52,
+      "duration": 4.17
+    },
+    {
+      "text": "going to",
+      "start": 146.959,
+      "duration": 1.841
+    },
+    {
+      "text": "[Music]",
+      "start": 147.69,
+      "duration": 4.23
+    },
+    {
+      "text": "insert a row here",
+      "start": 148.8,
+      "duration": 6.56
+    },
+    {
+      "text": "to make some space for",
+      "start": 151.92,
+      "duration": 7.44
+    },
+    {
+      "text": "the um desired cache",
+      "start": 155.36,
+      "duration": 5.68
+    },
+    {
+      "text": "and i'm not going to worry about the",
+      "start": 159.36,
+      "duration": 3.92
+    },
+    {
+      "text": "formatting for now",
+      "start": 161.04,
+      "duration": 3.6
+    },
+    {
+      "text": "though you would definitely want to",
+      "start": 163.28,
+      "duration": 3.36
+    },
+    {
+      "text": "clean this up",
+      "start": 164.64,
+      "duration": 4.48
+    },
+    {
+      "text": "but i'm going to move this over to here",
+      "start": 166.64,
+      "duration": 3.84
+    },
+    {
+      "text": "and you'll notice",
+      "start": 169.12,
+      "duration": 4.24
+    },
+    {
+      "text": "nothing broke when i move this and",
+      "start": 170.48,
+      "duration": 4.0
+    },
+    {
+      "text": "that's because",
+      "start": 173.36,
+      "duration": 4.799
+    },
+    {
+      "text": "i cut it so that would be control x or",
+      "start": 174.48,
+      "duration": 5.44
+    },
+    {
+      "text": "command x if you're on a mac",
+      "start": 178.159,
+      "duration": 4.241
+    },
+    {
+      "text": "and then pasting it over here what that",
+      "start": 179.92,
+      "duration": 5.039
+    },
+    {
+      "text": "does is it actually",
+      "start": 182.4,
+      "duration": 6.24
+    },
+    {
+      "text": "will move any references to that cell",
+      "start": 184.959,
+      "duration": 6.081
+    },
+    {
+      "text": "so if you look over here on the",
+      "start": 188.64,
+      "duration": 3.84
+    },
+    {
+      "text": "retirement tab",
+      "start": 191.04,
+      "duration": 4.24
+    },
+    {
+      "text": "now it's looking at b18 for the desired",
+      "start": 192.48,
+      "duration": 3.36
+    },
+    {
+      "text": "cache",
+      "start": 195.28,
+      "duration": 2.64
+    },
+    {
+      "text": "which is our new location and not the",
+      "start": 195.84,
+      "duration": 3.039
+    },
+    {
+      "text": "old one",
+      "start": 197.92,
+      "duration": 4.319
+    },
+    {
+      "text": "so that's kind of really uh key to being",
+      "start": 198.879,
+      "duration": 5.121
+    },
+    {
+      "text": "able to move things around an excel",
+      "start": 202.239,
+      "duration": 3.28
+    },
+    {
+      "text": "model without breaking everything",
+      "start": 204.0,
+      "duration": 4.64
+    },
+    {
+      "text": "is you want to cut and not just uh you",
+      "start": 205.519,
+      "duration": 5.321
+    },
+    {
+      "text": "know copy or manually try to move things",
+      "start": 208.64,
+      "duration": 4.319
+    },
+    {
+      "text": "over",
+      "start": 210.84,
+      "duration": 4.84
+    },
+    {
+      "text": "so then the other thing we want to do",
+      "start": 212.959,
+      "duration": 4.64
+    },
+    {
+      "text": "before we start doing the calculations",
+      "start": 215.68,
+      "duration": 2.96
+    },
+    {
+      "text": "is add these new",
+      "start": 217.599,
+      "duration": 4.241
+    },
+    {
+      "text": "inputs so this would be the",
+      "start": 218.64,
+      "duration": 6.879
+    },
+    {
+      "text": "annual spend and retirement",
+      "start": 221.84,
+      "duration": 8.72
+    },
+    {
+      "text": "is one and then the",
+      "start": 225.519,
+      "duration": 8.321
+    },
+    {
+      "text": "you know time in retirement",
+      "start": 230.56,
+      "duration": 6.08
+    },
+    {
+      "text": "would be the other",
+      "start": 233.84,
+      "duration": 2.8
+    },
+    {
+      "text": "and what do we say here for defaults for",
+      "start": 238.72,
+      "duration": 3.12
+    },
+    {
+      "text": "those values",
+      "start": 241.12,
+      "duration": 2.96
+    },
+    {
+      "text": "twenty forty thousand and twenty five",
+      "start": 241.84,
+      "duration": 4.479
+    },
+    {
+      "text": "years",
+      "start": 244.08,
+      "duration": 2.239
+    },
+    {
+      "text": "and of course you would uh oh this is",
+      "start": 247.599,
+      "duration": 4.321
+    },
+    {
+      "text": "coming as percentage to make sure if",
+      "start": 250.08,
+      "duration": 4.32
+    },
+    {
+      "text": "this happens that you",
+      "start": 251.92,
+      "duration": 4.24
+    },
+    {
+      "text": "take it off a percentage and then retype",
+      "start": 254.4,
+      "duration": 4.079
+    },
+    {
+      "text": "it otherwise it's going to be",
+      "start": 256.16,
+      "duration": 4.16
+    },
+    {
+      "text": "you know 1 100th of what you actually",
+      "start": 258.479,
+      "duration": 4.241
+    },
+    {
+      "text": "wanted",
+      "start": 260.32,
+      "duration": 2.4
+    },
+    {
+      "text": "so here now we have the new inputs",
+      "start": 262.96,
+      "duration": 6.4
+    },
+    {
+      "text": "and we can go ahead and set things up",
+      "start": 266.24,
+      "duration": 4.959
+    },
+    {
+      "text": "for the calculation",
+      "start": 269.36,
+      "duration": 5.839
+    },
+    {
+      "text": "so uh you know i would consider this",
+      "start": 271.199,
+      "duration": 6.161
+    },
+    {
+      "text": "uh you know part of the retirement part",
+      "start": 275.199,
+      "duration": 4.56
+    },
+    {
+      "text": "of the model is determining this",
+      "start": 277.36,
+      "duration": 4.08
+    },
+    {
+      "text": "uh you know you certainly could feel",
+      "start": 279.759,
+      "duration": 3.121
+    },
+    {
+      "text": "free to break this into another",
+      "start": 281.44,
+      "duration": 2.4
+    },
+    {
+      "text": "subsection",
+      "start": 282.88,
+      "duration": 3.84
+    },
+    {
+      "text": "another uh worksheet within the model uh",
+      "start": 283.84,
+      "duration": 4.32
+    },
+    {
+      "text": "completely separate",
+      "start": 286.72,
+      "duration": 2.8
+    },
+    {
+      "text": "but i'm just going to add it to the",
+      "start": 288.16,
+      "duration": 2.88
+    },
+    {
+      "text": "retirement one because i think it makes",
+      "start": 289.52,
+      "duration": 2.48
+    },
+    {
+      "text": "sense in there",
+      "start": 291.04,
+      "duration": 5.2
+    },
+    {
+      "text": "logically so on this retirement tab",
+      "start": 292.0,
+      "duration": 6.72
+    },
+    {
+      "text": "uh again right now we have desired cache",
+      "start": 296.24,
+      "duration": 3.76
+    },
+    {
+      "text": "in the input section",
+      "start": 298.72,
+      "duration": 3.28
+    },
+    {
+      "text": "and we don't have those other inputs",
+      "start": 300.0,
+      "duration": 3.68
+    },
+    {
+      "text": "coming in here yet",
+      "start": 302.0,
+      "duration": 4.479
+    },
+    {
+      "text": "um so let's add another row to make",
+      "start": 303.68,
+      "duration": 3.92
+    },
+    {
+      "text": "space",
+      "start": 306.479,
+      "duration": 4.961
+    },
+    {
+      "text": "and then i'm going to",
+      "start": 307.6,
+      "duration": 5.84
+    },
+    {
+      "text": "have another table over here which would",
+      "start": 311.44,
+      "duration": 3.199
+    },
+    {
+      "text": "be the",
+      "start": 313.44,
+      "duration": 5.36
+    },
+    {
+      "text": "uh you know desired cash calculations",
+      "start": 314.639,
+      "duration": 6.311
+    },
+    {
+      "text": "um and so",
+      "start": 318.8,
+      "duration": 3.36
+    },
+    {
+      "text": "[Music]",
+      "start": 320.95,
+      "duration": 5.05
+    },
+    {
+      "text": "here then i'm going to bring the",
+      "start": 322.16,
+      "duration": 5.84
+    },
+    {
+      "text": "desired cache over to here as well once",
+      "start": 326.0,
+      "duration": 3.6
+    },
+    {
+      "text": "again cutting",
+      "start": 328.0,
+      "duration": 4.639
+    },
+    {
+      "text": "control x command x to ensure",
+      "start": 329.6,
+      "duration": 5.76
+    },
+    {
+      "text": "that all the references stay intact so",
+      "start": 332.639,
+      "duration": 4.881
+    },
+    {
+      "text": "all these",
+      "start": 335.36,
+      "duration": 5.36
+    },
+    {
+      "text": "or all these is retired are based off of",
+      "start": 337.52,
+      "duration": 5.679
+    },
+    {
+      "text": "this value which uh the references did",
+      "start": 340.72,
+      "duration": 4.479
+    },
+    {
+      "text": "get updated and nothing has changed in",
+      "start": 343.199,
+      "duration": 3.84
+    },
+    {
+      "text": "the model",
+      "start": 345.199,
+      "duration": 4.161
+    },
+    {
+      "text": "then we need to bring over our new",
+      "start": 347.039,
+      "duration": 3.44
+    },
+    {
+      "text": "inputs",
+      "start": 349.36,
+      "duration": 4.32
+    },
+    {
+      "text": "so i'm going to grab the annual spend in",
+      "start": 350.479,
+      "duration": 4.401
+    },
+    {
+      "text": "retirement",
+      "start": 353.68,
+      "duration": 4.799
+    },
+    {
+      "text": "and the time and retirement",
+      "start": 354.88,
+      "duration": 6.72
+    },
+    {
+      "text": "now coming over to here and so now we",
+      "start": 358.479,
+      "duration": 5.041
+    },
+    {
+      "text": "can go ahead and actually do this",
+      "start": 361.6,
+      "duration": 3.599
+    },
+    {
+      "text": "calculation",
+      "start": 363.52,
+      "duration": 3.04
+    },
+    {
+      "text": "and because we've kept all the",
+      "start": 365.199,
+      "duration": 3.84
+    },
+    {
+      "text": "references intact as we've gone through",
+      "start": 366.56,
+      "duration": 3.84
+    },
+    {
+      "text": "now once we change this to being a",
+      "start": 369.039,
+      "duration": 3.521
+    },
+    {
+      "text": "calculated value everything is just",
+      "start": 370.4,
+      "duration": 3.12
+    },
+    {
+      "text": "going to still work",
+      "start": 372.56,
+      "duration": 3.359
+    },
+    {
+      "text": "as it did before just now having this be",
+      "start": 373.52,
+      "duration": 3.679
+    },
+    {
+      "text": "calculated",
+      "start": 375.919,
+      "duration": 5.12
+    },
+    {
+      "text": "um so now",
+      "start": 377.199,
+      "duration": 6.0
+    },
+    {
+      "text": "excuse me the desired cash um we're",
+      "start": 381.039,
+      "duration": 3.361
+    },
+    {
+      "text": "going to",
+      "start": 383.199,
+      "duration": 3.921
+    },
+    {
+      "text": "um take the present value to determine",
+      "start": 384.4,
+      "duration": 3.44
+    },
+    {
+      "text": "that",
+      "start": 387.12,
+      "duration": 4.24
+    },
+    {
+      "text": "um because it's you know we think of",
+      "start": 387.84,
+      "duration": 5.68
+    },
+    {
+      "text": "the day that they go into retirement as",
+      "start": 391.36,
+      "duration": 4.24
+    },
+    {
+      "text": "you know day zero in this calculation",
+      "start": 393.52,
+      "duration": 3.6
+    },
+    {
+      "text": "and we're figuring out how much money do",
+      "start": 395.6,
+      "duration": 2.64
+    },
+    {
+      "text": "we need at the beginning",
+      "start": 397.12,
+      "duration": 3.519
+    },
+    {
+      "text": "of retirement to be able to you know",
+      "start": 398.24,
+      "duration": 4.48
+    },
+    {
+      "text": "make these payments to yourself",
+      "start": 400.639,
+      "duration": 5.84
+    },
+    {
+      "text": "uh for your spending during retirement",
+      "start": 402.72,
+      "duration": 6.64
+    },
+    {
+      "text": "um oh and we need we do need one other",
+      "start": 406.479,
+      "duration": 3.201
+    },
+    {
+      "text": "uh",
+      "start": 409.36,
+      "duration": 3.52
+    },
+    {
+      "text": "input coming over here which is the",
+      "start": 409.68,
+      "duration": 6.0
+    },
+    {
+      "text": "um interest rate so i'm gonna grab that",
+      "start": 412.88,
+      "duration": 5.12
+    },
+    {
+      "text": "as well",
+      "start": 415.68,
+      "duration": 5.44
+    },
+    {
+      "text": "um and",
+      "start": 418.0,
+      "duration": 5.28
+    },
+    {
+      "text": "so then this is going to be the present",
+      "start": 421.12,
+      "duration": 4.56
+    },
+    {
+      "text": "value and it's going to be with that",
+      "start": 423.28,
+      "duration": 5.359
+    },
+    {
+      "text": "interest rate um and the number of",
+      "start": 425.68,
+      "duration": 4.799
+    },
+    {
+      "text": "periods is going to be how long we need",
+      "start": 428.639,
+      "duration": 4.081
+    },
+    {
+      "text": "to spend in retirement",
+      "start": 430.479,
+      "duration": 4.961
+    },
+    {
+      "text": "um and the payment is going to be",
+      "start": 432.72,
+      "duration": 3.44
+    },
+    {
+      "text": "negative",
+      "start": 435.44,
+      "duration": 4.08
+    },
+    {
+      "text": "of the spending that we have to",
+      "start": 436.16,
+      "duration": 6.8
+    },
+    {
+      "text": "um have each year in retirement and then",
+      "start": 439.52,
+      "duration": 7.2
+    },
+    {
+      "text": "you know by the time we uh you know",
+      "start": 442.96,
+      "duration": 5.92
+    },
+    {
+      "text": "die at the end we don't need any money",
+      "start": 446.72,
+      "duration": 3.68
+    },
+    {
+      "text": "left over and so we're going to put a",
+      "start": 448.88,
+      "duration": 2.8
+    },
+    {
+      "text": "zero",
+      "start": 450.4,
+      "duration": 3.28
+    },
+    {
+      "text": "for future value certainly if you wanted",
+      "start": 451.68,
+      "duration": 3.76
+    },
+    {
+      "text": "to expand the model to have an",
+      "start": 453.68,
+      "duration": 3.519
+    },
+    {
+      "text": "inheritance component where you want to",
+      "start": 455.44,
+      "duration": 2.4
+    },
+    {
+      "text": "have",
+      "start": 457.199,
+      "duration": 2.56
+    },
+    {
+      "text": "at least a certain amount left for your",
+      "start": 457.84,
+      "duration": 3.359
+    },
+    {
+      "text": "errors as an inheritance",
+      "start": 459.759,
+      "duration": 3.84
+    },
+    {
+      "text": "then that would be another input and you",
+      "start": 461.199,
+      "duration": 5.601
+    },
+    {
+      "text": "would use that as the future value here",
+      "start": 463.599,
+      "duration": 5.201
+    },
+    {
+      "text": "but here we're just assuming uh you",
+      "start": 466.8,
+      "duration": 3.04
+    },
+    {
+      "text": "don't need to pass on",
+      "start": 468.8,
+      "duration": 3.04
+    },
+    {
+      "text": "any money and so you have zero left at",
+      "start": 469.84,
+      "duration": 3.199
+    },
+    {
+      "text": "the end",
+      "start": 471.84,
+      "duration": 4.079
+    },
+    {
+      "text": "and so then we can calculate the desired",
+      "start": 473.039,
+      "duration": 3.921
+    },
+    {
+      "text": "cash",
+      "start": 475.919,
+      "duration": 3.761
+    },
+    {
+      "text": "um so based off of you know if really we",
+      "start": 476.96,
+      "duration": 4.48
+    },
+    {
+      "text": "only needed 40 000 per year",
+      "start": 479.68,
+      "duration": 4.239
+    },
+    {
+      "text": "and we expected to live 25 years really",
+      "start": 481.44,
+      "duration": 4.479
+    },
+    {
+      "text": "we didn't need as nearly as much",
+      "start": 483.919,
+      "duration": 5.28
+    },
+    {
+      "text": "cash as we thought we did uh going into",
+      "start": 485.919,
+      "duration": 5.201
+    },
+    {
+      "text": "retirement and so that means that now",
+      "start": 489.199,
+      "duration": 3.761
+    },
+    {
+      "text": "we're retiring a lot earlier",
+      "start": 491.12,
+      "duration": 5.84
+    },
+    {
+      "text": "um in 18 years and the last step here",
+      "start": 492.96,
+      "duration": 6.0
+    },
+    {
+      "text": "would just be to bring that output back",
+      "start": 496.96,
+      "duration": 2.72
+    },
+    {
+      "text": "over",
+      "start": 498.96,
+      "duration": 4.079
+    },
+    {
+      "text": "to uh the overview page of the model the",
+      "start": 499.68,
+      "duration": 4.88
+    },
+    {
+      "text": "inputs and outputs page",
+      "start": 503.039,
+      "duration": 3.681
+    },
+    {
+      "text": "so we would just reference that back",
+      "start": 504.56,
+      "duration": 3.199
+    },
+    {
+      "text": "over to the",
+      "start": 506.72,
+      "duration": 4.319
+    },
+    {
+      "text": "retirement tab so now we have that",
+      "start": 507.759,
+      "duration": 7.121
+    },
+    {
+      "text": "here as well so that way you know if we",
+      "start": 511.039,
+      "duration": 7.281
+    },
+    {
+      "text": "say we're going to live longer then that",
+      "start": 514.88,
+      "duration": 6.88
+    },
+    {
+      "text": "can update the desired cash",
+      "start": 518.32,
+      "duration": 5.92
+    },
+    {
+      "text": "which is going to update the years to",
+      "start": 521.76,
+      "duration": 3.92
+    },
+    {
+      "text": "retirement",
+      "start": 524.24,
+      "duration": 4.08
+    },
+    {
+      "text": "same thing if you need to spend more",
+      "start": 525.68,
+      "duration": 4.48
+    },
+    {
+      "text": "that's going to update again the desired",
+      "start": 528.32,
+      "duration": 2.72
+    },
+    {
+      "text": "cash",
+      "start": 530.16,
+      "duration": 4.32
+    },
+    {
+      "text": "which will update how long it's going to",
+      "start": 531.04,
+      "duration": 5.04
+    },
+    {
+      "text": "take to retire so everything is linked",
+      "start": 534.48,
+      "duration": 4.0
+    },
+    {
+      "text": "together",
+      "start": 536.08,
+      "duration": 2.4
+    },
+    {
+      "text": "so that's this lab exercise so thanks",
+      "start": 538.56,
+      "duration": 3.92
+    },
+    {
+      "text": "for listening",
+      "start": 541.519,
+      "duration": 7.601
+    },
+    {
+      "text": "and see you next time",
+      "start": 542.48,
+      "duration": 6.64
+    }
+  ]
+}

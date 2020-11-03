@@ -1,0 +1,3019 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.28,
+      "duration": 2.24
+    },
+    {
+      "text": "nick dear bertis here teaching you",
+      "start": 4.08,
+      "duration": 3.279
+    },
+    {
+      "text": "financial modeling and today",
+      "start": 5.52,
+      "duration": 3.2
+    },
+    {
+      "text": "i'm going to be talking about",
+      "start": 7.359,
+      "duration": 3.121
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 8.72,
+      "duration": 5.2
+    },
+    {
+      "text": "in python this is part of our lecture on",
+      "start": 10.48,
+      "duration": 6.559
+    },
+    {
+      "text": "exploring the parameter space",
+      "start": 13.92,
+      "duration": 6.48
+    },
+    {
+      "text": "so we left off last time we had gone",
+      "start": 17.039,
+      "duration": 4.24
+    },
+    {
+      "text": "through some",
+      "start": 20.4,
+      "duration": 3.52
+    },
+    {
+      "text": "additional python basics that we were",
+      "start": 21.279,
+      "duration": 4.721
+    },
+    {
+      "text": "going to need to be able to carry out",
+      "start": 23.92,
+      "duration": 6.08
+    },
+    {
+      "text": "sensitivity analysis in python i was on",
+      "start": 26.0,
+      "duration": 6.48
+    },
+    {
+      "text": "list comprehensions dictionaries",
+      "start": 30.0,
+      "duration": 4.96
+    },
+    {
+      "text": "installing packages",
+      "start": 32.48,
+      "duration": 3.68
+    },
+    {
+      "text": "and now we're going to go ahead and",
+      "start": 34.96,
+      "duration": 5.52
+    },
+    {
+      "text": "actually implement sensitivity analysis",
+      "start": 36.16,
+      "duration": 7.76
+    },
+    {
+      "text": "so for sensitivity analysis in python",
+      "start": 40.48,
+      "duration": 4.64
+    },
+    {
+      "text": "we're looking at",
+      "start": 43.92,
+      "duration": 4.0
+    },
+    {
+      "text": "two main kinds of ways that we can",
+      "start": 45.12,
+      "duration": 4.64
+    },
+    {
+      "text": "visualize the output",
+      "start": 47.92,
+      "duration": 4.4
+    },
+    {
+      "text": "so the new one which is different from",
+      "start": 49.76,
+      "duration": 3.92
+    },
+    {
+      "text": "what we're able to do in excel",
+      "start": 52.32,
+      "duration": 4.399
+    },
+    {
+      "text": "is this hex bin plot that you see here",
+      "start": 53.68,
+      "duration": 5.76
+    },
+    {
+      "text": "and this is analogous to the conditional",
+      "start": 56.719,
+      "duration": 3.441
+    },
+    {
+      "text": "formatting",
+      "start": 59.44,
+      "duration": 4.08
+    },
+    {
+      "text": "on a table in excel only in graphical",
+      "start": 60.16,
+      "duration": 4.16
+    },
+    {
+      "text": "form",
+      "start": 63.52,
+      "duration": 4.639
+    },
+    {
+      "text": "so here uh it makes the regions",
+      "start": 64.32,
+      "duration": 5.68
+    },
+    {
+      "text": "of this two-dimensional area",
+      "start": 68.159,
+      "duration": 4.161
+    },
+    {
+      "text": "corresponding to the value of the",
+      "start": 70.0,
+      "duration": 3.119
+    },
+    {
+      "text": "outcome",
+      "start": 72.32,
+      "duration": 2.72
+    },
+    {
+      "text": "so you have your two different inputs on",
+      "start": 73.119,
+      "duration": 3.601
+    },
+    {
+      "text": "the two different axes",
+      "start": 75.04,
+      "duration": 4.88
+    },
+    {
+      "text": "and then your outcome is the color",
+      "start": 76.72,
+      "duration": 6.079
+    },
+    {
+      "text": "um and so here high years to retirement",
+      "start": 79.92,
+      "duration": 4.16
+    },
+    {
+      "text": "is red",
+      "start": 82.799,
+      "duration": 3.041
+    },
+    {
+      "text": "low years to retirement is green and",
+      "start": 84.08,
+      "duration": 3.44
+    },
+    {
+      "text": "getting darker green",
+      "start": 85.84,
+      "duration": 5.04
+    },
+    {
+      "text": "the more that it decreases so we can see",
+      "start": 87.52,
+      "duration": 5.52
+    },
+    {
+      "text": "clearly from this graph that",
+      "start": 90.88,
+      "duration": 4.64
+    },
+    {
+      "text": "as savings rate increases and as the",
+      "start": 93.04,
+      "duration": 4.32
+    },
+    {
+      "text": "person gets promoted more often",
+      "start": 95.52,
+      "duration": 3.44
+    },
+    {
+      "text": "then they're going to be able to retire",
+      "start": 97.36,
+      "duration": 4.48
+    },
+    {
+      "text": "sooner",
+      "start": 98.96,
+      "duration": 2.88
+    },
+    {
+      "text": "the other main output that we have is",
+      "start": 102.079,
+      "duration": 5.68
+    },
+    {
+      "text": "exactly what we have in excel which is a",
+      "start": 105.52,
+      "duration": 4.08
+    },
+    {
+      "text": "table with conditional formatting",
+      "start": 107.759,
+      "duration": 3.761
+    },
+    {
+      "text": "applied to it",
+      "start": 109.6,
+      "duration": 5.04
+    },
+    {
+      "text": "so this is showing the same information",
+      "start": 111.52,
+      "duration": 6.559
+    },
+    {
+      "text": "as the hexton plot only with each of the",
+      "start": 114.64,
+      "duration": 3.92
+    },
+    {
+      "text": "numbers",
+      "start": 118.079,
+      "duration": 3.761
+    },
+    {
+      "text": "in there as well uh so it's mostly a",
+      "start": 118.56,
+      "duration": 4.64
+    },
+    {
+      "text": "personal preference",
+      "start": 121.84,
+      "duration": 3.599
+    },
+    {
+      "text": "uh with which one you want to go with",
+      "start": 123.2,
+      "duration": 5.199
+    },
+    {
+      "text": "but these are the two main ways to",
+      "start": 125.439,
+      "duration": 5.44
+    },
+    {
+      "text": "look at the two inputs at once with",
+      "start": 128.399,
+      "duration": 3.84
+    },
+    {
+      "text": "sensitivity analysis and",
+      "start": 130.879,
+      "duration": 3.521
+    },
+    {
+      "text": "visualize that of course with one way",
+      "start": 132.239,
+      "duration": 4.161
+    },
+    {
+      "text": "then you can just plot that",
+      "start": 134.4,
+      "duration": 5.199
+    },
+    {
+      "text": "with a typical line plot",
+      "start": 136.4,
+      "duration": 3.199
+    },
+    {
+      "text": "so the process to carry out sensitivity",
+      "start": 140.239,
+      "duration": 5.761
+    },
+    {
+      "text": "analysis and python",
+      "start": 143.52,
+      "duration": 4.24
+    },
+    {
+      "text": "if you don't want to use any packages",
+      "start": 146.0,
+      "duration": 4.16
+    },
+    {
+      "text": "you just want to use pure python",
+      "start": 147.76,
+      "duration": 6.16
+    },
+    {
+      "text": "then it's basically you do a loop",
+      "start": 150.16,
+      "duration": 6.799
+    },
+    {
+      "text": "over each input that you want to",
+      "start": 153.92,
+      "duration": 6.0
+    },
+    {
+      "text": "examine so you might say i want to look",
+      "start": 156.959,
+      "duration": 3.681
+    },
+    {
+      "text": "at",
+      "start": 159.92,
+      "duration": 4.08
+    },
+    {
+      "text": "uh 30 40 50 savings rates",
+      "start": 160.64,
+      "duration": 6.48
+    },
+    {
+      "text": "and so it'd be like four save rate in",
+      "start": 164.0,
+      "duration": 6.879
+    },
+    {
+      "text": "30 40 50 in a list um",
+      "start": 167.12,
+      "duration": 6.8
+    },
+    {
+      "text": "and then you run the model with uh each",
+      "start": 170.879,
+      "duration": 3.841
+    },
+    {
+      "text": "of those inputs",
+      "start": 173.92,
+      "duration": 3.2
+    },
+    {
+      "text": "passed in collect the results keep them",
+      "start": 174.72,
+      "duration": 3.68
+    },
+    {
+      "text": "associated",
+      "start": 177.12,
+      "duration": 3.52
+    },
+    {
+      "text": "with which inputs are related to those",
+      "start": 178.4,
+      "duration": 3.52
+    },
+    {
+      "text": "outputs",
+      "start": 180.64,
+      "duration": 3.28
+    },
+    {
+      "text": "and then put it all together to",
+      "start": 181.92,
+      "duration": 4.399
+    },
+    {
+      "text": "visualize",
+      "start": 183.92,
+      "duration": 5.92
+    },
+    {
+      "text": "um so then if you have more than one",
+      "start": 186.319,
+      "duration": 4.321
+    },
+    {
+      "text": "input",
+      "start": 189.84,
+      "duration": 2.88
+    },
+    {
+      "text": "you just go ahead and do additional",
+      "start": 190.64,
+      "duration": 4.0
+    },
+    {
+      "text": "loops and nest those loops",
+      "start": 192.72,
+      "duration": 4.32
+    },
+    {
+      "text": "within each other so for save rate and",
+      "start": 194.64,
+      "duration": 4.239
+    },
+    {
+      "text": "savings rates for",
+      "start": 197.04,
+      "duration": 4.88
+    },
+    {
+      "text": "uh number of promotions in",
+      "start": 198.879,
+      "duration": 7.041
+    },
+    {
+      "text": "uh you know two three four five",
+      "start": 201.92,
+      "duration": 7.039
+    },
+    {
+      "text": "something like that nested under each",
+      "start": 205.92,
+      "duration": 3.44
+    },
+    {
+      "text": "other",
+      "start": 208.959,
+      "duration": 3.28
+    },
+    {
+      "text": "and then nested under all the loops is",
+      "start": 209.36,
+      "duration": 4.72
+    },
+    {
+      "text": "where you actually run your model",
+      "start": 212.239,
+      "duration": 4.481
+    },
+    {
+      "text": "with each of those inputs again collect",
+      "start": 214.08,
+      "duration": 4.159
+    },
+    {
+      "text": "the outputs associate them with the",
+      "start": 216.72,
+      "duration": 2.72
+    },
+    {
+      "text": "inputs and then",
+      "start": 218.239,
+      "duration": 3.92
+    },
+    {
+      "text": "visualize it",
+      "start": 219.44,
+      "duration": 2.719
+    },
+    {
+      "text": "um then you know you start to look up",
+      "start": 222.72,
+      "duration": 3.28
+    },
+    {
+      "text": "more",
+      "start": 225.76,
+      "duration": 2.0
+    },
+    {
+      "text": "than two or three inputs at once and all",
+      "start": 226.0,
+      "duration": 3.519
+    },
+    {
+      "text": "of a sudden you're nested nested nested",
+      "start": 227.76,
+      "duration": 4.0
+    },
+    {
+      "text": "more and more and all these loops",
+      "start": 229.519,
+      "duration": 5.681
+    },
+    {
+      "text": "um and that can be pretty messy um",
+      "start": 231.76,
+      "duration": 5.839
+    },
+    {
+      "text": "so there is a way to resolve that there",
+      "start": 235.2,
+      "duration": 3.119
+    },
+    {
+      "text": "is a",
+      "start": 237.599,
+      "duration": 3.521
+    },
+    {
+      "text": "python has a built-in package called",
+      "start": 238.319,
+      "duration": 4.321
+    },
+    {
+      "text": "intertools",
+      "start": 241.12,
+      "duration": 4.56
+    },
+    {
+      "text": "tools for iteration which goes a little",
+      "start": 242.64,
+      "duration": 3.84
+    },
+    {
+      "text": "bit beyond",
+      "start": 245.68,
+      "duration": 4.72
+    },
+    {
+      "text": "just what the base language does",
+      "start": 246.48,
+      "duration": 6.8
+    },
+    {
+      "text": "and one of those basically allows you to",
+      "start": 250.4,
+      "duration": 3.199
+    },
+    {
+      "text": "do",
+      "start": 253.28,
+      "duration": 2.959
+    },
+    {
+      "text": "like a nested for loop but with only a",
+      "start": 253.599,
+      "duration": 4.401
+    },
+    {
+      "text": "single line of code so that's what this",
+      "start": 256.239,
+      "duration": 4.24
+    },
+    {
+      "text": "editor tools product is",
+      "start": 258.0,
+      "duration": 5.84
+    },
+    {
+      "text": "um and so you can use that to then",
+      "start": 260.479,
+      "duration": 5.201
+    },
+    {
+      "text": "collapse however many loops you would",
+      "start": 263.84,
+      "duration": 4.72
+    },
+    {
+      "text": "have onto one line um",
+      "start": 265.68,
+      "duration": 4.4
+    },
+    {
+      "text": "but then it's a little more difficult to",
+      "start": 268.56,
+      "duration": 5.52
+    },
+    {
+      "text": "understand what's going on there",
+      "start": 270.08,
+      "duration": 7.36
+    },
+    {
+      "text": "so i would if you're sticking with",
+      "start": 274.08,
+      "duration": 5.76
+    },
+    {
+      "text": "this approach for sensitivity analysis",
+      "start": 277.44,
+      "duration": 4.0
+    },
+    {
+      "text": "and we'll talk in a minute",
+      "start": 279.84,
+      "duration": 3.84
+    },
+    {
+      "text": "about a package we can use that makes",
+      "start": 281.44,
+      "duration": 3.68
+    },
+    {
+      "text": "all this much easier",
+      "start": 283.68,
+      "duration": 4.0
+    },
+    {
+      "text": "but with the pure python approach i",
+      "start": 285.12,
+      "duration": 4.72
+    },
+    {
+      "text": "would say two or three inputs at once",
+      "start": 287.68,
+      "duration": 4.72
+    },
+    {
+      "text": "just write out in the individual loops",
+      "start": 289.84,
+      "duration": 3.919
+    },
+    {
+      "text": "as you get more than that",
+      "start": 292.4,
+      "duration": 3.079
+    },
+    {
+      "text": "then you should consider using",
+      "start": 293.759,
+      "duration": 4.081
+    },
+    {
+      "text": "intertools.product",
+      "start": 295.479,
+      "duration": 6.201
+    },
+    {
+      "text": "as a replacement for the nested loops",
+      "start": 297.84,
+      "duration": 3.84
+    },
+    {
+      "text": "so here's an example of what that",
+      "start": 302.24,
+      "duration": 5.679
+    },
+    {
+      "text": "looks like the code that can make",
+      "start": 305.28,
+      "duration": 4.8
+    },
+    {
+      "text": "sensitivity analysis happen",
+      "start": 307.919,
+      "duration": 5.84
+    },
+    {
+      "text": "with just base python so",
+      "start": 310.08,
+      "duration": 5.04
+    },
+    {
+      "text": "here we're saying that we have a",
+      "start": 313.759,
+      "duration": 3.521
+    },
+    {
+      "text": "function called model and that's",
+      "start": 315.12,
+      "duration": 4.88
+    },
+    {
+      "text": "the function which runs our entire model",
+      "start": 317.28,
+      "duration": 4.32
+    },
+    {
+      "text": "so it takes the inputs",
+      "start": 320.0,
+      "duration": 4.479
+    },
+    {
+      "text": "and then it spits out the result of",
+      "start": 321.6,
+      "duration": 3.84
+    },
+    {
+      "text": "running the model",
+      "start": 324.479,
+      "duration": 3.121
+    },
+    {
+      "text": "so that can be you know calculating the",
+      "start": 325.44,
+      "duration": 3.759
+    },
+    {
+      "text": "years to retirement from the savings",
+      "start": 327.6,
+      "duration": 3.039
+    },
+    {
+      "text": "rate investment rate etc",
+      "start": 329.199,
+      "duration": 3.521
+    },
+    {
+      "text": "or any other model that you could",
+      "start": 330.639,
+      "duration": 4.4
+    },
+    {
+      "text": "possibly imagine",
+      "start": 332.72,
+      "duration": 4.319
+    },
+    {
+      "text": "as long as you can you can always",
+      "start": 335.039,
+      "duration": 4.081
+    },
+    {
+      "text": "represent the model as a function",
+      "start": 337.039,
+      "duration": 4.961
+    },
+    {
+      "text": "uh converting inputs to outputs and so",
+      "start": 339.12,
+      "duration": 3.919
+    },
+    {
+      "text": "if you do that",
+      "start": 342.0,
+      "duration": 2.88
+    },
+    {
+      "text": "then you can fit it into this structure",
+      "start": 343.039,
+      "duration": 4.241
+    },
+    {
+      "text": "just fine",
+      "start": 344.88,
+      "duration": 2.4
+    },
+    {
+      "text": "so we have two different inputs we're",
+      "start": 347.36,
+      "duration": 4.16
+    },
+    {
+      "text": "trying to examine here input one input",
+      "start": 349.759,
+      "duration": 3.041
+    },
+    {
+      "text": "two",
+      "start": 351.52,
+      "duration": 2.56
+    },
+    {
+      "text": "and for each of those we have two",
+      "start": 352.8,
+      "duration": 3.2
+    },
+    {
+      "text": "different values of",
+      "start": 354.08,
+      "duration": 3.6
+    },
+    {
+      "text": "the inputs that we wanna look at so for",
+      "start": 356.0,
+      "duration": 4.0
+    },
+    {
+      "text": "input one we wanna look at one and two",
+      "start": 357.68,
+      "duration": 5.92
+    },
+    {
+      "text": "input two we wanna look at four and five",
+      "start": 360.0,
+      "duration": 5.44
+    },
+    {
+      "text": "we set up a list to store all the",
+      "start": 363.6,
+      "duration": 4.56
+    },
+    {
+      "text": "results and then here we have the nested",
+      "start": 365.44,
+      "duration": 3.199
+    },
+    {
+      "text": "loop",
+      "start": 368.16,
+      "duration": 1.92
+    },
+    {
+      "text": "so we're going through each of these",
+      "start": 368.639,
+      "duration": 3.441
+    },
+    {
+      "text": "input lists getting an input",
+      "start": 370.08,
+      "duration": 5.04
+    },
+    {
+      "text": "out of each one and then within all the",
+      "start": 372.08,
+      "duration": 3.679
+    },
+    {
+      "text": "loops",
+      "start": 375.12,
+      "duration": 3.72
+    },
+    {
+      "text": "calling the model with each of the",
+      "start": 375.759,
+      "duration": 5.681
+    },
+    {
+      "text": "inputs then we get the result",
+      "start": 378.84,
+      "duration": 6.12
+    },
+    {
+      "text": "from the model and we associate the",
+      "start": 381.44,
+      "duration": 6.8
+    },
+    {
+      "text": "uh inputs with the output in the result",
+      "start": 384.96,
+      "duration": 6.64
+    },
+    {
+      "text": "here by creating a list of tuples",
+      "start": 388.24,
+      "duration": 5.28
+    },
+    {
+      "text": "where each tuple has everything grouped",
+      "start": 391.6,
+      "duration": 3.599
+    },
+    {
+      "text": "together",
+      "start": 393.52,
+      "duration": 4.56
+    },
+    {
+      "text": "then we create a data frame from that",
+      "start": 395.199,
+      "duration": 3.921
+    },
+    {
+      "text": "list of tuples",
+      "start": 398.08,
+      "duration": 3.44
+    },
+    {
+      "text": "and we can see the results of the",
+      "start": 399.12,
+      "duration": 4.32
+    },
+    {
+      "text": "sensitivity analysis here",
+      "start": 401.52,
+      "duration": 5.04
+    },
+    {
+      "text": "in the data frame of course this is not",
+      "start": 403.44,
+      "duration": 4.96
+    },
+    {
+      "text": "doing any visualization yet",
+      "start": 406.56,
+      "duration": 3.759
+    },
+    {
+      "text": "that part is going to be added on after",
+      "start": 408.4,
+      "duration": 4.079
+    },
+    {
+      "text": "this",
+      "start": 410.319,
+      "duration": 2.16
+    },
+    {
+      "text": "um so this",
+      "start": 414.88,
+      "duration": 7.599
+    },
+    {
+      "text": "was kind of the process which is out",
+      "start": 418.56,
+      "duration": 4.32
+    },
+    {
+      "text": "there",
+      "start": 422.479,
+      "duration": 2.16
+    },
+    {
+      "text": "this is what people are doing right now",
+      "start": 422.88,
+      "duration": 3.28
+    },
+    {
+      "text": "in general",
+      "start": 424.639,
+      "duration": 4.081
+    },
+    {
+      "text": "um and i thought that there should be a",
+      "start": 426.16,
+      "duration": 3.599
+    },
+    {
+      "text": "good package",
+      "start": 428.72,
+      "duration": 3.44
+    },
+    {
+      "text": "which makes this process easier",
+      "start": 429.759,
+      "duration": 3.361
+    },
+    {
+      "text": "especially",
+      "start": 432.16,
+      "duration": 2.64
+    },
+    {
+      "text": "you know not only doing this but then",
+      "start": 433.12,
+      "duration": 3.84
+    },
+    {
+      "text": "taking the result and visualizing it as",
+      "start": 434.8,
+      "duration": 4.399
+    },
+    {
+      "text": "well",
+      "start": 436.96,
+      "duration": 2.239
+    },
+    {
+      "text": "but i really couldn't find any tool out",
+      "start": 440.0,
+      "duration": 4.08
+    },
+    {
+      "text": "there which",
+      "start": 443.36,
+      "duration": 3.92
+    },
+    {
+      "text": "was built for this purpose",
+      "start": 444.08,
+      "duration": 7.119
+    },
+    {
+      "text": "i think a lot of that reason is because",
+      "start": 447.28,
+      "duration": 6.88
+    },
+    {
+      "text": "certainly a lot of financial",
+      "start": 451.199,
+      "duration": 3.921
+    },
+    {
+      "text": "institutions",
+      "start": 454.16,
+      "duration": 3.52
+    },
+    {
+      "text": "are already using python and they're",
+      "start": 455.12,
+      "duration": 5.359
+    },
+    {
+      "text": "building models out in python",
+      "start": 457.68,
+      "duration": 6.48
+    },
+    {
+      "text": "but for the most part these institutions",
+      "start": 460.479,
+      "duration": 6.801
+    },
+    {
+      "text": "are not going to be open sourcing their",
+      "start": 464.16,
+      "duration": 5.2
+    },
+    {
+      "text": "code they're just going to be keeping it",
+      "start": 467.28,
+      "duration": 4.16
+    },
+    {
+      "text": "within the company as their own",
+      "start": 469.36,
+      "duration": 3.76
+    },
+    {
+      "text": "intellectual property",
+      "start": 471.44,
+      "duration": 3.68
+    },
+    {
+      "text": "uh they want to have the rights to it",
+      "start": 473.12,
+      "duration": 3.759
+    },
+    {
+      "text": "and not anyone else",
+      "start": 475.12,
+      "duration": 4.799
+    },
+    {
+      "text": "and so i think there have been a lot of",
+      "start": 476.879,
+      "duration": 5.44
+    },
+    {
+      "text": "these tools created",
+      "start": 479.919,
+      "duration": 3.921
+    },
+    {
+      "text": "but they're just not out there for",
+      "start": 482.319,
+      "duration": 3.44
+    },
+    {
+      "text": "anyone to use they're within these",
+      "start": 483.84,
+      "duration": 4.479
+    },
+    {
+      "text": "banks and financial institutions that",
+      "start": 485.759,
+      "duration": 3.44
+    },
+    {
+      "text": "keep a close",
+      "start": 488.319,
+      "duration": 2.521
+    },
+    {
+      "text": "guard on the tools that they've",
+      "start": 489.199,
+      "duration": 4.56
+    },
+    {
+      "text": "developed",
+      "start": 490.84,
+      "duration": 6.28
+    },
+    {
+      "text": "so it really takes uh you know someone",
+      "start": 493.759,
+      "duration": 7.84
+    },
+    {
+      "text": "who both has the knowledge and uh",
+      "start": 497.12,
+      "duration": 7.519
+    },
+    {
+      "text": "is willing to be able to contribute",
+      "start": 501.599,
+      "duration": 5.761
+    },
+    {
+      "text": "to create an open source package without",
+      "start": 504.639,
+      "duration": 3.601
+    },
+    {
+      "text": "a lot",
+      "start": 507.36,
+      "duration": 4.0
+    },
+    {
+      "text": "of immediate benefit from it so",
+      "start": 508.24,
+      "duration": 5.359
+    },
+    {
+      "text": "a professor teaching a financial",
+      "start": 511.36,
+      "duration": 3.2
+    },
+    {
+      "text": "modeling course",
+      "start": 513.599,
+      "duration": 5.841
+    },
+    {
+      "text": "is kind of the ideal person to do that",
+      "start": 514.56,
+      "duration": 9.359
+    },
+    {
+      "text": "so and you know unlike in excel",
+      "start": 519.44,
+      "duration": 6.079
+    },
+    {
+      "text": "you can write add-ons for excel but",
+      "start": 523.919,
+      "duration": 3.36
+    },
+    {
+      "text": "that's kind of heavy weight",
+      "start": 525.519,
+      "duration": 5.44
+    },
+    {
+      "text": "um and in general people just use excel",
+      "start": 527.279,
+      "duration": 5.201
+    },
+    {
+      "text": "as is",
+      "start": 530.959,
+      "duration": 3.761
+    },
+    {
+      "text": "in python you have the base language but",
+      "start": 532.48,
+      "duration": 4.56
+    },
+    {
+      "text": "then you have all these additional 250",
+      "start": 534.72,
+      "duration": 2.72
+    },
+    {
+      "text": "000",
+      "start": 537.04,
+      "duration": 2.239
+    },
+    {
+      "text": "packages open source packages which have",
+      "start": 537.44,
+      "duration": 3.76
+    },
+    {
+      "text": "been created to extend the functionality",
+      "start": 539.279,
+      "duration": 3.68
+    },
+    {
+      "text": "of python",
+      "start": 541.2,
+      "duration": 4.319
+    },
+    {
+      "text": "and it's really easy for anyone to",
+      "start": 542.959,
+      "duration": 4.161
+    },
+    {
+      "text": "create a package",
+      "start": 545.519,
+      "duration": 4.801
+    },
+    {
+      "text": "and contribute to the ecosystem create a",
+      "start": 547.12,
+      "duration": 5.44
+    },
+    {
+      "text": "tool that solves a problem",
+      "start": 550.32,
+      "duration": 4.16
+    },
+    {
+      "text": "so that nobody else has to continue",
+      "start": 552.56,
+      "duration": 3.52
+    },
+    {
+      "text": "solving the same problem in their own",
+      "start": 554.48,
+      "duration": 3.52
+    },
+    {
+      "text": "work",
+      "start": 556.08,
+      "duration": 4.56
+    },
+    {
+      "text": "so i went ahead and created the",
+      "start": 558.0,
+      "duration": 4.08
+    },
+    {
+      "text": "sensitivity package",
+      "start": 560.64,
+      "duration": 4.8
+    },
+    {
+      "text": "in python which simplifies this whole",
+      "start": 562.08,
+      "duration": 5.759
+    },
+    {
+      "text": "flow as well as the visualization",
+      "start": 565.44,
+      "duration": 4.88
+    },
+    {
+      "text": "of the results and makes this whole",
+      "start": 567.839,
+      "duration": 3.041
+    },
+    {
+      "text": "thing",
+      "start": 570.32,
+      "duration": 4.32
+    },
+    {
+      "text": "very easy so i took the time",
+      "start": 570.88,
+      "duration": 5.84
+    },
+    {
+      "text": "to kind of solve this once in a general",
+      "start": 574.64,
+      "duration": 4.24
+    },
+    {
+      "text": "way and now everyone in the world",
+      "start": 576.72,
+      "duration": 5.84
+    },
+    {
+      "text": "can benefit from my efforts",
+      "start": 578.88,
+      "duration": 6.88
+    },
+    {
+      "text": "so that is really uh the big power of",
+      "start": 582.56,
+      "duration": 5.12
+    },
+    {
+      "text": "python that anyone in the world can",
+      "start": 585.76,
+      "duration": 3.84
+    },
+    {
+      "text": "contribute and it can make everyone else",
+      "start": 587.68,
+      "duration": 2.64
+    },
+    {
+      "text": "and the world",
+      "start": 589.6,
+      "duration": 4.08
+    },
+    {
+      "text": "more productive so everyone's not",
+      "start": 590.32,
+      "duration": 7.199
+    },
+    {
+      "text": "reinventing the wheel all the time",
+      "start": 593.68,
+      "duration": 3.839
+    },
+    {
+      "text": "so let's look at an example with",
+      "start": 597.68,
+      "duration": 6.159
+    },
+    {
+      "text": "the sensitivity package",
+      "start": 600.72,
+      "duration": 5.119
+    },
+    {
+      "text": "so from sensitivity we're going to",
+      "start": 603.839,
+      "duration": 4.161
+    },
+    {
+      "text": "import sensitivity analyzer that's the",
+      "start": 605.839,
+      "duration": 3.281
+    },
+    {
+      "text": "main class which",
+      "start": 608.0,
+      "duration": 4.48
+    },
+    {
+      "text": "handles all this and then you create a",
+      "start": 609.12,
+      "duration": 4.88
+    },
+    {
+      "text": "dictionary",
+      "start": 612.48,
+      "duration": 3.28
+    },
+    {
+      "text": "where the keys of the dictionaries are",
+      "start": 614.0,
+      "duration": 3.44
+    },
+    {
+      "text": "the names of your",
+      "start": 615.76,
+      "duration": 3.6
+    },
+    {
+      "text": "inputs the arguments to the function",
+      "start": 617.44,
+      "duration": 3.839
+    },
+    {
+      "text": "your model function",
+      "start": 619.36,
+      "duration": 5.039
+    },
+    {
+      "text": "and the values are what",
+      "start": 621.279,
+      "duration": 6.8
+    },
+    {
+      "text": "each individual values of the inputs you",
+      "start": 624.399,
+      "duration": 4.56
+    },
+    {
+      "text": "want to look at",
+      "start": 628.079,
+      "duration": 4.081
+    },
+    {
+      "text": "so one and two for input one 4 and 5 for",
+      "start": 628.959,
+      "duration": 5.361
+    },
+    {
+      "text": "input 2.",
+      "start": 632.16,
+      "duration": 5.359
+    },
+    {
+      "text": "then you pass to sensitivity analyzer",
+      "start": 634.32,
+      "duration": 6.48
+    },
+    {
+      "text": "that dictionary of the inputs",
+      "start": 637.519,
+      "duration": 6.401
+    },
+    {
+      "text": "and your model function and that creates",
+      "start": 640.8,
+      "duration": 5.76
+    },
+    {
+      "text": "an instance of the sensitivity analyzer",
+      "start": 643.92,
+      "duration": 6.08
+    },
+    {
+      "text": "and then the df data frame",
+      "start": 646.56,
+      "duration": 6.0
+    },
+    {
+      "text": "attribute of the sensitivity analyzer",
+      "start": 650.0,
+      "duration": 4.48
+    },
+    {
+      "text": "already has the results",
+      "start": 652.56,
+      "duration": 5.2
+    },
+    {
+      "text": "of doing this nested loop",
+      "start": 654.48,
+      "duration": 4.72
+    },
+    {
+      "text": "and collecting all the results and",
+      "start": 657.76,
+      "duration": 4.16
+    },
+    {
+      "text": "everything that have been done here",
+      "start": 659.2,
+      "duration": 4.319
+    },
+    {
+      "text": "and we'll see in a minute here in the",
+      "start": 661.92,
+      "duration": 3.039
+    },
+    {
+      "text": "example that is also",
+      "start": 663.519,
+      "duration": 3.76
+    },
+    {
+      "text": "similarly easy to visualize all the",
+      "start": 664.959,
+      "duration": 5.361
+    },
+    {
+      "text": "results as well",
+      "start": 667.279,
+      "duration": 3.041
+    },
+    {
+      "text": "so let's go ahead and look at the",
+      "start": 670.88,
+      "duration": 3.199
+    },
+    {
+      "text": "jupiter example",
+      "start": 673.04,
+      "duration": 3.919
+    },
+    {
+      "text": "for all of this",
+      "start": 674.079,
+      "duration": 2.88
+    },
+    {
+      "text": "so the first thing that we're going to",
+      "start": 678.16,
+      "duration": 3.679
+    },
+    {
+      "text": "do is",
+      "start": 679.92,
+      "duration": 5.12
+    },
+    {
+      "text": "install the sensitivity package",
+      "start": 681.839,
+      "duration": 5.921
+    },
+    {
+      "text": "and so in this is something that you",
+      "start": 685.04,
+      "duration": 4.56
+    },
+    {
+      "text": "would run in a terminal but jupiter has",
+      "start": 687.76,
+      "duration": 3.04
+    },
+    {
+      "text": "this shortcut",
+      "start": 689.6,
+      "duration": 3.04
+    },
+    {
+      "text": "uh as mentioned in the video on",
+      "start": 690.8,
+      "duration": 3.36
+    },
+    {
+      "text": "installing packages",
+      "start": 692.64,
+      "duration": 4.08
+    },
+    {
+      "text": "that uh you put the exclamation mark",
+      "start": 694.16,
+      "duration": 3.52
+    },
+    {
+      "text": "that means run it",
+      "start": 696.72,
+      "duration": 2.96
+    },
+    {
+      "text": "in a terminal in the background and then",
+      "start": 697.68,
+      "duration": 3.839
+    },
+    {
+      "text": "we want to do pip install",
+      "start": 699.68,
+      "duration": 4.32
+    },
+    {
+      "text": "sensitivity and i'm going to go ahead",
+      "start": 701.519,
+      "duration": 3.201
+    },
+    {
+      "text": "and add in",
+      "start": 704.0,
+      "duration": 3.2
+    },
+    {
+      "text": "upgrade because i already have it",
+      "start": 704.72,
+      "duration": 4.4
+    },
+    {
+      "text": "installed and i know that i've released",
+      "start": 707.2,
+      "duration": 4.0
+    },
+    {
+      "text": "some updates for the package and i want",
+      "start": 709.12,
+      "duration": 4.32
+    },
+    {
+      "text": "to have all those updates here",
+      "start": 711.2,
+      "duration": 3.439
+    },
+    {
+      "text": "so i'm going to run that and it's going",
+      "start": 713.44,
+      "duration": 2.8
+    },
+    {
+      "text": "to look like it's doing nothing for a",
+      "start": 714.639,
+      "duration": 2.88
+    },
+    {
+      "text": "little bit and then eventually",
+      "start": 716.24,
+      "duration": 3.68
+    },
+    {
+      "text": "it will pop out all the output from the",
+      "start": 717.519,
+      "duration": 3.201
+    },
+    {
+      "text": "result",
+      "start": 719.92,
+      "duration": 5.52
+    },
+    {
+      "text": "as we see now and we can see",
+      "start": 720.72,
+      "duration": 8.119
+    },
+    {
+      "text": "that it successfully installed",
+      "start": 725.44,
+      "duration": 4.56
+    },
+    {
+      "text": "sensitivity",
+      "start": 728.839,
+      "duration": 4.12
+    },
+    {
+      "text": "as of making this video 0.2.5 is the",
+      "start": 730.0,
+      "duration": 3.36
+    },
+    {
+      "text": "current",
+      "start": 732.959,
+      "duration": 3.44
+    },
+    {
+      "text": "version um you may just get",
+      "start": 733.36,
+      "duration": 4.719
+    },
+    {
+      "text": "requirement already satisfied for",
+      "start": 736.399,
+      "duration": 3.601
+    },
+    {
+      "text": "everything if you already have the",
+      "start": 738.079,
+      "duration": 4.721
+    },
+    {
+      "text": "newest version",
+      "start": 740.0,
+      "duration": 2.8
+    },
+    {
+      "text": "um and then if you run that first you",
+      "start": 742.839,
+      "duration": 3.721
+    },
+    {
+      "text": "don't really have to do this step but",
+      "start": 745.279,
+      "duration": 2.641
+    },
+    {
+      "text": "i'm just going to go ahead and",
+      "start": 746.56,
+      "duration": 4.959
+    },
+    {
+      "text": "restart the kernel for good measure",
+      "start": 747.92,
+      "duration": 3.599
+    },
+    {
+      "text": "so now let's uh go through",
+      "start": 751.76,
+      "duration": 6.24
+    },
+    {
+      "text": "what the process looks like kind of the",
+      "start": 755.36,
+      "duration": 4.159
+    },
+    {
+      "text": "original way without the sensitivity",
+      "start": 758.0,
+      "duration": 2.639
+    },
+    {
+      "text": "package",
+      "start": 759.519,
+      "duration": 2.801
+    },
+    {
+      "text": "and then we'll go into how to use the",
+      "start": 760.639,
+      "duration": 4.561
+    },
+    {
+      "text": "sensitivity package",
+      "start": 762.32,
+      "duration": 6.16
+    },
+    {
+      "text": "um so i'm going to import pandas",
+      "start": 765.2,
+      "duration": 4.4
+    },
+    {
+      "text": "that we'll use for collecting the",
+      "start": 768.48,
+      "duration": 3.599
+    },
+    {
+      "text": "results and i'm defining the model",
+      "start": 769.6,
+      "duration": 5.44
+    },
+    {
+      "text": "function so again this can be absolutely",
+      "start": 772.079,
+      "duration": 4.0
+    },
+    {
+      "text": "anything",
+      "start": 775.04,
+      "duration": 4.56
+    },
+    {
+      "text": "it can be your full financial model",
+      "start": 776.079,
+      "duration": 6.0
+    },
+    {
+      "text": "here we're just taking one number to the",
+      "start": 779.6,
+      "duration": 3.919
+    },
+    {
+      "text": "power of another number",
+      "start": 782.079,
+      "duration": 3.2
+    },
+    {
+      "text": "it really doesn't matter what happens",
+      "start": 783.519,
+      "duration": 3.841
+    },
+    {
+      "text": "inside of here that's the beauty of",
+      "start": 785.279,
+      "duration": 2.481
+    },
+    {
+      "text": "using",
+      "start": 787.36,
+      "duration": 3.68
+    },
+    {
+      "text": "functions we can plug whatever",
+      "start": 787.76,
+      "duration": 4.16
+    },
+    {
+      "text": "functionality",
+      "start": 791.04,
+      "duration": 3.359
+    },
+    {
+      "text": "we want into this structure and it works",
+      "start": 791.92,
+      "duration": 5.359
+    },
+    {
+      "text": "exactly the same",
+      "start": 794.399,
+      "duration": 2.88
+    },
+    {
+      "text": "so when i run the model i can get a",
+      "start": 797.76,
+      "duration": 6.16
+    },
+    {
+      "text": "result from it",
+      "start": 801.04,
+      "duration": 2.88
+    },
+    {
+      "text": "so then if we want to look at three",
+      "start": 804.16,
+      "duration": 4.479
+    },
+    {
+      "text": "different values for x1 three different",
+      "start": 806.88,
+      "duration": 4.639
+    },
+    {
+      "text": "values for x2",
+      "start": 808.639,
+      "duration": 4.961
+    },
+    {
+      "text": "then when we look at the nested loop we",
+      "start": 811.519,
+      "duration": 3.601
+    },
+    {
+      "text": "can see",
+      "start": 813.6,
+      "duration": 5.12
+    },
+    {
+      "text": "that we get basically each combination",
+      "start": 815.12,
+      "duration": 8.56
+    },
+    {
+      "text": "each pairwise combination of the inputs",
+      "start": 818.72,
+      "duration": 4.96
+    },
+    {
+      "text": "so we get nine total cases from three",
+      "start": 823.839,
+      "duration": 6.401
+    },
+    {
+      "text": "cases for each",
+      "start": 827.279,
+      "duration": 2.961
+    },
+    {
+      "text": "then we can add in calculating the model",
+      "start": 830.959,
+      "duration": 4.161
+    },
+    {
+      "text": "running the model",
+      "start": 833.76,
+      "duration": 3.84
+    },
+    {
+      "text": "um so that's just calling the model",
+      "start": 835.12,
+      "duration": 3.279
+    },
+    {
+      "text": "function",
+      "start": 837.6,
+      "duration": 3.84
+    },
+    {
+      "text": "on the inputs from the loops",
+      "start": 838.399,
+      "duration": 5.921
+    },
+    {
+      "text": "and then uh getting the result and here",
+      "start": 841.44,
+      "duration": 4.399
+    },
+    {
+      "text": "we're just going to print out the result",
+      "start": 844.32,
+      "duration": 4.319
+    },
+    {
+      "text": "as the next step",
+      "start": 845.839,
+      "duration": 2.8
+    },
+    {
+      "text": "um and then after that let's collect the",
+      "start": 848.959,
+      "duration": 4.641
+    },
+    {
+      "text": "results",
+      "start": 852.72,
+      "duration": 4.16
+    },
+    {
+      "text": "so taking the same loop but now adding",
+      "start": 853.6,
+      "duration": 4.16
+    },
+    {
+      "text": "to it that",
+      "start": 856.88,
+      "duration": 3.04
+    },
+    {
+      "text": "instead of just printing the result i'm",
+      "start": 857.76,
+      "duration": 4.079
+    },
+    {
+      "text": "going to have an output list",
+      "start": 859.92,
+      "duration": 5.2
+    },
+    {
+      "text": "and i'm going to append to that a tuple",
+      "start": 861.839,
+      "duration": 4.321
+    },
+    {
+      "text": "which contains",
+      "start": 865.12,
+      "duration": 4.399
+    },
+    {
+      "text": "each of the inputs as well as the output",
+      "start": 866.16,
+      "duration": 5.76
+    },
+    {
+      "text": "and then we can see that we have each",
+      "start": 869.519,
+      "duration": 3.281
+    },
+    {
+      "text": "pair of inputs",
+      "start": 871.92,
+      "duration": 5.44
+    },
+    {
+      "text": "associated with the output",
+      "start": 872.8,
+      "duration": 4.56
+    },
+    {
+      "text": "then we can put that into a data frame",
+      "start": 879.279,
+      "duration": 4.881
+    },
+    {
+      "text": "so if we give a data frame a list of",
+      "start": 882.639,
+      "duration": 3.921
+    },
+    {
+      "text": "tuples and then the names of the columns",
+      "start": 884.16,
+      "duration": 4.239
+    },
+    {
+      "text": "it's able to create a data frame from",
+      "start": 886.56,
+      "duration": 4.079
+    },
+    {
+      "text": "that",
+      "start": 888.399,
+      "duration": 2.24
+    },
+    {
+      "text": "and then we can add some styling",
+      "start": 892.079,
+      "duration": 7.361
+    },
+    {
+      "text": "about the result so here i'm adding a",
+      "start": 895.519,
+      "duration": 5.76
+    },
+    {
+      "text": "red yellow green color map",
+      "start": 899.44,
+      "duration": 5.199
+    },
+    {
+      "text": "um to the y column the output column",
+      "start": 901.279,
+      "duration": 6.721
+    },
+    {
+      "text": "uh which is now showing the high results",
+      "start": 904.639,
+      "duration": 4.241
+    },
+    {
+      "text": "in green",
+      "start": 908.0,
+      "duration": 5.04
+    },
+    {
+      "text": "and the low results in red",
+      "start": 908.88,
+      "duration": 6.24
+    },
+    {
+      "text": "then the other way to go about it is to",
+      "start": 913.04,
+      "duration": 4.799
+    },
+    {
+      "text": "use a hexman plot",
+      "start": 915.12,
+      "duration": 6.079
+    },
+    {
+      "text": "um so that's also",
+      "start": 917.839,
+      "duration": 6.881
+    },
+    {
+      "text": "off of df.plot just like we had done for",
+      "start": 921.199,
+      "duration": 6.241
+    },
+    {
+      "text": "all the other plots with pandas",
+      "start": 924.72,
+      "duration": 6.799
+    },
+    {
+      "text": "and you give it x and y as your two",
+      "start": 927.44,
+      "duration": 8.0
+    },
+    {
+      "text": "input variables and then",
+      "start": 931.519,
+      "duration": 7.201
+    },
+    {
+      "text": "c that stands for color",
+      "start": 935.44,
+      "duration": 5.44
+    },
+    {
+      "text": "is going to be determined by the outcome",
+      "start": 938.72,
+      "duration": 3.76
+    },
+    {
+      "text": "variable",
+      "start": 940.88,
+      "duration": 4.639
+    },
+    {
+      "text": "and then this grid size says",
+      "start": 942.48,
+      "duration": 7.359
+    },
+    {
+      "text": "going in each direction how many um",
+      "start": 945.519,
+      "duration": 6.721
+    },
+    {
+      "text": "like blocks should there be this is like",
+      "start": 949.839,
+      "duration": 3.761
+    },
+    {
+      "text": "three by three",
+      "start": 952.24,
+      "duration": 5.039
+    },
+    {
+      "text": "blocks in the graph",
+      "start": 953.6,
+      "duration": 6.88
+    },
+    {
+      "text": "again we pass that color map",
+      "start": 957.279,
+      "duration": 6.321
+    },
+    {
+      "text": "red yellow green um",
+      "start": 960.48,
+      "duration": 6.56
+    },
+    {
+      "text": "and then this share x equals false",
+      "start": 963.6,
+      "duration": 7.599
+    },
+    {
+      "text": "makes all the formatting work correctly",
+      "start": 967.04,
+      "duration": 8.719
+    },
+    {
+      "text": "um so that's without the library",
+      "start": 971.199,
+      "duration": 6.401
+    },
+    {
+      "text": "and then with these color maps you can",
+      "start": 975.759,
+      "duration": 3.44
+    },
+    {
+      "text": "do underscore r",
+      "start": 977.6,
+      "duration": 5.039
+    },
+    {
+      "text": "to reverse the color map",
+      "start": 979.199,
+      "duration": 5.841
+    },
+    {
+      "text": "if it turns out that a low number of the",
+      "start": 982.639,
+      "duration": 3.921
+    },
+    {
+      "text": "result is a better thing",
+      "start": 985.04,
+      "duration": 2.96
+    },
+    {
+      "text": "like years to retirement we want to",
+      "start": 986.56,
+      "duration": 3.04
+    },
+    {
+      "text": "retire quicker so there you would want",
+      "start": 988.0,
+      "duration": 2.8
+    },
+    {
+      "text": "the reverse",
+      "start": 989.6,
+      "duration": 4.64
+    },
+    {
+      "text": "red yellow green color map",
+      "start": 990.8,
+      "duration": 3.44
+    },
+    {
+      "text": "but all this is a little bit involved",
+      "start": 994.399,
+      "duration": 3.521
+    },
+    {
+      "text": "it's not super complicated but",
+      "start": 996.079,
+      "duration": 4.241
+    },
+    {
+      "text": "there's a fair number of steps here so",
+      "start": 997.92,
+      "duration": 3.919
+    },
+    {
+      "text": "the sensitivity",
+      "start": 1000.32,
+      "duration": 3.36
+    },
+    {
+      "text": "uh package is going to make this all",
+      "start": 1001.839,
+      "duration": 3.12
+    },
+    {
+      "text": "easier",
+      "start": 1003.68,
+      "duration": 4.079
+    },
+    {
+      "text": "so with the sensitivity package we set",
+      "start": 1004.959,
+      "duration": 3.841
+    },
+    {
+      "text": "up that",
+      "start": 1007.759,
+      "duration": 3.921
+    },
+    {
+      "text": "dictionary of the inputs and then we",
+      "start": 1008.8,
+      "duration": 3.599
+    },
+    {
+      "text": "create",
+      "start": 1011.68,
+      "duration": 4.159
+    },
+    {
+      "text": "the sensitivity analyzer",
+      "start": 1012.399,
+      "duration": 6.961
+    },
+    {
+      "text": "and we pass to the sensitivity analyzer",
+      "start": 1015.839,
+      "duration": 6.56
+    },
+    {
+      "text": "that dictionary as well as the model",
+      "start": 1019.36,
+      "duration": 3.68
+    },
+    {
+      "text": "function",
+      "start": 1022.399,
+      "duration": 2.56
+    },
+    {
+      "text": "and notice that there's no open close",
+      "start": 1023.04,
+      "duration": 3.68
+    },
+    {
+      "text": "parenthesis here",
+      "start": 1024.959,
+      "duration": 4.561
+    },
+    {
+      "text": "that's because we're passing the model",
+      "start": 1026.72,
+      "duration": 3.44
+    },
+    {
+      "text": "function",
+      "start": 1029.52,
+      "duration": 3.84
+    },
+    {
+      "text": "itself and not the result",
+      "start": 1030.16,
+      "duration": 6.24
+    },
+    {
+      "text": "of calling the model function as soon as",
+      "start": 1033.36,
+      "duration": 4.24
+    },
+    {
+      "text": "you put the parenthesis it's going to",
+      "start": 1036.4,
+      "duration": 3.76
+    },
+    {
+      "text": "call it evaluate it return the result",
+      "start": 1037.6,
+      "duration": 5.599
+    },
+    {
+      "text": "we want to pass the function itself so",
+      "start": 1040.16,
+      "duration": 5.6
+    },
+    {
+      "text": "that sensitivity analyzer can use this",
+      "start": 1043.199,
+      "duration": 3.12
+    },
+    {
+      "text": "function",
+      "start": 1045.76,
+      "duration": 3.76
+    },
+    {
+      "text": "that we're passing to it",
+      "start": 1046.319,
+      "duration": 3.201
+    },
+    {
+      "text": "um so you run sensitivity analyzer and",
+      "start": 1050.08,
+      "duration": 3.76
+    },
+    {
+      "text": "you'll see",
+      "start": 1053.039,
+      "duration": 3.441
+    },
+    {
+      "text": "this progress far go by here the model",
+      "start": 1053.84,
+      "duration": 4.32
+    },
+    {
+      "text": "didn't take any time so it basically",
+      "start": 1056.48,
+      "duration": 3.36
+    },
+    {
+      "text": "filled up immediately",
+      "start": 1058.16,
+      "duration": 5.28
+    },
+    {
+      "text": "um 450 iterations per second",
+      "start": 1059.84,
+      "duration": 5.52
+    },
+    {
+      "text": "um and you'll see a random nine",
+      "start": 1063.44,
+      "duration": 3.92
+    },
+    {
+      "text": "iterations in total because we have",
+      "start": 1065.36,
+      "duration": 3.36
+    },
+    {
+      "text": "three times three",
+      "start": 1067.36,
+      "duration": 4.48
+    },
+    {
+      "text": "uh cases of inputs",
+      "start": 1068.72,
+      "duration": 6.48
+    },
+    {
+      "text": "um so you know there's definitely a",
+      "start": 1071.84,
+      "duration": 4.56
+    },
+    {
+      "text": "chance that you can",
+      "start": 1075.2,
+      "duration": 2.88
+    },
+    {
+      "text": "put too many inputs here and you get a",
+      "start": 1076.4,
+      "duration": 3.6
+    },
+    {
+      "text": "really huge number of cases",
+      "start": 1078.08,
+      "duration": 3.04
+    },
+    {
+      "text": "and then you'll see this thing just",
+      "start": 1080.0,
+      "duration": 2.799
+    },
+    {
+      "text": "taking forever and then you should",
+      "start": 1081.12,
+      "duration": 3.52
+    },
+    {
+      "text": "reevaluate how many inputs you want to",
+      "start": 1082.799,
+      "duration": 4.24
+    },
+    {
+      "text": "look at",
+      "start": 1084.64,
+      "duration": 2.399
+    },
+    {
+      "text": "so then we've run sensitivity analyzer",
+      "start": 1088.559,
+      "duration": 8.48
+    },
+    {
+      "text": "now we can get that same exact",
+      "start": 1093.12,
+      "duration": 6.64
+    },
+    {
+      "text": "data frame which we had seen before but",
+      "start": 1097.039,
+      "duration": 4.321
+    },
+    {
+      "text": "just it's already there",
+      "start": 1099.76,
+      "duration": 3.6
+    },
+    {
+      "text": "ready for us we didn't have to go and",
+      "start": 1101.36,
+      "duration": 4.319
+    },
+    {
+      "text": "calculate it",
+      "start": 1103.36,
+      "duration": 5.84
+    },
+    {
+      "text": "and then for the plots",
+      "start": 1105.679,
+      "duration": 7.201
+    },
+    {
+      "text": "we just do sa.plot and then we have that",
+      "start": 1109.2,
+      "duration": 4.64
+    },
+    {
+      "text": "hexman plot",
+      "start": 1112.88,
+      "duration": 5.28
+    },
+    {
+      "text": "easy as that and we can also get these",
+      "start": 1113.84,
+      "duration": 6.959
+    },
+    {
+      "text": "styled data frames",
+      "start": 1118.16,
+      "duration": 6.24
+    },
+    {
+      "text": "by doing sa.style dfs",
+      "start": 1120.799,
+      "duration": 6.0
+    },
+    {
+      "text": "and that is going to give you the data",
+      "start": 1124.4,
+      "duration": 3.12
+    },
+    {
+      "text": "frame",
+      "start": 1126.799,
+      "duration": 3.201
+    },
+    {
+      "text": "with um conditional formatting applied",
+      "start": 1127.52,
+      "duration": 4.88
+    },
+    {
+      "text": "to it",
+      "start": 1130.0,
+      "duration": 2.4
+    },
+    {
+      "text": "and there are options that you can apply",
+      "start": 1132.72,
+      "duration": 3.36
+    },
+    {
+      "text": "to",
+      "start": 1135.679,
+      "duration": 2.0
+    },
+    {
+      "text": "the sensitivity analyzer as well to",
+      "start": 1136.08,
+      "duration": 4.719
+    },
+    {
+      "text": "customize the output",
+      "start": 1137.679,
+      "duration": 3.12
+    },
+    {
+      "text": "and so i'm going to do a few different",
+      "start": 1140.96,
+      "duration": 4.56
+    },
+    {
+      "text": "things here",
+      "start": 1143.12,
+      "duration": 4.72
+    },
+    {
+      "text": "so i'm going to give it some labels so",
+      "start": 1145.52,
+      "duration": 4.8
+    },
+    {
+      "text": "that it'll change out x1 x2 for",
+      "start": 1147.84,
+      "duration": 6.24
+    },
+    {
+      "text": "whatever names i want to call the inputs",
+      "start": 1150.32,
+      "duration": 3.76
+    },
+    {
+      "text": "i'm going to pass grid size of three so",
+      "start": 1154.24,
+      "duration": 3.76
+    },
+    {
+      "text": "that it makes larger",
+      "start": 1156.08,
+      "duration": 5.92
+    },
+    {
+      "text": "blocks here reverse colors that was like",
+      "start": 1158.0,
+      "duration": 5.28
+    },
+    {
+      "text": "adding underscore r",
+      "start": 1162.0,
+      "duration": 3.2
+    },
+    {
+      "text": "to the color wrap before it just flips",
+      "start": 1163.28,
+      "duration": 4.08
+    },
+    {
+      "text": "the color map",
+      "start": 1165.2,
+      "duration": 4.64
+    },
+    {
+      "text": "then you can also pass a custom color",
+      "start": 1167.36,
+      "duration": 4.319
+    },
+    {
+      "text": "map",
+      "start": 1169.84,
+      "duration": 6.24
+    },
+    {
+      "text": "and if you want to know what are all the",
+      "start": 1171.679,
+      "duration": 4.401
+    },
+    {
+      "text": "color maps you can use just google map",
+      "start": 1176.4,
+      "duration": 4.08
+    },
+    {
+      "text": "plot lib color maps",
+      "start": 1178.4,
+      "duration": 4.56
+    },
+    {
+      "text": "um that will take you to choosing color",
+      "start": 1180.48,
+      "duration": 4.559
+    },
+    {
+      "text": "maps in matplotlib",
+      "start": 1182.96,
+      "duration": 4.8
+    },
+    {
+      "text": "and you'll see all these different ones",
+      "start": 1185.039,
+      "duration": 5.601
+    },
+    {
+      "text": "that you can pick",
+      "start": 1187.76,
+      "duration": 4.88
+    },
+    {
+      "text": "so all these names on the left are",
+      "start": 1190.64,
+      "duration": 3.36
+    },
+    {
+      "text": "things that you can pass",
+      "start": 1192.64,
+      "duration": 3.84
+    },
+    {
+      "text": "to color map to get a different color",
+      "start": 1194.0,
+      "duration": 4.72
+    },
+    {
+      "text": "map",
+      "start": 1196.48,
+      "duration": 5.439
+    },
+    {
+      "text": "um and then uh",
+      "start": 1198.72,
+      "duration": 5.28
+    },
+    {
+      "text": "yep that's all the options so then i'm",
+      "start": 1201.919,
+      "duration": 4.24
+    },
+    {
+      "text": "going to run this and then plot and now",
+      "start": 1204.0,
+      "duration": 3.12
+    },
+    {
+      "text": "we can see",
+      "start": 1206.159,
+      "duration": 3.281
+    },
+    {
+      "text": "it has a large grid size it has the new",
+      "start": 1207.12,
+      "duration": 4.72
+    },
+    {
+      "text": "color map it's reversed the color map",
+      "start": 1209.44,
+      "duration": 4.88
+    },
+    {
+      "text": "and we see the labels coming in instead",
+      "start": 1211.84,
+      "duration": 3.04
+    },
+    {
+      "text": "of the",
+      "start": 1214.32,
+      "duration": 3.76
+    },
+    {
+      "text": "actual names of the arguments",
+      "start": 1214.88,
+      "duration": 6.96
+    },
+    {
+      "text": "and we see that on the",
+      "start": 1218.08,
+      "duration": 3.76
+    },
+    {
+      "text": "data frames as well",
+      "start": 1223.52,
+      "duration": 6.8
+    },
+    {
+      "text": "um and",
+      "start": 1226.559,
+      "duration": 5.761
+    },
+    {
+      "text": "the really beautiful thing about this",
+      "start": 1230.32,
+      "duration": 3.92
+    },
+    {
+      "text": "library is you can keep adding more",
+      "start": 1232.32,
+      "duration": 2.4
+    },
+    {
+      "text": "inputs",
+      "start": 1234.24,
+      "duration": 2.799
+    },
+    {
+      "text": "that you're looking at and you really",
+      "start": 1234.72,
+      "duration": 4.319
+    },
+    {
+      "text": "don't have to change your code",
+      "start": 1237.039,
+      "duration": 3.681
+    },
+    {
+      "text": "at all it works in the exact same",
+      "start": 1239.039,
+      "duration": 4.161
+    },
+    {
+      "text": "structure",
+      "start": 1240.72,
+      "duration": 2.48
+    },
+    {
+      "text": "so here we have a second model it's got",
+      "start": 1243.36,
+      "duration": 4.08
+    },
+    {
+      "text": "three inputs this time",
+      "start": 1245.6,
+      "duration": 4.559
+    },
+    {
+      "text": "and now we've got our dictionary which",
+      "start": 1247.44,
+      "duration": 4.719
+    },
+    {
+      "text": "has the three different",
+      "start": 1250.159,
+      "duration": 5.52
+    },
+    {
+      "text": "inputs um and three different values of",
+      "start": 1252.159,
+      "duration": 4.241
+    },
+    {
+      "text": "each",
+      "start": 1255.679,
+      "duration": 3.12
+    },
+    {
+      "text": "so we run that this time we can see it",
+      "start": 1256.4,
+      "duration": 3.759
+    },
+    {
+      "text": "ran 27 different",
+      "start": 1258.799,
+      "duration": 5.76
+    },
+    {
+      "text": "cases three times three times three um",
+      "start": 1260.159,
+      "duration": 7.601
+    },
+    {
+      "text": "and what we see when we plot it is that",
+      "start": 1264.559,
+      "duration": 3.841
+    },
+    {
+      "text": "now we get",
+      "start": 1267.76,
+      "duration": 3.12
+    },
+    {
+      "text": "three different plots all at once",
+      "start": 1268.4,
+      "duration": 4.56
+    },
+    {
+      "text": "without having to do any extra effort",
+      "start": 1270.88,
+      "duration": 5.2
+    },
+    {
+      "text": "we get x1 versus x2 we get x1 versus",
+      "start": 1272.96,
+      "duration": 6.4
+    },
+    {
+      "text": "x3 and we get x2 versus x3 so we get all",
+      "start": 1276.08,
+      "duration": 4.959
+    },
+    {
+      "text": "the different combinations of the",
+      "start": 1279.36,
+      "duration": 2.88
+    },
+    {
+      "text": "different inputs",
+      "start": 1281.039,
+      "duration": 4.401
+    },
+    {
+      "text": "and the relationships between them",
+      "start": 1282.24,
+      "duration": 5.12
+    },
+    {
+      "text": "so really easy to run a lot of different",
+      "start": 1285.44,
+      "duration": 4.64
+    },
+    {
+      "text": "inputs and visualize it all at once with",
+      "start": 1287.36,
+      "duration": 6.08
+    },
+    {
+      "text": "just a couple lines of code",
+      "start": 1290.08,
+      "duration": 3.36
+    },
+    {
+      "text": "and then we'll see the same thing with",
+      "start": 1293.84,
+      "duration": 4.079
+    },
+    {
+      "text": "the style data frames",
+      "start": 1295.84,
+      "duration": 5.92
+    },
+    {
+      "text": "um we'll get one verse two one verse",
+      "start": 1297.919,
+      "duration": 5.201
+    },
+    {
+      "text": "three two verse three and as you",
+      "start": 1301.76,
+      "duration": 2.24
+    },
+    {
+      "text": "continue to add more",
+      "start": 1303.12,
+      "duration": 3.52
+    },
+    {
+      "text": "inputs you'll get all those combinations",
+      "start": 1304.0,
+      "duration": 3.679
+    },
+    {
+      "text": "so it can become",
+      "start": 1306.64,
+      "duration": 4.48
+    },
+    {
+      "text": "a lot of output really quickly",
+      "start": 1307.679,
+      "duration": 3.441
+    },
+    {
+      "text": "um and if you need to look up",
+      "start": 1311.2,
+      "duration": 6.32
+    },
+    {
+      "text": "any so this style data frames you can",
+      "start": 1314.64,
+      "duration": 4.8
+    },
+    {
+      "text": "see i saved it into styled",
+      "start": 1317.52,
+      "duration": 4.56
+    },
+    {
+      "text": "predict it does automatically print out",
+      "start": 1319.44,
+      "duration": 3.68
+    },
+    {
+      "text": "the results",
+      "start": 1322.08,
+      "duration": 6.24
+    },
+    {
+      "text": "even if you save it into a variable",
+      "start": 1323.12,
+      "duration": 5.2
+    },
+    {
+      "text": "you'll see what we have here is actually",
+      "start": 1328.559,
+      "duration": 3.921
+    },
+    {
+      "text": "a dictionary",
+      "start": 1330.32,
+      "duration": 6.16
+    },
+    {
+      "text": "where the keys are tuples",
+      "start": 1332.48,
+      "duration": 4.0
+    },
+    {
+      "text": "and the values are the style data frames",
+      "start": 1337.28,
+      "duration": 5.68
+    },
+    {
+      "text": "so you can also look up",
+      "start": 1340.96,
+      "duration": 4.719
+    },
+    {
+      "text": "reference any of the individual results",
+      "start": 1342.96,
+      "duration": 3.92
+    },
+    {
+      "text": "that you want to",
+      "start": 1345.679,
+      "duration": 3.601
+    },
+    {
+      "text": "look at",
+      "start": 1346.88,
+      "duration": 2.4
+    },
+    {
+      "text": "so we can also do some additional",
+      "start": 1352.559,
+      "duration": 3.761
+    },
+    {
+      "text": "styling",
+      "start": 1354.799,
+      "duration": 4.081
+    },
+    {
+      "text": "we can change the number formatting of",
+      "start": 1356.32,
+      "duration": 4.08
+    },
+    {
+      "text": "the results as well",
+      "start": 1358.88,
+      "duration": 3.76
+    },
+    {
+      "text": "and you can pass this in either when you",
+      "start": 1360.4,
+      "duration": 3.519
+    },
+    {
+      "text": "create the sensitivity",
+      "start": 1362.64,
+      "duration": 4.0
+    },
+    {
+      "text": "analyzer at the beginning or to the",
+      "start": 1363.919,
+      "duration": 5.601
+    },
+    {
+      "text": "style dfs",
+      "start": 1366.64,
+      "duration": 2.88
+    },
+    {
+      "text": "command you can pass the number format",
+      "start": 1369.6,
+      "duration": 4.48
+    },
+    {
+      "text": "and this number format works exactly the",
+      "start": 1372.08,
+      "duration": 2.959
+    },
+    {
+      "text": "same as the",
+      "start": 1374.08,
+      "duration": 3.68
+    },
+    {
+      "text": "pandas number formatting uh that we",
+      "start": 1375.039,
+      "duration": 4.241
+    },
+    {
+      "text": "learned from the styling",
+      "start": 1377.76,
+      "duration": 4.56
+    },
+    {
+      "text": "penis data frames lecture",
+      "start": 1379.28,
+      "duration": 5.68
+    },
+    {
+      "text": "um where you basically put the same kind",
+      "start": 1382.32,
+      "duration": 3.76
+    },
+    {
+      "text": "of string",
+      "start": 1384.96,
+      "duration": 4.24
+    },
+    {
+      "text": "as like an f uh only you don't put the",
+      "start": 1386.08,
+      "duration": 4.24
+    },
+    {
+      "text": "variable here",
+      "start": 1389.2,
+      "duration": 2.64
+    },
+    {
+      "text": "you just put nothing there and then a",
+      "start": 1390.32,
+      "duration": 3.04
+    },
+    {
+      "text": "colon and then the format",
+      "start": 1391.84,
+      "duration": 3.36
+    },
+    {
+      "text": "code so you can see this is doing",
+      "start": 1393.36,
+      "duration": 3.52
+    },
+    {
+      "text": "dollars and then",
+      "start": 1395.2,
+      "duration": 4.0
+    },
+    {
+      "text": "uh formatted with commas and zero",
+      "start": 1396.88,
+      "duration": 3.919
+    },
+    {
+      "text": "decimal places",
+      "start": 1399.2,
+      "duration": 7.12
+    },
+    {
+      "text": "and we see that all coming here as well",
+      "start": 1400.799,
+      "duration": 5.521
+    },
+    {
+      "text": "so that covers the introduction to",
+      "start": 1407.6,
+      "duration": 4.16
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 1410.32,
+      "duration": 4.719
+    },
+    {
+      "text": "in python we'll come back next time to",
+      "start": 1411.76,
+      "duration": 5.52
+    },
+    {
+      "text": "add the sensitivity analysis into our",
+      "start": 1415.039,
+      "duration": 4.561
+    },
+    {
+      "text": "existing dynamic salary retirement",
+      "start": 1417.28,
+      "duration": 4.879
+    },
+    {
+      "text": "model so thanks for listening and see",
+      "start": 1419.6,
+      "duration": 7.6
+    },
+    {
+      "text": "you next time",
+      "start": 1422.159,
+      "duration": 5.041
+    }
+  ]
+}

@@ -1,0 +1,1084 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.72,
+      "duration": 2.32
+    },
+    {
+      "text": "nick duraburtis here teaching you",
+      "start": 3.6,
+      "duration": 3.84
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.04,
+      "duration": 3.12
+    },
+    {
+      "text": "be doing an",
+      "start": 7.44,
+      "duration": 3.68
+    },
+    {
+      "text": "introduction to monte carlo simulation",
+      "start": 8.16,
+      "duration": 3.439
+    },
+    {
+      "text": "and this",
+      "start": 11.12,
+      "duration": 3.12
+    },
+    {
+      "text": "is part of our new lecture segment on",
+      "start": 11.599,
+      "duration": 5.6
+    },
+    {
+      "text": "the same monte carlo simulation",
+      "start": 14.24,
+      "duration": 6.879
+    },
+    {
+      "text": "so we've explored in this course already",
+      "start": 17.199,
+      "duration": 6.401
+    },
+    {
+      "text": "a couple other ways of exploring the",
+      "start": 21.119,
+      "duration": 3.441
+    },
+    {
+      "text": "parameter space",
+      "start": 23.6,
+      "duration": 3.36
+    },
+    {
+      "text": "looking at different inputs and how they",
+      "start": 24.56,
+      "duration": 3.84
+    },
+    {
+      "text": "affect our model",
+      "start": 26.96,
+      "duration": 3.04
+    },
+    {
+      "text": "we've already looked at sensitivity",
+      "start": 28.4,
+      "duration": 4.319
+    },
+    {
+      "text": "analysis and scenario analysis",
+      "start": 30.0,
+      "duration": 6.719
+    },
+    {
+      "text": "and now monte carlo simulation comes to",
+      "start": 32.719,
+      "duration": 8.081
+    },
+    {
+      "text": "round out that set of possibilities",
+      "start": 36.719,
+      "duration": 7.281
+    },
+    {
+      "text": "so monte carlo simulation",
+      "start": 40.8,
+      "duration": 7.04
+    },
+    {
+      "text": "is unique in that it allows you to take",
+      "start": 44.0,
+      "duration": 6.8
+    },
+    {
+      "text": "a deterministic model which has no",
+      "start": 47.84,
+      "duration": 4.239
+    },
+    {
+      "text": "notion of randomness or",
+      "start": 50.8,
+      "duration": 4.32
+    },
+    {
+      "text": "probability and be able to make",
+      "start": 52.079,
+      "duration": 4.16
+    },
+    {
+      "text": "conclusions",
+      "start": 55.12,
+      "duration": 4.0
+    },
+    {
+      "text": "about the chance of certain outcomes",
+      "start": 56.239,
+      "duration": 3.601
+    },
+    {
+      "text": "occurring",
+      "start": 59.12,
+      "duration": 2.32
+    },
+    {
+      "text": "in your model so you're able to take",
+      "start": 59.84,
+      "duration": 3.84
+    },
+    {
+      "text": "this model with no probability",
+      "start": 61.44,
+      "duration": 5.12
+    },
+    {
+      "text": "in it at all and add it externally",
+      "start": 63.68,
+      "duration": 5.2
+    },
+    {
+      "text": "without having to change the core model",
+      "start": 66.56,
+      "duration": 4.32
+    },
+    {
+      "text": "itself",
+      "start": 68.88,
+      "duration": 4.88
+    },
+    {
+      "text": "um so that will give you a good",
+      "start": 70.88,
+      "duration": 4.4
+    },
+    {
+      "text": "understanding of",
+      "start": 73.76,
+      "duration": 3.679
+    },
+    {
+      "text": "not just what is kind of the expected",
+      "start": 75.28,
+      "duration": 3.519
+    },
+    {
+      "text": "outcome from the model",
+      "start": 77.439,
+      "duration": 3.441
+    },
+    {
+      "text": "but also what's the full range of",
+      "start": 78.799,
+      "duration": 3.521
+    },
+    {
+      "text": "possible outcomes and",
+      "start": 80.88,
+      "duration": 3.279
+    },
+    {
+      "text": "what is the chance of each of these",
+      "start": 82.32,
+      "duration": 4.08
+    },
+    {
+      "text": "outcomes occurring",
+      "start": 84.159,
+      "duration": 4.481
+    },
+    {
+      "text": "and certainly in finance this is an",
+      "start": 86.4,
+      "duration": 4.0
+    },
+    {
+      "text": "important thing to consider",
+      "start": 88.64,
+      "duration": 4.32
+    },
+    {
+      "text": "because we're always concerned about the",
+      "start": 90.4,
+      "duration": 3.52
+    },
+    {
+      "text": "risk return",
+      "start": 92.96,
+      "duration": 4.0
+    },
+    {
+      "text": "trade-off and we can",
+      "start": 93.92,
+      "duration": 6.48
+    },
+    {
+      "text": "think of in a sense the baseline output",
+      "start": 96.96,
+      "duration": 4.4
+    },
+    {
+      "text": "from our model as",
+      "start": 100.4,
+      "duration": 3.84
+    },
+    {
+      "text": "being kind of the return or you know",
+      "start": 101.36,
+      "duration": 4.0
+    },
+    {
+      "text": "whatever objective",
+      "start": 104.24,
+      "duration": 4.0
+    },
+    {
+      "text": "that we're uh looking at evaluating in",
+      "start": 105.36,
+      "duration": 4.32
+    },
+    {
+      "text": "the model",
+      "start": 108.24,
+      "duration": 4.6
+    },
+    {
+      "text": "and then the chance of of getting",
+      "start": 109.68,
+      "duration": 4.719
+    },
+    {
+      "text": "different",
+      "start": 112.84,
+      "duration": 3.879
+    },
+    {
+      "text": "outcomes we can think of that as the",
+      "start": 114.399,
+      "duration": 4.961
+    },
+    {
+      "text": "risk so",
+      "start": 116.719,
+      "duration": 2.641
+    },
+    {
+      "text": "running the model without monte carlo",
+      "start": 119.52,
+      "duration": 3.44
+    },
+    {
+      "text": "simulation we're kind of just looking at",
+      "start": 121.2,
+      "duration": 4.48
+    },
+    {
+      "text": "one side of the risk return trade-off",
+      "start": 122.96,
+      "duration": 4.72
+    },
+    {
+      "text": "and so it can be very helpful to bring",
+      "start": 125.68,
+      "duration": 5.84
+    },
+    {
+      "text": "this in to fully evaluate the problem",
+      "start": 127.68,
+      "duration": 6.0
+    },
+    {
+      "text": "so i think it's useful to motivate this",
+      "start": 131.52,
+      "duration": 4.0
+    },
+    {
+      "text": "by an example",
+      "start": 133.68,
+      "duration": 6.16
+    },
+    {
+      "text": "um so let's talk about a potential",
+      "start": 135.52,
+      "duration": 7.439
+    },
+    {
+      "text": "that you can place um so",
+      "start": 139.84,
+      "duration": 5.52
+    },
+    {
+      "text": "you have an opportunity to place a bet",
+      "start": 142.959,
+      "duration": 3.92
+    },
+    {
+      "text": "for one dollar",
+      "start": 145.36,
+      "duration": 3.599
+    },
+    {
+      "text": "and if you win that bet you're going to",
+      "start": 146.879,
+      "duration": 3.601
+    },
+    {
+      "text": "get two dollars",
+      "start": 148.959,
+      "duration": 3.681
+    },
+    {
+      "text": "but if you lose the bet then you're",
+      "start": 150.48,
+      "duration": 5.2
+    },
+    {
+      "text": "going to lose 750 000",
+      "start": 152.64,
+      "duration": 5.44
+    },
+    {
+      "text": "and there's no way to avoid this payment",
+      "start": 155.68,
+      "duration": 3.52
+    },
+    {
+      "text": "through legal means",
+      "start": 158.08,
+      "duration": 3.04
+    },
+    {
+      "text": "you're gonna have to be obligated to pay",
+      "start": 159.2,
+      "duration": 5.36
+    },
+    {
+      "text": "that no matter what",
+      "start": 161.12,
+      "duration": 3.44
+    },
+    {
+      "text": "and then looking at the odds of this bet",
+      "start": 164.8,
+      "duration": 7.28
+    },
+    {
+      "text": "uh one in a million you lose that 750",
+      "start": 168.319,
+      "duration": 6.801
+    },
+    {
+      "text": "000 and every other time",
+      "start": 172.08,
+      "duration": 6.96
+    },
+    {
+      "text": "999 999 times out of a million",
+      "start": 175.12,
+      "duration": 7.759
+    },
+    {
+      "text": "you're going to win the two dollars",
+      "start": 179.04,
+      "duration": 3.839
+    },
+    {
+      "text": "and if you just go and you take the",
+      "start": 183.28,
+      "duration": 3.28
+    },
+    {
+      "text": "expected value",
+      "start": 185.04,
+      "duration": 5.36
+    },
+    {
+      "text": "of this bet then the expected profit is",
+      "start": 186.56,
+      "duration": 6.319
+    },
+    {
+      "text": "25 cents so just looking",
+      "start": 190.4,
+      "duration": 5.52
+    },
+    {
+      "text": "at kind of the expected outcome you",
+      "start": 192.879,
+      "duration": 4.72
+    },
+    {
+      "text": "should definitely take this back",
+      "start": 195.92,
+      "duration": 5.039
+    },
+    {
+      "text": "but uh you know any",
+      "start": 197.599,
+      "duration": 7.121
+    },
+    {
+      "text": "reasonable person looking at this bet",
+      "start": 200.959,
+      "duration": 6.241
+    },
+    {
+      "text": "would think twice and at least carefully",
+      "start": 204.72,
+      "duration": 5.04
+    },
+    {
+      "text": "consider should i really take this bet",
+      "start": 207.2,
+      "duration": 6.64
+    },
+    {
+      "text": "because that downside of losing 750",
+      "start": 209.76,
+      "duration": 5.6
+    },
+    {
+      "text": "thousand dollars",
+      "start": 213.84,
+      "duration": 4.959
+    },
+    {
+      "text": "is so severely bad that",
+      "start": 215.36,
+      "duration": 5.2
+    },
+    {
+      "text": "even though it has such a low",
+      "start": 218.799,
+      "duration": 3.121
+    },
+    {
+      "text": "probability",
+      "start": 220.56,
+      "duration": 3.039
+    },
+    {
+      "text": "you might not want to take the bet",
+      "start": 221.92,
+      "duration": 3.44
+    },
+    {
+      "text": "because you only have such a small",
+      "start": 223.599,
+      "duration": 4.56
+    },
+    {
+      "text": "amount to gain in the bet",
+      "start": 225.36,
+      "duration": 5.04
+    },
+    {
+      "text": "so if you make decisions 100 percent on",
+      "start": 228.159,
+      "duration": 3.521
+    },
+    {
+      "text": "expected value",
+      "start": 230.4,
+      "duration": 4.96
+    },
+    {
+      "text": "you would take the bet but",
+      "start": 231.68,
+      "duration": 5.759
+    },
+    {
+      "text": "more than just the expected value",
+      "start": 235.36,
+      "duration": 3.76
+    },
+    {
+      "text": "matters here the probabilities of",
+      "start": 237.439,
+      "duration": 2.481
+    },
+    {
+      "text": "different outcomes",
+      "start": 239.12,
+      "duration": 3.679
+    },
+    {
+      "text": "occurring and what possible outcomes can",
+      "start": 239.92,
+      "duration": 3.92
+    },
+    {
+      "text": "occur",
+      "start": 242.799,
+      "duration": 5.761
+    },
+    {
+      "text": "still matter even beyond expected value",
+      "start": 243.84,
+      "duration": 8.319
+    },
+    {
+      "text": "so this is to some extent the",
+      "start": 248.56,
+      "duration": 6.399
+    },
+    {
+      "text": "kind of concepts we're trying to get at",
+      "start": 252.159,
+      "duration": 5.04
+    },
+    {
+      "text": "with monte carlo simulation",
+      "start": 254.959,
+      "duration": 3.601
+    },
+    {
+      "text": "you want to see what are the different",
+      "start": 257.199,
+      "duration": 3.6
+    },
+    {
+      "text": "possible outcomes from the model",
+      "start": 258.56,
+      "duration": 4.48
+    },
+    {
+      "text": "and consider what that means for your",
+      "start": 260.799,
+      "duration": 5.521
+    },
+    {
+      "text": "particular situation",
+      "start": 263.04,
+      "duration": 3.28
+    },
+    {
+      "text": "and then as far as running monte carlo",
+      "start": 267.12,
+      "duration": 3.359
+    },
+    {
+      "text": "simulation",
+      "start": 269.6,
+      "duration": 3.2
+    },
+    {
+      "text": "this is a visualization of how that",
+      "start": 270.479,
+      "duration": 3.761
+    },
+    {
+      "text": "looks",
+      "start": 272.8,
+      "duration": 5.04
+    },
+    {
+      "text": "and you may notice that this is",
+      "start": 274.24,
+      "duration": 6.64
+    },
+    {
+      "text": "uh very similar to what we had seen",
+      "start": 277.84,
+      "duration": 6.079
+    },
+    {
+      "text": "for sensitivity analysis",
+      "start": 280.88,
+      "duration": 5.44
+    },
+    {
+      "text": "in fact it's the same image here",
+      "start": 283.919,
+      "duration": 4.801
+    },
+    {
+      "text": "describing monte carlo simulation",
+      "start": 286.32,
+      "duration": 4.64
+    },
+    {
+      "text": "and that's because the process to run",
+      "start": 288.72,
+      "duration": 6.479
+    },
+    {
+      "text": "each of them is almost exactly the same",
+      "start": 290.96,
+      "duration": 7.76
+    },
+    {
+      "text": "so the same for external scenario",
+      "start": 295.199,
+      "duration": 4.161
+    },
+    {
+      "text": "analysis",
+      "start": 298.72,
+      "duration": 3.12
+    },
+    {
+      "text": "really all three techniques you follow",
+      "start": 299.36,
+      "duration": 3.76
+    },
+    {
+      "text": "the same pattern",
+      "start": 301.84,
+      "duration": 3.12
+    },
+    {
+      "text": "uh basically just run the model a bunch",
+      "start": 303.12,
+      "duration": 3.84
+    },
+    {
+      "text": "of times passing in different inputs",
+      "start": 304.96,
+      "duration": 3.2
+    },
+    {
+      "text": "each time",
+      "start": 306.96,
+      "duration": 2.799
+    },
+    {
+      "text": "and associating those inputs with the",
+      "start": 308.16,
+      "duration": 4.0
+    },
+    {
+      "text": "outputs and putting it all together in",
+      "start": 309.759,
+      "duration": 4.561
+    },
+    {
+      "text": "some sort of analysis and visualization",
+      "start": 312.16,
+      "duration": 4.64
+    },
+    {
+      "text": "at the end",
+      "start": 314.32,
+      "duration": 6.0
+    },
+    {
+      "text": "um so the the difference",
+      "start": 316.8,
+      "duration": 5.2
+    },
+    {
+      "text": "because the process is so similar the",
+      "start": 320.32,
+      "duration": 4.64
+    },
+    {
+      "text": "difference with monte carlo simulations",
+      "start": 322.0,
+      "duration": 6.56
+    },
+    {
+      "text": "is that we are assigning distributions",
+      "start": 324.96,
+      "duration": 5.36
+    },
+    {
+      "text": "probability distributions",
+      "start": 328.56,
+      "duration": 4.32
+    },
+    {
+      "text": "to each of the inputs and we're randomly",
+      "start": 330.32,
+      "duration": 3.2
+    },
+    {
+      "text": "drawing",
+      "start": 332.88,
+      "duration": 3.12
+    },
+    {
+      "text": "the values of those inputs to put into",
+      "start": 333.52,
+      "duration": 3.679
+    },
+    {
+      "text": "our model",
+      "start": 336.0,
+      "duration": 4.0
+    },
+    {
+      "text": "whereas with external scenario analysis",
+      "start": 337.199,
+      "duration": 3.761
+    },
+    {
+      "text": "we said",
+      "start": 340.0,
+      "duration": 3.68
+    },
+    {
+      "text": "what are all the inputs that make sense",
+      "start": 340.96,
+      "duration": 3.92
+    },
+    {
+      "text": "for this situation",
+      "start": 343.68,
+      "duration": 3.76
+    },
+    {
+      "text": "we're manually picking those values and",
+      "start": 344.88,
+      "duration": 4.48
+    },
+    {
+      "text": "also with sensitivity analysis we said",
+      "start": 347.44,
+      "duration": 3.039
+    },
+    {
+      "text": "we want to look at",
+      "start": 349.36,
+      "duration": 2.8
+    },
+    {
+      "text": "you know investment rates between one",
+      "start": 350.479,
+      "duration": 3.201
+    },
+    {
+      "text": "and five percent",
+      "start": 352.16,
+      "duration": 3.36
+    },
+    {
+      "text": "and so you're manually saying well i",
+      "start": 353.68,
+      "duration": 3.44
+    },
+    {
+      "text": "want to look at one two three four five",
+      "start": 355.52,
+      "duration": 2.72
+    },
+    {
+      "text": "percent",
+      "start": 357.12,
+      "duration": 3.199
+    },
+    {
+      "text": "um but with monte carlo simulation you",
+      "start": 358.24,
+      "duration": 3.6
+    },
+    {
+      "text": "just say well the",
+      "start": 360.319,
+      "duration": 3.44
+    },
+    {
+      "text": "interest rate is going to have a mean of",
+      "start": 361.84,
+      "duration": 3.359
+    },
+    {
+      "text": "three it's",
+      "start": 363.759,
+      "duration": 3.041
+    },
+    {
+      "text": "going to have a standard deviation of 2",
+      "start": 365.199,
+      "duration": 3.601
+    },
+    {
+      "text": "percent on a normal distribution",
+      "start": 366.8,
+      "duration": 3.28
+    },
+    {
+      "text": "and then each time that you run the",
+      "start": 368.8,
+      "duration": 3.76
+    },
+    {
+      "text": "model you don't know what interest rate",
+      "start": 370.08,
+      "duration": 4.16
+    },
+    {
+      "text": "is going to go in the model it's just",
+      "start": 372.56,
+      "duration": 3.919
+    },
+    {
+      "text": "randomly picked from the distribution it",
+      "start": 374.24,
+      "duration": 3.12
+    },
+    {
+      "text": "could be 5",
+      "start": 376.479,
+      "duration": 6.241
+    },
+    {
+      "text": "this time 1 the next time and so on",
+      "start": 377.36,
+      "duration": 5.36
+    },
+    {
+      "text": "and then what this allows you to do",
+      "start": 383.199,
+      "duration": 3.921
+    },
+    {
+      "text": "which is unique",
+      "start": 386.0,
+      "duration": 4.16
+    },
+    {
+      "text": "to monte carlo simulation is",
+      "start": 387.12,
+      "duration": 6.079
+    },
+    {
+      "text": "because we have probability",
+      "start": 390.16,
+      "duration": 4.96
+    },
+    {
+      "text": "distributions of the inputs",
+      "start": 393.199,
+      "duration": 4.081
+    },
+    {
+      "text": "that allows you to assign a probability",
+      "start": 395.12,
+      "duration": 4.079
+    },
+    {
+      "text": "distribution to the outputs",
+      "start": 397.28,
+      "duration": 5.039
+    },
+    {
+      "text": "as well um so that's where",
+      "start": 399.199,
+      "duration": 4.961
+    },
+    {
+      "text": "we're going to be able to get into",
+      "start": 402.319,
+      "duration": 3.681
+    },
+    {
+      "text": "talking about the chance",
+      "start": 404.16,
+      "duration": 4.72
+    },
+    {
+      "text": "of a certain outcome occurring uh you",
+      "start": 406.0,
+      "duration": 4.479
+    },
+    {
+      "text": "know maybe it's a capital budgeting",
+      "start": 408.88,
+      "duration": 2.48
+    },
+    {
+      "text": "setting and you're",
+      "start": 410.479,
+      "duration": 2.881
+    },
+    {
+      "text": "looking at the the probability that",
+      "start": 411.36,
+      "duration": 3.839
+    },
+    {
+      "text": "you're going to have a positive",
+      "start": 413.36,
+      "duration": 5.2
+    },
+    {
+      "text": "mpv uh or it could be a portfolio",
+      "start": 415.199,
+      "duration": 6.4
+    },
+    {
+      "text": "setting where you're saying uh you know",
+      "start": 418.56,
+      "duration": 3.68
+    },
+    {
+      "text": "there's",
+      "start": 421.599,
+      "duration": 3.281
+    },
+    {
+      "text": "a 10 chance that we're gonna lose as",
+      "start": 422.24,
+      "duration": 3.04
+    },
+    {
+      "text": "much",
+      "start": 424.88,
+      "duration": 3.52
+    },
+    {
+      "text": "as three hundred thousand dollars uh",
+      "start": 425.28,
+      "duration": 4.639
+    },
+    {
+      "text": "there are a lot of different situations",
+      "start": 428.4,
+      "duration": 3.04
+    },
+    {
+      "text": "where you wanna think about the",
+      "start": 429.919,
+      "duration": 2.881
+    },
+    {
+      "text": "probability",
+      "start": 431.44,
+      "duration": 4.24
+    },
+    {
+      "text": "and monte carlo simulation is a nice way",
+      "start": 432.8,
+      "duration": 3.36
+    },
+    {
+      "text": "to",
+      "start": 435.68,
+      "duration": 3.28
+    },
+    {
+      "text": "be able to come to those conclusions",
+      "start": 436.16,
+      "duration": 4.0
+    },
+    {
+      "text": "with an otherwise",
+      "start": 438.96,
+      "duration": 4.56
+    },
+    {
+      "text": "deterministic model",
+      "start": 440.16,
+      "duration": 6.4
+    },
+    {
+      "text": "so that's the quick intro of monte carlo",
+      "start": 443.52,
+      "duration": 4.56
+    },
+    {
+      "text": "simulation",
+      "start": 446.56,
+      "duration": 4.72
+    },
+    {
+      "text": "we're gonna do a different order for",
+      "start": 448.08,
+      "duration": 5.839
+    },
+    {
+      "text": "uh exposing everyone to this we're going",
+      "start": 451.28,
+      "duration": 3.039
+    },
+    {
+      "text": "to go",
+      "start": 453.919,
+      "duration": 3.521
+    },
+    {
+      "text": "next to actually running the simulation",
+      "start": 454.319,
+      "duration": 5.44
+    },
+    {
+      "text": "um and then we're gonna come back and",
+      "start": 457.44,
+      "duration": 3.52
+    },
+    {
+      "text": "discuss",
+      "start": 459.759,
+      "duration": 4.081
+    },
+    {
+      "text": "more formally what we're doing i think",
+      "start": 460.96,
+      "duration": 4.48
+    },
+    {
+      "text": "it's easiest to learn all this by",
+      "start": 463.84,
+      "duration": 3.359
+    },
+    {
+      "text": "example",
+      "start": 465.44,
+      "duration": 4.0
+    },
+    {
+      "text": "because when we talk about it formally",
+      "start": 467.199,
+      "duration": 3.84
+    },
+    {
+      "text": "it can sound a little bit complicated",
+      "start": 469.44,
+      "duration": 3.28
+    },
+    {
+      "text": "but really it's not",
+      "start": 471.039,
+      "duration": 4.0
+    },
+    {
+      "text": "and just seeing it by an example really",
+      "start": 472.72,
+      "duration": 4.0
+    },
+    {
+      "text": "drives that home",
+      "start": 475.039,
+      "duration": 3.761
+    },
+    {
+      "text": "so we'll come back next time to look at",
+      "start": 476.72,
+      "duration": 3.199
+    },
+    {
+      "text": "that example of",
+      "start": 478.8,
+      "duration": 3.92
+    },
+    {
+      "text": "running a monte carlo simulation so",
+      "start": 479.919,
+      "duration": 3.761
+    },
+    {
+      "text": "thanks for listening",
+      "start": 482.72,
+      "duration": 6.72
+    },
+    {
+      "text": "and see you next time",
+      "start": 483.68,
+      "duration": 5.76
+    }
+  ]
+}

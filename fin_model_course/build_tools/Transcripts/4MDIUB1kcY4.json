@@ -1,0 +1,809 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.96,
+      "duration": 2.24
+    },
+    {
+      "text": "nick dear verdict here teaching you",
+      "start": 3.84,
+      "duration": 3.519
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.2,
+      "duration": 3.04
+    },
+    {
+      "text": "be solving the",
+      "start": 7.359,
+      "duration": 3.441
+    },
+    {
+      "text": "live exercise on adding scenario",
+      "start": 8.24,
+      "duration": 3.439
+    },
+    {
+      "text": "analysis",
+      "start": 10.8,
+      "duration": 3.999
+    },
+    {
+      "text": "to the projects one python model",
+      "start": 11.679,
+      "duration": 5.6
+    },
+    {
+      "text": "so this is the lab exercise which is at",
+      "start": 14.799,
+      "duration": 4.161
+    },
+    {
+      "text": "the end of the scenario",
+      "start": 17.279,
+      "duration": 4.801
+    },
+    {
+      "text": "modeling material and here we're looking",
+      "start": 18.96,
+      "duration": 3.84
+    },
+    {
+      "text": "at",
+      "start": 22.08,
+      "duration": 2.64
+    },
+    {
+      "text": "setting up cases for a bad normal and",
+      "start": 22.8,
+      "duration": 3.92
+    },
+    {
+      "text": "good economy",
+      "start": 24.72,
+      "duration": 4.879
+    },
+    {
+      "text": "and looking at changing the initial",
+      "start": 26.72,
+      "duration": 3.36
+    },
+    {
+      "text": "demand",
+      "start": 29.599,
+      "duration": 2.721
+    },
+    {
+      "text": "and price per phone in each of those",
+      "start": 30.08,
+      "duration": 3.44
+    },
+    {
+      "text": "cases",
+      "start": 32.32,
+      "duration": 4.16
+    },
+    {
+      "text": "um and going through the whole external",
+      "start": 33.52,
+      "duration": 4.48
+    },
+    {
+      "text": "scenario analysis process",
+      "start": 36.48,
+      "duration": 4.32
+    },
+    {
+      "text": "so looking at the npv in each of those",
+      "start": 38.0,
+      "duration": 3.76
+    },
+    {
+      "text": "cases",
+      "start": 40.8,
+      "duration": 4.0
+    },
+    {
+      "text": "and also looking at the expected mpv",
+      "start": 41.76,
+      "duration": 5.2
+    },
+    {
+      "text": "if we assign some probabilities to those",
+      "start": 44.8,
+      "duration": 4.4
+    },
+    {
+      "text": "cases",
+      "start": 46.96,
+      "duration": 6.0
+    },
+    {
+      "text": "let's go ahead and jump over to the",
+      "start": 49.2,
+      "duration": 6.8
+    },
+    {
+      "text": "project one model and in my project",
+      "start": 52.96,
+      "duration": 6.399
+    },
+    {
+      "text": "one model i have a model mpv function",
+      "start": 56.0,
+      "duration": 5.68
+    },
+    {
+      "text": "which is able to give me the mpv from",
+      "start": 59.359,
+      "duration": 3.04
+    },
+    {
+      "text": "the model",
+      "start": 61.68,
+      "duration": 3.759
+    },
+    {
+      "text": "data um",
+      "start": 62.399,
+      "duration": 5.201
+    },
+    {
+      "text": "so what we want to do is we want to set",
+      "start": 65.439,
+      "duration": 3.601
+    },
+    {
+      "text": "up first",
+      "start": 67.6,
+      "duration": 5.28
+    },
+    {
+      "text": "the inputs for the bad and good economy",
+      "start": 69.04,
+      "duration": 6.16
+    },
+    {
+      "text": "we can assume that the baseline",
+      "start": 72.88,
+      "duration": 5.04
+    },
+    {
+      "text": "inputs the ones here with the model data",
+      "start": 75.2,
+      "duration": 4.239
+    },
+    {
+      "text": "we can assume that these",
+      "start": 77.92,
+      "duration": 4.4
+    },
+    {
+      "text": "hold for uh the normal economy case so",
+      "start": 79.439,
+      "duration": 4.881
+    },
+    {
+      "text": "we just set up the bad and good economy",
+      "start": 82.32,
+      "duration": 5.839
+    },
+    {
+      "text": "cases so bad economy data",
+      "start": 84.32,
+      "duration": 7.759
+    },
+    {
+      "text": "create a new instance of model inputs",
+      "start": 88.159,
+      "duration": 8.96
+    },
+    {
+      "text": "um and we want to change the",
+      "start": 92.079,
+      "duration": 5.04
+    },
+    {
+      "text": "demand and price per phone so",
+      "start": 97.52,
+      "duration": 6.879
+    },
+    {
+      "text": "for the demand that would be d1 uh the",
+      "start": 101.04,
+      "duration": 4.48
+    },
+    {
+      "text": "original value here",
+      "start": 104.399,
+      "duration": 4.481
+    },
+    {
+      "text": "is 100 000 um let's go",
+      "start": 105.52,
+      "duration": 7.44
+    },
+    {
+      "text": "for uh 50 000 instead",
+      "start": 108.88,
+      "duration": 4.08
+    },
+    {
+      "text": "and then the other input that we want to",
+      "start": 113.2,
+      "duration": 3.44
+    },
+    {
+      "text": "change",
+      "start": 116.079,
+      "duration": 3.841
+    },
+    {
+      "text": "is the price per phone um so that's",
+      "start": 116.64,
+      "duration": 6.64
+    },
+    {
+      "text": "price phone here normally 500 uh let's",
+      "start": 119.92,
+      "duration": 4.72
+    },
+    {
+      "text": "say that it's only going to be able to",
+      "start": 123.28,
+      "duration": 2.08
+    },
+    {
+      "text": "be",
+      "start": 124.64,
+      "duration": 4.16
+    },
+    {
+      "text": "350 in the bad economy so then we can",
+      "start": 125.36,
+      "duration": 6.64
+    },
+    {
+      "text": "set up the good economy data",
+      "start": 128.8,
+      "duration": 7.2
+    },
+    {
+      "text": "model inputs um here d1 can equal 200",
+      "start": 132.0,
+      "duration": 7.92
+    },
+    {
+      "text": "000 and the price per phone",
+      "start": 136.0,
+      "duration": 7.36
+    },
+    {
+      "text": "can equal 700.",
+      "start": 139.92,
+      "duration": 5.76
+    },
+    {
+      "text": "uh and then we can set up our dictionary",
+      "start": 143.36,
+      "duration": 3.599
+    },
+    {
+      "text": "of the cases",
+      "start": 145.68,
+      "duration": 4.559
+    },
+    {
+      "text": "bad economy bad economy data normal",
+      "start": 146.959,
+      "duration": 5.92
+    },
+    {
+      "text": "economy",
+      "start": 150.239,
+      "duration": 2.64
+    },
+    {
+      "text": "that's just going to be the regular",
+      "start": 153.12,
+      "duration": 4.24
+    },
+    {
+      "text": "model data and the good economy",
+      "start": 154.56,
+      "duration": 7.039
+    },
+    {
+      "text": "that's going to be the good economy data",
+      "start": 157.36,
+      "duration": 6.4
+    },
+    {
+      "text": "so then we have all those things in the",
+      "start": 161.599,
+      "duration": 4.881
+    },
+    {
+      "text": "dictionary there",
+      "start": 163.76,
+      "duration": 6.08
+    },
+    {
+      "text": "then we want to loop through that",
+      "start": 166.48,
+      "duration": 4.16
+    },
+    {
+      "text": "dictionary",
+      "start": 169.84,
+      "duration": 4.72
+    },
+    {
+      "text": "for case type base inputs",
+      "start": 170.64,
+      "duration": 7.92
+    },
+    {
+      "text": "in cases.items",
+      "start": 174.56,
+      "duration": 4.0
+    },
+    {
+      "text": "uh we're going to calculate the mpv as",
+      "start": 179.04,
+      "duration": 8.4
+    },
+    {
+      "text": "what's the name of my function model mpv",
+      "start": 183.2,
+      "duration": 4.24
+    },
+    {
+      "text": "model npv on the case inputs",
+      "start": 187.519,
+      "duration": 5.36
+    },
+    {
+      "text": "and then i can print the result um",
+      "start": 193.36,
+      "duration": 8.4
+    },
+    {
+      "text": "um in a",
+      "start": 198.4,
+      "duration": 7.119
+    },
+    {
+      "text": "base type economy",
+      "start": 201.76,
+      "duration": 7.28
+    },
+    {
+      "text": "the mbb is mpv",
+      "start": 205.519,
+      "duration": 5.601
+    },
+    {
+      "text": "and i want to format that with the",
+      "start": 209.04,
+      "duration": 3.52
+    },
+    {
+      "text": "dollar sign before it",
+      "start": 211.12,
+      "duration": 4.56
+    },
+    {
+      "text": "i want zero decimal places i want",
+      "start": 212.56,
+      "duration": 6.48
+    },
+    {
+      "text": "commas in there and fix that zero number",
+      "start": 215.68,
+      "duration": 5.36
+    },
+    {
+      "text": "of decimal places",
+      "start": 219.04,
+      "duration": 5.759
+    },
+    {
+      "text": "um and then oh i randomly got an l up",
+      "start": 221.04,
+      "duration": 4.08
+    },
+    {
+      "text": "here",
+      "start": 224.799,
+      "duration": 3.281
+    },
+    {
+      "text": "can't have that",
+      "start": 225.12,
+      "duration": 2.96
+    },
+    {
+      "text": "there now in a bad economy we have",
+      "start": 228.239,
+      "duration": 6.481
+    },
+    {
+      "text": "73 million mpv normal economy 369",
+      "start": 231.44,
+      "duration": 3.76
+    },
+    {
+      "text": "million",
+      "start": 234.72,
+      "duration": 3.68
+    },
+    {
+      "text": "good economy uh 1.1",
+      "start": 235.2,
+      "duration": 6.16
+    },
+    {
+      "text": "billion so that definitely tells you",
+      "start": 238.4,
+      "duration": 3.6
+    },
+    {
+      "text": "that",
+      "start": 241.36,
+      "duration": 3.12
+    },
+    {
+      "text": "the results of this model are very",
+      "start": 242.0,
+      "duration": 3.36
+    },
+    {
+      "text": "sensitive",
+      "start": 244.48,
+      "duration": 4.399
+    },
+    {
+      "text": "to the economic conditions",
+      "start": 245.36,
+      "duration": 7.84
+    },
+    {
+      "text": "and then if we assign some probabilities",
+      "start": 248.879,
+      "duration": 6.961
+    },
+    {
+      "text": "to these cases",
+      "start": 253.2,
+      "duration": 2.64
+    },
+    {
+      "text": "again we want to use the same keys",
+      "start": 258.56,
+      "duration": 5.32
+    },
+    {
+      "text": "as the",
+      "start": 262.079,
+      "duration": 3.361
+    },
+    {
+      "text": "[Music]",
+      "start": 263.88,
+      "duration": 3.48
+    },
+    {
+      "text": "dictionary of the cases just this time",
+      "start": 265.44,
+      "duration": 4.24
+    },
+    {
+      "text": "with probabilities let's say we think",
+      "start": 267.36,
+      "duration": 4.64
+    },
+    {
+      "text": "a recession coming up is pretty likely",
+      "start": 269.68,
+      "duration": 3.6
+    },
+    {
+      "text": "0.5",
+      "start": 272.0,
+      "duration": 4.479
+    },
+    {
+      "text": "normals 0.3 and the good",
+      "start": 273.28,
+      "duration": 7.359
+    },
+    {
+      "text": "is 0.2 then we can set up our",
+      "start": 276.479,
+      "duration": 7.841
+    },
+    {
+      "text": "expected mpv running total variable",
+      "start": 280.639,
+      "duration": 6.961
+    },
+    {
+      "text": "again we can copy the beginning of this",
+      "start": 284.32,
+      "duration": 7.92
+    },
+    {
+      "text": "loop for getting the mpv for each case",
+      "start": 287.6,
+      "duration": 7.44
+    },
+    {
+      "text": "then we can calculate the weighted mpv",
+      "start": 292.24,
+      "duration": 3.36
+    },
+    {
+      "text": "as",
+      "start": 295.04,
+      "duration": 3.92
+    },
+    {
+      "text": "the mpv times uh",
+      "start": 295.6,
+      "duration": 8.48
+    },
+    {
+      "text": "the probability for that case type",
+      "start": 298.96,
+      "duration": 8.56
+    },
+    {
+      "text": "and then we can add",
+      "start": 304.08,
+      "duration": 8.32
+    },
+    {
+      "text": "that weighted mpv onto the expected mpv",
+      "start": 307.52,
+      "duration": 8.64
+    },
+    {
+      "text": "um and then finally print out a sentence",
+      "start": 312.4,
+      "duration": 8.72
+    },
+    {
+      "text": "um which is corresponding to that um",
+      "start": 316.16,
+      "duration": 8.96
+    },
+    {
+      "text": "that uh the project would",
+      "start": 321.12,
+      "duration": 7.04
+    },
+    {
+      "text": "uh earn an",
+      "start": 325.12,
+      "duration": 6.079
+    },
+    {
+      "text": "expected mpv",
+      "start": 328.16,
+      "duration": 7.92
+    },
+    {
+      "text": "of expected mpv",
+      "start": 331.199,
+      "duration": 4.881
+    },
+    {
+      "text": "uh again with a dollar sign before it",
+      "start": 337.52,
+      "duration": 6.32
+    },
+    {
+      "text": "we want commas we want zero decimal",
+      "start": 340.88,
+      "duration": 5.44
+    },
+    {
+      "text": "places",
+      "start": 343.84,
+      "duration": 2.48
+    },
+    {
+      "text": "uh with a uh",
+      "start": 346.479,
+      "duration": 10.801
+    },
+    {
+      "text": "fans with a reception chance",
+      "start": 353.12,
+      "duration": 7.519
+    },
+    {
+      "text": "of probabilities",
+      "start": 357.28,
+      "duration": 6.16
+    },
+    {
+      "text": "uh again going to use the mismatched",
+      "start": 360.639,
+      "duration": 4.0
+    },
+    {
+      "text": "quotes here",
+      "start": 363.44,
+      "duration": 4.4
+    },
+    {
+      "text": "of probabilities bad",
+      "start": 364.639,
+      "duration": 3.201
+    },
+    {
+      "text": "and i've still got to be in the string",
+      "start": 368.16,
+      "duration": 6.319
+    },
+    {
+      "text": "and an expansion",
+      "start": 371.36,
+      "duration": 8.959
+    },
+    {
+      "text": "advance of probabilities uh",
+      "start": 374.479,
+      "duration": 8.081
+    },
+    {
+      "text": "good",
+      "start": 380.319,
+      "duration": 2.241
+    },
+    {
+      "text": "so i run that i do want to format those",
+      "start": 384.56,
+      "duration": 4.8
+    },
+    {
+      "text": "as well",
+      "start": 387.759,
+      "duration": 5.121
+    },
+    {
+      "text": "zero decimal percentage uh over here",
+      "start": 389.36,
+      "duration": 7.52
+    },
+    {
+      "text": "also zero decimal percentage",
+      "start": 392.88,
+      "duration": 6.72
+    },
+    {
+      "text": "and there we have the 370 million",
+      "start": 396.88,
+      "duration": 4.24
+    },
+    {
+      "text": "expected mpv",
+      "start": 399.6,
+      "duration": 3.92
+    },
+    {
+      "text": "with the 50 chance of recession and an",
+      "start": 401.12,
+      "duration": 3.44
+    },
+    {
+      "text": "expansionary",
+      "start": 403.52,
+      "duration": 6.0
+    },
+    {
+      "text": "chance of 20 and we would just want to",
+      "start": 404.56,
+      "duration": 6.32
+    },
+    {
+      "text": "break this print statement all the",
+      "start": 409.52,
+      "duration": 4.079
+    },
+    {
+      "text": "multiple lines because it's really long",
+      "start": 410.88,
+      "duration": 6.48
+    },
+    {
+      "text": "um make sure you",
+      "start": 413.599,
+      "duration": 7.121
+    },
+    {
+      "text": "you get all your quotes set up",
+      "start": 417.36,
+      "duration": 6.48
+    },
+    {
+      "text": "correctly with that",
+      "start": 420.72,
+      "duration": 3.12
+    },
+    {
+      "text": "um and there we go",
+      "start": 424.639,
+      "duration": 6.721
+    },
+    {
+      "text": "now we have all the results from the",
+      "start": 428.72,
+      "duration": 4.56
+    },
+    {
+      "text": "scenario analysis we have",
+      "start": 431.36,
+      "duration": 5.119
+    },
+    {
+      "text": "the outcome in each scenario and we also",
+      "start": 433.28,
+      "duration": 5.28
+    },
+    {
+      "text": "have the expected outcome",
+      "start": 436.479,
+      "duration": 4.241
+    },
+    {
+      "text": "based on the probabilities of the",
+      "start": 438.56,
+      "duration": 3.68
+    },
+    {
+      "text": "scenarios",
+      "start": 440.72,
+      "duration": 5.039
+    },
+    {
+      "text": "uh so that would be the um",
+      "start": 442.24,
+      "duration": 6.72
+    },
+    {
+      "text": "python solution",
+      "start": 445.759,
+      "duration": 5.601
+    },
+    {
+      "text": "for",
+      "start": 448.96,
+      "duration": 2.4
+    },
+    {
+      "text": "extending the project one model",
+      "start": 452.72,
+      "duration": 6.4
+    },
+    {
+      "text": "with scenario analysis so thanks for",
+      "start": 455.84,
+      "duration": 3.919
+    },
+    {
+      "text": "listening",
+      "start": 459.12,
+      "duration": 6.4
+    },
+    {
+      "text": "and see you next time",
+      "start": 459.759,
+      "duration": 5.761
+    }
+  ]
+}
