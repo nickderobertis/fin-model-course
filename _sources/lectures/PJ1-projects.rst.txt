@@ -1554,3 +1554,316 @@ Resources
 
 - :download:`WMT Debt Details </_static/Project Materials/Project 3/WMT Debt Details.xls>`
         
+
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>nick dear bird is here teaching you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:05: </span>financial modeling today i'm going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:08: </span>introduce the third project</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:10: </span>in the course monte carlo cost of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:12: </span>capital</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>so this project is doing two main things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:18: </span>one it's testing the knowledge of all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:21: </span>the monte carlo material that we've</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:23: </span>covered</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:23: </span>in the course and the other is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:26: </span>starting to work towards what's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:28: </span>be the capstone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:30: </span>model of the class the discounted cash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>flow valuation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:34: </span>of a stock or dcf model and within the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:37: </span>dcf model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:39: </span>you have to determine the cost of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:42: </span>capital</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:43: </span>for the company the weighted average</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:45: </span>cost of capital or the whack</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:47: </span>and uh that's one part of the model and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:51: </span>then the other part of the model deals</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:52: </span>with the free cash flows</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:54: </span>so for this third project we're just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:56: </span>going to focus on the whack</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:59: </span>and then in the final project in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:01: </span>course we're going to then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:03: </span>do the entire dcf model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:07: </span>so for this project we're all going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:10: </span>work on the same company we're all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:12: </span>going to try to figure out the whack for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:14: </span>walmart</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:17: </span>and that's the main goal here is to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:20: </span>figure out the whack</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:22: </span>and so that's going to involve working</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:25: </span>with both the debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:26: </span>and the equity finding the costs and the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:30: </span>weights of debt and equity and you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:33: </span>ignore</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:33: </span>preferred stock for the purposes of this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:36: </span>model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:39: </span>so not only should you just find the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:42: </span>whack</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:42: </span>that's kind of the core or base model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:45: </span>then you also want to run the monte</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:46: </span>carlo simulations on that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:48: </span>and we want to see all the standard kind</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:51: </span>of outputs that you would have from a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:53: </span>monte carlo simulation a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:56: </span>visualization of the probability</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:59: </span>distribution through a histogram</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:00: </span>as well as a table of the percentiles of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:04: </span>the distribution</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:06: </span>and you want to evaluate which of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:09: </span>variables</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:10: </span>has the greatest contribution to the wax</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:12: </span>so you want to do the full analysis</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:14: </span>of the relationship between the inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:16: </span>and the outputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:19: </span>so that's the main idea here and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:23: </span>to go along with this project there are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:25: </span>a number of data files</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:27: </span>provided so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:31: </span>you're going to get prices stock prices</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:34: </span>debt information</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:36: </span>um you're going to get the income</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:39: </span>statement and balance sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:41: </span>as well and we'll we'll take a look at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:43: </span>what these look like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:47: </span>and so for this project</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:51: </span>um you can feel free to modify these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:54: </span>data files</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:55: </span>in any way that you want just if you do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:58: </span>make any modifications</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:00: </span>then submit the modified data files</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:03: </span>along</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:04: </span>with your project if you don't submit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:07: </span>any of the files i'm going to assume</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:09: </span>that you were using the original file</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:12: </span>and so i'll run it with the original</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:14: </span>file and if it doesn't work because</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:16: </span>it was supposed to be modified and you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:17: </span>didn't submit that that's going to be an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:19: </span>issue with your model so make sure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:21: </span>that you provide any of the data files</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:24: </span>that you modify</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:27: </span>and the bonus on this is to try and do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:31: </span>the entire</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>thing without manually modifying any of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:34: </span>these data files</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:37: </span>and when thinking about the bonus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:40: </span>i would as always recommend doing it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:43: </span>last</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:44: </span>even though it's the first step in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:46: </span>process</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:47: </span>i still wouldn't recommend trying to do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:49: </span>it first</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:51: </span>um so do whatever manual cleanup you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:55: </span>have to do and if you think you're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:56: </span>to do the bonus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:57: </span>just write down every step that you're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:00: </span>doing to manually clean up the data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:02: </span>that you can later go back and try to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:04: </span>recreate that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:05: </span>with code instead of doing it manually</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:09: </span>and i provided a number of resources</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:12: </span>here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:13: </span>which are going to help you complete the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:15: </span>bonus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:18: </span>you may not need all of them it depends</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:20: </span>on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:21: </span>the ways that you go about doing this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:25: </span>and this stuff for the most part is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:27: </span>outside of the scope of the course but i</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:29: </span>think it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:30: </span>it's valuable uh to know this because</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:34: </span>in the real world data files are often</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:36: </span>going to be messy and you need to clean</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:37: </span>them up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:38: </span>and you don't want to have to have this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:40: </span>manual cleanup step every time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:42: </span>it's definitely room for error in your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:45: </span>model if you mess up one of the manual</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:47: </span>clean up steps</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:49: </span>and it's just a lot more work to keep</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:51: </span>doing that manually</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:54: </span>so um then i provided a few</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:58: </span>notes um to help guide you along here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:02: </span>so you've got daily stock prices and so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:05: </span>that means when you calculate returns</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:06: </span>from those prices that those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:08: </span>returns are going to be daily as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:13: </span>so in order to work with the cap m</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:17: </span>then you're going to need to take the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:20: </span>annualized risk free rate from the model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:23: </span>and divide it by 252 to get a daily rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:26: </span>then you can run the cap m and then at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:29: </span>the end you'll have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:30: </span>a daily uh result at the end</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:34: </span>so you can multiply that by 252 at the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:37: </span>end</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:40: </span>um i already talked about this with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:42: </span>modifying</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:43: </span>the data files um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:47: </span>and then we'll look at the debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:49: </span>spreadsheet here in a moment but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:53: </span>the maturity is is missing in some cases</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:55: </span>or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:56: </span>um it's it just says a year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:59: </span>if it just says a year then you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:01: </span>assume it's december 31st</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:03: </span>of that year if there's a range of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:07: </span>coupons given for the debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:08: </span>then you can just take the midpoint of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:10: </span>that range and use that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:12: </span>as the coupon</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:16: </span>if there is not enough information to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:18: </span>calculate a bond price</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:19: </span>then you can just use the principal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:22: </span>amount</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:22: </span>instead of trying to calculate a market</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:25: </span>value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:26: </span>if there's not enough information to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:27: </span>calculate a price and it doesn't have a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:29: </span>principal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:29: </span>then you can just exclude it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:34: </span>so let's take a look at these data files</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:38: </span>so first one s p 500 prices</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:41: </span>this is the prices on the s p 500 pulled</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:45: </span>straight from yahoo finance</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:48: </span>and the adjusted close column is going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:50: </span>to be the one that you would want to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:52: </span>to get the price</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:53: </span>including any dividends or share splits</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:55: </span>or things like that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:58: </span>and next we have the walmart debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>details</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:02: </span>or let me just quickly hit the uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:04: </span>walmart</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:05: </span>uh prices first um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:08: </span>walmart prices same exact thing as the s</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:12: </span>p</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:12: </span>prices just for walmart instead of the s</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:14: </span>p so again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:16: </span>the adjusted close column is the one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:18: </span>that you want to use for the price</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:21: </span>um and then that details</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:24: </span>so this is where what you're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:26: </span>use to calculate the market value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:28: </span>of debt this is pulled from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:32: </span>s p capital iq and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:35: </span>you'll see here first there's actually</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:39: </span>two tables</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:40: </span>in here you'll notice that the top</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:44: </span>table is more recent so just use the top</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:47: </span>table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:47: </span>you can completely ignore the bottom</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:49: </span>table it should not be included it's old</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:51: </span>data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:52: </span>so just using the top table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:56: </span>and then this is where i was talking</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:57: </span>about some of the maturities or just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>years you can assume that's december</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:01: </span>31st</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:02: </span>and then some of the coupons are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:04: </span>arranged you can just take the midpoint</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:06: </span>of that range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:08: </span>um and you're going to want to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:10: </span>calculating the market value of these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:11: </span>instruments to try and get at the market</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:13: </span>value of debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:14: </span>for walmart</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:21: </span>and then the income statement</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:24: </span>is provided here so this gives you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:28: </span>all the income statement items and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:32: </span>quarterly time periods starting with the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:35: </span>oldest over here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:36: </span>and the newest all the way on the right</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:39: </span>so you just want to use the newest data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:42: </span>you don't need to worry about any of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:44: </span>this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:44: </span>old data just the newest is what you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:48: </span>want to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:50: </span>same thing coming to the balance sheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:53: </span>all the balance sheet items different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:55: </span>time periods</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:56: </span>again just use the most recent period</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:59: </span>provided</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:03: </span>so those are the data files that are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:06: </span>provided</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:07: </span>with the project</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:11: </span>here are the inputs you're going to have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:13: </span>in the project</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:16: </span>and the grading is similar to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:20: </span>what it has been in the other projects</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:22: </span>accuracy readability formatting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:24: </span>following the template and a 5</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:26: </span>bonus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:29: </span>and i gave you some solutions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:33: </span>with the baseline inputs so you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:36: </span>check to make sure that things are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:37: </span>working appropriately</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:42: </span>and that's what's involved here i'll</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:44: </span>just quickly go ahead</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:46: </span>and show the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:49: </span>templates um so here is the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:53: </span>excel template as the baseline inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:56: </span>and the simulation inputs and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:01: </span>if you're doing the combine excel python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:03: </span>model then you can put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:06: </span>your baseline whack here all the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:08: </span>intermediate outputs here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:10: </span>and if you're doing a pure excel model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:14: </span>then you want to put all your monte</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:15: </span>carlo results here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:18: </span>so then you'll have each of the wax</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:21: </span>as well as the other inputs that it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:24: </span>associated with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:24: </span>for all 10 000 iterations there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:31: </span>and then on the python side this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:34: </span>is the template so it has the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:39: </span>the model inputs and it has the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:41: </span>simulation inputs</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:43: </span>and you want to ultimately set these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:46: </span>variables with the results from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:48: </span>your baseline model and after the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:51: </span>simulation you want to set</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:53: </span>the simulation results into the wac</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:58: </span>mcdf</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:00: </span>um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:05: </span>so you like just like the last project</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>you can submit pure python for your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:10: </span>excel or a combination model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:12: </span>um but if you do the combination model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:15: </span>the one restriction i'm going to put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:17: </span>is that then your answer your your you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:20: </span>should be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:20: </span>ultimately um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:23: </span>setting these variables in the python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:25: </span>template and expect to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:27: </span>me grading these variables in the python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:29: </span>template</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:30: </span>um so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:34: </span>um but other than that you can use any</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:39: </span>of the two tools that you would like for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:40: </span>whatever parts of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:42: </span>project</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:45: </span>and regardless of whatever setup you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:47: </span>have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:48: </span>when i run the model it should run the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:51: </span>monte carlo simulation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:52: </span>it should not just be a hard-coded</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:54: </span>simulation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:56: </span>in there that was run by some means that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:58: </span>i don't know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:01: </span>um so yeah that's everything</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:05: </span>that's involved here in the project</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:08: </span>feel free to reach out with any</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:10: </span>questions about it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:12: </span>and thanks for listening i'll see you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:14: </span>next time</li>
+	</ul></div>
+
+|
