@@ -699,7 +699,7 @@ def get_read_write_xlwings_lab_lecture() -> LabExerciseLecture:
 def get_intro_monte_carlo_lab_lecture() -> LabExerciseLecture:
     title = 'Monte Carlo Simulation of DDM'
     short_title = 'Intro Monte Carlo Lab'
-    youtube_id = ''
+    youtube_id = 'ZR8AiEaOEJs'
     week_covered = 10
     bullets = [
         [
@@ -737,7 +737,7 @@ def get_intro_monte_carlo_lab_lecture() -> LabExerciseLecture:
 def get_python_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
     title = 'Monte Carlo Simulation of Python Models'
     short_title = 'Monte Carlo Python Lab'
-    youtube_id = ''
+    youtube_id = 'CkfhvKfXR9k'
     week_covered = 10
     bullets = [
         [
@@ -750,12 +750,12 @@ def get_python_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
         ],
         [
             "Continue from the first lab exercise. Now you are also concerned that your assembly line will not be "
-            "as efficient amd so the number of phones per machine will be lower. So draw that from a normal "
+            "as efficient and so the number of phones per machine will be lower. So draw that from a normal "
             "distribution with mean 100,000 and standard deviation of 20,000. ",
             "As you run the model, also store what were the interest and number of phones corresponding "
             "to the NPV. You want to see which has a greater impact on the NPV: "
             "interest or number of phones. Visualize the relationship between interest and NPV, and "
-            "the relationship between beginning salary and NPV. Also run a regression "
+            "the relationship between number of phones and NPV. Also run a regression "
             "to quantitatively determine which has a greater effect."
         ]
     ]
@@ -774,7 +774,7 @@ def get_python_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
 def get_excel_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
     title = 'Monte Carlo Simulation of Excel Models'
     short_title = 'Monte Carlo Excel Lab'
-    youtube_id = ''
+    youtube_id = 'xCMov82vyD4'
     week_covered = 10
     bullets = [
         [
@@ -785,7 +785,7 @@ def get_excel_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
             'Estimate the model 1,000 times and output the results back to Excel',
             'In Excel, visualize the results.  Create a '
             'table of probabilities and the minimum NPV we could expect with that probability. Output '
-            r'the chance that the NPV will be more than \$800,000,000.'
+            r'the chance that the NPV will be more than \$400,000,000.'
         ],
         [
             "Continue from the first lab exercise. Now you are also concerned that there is varying quality "
