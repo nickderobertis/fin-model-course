@@ -1,0 +1,1519 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.6,
+      "duration": 2.159
+    },
+    {
+      "text": "nick dear bird is here teaching you",
+      "start": 4.4,
+      "duration": 3.76
+    },
+    {
+      "text": "financial modeling today i'm going to",
+      "start": 5.759,
+      "duration": 4.241
+    },
+    {
+      "text": "introduce the third project",
+      "start": 8.16,
+      "duration": 4.32
+    },
+    {
+      "text": "in the course monte carlo cost of",
+      "start": 10.0,
+      "duration": 4.4
+    },
+    {
+      "text": "capital",
+      "start": 12.48,
+      "duration": 6.24
+    },
+    {
+      "text": "so this project is doing two main things",
+      "start": 14.4,
+      "duration": 7.12
+    },
+    {
+      "text": "one it's testing the knowledge of all",
+      "start": 18.72,
+      "duration": 4.479
+    },
+    {
+      "text": "the monte carlo material that we've",
+      "start": 21.52,
+      "duration": 2.16
+    },
+    {
+      "text": "covered",
+      "start": 23.199,
+      "duration": 3.601
+    },
+    {
+      "text": "in the course and the other is",
+      "start": 23.68,
+      "duration": 5.28
+    },
+    {
+      "text": "starting to work towards what's going to",
+      "start": 26.8,
+      "duration": 3.36
+    },
+    {
+      "text": "be the capstone",
+      "start": 28.96,
+      "duration": 3.759
+    },
+    {
+      "text": "model of the class the discounted cash",
+      "start": 30.16,
+      "duration": 3.84
+    },
+    {
+      "text": "flow valuation",
+      "start": 32.719,
+      "duration": 5.041
+    },
+    {
+      "text": "of a stock or dcf model and within the",
+      "start": 34.0,
+      "duration": 5.44
+    },
+    {
+      "text": "dcf model",
+      "start": 37.76,
+      "duration": 4.959
+    },
+    {
+      "text": "you have to determine the cost of",
+      "start": 39.44,
+      "duration": 3.92
+    },
+    {
+      "text": "capital",
+      "start": 42.719,
+      "duration": 2.32
+    },
+    {
+      "text": "for the company the weighted average",
+      "start": 43.36,
+      "duration": 4.24
+    },
+    {
+      "text": "cost of capital or the whack",
+      "start": 45.039,
+      "duration": 6.0
+    },
+    {
+      "text": "and uh that's one part of the model and",
+      "start": 47.6,
+      "duration": 4.639
+    },
+    {
+      "text": "then the other part of the model deals",
+      "start": 51.039,
+      "duration": 3.281
+    },
+    {
+      "text": "with the free cash flows",
+      "start": 52.239,
+      "duration": 4.0
+    },
+    {
+      "text": "so for this third project we're just",
+      "start": 54.32,
+      "duration": 4.719
+    },
+    {
+      "text": "going to focus on the whack",
+      "start": 56.239,
+      "duration": 4.96
+    },
+    {
+      "text": "and then in the final project in the",
+      "start": 59.039,
+      "duration": 4.561
+    },
+    {
+      "text": "course we're going to then",
+      "start": 61.199,
+      "duration": 5.841
+    },
+    {
+      "text": "do the entire dcf model",
+      "start": 63.6,
+      "duration": 6.64
+    },
+    {
+      "text": "so for this project we're all going to",
+      "start": 67.04,
+      "duration": 5.04
+    },
+    {
+      "text": "work on the same company we're all",
+      "start": 70.24,
+      "duration": 4.72
+    },
+    {
+      "text": "going to try to figure out the whack for",
+      "start": 72.08,
+      "duration": 5.28
+    },
+    {
+      "text": "walmart",
+      "start": 74.96,
+      "duration": 2.4
+    },
+    {
+      "text": "and that's the main goal here is to",
+      "start": 77.84,
+      "duration": 4.8
+    },
+    {
+      "text": "figure out the whack",
+      "start": 80.72,
+      "duration": 4.56
+    },
+    {
+      "text": "and so that's going to involve working",
+      "start": 82.64,
+      "duration": 3.76
+    },
+    {
+      "text": "with both the debt",
+      "start": 85.28,
+      "duration": 5.04
+    },
+    {
+      "text": "and the equity finding the costs and the",
+      "start": 86.4,
+      "duration": 6.8
+    },
+    {
+      "text": "weights of debt and equity and you can",
+      "start": 90.32,
+      "duration": 3.439
+    },
+    {
+      "text": "ignore",
+      "start": 93.2,
+      "duration": 3.12
+    },
+    {
+      "text": "preferred stock for the purposes of this",
+      "start": 93.759,
+      "duration": 4.881
+    },
+    {
+      "text": "model",
+      "start": 96.32,
+      "duration": 2.32
+    },
+    {
+      "text": "so not only should you just find the",
+      "start": 99.52,
+      "duration": 3.44
+    },
+    {
+      "text": "whack",
+      "start": 102.56,
+      "duration": 2.72
+    },
+    {
+      "text": "that's kind of the core or base model",
+      "start": 102.96,
+      "duration": 3.519
+    },
+    {
+      "text": "then you also want to run the monte",
+      "start": 105.28,
+      "duration": 3.6
+    },
+    {
+      "text": "carlo simulations on that",
+      "start": 106.479,
+      "duration": 5.201
+    },
+    {
+      "text": "and we want to see all the standard kind",
+      "start": 108.88,
+      "duration": 4.559
+    },
+    {
+      "text": "of outputs that you would have from a",
+      "start": 111.68,
+      "duration": 5.2
+    },
+    {
+      "text": "monte carlo simulation a",
+      "start": 113.439,
+      "duration": 5.761
+    },
+    {
+      "text": "visualization of the probability",
+      "start": 116.88,
+      "duration": 4.0
+    },
+    {
+      "text": "distribution through a histogram",
+      "start": 119.2,
+      "duration": 5.04
+    },
+    {
+      "text": "as well as a table of the percentiles of",
+      "start": 120.88,
+      "duration": 5.839
+    },
+    {
+      "text": "the distribution",
+      "start": 124.24,
+      "duration": 5.04
+    },
+    {
+      "text": "and you want to evaluate which of the",
+      "start": 126.719,
+      "duration": 3.76
+    },
+    {
+      "text": "variables",
+      "start": 129.28,
+      "duration": 3.52
+    },
+    {
+      "text": "has the greatest contribution to the wax",
+      "start": 130.479,
+      "duration": 4.241
+    },
+    {
+      "text": "so you want to do the full analysis",
+      "start": 132.8,
+      "duration": 4.079
+    },
+    {
+      "text": "of the relationship between the inputs",
+      "start": 134.72,
+      "duration": 4.879
+    },
+    {
+      "text": "and the outputs",
+      "start": 136.879,
+      "duration": 6.961
+    },
+    {
+      "text": "so that's the main idea here and",
+      "start": 139.599,
+      "duration": 6.241
+    },
+    {
+      "text": "to go along with this project there are",
+      "start": 143.84,
+      "duration": 3.68
+    },
+    {
+      "text": "a number of data files",
+      "start": 145.84,
+      "duration": 5.28
+    },
+    {
+      "text": "provided so",
+      "start": 147.52,
+      "duration": 7.359
+    },
+    {
+      "text": "you're going to get prices stock prices",
+      "start": 151.12,
+      "duration": 5.52
+    },
+    {
+      "text": "debt information",
+      "start": 154.879,
+      "duration": 4.64
+    },
+    {
+      "text": "um you're going to get the income",
+      "start": 156.64,
+      "duration": 4.4
+    },
+    {
+      "text": "statement and balance sheet",
+      "start": 159.519,
+      "duration": 4.0
+    },
+    {
+      "text": "as well and we'll we'll take a look at",
+      "start": 161.04,
+      "duration": 5.36
+    },
+    {
+      "text": "what these look like",
+      "start": 163.519,
+      "duration": 2.881
+    },
+    {
+      "text": "and so for this project",
+      "start": 167.76,
+      "duration": 7.04
+    },
+    {
+      "text": "um you can feel free to modify these",
+      "start": 171.44,
+      "duration": 4.24
+    },
+    {
+      "text": "data files",
+      "start": 174.8,
+      "duration": 3.76
+    },
+    {
+      "text": "in any way that you want just if you do",
+      "start": 175.68,
+      "duration": 5.12
+    },
+    {
+      "text": "make any modifications",
+      "start": 178.56,
+      "duration": 4.959
+    },
+    {
+      "text": "then submit the modified data files",
+      "start": 180.8,
+      "duration": 3.439
+    },
+    {
+      "text": "along",
+      "start": 183.519,
+      "duration": 4.0
+    },
+    {
+      "text": "with your project if you don't submit",
+      "start": 184.239,
+      "duration": 5.441
+    },
+    {
+      "text": "any of the files i'm going to assume",
+      "start": 187.519,
+      "duration": 5.44
+    },
+    {
+      "text": "that you were using the original file",
+      "start": 189.68,
+      "duration": 4.639
+    },
+    {
+      "text": "and so i'll run it with the original",
+      "start": 192.959,
+      "duration": 3.2
+    },
+    {
+      "text": "file and if it doesn't work because",
+      "start": 194.319,
+      "duration": 3.121
+    },
+    {
+      "text": "it was supposed to be modified and you",
+      "start": 196.159,
+      "duration": 3.281
+    },
+    {
+      "text": "didn't submit that that's going to be an",
+      "start": 197.44,
+      "duration": 4.24
+    },
+    {
+      "text": "issue with your model so make sure",
+      "start": 199.44,
+      "duration": 5.359
+    },
+    {
+      "text": "that you provide any of the data files",
+      "start": 201.68,
+      "duration": 6.0
+    },
+    {
+      "text": "that you modify",
+      "start": 204.799,
+      "duration": 2.881
+    },
+    {
+      "text": "and the bonus on this is to try and do",
+      "start": 207.76,
+      "duration": 4.32
+    },
+    {
+      "text": "the entire",
+      "start": 211.519,
+      "duration": 3.36
+    },
+    {
+      "text": "thing without manually modifying any of",
+      "start": 212.08,
+      "duration": 5.28
+    },
+    {
+      "text": "these data files",
+      "start": 214.879,
+      "duration": 5.521
+    },
+    {
+      "text": "and when thinking about the bonus",
+      "start": 217.36,
+      "duration": 6.0
+    },
+    {
+      "text": "i would as always recommend doing it",
+      "start": 220.4,
+      "duration": 3.6
+    },
+    {
+      "text": "last",
+      "start": 223.36,
+      "duration": 3.12
+    },
+    {
+      "text": "even though it's the first step in the",
+      "start": 224.0,
+      "duration": 3.68
+    },
+    {
+      "text": "process",
+      "start": 226.48,
+      "duration": 3.44
+    },
+    {
+      "text": "i still wouldn't recommend trying to do",
+      "start": 227.68,
+      "duration": 3.68
+    },
+    {
+      "text": "it first",
+      "start": 229.92,
+      "duration": 5.519
+    },
+    {
+      "text": "um so do whatever manual cleanup you",
+      "start": 231.36,
+      "duration": 5.439
+    },
+    {
+      "text": "have to do and if you think you're going",
+      "start": 235.439,
+      "duration": 2.241
+    },
+    {
+      "text": "to do the bonus",
+      "start": 236.799,
+      "duration": 3.52
+    },
+    {
+      "text": "just write down every step that you're",
+      "start": 237.68,
+      "duration": 4.88
+    },
+    {
+      "text": "doing to manually clean up the data",
+      "start": 240.319,
+      "duration": 4.401
+    },
+    {
+      "text": "that you can later go back and try to",
+      "start": 242.56,
+      "duration": 3.2
+    },
+    {
+      "text": "recreate that",
+      "start": 244.72,
+      "duration": 4.879
+    },
+    {
+      "text": "with code instead of doing it manually",
+      "start": 245.76,
+      "duration": 6.64
+    },
+    {
+      "text": "and i provided a number of resources",
+      "start": 249.599,
+      "duration": 4.321
+    },
+    {
+      "text": "here",
+      "start": 252.4,
+      "duration": 3.44
+    },
+    {
+      "text": "which are going to help you complete the",
+      "start": 253.92,
+      "duration": 4.08
+    },
+    {
+      "text": "bonus",
+      "start": 255.84,
+      "duration": 5.119
+    },
+    {
+      "text": "you may not need all of them it depends",
+      "start": 258.0,
+      "duration": 3.359
+    },
+    {
+      "text": "on",
+      "start": 260.959,
+      "duration": 4.081
+    },
+    {
+      "text": "the ways that you go about doing this",
+      "start": 261.359,
+      "duration": 3.681
+    },
+    {
+      "text": "and this stuff for the most part is",
+      "start": 265.52,
+      "duration": 4.16
+    },
+    {
+      "text": "outside of the scope of the course but i",
+      "start": 267.84,
+      "duration": 2.4
+    },
+    {
+      "text": "think it's",
+      "start": 269.68,
+      "duration": 4.48
+    },
+    {
+      "text": "it's valuable uh to know this because",
+      "start": 270.24,
+      "duration": 6.16
+    },
+    {
+      "text": "in the real world data files are often",
+      "start": 274.16,
+      "duration": 3.759
+    },
+    {
+      "text": "going to be messy and you need to clean",
+      "start": 276.4,
+      "duration": 2.0
+    },
+    {
+      "text": "them up",
+      "start": 277.919,
+      "duration": 2.241
+    },
+    {
+      "text": "and you don't want to have to have this",
+      "start": 278.4,
+      "duration": 4.4
+    },
+    {
+      "text": "manual cleanup step every time",
+      "start": 280.16,
+      "duration": 5.44
+    },
+    {
+      "text": "it's definitely room for error in your",
+      "start": 282.8,
+      "duration": 4.64
+    },
+    {
+      "text": "model if you mess up one of the manual",
+      "start": 285.6,
+      "duration": 3.44
+    },
+    {
+      "text": "clean up steps",
+      "start": 287.44,
+      "duration": 3.68
+    },
+    {
+      "text": "and it's just a lot more work to keep",
+      "start": 289.04,
+      "duration": 5.04
+    },
+    {
+      "text": "doing that manually",
+      "start": 291.12,
+      "duration": 2.96
+    },
+    {
+      "text": "so um then i provided a few",
+      "start": 294.84,
+      "duration": 8.04
+    },
+    {
+      "text": "notes um to help guide you along here",
+      "start": 298.0,
+      "duration": 7.28
+    },
+    {
+      "text": "so you've got daily stock prices and so",
+      "start": 302.88,
+      "duration": 4.0
+    },
+    {
+      "text": "that means when you calculate returns",
+      "start": 305.28,
+      "duration": 3.199
+    },
+    {
+      "text": "from those prices that those",
+      "start": 306.88,
+      "duration": 5.44
+    },
+    {
+      "text": "returns are going to be daily as well",
+      "start": 308.479,
+      "duration": 3.841
+    },
+    {
+      "text": "so in order to work with the cap m",
+      "start": 313.039,
+      "duration": 7.041
+    },
+    {
+      "text": "then you're going to need to take the",
+      "start": 317.759,
+      "duration": 4.641
+    },
+    {
+      "text": "annualized risk free rate from the model",
+      "start": 320.08,
+      "duration": 3.36
+    },
+    {
+      "text": "inputs",
+      "start": 322.4,
+      "duration": 4.079
+    },
+    {
+      "text": "and divide it by 252 to get a daily rate",
+      "start": 323.44,
+      "duration": 5.84
+    },
+    {
+      "text": "then you can run the cap m and then at",
+      "start": 326.479,
+      "duration": 4.481
+    },
+    {
+      "text": "the end you'll have",
+      "start": 329.28,
+      "duration": 5.12
+    },
+    {
+      "text": "a daily uh result at the end",
+      "start": 330.96,
+      "duration": 6.32
+    },
+    {
+      "text": "so you can multiply that by 252 at the",
+      "start": 334.4,
+      "duration": 5.44
+    },
+    {
+      "text": "end",
+      "start": 337.28,
+      "duration": 2.56
+    },
+    {
+      "text": "um i already talked about this with",
+      "start": 340.16,
+      "duration": 3.68
+    },
+    {
+      "text": "modifying",
+      "start": 342.88,
+      "duration": 4.159
+    },
+    {
+      "text": "the data files um",
+      "start": 343.84,
+      "duration": 5.919
+    },
+    {
+      "text": "and then we'll look at the debt",
+      "start": 347.039,
+      "duration": 6.0
+    },
+    {
+      "text": "spreadsheet here in a moment but",
+      "start": 349.759,
+      "duration": 5.601
+    },
+    {
+      "text": "the maturity is is missing in some cases",
+      "start": 353.039,
+      "duration": 3.44
+    },
+    {
+      "text": "or",
+      "start": 355.36,
+      "duration": 4.32
+    },
+    {
+      "text": "um it's it just says a year",
+      "start": 356.479,
+      "duration": 5.201
+    },
+    {
+      "text": "if it just says a year then you can",
+      "start": 359.68,
+      "duration": 3.84
+    },
+    {
+      "text": "assume it's december 31st",
+      "start": 361.68,
+      "duration": 5.44
+    },
+    {
+      "text": "of that year if there's a range of",
+      "start": 363.52,
+      "duration": 5.36
+    },
+    {
+      "text": "coupons given for the debt",
+      "start": 367.12,
+      "duration": 3.76
+    },
+    {
+      "text": "then you can just take the midpoint of",
+      "start": 368.88,
+      "duration": 3.759
+    },
+    {
+      "text": "that range and use that",
+      "start": 370.88,
+      "duration": 4.64
+    },
+    {
+      "text": "as the coupon",
+      "start": 372.639,
+      "duration": 2.881
+    },
+    {
+      "text": "if there is not enough information to",
+      "start": 376.24,
+      "duration": 3.44
+    },
+    {
+      "text": "calculate a bond price",
+      "start": 378.24,
+      "duration": 4.079
+    },
+    {
+      "text": "then you can just use the principal",
+      "start": 379.68,
+      "duration": 3.12
+    },
+    {
+      "text": "amount",
+      "start": 382.319,
+      "duration": 2.961
+    },
+    {
+      "text": "instead of trying to calculate a market",
+      "start": 382.8,
+      "duration": 3.519
+    },
+    {
+      "text": "value",
+      "start": 385.28,
+      "duration": 2.32
+    },
+    {
+      "text": "if there's not enough information to",
+      "start": 386.319,
+      "duration": 2.88
+    },
+    {
+      "text": "calculate a price and it doesn't have a",
+      "start": 387.6,
+      "duration": 2.319
+    },
+    {
+      "text": "principal",
+      "start": 389.199,
+      "duration": 5.12
+    },
+    {
+      "text": "then you can just exclude it",
+      "start": 389.919,
+      "duration": 8.241
+    },
+    {
+      "text": "so let's take a look at these data files",
+      "start": 394.319,
+      "duration": 7.44
+    },
+    {
+      "text": "so first one s p 500 prices",
+      "start": 398.16,
+      "duration": 7.36
+    },
+    {
+      "text": "this is the prices on the s p 500 pulled",
+      "start": 401.759,
+      "duration": 6.241
+    },
+    {
+      "text": "straight from yahoo finance",
+      "start": 405.52,
+      "duration": 4.959
+    },
+    {
+      "text": "and the adjusted close column is going",
+      "start": 408.0,
+      "duration": 4.479
+    },
+    {
+      "text": "to be the one that you would want to use",
+      "start": 410.479,
+      "duration": 3.041
+    },
+    {
+      "text": "to get the price",
+      "start": 412.479,
+      "duration": 3.28
+    },
+    {
+      "text": "including any dividends or share splits",
+      "start": 413.52,
+      "duration": 5.119
+    },
+    {
+      "text": "or things like that",
+      "start": 415.759,
+      "duration": 2.88
+    },
+    {
+      "text": "and next we have the walmart debt",
+      "start": 418.88,
+      "duration": 3.2
+    },
+    {
+      "text": "details",
+      "start": 420.96,
+      "duration": 3.44
+    },
+    {
+      "text": "or let me just quickly hit the uh",
+      "start": 422.08,
+      "duration": 3.44
+    },
+    {
+      "text": "walmart",
+      "start": 424.4,
+      "duration": 4.56
+    },
+    {
+      "text": "uh prices first um",
+      "start": 425.52,
+      "duration": 6.48
+    },
+    {
+      "text": "walmart prices same exact thing as the s",
+      "start": 428.96,
+      "duration": 3.28
+    },
+    {
+      "text": "p",
+      "start": 432.0,
+      "duration": 2.72
+    },
+    {
+      "text": "prices just for walmart instead of the s",
+      "start": 432.24,
+      "duration": 3.84
+    },
+    {
+      "text": "p so again",
+      "start": 434.72,
+      "duration": 3.52
+    },
+    {
+      "text": "the adjusted close column is the one",
+      "start": 436.08,
+      "duration": 5.28
+    },
+    {
+      "text": "that you want to use for the price",
+      "start": 438.24,
+      "duration": 3.12
+    },
+    {
+      "text": "um and then that details",
+      "start": 441.599,
+      "duration": 4.88
+    },
+    {
+      "text": "so this is where what you're going to",
+      "start": 444.72,
+      "duration": 4.08
+    },
+    {
+      "text": "use to calculate the market value",
+      "start": 446.479,
+      "duration": 5.84
+    },
+    {
+      "text": "of debt this is pulled from",
+      "start": 448.8,
+      "duration": 6.72
+    },
+    {
+      "text": "s p capital iq and",
+      "start": 452.319,
+      "duration": 6.88
+    },
+    {
+      "text": "you'll see here first there's actually",
+      "start": 455.52,
+      "duration": 5.119
+    },
+    {
+      "text": "two tables",
+      "start": 459.199,
+      "duration": 4.881
+    },
+    {
+      "text": "in here you'll notice that the top",
+      "start": 460.639,
+      "duration": 6.721
+    },
+    {
+      "text": "table is more recent so just use the top",
+      "start": 464.08,
+      "duration": 3.839
+    },
+    {
+      "text": "table",
+      "start": 467.36,
+      "duration": 2.239
+    },
+    {
+      "text": "you can completely ignore the bottom",
+      "start": 467.919,
+      "duration": 3.68
+    },
+    {
+      "text": "table it should not be included it's old",
+      "start": 469.599,
+      "duration": 3.361
+    },
+    {
+      "text": "data",
+      "start": 471.599,
+      "duration": 4.401
+    },
+    {
+      "text": "so just using the top table",
+      "start": 472.96,
+      "duration": 4.56
+    },
+    {
+      "text": "and then this is where i was talking",
+      "start": 476.0,
+      "duration": 3.599
+    },
+    {
+      "text": "about some of the maturities or just",
+      "start": 477.52,
+      "duration": 3.679
+    },
+    {
+      "text": "years you can assume that's december",
+      "start": 479.599,
+      "duration": 2.801
+    },
+    {
+      "text": "31st",
+      "start": 481.199,
+      "duration": 2.961
+    },
+    {
+      "text": "and then some of the coupons are",
+      "start": 482.4,
+      "duration": 3.84
+    },
+    {
+      "text": "arranged you can just take the midpoint",
+      "start": 484.16,
+      "duration": 3.84
+    },
+    {
+      "text": "of that range",
+      "start": 486.24,
+      "duration": 3.76
+    },
+    {
+      "text": "um and you're going to want to be",
+      "start": 488.0,
+      "duration": 3.84
+    },
+    {
+      "text": "calculating the market value of these",
+      "start": 490.0,
+      "duration": 3.919
+    },
+    {
+      "text": "instruments to try and get at the market",
+      "start": 491.84,
+      "duration": 3.039
+    },
+    {
+      "text": "value of debt",
+      "start": 493.919,
+      "duration": 3.84
+    },
+    {
+      "text": "for walmart",
+      "start": 494.879,
+      "duration": 2.88
+    },
+    {
+      "text": "and then the income statement",
+      "start": 501.28,
+      "duration": 7.68
+    },
+    {
+      "text": "is provided here so this gives you",
+      "start": 504.8,
+      "duration": 7.84
+    },
+    {
+      "text": "all the income statement items and",
+      "start": 508.96,
+      "duration": 6.079
+    },
+    {
+      "text": "quarterly time periods starting with the",
+      "start": 512.64,
+      "duration": 3.68
+    },
+    {
+      "text": "oldest over here",
+      "start": 515.039,
+      "duration": 4.56
+    },
+    {
+      "text": "and the newest all the way on the right",
+      "start": 516.32,
+      "duration": 6.24
+    },
+    {
+      "text": "so you just want to use the newest data",
+      "start": 519.599,
+      "duration": 4.881
+    },
+    {
+      "text": "you don't need to worry about any of",
+      "start": 522.56,
+      "duration": 2.399
+    },
+    {
+      "text": "this",
+      "start": 524.48,
+      "duration": 3.76
+    },
+    {
+      "text": "old data just the newest is what you",
+      "start": 524.959,
+      "duration": 5.761
+    },
+    {
+      "text": "want to use",
+      "start": 528.24,
+      "duration": 2.48
+    },
+    {
+      "text": "same thing coming to the balance sheet",
+      "start": 530.8,
+      "duration": 4.479
+    },
+    {
+      "text": "all the balance sheet items different",
+      "start": 533.36,
+      "duration": 3.039
+    },
+    {
+      "text": "time periods",
+      "start": 535.279,
+      "duration": 4.161
+    },
+    {
+      "text": "again just use the most recent period",
+      "start": 536.399,
+      "duration": 5.601
+    },
+    {
+      "text": "provided",
+      "start": 539.44,
+      "duration": 2.56
+    },
+    {
+      "text": "so those are the data files that are",
+      "start": 543.92,
+      "duration": 3.28
+    },
+    {
+      "text": "provided",
+      "start": 546.48,
+      "duration": 4.0
+    },
+    {
+      "text": "with the project",
+      "start": 547.2,
+      "duration": 3.28
+    },
+    {
+      "text": "here are the inputs you're going to have",
+      "start": 551.68,
+      "duration": 4.88
+    },
+    {
+      "text": "in the project",
+      "start": 553.92,
+      "duration": 2.64
+    },
+    {
+      "text": "and the grading is similar to",
+      "start": 556.88,
+      "duration": 5.28
+    },
+    {
+      "text": "what it has been in the other projects",
+      "start": 560.16,
+      "duration": 3.84
+    },
+    {
+      "text": "accuracy readability formatting",
+      "start": 562.16,
+      "duration": 4.32
+    },
+    {
+      "text": "following the template and a 5",
+      "start": 564.0,
+      "duration": 4.959
+    },
+    {
+      "text": "bonus",
+      "start": 566.48,
+      "duration": 2.479
+    },
+    {
+      "text": "and i gave you some solutions",
+      "start": 569.76,
+      "duration": 6.32
+    },
+    {
+      "text": "with the baseline inputs so you can",
+      "start": 573.92,
+      "duration": 4.0
+    },
+    {
+      "text": "check to make sure that things are",
+      "start": 576.08,
+      "duration": 4.96
+    },
+    {
+      "text": "working appropriately",
+      "start": 577.92,
+      "duration": 3.12
+    },
+    {
+      "text": "and that's what's involved here i'll",
+      "start": 582.24,
+      "duration": 4.159
+    },
+    {
+      "text": "just quickly go ahead",
+      "start": 584.56,
+      "duration": 4.959
+    },
+    {
+      "text": "and show the",
+      "start": 586.399,
+      "duration": 7.12
+    },
+    {
+      "text": "templates um so here is the",
+      "start": 589.519,
+      "duration": 7.201
+    },
+    {
+      "text": "excel template as the baseline inputs",
+      "start": 593.519,
+      "duration": 7.76
+    },
+    {
+      "text": "and the simulation inputs and then",
+      "start": 596.72,
+      "duration": 4.559
+    },
+    {
+      "text": "if you're doing the combine excel python",
+      "start": 601.92,
+      "duration": 4.32
+    },
+    {
+      "text": "model then you can put",
+      "start": 603.68,
+      "duration": 4.8
+    },
+    {
+      "text": "your baseline whack here all the",
+      "start": 606.24,
+      "duration": 4.64
+    },
+    {
+      "text": "intermediate outputs here",
+      "start": 608.48,
+      "duration": 5.68
+    },
+    {
+      "text": "and if you're doing a pure excel model",
+      "start": 610.88,
+      "duration": 4.8
+    },
+    {
+      "text": "then you want to put all your monte",
+      "start": 614.16,
+      "duration": 4.4
+    },
+    {
+      "text": "carlo results here",
+      "start": 615.68,
+      "duration": 6.0
+    },
+    {
+      "text": "so then you'll have each of the wax",
+      "start": 618.56,
+      "duration": 5.519
+    },
+    {
+      "text": "as well as the other inputs that it's",
+      "start": 621.68,
+      "duration": 3.279
+    },
+    {
+      "text": "associated with",
+      "start": 624.079,
+      "duration": 6.081
+    },
+    {
+      "text": "for all 10 000 iterations there",
+      "start": 624.959,
+      "duration": 5.201
+    },
+    {
+      "text": "and then on the python side this",
+      "start": 631.36,
+      "duration": 7.76
+    },
+    {
+      "text": "is the template so it has the",
+      "start": 634.48,
+      "duration": 7.039
+    },
+    {
+      "text": "the model inputs and it has the",
+      "start": 639.12,
+      "duration": 4.24
+    },
+    {
+      "text": "simulation inputs",
+      "start": 641.519,
+      "duration": 4.721
+    },
+    {
+      "text": "and you want to ultimately set these",
+      "start": 643.36,
+      "duration": 4.88
+    },
+    {
+      "text": "variables with the results from",
+      "start": 646.24,
+      "duration": 5.279
+    },
+    {
+      "text": "your baseline model and after the",
+      "start": 648.24,
+      "duration": 5.279
+    },
+    {
+      "text": "simulation you want to set",
+      "start": 651.519,
+      "duration": 6.88
+    },
+    {
+      "text": "the simulation results into the wac",
+      "start": 653.519,
+      "duration": 4.88
+    },
+    {
+      "text": "mcdf",
+      "start": 658.839,
+      "duration": 6.601
+    },
+    {
+      "text": "um and",
+      "start": 660.32,
+      "duration": 8.24
+    },
+    {
+      "text": "so you like just like the last project",
+      "start": 665.44,
+      "duration": 4.72
+    },
+    {
+      "text": "you can submit pure python for your",
+      "start": 668.56,
+      "duration": 3.92
+    },
+    {
+      "text": "excel or a combination model",
+      "start": 670.16,
+      "duration": 5.44
+    },
+    {
+      "text": "um but if you do the combination model",
+      "start": 672.48,
+      "duration": 4.56
+    },
+    {
+      "text": "the one restriction i'm going to put",
+      "start": 675.6,
+      "duration": 4.479
+    },
+    {
+      "text": "is that then your answer your your you",
+      "start": 677.04,
+      "duration": 3.52
+    },
+    {
+      "text": "should be",
+      "start": 680.079,
+      "duration": 3.681
+    },
+    {
+      "text": "ultimately um",
+      "start": 680.56,
+      "duration": 4.959
+    },
+    {
+      "text": "setting these variables in the python",
+      "start": 683.76,
+      "duration": 3.28
+    },
+    {
+      "text": "template and expect to be",
+      "start": 685.519,
+      "duration": 4.161
+    },
+    {
+      "text": "me grading these variables in the python",
+      "start": 687.04,
+      "duration": 3.84
+    },
+    {
+      "text": "template",
+      "start": 689.68,
+      "duration": 4.719
+    },
+    {
+      "text": "um so",
+      "start": 690.88,
+      "duration": 3.519
+    },
+    {
+      "text": "um but other than that you can use any",
+      "start": 694.48,
+      "duration": 6.32
+    },
+    {
+      "text": "of the two tools that you would like for",
+      "start": 699.2,
+      "duration": 3.12
+    },
+    {
+      "text": "whatever parts of the",
+      "start": 700.8,
+      "duration": 3.84
+    },
+    {
+      "text": "project",
+      "start": 702.32,
+      "duration": 2.32
+    },
+    {
+      "text": "and regardless of whatever setup you",
+      "start": 705.44,
+      "duration": 3.44
+    },
+    {
+      "text": "have",
+      "start": 707.76,
+      "duration": 3.36
+    },
+    {
+      "text": "when i run the model it should run the",
+      "start": 708.88,
+      "duration": 3.68
+    },
+    {
+      "text": "monte carlo simulation",
+      "start": 711.12,
+      "duration": 3.719
+    },
+    {
+      "text": "it should not just be a hard-coded",
+      "start": 712.56,
+      "duration": 3.44
+    },
+    {
+      "text": "simulation",
+      "start": 714.839,
+      "duration": 3.161
+    },
+    {
+      "text": "in there that was run by some means that",
+      "start": 716.0,
+      "duration": 4.639
+    },
+    {
+      "text": "i don't know",
+      "start": 718.0,
+      "duration": 2.639
+    },
+    {
+      "text": "um so yeah that's everything",
+      "start": 721.04,
+      "duration": 7.919
+    },
+    {
+      "text": "that's involved here in the project",
+      "start": 725.44,
+      "duration": 5.44
+    },
+    {
+      "text": "feel free to reach out with any",
+      "start": 728.959,
+      "duration": 3.201
+    },
+    {
+      "text": "questions about it",
+      "start": 730.88,
+      "duration": 3.28
+    },
+    {
+      "text": "and thanks for listening i'll see you",
+      "start": 732.16,
+      "duration": 7.52
+    },
+    {
+      "text": "next time",
+      "start": 734.16,
+      "duration": 5.52
+    }
+  ]
+}
