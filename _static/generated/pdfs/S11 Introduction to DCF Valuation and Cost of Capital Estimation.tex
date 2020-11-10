@@ -178,7 +178,7 @@ and estimating the
 \item You are the CFO for a startup developing artificial intelligence technologies. There will be an initial research phase before making any money. Google is watching your development and will purchase the company after it is profitable.
 \item For the first two years (years 0 and 1), the company loses \$20 million. Then there is one breakeven year, after which the profit is \$10 million for year 3. Finally in year 4, Google purchases the company for \$70 million.
 \item The WACC for the company is 15\% and it has 1 million shares outstanding. The company has \$5 million in debt and \$1 million in cash.
-\item What is the enterprise value of the stock at year 5? What about the enterprise value today? What is the price of the stock today?
+\item What is the enterprise value of the stock at year 4 before Google acquires the company? What about the enterprise value today? What is the price of the stock today?
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
@@ -234,7 +234,7 @@ $r_i = r_f + \beta (r_m - r_f) + \epsilon$
 \setbeamercolor{block title}{bg=darkgreen}
 \begin{block}{Python CAPM Estimation}
 \begin{itemize}
-\item Go to Canvas and download "Determining the Cost of Equity.ipynb" and "price data.xlsx" from Examples > DCF > Cost of Equity > Python
+\item Go to the course site and download "Determining the Cost of Equity.ipynb" and "price data.xlsx" from Cost of Equity Python Examples
 \item Make sure that you place these two in the same folder
 \item We are using historical prices to calculate the cost of equity using CAPM
 \item We will use a risk free rate of 3\% for the exercise
@@ -248,7 +248,7 @@ $r_i = r_f + \beta (r_m - r_f) + \epsilon$
 \setbeamercolor{block title}{bg=darkgreen}
 \begin{block}{Excel CAPM Estimation}
 \begin{itemize}
-\item Go to Canvas and download "DCF Cost of Equity.xlsx" from Examples > DCF > Cost of Equity > Excel
+\item Go to the course site and download "DCF Cost of Equity.xlsx" from Cost of Equity Excel Examples
 \item We are using historical prices to calculate the cost of equity using CAPM
 \item We will use a risk free rate of 3\% for the exercise
 \end{itemize}
@@ -297,9 +297,9 @@ $r_i = r_f + \beta (r_m - r_f) + \epsilon$
 \item There are two general approaches to estimating this: the
 \underline{financial statements approach}
 and the
-\underline{market value of bonds approach}
+\underline{market rate of bonds approach}
 \vfill
-\item The market value of bonds approach is better able to capture the current rate when it has changed substantially over time, but it requires price, coupon, and maturity information on a bond.
+\item The market rate of bonds approach is better able to capture the current rate when it has changed substantially over time, but it requires price, coupon, and maturity information on a bond.
 \vfill
 \item The financial statements approach uses only the income statement and balance sheet, and represents a weighted average historical cost of debt.
 \end{itemize}
@@ -317,7 +317,7 @@ and the
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{The Market Value of Bonds Approach to Cost of Debt}
+\frametitle{The Market Rate of Bonds Approach to Cost of Debt}
 \begin{itemize}
 \item The cost of debt is about raising new debt, so it is more accurate to look at the market to determine how much the company would have to pay for new debt.
 \vfill
@@ -351,8 +351,8 @@ and the
 \setbeamercolor{block title}{bg=violet}
 \begin{block}{Finding Cost of Debt Given Financial and Market Info, Level 1}
 \begin{enumerate}
-\item A chemical manufacturer has a 7.0\% coupon, annual pay 1000 par value bond outstanding, priced at \$1042.12 on 2020-11-06.
-\item If the bond matures on 2023-11-06, what is the cost of debt for this company? The tax rate is 35\%.
+\item A chemical manufacturer has a 7.0\% coupon, annual pay 1000 par value bond outstanding, priced at \$1042.12 on 2020-11-10.
+\item If the bond matures on 2023-11-10, what is the cost of debt for this company? The tax rate is 35\%.
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
@@ -367,7 +367,7 @@ and the
 \begin{frame}
 \frametitle{What is the Market Value of Debt?}
 \begin{itemize}
-\item If you have taken the debt course, you should be familiar with the fact that bonds' values change over time.
+\item If you have taken a debt course, you should be familiar with the fact that bonds' values change over time.
 \vfill
 \item The value of a bond can be determined (just like any financial asset) by taking the present value of future cash flows (here, interest and principal payments). 
 \vfill
@@ -406,22 +406,9 @@ and the
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Calculating the Market Value of Debt}
-{
-\setbeamercolor{block title}{bg=darkgreen}
-\begin{block}{MV Debt Example}
-\begin{itemize}
-\item Go to Canvas and download "Market Value of Debt.ipynb" and "debt data.xlsx" from Examples > DCF > Cost of Debt
-\item Ensure you have the Jupyter notebook and the Excel spreadsheet in the same folder.
-\item We will go through the Jupyter notebook to show the three approaches to estimating the market value of debt.
-\end{itemize}
-\end{block}
-}
-\end{frame}
-\begin{frame}
 \frametitle{Dealing with Seniority of Debt}
 \begin{itemize}
-\item For the purposes of this class, we won't deal with seniority. But you should keep it in mind in the future when estimating the market value of debt.
+\item For the purposes of this class, we won't deal with seniority. But you should keep it in mind in the future when estimating the market value and cost of debt.
 \vfill
 \item Seniority represents the payoff order during bankruptcy. The most senior loans will be paid first, and if there is still money left over, then the more junior loans will be paid.
 \vfill
@@ -429,6 +416,19 @@ and the
 \vfill
 \item In the prior exercise, when valuing individual debt instruments, we assumed a single cost of debt, when in reality, it should be adjusted for the seniority.
 \end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Calculating the Market Value of Debt}
+{
+\setbeamercolor{block title}{bg=darkgreen}
+\begin{block}{MV Debt Example}
+\begin{itemize}
+\item Go to the course site and download "Market Value of Debt.ipynb" and "debt data.xlsx" from Cost of Debt Examples
+\item Ensure you have the Jupyter notebook and the Excel spreadsheet in the same folder.
+\item We will go through the Jupyter notebook to show the three approaches to estimating the market value of debt.
+\end{itemize}
+\end{block}
+}
 \end{frame}
 \end{section}
 \begin{section}[WACC]{Putting it All Together: Calculating the WACC}
@@ -529,7 +529,7 @@ After: 5.20\%};
 \item A pharmaceutical company developed a new drug and has 4 years to sell it before the patent expires. It forms a new company to manufacture and sell the drug. After 4 years, the company will be sold to someone that wants to continue manufacturing at the lower price. The company is just about to pay a dividend.
 \item The new company pays a dividend of \$1 per share each year for years 0 to 3, before selling it for \$30 million in year 4.
 \item There are 10 million shares outstanding, \$10 million of debt and \$1 million of cash throughout the life of the company. The WACC is 10\% today.
-\item What is the enterprise value at year 5 and today? What is the price of the stock today?
+\item What is the enterprise value at year 4 and today? What is the price of the stock today?
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}
@@ -547,7 +547,7 @@ After: 5.20\%};
 \setbeamercolor{block title}{bg=orange}
 \begin{block}{Finding Enterprise and Equity Value Given FCF and WACC, Answers for Level 1}
 \begin{enumerate}
-\item The enterprise value at year 5 is \$70 million
+\item The enterprise value at year 4 is \$70 million
 \item The enterprise value at year 0 is \$9.2 million
 \item The equity value at year 0 is \$5.21 million so the share price is \$5.21
 \end{enumerate}
@@ -567,9 +567,9 @@ After: 5.20\%};
 \setbeamercolor{block title}{bg=orange}
 \begin{block}{Finding Enterprise and Equity Value Given FCF and WACC, Answers for Level 2}
 \begin{enumerate}
-\item The enterprise value at year 5 is \$30 million
-\item The equity value at year 0 is \$49.2 million so the share price is \$4.92
-\item The enterprise value at year 0 is \$58.2 million
+\item The enterprise value at year 4 is \$30 million
+\item The equity value at year 0 is \$48.5 million so the share price is \$4.85
+\item The enterprise value at year 0 is \$57.5 million
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccccc}

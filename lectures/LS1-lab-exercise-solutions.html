@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lab Exercise Solutions &mdash; fin_model_course 0.1.9 documentation</title>
+  <title>Lab Exercise Solutions &mdash; fin_model_course 0.1.10 documentation</title>
   
 
   
@@ -28,6 +28,7 @@
         <script src="../_static/language_data.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -69,7 +70,7 @@
             
             
               <div class="version">
-                0.1.9
+                0.1.10
               </div>
             
           
@@ -106,6 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="8-probabilistic-modeling.html">Probabilistic Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9-combining-excel-and-python.html">Combining Excel and Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10-monte-carlo-simulation.html">Monte Carlo Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html">Introduction to DCF Valuation and Cost of Capital Estimation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PJ1-projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Lab Exercise Solutions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#extending-a-simple-retirement-model">Extending a Simple Retirement Model</a><ul>
@@ -235,6 +237,33 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#id49">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#monte-carlo-simulation-of-ddm">Monte Carlo Simulation of DDM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id50">Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id51">Level 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id52">Level 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id53">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#monte-carlo-simulation-of-python-models">Monte Carlo Simulation of Python Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id54">Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id55">Level 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56">Level 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id57">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#monte-carlo-simulation-of-excel-models">Monte Carlo Simulation of Excel Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id58">Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id59">Level 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id60">Level 2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id61">Resources</a></li>
 </ul>
 </li>
 </ul>
@@ -860,6 +889,103 @@
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/70ecbc16ff2916f54efd6cf8015628d2/S9 Combining Excel and Python.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Combining</span> <span class="pre">Excel</span> <span class="pre">and</span> <span class="pre">Python</span></code></a></p></li>
 <li><p><a class="reference download internal" download="" href="../_downloads/be967b05a0026eb02a0cf0155e7e3262/xlwings Lab.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">xlwings</span> <span class="pre">Lab</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="monte-carlo-simulation-of-ddm">
+<h2>Monte Carlo Simulation of DDM<a class="headerlink" href="#monte-carlo-simulation-of-ddm" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/ZR8AiEaOEJs"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id50">
+<h3>Description<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id51">
+<h4>Level 1<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>You are trying to determine the value of a mature company. The company has had stable dividend growth for a long time so you select the dividend discount model (DDM).</p></li>
+<li><p><span class="math notranslate nohighlight">\(P = \frac{d_1}{r_s - g}\)</span></p></li>
+<li><p>The next dividend will be $1, and your baseline estimates of the cost of capital and growth are 9% and 4%, respectively</p></li>
+<li><p>Write a function which is able to get the price based on values of the inputs</p></li>
+<li><p>Then you are concerned about mis-estimation of the inputs and how it could affect the price. So then assume that the growth rate has a mean of 4% but a standard deviation of 1%</p></li>
+<li><p>Visualize and summarize the resulting probability distribution of the price</p></li>
+</ul>
+</div>
+<div class="section" id="id52">
+<h4>Level 2<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Continue from the first lab exercise</p></li>
+<li><p>Now you are also concerned you have mis-estimated the cost of capital. So now use a mean of 9% and standard deviation of 2%, in addition to varying the growth</p></li>
+<li><p>Visualize and summarize the resulting probability distribution of the price</p></li>
+<li><p>Be careful as in some cases, the drawn cost of capital will be lower than the drawn growth rate, which breaks the DDM. You will need to modify your logic to throw out these cases.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id53">
+<h3>Resources<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/4ca1b00d620378f3685eced0ff92b544/S10 Monte Carlo Simulation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Monte</span> <span class="pre">Carlo</span> <span class="pre">Simulation</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="monte-carlo-simulation-of-python-models">
+<h2>Monte Carlo Simulation of Python Models<a class="headerlink" href="#monte-carlo-simulation-of-python-models" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/CkfhvKfXR9k"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id54">
+<h3>Description<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id55">
+<h4>Level 1<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Work off of your existing Project 1 Python model</p></li>
+<li><p>You are concerned the NPV could be heavily affected by changes in the interest rate. Instead of fixing it, draw it from a normal distribution with mean of 7% and standard deviation of 2%.</p></li>
+<li><p>Run the model 10,000 times and collect the NPV results. Visualize the results. Create a table of probabilities and the minimum NPV we could expect with that probability. Output the chance that the NPV will be more than $400,000,000.</p></li>
+</ul>
+</div>
+<div class="section" id="id56">
+<h4>Level 2<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Continue from the first lab exercise. Now you are also concerned that your assembly line will not be as efficient and so the number of phones per machine will be lower. So draw that from a normal distribution with mean 100,000 and standard deviation of 20,000.</p></li>
+<li><p>As you run the model, also store what were the interest and number of phones corresponding to the NPV. You want to see which has a greater impact on the NPV: interest or number of phones. Visualize the relationship between interest and NPV, and the relationship between number of phones and NPV. Also run a regression to quantitatively determine which has a greater effect.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id57">
+<h3>Resources<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/4ca1b00d620378f3685eced0ff92b544/S10 Monte Carlo Simulation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Monte</span> <span class="pre">Carlo</span> <span class="pre">Simulation</span></code></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="monte-carlo-simulation-of-excel-models">
+<h2>Monte Carlo Simulation of Excel Models<a class="headerlink" href="#monte-carlo-simulation-of-excel-models" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/xCMov82vyD4"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id58">
+<h3>Description<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id59">
+<h4>Level 1<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>You will be running Monte Carlo simulations on your existing Excel model from Project 1</p></li>
+<li><p>You are concerned that your estimate for the number of phones that will be sold is incorrect.</p></li>
+<li><p>The number of phones should instead be drawn from a normal distribution with mean 100,000 and standard deviation of 20,000.</p></li>
+<li><p>Estimate the model 1,000 times and output the results back to Excel</p></li>
+<li><p>In Excel, visualize the results.  Create a table of probabilities and the minimum NPV we could expect with that probability. Output the chance that the NPV will be more than $400,000,000.</p></li>
+</ul>
+</div>
+<div class="section" id="id60">
+<h4>Level 2<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Continue from the first lab exercise. Now you are also concerned that there is varying quality in the machines, so they may have a different lifespan. Draw that from a normal distribution with mean 10 years and standard deviation of 2 years.</p></li>
+<li><p>As you run the model, also store what were the number of phones and machine life corresponding to the NPV, all in Excel. You want to see which has a greater impact on the NPV: number of phones or machine life. Visualize the relationship between number of phones and NPV, and the relationship between beginning machine life and NPV. Try to determine which has a greater effect.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id61">
+<h3>Resources<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/4ca1b00d620378f3685eced0ff92b544/S10 Monte Carlo Simulation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Monte</span> <span class="pre">Carlo</span> <span class="pre">Simulation</span></code></a></p></li>
 </ul>
 </div>
 </div>

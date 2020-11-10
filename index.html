@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Nick DeRobertis’ Financial Modeling Course! &mdash; fin_model_course 0.1.9 documentation</title>
+  <title>Welcome to Nick DeRobertis’ Financial Modeling Course! &mdash; fin_model_course 0.1.10 documentation</title>
   
 
   
@@ -28,6 +28,7 @@
         <script src="_static/language_data.js"></script>
         <script src="_static/clipboard.min.js"></script>
         <script src="_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -68,7 +69,7 @@
             
             
               <div class="version">
-                0.1.9
+                0.1.10
               </div>
             
           
@@ -105,6 +106,7 @@
 <li class="toctree-l1"><a class="reference internal" href="lectures/8-probabilistic-modeling.html">Probabilistic Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lectures/9-combining-excel-and-python.html">Combining Excel and Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lectures/10-monte-carlo-simulation.html">Monte Carlo Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html">Introduction to DCF Valuation and Cost of Capital Estimation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lectures/PJ1-projects.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lectures/LS1-lab-exercise-solutions.html">Lab Exercise Solutions</a></li>
 </ul>
@@ -292,6 +294,20 @@
 <li class="toctree-l2"><a class="reference internal" href="lectures/10-monte-carlo-simulation.html#relationship-of-inputs-and-outputs-in-excel-monte-carlo-simulation">Relationship of Inputs and Outputs in Excel Monte Carlo Simulation</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html">Introduction to DCF Valuation and Cost of Capital Estimation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#introduction-to-discounted-cash-flow-dcf-valuation">Introduction to Discounted Cash Flow (DCF) Valuation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#enterprise-value-and-equity-value">Enterprise Value and Equity Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#introduction-to-cost-of-equity">Introduction to Cost of Equity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#cost-of-equity-in-python">Cost of Equity in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#cost-of-equity-in-excel">Cost of Equity in Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#market-value-of-equity">Market Value of Equity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#cost-of-debt">Cost of Debt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#introduction-to-market-value-of-debt">Introduction to Market Value of Debt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#calculating-the-market-value-of-debt-in-python">Calculating the Market Value of Debt in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/11-introduction-to-dcf-valuation-and-cost-of-capital-estimation.html#calculating-the-weighted-average-cost-of-capital-wacc">Calculating the Weighted Average Cost of Capital (WACC)</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="lectures/PJ1-projects.html">Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="lectures/PJ1-projects.html#resources">Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lectures/PJ1-projects.html#project-0-project-grading-overview">Project 0 - Project Grading Overview</a></li>
@@ -324,6 +340,9 @@
 <li class="toctree-l2"><a class="reference internal" href="lectures/LS1-lab-exercise-solutions.html#extending-the-project-1-model-with-internal-randomness">Extending the Project 1 Model with Internal Randomness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lectures/LS1-lab-exercise-solutions.html#reading-and-writing-to-excel-with-pandas">Reading and Writing to Excel with Pandas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lectures/LS1-lab-exercise-solutions.html#reading-and-writing-to-excel-with-xlwings">Reading and Writing to Excel with xlwings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/LS1-lab-exercise-solutions.html#monte-carlo-simulation-of-ddm">Monte Carlo Simulation of DDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/LS1-lab-exercise-solutions.html#monte-carlo-simulation-of-python-models">Monte Carlo Simulation of Python Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/LS1-lab-exercise-solutions.html#monte-carlo-simulation-of-excel-models">Monte Carlo Simulation of Excel Models</a></li>
 </ul>
 </li>
 </ul>
