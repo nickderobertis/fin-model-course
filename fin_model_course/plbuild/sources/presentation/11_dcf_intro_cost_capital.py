@@ -201,8 +201,9 @@ def get_content():
                 ),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download "Determining the Cost of Equity.ipynb" and "price data.xlsx" from '
-                        'Examples > DCF > Cost of Equity > Python',
+                        'Go to the course site and download "Determining the Cost of Equity.ipynb" '
+                        'and "price data.xlsx" from '
+                        'Cost of Equity Python Examples',
                         'Make sure that you place these two in the same folder',
                         'We are using historical prices to calculate the cost of equity using CAPM',
                         'We will use a risk free rate of 3% for the exercise',
@@ -212,8 +213,8 @@ def get_content():
                 ),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download "DCF Cost of Equity.xlsx" from '
-                        'Examples > DCF > Cost of Equity > Excel',
+                        'Go to the course site and download "DCF Cost of Equity.xlsx" from '
+                        'Cost of Equity Excel Examples',
                         'We are using historical prices to calculate the cost of equity using CAPM',
                         'We will use a risk free rate of 3% for the exercise',
                     ],
@@ -244,8 +245,8 @@ def get_content():
                         'the marginal interest cost of raising one additional dollar via debt.',
                         ['There are two general approaches to estimating this: the',
                          pl.Underline('financial statements approach'), 'and the',
-                         pl.Underline('market value of bonds approach')],
-                        'The market value of bonds approach is better able to capture the current rate when it has '
+                         pl.Underline('market rate of bonds approach')],
+                        'The market rate of bonds approach is better able to capture the current rate when it has '
                         'changed substantially over time, but it requires price, coupon, and maturity information on '
                         'a bond.',
                         'The financial statements approach uses only the income statement and balance sheet, and '
@@ -276,7 +277,7 @@ def get_content():
                         'equivalent to the cost of the bond for the company',
                         'The YTM is simply the IRR of the bond, considering the current market price of the bond'
                     ],
-                    title='The Market Value of Bonds Approach to Cost of Debt'
+                    title='The Market Rate of Bonds Approach to Cost of Debt'
                 ),
                 lp.DimRevealListFrame(
                     [
@@ -297,7 +298,7 @@ def get_content():
                 cost_debt_exercise.presentation_frames(),
                 lp.DimRevealListFrame(
                     [
-                        "If you have taken the debt course, you should be familiar with the fact that bonds' values "
+                        "If you have taken a debt course, you should be familiar with the fact that bonds' values "
                         "change over time.",
                         'The value of a bond can be determined (just like any financial asset) by taking the present value of '
                         'future cash flows (here, interest and principal payments). ',
@@ -334,21 +335,10 @@ def get_content():
                     ],
                     title='Approaches to Calculating the Market Value of Debt'
                 ),
-                InClassExampleFrame(
-                    [
-                        'Go to Canvas and download "Market Value of Debt.ipynb" and "debt data.xlsx" from '
-                        'Examples > DCF > Cost of Debt',
-                        'Ensure you have the Jupyter notebook and the Excel spreadsheet in the same folder.',
-                        'We will go through the Jupyter notebook to show the three approaches to estimating '
-                        'the market value of debt.'
-                    ],
-                    title='Calculating the Market Value of Debt',
-                    block_title='MV Debt Example'
-                ),
                 lp.DimRevealListFrame(
                     [
                         "For the purposes of this class, we won't deal with seniority. But you should keep it in mind "
-                        "in the future when estimating the market value of debt.",
+                        "in the future when estimating the market value and cost of debt.",
                         'Seniority represents the payoff order during bankruptcy. The most senior loans will be paid '
                         'first, and if there is still money left over, then the more junior loans will be paid.',
                         'As there is a higher expected value in recovery, senior loans are less risky and so should '
@@ -357,7 +347,18 @@ def get_content():
                         'debt, when in reality, it should be adjusted for the seniority.',
                     ],
                     title='Dealing with Seniority of Debt'
-                )
+                ),
+                InClassExampleFrame(
+                    [
+                        'Go to the course site and download "Market Value of Debt.ipynb" and "debt data.xlsx" from '
+                        'Cost of Debt Examples',
+                        'Ensure you have the Jupyter notebook and the Excel spreadsheet in the same folder.',
+                        'We will go through the Jupyter notebook to show the three approaches to estimating '
+                        'the market value of debt.'
+                    ],
+                    title='Calculating the Market Value of Debt',
+                    block_title='MV Debt Example'
+                ),
             ],
             title='Cost of Debt Estimation',
             short_title='Debt'

@@ -812,7 +812,7 @@ def get_excel_retirement_monte_carlo_lab_lecture() -> LabExerciseLecture:
 def get_enterprise_value_lab_lecture() -> LabExerciseLecture:
     title = 'Finding Enterprise and Equity Value Given FCF and WACC'
     short_title = 'Enterprise and Equity Value Lab'
-    youtube_id = ''
+    youtube_id = 'iWEDRKSZx70'
     week_covered = 11
     bullets = [
         [
@@ -823,7 +823,8 @@ def get_enterprise_value_lab_lecture() -> LabExerciseLecture:
             r'the profit is \$10 million for year 3. Finally in year 4, Google purchases the company for \$70 million.',
             'The WACC for the company is 15% and it has 1 million shares outstanding. The company has \$5 million '
             'in debt and \$1 million in cash.',
-            'What is the enterprise value of the stock at year 5? What about the enterprise value today? '
+            'What is the enterprise value of the stock at year 4 before Google acquires the company? '
+            'What about the enterprise value today? '
             'What is the price of the stock today?'
         ],
         [
@@ -834,19 +835,19 @@ def get_enterprise_value_lab_lecture() -> LabExerciseLecture:
             r'year 4.',
             r'There are 10 million shares outstanding, \$10 million of debt and \$1 million of cash throughout the '
             r'life of the company. The WACC is 10% today.',
-            'What is the enterprise value at year 5 and today? What is the price of the stock today?'
+            'What is the enterprise value at year 4 and today? What is the price of the stock today?'
         ]
     ]
     answers = [
         [
-            r'The enterprise value at year 5 is \$70 million',
+            r'The enterprise value at year 4 is \$70 million',
             r'The enterprise value at year 0 is \$9.2 million',
             r'The equity value at year 0 is \$5.21 million so the share price is \$5.21'
         ],
         [
-            r'The enterprise value at year 5 is \$30 million',
-            r'The equity value at year 0 is \$49.2 million so the share price is \$4.92',
-            r'The enterprise value at year 0 is \$58.2 million',
+            r'The enterprise value at year 4 is \$30 million',
+            r'The equity value at year 0 is \$48.5 million so the share price is \$4.85',
+            r'The enterprise value at year 0 is \$57.5 million',
         ]
     ]
     resources = [
@@ -861,7 +862,7 @@ def get_enterprise_value_lab_lecture() -> LabExerciseLecture:
 def get_dcf_cost_equity_lab_lecture() -> LabExerciseLecture:
     title = 'Finding Cost of Equity Given Historical Prices'
     short_title = 'DCF Cost of Equity Lab'
-    youtube_id = ''
+    youtube_id = 'GRlIQDVznGE'
     week_covered = 11
 
     risk_free = 0.02
@@ -907,7 +908,7 @@ def get_dcf_cost_equity_lab_lecture() -> LabExerciseLecture:
 def get_dcf_cost_debt_lab_lecture() -> LabExerciseLecture:
     title = 'Finding Cost of Debt Given Financial and Market Info'
     short_title = 'DCF Cost of Debt Lab'
-    youtube_id = ''
+    youtube_id = 'ozWU9mIkXCM'
     week_covered = 11
 
     risk_free = 0.02

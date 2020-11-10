@@ -1,0 +1,2089 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.36,
+      "duration": 2.399
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.24,
+      "duration": 3.599
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.759,
+      "duration": 3.041
+    },
+    {
+      "text": "be solving the",
+      "start": 7.839,
+      "duration": 3.601
+    },
+    {
+      "text": "lab exercise on adding monte carlo",
+      "start": 8.8,
+      "duration": 3.52
+    },
+    {
+      "text": "simulation",
+      "start": 11.44,
+      "duration": 4.8
+    },
+    {
+      "text": "to an existing python model",
+      "start": 12.32,
+      "duration": 6.24
+    },
+    {
+      "text": "so this is part of our lecture series on",
+      "start": 16.24,
+      "duration": 5.76
+    },
+    {
+      "text": "monte carlo simulation",
+      "start": 18.56,
+      "duration": 6.479
+    },
+    {
+      "text": "and at the end of",
+      "start": 22.0,
+      "duration": 5.279
+    },
+    {
+      "text": "the formal monte carlo material we",
+      "start": 25.039,
+      "duration": 4.721
+    },
+    {
+      "text": "introduced this lab exercise where",
+      "start": 27.279,
+      "duration": 4.8
+    },
+    {
+      "text": "we're taking the project one python",
+      "start": 29.76,
+      "duration": 3.12
+    },
+    {
+      "text": "model",
+      "start": 32.079,
+      "duration": 2.561
+    },
+    {
+      "text": "and extending it with monte carlo",
+      "start": 32.88,
+      "duration": 3.04
+    },
+    {
+      "text": "simulation",
+      "start": 34.64,
+      "duration": 4.88
+    },
+    {
+      "text": "so the situation is that we're concerned",
+      "start": 35.92,
+      "duration": 5.04
+    },
+    {
+      "text": "that the interest rate",
+      "start": 39.52,
+      "duration": 5.199
+    },
+    {
+      "text": "is going to be an issue so",
+      "start": 40.96,
+      "duration": 6.56
+    },
+    {
+      "text": "we're going to assess changes in the",
+      "start": 44.719,
+      "duration": 4.641
+    },
+    {
+      "text": "interest rate and how that affects",
+      "start": 47.52,
+      "duration": 4.719
+    },
+    {
+      "text": "the mpv",
+      "start": 49.36,
+      "duration": 2.879
+    },
+    {
+      "text": "so let's jump over to",
+      "start": 52.719,
+      "duration": 6.721
+    },
+    {
+      "text": "the project 1 model",
+      "start": 55.76,
+      "duration": 7.68
+    },
+    {
+      "text": "so i already defined everything and",
+      "start": 59.44,
+      "duration": 6.96
+    },
+    {
+      "text": "brought the model function down to here",
+      "start": 63.44,
+      "duration": 4.48
+    },
+    {
+      "text": "so we can now",
+      "start": 66.4,
+      "duration": 5.6
+    },
+    {
+      "text": "work with that so",
+      "start": 67.92,
+      "duration": 7.36
+    },
+    {
+      "text": "um we're going to need to import the",
+      "start": 72.0,
+      "duration": 4.96
+    },
+    {
+      "text": "random module",
+      "start": 75.28,
+      "duration": 4.479
+    },
+    {
+      "text": "to be able to randomly draw the interest",
+      "start": 76.96,
+      "duration": 4.799
+    },
+    {
+      "text": "rate",
+      "start": 79.759,
+      "duration": 7.841
+    },
+    {
+      "text": "and um we're going to",
+      "start": 81.759,
+      "duration": 9.921
+    },
+    {
+      "text": "um let let's create",
+      "start": 87.6,
+      "duration": 7.36
+    },
+    {
+      "text": "another data class",
+      "start": 91.68,
+      "duration": 3.28
+    },
+    {
+      "text": "for simulation inputs",
+      "start": 97.04,
+      "duration": 4.8
+    },
+    {
+      "text": "and then we can have the um",
+      "start": 101.92,
+      "duration": 4.96
+    },
+    {
+      "text": "interest mean uh what do we",
+      "start": 107.84,
+      "duration": 5.76
+    },
+    {
+      "text": "say it's going to be seven percent and",
+      "start": 111.28,
+      "duration": 4.159
+    },
+    {
+      "text": "standard deviation of two",
+      "start": 113.6,
+      "duration": 5.119
+    },
+    {
+      "text": "interest means seven interest",
+      "start": 115.439,
+      "duration": 6.161
+    },
+    {
+      "text": "std is going to be two percent by",
+      "start": 118.719,
+      "duration": 3.68
+    },
+    {
+      "text": "default",
+      "start": 121.6,
+      "duration": 8.24
+    },
+    {
+      "text": "uh these are both floats",
+      "start": 122.399,
+      "duration": 10.48
+    },
+    {
+      "text": "okay and then we can do sim data equals",
+      "start": 129.84,
+      "duration": 6.16
+    },
+    {
+      "text": "simulation inputs",
+      "start": 132.879,
+      "duration": 3.121
+    },
+    {
+      "text": "and bring back our data",
+      "start": 136.48,
+      "duration": 7.36
+    },
+    {
+      "text": "equals model data",
+      "start": 139.92,
+      "duration": 3.92
+    },
+    {
+      "text": "um okay so",
+      "start": 144.959,
+      "duration": 7.761
+    },
+    {
+      "text": "we can draw",
+      "start": 148.879,
+      "duration": 5.961
+    },
+    {
+      "text": "these interest rates from a normal",
+      "start": 152.72,
+      "duration": 3.44
+    },
+    {
+      "text": "distribution",
+      "start": 154.84,
+      "duration": 4.44
+    },
+    {
+      "text": "the sim data interest mean",
+      "start": 156.16,
+      "duration": 6.56
+    },
+    {
+      "text": "and the sim data of interest std",
+      "start": 159.28,
+      "duration": 5.599
+    },
+    {
+      "text": "and that will get us random interest",
+      "start": 162.72,
+      "duration": 4.96
+    },
+    {
+      "text": "rates as we see",
+      "start": 164.879,
+      "duration": 2.801
+    },
+    {
+      "text": "so then we can work this",
+      "start": 168.0,
+      "duration": 6.08
+    },
+    {
+      "text": "into a new setup",
+      "start": 171.04,
+      "duration": 6.8
+    },
+    {
+      "text": "where we're going to draw the interests",
+      "start": 174.08,
+      "duration": 6.239
+    },
+    {
+      "text": "this way",
+      "start": 177.84,
+      "duration": 2.479
+    },
+    {
+      "text": "and then we're going to",
+      "start": 181.28,
+      "duration": 3.039
+    },
+    {
+      "text": "create the data",
+      "start": 184.879,
+      "duration": 2.961
+    },
+    {
+      "text": "by passing this interest rate",
+      "start": 187.92,
+      "duration": 5.92
+    },
+    {
+      "text": "so interest is going to equal that",
+      "start": 191.599,
+      "duration": 7.201
+    },
+    {
+      "text": "interest that we just calculated",
+      "start": 193.84,
+      "duration": 7.28
+    },
+    {
+      "text": "and now we see that we have the model",
+      "start": 198.8,
+      "duration": 3.28
+    },
+    {
+      "text": "inputs but with",
+      "start": 201.12,
+      "duration": 4.72
+    },
+    {
+      "text": "the new random interest rate",
+      "start": 202.08,
+      "duration": 6.799
+    },
+    {
+      "text": "included in there",
+      "start": 205.84,
+      "duration": 3.039
+    },
+    {
+      "text": "and so now we can pass that new data",
+      "start": 210.48,
+      "duration": 5.92
+    },
+    {
+      "text": "to the model and we see that we get a",
+      "start": 213.599,
+      "duration": 5.681
+    },
+    {
+      "text": "new mpv",
+      "start": 216.4,
+      "duration": 2.88
+    },
+    {
+      "text": "so that's one simulation for us",
+      "start": 220.159,
+      "duration": 6.561
+    },
+    {
+      "text": "um so let's go ahead and create a",
+      "start": 223.68,
+      "duration": 5.68
+    },
+    {
+      "text": "function for that",
+      "start": 226.72,
+      "duration": 5.04
+    },
+    {
+      "text": "um so i'm just going to call the",
+      "start": 229.36,
+      "duration": 4.079
+    },
+    {
+      "text": "function simulation",
+      "start": 231.76,
+      "duration": 4.72
+    },
+    {
+      "text": "that's going to take the data and the",
+      "start": 233.439,
+      "duration": 6.961
+    },
+    {
+      "text": "sim data",
+      "start": 236.48,
+      "duration": 6.08
+    },
+    {
+      "text": "actually it doesn't need to take the",
+      "start": 240.4,
+      "duration": 5.839
+    },
+    {
+      "text": "data it's just using the sim data",
+      "start": 242.56,
+      "duration": 3.679
+    },
+    {
+      "text": "and it's going to do this everything",
+      "start": 250.72,
+      "duration": 5.12
+    },
+    {
+      "text": "that we just looked at",
+      "start": 252.56,
+      "duration": 3.28
+    },
+    {
+      "text": "so now we have a simulation function",
+      "start": 260.479,
+      "duration": 3.761
+    },
+    {
+      "text": "that we can pass our",
+      "start": 262.32,
+      "duration": 7.52
+    },
+    {
+      "text": "simulation data",
+      "start": 264.24,
+      "duration": 5.6
+    },
+    {
+      "text": "and see a different mpv each time",
+      "start": 269.919,
+      "duration": 4.161
+    },
+    {
+      "text": "everything seems to be working correctly",
+      "start": 275.44,
+      "duration": 3.52
+    },
+    {
+      "text": "um and we can make it return not just",
+      "start": 279.04,
+      "duration": 4.879
+    },
+    {
+      "text": "the mpv but also",
+      "start": 282.24,
+      "duration": 5.36
+    },
+    {
+      "text": "um the interest as well so now we see",
+      "start": 283.919,
+      "duration": 5.28
+    },
+    {
+      "text": "the interest rate that produced that",
+      "start": 287.6,
+      "duration": 4.0
+    },
+    {
+      "text": "mpv",
+      "start": 289.199,
+      "duration": 2.401
+    },
+    {
+      "text": "so if i put this into a list",
+      "start": 293.199,
+      "duration": 4.0
+    },
+    {
+      "text": "comprehension",
+      "start": 294.84,
+      "duration": 4.919
+    },
+    {
+      "text": "and let me go back and add a number of",
+      "start": 297.199,
+      "duration": 5.28
+    },
+    {
+      "text": "iterations",
+      "start": 299.759,
+      "duration": 2.72
+    },
+    {
+      "text": "into this so let's just keep it at 10 to",
+      "start": 304.16,
+      "duration": 4.72
+    },
+    {
+      "text": "start out with we'll increase it later",
+      "start": 306.32,
+      "duration": 7.12
+    },
+    {
+      "text": "um so simulation",
+      "start": 308.88,
+      "duration": 4.87
+    },
+    {
+      "text": "um",
+      "start": 313.44,
+      "duration": 3.499
+    },
+    {
+      "text": "[Music]",
+      "start": 313.75,
+      "duration": 3.189
+    },
+    {
+      "text": "orion range",
+      "start": 317.68,
+      "duration": 3.12
+    },
+    {
+      "text": "um data dot and iterations",
+      "start": 321.28,
+      "duration": 5.44
+    },
+    {
+      "text": "and then we'll see that we have that",
+      "start": 328.56,
+      "duration": 4.32
+    },
+    {
+      "text": "many results now",
+      "start": 331.68,
+      "duration": 3.6
+    },
+    {
+      "text": "with different random interest rates and",
+      "start": 332.88,
+      "duration": 5.92
+    },
+    {
+      "text": "different random mpbs",
+      "start": 335.28,
+      "duration": 9.12
+    },
+    {
+      "text": "so then let me import pandas",
+      "start": 338.8,
+      "duration": 5.6
+    },
+    {
+      "text": "and so now i can create a data frame",
+      "start": 346.72,
+      "duration": 7.039
+    },
+    {
+      "text": "from those results",
+      "start": 350.639,
+      "duration": 8.881
+    },
+    {
+      "text": "and the columns are interest and mpv",
+      "start": 353.759,
+      "duration": 5.761
+    },
+    {
+      "text": "so now we have a data frame of the",
+      "start": 360.96,
+      "duration": 4.92
+    },
+    {
+      "text": "results",
+      "start": 364.84,
+      "duration": 2.76
+    },
+    {
+      "text": "[Music]",
+      "start": 365.88,
+      "duration": 6.039
+    },
+    {
+      "text": "so let's create a function for that",
+      "start": 367.6,
+      "duration": 7.68
+    },
+    {
+      "text": "simulations data frame again takes the",
+      "start": 371.919,
+      "duration": 5.441
+    },
+    {
+      "text": "simulation data",
+      "start": 375.28,
+      "duration": 5.359
+    },
+    {
+      "text": "does this and then returns the data",
+      "start": 377.36,
+      "duration": 6.16
+    },
+    {
+      "text": "frame at the end",
+      "start": 380.639,
+      "duration": 2.881
+    },
+    {
+      "text": "so now we can do simulations df",
+      "start": 383.919,
+      "duration": 6.72
+    },
+    {
+      "text": "on uh whatever um",
+      "start": 387.039,
+      "duration": 7.921
+    },
+    {
+      "text": "simulation inputs we want um",
+      "start": 390.639,
+      "duration": 7.361
+    },
+    {
+      "text": "if we want to put 100 iterations",
+      "start": 394.96,
+      "duration": 6.72
+    },
+    {
+      "text": "then we can see we get 100 here",
+      "start": 398.0,
+      "duration": 3.68
+    },
+    {
+      "text": "and i did let me just go and change the",
+      "start": 402.24,
+      "duration": 4.32
+    },
+    {
+      "text": "default 10",
+      "start": 405.84,
+      "duration": 4.0
+    },
+    {
+      "text": "000 now",
+      "start": 406.56,
+      "duration": 3.28
+    },
+    {
+      "text": "so we can just put this back to sim data",
+      "start": 410.08,
+      "duration": 4.88
+    },
+    {
+      "text": "and we have ten thousand simulations",
+      "start": 416.319,
+      "duration": 10.481
+    },
+    {
+      "text": "okay um",
+      "start": 423.52,
+      "duration": 6.72
+    },
+    {
+      "text": "and now we can",
+      "start": 426.8,
+      "duration": 5.6
+    },
+    {
+      "text": "look at the resulting probability",
+      "start": 430.24,
+      "duration": 4.399
+    },
+    {
+      "text": "distribution of the mpv",
+      "start": 432.4,
+      "duration": 5.28
+    },
+    {
+      "text": "so if we look at mpv and i don't need",
+      "start": 434.639,
+      "duration": 5.921
+    },
+    {
+      "text": "any of these anymore",
+      "start": 437.68,
+      "duration": 6.079
+    },
+    {
+      "text": "and we want to look at a histogram",
+      "start": 440.56,
+      "duration": 8.479
+    },
+    {
+      "text": "with 100 bins let's see how that looks",
+      "start": 443.759,
+      "duration": 8.321
+    },
+    {
+      "text": "so looks roughly normal maybe uh the",
+      "start": 449.039,
+      "duration": 4.88
+    },
+    {
+      "text": "tail is a little bit longer",
+      "start": 452.08,
+      "duration": 5.119
+    },
+    {
+      "text": "on the right hand side",
+      "start": 453.919,
+      "duration": 8.921
+    },
+    {
+      "text": "but mostly normal um and centered around",
+      "start": 457.199,
+      "duration": 8.321
+    },
+    {
+      "text": "this what's that",
+      "start": 462.84,
+      "duration": 5.32
+    },
+    {
+      "text": "30 million",
+      "start": 465.52,
+      "duration": 2.64
+    },
+    {
+      "text": "or 300 million right",
+      "start": 469.919,
+      "duration": 7.441
+    },
+    {
+      "text": "yeah so centered around 300 million",
+      "start": 473.36,
+      "duration": 7.279
+    },
+    {
+      "text": "sometimes going past uh",
+      "start": 477.36,
+      "duration": 6.239
+    },
+    {
+      "text": "most the time between two and a half 250",
+      "start": 480.639,
+      "duration": 3.441
+    },
+    {
+      "text": "million",
+      "start": 483.599,
+      "duration": 3.44
+    },
+    {
+      "text": "and 400 million um sometimes going",
+      "start": 484.08,
+      "duration": 4.72
+    },
+    {
+      "text": "higher than that sometimes going lower",
+      "start": 487.039,
+      "duration": 5.201
+    },
+    {
+      "text": "but not very often",
+      "start": 488.8,
+      "duration": 7.119
+    },
+    {
+      "text": "so then we can also look at the",
+      "start": 492.24,
+      "duration": 7.359
+    },
+    {
+      "text": "um percentiles of the distribution",
+      "start": 495.919,
+      "duration": 5.521
+    },
+    {
+      "text": "before i do that i'm going to create a",
+      "start": 499.599,
+      "duration": 3.761
+    },
+    {
+      "text": "styler function for the data frame",
+      "start": 501.44,
+      "duration": 3.4
+    },
+    {
+      "text": "because we'll use that over there as",
+      "start": 503.36,
+      "duration": 3.679
+    },
+    {
+      "text": "well",
+      "start": 504.84,
+      "duration": 4.44
+    },
+    {
+      "text": "so i'm just first looking at the first",
+      "start": 507.039,
+      "duration": 3.921
+    },
+    {
+      "text": "few rows of the data frame so this thing",
+      "start": 509.28,
+      "duration": 2.56
+    },
+    {
+      "text": "isn't going to be",
+      "start": 510.96,
+      "duration": 4.4
+    },
+    {
+      "text": "huge with 10 000 rows",
+      "start": 511.84,
+      "duration": 3.52
+    },
+    {
+      "text": "and then i'm going to format the numbers",
+      "start": 515.44,
+      "duration": 6.159
+    },
+    {
+      "text": "here so interest",
+      "start": 519.519,
+      "duration": 5.201
+    },
+    {
+      "text": "i'm going to use",
+      "start": 521.599,
+      "duration": 6.161
+    },
+    {
+      "text": "two decimal place percentage formatting",
+      "start": 524.72,
+      "duration": 6.559
+    },
+    {
+      "text": "and mpv is going to be",
+      "start": 527.76,
+      "duration": 7.12
+    },
+    {
+      "text": "dollars um and",
+      "start": 531.279,
+      "duration": 8.321
+    },
+    {
+      "text": "uh with commas and zero decimal places",
+      "start": 534.88,
+      "duration": 6.639
+    },
+    {
+      "text": "so then this should look a little bit",
+      "start": 539.6,
+      "duration": 3.76
+    },
+    {
+      "text": "better yeah now it's very clear that",
+      "start": 541.519,
+      "duration": 2.561
+    },
+    {
+      "text": "these are",
+      "start": 543.36,
+      "duration": 5.28
+    },
+    {
+      "text": "300 million etc um",
+      "start": 544.08,
+      "duration": 6.319
+    },
+    {
+      "text": "and so now i'll convert that into a",
+      "start": 548.64,
+      "duration": 4.639
+    },
+    {
+      "text": "styler function",
+      "start": 550.399,
+      "duration": 2.88
+    },
+    {
+      "text": "um and then i don't need the head",
+      "start": 556.24,
+      "duration": 5.84
+    },
+    {
+      "text": "anymore",
+      "start": 560.839,
+      "duration": 6.521
+    },
+    {
+      "text": "and i can just call this on the app.head",
+      "start": 562.08,
+      "duration": 5.28
+    },
+    {
+      "text": "and it is indeed working so we'll come",
+      "start": 568.16,
+      "duration": 4.799
+    },
+    {
+      "text": "down here now we can",
+      "start": 570.32,
+      "duration": 4.72
+    },
+    {
+      "text": "get our percentiles that we want to look",
+      "start": 572.959,
+      "duration": 5.041
+    },
+    {
+      "text": "at so i'm going to look at",
+      "start": 575.04,
+      "duration": 5.76
+    },
+    {
+      "text": "five percent increments so you can see",
+      "start": 578.0,
+      "duration": 3.279
+    },
+    {
+      "text": "there",
+      "start": 580.8,
+      "duration": 3.44
+    },
+    {
+      "text": "five percent increments and then i'm",
+      "start": 581.279,
+      "duration": 4.321
+    },
+    {
+      "text": "going to call",
+      "start": 584.24,
+      "duration": 6.32
+    },
+    {
+      "text": "quantile on that",
+      "start": 585.6,
+      "duration": 7.28
+    },
+    {
+      "text": "and here you see it has that same not",
+      "start": 590.56,
+      "duration": 4.16
+    },
+    {
+      "text": "great formatting so i'm going to call",
+      "start": 592.88,
+      "duration": 5.44
+    },
+    {
+      "text": "styled vf on that",
+      "start": 594.72,
+      "duration": 3.6
+    },
+    {
+      "text": "and now we can see it has the nice",
+      "start": 599.2,
+      "duration": 3.6
+    },
+    {
+      "text": "formatting and so this quantifies the",
+      "start": 600.56,
+      "duration": 4.16
+    },
+    {
+      "text": "same thing that we're seeing",
+      "start": 602.8,
+      "duration": 5.44
+    },
+    {
+      "text": "in this histogram",
+      "start": 604.72,
+      "duration": 5.84
+    },
+    {
+      "text": "that most time we're in the 300 million",
+      "start": 608.24,
+      "duration": 3.68
+    },
+    {
+      "text": "kind of range",
+      "start": 610.56,
+      "duration": 2.719
+    },
+    {
+      "text": "five percent of the time it will get as",
+      "start": 611.92,
+      "duration": 3.44
+    },
+    {
+      "text": "low as 250 million",
+      "start": 613.279,
+      "duration": 3.68
+    },
+    {
+      "text": "five percent of the time it will get",
+      "start": 615.36,
+      "duration": 4.8
+    },
+    {
+      "text": "over 400 million",
+      "start": 616.959,
+      "duration": 3.201
+    },
+    {
+      "text": "um and then the",
+      "start": 620.24,
+      "duration": 6.32
+    },
+    {
+      "text": "question so table of probabilities",
+      "start": 623.44,
+      "duration": 6.399
+    },
+    {
+      "text": "visualize the results then we also want",
+      "start": 626.56,
+      "duration": 4.64
+    },
+    {
+      "text": "to output the chance",
+      "start": 629.839,
+      "duration": 3.761
+    },
+    {
+      "text": "that the mpv will be more than four",
+      "start": 631.2,
+      "duration": 5.52
+    },
+    {
+      "text": "hundred thousand dollars",
+      "start": 633.6,
+      "duration": 6.56
+    },
+    {
+      "text": "um so we can",
+      "start": 636.72,
+      "duration": 5.52
+    },
+    {
+      "text": "[Music]",
+      "start": 640.16,
+      "duration": 5.2
+    },
+    {
+      "text": "check this so df mpv",
+      "start": 642.24,
+      "duration": 8.0
+    },
+    {
+      "text": "greater than or 400 million dollars 400",
+      "start": 645.36,
+      "duration": 9.039
+    },
+    {
+      "text": "million dollars so that gives us a",
+      "start": 650.24,
+      "duration": 5.279
+    },
+    {
+      "text": "series of",
+      "start": 654.399,
+      "duration": 3.921
+    },
+    {
+      "text": "true or false for whether it was greater",
+      "start": 655.519,
+      "duration": 3.281
+    },
+    {
+      "text": "than",
+      "start": 658.32,
+      "duration": 3.6
+    },
+    {
+      "text": "400 million dollars we can take that",
+      "start": 658.8,
+      "duration": 6.24
+    },
+    {
+      "text": "and convert it to integers 0 1 for",
+      "start": 661.92,
+      "duration": 4.4
+    },
+    {
+      "text": "whether it's",
+      "start": 665.04,
+      "duration": 4.799
+    },
+    {
+      "text": "um greater than 400 million dollars and",
+      "start": 666.32,
+      "duration": 4.88
+    },
+    {
+      "text": "then take the average",
+      "start": 669.839,
+      "duration": 4.24
+    },
+    {
+      "text": "and that's going to tell us how often",
+      "start": 671.2,
+      "duration": 3.6
+    },
+    {
+      "text": "this",
+      "start": 674.079,
+      "duration": 4.0
+    },
+    {
+      "text": "is going to occur so",
+      "start": 674.8,
+      "duration": 5.12
+    },
+    {
+      "text": "let's save that in a variable so that we",
+      "start": 678.079,
+      "duration": 3.921
+    },
+    {
+      "text": "can then print out a string",
+      "start": 679.92,
+      "duration": 5.2
+    },
+    {
+      "text": "which gives meaning to that",
+      "start": 682.0,
+      "duration": 6.56
+    },
+    {
+      "text": "so there is a",
+      "start": 685.12,
+      "duration": 3.44
+    },
+    {
+      "text": "percent with the percent formatting",
+      "start": 689.2,
+      "duration": 8.4
+    },
+    {
+      "text": "and that mpv",
+      "start": 694.0,
+      "duration": 6.88
+    },
+    {
+      "text": "will be greater than",
+      "start": 697.6,
+      "duration": 6.72
+    },
+    {
+      "text": "uh i might as well make this",
+      "start": 700.88,
+      "duration": 6.56
+    },
+    {
+      "text": "a variable as well uh cut off",
+      "start": 704.32,
+      "duration": 7.759
+    },
+    {
+      "text": "is gonna be this 400 million",
+      "start": 707.44,
+      "duration": 4.639
+    },
+    {
+      "text": "uh greater than cut off",
+      "start": 712.399,
+      "duration": 8.481
+    },
+    {
+      "text": "there let's put a dollar sign commas",
+      "start": 717.68,
+      "duration": 6.56
+    },
+    {
+      "text": "and zero decimal places",
+      "start": 720.88,
+      "duration": 3.36
+    },
+    {
+      "text": "okay so now we have a nicely formatted",
+      "start": 724.88,
+      "duration": 5.199
+    },
+    {
+      "text": "result here there's a 6.37 chance that",
+      "start": 726.959,
+      "duration": 7.361
+    },
+    {
+      "text": "the mpv will be greater than 400 million",
+      "start": 730.079,
+      "duration": 4.241
+    },
+    {
+      "text": "so that's the level 1 exercise now",
+      "start": 734.56,
+      "duration": 5.12
+    },
+    {
+      "text": "coming to the level 2.",
+      "start": 736.72,
+      "duration": 6.4
+    },
+    {
+      "text": "um so now we're also concerned",
+      "start": 739.68,
+      "duration": 7.599
+    },
+    {
+      "text": "about the number of phones for a machine",
+      "start": 743.12,
+      "duration": 5.519
+    },
+    {
+      "text": "there could be some issues in the",
+      "start": 747.279,
+      "duration": 4.081
+    },
+    {
+      "text": "assembly line",
+      "start": 748.639,
+      "duration": 2.721
+    },
+    {
+      "text": "and so we're going to add that in",
+      "start": 751.6,
+      "duration": 7.2
+    },
+    {
+      "text": "and then beyond",
+      "start": 755.04,
+      "duration": 5.359
+    },
+    {
+      "text": "what we were already doing with",
+      "start": 758.8,
+      "duration": 4.719
+    },
+    {
+      "text": "visualizing the results",
+      "start": 760.399,
+      "duration": 3.12
+    },
+    {
+      "text": "we now also want to look at the",
+      "start": 763.76,
+      "duration": 4.16
+    },
+    {
+      "text": "relationship between the inputs and",
+      "start": 766.32,
+      "duration": 2.88
+    },
+    {
+      "text": "outputs",
+      "start": 767.92,
+      "duration": 4.8
+    },
+    {
+      "text": "visualize those relationships and",
+      "start": 769.2,
+      "duration": 6.639
+    },
+    {
+      "text": "run a regression to quantify",
+      "start": 772.72,
+      "duration": 6.48
+    },
+    {
+      "text": "those results as well",
+      "start": 775.839,
+      "duration": 3.361
+    },
+    {
+      "text": "so we can come back up here and we're",
+      "start": 779.519,
+      "duration": 4.32
+    },
+    {
+      "text": "going to need a couple more",
+      "start": 782.88,
+      "duration": 4.72
+    },
+    {
+      "text": "simulation inputs now",
+      "start": 783.839,
+      "duration": 7.761
+    },
+    {
+      "text": "so now what is the",
+      "start": 787.6,
+      "duration": 4.0
+    },
+    {
+      "text": "original input called just keep it",
+      "start": 792.0,
+      "duration": 3.68
+    },
+    {
+      "text": "consistent",
+      "start": 793.839,
+      "duration": 8.0
+    },
+    {
+      "text": "and phones so end phones mean",
+      "start": 795.68,
+      "duration": 6.159
+    },
+    {
+      "text": "was 100 000.",
+      "start": 805.279,
+      "duration": 3.12
+    },
+    {
+      "text": "and phones standard deviation",
+      "start": 808.72,
+      "duration": 7.119
+    },
+    {
+      "text": "is going to be 20 000.",
+      "start": 811.92,
+      "duration": 3.919
+    },
+    {
+      "text": "so then in addition to drawing the",
+      "start": 817.839,
+      "duration": 3.761
+    },
+    {
+      "text": "interest",
+      "start": 820.959,
+      "duration": 4.481
+    },
+    {
+      "text": "we can do the same with the",
+      "start": 821.6,
+      "duration": 7.919
+    },
+    {
+      "text": "number of phones",
+      "start": 825.44,
+      "duration": 6.48
+    },
+    {
+      "text": "so i'm going to switch these out for and",
+      "start": 829.519,
+      "duration": 4.32
+    },
+    {
+      "text": "phones",
+      "start": 831.92,
+      "duration": 4.96
+    },
+    {
+      "text": "and then also pass and phones equal then",
+      "start": 833.839,
+      "duration": 5.761
+    },
+    {
+      "text": "phones here",
+      "start": 836.88,
+      "duration": 2.72
+    },
+    {
+      "text": "and then also return that in the result",
+      "start": 840.24,
+      "duration": 9.36
+    },
+    {
+      "text": "then add that into the data frame",
+      "start": 844.24,
+      "duration": 5.36
+    },
+    {
+      "text": "and add that into the styler",
+      "start": 852.72,
+      "duration": 6.0
+    },
+    {
+      "text": "as well",
+      "start": 856.24,
+      "duration": 2.48
+    },
+    {
+      "text": "over there we're just going to have",
+      "start": 859.36,
+      "duration": 3.68
+    },
+    {
+      "text": "commas",
+      "start": 861.44,
+      "duration": 5.12
+    },
+    {
+      "text": "and zero decimal places",
+      "start": 863.04,
+      "duration": 3.52
+    },
+    {
+      "text": "okay um",
+      "start": 867.36,
+      "duration": 4.479
+    },
+    {
+      "text": "and then okay yeah i've got actually",
+      "start": 874.8,
+      "duration": 8.24
+    },
+    {
+      "text": "run this let me put this for that um",
+      "start": 878.56,
+      "duration": 6.88
+    },
+    {
+      "text": "and now we see interest rate number of",
+      "start": 883.04,
+      "duration": 4.0
+    },
+    {
+      "text": "phones also random",
+      "start": 885.44,
+      "duration": 6.639
+    },
+    {
+      "text": "and both of those factoring into the mpv",
+      "start": 887.04,
+      "duration": 5.039
+    },
+    {
+      "text": "so then we can re-examine these things",
+      "start": 893.36,
+      "duration": 4.96
+    },
+    {
+      "text": "the mpv um",
+      "start": 895.44,
+      "duration": 6.72
+    },
+    {
+      "text": "now pretty similar going over a slightly",
+      "start": 898.32,
+      "duration": 6.11
+    },
+    {
+      "text": "larger range than before",
+      "start": 902.16,
+      "duration": 3.52
+    },
+    {
+      "text": "[Music]",
+      "start": 904.43,
+      "duration": 4.209
+    },
+    {
+      "text": "quantiles uh same thing slightly larger",
+      "start": 905.68,
+      "duration": 3.44
+    },
+    {
+      "text": "range",
+      "start": 908.639,
+      "duration": 3.921
+    },
+    {
+      "text": "going on here now",
+      "start": 909.12,
+      "duration": 4.8
+    },
+    {
+      "text": "there's a little bit better chance that",
+      "start": 912.56,
+      "duration": 3.12
+    },
+    {
+      "text": "we're going to be able to get the 400",
+      "start": 913.92,
+      "duration": 3.599
+    },
+    {
+      "text": "million",
+      "start": 915.68,
+      "duration": 3.839
+    },
+    {
+      "text": "but now what we're doing additionally is",
+      "start": 917.519,
+      "duration": 3.921
+    },
+    {
+      "text": "to analyze the relationship between the",
+      "start": 919.519,
+      "duration": 2.88
+    },
+    {
+      "text": "inputs and",
+      "start": 921.44,
+      "duration": 6.0
+    },
+    {
+      "text": "outputs so one way we can go about that",
+      "start": 922.399,
+      "duration": 8.401
+    },
+    {
+      "text": "is scatter plots so uh",
+      "start": 927.44,
+      "duration": 6.16
+    },
+    {
+      "text": "set x equal to interest and y equal to",
+      "start": 930.8,
+      "duration": 4.24
+    },
+    {
+      "text": "the mpv",
+      "start": 933.6,
+      "duration": 3.2
+    },
+    {
+      "text": "and we can see a scatter plot between",
+      "start": 935.04,
+      "duration": 3.799
+    },
+    {
+      "text": "the two",
+      "start": 936.8,
+      "duration": 5.039
+    },
+    {
+      "text": "um",
+      "start": 938.839,
+      "duration": 6.12
+    },
+    {
+      "text": "and let's make this",
+      "start": 941.839,
+      "duration": 7.521
+    },
+    {
+      "text": "for interest and for a number of phones",
+      "start": 944.959,
+      "duration": 4.401
+    },
+    {
+      "text": "we're going to do this same scatter plot",
+      "start": 950.88,
+      "duration": 5.36
+    },
+    {
+      "text": "so we can see with the interest rate",
+      "start": 958.88,
+      "duration": 4.24
+    },
+    {
+      "text": "that it looks like there's a very",
+      "start": 961.279,
+      "duration": 6.0
+    },
+    {
+      "text": "very clear relation here",
+      "start": 963.12,
+      "duration": 6.079
+    },
+    {
+      "text": "seems to be almost linear kind of a",
+      "start": 967.279,
+      "duration": 3.92
+    },
+    {
+      "text": "curved relationship",
+      "start": 969.199,
+      "duration": 4.08
+    },
+    {
+      "text": "but definitely a clear pattern there",
+      "start": 971.199,
+      "duration": 5.2
+    },
+    {
+      "text": "those two look very strongly related",
+      "start": 973.279,
+      "duration": 5.281
+    },
+    {
+      "text": "as for the number of phones it's not so",
+      "start": 976.399,
+      "duration": 3.201
+    },
+    {
+      "text": "clear",
+      "start": 978.56,
+      "duration": 2.88
+    },
+    {
+      "text": "these mostly look like an ambiguous",
+      "start": 979.6,
+      "duration": 3.12
+    },
+    {
+      "text": "cloud",
+      "start": 981.44,
+      "duration": 3.12
+    },
+    {
+      "text": "but it does seem to be going a little",
+      "start": 982.72,
+      "duration": 4.559
+    },
+    {
+      "text": "bit up and to the right",
+      "start": 984.56,
+      "duration": 4.399
+    },
+    {
+      "text": "so it's not very clear it certainly",
+      "start": 987.279,
+      "duration": 3.201
+    },
+    {
+      "text": "looks like it's not as strong of a",
+      "start": 988.959,
+      "duration": 2.24
+    },
+    {
+      "text": "relationship",
+      "start": 990.48,
+      "duration": 3.919
+    },
+    {
+      "text": "as uh interest in mpv",
+      "start": 991.199,
+      "duration": 5.281
+    },
+    {
+      "text": "and it's a little bit ambiguous about",
+      "start": 994.399,
+      "duration": 3.68
+    },
+    {
+      "text": "whether there's a relationship we really",
+      "start": 996.48,
+      "duration": 2.159
+    },
+    {
+      "text": "have to",
+      "start": 998.079,
+      "duration": 4.801
+    },
+    {
+      "text": "quantify this to understand that better",
+      "start": 998.639,
+      "duration": 4.241
+    },
+    {
+      "text": "so the next step is then to run the",
+      "start": 1002.959,
+      "duration": 3.841
+    },
+    {
+      "text": "regression i'm going to come back",
+      "start": 1004.8,
+      "duration": 8.0
+    },
+    {
+      "text": "and add uh the import for stats models",
+      "start": 1006.8,
+      "duration": 6.0
+    },
+    {
+      "text": "[Music]",
+      "start": 1015.88,
+      "duration": 3.12
+    },
+    {
+      "text": "and then um i'm going to",
+      "start": 1019.12,
+      "duration": 8.16
+    },
+    {
+      "text": "set up the x is going to be",
+      "start": 1023.279,
+      "duration": 9.76
+    },
+    {
+      "text": "the data frame the inpress column",
+      "start": 1027.28,
+      "duration": 5.759
+    },
+    {
+      "text": "whoops i put an extra brackets wait no",
+      "start": 1034.319,
+      "duration": 3.441
+    },
+    {
+      "text": "that was correct",
+      "start": 1036.559,
+      "duration": 5.841
+    },
+    {
+      "text": "interest column and number of posts",
+      "start": 1037.76,
+      "duration": 4.64
+    },
+    {
+      "text": "yup got them both y is going to be the",
+      "start": 1044.48,
+      "duration": 5.599
+    },
+    {
+      "text": "mpv",
+      "start": 1047.6,
+      "duration": 2.479
+    },
+    {
+      "text": "and we're going to want to add the",
+      "start": 1050.64,
+      "duration": 3.919
+    },
+    {
+      "text": "constant",
+      "start": 1052.48,
+      "duration": 5.84
+    },
+    {
+      "text": "to the x and then we can create the",
+      "start": 1054.559,
+      "duration": 4.24
+    },
+    {
+      "text": "model",
+      "start": 1058.32,
+      "duration": 5.2
+    },
+    {
+      "text": "as sm.ols of",
+      "start": 1058.799,
+      "duration": 4.721
+    },
+    {
+      "text": "y and then x as constant",
+      "start": 1063.679,
+      "duration": 7.281
+    },
+    {
+      "text": "equals true result",
+      "start": 1067.28,
+      "duration": 5.04
+    },
+    {
+      "text": "we're going to fit the model to get the",
+      "start": 1070.96,
+      "duration": 3.2
+    },
+    {
+      "text": "result and then we're going to",
+      "start": 1072.32,
+      "duration": 8.719
+    },
+    {
+      "text": "summarize the result",
+      "start": 1074.16,
+      "duration": 8.96
+    },
+    {
+      "text": "it did not converge okay that's",
+      "start": 1081.039,
+      "duration": 4.401
+    },
+    {
+      "text": "interesting",
+      "start": 1083.12,
+      "duration": 5.59
+    },
+    {
+      "text": "um everything looks correct there",
+      "start": 1085.44,
+      "duration": 6.359
+    },
+    {
+      "text": "[Music]",
+      "start": 1088.71,
+      "duration": 3.089
+    },
+    {
+      "text": "everything looks fine here",
+      "start": 1093.679,
+      "duration": 5.761
+    },
+    {
+      "text": "um",
+      "start": 1097.12,
+      "duration": 2.32
+    },
+    {
+      "text": "yeah the order is correct",
+      "start": 1101.44,
+      "duration": 6.16
+    },
+    {
+      "text": "it worked fine that time i'm not quite",
+      "start": 1104.64,
+      "duration": 5.919
+    },
+    {
+      "text": "sure what happened there honestly",
+      "start": 1107.6,
+      "duration": 6.319
+    },
+    {
+      "text": "but i'm happy to work this time",
+      "start": 1110.559,
+      "duration": 6.721
+    },
+    {
+      "text": "um so looking at the re results first",
+      "start": 1113.919,
+      "duration": 5.201
+    },
+    {
+      "text": "thing we'll notice the p values",
+      "start": 1117.28,
+      "duration": 4.32
+    },
+    {
+      "text": "are all zero which means these are all",
+      "start": 1119.12,
+      "duration": 5.84
+    },
+    {
+      "text": "significantly related to each other",
+      "start": 1121.6,
+      "duration": 5.04
+    },
+    {
+      "text": "and then we can interpret the",
+      "start": 1124.96,
+      "duration": 3.839
+    },
+    {
+      "text": "coefficients to understand the",
+      "start": 1126.64,
+      "duration": 4.8
+    },
+    {
+      "text": "relationship",
+      "start": 1128.799,
+      "duration": 2.641
+    },
+    {
+      "text": "so here when we get one additional",
+      "start": 1132.799,
+      "duration": 6.0
+    },
+    {
+      "text": "phone made by each machine then we're",
+      "start": 1136.799,
+      "duration": 4.88
+    },
+    {
+      "text": "going to get 768 additional dollars of",
+      "start": 1138.799,
+      "duration": 7.521
+    },
+    {
+      "text": "mpv holding the interest constant",
+      "start": 1141.679,
+      "duration": 4.641
+    },
+    {
+      "text": "and then this is quite a large negative",
+      "start": 1146.48,
+      "duration": 7.36
+    },
+    {
+      "text": "number and that's because",
+      "start": 1150.0,
+      "duration": 7.44
+    },
+    {
+      "text": "uh the interest is in decimal and so",
+      "start": 1153.84,
+      "duration": 5.6
+    },
+    {
+      "text": "that's saying going from zero to one",
+      "start": 1157.44,
+      "duration": 5.599
+    },
+    {
+      "text": "hundred percent interest which doesn't",
+      "start": 1159.44,
+      "duration": 6.479
+    },
+    {
+      "text": "make a lot of sense to compare really we",
+      "start": 1163.039,
+      "duration": 4.721
+    },
+    {
+      "text": "want 1 100",
+      "start": 1165.919,
+      "duration": 5.281
+    },
+    {
+      "text": "of that coefficient",
+      "start": 1167.76,
+      "duration": 5.68
+    },
+    {
+      "text": "uh",
+      "start": 1171.2,
+      "duration": 2.24
+    },
+    {
+      "text": "so when to look at it divided by 100",
+      "start": 1175.36,
+      "duration": 5.439
+    },
+    {
+      "text": "and",
+      "start": 1181.6,
+      "duration": 2.24
+    },
+    {
+      "text": "that would be that the",
+      "start": 1185.76,
+      "duration": 6.72
+    },
+    {
+      "text": "mpv drops by 23 million when the",
+      "start": 1189.36,
+      "duration": 3.76
+    },
+    {
+      "text": "interest",
+      "start": 1192.48,
+      "duration": 3.439
+    },
+    {
+      "text": "rate increases by one percent which",
+      "start": 1193.12,
+      "duration": 4.88
+    },
+    {
+      "text": "makes sense",
+      "start": 1195.919,
+      "duration": 4.401
+    },
+    {
+      "text": "um but this still doesn't tell us which",
+      "start": 1198.0,
+      "duration": 4.159
+    },
+    {
+      "text": "one has a larger impact",
+      "start": 1200.32,
+      "duration": 4.52
+    },
+    {
+      "text": "because we have to look at the standard",
+      "start": 1202.159,
+      "duration": 4.0
+    },
+    {
+      "text": "deviation",
+      "start": 1204.84,
+      "duration": 6.199
+    },
+    {
+      "text": "in order to assess that um",
+      "start": 1206.159,
+      "duration": 9.121
+    },
+    {
+      "text": "the standard deviation of the data frame",
+      "start": 1211.039,
+      "duration": 7.601
+    },
+    {
+      "text": "um and we can multiply that",
+      "start": 1215.28,
+      "duration": 9.12
+    },
+    {
+      "text": "by the parameters the coefficients",
+      "start": 1218.64,
+      "duration": 5.76
+    },
+    {
+      "text": "and this will give us the standardized",
+      "start": 1225.919,
+      "duration": 5.681
+    },
+    {
+      "text": "coefficients",
+      "start": 1228.72,
+      "duration": 2.88
+    },
+    {
+      "text": "now saying a 1 standard deviation",
+      "start": 1231.679,
+      "duration": 4.561
+    },
+    {
+      "text": "increase in the number of phones",
+      "start": 1234.159,
+      "duration": 5.76
+    },
+    {
+      "text": "will increase npv by 15 million",
+      "start": 1236.24,
+      "duration": 6.0
+    },
+    {
+      "text": "and a one standard deviation increase in",
+      "start": 1239.919,
+      "duration": 4.161
+    },
+    {
+      "text": "interest will decrease",
+      "start": 1242.24,
+      "duration": 5.04
+    },
+    {
+      "text": "the num or the npv by",
+      "start": 1244.08,
+      "duration": 6.56
+    },
+    {
+      "text": "46 million so it looks like the interest",
+      "start": 1247.28,
+      "duration": 5.36
+    },
+    {
+      "text": "rate has approximately a three times",
+      "start": 1250.64,
+      "duration": 4.8
+    },
+    {
+      "text": "greater impact in the model than the",
+      "start": 1252.64,
+      "duration": 4.24
+    },
+    {
+      "text": "number of phones",
+      "start": 1255.44,
+      "duration": 3.76
+    },
+    {
+      "text": "assuming that we've picked reasonable",
+      "start": 1256.88,
+      "duration": 3.52
+    },
+    {
+      "text": "distributions",
+      "start": 1259.2,
+      "duration": 4.64
+    },
+    {
+      "text": "for the inputs",
+      "start": 1260.4,
+      "duration": 3.44
+    },
+    {
+      "text": "[Music]",
+      "start": 1264.26,
+      "duration": 6.62
+    },
+    {
+      "text": "so that is everything involved",
+      "start": 1266.72,
+      "duration": 7.04
+    },
+    {
+      "text": "in this lab exercise so thanks for",
+      "start": 1270.88,
+      "duration": 3.6
+    },
+    {
+      "text": "listening",
+      "start": 1273.76,
+      "duration": 4.08
+    },
+    {
+      "text": "and see you next time",
+      "start": 1274.48,
+      "duration": 3.36
+    }
+  ]
+}

@@ -1,0 +1,3369 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.28,
+      "duration": 2.32
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.08,
+      "duration": 3.12
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.6,
+      "duration": 3.52
+    },
+    {
+      "text": "today we're going to be looking at how",
+      "start": 7.2,
+      "duration": 4.8
+    },
+    {
+      "text": "to calculate the market value of debt",
+      "start": 9.12,
+      "duration": 5.28
+    },
+    {
+      "text": "in python using three different",
+      "start": 12.0,
+      "duration": 3.759
+    },
+    {
+      "text": "approaches",
+      "start": 14.4,
+      "duration": 3.92
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 15.759,
+      "duration": 4.081
+    },
+    {
+      "text": "the discounted cash flow",
+      "start": 18.32,
+      "duration": 4.56
+    },
+    {
+      "text": "valuation model focusing on the cost of",
+      "start": 19.84,
+      "duration": 4.08
+    },
+    {
+      "text": "capital portion",
+      "start": 22.88,
+      "duration": 4.559
+    },
+    {
+      "text": "of the model so",
+      "start": 23.92,
+      "duration": 7.279
+    },
+    {
+      "text": "we in the last video talked through the",
+      "start": 27.439,
+      "duration": 6.481
+    },
+    {
+      "text": "uh three different approaches for",
+      "start": 31.199,
+      "duration": 6.481
+    },
+    {
+      "text": "calculating the market value of debt",
+      "start": 33.92,
+      "duration": 5.68
+    },
+    {
+      "text": "the financial statement approach",
+      "start": 37.68,
+      "duration": 3.28
+    },
+    {
+      "text": "assuming the book value is equal to the",
+      "start": 39.6,
+      "duration": 2.56
+    },
+    {
+      "text": "market value",
+      "start": 40.96,
+      "duration": 4.24
+    },
+    {
+      "text": "the hypothetical bond approach and the",
+      "start": 42.16,
+      "duration": 5.28
+    },
+    {
+      "text": "market value of individual instruments",
+      "start": 45.2,
+      "duration": 3.199
+    },
+    {
+      "text": "approach",
+      "start": 47.44,
+      "duration": 4.4
+    },
+    {
+      "text": "so we'll look at each of these",
+      "start": 48.399,
+      "duration": 3.441
+    },
+    {
+      "text": "and take a look at that last video if",
+      "start": 52.239,
+      "duration": 5.681
+    },
+    {
+      "text": "you want additional detail on all of",
+      "start": 56.239,
+      "duration": 3.921
+    },
+    {
+      "text": "these",
+      "start": 57.92,
+      "duration": 5.279
+    },
+    {
+      "text": "but for here we are going into the",
+      "start": 60.16,
+      "duration": 4.48
+    },
+    {
+      "text": "python example",
+      "start": 63.199,
+      "duration": 4.721
+    },
+    {
+      "text": "of how to do this um and",
+      "start": 64.64,
+      "duration": 5.839
+    },
+    {
+      "text": "the completed example is here on the",
+      "start": 67.92,
+      "duration": 3.519
+    },
+    {
+      "text": "course site",
+      "start": 70.479,
+      "duration": 4.561
+    },
+    {
+      "text": "as well so let's jump over to the",
+      "start": 71.439,
+      "duration": 6.0
+    },
+    {
+      "text": "jupiter notebook",
+      "start": 75.04,
+      "duration": 6.0
+    },
+    {
+      "text": "and again this is split up into three",
+      "start": 77.439,
+      "duration": 5.601
+    },
+    {
+      "text": "sections based on the three different",
+      "start": 81.04,
+      "duration": 5.6
+    },
+    {
+      "text": "approaches so i'll start here by just",
+      "start": 83.04,
+      "duration": 6.0
+    },
+    {
+      "text": "defining some inputs that we're going to",
+      "start": 86.64,
+      "duration": 3.6
+    },
+    {
+      "text": "use throughout",
+      "start": 89.04,
+      "duration": 4.64
+    },
+    {
+      "text": "the total book debt interest expense and",
+      "start": 90.24,
+      "duration": 4.879
+    },
+    {
+      "text": "cost of that",
+      "start": 93.68,
+      "duration": 4.56
+    },
+    {
+      "text": "so you can assume that",
+      "start": 95.119,
+      "duration": 6.401
+    },
+    {
+      "text": "these would be loaded in from financial",
+      "start": 98.24,
+      "duration": 4.8
+    },
+    {
+      "text": "statements",
+      "start": 101.52,
+      "duration": 4.879
+    },
+    {
+      "text": "and um the cost of debt",
+      "start": 103.04,
+      "duration": 6.719
+    },
+    {
+      "text": "was calculated previously in some other",
+      "start": 106.399,
+      "duration": 6.72
+    },
+    {
+      "text": "exercise using the",
+      "start": 109.759,
+      "duration": 6.081
+    },
+    {
+      "text": "financial statement approach or the",
+      "start": 113.119,
+      "duration": 3.36
+    },
+    {
+      "text": "market",
+      "start": 115.84,
+      "duration": 3.52
+    },
+    {
+      "text": "value of a bond approach so we already",
+      "start": 116.479,
+      "duration": 4.0
+    },
+    {
+      "text": "have the cost of debt",
+      "start": 119.36,
+      "duration": 2.88
+    },
+    {
+      "text": "and we got this other info from the",
+      "start": 120.479,
+      "duration": 3.92
+    },
+    {
+      "text": "financial statements",
+      "start": 122.24,
+      "duration": 4.239
+    },
+    {
+      "text": "so now going into the first approach",
+      "start": 124.399,
+      "duration": 3.761
+    },
+    {
+      "text": "which is if all you have is the",
+      "start": 126.479,
+      "duration": 3.521
+    },
+    {
+      "text": "financial statements",
+      "start": 128.16,
+      "duration": 4.32
+    },
+    {
+      "text": "you don't have anything on market",
+      "start": 130.0,
+      "duration": 4.48
+    },
+    {
+      "text": "currently outstanding market debt",
+      "start": 132.48,
+      "duration": 4.56
+    },
+    {
+      "text": "this is all you can do and that's just",
+      "start": 134.48,
+      "duration": 3.119
+    },
+    {
+      "text": "that",
+      "start": 137.04,
+      "duration": 4.08
+    },
+    {
+      "text": "we just assume the uh book value of debt",
+      "start": 137.599,
+      "duration": 4.481
+    },
+    {
+      "text": "the total",
+      "start": 141.12,
+      "duration": 4.0
+    },
+    {
+      "text": "book debt from the balance sheet is",
+      "start": 142.08,
+      "duration": 4.239
+    },
+    {
+      "text": "equal to the market value",
+      "start": 145.12,
+      "duration": 4.16
+    },
+    {
+      "text": "and so we're done so it's really okay",
+      "start": 146.319,
+      "duration": 4.64
+    },
+    {
+      "text": "it's not even a calculation we're just",
+      "start": 149.28,
+      "duration": 2.56
+    },
+    {
+      "text": "using",
+      "start": 150.959,
+      "duration": 5.601
+    },
+    {
+      "text": "the historical as uh the market",
+      "start": 151.84,
+      "duration": 8.08
+    },
+    {
+      "text": "and sometimes that's all you can do",
+      "start": 156.56,
+      "duration": 5.2
+    },
+    {
+      "text": "but we can definitely do better than",
+      "start": 159.92,
+      "duration": 5.52
+    },
+    {
+      "text": "that if we have the data available",
+      "start": 161.76,
+      "duration": 3.68
+    },
+    {
+      "text": "so next is going to",
+      "start": 165.68,
+      "duration": 6.559
+    },
+    {
+      "text": "the hypothetical bond approach",
+      "start": 169.12,
+      "duration": 5.6
+    },
+    {
+      "text": "um so there for the hypothetical bond",
+      "start": 172.239,
+      "duration": 4.481
+    },
+    {
+      "text": "approach we need to also know what is",
+      "start": 174.72,
+      "duration": 3.68
+    },
+    {
+      "text": "the average maturity",
+      "start": 176.72,
+      "duration": 4.879
+    },
+    {
+      "text": "of outstanding bonds and that may be",
+      "start": 178.4,
+      "duration": 6.72
+    },
+    {
+      "text": "difficult to determine",
+      "start": 181.599,
+      "duration": 6.881
+    },
+    {
+      "text": "so that can be a reason that",
+      "start": 185.12,
+      "duration": 4.64
+    },
+    {
+      "text": "you may not be able to go to this",
+      "start": 188.48,
+      "duration": 3.679
+    },
+    {
+      "text": "approach",
+      "start": 189.76,
+      "duration": 2.399
+    },
+    {
+      "text": "but if you do have that then we can",
+      "start": 192.319,
+      "duration": 3.441
+    },
+    {
+      "text": "basically model",
+      "start": 194.8,
+      "duration": 3.68
+    },
+    {
+      "text": "all the company's debt as a single bond",
+      "start": 195.76,
+      "duration": 3.119
+    },
+    {
+      "text": "and",
+      "start": 198.48,
+      "duration": 3.36
+    },
+    {
+      "text": "find the value that way so let's just",
+      "start": 198.879,
+      "duration": 4.241
+    },
+    {
+      "text": "say",
+      "start": 201.84,
+      "duration": 2.88
+    },
+    {
+      "text": "we were able to determine that the",
+      "start": 203.12,
+      "duration": 3.6
+    },
+    {
+      "text": "average maturity on",
+      "start": 204.72,
+      "duration": 5.599
+    },
+    {
+      "text": "the outstanding bonds is uh",
+      "start": 206.72,
+      "duration": 7.28
+    },
+    {
+      "text": "five years and this would be a weighted",
+      "start": 210.319,
+      "duration": 6.0
+    },
+    {
+      "text": "average maturity by the way uh looking",
+      "start": 214.0,
+      "duration": 3.519
+    },
+    {
+      "text": "at the different",
+      "start": 216.319,
+      "duration": 4.881
+    },
+    {
+      "text": "uh values of each of the bonds",
+      "start": 217.519,
+      "duration": 3.681
+    },
+    {
+      "text": "so we want to create a hypothetical bond",
+      "start": 221.84,
+      "duration": 5.2
+    },
+    {
+      "text": "that represents all the company's debt",
+      "start": 224.56,
+      "duration": 5.599
+    },
+    {
+      "text": "so the first thing that we need to do",
+      "start": 227.04,
+      "duration": 6.399
+    },
+    {
+      "text": "is come up with the coupon rate",
+      "start": 230.159,
+      "duration": 5.521
+    },
+    {
+      "text": "that would be paid on this hypothetical",
+      "start": 233.439,
+      "duration": 3.761
+    },
+    {
+      "text": "bond",
+      "start": 235.68,
+      "duration": 4.96
+    },
+    {
+      "text": "which we can get that from the financial",
+      "start": 237.2,
+      "duration": 4.959
+    },
+    {
+      "text": "statements",
+      "start": 240.64,
+      "duration": 5.04
+    },
+    {
+      "text": "we can take the interest expense divided",
+      "start": 242.159,
+      "duration": 5.601
+    },
+    {
+      "text": "by the total book debt",
+      "start": 245.68,
+      "duration": 4.72
+    },
+    {
+      "text": "and take that as the coupon rate on the",
+      "start": 247.76,
+      "duration": 3.839
+    },
+    {
+      "text": "bond",
+      "start": 250.4,
+      "duration": 3.039
+    },
+    {
+      "text": "so with our existing numbers that puts",
+      "start": 251.599,
+      "duration": 5.681
+    },
+    {
+      "text": "the coupon rate at six percent",
+      "start": 253.439,
+      "duration": 3.841
+    },
+    {
+      "text": "so now that we have the coupon rate we",
+      "start": 257.68,
+      "duration": 3.44
+    },
+    {
+      "text": "can create",
+      "start": 259.919,
+      "duration": 3.681
+    },
+    {
+      "text": "the cash flows of the bond and just take",
+      "start": 261.12,
+      "duration": 5.76
+    },
+    {
+      "text": "the present value of those cash flows",
+      "start": 263.6,
+      "duration": 6.56
+    },
+    {
+      "text": "so the coupon raymond the principal",
+      "start": 266.88,
+      "duration": 6.319
+    },
+    {
+      "text": "uh of this hypothetical bond is",
+      "start": 270.16,
+      "duration": 5.92
+    },
+    {
+      "text": "the uh entire debt for the company the",
+      "start": 273.199,
+      "duration": 4.161
+    },
+    {
+      "text": "booked at",
+      "start": 276.08,
+      "duration": 4.72
+    },
+    {
+      "text": "um and the",
+      "start": 277.36,
+      "duration": 5.44
+    },
+    {
+      "text": "coupon payment is just that rate we just",
+      "start": 280.8,
+      "duration": 5.2
+    },
+    {
+      "text": "calculated multiplied by the principal",
+      "start": 282.8,
+      "duration": 6.959
+    },
+    {
+      "text": "and the cash flows are going to be",
+      "start": 286.0,
+      "duration": 6.8
+    },
+    {
+      "text": "that coupon payment um",
+      "start": 289.759,
+      "duration": 6.401
+    },
+    {
+      "text": "for as many periods",
+      "start": 292.8,
+      "duration": 6.48
+    },
+    {
+      "text": "up until the final period",
+      "start": 296.16,
+      "duration": 6.56
+    },
+    {
+      "text": "which then we have uh the principal",
+      "start": 299.28,
+      "duration": 7.52
+    },
+    {
+      "text": "plus the coupon payment",
+      "start": 302.72,
+      "duration": 6.88
+    },
+    {
+      "text": "so calculating that uh with this",
+      "start": 306.8,
+      "duration": 4.88
+    },
+    {
+      "text": "five-year hypothetical bond then we have",
+      "start": 309.6,
+      "duration": 3.2
+    },
+    {
+      "text": "60 000",
+      "start": 311.68,
+      "duration": 3.76
+    },
+    {
+      "text": "cash flows for the coupon payments",
+      "start": 312.8,
+      "duration": 4.16
+    },
+    {
+      "text": "followed by",
+      "start": 315.44,
+      "duration": 7.36
+    },
+    {
+      "text": "a 1 million 60 000 payment on the end",
+      "start": 316.96,
+      "duration": 5.84
+    },
+    {
+      "text": "so now that we have the cash flows and",
+      "start": 323.6,
+      "duration": 4.08
+    },
+    {
+      "text": "we can use the",
+      "start": 326.639,
+      "duration": 3.28
+    },
+    {
+      "text": "cost of debt which we have calculated",
+      "start": 327.68,
+      "duration": 3.28
+    },
+    {
+      "text": "separately",
+      "start": 329.919,
+      "duration": 4.0
+    },
+    {
+      "text": "as the discount rate then we can",
+      "start": 330.96,
+      "duration": 5.84
+    },
+    {
+      "text": "determine the market value of debt",
+      "start": 333.919,
+      "duration": 4.72
+    },
+    {
+      "text": "and make sure with numpy that you",
+      "start": 336.8,
+      "duration": 3.44
+    },
+    {
+      "text": "include a zero at the beginning of the",
+      "start": 338.639,
+      "duration": 2.881
+    },
+    {
+      "text": "cash flows because",
+      "start": 340.24,
+      "duration": 2.72
+    },
+    {
+      "text": "it always assumes that it's getting",
+      "start": 341.52,
+      "duration": 3.76
+    },
+    {
+      "text": "period zero first and this would be",
+      "start": 342.96,
+      "duration": 5.12
+    },
+    {
+      "text": "period one",
+      "start": 345.28,
+      "duration": 2.8
+    },
+    {
+      "text": "um and through that we get the market",
+      "start": 348.24,
+      "duration": 4.239
+    },
+    {
+      "text": "value of debt",
+      "start": 351.199,
+      "duration": 5.041
+    },
+    {
+      "text": "so here we're getting 920",
+      "start": 352.479,
+      "duration": 6.881
+    },
+    {
+      "text": "000 as the estimate of the cost or",
+      "start": 356.24,
+      "duration": 6.079
+    },
+    {
+      "text": "market value of debt",
+      "start": 359.36,
+      "duration": 2.959
+    },
+    {
+      "text": "and you don't necessarily have to go",
+      "start": 362.96,
+      "duration": 3.28
+    },
+    {
+      "text": "through this",
+      "start": 365.6,
+      "duration": 3.68
+    },
+    {
+      "text": "approach of creating uh",
+      "start": 366.24,
+      "duration": 6.16
+    },
+    {
+      "text": "the cash flows directly um",
+      "start": 369.28,
+      "duration": 6.24
+    },
+    {
+      "text": "and also if the",
+      "start": 372.4,
+      "duration": 5.919
+    },
+    {
+      "text": "maturity is not a whole number which it",
+      "start": 375.52,
+      "duration": 5.2
+    },
+    {
+      "text": "almost certainly won't be then this",
+      "start": 378.319,
+      "duration": 5.921
+    },
+    {
+      "text": "direct approach won't work this was more",
+      "start": 380.72,
+      "duration": 6.96
+    },
+    {
+      "text": "uh to just kind of emphasize that",
+      "start": 384.24,
+      "duration": 5.28
+    },
+    {
+      "text": "uh theoretically this is what's going on",
+      "start": 387.68,
+      "duration": 3.44
+    },
+    {
+      "text": "here we're just lining up the",
+      "start": 389.52,
+      "duration": 3.2
+    },
+    {
+      "text": "hypothetical bond payments and taking",
+      "start": 391.12,
+      "duration": 2.079
+    },
+    {
+      "text": "the press",
+      "start": 392.72,
+      "duration": 3.52
+    },
+    {
+      "text": "value but there is a formula which",
+      "start": 393.199,
+      "duration": 7.361
+    },
+    {
+      "text": "allows us to do that in one step",
+      "start": 396.24,
+      "duration": 7.36
+    },
+    {
+      "text": "so it's given here",
+      "start": 400.56,
+      "duration": 5.6
+    },
+    {
+      "text": "and then you could you know copy paste",
+      "start": 403.6,
+      "duration": 5.84
+    },
+    {
+      "text": "this formula into your model",
+      "start": 406.16,
+      "duration": 6.319
+    },
+    {
+      "text": "to complete the calculation",
+      "start": 409.44,
+      "duration": 7.44
+    },
+    {
+      "text": "um and that is basically using the",
+      "start": 412.479,
+      "duration": 8.961
+    },
+    {
+      "text": "annuity formula and then adding on",
+      "start": 416.88,
+      "duration": 10.24
+    },
+    {
+      "text": "the final payment as a separate term",
+      "start": 421.44,
+      "duration": 5.68
+    },
+    {
+      "text": "so then with that approach we get the",
+      "start": 427.28,
+      "duration": 4.319
+    },
+    {
+      "text": "exact same",
+      "start": 429.84,
+      "duration": 4.4
+    },
+    {
+      "text": "market value as we did with lining up",
+      "start": 431.599,
+      "duration": 3.6
+    },
+    {
+      "text": "the cash flows",
+      "start": 434.24,
+      "duration": 4.0
+    },
+    {
+      "text": "but this will also work for maturities",
+      "start": 435.199,
+      "duration": 6.241
+    },
+    {
+      "text": "that are not whole numbers",
+      "start": 438.24,
+      "duration": 3.2
+    },
+    {
+      "text": "and we can create a function which",
+      "start": 443.68,
+      "duration": 6.0
+    },
+    {
+      "text": "does all of that so you can definitely",
+      "start": 447.039,
+      "duration": 3.921
+    },
+    {
+      "text": "feel free to",
+      "start": 449.68,
+      "duration": 3.76
+    },
+    {
+      "text": "uh copy paste this function into your",
+      "start": 450.96,
+      "duration": 4.079
+    },
+    {
+      "text": "model",
+      "start": 453.44,
+      "duration": 4.319
+    },
+    {
+      "text": "um and that is going to be taking the",
+      "start": 455.039,
+      "duration": 4.401
+    },
+    {
+      "text": "average maturity cost of that",
+      "start": 457.759,
+      "duration": 3.921
+    },
+    {
+      "text": "total book debt and interest expense and",
+      "start": 459.44,
+      "duration": 3.28
+    },
+    {
+      "text": "giving you",
+      "start": 461.68,
+      "duration": 3.28
+    },
+    {
+      "text": "the market value of the debt by this",
+      "start": 462.72,
+      "duration": 4.159
+    },
+    {
+      "text": "approach",
+      "start": 464.96,
+      "duration": 4.799
+    },
+    {
+      "text": "so then once we have the function we can",
+      "start": 466.879,
+      "duration": 3.6
+    },
+    {
+      "text": "pass in",
+      "start": 469.759,
+      "duration": 3.761
+    },
+    {
+      "text": "whatever numbers different uh average",
+      "start": 470.479,
+      "duration": 3.681
+    },
+    {
+      "text": "maturities",
+      "start": 473.52,
+      "duration": 3.119
+    },
+    {
+      "text": "we could do a sensitivity analysis or",
+      "start": 474.16,
+      "duration": 6.08
+    },
+    {
+      "text": "other extensions etc",
+      "start": 476.639,
+      "duration": 3.601
+    },
+    {
+      "text": "so then coming to the",
+      "start": 482.24,
+      "duration": 5.6
+    },
+    {
+      "text": "last approach here valuing the",
+      "start": 485.28,
+      "duration": 3.199
+    },
+    {
+      "text": "individual",
+      "start": 487.84,
+      "duration": 4.96
+    },
+    {
+      "text": "debt instruments so it's basically the",
+      "start": 488.479,
+      "duration": 7.44
+    },
+    {
+      "text": "same as what we just did but instead of",
+      "start": 492.8,
+      "duration": 4.72
+    },
+    {
+      "text": "creating one hypothetical bond that",
+      "start": 495.919,
+      "duration": 4.321
+    },
+    {
+      "text": "represents the entire company's debt",
+      "start": 497.52,
+      "duration": 5.76
+    },
+    {
+      "text": "we just do this uh value bond valuation",
+      "start": 500.24,
+      "duration": 5.04
+    },
+    {
+      "text": "process with each of the individual",
+      "start": 503.28,
+      "duration": 4.16
+    },
+    {
+      "text": "bonds that the company holds",
+      "start": 505.28,
+      "duration": 3.919
+    },
+    {
+      "text": "and then sum up the values of each of",
+      "start": 507.44,
+      "duration": 5.28
+    },
+    {
+      "text": "those to get the total market value",
+      "start": 509.199,
+      "duration": 3.521
+    },
+    {
+      "text": "so let me load in",
+      "start": 513.279,
+      "duration": 7.281
+    },
+    {
+      "text": "some data and this is just some",
+      "start": 517.36,
+      "duration": 5.119
+    },
+    {
+      "text": "example data of just three different",
+      "start": 520.56,
+      "duration": 3.2
+    },
+    {
+      "text": "bonds",
+      "start": 522.479,
+      "duration": 4.641
+    },
+    {
+      "text": "um with some",
+      "start": 523.76,
+      "duration": 8.8
+    },
+    {
+      "text": "maturities and coupons principle",
+      "start": 527.12,
+      "duration": 5.44
+    },
+    {
+      "text": "so um in order to",
+      "start": 532.839,
+      "duration": 6.361
+    },
+    {
+      "text": "use this approach we do",
+      "start": 536.16,
+      "duration": 5.119
+    },
+    {
+      "text": "have to make sure that we are getting a",
+      "start": 539.2,
+      "duration": 3.52
+    },
+    {
+      "text": "good sample",
+      "start": 541.279,
+      "duration": 5.601
+    },
+    {
+      "text": "of the company's uh bonds we should have",
+      "start": 542.72,
+      "duration": 6.16
+    },
+    {
+      "text": "nearly all of the company's debt",
+      "start": 546.88,
+      "duration": 3.44
+    },
+    {
+      "text": "instruments",
+      "start": 548.88,
+      "duration": 4.48
+    },
+    {
+      "text": "for this approach to be valid",
+      "start": 550.32,
+      "duration": 4.8
+    },
+    {
+      "text": "so the way we can check that is we can",
+      "start": 553.36,
+      "duration": 3.919
+    },
+    {
+      "text": "sum up the principal",
+      "start": 555.12,
+      "duration": 5.68
+    },
+    {
+      "text": "on all the debt instruments that we have",
+      "start": 557.279,
+      "duration": 5.281
+    },
+    {
+      "text": "and that should be close to the",
+      "start": 560.8,
+      "duration": 4.719
+    },
+    {
+      "text": "company's total book debt",
+      "start": 562.56,
+      "duration": 5.12
+    },
+    {
+      "text": "the one that you get from the balance",
+      "start": 565.519,
+      "duration": 3.601
+    },
+    {
+      "text": "sheet",
+      "start": 567.68,
+      "duration": 3.2
+    },
+    {
+      "text": "so these two things are close and they",
+      "start": 569.12,
+      "duration": 3.76
+    },
+    {
+      "text": "don't have to line up exactly they",
+      "start": 570.88,
+      "duration": 2.399
+    },
+    {
+      "text": "almost",
+      "start": 572.88,
+      "duration": 4.079
+    },
+    {
+      "text": "never will line up exactly because there",
+      "start": 573.279,
+      "duration": 4.721
+    },
+    {
+      "text": "you know could have been additional",
+      "start": 576.959,
+      "duration": 3.201
+    },
+    {
+      "text": "bonds issued or retired since the last",
+      "start": 578.0,
+      "duration": 4.24
+    },
+    {
+      "text": "balance sheet period",
+      "start": 580.16,
+      "duration": 4.88
+    },
+    {
+      "text": "um but as long as they're close i would",
+      "start": 582.24,
+      "duration": 4.08
+    },
+    {
+      "text": "say within",
+      "start": 585.04,
+      "duration": 5.2
+    },
+    {
+      "text": "a few percent of each other then",
+      "start": 586.32,
+      "duration": 7.84
+    },
+    {
+      "text": "this approach is going to be valid and",
+      "start": 590.24,
+      "duration": 6.48
+    },
+    {
+      "text": "if you're further than fro then rather",
+      "start": 594.16,
+      "duration": 3.679
+    },
+    {
+      "text": "than a couple percent",
+      "start": 596.72,
+      "duration": 2.64
+    },
+    {
+      "text": "you could do some kind of adjustment",
+      "start": 597.839,
+      "duration": 5.12
+    },
+    {
+      "text": "approach if you have 10 percent",
+      "start": 599.36,
+      "duration": 7.52
+    },
+    {
+      "text": "if you have 90 of the bonds uh",
+      "start": 602.959,
+      "duration": 7.12
+    },
+    {
+      "text": "outstanding then you could just you know",
+      "start": 606.88,
+      "duration": 4.959
+    },
+    {
+      "text": "multiply the ending market value that",
+      "start": 610.079,
+      "duration": 2.641
+    },
+    {
+      "text": "you get by",
+      "start": 611.839,
+      "duration": 4.24
+    },
+    {
+      "text": "1.11 repeating to uh",
+      "start": 612.72,
+      "duration": 6.32
+    },
+    {
+      "text": "to kind of normalize that but in general",
+      "start": 616.079,
+      "duration": 3.841
+    },
+    {
+      "text": "i would say just",
+      "start": 619.04,
+      "duration": 3.76
+    },
+    {
+      "text": "use this approach if you have data on",
+      "start": 619.92,
+      "duration": 4.159
+    },
+    {
+      "text": "nearly all of the bonds",
+      "start": 622.8,
+      "duration": 3.92
+    },
+    {
+      "text": "outstanding",
+      "start": 624.079,
+      "duration": 2.641
+    },
+    {
+      "text": "so in this case they match up exactly",
+      "start": 627.44,
+      "duration": 4.8
+    },
+    {
+      "text": "because it's a simple example and so",
+      "start": 630.32,
+      "duration": 4.959
+    },
+    {
+      "text": "we're going to move forward",
+      "start": 632.24,
+      "duration": 3.039
+    },
+    {
+      "text": "so then it's going to be the same",
+      "start": 635.519,
+      "duration": 7.681
+    },
+    {
+      "text": "approach that we just looked at",
+      "start": 639.519,
+      "duration": 5.76
+    },
+    {
+      "text": "lining up the cash flows and taking the",
+      "start": 643.2,
+      "duration": 4.879
+    },
+    {
+      "text": "present value of those cash flows",
+      "start": 645.279,
+      "duration": 6.081
+    },
+    {
+      "text": "and then we can",
+      "start": 648.079,
+      "duration": 7.041
+    },
+    {
+      "text": "get the market value of any bond",
+      "start": 651.36,
+      "duration": 3.76
+    },
+    {
+      "text": "and you may want to use the function we",
+      "start": 655.92,
+      "duration": 4.56
+    },
+    {
+      "text": "looked at earlier",
+      "start": 659.2,
+      "duration": 2.879
+    },
+    {
+      "text": "instead because that will be able to",
+      "start": 660.48,
+      "duration": 3.84
+    },
+    {
+      "text": "handle the",
+      "start": 662.079,
+      "duration": 5.281
+    },
+    {
+      "text": "decimal maturities as well but this is",
+      "start": 664.32,
+      "duration": 4.079
+    },
+    {
+      "text": "just kind of",
+      "start": 667.36,
+      "duration": 2.8
+    },
+    {
+      "text": "for sake of example i think this is",
+      "start": 668.399,
+      "duration": 3.361
+    },
+    {
+      "text": "easier to conceptualize",
+      "start": 670.16,
+      "duration": 5.679
+    },
+    {
+      "text": "what's going on",
+      "start": 671.76,
+      "duration": 4.079
+    },
+    {
+      "text": "so now we have a function",
+      "start": 676.399,
+      "duration": 4.88
+    },
+    {
+      "text": "which can get us the market value of a",
+      "start": 679.6,
+      "duration": 3.359
+    },
+    {
+      "text": "bond",
+      "start": 681.279,
+      "duration": 4.321
+    },
+    {
+      "text": "and we have a data frame full of bonds",
+      "start": 682.959,
+      "duration": 4.801
+    },
+    {
+      "text": "how do we put these two things together",
+      "start": 685.6,
+      "duration": 4.96
+    },
+    {
+      "text": "apply this a function to each of the",
+      "start": 687.76,
+      "duration": 4.319
+    },
+    {
+      "text": "rows in the data frame",
+      "start": 690.56,
+      "duration": 3.76
+    },
+    {
+      "text": "to get the market value of each of the",
+      "start": 692.079,
+      "duration": 5.121
+    },
+    {
+      "text": "bonds that we have information on",
+      "start": 694.32,
+      "duration": 6.16
+    },
+    {
+      "text": "so dot apply on the data frame",
+      "start": 697.2,
+      "duration": 4.879
+    },
+    {
+      "text": "is what's going to be able to do that",
+      "start": 700.48,
+      "duration": 3.039
+    },
+    {
+      "text": "for us",
+      "start": 702.079,
+      "duration": 3.041
+    },
+    {
+      "text": "so i'm just going to briefly here",
+      "start": 703.519,
+      "duration": 5.041
+    },
+    {
+      "text": "introduce dot apply",
+      "start": 705.12,
+      "duration": 3.44
+    },
+    {
+      "text": "and dot apply is just letting you",
+      "start": 708.72,
+      "duration": 7.84
+    },
+    {
+      "text": "take a function which works on",
+      "start": 713.04,
+      "duration": 6.799
+    },
+    {
+      "text": "one row or one piece or one cell",
+      "start": 716.56,
+      "duration": 5.12
+    },
+    {
+      "text": "one part of the data frame and you want",
+      "start": 719.839,
+      "duration": 3.761
+    },
+    {
+      "text": "to apply it across the data frame so",
+      "start": 721.68,
+      "duration": 5.2
+    },
+    {
+      "text": "that's why it's called apply",
+      "start": 723.6,
+      "duration": 3.28
+    },
+    {
+      "text": "um and to help understand",
+      "start": 727.04,
+      "duration": 7.28
+    },
+    {
+      "text": "what's going on when we call apply",
+      "start": 730.72,
+      "duration": 6.96
+    },
+    {
+      "text": "um so here i'm doing df.apply",
+      "start": 734.32,
+      "duration": 6.319
+    },
+    {
+      "text": "and i'm passing this understand apply",
+      "start": 737.68,
+      "duration": 5.36
+    },
+    {
+      "text": "function",
+      "start": 740.639,
+      "duration": 2.401
+    },
+    {
+      "text": "um and",
+      "start": 743.12,
+      "duration": 6.08
+    },
+    {
+      "text": "what we will see here um is we see a",
+      "start": 746.24,
+      "duration": 4.48
+    },
+    {
+      "text": "print statement for each time the",
+      "start": 749.2,
+      "duration": 3.439
+    },
+    {
+      "text": "function is called",
+      "start": 750.72,
+      "duration": 6.0
+    },
+    {
+      "text": "then uh we will see what is being passed",
+      "start": 752.639,
+      "duration": 7.281
+    },
+    {
+      "text": "into this function got values",
+      "start": 756.72,
+      "duration": 6.16
+    },
+    {
+      "text": "and we can see it's a series which is",
+      "start": 759.92,
+      "duration": 4.4
+    },
+    {
+      "text": "there",
+      "start": 762.88,
+      "duration": 5.68
+    },
+    {
+      "text": "which represents the entire row of data",
+      "start": 764.32,
+      "duration": 7.44
+    },
+    {
+      "text": "we can see how this these numbers match",
+      "start": 768.56,
+      "duration": 4.8
+    },
+    {
+      "text": "up with the first row",
+      "start": 771.76,
+      "duration": 4.879
+    },
+    {
+      "text": "in the data frame",
+      "start": 773.36,
+      "duration": 3.279
+    },
+    {
+      "text": "um and you can see that it's a",
+      "start": 776.8,
+      "duration": 8.08
+    },
+    {
+      "text": "series and then",
+      "start": 780.0,
+      "duration": 8.079
+    },
+    {
+      "text": "with a series we can pull out elements",
+      "start": 784.88,
+      "duration": 6.639
+    },
+    {
+      "text": "just like with a data frame",
+      "start": 788.079,
+      "duration": 7.681
+    },
+    {
+      "text": "we put the name of the",
+      "start": 791.519,
+      "duration": 6.481
+    },
+    {
+      "text": "value that we're trying to pull out and",
+      "start": 795.76,
+      "duration": 3.84
+    },
+    {
+      "text": "it will be able to pull it out so then",
+      "start": 798.0,
+      "duration": 2.079
+    },
+    {
+      "text": "the next",
+      "start": 799.6,
+      "duration": 3.2
+    },
+    {
+      "text": "is value of principal and you can see it",
+      "start": 800.079,
+      "duration": 4.081
+    },
+    {
+      "text": "is getting this",
+      "start": 802.8,
+      "duration": 4.159
+    },
+    {
+      "text": "uh 30 000 or you know whatever is",
+      "start": 804.16,
+      "duration": 6.08
+    },
+    {
+      "text": "corresponding to the row",
+      "start": 806.959,
+      "duration": 5.12
+    },
+    {
+      "text": "and this is just bring some extra lines",
+      "start": 810.24,
+      "duration": 4.24
+    },
+    {
+      "text": "to separate so we can see",
+      "start": 812.079,
+      "duration": 3.841
+    },
+    {
+      "text": "that this function got called three",
+      "start": 814.48,
+      "duration": 3.68
+    },
+    {
+      "text": "times it got called once",
+      "start": 815.92,
+      "duration": 5.12
+    },
+    {
+      "text": "for each row",
+      "start": 818.16,
+      "duration": 2.88
+    },
+    {
+      "text": "and so this is exactly what we need to",
+      "start": 821.279,
+      "duration": 3.441
+    },
+    {
+      "text": "be able to",
+      "start": 823.279,
+      "duration": 3.761
+    },
+    {
+      "text": "apply this market value calculation",
+      "start": 824.72,
+      "duration": 3.44
+    },
+    {
+      "text": "across",
+      "start": 827.04,
+      "duration": 3.52
+    },
+    {
+      "text": "all of the different rows in the data",
+      "start": 828.16,
+      "duration": 5.52
+    },
+    {
+      "text": "frame which represent different bonds",
+      "start": 830.56,
+      "duration": 5.6
+    },
+    {
+      "text": "so if we give it a function which is",
+      "start": 833.68,
+      "duration": 3.2
+    },
+    {
+      "text": "able to",
+      "start": 836.16,
+      "duration": 4.239
+    },
+    {
+      "text": "take this series of data",
+      "start": 836.88,
+      "duration": 6.079
+    },
+    {
+      "text": "and return back the market value of the",
+      "start": 840.399,
+      "duration": 4.961
+    },
+    {
+      "text": "bond based on that data",
+      "start": 842.959,
+      "duration": 5.601
+    },
+    {
+      "text": "then we can pass that function to apply",
+      "start": 845.36,
+      "duration": 5.44
+    },
+    {
+      "text": "and get the market value of all the",
+      "start": 848.56,
+      "duration": 5.04
+    },
+    {
+      "text": "bonds at once",
+      "start": 850.8,
+      "duration": 2.8
+    },
+    {
+      "text": "so um and then the one other thing that",
+      "start": 855.6,
+      "duration": 3.599
+    },
+    {
+      "text": "you'll see",
+      "start": 858.16,
+      "duration": 4.4
+    },
+    {
+      "text": "in here is that i have axis equals one",
+      "start": 859.199,
+      "duration": 5.121
+    },
+    {
+      "text": "that means we want to work on the rows",
+      "start": 862.56,
+      "duration": 3.36
+    },
+    {
+      "text": "of the data frame",
+      "start": 864.32,
+      "duration": 4.8
+    },
+    {
+      "text": "uh if we put access equal to zero or",
+      "start": 865.92,
+      "duration": 4.159
+    },
+    {
+      "text": "that's the default",
+      "start": 869.12,
+      "duration": 2.719
+    },
+    {
+      "text": "same thing will happen when i don't put",
+      "start": 870.079,
+      "duration": 3.841
+    },
+    {
+      "text": "any axis",
+      "start": 871.839,
+      "duration": 4.8
+    },
+    {
+      "text": "it works on the columns of the data",
+      "start": 873.92,
+      "duration": 3.52
+    },
+    {
+      "text": "frame",
+      "start": 876.639,
+      "duration": 3.841
+    },
+    {
+      "text": "and so that's why you see um",
+      "start": 877.44,
+      "duration": 4.959
+    },
+    {
+      "text": "got values series of things that's being",
+      "start": 880.48,
+      "duration": 5.359
+    },
+    {
+      "text": "passed to the function this time we got",
+      "start": 882.399,
+      "duration": 6.481
+    },
+    {
+      "text": "the entire principal column rather than",
+      "start": 885.839,
+      "duration": 5.041
+    },
+    {
+      "text": "the first row of the data frame",
+      "start": 888.88,
+      "duration": 4.639
+    },
+    {
+      "text": "so this axis equals one is important to",
+      "start": 890.88,
+      "duration": 4.48
+    },
+    {
+      "text": "be able to work on each row",
+      "start": 893.519,
+      "duration": 4.481
+    },
+    {
+      "text": "at once but if you wanted to do some",
+      "start": 895.36,
+      "duration": 4.159
+    },
+    {
+      "text": "kind of calculation that worked on each",
+      "start": 898.0,
+      "duration": 3.76
+    },
+    {
+      "text": "column at once then you wouldn't want to",
+      "start": 899.519,
+      "duration": 5.76
+    },
+    {
+      "text": "pass this axis equals one",
+      "start": 901.76,
+      "duration": 3.519
+    },
+    {
+      "text": "so now that we understand dot apply",
+      "start": 906.959,
+      "duration": 6.801
+    },
+    {
+      "text": "on the data frame now we can use that",
+      "start": 910.32,
+      "duration": 5.92
+    },
+    {
+      "text": "in the context of calculating the market",
+      "start": 913.76,
+      "duration": 5.12
+    },
+    {
+      "text": "value of these bonds",
+      "start": 916.24,
+      "duration": 5.839
+    },
+    {
+      "text": "so um",
+      "start": 918.88,
+      "duration": 5.44
+    },
+    {
+      "text": "we already have the md bond function as",
+      "start": 922.079,
+      "duration": 4.88
+    },
+    {
+      "text": "we saw previously which can",
+      "start": 924.32,
+      "duration": 5.36
+    },
+    {
+      "text": "get us the market value of the bond",
+      "start": 926.959,
+      "duration": 6.24
+    },
+    {
+      "text": "based on these details",
+      "start": 929.68,
+      "duration": 3.519
+    },
+    {
+      "text": "so now in order to use it with applying",
+      "start": 933.68,
+      "duration": 4.32
+    },
+    {
+      "text": "remember that apply has to be able to",
+      "start": 936.24,
+      "duration": 3.36
+    },
+    {
+      "text": "take the series",
+      "start": 938.0,
+      "duration": 4.72
+    },
+    {
+      "text": "as its first argument and so we",
+      "start": 939.6,
+      "duration": 6.56
+    },
+    {
+      "text": "we wrap this mv bond function call",
+      "start": 942.72,
+      "duration": 5.52
+    },
+    {
+      "text": "inside another function which is",
+      "start": 946.16,
+      "duration": 4.88
+    },
+    {
+      "text": "constructed specifically for using with",
+      "start": 948.24,
+      "duration": 5.519
+    },
+    {
+      "text": "apply on the data frame and so that",
+      "start": 951.04,
+      "duration": 4.64
+    },
+    {
+      "text": "function is going to take the series as",
+      "start": 953.759,
+      "duration": 4.0
+    },
+    {
+      "text": "the first argument",
+      "start": 955.68,
+      "duration": 5.12
+    },
+    {
+      "text": "and in order to do this calculation",
+      "start": 957.759,
+      "duration": 5.52
+    },
+    {
+      "text": "we don't see anywhere in this data frame",
+      "start": 960.8,
+      "duration": 4.159
+    },
+    {
+      "text": "the cost of debt",
+      "start": 963.279,
+      "duration": 3.36
+    },
+    {
+      "text": "and we just have a single cost of data",
+      "start": 964.959,
+      "duration": 2.721
+    },
+    {
+      "text": "that we're going to want to use in all",
+      "start": 966.639,
+      "duration": 2.081
+    },
+    {
+      "text": "the calculations",
+      "start": 967.68,
+      "duration": 2.48
+    },
+    {
+      "text": "so we're going to add that here as an",
+      "start": 968.72,
+      "duration": 3.039
+    },
+    {
+      "text": "additional argument",
+      "start": 970.16,
+      "duration": 3.44
+    },
+    {
+      "text": "and that can be passed when we call",
+      "start": 971.759,
+      "duration": 3.361
+    },
+    {
+      "text": "apply",
+      "start": 973.6,
+      "duration": 5.599
+    },
+    {
+      "text": "bypassing it by the keyword name",
+      "start": 975.12,
+      "duration": 4.079
+    },
+    {
+      "text": "so any additional arguments of the",
+      "start": 979.279,
+      "duration": 3.68
+    },
+    {
+      "text": "function can be passed this way and then",
+      "start": 981.12,
+      "duration": 4.24
+    },
+    {
+      "text": "it's going to get the same cost of debt",
+      "start": 982.959,
+      "duration": 6.32
+    },
+    {
+      "text": "for each row in the data frame",
+      "start": 985.36,
+      "duration": 3.919
+    },
+    {
+      "text": "so the only other thing that we're doing",
+      "start": 989.36,
+      "duration": 5.12
+    },
+    {
+      "text": "here is we're just pulling out",
+      "start": 992.0,
+      "duration": 4.24
+    },
+    {
+      "text": "each of those individual values from the",
+      "start": 994.48,
+      "duration": 3.76
+    },
+    {
+      "text": "series so just like we had seen back",
+      "start": 996.24,
+      "duration": 2.48
+    },
+    {
+      "text": "here",
+      "start": 998.24,
+      "duration": 2.719
+    },
+    {
+      "text": "where we were able to pull the principle",
+      "start": 998.72,
+      "duration": 4.16
+    },
+    {
+      "text": "out of the series",
+      "start": 1000.959,
+      "duration": 4.081
+    },
+    {
+      "text": "and use it uh we're just doing the same",
+      "start": 1002.88,
+      "duration": 3.04
+    },
+    {
+      "text": "thing here",
+      "start": 1005.04,
+      "duration": 2.64
+    },
+    {
+      "text": "with the principle the coupon rate and",
+      "start": 1005.92,
+      "duration": 3.279
+    },
+    {
+      "text": "the maturity",
+      "start": 1007.68,
+      "duration": 3.76
+    },
+    {
+      "text": "um and then now that we have all those",
+      "start": 1009.199,
+      "duration": 3.281
+    },
+    {
+      "text": "individual numbers",
+      "start": 1011.44,
+      "duration": 3.6
+    },
+    {
+      "text": "we call the mv bond function passing",
+      "start": 1012.48,
+      "duration": 3.359
+    },
+    {
+      "text": "those numbers",
+      "start": 1015.04,
+      "duration": 2.56
+    },
+    {
+      "text": "as well as the cost of debt which is",
+      "start": 1015.839,
+      "duration": 4.641
+    },
+    {
+      "text": "separately passed to the function",
+      "start": 1017.6,
+      "duration": 5.919
+    },
+    {
+      "text": "and then it's able to return the market",
+      "start": 1020.48,
+      "duration": 4.88
+    },
+    {
+      "text": "value of the bond",
+      "start": 1023.519,
+      "duration": 4.721
+    },
+    {
+      "text": "so we call this and we see the market",
+      "start": 1025.36,
+      "duration": 4.16
+    },
+    {
+      "text": "value of the bond",
+      "start": 1028.24,
+      "duration": 5.04
+    },
+    {
+      "text": "of each bond and so that lines up",
+      "start": 1029.52,
+      "duration": 5.36
+    },
+    {
+      "text": "with the values in the data frame you",
+      "start": 1033.28,
+      "duration": 3.36
+    },
+    {
+      "text": "can see the ones with higher principal",
+      "start": 1034.88,
+      "duration": 5.439
+    },
+    {
+      "text": "i also have higher market values um",
+      "start": 1036.64,
+      "duration": 6.399
+    },
+    {
+      "text": "and so this is staying aligned with each",
+      "start": 1040.319,
+      "duration": 5.201
+    },
+    {
+      "text": "row and data frame",
+      "start": 1043.039,
+      "duration": 5.201
+    },
+    {
+      "text": "so to kind of wrap this up we can assign",
+      "start": 1045.52,
+      "duration": 3.6
+    },
+    {
+      "text": "that back",
+      "start": 1048.24,
+      "duration": 3.36
+    },
+    {
+      "text": "into the data frame so i'm just doing",
+      "start": 1049.12,
+      "duration": 3.6
+    },
+    {
+      "text": "the same",
+      "start": 1051.6,
+      "duration": 4.48
+    },
+    {
+      "text": "apply call over here but assigning that",
+      "start": 1052.72,
+      "duration": 4.959
+    },
+    {
+      "text": "back into the value",
+      "start": 1056.08,
+      "duration": 4.24
+    },
+    {
+      "text": "column of the data frame so then when we",
+      "start": 1057.679,
+      "duration": 3.681
+    },
+    {
+      "text": "look at it",
+      "start": 1060.32,
+      "duration": 2.96
+    },
+    {
+      "text": "then we have value come here as an",
+      "start": 1061.36,
+      "duration": 3.36
+    },
+    {
+      "text": "additional column",
+      "start": 1063.28,
+      "duration": 3.84
+    },
+    {
+      "text": "which now we have the market value of",
+      "start": 1064.72,
+      "duration": 4.4
+    },
+    {
+      "text": "each one of these bonds",
+      "start": 1067.12,
+      "duration": 4.24
+    },
+    {
+      "text": "and it doesn't matter how many roads are",
+      "start": 1069.12,
+      "duration": 3.28
+    },
+    {
+      "text": "in this data frame",
+      "start": 1071.36,
+      "duration": 2.64
+    },
+    {
+      "text": "here it was three could have been three",
+      "start": 1072.4,
+      "duration": 3.36
+    },
+    {
+      "text": "thousand everything would have been",
+      "start": 1074.0,
+      "duration": 4.0
+    },
+    {
+      "text": "exactly the same as far as the code that",
+      "start": 1075.76,
+      "duration": 3.2
+    },
+    {
+      "text": "you're writing",
+      "start": 1078.0,
+      "duration": 3.2
+    },
+    {
+      "text": "so this is a really powerful approach to",
+      "start": 1078.96,
+      "duration": 3.52
+    },
+    {
+      "text": "be able to",
+      "start": 1081.2,
+      "duration": 3.76
+    },
+    {
+      "text": "calculate the market value of as many",
+      "start": 1082.48,
+      "duration": 3.04
+    },
+    {
+      "text": "bonds",
+      "start": 1084.96,
+      "duration": 3.52
+    },
+    {
+      "text": "as you would like",
+      "start": 1085.52,
+      "duration": 2.96
+    },
+    {
+      "text": "and then we",
+      "start": 1088.72,
+      "duration": 6.319
+    },
+    {
+      "text": "ultimately want to take the sum of",
+      "start": 1091.84,
+      "duration": 6.4
+    },
+    {
+      "text": "all these values to get the total market",
+      "start": 1095.039,
+      "duration": 4.561
+    },
+    {
+      "text": "value of debt",
+      "start": 1098.24,
+      "duration": 5.76
+    },
+    {
+      "text": "for the company and that wraps up",
+      "start": 1099.6,
+      "duration": 7.52
+    },
+    {
+      "text": "the individual bonds approach",
+      "start": 1104.0,
+      "duration": 7.12
+    },
+    {
+      "text": "to calculating the market value of debt",
+      "start": 1107.12,
+      "duration": 4.0
+    },
+    {
+      "text": "but there is one additional thing to",
+      "start": 1111.6,
+      "duration": 3.68
+    },
+    {
+      "text": "consider here which is often you're",
+      "start": 1113.679,
+      "duration": 3.921
+    },
+    {
+      "text": "going to have a maturity date",
+      "start": 1115.28,
+      "duration": 5.759
+    },
+    {
+      "text": "and not a number of years",
+      "start": 1117.6,
+      "duration": 7.04
+    },
+    {
+      "text": "of maturity and even if you did have a",
+      "start": 1121.039,
+      "duration": 5.201
+    },
+    {
+      "text": "number of years of maturity",
+      "start": 1124.64,
+      "duration": 4.48
+    },
+    {
+      "text": "um you know usually it's going to be",
+      "start": 1126.24,
+      "duration": 4.319
+    },
+    {
+      "text": "decimal and so we're not going to want",
+      "start": 1129.12,
+      "duration": 2.559
+    },
+    {
+      "text": "to use this",
+      "start": 1130.559,
+      "duration": 3.761
+    },
+    {
+      "text": "um you know lining up the cash flows",
+      "start": 1131.679,
+      "duration": 5.681
+    },
+    {
+      "text": "kind of approach",
+      "start": 1134.32,
+      "duration": 6.56
+    },
+    {
+      "text": "so um here i'm",
+      "start": 1137.36,
+      "duration": 5.12
+    },
+    {
+      "text": "i'm showing the same function that we",
+      "start": 1140.88,
+      "duration": 3.44
+    },
+    {
+      "text": "had from before the annuity",
+      "start": 1142.48,
+      "duration": 3.76
+    },
+    {
+      "text": "approach function which uses this long",
+      "start": 1144.32,
+      "duration": 4.4
+    },
+    {
+      "text": "formula",
+      "start": 1146.24,
+      "duration": 4.64
+    },
+    {
+      "text": "and i created another apply function",
+      "start": 1148.72,
+      "duration": 3.28
+    },
+    {
+      "text": "which uses that",
+      "start": 1150.88,
+      "duration": 3.76
+    },
+    {
+      "text": "so um in general i would recommend to go",
+      "start": 1152.0,
+      "duration": 3.679
+    },
+    {
+      "text": "with this",
+      "start": 1154.64,
+      "duration": 2.88
+    },
+    {
+      "text": "uh rather than the prior approach where",
+      "start": 1155.679,
+      "duration": 3.601
+    },
+    {
+      "text": "the prior approach was",
+      "start": 1157.52,
+      "duration": 3.6
+    },
+    {
+      "text": "really just trying to help you",
+      "start": 1159.28,
+      "duration": 3.84
+    },
+    {
+      "text": "understand the calculation that we're",
+      "start": 1161.12,
+      "duration": 2.4
+    },
+    {
+      "text": "just",
+      "start": 1163.12,
+      "duration": 1.84
+    },
+    {
+      "text": "lining up with cash flows and taking the",
+      "start": 1163.52,
+      "duration": 3.84
+    },
+    {
+      "text": "present value but this just does that",
+      "start": 1164.96,
+      "duration": 4.8
+    },
+    {
+      "text": "same thing with a simple formula",
+      "start": 1167.36,
+      "duration": 6.08
+    },
+    {
+      "text": "um so we'll see when we",
+      "start": 1169.76,
+      "duration": 6.88
+    },
+    {
+      "text": "apply that this new function which uses",
+      "start": 1173.44,
+      "duration": 4.96
+    },
+    {
+      "text": "the annuity approach",
+      "start": 1176.64,
+      "duration": 3.76
+    },
+    {
+      "text": "on the same data frame we get the exact",
+      "start": 1178.4,
+      "duration": 3.6
+    },
+    {
+      "text": "same uh",
+      "start": 1180.4,
+      "duration": 4.08
+    },
+    {
+      "text": "values that we got with the other",
+      "start": 1182.0,
+      "duration": 3.52
+    },
+    {
+      "text": "calculation",
+      "start": 1184.48,
+      "duration": 2.96
+    },
+    {
+      "text": "but this approach will be able to work",
+      "start": 1185.52,
+      "duration": 4.48
+    },
+    {
+      "text": "for decimal maturities as well",
+      "start": 1187.44,
+      "duration": 3.84
+    },
+    {
+      "text": "which once you're just working with",
+      "start": 1190.0,
+      "duration": 3.12
+    },
+    {
+      "text": "material maturity dates",
+      "start": 1191.28,
+      "duration": 4.08
+    },
+    {
+      "text": "you're almost always going to have a",
+      "start": 1193.12,
+      "duration": 3.04
+    },
+    {
+      "text": "decimal",
+      "start": 1195.36,
+      "duration": 3.92
+    },
+    {
+      "text": "uh maturity uh something other than a",
+      "start": 1196.16,
+      "duration": 3.519
+    },
+    {
+      "text": "whole",
+      "start": 1199.28,
+      "duration": 2.88
+    },
+    {
+      "text": "integer",
+      "start": 1199.679,
+      "duration": 2.481
+    },
+    {
+      "text": "so let's drop um the",
+      "start": 1203.039,
+      "duration": 6.481
+    },
+    {
+      "text": "maturity years and the value",
+      "start": 1206.4,
+      "duration": 6.72
+    },
+    {
+      "text": "from this data frame um so now we're",
+      "start": 1209.52,
+      "duration": 7.039
+    },
+    {
+      "text": "left with just working with the date",
+      "start": 1213.12,
+      "duration": 8.64
+    },
+    {
+      "text": "um and we can check the data types",
+      "start": 1216.559,
+      "duration": 8.881
+    },
+    {
+      "text": "of the uh columns in the data frame",
+      "start": 1221.76,
+      "duration": 5.68
+    },
+    {
+      "text": "through this dot d types",
+      "start": 1225.44,
+      "duration": 3.76
+    },
+    {
+      "text": "because we need to make sure that pandas",
+      "start": 1227.44,
+      "duration": 3.599
+    },
+    {
+      "text": "has correctly classified this",
+      "start": 1229.2,
+      "duration": 4.32
+    },
+    {
+      "text": "as a date column before we can do any",
+      "start": 1231.039,
+      "duration": 4.321
+    },
+    {
+      "text": "date operations with it",
+      "start": 1233.52,
+      "duration": 4.159
+    },
+    {
+      "text": "so we see that maturity date has the",
+      "start": 1235.36,
+      "duration": 3.199
+    },
+    {
+      "text": "date time",
+      "start": 1237.679,
+      "duration": 4.161
+    },
+    {
+      "text": "type and so it has correctly classified",
+      "start": 1238.559,
+      "duration": 4.641
+    },
+    {
+      "text": "it",
+      "start": 1241.84,
+      "duration": 3.52
+    },
+    {
+      "text": "whereas the coupon is a floating point",
+      "start": 1243.2,
+      "duration": 4.16
+    },
+    {
+      "text": "number and the principal",
+      "start": 1245.36,
+      "duration": 5.92
+    },
+    {
+      "text": "is an integer now",
+      "start": 1247.36,
+      "duration": 6.48
+    },
+    {
+      "text": "um where this usually goes wrong is if",
+      "start": 1251.28,
+      "duration": 3.92
+    },
+    {
+      "text": "you have",
+      "start": 1253.84,
+      "duration": 3.839
+    },
+    {
+      "text": "uh some rows which are not dates like",
+      "start": 1255.2,
+      "duration": 4.32
+    },
+    {
+      "text": "maybe it's a dash or",
+      "start": 1257.679,
+      "duration": 5.441
+    },
+    {
+      "text": "a blank or you know",
+      "start": 1259.52,
+      "duration": 6.48
+    },
+    {
+      "text": "a year instead of a date or these kinds",
+      "start": 1263.12,
+      "duration": 3.52
+    },
+    {
+      "text": "of things",
+      "start": 1266.0,
+      "duration": 2.159
+    },
+    {
+      "text": "are going to mess it up and it won't be",
+      "start": 1266.64,
+      "duration": 5.039
+    },
+    {
+      "text": "able to detect that as dates",
+      "start": 1268.159,
+      "duration": 3.52
+    },
+    {
+      "text": "but if everything is a date it will",
+      "start": 1272.64,
+      "duration": 2.96
+    },
+    {
+      "text": "probably load in fine but you should",
+      "start": 1274.159,
+      "duration": 1.921
+    },
+    {
+      "text": "definitely",
+      "start": 1275.6,
+      "duration": 4.16
+    },
+    {
+      "text": "check regardless but presume that it",
+      "start": 1276.08,
+      "duration": 5.839
+    },
+    {
+      "text": "didn't come in as a date",
+      "start": 1279.76,
+      "duration": 4.24
+    },
+    {
+      "text": "and then we did whatever cleanup was",
+      "start": 1281.919,
+      "duration": 4.64
+    },
+    {
+      "text": "necessary to remove these",
+      "start": 1284.0,
+      "duration": 5.679
+    },
+    {
+      "text": "values which are not dates uh",
+      "start": 1286.559,
+      "duration": 6.081
+    },
+    {
+      "text": "then we can convert it to a date with",
+      "start": 1289.679,
+      "duration": 3.441
+    },
+    {
+      "text": "this",
+      "start": 1292.64,
+      "duration": 3.6
+    },
+    {
+      "text": "uh pandas two daytime method",
+      "start": 1293.12,
+      "duration": 4.96
+    },
+    {
+      "text": "so we just assign back into that same",
+      "start": 1296.24,
+      "duration": 3.52
+    },
+    {
+      "text": "column",
+      "start": 1298.08,
+      "duration": 6.32
+    },
+    {
+      "text": "converting that column into a date time",
+      "start": 1299.76,
+      "duration": 6.799
+    },
+    {
+      "text": "and after you do this then you'll",
+      "start": 1304.4,
+      "duration": 3.44
+    },
+    {
+      "text": "definitely be left with",
+      "start": 1306.559,
+      "duration": 4.321
+    },
+    {
+      "text": "daytime now it could error out",
+      "start": 1307.84,
+      "duration": 5.52
+    },
+    {
+      "text": "if there's something in the column which",
+      "start": 1310.88,
+      "duration": 4.88
+    },
+    {
+      "text": "can't be converted to date time",
+      "start": 1313.36,
+      "duration": 4.4
+    },
+    {
+      "text": "which there probably is if it wasn't",
+      "start": 1315.76,
+      "duration": 4.64
+    },
+    {
+      "text": "loaded as a date time automatically",
+      "start": 1317.76,
+      "duration": 4.72
+    },
+    {
+      "text": "so you would want to add code which",
+      "start": 1320.4,
+      "duration": 3.68
+    },
+    {
+      "text": "cleans that up and then",
+      "start": 1322.48,
+      "duration": 4.96
+    },
+    {
+      "text": "do the state time conversion",
+      "start": 1324.08,
+      "duration": 3.36
+    },
+    {
+      "text": "so then we want to",
+      "start": 1329.28,
+      "duration": 7.6
+    },
+    {
+      "text": "uh basically calculate that",
+      "start": 1333.44,
+      "duration": 5.92
+    },
+    {
+      "text": "number of years of maturity using the",
+      "start": 1336.88,
+      "duration": 4.08
+    },
+    {
+      "text": "date",
+      "start": 1339.36,
+      "duration": 4.799
+    },
+    {
+      "text": "um so if we look at",
+      "start": 1340.96,
+      "duration": 5.599
+    },
+    {
+      "text": "what happens when we pull out a single",
+      "start": 1344.159,
+      "duration": 4.88
+    },
+    {
+      "text": "date we have this time stamp",
+      "start": 1346.559,
+      "duration": 5.761
+    },
+    {
+      "text": "so that is the way that panus represents",
+      "start": 1349.039,
+      "duration": 8.241
+    },
+    {
+      "text": "dates is with this timestamp data type",
+      "start": 1352.32,
+      "duration": 4.96
+    },
+    {
+      "text": "so we ultimately want to say well",
+      "start": 1357.679,
+      "duration": 5.201
+    },
+    {
+      "text": "how long is remaining on this bond so",
+      "start": 1361.039,
+      "duration": 3.041
+    },
+    {
+      "text": "that's the difference between the",
+      "start": 1362.88,
+      "duration": 2.159
+    },
+    {
+      "text": "maturity date",
+      "start": 1364.08,
+      "duration": 3.28
+    },
+    {
+      "text": "and today's date so how do we get",
+      "start": 1365.039,
+      "duration": 3.361
+    },
+    {
+      "text": "today's date",
+      "start": 1367.36,
+      "duration": 3.52
+    },
+    {
+      "text": "in the code without hard coding it such",
+      "start": 1368.4,
+      "duration": 3.92
+    },
+    {
+      "text": "that we'd have to update it every time",
+      "start": 1370.88,
+      "duration": 2.72
+    },
+    {
+      "text": "we ran the code",
+      "start": 1372.32,
+      "duration": 3.359
+    },
+    {
+      "text": "well we have the date time module built",
+      "start": 1373.6,
+      "duration": 3.28
+    },
+    {
+      "text": "into python",
+      "start": 1375.679,
+      "duration": 2.561
+    },
+    {
+      "text": "this is there in every python",
+      "start": 1376.88,
+      "duration": 3.679
+    },
+    {
+      "text": "installation",
+      "start": 1378.24,
+      "duration": 4.919
+    },
+    {
+      "text": "and within that you can do",
+      "start": 1380.559,
+      "duration": 4.641
+    },
+    {
+      "text": "datetime.datetime.today",
+      "start": 1383.159,
+      "duration": 4.76
+    },
+    {
+      "text": "and that is going to give you today's",
+      "start": 1385.2,
+      "duration": 3.12
+    },
+    {
+      "text": "date",
+      "start": 1387.919,
+      "duration": 3.601
+    },
+    {
+      "text": "and time so",
+      "start": 1388.32,
+      "duration": 6.88
+    },
+    {
+      "text": "you can see the date and time here it",
+      "start": 1391.52,
+      "duration": 4.32
+    },
+    {
+      "text": "all",
+      "start": 1395.2,
+      "duration": 5.599
+    },
+    {
+      "text": "matches up with my system date and time",
+      "start": 1395.84,
+      "duration": 4.959
+    },
+    {
+      "text": "and then we can do math but those dates",
+      "start": 1400.96,
+      "duration": 4.0
+    },
+    {
+      "text": "just fine",
+      "start": 1403.84,
+      "duration": 4.24
+    },
+    {
+      "text": "so if we just subtract uh",
+      "start": 1404.96,
+      "duration": 6.959
+    },
+    {
+      "text": "the date uh which we got from the data",
+      "start": 1408.08,
+      "duration": 4.8
+    },
+    {
+      "text": "frame",
+      "start": 1411.919,
+      "duration": 4.561
+    },
+    {
+      "text": "we subtract today from that date we get",
+      "start": 1412.88,
+      "duration": 7.039
+    },
+    {
+      "text": "360 days as the resulting",
+      "start": 1416.48,
+      "duration": 6.88
+    },
+    {
+      "text": "time difference or time delta so this is",
+      "start": 1419.919,
+      "duration": 5.041
+    },
+    {
+      "text": "another",
+      "start": 1423.36,
+      "duration": 4.799
+    },
+    {
+      "text": "data type in the date time library built",
+      "start": 1424.96,
+      "duration": 4.4
+    },
+    {
+      "text": "into python",
+      "start": 1428.159,
+      "duration": 3.361
+    },
+    {
+      "text": "which represents the difference between",
+      "start": 1429.36,
+      "duration": 4.799
+    },
+    {
+      "text": "two dates",
+      "start": 1431.52,
+      "duration": 2.639
+    },
+    {
+      "text": "but we need to convert this",
+      "start": 1435.6,
+      "duration": 7.92
+    },
+    {
+      "text": "time delta into a number of years",
+      "start": 1438.88,
+      "duration": 7.679
+    },
+    {
+      "text": "now there are some packages out there uh",
+      "start": 1443.52,
+      "duration": 6.159
+    },
+    {
+      "text": "which make this process really easy",
+      "start": 1446.559,
+      "duration": 5.841
+    },
+    {
+      "text": "uh like date you tell is one of those",
+      "start": 1449.679,
+      "duration": 3.921
+    },
+    {
+      "text": "packages",
+      "start": 1452.4,
+      "duration": 2.8
+    },
+    {
+      "text": "and then you'll just have like a dot",
+      "start": 1453.6,
+      "duration": 3.439
+    },
+    {
+      "text": "seconds or dot",
+      "start": 1455.2,
+      "duration": 5.04
+    },
+    {
+      "text": "years kind of attribute",
+      "start": 1457.039,
+      "duration": 6.401
+    },
+    {
+      "text": "um takes a little bit extra effort with",
+      "start": 1460.24,
+      "duration": 6.4
+    },
+    {
+      "text": "the uh just built-in libraries",
+      "start": 1463.44,
+      "duration": 6.08
+    },
+    {
+      "text": "but it's not too bad what we have to do",
+      "start": 1466.64,
+      "duration": 3.44
+    },
+    {
+      "text": "is",
+      "start": 1469.52,
+      "duration": 3.759
+    },
+    {
+      "text": "convert it to a number of seconds so the",
+      "start": 1470.08,
+      "duration": 5.36
+    },
+    {
+      "text": "dot total seconds method",
+      "start": 1473.279,
+      "duration": 5.361
+    },
+    {
+      "text": "will convert this time delta into a",
+      "start": 1475.44,
+      "duration": 4.56
+    },
+    {
+      "text": "floating point number",
+      "start": 1478.64,
+      "duration": 3.12
+    },
+    {
+      "text": "of how many seconds are in the",
+      "start": 1480.0,
+      "duration": 3.679
+    },
+    {
+      "text": "difference",
+      "start": 1481.76,
+      "duration": 3.36
+    },
+    {
+      "text": "and then you can calculate how many",
+      "start": 1483.679,
+      "duration": 3.521
+    },
+    {
+      "text": "seconds are in a year or whatever",
+      "start": 1485.12,
+      "duration": 5.2
+    },
+    {
+      "text": "time or whatever length of period you're",
+      "start": 1487.2,
+      "duration": 6.4
+    },
+    {
+      "text": "using in your analysis",
+      "start": 1490.32,
+      "duration": 3.28
+    },
+    {
+      "text": "so here this is 31 million",
+      "start": 1494.08,
+      "duration": 7.04
+    },
+    {
+      "text": "seconds in a year and then you just",
+      "start": 1497.919,
+      "duration": 4.64
+    },
+    {
+      "text": "divide the seconds",
+      "start": 1501.12,
+      "duration": 4.32
+    },
+    {
+      "text": "by the number of seconds per year to get",
+      "start": 1502.559,
+      "duration": 5.841
+    },
+    {
+      "text": "the years elapsed",
+      "start": 1505.44,
+      "duration": 2.96
+    },
+    {
+      "text": "so and then even you don't necessarily",
+      "start": 1508.48,
+      "duration": 4.64
+    },
+    {
+      "text": "have to do that all yourself you can",
+      "start": 1511.919,
+      "duration": 2.401
+    },
+    {
+      "text": "just grab",
+      "start": 1513.12,
+      "duration": 4.159
+    },
+    {
+      "text": "this function from the example which",
+      "start": 1514.32,
+      "duration": 4.4
+    },
+    {
+      "text": "does all it for you",
+      "start": 1517.279,
+      "duration": 3.601
+    },
+    {
+      "text": "so it takes whatever date and it's going",
+      "start": 1518.72,
+      "duration": 3.839
+    },
+    {
+      "text": "to grab today's date",
+      "start": 1520.88,
+      "duration": 3.279
+    },
+    {
+      "text": "take the difference take the total",
+      "start": 1522.559,
+      "duration": 3.6
+    },
+    {
+      "text": "seconds of that difference and turn that",
+      "start": 1524.159,
+      "duration": 3.441
+    },
+    {
+      "text": "into years",
+      "start": 1526.159,
+      "duration": 4.4
+    },
+    {
+      "text": "so you just call this function on a date",
+      "start": 1527.6,
+      "duration": 4.8
+    },
+    {
+      "text": "and it's going to tell you how many",
+      "start": 1530.559,
+      "duration": 2.321
+    },
+    {
+      "text": "years",
+      "start": 1532.4,
+      "duration": 3.36
+    },
+    {
+      "text": "until that date",
+      "start": 1532.88,
+      "duration": 2.88
+    },
+    {
+      "text": "and remember that when we use a function",
+      "start": 1536.96,
+      "duration": 3.599
+    },
+    {
+      "text": "with apply",
+      "start": 1539.679,
+      "duration": 2.161
+    },
+    {
+      "text": "that it needs to be able to take the",
+      "start": 1540.559,
+      "duration": 3.201
+    },
+    {
+      "text": "series the row",
+      "start": 1541.84,
+      "duration": 5.04
+    },
+    {
+      "text": "series as the first argument so we just",
+      "start": 1543.76,
+      "duration": 5.12
+    },
+    {
+      "text": "make one more function for the purposes",
+      "start": 1546.88,
+      "duration": 3.36
+    },
+    {
+      "text": "of apply which",
+      "start": 1548.88,
+      "duration": 4.72
+    },
+    {
+      "text": "just wraps calling this",
+      "start": 1550.24,
+      "duration": 5.52
+    },
+    {
+      "text": "function which converts the date into a",
+      "start": 1553.6,
+      "duration": 4.4
+    },
+    {
+      "text": "number of years from today",
+      "start": 1555.76,
+      "duration": 3.84
+    },
+    {
+      "text": "and all this function does is it takes",
+      "start": 1558.0,
+      "duration": 3.84
+    },
+    {
+      "text": "the series it gets the date out of the",
+      "start": 1559.6,
+      "duration": 2.8
+    },
+    {
+      "text": "series",
+      "start": 1561.84,
+      "duration": 3.68
+    },
+    {
+      "text": "and returns the number of years",
+      "start": 1562.4,
+      "duration": 5.519
+    },
+    {
+      "text": "and here i made it an optional argument",
+      "start": 1565.52,
+      "duration": 5.6
+    },
+    {
+      "text": "of the name of this date column",
+      "start": 1567.919,
+      "duration": 4.64
+    },
+    {
+      "text": "so that if your column is called",
+      "start": 1571.12,
+      "duration": 4.0
+    },
+    {
+      "text": "maturity space parentheses date",
+      "start": 1572.559,
+      "duration": 5.6
+    },
+    {
+      "text": "then it will just work otherwise you can",
+      "start": 1575.12,
+      "duration": 7.919
+    },
+    {
+      "text": "pass whatever the date column is",
+      "start": 1578.159,
+      "duration": 7.041
+    },
+    {
+      "text": "and it will work with whatever your date",
+      "start": 1583.039,
+      "duration": 3.681
+    },
+    {
+      "text": "column is called without you having to",
+      "start": 1585.2,
+      "duration": 4.479
+    },
+    {
+      "text": "modify the function",
+      "start": 1586.72,
+      "duration": 2.959
+    },
+    {
+      "text": "um but here the name is maturity date",
+      "start": 1589.76,
+      "duration": 5.84
+    },
+    {
+      "text": "in the data frame and so this just",
+      "start": 1593.12,
+      "duration": 4.159
+    },
+    {
+      "text": "directly worked",
+      "start": 1595.6,
+      "duration": 4.8
+    },
+    {
+      "text": "and so that got us the years to maturity",
+      "start": 1597.279,
+      "duration": 5.921
+    },
+    {
+      "text": "for each of these assets",
+      "start": 1600.4,
+      "duration": 5.36
+    },
+    {
+      "text": "so then we can just assign that back",
+      "start": 1603.2,
+      "duration": 4.0
+    },
+    {
+      "text": "into the data frame",
+      "start": 1605.76,
+      "duration": 3.12
+    },
+    {
+      "text": "and we'll have a number of years of",
+      "start": 1607.2,
+      "duration": 6.4
+    },
+    {
+      "text": "maturity for each of the bonds",
+      "start": 1608.88,
+      "duration": 8.72
+    },
+    {
+      "text": "then we can just do apply again with our",
+      "start": 1613.6,
+      "duration": 7.439
+    },
+    {
+      "text": "annuity approach apply function and that",
+      "start": 1617.6,
+      "duration": 4.319
+    },
+    {
+      "text": "will get you",
+      "start": 1621.039,
+      "duration": 5.12
+    },
+    {
+      "text": "get us the value of these bonds as well",
+      "start": 1621.919,
+      "duration": 7.601
+    },
+    {
+      "text": "and we simply just sum those at",
+      "start": 1626.159,
+      "duration": 6.4
+    },
+    {
+      "text": "each of these values in order to get",
+      "start": 1629.52,
+      "duration": 5.36
+    },
+    {
+      "text": "the total market value of debt for the",
+      "start": 1632.559,
+      "duration": 4.801
+    },
+    {
+      "text": "company",
+      "start": 1634.88,
+      "duration": 5.519
+    },
+    {
+      "text": "so that's a full overview of how to",
+      "start": 1637.36,
+      "duration": 3.76
+    },
+    {
+      "text": "calculate",
+      "start": 1640.399,
+      "duration": 4.4
+    },
+    {
+      "text": "the market value of debt in python",
+      "start": 1641.12,
+      "duration": 6.72
+    },
+    {
+      "text": "so thanks for listening and",
+      "start": 1644.799,
+      "duration": 8.321
+    },
+    {
+      "text": "see you next time",
+      "start": 1647.84,
+      "duration": 5.28
+    }
+  ]
+}

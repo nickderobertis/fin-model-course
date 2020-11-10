@@ -1,0 +1,1874 @@
+{
+  "entries": [
+    {
+      "text": "hey this is nick dear burtis teaching",
+      "start": 3.04,
+      "duration": 3.279
+    },
+    {
+      "text": "you financial modeling",
+      "start": 4.88,
+      "duration": 3.6
+    },
+    {
+      "text": "today we're going to be solving the lab",
+      "start": 6.319,
+      "duration": 3.28
+    },
+    {
+      "text": "exercise",
+      "start": 8.48,
+      "duration": 3.6
+    },
+    {
+      "text": "on building out a dividend discount",
+      "start": 9.599,
+      "duration": 3.281
+    },
+    {
+      "text": "model",
+      "start": 12.08,
+      "duration": 4.959
+    },
+    {
+      "text": "complete with monte carlo simulations",
+      "start": 12.88,
+      "duration": 6.64
+    },
+    {
+      "text": "so this is part of our lecture series on",
+      "start": 17.039,
+      "duration": 4.561
+    },
+    {
+      "text": "monte carlo simulation",
+      "start": 19.52,
+      "duration": 4.96
+    },
+    {
+      "text": "and this is the first lab exercise in",
+      "start": 21.6,
+      "duration": 4.4
+    },
+    {
+      "text": "the segment",
+      "start": 24.48,
+      "duration": 4.799
+    },
+    {
+      "text": "so here we are trying to build out a",
+      "start": 26.0,
+      "duration": 4.56
+    },
+    {
+      "text": "dividend discount model",
+      "start": 29.279,
+      "duration": 5.12
+    },
+    {
+      "text": "for this company following the formula",
+      "start": 30.56,
+      "duration": 6.64
+    },
+    {
+      "text": "and then we're concerned that the growth",
+      "start": 34.399,
+      "duration": 3.68
+    },
+    {
+      "text": "rate",
+      "start": 37.2,
+      "duration": 4.8
+    },
+    {
+      "text": "is misestimated and so we're going to do",
+      "start": 38.079,
+      "duration": 5.601
+    },
+    {
+      "text": "a monte carlo simulation",
+      "start": 42.0,
+      "duration": 4.48
+    },
+    {
+      "text": "varying the growth rate and then the",
+      "start": 43.68,
+      "duration": 4.719
+    },
+    {
+      "text": "level two exercise",
+      "start": 46.48,
+      "duration": 5.44
+    },
+    {
+      "text": "is that we're also concerned that the",
+      "start": 48.399,
+      "duration": 6.32
+    },
+    {
+      "text": "cost of capital is misestimated as well",
+      "start": 51.92,
+      "duration": 4.799
+    },
+    {
+      "text": "and so we're going to add that",
+      "start": 54.719,
+      "duration": 5.68
+    },
+    {
+      "text": "into the monte carlo simulation",
+      "start": 56.719,
+      "duration": 3.68
+    },
+    {
+      "text": "so let's jump over to jupiter notebook",
+      "start": 61.039,
+      "duration": 3.601
+    },
+    {
+      "text": "to",
+      "start": 63.76,
+      "duration": 4.0
+    },
+    {
+      "text": "solve this so",
+      "start": 64.64,
+      "duration": 4.64
+    },
+    {
+      "text": "the first thing that we need to do is",
+      "start": 67.76,
+      "duration": 3.359
+    },
+    {
+      "text": "build out the base model so",
+      "start": 69.28,
+      "duration": 4.8
+    },
+    {
+      "text": "we need to build a function which is",
+      "start": 71.119,
+      "duration": 4.721
+    },
+    {
+      "text": "going to give us the results",
+      "start": 74.08,
+      "duration": 5.76
+    },
+    {
+      "text": "from the dividend discount model so",
+      "start": 75.84,
+      "duration": 7.88
+    },
+    {
+      "text": "um i'm going to call this dividend",
+      "start": 79.84,
+      "duration": 5.04
+    },
+    {
+      "text": "discount",
+      "start": 83.72,
+      "duration": 5.16
+    },
+    {
+      "text": "um and then we have three",
+      "start": 84.88,
+      "duration": 7.199
+    },
+    {
+      "text": "inputs into this",
+      "start": 88.88,
+      "duration": 5.279
+    },
+    {
+      "text": "equation we have the next dividend we",
+      "start": 92.079,
+      "duration": 4.0
+    },
+    {
+      "text": "have the cost of capital and the growth",
+      "start": 94.159,
+      "duration": 2.721
+    },
+    {
+      "text": "rate",
+      "start": 96.079,
+      "duration": 5.761
+    },
+    {
+      "text": "and that should yield us the price so",
+      "start": 96.88,
+      "duration": 4.96
+    },
+    {
+      "text": "we are going to need to take the",
+      "start": 102.64,
+      "duration": 4.72
+    },
+    {
+      "text": "dividend",
+      "start": 105.04,
+      "duration": 6.64
+    },
+    {
+      "text": "the cost of capital",
+      "start": 107.36,
+      "duration": 9.28
+    },
+    {
+      "text": "and the growth rate as our inputs",
+      "start": 111.68,
+      "duration": 4.96
+    },
+    {
+      "text": "um and so",
+      "start": 116.88,
+      "duration": 7.599
+    },
+    {
+      "text": "that's just going to be the dividend",
+      "start": 120.479,
+      "duration": 7.361
+    },
+    {
+      "text": "divided by the cost of capital",
+      "start": 124.479,
+      "duration": 6.961
+    },
+    {
+      "text": "minus the growth rate",
+      "start": 127.84,
+      "duration": 3.6
+    },
+    {
+      "text": "so that's the basic model and then we",
+      "start": 133.2,
+      "duration": 4.16
+    },
+    {
+      "text": "can",
+      "start": 136.08,
+      "duration": 4.48
+    },
+    {
+      "text": "try it out with the numbers given",
+      "start": 137.36,
+      "duration": 6.48
+    },
+    {
+      "text": "in the problem one dollar",
+      "start": 140.56,
+      "duration": 6.96
+    },
+    {
+      "text": "nine percent and four percent one dollar",
+      "start": 143.84,
+      "duration": 7.36
+    },
+    {
+      "text": "nine percent and four percent",
+      "start": 147.52,
+      "duration": 6.24
+    },
+    {
+      "text": "and we get a 20 stock price so that's",
+      "start": 151.2,
+      "duration": 4.399
+    },
+    {
+      "text": "the output from the baseline",
+      "start": 153.76,
+      "duration": 5.199
+    },
+    {
+      "text": "model nice and simple but again we're",
+      "start": 155.599,
+      "duration": 4.561
+    },
+    {
+      "text": "concerned that",
+      "start": 158.959,
+      "duration": 3.601
+    },
+    {
+      "text": "the growth rate is misestimated here and",
+      "start": 160.16,
+      "duration": 4.24
+    },
+    {
+      "text": "so now we want to do a monocarlo",
+      "start": 162.56,
+      "duration": 4.8
+    },
+    {
+      "text": "simulation on it",
+      "start": 164.4,
+      "duration": 2.96
+    },
+    {
+      "text": "so for the simulation uh we're going to",
+      "start": 167.519,
+      "duration": 3.681
+    },
+    {
+      "text": "need to",
+      "start": 170.4,
+      "duration": 2.96
+    },
+    {
+      "text": "import the random modules that we can",
+      "start": 171.2,
+      "duration": 3.679
+    },
+    {
+      "text": "draw random numbers from",
+      "start": 173.36,
+      "duration": 6.72
+    },
+    {
+      "text": "normal distributions and then",
+      "start": 174.879,
+      "duration": 5.201
+    },
+    {
+      "text": "i'm going to say that the growth mean is",
+      "start": 180.56,
+      "duration": 4.24
+    },
+    {
+      "text": "four percent",
+      "start": 183.28,
+      "duration": 4.56
+    },
+    {
+      "text": "and the growth uh standard deviation",
+      "start": 184.8,
+      "duration": 7.76
+    },
+    {
+      "text": "what did it say over here one percent",
+      "start": 187.84,
+      "duration": 4.72
+    },
+    {
+      "text": "so then we can use uh random",
+      "start": 194.48,
+      "duration": 6.0
+    },
+    {
+      "text": "dot normal variate to draw a random",
+      "start": 198.239,
+      "duration": 4.72
+    },
+    {
+      "text": "number from a normal distribution",
+      "start": 200.48,
+      "duration": 5.039
+    },
+    {
+      "text": "so the growth mean and then the gross",
+      "start": 202.959,
+      "duration": 3.601
+    },
+    {
+      "text": "standard deviation",
+      "start": 205.519,
+      "duration": 2.8
+    },
+    {
+      "text": "and just double checking the mean comes",
+      "start": 206.56,
+      "duration": 4.72
+    },
+    {
+      "text": "first which it does",
+      "start": 208.319,
+      "duration": 5.28
+    },
+    {
+      "text": "and we can see that we get random growth",
+      "start": 211.28,
+      "duration": 5.84
+    },
+    {
+      "text": "rates based upon that",
+      "start": 213.599,
+      "duration": 3.521
+    },
+    {
+      "text": "so um",
+      "start": 217.36,
+      "duration": 3.36
+    },
+    {
+      "text": "[Music]",
+      "start": 219.09,
+      "duration": 4.75
+    },
+    {
+      "text": "now we have the random growth rate",
+      "start": 220.72,
+      "duration": 5.36
+    },
+    {
+      "text": "now we have to be able to pass that",
+      "start": 223.84,
+      "duration": 4.88
+    },
+    {
+      "text": "through the model",
+      "start": 226.08,
+      "duration": 5.76
+    },
+    {
+      "text": "so we can do growth equals",
+      "start": 228.72,
+      "duration": 6.64
+    },
+    {
+      "text": "the random.normal variant and",
+      "start": 231.84,
+      "duration": 6.64
+    },
+    {
+      "text": "then we're going to i'm going to just",
+      "start": 235.36,
+      "duration": 5.68
+    },
+    {
+      "text": "add up here also the dividend",
+      "start": 238.48,
+      "duration": 5.92
+    },
+    {
+      "text": "is one dollar the",
+      "start": 241.04,
+      "duration": 6.24
+    },
+    {
+      "text": "cost of capital",
+      "start": 244.4,
+      "duration": 2.88
+    },
+    {
+      "text": "is nine percent",
+      "start": 248.08,
+      "duration": 7.12
+    },
+    {
+      "text": "and so then uh the price is going to be",
+      "start": 251.12,
+      "duration": 7.44
+    },
+    {
+      "text": "running the dividend discount on",
+      "start": 255.2,
+      "duration": 7.52
+    },
+    {
+      "text": "um that dividend",
+      "start": 258.56,
+      "duration": 4.16
+    },
+    {
+      "text": "dividend uh the cost of capital",
+      "start": 263.36,
+      "duration": 6.48
+    },
+    {
+      "text": "and the growth",
+      "start": 266.96,
+      "duration": 2.88
+    },
+    {
+      "text": "and then i'm just going to show the",
+      "start": 270.479,
+      "duration": 4.481
+    },
+    {
+      "text": "price to make sure that this is working",
+      "start": 271.84,
+      "duration": 5.44
+    },
+    {
+      "text": "so yes we can see that we now get",
+      "start": 274.96,
+      "duration": 3.28
+    },
+    {
+      "text": "different prices",
+      "start": 277.28,
+      "duration": 3.199
+    },
+    {
+      "text": "each time we run it which generally are",
+      "start": 278.24,
+      "duration": 3.28
+    },
+    {
+      "text": "somewhat close to",
+      "start": 280.479,
+      "duration": 4.961
+    },
+    {
+      "text": "20 dollars and sometimes go well outside",
+      "start": 281.52,
+      "duration": 6.399
+    },
+    {
+      "text": "that range",
+      "start": 285.44,
+      "duration": 4.88
+    },
+    {
+      "text": "so now it looks like we have a single",
+      "start": 287.919,
+      "duration": 3.361
+    },
+    {
+      "text": "simulation",
+      "start": 290.32,
+      "duration": 4.48
+    },
+    {
+      "text": "working correctly so then we can",
+      "start": 291.28,
+      "duration": 6.08
+    },
+    {
+      "text": "do a loop over the number of iterations",
+      "start": 294.8,
+      "duration": 5.76
+    },
+    {
+      "text": "that we want to use",
+      "start": 297.36,
+      "duration": 3.2
+    },
+    {
+      "text": "i'm going to just start it out at 10",
+      "start": 302.08,
+      "duration": 5.04
+    },
+    {
+      "text": "and then increase it once everything is",
+      "start": 305.12,
+      "duration": 4.16
+    },
+    {
+      "text": "working",
+      "start": 307.12,
+      "duration": 5.359
+    },
+    {
+      "text": "so then um i'm going to loop over the",
+      "start": 309.28,
+      "duration": 6.24
+    },
+    {
+      "text": "number of iterations",
+      "start": 312.479,
+      "duration": 3.041
+    },
+    {
+      "text": "and i'm going to",
+      "start": 315.68,
+      "duration": 7.359
+    },
+    {
+      "text": "run the simulation each time and",
+      "start": 319.12,
+      "duration": 8.0
+    },
+    {
+      "text": "um i'm going to",
+      "start": 323.039,
+      "duration": 7.201
+    },
+    {
+      "text": "append the results",
+      "start": 327.12,
+      "duration": 7.2
+    },
+    {
+      "text": "to a list so i'm going to",
+      "start": 330.24,
+      "duration": 6.48
+    },
+    {
+      "text": "append a tuple of both the growth and",
+      "start": 334.32,
+      "duration": 4.64
+    },
+    {
+      "text": "the price",
+      "start": 336.72,
+      "duration": 4.64
+    },
+    {
+      "text": "so that we can see the two together so",
+      "start": 338.96,
+      "duration": 3.76
+    },
+    {
+      "text": "then i run this",
+      "start": 341.36,
+      "duration": 3.679
+    },
+    {
+      "text": "and now we see that we have each",
+      "start": 342.72,
+      "duration": 4.08
+    },
+    {
+      "text": "randomly drawn growth rate associated",
+      "start": 345.039,
+      "duration": 2.88
+    },
+    {
+      "text": "with the price",
+      "start": 346.8,
+      "duration": 4.239
+    },
+    {
+      "text": "that it leads to so now we have this",
+      "start": 347.919,
+      "duration": 4.641
+    },
+    {
+      "text": "simulation running",
+      "start": 351.039,
+      "duration": 3.201
+    },
+    {
+      "text": "10 times and we can just change this to",
+      "start": 352.56,
+      "duration": 3.04
+    },
+    {
+      "text": "run it 10",
+      "start": 354.24,
+      "duration": 3.2
+    },
+    {
+      "text": "000 times or however many times we would",
+      "start": 355.6,
+      "duration": 4.08
+    },
+    {
+      "text": "like",
+      "start": 357.44,
+      "duration": 2.24
+    },
+    {
+      "text": "so now that simulation works i'm going",
+      "start": 359.84,
+      "duration": 3.76
+    },
+    {
+      "text": "to",
+      "start": 363.199,
+      "duration": 3.521
+    },
+    {
+      "text": "wrap that up in a function",
+      "start": 363.6,
+      "duration": 6.48
+    },
+    {
+      "text": "of ddr simulations which",
+      "start": 366.72,
+      "duration": 6.8
+    },
+    {
+      "text": "is going to take uh all these same",
+      "start": 370.08,
+      "duration": 4.0
+    },
+    {
+      "text": "inputs",
+      "start": 373.52,
+      "duration": 3.76
+    },
+    {
+      "text": "that we just looked at here the dividend",
+      "start": 374.08,
+      "duration": 7.28
+    },
+    {
+      "text": "cost of capital growth mean",
+      "start": 377.28,
+      "duration": 8.8
+    },
+    {
+      "text": "growth std and iterations",
+      "start": 381.36,
+      "duration": 4.72
+    },
+    {
+      "text": "and return the results then",
+      "start": 387.84,
+      "duration": 10.799
+    },
+    {
+      "text": "so then when i call it uh with the same",
+      "start": 394.16,
+      "duration": 5.92
+    },
+    {
+      "text": "then we should see the same result",
+      "start": 398.639,
+      "duration": 3.521
+    },
+    {
+      "text": "coming out well of course",
+      "start": 400.08,
+      "duration": 5.28
+    },
+    {
+      "text": "you know with the randomness",
+      "start": 402.16,
+      "duration": 3.2
+    },
+    {
+      "text": "okay and then um",
+      "start": 406.24,
+      "duration": 6.0
+    },
+    {
+      "text": "we want to visualize and summarize the",
+      "start": 410.0,
+      "duration": 4.24
+    },
+    {
+      "text": "resulting probability distribution of",
+      "start": 412.24,
+      "duration": 3.84
+    },
+    {
+      "text": "the price",
+      "start": 414.24,
+      "duration": 5.6
+    },
+    {
+      "text": "so next i'm going to",
+      "start": 416.08,
+      "duration": 6.959
+    },
+    {
+      "text": "create a data frame from this so save",
+      "start": 419.84,
+      "duration": 4.88
+    },
+    {
+      "text": "these results",
+      "start": 423.039,
+      "duration": 4.481
+    },
+    {
+      "text": "and then i'm going to need to import",
+      "start": 424.72,
+      "duration": 5.44
+    },
+    {
+      "text": "pandas",
+      "start": 427.52,
+      "duration": 2.64
+    },
+    {
+      "text": "run that and then",
+      "start": 431.52,
+      "duration": 7.2
+    },
+    {
+      "text": "create a data frame from these results",
+      "start": 434.8,
+      "duration": 7.36
+    },
+    {
+      "text": "and uh the",
+      "start": 438.72,
+      "duration": 6.08
+    },
+    {
+      "text": "then put the columns and the growth rate",
+      "start": 442.16,
+      "duration": 3.759
+    },
+    {
+      "text": "is first",
+      "start": 444.8,
+      "duration": 5.44
+    },
+    {
+      "text": "and then the uh price is second",
+      "start": 445.919,
+      "duration": 6.961
+    },
+    {
+      "text": "and so now we can see those two things",
+      "start": 450.24,
+      "duration": 6.16
+    },
+    {
+      "text": "coming into the data frame",
+      "start": 452.88,
+      "duration": 3.52
+    },
+    {
+      "text": "[Music]",
+      "start": 456.86,
+      "duration": 5.059
+    },
+    {
+      "text": "so then next we want to",
+      "start": 458.16,
+      "duration": 7.2
+    },
+    {
+      "text": "visualize the output",
+      "start": 461.919,
+      "duration": 8.081
+    },
+    {
+      "text": "so we can take the price column",
+      "start": 465.36,
+      "duration": 7.679
+    },
+    {
+      "text": "of the data frame",
+      "start": 470.0,
+      "duration": 3.039
+    },
+    {
+      "text": "and do a histogram on it",
+      "start": 473.44,
+      "duration": 8.08
+    },
+    {
+      "text": "um and here well",
+      "start": 478.4,
+      "duration": 4.88
+    },
+    {
+      "text": "we only have 10 results right now i'm",
+      "start": 481.52,
+      "duration": 4.799
+    },
+    {
+      "text": "going to up it to 100 000 results",
+      "start": 483.28,
+      "duration": 6.08
+    },
+    {
+      "text": "100 000 or 10 000 results",
+      "start": 486.319,
+      "duration": 5.201
+    },
+    {
+      "text": "and now try this again and let me",
+      "start": 489.36,
+      "duration": 3.76
+    },
+    {
+      "text": "increase",
+      "start": 491.52,
+      "duration": 6.0
+    },
+    {
+      "text": "the bin count okay so now we see the",
+      "start": 493.12,
+      "duration": 5.359
+    },
+    {
+      "text": "resulting",
+      "start": 497.52,
+      "duration": 2.72
+    },
+    {
+      "text": "probability distribution of the price",
+      "start": 498.479,
+      "duration": 4.0
+    },
+    {
+      "text": "again that most are around 20",
+      "start": 500.24,
+      "duration": 4.399
+    },
+    {
+      "text": "but some are getting up into this 40 50",
+      "start": 502.479,
+      "duration": 4.641
+    },
+    {
+      "text": "60 range and some are as low as 10",
+      "start": 504.639,
+      "duration": 3.361
+    },
+    {
+      "text": "dollars",
+      "start": 507.12,
+      "duration": 2.96
+    },
+    {
+      "text": "but the bulk seem to be between 10 and",
+      "start": 508.0,
+      "duration": 3.919
+    },
+    {
+      "text": "30.",
+      "start": 510.08,
+      "duration": 5.04
+    },
+    {
+      "text": "and it looks roughly normal but it's not",
+      "start": 511.919,
+      "duration": 6.321
+    },
+    {
+      "text": "normal we seem to have a shorter tail",
+      "start": 515.12,
+      "duration": 5.2
+    },
+    {
+      "text": "over here and a longer tail",
+      "start": 518.24,
+      "duration": 6.0
+    },
+    {
+      "text": "over here so",
+      "start": 520.32,
+      "duration": 3.92
+    },
+    {
+      "text": "even though the growth itself was",
+      "start": 524.399,
+      "duration": 6.241
+    },
+    {
+      "text": "a normal distribution and we can verify",
+      "start": 527.92,
+      "duration": 3.84
+    },
+    {
+      "text": "that by",
+      "start": 530.64,
+      "duration": 3.92
+    },
+    {
+      "text": "looking at the growth uh the resulting",
+      "start": 531.76,
+      "duration": 3.92
+    },
+    {
+      "text": "price was not",
+      "start": 534.56,
+      "duration": 4.0
+    },
+    {
+      "text": "normally distributed so it just shows",
+      "start": 535.68,
+      "duration": 4.08
+    },
+    {
+      "text": "how",
+      "start": 538.56,
+      "duration": 2.48
+    },
+    {
+      "text": "you don't necessarily know the output",
+      "start": 539.76,
+      "duration": 5.44
+    },
+    {
+      "text": "distribution until you take a look at it",
+      "start": 541.04,
+      "duration": 4.16
+    },
+    {
+      "text": "so and then we want to also look at",
+      "start": 545.44,
+      "duration": 3.839
+    },
+    {
+      "text": "quantiles",
+      "start": 548.399,
+      "duration": 4.321
+    },
+    {
+      "text": "on this um",
+      "start": 549.279,
+      "duration": 6.881
+    },
+    {
+      "text": "so i'm going to make a range of",
+      "start": 552.72,
+      "duration": 6.72
+    },
+    {
+      "text": "every five percent um",
+      "start": 556.16,
+      "duration": 6.799
+    },
+    {
+      "text": "and then call quantile on the data frame",
+      "start": 559.44,
+      "duration": 6.959
+    },
+    {
+      "text": "with those percentiles",
+      "start": 562.959,
+      "duration": 3.44
+    },
+    {
+      "text": "and so now we can see the probability",
+      "start": 567.12,
+      "duration": 4.32
+    },
+    {
+      "text": "distribution of the price as well as",
+      "start": 569.279,
+      "duration": 7.68
+    },
+    {
+      "text": "the growth rate um and",
+      "start": 571.44,
+      "duration": 8.64
+    },
+    {
+      "text": "we would also want to style this",
+      "start": 576.959,
+      "duration": 7.281
+    },
+    {
+      "text": "output um so i'm going to",
+      "start": 580.08,
+      "duration": 10.48
+    },
+    {
+      "text": "write a stylor function",
+      "start": 584.24,
+      "duration": 8.64
+    },
+    {
+      "text": "uh so a function which takes the data",
+      "start": 590.56,
+      "duration": 4.719
+    },
+    {
+      "text": "frame and then it returns",
+      "start": 592.88,
+      "duration": 6.32
+    },
+    {
+      "text": "uh the styled uh where",
+      "start": 595.279,
+      "duration": 7.281
+    },
+    {
+      "text": "the growth is going to have",
+      "start": 599.2,
+      "duration": 6.48
+    },
+    {
+      "text": "a percentage formatting let's do two",
+      "start": 602.56,
+      "duration": 4.24
+    },
+    {
+      "text": "decimal places",
+      "start": 605.68,
+      "duration": 4.399
+    },
+    {
+      "text": "percent formatting and the price",
+      "start": 606.8,
+      "duration": 6.64
+    },
+    {
+      "text": "is going to be dollars and",
+      "start": 610.079,
+      "duration": 8.88
+    },
+    {
+      "text": "it's going to have two decimal places",
+      "start": 613.44,
+      "duration": 8.8
+    },
+    {
+      "text": "um and then here we can do style df and",
+      "start": 618.959,
+      "duration": 5.521
+    },
+    {
+      "text": "here make sure to do just",
+      "start": 622.24,
+      "duration": 4.24
+    },
+    {
+      "text": "head or tail to look at part of the data",
+      "start": 624.48,
+      "duration": 3.44
+    },
+    {
+      "text": "frame rather",
+      "start": 626.48,
+      "duration": 3.12
+    },
+    {
+      "text": "otherwise you're going to get 10 000",
+      "start": 627.92,
+      "duration": 5.919
+    },
+    {
+      "text": "rows in the results after you style it",
+      "start": 629.6,
+      "duration": 4.239
+    },
+    {
+      "text": "and then i'm going to call it here on",
+      "start": 634.56,
+      "duration": 4.959
+    },
+    {
+      "text": "the quantile data frame as well",
+      "start": 636.32,
+      "duration": 6.16
+    },
+    {
+      "text": "okay so now this is all looking good as",
+      "start": 639.519,
+      "duration": 5.201
+    },
+    {
+      "text": "well",
+      "start": 642.48,
+      "duration": 2.24
+    },
+    {
+      "text": "so that's the level one",
+      "start": 645.2,
+      "duration": 7.12
+    },
+    {
+      "text": "exercise um so coming to",
+      "start": 648.32,
+      "duration": 7.199
+    },
+    {
+      "text": "level two now it's saying that",
+      "start": 652.32,
+      "duration": 6.72
+    },
+    {
+      "text": "um we want to also look at",
+      "start": 655.519,
+      "duration": 4.88
+    },
+    {
+      "text": "changing the cost of capital in the",
+      "start": 659.04,
+      "duration": 3.84
+    },
+    {
+      "text": "simulations because we're also concerned",
+      "start": 660.399,
+      "duration": 5.761
+    },
+    {
+      "text": "that can be misestimated um it has a",
+      "start": 662.88,
+      "duration": 4.88
+    },
+    {
+      "text": "note here about how",
+      "start": 666.16,
+      "duration": 5.76
+    },
+    {
+      "text": "the model can break down when um",
+      "start": 667.76,
+      "duration": 5.36
+    },
+    {
+      "text": "it's an assumption of the dividend",
+      "start": 671.92,
+      "duration": 2.96
+    },
+    {
+      "text": "discount model that the growth rate",
+      "start": 673.12,
+      "duration": 3.2
+    },
+    {
+      "text": "should be less than",
+      "start": 674.88,
+      "duration": 3.6
+    },
+    {
+      "text": "the cost of capital and once we vary",
+      "start": 676.32,
+      "duration": 3.04
+    },
+    {
+      "text": "both",
+      "start": 678.48,
+      "duration": 3.599
+    },
+    {
+      "text": "in the simulations then we're going to",
+      "start": 679.36,
+      "duration": 3.84
+    },
+    {
+      "text": "have some cases which",
+      "start": 682.079,
+      "duration": 4.081
+    },
+    {
+      "text": "break the model so let me first just",
+      "start": 683.2,
+      "duration": 4.8
+    },
+    {
+      "text": "kind of naively build it out",
+      "start": 686.16,
+      "duration": 4.72
+    },
+    {
+      "text": "this part and then we'll see the issues",
+      "start": 688.0,
+      "duration": 6.0
+    },
+    {
+      "text": "and then come back and fix them",
+      "start": 690.88,
+      "duration": 6.639
+    },
+    {
+      "text": "so i'm going to go and modify this now",
+      "start": 694.0,
+      "duration": 6.959
+    },
+    {
+      "text": "so that it can also",
+      "start": 697.519,
+      "duration": 3.44
+    },
+    {
+      "text": "look at the mean and standard deviation",
+      "start": 701.279,
+      "duration": 4.481
+    },
+    {
+      "text": "of the cost of capital",
+      "start": 704.399,
+      "duration": 2.961
+    },
+    {
+      "text": "and use those rather than a",
+      "start": 705.76,
+      "duration": 3.759
+    },
+    {
+      "text": "deterministic one",
+      "start": 707.36,
+      "duration": 4.88
+    },
+    {
+      "text": "so it was saying uh nine and two percent",
+      "start": 709.519,
+      "duration": 4.161
+    },
+    {
+      "text": "the mean and standard deviation",
+      "start": 712.24,
+      "duration": 4.399
+    },
+    {
+      "text": "so i'm gonna change this to cost capital",
+      "start": 713.68,
+      "duration": 4.159
+    },
+    {
+      "text": "mean",
+      "start": 716.639,
+      "duration": 5.121
+    },
+    {
+      "text": "uh cost capital std",
+      "start": 717.839,
+      "duration": 7.761
+    },
+    {
+      "text": "uh two percent this will also start",
+      "start": 721.76,
+      "duration": 6.079
+    },
+    {
+      "text": "taking the mean",
+      "start": 725.6,
+      "duration": 6.08
+    },
+    {
+      "text": "and the standard deviation",
+      "start": 727.839,
+      "duration": 5.12
+    },
+    {
+      "text": "and then i'm just going to do the same",
+      "start": 731.68,
+      "duration": 5.44
+    },
+    {
+      "text": "thing here that i did with the growth",
+      "start": 732.959,
+      "duration": 4.161
+    },
+    {
+      "text": "but instead with the cost of capital",
+      "start": 737.92,
+      "duration": 5.28
+    },
+    {
+      "text": "um and now that's the same variable",
+      "start": 743.279,
+      "duration": 4.321
+    },
+    {
+      "text": "that's getting used here so that should",
+      "start": 745.92,
+      "duration": 3.76
+    },
+    {
+      "text": "flow all the way through",
+      "start": 747.6,
+      "duration": 5.359
+    },
+    {
+      "text": "um and then just need to",
+      "start": 749.68,
+      "duration": 6.88
+    },
+    {
+      "text": "replace these here and",
+      "start": 752.959,
+      "duration": 7.761
+    },
+    {
+      "text": "now it should work oh we do want to also",
+      "start": 756.56,
+      "duration": 6.079
+    },
+    {
+      "text": "add that into the results the cost of",
+      "start": 760.72,
+      "duration": 3.28
+    },
+    {
+      "text": "capital",
+      "start": 762.639,
+      "duration": 4.961
+    },
+    {
+      "text": "uh and then add that into the columns",
+      "start": 764.0,
+      "duration": 6.48
+    },
+    {
+      "text": "as well and also add that into the",
+      "start": 767.6,
+      "duration": 6.08
+    },
+    {
+      "text": "styler where it's going to have the same",
+      "start": 770.48,
+      "duration": 8.0
+    },
+    {
+      "text": "format as the growth rate",
+      "start": 773.68,
+      "duration": 4.8
+    },
+    {
+      "text": "okay let's try this again and we can see",
+      "start": 779.12,
+      "duration": 4.56
+    },
+    {
+      "text": "indeed now we have the cost of capital",
+      "start": 781.68,
+      "duration": 3.92
+    },
+    {
+      "text": "randomly in there",
+      "start": 783.68,
+      "duration": 4.0
+    },
+    {
+      "text": "and it's affecting the price as well and",
+      "start": 785.6,
+      "duration": 4.0
+    },
+    {
+      "text": "these two have very similar growth rates",
+      "start": 787.68,
+      "duration": 3.599
+    },
+    {
+      "text": "very different prices due to the cost of",
+      "start": 789.6,
+      "duration": 3.44
+    },
+    {
+      "text": "capital so it looks like everything is",
+      "start": 791.279,
+      "duration": 3.841
+    },
+    {
+      "text": "working correctly",
+      "start": 793.04,
+      "duration": 5.12
+    },
+    {
+      "text": "now let's look at the histogram here",
+      "start": 795.12,
+      "duration": 4.24
+    },
+    {
+      "text": "you'll notice",
+      "start": 798.16,
+      "duration": 4.32
+    },
+    {
+      "text": "it looks really strange",
+      "start": 799.36,
+      "duration": 6.32
+    },
+    {
+      "text": "there's this huge huge spike here right",
+      "start": 802.48,
+      "duration": 4.159
+    },
+    {
+      "text": "near zero",
+      "start": 805.68,
+      "duration": 3.12
+    },
+    {
+      "text": "and then the axes of this are really",
+      "start": 806.639,
+      "duration": 3.681
+    },
+    {
+      "text": "really huge",
+      "start": 808.8,
+      "duration": 3.76
+    },
+    {
+      "text": "they go even really negative and they go",
+      "start": 810.32,
+      "duration": 3.28
+    },
+    {
+      "text": "up to",
+      "start": 812.56,
+      "duration": 3.6
+    },
+    {
+      "text": "a million over here um and that's",
+      "start": 813.6,
+      "duration": 4.479
+    },
+    {
+      "text": "because",
+      "start": 816.16,
+      "duration": 4.96
+    },
+    {
+      "text": "uh if we look at",
+      "start": 818.079,
+      "duration": 5.281
+    },
+    {
+      "text": "uh the maximum values in here we do have",
+      "start": 821.12,
+      "duration": 3.6
+    },
+    {
+      "text": "a 95 000",
+      "start": 823.36,
+      "duration": 4.8
+    },
+    {
+      "text": "price when uh",
+      "start": 824.72,
+      "duration": 4.799
+    },
+    {
+      "text": "we have a ninety five thousand dollar",
+      "start": 828.16,
+      "duration": 3.76
+    },
+    {
+      "text": "price and we also have a",
+      "start": 829.519,
+      "duration": 3.921
+    },
+    {
+      "text": "negative twenty nine thousand dollar",
+      "start": 831.92,
+      "duration": 4.0
+    },
+    {
+      "text": "price that's definitely indicative that",
+      "start": 833.44,
+      "duration": 3.04
+    },
+    {
+      "text": "we've",
+      "start": 835.92,
+      "duration": 2.64
+    },
+    {
+      "text": "violated the assumptions of the dividend",
+      "start": 836.48,
+      "duration": 4.359
+    },
+    {
+      "text": "discount model",
+      "start": 838.56,
+      "duration": 5.44
+    },
+    {
+      "text": "um and",
+      "start": 840.839,
+      "duration": 6.841
+    },
+    {
+      "text": "um we can kind of",
+      "start": 844.0,
+      "duration": 8.0
+    },
+    {
+      "text": "look at that where is the growth",
+      "start": 847.68,
+      "duration": 4.32
+    },
+    {
+      "text": "greater than the cost of capital",
+      "start": 852.56,
+      "duration": 5.279
+    },
+    {
+      "text": "um we could see all these cases where",
+      "start": 860.079,
+      "duration": 4.081
+    },
+    {
+      "text": "the growth is greater than the cost of",
+      "start": 862.72,
+      "duration": 2.479
+    },
+    {
+      "text": "capital",
+      "start": 864.16,
+      "duration": 3.84
+    },
+    {
+      "text": "that we're getting really crazy uh",
+      "start": 865.199,
+      "duration": 4.561
+    },
+    {
+      "text": "typically negative prices and it's when",
+      "start": 868.0,
+      "duration": 3.76
+    },
+    {
+      "text": "they're really close together",
+      "start": 869.76,
+      "duration": 3.84
+    },
+    {
+      "text": "um that we're going to get the super",
+      "start": 871.76,
+      "duration": 4.4
+    },
+    {
+      "text": "large prices",
+      "start": 873.6,
+      "duration": 7.52
+    },
+    {
+      "text": "so what we can do is",
+      "start": 876.16,
+      "duration": 8.239
+    },
+    {
+      "text": "um modify this a little bit",
+      "start": 881.12,
+      "duration": 6.88
+    },
+    {
+      "text": "um so after we've drawn the growth and",
+      "start": 884.399,
+      "duration": 5.521
+    },
+    {
+      "text": "cost of capital we're basically going to",
+      "start": 888.0,
+      "duration": 2.88
+    },
+    {
+      "text": "check",
+      "start": 889.92,
+      "duration": 4.159
+    },
+    {
+      "text": "is this valid um so",
+      "start": 890.88,
+      "duration": 6.319
+    },
+    {
+      "text": "i'm going to say um",
+      "start": 894.079,
+      "duration": 7.12
+    },
+    {
+      "text": "if growth is greater than",
+      "start": 897.199,
+      "duration": 6.88
+    },
+    {
+      "text": "cost of capital",
+      "start": 901.199,
+      "duration": 2.88
+    },
+    {
+      "text": "then we're just going to skip that one",
+      "start": 904.56,
+      "duration": 3.279
+    },
+    {
+      "text": "and go on to the next one",
+      "start": 906.32,
+      "duration": 3.36
+    },
+    {
+      "text": "so let's see what that does to the",
+      "start": 907.839,
+      "duration": 3.041
+    },
+    {
+      "text": "results",
+      "start": 909.68,
+      "duration": 3.68
+    },
+    {
+      "text": "um so i do this check and now we see",
+      "start": 910.88,
+      "duration": 3.36
+    },
+    {
+      "text": "there are none",
+      "start": 913.36,
+      "duration": 2.479
+    },
+    {
+      "text": "where the growth is greater than cost of",
+      "start": 914.24,
+      "duration": 4.08
+    },
+    {
+      "text": "capital so that definitely helped",
+      "start": 915.839,
+      "duration": 5.841
+    },
+    {
+      "text": "we don't see any negative prices anymore",
+      "start": 918.32,
+      "duration": 5.28
+    },
+    {
+      "text": "but we do still see some very large",
+      "start": 921.68,
+      "duration": 4.719
+    },
+    {
+      "text": "prices so",
+      "start": 923.6,
+      "duration": 4.08
+    },
+    {
+      "text": "this has helped now we don't have the",
+      "start": 926.399,
+      "duration": 2.88
+    },
+    {
+      "text": "negative side over here but we're still",
+      "start": 927.68,
+      "duration": 2.719
+    },
+    {
+      "text": "going up",
+      "start": 929.279,
+      "duration": 4.48
+    },
+    {
+      "text": "very large",
+      "start": 930.399,
+      "duration": 3.36
+    },
+    {
+      "text": "so we want to",
+      "start": 934.72,
+      "duration": 5.039
+    },
+    {
+      "text": "modify this condition so that it will",
+      "start": 938.079,
+      "duration": 3.12
+    },
+    {
+      "text": "also catch",
+      "start": 939.759,
+      "duration": 3.361
+    },
+    {
+      "text": "when the growth and cost of capital are",
+      "start": 941.199,
+      "duration": 5.121
+    },
+    {
+      "text": "very close to each other",
+      "start": 943.12,
+      "duration": 3.2
+    },
+    {
+      "text": "so whenever the growth",
+      "start": 947.68,
+      "duration": 7.279
+    },
+    {
+      "text": "is greater than the cost of capital",
+      "start": 950.88,
+      "duration": 7.28
+    },
+    {
+      "text": "minus let's just say",
+      "start": 954.959,
+      "duration": 6.641
+    },
+    {
+      "text": "half percent um",
+      "start": 958.16,
+      "duration": 6.239
+    },
+    {
+      "text": "let's give that a shot now we see the",
+      "start": 961.6,
+      "duration": 5.039
+    },
+    {
+      "text": "largest price in here is 189",
+      "start": 964.399,
+      "duration": 6.0
+    },
+    {
+      "text": "which is a lot more reasonable",
+      "start": 966.639,
+      "duration": 6.88
+    },
+    {
+      "text": "and now we look at the distribution and",
+      "start": 970.399,
+      "duration": 4.0
+    },
+    {
+      "text": "it looks",
+      "start": 973.519,
+      "duration": 2.801
+    },
+    {
+      "text": "pretty much like the distribution did",
+      "start": 974.399,
+      "duration": 3.68
+    },
+    {
+      "text": "with just varying the growth rate so",
+      "start": 976.32,
+      "duration": 4.959
+    },
+    {
+      "text": "there's another good sign",
+      "start": 978.079,
+      "duration": 3.2
+    },
+    {
+      "text": "it's still got this long tail to the",
+      "start": 981.519,
+      "duration": 5.201
+    },
+    {
+      "text": "right and a short tail of the left",
+      "start": 983.279,
+      "duration": 6.641
+    },
+    {
+      "text": "but nothing in here seems crazy so",
+      "start": 986.72,
+      "duration": 6.559
+    },
+    {
+      "text": "now this is looking correct um",
+      "start": 989.92,
+      "duration": 5.919
+    },
+    {
+      "text": "and we can see that in the distribution",
+      "start": 993.279,
+      "duration": 3.12
+    },
+    {
+      "text": "as well",
+      "start": 995.839,
+      "duration": 2.641
+    },
+    {
+      "text": "we have a fairly reasonable range of",
+      "start": 996.399,
+      "duration": 4.641
+    },
+    {
+      "text": "prices",
+      "start": 998.48,
+      "duration": 2.56
+    },
+    {
+      "text": "so that was",
+      "start": 1001.199,
+      "duration": 5.2
+    },
+    {
+      "text": "everything involved here in the lab",
+      "start": 1004.24,
+      "duration": 4.0
+    },
+    {
+      "text": "exercise",
+      "start": 1006.399,
+      "duration": 3.68
+    },
+    {
+      "text": "so thanks for listening and i'll see you",
+      "start": 1008.24,
+      "duration": 6.959
+    },
+    {
+      "text": "next time",
+      "start": 1010.079,
+      "duration": 5.12
+    }
+  ]
+}

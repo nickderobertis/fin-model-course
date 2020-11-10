@@ -1,0 +1,1774 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick diabetis",
+      "start": 4.24,
+      "duration": 3.519
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 6.0,
+      "duration": 3.679
+    },
+    {
+      "text": "today we're going to be talking about",
+      "start": 7.759,
+      "duration": 4.161
+    },
+    {
+      "text": "estimating the cost of equity",
+      "start": 9.679,
+      "duration": 5.441
+    },
+    {
+      "text": "in python using historical stock returns",
+      "start": 11.92,
+      "duration": 4.96
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 15.12,
+      "duration": 4.56
+    },
+    {
+      "text": "the dcf model focusing on the cost of",
+      "start": 16.88,
+      "duration": 3.44
+    },
+    {
+      "text": "capital",
+      "start": 19.68,
+      "duration": 4.72
+    },
+    {
+      "text": "side of the model so we've already",
+      "start": 20.32,
+      "duration": 6.64
+    },
+    {
+      "text": "given a general introduction of the dcf",
+      "start": 24.4,
+      "duration": 3.119
+    },
+    {
+      "text": "model",
+      "start": 26.96,
+      "duration": 2.8
+    },
+    {
+      "text": "and its various parts we talked through",
+      "start": 27.519,
+      "duration": 4.08
+    },
+    {
+      "text": "the enterprise value and stock value",
+      "start": 29.76,
+      "duration": 2.959
+    },
+    {
+      "text": "portion",
+      "start": 31.599,
+      "duration": 4.161
+    },
+    {
+      "text": "and we also gave an introduction on",
+      "start": 32.719,
+      "duration": 5.041
+    },
+    {
+      "text": "estimating the cost of equity in general",
+      "start": 35.76,
+      "duration": 3.92
+    },
+    {
+      "text": "kind of the conceptual framework behind",
+      "start": 37.76,
+      "duration": 2.479
+    },
+    {
+      "text": "it",
+      "start": 39.68,
+      "duration": 3.039
+    },
+    {
+      "text": "so make sure that at least you've seen",
+      "start": 40.239,
+      "duration": 3.041
+    },
+    {
+      "text": "that",
+      "start": 42.719,
+      "duration": 2.641
+    },
+    {
+      "text": "general cost of equity introduction",
+      "start": 43.28,
+      "duration": 4.24
+    },
+    {
+      "text": "before coming into",
+      "start": 45.36,
+      "duration": 7.44
+    },
+    {
+      "text": "estimating this cost of equity in python",
+      "start": 47.52,
+      "duration": 8.48
+    },
+    {
+      "text": "so we can go ahead and go over to",
+      "start": 52.8,
+      "duration": 5.68
+    },
+    {
+      "text": "the example jupiter notebook for this",
+      "start": 56.0,
+      "duration": 3.28
+    },
+    {
+      "text": "all of these",
+      "start": 58.48,
+      "duration": 3.599
+    },
+    {
+      "text": "uh materials are there on the course",
+      "start": 59.28,
+      "duration": 5.599
+    },
+    {
+      "text": "site as well",
+      "start": 62.079,
+      "duration": 2.8
+    },
+    {
+      "text": "so uh here's the",
+      "start": 65.199,
+      "duration": 6.401
+    },
+    {
+      "text": "duper notebook focused on estimating",
+      "start": 68.32,
+      "duration": 6.72
+    },
+    {
+      "text": "the cost of equity so here as explained",
+      "start": 71.6,
+      "duration": 4.559
+    },
+    {
+      "text": "in the prior video",
+      "start": 75.04,
+      "duration": 4.0
+    },
+    {
+      "text": "we are using the cap model to",
+      "start": 76.159,
+      "duration": 4.481
+    },
+    {
+      "text": "[Music]",
+      "start": 79.04,
+      "duration": 6.32
+    },
+    {
+      "text": "estimate this future cost of equity",
+      "start": 80.64,
+      "duration": 7.04
+    },
+    {
+      "text": "and to do that we're going to fit the",
+      "start": 85.36,
+      "duration": 4.48
+    },
+    {
+      "text": "model with historical data",
+      "start": 87.68,
+      "duration": 5.36
+    },
+    {
+      "text": "and then use the fitted model to then",
+      "start": 89.84,
+      "duration": 6.08
+    },
+    {
+      "text": "predict the future",
+      "start": 93.04,
+      "duration": 2.88
+    },
+    {
+      "text": "so the first thing that we're going to",
+      "start": 96.72,
+      "duration": 3.92
+    },
+    {
+      "text": "do",
+      "start": 100.24,
+      "duration": 2.879
+    },
+    {
+      "text": "is read in the data that we need to use",
+      "start": 100.64,
+      "duration": 3.36
+    },
+    {
+      "text": "so",
+      "start": 103.119,
+      "duration": 5.121
+    },
+    {
+      "text": "i provided this price data file",
+      "start": 104.0,
+      "duration": 4.24
+    },
+    {
+      "text": "which has the price on the market",
+      "start": 108.72,
+      "duration": 5.6
+    },
+    {
+      "text": "portfolio that could be something like",
+      "start": 112.399,
+      "duration": 4.08
+    },
+    {
+      "text": "an s p 500",
+      "start": 114.32,
+      "duration": 5.52
+    },
+    {
+      "text": "or russell 2000 or",
+      "start": 116.479,
+      "duration": 5.841
+    },
+    {
+      "text": "some kind of index which captures a",
+      "start": 119.84,
+      "duration": 3.36
+    },
+    {
+      "text": "large portion",
+      "start": 122.32,
+      "duration": 4.32
+    },
+    {
+      "text": "of the market and then we have the price",
+      "start": 123.2,
+      "duration": 6.08
+    },
+    {
+      "text": "of the asset or stock that we're",
+      "start": 126.64,
+      "duration": 3.2
+    },
+    {
+      "text": "interested",
+      "start": 129.28,
+      "duration": 4.08
+    },
+    {
+      "text": "in determining the cost for",
+      "start": 129.84,
+      "duration": 3.52
+    },
+    {
+      "text": "and we have a 100",
+      "start": 134.239,
+      "duration": 8.321
+    },
+    {
+      "text": "uh and one different prices here",
+      "start": 138.16,
+      "duration": 7.84
+    },
+    {
+      "text": "for each of the two assets",
+      "start": 142.56,
+      "duration": 3.44
+    },
+    {
+      "text": "so now that we've loaded in this data",
+      "start": 146.4,
+      "duration": 3.68
+    },
+    {
+      "text": "into the data frame",
+      "start": 148.8,
+      "duration": 3.68
+    },
+    {
+      "text": "now we can go about calculating the",
+      "start": 150.08,
+      "duration": 4.239
+    },
+    {
+      "text": "returns because we have prices",
+      "start": 152.48,
+      "duration": 4.0
+    },
+    {
+      "text": "but we need to work with returns in the",
+      "start": 154.319,
+      "duration": 3.521
+    },
+    {
+      "text": "model",
+      "start": 156.48,
+      "duration": 4.56
+    },
+    {
+      "text": "and so the return on a stock or any",
+      "start": 157.84,
+      "duration": 3.679
+    },
+    {
+      "text": "asset",
+      "start": 161.04,
+      "duration": 2.24
+    },
+    {
+      "text": "is just the percentage change in its",
+      "start": 161.519,
+      "duration": 4.72
+    },
+    {
+      "text": "price new minus old overall",
+      "start": 163.28,
+      "duration": 6.64
+    },
+    {
+      "text": "um and thankfully in pandas we don't",
+      "start": 166.239,
+      "duration": 5.28
+    },
+    {
+      "text": "even need to know that",
+      "start": 169.92,
+      "duration": 3.679
+    },
+    {
+      "text": "the formula for percentage change so",
+      "start": 171.519,
+      "duration": 3.041
+    },
+    {
+      "text": "hopefully",
+      "start": 173.599,
+      "duration": 3.521
+    },
+    {
+      "text": "you do know that um but we have this",
+      "start": 174.56,
+      "duration": 4.24
+    },
+    {
+      "text": "percent change method",
+      "start": 177.12,
+      "duration": 4.88
+    },
+    {
+      "text": "on the data frame so you just do dot",
+      "start": 178.8,
+      "duration": 7.12
+    },
+    {
+      "text": "percent change and that's going to",
+      "start": 182.0,
+      "duration": 6.239
+    },
+    {
+      "text": "do that calculation for you on every row",
+      "start": 185.92,
+      "duration": 4.319
+    },
+    {
+      "text": "of every column so that's",
+      "start": 188.239,
+      "duration": 3.761
+    },
+    {
+      "text": "really nice when you just have a data",
+      "start": 190.239,
+      "duration": 3.681
+    },
+    {
+      "text": "frame full of prices you can convert it",
+      "start": 192.0,
+      "duration": 3.36
+    },
+    {
+      "text": "into a data frame",
+      "start": 193.92,
+      "duration": 3.599
+    },
+    {
+      "text": "full of returns with just a single",
+      "start": 195.36,
+      "duration": 4.48
+    },
+    {
+      "text": "command",
+      "start": 197.519,
+      "duration": 2.321
+    },
+    {
+      "text": "and you'll notice that the first row",
+      "start": 201.36,
+      "duration": 3.04
+    },
+    {
+      "text": "here has these",
+      "start": 203.04,
+      "duration": 4.88
+    },
+    {
+      "text": "nans so nan means not a number",
+      "start": 204.4,
+      "duration": 6.24
+    },
+    {
+      "text": "it is the representation for a missing",
+      "start": 207.92,
+      "duration": 3.28
+    },
+    {
+      "text": "value",
+      "start": 210.64,
+      "duration": 2.8
+    },
+    {
+      "text": "in penis this is just saying that there",
+      "start": 211.2,
+      "duration": 4.16
+    },
+    {
+      "text": "was no way to calculate",
+      "start": 213.44,
+      "duration": 4.96
+    },
+    {
+      "text": "the these values because the percentage",
+      "start": 215.36,
+      "duration": 4.159
+    },
+    {
+      "text": "change is new minus",
+      "start": 218.4,
+      "duration": 4.0
+    },
+    {
+      "text": "old over old and for the first row we",
+      "start": 219.519,
+      "duration": 4.64
+    },
+    {
+      "text": "don't have any old we only",
+      "start": 222.4,
+      "duration": 3.919
+    },
+    {
+      "text": "we don't have any prior price to look at",
+      "start": 224.159,
+      "duration": 3.921
+    },
+    {
+      "text": "to calculate the return and so there's",
+      "start": 226.319,
+      "duration": 2.64
+    },
+    {
+      "text": "no",
+      "start": 228.08,
+      "duration": 4.64
+    },
+    {
+      "text": "return for the first period",
+      "start": 228.959,
+      "duration": 3.761
+    },
+    {
+      "text": "um but we do get the returns going all",
+      "start": 235.599,
+      "duration": 4.401
+    },
+    {
+      "text": "the way",
+      "start": 239.76,
+      "duration": 3.92
+    },
+    {
+      "text": "to the end of the data set just fine",
+      "start": 240.0,
+      "duration": 3.68
+    },
+    {
+      "text": "so in the cap model",
+      "start": 246.4,
+      "duration": 6.16
+    },
+    {
+      "text": "we have this market risk premium portion",
+      "start": 250.159,
+      "duration": 4.321
+    },
+    {
+      "text": "here the return",
+      "start": 252.56,
+      "duration": 5.6
+    },
+    {
+      "text": "on the market minus the risk-free rate",
+      "start": 254.48,
+      "duration": 5.039
+    },
+    {
+      "text": "and so we're going to need to calculate",
+      "start": 258.16,
+      "duration": 3.359
+    },
+    {
+      "text": "that in order to",
+      "start": 259.519,
+      "duration": 4.4
+    },
+    {
+      "text": "run the regression because we can think",
+      "start": 261.519,
+      "duration": 3.361
+    },
+    {
+      "text": "of",
+      "start": 263.919,
+      "duration": 2.961
+    },
+    {
+      "text": "a simple linear regression in this",
+      "start": 264.88,
+      "duration": 4.0
+    },
+    {
+      "text": "format",
+      "start": 266.88,
+      "duration": 5.92
+    },
+    {
+      "text": "and so here the uh rate on the market",
+      "start": 268.88,
+      "duration": 6.4
+    },
+    {
+      "text": "minus the risk free is becoming the x",
+      "start": 272.8,
+      "duration": 4.24
+    },
+    {
+      "text": "and this equation so we need to just",
+      "start": 275.28,
+      "duration": 3.44
+    },
+    {
+      "text": "calculate that first",
+      "start": 277.04,
+      "duration": 5.36
+    },
+    {
+      "text": "so that we can use that as the x",
+      "start": 278.72,
+      "duration": 6.64
+    },
+    {
+      "text": "so we're just gonna assume here that the",
+      "start": 282.4,
+      "duration": 5.04
+    },
+    {
+      "text": "risk-free rate is three percent",
+      "start": 285.36,
+      "duration": 4.8
+    },
+    {
+      "text": "uh another approach here is to actually",
+      "start": 287.44,
+      "duration": 4.08
+    },
+    {
+      "text": "collect data on",
+      "start": 290.16,
+      "duration": 4.0
+    },
+    {
+      "text": "treasuries and use historical treasury",
+      "start": 291.52,
+      "duration": 3.28
+    },
+    {
+      "text": "rates",
+      "start": 294.16,
+      "duration": 2.4
+    },
+    {
+      "text": "as the risk free rates and then it could",
+      "start": 294.8,
+      "duration": 3.92
+    },
+    {
+      "text": "vary in each period",
+      "start": 296.56,
+      "duration": 4.24
+    },
+    {
+      "text": "uh but for simplicity here i'm just",
+      "start": 298.72,
+      "duration": 5.199
+    },
+    {
+      "text": "going to use three percent",
+      "start": 300.8,
+      "duration": 6.16
+    },
+    {
+      "text": "which is quite high in 2020 but",
+      "start": 303.919,
+      "duration": 5.12
+    },
+    {
+      "text": "more have more normal rate in normal",
+      "start": 306.96,
+      "duration": 3.76
+    },
+    {
+      "text": "times",
+      "start": 309.039,
+      "duration": 5.041
+    },
+    {
+      "text": "um so to",
+      "start": 310.72,
+      "duration": 5.759
+    },
+    {
+      "text": "come up with that uh market returns",
+      "start": 314.08,
+      "duration": 4.64
+    },
+    {
+      "text": "minus first free well we just take the",
+      "start": 316.479,
+      "duration": 5.28
+    },
+    {
+      "text": "the market market portfolio return",
+      "start": 318.72,
+      "duration": 3.84
+    },
+    {
+      "text": "column",
+      "start": 321.759,
+      "duration": 2.801
+    },
+    {
+      "text": "and subtract the risk free and we can",
+      "start": 322.56,
+      "duration": 3.84
+    },
+    {
+      "text": "save that into a new column",
+      "start": 324.56,
+      "duration": 4.88
+    },
+    {
+      "text": "in the data frame and now we have this",
+      "start": 326.4,
+      "duration": 4.639
+    },
+    {
+      "text": "market risk premium",
+      "start": 329.44,
+      "duration": 4.96
+    },
+    {
+      "text": "column which is just the",
+      "start": 331.039,
+      "duration": 7.121
+    },
+    {
+      "text": "market return minus the risk free and be",
+      "start": 334.4,
+      "duration": 5.44
+    },
+    {
+      "text": "careful about your units here this",
+      "start": 338.16,
+      "duration": 3.599
+    },
+    {
+      "text": "is a percentage and so it should be in",
+      "start": 339.84,
+      "duration": 4.88
+    },
+    {
+      "text": "decimal format",
+      "start": 341.759,
+      "duration": 2.961
+    },
+    {
+      "text": "so now we have the setup that we need in",
+      "start": 346.08,
+      "duration": 4.32
+    },
+    {
+      "text": "order to go",
+      "start": 349.52,
+      "duration": 5.28
+    },
+    {
+      "text": "and run the capem on the historical data",
+      "start": 350.4,
+      "duration": 7.519
+    },
+    {
+      "text": "through an ols regression",
+      "start": 354.8,
+      "duration": 6.16
+    },
+    {
+      "text": "so to run a regression in python we can",
+      "start": 357.919,
+      "duration": 5.201
+    },
+    {
+      "text": "use the stats models package",
+      "start": 360.96,
+      "duration": 5.04
+    },
+    {
+      "text": "so here is kind of the standard",
+      "start": 363.12,
+      "duration": 3.76
+    },
+    {
+      "text": "convention",
+      "start": 366.0,
+      "duration": 4.16
+    },
+    {
+      "text": "for the import so most code samples you",
+      "start": 366.88,
+      "duration": 5.12
+    },
+    {
+      "text": "see online are doing this",
+      "start": 370.16,
+      "duration": 5.039
+    },
+    {
+      "text": "import sas models dot api as sm and then",
+      "start": 372.0,
+      "duration": 3.6
+    },
+    {
+      "text": "we use",
+      "start": 375.199,
+      "duration": 3.761
+    },
+    {
+      "text": "sm dot for everything",
+      "start": 375.6,
+      "duration": 7.12
+    },
+    {
+      "text": "um and it's very important that you",
+      "start": 378.96,
+      "duration": 6.56
+    },
+    {
+      "text": "uh include the constant in this",
+      "start": 382.72,
+      "duration": 3.919
+    },
+    {
+      "text": "regression",
+      "start": 385.52,
+      "duration": 2.56
+    },
+    {
+      "text": "with stats models you do have to",
+      "start": 386.639,
+      "duration": 3.28
+    },
+    {
+      "text": "explicitly tell it to include the",
+      "start": 388.08,
+      "duration": 3.36
+    },
+    {
+      "text": "constant",
+      "start": 389.919,
+      "duration": 4.72
+    },
+    {
+      "text": "um because if you look",
+      "start": 391.44,
+      "duration": 6.879
+    },
+    {
+      "text": "at the format of the cap-m the risk-free",
+      "start": 394.639,
+      "duration": 4.881
+    },
+    {
+      "text": "rate here",
+      "start": 398.319,
+      "duration": 4.401
+    },
+    {
+      "text": "is the interceptor constant and so if we",
+      "start": 399.52,
+      "duration": 5.04
+    },
+    {
+      "text": "estimated it without",
+      "start": 402.72,
+      "duration": 4.4
+    },
+    {
+      "text": "then we would not be appropriately",
+      "start": 404.56,
+      "duration": 3.44
+    },
+    {
+      "text": "estimating the cap",
+      "start": 407.12,
+      "duration": 5.199
+    },
+    {
+      "text": "m and so we need to have that intercept",
+      "start": 408.0,
+      "duration": 4.319
+    },
+    {
+      "text": "um and so we add that here to the market",
+      "start": 412.8,
+      "duration": 4.959
+    },
+    {
+      "text": "risk premium",
+      "start": 416.319,
+      "duration": 4.32
+    },
+    {
+      "text": "and the y is going to be the price of",
+      "start": 417.759,
+      "duration": 5.361
+    },
+    {
+      "text": "the returns on the stock",
+      "start": 420.639,
+      "duration": 5.68
+    },
+    {
+      "text": "and then we can estimate the model um",
+      "start": 423.12,
+      "duration": 6.799
+    },
+    {
+      "text": "but lotus as was already there",
+      "start": 426.319,
+      "duration": 6.88
+    },
+    {
+      "text": "uh we have this missing data error",
+      "start": 429.919,
+      "duration": 6.72
+    },
+    {
+      "text": "coming up that",
+      "start": 433.199,
+      "duration": 7.521
+    },
+    {
+      "text": "exogenous which means the x variables",
+      "start": 436.639,
+      "duration": 7.12
+    },
+    {
+      "text": "contains either infinity or missing",
+      "start": 440.72,
+      "duration": 6.24
+    },
+    {
+      "text": "values which of course we do have",
+      "start": 443.759,
+      "duration": 5.361
+    },
+    {
+      "text": "missing values we saw that before",
+      "start": 446.96,
+      "duration": 6.48
+    },
+    {
+      "text": "the first row has missing values",
+      "start": 449.12,
+      "duration": 7.04
+    },
+    {
+      "text": "and stats models cannot directly just",
+      "start": 453.44,
+      "duration": 3.12
+    },
+    {
+      "text": "work",
+      "start": 456.16,
+      "duration": 3.439
+    },
+    {
+      "text": "with those missing values so what we",
+      "start": 456.56,
+      "duration": 4.32
+    },
+    {
+      "text": "have to do",
+      "start": 459.599,
+      "duration": 4.801
+    },
+    {
+      "text": "is drop those missing values so this",
+      "start": 460.88,
+      "duration": 5.28
+    },
+    {
+      "text": "drop n a command",
+      "start": 464.4,
+      "duration": 6.079
+    },
+    {
+      "text": "on a data frame is going to remove",
+      "start": 466.16,
+      "duration": 7.84
+    },
+    {
+      "text": "any rows which have missing values",
+      "start": 470.479,
+      "duration": 7.041
+    },
+    {
+      "text": "and there are options on it you can say",
+      "start": 474.0,
+      "duration": 4.319
+    },
+    {
+      "text": "uh",
+      "start": 477.52,
+      "duration": 2.64
+    },
+    {
+      "text": "default is if there's anything missing",
+      "start": 478.319,
+      "duration": 3.121
+    },
+    {
+      "text": "in the row it will drop it",
+      "start": 480.16,
+      "duration": 4.159
+    },
+    {
+      "text": "you can also do how equals all and then",
+      "start": 481.44,
+      "duration": 3.28
+    },
+    {
+      "text": "it's",
+      "start": 484.319,
+      "duration": 2.481
+    },
+    {
+      "text": "uh only if everything is missing will it",
+      "start": 484.72,
+      "duration": 3.28
+    },
+    {
+      "text": "drop it",
+      "start": 486.8,
+      "duration": 3.839
+    },
+    {
+      "text": "but here we do want any because which is",
+      "start": 488.0,
+      "duration": 3.44
+    },
+    {
+      "text": "the default",
+      "start": 490.639,
+      "duration": 4.0
+    },
+    {
+      "text": "because uh any missing value",
+      "start": 491.44,
+      "duration": 7.199
+    },
+    {
+      "text": "is going to mess up the estimation so",
+      "start": 494.639,
+      "duration": 6.801
+    },
+    {
+      "text": "after dropping and you can see that the",
+      "start": 498.639,
+      "duration": 4.641
+    },
+    {
+      "text": "first row here",
+      "start": 501.44,
+      "duration": 6.24
+    },
+    {
+      "text": "is what the second row was before",
+      "start": 503.28,
+      "duration": 6.8
+    },
+    {
+      "text": "we have just eliminated this first row",
+      "start": 507.68,
+      "duration": 3.6
+    },
+    {
+      "text": "because it was all just",
+      "start": 510.08,
+      "duration": 5.28
+    },
+    {
+      "text": "missing values so and then we saved that",
+      "start": 511.28,
+      "duration": 4.879
+    },
+    {
+      "text": "back",
+      "start": 515.36,
+      "duration": 4.32
+    },
+    {
+      "text": "into the returns data frame you do have",
+      "start": 516.159,
+      "duration": 3.841
+    },
+    {
+      "text": "to",
+      "start": 519.68,
+      "duration": 2.239
+    },
+    {
+      "text": "assign it back otherwise it's not going",
+      "start": 520.0,
+      "duration": 3.919
+    },
+    {
+      "text": "to take effect",
+      "start": 521.919,
+      "duration": 5.521
+    },
+    {
+      "text": "in the original data um",
+      "start": 523.919,
+      "duration": 6.241
+    },
+    {
+      "text": "so now that we have removed those",
+      "start": 527.44,
+      "duration": 4.56
+    },
+    {
+      "text": "missings let's go ahead and try",
+      "start": 530.16,
+      "duration": 3.92
+    },
+    {
+      "text": "this regression again and this time it",
+      "start": 532.0,
+      "duration": 4.8
+    },
+    {
+      "text": "works just fine",
+      "start": 534.08,
+      "duration": 6.16
+    },
+    {
+      "text": "so we see all the standard uh regression",
+      "start": 536.8,
+      "duration": 6.24
+    },
+    {
+      "text": "summary output all the fit statistics",
+      "start": 540.24,
+      "duration": 5.52
+    },
+    {
+      "text": "and then here is what we're really",
+      "start": 543.04,
+      "duration": 4.4
+    },
+    {
+      "text": "interested in",
+      "start": 545.76,
+      "duration": 4.16
+    },
+    {
+      "text": "the coefficient on the market risk",
+      "start": 547.44,
+      "duration": 3.44
+    },
+    {
+      "text": "premium",
+      "start": 549.92,
+      "duration": 3.2
+    },
+    {
+      "text": "is the beta which was that main",
+      "start": 550.88,
+      "duration": 3.92
+    },
+    {
+      "text": "parameter that we're trying to estimate",
+      "start": 553.12,
+      "duration": 3.2
+    },
+    {
+      "text": "through this approach",
+      "start": 554.8,
+      "duration": 5.12
+    },
+    {
+      "text": "and we see here that the beta is 0.8338",
+      "start": 556.32,
+      "duration": 6.72
+    },
+    {
+      "text": "so this is uh generally less risky",
+      "start": 559.92,
+      "duration": 5.28
+    },
+    {
+      "text": "than the overall market in terms of",
+      "start": 563.04,
+      "duration": 5.04
+    },
+    {
+      "text": "systematic risk",
+      "start": 565.2,
+      "duration": 2.88
+    },
+    {
+      "text": "um so we're going to want to use that",
+      "start": 568.64,
+      "duration": 5.52
+    },
+    {
+      "text": "beta in a calculation",
+      "start": 572.48,
+      "duration": 5.16
+    },
+    {
+      "text": "and in stats models we have this uh",
+      "start": 574.16,
+      "duration": 6.16
+    },
+    {
+      "text": "results.params which is a series",
+      "start": 577.64,
+      "duration": 4.84
+    },
+    {
+      "text": "and a series of the coefficients so",
+      "start": 580.32,
+      "duration": 3.04
+    },
+    {
+      "text": "we've got",
+      "start": 582.48,
+      "duration": 3.039
+    },
+    {
+      "text": "a constant and you'll notice that this",
+      "start": 583.36,
+      "duration": 3.28
+    },
+    {
+      "text": "estimated to be",
+      "start": 585.519,
+      "duration": 4.721
+    },
+    {
+      "text": "uh very close to our three percent",
+      "start": 586.64,
+      "duration": 5.52
+    },
+    {
+      "text": "risk-free rate so that's a really good",
+      "start": 590.24,
+      "duration": 3.599
+    },
+    {
+      "text": "sign that it came up",
+      "start": 592.16,
+      "duration": 3.76
+    },
+    {
+      "text": "as three percent it should not be too",
+      "start": 593.839,
+      "duration": 3.12
+    },
+    {
+      "text": "far from",
+      "start": 595.92,
+      "duration": 4.24
+    },
+    {
+      "text": "uh your risk-free rate and then",
+      "start": 596.959,
+      "duration": 5.841
+    },
+    {
+      "text": "uh we've got the beta here as well so we",
+      "start": 600.16,
+      "duration": 5.119
+    },
+    {
+      "text": "can pull the mrp",
+      "start": 602.8,
+      "duration": 4.8
+    },
+    {
+      "text": "uh coefficient out of that which is the",
+      "start": 605.279,
+      "duration": 3.361
+    },
+    {
+      "text": "beta",
+      "start": 607.6,
+      "duration": 2.799
+    },
+    {
+      "text": "so then just saving that into a variable",
+      "start": 608.64,
+      "duration": 3.84
+    },
+    {
+      "text": "now we've got beta into a variable and",
+      "start": 610.399,
+      "duration": 2.801
+    },
+    {
+      "text": "can use it",
+      "start": 612.48,
+      "duration": 4.0
+    },
+    {
+      "text": "to estimate the future",
+      "start": 613.2,
+      "duration": 5.84
+    },
+    {
+      "text": "market return very sorry to estimate the",
+      "start": 616.48,
+      "duration": 6.24
+    },
+    {
+      "text": "uh cost of equity going forward",
+      "start": 619.04,
+      "duration": 3.68
+    },
+    {
+      "text": "um so again the capital formula now",
+      "start": 622.8,
+      "duration": 3.84
+    },
+    {
+      "text": "we've estimated it and gotten the",
+      "start": 625.279,
+      "duration": 2.401
+    },
+    {
+      "text": "historical",
+      "start": 626.64,
+      "duration": 2.639
+    },
+    {
+      "text": "beta and we're going to assume that beta",
+      "start": 627.68,
+      "duration": 3.2
+    },
+    {
+      "text": "applies in the future as",
+      "start": 629.279,
+      "duration": 5.041
+    },
+    {
+      "text": "well and so now we want to plug that",
+      "start": 630.88,
+      "duration": 4.959
+    },
+    {
+      "text": "beta end",
+      "start": 634.32,
+      "duration": 4.0
+    },
+    {
+      "text": "along with the projected risk-free rate",
+      "start": 635.839,
+      "duration": 4.401
+    },
+    {
+      "text": "going forward and the projected market",
+      "start": 638.32,
+      "duration": 2.959
+    },
+    {
+      "text": "return",
+      "start": 640.24,
+      "duration": 3.92
+    },
+    {
+      "text": "going forward to ultimately come up with",
+      "start": 641.279,
+      "duration": 4.401
+    },
+    {
+      "text": "the cost",
+      "start": 644.16,
+      "duration": 5.6
+    },
+    {
+      "text": "or rate of return on this stock",
+      "start": 645.68,
+      "duration": 6.88
+    },
+    {
+      "text": "so we know the beta and we can just",
+      "start": 649.76,
+      "duration": 4.16
+    },
+    {
+      "text": "assume that the risk free is going to be",
+      "start": 652.56,
+      "duration": 3.12
+    },
+    {
+      "text": "the same as it was",
+      "start": 653.92,
+      "duration": 4.159
+    },
+    {
+      "text": "so then what we do still need to get is",
+      "start": 655.68,
+      "duration": 4.96
+    },
+    {
+      "text": "the market return to plug in here",
+      "start": 658.079,
+      "duration": 5.041
+    },
+    {
+      "text": "so we can just take an average of all",
+      "start": 660.64,
+      "duration": 3.759
+    },
+    {
+      "text": "the historical",
+      "start": 663.12,
+      "duration": 4.32
+    },
+    {
+      "text": "returns and use that as an estimate for",
+      "start": 664.399,
+      "duration": 4.641
+    },
+    {
+      "text": "the future",
+      "start": 667.44,
+      "duration": 3.92
+    },
+    {
+      "text": "now you can definitely adjust this that",
+      "start": 669.04,
+      "duration": 4.0
+    },
+    {
+      "text": "would be kind of like the baseline case",
+      "start": 671.36,
+      "duration": 2.32
+    },
+    {
+      "text": "to just",
+      "start": 673.04,
+      "duration": 4.239
+    },
+    {
+      "text": "take it as it was but then if you think",
+      "start": 673.68,
+      "duration": 6.399
+    },
+    {
+      "text": "a recession is coming up or we've just",
+      "start": 677.279,
+      "duration": 4.481
+    },
+    {
+      "text": "entered a recession",
+      "start": 680.079,
+      "duration": 3.681
+    },
+    {
+      "text": "then it could be lower than this you",
+      "start": 681.76,
+      "duration": 3.759
+    },
+    {
+      "text": "could adjust it downward",
+      "start": 683.76,
+      "duration": 4.72
+    },
+    {
+      "text": "if we're an expansion economy uh then",
+      "start": 685.519,
+      "duration": 4.961
+    },
+    {
+      "text": "you could adjust it upward",
+      "start": 688.48,
+      "duration": 5.919
+    },
+    {
+      "text": "and certainly with uh some kind of uh",
+      "start": 690.48,
+      "duration": 5.84
+    },
+    {
+      "text": "sensitivity analysis or scenario",
+      "start": 694.399,
+      "duration": 3.761
+    },
+    {
+      "text": "analysis or monte carlo simulation you",
+      "start": 696.32,
+      "duration": 3.12
+    },
+    {
+      "text": "can vary",
+      "start": 698.16,
+      "duration": 3.919
+    },
+    {
+      "text": "these kinds of things to understand",
+      "start": 699.44,
+      "duration": 4.399
+    },
+    {
+      "text": "what's going to happen to the cost of",
+      "start": 702.079,
+      "duration": 4.32
+    },
+    {
+      "text": "equity cost of capital ultimate value of",
+      "start": 703.839,
+      "duration": 3.921
+    },
+    {
+      "text": "the stock",
+      "start": 706.399,
+      "duration": 4.401
+    },
+    {
+      "text": "when we change our assumptions about",
+      "start": 707.76,
+      "duration": 6.24
+    },
+    {
+      "text": "what's going to happen in the future",
+      "start": 710.8,
+      "duration": 3.2
+    },
+    {
+      "text": "but here we're just going to use the",
+      "start": 714.32,
+      "duration": 3.199
+    },
+    {
+      "text": "historical assume that that is going to",
+      "start": 715.36,
+      "duration": 5.039
+    },
+    {
+      "text": "apply in the future",
+      "start": 717.519,
+      "duration": 2.88
+    },
+    {
+      "text": "so then we can go ahead and estimate the",
+      "start": 721.279,
+      "duration": 6.321
+    },
+    {
+      "text": "model to get the cost of equity",
+      "start": 724.32,
+      "duration": 6.24
+    },
+    {
+      "text": "going forward so all we do is just plug",
+      "start": 727.6,
+      "duration": 4.32
+    },
+    {
+      "text": "everything into the left hand",
+      "start": 730.56,
+      "duration": 3.44
+    },
+    {
+      "text": "or right hand side of the model again",
+      "start": 731.92,
+      "duration": 3.52
+    },
+    {
+      "text": "assuming this",
+      "start": 734.0,
+      "duration": 4.16
+    },
+    {
+      "text": "epsilon is zero uh so we're going to",
+      "start": 735.44,
+      "duration": 4.16
+    },
+    {
+      "text": "plug the risk free",
+      "start": 738.16,
+      "duration": 4.32
+    },
+    {
+      "text": "plus the beta that we estimated times",
+      "start": 739.6,
+      "duration": 4.4
+    },
+    {
+      "text": "the market return",
+      "start": 742.48,
+      "duration": 2.96
+    },
+    {
+      "text": "that we estimated as the average of",
+      "start": 744.0,
+      "duration": 5.2
+    },
+    {
+      "text": "historical minus that risk-free again",
+      "start": 745.44,
+      "duration": 7.36
+    },
+    {
+      "text": "and then we calculate that and we get",
+      "start": 749.2,
+      "duration": 6.879
+    },
+    {
+      "text": "the overall cost of equity that we can",
+      "start": 752.8,
+      "duration": 3.68
+    },
+    {
+      "text": "go",
+      "start": 756.079,
+      "duration": 3.841
+    },
+    {
+      "text": "and then use in calculating the whack",
+      "start": 756.48,
+      "duration": 6.24
+    },
+    {
+      "text": "which will ultimately let us do the",
+      "start": 759.92,
+      "duration": 4.0
+    },
+    {
+      "text": "discounted cash flow",
+      "start": 762.72,
+      "duration": 4.88
+    },
+    {
+      "text": "valuation of a stock",
+      "start": 763.92,
+      "duration": 3.68
+    },
+    {
+      "text": "so that's what's involved and estimating",
+      "start": 769.6,
+      "duration": 4.479
+    },
+    {
+      "text": "the cost of equity",
+      "start": 772.48,
+      "duration": 4.64
+    },
+    {
+      "text": "and python using the cap m and then if",
+      "start": 774.079,
+      "duration": 4.801
+    },
+    {
+      "text": "you wanted to use a different model",
+      "start": 777.12,
+      "duration": 2.719
+    },
+    {
+      "text": "other than the cap",
+      "start": 778.88,
+      "duration": 4.079
+    },
+    {
+      "text": "m such as maybe like a power fringe",
+      "start": 779.839,
+      "duration": 6.161
+    },
+    {
+      "text": "three factor model the only thing that",
+      "start": 782.959,
+      "duration": 4.401
+    },
+    {
+      "text": "would change here",
+      "start": 786.0,
+      "duration": 5.279
+    },
+    {
+      "text": "is when you uh you would have to collect",
+      "start": 787.36,
+      "duration": 6.8
+    },
+    {
+      "text": "data on whatever factors you want to use",
+      "start": 791.279,
+      "duration": 6.081
+    },
+    {
+      "text": "and then you would uh include those",
+      "start": 794.16,
+      "duration": 5.919
+    },
+    {
+      "text": "in the regression as well as other x",
+      "start": 797.36,
+      "duration": 3.76
+    },
+    {
+      "text": "variables",
+      "start": 800.079,
+      "duration": 2.56
+    },
+    {
+      "text": "and you would also estimate the",
+      "start": 801.12,
+      "duration": 3.92
+    },
+    {
+      "text": "coefficients on those",
+      "start": 802.639,
+      "duration": 4.481
+    },
+    {
+      "text": "and then you would also have estimates",
+      "start": 805.04,
+      "duration": 3.919
+    },
+    {
+      "text": "of those factors",
+      "start": 807.12,
+      "duration": 3.36
+    },
+    {
+      "text": "going forward which would probably be",
+      "start": 808.959,
+      "duration": 4.401
+    },
+    {
+      "text": "based off of",
+      "start": 810.48,
+      "duration": 6.0
+    },
+    {
+      "text": "um averages of the factors historically",
+      "start": 813.36,
+      "duration": 6.24
+    },
+    {
+      "text": "and you could adjust those and",
+      "start": 816.48,
+      "duration": 4.719
+    },
+    {
+      "text": "then you would just plug everything in",
+      "start": 819.6,
+      "duration": 3.599
+    },
+    {
+      "text": "here at the end so the",
+      "start": 821.199,
+      "duration": 4.801
+    },
+    {
+      "text": "approach is going to apply no matter",
+      "start": 823.199,
+      "duration": 3.361
+    },
+    {
+      "text": "which",
+      "start": 826.0,
+      "duration": 3.6
+    },
+    {
+      "text": "type of model you're using you just need",
+      "start": 826.56,
+      "duration": 5.44
+    },
+    {
+      "text": "to change a couple of steps a little bit",
+      "start": 829.6,
+      "duration": 3.359
+    },
+    {
+      "text": "to apply it",
+      "start": 832.0,
+      "duration": 5.76
+    },
+    {
+      "text": "with different stock pricing models",
+      "start": 832.959,
+      "duration": 4.801
+    },
+    {
+      "text": "so that's everything involved here and",
+      "start": 837.839,
+      "duration": 5.521
+    },
+    {
+      "text": "estimating this in python",
+      "start": 841.36,
+      "duration": 3.2
+    },
+    {
+      "text": "in the next video we're going to come",
+      "start": 843.36,
+      "duration": 3.12
+    },
+    {
+      "text": "back and cover handling it in",
+      "start": 844.56,
+      "duration": 4.719
+    },
+    {
+      "text": "excel so thanks for listening and see",
+      "start": 846.48,
+      "duration": 7.84
+    },
+    {
+      "text": "you next time",
+      "start": 849.279,
+      "duration": 5.041
+    }
+  ]
+}

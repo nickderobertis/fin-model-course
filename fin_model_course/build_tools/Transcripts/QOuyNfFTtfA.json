@@ -1,0 +1,1989 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.76,
+      "duration": 2.48
+    },
+    {
+      "text": "nick dear burtis here teaching you",
+      "start": 4.72,
+      "duration": 3.039
+    },
+    {
+      "text": "financial modeling",
+      "start": 6.24,
+      "duration": 3.12
+    },
+    {
+      "text": "today we're going to be doing an",
+      "start": 7.759,
+      "duration": 3.201
+    },
+    {
+      "text": "introduction to",
+      "start": 9.36,
+      "duration": 4.239
+    },
+    {
+      "text": "the market value of debt how to think",
+      "start": 10.96,
+      "duration": 3.28
+    },
+    {
+      "text": "about it",
+      "start": 13.599,
+      "duration": 3.76
+    },
+    {
+      "text": "and how to calculate it and this is part",
+      "start": 14.24,
+      "duration": 3.36
+    },
+    {
+      "text": "of",
+      "start": 17.359,
+      "duration": 2.641
+    },
+    {
+      "text": "our lecture segment on the discounted",
+      "start": 17.6,
+      "duration": 4.4
+    },
+    {
+      "text": "cash flow valuation model",
+      "start": 20.0,
+      "duration": 4.88
+    },
+    {
+      "text": "focusing on the cost of capital portion",
+      "start": 22.0,
+      "duration": 4.96
+    },
+    {
+      "text": "of the model",
+      "start": 24.88,
+      "duration": 5.28
+    },
+    {
+      "text": "so we already talked about",
+      "start": 26.96,
+      "duration": 6.8
+    },
+    {
+      "text": "the cost of debt in prior video",
+      "start": 30.16,
+      "duration": 6.64
+    },
+    {
+      "text": "and now we are getting into the market",
+      "start": 33.76,
+      "duration": 3.92
+    },
+    {
+      "text": "value",
+      "start": 36.8,
+      "duration": 3.759
+    },
+    {
+      "text": "of debt because we need the costs and",
+      "start": 37.68,
+      "duration": 3.84
+    },
+    {
+      "text": "market values",
+      "start": 40.559,
+      "duration": 3.52
+    },
+    {
+      "text": "of each of equity and debt to ultimately",
+      "start": 41.52,
+      "duration": 4.16
+    },
+    {
+      "text": "be able to calculate",
+      "start": 44.079,
+      "duration": 3.841
+    },
+    {
+      "text": "the weighted average cost of capital or",
+      "start": 45.68,
+      "duration": 4.559
+    },
+    {
+      "text": "whack",
+      "start": 47.92,
+      "duration": 2.319
+    },
+    {
+      "text": "so",
+      "start": 50.559,
+      "duration": 2.241
+    },
+    {
+      "text": "after a bond is issued its value can",
+      "start": 53.76,
+      "duration": 3.52
+    },
+    {
+      "text": "change",
+      "start": 56.64,
+      "duration": 2.8
+    },
+    {
+      "text": "over time and it almost certainly will",
+      "start": 57.28,
+      "duration": 3.919
+    },
+    {
+      "text": "change over time",
+      "start": 59.44,
+      "duration": 5.28
+    },
+    {
+      "text": "um and this is not a debt course",
+      "start": 61.199,
+      "duration": 5.441
+    },
+    {
+      "text": "and so i'm not going to go into a ton of",
+      "start": 64.72,
+      "duration": 3.04
+    },
+    {
+      "text": "detail here",
+      "start": 66.64,
+      "duration": 4.64
+    },
+    {
+      "text": "um so definitely reference some",
+      "start": 67.76,
+      "duration": 5.039
+    },
+    {
+      "text": "additional debt materials",
+      "start": 71.28,
+      "duration": 3.519
+    },
+    {
+      "text": "if you haven't learned about any of",
+      "start": 72.799,
+      "duration": 5.121
+    },
+    {
+      "text": "these concepts before",
+      "start": 74.799,
+      "duration": 3.121
+    },
+    {
+      "text": "uh when we think about the value of",
+      "start": 78.799,
+      "duration": 7.36
+    },
+    {
+      "text": "debt be it bond bank loan",
+      "start": 82.159,
+      "duration": 7.681
+    },
+    {
+      "text": "whatever else we can determine its value",
+      "start": 86.159,
+      "duration": 6.801
+    },
+    {
+      "text": "just like any other financial asset any",
+      "start": 89.84,
+      "duration": 5.44
+    },
+    {
+      "text": "asset that pays cash flows",
+      "start": 92.96,
+      "duration": 4.24
+    },
+    {
+      "text": "we can always just take the present",
+      "start": 95.28,
+      "duration": 3.04
+    },
+    {
+      "text": "value of",
+      "start": 97.2,
+      "duration": 3.76
+    },
+    {
+      "text": "those future cash flows and that will",
+      "start": 98.32,
+      "duration": 4.96
+    },
+    {
+      "text": "get us the value of the asset",
+      "start": 100.96,
+      "duration": 5.839
+    },
+    {
+      "text": "so for a bond it's going to be the",
+      "start": 103.28,
+      "duration": 6.64
+    },
+    {
+      "text": "regular interest or coupon payments and",
+      "start": 106.799,
+      "duration": 4.241
+    },
+    {
+      "text": "then the final",
+      "start": 109.92,
+      "duration": 3.68
+    },
+    {
+      "text": "uh principal plus coupon payment in the",
+      "start": 111.04,
+      "duration": 4.24
+    },
+    {
+      "text": "last period",
+      "start": 113.6,
+      "duration": 3.68
+    },
+    {
+      "text": "that we use to determine the value of",
+      "start": 115.28,
+      "duration": 4.4
+    },
+    {
+      "text": "the bond",
+      "start": 117.28,
+      "duration": 2.4
+    },
+    {
+      "text": "but remember that when we take the",
+      "start": 120.96,
+      "duration": 3.199
+    },
+    {
+      "text": "present value of something",
+      "start": 122.799,
+      "duration": 4.161
+    },
+    {
+      "text": "it's both the cash flows as well as the",
+      "start": 124.159,
+      "duration": 4.24
+    },
+    {
+      "text": "discount rate",
+      "start": 126.96,
+      "duration": 4.719
+    },
+    {
+      "text": "that affect the value",
+      "start": 128.399,
+      "duration": 3.28
+    },
+    {
+      "text": "and with bonds the",
+      "start": 131.68,
+      "duration": 6.72
+    },
+    {
+      "text": "payments the interest coupon payments",
+      "start": 135.04,
+      "duration": 6.48
+    },
+    {
+      "text": "are contracted at beginning",
+      "start": 138.4,
+      "duration": 6.96
+    },
+    {
+      "text": "of the life of the asset and remain in",
+      "start": 141.52,
+      "duration": 4.88
+    },
+    {
+      "text": "place",
+      "start": 145.36,
+      "duration": 4.08
+    },
+    {
+      "text": "for the entire life of the asset a bond",
+      "start": 146.4,
+      "duration": 4.96
+    },
+    {
+      "text": "is just a contract",
+      "start": 149.44,
+      "duration": 4.32
+    },
+    {
+      "text": "which says that the company is going to",
+      "start": 151.36,
+      "duration": 3.84
+    },
+    {
+      "text": "pay",
+      "start": 153.76,
+      "duration": 3.6
+    },
+    {
+      "text": "a certain amount of interest in return",
+      "start": 155.2,
+      "duration": 3.2
+    },
+    {
+      "text": "for a loan",
+      "start": 157.36,
+      "duration": 2.72
+    },
+    {
+      "text": "and then they're going to return the",
+      "start": 158.4,
+      "duration": 4.24
+    },
+    {
+      "text": "money at the end",
+      "start": 160.08,
+      "duration": 6.0
+    },
+    {
+      "text": "um and so",
+      "start": 162.64,
+      "duration": 6.64
+    },
+    {
+      "text": "the value of the bonds can change over",
+      "start": 166.08,
+      "duration": 4.4
+    },
+    {
+      "text": "time",
+      "start": 169.28,
+      "duration": 5.12
+    },
+    {
+      "text": "but the interest payments cannot change",
+      "start": 170.48,
+      "duration": 5.52
+    },
+    {
+      "text": "and so that means that what must be",
+      "start": 174.4,
+      "duration": 4.96
+    },
+    {
+      "text": "changing is the discount rate",
+      "start": 176.0,
+      "duration": 4.56
+    },
+    {
+      "text": "because those are the only two",
+      "start": 179.36,
+      "duration": 6.48
+    },
+    {
+      "text": "components of the present value equation",
+      "start": 180.56,
+      "duration": 5.28
+    },
+    {
+      "text": "so why would the discount rate change",
+      "start": 187.2,
+      "duration": 3.84
+    },
+    {
+      "text": "for a company",
+      "start": 189.76,
+      "duration": 4.64
+    },
+    {
+      "text": "well a discount rate or a company",
+      "start": 191.04,
+      "duration": 6.24
+    },
+    {
+      "text": "is supposed to be reflecting the amount",
+      "start": 194.4,
+      "duration": 4.0
+    },
+    {
+      "text": "of risk",
+      "start": 197.28,
+      "duration": 5.12
+    },
+    {
+      "text": "in that company and specifically",
+      "start": 198.4,
+      "duration": 5.68
+    },
+    {
+      "text": "we're looking at the rate on the debt so",
+      "start": 202.4,
+      "duration": 3.28
+    },
+    {
+      "text": "specifically the riskiness",
+      "start": 204.08,
+      "duration": 4.799
+    },
+    {
+      "text": "of the company's debt",
+      "start": 205.68,
+      "duration": 3.199
+    },
+    {
+      "text": "so a lot of things can affect that and",
+      "start": 209.04,
+      "duration": 4.4
+    },
+    {
+      "text": "for most companies it does fluctuate",
+      "start": 211.36,
+      "duration": 2.72
+    },
+    {
+      "text": "quite a bit",
+      "start": 213.44,
+      "duration": 4.56
+    },
+    {
+      "text": "over time um",
+      "start": 214.08,
+      "duration": 5.28
+    },
+    {
+      "text": "some things that could affect that",
+      "start": 218.0,
+      "duration": 4.48
+    },
+    {
+      "text": "include taking on additional debt",
+      "start": 219.36,
+      "duration": 4.879
+    },
+    {
+      "text": "if you have a lot of debt already in",
+      "start": 222.48,
+      "duration": 3.119
+    },
+    {
+      "text": "your capital structure you've got to be",
+      "start": 224.239,
+      "duration": 1.761
+    },
+    {
+      "text": "making",
+      "start": 225.599,
+      "duration": 2.56
+    },
+    {
+      "text": "all these interest payments it becomes",
+      "start": 226.0,
+      "duration": 4.239
+    },
+    {
+      "text": "more risky to issue additional debt and",
+      "start": 228.159,
+      "duration": 4.961
+    },
+    {
+      "text": "have an even higher interest payment",
+      "start": 230.239,
+      "duration": 6.321
+    },
+    {
+      "text": "could be starting a new project",
+      "start": 233.12,
+      "duration": 3.44
+    },
+    {
+      "text": "if this project especially if it's",
+      "start": 236.879,
+      "duration": 3.121
+    },
+    {
+      "text": "something",
+      "start": 239.519,
+      "duration": 2.321
+    },
+    {
+      "text": "new that the company is trying to",
+      "start": 240.0,
+      "duration": 3.04
+    },
+    {
+      "text": "innovate",
+      "start": 241.84,
+      "duration": 3.599
+    },
+    {
+      "text": "that is not comparable to their existing",
+      "start": 243.04,
+      "duration": 4.399
+    },
+    {
+      "text": "operations",
+      "start": 245.439,
+      "duration": 4.0
+    },
+    {
+      "text": "it could be substantially more risky or",
+      "start": 247.439,
+      "duration": 3.44
+    },
+    {
+      "text": "less risky",
+      "start": 249.439,
+      "duration": 3.681
+    },
+    {
+      "text": "than the existing operations and that's",
+      "start": 250.879,
+      "duration": 4.161
+    },
+    {
+      "text": "going to change the overall",
+      "start": 253.12,
+      "duration": 4.48
+    },
+    {
+      "text": "mix of risk in the company and therefore",
+      "start": 255.04,
+      "duration": 5.199
+    },
+    {
+      "text": "the cost of debt",
+      "start": 257.6,
+      "duration": 5.36
+    },
+    {
+      "text": "or even just having a bad year can",
+      "start": 260.239,
+      "duration": 3.761
+    },
+    {
+      "text": "change",
+      "start": 262.96,
+      "duration": 4.16
+    },
+    {
+      "text": "the cost of debt or discount rate for",
+      "start": 264.0,
+      "duration": 5.36
+    },
+    {
+      "text": "the company",
+      "start": 267.12,
+      "duration": 4.639
+    },
+    {
+      "text": "because they have to make those payments",
+      "start": 269.36,
+      "duration": 3.76
+    },
+    {
+      "text": "on their interest",
+      "start": 271.759,
+      "duration": 3.521
+    },
+    {
+      "text": "and that's what debt investors are",
+      "start": 273.12,
+      "duration": 3.6
+    },
+    {
+      "text": "concerned about",
+      "start": 275.28,
+      "duration": 2.639
+    },
+    {
+      "text": "if all of a sudden they're less",
+      "start": 276.72,
+      "duration": 3.919
+    },
+    {
+      "text": "profitable this year and they're only",
+      "start": 277.919,
+      "duration": 4.0
+    },
+    {
+      "text": "barely able to make that interest",
+      "start": 280.639,
+      "duration": 3.361
+    },
+    {
+      "text": "payment that's",
+      "start": 281.919,
+      "duration": 5.601
+    },
+    {
+      "text": "a very negative signal or going forward",
+      "start": 284.0,
+      "duration": 5.28
+    },
+    {
+      "text": "in their ability to pay the future",
+      "start": 287.52,
+      "duration": 3.92
+    },
+    {
+      "text": "interest payments and so that raises the",
+      "start": 289.28,
+      "duration": 6.88
+    },
+    {
+      "text": "discount rate",
+      "start": 291.44,
+      "duration": 9.199
+    },
+    {
+      "text": "so why should we care about all of this",
+      "start": 296.16,
+      "duration": 8.24
+    },
+    {
+      "text": "let's walk through an example",
+      "start": 300.639,
+      "duration": 5.921
+    },
+    {
+      "text": "so a company issues a bond it's a",
+      "start": 304.4,
+      "duration": 3.519
+    },
+    {
+      "text": "three-year bond",
+      "start": 306.56,
+      "duration": 5.04
+    },
+    {
+      "text": "10 coupon and",
+      "start": 307.919,
+      "duration": 7.28
+    },
+    {
+      "text": "as is typical for essentially every bond",
+      "start": 311.6,
+      "duration": 6.159
+    },
+    {
+      "text": "the bond is going to be issued at par",
+      "start": 315.199,
+      "duration": 3.361
+    },
+    {
+      "text": "and that means",
+      "start": 317.759,
+      "duration": 4.401
+    },
+    {
+      "text": "that uh the principal the value of the",
+      "start": 318.56,
+      "duration": 4.479
+    },
+    {
+      "text": "principal",
+      "start": 322.16,
+      "duration": 4.319
+    },
+    {
+      "text": "is equal to",
+      "start": 323.039,
+      "duration": 6.88
+    },
+    {
+      "text": "the price at which the bond is being",
+      "start": 326.479,
+      "duration": 5.681
+    },
+    {
+      "text": "issued",
+      "start": 329.919,
+      "duration": 5.84
+    },
+    {
+      "text": "um companies always just set it up this",
+      "start": 332.16,
+      "duration": 5.12
+    },
+    {
+      "text": "way that's kind of the standard",
+      "start": 335.759,
+      "duration": 3.761
+    },
+    {
+      "text": "in the industry is to do this so that",
+      "start": 337.28,
+      "duration": 4.08
+    },
+    {
+      "text": "the price of the bond when it's issued",
+      "start": 339.52,
+      "duration": 3.04
+    },
+    {
+      "text": "is a thousand",
+      "start": 341.36,
+      "duration": 4.8
+    },
+    {
+      "text": "the same as the",
+      "start": 342.56,
+      "duration": 6.8
+    },
+    {
+      "text": "face value par value principal value",
+      "start": 346.16,
+      "duration": 6.319
+    },
+    {
+      "text": "a thousand dollars",
+      "start": 349.36,
+      "duration": 8.08
+    },
+    {
+      "text": "and when we have a stream of cash flows",
+      "start": 352.479,
+      "duration": 6.481
+    },
+    {
+      "text": "like this",
+      "start": 357.44,
+      "duration": 4.479
+    },
+    {
+      "text": "uh 10 per year and then getting the",
+      "start": 358.96,
+      "duration": 3.519
+    },
+    {
+      "text": "interest",
+      "start": 361.919,
+      "duration": 3.601
+    },
+    {
+      "text": "plus the principal back at the end",
+      "start": 362.479,
+      "duration": 6.801
+    },
+    {
+      "text": "uh then there must the discount rate",
+      "start": 365.52,
+      "duration": 6.239
+    },
+    {
+      "text": "must also be equal to the interest rate",
+      "start": 369.28,
+      "duration": 5.44
+    },
+    {
+      "text": "in order for the bond to be priced at",
+      "start": 371.759,
+      "duration": 4.72
+    },
+    {
+      "text": "par",
+      "start": 374.72,
+      "duration": 5.12
+    },
+    {
+      "text": "so when it's issued everything is in",
+      "start": 376.479,
+      "duration": 5.361
+    },
+    {
+      "text": "sync the coupon rate",
+      "start": 379.84,
+      "duration": 6.56
+    },
+    {
+      "text": "is equal to the discount rate",
+      "start": 381.84,
+      "duration": 4.56
+    },
+    {
+      "text": "and the price of the bond is equal to",
+      "start": 386.479,
+      "duration": 5.761
+    },
+    {
+      "text": "the face value of the bond",
+      "start": 389.039,
+      "duration": 3.201
+    },
+    {
+      "text": "so a year passes by and now",
+      "start": 393.28,
+      "duration": 5.28
+    },
+    {
+      "text": "the company becomes substantially more",
+      "start": 396.88,
+      "duration": 4.4
+    },
+    {
+      "text": "risky they had a bad financial year",
+      "start": 398.56,
+      "duration": 4.16
+    },
+    {
+      "text": "maybe one of the one of the other",
+      "start": 401.28,
+      "duration": 3.359
+    },
+    {
+      "text": "situations we talked about they issued",
+      "start": 402.72,
+      "duration": 3.44
+    },
+    {
+      "text": "additional debt",
+      "start": 404.639,
+      "duration": 4.721
+    },
+    {
+      "text": "et cetera but now",
+      "start": 406.16,
+      "duration": 6.319
+    },
+    {
+      "text": "in order to issue new bonds investors",
+      "start": 409.36,
+      "duration": 6.239
+    },
+    {
+      "text": "are requiring that the company offer 15",
+      "start": 412.479,
+      "duration": 5.681
+    },
+    {
+      "text": "in order for people to be interested in",
+      "start": 415.599,
+      "duration": 6.481
+    },
+    {
+      "text": "buying these bonds",
+      "start": 418.16,
+      "duration": 6.8
+    },
+    {
+      "text": "so because of that now we see that the",
+      "start": 422.08,
+      "duration": 4.08
+    },
+    {
+      "text": "existing bond",
+      "start": 424.96,
+      "duration": 2.88
+    },
+    {
+      "text": "that they had outstanding the three year",
+      "start": 426.16,
+      "duration": 3.2
+    },
+    {
+      "text": "which was originally priced at a",
+      "start": 427.84,
+      "duration": 2.96
+    },
+    {
+      "text": "thousand",
+      "start": 429.36,
+      "duration": 5.679
+    },
+    {
+      "text": "is now priced at 9 18.71",
+      "start": 430.8,
+      "duration": 6.64
+    },
+    {
+      "text": "and that's reflecting that if someone",
+      "start": 435.039,
+      "duration": 5.041
+    },
+    {
+      "text": "buys a new bond that the company issues",
+      "start": 437.44,
+      "duration": 5.68
+    },
+    {
+      "text": "they would earn a 15 rate of interest",
+      "start": 440.08,
+      "duration": 5.6
+    },
+    {
+      "text": "but if they buy this existing bond they",
+      "start": 443.12,
+      "duration": 4.079
+    },
+    {
+      "text": "would only earn a 10",
+      "start": 445.68,
+      "duration": 4.48
+    },
+    {
+      "text": "rate of interest less than the rate",
+      "start": 447.199,
+      "duration": 4.241
+    },
+    {
+      "text": "which would now be offered by the",
+      "start": 450.16,
+      "duration": 1.84
+    },
+    {
+      "text": "company",
+      "start": 451.44,
+      "duration": 2.24
+    },
+    {
+      "text": "and so they should not be willing to pay",
+      "start": 452.0,
+      "duration": 3.68
+    },
+    {
+      "text": "as much for that",
+      "start": 453.68,
+      "duration": 3.76
+    },
+    {
+      "text": "when a new bond would cost a thousand",
+      "start": 455.68,
+      "duration": 4.16
+    },
+    {
+      "text": "dollars",
+      "start": 457.44,
+      "duration": 2.4
+    },
+    {
+      "text": "and we calculate the irr on that bond",
+      "start": 461.12,
+      "duration": 6.799
+    },
+    {
+      "text": "which is the yield of maturity",
+      "start": 464.879,
+      "duration": 6.801
+    },
+    {
+      "text": "and that would be 15",
+      "start": 467.919,
+      "duration": 7.041
+    },
+    {
+      "text": "so the 15",
+      "start": 471.68,
+      "duration": 6.72
+    },
+    {
+      "text": "yield that we have on this existing bond",
+      "start": 474.96,
+      "duration": 6.88
+    },
+    {
+      "text": "with its new market price matches up",
+      "start": 478.4,
+      "duration": 7.359
+    },
+    {
+      "text": "with the cost of debt for the company",
+      "start": 481.84,
+      "duration": 7.52
+    },
+    {
+      "text": "what it would cost to issue a new bond",
+      "start": 485.759,
+      "duration": 7.601
+    },
+    {
+      "text": "but if we look at the book value of the",
+      "start": 489.36,
+      "duration": 5.44
+    },
+    {
+      "text": "debt",
+      "start": 493.36,
+      "duration": 3.2
+    },
+    {
+      "text": "the book value would still be at a",
+      "start": 494.8,
+      "duration": 4.16
+    },
+    {
+      "text": "thousand the book value just stays",
+      "start": 496.56,
+      "duration": 5.759
+    },
+    {
+      "text": "at whatever it was issued at",
+      "start": 498.96,
+      "duration": 7.519
+    },
+    {
+      "text": "and so if you were to",
+      "start": 502.319,
+      "duration": 7.681
+    },
+    {
+      "text": "try to calculate the um",
+      "start": 506.479,
+      "duration": 5.521
+    },
+    {
+      "text": "yield of maturity or cost of debt based",
+      "start": 510.0,
+      "duration": 3.76
+    },
+    {
+      "text": "on that thinking about it",
+      "start": 512.0,
+      "duration": 3.44
+    },
+    {
+      "text": "as being priced at a thousand then you",
+      "start": 513.76,
+      "duration": 3.199
+    },
+    {
+      "text": "would get 10 which is",
+      "start": 515.44,
+      "duration": 4.64
+    },
+    {
+      "text": "far away from the actual new",
+      "start": 516.959,
+      "duration": 6.32
+    },
+    {
+      "text": "cost of debt for the company",
+      "start": 520.08,
+      "duration": 6.879
+    },
+    {
+      "text": "you would also say that",
+      "start": 523.279,
+      "duration": 5.761
+    },
+    {
+      "text": "debt has a greater proportion in this",
+      "start": 526.959,
+      "duration": 3.521
+    },
+    {
+      "text": "capital structure",
+      "start": 529.04,
+      "duration": 3.359
+    },
+    {
+      "text": "than is actually the case because it has",
+      "start": 530.48,
+      "duration": 3.2
+    },
+    {
+      "text": "actually decreased",
+      "start": 532.399,
+      "duration": 5.12
+    },
+    {
+      "text": "in value so we can end up with quite",
+      "start": 533.68,
+      "duration": 4.4
+    },
+    {
+      "text": "interact",
+      "start": 537.519,
+      "duration": 3.681
+    },
+    {
+      "text": "inaccurate estimates if we",
+      "start": 538.08,
+      "duration": 6.0
+    },
+    {
+      "text": "focus completely on the historical",
+      "start": 541.2,
+      "duration": 4.079
+    },
+    {
+      "text": "rather than",
+      "start": 544.08,
+      "duration": 5.28
+    },
+    {
+      "text": "looking at the market",
+      "start": 545.279,
+      "duration": 7.12
+    },
+    {
+      "text": "so how do you go about calculating this",
+      "start": 549.36,
+      "duration": 6.64
+    },
+    {
+      "text": "market value of debt so we'll discuss",
+      "start": 552.399,
+      "duration": 5.44
+    },
+    {
+      "text": "three different approaches here",
+      "start": 556.0,
+      "duration": 4.56
+    },
+    {
+      "text": "and similarly to the cost of debt it's",
+      "start": 557.839,
+      "duration": 4.241
+    },
+    {
+      "text": "going to depend on what data you have",
+      "start": 560.56,
+      "duration": 2.719
+    },
+    {
+      "text": "available",
+      "start": 562.08,
+      "duration": 3.04
+    },
+    {
+      "text": "which approach that you can use and some",
+      "start": 563.279,
+      "duration": 3.281
+    },
+    {
+      "text": "are going to be more accurate than",
+      "start": 565.12,
+      "duration": 3.839
+    },
+    {
+      "text": "others",
+      "start": 566.56,
+      "duration": 2.399
+    },
+    {
+      "text": "so first approach",
+      "start": 569.12,
+      "duration": 6.48
+    },
+    {
+      "text": "we're discussing here is the pure",
+      "start": 572.64,
+      "duration": 3.44
+    },
+    {
+      "text": "financial",
+      "start": 575.6,
+      "duration": 3.84
+    },
+    {
+      "text": "statement approach um and for that",
+      "start": 576.08,
+      "duration": 4.96
+    },
+    {
+      "text": "you're just taking the book value of",
+      "start": 579.44,
+      "duration": 4.32
+    },
+    {
+      "text": "debt and using that as the market value",
+      "start": 581.04,
+      "duration": 3.84
+    },
+    {
+      "text": "of debt",
+      "start": 583.76,
+      "duration": 3.84
+    },
+    {
+      "text": "and sometimes that's all you have enough",
+      "start": 584.88,
+      "duration": 3.76
+    },
+    {
+      "text": "data to do",
+      "start": 587.6,
+      "duration": 2.799
+    },
+    {
+      "text": "and so you just kind of have to settle",
+      "start": 588.64,
+      "duration": 3.759
+    },
+    {
+      "text": "with that",
+      "start": 590.399,
+      "duration": 3.921
+    },
+    {
+      "text": "but it's always preferable to be able to",
+      "start": 592.399,
+      "duration": 3.201
+    },
+    {
+      "text": "look at",
+      "start": 594.32,
+      "duration": 3.68
+    },
+    {
+      "text": "what's going on in the market currently",
+      "start": 595.6,
+      "duration": 4.48
+    },
+    {
+      "text": "to be able to",
+      "start": 598.0,
+      "duration": 4.56
+    },
+    {
+      "text": "come up with the market value of debt",
+      "start": 600.08,
+      "duration": 3.36
+    },
+    {
+      "text": "rather than just",
+      "start": 602.56,
+      "duration": 2.88
+    },
+    {
+      "text": "looking at the historical because of the",
+      "start": 603.44,
+      "duration": 5.36
+    },
+    {
+      "text": "issues that we just talked through",
+      "start": 605.44,
+      "duration": 3.36
+    },
+    {
+      "text": "so then um",
+      "start": 609.68,
+      "duration": 8.399
+    },
+    {
+      "text": "if you have the cost of debt",
+      "start": 613.92,
+      "duration": 7.44
+    },
+    {
+      "text": "and it's actually a market cost of debt",
+      "start": 618.079,
+      "duration": 7.76
+    },
+    {
+      "text": "from the market uh bond approach",
+      "start": 621.36,
+      "duration": 7.919
+    },
+    {
+      "text": "and if you know on average",
+      "start": 625.839,
+      "duration": 7.761
+    },
+    {
+      "text": "the maturity of the company's debt",
+      "start": 629.279,
+      "duration": 7.68
+    },
+    {
+      "text": "then you can basically model",
+      "start": 633.6,
+      "duration": 6.239
+    },
+    {
+      "text": "all of the company's debt as one big",
+      "start": 636.959,
+      "duration": 4.88
+    },
+    {
+      "text": "hypothetical bond",
+      "start": 639.839,
+      "duration": 5.841
+    },
+    {
+      "text": "and use that kind of evaluation approach",
+      "start": 641.839,
+      "duration": 4.961
+    },
+    {
+      "text": "to come up",
+      "start": 645.68,
+      "duration": 4.88
+    },
+    {
+      "text": "with the market value of debt",
+      "start": 646.8,
+      "duration": 3.76
+    },
+    {
+      "text": "and that's going to be more accurate",
+      "start": 651.92,
+      "duration": 3.44
+    },
+    {
+      "text": "than the financial statement approach",
+      "start": 653.92,
+      "duration": 2.4
+    },
+    {
+      "text": "because it does",
+      "start": 655.36,
+      "duration": 2.64
+    },
+    {
+      "text": "consider what's going on in the market",
+      "start": 656.32,
+      "duration": 4.079
+    },
+    {
+      "text": "currently",
+      "start": 658.0,
+      "duration": 4.24
+    },
+    {
+      "text": "but there are a number of assumptions we",
+      "start": 660.399,
+      "duration": 3.521
+    },
+    {
+      "text": "have to make here and",
+      "start": 662.24,
+      "duration": 5.44
+    },
+    {
+      "text": "so um it's not as accurate as the last",
+      "start": 663.92,
+      "duration": 5.68
+    },
+    {
+      "text": "possible approach",
+      "start": 667.68,
+      "duration": 5.599
+    },
+    {
+      "text": "which is you have information on all of",
+      "start": 669.6,
+      "duration": 5.44
+    },
+    {
+      "text": "the debt that the company",
+      "start": 673.279,
+      "duration": 5.201
+    },
+    {
+      "text": "has and the current uh",
+      "start": 675.04,
+      "duration": 6.88
+    },
+    {
+      "text": "details of all of those",
+      "start": 678.48,
+      "duration": 6.16
+    },
+    {
+      "text": "you can calculate the market value of",
+      "start": 681.92,
+      "duration": 4.8
+    },
+    {
+      "text": "each individual debt instrument",
+      "start": 684.64,
+      "duration": 5.04
+    },
+    {
+      "text": "and sum them up to get the total market",
+      "start": 686.72,
+      "duration": 4.239
+    },
+    {
+      "text": "value of debt",
+      "start": 689.68,
+      "duration": 3.599
+    },
+    {
+      "text": "so this is going to be the most accurate",
+      "start": 690.959,
+      "duration": 3.361
+    },
+    {
+      "text": "assuming that",
+      "start": 693.279,
+      "duration": 5.68
+    },
+    {
+      "text": "you can collect all of the data on this",
+      "start": 694.32,
+      "duration": 6.8
+    },
+    {
+      "text": "um if you are missing substantial",
+      "start": 698.959,
+      "duration": 3.761
+    },
+    {
+      "text": "portions of",
+      "start": 701.12,
+      "duration": 3.6
+    },
+    {
+      "text": "the instruments or if you can't get it",
+      "start": 702.72,
+      "duration": 3.119
+    },
+    {
+      "text": "at all",
+      "start": 704.72,
+      "duration": 4.4
+    },
+    {
+      "text": "then it's not going to be an accurate or",
+      "start": 705.839,
+      "duration": 5.601
+    },
+    {
+      "text": "feasible approach",
+      "start": 709.12,
+      "duration": 3.92
+    },
+    {
+      "text": "but if you have that information it's",
+      "start": 711.44,
+      "duration": 5.44
+    },
+    {
+      "text": "going to be the most accurate",
+      "start": 713.04,
+      "duration": 5.68
+    },
+    {
+      "text": "so those are the three approaches we're",
+      "start": 716.88,
+      "duration": 3.84
+    },
+    {
+      "text": "discussing in this course and we're",
+      "start": 718.72,
+      "duration": 3.28
+    },
+    {
+      "text": "going to",
+      "start": 720.72,
+      "duration": 4.16
+    },
+    {
+      "text": "look at how to implement each of them in",
+      "start": 722.0,
+      "duration": 5.76
+    },
+    {
+      "text": "the following video",
+      "start": 724.88,
+      "duration": 2.88
+    },
+    {
+      "text": "but before we wrap up i do want to just",
+      "start": 727.92,
+      "duration": 5.359
+    },
+    {
+      "text": "talk a little bit about the seniority",
+      "start": 730.88,
+      "duration": 5.04
+    },
+    {
+      "text": "of debt",
+      "start": 733.279,
+      "duration": 2.641
+    },
+    {
+      "text": "and we're not going to handle it",
+      "start": 736.639,
+      "duration": 6.561
+    },
+    {
+      "text": "within the examples in this class",
+      "start": 740.16,
+      "duration": 4.799
+    },
+    {
+      "text": "but it is something that you want to",
+      "start": 743.2,
+      "duration": 3.36
+    },
+    {
+      "text": "think about",
+      "start": 744.959,
+      "duration": 5.761
+    },
+    {
+      "text": "if you go to build a more serious",
+      "start": 746.56,
+      "duration": 7.76
+    },
+    {
+      "text": "debt side of a dcf model for wind",
+      "start": 750.72,
+      "duration": 6.119
+    },
+    {
+      "text": "you need to be really accurate in the",
+      "start": 754.32,
+      "duration": 4.0
+    },
+    {
+      "text": "model",
+      "start": 756.839,
+      "duration": 4.601
+    },
+    {
+      "text": "so seniority is the",
+      "start": 758.32,
+      "duration": 6.4
+    },
+    {
+      "text": "concept that uh",
+      "start": 761.44,
+      "duration": 5.6
+    },
+    {
+      "text": "when the company goes bankrupt or if the",
+      "start": 764.72,
+      "duration": 4.64
+    },
+    {
+      "text": "company goes bankrupt",
+      "start": 767.04,
+      "duration": 5.76
+    },
+    {
+      "text": "and they're liquidating the assets",
+      "start": 769.36,
+      "duration": 6.88
+    },
+    {
+      "text": "there is an order in which the different",
+      "start": 772.8,
+      "duration": 4.24
+    },
+    {
+      "text": "debt holders",
+      "start": 776.24,
+      "duration": 4.96
+    },
+    {
+      "text": "get paid off during this process",
+      "start": 777.04,
+      "duration": 7.76
+    },
+    {
+      "text": "so debt holders get paid before",
+      "start": 781.2,
+      "duration": 8.16
+    },
+    {
+      "text": "equity holders uh essentially always",
+      "start": 784.8,
+      "duration": 5.92
+    },
+    {
+      "text": "you pay off all the debt holders and",
+      "start": 789.36,
+      "duration": 3.12
+    },
+    {
+      "text": "then if there's anything left it will go",
+      "start": 790.72,
+      "duration": 5.44
+    },
+    {
+      "text": "to the stockholders but",
+      "start": 792.48,
+      "duration": 6.64
+    },
+    {
+      "text": "uh oftentimes there's not even enough",
+      "start": 796.16,
+      "duration": 4.799
+    },
+    {
+      "text": "money after liquidating the assets to",
+      "start": 799.12,
+      "duration": 4.48
+    },
+    {
+      "text": "pay all of the debt holders",
+      "start": 800.959,
+      "duration": 4.801
+    },
+    {
+      "text": "and so some debt holders are going to",
+      "start": 803.6,
+      "duration": 3.84
+    },
+    {
+      "text": "get paid and others are not and the",
+      "start": 805.76,
+      "duration": 2.96
+    },
+    {
+      "text": "seniority",
+      "start": 807.44,
+      "duration": 5.36
+    },
+    {
+      "text": "is what determines that so seniority",
+      "start": 808.72,
+      "duration": 7.2
+    },
+    {
+      "text": "is just about this payoff order",
+      "start": 812.8,
+      "duration": 5.839
+    },
+    {
+      "text": "a senior loan is going to get paid off",
+      "start": 815.92,
+      "duration": 4.0
+    },
+    {
+      "text": "first",
+      "start": 818.639,
+      "duration": 2.961
+    },
+    {
+      "text": "and then if there's still money left",
+      "start": 819.92,
+      "duration": 3.919
+    },
+    {
+      "text": "over then the junior",
+      "start": 821.6,
+      "duration": 5.679
+    },
+    {
+      "text": "loans are going to get paid off",
+      "start": 823.839,
+      "duration": 7.761
+    },
+    {
+      "text": "and uh there are different levels of",
+      "start": 827.279,
+      "duration": 6.881
+    },
+    {
+      "text": "seniority uh it's often just referred to",
+      "start": 831.6,
+      "duration": 3.2
+    },
+    {
+      "text": "as just",
+      "start": 834.16,
+      "duration": 3.919
+    },
+    {
+      "text": "senior or junior but a company can have",
+      "start": 834.8,
+      "duration": 4.64
+    },
+    {
+      "text": "as many different levels",
+      "start": 838.079,
+      "duration": 4.801
+    },
+    {
+      "text": "of seniority as they want it's just",
+      "start": 839.44,
+      "duration": 5.44
+    },
+    {
+      "text": "however they write the",
+      "start": 842.88,
+      "duration": 4.88
+    },
+    {
+      "text": "bond contracts",
+      "start": 844.88,
+      "duration": 2.88
+    },
+    {
+      "text": "so the seniority is important",
+      "start": 848.0,
+      "duration": 5.92
+    },
+    {
+      "text": "because",
+      "start": 851.279,
+      "duration": 2.641
+    },
+    {
+      "text": "lenders have to consider this bankruptcy",
+      "start": 854.88,
+      "duration": 4.319
+    },
+    {
+      "text": "recovery scenario",
+      "start": 857.279,
+      "duration": 4.0
+    },
+    {
+      "text": "when they are setting the rates that",
+      "start": 859.199,
+      "duration": 5.041
+    },
+    {
+      "text": "they would be willing to lend at",
+      "start": 861.279,
+      "duration": 5.441
+    },
+    {
+      "text": "and if you have a senior loan then in",
+      "start": 864.24,
+      "duration": 4.64
+    },
+    {
+      "text": "this recovery process",
+      "start": 866.72,
+      "duration": 3.84
+    },
+    {
+      "text": "there's a higher chance that you're",
+      "start": 868.88,
+      "duration": 3.12
+    },
+    {
+      "text": "going to get more money out of the",
+      "start": 870.56,
+      "duration": 2.399
+    },
+    {
+      "text": "process",
+      "start": 872.0,
+      "duration": 3.76
+    },
+    {
+      "text": "and with the junior loan there's a lower",
+      "start": 872.959,
+      "duration": 4.801
+    },
+    {
+      "text": "chance that you're going to get money",
+      "start": 875.76,
+      "duration": 3.84
+    },
+    {
+      "text": "or how much or you might not even get",
+      "start": 877.76,
+      "duration": 4.319
+    },
+    {
+      "text": "paid at all",
+      "start": 879.6,
+      "duration": 6.16
+    },
+    {
+      "text": "so the junior loans have to command a",
+      "start": 882.079,
+      "duration": 5.2
+    },
+    {
+      "text": "higher interest rate",
+      "start": 885.76,
+      "duration": 3.439
+    },
+    {
+      "text": "in order to compensate for the fact that",
+      "start": 887.279,
+      "duration": 4.641
+    },
+    {
+      "text": "they're not going to get paid",
+      "start": 889.199,
+      "duration": 5.921
+    },
+    {
+      "text": "at all or as much in the",
+      "start": 891.92,
+      "duration": 7.2
+    },
+    {
+      "text": "recovery bankruptcy process",
+      "start": 895.12,
+      "duration": 7.76
+    },
+    {
+      "text": "um and when",
+      "start": 899.12,
+      "duration": 6.56
+    },
+    {
+      "text": "thinking about the cost and market value",
+      "start": 902.88,
+      "duration": 4.24
+    },
+    {
+      "text": "of debt in this class",
+      "start": 905.68,
+      "duration": 3.519
+    },
+    {
+      "text": "we're not we're not working with the",
+      "start": 907.12,
+      "duration": 4.159
+    },
+    {
+      "text": "seniority we're just assuming",
+      "start": 909.199,
+      "duration": 5.521
+    },
+    {
+      "text": "everything has the same seniority",
+      "start": 911.279,
+      "duration": 5.36
+    },
+    {
+      "text": "but in a more detailed model you would",
+      "start": 914.72,
+      "duration": 3.76
+    },
+    {
+      "text": "want to find the different levels of",
+      "start": 916.639,
+      "duration": 3.2
+    },
+    {
+      "text": "seniority",
+      "start": 918.48,
+      "duration": 3.919
+    },
+    {
+      "text": "in this specific company's debt",
+      "start": 919.839,
+      "duration": 3.841
+    },
+    {
+      "text": "structure",
+      "start": 922.399,
+      "duration": 4.321
+    },
+    {
+      "text": "and treat them separately so here you",
+      "start": 923.68,
+      "duration": 5.04
+    },
+    {
+      "text": "know say there's three levels a senior a",
+      "start": 926.72,
+      "duration": 2.559
+    },
+    {
+      "text": "junior",
+      "start": 928.72,
+      "duration": 2.32
+    },
+    {
+      "text": "and and kind of a medium level of",
+      "start": 929.279,
+      "duration": 3.521
+    },
+    {
+      "text": "seniority",
+      "start": 931.04,
+      "duration": 3.76
+    },
+    {
+      "text": "then you would just take these as three",
+      "start": 932.8,
+      "duration": 4.479
+    },
+    {
+      "text": "categories and you would find the costs",
+      "start": 934.8,
+      "duration": 5.279
+    },
+    {
+      "text": "of debt within each of these categories",
+      "start": 937.279,
+      "duration": 4.321
+    },
+    {
+      "text": "and keep them separate in",
+      "start": 940.079,
+      "duration": 5.281
+    },
+    {
+      "text": "the analysis so it's not going to be a",
+      "start": 941.6,
+      "duration": 4.479
+    },
+    {
+      "text": "big change",
+      "start": 945.36,
+      "duration": 3.919
+    },
+    {
+      "text": "beyond what we're doing in this class",
+      "start": 946.079,
+      "duration": 6.161
+    },
+    {
+      "text": "but it does complicate matters a little",
+      "start": 949.279,
+      "duration": 5.12
+    },
+    {
+      "text": "bit and so that's why we're not",
+      "start": 952.24,
+      "duration": 4.0
+    },
+    {
+      "text": "handling that here but it will be easy",
+      "start": 954.399,
+      "duration": 3.521
+    },
+    {
+      "text": "to extend into that",
+      "start": 956.24,
+      "duration": 6.159
+    },
+    {
+      "text": "after you understand the basic process",
+      "start": 957.92,
+      "duration": 4.479
+    },
+    {
+      "text": "so that's how we can think about",
+      "start": 962.639,
+      "duration": 4.241
+    },
+    {
+      "text": "calculating",
+      "start": 965.92,
+      "duration": 3.52
+    },
+    {
+      "text": "the market value of debt and we'll come",
+      "start": 966.88,
+      "duration": 4.0
+    },
+    {
+      "text": "back in the following video",
+      "start": 969.44,
+      "duration": 5.519
+    },
+    {
+      "text": "to look at examples of calculating this",
+      "start": 970.88,
+      "duration": 7.079
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 974.959,
+      "duration": 6.0
+    },
+    {
+      "text": "time",
+      "start": 977.959,
+      "duration": 3.0
+    }
+  ]
+}

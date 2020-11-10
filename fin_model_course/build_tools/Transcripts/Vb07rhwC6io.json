@@ -1,0 +1,759 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.12,
+      "duration": 2.239
+    },
+    {
+      "text": "nick dierbert is here teaching you",
+      "start": 3.919,
+      "duration": 3.601
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.359,
+      "duration": 3.28
+    },
+    {
+      "text": "be talking about",
+      "start": 7.52,
+      "duration": 3.6
+    },
+    {
+      "text": "calculating the weighted average cost of",
+      "start": 8.639,
+      "duration": 3.521
+    },
+    {
+      "text": "capital or",
+      "start": 11.12,
+      "duration": 4.08
+    },
+    {
+      "text": "whack and this is part of our lecture",
+      "start": 12.16,
+      "duration": 5.68
+    },
+    {
+      "text": "segment on the discounted cash flow",
+      "start": 15.2,
+      "duration": 6.239
+    },
+    {
+      "text": "valuation model and focusing on the cost",
+      "start": 17.84,
+      "duration": 7.12
+    },
+    {
+      "text": "of capital portion of the model",
+      "start": 21.439,
+      "duration": 5.92
+    },
+    {
+      "text": "so this is our last video in this",
+      "start": 24.96,
+      "duration": 3.44
+    },
+    {
+      "text": "lecture segment",
+      "start": 27.359,
+      "duration": 4.561
+    },
+    {
+      "text": "we already covered an intro to the dcf",
+      "start": 28.4,
+      "duration": 7.04
+    },
+    {
+      "text": "enterprise and equity value uh cost and",
+      "start": 31.92,
+      "duration": 4.72
+    },
+    {
+      "text": "market value of equity",
+      "start": 35.44,
+      "duration": 3.92
+    },
+    {
+      "text": "cost and market value of debt now we are",
+      "start": 36.64,
+      "duration": 3.2
+    },
+    {
+      "text": "just",
+      "start": 39.36,
+      "duration": 3.84
+    },
+    {
+      "text": "coming to put it all together as the end",
+      "start": 39.84,
+      "duration": 5.52
+    },
+    {
+      "text": "of the cost of capital portion",
+      "start": 43.2,
+      "duration": 5.039
+    },
+    {
+      "text": "of the model to calculate the whack",
+      "start": 45.36,
+      "duration": 4.96
+    },
+    {
+      "text": "which will become the discount rate",
+      "start": 48.239,
+      "duration": 6.401
+    },
+    {
+      "text": "we use in the dcf model",
+      "start": 50.32,
+      "duration": 7.919
+    },
+    {
+      "text": "so if you have calculated a weighted",
+      "start": 54.64,
+      "duration": 4.719
+    },
+    {
+      "text": "average before",
+      "start": 58.239,
+      "duration": 4.96
+    },
+    {
+      "text": "then this should feel very familiar",
+      "start": 59.359,
+      "duration": 5.84
+    },
+    {
+      "text": "to you because all it is is just a",
+      "start": 63.199,
+      "duration": 3.681
+    },
+    {
+      "text": "weighted average",
+      "start": 65.199,
+      "duration": 3.841
+    },
+    {
+      "text": "and it's just a weighted average of the",
+      "start": 66.88,
+      "duration": 3.52
+    },
+    {
+      "text": "different",
+      "start": 69.04,
+      "duration": 4.48
+    },
+    {
+      "text": "costs of capital and",
+      "start": 70.4,
+      "duration": 6.56
+    },
+    {
+      "text": "weighted by the percentage of",
+      "start": 73.52,
+      "duration": 5.599
+    },
+    {
+      "text": "that source of capital in the overall",
+      "start": 76.96,
+      "duration": 5.04
+    },
+    {
+      "text": "capital structure",
+      "start": 79.119,
+      "duration": 2.881
+    },
+    {
+      "text": "so this is just focusing on",
+      "start": 82.24,
+      "duration": 5.36
+    },
+    {
+      "text": "debt and equity you could have a third",
+      "start": 85.6,
+      "duration": 4.32
+    },
+    {
+      "text": "term in here for preferred stock",
+      "start": 87.6,
+      "duration": 4.32
+    },
+    {
+      "text": "as well or additional terms if you had",
+      "start": 89.92,
+      "duration": 4.239
+    },
+    {
+      "text": "additional um",
+      "start": 91.92,
+      "duration": 5.839
+    },
+    {
+      "text": "you know different uh you know maybe you",
+      "start": 94.159,
+      "duration": 5.121
+    },
+    {
+      "text": "have different seniorities of debt and",
+      "start": 97.759,
+      "duration": 2.801
+    },
+    {
+      "text": "you want to include those as separate",
+      "start": 99.28,
+      "duration": 2.64
+    },
+    {
+      "text": "components",
+      "start": 100.56,
+      "duration": 4.0
+    },
+    {
+      "text": "with different costs of debt there are",
+      "start": 101.92,
+      "duration": 3.44
+    },
+    {
+      "text": "different ways to",
+      "start": 104.56,
+      "duration": 2.96
+    },
+    {
+      "text": "specify this equation but this is kind",
+      "start": 105.36,
+      "duration": 3.119
+    },
+    {
+      "text": "of the general",
+      "start": 107.52,
+      "duration": 5.52
+    },
+    {
+      "text": "format you just take each",
+      "start": 108.479,
+      "duration": 8.721
+    },
+    {
+      "text": "cost of capital and multiply it by",
+      "start": 113.04,
+      "duration": 6.16
+    },
+    {
+      "text": "the weight of that capital in the",
+      "start": 117.2,
+      "duration": 3.21
+    },
+    {
+      "text": "capital structure",
+      "start": 119.2,
+      "duration": 2.559
+    },
+    {
+      "text": "[Music]",
+      "start": 120.41,
+      "duration": 2.95
+    },
+    {
+      "text": "and for any debt components you're going",
+      "start": 121.759,
+      "duration": 3.121
+    },
+    {
+      "text": "to want to make sure that you use",
+      "start": 123.36,
+      "duration": 4.399
+    },
+    {
+      "text": "the after tax cost of debt so that's",
+      "start": 124.88,
+      "duration": 4.32
+    },
+    {
+      "text": "taking the pre-tax",
+      "start": 127.759,
+      "duration": 4.161
+    },
+    {
+      "text": "and multiplying by one minus the tax",
+      "start": 129.2,
+      "duration": 4.88
+    },
+    {
+      "text": "rate",
+      "start": 131.92,
+      "duration": 5.6
+    },
+    {
+      "text": "um so this puts together everything that",
+      "start": 134.08,
+      "duration": 4.32
+    },
+    {
+      "text": "we have",
+      "start": 137.52,
+      "duration": 2.32
+    },
+    {
+      "text": "calculated so far we've already",
+      "start": 138.4,
+      "duration": 2.96
+    },
+    {
+      "text": "calculated the cost of equity we've",
+      "start": 139.84,
+      "duration": 3.28
+    },
+    {
+      "text": "calculated the cost of debt",
+      "start": 141.36,
+      "duration": 5.04
+    },
+    {
+      "text": "calculated the tax rate so there is one",
+      "start": 143.12,
+      "duration": 5.6
+    },
+    {
+      "text": "small calculation left to do before we",
+      "start": 146.4,
+      "duration": 3.68
+    },
+    {
+      "text": "get to the whack itself",
+      "start": 148.72,
+      "duration": 4.159
+    },
+    {
+      "text": "which is then calculating the weights of",
+      "start": 150.08,
+      "duration": 4.4
+    },
+    {
+      "text": "debt and equity",
+      "start": 152.879,
+      "duration": 3.681
+    },
+    {
+      "text": "so the weights of debt and equity very",
+      "start": 154.48,
+      "duration": 3.92
+    },
+    {
+      "text": "simple it's just",
+      "start": 156.56,
+      "duration": 4.8
+    },
+    {
+      "text": "uh the market value of that type of",
+      "start": 158.4,
+      "duration": 4.0
+    },
+    {
+      "text": "capital",
+      "start": 161.36,
+      "duration": 4.8
+    },
+    {
+      "text": "divided by the total capital",
+      "start": 162.4,
+      "duration": 7.04
+    },
+    {
+      "text": "so uh here in this uh",
+      "start": 166.16,
+      "duration": 5.76
+    },
+    {
+      "text": "form of the equation where we just have",
+      "start": 169.44,
+      "duration": 5.519
+    },
+    {
+      "text": "equity and debt and one type of each",
+      "start": 171.92,
+      "duration": 4.72
+    },
+    {
+      "text": "then it would be the market value of",
+      "start": 174.959,
+      "duration": 3.92
+    },
+    {
+      "text": "debt divided by",
+      "start": 176.64,
+      "duration": 5.12
+    },
+    {
+      "text": "the market value or sorry market value",
+      "start": 178.879,
+      "duration": 3.601
+    },
+    {
+      "text": "of equity",
+      "start": 181.76,
+      "duration": 2.64
+    },
+    {
+      "text": "divided by the market value of equity",
+      "start": 182.48,
+      "duration": 3.92
+    },
+    {
+      "text": "plus the market value of debt",
+      "start": 184.4,
+      "duration": 3.44
+    },
+    {
+      "text": "and then over here it would be the",
+      "start": 186.4,
+      "duration": 3.919
+    },
+    {
+      "text": "market value of debt divided by",
+      "start": 187.84,
+      "duration": 4.24
+    },
+    {
+      "text": "market value of equity plus the market",
+      "start": 190.319,
+      "duration": 3.84
+    },
+    {
+      "text": "value of debt",
+      "start": 192.08,
+      "duration": 5.04
+    },
+    {
+      "text": "if you had additional components of the",
+      "start": 194.159,
+      "duration": 4.481
+    },
+    {
+      "text": "capital structure",
+      "start": 197.12,
+      "duration": 3.039
+    },
+    {
+      "text": "then those would get added into the",
+      "start": 198.64,
+      "duration": 3.92
+    },
+    {
+      "text": "denominator of each of those weights",
+      "start": 200.159,
+      "duration": 4.881
+    },
+    {
+      "text": "as well the market values you know all",
+      "start": 202.56,
+      "duration": 3.759
+    },
+    {
+      "text": "your different market values for the",
+      "start": 205.04,
+      "duration": 3.279
+    },
+    {
+      "text": "different components are the denominator",
+      "start": 206.319,
+      "duration": 4.48
+    },
+    {
+      "text": "when you sum them up and the market",
+      "start": 208.319,
+      "duration": 3.681
+    },
+    {
+      "text": "value of each component",
+      "start": 210.799,
+      "duration": 3.281
+    },
+    {
+      "text": "is the numerator in calculating the",
+      "start": 212.0,
+      "duration": 3.599
+    },
+    {
+      "text": "weight",
+      "start": 214.08,
+      "duration": 2.96
+    },
+    {
+      "text": "so you should have something between",
+      "start": 215.599,
+      "duration": 3.761
+    },
+    {
+      "text": "zero and one for the weights",
+      "start": 217.04,
+      "duration": 6.16
+    },
+    {
+      "text": "on each of these and then you just",
+      "start": 219.36,
+      "duration": 6.0
+    },
+    {
+      "text": "uh then we have all the components into",
+      "start": 223.2,
+      "duration": 3.84
+    },
+    {
+      "text": "this formula so you just put them",
+      "start": 225.36,
+      "duration": 2.159
+    },
+    {
+      "text": "together",
+      "start": 227.04,
+      "duration": 4.24
+    },
+    {
+      "text": "and that ultimately gets you the whack",
+      "start": 227.519,
+      "duration": 3.761
+    },
+    {
+      "text": "so and then to kind of visualize",
+      "start": 232.319,
+      "duration": 6.48
+    },
+    {
+      "text": "the effect of those weights",
+      "start": 235.599,
+      "duration": 5.521
+    },
+    {
+      "text": "i just made a quick graphic here which",
+      "start": 238.799,
+      "duration": 3.121
+    },
+    {
+      "text": "shows",
+      "start": 241.12,
+      "duration": 4.08
+    },
+    {
+      "text": "two companies which have the exact same",
+      "start": 241.92,
+      "duration": 4.0
+    },
+    {
+      "text": "cost",
+      "start": 245.2,
+      "duration": 3.92
+    },
+    {
+      "text": "of equity in debt um",
+      "start": 245.92,
+      "duration": 7.039
+    },
+    {
+      "text": "pre-tax and post-tax uh cost of debt",
+      "start": 249.12,
+      "duration": 6.72
+    },
+    {
+      "text": "the same equity cost is the same but the",
+      "start": 252.959,
+      "duration": 4.4
+    },
+    {
+      "text": "first company",
+      "start": 255.84,
+      "duration": 4.16
+    },
+    {
+      "text": "is uh evenly split between equity and",
+      "start": 257.359,
+      "duration": 3.521
+    },
+    {
+      "text": "debt",
+      "start": 260.0,
+      "duration": 3.04
+    },
+    {
+      "text": "and the second company is weighted more",
+      "start": 260.88,
+      "duration": 3.68
+    },
+    {
+      "text": "towards equity",
+      "start": 263.04,
+      "duration": 3.68
+    },
+    {
+      "text": "so you can see the resulting whack is",
+      "start": 264.56,
+      "duration": 4.639
+    },
+    {
+      "text": "substantially lower quite a bit lower",
+      "start": 266.72,
+      "duration": 6.08
+    },
+    {
+      "text": "for the 50 50 company than it is",
+      "start": 269.199,
+      "duration": 6.081
+    },
+    {
+      "text": "for the mostly equity company and this",
+      "start": 272.8,
+      "duration": 3.52
+    },
+    {
+      "text": "is generally the case",
+      "start": 275.28,
+      "duration": 3.76
+    },
+    {
+      "text": "generally the cost of debt are lower",
+      "start": 276.32,
+      "duration": 4.4
+    },
+    {
+      "text": "than the cost of equity since",
+      "start": 279.04,
+      "duration": 4.48
+    },
+    {
+      "text": "debt is paid off first in the event of",
+      "start": 280.72,
+      "duration": 4.24
+    },
+    {
+      "text": "bankruptcy",
+      "start": 283.52,
+      "duration": 4.56
+    },
+    {
+      "text": "um and so the more that a company is",
+      "start": 284.96,
+      "duration": 4.799
+    },
+    {
+      "text": "shifted towards",
+      "start": 288.08,
+      "duration": 4.48
+    },
+    {
+      "text": "debt then the lower the overall cost of",
+      "start": 289.759,
+      "duration": 3.521
+    },
+    {
+      "text": "capital",
+      "start": 292.56,
+      "duration": 4.16
+    },
+    {
+      "text": "will be um",
+      "start": 293.28,
+      "duration": 6.16
+    },
+    {
+      "text": "so it's definitely important to consider",
+      "start": 296.72,
+      "duration": 3.6
+    },
+    {
+      "text": "not only the",
+      "start": 299.44,
+      "duration": 5.039
+    },
+    {
+      "text": "rates on the uh sources of capital but",
+      "start": 300.32,
+      "duration": 5.28
+    },
+    {
+      "text": "also",
+      "start": 304.479,
+      "duration": 3.44
+    },
+    {
+      "text": "the weights that they have within the",
+      "start": 305.6,
+      "duration": 5.2
+    },
+    {
+      "text": "overall capital structure",
+      "start": 307.919,
+      "duration": 5.921
+    },
+    {
+      "text": "so that wraps up the calculation",
+      "start": 310.8,
+      "duration": 6.08
+    },
+    {
+      "text": "of whack we're going to come back",
+      "start": 313.84,
+      "duration": 6.96
+    },
+    {
+      "text": "in the next lecture segment to focus on",
+      "start": 316.88,
+      "duration": 8.4
+    },
+    {
+      "text": "the free cash flow side of the dcf",
+      "start": 320.8,
+      "duration": 7.44
+    },
+    {
+      "text": "model so we have handled this part and",
+      "start": 325.28,
+      "duration": 4.56
+    },
+    {
+      "text": "we've handled this part",
+      "start": 328.24,
+      "duration": 3.36
+    },
+    {
+      "text": "and we're just going to focus on the",
+      "start": 329.84,
+      "duration": 3.6
+    },
+    {
+      "text": "free cash flow side of the model",
+      "start": 331.6,
+      "duration": 4.64
+    },
+    {
+      "text": "in the entire next lecture series and at",
+      "start": 333.44,
+      "duration": 4.08
+    },
+    {
+      "text": "the end of that we'll also",
+      "start": 336.24,
+      "duration": 4.16
+    },
+    {
+      "text": "put the whole thing together into one",
+      "start": 337.52,
+      "duration": 5.119
+    },
+    {
+      "text": "cohesive model",
+      "start": 340.4,
+      "duration": 5.639
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 342.639,
+      "duration": 6.4
+    },
+    {
+      "text": "time",
+      "start": 346.039,
+      "duration": 3.0
+    }
+  ]
+}

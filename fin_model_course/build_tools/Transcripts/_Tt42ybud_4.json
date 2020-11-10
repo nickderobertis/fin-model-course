@@ -1,0 +1,779 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.76,
+      "duration": 2.48
+    },
+    {
+      "text": "this is nick dear burtis teaching you",
+      "start": 4.56,
+      "duration": 3.04
+    },
+    {
+      "text": "financial modeling",
+      "start": 6.24,
+      "duration": 3.359
+    },
+    {
+      "text": "today we're going to be learning about",
+      "start": 7.6,
+      "duration": 4.32
+    },
+    {
+      "text": "how to calculate the market value of",
+      "start": 9.599,
+      "duration": 4.881
+    },
+    {
+      "text": "equity and this is part of our lecture",
+      "start": 11.92,
+      "duration": 3.12
+    },
+    {
+      "text": "series",
+      "start": 14.48,
+      "duration": 2.879
+    },
+    {
+      "text": "on the discounted cash flow valuation",
+      "start": 15.04,
+      "duration": 3.44
+    },
+    {
+      "text": "model focusing",
+      "start": 17.359,
+      "duration": 3.68
+    },
+    {
+      "text": "on the cost of capital portion of the",
+      "start": 18.48,
+      "duration": 4.719
+    },
+    {
+      "text": "model",
+      "start": 21.039,
+      "duration": 5.841
+    },
+    {
+      "text": "so we have already discussed",
+      "start": 23.199,
+      "duration": 6.961
+    },
+    {
+      "text": "the overview of the dcf model and",
+      "start": 26.88,
+      "duration": 6.08
+    },
+    {
+      "text": "how to work with enterprise value and",
+      "start": 30.16,
+      "duration": 4.239
+    },
+    {
+      "text": "equity value",
+      "start": 32.96,
+      "duration": 3.279
+    },
+    {
+      "text": "and then we also estimated the cost of",
+      "start": 34.399,
+      "duration": 4.881
+    },
+    {
+      "text": "equity so now we're coming to",
+      "start": 36.239,
+      "duration": 5.361
+    },
+    {
+      "text": "estimating the market value of equity",
+      "start": 39.28,
+      "duration": 4.16
+    },
+    {
+      "text": "because ultimately to",
+      "start": 41.6,
+      "duration": 4.479
+    },
+    {
+      "text": "create the whack we're going to need the",
+      "start": 43.44,
+      "duration": 4.32
+    },
+    {
+      "text": "cost and market values",
+      "start": 46.079,
+      "duration": 5.441
+    },
+    {
+      "text": "of both equity and debt",
+      "start": 47.76,
+      "duration": 7.36
+    },
+    {
+      "text": "so coming to the market value of equity",
+      "start": 51.52,
+      "duration": 6.719
+    },
+    {
+      "text": "we are going to need this basically in",
+      "start": 55.12,
+      "duration": 4.32
+    },
+    {
+      "text": "order to",
+      "start": 58.239,
+      "duration": 4.96
+    },
+    {
+      "text": "create the weights and the whack formula",
+      "start": 59.44,
+      "duration": 7.12
+    },
+    {
+      "text": "so the weights are taking",
+      "start": 63.199,
+      "duration": 5.361
+    },
+    {
+      "text": "the market value of equity and dividing",
+      "start": 66.56,
+      "duration": 3.52
+    },
+    {
+      "text": "it by the total capital that would be",
+      "start": 68.56,
+      "duration": 2.8
+    },
+    {
+      "text": "the equity weight",
+      "start": 70.08,
+      "duration": 2.719
+    },
+    {
+      "text": "and the debt weight would be the market",
+      "start": 71.36,
+      "duration": 3.28
+    },
+    {
+      "text": "value of debt divided by the total",
+      "start": 72.799,
+      "duration": 2.721
+    },
+    {
+      "text": "capital",
+      "start": 74.64,
+      "duration": 3.6
+    },
+    {
+      "text": "and the total capital is just the sum of",
+      "start": 75.52,
+      "duration": 5.84
+    },
+    {
+      "text": "the market values of equity and debt",
+      "start": 78.24,
+      "duration": 5.36
+    },
+    {
+      "text": "as long as we're ignoring preferred",
+      "start": 81.36,
+      "duration": 3.439
+    },
+    {
+      "text": "stock which",
+      "start": 83.6,
+      "duration": 3.36
+    },
+    {
+      "text": "for the purposes of this lecture we are",
+      "start": 84.799,
+      "duration": 4.0
+    },
+    {
+      "text": "and it tends to be a very minor portion",
+      "start": 86.96,
+      "duration": 4.88
+    },
+    {
+      "text": "of the capital structure",
+      "start": 88.799,
+      "duration": 3.041
+    },
+    {
+      "text": "so if your company is publicly traded",
+      "start": 92.64,
+      "duration": 6.72
+    },
+    {
+      "text": "it is very straightforward to calculate",
+      "start": 95.759,
+      "duration": 6.72
+    },
+    {
+      "text": "the market cap or market value",
+      "start": 99.36,
+      "duration": 6.64
+    },
+    {
+      "text": "of the company because it's already",
+      "start": 102.479,
+      "duration": 7.121
+    },
+    {
+      "text": "publicly available information you just",
+      "start": 106.0,
+      "duration": 6.159
+    },
+    {
+      "text": "look in the market since it's publicly",
+      "start": 109.6,
+      "duration": 3.68
+    },
+    {
+      "text": "traded",
+      "start": 112.159,
+      "duration": 3.361
+    },
+    {
+      "text": "and there you'll be able to see the",
+      "start": 113.28,
+      "duration": 3.76
+    },
+    {
+      "text": "number of shares outstanding",
+      "start": 115.52,
+      "duration": 3.84
+    },
+    {
+      "text": "as well as the current share price and",
+      "start": 117.04,
+      "duration": 3.52
+    },
+    {
+      "text": "when you multiply these two things",
+      "start": 119.36,
+      "duration": 2.48
+    },
+    {
+      "text": "together you get the market",
+      "start": 120.56,
+      "duration": 3.04
+    },
+    {
+      "text": "capitalization",
+      "start": 121.84,
+      "duration": 5.2
+    },
+    {
+      "text": "which is the same as the market value of",
+      "start": 123.6,
+      "duration": 5.12
+    },
+    {
+      "text": "equity",
+      "start": 127.04,
+      "duration": 4.8
+    },
+    {
+      "text": "so that's all it takes for a publicly",
+      "start": 128.72,
+      "duration": 5.92
+    },
+    {
+      "text": "traded company",
+      "start": 131.84,
+      "duration": 2.8
+    },
+    {
+      "text": "now if your company is not publicly",
+      "start": 134.72,
+      "duration": 3.12
+    },
+    {
+      "text": "traded",
+      "start": 137.12,
+      "duration": 2.88
+    },
+    {
+      "text": "that's where this can become a",
+      "start": 137.84,
+      "duration": 4.72
+    },
+    {
+      "text": "challenging exercise",
+      "start": 140.0,
+      "duration": 6.08
+    },
+    {
+      "text": "so if your company",
+      "start": 142.56,
+      "duration": 6.72
+    },
+    {
+      "text": "is not publicly traded but they are",
+      "start": 146.08,
+      "duration": 6.72
+    },
+    {
+      "text": "well established and have",
+      "start": 149.28,
+      "duration": 6.72
+    },
+    {
+      "text": "competitors which are fairly comparable",
+      "start": 152.8,
+      "duration": 5.04
+    },
+    {
+      "text": "a lot of people will use comparable",
+      "start": 156.0,
+      "duration": 3.12
+    },
+    {
+      "text": "based approaches",
+      "start": 157.84,
+      "duration": 4.72
+    },
+    {
+      "text": "to calculate the market value of equity",
+      "start": 159.12,
+      "duration": 5.839
+    },
+    {
+      "text": "basically look at the competitors which",
+      "start": 162.56,
+      "duration": 4.48
+    },
+    {
+      "text": "uh you would find one that is publicly",
+      "start": 164.959,
+      "duration": 2.881
+    },
+    {
+      "text": "traded or",
+      "start": 167.04,
+      "duration": 2.4
+    },
+    {
+      "text": "hopefully multiple that are publicly",
+      "start": 167.84,
+      "duration": 4.16
+    },
+    {
+      "text": "traded and look at the market value of",
+      "start": 169.44,
+      "duration": 4.24
+    },
+    {
+      "text": "those companies",
+      "start": 172.0,
+      "duration": 4.239
+    },
+    {
+      "text": "and then compare the company that you",
+      "start": 173.68,
+      "duration": 4.16
+    },
+    {
+      "text": "ultimately want to get the market value",
+      "start": 176.239,
+      "duration": 1.92
+    },
+    {
+      "text": "for",
+      "start": 177.84,
+      "duration": 2.64
+    },
+    {
+      "text": "to these companies along different",
+      "start": 178.159,
+      "duration": 3.281
+    },
+    {
+      "text": "dimensions",
+      "start": 180.48,
+      "duration": 3.679
+    },
+    {
+      "text": "to try and back into the market value of",
+      "start": 181.44,
+      "duration": 4.4
+    },
+    {
+      "text": "this company",
+      "start": 184.159,
+      "duration": 4.561
+    },
+    {
+      "text": "for example if a competitor has 10",
+      "start": 185.84,
+      "duration": 5.2
+    },
+    {
+      "text": "billion dollars of market value",
+      "start": 188.72,
+      "duration": 6.4
+    },
+    {
+      "text": "and they have a 10 market share",
+      "start": 191.04,
+      "duration": 6.08
+    },
+    {
+      "text": "and the structure of this company is",
+      "start": 195.12,
+      "duration": 3.36
+    },
+    {
+      "text": "very similar to the one that you're",
+      "start": 197.12,
+      "duration": 3.039
+    },
+    {
+      "text": "trying to value",
+      "start": 198.48,
+      "duration": 3.52
+    },
+    {
+      "text": "and the one that you're trying to value",
+      "start": 200.159,
+      "duration": 4.881
+    },
+    {
+      "text": "has a five percent market share",
+      "start": 202.0,
+      "duration": 5.04
+    },
+    {
+      "text": "and you see that the profit margins are",
+      "start": 205.04,
+      "duration": 4.4
+    },
+    {
+      "text": "similar across the two companies",
+      "start": 207.04,
+      "duration": 4.0
+    },
+    {
+      "text": "then it might be reasonable to conclude",
+      "start": 209.44,
+      "duration": 4.079
+    },
+    {
+      "text": "that the value of",
+      "start": 211.04,
+      "duration": 4.24
+    },
+    {
+      "text": "the company that you're trying to value",
+      "start": 213.519,
+      "duration": 4.481
+    },
+    {
+      "text": "the market value of equity is half",
+      "start": 215.28,
+      "duration": 4.959
+    },
+    {
+      "text": "of the market value of this other",
+      "start": 218.0,
+      "duration": 4.56
+    },
+    {
+      "text": "company so 5 billion",
+      "start": 220.239,
+      "duration": 4.64
+    },
+    {
+      "text": "so these are the kinds of thought",
+      "start": 222.56,
+      "duration": 3.44
+    },
+    {
+      "text": "exercises that",
+      "start": 224.879,
+      "duration": 3.44
+    },
+    {
+      "text": "people go through to be able to come up",
+      "start": 226.0,
+      "duration": 4.879
+    },
+    {
+      "text": "with the market value for",
+      "start": 228.319,
+      "duration": 5.761
+    },
+    {
+      "text": "non-public companies uh by looking at",
+      "start": 230.879,
+      "duration": 5.28
+    },
+    {
+      "text": "comparables",
+      "start": 234.08,
+      "duration": 4.159
+    },
+    {
+      "text": "sometimes you're not even gonna have",
+      "start": 236.159,
+      "duration": 3.121
+    },
+    {
+      "text": "comparables",
+      "start": 238.239,
+      "duration": 2.72
+    },
+    {
+      "text": "especially for very early stage",
+      "start": 239.28,
+      "duration": 3.599
+    },
+    {
+      "text": "companies",
+      "start": 240.959,
+      "duration": 4.401
+    },
+    {
+      "text": "they might be coming up with some new",
+      "start": 242.879,
+      "duration": 3.201
+    },
+    {
+      "text": "technology",
+      "start": 245.36,
+      "duration": 3.2
+    },
+    {
+      "text": "that nobody else has created before how",
+      "start": 246.08,
+      "duration": 4.079
+    },
+    {
+      "text": "do you come up with a comparable for",
+      "start": 248.56,
+      "duration": 3.679
+    },
+    {
+      "text": "that you can't",
+      "start": 250.159,
+      "duration": 5.28
+    },
+    {
+      "text": "and so for those companies",
+      "start": 252.239,
+      "duration": 5.201
+    },
+    {
+      "text": "luckily most of the time those early",
+      "start": 255.439,
+      "duration": 3.681
+    },
+    {
+      "text": "stage companies are not even going to",
+      "start": 257.44,
+      "duration": 2.079
+    },
+    {
+      "text": "have",
+      "start": 259.12,
+      "duration": 2.239
+    },
+    {
+      "text": "debt in the capital structure they're",
+      "start": 259.519,
+      "duration": 3.441
+    },
+    {
+      "text": "going to be 100",
+      "start": 261.359,
+      "duration": 4.721
+    },
+    {
+      "text": "equity uh financed and so to come up",
+      "start": 262.96,
+      "duration": 4.56
+    },
+    {
+      "text": "with their whack it's 100",
+      "start": 266.08,
+      "duration": 3.119
+    },
+    {
+      "text": "equity you only need to consider the",
+      "start": 267.52,
+      "duration": 3.28
+    },
+    {
+      "text": "cost of equity you don't even",
+      "start": 269.199,
+      "duration": 3.761
+    },
+    {
+      "text": "need the market value of equity to",
+      "start": 270.8,
+      "duration": 4.0
+    },
+    {
+      "text": "calculate the whack",
+      "start": 272.96,
+      "duration": 4.64
+    },
+    {
+      "text": "so hopefully that's the case but if your",
+      "start": 274.8,
+      "duration": 3.52
+    },
+    {
+      "text": "company",
+      "start": 277.6,
+      "duration": 3.76
+    },
+    {
+      "text": "is private has no comparables",
+      "start": 278.32,
+      "duration": 5.84
+    },
+    {
+      "text": "and also has debt in the capital",
+      "start": 281.36,
+      "duration": 4.48
+    },
+    {
+      "text": "structure",
+      "start": 284.16,
+      "duration": 4.479
+    },
+    {
+      "text": "then all you can really go off of is",
+      "start": 285.84,
+      "duration": 5.6
+    },
+    {
+      "text": "trying to look at the",
+      "start": 288.639,
+      "duration": 6.161
+    },
+    {
+      "text": "the business and trying to estimate",
+      "start": 291.44,
+      "duration": 6.56
+    },
+    {
+      "text": "the value based on the present value of",
+      "start": 294.8,
+      "duration": 5.92
+    },
+    {
+      "text": "future cash flows",
+      "start": 298.0,
+      "duration": 4.32
+    },
+    {
+      "text": "which of course is quite a bit more",
+      "start": 300.72,
+      "duration": 4.72
+    },
+    {
+      "text": "involved than these other approaches",
+      "start": 302.32,
+      "duration": 5.92
+    },
+    {
+      "text": "but again it's pretty rare that you need",
+      "start": 305.44,
+      "duration": 4.64
+    },
+    {
+      "text": "to do that because these early stage",
+      "start": 308.24,
+      "duration": 2.799
+    },
+    {
+      "text": "companies where you don't have",
+      "start": 310.08,
+      "duration": 1.76
+    },
+    {
+      "text": "comparables",
+      "start": 311.039,
+      "duration": 3.361
+    },
+    {
+      "text": "typically do not carry debt and so you",
+      "start": 311.84,
+      "duration": 5.6
+    },
+    {
+      "text": "don't need to go through this exercise",
+      "start": 314.4,
+      "duration": 4.88
+    },
+    {
+      "text": "but as far as this class is concerned",
+      "start": 317.44,
+      "duration": 3.52
+    },
+    {
+      "text": "and probably most of the time that",
+      "start": 319.28,
+      "duration": 3.199
+    },
+    {
+      "text": "you're going to be",
+      "start": 320.96,
+      "duration": 3.12
+    },
+    {
+      "text": "calculating the whack for a company it's",
+      "start": 322.479,
+      "duration": 3.201
+    },
+    {
+      "text": "going to be a public company",
+      "start": 324.08,
+      "duration": 4.559
+    },
+    {
+      "text": "and in that case just use the market cap",
+      "start": 325.68,
+      "duration": 3.44
+    },
+    {
+      "text": "as",
+      "start": 328.639,
+      "duration": 2.481
+    },
+    {
+      "text": "the market value of equity and you're",
+      "start": 329.12,
+      "duration": 3.919
+    },
+    {
+      "text": "done",
+      "start": 331.12,
+      "duration": 4.96
+    },
+    {
+      "text": "so that covers market value of equity in",
+      "start": 333.039,
+      "duration": 5.44
+    },
+    {
+      "text": "the context of calculating rack",
+      "start": 336.08,
+      "duration": 6.44
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 338.479,
+      "duration": 7.041
+    },
+    {
+      "text": "time",
+      "start": 342.52,
+      "duration": 3.0
+    }
+  ]
+}
