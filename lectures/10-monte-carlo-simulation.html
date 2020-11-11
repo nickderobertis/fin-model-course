@@ -131,23 +131,24 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#analyzing-relationships-with-monte-carlo-simulations">Analyzing Relationships with Monte Carlo Simulations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id8">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Transcript</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#applying-monte-carlo-simulation-to-a-python-model">Applying Monte Carlo Simulation to a Python Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id9">Notes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">Resources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">Transcript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Transcript</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#applying-monte-carlo-simulation-to-an-excel-model">Applying Monte Carlo Simulation to an Excel Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id12">Notes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">Resources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">Transcript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Transcript</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#relationship-of-inputs-and-outputs-in-excel-monte-carlo-simulation">Relationship of Inputs and Outputs in Excel Monte Carlo Simulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id15">Notes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">Transcript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Transcript</a></li>
 </ul>
 </li>
 </ul>
@@ -1772,14 +1773,435 @@
 <li><p>The multivariate regression results give the quantitative interpretation of the relationship while scatter plots can help visualize the relationship</p></li>
 </ul>
 </div>
+<div class="section" id="id9">
+<h3>Transcript<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="transcript"><ul class="transcript-entries">
+            <li class="transcript-entry"><span class="transcript-timestamp">00:02: </span>hey everyone this is nick diabetis</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>teaching you financial modeling</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:06: </span>today we're going to be looking at how</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:07: </span>we can analyze the relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:09: </span>between inputs and outputs in our models</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:12: </span>by using</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:13: </span>monte carlo simulation this is part of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:16: </span>our lecture segment on</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:17: </span>monte carlo simulation so</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:21: </span>we've already covered an intro to monte</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:24: </span>carlo we've run</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:25: </span>monte carlo on a model and then we went</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:28: </span>through the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:29: </span>formal introduction of what we're doing</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>in monte carlo simulation so now we're</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:36: </span>going to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:37: </span>dig into how we can</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:41: </span>establish relationships and quantify the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:43: </span>relationships</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:45: </span>between our inputs and outputs using</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:47: </span>monte carlo simulation</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:49: </span>so we</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:53: </span>the monte carlo simulation is not the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:54: </span>only tool that we can use</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:56: </span>to achieve this objective we've already</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:59: </span>looked at</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:00: </span>sensitivity analysis which can get at</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:03: </span>the same basic idea what is the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:05: </span>relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:06: </span>between the inputs and the outputs with</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:08: </span>sensitivity analysis we're changing one</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:10: </span>or two inputs at once</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:12: </span>and seeing what happens to the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:16: </span>output of our model with those changing</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:18: </span>input values</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:21: </span>with monte carlo simulation then</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:24: </span>we're uh running the model a bunch of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:27: </span>different times with all these</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:28: </span>randomized inputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:30: </span>and that allows us to get a more</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:34: </span>full picture of how the inputs relate to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:37: </span>the outputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:38: </span>because when you change just one or two</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:40: </span>inputs at a time</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:42: </span>you may be leaving out that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:45: </span>when other inputs are at different</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>values</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:49: </span>these inputs that you're changing have</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:51: </span>different effects</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:53: </span>so thinking about the retirement model</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:58: </span>when we're changing the interest rate</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:59: </span>and seeing how that changes our years to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:02: </span>retirement</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:03: </span>well the interest rate is going to have</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:06: </span>a bigger impact</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:07: </span>on the model if the initial salary</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:11: </span>was higher to begin with so you might</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:14: </span>you know thinking about this in advance</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:16: </span>you might do a sensitivity analysis</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:18: </span>of interest rate versus the initial</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:20: </span>salary so you can see how these two</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:22: </span>interplay together</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:25: </span>but you may not have thought about this</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:26: </span>relationship at the get-go</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:28: </span>or there may be other relationships</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:30: </span>which</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:31: </span>matter as well i mean with a higher</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:33: </span>savings rate</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:34: </span>also the interest rate is going to be</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:36: </span>more impactful</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:38: </span>so uh doing it the monte carlo</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:42: </span>simulation route to analyze the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:43: </span>relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:45: </span>you're kind of bringing all these</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:46: </span>different relationships together</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:48: </span>and not having to explicitly think about</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:51: </span>them as the modeler</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:52: </span>you just kind of throw everything in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:54: </span>with random inputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:56: </span>and the simulation is going to reveal</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:59: </span>those relationships</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:04: </span>so by changing all the inputs each time</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:06: </span>that you run the model</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:08: </span>then you're going to get cases uh</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:11: </span>with each different values of the inputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:13: </span>so</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:15: </span>some cases you're going to have a high</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:16: </span>interest rate and within that in some</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:18: </span>cases you're going to have a high salary</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:20: </span>some cases you're going to have a low</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:21: </span>salary</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:22: </span>some uh simulations you're going to have</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:25: </span>a low interest rate and within that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:27: </span>you're going to have some that have a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:28: </span>high salary and some that have a low</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>salary</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:30: </span>as well as different values of the other</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>inputs as well</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:34: </span>so as long as you do enough simulations</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:36: </span>a high enough number of iterations</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:39: </span>then you're going to capture cases of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:41: </span>all these different values of the inputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:44: </span>interplaying together and that gives you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:46: </span>a much more</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:47: </span>fuller picture of the relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:50: </span>between the inputs and outputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:54: </span>now the issue with this with sensitivity</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:57: </span>analysis it was fairly straightforward</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:59: </span>to understand uh how we can just look at</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:02: </span>those results we just see the result</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:04: </span>from the model</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:05: </span>we can visualize it using conditional</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:08: </span>formatting</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:09: </span>or a hexpin plot and it's fairly</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:12: </span>straightforward</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:13: </span>it's a little more complicated to take</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:17: </span>okay well now we've got 10 000 results</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:20: </span>from this model</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:21: </span>how do we get an understanding of the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:24: </span>relationship between the inputs and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:25: </span>outputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:27: </span>so i'll discuss two different approaches</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:30: </span>that we can use here</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:31: </span>to get an understanding the first is</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:35: </span>by visualizing uh via a scatter plot</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:40: </span>so the scatter plot</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:43: </span>shows the relationship between two</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:45: </span>variables one that gets plotted on the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:47: </span>x-axis and one that gets plotted on the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:49: </span>y-axis</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:50: </span>and each point is the values of the x</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:54: </span>and the y's together</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:56: </span>so this could be looking at that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:00: </span>investment rate on the x and looking at</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:02: </span>the years to retirement</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:04: </span>on the y dimension and you would say</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:05: </span>well one time i ran it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:07: </span>and i had a 2.2 interest rate and i got</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:12: </span>22 years to retirement uh</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:15: </span>et cetera and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:19: </span>um the disadvantage of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>scatter plots is that it only does look</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:24: </span>at one variable at a time so you do have</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:26: </span>to have</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:26: </span>like one scatter plot for each variable</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:30: </span>but then each graph is is very focused</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:33: </span>on that variable</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:36: </span>and so what you're looking for when you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:38: </span>look at these scatter plots</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:40: </span>is you want to see some kind of pattern</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:44: </span>um if the points are just kind of in a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:47: </span>cloud</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:48: </span>as we see in the bottom picture here</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:51: </span>there's no kind of linear</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:53: </span>or shape in here it's just kind of an</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:57: </span>ambiguous cloud that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:00: </span>is supportive of there not being a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:02: </span>strong relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:03: </span>between the variables whereas</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:07: </span>when the points seem to kind of fit</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:09: </span>along a line</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:10: </span>or like a u shape or some other kind of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:13: </span>very defined shape</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:16: </span>[Music]</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:17: </span>then that's evidence in support</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:20: </span>of there being a relationship between</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:23: </span>the two variables</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:27: </span>so</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:31: </span>as far as quantifying this then we're</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:34: </span>going to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:35: </span>look at regressions multivariate</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:38: </span>regressions</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:39: </span>to accomplish that the scatter plot just</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:41: </span>gives you a quick picture</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:43: </span>visualization that you can quickly see</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:46: </span>the relationship and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:48: </span>how the relationship changes throughout</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:49: </span>the range of the input</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:53: </span>but the multivariate regression is going</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:56: </span>to be able to give you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:57: </span>quantitatively what is the impact of the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>input on the output</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:02: </span>so that allows you to answer questions</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:04: </span>like if i earned</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:06: </span>ten thousand dollars more for my</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:07: </span>starting salary how much sooner</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:10: </span>would i be able to retire uh</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:13: </span>so of course in order to answer that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:15: </span>question</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:16: </span>an easy attempt at it is to just go to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:19: </span>your model inputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:20: </span>and increase the salary by 10 000 and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:23: </span>see what happens</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:24: </span>to the years of retirement that's kind</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:26: </span>of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:27: </span>that's you know basically the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:28: </span>sensitivity analysis approach</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:31: </span>um but it is a simplistic way of looking</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:34: </span>at it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:35: </span>it doesn't take into account how all the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:38: </span>other inputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:39: </span>in the model could change you're still</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:41: </span>just assuming that those other inputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:43: </span>are at their baseline values</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:46: </span>so by doing the monte carlo simulation</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:48: </span>we take into account</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:49: </span>all these cases of all the other inputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:52: </span>being at different values</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:55: </span>so multivariate regression basically we</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>put</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>whatever output we're trying to analyze</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:02: </span>as our y variable</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:04: </span>and then each of our inputs as the x</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:05: </span>variables</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:07: </span>and this will be able to tell us</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:09: </span>quantitatively</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:10: </span>what is the relationship what's the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:13: </span>strength</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:13: </span>magnitude of the relationship and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:15: </span>direction</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:17: </span>uh between the input and the output</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:22: </span>so the process or how you interpret the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:27: </span>uh results of that as we run a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:29: </span>multivariate</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:30: </span>regression we get some fit statistics</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:33: </span>and then the part that really matters</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:36: </span>for this</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:37: </span>is the coefficients and the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:40: </span>p-values and if the p-value is high</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:45: </span>that's evidence of there not being a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:47: </span>relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:49: </span>if it's low then there is at least some</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:52: </span>relationship it doesn't necessarily mean</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:54: </span>that the relationship is strong or</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:56: </span>even meaningful in your model but it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:58: </span>does mean that there is evidence that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:00: </span>there is a relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:02: </span>and then you look at the coefficient to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:05: </span>assess the strength or magnitude of that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:08: </span>relationship so the coefficient</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:12: </span>in multivariate regression is</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:16: </span>how much does the outcome variable</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:18: </span>change when there</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:19: </span>is a one unit increase in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:22: </span>the input variable or x variable</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:26: </span>so to give an example of that say we're</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:29: </span>working still with this</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:31: </span>retirement model and you get a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:33: </span>coefficient of negative .0002</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:37: </span>on starting salary when years to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:40: </span>retirement is your y variable</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:43: </span>so what that means is a one unit</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:44: </span>increase in our x</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:46: </span>is associated with a negative point zero</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:49: </span>zero zero</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:49: </span>two unit increase or decrease in the y</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:54: </span>um so our salary is in dollars and so</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:58: </span>that means that's a one dollar increase</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:00: </span>in salary</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:01: </span>and then our year's retirement is in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:04: </span>years</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:05: </span>and so that's a one dollar increase in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:07: </span>salary associated with a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:08: </span>decrease in year's retirement of 0.0002</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:12: </span>years</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:13: </span>of course that's not</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:16: </span>a nice way to interpret it right like</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:19: </span>who cares about a one dollar increase in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:20: </span>salary that's not</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:22: </span>gonna be a meaningful thing uh but the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:24: </span>nice thing about these</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:26: </span>uh relationships is you can just</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:27: </span>multiply them up</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:29: </span>in order to get it in terms of something</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:31: </span>which is meaningful</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:33: </span>so we can multiply both sides here by</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:35: </span>ten thousand</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:36: </span>to now change it into a ten thousand</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:39: </span>dollar increase in salary</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:41: </span>is associated with a decrease in use to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:44: </span>retirement by</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:45: </span>two years so whenever you interpret the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:48: </span>coefficients</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:50: </span>you want to put them in terms of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:52: </span>something which is meaningful</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:54: </span>for your model no one cares about a one</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:56: </span>dollar change in salary how about a ten</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:58: </span>thousand dollar change</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:00: </span>and let's interpret it in that context</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:05: </span>an important thing as you go to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:07: </span>interpret the results from the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>regression</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:10: </span>um and this can definitely be a point of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:13: </span>confusion</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:14: </span>is that these coefficients are</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:17: </span>all less all else constant so that means</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:22: </span>that this you know ten thousand dollar</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:25: </span>increase in salary decreases years to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:26: </span>retirement by two years</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:28: </span>that is not taking into account um</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:33: </span>that you know when you're able to earn</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:35: </span>more money you're probably able to save</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:37: </span>more money as well and so the savings</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:39: </span>rate is going to be higher for an</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:40: </span>individual who makes</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:42: </span>more money that is not being captured</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:45: </span>in the coefficient now</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:49: </span>a big reason that i've been saying we</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:51: </span>should use this approach rather than</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:53: </span>just</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:53: </span>sensitivity analysis is because it takes</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:55: </span>into account that all the other</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:56: </span>variables are changing</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:58: </span>so that's where students can get</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:00: </span>confused by this</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:02: </span>because now here we're saying oh but</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:05: </span>we're basically treating all the other</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:06: </span>inputs as constant</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:08: </span>um but it's</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:12: </span>even though we're kind of isolating the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:14: </span>effect to this one</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:16: </span>uh input with this coefficient</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:19: </span>the regression model is still</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:21: </span>considering all these different cases of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:23: </span>the input values so you can kind of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:25: </span>think of it as an</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:26: </span>average across you know thinking about</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:29: </span>um earning salary uh you can think of it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:33: </span>as an average across</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:34: </span>like sometimes the investment rate was</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:35: </span>high sometimes the investment rate was</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:37: </span>low</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:38: </span>sometimes the saving rate was high</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:39: </span>sometimes the saving rate was low</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:42: </span>taking the average across all these</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:44: </span>different cases</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:45: </span>what was the overall effect of just the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:49: </span>salary portion</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:53: </span>so if you know that two inputs in your</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:56: </span>model</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:57: </span>are linked as is the case</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:00: </span>uh potentially here with starting salary</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:02: </span>and savings rate you know that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:04: </span>if you have a higher starting salary</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:06: </span>you're gonna have a higher savings rate</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:09: </span>then you can basically combine the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:12: </span>coefficients and say well i know when</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:15: </span>the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:15: </span>salary goes up at ten thousand the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:17: </span>savings rate is going to go up by five</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:18: </span>percent and then you can add those two</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:21: </span>effects together</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:22: </span>to get the total effect on the years to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:24: </span>retirement so you can still use these</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:27: </span>regression results to get at the full</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:29: </span>relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:30: </span>it's just that each coefficient is</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:33: </span>interpreting</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:34: </span>just the effect of that variable</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:39: </span>and another thing to be careful about</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:41: </span>here is the units we already talked</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:43: </span>about</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:43: </span>you know how this is a one unit increase</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:45: </span>and you're probably</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:47: </span>in a lot of cases going to need to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:48: </span>adjust the units</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:50: </span>in order to get that to a meaningful</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:53: </span>number</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:54: </span>uh and that's definitely the case when</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:56: </span>you think about decimals versus</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:59: </span>percentages so you know we're always</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:02: </span>representing our investment returns in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:04: </span>decimal format</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:06: </span>in our python models and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:09: </span>a one unit change in decimal format is</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:12: </span>actually a 100</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:13: </span>change it's going from zero to one which</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:15: </span>is zero to one hundred percent</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:18: </span>um and so the coefficient that you'll</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:20: </span>get</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:21: </span>for the investment rate or any other</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:23: </span>decimal</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:25: </span>um decimal number that is actually a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:27: </span>percentage</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:29: </span>um then basically</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:32: </span>the coefficient is going to be much</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:35: </span>larger</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:36: </span>uh it's going to be a hundred times as</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:38: </span>large as</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:39: </span>the value would be for a 1 change so you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:42: </span>have to divide by 100</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:44: </span>to get it to a one percent change</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:48: </span>um and if you you know have things in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:51: </span>percentages it could go the other way</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:53: </span>around in the model</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:55: </span>and so you just need to be careful about</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:56: </span>the units and thinking through</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">14:58: </span>the coefficients and what</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:02: </span>makes sense to have everything in the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:04: </span>proper units</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:07: </span>so that's an overview of theoretically</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:10: </span>how and why we're going to analyze the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:13: </span>relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:14: </span>of inputs and outputs through monte</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:16: </span>carlo simulations</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:18: </span>we'll come back next time to apply monte</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:21: </span>carlo simulation</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:22: </span>to the dynamic salary retirement model</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:25: </span>and within that we're going to see an</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:26: </span>example of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:27: </span>how we can do all this analysis of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:29: </span>relating inputs to outputs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:31: </span>so thanks for listening and see you next</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">15:35: </span>time</li>
+    </ul></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
 </div>
 <div class="section" id="applying-monte-carlo-simulation-to-a-python-model">
 <h2>Applying Monte Carlo Simulation to a Python Model<a class="headerlink" href="#applying-monte-carlo-simulation-to-a-python-model" title="Permalink to this headline">¶</a></h2>
 <iframe src="https://www.youtube.com/embed/DAddBN2xPuI"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="section" id="id9">
-<h3>Notes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h3>Notes<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>It can make sense to set up a separate dataclass for your simulation-specific inputs, or you may add them to the existing dataclass</p></li>
 <li><p>Once you start running large numbers of simulations, some unexpected situations may occur in your model such as inputs going negative that were supposed to only be positive, or one input being greater than another when it is supposed to be less. To solve this, we can build functions which produce the random inputs according to the necessary conditions in our model</p></li>
@@ -1790,14 +2212,14 @@
 <li><p>We can check the standardized coefficients (coef * std) to understand which inputs have the greatest impact on the outputs. Be careful that these results are influenced by your choice of the input distributions. If your input distributions are not reasonable, neither will be the results</p></li>
 </ul>
 </div>
-<div class="section" id="id10">
-<h3>Resources<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h3>Resources<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/68edbc21263b7a69b21d94580bf74586/Dynamic Salary Retirement Model Monte Carlo.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">with</span> <span class="pre">Monte</span> <span class="pre">Carlo</span></code></a></p></li>
 </ul>
 </div>
-<div class="section" id="id11">
-<h3>Transcript<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h3>Transcript<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <div class="transcript"><ul class="transcript-entries">
             <li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone</li>
             <li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>nick diabetes here teaching you</li>
@@ -2738,8 +3160,8 @@
 <iframe src="https://www.youtube.com/embed/f7CM9urH3sI"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="section" id="id12">
-<h3>Notes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3>Notes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>The process for running Monte Carlo simulations in Excel is nearly the same as that in Python when we use Python to run the simulations on the Excel model using xlwings</p></li>
 <li><p>The main difference is that we write the inputs into Excel and extract the results using xlwings rather than running Python logic for the core model</p></li>
@@ -2748,15 +3170,15 @@
 <li><p>Keep in mind that if you visualize the outputs in Excel, next time you run the simulation it will go slow due to the visualizations. Because of this it may be a better idea in general to do the analysis in Python if you have a choice</p></li>
 </ul>
 </div>
-<div class="section" id="id13">
-<h3>Resources<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h3>Resources<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference download internal" download="" href="../_downloads/68223109d0278a9aab6563cabd7e8201/Dynamic Salary Retirement Model with Monte Carlo.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">Salary</span> <span class="pre">Retirement</span> <span class="pre">Model</span> <span class="pre">with</span> <span class="pre">Monte</span> <span class="pre">Carlo</span></code></a></p></li>
 <li><p><a class="reference download internal" download="" href="../_downloads/2089cf70bf27f31824c4e2a307f58a87/Excel Monte Carlo.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Excel</span> <span class="pre">Monte</span> <span class="pre">Carlo</span></code></a></p></li>
 </ul>
 </div>
-<div class="section" id="id14">
-<h3>Transcript<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h3>Transcript<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <div class="transcript"><ul class="transcript-entries">
             <li class="transcript-entry"><span class="transcript-timestamp">00:02: </span>hey everyone</li>
             <li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>nick dear bird is here teaching you</li>
@@ -3201,8 +3623,8 @@
 <iframe src="https://www.youtube.com/embed/qLueSIM2buI"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="section" id="id15">
-<h3>Notes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3>Notes<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>This continues off the prior lecture to keep the inputs associated with the outputs in the Excel output, and then to do the analysis of how the inputs relate to the outputs</p></li>
 <li><p>It is easier to go to DataFrame output into Excel to keep everything together</p></li>
@@ -3210,8 +3632,8 @@
 <li><p>You may need to enable the Data Analysis Toolpack add-in in Excel to get access to multivariate regression</p></li>
 </ul>
 </div>
-<div class="section" id="id16">
-<h3>Transcript<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h3>Transcript<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <div class="transcript"><ul class="transcript-entries">
             <li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone this is nick durabartis</li>
             <li class="transcript-entry"><span class="transcript-timestamp">00:05: </span>teaching you financial modeling</li>
