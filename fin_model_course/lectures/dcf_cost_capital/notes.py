@@ -97,6 +97,7 @@ def get_excel_cost_of_equity_lecture() -> Lecture:
     ], title=title)
     resources = [
         RESOURCES.examples.dcf.cost_of_equity.excel_coe,
+        RESOURCES.labs.dcf.cost_of_equity.prices_xlsx,
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
 

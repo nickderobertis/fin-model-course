@@ -135,7 +135,7 @@ class ConnectingPythonExcelLabResources(ResourceCollection):
 class DCFCostOfEquityLabResources(ResourceCollection):
     title: str = "Cost of Equity"
     prices_xlsx: LectureResource = LectureResource(
-        f"Prices", static_url=f"{LAB_FOLDER_NAME}/DCF/Cost of Equity/prices.xlsx"
+        f"Prices (for lab)", static_url=f"{LAB_FOLDER_NAME}/DCF/Cost of Equity/prices.xlsx"
     )
 
 
