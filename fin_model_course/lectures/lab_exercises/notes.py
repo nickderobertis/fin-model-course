@@ -927,8 +927,8 @@ def get_dcf_cost_debt_lab_lecture() -> LabExerciseLecture:
 
     # Level 2 exercise
     wmt_int_exp = 641
-    wmt_total_debt = 74709
-    wmt_ebt = 4843
+    wmt_total_debt = 56396
+    wmt_ebt = 4913
     wmt_tax_paid = 1233
 
     wmt_tax_rate = wmt_tax_paid / wmt_ebt
