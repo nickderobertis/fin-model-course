@@ -1,0 +1,1399 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.8,
+      "duration": 2.559
+    },
+    {
+      "text": "this is nick dear burtis teaching you",
+      "start": 3.679,
+      "duration": 3.12
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.359,
+      "duration": 3.2
+    },
+    {
+      "text": "today we're going to be solving the lab",
+      "start": 6.799,
+      "duration": 3.361
+    },
+    {
+      "text": "exercise on",
+      "start": 8.559,
+      "duration": 5.521
+    },
+    {
+      "text": "finding the enterprise and equity value",
+      "start": 10.16,
+      "duration": 7.119
+    },
+    {
+      "text": "given free cash flows and whack this is",
+      "start": 14.08,
+      "duration": 4.64
+    },
+    {
+      "text": "part of our lecture segment",
+      "start": 17.279,
+      "duration": 3.92
+    },
+    {
+      "text": "on the discounted cash flow valuation",
+      "start": 18.72,
+      "duration": 4.639
+    },
+    {
+      "text": "model focusing on the cost of capital",
+      "start": 21.199,
+      "duration": 4.481
+    },
+    {
+      "text": "portion",
+      "start": 23.359,
+      "duration": 6.481
+    },
+    {
+      "text": "so this lab exercise came at the end of",
+      "start": 25.68,
+      "duration": 5.919
+    },
+    {
+      "text": "dealing with enterprise and",
+      "start": 29.84,
+      "duration": 5.68
+    },
+    {
+      "text": "equity value and it has two levels",
+      "start": 31.599,
+      "duration": 7.841
+    },
+    {
+      "text": "here the first level we",
+      "start": 35.52,
+      "duration": 8.0
+    },
+    {
+      "text": "have some cash flows and a whack given",
+      "start": 39.44,
+      "duration": 6.639
+    },
+    {
+      "text": "a number of shares an amount of debt and",
+      "start": 43.52,
+      "duration": 4.32
+    },
+    {
+      "text": "an amount of cash",
+      "start": 46.079,
+      "duration": 3.681
+    },
+    {
+      "text": "and we're trying to find the enterprise",
+      "start": 47.84,
+      "duration": 4.16
+    },
+    {
+      "text": "value at the end of the time period",
+      "start": 49.76,
+      "duration": 5.119
+    },
+    {
+      "text": "as well as today and we're trying to",
+      "start": 52.0,
+      "duration": 3.28
+    },
+    {
+      "text": "find",
+      "start": 54.879,
+      "duration": 4.641
+    },
+    {
+      "text": "the price of the stock today as well",
+      "start": 55.28,
+      "duration": 6.32
+    },
+    {
+      "text": "so let's go ahead and jump over to a",
+      "start": 59.52,
+      "duration": 3.92
+    },
+    {
+      "text": "jupiter notebook to complete this",
+      "start": 61.6,
+      "duration": 4.559
+    },
+    {
+      "text": "exercise",
+      "start": 63.44,
+      "duration": 2.719
+    },
+    {
+      "text": "so first thing that i want to do",
+      "start": 67.04,
+      "duration": 7.119
+    },
+    {
+      "text": "is define variables",
+      "start": 70.96,
+      "duration": 5.68
+    },
+    {
+      "text": "for some of these quantities that we had",
+      "start": 74.159,
+      "duration": 5.6
+    },
+    {
+      "text": "in the exercise",
+      "start": 76.64,
+      "duration": 3.119
+    },
+    {
+      "text": "so we're going to have some cash flows",
+      "start": 79.92,
+      "duration": 6.4
+    },
+    {
+      "text": "we can just put those into a list",
+      "start": 83.04,
+      "duration": 6.24
+    },
+    {
+      "text": "and as is noted in the exercise negative",
+      "start": 86.32,
+      "duration": 3.839
+    },
+    {
+      "text": "20 million",
+      "start": 89.28,
+      "duration": 3.76
+    },
+    {
+      "text": "for years zero and one and then a year",
+      "start": 90.159,
+      "duration": 4.161
+    },
+    {
+      "text": "of zero",
+      "start": 93.04,
+      "duration": 5.439
+    },
+    {
+      "text": "and then 10 million and then 70 million",
+      "start": 94.32,
+      "duration": 7.119
+    },
+    {
+      "text": "so i'm just going to do this all in",
+      "start": 98.479,
+      "duration": 4.161
+    },
+    {
+      "text": "millions",
+      "start": 101.439,
+      "duration": 5.121
+    },
+    {
+      "text": "um so negative 20 twice",
+      "start": 102.64,
+      "duration": 8.56
+    },
+    {
+      "text": "zero 10 and then 70 and year four",
+      "start": 106.56,
+      "duration": 9.76
+    },
+    {
+      "text": "uh we have the whack is 15",
+      "start": 111.2,
+      "duration": 5.12
+    },
+    {
+      "text": "um and",
+      "start": 116.56,
+      "duration": 4.559
+    },
+    {
+      "text": "we have what else 5 million in debt",
+      "start": 122.0,
+      "duration": 7.84
+    },
+    {
+      "text": "uh 5 million and we have 1 million in",
+      "start": 131.2,
+      "duration": 7.039
+    },
+    {
+      "text": "cash",
+      "start": 135.92,
+      "duration": 2.319
+    },
+    {
+      "text": "okay so now um",
+      "start": 140.72,
+      "duration": 7.28
+    },
+    {
+      "text": "we can go to uh thinking about",
+      "start": 144.16,
+      "duration": 5.84
+    },
+    {
+      "text": "the questions which are asked which",
+      "start": 148.0,
+      "duration": 3.92
+    },
+    {
+      "text": "first is what is the enterprise value of",
+      "start": 150.0,
+      "duration": 2.8
+    },
+    {
+      "text": "the stock",
+      "start": 151.92,
+      "duration": 3.76
+    },
+    {
+      "text": "at year four before the acquisition",
+      "start": 152.8,
+      "duration": 3.2
+    },
+    {
+      "text": "which",
+      "start": 155.68,
+      "duration": 3.68
+    },
+    {
+      "text": "happens in year four",
+      "start": 156.0,
+      "duration": 3.36
+    },
+    {
+      "text": "so whenever we are",
+      "start": 159.68,
+      "duration": 4.559
+    },
+    {
+      "text": "taking thinking about present value",
+      "start": 165.599,
+      "duration": 6.321
+    },
+    {
+      "text": "we're always only considering future",
+      "start": 169.44,
+      "duration": 4.48
+    },
+    {
+      "text": "cash flows we don't care",
+      "start": 171.92,
+      "duration": 4.24
+    },
+    {
+      "text": "about what has happened in the past",
+      "start": 173.92,
+      "duration": 3.039
+    },
+    {
+      "text": "except for",
+      "start": 176.16,
+      "duration": 4.159
+    },
+    {
+      "text": "its ability to predict the future",
+      "start": 176.959,
+      "duration": 6.161
+    },
+    {
+      "text": "so this is the year for cash flow 70",
+      "start": 180.319,
+      "duration": 3.681
+    },
+    {
+      "text": "million",
+      "start": 183.12,
+      "duration": 4.16
+    },
+    {
+      "text": "and it's asking right before that cash",
+      "start": 184.0,
+      "duration": 4.159
+    },
+    {
+      "text": "flow",
+      "start": 187.28,
+      "duration": 5.2
+    },
+    {
+      "text": "what is the value of the company and",
+      "start": 188.159,
+      "duration": 6.241
+    },
+    {
+      "text": "the future cash flows are just 70",
+      "start": 192.48,
+      "duration": 3.039
+    },
+    {
+      "text": "million",
+      "start": 194.4,
+      "duration": 3.44
+    },
+    {
+      "text": "we don't care about the historical cash",
+      "start": 195.519,
+      "duration": 3.521
+    },
+    {
+      "text": "flows",
+      "start": 197.84,
+      "duration": 2.88
+    },
+    {
+      "text": "and because we're right before this",
+      "start": 199.04,
+      "duration": 5.04
+    },
+    {
+      "text": "payment the present value of the payment",
+      "start": 200.72,
+      "duration": 6.879
+    },
+    {
+      "text": "is equal to the value of the payment",
+      "start": 204.08,
+      "duration": 6.079
+    },
+    {
+      "text": "and so right before this payment is paid",
+      "start": 207.599,
+      "duration": 3.681
+    },
+    {
+      "text": "in year four",
+      "start": 210.159,
+      "duration": 3.681
+    },
+    {
+      "text": "the value of the company is 70 million",
+      "start": 211.28,
+      "duration": 4.56
+    },
+    {
+      "text": "and that's why google is paying 70",
+      "start": 213.84,
+      "duration": 3.52
+    },
+    {
+      "text": "million for it",
+      "start": 215.84,
+      "duration": 5.2
+    },
+    {
+      "text": "um so because that's the only cash flow",
+      "start": 217.36,
+      "duration": 5.04
+    },
+    {
+      "text": "that's going to be coming to us as",
+      "start": 221.04,
+      "duration": 3.199
+    },
+    {
+      "text": "owners of this company",
+      "start": 222.4,
+      "duration": 3.28
+    },
+    {
+      "text": "that's the only cash flow we consider",
+      "start": 224.239,
+      "duration": 3.041
+    },
+    {
+      "text": "for the calculation and there's not even",
+      "start": 225.68,
+      "duration": 3.04
+    },
+    {
+      "text": "a calculation necessary",
+      "start": 227.28,
+      "duration": 4.0
+    },
+    {
+      "text": "it's just 70 million is the enterprise",
+      "start": 228.72,
+      "duration": 3.04
+    },
+    {
+      "text": "value",
+      "start": 231.28,
+      "duration": 4.72
+    },
+    {
+      "text": "at year 4 right before the acquisition",
+      "start": 231.76,
+      "duration": 6.479
+    },
+    {
+      "text": "now coming to the second question it's",
+      "start": 236.0,
+      "duration": 4.08
+    },
+    {
+      "text": "asking what is the enterprise value",
+      "start": 238.239,
+      "duration": 3.601
+    },
+    {
+      "text": "today so that's a more interesting",
+      "start": 240.08,
+      "duration": 3.76
+    },
+    {
+      "text": "question",
+      "start": 241.84,
+      "duration": 5.599
+    },
+    {
+      "text": "so for that we want to um",
+      "start": 243.84,
+      "duration": 7.2
+    },
+    {
+      "text": "take the present value of the business",
+      "start": 247.439,
+      "duration": 8.72
+    },
+    {
+      "text": "so we can add an import to numpy here",
+      "start": 251.04,
+      "duration": 5.119
+    },
+    {
+      "text": "import numpy as mp as is the convention",
+      "start": 256.959,
+      "duration": 8.481
+    },
+    {
+      "text": "and we can use numpy's mpv function",
+      "start": 261.919,
+      "duration": 7.921
+    },
+    {
+      "text": "give it the whack and the cash flows",
+      "start": 265.44,
+      "duration": 7.92
+    },
+    {
+      "text": "and that is going to tell us the",
+      "start": 269.84,
+      "duration": 6.88
+    },
+    {
+      "text": "uh enterprise value today now this is in",
+      "start": 273.36,
+      "duration": 4.8
+    },
+    {
+      "text": "millions",
+      "start": 276.72,
+      "duration": 5.28
+    },
+    {
+      "text": "um so we can multiply that",
+      "start": 278.16,
+      "duration": 7.52
+    },
+    {
+      "text": "by a million to get it in dollars",
+      "start": 282.0,
+      "duration": 7.28
+    },
+    {
+      "text": "so 9.2 million dollars is",
+      "start": 285.68,
+      "duration": 11.44
+    },
+    {
+      "text": "the enterprise value today",
+      "start": 289.28,
+      "duration": 11.04
+    },
+    {
+      "text": "so now that we have the enterprise value",
+      "start": 297.12,
+      "duration": 5.84
+    },
+    {
+      "text": "the remaining question being asked is",
+      "start": 300.32,
+      "duration": 3.68
+    },
+    {
+      "text": "what is the price",
+      "start": 302.96,
+      "duration": 4.32
+    },
+    {
+      "text": "of the stock today so for that we need",
+      "start": 304.0,
+      "duration": 3.919
+    },
+    {
+      "text": "to",
+      "start": 307.28,
+      "duration": 5.04
+    },
+    {
+      "text": "think about the enterprise value formula",
+      "start": 307.919,
+      "duration": 7.521
+    },
+    {
+      "text": "so the enterprise value",
+      "start": 312.32,
+      "duration": 6.96
+    },
+    {
+      "text": "formula we have that",
+      "start": 315.44,
+      "duration": 7.52
+    },
+    {
+      "text": "the um enterprise",
+      "start": 319.28,
+      "duration": 6.96
+    },
+    {
+      "text": "value is equal to debt",
+      "start": 322.96,
+      "duration": 8.0
+    },
+    {
+      "text": "plus equity values minus cash right",
+      "start": 326.24,
+      "duration": 8.239
+    },
+    {
+      "text": "so um",
+      "start": 330.96,
+      "duration": 6.56
+    },
+    {
+      "text": "we can flip around this formula",
+      "start": 334.479,
+      "duration": 7.28
+    },
+    {
+      "text": "to work for solving for the equity value",
+      "start": 337.52,
+      "duration": 7.6
+    },
+    {
+      "text": "by subtracting debt over to the other",
+      "start": 341.759,
+      "duration": 5.681
+    },
+    {
+      "text": "side",
+      "start": 345.12,
+      "duration": 2.32
+    },
+    {
+      "text": "and adding cash over to the other side",
+      "start": 348.479,
+      "duration": 5.361
+    },
+    {
+      "text": "so we can get the equity value by taking",
+      "start": 354.8,
+      "duration": 3.44
+    },
+    {
+      "text": "the enterprise value",
+      "start": 357.039,
+      "duration": 4.16
+    },
+    {
+      "text": "minus debt plus cash so we already have",
+      "start": 358.24,
+      "duration": 4.079
+    },
+    {
+      "text": "the enterprise value",
+      "start": 361.199,
+      "duration": 5.521
+    },
+    {
+      "text": "we're going to subtract the debt",
+      "start": 362.319,
+      "duration": 7.761
+    },
+    {
+      "text": "and add the cash and here we go now we",
+      "start": 366.72,
+      "duration": 3.84
+    },
+    {
+      "text": "have",
+      "start": 370.08,
+      "duration": 3.679
+    },
+    {
+      "text": "the equity value of the company",
+      "start": 370.56,
+      "duration": 5.359
+    },
+    {
+      "text": "and the last thing i didn't put an input",
+      "start": 373.759,
+      "duration": 3.601
+    },
+    {
+      "text": "here for",
+      "start": 375.919,
+      "duration": 5.921
+    },
+    {
+      "text": "a number of shares is 1 million",
+      "start": 377.36,
+      "duration": 4.48
+    },
+    {
+      "text": "so now this would be the equity",
+      "start": 383.199,
+      "duration": 7.601
+    },
+    {
+      "text": "value and then",
+      "start": 386.319,
+      "duration": 7.761
+    },
+    {
+      "text": "the price would be the equity value",
+      "start": 390.8,
+      "duration": 6.88
+    },
+    {
+      "text": "divided by the shares outstanding",
+      "start": 394.08,
+      "duration": 5.92
+    },
+    {
+      "text": "so the price is going to be five dollars",
+      "start": 397.68,
+      "duration": 5.44
+    },
+    {
+      "text": "and 20 cents",
+      "start": 400.0,
+      "duration": 3.12
+    },
+    {
+      "text": "so that's the first exercise here",
+      "start": 403.759,
+      "duration": 7.84
+    },
+    {
+      "text": "and then the second one",
+      "start": 408.479,
+      "duration": 6.881
+    },
+    {
+      "text": "is similar again we have um",
+      "start": 411.599,
+      "duration": 7.121
+    },
+    {
+      "text": "some cash flows um again the company is",
+      "start": 415.36,
+      "duration": 5.48
+    },
+    {
+      "text": "going to be acquired",
+      "start": 418.72,
+      "duration": 6.319
+    },
+    {
+      "text": "um and",
+      "start": 420.84,
+      "duration": 7.56
+    },
+    {
+      "text": "but instead with this one um",
+      "start": 425.039,
+      "duration": 7.201
+    },
+    {
+      "text": "we have not given to us the cash flows",
+      "start": 428.4,
+      "duration": 5.919
+    },
+    {
+      "text": "but we have instead given to us",
+      "start": 432.24,
+      "duration": 6.239
+    },
+    {
+      "text": "the dividends and the dividend is the",
+      "start": 434.319,
+      "duration": 7.201
+    },
+    {
+      "text": "cash flow to the equity holders only",
+      "start": 438.479,
+      "duration": 4.481
+    },
+    {
+      "text": "and so when you take the present value",
+      "start": 441.52,
+      "duration": 3.519
+    },
+    {
+      "text": "of the dividends you get the equity",
+      "start": 442.96,
+      "duration": 4.16
+    },
+    {
+      "text": "value and not the enterprise value so",
+      "start": 445.039,
+      "duration": 3.521
+    },
+    {
+      "text": "that's the key",
+      "start": 447.12,
+      "duration": 6.799
+    },
+    {
+      "text": "difference here with this final exercise",
+      "start": 448.56,
+      "duration": 8.88
+    },
+    {
+      "text": "um so",
+      "start": 453.919,
+      "duration": 7.441
+    },
+    {
+      "text": "and then when we",
+      "start": 457.44,
+      "duration": 5.92
+    },
+    {
+      "text": "look at the capital structure there's 10",
+      "start": 461.36,
+      "duration": 4.239
+    },
+    {
+      "text": "million dollars in debt",
+      "start": 463.36,
+      "duration": 5.679
+    },
+    {
+      "text": "and it's talking about um the company",
+      "start": 465.599,
+      "duration": 5.44
+    },
+    {
+      "text": "being bought for 30 million dollars",
+      "start": 469.039,
+      "duration": 5.041
+    },
+    {
+      "text": "at the end in year four so",
+      "start": 471.039,
+      "duration": 5.681
+    },
+    {
+      "text": "10 million dollars of that is going to",
+      "start": 474.08,
+      "duration": 4.16
+    },
+    {
+      "text": "go to servicing",
+      "start": 476.72,
+      "duration": 3.759
+    },
+    {
+      "text": "or buying out the debt holders the",
+      "start": 478.24,
+      "duration": 4.239
+    },
+    {
+      "text": "remaining 20 million",
+      "start": 480.479,
+      "duration": 4.961
+    },
+    {
+      "text": "is going to be coming as a cash flow to",
+      "start": 482.479,
+      "duration": 4.4
+    },
+    {
+      "text": "equity holders",
+      "start": 485.44,
+      "duration": 3.12
+    },
+    {
+      "text": "so we're only going to consider a 20",
+      "start": 486.879,
+      "duration": 3.281
+    },
+    {
+      "text": "million portion",
+      "start": 488.56,
+      "duration": 4.88
+    },
+    {
+      "text": "of this 30 million when determining",
+      "start": 490.16,
+      "duration": 6.4
+    },
+    {
+      "text": "the equity value",
+      "start": 493.44,
+      "duration": 3.12
+    },
+    {
+      "text": "so let's go ahead and go through those",
+      "start": 496.96,
+      "duration": 4.16
+    },
+    {
+      "text": "calculations",
+      "start": 498.879,
+      "duration": 5.521
+    },
+    {
+      "text": "so um let's come back over",
+      "start": 501.12,
+      "duration": 4.639
+    },
+    {
+      "text": "now we have 10 million shares",
+      "start": 504.4,
+      "duration": 3.12
+    },
+    {
+      "text": "outstanding 10 million of debt and 1",
+      "start": 505.759,
+      "duration": 3.601
+    },
+    {
+      "text": "million of cash",
+      "start": 507.52,
+      "duration": 5.04
+    },
+    {
+      "text": "um so i'm going to add an extra zero",
+      "start": 509.36,
+      "duration": 4.64
+    },
+    {
+      "text": "here",
+      "start": 512.56,
+      "duration": 3.52
+    },
+    {
+      "text": "sorry now cash was 1 million add an",
+      "start": 514.0,
+      "duration": 3.839
+    },
+    {
+      "text": "extra zero here",
+      "start": 516.08,
+      "duration": 3.6
+    },
+    {
+      "text": "um instead of 5 million debt this is",
+      "start": 517.839,
+      "duration": 5.44
+    },
+    {
+      "text": "going to be 10 million dollars in debt",
+      "start": 519.68,
+      "duration": 7.04
+    },
+    {
+      "text": "what about the whack is 10",
+      "start": 523.279,
+      "duration": 8.481
+    },
+    {
+      "text": "now um so i'm going to update that to 10",
+      "start": 526.72,
+      "duration": 9.76
+    },
+    {
+      "text": "um and then the cash flows",
+      "start": 531.76,
+      "duration": 8.079
+    },
+    {
+      "text": "so we can either do everything in per",
+      "start": 536.48,
+      "duration": 4.0
+    },
+    {
+      "text": "share",
+      "start": 539.839,
+      "duration": 3.041
+    },
+    {
+      "text": "amounts and ultimately get the share",
+      "start": 540.48,
+      "duration": 3.2
+    },
+    {
+      "text": "price",
+      "start": 542.88,
+      "duration": 3.84
+    },
+    {
+      "text": "or we can do everything in uh",
+      "start": 543.68,
+      "duration": 6.4
+    },
+    {
+      "text": "you know full equity holder amounts and",
+      "start": 546.72,
+      "duration": 5.28
+    },
+    {
+      "text": "get the equity value",
+      "start": 550.08,
+      "duration": 5.28
+    },
+    {
+      "text": "so let's go with converting everything",
+      "start": 552.0,
+      "duration": 6.56
+    },
+    {
+      "text": "into uh the amount that's coming for all",
+      "start": 555.36,
+      "duration": 5.84
+    },
+    {
+      "text": "the equity holders as a whole",
+      "start": 558.56,
+      "duration": 5.12
+    },
+    {
+      "text": "so we have a dividend of one dollar per",
+      "start": 561.2,
+      "duration": 3.199
+    },
+    {
+      "text": "share",
+      "start": 563.68,
+      "duration": 5.12
+    },
+    {
+      "text": "um so dividend is one dollar",
+      "start": 564.399,
+      "duration": 7.841
+    },
+    {
+      "text": "um and then we have",
+      "start": 568.8,
+      "duration": 8.32
+    },
+    {
+      "text": "10 million shares outstanding so uh",
+      "start": 572.24,
+      "duration": 8.56
+    },
+    {
+      "text": "the the dividend payment",
+      "start": 577.12,
+      "duration": 6.88
+    },
+    {
+      "text": "to equity is going to equal",
+      "start": 580.8,
+      "duration": 5.36
+    },
+    {
+      "text": "the number of shares outstanding",
+      "start": 584.0,
+      "duration": 3.36
+    },
+    {
+      "text": "multiplied",
+      "start": 586.16,
+      "duration": 5.679
+    },
+    {
+      "text": "by the dividend",
+      "start": 587.36,
+      "duration": 4.479
+    },
+    {
+      "text": "so the dividend payment to equity is",
+      "start": 595.68,
+      "duration": 4.8
+    },
+    {
+      "text": "going to be 10 million dollars",
+      "start": 598.08,
+      "duration": 6.24
+    },
+    {
+      "text": "um so then um",
+      "start": 600.48,
+      "duration": 7.039
+    },
+    {
+      "text": "we're going to have that for years zero",
+      "start": 604.32,
+      "duration": 4.56
+    },
+    {
+      "text": "to three",
+      "start": 607.519,
+      "duration": 4.56
+    },
+    {
+      "text": "and then um in year four",
+      "start": 608.88,
+      "duration": 6.72
+    },
+    {
+      "text": "then um we have this acquisition to",
+      "start": 612.079,
+      "duration": 4.801
+    },
+    {
+      "text": "consider",
+      "start": 615.6,
+      "duration": 4.799
+    },
+    {
+      "text": "so for that acquisition",
+      "start": 616.88,
+      "duration": 6.76
+    },
+    {
+      "text": "we have 30 million dollars so um",
+      "start": 620.399,
+      "duration": 6.56
+    },
+    {
+      "text": "acquisition price",
+      "start": 623.64,
+      "duration": 7.199
+    },
+    {
+      "text": "is 30 million dollars",
+      "start": 626.959,
+      "duration": 8.181
+    },
+    {
+      "text": "um and so the",
+      "start": 630.839,
+      "duration": 5.641
+    },
+    {
+      "text": "[Music]",
+      "start": 635.14,
+      "duration": 5.42
+    },
+    {
+      "text": "acquisition to equity is going to equal",
+      "start": 636.48,
+      "duration": 4.479
+    },
+    {
+      "text": "the",
+      "start": 640.56,
+      "duration": 3.839
+    },
+    {
+      "text": "acquisition price minus the amount of",
+      "start": 640.959,
+      "duration": 4.721
+    },
+    {
+      "text": "the debt",
+      "start": 644.399,
+      "duration": 2.721
+    },
+    {
+      "text": "because they have to pay off the debt",
+      "start": 645.68,
+      "duration": 3.04
+    },
+    {
+      "text": "holders so now",
+      "start": 647.12,
+      "duration": 4.32
+    },
+    {
+      "text": "the acquisition to equity is going to be",
+      "start": 648.72,
+      "duration": 5.52
+    },
+    {
+      "text": "20 million dollars",
+      "start": 651.44,
+      "duration": 5.12
+    },
+    {
+      "text": "so then uh we're not going to have these",
+      "start": 654.24,
+      "duration": 3.039
+    },
+    {
+      "text": "cash flows",
+      "start": 656.56,
+      "duration": 2.48
+    },
+    {
+      "text": "anymore we're now going to be creating",
+      "start": 657.279,
+      "duration": 3.201
+    },
+    {
+      "text": "new cash flows",
+      "start": 659.04,
+      "duration": 4.799
+    },
+    {
+      "text": "based on that so that's going to be",
+      "start": 660.48,
+      "duration": 6.479
+    },
+    {
+      "text": "the dividend payment",
+      "start": 663.839,
+      "duration": 5.68
+    },
+    {
+      "text": "to equity and we're going to get that",
+      "start": 666.959,
+      "duration": 4.721
+    },
+    {
+      "text": "for",
+      "start": 669.519,
+      "duration": 5.76
+    },
+    {
+      "text": "your 0 to zero to three right",
+      "start": 671.68,
+      "duration": 6.08
+    },
+    {
+      "text": "um yep that's four years zero one two",
+      "start": 675.279,
+      "duration": 4.0
+    },
+    {
+      "text": "three",
+      "start": 677.76,
+      "duration": 4.96
+    },
+    {
+      "text": "um and then we're going to add on",
+      "start": 679.279,
+      "duration": 6.961
+    },
+    {
+      "text": "this uh final payment of the acquisition",
+      "start": 682.72,
+      "duration": 4.239
+    },
+    {
+      "text": "amount to",
+      "start": 686.24,
+      "duration": 4.24
+    },
+    {
+      "text": "equity so",
+      "start": 686.959,
+      "duration": 5.681
+    },
+    {
+      "text": "yep now we have four periods of the",
+      "start": 690.48,
+      "duration": 3.28
+    },
+    {
+      "text": "dividend payment",
+      "start": 692.64,
+      "duration": 5.04
+    },
+    {
+      "text": "and one period of the acquisition",
+      "start": 693.76,
+      "duration": 3.92
+    },
+    {
+      "text": "so now um we can",
+      "start": 697.76,
+      "duration": 8.16
+    },
+    {
+      "text": "get now the equity value",
+      "start": 701.44,
+      "duration": 4.48
+    },
+    {
+      "text": "because these are all payments to equity",
+      "start": 707.2,
+      "duration": 4.079
+    },
+    {
+      "text": "so by taking the present value of",
+      "start": 711.6,
+      "duration": 6.479
+    },
+    {
+      "text": "these payments now we have the",
+      "start": 714.8,
+      "duration": 7.52
+    },
+    {
+      "text": "uh current day value of equity",
+      "start": 718.079,
+      "duration": 7.521
+    },
+    {
+      "text": "um so then in order to get to the",
+      "start": 722.32,
+      "duration": 5.44
+    },
+    {
+      "text": "current day",
+      "start": 725.6,
+      "duration": 5.679
+    },
+    {
+      "text": "stock price we just take that equity",
+      "start": 727.76,
+      "duration": 8.48
+    },
+    {
+      "text": "value and divide by the shares",
+      "start": 731.279,
+      "duration": 4.961
+    },
+    {
+      "text": "so 4.85 cents",
+      "start": 736.639,
+      "duration": 6.32
+    },
+    {
+      "text": "and in order to get the current equity",
+      "start": 740.079,
+      "duration": 3.921
+    },
+    {
+      "text": "value",
+      "start": 742.959,
+      "duration": 4.161
+    },
+    {
+      "text": "we just follow this formula we're going",
+      "start": 744.0,
+      "duration": 5.36
+    },
+    {
+      "text": "to",
+      "start": 747.12,
+      "duration": 2.24
+    },
+    {
+      "text": "take the debt plus the equity value",
+      "start": 749.76,
+      "duration": 9.36
+    },
+    {
+      "text": "and minus the cash and that is going to",
+      "start": 755.279,
+      "duration": 4.641
+    },
+    {
+      "text": "be",
+      "start": 759.12,
+      "duration": 5.36
+    },
+    {
+      "text": "the enterprise value",
+      "start": 759.92,
+      "duration": 4.56
+    },
+    {
+      "text": "and the last question that was being",
+      "start": 767.44,
+      "duration": 3.519
+    },
+    {
+      "text": "asked was again what is the enterprise",
+      "start": 768.88,
+      "duration": 4.72
+    },
+    {
+      "text": "value at year four",
+      "start": 770.959,
+      "duration": 6.481
+    },
+    {
+      "text": "um which",
+      "start": 773.6,
+      "duration": 3.84
+    },
+    {
+      "text": "would be again just we're about to",
+      "start": 777.6,
+      "duration": 4.799
+    },
+    {
+      "text": "receive this 30 million dollar payment",
+      "start": 780.48,
+      "duration": 3.52
+    },
+    {
+      "text": "to buy out the company",
+      "start": 782.399,
+      "duration": 3.841
+    },
+    {
+      "text": "and so the enterprise value at year four",
+      "start": 784.0,
+      "duration": 5.36
+    },
+    {
+      "text": "is 30 million",
+      "start": 786.24,
+      "duration": 3.12
+    },
+    {
+      "text": "so that covers uh the lab exercises",
+      "start": 789.6,
+      "duration": 5.919
+    },
+    {
+      "text": "on finding enterprise and equity value",
+      "start": 793.279,
+      "duration": 4.081
+    },
+    {
+      "text": "given free cash flows and",
+      "start": 795.519,
+      "duration": 4.32
+    },
+    {
+      "text": "whack thanks for listening i'll see you",
+      "start": 797.36,
+      "duration": 6.8
+    },
+    {
+      "text": "next time",
+      "start": 799.839,
+      "duration": 4.321
+    }
+  ]
+}

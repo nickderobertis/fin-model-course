@@ -116,3 +116,30 @@ def get_project_3_lecture() -> Lecture:
         *RESOURCES.projects.project_3.resources(),
     ]
     return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)
+
+
+def get_project_4_lecture() -> Lecture:
+    project_title = 'Full DCF Valuation'
+    project_num = 4
+    title = f'Project {project_num} - {project_title}'
+    youtube_id = 'FtcMf0yjPVw'
+    week_covered = 12
+    notes = LectureNotes([
+        'The focus of this project is to complete the full Discounted Cash Flow (DCF) valuation '
+        'of a stock',
+        'The other main focus of the project is to transition you into modeling in the real world '
+        "where you won't have the template and answers provided",
+        'This is an open-ended project, you get to choose the company you want to value and you can '
+        'feel free to use Python, Excel, or a combination',
+        'Be sure to complete all the extensions to the model including sensitivity analysis, scenario '
+        'analysis, Monte Carlo simulation, and visualization or you will lose substantial points',
+        'Your analysis of the company is important to set the assumptions for the forecasts. You need to '
+        'research the company and its plans for the future and incorporate your findings into the forecasts',
+        'You also need to analyze the results from the model and the extensions, and produce a report of '
+        'your research and findings from the model',
+        'The bonus is similarly unstructured, do a great job in any area(s) of the model to be eligible for the bonus'
+    ], title=title)
+    resources = [
+        *RESOURCES.projects.project_4.resources(),
+    ]
+    return Lecture(title, week_covered, notes, youtube_id=youtube_id, resources=resources)

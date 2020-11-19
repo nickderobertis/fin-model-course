@@ -1,0 +1,1794 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick dear burtis",
+      "start": 4.08,
+      "duration": 3.6
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 6.0,
+      "duration": 3.519
+    },
+    {
+      "text": "today we're going to be talking about",
+      "start": 7.68,
+      "duration": 4.8
+    },
+    {
+      "text": "forecasting simple financial statements",
+      "start": 9.519,
+      "duration": 6.08
+    },
+    {
+      "text": "in python using fin statement this is",
+      "start": 12.48,
+      "duration": 4.719
+    },
+    {
+      "text": "part of our lecture series on",
+      "start": 15.599,
+      "duration": 3.281
+    },
+    {
+      "text": "free cash flow estimation and",
+      "start": 17.199,
+      "duration": 4.0
+    },
+    {
+      "text": "forecasting which is part of a broader",
+      "start": 18.88,
+      "duration": 3.6
+    },
+    {
+      "text": "goal in the course of",
+      "start": 21.199,
+      "duration": 4.0
+    },
+    {
+      "text": "building out a full discounted cash flow",
+      "start": 22.48,
+      "duration": 3.52
+    },
+    {
+      "text": "valuation",
+      "start": 25.199,
+      "duration": 4.561
+    },
+    {
+      "text": "of a stock so",
+      "start": 26.0,
+      "duration": 6.88
+    },
+    {
+      "text": "we had just finished all the simple",
+      "start": 29.76,
+      "duration": 6.24
+    },
+    {
+      "text": "forecasting material in prior videos",
+      "start": 32.88,
+      "duration": 6.88
+    },
+    {
+      "text": "and um we had looked at",
+      "start": 36.0,
+      "duration": 6.399
+    },
+    {
+      "text": "examples of how to do simple time series",
+      "start": 39.76,
+      "duration": 3.92
+    },
+    {
+      "text": "forecasting",
+      "start": 42.399,
+      "duration": 4.0
+    },
+    {
+      "text": "but now this is focusing on working with",
+      "start": 43.68,
+      "duration": 4.48
+    },
+    {
+      "text": "the entire financial statements",
+      "start": 46.399,
+      "duration": 4.241
+    },
+    {
+      "text": "in a forecast and using the fence",
+      "start": 48.16,
+      "duration": 3.44
+    },
+    {
+      "text": "statement package",
+      "start": 50.64,
+      "duration": 4.239
+    },
+    {
+      "text": "to smooth that process",
+      "start": 51.6,
+      "duration": 6.56
+    },
+    {
+      "text": "so we can jump over to the example",
+      "start": 54.879,
+      "duration": 7.52
+    },
+    {
+      "text": "jupiter notebook so",
+      "start": 58.16,
+      "duration": 7.76
+    },
+    {
+      "text": "um the first thing that we'll do here",
+      "start": 62.399,
+      "duration": 6.561
+    },
+    {
+      "text": "is uh load in the",
+      "start": 65.92,
+      "duration": 6.08
+    },
+    {
+      "text": "financial statements so",
+      "start": 68.96,
+      "duration": 6.479
+    },
+    {
+      "text": "we are going to um",
+      "start": 72.0,
+      "duration": 6.32
+    },
+    {
+      "text": "create data frames from the csv files",
+      "start": 75.439,
+      "duration": 4.32
+    },
+    {
+      "text": "that have the statements",
+      "start": 78.32,
+      "duration": 4.56
+    },
+    {
+      "text": "and then create the balance sheet",
+      "start": 79.759,
+      "duration": 6.481
+    },
+    {
+      "text": "income statements uh both from",
+      "start": 82.88,
+      "duration": 6.239
+    },
+    {
+      "text": "those data frames and then create the",
+      "start": 86.24,
+      "duration": 3.919
+    },
+    {
+      "text": "financial statements",
+      "start": 89.119,
+      "duration": 3.841
+    },
+    {
+      "text": "from the income statement and balance",
+      "start": 90.159,
+      "duration": 4.96
+    },
+    {
+      "text": "sheet",
+      "start": 92.96,
+      "duration": 5.68
+    },
+    {
+      "text": "so since we've done that we can view",
+      "start": 95.119,
+      "duration": 6.401
+    },
+    {
+      "text": "the statements so we see the income",
+      "start": 98.64,
+      "duration": 3.759
+    },
+    {
+      "text": "statement",
+      "start": 101.52,
+      "duration": 4.559
+    },
+    {
+      "text": "and all the different periods of values",
+      "start": 102.399,
+      "duration": 7.36
+    },
+    {
+      "text": "and we see the balance sheet also with",
+      "start": 106.079,
+      "duration": 7.921
+    },
+    {
+      "text": "all the different periods of values",
+      "start": 109.759,
+      "duration": 8.0
+    },
+    {
+      "text": "so um we're going to look at",
+      "start": 114.0,
+      "duration": 7.68
+    },
+    {
+      "text": "forecasting um we have a couple of",
+      "start": 117.759,
+      "duration": 5.121
+    },
+    {
+      "text": "different",
+      "start": 121.68,
+      "duration": 4.479
+    },
+    {
+      "text": "uh configuration settings um but here is",
+      "start": 122.88,
+      "duration": 5.359
+    },
+    {
+      "text": "a little aside to say",
+      "start": 126.159,
+      "duration": 3.761
+    },
+    {
+      "text": "uh it's often the case that you might",
+      "start": 128.239,
+      "duration": 4.321
+    },
+    {
+      "text": "want to run multiple different forecasts",
+      "start": 129.92,
+      "duration": 4.88
+    },
+    {
+      "text": "so if you know that's true then you can",
+      "start": 132.56,
+      "duration": 3.36
+    },
+    {
+      "text": "make a copy",
+      "start": 134.8,
+      "duration": 4.0
+    },
+    {
+      "text": "of the statements to keep uh any changes",
+      "start": 135.92,
+      "duration": 5.039
+    },
+    {
+      "text": "that you make to the configuration",
+      "start": 138.8,
+      "duration": 4.799
+    },
+    {
+      "text": "separate so that you can run multiple",
+      "start": 140.959,
+      "duration": 4.321
+    },
+    {
+      "text": "completely separate forecasts",
+      "start": 143.599,
+      "duration": 4.081
+    },
+    {
+      "text": "so here is how you would copy the",
+      "start": 145.28,
+      "duration": 3.2
+    },
+    {
+      "text": "statements",
+      "start": 147.68,
+      "duration": 4.0
+    },
+    {
+      "text": "into uh additional uh",
+      "start": 148.48,
+      "duration": 4.72
+    },
+    {
+      "text": "statements which are now totally",
+      "start": 151.68,
+      "duration": 5.36
+    },
+    {
+      "text": "separate from the first",
+      "start": 153.2,
+      "duration": 7.039
+    },
+    {
+      "text": "so now let's jump into forecasting",
+      "start": 157.04,
+      "duration": 6.72
+    },
+    {
+      "text": "um so what we have",
+      "start": 160.239,
+      "duration": 6.481
+    },
+    {
+      "text": "um in order to understand what",
+      "start": 163.76,
+      "duration": 5.199
+    },
+    {
+      "text": "assumptions are going into the forecast",
+      "start": 166.72,
+      "duration": 5.68
+    },
+    {
+      "text": "is this dot forecast assumptions uh",
+      "start": 168.959,
+      "duration": 6.081
+    },
+    {
+      "text": "attribute on the financial statements",
+      "start": 172.4,
+      "duration": 4.32
+    },
+    {
+      "text": "object",
+      "start": 175.04,
+      "duration": 3.76
+    },
+    {
+      "text": "so when you look at that as penis data",
+      "start": 176.72,
+      "duration": 3.12
+    },
+    {
+      "text": "frame",
+      "start": 178.8,
+      "duration": 4.24
+    },
+    {
+      "text": "of basically each",
+      "start": 179.84,
+      "duration": 6.24
+    },
+    {
+      "text": "line item in the index and some details",
+      "start": 183.04,
+      "duration": 6.16
+    },
+    {
+      "text": "about how the forecast is going to be",
+      "start": 186.08,
+      "duration": 4.879
+    },
+    {
+      "text": "carried out",
+      "start": 189.2,
+      "duration": 5.84
+    },
+    {
+      "text": "so the first column here is",
+      "start": 190.959,
+      "duration": 7.36
+    },
+    {
+      "text": "the method so you can choose",
+      "start": 195.04,
+      "duration": 6.32
+    },
+    {
+      "text": "among one of the available forecast",
+      "start": 198.319,
+      "duration": 7.041
+    },
+    {
+      "text": "methods in order to do the forecast",
+      "start": 201.36,
+      "duration": 6.32
+    },
+    {
+      "text": "and it defaults to the compounded annual",
+      "start": 205.36,
+      "duration": 3.28
+    },
+    {
+      "text": "growth rate",
+      "start": 207.68,
+      "duration": 3.52
+    },
+    {
+      "text": "but we can also choose to use the",
+      "start": 208.64,
+      "duration": 3.44
+    },
+    {
+      "text": "average",
+      "start": 211.2,
+      "duration": 3.759
+    },
+    {
+      "text": "approach the recent value approach or",
+      "start": 212.08,
+      "duration": 3.2
+    },
+    {
+      "text": "the",
+      "start": 214.959,
+      "duration": 4.081
+    },
+    {
+      "text": "trend regression approach",
+      "start": 215.28,
+      "duration": 5.36
+    },
+    {
+      "text": "and when we get into looking at more",
+      "start": 219.04,
+      "duration": 3.44
+    },
+    {
+      "text": "complex time series we'll see another",
+      "start": 220.64,
+      "duration": 6.56
+    },
+    {
+      "text": "approach which is helpful there as well",
+      "start": 222.48,
+      "duration": 8.319
+    },
+    {
+      "text": "and then the next column here is talking",
+      "start": 227.2,
+      "duration": 4.64
+    },
+    {
+      "text": "about",
+      "start": 230.799,
+      "duration": 3.52
+    },
+    {
+      "text": "is this item forecasted as a percentage",
+      "start": 231.84,
+      "duration": 4.08
+    },
+    {
+      "text": "of another item",
+      "start": 234.319,
+      "duration": 4.881
+    },
+    {
+      "text": "so you see here that revenue is not",
+      "start": 235.92,
+      "duration": 4.959
+    },
+    {
+      "text": "forecasted as a percentage of another",
+      "start": 239.2,
+      "duration": 3.759
+    },
+    {
+      "text": "item it's forecasted standalone",
+      "start": 240.879,
+      "duration": 4.401
+    },
+    {
+      "text": "but cost of goods sold is forecasted as",
+      "start": 242.959,
+      "duration": 3.36
+    },
+    {
+      "text": "a percentage of",
+      "start": 245.28,
+      "duration": 4.4
+    },
+    {
+      "text": "revenue and it has kind of the standard",
+      "start": 246.319,
+      "duration": 4.801
+    },
+    {
+      "text": "assumptions that you would normally",
+      "start": 249.68,
+      "duration": 4.639
+    },
+    {
+      "text": "see for forecasting items as a",
+      "start": 251.12,
+      "duration": 5.519
+    },
+    {
+      "text": "percentage of other items",
+      "start": 254.319,
+      "duration": 4.001
+    },
+    {
+      "text": "but you can adjust that further if",
+      "start": 256.639,
+      "duration": 4.0
+    },
+    {
+      "text": "needed",
+      "start": 258.32,
+      "duration": 5.76
+    },
+    {
+      "text": "um and then next we have",
+      "start": 260.639,
+      "duration": 6.161
+    },
+    {
+      "text": "cap and floor that's in case you want to",
+      "start": 264.08,
+      "duration": 3.44
+    },
+    {
+      "text": "put",
+      "start": 266.8,
+      "duration": 3.76
+    },
+    {
+      "text": "a minimum or a maximum on your",
+      "start": 267.52,
+      "duration": 5.84
+    },
+    {
+      "text": "forecasted values",
+      "start": 270.56,
+      "duration": 5.6
+    },
+    {
+      "text": "and then finally here we have plug which",
+      "start": 273.36,
+      "duration": 3.76
+    },
+    {
+      "text": "is about",
+      "start": 276.16,
+      "duration": 3.12
+    },
+    {
+      "text": "balancing the balance sheet so the",
+      "start": 277.12,
+      "duration": 3.68
+    },
+    {
+      "text": "library will automatically",
+      "start": 279.28,
+      "duration": 3.52
+    },
+    {
+      "text": "balance the balance sheet for you based",
+      "start": 280.8,
+      "duration": 4.16
+    },
+    {
+      "text": "off of the forecasts",
+      "start": 282.8,
+      "duration": 5.36
+    },
+    {
+      "text": "but in order to do that it does have to",
+      "start": 284.96,
+      "duration": 7.44
+    },
+    {
+      "text": "avoid uh forecasting uh",
+      "start": 288.16,
+      "duration": 7.84
+    },
+    {
+      "text": "at least one one or two items",
+      "start": 292.4,
+      "duration": 6.72
+    },
+    {
+      "text": "uh typically one on the assets uh",
+      "start": 296.0,
+      "duration": 5.44
+    },
+    {
+      "text": "one on the asset side and one on the",
+      "start": 299.12,
+      "duration": 4.4
+    },
+    {
+      "text": "liabilities side",
+      "start": 301.44,
+      "duration": 5.039
+    },
+    {
+      "text": "liabilities or equity side um in order",
+      "start": 303.52,
+      "duration": 4.239
+    },
+    {
+      "text": "to balance the balance sheet based off",
+      "start": 306.479,
+      "duration": 2.72
+    },
+    {
+      "text": "your forecast it has to",
+      "start": 307.759,
+      "duration": 5.28
+    },
+    {
+      "text": "manually adjust these values",
+      "start": 309.199,
+      "duration": 7.28
+    },
+    {
+      "text": "and so by default cash",
+      "start": 313.039,
+      "duration": 6.081
+    },
+    {
+      "text": "and long term debt are going to be the",
+      "start": 316.479,
+      "duration": 3.921
+    },
+    {
+      "text": "plug items",
+      "start": 319.12,
+      "duration": 5.12
+    },
+    {
+      "text": "so if the assets are too high from your",
+      "start": 320.4,
+      "duration": 5.76
+    },
+    {
+      "text": "initial forecast it's going to increase",
+      "start": 324.24,
+      "duration": 3.519
+    },
+    {
+      "text": "the debt",
+      "start": 326.16,
+      "duration": 4.0
+    },
+    {
+      "text": "and if the assets are too low then it's",
+      "start": 327.759,
+      "duration": 3.041
+    },
+    {
+      "text": "going to",
+      "start": 330.16,
+      "duration": 4.08
+    },
+    {
+      "text": "increase the cash basically",
+      "start": 330.8,
+      "duration": 5.76
+    },
+    {
+      "text": "but you can adjust which items are the",
+      "start": 334.24,
+      "duration": 3.12
+    },
+    {
+      "text": "plug",
+      "start": 336.56,
+      "duration": 2.639
+    },
+    {
+      "text": "should you want to directly forecast",
+      "start": 337.36,
+      "duration": 4.24
+    },
+    {
+      "text": "cash or directly forecast long-term debt",
+      "start": 339.199,
+      "duration": 3.041
+    },
+    {
+      "text": "and have",
+      "start": 341.6,
+      "duration": 4.96
+    },
+    {
+      "text": "something else serve as the plug",
+      "start": 342.24,
+      "duration": 4.32
+    },
+    {
+      "text": "so we can update this configuration",
+      "start": 347.28,
+      "duration": 6.56
+    },
+    {
+      "text": "using the update method so we",
+      "start": 354.56,
+      "duration": 8.72
+    },
+    {
+      "text": "on the statements we have this",
+      "start": 358.96,
+      "duration": 8.239
+    },
+    {
+      "text": "config and we can",
+      "start": 363.28,
+      "duration": 8.4
+    },
+    {
+      "text": "update that um",
+      "start": 367.199,
+      "duration": 4.481
+    },
+    {
+      "text": "so we have update and update all um here",
+      "start": 373.039,
+      "duration": 3.521
+    },
+    {
+      "text": "update",
+      "start": 376.08,
+      "duration": 3.119
+    },
+    {
+      "text": "all so all of these forecast assumptions",
+      "start": 376.56,
+      "duration": 3.44
+    },
+    {
+      "text": "are going to be under",
+      "start": 379.199,
+      "duration": 3.84
+    },
+    {
+      "text": "the forecast config so you pass first a",
+      "start": 380.0,
+      "duration": 4.0
+    },
+    {
+      "text": "list",
+      "start": 383.039,
+      "duration": 3.6
+    },
+    {
+      "text": "uh where the first item will be forecast",
+      "start": 384.0,
+      "duration": 4.96
+    },
+    {
+      "text": "config",
+      "start": 386.639,
+      "duration": 4.881
+    },
+    {
+      "text": "and the second item will be which one of",
+      "start": 388.96,
+      "duration": 4.079
+    },
+    {
+      "text": "these that you want to",
+      "start": 391.52,
+      "duration": 5.119
+    },
+    {
+      "text": "update so here method",
+      "start": 393.039,
+      "duration": 6.72
+    },
+    {
+      "text": "and then that list is the first argument",
+      "start": 396.639,
+      "duration": 4.641
+    },
+    {
+      "text": "what you want to update",
+      "start": 399.759,
+      "duration": 4.241
+    },
+    {
+      "text": "and then the value you want to use to",
+      "start": 401.28,
+      "duration": 4.32
+    },
+    {
+      "text": "update it comes next",
+      "start": 404.0,
+      "duration": 4.8
+    },
+    {
+      "text": "so this sets the compounded annual",
+      "start": 405.6,
+      "duration": 5.36
+    },
+    {
+      "text": "growth rate method for all the forecasts",
+      "start": 408.8,
+      "duration": 4.16
+    },
+    {
+      "text": "of course we already had that",
+      "start": 410.96,
+      "duration": 5.44
+    },
+    {
+      "text": "uh we could also set it a trend and see",
+      "start": 412.96,
+      "duration": 4.72
+    },
+    {
+      "text": "that come through",
+      "start": 416.4,
+      "duration": 4.799
+    },
+    {
+      "text": "on all the assumptions",
+      "start": 417.68,
+      "duration": 3.519
+    },
+    {
+      "text": "um and you can also update",
+      "start": 421.28,
+      "duration": 6.96
+    },
+    {
+      "text": "a single item um so to update",
+      "start": 424.56,
+      "duration": 7.28
+    },
+    {
+      "text": "a single item then it's um",
+      "start": 428.24,
+      "duration": 5.92
+    },
+    {
+      "text": "going to be a similar syntax and we'll",
+      "start": 431.84,
+      "duration": 3.28
+    },
+    {
+      "text": "see that here",
+      "start": 434.16,
+      "duration": 4.08
+    },
+    {
+      "text": "in a moment but i'm going to switch it",
+      "start": 435.12,
+      "duration": 4.4
+    },
+    {
+      "text": "back to the",
+      "start": 438.24,
+      "duration": 4.799
+    },
+    {
+      "text": "compounding growth rate method",
+      "start": 439.52,
+      "duration": 3.519
+    },
+    {
+      "text": "so the way that we forecast once we have",
+      "start": 445.36,
+      "duration": 4.8
+    },
+    {
+      "text": "decided that our",
+      "start": 449.12,
+      "duration": 2.479
+    },
+    {
+      "text": "assumptions are good enough to run the",
+      "start": 450.16,
+      "duration": 3.52
+    },
+    {
+      "text": "forecast then",
+      "start": 451.599,
+      "duration": 5.44
+    },
+    {
+      "text": "um there's just a dot forecast method on",
+      "start": 453.68,
+      "duration": 6.079
+    },
+    {
+      "text": "the financial statements and then you'll",
+      "start": 457.039,
+      "duration": 3.041
+    },
+    {
+      "text": "see",
+      "start": 459.759,
+      "duration": 3.361
+    },
+    {
+      "text": "some output go by",
+      "start": 460.08,
+      "duration": 3.04
+    },
+    {
+      "text": "and the warnings that you see here are",
+      "start": 463.52,
+      "duration": 3.119
+    },
+    {
+      "text": "about",
+      "start": 465.759,
+      "duration": 3.12
+    },
+    {
+      "text": "uh the compounded annual growth rate not",
+      "start": 466.639,
+      "duration": 3.921
+    },
+    {
+      "text": "being an appropriate method for some of",
+      "start": 468.879,
+      "duration": 2.401
+    },
+    {
+      "text": "the items",
+      "start": 470.56,
+      "duration": 2.479
+    },
+    {
+      "text": "basically the items which are at zero",
+      "start": 471.28,
+      "duration": 3.44
+    },
+    {
+      "text": "the entire time it can't calculate a",
+      "start": 473.039,
+      "duration": 3.041
+    },
+    {
+      "text": "growth rate",
+      "start": 474.72,
+      "duration": 4.64
+    },
+    {
+      "text": "um so you could set those to trend",
+      "start": 476.08,
+      "duration": 5.2
+    },
+    {
+      "text": "if the warnings bother you otherwise",
+      "start": 479.36,
+      "duration": 4.72
+    },
+    {
+      "text": "it's just going to remain at zero anyway",
+      "start": 481.28,
+      "duration": 5.68
+    },
+    {
+      "text": "um and then we can look at the",
+      "start": 484.08,
+      "duration": 4.64
+    },
+    {
+      "text": "forecasted statements",
+      "start": 486.96,
+      "duration": 5.28
+    },
+    {
+      "text": "so uh by default it's going to forecast",
+      "start": 488.72,
+      "duration": 6.24
+    },
+    {
+      "text": "for five periods into the future you are",
+      "start": 492.24,
+      "duration": 3.92
+    },
+    {
+      "text": "able to",
+      "start": 494.96,
+      "duration": 4.48
+    },
+    {
+      "text": "adjust that in the forecast",
+      "start": 496.16,
+      "duration": 6.8
+    },
+    {
+      "text": "arguments um",
+      "start": 499.44,
+      "duration": 6.56
+    },
+    {
+      "text": "and then",
+      "start": 502.96,
+      "duration": 5.12
+    },
+    {
+      "text": "we have all of our forecasted statements",
+      "start": 506.0,
+      "duration": 4.08
+    },
+    {
+      "text": "here but it can be a little difficult to",
+      "start": 508.08,
+      "duration": 3.76
+    },
+    {
+      "text": "see what happened just from the numbers",
+      "start": 510.08,
+      "duration": 4.879
+    },
+    {
+      "text": "so there's also a plot method which is",
+      "start": 511.84,
+      "duration": 5.04
+    },
+    {
+      "text": "going to show us",
+      "start": 514.959,
+      "duration": 4.721
+    },
+    {
+      "text": "all of the different forecast plots",
+      "start": 516.88,
+      "duration": 3.12
+    },
+    {
+      "text": "which",
+      "start": 519.68,
+      "duration": 3.52
+    },
+    {
+      "text": "we can easily examine to understand what",
+      "start": 520.0,
+      "duration": 6.72
+    },
+    {
+      "text": "happened with the forecast",
+      "start": 523.2,
+      "duration": 3.52
+    },
+    {
+      "text": "so we can see the forecast for revenue",
+      "start": 527.279,
+      "duration": 4.161
+    },
+    {
+      "text": "we can see that forecasted cost of goods",
+      "start": 529.68,
+      "duration": 4.48
+    },
+    {
+      "text": "sold as a percentage of revenue and",
+      "start": 531.44,
+      "duration": 6.16
+    },
+    {
+      "text": "all these other line items as well",
+      "start": 534.16,
+      "duration": 5.359
+    },
+    {
+      "text": "so all that just kind of happened in the",
+      "start": 537.6,
+      "duration": 3.6
+    },
+    {
+      "text": "background for us",
+      "start": 539.519,
+      "duration": 8.801
+    },
+    {
+      "text": "and now we have forecasts for everything",
+      "start": 541.2,
+      "duration": 8.72
+    },
+    {
+      "text": "if you want to just look at a few plots",
+      "start": 548.32,
+      "duration": 3.519
+    },
+    {
+      "text": "you can pass the subset to the plot",
+      "start": 549.92,
+      "duration": 3.039
+    },
+    {
+      "text": "method",
+      "start": 551.839,
+      "duration": 3.44
+    },
+    {
+      "text": "so you don't have this huge output every",
+      "start": 552.959,
+      "duration": 4.56
+    },
+    {
+      "text": "time",
+      "start": 555.279,
+      "duration": 2.24
+    },
+    {
+      "text": "so um if you want to",
+      "start": 559.04,
+      "duration": 6.479
+    },
+    {
+      "text": "update particular items you can use this",
+      "start": 562.32,
+      "duration": 4.959
+    },
+    {
+      "text": "syntax so it's the same as the update",
+      "start": 565.519,
+      "duration": 3.521
+    },
+    {
+      "text": "all syntax except we first",
+      "start": 567.279,
+      "duration": 4.0
+    },
+    {
+      "text": "put the name of the item that we want to",
+      "start": 569.04,
+      "duration": 3.52
+    },
+    {
+      "text": "update",
+      "start": 571.279,
+      "duration": 4.401
+    },
+    {
+      "text": "um so this is going to set revenue",
+      "start": 572.56,
+      "duration": 5.68
+    },
+    {
+      "text": "to the trend forecast method and it's",
+      "start": 575.68,
+      "duration": 3.839
+    },
+    {
+      "text": "going to set",
+      "start": 578.24,
+      "duration": 4.159
+    },
+    {
+      "text": "cost of goods sold to the mean forecast",
+      "start": 579.519,
+      "duration": 5.281
+    },
+    {
+      "text": "method",
+      "start": 582.399,
+      "duration": 2.401
+    },
+    {
+      "text": "so when we look at the forecast",
+      "start": 584.959,
+      "duration": 7.201
+    },
+    {
+      "text": "assumptions then we'll see that those",
+      "start": 588.839,
+      "duration": 3.881
+    },
+    {
+      "text": "have",
+      "start": 592.16,
+      "duration": 3.52
+    },
+    {
+      "text": "updated revenues now trend cost of goods",
+      "start": 592.72,
+      "duration": 3.36
+    },
+    {
+      "text": "sold",
+      "start": 595.68,
+      "duration": 2.48
+    },
+    {
+      "text": "is now a mean but still a percentage of",
+      "start": 596.08,
+      "duration": 4.56
+    },
+    {
+      "text": "revenue",
+      "start": 598.16,
+      "duration": 2.48
+    },
+    {
+      "text": "so then we can run the forecast again",
+      "start": 601.76,
+      "duration": 8.24
+    },
+    {
+      "text": "and we will see the results here in a",
+      "start": 605.76,
+      "duration": 4.8
+    },
+    {
+      "text": "moment",
+      "start": 610.0,
+      "duration": 2.16
+    },
+    {
+      "text": "it does take a little bit of time to",
+      "start": 610.56,
+      "duration": 4.32
+    },
+    {
+      "text": "balance the balance sheet",
+      "start": 612.16,
+      "duration": 5.44
+    },
+    {
+      "text": "and then we can look at the results that",
+      "start": 614.88,
+      "duration": 5.199
+    },
+    {
+      "text": "come out",
+      "start": 617.6,
+      "duration": 2.479
+    },
+    {
+      "text": "um so we'll see now in contrast to",
+      "start": 620.16,
+      "duration": 4.16
+    },
+    {
+      "text": "before",
+      "start": 623.2,
+      "duration": 4.4
+    },
+    {
+      "text": "we can see that um",
+      "start": 624.32,
+      "duration": 6.0
+    },
+    {
+      "text": "before the cost of goods sold was using",
+      "start": 627.6,
+      "duration": 4.08
+    },
+    {
+      "text": "a compound or annual growth rate",
+      "start": 630.32,
+      "duration": 2.639
+    },
+    {
+      "text": "approach",
+      "start": 631.68,
+      "duration": 4.159
+    },
+    {
+      "text": "and now it is at an average approach",
+      "start": 632.959,
+      "duration": 5.281
+    },
+    {
+      "text": "instead",
+      "start": 635.839,
+      "duration": 4.721
+    },
+    {
+      "text": "and same thing with the revenue",
+      "start": 638.24,
+      "duration": 4.0
+    },
+    {
+      "text": "compounded annual growth rate",
+      "start": 640.56,
+      "duration": 4.719
+    },
+    {
+      "text": "before and now it is using a trendline",
+      "start": 642.24,
+      "duration": 5.599
+    },
+    {
+      "text": "approach",
+      "start": 645.279,
+      "duration": 2.56
+    },
+    {
+      "text": "so um then it's often the case that you",
+      "start": 649.44,
+      "duration": 5.12
+    },
+    {
+      "text": "don't just want to take",
+      "start": 653.36,
+      "duration": 2.96
+    },
+    {
+      "text": "kind of the baseline result that you get",
+      "start": 654.56,
+      "duration": 3.68
+    },
+    {
+      "text": "from the forecast you may have some kind",
+      "start": 656.32,
+      "duration": 2.72
+    },
+    {
+      "text": "of",
+      "start": 658.24,
+      "duration": 3.52
+    },
+    {
+      "text": "qualitative information that you can use",
+      "start": 659.04,
+      "duration": 5.12
+    },
+    {
+      "text": "to adjust the forecast such as some",
+      "start": 661.76,
+      "duration": 4.48
+    },
+    {
+      "text": "new project that you know is coming on",
+      "start": 664.16,
+      "duration": 4.0
+    },
+    {
+      "text": "for the company or some other change in",
+      "start": 666.24,
+      "duration": 4.159
+    },
+    {
+      "text": "the operations which is not reflected",
+      "start": 668.16,
+      "duration": 5.919
+    },
+    {
+      "text": "in the historical information so",
+      "start": 670.399,
+      "duration": 6.56
+    },
+    {
+      "text": "i built this into the library where we",
+      "start": 674.079,
+      "duration": 3.76
+    },
+    {
+      "text": "can adjust",
+      "start": 676.959,
+      "duration": 3.921
+    },
+    {
+      "text": "an existing forecast",
+      "start": 677.839,
+      "duration": 6.481
+    },
+    {
+      "text": "um so after you've done the forecasts",
+      "start": 680.88,
+      "duration": 6.959
+    },
+    {
+      "text": "then you can access uh the forecast by",
+      "start": 684.32,
+      "duration": 5.44
+    },
+    {
+      "text": "forecast and then the name of the",
+      "start": 687.839,
+      "duration": 3.601
+    },
+    {
+      "text": "statement item",
+      "start": 689.76,
+      "duration": 3.68
+    },
+    {
+      "text": "and then you can convert it to a manual",
+      "start": 691.44,
+      "duration": 3.04
+    },
+    {
+      "text": "forecast",
+      "start": 693.44,
+      "duration": 4.0
+    },
+    {
+      "text": "where we just have fixed values for the",
+      "start": 694.48,
+      "duration": 5.44
+    },
+    {
+      "text": "forecast",
+      "start": 697.44,
+      "duration": 4.639
+    },
+    {
+      "text": "and as you're converting it to a manual",
+      "start": 699.92,
+      "duration": 3.2
+    },
+    {
+      "text": "forecast",
+      "start": 702.079,
+      "duration": 3.521
+    },
+    {
+      "text": "then you can make adjustments or you can",
+      "start": 703.12,
+      "duration": 3.6
+    },
+    {
+      "text": "replace",
+      "start": 705.6,
+      "duration": 4.72
+    },
+    {
+      "text": "uh different parts of that forecast",
+      "start": 706.72,
+      "duration": 7.04
+    },
+    {
+      "text": "so and by default it",
+      "start": 710.32,
+      "duration": 5.92
+    },
+    {
+      "text": "uh works in growth rates but you can",
+      "start": 713.76,
+      "duration": 3.12
+    },
+    {
+      "text": "also pass",
+      "start": 716.24,
+      "duration": 3.039
+    },
+    {
+      "text": "use levels equal true to work with the",
+      "start": 716.88,
+      "duration": 4.56
+    },
+    {
+      "text": "levels of the item",
+      "start": 719.279,
+      "duration": 5.68
+    },
+    {
+      "text": "um so the um",
+      "start": 721.44,
+      "duration": 7.44
+    },
+    {
+      "text": "first one here we're adjusting cash",
+      "start": 724.959,
+      "duration": 7.281
+    },
+    {
+      "text": "and it's going to adjust the first",
+      "start": 728.88,
+      "duration": 4.079
+    },
+    {
+      "text": "period",
+      "start": 732.24,
+      "duration": 3.92
+    },
+    {
+      "text": "zero index period",
+      "start": 732.959,
+      "duration": 6.56
+    },
+    {
+      "text": "to increase the growth by 40",
+      "start": 736.16,
+      "duration": 7.28
+    },
+    {
+      "text": "in that period the second example here",
+      "start": 739.519,
+      "duration": 6.401
+    },
+    {
+      "text": "um is on the levels instead of on the",
+      "start": 743.44,
+      "duration": 3.76
+    },
+    {
+      "text": "growth rate",
+      "start": 745.92,
+      "duration": 4.64
+    },
+    {
+      "text": "and it's going to replace uh",
+      "start": 747.2,
+      "duration": 6.4
+    },
+    {
+      "text": "each of the values",
+      "start": 750.56,
+      "duration": 4.56
+    },
+    {
+      "text": "for the cost of goods sold as a",
+      "start": 753.6,
+      "duration": 6.239
+    },
+    {
+      "text": "percentage of sales forecasts with 85",
+      "start": 755.12,
+      "duration": 4.719
+    },
+    {
+      "text": "and then this last one on the revenue",
+      "start": 760.079,
+      "duration": 6.0
+    },
+    {
+      "text": "again on the levels and it's going to",
+      "start": 763.6,
+      "duration": 3.12
+    },
+    {
+      "text": "replace",
+      "start": 766.079,
+      "duration": 4.081
+    },
+    {
+      "text": "the second period value with",
+      "start": 766.72,
+      "duration": 7.679
+    },
+    {
+      "text": "uh 80 billion dollars",
+      "start": 770.16,
+      "duration": 7.119
+    },
+    {
+      "text": "so i do that and then uh run the",
+      "start": 774.399,
+      "duration": 4.081
+    },
+    {
+      "text": "forecast again",
+      "start": 777.279,
+      "duration": 4.0
+    },
+    {
+      "text": "and we'll look at the results that come",
+      "start": 778.48,
+      "duration": 5.039
+    },
+    {
+      "text": "out",
+      "start": 781.279,
+      "duration": 2.24
+    },
+    {
+      "text": "um",
+      "start": 784.839,
+      "duration": 3.0
+    },
+    {
+      "text": "so we have um now in the",
+      "start": 788.24,
+      "duration": 6.08
+    },
+    {
+      "text": "revenue we see that that second forecast",
+      "start": 791.68,
+      "duration": 4.08
+    },
+    {
+      "text": "period was replaced",
+      "start": 794.32,
+      "duration": 4.639
+    },
+    {
+      "text": "by uh 80 billion",
+      "start": 795.76,
+      "duration": 4.72
+    },
+    {
+      "text": "and the cost of goods sold as a",
+      "start": 798.959,
+      "duration": 3.521
+    },
+    {
+      "text": "percentage of revenue",
+      "start": 800.48,
+      "duration": 4.64
+    },
+    {
+      "text": "we see that now it's flatlined at 85",
+      "start": 802.48,
+      "duration": 5.599
+    },
+    {
+      "text": "percent instead",
+      "start": 805.12,
+      "duration": 2.959
+    },
+    {
+      "text": "and in the cash uh we see that we have",
+      "start": 808.32,
+      "duration": 4.0
+    },
+    {
+      "text": "an additional",
+      "start": 811.04,
+      "duration": 5.2
+    },
+    {
+      "text": "uh bump at the beginning uh of a 40",
+      "start": 812.32,
+      "duration": 8.48
+    },
+    {
+      "text": "growth uh for the first period",
+      "start": 816.24,
+      "duration": 4.56
+    },
+    {
+      "text": "so um and then when we look at the",
+      "start": 821.44,
+      "duration": 7.519
+    },
+    {
+      "text": "forecast assumptions there",
+      "start": 825.68,
+      "duration": 5.519
+    },
+    {
+      "text": "we see all these things that we've done",
+      "start": 828.959,
+      "duration": 4.481
+    },
+    {
+      "text": "so revenue cost of goods sold",
+      "start": 831.199,
+      "duration": 4.481
+    },
+    {
+      "text": "and cash got converted to manual",
+      "start": 833.44,
+      "duration": 3.44
+    },
+    {
+      "text": "forecasts",
+      "start": 835.68,
+      "duration": 5.12
+    },
+    {
+      "text": "and now it specifies",
+      "start": 836.88,
+      "duration": 6.24
+    },
+    {
+      "text": "what values are just basically hard",
+      "start": 840.8,
+      "duration": 6.24
+    },
+    {
+      "text": "coded into the forecast",
+      "start": 843.12,
+      "duration": 3.92
+    },
+    {
+      "text": "and we see all our other forecast",
+      "start": 847.839,
+      "duration": 3.36
+    },
+    {
+      "text": "assumptions",
+      "start": 850.399,
+      "duration": 3.12
+    },
+    {
+      "text": "there",
+      "start": 851.199,
+      "duration": 2.32
+    },
+    {
+      "text": "but we made that copy of the statements",
+      "start": 854.32,
+      "duration": 3.68
+    },
+    {
+      "text": "at the beginning because we might want",
+      "start": 856.16,
+      "duration": 3.359
+    },
+    {
+      "text": "to do another forecast",
+      "start": 858.0,
+      "duration": 3.519
+    },
+    {
+      "text": "and we look at that one and we see that",
+      "start": 859.519,
+      "duration": 3.601
+    },
+    {
+      "text": "none of the assumptions have been",
+      "start": 861.519,
+      "duration": 2.241
+    },
+    {
+      "text": "touched",
+      "start": 863.12,
+      "duration": 3.04
+    },
+    {
+      "text": "so that's why we did the copy before",
+      "start": 863.76,
+      "duration": 4.319
+    },
+    {
+      "text": "going and modifying the assumptions",
+      "start": 866.16,
+      "duration": 4.32
+    },
+    {
+      "text": "that way we have a totally clean set of",
+      "start": 868.079,
+      "duration": 3.521
+    },
+    {
+      "text": "assumptions now",
+      "start": 870.48,
+      "duration": 3.76
+    },
+    {
+      "text": "that we can go and run a completely",
+      "start": 871.6,
+      "duration": 5.599
+    },
+    {
+      "text": "separate forecast",
+      "start": 874.24,
+      "duration": 2.959
+    },
+    {
+      "text": "so that's a quick overview on using",
+      "start": 877.279,
+      "duration": 5.56
+    },
+    {
+      "text": "fin statement to do financial statement",
+      "start": 880.32,
+      "duration": 3.92
+    },
+    {
+      "text": "forecasting uh",
+      "start": 882.839,
+      "duration": 3.56
+    },
+    {
+      "text": "we'll have another video where we look",
+      "start": 884.24,
+      "duration": 3.2
+    },
+    {
+      "text": "at uh",
+      "start": 886.399,
+      "duration": 4.081
+    },
+    {
+      "text": "forecasting complex time series",
+      "start": 887.44,
+      "duration": 5.36
+    },
+    {
+      "text": "in financial statements also using fin",
+      "start": 890.48,
+      "duration": 3.44
+    },
+    {
+      "text": "statement",
+      "start": 892.8,
+      "duration": 4.039
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 893.92,
+      "duration": 5.919
+    },
+    {
+      "text": "time",
+      "start": 896.839,
+      "duration": 3.0
+    }
+  ]
+}

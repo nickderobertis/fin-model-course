@@ -1,0 +1,1509 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick diabetis",
+      "start": 3.6,
+      "duration": 3.6
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 5.52,
+      "duration": 3.119
+    },
+    {
+      "text": "today we're going to be doing an",
+      "start": 7.2,
+      "duration": 4.399
+    },
+    {
+      "text": "introduction to free cash flows",
+      "start": 8.639,
+      "duration": 4.801
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 11.599,
+      "duration": 3.761
+    },
+    {
+      "text": "free cash flow estimation and",
+      "start": 13.44,
+      "duration": 3.36
+    },
+    {
+      "text": "forecasting",
+      "start": 15.36,
+      "duration": 4.4
+    },
+    {
+      "text": "which follows on to our previous lecture",
+      "start": 16.8,
+      "duration": 3.76
+    },
+    {
+      "text": "segment",
+      "start": 19.76,
+      "duration": 4.4
+    },
+    {
+      "text": "on the weighted average cost of capital",
+      "start": 20.56,
+      "duration": 5.28
+    },
+    {
+      "text": "putting these two lecture segments",
+      "start": 24.16,
+      "duration": 3.6
+    },
+    {
+      "text": "together we will develop the",
+      "start": 25.84,
+      "duration": 4.48
+    },
+    {
+      "text": "discounted cash flow valuation of a",
+      "start": 27.76,
+      "duration": 4.639
+    },
+    {
+      "text": "stock",
+      "start": 30.32,
+      "duration": 6.8
+    },
+    {
+      "text": "so getting into the free cash flows",
+      "start": 32.399,
+      "duration": 8.401
+    },
+    {
+      "text": "so we have already gone through",
+      "start": 37.12,
+      "duration": 8.0
+    },
+    {
+      "text": "basically one half of the dcf model",
+      "start": 40.8,
+      "duration": 7.04
+    },
+    {
+      "text": "where we",
+      "start": 45.12,
+      "duration": 2.72
+    },
+    {
+      "text": "got the weighted average cost of capital",
+      "start": 48.239,
+      "duration": 4.48
+    },
+    {
+      "text": "how much does the company have to pay in",
+      "start": 50.559,
+      "duration": 3.68
+    },
+    {
+      "text": "order to raise money for their",
+      "start": 52.719,
+      "duration": 2.961
+    },
+    {
+      "text": "operations",
+      "start": 54.239,
+      "duration": 4.081
+    },
+    {
+      "text": "so the other half of the dcf model is",
+      "start": 55.68,
+      "duration": 5.039
+    },
+    {
+      "text": "focused on the free cash flows",
+      "start": 58.32,
+      "duration": 4.079
+    },
+    {
+      "text": "so that ultimately we can take the",
+      "start": 60.719,
+      "duration": 3.041
+    },
+    {
+      "text": "present value of",
+      "start": 62.399,
+      "duration": 3.841
+    },
+    {
+      "text": "future free cash flows in order to",
+      "start": 63.76,
+      "duration": 5.92
+    },
+    {
+      "text": "determine the value of the business",
+      "start": 66.24,
+      "duration": 6.64
+    },
+    {
+      "text": "so within that free cash flow side of",
+      "start": 69.68,
+      "duration": 4.56
+    },
+    {
+      "text": "the dcf model",
+      "start": 72.88,
+      "duration": 4.08
+    },
+    {
+      "text": "we can even decompose it into two",
+      "start": 74.24,
+      "duration": 4.32
+    },
+    {
+      "text": "further parts",
+      "start": 76.96,
+      "duration": 5.6
+    },
+    {
+      "text": "and that is first finding the historical",
+      "start": 78.56,
+      "duration": 7.04
+    },
+    {
+      "text": "free cash flows so you have the",
+      "start": 82.56,
+      "duration": 5.68
+    },
+    {
+      "text": "historical financial statements income",
+      "start": 85.6,
+      "duration": 4.24
+    },
+    {
+      "text": "statement balance sheet perhaps",
+      "start": 88.24,
+      "duration": 3.519
+    },
+    {
+      "text": "statement of cash flows",
+      "start": 89.84,
+      "duration": 5.279
+    },
+    {
+      "text": "and you calculate the free cash flows",
+      "start": 91.759,
+      "duration": 6.561
+    },
+    {
+      "text": "from those financial statements and this",
+      "start": 95.119,
+      "duration": 3.601
+    },
+    {
+      "text": "part",
+      "start": 98.32,
+      "duration": 3.439
+    },
+    {
+      "text": "is fairly straightforward uh you're just",
+      "start": 98.72,
+      "duration": 3.759
+    },
+    {
+      "text": "kind of",
+      "start": 101.759,
+      "duration": 2.72
+    },
+    {
+      "text": "going through the formulas in order to",
+      "start": 102.479,
+      "duration": 3.6
+    },
+    {
+      "text": "calculate these things",
+      "start": 104.479,
+      "duration": 4.561
+    },
+    {
+      "text": "there's no real uh decision making to be",
+      "start": 106.079,
+      "duration": 4.641
+    },
+    {
+      "text": "done in the matter no kind of",
+      "start": 109.04,
+      "duration": 4.0
+    },
+    {
+      "text": "qualitative analysis you just do the",
+      "start": 110.72,
+      "duration": 4.719
+    },
+    {
+      "text": "calculations",
+      "start": 113.04,
+      "duration": 6.16
+    },
+    {
+      "text": "the other part which is more",
+      "start": 115.439,
+      "duration": 7.441
+    },
+    {
+      "text": "complicated and difficult is to",
+      "start": 119.2,
+      "duration": 6.32
+    },
+    {
+      "text": "project the free cash flows into the",
+      "start": 122.88,
+      "duration": 3.76
+    },
+    {
+      "text": "future",
+      "start": 125.52,
+      "duration": 3.04
+    },
+    {
+      "text": "remember that when considering the value",
+      "start": 126.64,
+      "duration": 3.28
+    },
+    {
+      "text": "of an asset",
+      "start": 128.56,
+      "duration": 4.24
+    },
+    {
+      "text": "we only consider future cash flows which",
+      "start": 129.92,
+      "duration": 4.959
+    },
+    {
+      "text": "are going to be paid we don't care",
+      "start": 132.8,
+      "duration": 5.76
+    },
+    {
+      "text": "about the historical so uh we calculate",
+      "start": 134.879,
+      "duration": 4.641
+    },
+    {
+      "text": "the historical",
+      "start": 138.56,
+      "duration": 3.44
+    },
+    {
+      "text": "just in that it will help us project the",
+      "start": 139.52,
+      "duration": 3.2
+    },
+    {
+      "text": "future",
+      "start": 142.0,
+      "duration": 2.879
+    },
+    {
+      "text": "but the future is what we really care",
+      "start": 142.72,
+      "duration": 5.599
+    },
+    {
+      "text": "about for the valuation",
+      "start": 144.879,
+      "duration": 3.44
+    },
+    {
+      "text": "so there's a lot of decisions to be made",
+      "start": 148.72,
+      "duration": 7.68
+    },
+    {
+      "text": "in how you forecast the future",
+      "start": 152.4,
+      "duration": 6.8
+    },
+    {
+      "text": "free cash flows and we'll talk about a",
+      "start": 156.4,
+      "duration": 4.479
+    },
+    {
+      "text": "variety of different approaches",
+      "start": 159.2,
+      "duration": 4.96
+    },
+    {
+      "text": "and the conditions under which you would",
+      "start": 160.879,
+      "duration": 4.481
+    },
+    {
+      "text": "might want to use some of these",
+      "start": 164.16,
+      "duration": 3.28
+    },
+    {
+      "text": "different approaches",
+      "start": 165.36,
+      "duration": 4.08
+    },
+    {
+      "text": "and we'll get into all of that within",
+      "start": 167.44,
+      "duration": 3.84
+    },
+    {
+      "text": "the forecasting material",
+      "start": 169.44,
+      "duration": 4.96
+    },
+    {
+      "text": "within this lecture",
+      "start": 171.28,
+      "duration": 3.12
+    },
+    {
+      "text": "but before we get there let me just",
+      "start": 175.2,
+      "duration": 7.36
+    },
+    {
+      "text": "give a quick introduction on free cash",
+      "start": 178.64,
+      "duration": 5.679
+    },
+    {
+      "text": "flows themselves",
+      "start": 182.56,
+      "duration": 4.24
+    },
+    {
+      "text": "so what are free cash flows and why do",
+      "start": 184.319,
+      "duration": 4.481
+    },
+    {
+      "text": "we care about them",
+      "start": 186.8,
+      "duration": 5.439
+    },
+    {
+      "text": "so free cash flows we can think of as",
+      "start": 188.8,
+      "duration": 6.24
+    },
+    {
+      "text": "the cash that the company is getting",
+      "start": 192.239,
+      "duration": 5.041
+    },
+    {
+      "text": "from their operations",
+      "start": 195.04,
+      "duration": 4.72
+    },
+    {
+      "text": "they have some revenue come in they have",
+      "start": 197.28,
+      "duration": 3.599
+    },
+    {
+      "text": "to pay",
+      "start": 199.76,
+      "duration": 4.399
+    },
+    {
+      "text": "for expenses salaries cost of goods sold",
+      "start": 200.879,
+      "duration": 5.601
+    },
+    {
+      "text": "the inventory",
+      "start": 204.159,
+      "duration": 5.521
+    },
+    {
+      "text": "etc and then they end up with some",
+      "start": 206.48,
+      "duration": 4.08
+    },
+    {
+      "text": "amount of cash",
+      "start": 209.68,
+      "duration": 3.199
+    },
+    {
+      "text": "left over after paying for all those",
+      "start": 210.56,
+      "duration": 3.84
+    },
+    {
+      "text": "operations",
+      "start": 212.879,
+      "duration": 6.801
+    },
+    {
+      "text": "so that would be the free cash flows",
+      "start": 214.4,
+      "duration": 9.199
+    },
+    {
+      "text": "and so some people can get this confused",
+      "start": 219.68,
+      "duration": 4.24
+    },
+    {
+      "text": "with",
+      "start": 223.599,
+      "duration": 2.801
+    },
+    {
+      "text": "net income because they think well isn't",
+      "start": 223.92,
+      "duration": 4.319
+    },
+    {
+      "text": "that what net income is",
+      "start": 226.4,
+      "duration": 4.24
+    },
+    {
+      "text": "the cash that's left over after you paid",
+      "start": 228.239,
+      "duration": 4.321
+    },
+    {
+      "text": "for expenses",
+      "start": 230.64,
+      "duration": 5.519
+    },
+    {
+      "text": "um but these are a little bit different",
+      "start": 232.56,
+      "duration": 6.959
+    },
+    {
+      "text": "so net income is a measure that was",
+      "start": 236.159,
+      "duration": 3.921
+    },
+    {
+      "text": "developed",
+      "start": 239.519,
+      "duration": 4.08
+    },
+    {
+      "text": "by accountants which helps",
+      "start": 240.08,
+      "duration": 7.12
+    },
+    {
+      "text": "smooth out irregularities in",
+      "start": 243.599,
+      "duration": 7.121
+    },
+    {
+      "text": "uh the company's earnings um",
+      "start": 247.2,
+      "duration": 6.8
+    },
+    {
+      "text": "especially around expenses",
+      "start": 250.72,
+      "duration": 7.039
+    },
+    {
+      "text": "which represent investments in",
+      "start": 254.0,
+      "duration": 6.0
+    },
+    {
+      "text": "like fixed goods and things like that",
+      "start": 257.759,
+      "duration": 4.641
+    },
+    {
+      "text": "which uh are going to be used over",
+      "start": 260.0,
+      "duration": 5.44
+    },
+    {
+      "text": "a long time span so maybe the company",
+      "start": 262.4,
+      "duration": 4.16
+    },
+    {
+      "text": "purchase a new",
+      "start": 265.44,
+      "duration": 3.92
+    },
+    {
+      "text": "a new warehouse they're going to use",
+      "start": 266.56,
+      "duration": 4.32
+    },
+    {
+      "text": "that warehouse over the next",
+      "start": 269.36,
+      "duration": 5.68
+    },
+    {
+      "text": "15 years or net income we would say",
+      "start": 270.88,
+      "duration": 5.68
+    },
+    {
+      "text": "just as an example there are different",
+      "start": 275.04,
+      "duration": 4.08
+    },
+    {
+      "text": "ways to account for it but",
+      "start": 276.56,
+      "duration": 5.84
+    },
+    {
+      "text": "1 15 of the cost is going to accrue to",
+      "start": 279.12,
+      "duration": 3.84
+    },
+    {
+      "text": "each year",
+      "start": 282.4,
+      "duration": 3.359
+    },
+    {
+      "text": "in the net income try and say well let's",
+      "start": 282.96,
+      "duration": 4.16
+    },
+    {
+      "text": "let's match up",
+      "start": 285.759,
+      "duration": 4.801
+    },
+    {
+      "text": "the expense with the usage of the asset",
+      "start": 287.12,
+      "duration": 3.76
+    },
+    {
+      "text": "to",
+      "start": 290.56,
+      "duration": 4.96
+    },
+    {
+      "text": "kind of smooth out uh the earnings",
+      "start": 290.88,
+      "duration": 8.48
+    },
+    {
+      "text": "so in contrast uh free cash flows do not",
+      "start": 295.52,
+      "duration": 4.8
+    },
+    {
+      "text": "do any of this",
+      "start": 299.36,
+      "duration": 4.72
+    },
+    {
+      "text": "smoothing it's all about the actual cash",
+      "start": 300.32,
+      "duration": 6.879
+    },
+    {
+      "text": "which is trading hands uh you know",
+      "start": 304.08,
+      "duration": 6.8
+    },
+    {
+      "text": "electronic or physical cash um",
+      "start": 307.199,
+      "duration": 6.161
+    },
+    {
+      "text": "so if they purchase a building which",
+      "start": 310.88,
+      "duration": 5.12
+    },
+    {
+      "text": "they're going to use over 15 years",
+      "start": 313.36,
+      "duration": 5.44
+    },
+    {
+      "text": "with free cash flows all of that expense",
+      "start": 316.0,
+      "duration": 4.4
+    },
+    {
+      "text": "is coming in the year where they",
+      "start": 318.8,
+      "duration": 2.72
+    },
+    {
+      "text": "actually purchased",
+      "start": 320.4,
+      "duration": 4.32
+    },
+    {
+      "text": "the building so it's it's when was the",
+      "start": 321.52,
+      "duration": 5.04
+    },
+    {
+      "text": "cash actually spent",
+      "start": 324.72,
+      "duration": 7.6
+    },
+    {
+      "text": "not when is the asset going to be used",
+      "start": 326.56,
+      "duration": 5.76
+    },
+    {
+      "text": "um so why do we care",
+      "start": 332.639,
+      "duration": 6.321
+    },
+    {
+      "text": "about free cash flow over net income for",
+      "start": 335.759,
+      "duration": 4.561
+    },
+    {
+      "text": "valuation",
+      "start": 338.96,
+      "duration": 4.48
+    },
+    {
+      "text": "so free cash flow is what is actually",
+      "start": 340.32,
+      "duration": 4.319
+    },
+    {
+      "text": "going on with the cash",
+      "start": 343.44,
+      "duration": 3.759
+    },
+    {
+      "text": "and so that's what we want to consider",
+      "start": 344.639,
+      "duration": 3.041
+    },
+    {
+      "text": "for",
+      "start": 347.199,
+      "duration": 4.401
+    },
+    {
+      "text": "the valuation net income",
+      "start": 347.68,
+      "duration": 6.32
+    },
+    {
+      "text": "is still useful to think about in terms",
+      "start": 351.6,
+      "duration": 4.319
+    },
+    {
+      "text": "of thinking about what is kind of a",
+      "start": 354.0,
+      "duration": 3.12
+    },
+    {
+      "text": "typical",
+      "start": 355.919,
+      "duration": 2.881
+    },
+    {
+      "text": "amount that the company would earn in a",
+      "start": 357.12,
+      "duration": 4.079
+    },
+    {
+      "text": "given year um",
+      "start": 358.8,
+      "duration": 4.56
+    },
+    {
+      "text": "considering smoothing out costs across",
+      "start": 361.199,
+      "duration": 3.361
+    },
+    {
+      "text": "multiple years",
+      "start": 363.36,
+      "duration": 4.16
+    },
+    {
+      "text": "but when we're thinking about valuation",
+      "start": 364.56,
+      "duration": 4.72
+    },
+    {
+      "text": "we always want to use free cash flows",
+      "start": 367.52,
+      "duration": 2.64
+    },
+    {
+      "text": "because that's what",
+      "start": 369.28,
+      "duration": 4.4
+    },
+    {
+      "text": "actually happens um and we want to be",
+      "start": 370.16,
+      "duration": 6.319
+    },
+    {
+      "text": "using the truth for our valuation",
+      "start": 373.68,
+      "duration": 4.48
+    },
+    {
+      "text": "investors care about",
+      "start": 376.479,
+      "duration": 3.201
+    },
+    {
+      "text": "when they're going to get that cash the",
+      "start": 378.16,
+      "duration": 3.599
+    },
+    {
+      "text": "timing of it is important",
+      "start": 379.68,
+      "duration": 6.32
+    },
+    {
+      "text": "um and so we always use free cash flows",
+      "start": 381.759,
+      "duration": 7.761
+    },
+    {
+      "text": "for valuation and",
+      "start": 386.0,
+      "duration": 6.84
+    },
+    {
+      "text": "free cash flows um",
+      "start": 389.52,
+      "duration": 7.04
+    },
+    {
+      "text": "represent uh the",
+      "start": 392.84,
+      "duration": 6.04
+    },
+    {
+      "text": "earnings from the operations and then",
+      "start": 396.56,
+      "duration": 4.96
+    },
+    {
+      "text": "those free cash flows go to service",
+      "start": 398.88,
+      "duration": 5.84
+    },
+    {
+      "text": "both debt and equity holders",
+      "start": 401.52,
+      "duration": 6.88
+    },
+    {
+      "text": "so uh free cash flows are used",
+      "start": 404.72,
+      "duration": 6.72
+    },
+    {
+      "text": "to pay interest on the debt uh and",
+      "start": 408.4,
+      "duration": 4.239
+    },
+    {
+      "text": "they're also",
+      "start": 411.44,
+      "duration": 4.319
+    },
+    {
+      "text": "used to pay dividends or",
+      "start": 412.639,
+      "duration": 5.68
+    },
+    {
+      "text": "uh go into retained earnings and",
+      "start": 415.759,
+      "duration": 6.0
+    },
+    {
+      "text": "increase the value of equity that way",
+      "start": 418.319,
+      "duration": 6.16
+    },
+    {
+      "text": "um when we take the present value of",
+      "start": 421.759,
+      "duration": 3.921
+    },
+    {
+      "text": "free cash flows",
+      "start": 424.479,
+      "duration": 3.44
+    },
+    {
+      "text": "what we get is the enterprise value or",
+      "start": 425.68,
+      "duration": 3.359
+    },
+    {
+      "text": "the entire",
+      "start": 427.919,
+      "duration": 4.321
+    },
+    {
+      "text": "uh full asset value of the firm and then",
+      "start": 429.039,
+      "duration": 5.681
+    },
+    {
+      "text": "we can decompose that further into the",
+      "start": 432.24,
+      "duration": 4.239
+    },
+    {
+      "text": "debt value and equity value",
+      "start": 434.72,
+      "duration": 4.879
+    },
+    {
+      "text": "of the firm as we covered in the prior",
+      "start": 436.479,
+      "duration": 5.921
+    },
+    {
+      "text": "lecture series",
+      "start": 439.599,
+      "duration": 2.801
+    },
+    {
+      "text": "so thinking about calculating the",
+      "start": 443.919,
+      "duration": 3.84
+    },
+    {
+      "text": "historical",
+      "start": 446.88,
+      "duration": 2.719
+    },
+    {
+      "text": "free cash flows so there's a number of",
+      "start": 447.759,
+      "duration": 4.081
+    },
+    {
+      "text": "different approaches which are",
+      "start": 449.599,
+      "duration": 3.521
+    },
+    {
+      "text": "equivalent",
+      "start": 451.84,
+      "duration": 2.94
+    },
+    {
+      "text": "um we're going to",
+      "start": 453.12,
+      "duration": 3.199
+    },
+    {
+      "text": "[Music]",
+      "start": 454.78,
+      "duration": 4.259
+    },
+    {
+      "text": "go through a way in this course that",
+      "start": 456.319,
+      "duration": 3.921
+    },
+    {
+      "text": "only requires",
+      "start": 459.039,
+      "duration": 3.121
+    },
+    {
+      "text": "the income statement and balance sheet",
+      "start": 460.24,
+      "duration": 3.92
+    },
+    {
+      "text": "so that you don't even have to",
+      "start": 462.16,
+      "duration": 3.759
+    },
+    {
+      "text": "work with the statement of cash flows",
+      "start": 464.16,
+      "duration": 3.439
+    },
+    {
+      "text": "but certainly there are",
+      "start": 465.919,
+      "duration": 3.361
+    },
+    {
+      "text": "methods which use the statement of cash",
+      "start": 467.599,
+      "duration": 4.72
+    },
+    {
+      "text": "flows as well",
+      "start": 469.28,
+      "duration": 3.039
+    },
+    {
+      "text": "and so this is the basic formula",
+      "start": 473.199,
+      "duration": 6.321
+    },
+    {
+      "text": "shown here on the right and in the",
+      "start": 476.24,
+      "duration": 5.6
+    },
+    {
+      "text": "next video we'll go into a lot more",
+      "start": 479.52,
+      "duration": 3.04
+    },
+    {
+      "text": "detail",
+      "start": 481.84,
+      "duration": 3.919
+    },
+    {
+      "text": "on this um but basically we're just",
+      "start": 482.56,
+      "duration": 4.8
+    },
+    {
+      "text": "taking this formula and we're just going",
+      "start": 485.759,
+      "duration": 2.641
+    },
+    {
+      "text": "to calculate it",
+      "start": 487.36,
+      "duration": 6.48
+    },
+    {
+      "text": "for each year of historical data",
+      "start": 488.4,
+      "duration": 5.44
+    },
+    {
+      "text": "but it is kind of a multi-level",
+      "start": 494.0,
+      "duration": 3.44
+    },
+    {
+      "text": "calculation",
+      "start": 496.479,
+      "duration": 4.16
+    },
+    {
+      "text": "in that each of these three components",
+      "start": 497.44,
+      "duration": 6.08
+    },
+    {
+      "text": "which we are going to use to adjust the",
+      "start": 500.639,
+      "duration": 4.081
+    },
+    {
+      "text": "net income",
+      "start": 503.52,
+      "duration": 3.84
+    },
+    {
+      "text": "they each have to be calculated on their",
+      "start": 504.72,
+      "duration": 3.199
+    },
+    {
+      "text": "own",
+      "start": 507.36,
+      "duration": 3.6
+    },
+    {
+      "text": "before we can go and do the historical",
+      "start": 507.919,
+      "duration": 6.161
+    },
+    {
+      "text": "free cash flow calculation",
+      "start": 510.96,
+      "duration": 6.8
+    },
+    {
+      "text": "and the philosophy behind this formula",
+      "start": 514.08,
+      "duration": 7.519
+    },
+    {
+      "text": "is that we are taking this net income",
+      "start": 517.76,
+      "duration": 6.159
+    },
+    {
+      "text": "which accountants have adjusted and",
+      "start": 521.599,
+      "duration": 4.401
+    },
+    {
+      "text": "we're going to reverse the adjustments",
+      "start": 523.919,
+      "duration": 3.441
+    },
+    {
+      "text": "that they've made",
+      "start": 526.0,
+      "duration": 4.56
+    },
+    {
+      "text": "and also include what they've excluded",
+      "start": 527.36,
+      "duration": 7.44
+    },
+    {
+      "text": "as far as capital expenditures these",
+      "start": 530.56,
+      "duration": 5.04
+    },
+    {
+      "text": "large",
+      "start": 534.8,
+      "duration": 2.64
+    },
+    {
+      "text": "purchases which are being spread over",
+      "start": 535.6,
+      "duration": 3.6
+    },
+    {
+      "text": "multiple years",
+      "start": 537.44,
+      "duration": 4.64
+    },
+    {
+      "text": "um so by doing these adjustments we'll",
+      "start": 539.2,
+      "duration": 4.0
+    },
+    {
+      "text": "be able to get back",
+      "start": 542.08,
+      "duration": 3.84
+    },
+    {
+      "text": "to the actual cash coming from the",
+      "start": 543.2,
+      "duration": 3.6
+    },
+    {
+      "text": "operations",
+      "start": 545.92,
+      "duration": 4.16
+    },
+    {
+      "text": "the free cash flows",
+      "start": 546.8,
+      "duration": 3.28
+    },
+    {
+      "text": "and then thinking about the other side",
+      "start": 550.399,
+      "duration": 3.041
+    },
+    {
+      "text": "of",
+      "start": 552.72,
+      "duration": 3.84
+    },
+    {
+      "text": "free cash flows in the dcf model",
+      "start": 553.44,
+      "duration": 6.64
+    },
+    {
+      "text": "we need to forecast them into the future",
+      "start": 556.56,
+      "duration": 5.2
+    },
+    {
+      "text": "and this is definitely",
+      "start": 560.08,
+      "duration": 4.879
+    },
+    {
+      "text": "the more challenging part because the",
+      "start": 561.76,
+      "duration": 5.04
+    },
+    {
+      "text": "historical free cash flows are a very",
+      "start": 564.959,
+      "duration": 3.681
+    },
+    {
+      "text": "mechanical thing you just",
+      "start": 566.8,
+      "duration": 5.28
+    },
+    {
+      "text": "do the calculation and you're done",
+      "start": 568.64,
+      "duration": 6.48
+    },
+    {
+      "text": "but with forecasting there's a lot of",
+      "start": 572.08,
+      "duration": 4.8
+    },
+    {
+      "text": "decisions you have to make",
+      "start": 575.12,
+      "duration": 5.12
+    },
+    {
+      "text": "as the modeler",
+      "start": 576.88,
+      "duration": 5.519
+    },
+    {
+      "text": "and you want to use knowledge you have",
+      "start": 580.24,
+      "duration": 4.24
+    },
+    {
+      "text": "about the company in order to make those",
+      "start": 582.399,
+      "duration": 4.641
+    },
+    {
+      "text": "decisions",
+      "start": 584.48,
+      "duration": 2.56
+    },
+    {
+      "text": "so we can broadly break down",
+      "start": 587.519,
+      "duration": 5.921
+    },
+    {
+      "text": "at the highest level uh of how to",
+      "start": 590.64,
+      "duration": 4.72
+    },
+    {
+      "text": "forecast the free cash flows into two",
+      "start": 593.44,
+      "duration": 3.2
+    },
+    {
+      "text": "methods",
+      "start": 595.36,
+      "duration": 4.4
+    },
+    {
+      "text": "and that is forecasting free cash flows",
+      "start": 596.64,
+      "duration": 6.4
+    },
+    {
+      "text": "directly or forecasting the financial",
+      "start": 599.76,
+      "duration": 4.88
+    },
+    {
+      "text": "statements",
+      "start": 603.04,
+      "duration": 4.799
+    },
+    {
+      "text": "um and forecasting free cash flows you",
+      "start": 604.64,
+      "duration": 4.4
+    },
+    {
+      "text": "only have to forecast",
+      "start": 607.839,
+      "duration": 3.281
+    },
+    {
+      "text": "one thing and so it's very easy and",
+      "start": 609.04,
+      "duration": 3.44
+    },
+    {
+      "text": "quick to do",
+      "start": 611.12,
+      "duration": 3.92
+    },
+    {
+      "text": "but it's typically going to not be able",
+      "start": 612.48,
+      "duration": 4.0
+    },
+    {
+      "text": "to be as accurate",
+      "start": 615.04,
+      "duration": 3.919
+    },
+    {
+      "text": "uh unless this is a company that has",
+      "start": 616.48,
+      "duration": 3.68
+    },
+    {
+      "text": "very stable",
+      "start": 618.959,
+      "duration": 4.56
+    },
+    {
+      "text": "free cash flows but generally",
+      "start": 620.16,
+      "duration": 4.56
+    },
+    {
+      "text": "what you're going to want to do is",
+      "start": 623.519,
+      "duration": 3.681
+    },
+    {
+      "text": "forecast the financial statements",
+      "start": 624.72,
+      "duration": 5.92
+    },
+    {
+      "text": "because that gives you a much greater",
+      "start": 627.2,
+      "duration": 4.56
+    },
+    {
+      "text": "level of detail",
+      "start": 630.64,
+      "duration": 4.96
+    },
+    {
+      "text": "into the company's operations",
+      "start": 631.76,
+      "duration": 3.84
+    },
+    {
+      "text": "and then once you've decided on",
+      "start": 636.24,
+      "duration": 6.32
+    },
+    {
+      "text": "what you're going to forecast either the",
+      "start": 641.12,
+      "duration": 3.04
+    },
+    {
+      "text": "financial statements or the free cash",
+      "start": 642.56,
+      "duration": 2.88
+    },
+    {
+      "text": "flows",
+      "start": 644.16,
+      "duration": 4.56
+    },
+    {
+      "text": "then there are a lot of ways",
+      "start": 645.44,
+      "duration": 7.36
+    },
+    {
+      "text": "to go about that forecasting exercise",
+      "start": 648.72,
+      "duration": 7.2
+    },
+    {
+      "text": "um so generally",
+      "start": 652.8,
+      "duration": 4.56
+    },
+    {
+      "text": "generally we're going to look at time",
+      "start": 655.92,
+      "duration": 3.68
+    },
+    {
+      "text": "series methods in order to",
+      "start": 657.36,
+      "duration": 4.719
+    },
+    {
+      "text": "do the forecasts and we'll talk a lot",
+      "start": 659.6,
+      "duration": 3.679
+    },
+    {
+      "text": "more about",
+      "start": 662.079,
+      "duration": 4.801
+    },
+    {
+      "text": "what that means in the following videos",
+      "start": 663.279,
+      "duration": 5.361
+    },
+    {
+      "text": "but basically different models that we",
+      "start": 666.88,
+      "duration": 3.199
+    },
+    {
+      "text": "can use to",
+      "start": 668.64,
+      "duration": 4.8
+    },
+    {
+      "text": "predict the future from the past",
+      "start": 670.079,
+      "duration": 7.041
+    },
+    {
+      "text": "and then even aside from those models",
+      "start": 673.44,
+      "duration": 5.519
+    },
+    {
+      "text": "even after we've already decided what",
+      "start": 677.12,
+      "duration": 3.04
+    },
+    {
+      "text": "we're forecasting",
+      "start": 678.959,
+      "duration": 2.961
+    },
+    {
+      "text": "there's still another decision to make",
+      "start": 680.16,
+      "duration": 3.04
+    },
+    {
+      "text": "which is",
+      "start": 681.92,
+      "duration": 4.08
+    },
+    {
+      "text": "uh what what we're going to forecast",
+      "start": 683.2,
+      "duration": 4.16
+    },
+    {
+      "text": "within that item are we going to",
+      "start": 686.0,
+      "duration": 2.399
+    },
+    {
+      "text": "forecast",
+      "start": 687.36,
+      "duration": 2.8
+    },
+    {
+      "text": "the level of the item the growth of the",
+      "start": 688.399,
+      "duration": 4.0
+    },
+    {
+      "text": "item or are we going to peg it to",
+      "start": 690.16,
+      "duration": 3.359
+    },
+    {
+      "text": "another item and",
+      "start": 692.399,
+      "duration": 4.481
+    },
+    {
+      "text": "forecast the percentage so we'll dig",
+      "start": 693.519,
+      "duration": 6.481
+    },
+    {
+      "text": "into all these different decisions",
+      "start": 696.88,
+      "duration": 6.079
+    },
+    {
+      "text": "and the considerations you want to make",
+      "start": 700.0,
+      "duration": 4.24
+    },
+    {
+      "text": "in those decisions",
+      "start": 702.959,
+      "duration": 4.481
+    },
+    {
+      "text": "and uh how you would actually",
+      "start": 704.24,
+      "duration": 5.039
+    },
+    {
+      "text": "go through each one of these approaches",
+      "start": 707.44,
+      "duration": 4.639
+    },
+    {
+      "text": "and calculate them",
+      "start": 709.279,
+      "duration": 7.041
+    },
+    {
+      "text": "so all that come in this lecture series",
+      "start": 712.079,
+      "duration": 6.081
+    },
+    {
+      "text": "and the last part of the lecture series",
+      "start": 716.32,
+      "duration": 3.12
+    },
+    {
+      "text": "will also look at",
+      "start": 718.16,
+      "duration": 4.479
+    },
+    {
+      "text": "how to finish up the dcf model",
+      "start": 719.44,
+      "duration": 5.6
+    },
+    {
+      "text": "with everything else that we've learned",
+      "start": 722.639,
+      "duration": 5.44
+    },
+    {
+      "text": "from the prior lecture series",
+      "start": 725.04,
+      "duration": 7.2
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 728.079,
+      "duration": 4.161
+    },
+    {
+      "text": "time",
+      "start": 733.0,
+      "duration": 3.0
+    }
+  ]
+}

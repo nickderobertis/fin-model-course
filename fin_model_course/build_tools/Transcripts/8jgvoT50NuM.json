@@ -1,0 +1,2059 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.879,
+      "duration": 2.321
+    },
+    {
+      "text": "this is nick dierbertis teaching you",
+      "start": 3.6,
+      "duration": 3.92
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.2,
+      "duration": 3.439
+    },
+    {
+      "text": "be talking about",
+      "start": 7.52,
+      "duration": 5.199
+    },
+    {
+      "text": "simple time series forecasting in python",
+      "start": 8.639,
+      "duration": 6.481
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 12.719,
+      "duration": 4.001
+    },
+    {
+      "text": "free cash flow estimation",
+      "start": 15.12,
+      "duration": 4.079
+    },
+    {
+      "text": "and forecasting which is part of our",
+      "start": 16.72,
+      "duration": 3.84
+    },
+    {
+      "text": "broader goal in the course",
+      "start": 19.199,
+      "duration": 3.441
+    },
+    {
+      "text": "to build out the full discounted cash",
+      "start": 20.56,
+      "duration": 5.68
+    },
+    {
+      "text": "flow valuation of stock",
+      "start": 22.64,
+      "duration": 3.6
+    },
+    {
+      "text": "so we already covered introduction",
+      "start": 26.32,
+      "duration": 6.079
+    },
+    {
+      "text": "on forecasting and the simple",
+      "start": 30.0,
+      "duration": 3.36
+    },
+    {
+      "text": "forecasting",
+      "start": 32.399,
+      "duration": 4.0
+    },
+    {
+      "text": "models and also how to go about the",
+      "start": 33.36,
+      "duration": 4.56
+    },
+    {
+      "text": "forecast in excel",
+      "start": 36.399,
+      "duration": 5.441
+    },
+    {
+      "text": "so take a look at those videos um",
+      "start": 37.92,
+      "duration": 5.6
+    },
+    {
+      "text": "now we're getting to carrying out the",
+      "start": 41.84,
+      "duration": 4.16
+    },
+    {
+      "text": "process in python",
+      "start": 43.52,
+      "duration": 5.199
+    },
+    {
+      "text": "so let's jump over to the jupiter",
+      "start": 46.0,
+      "duration": 3.36
+    },
+    {
+      "text": "notebook",
+      "start": 48.719,
+      "duration": 2.401
+    },
+    {
+      "text": "example for this which is on the course",
+      "start": 49.36,
+      "duration": 3.76
+    },
+    {
+      "text": "site",
+      "start": 51.12,
+      "duration": 5.36
+    },
+    {
+      "text": "and here we're going to load in the same",
+      "start": 53.12,
+      "duration": 3.84
+    },
+    {
+      "text": "data",
+      "start": 56.48,
+      "duration": 4.719
+    },
+    {
+      "text": "that we used in the excel exercise",
+      "start": 56.96,
+      "duration": 6.48
+    },
+    {
+      "text": "sales and cost of goods sold for three",
+      "start": 61.199,
+      "duration": 4.801
+    },
+    {
+      "text": "different periods",
+      "start": 63.44,
+      "duration": 4.24
+    },
+    {
+      "text": "and we're going to try and forecast the",
+      "start": 66.0,
+      "duration": 5.04
+    },
+    {
+      "text": "next period into the future",
+      "start": 67.68,
+      "duration": 6.16
+    },
+    {
+      "text": "so just as we had seen with other",
+      "start": 71.04,
+      "duration": 4.24
+    },
+    {
+      "text": "financial statement data",
+      "start": 73.84,
+      "duration": 4.4
+    },
+    {
+      "text": "we should set the first column as the",
+      "start": 75.28,
+      "duration": 3.92
+    },
+    {
+      "text": "index",
+      "start": 78.24,
+      "duration": 3.84
+    },
+    {
+      "text": "so that we can easily look up these",
+      "start": 79.2,
+      "duration": 3.44
+    },
+    {
+      "text": "items",
+      "start": 82.08,
+      "duration": 4.16
+    },
+    {
+      "text": "by their names i will also solve this",
+      "start": 82.64,
+      "duration": 6.64
+    },
+    {
+      "text": "unnamed issue here and allow",
+      "start": 86.24,
+      "duration": 7.6
+    },
+    {
+      "text": "the date columns to work appropriately",
+      "start": 89.28,
+      "duration": 4.56
+    },
+    {
+      "text": "so um the first",
+      "start": 95.6,
+      "duration": 4.96
+    },
+    {
+      "text": "step in the forecasting process is to",
+      "start": 98.64,
+      "duration": 3.839
+    },
+    {
+      "text": "examine the history",
+      "start": 100.56,
+      "duration": 5.12
+    },
+    {
+      "text": "and so we can plot it",
+      "start": 102.479,
+      "duration": 5.761
+    },
+    {
+      "text": "but you can't just easily plot the data",
+      "start": 105.68,
+      "duration": 5.04
+    },
+    {
+      "text": "in this format really we need it to be",
+      "start": 108.24,
+      "duration": 5.519
+    },
+    {
+      "text": "flipped because uh we're plotting over",
+      "start": 110.72,
+      "duration": 3.28
+    },
+    {
+      "text": "the",
+      "start": 113.759,
+      "duration": 3.921
+    },
+    {
+      "text": "index the each column over the index",
+      "start": 114.0,
+      "duration": 7.439
+    },
+    {
+      "text": "um so with this we would have like a",
+      "start": 117.68,
+      "duration": 6.32
+    },
+    {
+      "text": "2017 a 2018 and a 2019 plot that",
+      "start": 121.439,
+      "duration": 4.081
+    },
+    {
+      "text": "connects sales and cost of goods sold",
+      "start": 124.0,
+      "duration": 3.2
+    },
+    {
+      "text": "not what we want",
+      "start": 125.52,
+      "duration": 5.04
+    },
+    {
+      "text": "so thankfully with pandas we can do dot",
+      "start": 127.2,
+      "duration": 6.16
+    },
+    {
+      "text": "capital t and that transposes the data",
+      "start": 130.56,
+      "duration": 4.08
+    },
+    {
+      "text": "frame",
+      "start": 133.36,
+      "duration": 3.68
+    },
+    {
+      "text": "so now we have the columns as those",
+      "start": 134.64,
+      "duration": 3.36
+    },
+    {
+      "text": "statement items",
+      "start": 137.04,
+      "duration": 3.279
+    },
+    {
+      "text": "and the rows as the time periods which",
+      "start": 138.0,
+      "duration": 3.52
+    },
+    {
+      "text": "is the format",
+      "start": 140.319,
+      "duration": 3.92
+    },
+    {
+      "text": "we need to be able to plot it so if we",
+      "start": 141.52,
+      "duration": 3.2
+    },
+    {
+      "text": "just",
+      "start": 144.239,
+      "duration": 3.36
+    },
+    {
+      "text": "uh take that transposed data frame and",
+      "start": 144.72,
+      "duration": 4.32
+    },
+    {
+      "text": "we do a line plot",
+      "start": 147.599,
+      "duration": 4.161
+    },
+    {
+      "text": "on that then we can see sales and cost",
+      "start": 149.04,
+      "duration": 3.76
+    },
+    {
+      "text": "of goods sold",
+      "start": 151.76,
+      "duration": 4.64
+    },
+    {
+      "text": "over time so it kind of goes up and then",
+      "start": 152.8,
+      "duration": 4.719
+    },
+    {
+      "text": "down and so",
+      "start": 156.4,
+      "duration": 3.04
+    },
+    {
+      "text": "the average or recent value approach may",
+      "start": 157.519,
+      "duration": 3.121
+    },
+    {
+      "text": "be appropriate",
+      "start": 159.44,
+      "duration": 3.92
+    },
+    {
+      "text": "but we'll look at all the different",
+      "start": 160.64,
+      "duration": 3.92
+    },
+    {
+      "text": "simple approaches",
+      "start": 163.36,
+      "duration": 6.8
+    },
+    {
+      "text": "to see how we can do each of them so",
+      "start": 164.56,
+      "duration": 6.64
+    },
+    {
+      "text": "first we can look",
+      "start": 170.16,
+      "duration": 4.96
+    },
+    {
+      "text": "at the recent value approach um",
+      "start": 171.2,
+      "duration": 7.92
+    },
+    {
+      "text": "so we're gonna need to pull",
+      "start": 175.12,
+      "duration": 8.64
+    },
+    {
+      "text": "the um most recent value of sales and",
+      "start": 179.12,
+      "duration": 6.96
+    },
+    {
+      "text": "cost of goods sold",
+      "start": 183.76,
+      "duration": 4.399
+    },
+    {
+      "text": "so one thing we can do to make our life",
+      "start": 186.08,
+      "duration": 3.92
+    },
+    {
+      "text": "a little bit easier there is save",
+      "start": 188.159,
+      "duration": 4.961
+    },
+    {
+      "text": "that last period into a variable",
+      "start": 190.0,
+      "duration": 6.159
+    },
+    {
+      "text": "and we can get that value by looking at",
+      "start": 193.12,
+      "duration": 4.88
+    },
+    {
+      "text": "the columns of the data frame",
+      "start": 196.159,
+      "duration": 5.201
+    },
+    {
+      "text": "and taking the max uh within that",
+      "start": 198.0,
+      "duration": 8.159
+    },
+    {
+      "text": "so um we see that 2019 is the most",
+      "start": 201.36,
+      "duration": 6.64
+    },
+    {
+      "text": "recent period here",
+      "start": 206.159,
+      "duration": 5.121
+    },
+    {
+      "text": "and so now we can",
+      "start": 208.0,
+      "duration": 6.48
+    },
+    {
+      "text": "use the outlook which gets us the entire",
+      "start": 211.28,
+      "duration": 6.319
+    },
+    {
+      "text": "row of sales or cost of goods sold and",
+      "start": 214.48,
+      "duration": 3.44
+    },
+    {
+      "text": "then",
+      "start": 217.599,
+      "duration": 3.601
+    },
+    {
+      "text": "also uh look up the last date",
+      "start": 217.92,
+      "duration": 6.48
+    },
+    {
+      "text": "within that so that will get us the most",
+      "start": 221.2,
+      "duration": 3.92
+    },
+    {
+      "text": "recent",
+      "start": 224.4,
+      "duration": 6.399
+    },
+    {
+      "text": "period out of uh whatever time series",
+      "start": 225.12,
+      "duration": 5.679
+    },
+    {
+      "text": "so we'll do that for both sales and cost",
+      "start": 231.04,
+      "duration": 3.52
+    },
+    {
+      "text": "of goods sold",
+      "start": 232.959,
+      "duration": 4.241
+    },
+    {
+      "text": "and then because with the recent value",
+      "start": 234.56,
+      "duration": 4.64
+    },
+    {
+      "text": "model we just use the recent value going",
+      "start": 237.2,
+      "duration": 3.2
+    },
+    {
+      "text": "forward",
+      "start": 239.2,
+      "duration": 4.399
+    },
+    {
+      "text": "those are our forecasts so um there",
+      "start": 240.4,
+      "duration": 6.16
+    },
+    {
+      "text": "we have forecasted value for sales 1100",
+      "start": 243.599,
+      "duration": 3.521
+    },
+    {
+      "text": "and for",
+      "start": 246.56,
+      "duration": 4.0
+    },
+    {
+      "text": "cost of goods sold 650",
+      "start": 247.12,
+      "duration": 3.44
+    },
+    {
+      "text": "next we'll look at the average uh",
+      "start": 251.12,
+      "duration": 6.16
+    },
+    {
+      "text": "historical average approach method model",
+      "start": 254.159,
+      "duration": 5.76
+    },
+    {
+      "text": "for forecasting",
+      "start": 257.28,
+      "duration": 4.16
+    },
+    {
+      "text": "so for that we're just going to take an",
+      "start": 259.919,
+      "duration": 3.361
+    },
+    {
+      "text": "average of the historical",
+      "start": 261.44,
+      "duration": 3.36
+    },
+    {
+      "text": "so we're going to pull out that sales",
+      "start": 263.28,
+      "duration": 3.12
+    },
+    {
+      "text": "row and take the average and pull out",
+      "start": 264.8,
+      "duration": 3.2
+    },
+    {
+      "text": "that cost of goods sold row and take",
+      "start": 266.4,
+      "duration": 4.32
+    },
+    {
+      "text": "the average and those are our forecasts",
+      "start": 268.0,
+      "duration": 3.12
+    },
+    {
+      "text": "for",
+      "start": 270.72,
+      "duration": 3.039
+    },
+    {
+      "text": "going forward",
+      "start": 271.12,
+      "duration": 2.639
+    },
+    {
+      "text": "so the the trend is the first one that",
+      "start": 276.0,
+      "duration": 3.44
+    },
+    {
+      "text": "actually takes",
+      "start": 278.4,
+      "duration": 3.92
+    },
+    {
+      "text": "a little bit of effort to do we need to",
+      "start": 279.44,
+      "duration": 4.88
+    },
+    {
+      "text": "run an ols regression",
+      "start": 282.32,
+      "duration": 5.28
+    },
+    {
+      "text": "uh with the t uh just",
+      "start": 284.32,
+      "duration": 6.48
+    },
+    {
+      "text": "an incrementing time period variable",
+      "start": 287.6,
+      "duration": 6.64
+    },
+    {
+      "text": "as the independent variable and",
+      "start": 290.8,
+      "duration": 8.16
+    },
+    {
+      "text": "our our values as the y",
+      "start": 294.24,
+      "duration": 6.16
+    },
+    {
+      "text": "and we're going to estimate the",
+      "start": 298.96,
+      "duration": 3.76
+    },
+    {
+      "text": "intercept and the coefficient that we're",
+      "start": 300.4,
+      "duration": 2.96
+    },
+    {
+      "text": "going to use",
+      "start": 302.72,
+      "duration": 3.36
+    },
+    {
+      "text": "in calculating the forecast going",
+      "start": 303.36,
+      "duration": 5.04
+    },
+    {
+      "text": "forward",
+      "start": 306.08,
+      "duration": 2.32
+    },
+    {
+      "text": "so first thing that we need to do is set",
+      "start": 308.84,
+      "duration": 3.24
+    },
+    {
+      "text": "up",
+      "start": 311.68,
+      "duration": 4.079
+    },
+    {
+      "text": "a data frame which um",
+      "start": 312.08,
+      "duration": 4.88
+    },
+    {
+      "text": "is going to be in the structure to run",
+      "start": 315.759,
+      "duration": 3.601
+    },
+    {
+      "text": "the regression so we can first",
+      "start": 316.96,
+      "duration": 4.88
+    },
+    {
+      "text": "grab that sales column out of the data",
+      "start": 319.36,
+      "duration": 3.119
+    },
+    {
+      "text": "frame",
+      "start": 321.84,
+      "duration": 2.96
+    },
+    {
+      "text": "and make a new data frame out of that so",
+      "start": 322.479,
+      "duration": 3.761
+    },
+    {
+      "text": "that now it's in this",
+      "start": 324.8,
+      "duration": 4.64
+    },
+    {
+      "text": "transposed format",
+      "start": 326.24,
+      "duration": 3.2
+    },
+    {
+      "text": "um you also could have transposed it and",
+      "start": 329.52,
+      "duration": 4.32
+    },
+    {
+      "text": "then looks up the sales column that",
+      "start": 332.4,
+      "duration": 4.32
+    },
+    {
+      "text": "would have worked as well",
+      "start": 333.84,
+      "duration": 2.88
+    },
+    {
+      "text": "and then um",
+      "start": 337.12,
+      "duration": 6.639
+    },
+    {
+      "text": "what we want for t is like zero one two",
+      "start": 340.24,
+      "duration": 7.36
+    },
+    {
+      "text": "um so we can do that by",
+      "start": 343.759,
+      "duration": 6.72
+    },
+    {
+      "text": "kind of using pandas's automatic index",
+      "start": 347.6,
+      "duration": 5.52
+    },
+    {
+      "text": "to our advantage so if we use reset",
+      "start": 350.479,
+      "duration": 3.201
+    },
+    {
+      "text": "index",
+      "start": 353.12,
+      "duration": 4.88
+    },
+    {
+      "text": "to get rid of uh this",
+      "start": 353.68,
+      "duration": 7.6
+    },
+    {
+      "text": "date index here we use drop equals true",
+      "start": 358.0,
+      "duration": 4.8
+    },
+    {
+      "text": "to make sure it doesn't come in as a",
+      "start": 361.28,
+      "duration": 3.359
+    },
+    {
+      "text": "column in the data frame",
+      "start": 362.8,
+      "duration": 4.8
+    },
+    {
+      "text": "now we have 0 1 2. this is ultimately",
+      "start": 364.639,
+      "duration": 4.481
+    },
+    {
+      "text": "going to be our t but we have to get it",
+      "start": 367.6,
+      "duration": 4.0
+    },
+    {
+      "text": "to come as a column",
+      "start": 369.12,
+      "duration": 4.3
+    },
+    {
+      "text": "so we um",
+      "start": 371.6,
+      "duration": 3.76
+    },
+    {
+      "text": "[Music]",
+      "start": 373.42,
+      "duration": 5.3
+    },
+    {
+      "text": "do reset index again this time without",
+      "start": 375.36,
+      "duration": 4.32
+    },
+    {
+      "text": "the drop",
+      "start": 378.72,
+      "duration": 3.199
+    },
+    {
+      "text": "and that says take what was the index",
+      "start": 379.68,
+      "duration": 4.16
+    },
+    {
+      "text": "and now make it a column",
+      "start": 381.919,
+      "duration": 3.84
+    },
+    {
+      "text": "in the data frame and generate a new",
+      "start": 383.84,
+      "duration": 4.479
+    },
+    {
+      "text": "auto incrementing index",
+      "start": 385.759,
+      "duration": 5.841
+    },
+    {
+      "text": "um so then we can just rename that",
+      "start": 388.319,
+      "duration": 3.841
+    },
+    {
+      "text": "column",
+      "start": 391.6,
+      "duration": 4.56
+    },
+    {
+      "text": "as t and now we have this t",
+      "start": 392.16,
+      "duration": 7.599
+    },
+    {
+      "text": "column in here um this is certainly not",
+      "start": 396.16,
+      "duration": 5.36
+    },
+    {
+      "text": "the only approach to",
+      "start": 399.759,
+      "duration": 4.88
+    },
+    {
+      "text": "getting this uh t variable but",
+      "start": 401.52,
+      "duration": 4.88
+    },
+    {
+      "text": "it's straight it's a straightforward way",
+      "start": 404.639,
+      "duration": 5.201
+    },
+    {
+      "text": "to do it",
+      "start": 406.4,
+      "duration": 3.44
+    },
+    {
+      "text": "so that was a number of steps there",
+      "start": 410.479,
+      "duration": 4.801
+    },
+    {
+      "text": "uh and we're gonna need to do the same",
+      "start": 413.84,
+      "duration": 4.079
+    },
+    {
+      "text": "thing for both sales and costa gets sold",
+      "start": 415.28,
+      "duration": 5.44
+    },
+    {
+      "text": "so let's create a function which does",
+      "start": 417.919,
+      "duration": 4.321
+    },
+    {
+      "text": "those steps for us",
+      "start": 420.72,
+      "duration": 3.44
+    },
+    {
+      "text": "creates the new data frame from that",
+      "start": 422.24,
+      "duration": 3.679
+    },
+    {
+      "text": "particular",
+      "start": 424.16,
+      "duration": 4.8
+    },
+    {
+      "text": "line item resets",
+      "start": 425.919,
+      "duration": 5.041
+    },
+    {
+      "text": "gets rid of the data index and then uses",
+      "start": 428.96,
+      "duration": 3.84
+    },
+    {
+      "text": "the",
+      "start": 430.96,
+      "duration": 5.12
+    },
+    {
+      "text": "auto incrementing and next as t",
+      "start": 432.8,
+      "duration": 5.679
+    },
+    {
+      "text": "so then we can run that from the",
+      "start": 436.08,
+      "duration": 3.2
+    },
+    {
+      "text": "original",
+      "start": 438.479,
+      "duration": 3.921
+    },
+    {
+      "text": "data frame and just pick",
+      "start": 439.28,
+      "duration": 6.88
+    },
+    {
+      "text": "which line item we want to use it on and",
+      "start": 442.4,
+      "duration": 4.48
+    },
+    {
+      "text": "it generates",
+      "start": 446.16,
+      "duration": 2.319
+    },
+    {
+      "text": "the data frame and the correct structure",
+      "start": 446.88,
+      "duration": 4.96
+    },
+    {
+      "text": "for us",
+      "start": 448.479,
+      "duration": 3.361
+    },
+    {
+      "text": "um so then the next step is then to run",
+      "start": 452.08,
+      "duration": 3.92
+    },
+    {
+      "text": "the regression",
+      "start": 454.639,
+      "duration": 5.041
+    },
+    {
+      "text": "um so",
+      "start": 456.0,
+      "duration": 5.68
+    },
+    {
+      "text": "here we're using stats models to run the",
+      "start": 459.68,
+      "duration": 3.519
+    },
+    {
+      "text": "regression and we're going to run",
+      "start": 461.68,
+      "duration": 4.56
+    },
+    {
+      "text": "an ols regression",
+      "start": 463.199,
+      "duration": 6.161
+    },
+    {
+      "text": "and whatever our line item we want to",
+      "start": 466.24,
+      "duration": 5.12
+    },
+    {
+      "text": "predict is going to be the y",
+      "start": 469.36,
+      "duration": 4.399
+    },
+    {
+      "text": "and then the x is going to be the t and",
+      "start": 471.36,
+      "duration": 5.48
+    },
+    {
+      "text": "make sure to add the constant",
+      "start": 473.759,
+      "duration": 5.921
+    },
+    {
+      "text": "um and then we fit the model",
+      "start": 476.84,
+      "duration": 5.96
+    },
+    {
+      "text": "and we get the summary of the results so",
+      "start": 479.68,
+      "duration": 4.079
+    },
+    {
+      "text": "there we can see",
+      "start": 482.8,
+      "duration": 4.64
+    },
+    {
+      "text": "the um intercept was estimated as 1050",
+      "start": 483.759,
+      "duration": 8.401
+    },
+    {
+      "text": "and that the coefficient on t is 50.",
+      "start": 487.44,
+      "duration": 7.36
+    },
+    {
+      "text": "so we can pull those out of the results",
+      "start": 492.16,
+      "duration": 4.08
+    },
+    {
+      "text": "by",
+      "start": 494.8,
+      "duration": 3.519
+    },
+    {
+      "text": "accessing params on the results and",
+      "start": 496.24,
+      "duration": 3.6
+    },
+    {
+      "text": "pulling out the const",
+      "start": 498.319,
+      "duration": 4.241
+    },
+    {
+      "text": "and the t",
+      "start": 499.84,
+      "duration": 2.72
+    },
+    {
+      "text": "so now we have those as individual",
+      "start": 502.879,
+      "duration": 4.0
+    },
+    {
+      "text": "variables",
+      "start": 504.84,
+      "duration": 3.96
+    },
+    {
+      "text": "so now we have fitted the model we just",
+      "start": 506.879,
+      "duration": 3.681
+    },
+    {
+      "text": "need to predict",
+      "start": 508.8,
+      "duration": 3.679
+    },
+    {
+      "text": "um and so the prediction is just you",
+      "start": 510.56,
+      "duration": 3.599
+    },
+    {
+      "text": "take the intercept plus the",
+      "start": 512.479,
+      "duration": 5.04
+    },
+    {
+      "text": "beta times the t or whatever period you",
+      "start": 514.159,
+      "duration": 4.641
+    },
+    {
+      "text": "want to forecast",
+      "start": 517.519,
+      "duration": 4.721
+    },
+    {
+      "text": "and because 2 was the t of",
+      "start": 518.8,
+      "duration": 6.08
+    },
+    {
+      "text": "the last period 3 is going to be the",
+      "start": 522.24,
+      "duration": 4.32
+    },
+    {
+      "text": "next t",
+      "start": 524.88,
+      "duration": 4.32
+    },
+    {
+      "text": "and so that is our forecast of the sales",
+      "start": 526.56,
+      "duration": 5.839
+    },
+    {
+      "text": "using the train method",
+      "start": 529.2,
+      "duration": 3.199
+    },
+    {
+      "text": "so um we can",
+      "start": 532.839,
+      "duration": 7.881
+    },
+    {
+      "text": "also make some functions",
+      "start": 537.12,
+      "duration": 6.0
+    },
+    {
+      "text": "for this process as well running the ols",
+      "start": 540.72,
+      "duration": 4.08
+    },
+    {
+      "text": "regression and getting the beta and",
+      "start": 543.12,
+      "duration": 5.6
+    },
+    {
+      "text": "intercept and predicting based on that",
+      "start": 544.8,
+      "duration": 4.4
+    },
+    {
+      "text": "beta",
+      "start": 548.72,
+      "duration": 3.679
+    },
+    {
+      "text": "intercept and the t um",
+      "start": 549.2,
+      "duration": 4.72
+    },
+    {
+      "text": "so then we can use those functions",
+      "start": 552.399,
+      "duration": 4.401
+    },
+    {
+      "text": "instead and we can make one more final",
+      "start": 553.92,
+      "duration": 4.32
+    },
+    {
+      "text": "function that puts all these steps",
+      "start": 556.8,
+      "duration": 2.0
+    },
+    {
+      "text": "together",
+      "start": 558.24,
+      "duration": 3.2
+    },
+    {
+      "text": "create that data frame and then run",
+      "start": 558.8,
+      "duration": 3.28
+    },
+    {
+      "text": "these",
+      "start": 561.44,
+      "duration": 3.36
+    },
+    {
+      "text": "uh run the regression and predict from",
+      "start": 562.08,
+      "duration": 3.84
+    },
+    {
+      "text": "the regression",
+      "start": 564.8,
+      "duration": 3.039
+    },
+    {
+      "text": "now we have one function which is able",
+      "start": 565.92,
+      "duration": 3.2
+    },
+    {
+      "text": "to do the full",
+      "start": 567.839,
+      "duration": 4.0
+    },
+    {
+      "text": "uh trend regression forecasting process",
+      "start": 569.12,
+      "duration": 4.24
+    },
+    {
+      "text": "so you just give it the data frame the",
+      "start": 571.839,
+      "duration": 2.641
+    },
+    {
+      "text": "name of the",
+      "start": 573.36,
+      "duration": 4.159
+    },
+    {
+      "text": "item that you want to forecast",
+      "start": 574.48,
+      "duration": 7.52
+    },
+    {
+      "text": "and the number of",
+      "start": 577.519,
+      "duration": 6.241
+    },
+    {
+      "text": "time periods that you want to forecast",
+      "start": 582.0,
+      "duration": 3.519
+    },
+    {
+      "text": "it or the",
+      "start": 583.76,
+      "duration": 6.0
+    },
+    {
+      "text": "the uh t value of the time period that",
+      "start": 585.519,
+      "duration": 5.44
+    },
+    {
+      "text": "you want to forecast",
+      "start": 589.76,
+      "duration": 3.519
+    },
+    {
+      "text": "so if two was your last historical then",
+      "start": 590.959,
+      "duration": 5.361
+    },
+    {
+      "text": "three is one period into the future",
+      "start": 593.279,
+      "duration": 4.56
+    },
+    {
+      "text": "and then we can just use that function",
+      "start": 596.32,
+      "duration": 3.68
+    },
+    {
+      "text": "on the sales the cost of goods sold",
+      "start": 597.839,
+      "duration": 3.761
+    },
+    {
+      "text": "and that will allow us to get our",
+      "start": 600.0,
+      "duration": 5.839
+    },
+    {
+      "text": "forecast here",
+      "start": 601.6,
+      "duration": 4.239
+    },
+    {
+      "text": "and you can feel free to take these",
+      "start": 606.8,
+      "duration": 3.36
+    },
+    {
+      "text": "functions into your own model",
+      "start": 608.48,
+      "duration": 4.96
+    },
+    {
+      "text": "to do this as well",
+      "start": 610.16,
+      "duration": 3.28
+    },
+    {
+      "text": "so then we also have the compounded",
+      "start": 614.64,
+      "duration": 5.199
+    },
+    {
+      "text": "annual growth rate approach",
+      "start": 617.2,
+      "duration": 5.68
+    },
+    {
+      "text": "so we",
+      "start": 619.839,
+      "duration": 6.24
+    },
+    {
+      "text": "can still use that data frame which was",
+      "start": 622.88,
+      "duration": 5.519
+    },
+    {
+      "text": "set up for the forecasting so let's take",
+      "start": 626.079,
+      "duration": 4.721
+    },
+    {
+      "text": "the one for sales",
+      "start": 628.399,
+      "duration": 5.601
+    },
+    {
+      "text": "and now we want to calculate this uh",
+      "start": 630.8,
+      "duration": 5.84
+    },
+    {
+      "text": "kaiger formula so we want to get the",
+      "start": 634.0,
+      "duration": 3.44
+    },
+    {
+      "text": "first",
+      "start": 636.64,
+      "duration": 4.0
+    },
+    {
+      "text": "sales so we can use a.i look",
+      "start": 637.44,
+      "duration": 6.16
+    },
+    {
+      "text": "to get the first value and uh the last",
+      "start": 640.64,
+      "duration": 4.24
+    },
+    {
+      "text": "value",
+      "start": 643.6,
+      "duration": 5.2
+    },
+    {
+      "text": "so we set that as y0 and yt",
+      "start": 644.88,
+      "duration": 7.76
+    },
+    {
+      "text": "um and we can get the number of time",
+      "start": 648.8,
+      "duration": 5.039
+    },
+    {
+      "text": "periods",
+      "start": 652.64,
+      "duration": 2.879
+    },
+    {
+      "text": "by doing the same thing on the t",
+      "start": 653.839,
+      "duration": 3.761
+    },
+    {
+      "text": "variable so two",
+      "start": 655.519,
+      "duration": 5.201
+    },
+    {
+      "text": "time periods elapsed",
+      "start": 657.6,
+      "duration": 5.919
+    },
+    {
+      "text": "between the first and the last period",
+      "start": 660.72,
+      "duration": 5.28
+    },
+    {
+      "text": "and then we can just calculate the",
+      "start": 663.519,
+      "duration": 5.681
+    },
+    {
+      "text": "kagger formula and we have the",
+      "start": 666.0,
+      "duration": 7.12
+    },
+    {
+      "text": "the kagger and then we'll want to",
+      "start": 669.2,
+      "duration": 8.16
+    },
+    {
+      "text": "apply that going forward into the future",
+      "start": 673.12,
+      "duration": 8.88
+    },
+    {
+      "text": "so to apply that then you just",
+      "start": 677.36,
+      "duration": 4.64
+    },
+    {
+      "text": "multiply the last value the yt",
+      "start": 682.16,
+      "duration": 9.6
+    },
+    {
+      "text": "times 1 plus the compounded annual",
+      "start": 688.72,
+      "duration": 4.16
+    },
+    {
+      "text": "growth rate",
+      "start": 691.76,
+      "duration": 3.519
+    },
+    {
+      "text": "to the power of the number of periods in",
+      "start": 692.88,
+      "duration": 3.199
+    },
+    {
+      "text": "the future",
+      "start": 695.279,
+      "duration": 7.281
+    },
+    {
+      "text": "that you want to forecast",
+      "start": 696.079,
+      "duration": 8.721
+    },
+    {
+      "text": "um",
+      "start": 702.56,
+      "duration": 2.24
+    },
+    {
+      "text": "oh that's how you do exponents in python",
+      "start": 710.639,
+      "duration": 5.76
+    },
+    {
+      "text": "i'm a little tired today",
+      "start": 714.56,
+      "duration": 5.36
+    },
+    {
+      "text": "um so there we go that's our forecasted",
+      "start": 716.399,
+      "duration": 5.041
+    },
+    {
+      "text": "value",
+      "start": 719.92,
+      "duration": 5.599
+    },
+    {
+      "text": "and now we can put that into",
+      "start": 721.44,
+      "duration": 7.199
+    },
+    {
+      "text": "um formula and two functions",
+      "start": 725.519,
+      "duration": 5.681
+    },
+    {
+      "text": "one that gets the compound and annual",
+      "start": 728.639,
+      "duration": 4.081
+    },
+    {
+      "text": "growth rate doing those steps we just",
+      "start": 731.2,
+      "duration": 2.639
+    },
+    {
+      "text": "looked at",
+      "start": 732.72,
+      "duration": 3.52
+    },
+    {
+      "text": "and the other which uh creates the",
+      "start": 733.839,
+      "duration": 3.12
+    },
+    {
+      "text": "forecast",
+      "start": 736.24,
+      "duration": 3.44
+    },
+    {
+      "text": "from that compounded annual growth rate",
+      "start": 736.959,
+      "duration": 4.801
+    },
+    {
+      "text": "um so using those two functions",
+      "start": 739.68,
+      "duration": 5.12
+    },
+    {
+      "text": "then we can get the forecasted value",
+      "start": 741.76,
+      "duration": 5.199
+    },
+    {
+      "text": "and we can put those together into one",
+      "start": 744.8,
+      "duration": 3.68
+    },
+    {
+      "text": "final function which",
+      "start": 746.959,
+      "duration": 3.521
+    },
+    {
+      "text": "is the forecast data frame calculates",
+      "start": 748.48,
+      "duration": 3.52
+    },
+    {
+      "text": "the compound anal growth rate and",
+      "start": 750.48,
+      "duration": 3.76
+    },
+    {
+      "text": "applies that into the future",
+      "start": 752.0,
+      "duration": 4.56
+    },
+    {
+      "text": "uh one function which does it all for",
+      "start": 754.24,
+      "duration": 4.32
+    },
+    {
+      "text": "the kagger approach and then",
+      "start": 756.56,
+      "duration": 6.88
+    },
+    {
+      "text": "we can use it in the same way as that",
+      "start": 758.56,
+      "duration": 8.16
+    },
+    {
+      "text": "the regular trend approach",
+      "start": 763.44,
+      "duration": 3.28
+    },
+    {
+      "text": "and we get the results there",
+      "start": 767.68,
+      "duration": 6.159
+    },
+    {
+      "text": "so that was all working with the levels",
+      "start": 773.92,
+      "duration": 6.8
+    },
+    {
+      "text": "of the sales and cost of goods sold",
+      "start": 777.2,
+      "duration": 6.639
+    },
+    {
+      "text": "but usually cost of goods sold is",
+      "start": 780.72,
+      "duration": 4.64
+    },
+    {
+      "text": "forecasted as a percentage",
+      "start": 783.839,
+      "duration": 5.68
+    },
+    {
+      "text": "of sales so let's look at doing that",
+      "start": 785.36,
+      "duration": 5.68
+    },
+    {
+      "text": "so the first thing that we want to do is",
+      "start": 789.519,
+      "duration": 3.12
+    },
+    {
+      "text": "create a row in our data frame which",
+      "start": 791.04,
+      "duration": 3.52
+    },
+    {
+      "text": "represents the cost of goods sold as a",
+      "start": 792.639,
+      "duration": 3.041
+    },
+    {
+      "text": "percentage of sales",
+      "start": 794.56,
+      "duration": 4.8
+    },
+    {
+      "text": "so i'm going to assign a new row",
+      "start": 795.68,
+      "duration": 6.48
+    },
+    {
+      "text": "by taking the cost of goods sold divided",
+      "start": 799.36,
+      "duration": 3.84
+    },
+    {
+      "text": "by",
+      "start": 802.16,
+      "duration": 4.799
+    },
+    {
+      "text": "the um sales",
+      "start": 803.2,
+      "duration": 3.759
+    },
+    {
+      "text": "and then we've already built out these",
+      "start": 807.12,
+      "duration": 3.68
+    },
+    {
+      "text": "forecasting",
+      "start": 809.76,
+      "duration": 4.319
+    },
+    {
+      "text": "uh functions so we can just use them on",
+      "start": 810.8,
+      "duration": 6.0
+    },
+    {
+      "text": "that percentage as well with the trend",
+      "start": 814.079,
+      "duration": 4.161
+    },
+    {
+      "text": "we would estimate that the next",
+      "start": 816.8,
+      "duration": 3.76
+    },
+    {
+      "text": "periods cost of goods sold as a",
+      "start": 818.24,
+      "duration": 3.599
+    },
+    {
+      "text": "percentage of sales would be",
+      "start": 820.56,
+      "duration": 3.839
+    },
+    {
+      "text": "57",
+      "start": 821.839,
+      "duration": 2.56
+    },
+    {
+      "text": "and then we just multiply that by the",
+      "start": 824.88,
+      "duration": 3.519
+    },
+    {
+      "text": "forecasted sales value",
+      "start": 826.72,
+      "duration": 4.08
+    },
+    {
+      "text": "and that gets us our cost of goods sold",
+      "start": 828.399,
+      "duration": 4.961
+    },
+    {
+      "text": "forecast",
+      "start": 830.8,
+      "duration": 2.56
+    },
+    {
+      "text": "so to kind of put everything together",
+      "start": 834.16,
+      "duration": 4.0
+    },
+    {
+      "text": "around this exercise",
+      "start": 835.92,
+      "duration": 5.039
+    },
+    {
+      "text": "let's make one more function here which",
+      "start": 838.16,
+      "duration": 3.52
+    },
+    {
+      "text": "um",
+      "start": 840.959,
+      "duration": 4.081
+    },
+    {
+      "text": "you can give it the name of the method",
+      "start": 841.68,
+      "duration": 5.599
+    },
+    {
+      "text": "that you want to use",
+      "start": 845.04,
+      "duration": 5.359
+    },
+    {
+      "text": "and it's going to run that particular",
+      "start": 847.279,
+      "duration": 4.56
+    },
+    {
+      "text": "forecast method",
+      "start": 850.399,
+      "duration": 5.12
+    },
+    {
+      "text": "so using the two functions which we",
+      "start": 851.839,
+      "duration": 4.161
+    },
+    {
+      "text": "developed",
+      "start": 855.519,
+      "duration": 2.88
+    },
+    {
+      "text": "for the trend regression and the the",
+      "start": 856.0,
+      "duration": 4.16
+    },
+    {
+      "text": "kagger approach",
+      "start": 858.399,
+      "duration": 4.8
+    },
+    {
+      "text": "as well as just taking the most recent",
+      "start": 860.16,
+      "duration": 3.919
+    },
+    {
+      "text": "value",
+      "start": 863.199,
+      "duration": 2.64
+    },
+    {
+      "text": "and taking the average of the historical",
+      "start": 864.079,
+      "duration": 3.041
+    },
+    {
+      "text": "values",
+      "start": 865.839,
+      "duration": 3.0
+    },
+    {
+      "text": "all these now incorporated into one",
+      "start": 867.12,
+      "duration": 3.12
+    },
+    {
+      "text": "function",
+      "start": 868.839,
+      "duration": 2.68
+    },
+    {
+      "text": "so now we have these four different",
+      "start": 870.24,
+      "duration": 3.76
+    },
+    {
+      "text": "methods",
+      "start": 871.519,
+      "duration": 2.481
+    },
+    {
+      "text": "and we want to forecast the next period",
+      "start": 874.24,
+      "duration": 6.88
+    },
+    {
+      "text": "so then we're going to go through each",
+      "start": 879.68,
+      "duration": 4.08
+    },
+    {
+      "text": "method and we're going to forecast sales",
+      "start": 881.12,
+      "duration": 4.48
+    },
+    {
+      "text": "by that method",
+      "start": 883.76,
+      "duration": 5.28
+    },
+    {
+      "text": "and then uh for each of those",
+      "start": 885.6,
+      "duration": 5.52
+    },
+    {
+      "text": "uh sales methods we're going to go",
+      "start": 889.04,
+      "duration": 3.599
+    },
+    {
+      "text": "through the methods again for the cost",
+      "start": 891.12,
+      "duration": 3.68
+    },
+    {
+      "text": "of goods sold",
+      "start": 892.639,
+      "duration": 4.241
+    },
+    {
+      "text": "and then within that we're going to",
+      "start": 894.8,
+      "duration": 3.52
+    },
+    {
+      "text": "forecast the levels",
+      "start": 896.88,
+      "duration": 4.16
+    },
+    {
+      "text": "of the cost of goods sold and forecast",
+      "start": 898.32,
+      "duration": 3.84
+    },
+    {
+      "text": "the",
+      "start": 901.04,
+      "duration": 2.72
+    },
+    {
+      "text": "percentage cost of goods sold as a",
+      "start": 902.16,
+      "duration": 3.119
+    },
+    {
+      "text": "percentage of",
+      "start": 903.76,
+      "duration": 4.879
+    },
+    {
+      "text": "revenue and uh calculate the levels",
+      "start": 905.279,
+      "duration": 6.8
+    },
+    {
+      "text": "based on that so when we do that then we",
+      "start": 908.639,
+      "duration": 4.961
+    },
+    {
+      "text": "get",
+      "start": 912.079,
+      "duration": 3.361
+    },
+    {
+      "text": "lots of different results here for",
+      "start": 913.6,
+      "duration": 3.039
+    },
+    {
+      "text": "possible",
+      "start": 915.44,
+      "duration": 4.959
+    },
+    {
+      "text": "um results for the cost of goods sold",
+      "start": 916.639,
+      "duration": 5.681
+    },
+    {
+      "text": "depending on",
+      "start": 920.399,
+      "duration": 5.44
+    },
+    {
+      "text": "which method was used for the sales and",
+      "start": 922.32,
+      "duration": 5.6
+    },
+    {
+      "text": "which method was used for the cost to",
+      "start": 925.839,
+      "duration": 3.44
+    },
+    {
+      "text": "get sold",
+      "start": 927.92,
+      "duration": 3.599
+    },
+    {
+      "text": "and whether the levels of the cost of",
+      "start": 929.279,
+      "duration": 4.24
+    },
+    {
+      "text": "goods sold or the percentage",
+      "start": 931.519,
+      "duration": 5.361
+    },
+    {
+      "text": "of sales of cost of goods sold was",
+      "start": 933.519,
+      "duration": 6.0
+    },
+    {
+      "text": "forecasted so lots of options here even",
+      "start": 936.88,
+      "duration": 3.12
+    },
+    {
+      "text": "with just",
+      "start": 939.519,
+      "duration": 4.32
+    },
+    {
+      "text": "the simple forecasting models",
+      "start": 940.0,
+      "duration": 3.839
+    },
+    {
+      "text": "and since there were so many approaches",
+      "start": 944.24,
+      "duration": 4.159
+    },
+    {
+      "text": "here it's useful to visualize that it's",
+      "start": 945.839,
+      "duration": 4.161
+    },
+    {
+      "text": "kind of hard to read all this text",
+      "start": 948.399,
+      "duration": 3.521
+    },
+    {
+      "text": "output",
+      "start": 950.0,
+      "duration": 4.72
+    },
+    {
+      "text": "so we can use a box plot to look at the",
+      "start": 951.92,
+      "duration": 3.76
+    },
+    {
+      "text": "distribution",
+      "start": 954.72,
+      "duration": 4.4
+    },
+    {
+      "text": "of these forecasts and that shows us",
+      "start": 955.68,
+      "duration": 4.0
+    },
+    {
+      "text": "that",
+      "start": 959.12,
+      "duration": 3.44
+    },
+    {
+      "text": "the forecasts basically go down to about",
+      "start": 959.68,
+      "duration": 3.76
+    },
+    {
+      "text": "uh",
+      "start": 962.56,
+      "duration": 4.16
+    },
+    {
+      "text": "6 20 or so 6 25 maybe",
+      "start": 963.44,
+      "duration": 6.88
+    },
+    {
+      "text": "up to like 7 almost 7 20",
+      "start": 966.72,
+      "duration": 6.4
+    },
+    {
+      "text": "but most of the forecasts lie between 6",
+      "start": 970.32,
+      "duration": 3.36
+    },
+    {
+      "text": "50",
+      "start": 973.12,
+      "duration": 4.719
+    },
+    {
+      "text": "and 6 90.",
+      "start": 973.68,
+      "duration": 5.92
+    },
+    {
+      "text": "so now we have an idea of kind of the",
+      "start": 977.839,
+      "duration": 3.36
+    },
+    {
+      "text": "general range of the forecast",
+      "start": 979.6,
+      "duration": 5.76
+    },
+    {
+      "text": "depending on the method that we choose",
+      "start": 981.199,
+      "duration": 4.161
+    },
+    {
+      "text": "so that's a quick overview on how to",
+      "start": 985.519,
+      "duration": 6.401
+    },
+    {
+      "text": "use the four different",
+      "start": 988.56,
+      "duration": 6.639
+    },
+    {
+      "text": "simple time series models that we're",
+      "start": 991.92,
+      "duration": 3.919
+    },
+    {
+      "text": "covering",
+      "start": 995.199,
+      "duration": 3.44
+    },
+    {
+      "text": "in this course and applying it to both",
+      "start": 995.839,
+      "duration": 3.44
+    },
+    {
+      "text": "levels",
+      "start": 998.639,
+      "duration": 3.841
+    },
+    {
+      "text": "and percentages of items so",
+      "start": 999.279,
+      "duration": 5.041
+    },
+    {
+      "text": "thanks for listening and i'll see you",
+      "start": 1002.48,
+      "duration": 6.64
+    },
+    {
+      "text": "next time",
+      "start": 1004.32,
+      "duration": 4.8
+    }
+  ]
+}

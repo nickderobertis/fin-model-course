@@ -1,0 +1,279 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.8,
+      "duration": 2.32
+    },
+    {
+      "text": "this is nick dear vertis teaching you",
+      "start": 3.6,
+      "duration": 3.44
+    },
+    {
+      "text": "financial modeling today",
+      "start": 5.12,
+      "duration": 4.0
+    },
+    {
+      "text": "i'm going to be introducing the lab",
+      "start": 7.04,
+      "duration": 3.2
+    },
+    {
+      "text": "exercise on",
+      "start": 9.12,
+      "duration": 4.32
+    },
+    {
+      "text": "calculating historical free cash flows",
+      "start": 10.24,
+      "duration": 5.04
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 13.44,
+      "duration": 3.36
+    },
+    {
+      "text": "free cash flow estimation",
+      "start": 15.28,
+      "duration": 4.4
+    },
+    {
+      "text": "and forecasting as part of our larger",
+      "start": 16.8,
+      "duration": 3.6
+    },
+    {
+      "text": "objective",
+      "start": 19.68,
+      "duration": 2.8
+    },
+    {
+      "text": "of building out the full discounted cash",
+      "start": 20.4,
+      "duration": 5.92
+    },
+    {
+      "text": "flow evaluation of a stock",
+      "start": 22.48,
+      "duration": 3.84
+    },
+    {
+      "text": "so we just wrapped up the historical",
+      "start": 26.4,
+      "duration": 4.639
+    },
+    {
+      "text": "free cash flows material",
+      "start": 29.119,
+      "duration": 4.641
+    },
+    {
+      "text": "i'm going through an introduction on it",
+      "start": 31.039,
+      "duration": 3.601
+    },
+    {
+      "text": "as well as",
+      "start": 33.76,
+      "duration": 3.6
+    },
+    {
+      "text": "showing how to calculate it in python",
+      "start": 34.64,
+      "duration": 4.079
+    },
+    {
+      "text": "and now we come to",
+      "start": 37.36,
+      "duration": 3.84
+    },
+    {
+      "text": "the lab exercise which tests knowledge",
+      "start": 38.719,
+      "duration": 3.921
+    },
+    {
+      "text": "of that material",
+      "start": 41.2,
+      "duration": 5.12
+    },
+    {
+      "text": "so it's two exercises um and the first",
+      "start": 42.64,
+      "duration": 4.64
+    },
+    {
+      "text": "one here",
+      "start": 46.32,
+      "duration": 3.2
+    },
+    {
+      "text": "uh i just directly gave you the numbers",
+      "start": 47.28,
+      "duration": 3.04
+    },
+    {
+      "text": "to use",
+      "start": 49.52,
+      "duration": 4.0
+    },
+    {
+      "text": "to calculate the free cash flows so it's",
+      "start": 50.32,
+      "duration": 3.68
+    },
+    {
+      "text": "kind of",
+      "start": 53.52,
+      "duration": 3.679
+    },
+    {
+      "text": "just about being able to uh go through",
+      "start": 54.0,
+      "duration": 3.68
+    },
+    {
+      "text": "that",
+      "start": 57.199,
+      "duration": 4.081
+    },
+    {
+      "text": "formula to calculate the free cash flows",
+      "start": 57.68,
+      "duration": 6.72
+    },
+    {
+      "text": "um so you can get used to",
+      "start": 61.28,
+      "duration": 5.04
+    },
+    {
+      "text": "uh the components that are involved and",
+      "start": 64.4,
+      "duration": 4.079
+    },
+    {
+      "text": "how you put them together",
+      "start": 66.32,
+      "duration": 4.64
+    },
+    {
+      "text": "and then level two is a little more",
+      "start": 68.479,
+      "duration": 3.281
+    },
+    {
+      "text": "realistic",
+      "start": 70.96,
+      "duration": 4.08
+    },
+    {
+      "text": "exercise of you have to actually load in",
+      "start": 71.76,
+      "duration": 5.679
+    },
+    {
+      "text": "um income statement and balance sheet",
+      "start": 75.04,
+      "duration": 3.119
+    },
+    {
+      "text": "data",
+      "start": 77.439,
+      "duration": 3.841
+    },
+    {
+      "text": "and calculate the free cash flows using",
+      "start": 78.159,
+      "duration": 6.401
+    },
+    {
+      "text": "those data directly um and you'll want",
+      "start": 81.28,
+      "duration": 5.12
+    },
+    {
+      "text": "to calculate two different periods",
+      "start": 84.56,
+      "duration": 5.519
+    },
+    {
+      "text": "of the free cash flows",
+      "start": 86.4,
+      "duration": 6.48
+    },
+    {
+      "text": "um so this is going to be quite simple",
+      "start": 90.079,
+      "duration": 3.441
+    },
+    {
+      "text": "uh",
+      "start": 92.88,
+      "duration": 3.76
+    },
+    {
+      "text": "or sorry quite similar to the",
+      "start": 93.52,
+      "duration": 6.32
+    },
+    {
+      "text": "example that we went through in python",
+      "start": 96.64,
+      "duration": 5.119
+    },
+    {
+      "text": "and you can feel free to",
+      "start": 99.84,
+      "duration": 5.04
+    },
+    {
+      "text": "use whatever tools um excel",
+      "start": 101.759,
+      "duration": 5.921
+    },
+    {
+      "text": "python or within python you can use just",
+      "start": 104.88,
+      "duration": 6.559
+    },
+    {
+      "text": "panos or you can use find statement",
+      "start": 107.68,
+      "duration": 3.759
+    },
+    {
+      "text": "however you want to go and calculate the",
+      "start": 111.84,
+      "duration": 4.959
+    },
+    {
+      "text": "free cash flows",
+      "start": 114.24,
+      "duration": 4.879
+    },
+    {
+      "text": "so that's the lab exercise for the",
+      "start": 116.799,
+      "duration": 3.121
+    },
+    {
+      "text": "historical",
+      "start": 119.119,
+      "duration": 3.28
+    },
+    {
+      "text": "free cash flows thanks for listening and",
+      "start": 119.92,
+      "duration": 7.519
+    },
+    {
+      "text": "see you next time",
+      "start": 122.399,
+      "duration": 5.04
+    }
+  ]
+}

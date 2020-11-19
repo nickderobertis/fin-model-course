@@ -814,6 +814,10 @@ class GeneralPythonExternalResources(ResourceCollection):
         'Guide to Python Imports',
         external_url='https://realpython.com/absolute-vs-relative-python-imports/'
     )
+    finstmt_documentation: LectureResource = LectureResource(
+        'finstmt Documentation',
+        external_url='https://nickderobertis.github.io/py-finstmt/'
+    )
 
 
 class ExternalResources(ResourceCollection):

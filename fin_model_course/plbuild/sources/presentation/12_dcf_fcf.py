@@ -104,8 +104,9 @@ def get_content():
                          'and', pl.Underline('forecast the financial statements.')],
                         'Forecasting FCFs is much easier but is not as accurate, both due to lack of granularity and '
                         'due to typically uneven FCFs',
-                        ['Then there are two main methods of forecasting', pl.Underline('time-series methods'),
-                         'and', pl.Underline('% of item methods')]
+                        ['We will use', pl.Underline('time-series methods'), 'to forecast the financial statements, '
+                         'either in the', pl.Underline('levels'), 'of the item, the', pl.Underline('growth'),
+                         'of the item, or as a', pl.Underline('percentage of another item')]
                     ],
                     title='Forecasting FCFs'
                 )
@@ -183,16 +184,16 @@ def get_content():
                     block_title='Calculating FCF',
                     title='Put it All Together'
                 ),
-                fcf_exercise.presentation_frames(),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download the files in Examples > DCF > Historical FCF',
-                        'There shold be a Jupyter notebook as well as a data file',
+                        'Go to the course site and download the files in Historical FCF',
+                        'There should be a Jupyter notebook as well as a data file',
                         'We will go through a couple approaches to calculating FCFs in Python.'
                     ],
                     title='Example for Calculating FCFs',
                     block_title='Two Ways to Calculate FCFs in Python'
-                )
+                ),
+                fcf_exercise.presentation_frames(),
             ],
             title='Calculating Historical Free Cash Flows',
             short_title='Historical FCF',
@@ -201,14 +202,19 @@ def get_content():
             [
                 lp.DimRevealListFrame(
                     [
-                        'As mentioned in the intro, we can generally use either time-series methods or '
-                        '% of item methods.',
+                        pl.TextSize(-1),
+                        'As mentioned in the intro, we will use time-series methods on the levels of the item, '
+                        'the growth of the item, or as a percentage of another item',
                         'Time-series methods are about numerically estimating future values based on past values',
-                        '% of item methods link an item to another item. E.g. setting cost of goods sold to '
-                        '60% of sales.',
-                        'At least some time-series methods must be used, as % of item methods link the forecast of '
-                        'this item to another item, they can not be the only method',
-                        'Both methods can be adjusted by the analysts qualitative projections of the future'
+                        'Levels mean we forecast the numbers of the item itself, e.g. sales was 1M two years ago and '
+                        '1.5M last year so we feed those numbers into our time-series model and predict 2M for the '
+                        'next year',
+                        'Growth means to first calculate the historical growth rate of the item, then forecast that. '
+                        'E.g. sales grew 10% two years ago and 8% last year so we expect it to grow 6% this year',
+                        'Percentage of item methods link an item to another item. E.g. setting cost of goods sold to '
+                        '60% of sales. That percentage still needs to be forecasted',
+                        "Any forecast can be adjusted by the analyst's qualitative projections of the future. The "
+                        "forecast method may also have to be chosen with the qualitative analysis in mind"
                     ],
                     title='Overview of the Methods'
                 ),
@@ -228,9 +234,9 @@ def get_content():
                         ['The simplest models are to use the', pl.Underline('average of historical values'), 'or the',
                          pl.Underline('most recent value'), 'as the prediction for all future values'],
                         ['A more realistic model will also include estimating the', pl.Underline('trend'),
-                         'or growth of the historical values and applying that to the future'],
-                        'More advanced models use autoregressive terms (past values predict future values), moving '
-                        'average terms (past errors predict future values), or conditional heteroskedasticity terms '
+                         f'or {pl.Underline("growth")} of the historical values and applying that to the future'],
+                        'More advanced models use autoregressive terms (recent values predict future values), moving '
+                        'average terms (recent errors predict future values), or conditional heteroskedasticity terms '
                         '(changing variance over time)',
                         'Examples of these advanced models include AR, MA, ARMA, ARCH, GAM, and many more'
                     ],
@@ -242,8 +248,9 @@ def get_content():
                         'data, and the historical patterns in the data',
                         'If the data is historically constant or expected to be constant in the future, using the '
                         'average or most recent value should be enough',
-                        "If the data follows a defined trend and doesn't have historical patterns, then using the "
-                        "trend should be enough",
+                        "If the data follows a defined trend or growth and doesn't have historical patterns, "
+                        "then using the "
+                        "trend or growth models should be enough",
                         'If there are historical patterns in the data, such as seasonality, then more advanced '
                         'models are required.'
                     ],
@@ -264,12 +271,15 @@ def get_content():
                 ),
                 lp.DimRevealListFrame(
                     [
-                        ['We also mentioned', pl.Underline('% of item'), 'methods as a general forecasting approach'],
-                        'These methods still require a time-series forecast. Instead of directly forecasting the item, '
-                        'you will be forecasting future item percentages, then using these in combination with '
+                        'When we forecast levels, just use the forecasted values and you are done',
+                        'When we forecast growth, calculate the historical growth, run the forecast on that, then '
+                        'apply the predicted future growth from the final historical period to generate '
+                        'the forecasted levels',
+                        'For percentage of item methods, calculate the historical percentage of the item, '
+                        'forecast future item percentages, then use these in combination with '
                         'the forecast of the referenced item to generate the prediction',
                         'E.g. use the average approach to say historically COGS was 40% of sales, and so estimate '
-                        'COGS as 40% of sales going forward'
+                        'COGS as 40% of sales going forward. Multiply the forecasted sales by 40% to get the COGS',
                     ],
                     title='What to Forecast?'
                 )
@@ -326,36 +336,16 @@ def get_content():
                     [
                         [
                             pl.Bold('Fit:'),
-                            pl.UnorderedList([
                                 [
-                                    pl.Underline('Method 1'),
                                     'Run an OLS regression with a constant and time as the independent variable, '
                                     'where time is measured in number of periods since the beginning',
                                 ],
-                                [
-                                    pl.Underline('Method 2'),
-                                    [
-                                        'Calculate the compounded annual growth rate (CAGR) as',
-                                        pl.Equation(str_eq=r'\frac{y_T}{y_0}^{\frac{1}{n}} - 1')
-                                    ]
-                                ],
-                            ])
                         ],
                         [
                             pl.Bold('Predict:'),
-                            pl.UnorderedList([
                                 [
-                                    pl.Underline('Method 1'),
                                     r'For each $t$ you want to predict, calculate $a + \beta t$',
                                 ],
-                                [
-                                    pl.Underline('Method 2'),
-                                    [
-                                        'Calculate future periods using the CAGR as',
-                                        pl.Equation(str_eq=rf'y_{{T + n}} = y_T * {pl.Text("CAGR")}^n')
-                                    ]
-                                ],
-                            ])
                         ]
                     ],
                     [
@@ -364,10 +354,31 @@ def get_content():
                     title='Using the Trend Model',
                     block_title='Trend Model'
                 ),
+                SingleBlockDimRevealListFrame(
+                    [
+                        [
+                            pl.Bold('Fit:'),
+                            [
+                                'Calculate the compounded annual growth rate (CAGR) as',
+                                pl.Equation(str_eq=r'\frac{y_T}{y_0}^{\frac{1}{n}} - 1')
+                            ]
+                        ],
+                        [
+                            pl.Bold('Predict:'),
+                            ['Calculate future periods by compounding CAGR on the latest historical period',
+                            pl.Equation(str_eq=rf'y_{{T + f}} = y_T * (1 + {pl.Text("CAGR")})^f')]
+                        ]
+                    ],
+                    [
+                        pl.Equation(str_eq=r'y_{{T + f}} = y_T * (\frac{y_T}{y_0}^{\frac{1}{n}})^f', inline=False)
+                    ],
+                    title='Using the CAGR Model',
+                    block_title='CAGR'
+                ),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download the files in Examples > DCF > Forecasting > Simple',
-                        'There shold be a Jupyter notebook as well as two Excel files. Place these all in the '
+                        'Go to the course site and download the files in Examples > DCF > Forecasting > Simple',
+                        'There should be a Jupyter notebook as well as two Excel files. Place these all in the '
                         'same folder',
                         'We will walk through "Sales COGS Forecasted.xlsx" to show forecasting in Excel, and '
                         '"Forecast Sales COGS Simple.ipynb" for forecasting in Python. "Sales COGS.xlsx" '
@@ -377,6 +388,15 @@ def get_content():
                     block_title='Example for Simple Time-Series Forecasting'
                 ),
                 simple_ts_exercise.presentation_frames(),
+                InClassExampleFrame(
+                    [
+                        'Go to the course site and download "Forecasting Financial Statements.ipynb"',
+                        f'We will walk through using {pl.Monospace("finstmt")} to forecast financial statements '
+                        'using simple time-series models',
+                    ],
+                    title='Forecasting Financial Statements with Simple Time-Series in Python',
+                    block_title='Use finstmt for Financial Statement Forecasting'
+                ),
             ],
             title='Forecasting Simple Time-Series',
             short_title='Simple Forecast'
@@ -413,7 +433,7 @@ def get_content():
                     [
                         "So you've determined a trend alone will not fit the historical data. What are next steps?",
                         ['Generally fitting the best time-series model is an involved process which requires '
-                         'subtantial knowledge of how the models work, see',
+                         'substantial knowledge of how the models work, see',
                          Hyperlink(
                              'https://www.seanabu.com/2016/03/22/time-series-seasonal-ARIMA-model-in-python/',
                              'this blog post'
@@ -448,8 +468,8 @@ def get_content():
                 ),
                 InClassExampleFrame(
                     [
-                        'Go to Canvas and download the files in Examples > DCF > Forecasting > Complex',
-                        'There shold be a Jupyter notebook as well as two Excel files. Place these all in the '
+                        'Go to the course site and download the files in Examples > DCF > Forecasting > Complex',
+                        'There should be a Jupyter notebook as well as two Excel files. Place these all in the '
                         'same folder',
                         'We will walk through "Forecasting Quarterly Financial Statements.ipynb" to show forecasting '
                         'in Python using both the Quarterly Seasonal Trend Model and the automated software approach.'

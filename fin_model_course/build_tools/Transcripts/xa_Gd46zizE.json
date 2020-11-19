@@ -1,0 +1,269 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick d robertis",
+      "start": 3.76,
+      "duration": 3.599
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 5.6,
+      "duration": 4.56
+    },
+    {
+      "text": "today we're going to be introducing the",
+      "start": 7.359,
+      "duration": 4.16
+    },
+    {
+      "text": "lab exercise",
+      "start": 10.16,
+      "duration": 5.599
+    },
+    {
+      "text": "on simple time series forecasting",
+      "start": 11.519,
+      "duration": 6.081
+    },
+    {
+      "text": "this is part of our lecture segment on",
+      "start": 15.759,
+      "duration": 3.6
+    },
+    {
+      "text": "free cash flow estimation and",
+      "start": 17.6,
+      "duration": 3.2
+    },
+    {
+      "text": "forecasting",
+      "start": 19.359,
+      "duration": 3.361
+    },
+    {
+      "text": "as part of a broader goal to build at",
+      "start": 20.8,
+      "duration": 4.239
+    },
+    {
+      "text": "the full discounted cash flow valuation",
+      "start": 22.72,
+      "duration": 4.24
+    },
+    {
+      "text": "of a stock",
+      "start": 25.039,
+      "duration": 4.961
+    },
+    {
+      "text": "so we finished up",
+      "start": 26.96,
+      "duration": 5.599
+    },
+    {
+      "text": "in prior videos the overview of",
+      "start": 30.0,
+      "duration": 3.6
+    },
+    {
+      "text": "forecasting",
+      "start": 32.559,
+      "duration": 4.481
+    },
+    {
+      "text": "and all the simple forecast models",
+      "start": 33.6,
+      "duration": 6.32
+    },
+    {
+      "text": "uh and then we went through examples of",
+      "start": 37.04,
+      "duration": 5.839
+    },
+    {
+      "text": "how to run these simple forecast models",
+      "start": 39.92,
+      "duration": 6.639
+    },
+    {
+      "text": "in both excel and python so now",
+      "start": 42.879,
+      "duration": 7.2
+    },
+    {
+      "text": "we are coming to the lab exercise which",
+      "start": 46.559,
+      "duration": 6.561
+    },
+    {
+      "text": "uh cements understanding of all these",
+      "start": 50.079,
+      "duration": 5.041
+    },
+    {
+      "text": "topics",
+      "start": 53.12,
+      "duration": 5.04
+    },
+    {
+      "text": "and it's a very similar exercise to what",
+      "start": 55.12,
+      "duration": 4.959
+    },
+    {
+      "text": "was shown in the excel and python",
+      "start": 58.16,
+      "duration": 3.36
+    },
+    {
+      "text": "examples",
+      "start": 60.079,
+      "duration": 2.96
+    },
+    {
+      "text": "so you're going to take this debt",
+      "start": 61.52,
+      "duration": 3.279
+    },
+    {
+      "text": "interest file which has",
+      "start": 63.039,
+      "duration": 4.881
+    },
+    {
+      "text": "information on the",
+      "start": 64.799,
+      "duration": 7.121
+    },
+    {
+      "text": "total debt and the interest payment",
+      "start": 67.92,
+      "duration": 5.49
+    },
+    {
+      "text": "and you want to",
+      "start": 71.92,
+      "duration": 3.76
+    },
+    {
+      "text": "[Music]",
+      "start": 73.41,
+      "duration": 4.749
+    },
+    {
+      "text": "basically forecast uh with all the",
+      "start": 75.68,
+      "duration": 4.079
+    },
+    {
+      "text": "different approaches",
+      "start": 78.159,
+      "duration": 5.041
+    },
+    {
+      "text": "and you want to forecast on for interest",
+      "start": 79.759,
+      "duration": 6.241
+    },
+    {
+      "text": "you want to forecast that both in terms",
+      "start": 83.2,
+      "duration": 4.08
+    },
+    {
+      "text": "of levels",
+      "start": 86.0,
+      "duration": 4.479
+    },
+    {
+      "text": "as well as forecasting it as",
+      "start": 87.28,
+      "duration": 7.519
+    },
+    {
+      "text": "a percentage of debt",
+      "start": 90.479,
+      "duration": 4.32
+    },
+    {
+      "text": "so infest is another common example",
+      "start": 95.439,
+      "duration": 7.281
+    },
+    {
+      "text": "that is typically percent forecasted as",
+      "start": 100.0,
+      "duration": 4.159
+    },
+    {
+      "text": "a percentage",
+      "start": 102.72,
+      "duration": 4.0
+    },
+    {
+      "text": "of uh total debt or long-term debt",
+      "start": 104.159,
+      "duration": 4.481
+    },
+    {
+      "text": "rather than at levels so it's a good",
+      "start": 106.72,
+      "duration": 5.359
+    },
+    {
+      "text": "uh fit for this exercise",
+      "start": 108.64,
+      "duration": 6.08
+    },
+    {
+      "text": "um and then you can find all the answers",
+      "start": 112.079,
+      "duration": 3.281
+    },
+    {
+      "text": "here",
+      "start": 114.72,
+      "duration": 5.759
+    },
+    {
+      "text": "on the um slides as well",
+      "start": 115.36,
+      "duration": 5.119
+    },
+    {
+      "text": "so that's the review of the lab exercise",
+      "start": 120.56,
+      "duration": 8.16
+    },
+    {
+      "text": "we'll come back next time to talk about",
+      "start": 124.719,
+      "duration": 6.481
+    },
+    {
+      "text": "more specifically forecasting financial",
+      "start": 128.72,
+      "duration": 4.159
+    },
+    {
+      "text": "statements as a whole",
+      "start": 131.2,
+      "duration": 4.32
+    },
+    {
+      "text": "with these simple forecasting methods so",
+      "start": 132.879,
+      "duration": 3.601
+    },
+    {
+      "text": "thanks for listening",
+      "start": 135.52,
+      "duration": 6.719
+    },
+    {
+      "text": "and see you next time",
+      "start": 136.48,
+      "duration": 5.759
+    }
+  ]
+}

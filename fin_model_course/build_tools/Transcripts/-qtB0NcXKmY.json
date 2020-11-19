@@ -1,0 +1,1189 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.96,
+      "duration": 2.319
+    },
+    {
+      "text": "this is nick diabetis teaching you",
+      "start": 3.76,
+      "duration": 3.84
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.279,
+      "duration": 2.64
+    },
+    {
+      "text": "be",
+      "start": 7.6,
+      "duration": 3.2
+    },
+    {
+      "text": "talking about simple time series",
+      "start": 7.919,
+      "duration": 3.76
+    },
+    {
+      "text": "forecasting",
+      "start": 10.8,
+      "duration": 2.959
+    },
+    {
+      "text": "models this is part of our lecture",
+      "start": 11.679,
+      "duration": 4.721
+    },
+    {
+      "text": "series on free cash flow estimation and",
+      "start": 13.759,
+      "duration": 4.001
+    },
+    {
+      "text": "forecasting",
+      "start": 16.4,
+      "duration": 4.48
+    },
+    {
+      "text": "as part of a larger goal of developing a",
+      "start": 17.76,
+      "duration": 5.519
+    },
+    {
+      "text": "full discounted cash flow valuation of a",
+      "start": 20.88,
+      "duration": 4.72
+    },
+    {
+      "text": "stock",
+      "start": 23.279,
+      "duration": 2.321
+    },
+    {
+      "text": "so in the prior video we gave a full",
+      "start": 26.08,
+      "duration": 5.439
+    },
+    {
+      "text": "overview on the whole forecasting",
+      "start": 29.199,
+      "duration": 4.321
+    },
+    {
+      "text": "process and all the considerations",
+      "start": 31.519,
+      "duration": 4.001
+    },
+    {
+      "text": "and pieces that go into that so take a",
+      "start": 33.52,
+      "duration": 3.12
+    },
+    {
+      "text": "look at that",
+      "start": 35.52,
+      "duration": 3.6
+    },
+    {
+      "text": "first if you haven't seen that already",
+      "start": 36.64,
+      "duration": 4.56
+    },
+    {
+      "text": "now we're getting into",
+      "start": 39.12,
+      "duration": 5.599
+    },
+    {
+      "text": "uh the simple forecasting portion",
+      "start": 41.2,
+      "duration": 6.64
+    },
+    {
+      "text": "of the lecture series where in this",
+      "start": 44.719,
+      "duration": 5.201
+    },
+    {
+      "text": "video we're going to look at",
+      "start": 47.84,
+      "duration": 5.6
+    },
+    {
+      "text": "simple models we can use to forecast",
+      "start": 49.92,
+      "duration": 8.24
+    },
+    {
+      "text": "time series which are not very complex",
+      "start": 53.44,
+      "duration": 6.56
+    },
+    {
+      "text": "the first model that we're looking at",
+      "start": 58.16,
+      "duration": 5.36
+    },
+    {
+      "text": "here is the historical average model",
+      "start": 60.0,
+      "duration": 7.439
+    },
+    {
+      "text": "um and basically all we're doing here is",
+      "start": 63.52,
+      "duration": 4.959
+    },
+    {
+      "text": "taking an average",
+      "start": 67.439,
+      "duration": 3.121
+    },
+    {
+      "text": "of the historical data and using that to",
+      "start": 68.479,
+      "duration": 4.561
+    },
+    {
+      "text": "predict the future",
+      "start": 70.56,
+      "duration": 5.44
+    },
+    {
+      "text": "so this is useful if uh there's not a",
+      "start": 73.04,
+      "duration": 3.439
+    },
+    {
+      "text": "clear",
+      "start": 76.0,
+      "duration": 2.64
+    },
+    {
+      "text": "trend up or down in the data it's kind",
+      "start": 76.479,
+      "duration": 4.081
+    },
+    {
+      "text": "of fairly constant but it's moving up",
+      "start": 78.64,
+      "duration": 4.24
+    },
+    {
+      "text": "and down",
+      "start": 80.56,
+      "duration": 2.32
+    },
+    {
+      "text": "and you think that it basically reverts",
+      "start": 83.04,
+      "duration": 3.92
+    },
+    {
+      "text": "to the mean",
+      "start": 85.759,
+      "duration": 5.68
+    },
+    {
+      "text": "then this is a good approach to use",
+      "start": 86.96,
+      "duration": 8.799
+    },
+    {
+      "text": "um and so it's just you know taking each",
+      "start": 91.439,
+      "duration": 8.801
+    },
+    {
+      "text": "uh time period in the historical data",
+      "start": 95.759,
+      "duration": 7.68
+    },
+    {
+      "text": "summing them up taking the average",
+      "start": 100.24,
+      "duration": 5.36
+    },
+    {
+      "text": "and then using that average to predict",
+      "start": 103.439,
+      "duration": 4.161
+    },
+    {
+      "text": "all the future periods",
+      "start": 105.6,
+      "duration": 4.24
+    },
+    {
+      "text": "so",
+      "start": 107.6,
+      "duration": 2.24
+    },
+    {
+      "text": "every every future period is going to",
+      "start": 111.28,
+      "duration": 3.44
+    },
+    {
+      "text": "have the same",
+      "start": 113.36,
+      "duration": 4.48
+    },
+    {
+      "text": "value for its forecast it's just all of",
+      "start": 114.72,
+      "duration": 3.359
+    },
+    {
+      "text": "it",
+      "start": 117.84,
+      "duration": 4.72
+    },
+    {
+      "text": "is at the average um",
+      "start": 118.079,
+      "duration": 4.481
+    },
+    {
+      "text": "and this epsilon here just represents",
+      "start": 122.64,
+      "duration": 4.079
+    },
+    {
+      "text": "the error and the forecast that you're",
+      "start": 124.96,
+      "duration": 3.2
+    },
+    {
+      "text": "never going to be able to forecast",
+      "start": 126.719,
+      "duration": 4.24
+    },
+    {
+      "text": "things perfectly",
+      "start": 128.16,
+      "duration": 2.799
+    },
+    {
+      "text": "second model we're looking at is the",
+      "start": 132.08,
+      "duration": 3.92
+    },
+    {
+      "text": "recent value model so this is",
+      "start": 133.92,
+      "duration": 3.84
+    },
+    {
+      "text": "even a little bit simpler than the",
+      "start": 136.0,
+      "duration": 4.48
+    },
+    {
+      "text": "historical average model",
+      "start": 137.76,
+      "duration": 4.559
+    },
+    {
+      "text": "here we're just taking whatever the most",
+      "start": 140.48,
+      "duration": 3.04
+    },
+    {
+      "text": "recent value was",
+      "start": 142.319,
+      "duration": 2.721
+    },
+    {
+      "text": "and assuming that it's going to stay",
+      "start": 143.52,
+      "duration": 3.76
+    },
+    {
+      "text": "there in the future",
+      "start": 145.04,
+      "duration": 5.76
+    },
+    {
+      "text": "um and we just use that same value for",
+      "start": 147.28,
+      "duration": 4.56
+    },
+    {
+      "text": "all the future",
+      "start": 150.8,
+      "duration": 4.24
+    },
+    {
+      "text": "periods so",
+      "start": 151.84,
+      "duration": 5.36
+    },
+    {
+      "text": "this this is applicable in mostly the",
+      "start": 155.04,
+      "duration": 3.04
+    },
+    {
+      "text": "same settings",
+      "start": 157.2,
+      "duration": 4.16
+    },
+    {
+      "text": "as the historical average model",
+      "start": 158.08,
+      "duration": 5.92
+    },
+    {
+      "text": "uh if the data does not have a defined",
+      "start": 161.36,
+      "duration": 3.599
+    },
+    {
+      "text": "uh",
+      "start": 164.0,
+      "duration": 6.16
+    },
+    {
+      "text": "trend up or downward um then",
+      "start": 164.959,
+      "duration": 8.241
+    },
+    {
+      "text": "this can make sense but in contrast to",
+      "start": 170.16,
+      "duration": 4.719
+    },
+    {
+      "text": "the historical average",
+      "start": 173.2,
+      "duration": 4.0
+    },
+    {
+      "text": "this is where you think uh whatever it",
+      "start": 174.879,
+      "duration": 3.041
+    },
+    {
+      "text": "was most",
+      "start": 177.2,
+      "duration": 2.8
+    },
+    {
+      "text": "recently is going to be a better",
+      "start": 177.92,
+      "duration": 3.44
+    },
+    {
+      "text": "estimate for where it's going to be in",
+      "start": 180.0,
+      "duration": 2.319
+    },
+    {
+      "text": "the future",
+      "start": 181.36,
+      "duration": 3.04
+    },
+    {
+      "text": "in other words there's not any kind of",
+      "start": 182.319,
+      "duration": 4.961
+    },
+    {
+      "text": "mean reversion in this data",
+      "start": 184.4,
+      "duration": 5.919
+    },
+    {
+      "text": "so that whatever we had is most recently",
+      "start": 187.28,
+      "duration": 6.08
+    },
+    {
+      "text": "is the best estimate",
+      "start": 190.319,
+      "duration": 3.041
+    },
+    {
+      "text": "then um we're gonna look here at",
+      "start": 195.599,
+      "duration": 6.081
+    },
+    {
+      "text": "two models which deal with when the data",
+      "start": 199.12,
+      "duration": 4.0
+    },
+    {
+      "text": "is going up or down",
+      "start": 201.68,
+      "duration": 4.479
+    },
+    {
+      "text": "over time so the first is the trend",
+      "start": 203.12,
+      "duration": 4.0
+    },
+    {
+      "text": "model",
+      "start": 206.159,
+      "duration": 3.36
+    },
+    {
+      "text": "um and so this is appropriate when it",
+      "start": 207.12,
+      "duration": 4.56
+    },
+    {
+      "text": "seems like it's linearly going up or",
+      "start": 209.519,
+      "duration": 2.481
+    },
+    {
+      "text": "down",
+      "start": 211.68,
+      "duration": 3.119
+    },
+    {
+      "text": "like kind of a straight line uh in the",
+      "start": 212.0,
+      "duration": 4.159
+    },
+    {
+      "text": "data",
+      "start": 214.799,
+      "duration": 3.281
+    },
+    {
+      "text": "whereas if it's kind of a curve an",
+      "start": 216.159,
+      "duration": 3.44
+    },
+    {
+      "text": "exponential change",
+      "start": 218.08,
+      "duration": 2.56
+    },
+    {
+      "text": "then you're going to want to use the",
+      "start": 219.599,
+      "duration": 3.28
+    },
+    {
+      "text": "growth model which we're going to look",
+      "start": 220.64,
+      "duration": 3.84
+    },
+    {
+      "text": "at next",
+      "start": 222.879,
+      "duration": 4.08
+    },
+    {
+      "text": "but if it's linear then uh the trend",
+      "start": 224.48,
+      "duration": 3.2
+    },
+    {
+      "text": "model",
+      "start": 226.959,
+      "duration": 3.761
+    },
+    {
+      "text": "is the most appropriate and so this is",
+      "start": 227.68,
+      "duration": 6.0
+    },
+    {
+      "text": "the first one where we actually have to",
+      "start": 230.72,
+      "duration": 4.719
+    },
+    {
+      "text": "do something other than a very simple",
+      "start": 233.68,
+      "duration": 4.24
+    },
+    {
+      "text": "calculation to actually fit it",
+      "start": 235.439,
+      "duration": 4.88
+    },
+    {
+      "text": "uh what we have to do to fit this is run",
+      "start": 237.92,
+      "duration": 4.56
+    },
+    {
+      "text": "an ols regression",
+      "start": 240.319,
+      "duration": 5.441
+    },
+    {
+      "text": "um so still not very complicated but",
+      "start": 242.48,
+      "duration": 5.28
+    },
+    {
+      "text": "certainly more than just using the last",
+      "start": 245.76,
+      "duration": 3.199
+    },
+    {
+      "text": "period",
+      "start": 247.76,
+      "duration": 4.24
+    },
+    {
+      "text": "um so that",
+      "start": 248.959,
+      "duration": 6.961
+    },
+    {
+      "text": "regression um you would estimate it with",
+      "start": 252.0,
+      "duration": 7.12
+    },
+    {
+      "text": "a constant um and",
+      "start": 255.92,
+      "duration": 6.24
+    },
+    {
+      "text": "the x or independent",
+      "start": 259.12,
+      "duration": 6.32
+    },
+    {
+      "text": "variable there would be t",
+      "start": 262.16,
+      "duration": 6.96
+    },
+    {
+      "text": "time the number of periods and so it can",
+      "start": 265.44,
+      "duration": 4.16
+    },
+    {
+      "text": "be",
+      "start": 269.12,
+      "duration": 2.48
+    },
+    {
+      "text": "you know one for the first period two",
+      "start": 269.6,
+      "duration": 3.599
+    },
+    {
+      "text": "for the second period three for the",
+      "start": 271.6,
+      "duration": 3.2
+    },
+    {
+      "text": "third period and so on that's going to",
+      "start": 273.199,
+      "duration": 3.361
+    },
+    {
+      "text": "be the variable",
+      "start": 274.8,
+      "duration": 4.48
+    },
+    {
+      "text": "you're gonna use as on the right hand",
+      "start": 276.56,
+      "duration": 3.44
+    },
+    {
+      "text": "side",
+      "start": 279.28,
+      "duration": 3.359
+    },
+    {
+      "text": "and then on the left hand side as your y",
+      "start": 280.0,
+      "duration": 3.04
+    },
+    {
+      "text": "your",
+      "start": 282.639,
+      "duration": 3.921
+    },
+    {
+      "text": "response or dependent variable um",
+      "start": 283.04,
+      "duration": 4.96
+    },
+    {
+      "text": "you're going to use whatever you're",
+      "start": 286.56,
+      "duration": 4.56
+    },
+    {
+      "text": "trying to forecast",
+      "start": 288.0,
+      "duration": 3.12
+    },
+    {
+      "text": "so you fit this regression and that's",
+      "start": 291.36,
+      "duration": 4.96
+    },
+    {
+      "text": "going to get you this coefficient",
+      "start": 294.24,
+      "duration": 5.679
+    },
+    {
+      "text": "on the time variable and that's what we",
+      "start": 296.32,
+      "duration": 7.2
+    },
+    {
+      "text": "need to get out of this fitting process",
+      "start": 299.919,
+      "duration": 5.761
+    },
+    {
+      "text": "so then in order to predict that into",
+      "start": 303.52,
+      "duration": 3.76
+    },
+    {
+      "text": "the future",
+      "start": 305.68,
+      "duration": 4.88
+    },
+    {
+      "text": "we then calculate uh",
+      "start": 307.28,
+      "duration": 6.24
+    },
+    {
+      "text": "the the fitted model by using that",
+      "start": 310.56,
+      "duration": 4.72
+    },
+    {
+      "text": "coefficient that we calculated",
+      "start": 313.52,
+      "duration": 5.2
+    },
+    {
+      "text": "from the historical multiplying it by",
+      "start": 315.28,
+      "duration": 6.16
+    },
+    {
+      "text": "the time period um and adding the",
+      "start": 318.72,
+      "duration": 4.88
+    },
+    {
+      "text": "constant which was estimated",
+      "start": 321.44,
+      "duration": 6.08
+    },
+    {
+      "text": "so uh if you had five historical periods",
+      "start": 323.6,
+      "duration": 6.48
+    },
+    {
+      "text": "those might be one two three four five",
+      "start": 327.52,
+      "duration": 3.679
+    },
+    {
+      "text": "as t",
+      "start": 330.08,
+      "duration": 4.8
+    },
+    {
+      "text": "in your uh regression",
+      "start": 331.199,
+      "duration": 5.44
+    },
+    {
+      "text": "then you wanna forecast one period in",
+      "start": 334.88,
+      "duration": 3.92
+    },
+    {
+      "text": "the future that's going to be period",
+      "start": 336.639,
+      "duration": 4.721
+    },
+    {
+      "text": "six so you're going to plug in 6 for t",
+      "start": 338.8,
+      "duration": 4.0
+    },
+    {
+      "text": "here",
+      "start": 341.36,
+      "duration": 4.559
+    },
+    {
+      "text": "and the estimated coefficient",
+      "start": 342.8,
+      "duration": 5.2
+    },
+    {
+      "text": "and intercept then you want to predict",
+      "start": 345.919,
+      "duration": 3.521
+    },
+    {
+      "text": "the next period you're going to plug in",
+      "start": 348.0,
+      "duration": 2.08
+    },
+    {
+      "text": "7",
+      "start": 349.44,
+      "duration": 2.0
+    },
+    {
+      "text": "period to that you're going to plug in",
+      "start": 350.08,
+      "duration": 3.44
+    },
+    {
+      "text": "eight and so on",
+      "start": 351.44,
+      "duration": 4.24
+    },
+    {
+      "text": "and this is able to capture a linear",
+      "start": 353.52,
+      "duration": 3.679
+    },
+    {
+      "text": "trend up or down",
+      "start": 355.68,
+      "duration": 4.16
+    },
+    {
+      "text": "in the data",
+      "start": 357.199,
+      "duration": 2.641
+    },
+    {
+      "text": "but if that change over time",
+      "start": 361.44,
+      "duration": 6.72
+    },
+    {
+      "text": "going up or down is is more of a curve",
+      "start": 365.28,
+      "duration": 4.0
+    },
+    {
+      "text": "exponential",
+      "start": 368.16,
+      "duration": 5.28
+    },
+    {
+      "text": "rather than a straight line",
+      "start": 369.28,
+      "duration": 6.72
+    },
+    {
+      "text": "then we want to use the growth model or",
+      "start": 373.44,
+      "duration": 5.92
+    },
+    {
+      "text": "compounded annual growth model",
+      "start": 376.0,
+      "duration": 6.479
+    },
+    {
+      "text": "um so what this says is basically we're",
+      "start": 379.36,
+      "duration": 4.0
+    },
+    {
+      "text": "calculating",
+      "start": 382.479,
+      "duration": 3.361
+    },
+    {
+      "text": "the per period growth rate in the",
+      "start": 383.36,
+      "duration": 4.0
+    },
+    {
+      "text": "historical data",
+      "start": 385.84,
+      "duration": 2.799
+    },
+    {
+      "text": "and we're going to apply that growth",
+      "start": 387.36,
+      "duration": 3.76
+    },
+    {
+      "text": "rate going forward",
+      "start": 388.639,
+      "duration": 4.4
+    },
+    {
+      "text": "so you can calculate the compounded",
+      "start": 391.12,
+      "duration": 3.84
+    },
+    {
+      "text": "annual growth rate which is basically",
+      "start": 393.039,
+      "duration": 2.561
+    },
+    {
+      "text": "what",
+      "start": 394.96,
+      "duration": 3.679
+    },
+    {
+      "text": "growth rate would you have to have had",
+      "start": 395.6,
+      "duration": 6.159
+    },
+    {
+      "text": "in each period in order to have the",
+      "start": 398.639,
+      "duration": 4.481
+    },
+    {
+      "text": "growth over the full",
+      "start": 401.759,
+      "duration": 4.0
+    },
+    {
+      "text": "time period",
+      "start": 403.12,
+      "duration": 2.639
+    },
+    {
+      "text": "so you do that by just taking your most",
+      "start": 406.24,
+      "duration": 4.32
+    },
+    {
+      "text": "recent value",
+      "start": 408.96,
+      "duration": 4.4
+    },
+    {
+      "text": "and dividing it by the earliest value",
+      "start": 410.56,
+      "duration": 4.32
+    },
+    {
+      "text": "that you have",
+      "start": 413.36,
+      "duration": 4.959
+    },
+    {
+      "text": "um taking all of that taking it to the",
+      "start": 414.88,
+      "duration": 6.64
+    },
+    {
+      "text": "one over number of periods power so that",
+      "start": 418.319,
+      "duration": 4.0
+    },
+    {
+      "text": "would be",
+      "start": 421.52,
+      "duration": 2.64
+    },
+    {
+      "text": "how many periods are in between that",
+      "start": 422.319,
+      "duration": 4.0
+    },
+    {
+      "text": "beginning of the historical data and the",
+      "start": 424.16,
+      "duration": 4.479
+    },
+    {
+      "text": "end of historical data",
+      "start": 426.319,
+      "duration": 6.641
+    },
+    {
+      "text": "um you raise that fraction to that power",
+      "start": 428.639,
+      "duration": 5.921
+    },
+    {
+      "text": "and then you subtract one and that's",
+      "start": 432.96,
+      "duration": 3.12
+    },
+    {
+      "text": "going to get you the compounded annual",
+      "start": 434.56,
+      "duration": 3.68
+    },
+    {
+      "text": "growth rate or how much should the",
+      "start": 436.08,
+      "duration": 3.839
+    },
+    {
+      "text": "growth rate have been in each period",
+      "start": 438.24,
+      "duration": 5.359
+    },
+    {
+      "text": "to grow as much as it did over the",
+      "start": 439.919,
+      "duration": 7.601
+    },
+    {
+      "text": "entire range of the historical data",
+      "start": 443.599,
+      "duration": 7.761
+    },
+    {
+      "text": "so then once you have that kagger fitted",
+      "start": 447.52,
+      "duration": 7.519
+    },
+    {
+      "text": "then you can predict the future using it",
+      "start": 451.36,
+      "duration": 6.0
+    },
+    {
+      "text": "so uh you know we're just going to use",
+      "start": 455.039,
+      "duration": 3.6
+    },
+    {
+      "text": "the standard",
+      "start": 457.36,
+      "duration": 4.88
+    },
+    {
+      "text": "like growth kind of formula",
+      "start": 458.639,
+      "duration": 3.601
+    },
+    {
+      "text": "where you just take whatever the last",
+      "start": 462.479,
+      "duration": 3.84
+    },
+    {
+      "text": "period was",
+      "start": 464.879,
+      "duration": 3.841
+    },
+    {
+      "text": "and you multiply by one plus the growth",
+      "start": 466.319,
+      "duration": 3.041
+    },
+    {
+      "text": "rate",
+      "start": 468.72,
+      "duration": 2.8
+    },
+    {
+      "text": "compounded at however many periods you",
+      "start": 469.36,
+      "duration": 4.399
+    },
+    {
+      "text": "want to forecast into the future",
+      "start": 471.52,
+      "duration": 4.079
+    },
+    {
+      "text": "so if you're just forecasting one period",
+      "start": 473.759,
+      "duration": 3.521
+    },
+    {
+      "text": "in the future it's just times one plus",
+      "start": 475.599,
+      "duration": 2.961
+    },
+    {
+      "text": "the growth rate",
+      "start": 477.28,
+      "duration": 2.479
+    },
+    {
+      "text": "if you're going two periods in the",
+      "start": 478.56,
+      "duration": 3.359
+    },
+    {
+      "text": "future is times one plus the growth rate",
+      "start": 479.759,
+      "duration": 3.28
+    },
+    {
+      "text": "squared",
+      "start": 481.919,
+      "duration": 5.12
+    },
+    {
+      "text": "and so on um",
+      "start": 483.039,
+      "duration": 7.6
+    },
+    {
+      "text": "so that's how you uh calculate the",
+      "start": 487.039,
+      "duration": 6.72
+    },
+    {
+      "text": "kagger model so",
+      "start": 490.639,
+      "duration": 6.0
+    },
+    {
+      "text": "that's the four different simple",
+      "start": 493.759,
+      "duration": 3.761
+    },
+    {
+      "text": "forecasting",
+      "start": 496.639,
+      "duration": 4.321
+    },
+    {
+      "text": "models that we're going to look at and",
+      "start": 497.52,
+      "duration": 5.28
+    },
+    {
+      "text": "collectively these four models are",
+      "start": 500.96,
+      "duration": 3.28
+    },
+    {
+      "text": "useful uh",
+      "start": 502.8,
+      "duration": 4.64
+    },
+    {
+      "text": "whenever the historical data is fairly",
+      "start": 504.24,
+      "duration": 4.079
+    },
+    {
+      "text": "simple",
+      "start": 507.44,
+      "duration": 3.52
+    },
+    {
+      "text": "now if there are repeating historical",
+      "start": 508.319,
+      "duration": 3.84
+    },
+    {
+      "text": "patterns in the data",
+      "start": 510.96,
+      "duration": 4.16
+    },
+    {
+      "text": "uh maybe there's a spike uh you know",
+      "start": 512.159,
+      "duration": 3.921
+    },
+    {
+      "text": "over and over",
+      "start": 515.12,
+      "duration": 3.12
+    },
+    {
+      "text": "in the data these models are not going",
+      "start": 516.08,
+      "duration": 4.0
+    },
+    {
+      "text": "to be appropriate that's where you need",
+      "start": 518.24,
+      "duration": 5.279
+    },
+    {
+      "text": "to go to the more complex models but",
+      "start": 520.08,
+      "duration": 4.879
+    },
+    {
+      "text": "if it's you know just kind of staying",
+      "start": 523.519,
+      "duration": 3.281
+    },
+    {
+      "text": "around the same or it's just turning up",
+      "start": 524.959,
+      "duration": 3.281
+    },
+    {
+      "text": "or turning down",
+      "start": 526.8,
+      "duration": 4.159
+    },
+    {
+      "text": "then these simple forecast models can",
+      "start": 528.24,
+      "duration": 5.36
+    },
+    {
+      "text": "work just fine",
+      "start": 530.959,
+      "duration": 5.201
+    },
+    {
+      "text": "so that covers the symbol forecast",
+      "start": 533.6,
+      "duration": 4.32
+    },
+    {
+      "text": "models we're going to come back",
+      "start": 536.16,
+      "duration": 4.32
+    },
+    {
+      "text": "next time in the next uh two videos to",
+      "start": 537.92,
+      "duration": 3.44
+    },
+    {
+      "text": "look at",
+      "start": 540.48,
+      "duration": 3.76
+    },
+    {
+      "text": "how we can carry this out in both excel",
+      "start": 541.36,
+      "duration": 4.159
+    },
+    {
+      "text": "and python",
+      "start": 544.24,
+      "duration": 3.279
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 545.519,
+      "duration": 4.32
+    },
+    {
+      "text": "time",
+      "start": 547.519,
+      "duration": 2.32
+    }
+  ]
+}

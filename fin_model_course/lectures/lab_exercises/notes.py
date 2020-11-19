@@ -971,7 +971,7 @@ def get_dcf_cost_debt_lab_lecture() -> LabExerciseLecture:
 def get_fcf_calculation_lab_lecture() -> LabExerciseLecture:
     title = 'Free Cash Flow Calculation'
     short_title = 'Calculate FCF Lab'
-    youtube_id = ''
+    youtube_id = 'zVTkT5p0SHs'
     week_covered = 12
 
     lab_1_inputs = dict(
@@ -1043,7 +1043,7 @@ def get_fcf_calculation_lab_lecture() -> LabExerciseLecture:
 def get_simple_forecast_lab_lecture() -> LabExerciseLecture:
     title = 'Forecasting Simple Time-Series'
     short_title = 'Simple Forecast Lab'
-    youtube_id = ''
+    youtube_id = '9td30aTGAN0'
     week_covered = 12
 
     # NOTE: to get answers, ran Forecast Sales COGS simple but loading in these data instead
@@ -1052,18 +1052,18 @@ def get_simple_forecast_lab_lecture() -> LabExerciseLecture:
         [
             ['Go to', COURSE_SITE, 'and download "Debt Interest.xlsx"'],
             'Forecast the next value of total debt using trend regression approach',
-            'Forecast the next value of interest using the four approaches (average, recent, trend reg, trend CAGR)',
+            'Forecast the next value of interest using the four approaches (average, recent, trend, CAGR)',
             'Forecast the next value of interest using the % of total debt method, with the percentages forecasted '
-            'using the four approaches (average, recent, trend reg, trend CAGR)',
+            'using the four approaches (average, recent, trend, CAGR)',
         ],
     ]
     answers = [
         [
             r'The forecasted value of total debt should be \$6,867',
             r'The directly forecasted values of interest should be \$1,600, \$1,900, \$2,300, and \$2,391, '
-            r'for average, recent, trend reg, trend CAGR, respectively',
+            r'for average, recent, trend, CAGR, respectively',
             r'The % of debt forecasted values of interest should be \$2,072, \$2,139, \$2,379, and \$2,312, '
-            r'for average, recent, trend reg, trend CAGR, respectively',
+            r'for average, recent, trend, CAGR, respectively',
         ],
     ]
     resources = [

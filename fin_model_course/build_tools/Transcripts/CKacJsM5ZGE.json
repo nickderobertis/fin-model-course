@@ -1,0 +1,2689 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick diabetis",
+      "start": 2.159,
+      "duration": 3.761
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 4.08,
+      "duration": 3.759
+    },
+    {
+      "text": "today we're going to be doing an",
+      "start": 5.92,
+      "duration": 3.04
+    },
+    {
+      "text": "introduction on",
+      "start": 7.839,
+      "duration": 3.601
+    },
+    {
+      "text": "forecasting this is part of our lecture",
+      "start": 8.96,
+      "duration": 3.28
+    },
+    {
+      "text": "segment",
+      "start": 11.44,
+      "duration": 3.48
+    },
+    {
+      "text": "on free cash flow estimation and",
+      "start": 12.24,
+      "duration": 3.84
+    },
+    {
+      "text": "forecasting",
+      "start": 14.92,
+      "duration": 2.76
+    },
+    {
+      "text": "which is part of a broader goal in the",
+      "start": 16.08,
+      "duration": 3.6
+    },
+    {
+      "text": "course of building out the full",
+      "start": 17.68,
+      "duration": 4.64
+    },
+    {
+      "text": "discounted cash flow valuation of a",
+      "start": 19.68,
+      "duration": 5.04
+    },
+    {
+      "text": "stock",
+      "start": 22.32,
+      "duration": 2.4
+    },
+    {
+      "text": "so we already covered uh the historical",
+      "start": 25.599,
+      "duration": 3.84
+    },
+    {
+      "text": "free cash flow",
+      "start": 28.32,
+      "duration": 3.919
+    },
+    {
+      "text": "part of all this so go back to the prior",
+      "start": 29.439,
+      "duration": 3.681
+    },
+    {
+      "text": "videos",
+      "start": 32.239,
+      "duration": 3.681
+    },
+    {
+      "text": "to see that and now we're just getting",
+      "start": 33.12,
+      "duration": 3.52
+    },
+    {
+      "text": "into",
+      "start": 35.92,
+      "duration": 3.68
+    },
+    {
+      "text": "thinking about well we need to think",
+      "start": 36.64,
+      "duration": 4.88
+    },
+    {
+      "text": "know about the future",
+      "start": 39.6,
+      "duration": 4.479
+    },
+    {
+      "text": "free cash flows in order to take the",
+      "start": 41.52,
+      "duration": 4.64
+    },
+    {
+      "text": "present value and get the value of the",
+      "start": 44.079,
+      "duration": 3.521
+    },
+    {
+      "text": "company",
+      "start": 46.16,
+      "duration": 3.84
+    },
+    {
+      "text": "and so that brings us into this whole",
+      "start": 47.6,
+      "duration": 3.04
+    },
+    {
+      "text": "area",
+      "start": 50.0,
+      "duration": 3.84
+    },
+    {
+      "text": "of forecasting",
+      "start": 50.64,
+      "duration": 6.88
+    },
+    {
+      "text": "um so forecasting uh",
+      "start": 53.84,
+      "duration": 7.199
+    },
+    {
+      "text": "is a fairly complicated topic there is a",
+      "start": 57.52,
+      "duration": 4.879
+    },
+    {
+      "text": "lot involved",
+      "start": 61.039,
+      "duration": 3.52
+    },
+    {
+      "text": "i could really teach an entire course",
+      "start": 62.399,
+      "duration": 4.561
+    },
+    {
+      "text": "just on forecasting we're really just",
+      "start": 64.559,
+      "duration": 4.161
+    },
+    {
+      "text": "going to look at a very high level",
+      "start": 66.96,
+      "duration": 2.56
+    },
+    {
+      "text": "overview",
+      "start": 68.72,
+      "duration": 3.84
+    },
+    {
+      "text": "on it in general um",
+      "start": 69.52,
+      "duration": 5.76
+    },
+    {
+      "text": "and it gets quite complicated once you",
+      "start": 72.56,
+      "duration": 3.52
+    },
+    {
+      "text": "get into",
+      "start": 75.28,
+      "duration": 5.36
+    },
+    {
+      "text": "the details uh you know it's a whole",
+      "start": 76.08,
+      "duration": 7.84
+    },
+    {
+      "text": "branch of econometrics to work on these",
+      "start": 80.64,
+      "duration": 5.04
+    },
+    {
+      "text": "time series models used for",
+      "start": 83.92,
+      "duration": 4.559
+    },
+    {
+      "text": "forecasting people make a living off of",
+      "start": 85.68,
+      "duration": 5.36
+    },
+    {
+      "text": "researching these things",
+      "start": 88.479,
+      "duration": 5.201
+    },
+    {
+      "text": "people have full-time jobs working on",
+      "start": 91.04,
+      "duration": 4.32
+    },
+    {
+      "text": "forecasting",
+      "start": 93.68,
+      "duration": 4.56
+    },
+    {
+      "text": "so it's definitely a full topic to",
+      "start": 95.36,
+      "duration": 3.68
+    },
+    {
+      "text": "discuss",
+      "start": 98.24,
+      "duration": 4.08
+    },
+    {
+      "text": "but we're just going to kind of you know",
+      "start": 99.04,
+      "duration": 5.039
+    },
+    {
+      "text": "briefly look through it and",
+      "start": 102.32,
+      "duration": 3.36
+    },
+    {
+      "text": "take the most high level things that we",
+      "start": 104.079,
+      "duration": 3.36
+    },
+    {
+      "text": "need to know about it just to be able to",
+      "start": 105.68,
+      "duration": 2.56
+    },
+    {
+      "text": "do",
+      "start": 107.439,
+      "duration": 4.161
+    },
+    {
+      "text": "our own simple forecasts",
+      "start": 108.24,
+      "duration": 3.36
+    },
+    {
+      "text": "so um as we talked about earlier in the",
+      "start": 112.24,
+      "duration": 4.32
+    },
+    {
+      "text": "introduction",
+      "start": 115.84,
+      "duration": 4.16
+    },
+    {
+      "text": "on this lecture series um",
+      "start": 116.56,
+      "duration": 6.32
+    },
+    {
+      "text": "we are going to be forecasting uh either",
+      "start": 120.0,
+      "duration": 4.56
+    },
+    {
+      "text": "the free cash flows or the financial",
+      "start": 122.88,
+      "duration": 3.919
+    },
+    {
+      "text": "statement line items",
+      "start": 124.56,
+      "duration": 3.839
+    },
+    {
+      "text": "and in order to forecast those we're",
+      "start": 126.799,
+      "duration": 4.321
+    },
+    {
+      "text": "going to use time series methods",
+      "start": 128.399,
+      "duration": 4.961
+    },
+    {
+      "text": "uh which are methods of predicting the",
+      "start": 131.12,
+      "duration": 4.24
+    },
+    {
+      "text": "future from the past",
+      "start": 133.36,
+      "duration": 4.0
+    },
+    {
+      "text": "and we're going to use those on one of",
+      "start": 135.36,
+      "duration": 4.08
+    },
+    {
+      "text": "possible one of a few possible targets",
+      "start": 137.36,
+      "duration": 3.76
+    },
+    {
+      "text": "either the levels of the item",
+      "start": 139.44,
+      "duration": 4.879
+    },
+    {
+      "text": "the growth of the item or",
+      "start": 141.12,
+      "duration": 5.52
+    },
+    {
+      "text": "the percentage that this item is of",
+      "start": 144.319,
+      "duration": 3.121
+    },
+    {
+      "text": "another item",
+      "start": 146.64,
+      "duration": 4.239
+    },
+    {
+      "text": "which is already forecasted",
+      "start": 147.44,
+      "duration": 3.439
+    },
+    {
+      "text": "so these time series methods is any",
+      "start": 151.36,
+      "duration": 3.84
+    },
+    {
+      "text": "method",
+      "start": 154.48,
+      "duration": 3.92
+    },
+    {
+      "text": "which we can use to",
+      "start": 155.2,
+      "duration": 6.56
+    },
+    {
+      "text": "predict the future from the past",
+      "start": 158.4,
+      "duration": 6.4
+    },
+    {
+      "text": "so we'll look at a number of",
+      "start": 161.76,
+      "duration": 5.04
+    },
+    {
+      "text": "simple models such as the average",
+      "start": 164.8,
+      "duration": 4.24
+    },
+    {
+      "text": "approach the recent value approach",
+      "start": 166.8,
+      "duration": 5.6
+    },
+    {
+      "text": "uh linear trend and compounded annual",
+      "start": 169.04,
+      "duration": 5.839
+    },
+    {
+      "text": "growth rates",
+      "start": 172.4,
+      "duration": 4.72
+    },
+    {
+      "text": "um and we'll also get into some more",
+      "start": 174.879,
+      "duration": 3.28
+    },
+    {
+      "text": "complex models",
+      "start": 177.12,
+      "duration": 4.32
+    },
+    {
+      "text": "which can be used for",
+      "start": 178.159,
+      "duration": 5.841
+    },
+    {
+      "text": "more complex time series such as a",
+      "start": 181.44,
+      "duration": 4.24
+    },
+    {
+      "text": "quarterly",
+      "start": 184.0,
+      "duration": 5.28
+    },
+    {
+      "text": "seasonal trend model and looking at",
+      "start": 185.68,
+      "duration": 7.52
+    },
+    {
+      "text": "more advanced models as well",
+      "start": 189.28,
+      "duration": 3.92
+    },
+    {
+      "text": "and thinking about this levels versus",
+      "start": 194.959,
+      "duration": 3.121
+    },
+    {
+      "text": "growth versus",
+      "start": 197.04,
+      "duration": 3.76
+    },
+    {
+      "text": "percentage of so what we're talking",
+      "start": 198.08,
+      "duration": 3.6
+    },
+    {
+      "text": "about there",
+      "start": 200.8,
+      "duration": 3.92
+    },
+    {
+      "text": "is levels means you're forecasting the",
+      "start": 201.68,
+      "duration": 6.24
+    },
+    {
+      "text": "value itself so sales was",
+      "start": 204.72,
+      "duration": 5.68
+    },
+    {
+      "text": "a million and then it's 1.5 million we",
+      "start": 207.92,
+      "duration": 3.28
+    },
+    {
+      "text": "might predict",
+      "start": 210.4,
+      "duration": 3.52
+    },
+    {
+      "text": "using a linear trend that is going to be",
+      "start": 211.2,
+      "duration": 3.44
+    },
+    {
+      "text": "2 million",
+      "start": 213.92,
+      "duration": 2.319
+    },
+    {
+      "text": "for next year so we're using that",
+      "start": 214.64,
+      "duration": 3.76
+    },
+    {
+      "text": "million and that 1.5 million",
+      "start": 216.239,
+      "duration": 4.961
+    },
+    {
+      "text": "directly in our forecast to generate the",
+      "start": 218.4,
+      "duration": 3.44
+    },
+    {
+      "text": "forecast",
+      "start": 221.2,
+      "duration": 4.16
+    },
+    {
+      "text": "of 2 million so the the original",
+      "start": 221.84,
+      "duration": 6.08
+    },
+    {
+      "text": "values of whatever item are what we are",
+      "start": 225.36,
+      "duration": 6.239
+    },
+    {
+      "text": "feeding into the forecast model",
+      "start": 227.92,
+      "duration": 3.679
+    },
+    {
+      "text": "then looking at the growth means that we",
+      "start": 232.48,
+      "duration": 4.56
+    },
+    {
+      "text": "first calculate the growth rates",
+      "start": 235.04,
+      "duration": 5.119
+    },
+    {
+      "text": "on the item um so say sale grew ten",
+      "start": 237.04,
+      "duration": 5.199
+    },
+    {
+      "text": "percent then it grew eight percent",
+      "start": 240.159,
+      "duration": 3.761
+    },
+    {
+      "text": "and we're feeding those growth rates",
+      "start": 242.239,
+      "duration": 3.041
+    },
+    {
+      "text": "into the forecast model",
+      "start": 243.92,
+      "duration": 3.679
+    },
+    {
+      "text": "so we might predict again based off a",
+      "start": 245.28,
+      "duration": 4.08
+    },
+    {
+      "text": "linear trend that the next year's growth",
+      "start": 247.599,
+      "duration": 3.92
+    },
+    {
+      "text": "is going to be six percent",
+      "start": 249.36,
+      "duration": 5.2
+    },
+    {
+      "text": "uh and then we apply that six percent to",
+      "start": 251.519,
+      "duration": 6.321
+    },
+    {
+      "text": "the prior sales level value in order to",
+      "start": 254.56,
+      "duration": 3.919
+    },
+    {
+      "text": "get",
+      "start": 257.84,
+      "duration": 4.88
+    },
+    {
+      "text": "uh our forecasted sales",
+      "start": 258.479,
+      "duration": 4.241
+    },
+    {
+      "text": "and the last target that we're talking",
+      "start": 263.36,
+      "duration": 5.52
+    },
+    {
+      "text": "about is the percentage of another item",
+      "start": 264.96,
+      "duration": 6.0
+    },
+    {
+      "text": "so that means you have some other item",
+      "start": 268.88,
+      "duration": 4.0
+    },
+    {
+      "text": "which is already forecasted so say that",
+      "start": 270.96,
+      "duration": 3.84
+    },
+    {
+      "text": "we already have sales forecasted",
+      "start": 272.88,
+      "duration": 3.36
+    },
+    {
+      "text": "and now we're trying to forecast the",
+      "start": 274.8,
+      "duration": 3.36
+    },
+    {
+      "text": "cost of goods sold",
+      "start": 276.24,
+      "duration": 3.6
+    },
+    {
+      "text": "well we could say that you know",
+      "start": 278.16,
+      "duration": 3.599
+    },
+    {
+      "text": "historically cost of goods sold has been",
+      "start": 279.84,
+      "duration": 2.24
+    },
+    {
+      "text": "about",
+      "start": 281.759,
+      "duration": 3.761
+    },
+    {
+      "text": "60 of sales uh and so now",
+      "start": 282.08,
+      "duration": 6.8
+    },
+    {
+      "text": "let's forecast the percentage of sales",
+      "start": 285.52,
+      "duration": 5.2
+    },
+    {
+      "text": "which cost of goods as a percentage of",
+      "start": 288.88,
+      "duration": 4.64
+    },
+    {
+      "text": "sales rather than the level or growth",
+      "start": 290.72,
+      "duration": 6.88
+    },
+    {
+      "text": "of cost of goods sold so then we",
+      "start": 293.52,
+      "duration": 6.48
+    },
+    {
+      "text": "forecast that it will also be 60 in the",
+      "start": 297.6,
+      "duration": 3.039
+    },
+    {
+      "text": "future",
+      "start": 300.0,
+      "duration": 3.12
+    },
+    {
+      "text": "and then we just multiply that 60 by the",
+      "start": 300.639,
+      "duration": 3.521
+    },
+    {
+      "text": "forecasted sales",
+      "start": 303.12,
+      "duration": 5.28
+    },
+    {
+      "text": "to get our estimate of the cost of goods",
+      "start": 304.16,
+      "duration": 4.24
+    },
+    {
+      "text": "sold and",
+      "start": 308.84,
+      "duration": 4.52
+    },
+    {
+      "text": "with all of these different forecast",
+      "start": 311.12,
+      "duration": 3.519
+    },
+    {
+      "text": "targets with any time",
+      "start": 313.36,
+      "duration": 4.32
+    },
+    {
+      "text": "series method that you're going to use",
+      "start": 314.639,
+      "duration": 6.881
+    },
+    {
+      "text": "you can still adjust uh the forecast",
+      "start": 317.68,
+      "duration": 6.56
+    },
+    {
+      "text": "afterwards you can say well you know",
+      "start": 321.52,
+      "duration": 4.08
+    },
+    {
+      "text": "here's kind of the baseline from the",
+      "start": 324.24,
+      "duration": 1.84
+    },
+    {
+      "text": "model",
+      "start": 325.6,
+      "duration": 3.68
+    },
+    {
+      "text": "but because of you know this new project",
+      "start": 326.08,
+      "duration": 5.92
+    },
+    {
+      "text": "that the company is going to start or",
+      "start": 329.28,
+      "duration": 5.84
+    },
+    {
+      "text": "uh this additional risk factor which has",
+      "start": 332.0,
+      "duration": 6.639
+    },
+    {
+      "text": "become more of an issue",
+      "start": 335.12,
+      "duration": 6.88
+    },
+    {
+      "text": "lately or whatever your analysis",
+      "start": 338.639,
+      "duration": 6.161
+    },
+    {
+      "text": "of the company's operations uh is you",
+      "start": 342.0,
+      "duration": 4.16
+    },
+    {
+      "text": "can incorporate that into your",
+      "start": 344.8,
+      "duration": 2.959
+    },
+    {
+      "text": "projections and say no i actually need",
+      "start": 346.16,
+      "duration": 2.96
+    },
+    {
+      "text": "to adjust",
+      "start": 347.759,
+      "duration": 4.401
+    },
+    {
+      "text": "some of these periods uh because of this",
+      "start": 349.12,
+      "duration": 4.88
+    },
+    {
+      "text": "additional information i have which is",
+      "start": 352.16,
+      "duration": 3.12
+    },
+    {
+      "text": "not reflected",
+      "start": 354.0,
+      "duration": 5.28
+    },
+    {
+      "text": "in the historical financials",
+      "start": 355.28,
+      "duration": 6.56
+    },
+    {
+      "text": "and you can also use this kind of",
+      "start": 359.28,
+      "duration": 5.919
+    },
+    {
+      "text": "qualitative information to actually pick",
+      "start": 361.84,
+      "duration": 5.76
+    },
+    {
+      "text": "which forecast method and target you're",
+      "start": 365.199,
+      "duration": 5.201
+    },
+    {
+      "text": "going to use",
+      "start": 367.6,
+      "duration": 2.8
+    },
+    {
+      "text": "so looking a little more at what these",
+      "start": 372.319,
+      "duration": 4.641
+    },
+    {
+      "text": "time series methods are again",
+      "start": 374.8,
+      "duration": 3.6
+    },
+    {
+      "text": "we are trying to predict the future",
+      "start": 376.96,
+      "duration": 4.48
+    },
+    {
+      "text": "using past information",
+      "start": 378.4,
+      "duration": 5.519
+    },
+    {
+      "text": "and there are a lot of possible models",
+      "start": 381.44,
+      "duration": 3.199
+    },
+    {
+      "text": "that we",
+      "start": 383.919,
+      "duration": 4.961
+    },
+    {
+      "text": "can use but the defining characteristics",
+      "start": 384.639,
+      "duration": 6.641
+    },
+    {
+      "text": "of all of them is that they're using",
+      "start": 388.88,
+      "duration": 3.84
+    },
+    {
+      "text": "something about the past",
+      "start": 391.28,
+      "duration": 4.96
+    },
+    {
+      "text": "in order to prevent predict the future",
+      "start": 392.72,
+      "duration": 5.759
+    },
+    {
+      "text": "and depending on the model it's using",
+      "start": 396.24,
+      "duration": 3.6
+    },
+    {
+      "text": "different characteristics",
+      "start": 398.479,
+      "duration": 4.401
+    },
+    {
+      "text": "of the past so it might be the trend it",
+      "start": 399.84,
+      "duration": 5.359
+    },
+    {
+      "text": "might be the growth it might be",
+      "start": 402.88,
+      "duration": 5.36
+    },
+    {
+      "text": "a historical deviations",
+      "start": 405.199,
+      "duration": 6.481
+    },
+    {
+      "text": "from the baseline forecasts i can adjust",
+      "start": 408.24,
+      "duration": 6.56
+    },
+    {
+      "text": "the forecast as well um",
+      "start": 411.68,
+      "duration": 6.639
+    },
+    {
+      "text": "so there's a lot of different um",
+      "start": 414.8,
+      "duration": 7.36
+    },
+    {
+      "text": "models that we can use there",
+      "start": 418.319,
+      "duration": 3.841
+    },
+    {
+      "text": "some of the simplest ones that you can",
+      "start": 422.96,
+      "duration": 3.76
+    },
+    {
+      "text": "use and we'll look",
+      "start": 424.8,
+      "duration": 5.44
+    },
+    {
+      "text": "at calculating these in a future video",
+      "start": 426.72,
+      "duration": 7.12
+    },
+    {
+      "text": "um simple very simple models we can just",
+      "start": 430.24,
+      "duration": 4.56
+    },
+    {
+      "text": "take an average",
+      "start": 433.84,
+      "duration": 2.799
+    },
+    {
+      "text": "of all the historical and say well it's",
+      "start": 434.8,
+      "duration": 3.28
+    },
+    {
+      "text": "going to be at that average",
+      "start": 436.639,
+      "duration": 3.68
+    },
+    {
+      "text": "going forward or we can take whatever",
+      "start": 438.08,
+      "duration": 4.08
+    },
+    {
+      "text": "was the most recent value",
+      "start": 440.319,
+      "duration": 3.521
+    },
+    {
+      "text": "and just say well that's our best",
+      "start": 442.16,
+      "duration": 3.12
+    },
+    {
+      "text": "estimate what it is now",
+      "start": 443.84,
+      "duration": 3.04
+    },
+    {
+      "text": "is our best estimate of what it's going",
+      "start": 445.28,
+      "duration": 4.8
+    },
+    {
+      "text": "to be going forward",
+      "start": 446.88,
+      "duration": 6.56
+    },
+    {
+      "text": "um and those",
+      "start": 450.08,
+      "duration": 6.8
+    },
+    {
+      "text": "are fitting in a number of",
+      "start": 453.44,
+      "duration": 6.4
+    },
+    {
+      "text": "uh forecasts it just depends on what",
+      "start": 456.88,
+      "duration": 4.24
+    },
+    {
+      "text": "you're forecasting it was something",
+      "start": 459.84,
+      "duration": 4.24
+    },
+    {
+      "text": "which tends to be very stable",
+      "start": 461.12,
+      "duration": 6.0
+    },
+    {
+      "text": "then these can be good models",
+      "start": 464.08,
+      "duration": 6.32
+    },
+    {
+      "text": "but most the time probably",
+      "start": 467.12,
+      "duration": 4.88
+    },
+    {
+      "text": "there is going to be some kind of trend",
+      "start": 470.4,
+      "duration": 3.359
+    },
+    {
+      "text": "or growth in",
+      "start": 472.0,
+      "duration": 4.96
+    },
+    {
+      "text": "the historical values",
+      "start": 473.759,
+      "duration": 5.921
+    },
+    {
+      "text": "so it's trending up or down or",
+      "start": 476.96,
+      "duration": 5.2
+    },
+    {
+      "text": "exponentially growing up or down",
+      "start": 479.68,
+      "duration": 4.72
+    },
+    {
+      "text": "and we want to continue that trend or",
+      "start": 482.16,
+      "duration": 3.2
+    },
+    {
+      "text": "growth into",
+      "start": 484.4,
+      "duration": 4.16
+    },
+    {
+      "text": "the future so we'll look at",
+      "start": 485.36,
+      "duration": 7.6
+    },
+    {
+      "text": "models uh for both of those",
+      "start": 488.56,
+      "duration": 7.44
+    },
+    {
+      "text": "and then there's a whole array of more",
+      "start": 492.96,
+      "duration": 5.679
+    },
+    {
+      "text": "advanced time series models",
+      "start": 496.0,
+      "duration": 4.879
+    },
+    {
+      "text": "and this is where a lot of that research",
+      "start": 498.639,
+      "duration": 3.28
+    },
+    {
+      "text": "that i mentioned is",
+      "start": 500.879,
+      "duration": 4.081
+    },
+    {
+      "text": "is around",
+      "start": 501.919,
+      "duration": 6.0
+    },
+    {
+      "text": "and so there are a few different general",
+      "start": 504.96,
+      "duration": 3.84
+    },
+    {
+      "text": "categories",
+      "start": 507.919,
+      "duration": 5.6
+    },
+    {
+      "text": "of how these models are different",
+      "start": 508.8,
+      "duration": 8.32
+    },
+    {
+      "text": "um one is auto aggressive terms",
+      "start": 513.519,
+      "duration": 6.801
+    },
+    {
+      "text": "so that means that you're directly using",
+      "start": 517.12,
+      "duration": 6.24
+    },
+    {
+      "text": "the recent values in the equation to",
+      "start": 520.32,
+      "duration": 5.04
+    },
+    {
+      "text": "predict the future",
+      "start": 523.36,
+      "duration": 5.2
+    },
+    {
+      "text": "our moving average means that",
+      "start": 525.36,
+      "duration": 6.88
+    },
+    {
+      "text": "um you're taking the historical",
+      "start": 528.56,
+      "duration": 5.6
+    },
+    {
+      "text": "you're taking the the forecast for the",
+      "start": 532.24,
+      "duration": 4.64
+    },
+    {
+      "text": "historical and the historical values",
+      "start": 534.16,
+      "duration": 5.2
+    },
+    {
+      "text": "calculating what was the forecast error",
+      "start": 536.88,
+      "duration": 4.8
+    },
+    {
+      "text": "how much were you off in those forecasts",
+      "start": 539.36,
+      "duration": 4.24
+    },
+    {
+      "text": "and those errors actually help you",
+      "start": 541.68,
+      "duration": 3.36
+    },
+    {
+      "text": "predict uh",
+      "start": 543.6,
+      "duration": 5.359
+    },
+    {
+      "text": "what the future uh is going to be",
+      "start": 545.04,
+      "duration": 6.96
+    },
+    {
+      "text": "or conditional heteroskedasticity",
+      "start": 548.959,
+      "duration": 6.401
+    },
+    {
+      "text": "which is a fancy way to say that",
+      "start": 552.0,
+      "duration": 5.6
+    },
+    {
+      "text": "the variance of the underlying data",
+      "start": 555.36,
+      "duration": 4.8
+    },
+    {
+      "text": "changes over time",
+      "start": 557.6,
+      "duration": 5.76
+    },
+    {
+      "text": "so if you're your line item is is",
+      "start": 560.16,
+      "duration": 7.119
+    },
+    {
+      "text": "uh you know very uh stays about the same",
+      "start": 563.36,
+      "duration": 5.2
+    },
+    {
+      "text": "and then it's changing a lot",
+      "start": 567.279,
+      "duration": 3.68
+    },
+    {
+      "text": "and it switches between that um then you",
+      "start": 568.56,
+      "duration": 3.2
+    },
+    {
+      "text": "should consider",
+      "start": 570.959,
+      "duration": 5.041
+    },
+    {
+      "text": "one of these kinds of models",
+      "start": 571.76,
+      "duration": 6.48
+    },
+    {
+      "text": "and so this is where we get into kind of",
+      "start": 576.0,
+      "duration": 3.519
+    },
+    {
+      "text": "the alphabet soup",
+      "start": 578.24,
+      "duration": 4.64
+    },
+    {
+      "text": "of models they tend to be just named uh",
+      "start": 579.519,
+      "duration": 6.0
+    },
+    {
+      "text": "with these different combinations of",
+      "start": 582.88,
+      "duration": 3.36
+    },
+    {
+      "text": "letters",
+      "start": 585.519,
+      "duration": 3.76
+    },
+    {
+      "text": "ar m a arma arch garch",
+      "start": 586.24,
+      "duration": 5.76
+    },
+    {
+      "text": "gam like there are so many of these",
+      "start": 589.279,
+      "duration": 4.481
+    },
+    {
+      "text": "types of models",
+      "start": 592.0,
+      "duration": 5.04
+    },
+    {
+      "text": "which are really uh going to be",
+      "start": 593.76,
+      "duration": 6.48
+    },
+    {
+      "text": "specialized for different purposes",
+      "start": 597.04,
+      "duration": 7.12
+    },
+    {
+      "text": "um so then you might say well",
+      "start": 600.24,
+      "duration": 6.719
+    },
+    {
+      "text": "we have these four simple models we have",
+      "start": 604.16,
+      "duration": 5.28
+    },
+    {
+      "text": "a bunch of more complicated models",
+      "start": 606.959,
+      "duration": 4.481
+    },
+    {
+      "text": "how do i go and pick which model i'm",
+      "start": 609.44,
+      "duration": 4.639
+    },
+    {
+      "text": "going to use",
+      "start": 611.44,
+      "duration": 2.639
+    },
+    {
+      "text": "so there's a number of factors that go",
+      "start": 614.24,
+      "duration": 5.44
+    },
+    {
+      "text": "into it",
+      "start": 617.2,
+      "duration": 4.639
+    },
+    {
+      "text": "and thinking about just the historical",
+      "start": 619.68,
+      "duration": 3.44
+    },
+    {
+      "text": "data",
+      "start": 621.839,
+      "duration": 4.161
+    },
+    {
+      "text": "the how much data you have is important",
+      "start": 623.12,
+      "duration": 6.0
+    },
+    {
+      "text": "as well as how frequent it is",
+      "start": 626.0,
+      "duration": 5.04
+    },
+    {
+      "text": "and whether there are any historical",
+      "start": 629.12,
+      "duration": 4.399
+    },
+    {
+      "text": "patterns and the data is going to be the",
+      "start": 631.04,
+      "duration": 4.4
+    },
+    {
+      "text": "biggest",
+      "start": 633.519,
+      "duration": 5.281
+    },
+    {
+      "text": "contributor to the decision of which",
+      "start": 635.44,
+      "duration": 6.079
+    },
+    {
+      "text": "model to use",
+      "start": 638.8,
+      "duration": 2.719
+    },
+    {
+      "text": "so if the data is basically constant",
+      "start": 641.76,
+      "duration": 3.84
+    },
+    {
+      "text": "historically",
+      "start": 644.16,
+      "duration": 4.16
+    },
+    {
+      "text": "then uh the the average or recent value",
+      "start": 645.6,
+      "duration": 3.6
+    },
+    {
+      "text": "approach",
+      "start": 648.32,
+      "duration": 4.0
+    },
+    {
+      "text": "should be a fine approach um and it just",
+      "start": 649.2,
+      "duration": 4.48
+    },
+    {
+      "text": "comes down to your",
+      "start": 652.32,
+      "duration": 3.44
+    },
+    {
+      "text": "um judgment call of whether you think",
+      "start": 653.68,
+      "duration": 4.08
+    },
+    {
+      "text": "that there's going to be some kind of",
+      "start": 655.76,
+      "duration": 3.44
+    },
+    {
+      "text": "mean reversion",
+      "start": 657.76,
+      "duration": 3.04
+    },
+    {
+      "text": "um and so the average would be more",
+      "start": 659.2,
+      "duration": 3.759
+    },
+    {
+      "text": "appropriate or if it's just going to",
+      "start": 660.8,
+      "duration": 3.44
+    },
+    {
+      "text": "stay where it's at",
+      "start": 662.959,
+      "duration": 3.361
+    },
+    {
+      "text": "and then the more the recent value",
+      "start": 664.24,
+      "duration": 3.12
+    },
+    {
+      "text": "approach would be",
+      "start": 666.32,
+      "duration": 4.639
+    },
+    {
+      "text": "the the best choice there",
+      "start": 667.36,
+      "duration": 3.599
+    },
+    {
+      "text": "but if um there's kind of a trend up in",
+      "start": 672.24,
+      "duration": 4.64
+    },
+    {
+      "text": "the data or",
+      "start": 676.24,
+      "duration": 2.4
+    },
+    {
+      "text": "trend down in the data whether that's",
+      "start": 676.88,
+      "duration": 4.8
+    },
+    {
+      "text": "more straight or it's more exponential",
+      "start": 678.64,
+      "duration": 5.04
+    },
+    {
+      "text": "um then you're going to want to consider",
+      "start": 681.68,
+      "duration": 3.599
+    },
+    {
+      "text": "using a trend or growth",
+      "start": 683.68,
+      "duration": 3.839
+    },
+    {
+      "text": "model so if it's a straighter line",
+      "start": 685.279,
+      "duration": 3.201
+    },
+    {
+      "text": "linear",
+      "start": 687.519,
+      "duration": 3.281
+    },
+    {
+      "text": "growth or decline you want to use the",
+      "start": 688.48,
+      "duration": 3.44
+    },
+    {
+      "text": "trend model",
+      "start": 690.8,
+      "duration": 2.719
+    },
+    {
+      "text": "and if it's more of an exponential",
+      "start": 691.92,
+      "duration": 3.919
+    },
+    {
+      "text": "growth or decline",
+      "start": 693.519,
+      "duration": 6.641
+    },
+    {
+      "text": "then you want to use the growth model",
+      "start": 695.839,
+      "duration": 4.321
+    },
+    {
+      "text": "and um if there are some kind of",
+      "start": 700.88,
+      "duration": 6.24
+    },
+    {
+      "text": "repeating patterns in the data like",
+      "start": 704.88,
+      "duration": 3.68
+    },
+    {
+      "text": "maybe it spikes up",
+      "start": 707.12,
+      "duration": 3.04
+    },
+    {
+      "text": "every like within every year maybe you",
+      "start": 708.56,
+      "duration": 3.279
+    },
+    {
+      "text": "have quarterly data and every",
+      "start": 710.16,
+      "duration": 3.679
+    },
+    {
+      "text": "you know second quarter uh the sales",
+      "start": 711.839,
+      "duration": 4.641
+    },
+    {
+      "text": "spike up",
+      "start": 713.839,
+      "duration": 2.641
+    },
+    {
+      "text": "these are cases where you're definitely",
+      "start": 716.8,
+      "duration": 3.12
+    },
+    {
+      "text": "going to need to use a more advanced",
+      "start": 718.32,
+      "duration": 5.68
+    },
+    {
+      "text": "model any of these for the",
+      "start": 719.92,
+      "duration": 6.96
+    },
+    {
+      "text": "average recent value trend and growth",
+      "start": 724.0,
+      "duration": 4.32
+    },
+    {
+      "text": "are not going to be able to capture",
+      "start": 726.88,
+      "duration": 3.28
+    },
+    {
+      "text": "these kinds of repeating patterns in the",
+      "start": 728.32,
+      "duration": 4.16
+    },
+    {
+      "text": "data that's where you definitely",
+      "start": 730.16,
+      "duration": 5.679
+    },
+    {
+      "text": "need to go to a more complex forecasting",
+      "start": 732.48,
+      "duration": 5.68
+    },
+    {
+      "text": "model",
+      "start": 735.839,
+      "duration": 2.321
+    },
+    {
+      "text": "but one you know there's there's a lot",
+      "start": 740.8,
+      "duration": 3.68
+    },
+    {
+      "text": "of decisions there to be made in terms",
+      "start": 742.88,
+      "duration": 2.24
+    },
+    {
+      "text": "of what",
+      "start": 744.48,
+      "duration": 3.2
+    },
+    {
+      "text": "model you're going to use but what is",
+      "start": 745.12,
+      "duration": 4.399
+    },
+    {
+      "text": "nice about forecasting is that",
+      "start": 747.68,
+      "duration": 2.719
+    },
+    {
+      "text": "regardless",
+      "start": 749.519,
+      "duration": 3.361
+    },
+    {
+      "text": "of what model you choose you go through",
+      "start": 750.399,
+      "duration": 3.68
+    },
+    {
+      "text": "the same process",
+      "start": 752.88,
+      "duration": 3.519
+    },
+    {
+      "text": "to do the forecast itself you just kind",
+      "start": 754.079,
+      "duration": 4.241
+    },
+    {
+      "text": "of switch out this model portion in the",
+      "start": 756.399,
+      "duration": 4.081
+    },
+    {
+      "text": "middle",
+      "start": 758.32,
+      "duration": 5.36
+    },
+    {
+      "text": "so if you understand the general process",
+      "start": 760.48,
+      "duration": 5.2
+    },
+    {
+      "text": "and you can learn the general process",
+      "start": 763.68,
+      "duration": 3.44
+    },
+    {
+      "text": "with simple models",
+      "start": 765.68,
+      "duration": 3.76
+    },
+    {
+      "text": "then it's easy to go and expand on that",
+      "start": 767.12,
+      "duration": 4.48
+    },
+    {
+      "text": "later learn the more complex models and",
+      "start": 769.44,
+      "duration": 3.92
+    },
+    {
+      "text": "just kind of plug them into this",
+      "start": 771.6,
+      "duration": 4.88
+    },
+    {
+      "text": "existing framework",
+      "start": 773.36,
+      "duration": 6.64
+    },
+    {
+      "text": "so the general process to forecasting is",
+      "start": 776.48,
+      "duration": 6.88
+    },
+    {
+      "text": "first you want to look at the historical",
+      "start": 780.0,
+      "duration": 4.72
+    },
+    {
+      "text": "data",
+      "start": 783.36,
+      "duration": 3.919
+    },
+    {
+      "text": "plot is usually a very good way to do",
+      "start": 784.72,
+      "duration": 3.359
+    },
+    {
+      "text": "this",
+      "start": 787.279,
+      "duration": 2.8
+    },
+    {
+      "text": "uh and if you just have a few numbers",
+      "start": 788.079,
+      "duration": 3.361
+    },
+    {
+      "text": "you don't necessarily have to plot them",
+      "start": 790.079,
+      "duration": 2.721
+    },
+    {
+      "text": "you can just look in the numbers",
+      "start": 791.44,
+      "duration": 3.92
+    },
+    {
+      "text": "but um as soon as you have more than a",
+      "start": 792.8,
+      "duration": 4.159
+    },
+    {
+      "text": "few data points it makes sense to plot",
+      "start": 795.36,
+      "duration": 2.08
+    },
+    {
+      "text": "it",
+      "start": 796.959,
+      "duration": 3.68
+    },
+    {
+      "text": "visually see it and what you're trying",
+      "start": 797.44,
+      "duration": 4.88
+    },
+    {
+      "text": "to do",
+      "start": 800.639,
+      "duration": 5.76
+    },
+    {
+      "text": "is get an understanding of that data",
+      "start": 802.32,
+      "duration": 6.0
+    },
+    {
+      "text": "so that you can ultimately make a choice",
+      "start": 806.399,
+      "duration": 4.0
+    },
+    {
+      "text": "on what time series model",
+      "start": 808.32,
+      "duration": 5.28
+    },
+    {
+      "text": "you're going to use",
+      "start": 810.399,
+      "duration": 5.041
+    },
+    {
+      "text": "so you want to look for patterns in the",
+      "start": 813.6,
+      "duration": 3.679
+    },
+    {
+      "text": "historical data whether it's a repeating",
+      "start": 815.44,
+      "duration": 2.32
+    },
+    {
+      "text": "pattern",
+      "start": 817.279,
+      "duration": 3.521
+    },
+    {
+      "text": "and you need a more complex model um or",
+      "start": 817.76,
+      "duration": 5.28
+    },
+    {
+      "text": "whether it's a trend or a growth rate",
+      "start": 820.8,
+      "duration": 4.56
+    },
+    {
+      "text": "and you want to use one of those models",
+      "start": 823.04,
+      "duration": 4.4
+    },
+    {
+      "text": "or if it's basically flat and you want",
+      "start": 825.36,
+      "duration": 2.96
+    },
+    {
+      "text": "to",
+      "start": 827.44,
+      "duration": 4.88
+    },
+    {
+      "text": "use the average or recent value model",
+      "start": 828.32,
+      "duration": 4.0
+    },
+    {
+      "text": "and you also want to consider any kind",
+      "start": 833.04,
+      "duration": 3.84
+    },
+    {
+      "text": "of",
+      "start": 835.76,
+      "duration": 3.36
+    },
+    {
+      "text": "qualitative knowledge that you have",
+      "start": 836.88,
+      "duration": 3.959
+    },
+    {
+      "text": "about it",
+      "start": 839.12,
+      "duration": 4.56
+    },
+    {
+      "text": "um you know if um",
+      "start": 840.839,
+      "duration": 5.961
+    },
+    {
+      "text": "it says in the company's 10k that",
+      "start": 843.68,
+      "duration": 5.12
+    },
+    {
+      "text": "um they're not going to be purchasing",
+      "start": 846.8,
+      "duration": 3.44
+    },
+    {
+      "text": "any new fixed assets",
+      "start": 848.8,
+      "duration": 5.039
+    },
+    {
+      "text": "over the next couple of years then uh",
+      "start": 850.24,
+      "duration": 5.92
+    },
+    {
+      "text": "no it doesn't make sense to use a trend",
+      "start": 853.839,
+      "duration": 3.841
+    },
+    {
+      "text": "if the historical data has been turning",
+      "start": 856.16,
+      "duration": 3.28
+    },
+    {
+      "text": "upwards well you already know",
+      "start": 857.68,
+      "duration": 3.44
+    },
+    {
+      "text": "that the company is not going to keep",
+      "start": 859.44,
+      "duration": 3.44
+    },
+    {
+      "text": "continuing on that path",
+      "start": 861.12,
+      "duration": 3.68
+    },
+    {
+      "text": "um so in that case you know maybe the",
+      "start": 862.88,
+      "duration": 5.92
+    },
+    {
+      "text": "recent value approach is is going to be",
+      "start": 864.8,
+      "duration": 4.0
+    },
+    {
+      "text": "better",
+      "start": 868.839,
+      "duration": 5.0
+    },
+    {
+      "text": "um and then the next step",
+      "start": 870.24,
+      "duration": 7.36
+    },
+    {
+      "text": "is then to fit that time series model",
+      "start": 873.839,
+      "duration": 5.68
+    },
+    {
+      "text": "and you'll have to make a choice there",
+      "start": 877.6,
+      "duration": 3.599
+    },
+    {
+      "text": "on whether you're fitting up on the",
+      "start": 879.519,
+      "duration": 2.241
+    },
+    {
+      "text": "levels",
+      "start": 881.199,
+      "duration": 3.121
+    },
+    {
+      "text": "the growth or the percentage of this",
+      "start": 881.76,
+      "duration": 3.12
+    },
+    {
+      "text": "item",
+      "start": 884.32,
+      "duration": 3.92
+    },
+    {
+      "text": "of another item but",
+      "start": 884.88,
+      "duration": 4.959
+    },
+    {
+      "text": "regardless of which you choose you're",
+      "start": 888.24,
+      "duration": 4.88
+    },
+    {
+      "text": "just fitting this model",
+      "start": 889.839,
+      "duration": 5.201
+    },
+    {
+      "text": "and then you're going to use the fitted",
+      "start": 893.12,
+      "duration": 3.76
+    },
+    {
+      "text": "model to predict",
+      "start": 895.04,
+      "duration": 5.52
+    },
+    {
+      "text": "the future um so you'll have some",
+      "start": 896.88,
+      "duration": 4.959
+    },
+    {
+      "text": "coefficients",
+      "start": 900.56,
+      "duration": 3.76
+    },
+    {
+      "text": "fitted from the historical data and then",
+      "start": 901.839,
+      "duration": 4.24
+    },
+    {
+      "text": "you use those coefficients to then",
+      "start": 904.32,
+      "duration": 5.44
+    },
+    {
+      "text": "predict the future data",
+      "start": 906.079,
+      "duration": 3.681
+    },
+    {
+      "text": "and then you have your forecast you've",
+      "start": 910.32,
+      "duration": 3.199
+    },
+    {
+      "text": "predicted the future",
+      "start": 912.24,
+      "duration": 3.839
+    },
+    {
+      "text": "and the last step is just to examine the",
+      "start": 913.519,
+      "duration": 3.76
+    },
+    {
+      "text": "forecast",
+      "start": 916.079,
+      "duration": 3.601
+    },
+    {
+      "text": "uh to make sure that you got kind of",
+      "start": 917.279,
+      "duration": 5.041
+    },
+    {
+      "text": "what expected and that it makes sense",
+      "start": 919.68,
+      "duration": 5.68
+    },
+    {
+      "text": "um so a plot is definitely the best way",
+      "start": 922.32,
+      "duration": 3.84
+    },
+    {
+      "text": "to do this",
+      "start": 925.36,
+      "duration": 3.44
+    },
+    {
+      "text": "you can look at a plot of both the",
+      "start": 926.16,
+      "duration": 3.679
+    },
+    {
+      "text": "historical",
+      "start": 928.8,
+      "duration": 3.76
+    },
+    {
+      "text": "and going into the forecasted and that",
+      "start": 929.839,
+      "duration": 3.92
+    },
+    {
+      "text": "lets you visually see",
+      "start": 932.56,
+      "duration": 4.639
+    },
+    {
+      "text": "well does this forecast seem to kind of",
+      "start": 933.759,
+      "duration": 4.801
+    },
+    {
+      "text": "continue",
+      "start": 937.199,
+      "duration": 5.041
+    },
+    {
+      "text": "the patterns which i saw in the past",
+      "start": 938.56,
+      "duration": 5.519
+    },
+    {
+      "text": "then i know that the forecast has worked",
+      "start": 942.24,
+      "duration": 3.68
+    },
+    {
+      "text": "correctly unless of course",
+      "start": 944.079,
+      "duration": 3.44
+    },
+    {
+      "text": "you've used your qualitative knowledge",
+      "start": 945.92,
+      "duration": 4.32
+    },
+    {
+      "text": "to adjust the forecast and then",
+      "start": 947.519,
+      "duration": 4.801
+    },
+    {
+      "text": "you know you're making sure that it is",
+      "start": 950.24,
+      "duration": 4.159
+    },
+    {
+      "text": "in line with your expectations of the",
+      "start": 952.32,
+      "duration": 5.12
+    },
+    {
+      "text": "company for the future",
+      "start": 954.399,
+      "duration": 3.041
+    },
+    {
+      "text": "so um",
+      "start": 960.0,
+      "duration": 3.6
+    },
+    {
+      "text": "we have to choose the time series model",
+      "start": 964.48,
+      "duration": 6.0
+    },
+    {
+      "text": "and recent value growth etc but we also",
+      "start": 967.6,
+      "duration": 4.479
+    },
+    {
+      "text": "have to choose",
+      "start": 970.48,
+      "duration": 3.76
+    },
+    {
+      "text": "what to forecast the levels the growth",
+      "start": 972.079,
+      "duration": 5.68
+    },
+    {
+      "text": "or percentage of another item",
+      "start": 974.24,
+      "duration": 3.519
+    },
+    {
+      "text": "um and",
+      "start": 977.92,
+      "duration": 5.599
+    },
+    {
+      "text": "there's a little bit different uh",
+      "start": 981.519,
+      "duration": 3.68
+    },
+    {
+      "text": "process of",
+      "start": 983.519,
+      "duration": 3.44
+    },
+    {
+      "text": "what you do depending on what you're",
+      "start": 985.199,
+      "duration": 4.161
+    },
+    {
+      "text": "forecasting",
+      "start": 986.959,
+      "duration": 5.68
+    },
+    {
+      "text": "when you forecast the levels um",
+      "start": 989.36,
+      "duration": 4.96
+    },
+    {
+      "text": "then you just forecast it and you're",
+      "start": 992.639,
+      "duration": 3.76
+    },
+    {
+      "text": "done the results from your forecasts",
+      "start": 994.32,
+      "duration": 4.48
+    },
+    {
+      "text": "are the results that you need and so",
+      "start": 996.399,
+      "duration": 3.921
+    },
+    {
+      "text": "you're done",
+      "start": 998.8,
+      "duration": 4.64
+    },
+    {
+      "text": "um and forecasting the",
+      "start": 1000.32,
+      "duration": 7.68
+    },
+    {
+      "text": "levels makes sense when you have",
+      "start": 1003.44,
+      "duration": 6.48
+    },
+    {
+      "text": "these more complex models which are",
+      "start": 1008.0,
+      "duration": 3.6
+    },
+    {
+      "text": "really able to take in",
+      "start": 1009.92,
+      "duration": 5.52
+    },
+    {
+      "text": "a lot of features of the data um",
+      "start": 1011.6,
+      "duration": 7.28
+    },
+    {
+      "text": "in order to do the forecast",
+      "start": 1015.44,
+      "duration": 3.44
+    },
+    {
+      "text": "and it makes sense for things which are",
+      "start": 1019.04,
+      "duration": 3.52
+    },
+    {
+      "text": "growing",
+      "start": 1021.92,
+      "duration": 3.919
+    },
+    {
+      "text": "more slowly or on a linear trend but if",
+      "start": 1022.56,
+      "duration": 5.759
+    },
+    {
+      "text": "it's an exponential trend",
+      "start": 1025.839,
+      "duration": 4.96
+    },
+    {
+      "text": "you might consider using the growth",
+      "start": 1028.319,
+      "duration": 5.201
+    },
+    {
+      "text": "rates instead",
+      "start": 1030.799,
+      "duration": 5.52
+    },
+    {
+      "text": "so when you want to forecast using the",
+      "start": 1033.52,
+      "duration": 4.48
+    },
+    {
+      "text": "growth rates what you do is you first",
+      "start": 1036.319,
+      "duration": 5.52
+    },
+    {
+      "text": "calculate the historical growth rates",
+      "start": 1038.0,
+      "duration": 6.559
+    },
+    {
+      "text": "through the percentage change and then",
+      "start": 1041.839,
+      "duration": 3.041
+    },
+    {
+      "text": "you",
+      "start": 1044.559,
+      "duration": 2.721
+    },
+    {
+      "text": "run the forecast with the growth numbers",
+      "start": 1044.88,
+      "duration": 5.039
+    },
+    {
+      "text": "instead of the original numbers",
+      "start": 1047.28,
+      "duration": 5.44
+    },
+    {
+      "text": "and that will allow you to predict the",
+      "start": 1049.919,
+      "duration": 4.161
+    },
+    {
+      "text": "future growth",
+      "start": 1052.72,
+      "duration": 4.079
+    },
+    {
+      "text": "and then you take the most recent level",
+      "start": 1054.08,
+      "duration": 4.08
+    },
+    {
+      "text": "and you do",
+      "start": 1056.799,
+      "duration": 3.921
+    },
+    {
+      "text": "uh multiply it by one plus next periods",
+      "start": 1058.16,
+      "duration": 4.24
+    },
+    {
+      "text": "of growth rate and keep doing that with",
+      "start": 1060.72,
+      "duration": 3.199
+    },
+    {
+      "text": "each future growth rate",
+      "start": 1062.4,
+      "duration": 4.56
+    },
+    {
+      "text": "to get uh the level forecasted",
+      "start": 1063.919,
+      "duration": 5.841
+    },
+    {
+      "text": "into the future",
+      "start": 1066.96,
+      "duration": 2.8
+    },
+    {
+      "text": "and then we have these this percentage",
+      "start": 1070.88,
+      "duration": 3.76
+    },
+    {
+      "text": "of item approach",
+      "start": 1073.12,
+      "duration": 4.48
+    },
+    {
+      "text": "uh where i think",
+      "start": 1074.64,
+      "duration": 2.96
+    },
+    {
+      "text": "in deciding whether to use that you",
+      "start": 1078.08,
+      "duration": 3.12
+    },
+    {
+      "text": "should think",
+      "start": 1080.4,
+      "duration": 4.72
+    },
+    {
+      "text": "about the whatever you're forecasting",
+      "start": 1081.2,
+      "duration": 7.92
+    },
+    {
+      "text": "um and how it relates to",
+      "start": 1085.12,
+      "duration": 7.12
+    },
+    {
+      "text": "other things which you forecasted",
+      "start": 1089.12,
+      "duration": 6.559
+    },
+    {
+      "text": "so having a knowledge of what each",
+      "start": 1092.24,
+      "duration": 5.679
+    },
+    {
+      "text": "financial statement line item means and",
+      "start": 1095.679,
+      "duration": 4.401
+    },
+    {
+      "text": "how it fits in the context of a",
+      "start": 1097.919,
+      "duration": 4.561
+    },
+    {
+      "text": "company's operations",
+      "start": 1100.08,
+      "duration": 5.44
+    },
+    {
+      "text": "is how you can guide these decisions",
+      "start": 1102.48,
+      "duration": 6.319
+    },
+    {
+      "text": "uh kind of the most classic example for",
+      "start": 1105.52,
+      "duration": 4.159
+    },
+    {
+      "text": "doing this",
+      "start": 1108.799,
+      "duration": 4.321
+    },
+    {
+      "text": "is forecasting costs of goods sold",
+      "start": 1109.679,
+      "duration": 5.441
+    },
+    {
+      "text": "cost of goods sold is almost always",
+      "start": 1113.12,
+      "duration": 3.84
+    },
+    {
+      "text": "forecasted as a percentage",
+      "start": 1115.12,
+      "duration": 5.12
+    },
+    {
+      "text": "of revenue because as you sell",
+      "start": 1116.96,
+      "duration": 4.56
+    },
+    {
+      "text": "additional products",
+      "start": 1120.24,
+      "duration": 3.76
+    },
+    {
+      "text": "you also have to increase the cost of",
+      "start": 1121.52,
+      "duration": 3.92
+    },
+    {
+      "text": "producing those products",
+      "start": 1124.0,
+      "duration": 3.76
+    },
+    {
+      "text": "basically it's the variable cost each",
+      "start": 1125.44,
+      "duration": 3.76
+    },
+    {
+      "text": "additional unit that you sell",
+      "start": 1127.76,
+      "duration": 5.12
+    },
+    {
+      "text": "you have to pay for the materials which",
+      "start": 1129.2,
+      "duration": 6.16
+    },
+    {
+      "text": "you use to create that product",
+      "start": 1132.88,
+      "duration": 5.919
+    },
+    {
+      "text": "and so the cost of goods scales uh with",
+      "start": 1135.36,
+      "duration": 6.64
+    },
+    {
+      "text": "these sales and so it makes the most",
+      "start": 1138.799,
+      "duration": 4.081
+    },
+    {
+      "text": "sense to just",
+      "start": 1142.0,
+      "duration": 4.24
+    },
+    {
+      "text": "tie these two things together um",
+      "start": 1142.88,
+      "duration": 5.28
+    },
+    {
+      "text": "and then you really just focus on",
+      "start": 1146.24,
+      "duration": 4.88
+    },
+    {
+      "text": "getting the sales forecast correct",
+      "start": 1148.16,
+      "duration": 4.639
+    },
+    {
+      "text": "and then cost of goods sold just becomes",
+      "start": 1151.12,
+      "duration": 4.16
+    },
+    {
+      "text": "a percentage of that",
+      "start": 1152.799,
+      "duration": 5.601
+    },
+    {
+      "text": "but you do still have to forecast the",
+      "start": 1155.28,
+      "duration": 6.48
+    },
+    {
+      "text": "percentages themselves um",
+      "start": 1158.4,
+      "duration": 6.32
+    },
+    {
+      "text": "most commonly people just use the recent",
+      "start": 1161.76,
+      "duration": 5.44
+    },
+    {
+      "text": "value or historical average approaches",
+      "start": 1164.72,
+      "duration": 3.52
+    },
+    {
+      "text": "but",
+      "start": 1167.2,
+      "duration": 2.4
+    },
+    {
+      "text": "again you would want to just go through",
+      "start": 1168.24,
+      "duration": 3.12
+    },
+    {
+      "text": "the same kind of evaluation of the",
+      "start": 1169.6,
+      "duration": 3.68
+    },
+    {
+      "text": "historical data",
+      "start": 1171.36,
+      "duration": 5.28
+    },
+    {
+      "text": "to determine which method to use but",
+      "start": 1173.28,
+      "duration": 6.48
+    },
+    {
+      "text": "um you calculate the historical",
+      "start": 1176.64,
+      "duration": 5.279
+    },
+    {
+      "text": "percentage so you divide say cost of",
+      "start": 1179.76,
+      "duration": 3.12
+    },
+    {
+      "text": "goods by sales",
+      "start": 1181.919,
+      "duration": 2.64
+    },
+    {
+      "text": "uh in the historical periods that will",
+      "start": 1182.88,
+      "duration": 3.679
+    },
+    {
+      "text": "get you the historical percentage",
+      "start": 1184.559,
+      "duration": 5.521
+    },
+    {
+      "text": "then you feed that into the forecast um",
+      "start": 1186.559,
+      "duration": 6.321
+    },
+    {
+      "text": "you'll get as a result the future uh",
+      "start": 1190.08,
+      "duration": 3.68
+    },
+    {
+      "text": "percentage",
+      "start": 1192.88,
+      "duration": 4.0
+    },
+    {
+      "text": "of this item of the other item cost of",
+      "start": 1193.76,
+      "duration": 5.68
+    },
+    {
+      "text": "goods sold as a percentage of sales",
+      "start": 1196.88,
+      "duration": 4.64
+    },
+    {
+      "text": "and then you just multiply that by your",
+      "start": 1199.44,
+      "duration": 3.04
+    },
+    {
+      "text": "forecast",
+      "start": 1201.52,
+      "duration": 2.88
+    },
+    {
+      "text": "of the sales or whatever the other item",
+      "start": 1202.48,
+      "duration": 3.52
+    },
+    {
+      "text": "is in order to get",
+      "start": 1204.4,
+      "duration": 5.92
+    },
+    {
+      "text": "the forecasted levels for this item",
+      "start": 1206.0,
+      "duration": 4.32
+    },
+    {
+      "text": "so yeah i have that same example here",
+      "start": 1212.72,
+      "duration": 4.24
+    },
+    {
+      "text": "cost of goods sold as a percentage of",
+      "start": 1215.44,
+      "duration": 2.08
+    },
+    {
+      "text": "sales",
+      "start": 1216.96,
+      "duration": 3.68
+    },
+    {
+      "text": "so maybe you know maybe the historical",
+      "start": 1217.52,
+      "duration": 4.32
+    },
+    {
+      "text": "periods were like",
+      "start": 1220.64,
+      "duration": 4.72
+    },
+    {
+      "text": "38 42 41",
+      "start": 1221.84,
+      "duration": 5.12
+    },
+    {
+      "text": "and so you say well it's just kind of",
+      "start": 1225.36,
+      "duration": 3.52
+    },
+    {
+      "text": "going up and down the historical average",
+      "start": 1226.96,
+      "duration": 3.839
+    },
+    {
+      "text": "approach makes sense for the forecast",
+      "start": 1228.88,
+      "duration": 4.799
+    },
+    {
+      "text": "so the average is 40 percent we're going",
+      "start": 1230.799,
+      "duration": 3.76
+    },
+    {
+      "text": "to use 40",
+      "start": 1233.679,
+      "duration": 3.441
+    },
+    {
+      "text": "going forward and then you already have",
+      "start": 1234.559,
+      "duration": 4.24
+    },
+    {
+      "text": "a separate forecast of the sales",
+      "start": 1237.12,
+      "duration": 3.2
+    },
+    {
+      "text": "so then you just multiply these two",
+      "start": 1238.799,
+      "duration": 3.281
+    },
+    {
+      "text": "things together uh",
+      "start": 1240.32,
+      "duration": 4.88
+    },
+    {
+      "text": "the forecasted sales with this 40 in",
+      "start": 1242.08,
+      "duration": 4.64
+    },
+    {
+      "text": "order to get the forecasted",
+      "start": 1245.2,
+      "duration": 4.64
+    },
+    {
+      "text": "cost of goods sold",
+      "start": 1246.72,
+      "duration": 6.56
+    },
+    {
+      "text": "so that's an overview on",
+      "start": 1249.84,
+      "duration": 5.52
+    },
+    {
+      "text": "everything that we're going to be doing",
+      "start": 1253.28,
+      "duration": 3.92
+    },
+    {
+      "text": "in forecasting",
+      "start": 1255.36,
+      "duration": 4.08
+    },
+    {
+      "text": "in this course we're going to come back",
+      "start": 1257.2,
+      "duration": 3.28
+    },
+    {
+      "text": "next time to",
+      "start": 1259.44,
+      "duration": 4.16
+    },
+    {
+      "text": "look at the simple",
+      "start": 1260.48,
+      "duration": 6.4
+    },
+    {
+      "text": "forecasting models so thanks for",
+      "start": 1263.6,
+      "duration": 3.92
+    },
+    {
+      "text": "listening",
+      "start": 1266.88,
+      "duration": 6.48
+    },
+    {
+      "text": "and see you next time",
+      "start": 1267.52,
+      "duration": 5.84
+    }
+  ]
+}

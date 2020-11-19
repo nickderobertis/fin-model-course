@@ -1,0 +1,849 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.36,
+      "duration": 2.479
+    },
+    {
+      "text": "this is nick dear burtis teaching you",
+      "start": 4.16,
+      "duration": 3.119
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.839,
+      "duration": 3.441
+    },
+    {
+      "text": "today we're going to be solving the lab",
+      "start": 7.279,
+      "duration": 3.201
+    },
+    {
+      "text": "exercise on",
+      "start": 9.28,
+      "duration": 4.239
+    },
+    {
+      "text": "free cash flow calculation this is part",
+      "start": 10.48,
+      "duration": 4.48
+    },
+    {
+      "text": "of our lecture segment on",
+      "start": 13.519,
+      "duration": 3.68
+    },
+    {
+      "text": "free cash flow estimation and",
+      "start": 14.96,
+      "duration": 3.52
+    },
+    {
+      "text": "forecasting",
+      "start": 17.199,
+      "duration": 2.961
+    },
+    {
+      "text": "which is part of our broader goal in the",
+      "start": 18.48,
+      "duration": 3.36
+    },
+    {
+      "text": "course of building out the full",
+      "start": 20.16,
+      "duration": 3.52
+    },
+    {
+      "text": "discounted cash flow valuation",
+      "start": 21.84,
+      "duration": 5.92
+    },
+    {
+      "text": "of a stock so",
+      "start": 23.68,
+      "duration": 6.88
+    },
+    {
+      "text": "this lab exercise came at the end of the",
+      "start": 27.76,
+      "duration": 3.599
+    },
+    {
+      "text": "historical",
+      "start": 30.56,
+      "duration": 3.519
+    },
+    {
+      "text": "free cash flow material and we have two",
+      "start": 31.359,
+      "duration": 3.681
+    },
+    {
+      "text": "levels",
+      "start": 34.079,
+      "duration": 3.521
+    },
+    {
+      "text": "so the first level here we're given some",
+      "start": 35.04,
+      "duration": 4.0
+    },
+    {
+      "text": "values on net income",
+      "start": 37.6,
+      "duration": 3.279
+    },
+    {
+      "text": "non-cash expenditures accounts",
+      "start": 39.04,
+      "duration": 4.48
+    },
+    {
+      "text": "receivable inventory payable ppe",
+      "start": 40.879,
+      "duration": 5.601
+    },
+    {
+      "text": "changes and the depreciation and",
+      "start": 43.52,
+      "duration": 4.64
+    },
+    {
+      "text": "amortization amount and we need to",
+      "start": 46.48,
+      "duration": 5.2
+    },
+    {
+      "text": "calculate the free cash flows",
+      "start": 48.16,
+      "duration": 6.559
+    },
+    {
+      "text": "and we'll be going with the formula seen",
+      "start": 51.68,
+      "duration": 3.519
+    },
+    {
+      "text": "here",
+      "start": 54.719,
+      "duration": 5.441
+    },
+    {
+      "text": "and the slides in order to achieve that",
+      "start": 55.199,
+      "duration": 4.961
+    },
+    {
+      "text": "so we can hop over to a jupiter notebook",
+      "start": 60.559,
+      "duration": 4.88
+    },
+    {
+      "text": "to do the calculations",
+      "start": 63.44,
+      "duration": 5.12
+    },
+    {
+      "text": "so the first thing i'll do is set up all",
+      "start": 65.439,
+      "duration": 3.521
+    },
+    {
+      "text": "the",
+      "start": 68.56,
+      "duration": 5.12
+    },
+    {
+      "text": "variables so we have net income is 300",
+      "start": 68.96,
+      "duration": 8.32
+    },
+    {
+      "text": "we have non-cash expenditures",
+      "start": 73.68,
+      "duration": 8.16
+    },
+    {
+      "text": "is 100 the accounts receivable",
+      "start": 77.28,
+      "duration": 9.12
+    },
+    {
+      "text": "it change is 1 thousand",
+      "start": 81.84,
+      "duration": 8.72
+    },
+    {
+      "text": "the uh inventory change",
+      "start": 86.4,
+      "duration": 7.92
+    },
+    {
+      "text": "is 500 the",
+      "start": 90.56,
+      "duration": 7.84
+    },
+    {
+      "text": "payable change is 800",
+      "start": 94.32,
+      "duration": 7.839
+    },
+    {
+      "text": "and the dpne is 2000 pp",
+      "start": 98.4,
+      "duration": 6.16
+    },
+    {
+      "text": "change",
+      "start": 102.159,
+      "duration": 2.401
+    },
+    {
+      "text": "and the depreciation and amortization",
+      "start": 105.439,
+      "duration": 9.121
+    },
+    {
+      "text": "is 200.",
+      "start": 110.56,
+      "duration": 7.599
+    },
+    {
+      "text": "so we ultimately want to do",
+      "start": 114.56,
+      "duration": 6.64
+    },
+    {
+      "text": "um net income",
+      "start": 118.159,
+      "duration": 5.681
+    },
+    {
+      "text": "net income",
+      "start": 121.2,
+      "duration": 2.64
+    },
+    {
+      "text": "and we want to add the",
+      "start": 124.479,
+      "duration": 6.241
+    },
+    {
+      "text": "non-cash expenses",
+      "start": 127.52,
+      "duration": 5.84
+    },
+    {
+      "text": "um and then next we need to subtract the",
+      "start": 130.72,
+      "duration": 4.08
+    },
+    {
+      "text": "networking capital",
+      "start": 133.36,
+      "duration": 3.28
+    },
+    {
+      "text": "so we don't have the networking capital",
+      "start": 134.8,
+      "duration": 3.28
+    },
+    {
+      "text": "yet we need to",
+      "start": 136.64,
+      "duration": 4.959
+    },
+    {
+      "text": "calculate that first uh so in order to",
+      "start": 138.08,
+      "duration": 4.0
+    },
+    {
+      "text": "calculate",
+      "start": 141.599,
+      "duration": 3.601
+    },
+    {
+      "text": "the networking capital we are going to",
+      "start": 142.08,
+      "duration": 5.92
+    },
+    {
+      "text": "take uh well the change in networking",
+      "start": 145.2,
+      "duration": 4.48
+    },
+    {
+      "text": "capital because we have all changes to",
+      "start": 148.0,
+      "duration": 2.72
+    },
+    {
+      "text": "work with",
+      "start": 149.68,
+      "duration": 2.72
+    },
+    {
+      "text": "we're going to take the change in",
+      "start": 150.72,
+      "duration": 3.92
+    },
+    {
+      "text": "accounts receivable",
+      "start": 152.4,
+      "duration": 4.479
+    },
+    {
+      "text": "to that we're going to add the inventory",
+      "start": 154.64,
+      "duration": 3.36
+    },
+    {
+      "text": "change",
+      "start": 156.879,
+      "duration": 2.881
+    },
+    {
+      "text": "and from that we're going to subtract",
+      "start": 158.0,
+      "duration": 5.12
+    },
+    {
+      "text": "the accounts payable change",
+      "start": 159.76,
+      "duration": 6.96
+    },
+    {
+      "text": "um and that would represent our change",
+      "start": 163.12,
+      "duration": 7.92
+    },
+    {
+      "text": "in networking capital",
+      "start": 166.72,
+      "duration": 8.48
+    },
+    {
+      "text": "so then we can",
+      "start": 171.04,
+      "duration": 8.72
+    },
+    {
+      "text": "bring that in there in the negative",
+      "start": 175.2,
+      "duration": 6.8
+    },
+    {
+      "text": "um and then we want to subtract the",
+      "start": 179.76,
+      "duration": 4.24
+    },
+    {
+      "text": "capital expenditures last",
+      "start": 182.0,
+      "duration": 3.76
+    },
+    {
+      "text": "but again we don't have the capital",
+      "start": 184.0,
+      "duration": 5.519
+    },
+    {
+      "text": "expenditures we need to calculate that",
+      "start": 185.76,
+      "duration": 6.24
+    },
+    {
+      "text": "so for the capital expenditures it's",
+      "start": 189.519,
+      "duration": 3.841
+    },
+    {
+      "text": "going to be",
+      "start": 192.0,
+      "duration": 4.239
+    },
+    {
+      "text": "the change in the property plant and",
+      "start": 193.36,
+      "duration": 4.0
+    },
+    {
+      "text": "equipment",
+      "start": 196.239,
+      "duration": 4.881
+    },
+    {
+      "text": "plus the depreciation amount so that",
+      "start": 197.36,
+      "duration": 6.879
+    },
+    {
+      "text": "is going to be the capex",
+      "start": 201.12,
+      "duration": 5.039
+    },
+    {
+      "text": "and so we're going to subtract that",
+      "start": 204.239,
+      "duration": 3.041
+    },
+    {
+      "text": "capex",
+      "start": 206.159,
+      "duration": 3.841
+    },
+    {
+      "text": "as well",
+      "start": 207.28,
+      "duration": 2.72
+    },
+    {
+      "text": "so that leads us to um",
+      "start": 211.12,
+      "duration": 6.72
+    },
+    {
+      "text": "a networking capital change in",
+      "start": 214.48,
+      "duration": 5.679
+    },
+    {
+      "text": "networking capital of 700",
+      "start": 217.84,
+      "duration": 8.319
+    },
+    {
+      "text": "uh the uh",
+      "start": 220.159,
+      "duration": 10.401
+    },
+    {
+      "text": "uh wait okay the um",
+      "start": 226.159,
+      "duration": 7.201
+    },
+    {
+      "text": "looking back at the problem the pv uh",
+      "start": 230.56,
+      "duration": 4.16
+    },
+    {
+      "text": "change is supposed to be two thousand",
+      "start": 233.36,
+      "duration": 1.76
+    },
+    {
+      "text": "not",
+      "start": 234.72,
+      "duration": 4.48
+    },
+    {
+      "text": "two hundred uh so yeah there we go now",
+      "start": 235.12,
+      "duration": 6.319
+    },
+    {
+      "text": "i'm able to match my",
+      "start": 239.2,
+      "duration": 6.0
+    },
+    {
+      "text": "uh solution the capex is 2200",
+      "start": 241.439,
+      "duration": 6.88
+    },
+    {
+      "text": "change in networking capital is 700",
+      "start": 245.2,
+      "duration": 6.56
+    },
+    {
+      "text": "and the net income",
+      "start": 248.319,
+      "duration": 9.361
+    },
+    {
+      "text": "or the free cash flows are negative 2500",
+      "start": 251.76,
+      "duration": 5.92
+    },
+    {
+      "text": "so that's the first exercise and now the",
+      "start": 259.12,
+      "duration": 5.519
+    },
+    {
+      "text": "second exercise",
+      "start": 262.72,
+      "duration": 4.4
+    },
+    {
+      "text": "we have to use the actual income",
+      "start": 264.639,
+      "duration": 4.401
+    },
+    {
+      "text": "statement and balance sheet data",
+      "start": 267.12,
+      "duration": 7.04
+    },
+    {
+      "text": "and calculate free cash flows from that",
+      "start": 269.04,
+      "duration": 9.12
+    },
+    {
+      "text": "so we can go ahead i'm going to",
+      "start": 274.16,
+      "duration": 8.4
+    },
+    {
+      "text": "import pandas and i'm also going to",
+      "start": 278.16,
+      "duration": 8.0
+    },
+    {
+      "text": "uh import from pin statement",
+      "start": 282.56,
+      "duration": 6.639
+    },
+    {
+      "text": "i'm going to import the",
+      "start": 286.16,
+      "duration": 6.16
+    },
+    {
+      "text": "balance sheet income statement",
+      "start": 289.199,
+      "duration": 8.321
+    },
+    {
+      "text": "and financial statements",
+      "start": 292.32,
+      "duration": 9.36
+    },
+    {
+      "text": "um so then i can",
+      "start": 297.52,
+      "duration": 7.84
+    },
+    {
+      "text": "read in the excel files",
+      "start": 301.68,
+      "duration": 3.68
+    },
+    {
+      "text": "so this would be the income data frame",
+      "start": 306.0,
+      "duration": 8.4
+    },
+    {
+      "text": "walmart income statement",
+      "start": 310.32,
+      "duration": 4.08
+    },
+    {
+      "text": "but we see it comes in we want to set",
+      "start": 317.199,
+      "duration": 4.0
+    },
+    {
+      "text": "the first",
+      "start": 319.919,
+      "duration": 5.921
+    },
+    {
+      "text": "column as the index column",
+      "start": 321.199,
+      "duration": 7.121
+    },
+    {
+      "text": "those statement line items become the",
+      "start": 325.84,
+      "duration": 3.12
+    },
+    {
+      "text": "index",
+      "start": 328.32,
+      "duration": 3.12
+    },
+    {
+      "text": "now this looks right in the structure we",
+      "start": 328.96,
+      "duration": 5.2
+    },
+    {
+      "text": "need it for print statement",
+      "start": 331.44,
+      "duration": 5.759
+    },
+    {
+      "text": "so then we can do the same",
+      "start": 334.16,
+      "duration": 6.16
+    },
+    {
+      "text": "with the balance sheet data frame",
+      "start": 337.199,
+      "duration": 6.961
+    },
+    {
+      "text": "or balance sheet uh excel file",
+      "start": 340.32,
+      "duration": 7.76
+    },
+    {
+      "text": "uh walmart balance sheet",
+      "start": 344.16,
+      "duration": 3.92
+    },
+    {
+      "text": "same thing over here with the index",
+      "start": 350.96,
+      "duration": 3.92
+    },
+    {
+      "text": "column",
+      "start": 352.56,
+      "duration": 2.32
+    },
+    {
+      "text": "and this looks right",
+      "start": 355.52,
+      "duration": 3.119
+    },
+    {
+      "text": "so then we can um",
+      "start": 359.36,
+      "duration": 6.08
+    },
+    {
+      "text": "create the balance sheet and income",
+      "start": 363.199,
+      "duration": 3.201
+    },
+    {
+      "text": "statement from",
+      "start": 365.44,
+      "duration": 4.319
+    },
+    {
+      "text": "those data frames so um",
+      "start": 366.4,
+      "duration": 7.12
+    },
+    {
+      "text": "so the income statement is going to be",
+      "start": 369.759,
+      "duration": 6.961
+    },
+    {
+      "text": "income statements from the",
+      "start": 373.52,
+      "duration": 6.48
+    },
+    {
+      "text": "data frame of the income statement data",
+      "start": 376.72,
+      "duration": 5.52
+    },
+    {
+      "text": "frame",
+      "start": 380.0,
+      "duration": 2.24
+    },
+    {
+      "text": "and the balance",
+      "start": 384.479,
+      "duration": 6.0
+    },
+    {
+      "text": "sheet",
+      "start": 388.16,
+      "duration": 2.319
+    },
+    {
+      "text": "we're going to create that in a similar",
+      "start": 391.52,
+      "duration": 4.239
+    },
+    {
+      "text": "way from the data frame of the balance",
+      "start": 393.759,
+      "duration": 2.401
+    },
+    {
+      "text": "sheet",
+      "start": 395.759,
+      "duration": 4.641
+    },
+    {
+      "text": "data frame and then we can create the",
+      "start": 396.16,
+      "duration": 5.68
+    },
+    {
+      "text": "financial statements",
+      "start": 400.4,
+      "duration": 5.28
+    },
+    {
+      "text": "but from the income statement",
+      "start": 401.84,
+      "duration": 8.0
+    },
+    {
+      "text": "and the balance sheet",
+      "start": 405.68,
+      "duration": 4.16
+    },
+    {
+      "text": "so then it loads it in to find statement",
+      "start": 410.96,
+      "duration": 7.359
+    },
+    {
+      "text": "so then we will be able to",
+      "start": 415.28,
+      "duration": 6.319
+    },
+    {
+      "text": "work with it so",
+      "start": 418.319,
+      "duration": 6.481
+    },
+    {
+      "text": "then the question is asking about",
+      "start": 421.599,
+      "duration": 7.04
+    },
+    {
+      "text": "um calculating the free cash flows",
+      "start": 424.8,
+      "duration": 7.04
+    },
+    {
+      "text": "um and so for calculating free cash",
+      "start": 428.639,
+      "duration": 4.4
+    },
+    {
+      "text": "flows",
+      "start": 431.84,
+      "duration": 4.4
+    },
+    {
+      "text": "in print statement that is uh simple",
+      "start": 433.039,
+      "duration": 6.801
+    },
+    {
+      "text": "you just do statements dot fcf",
+      "start": 436.24,
+      "duration": 6.16
+    },
+    {
+      "text": "um and that gets us the free cash flows",
+      "start": 439.84,
+      "duration": 3.28
+    },
+    {
+      "text": "and",
+      "start": 442.4,
+      "duration": 3.12
+    },
+    {
+      "text": "there we're done we have it calculated",
+      "start": 443.12,
+      "duration": 4.56
+    },
+    {
+      "text": "for every period",
+      "start": 445.52,
+      "duration": 4.88
+    },
+    {
+      "text": "um now if you wanted to go about it a",
+      "start": 447.68,
+      "duration": 5.84
+    },
+    {
+      "text": "little bit more manual way",
+      "start": 450.4,
+      "duration": 6.96
+    },
+    {
+      "text": "we can use those same components",
+      "start": 453.52,
+      "duration": 7.04
+    },
+    {
+      "text": "that we used in the level 1 problem we",
+      "start": 457.36,
+      "duration": 3.679
+    },
+    {
+      "text": "can",
+      "start": 460.56,
+      "duration": 3.68
+    },
+    {
+      "text": "take the net income",
+      "start": 461.039,
+      "duration": 8.081
+    },
+    {
+      "text": "and we can add uh the non-cash expenses",
+      "start": 464.24,
+      "duration": 8.32
+    },
+    {
+      "text": "and we can subtract um",
+      "start": 469.12,
+      "duration": 9.68
+    },
+    {
+      "text": "the uh chained in the networking capital",
+      "start": 472.56,
+      "duration": 11.12
+    },
+    {
+      "text": "and we can subtract the capex",
+      "start": 478.8,
+      "duration": 4.88
+    },
+    {
+      "text": "and we'll get the same result as",
+      "start": 483.759,
+      "duration": 8.241
+    },
+    {
+      "text": "accessing the fcf directly",
+      "start": 487.44,
+      "duration": 6.72
+    },
+    {
+      "text": "so that covers both of these lab",
+      "start": 492.0,
+      "duration": 5.199
+    },
+    {
+      "text": "exercises on calculating free cash flows",
+      "start": 494.16,
+      "duration": 7.0
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 497.199,
+      "duration": 6.961
+    },
+    {
+      "text": "time",
+      "start": 501.16,
+      "duration": 3.0
+    }
+  ]
+}

@@ -1,0 +1,1409 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.199,
+      "duration": 2.481
+    },
+    {
+      "text": "this is nick diovertis teaching you",
+      "start": 4.0,
+      "duration": 3.04
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.68,
+      "duration": 3.36
+    },
+    {
+      "text": "today we're going to be solving the lab",
+      "start": 7.04,
+      "duration": 3.04
+    },
+    {
+      "text": "exercise",
+      "start": 9.04,
+      "duration": 4.08
+    },
+    {
+      "text": "on finding cost of debt given",
+      "start": 10.08,
+      "duration": 6.32
+    },
+    {
+      "text": "financial and market information this is",
+      "start": 13.12,
+      "duration": 4.72
+    },
+    {
+      "text": "part of our lecture series",
+      "start": 16.4,
+      "duration": 4.0
+    },
+    {
+      "text": "on the discounted cash flow evaluation",
+      "start": 17.84,
+      "duration": 3.279
+    },
+    {
+      "text": "model",
+      "start": 20.4,
+      "duration": 3.44
+    },
+    {
+      "text": "focusing on the cost of capital portion",
+      "start": 21.119,
+      "duration": 5.441
+    },
+    {
+      "text": "of the model",
+      "start": 23.84,
+      "duration": 2.72
+    },
+    {
+      "text": "so we covered all of the material on the",
+      "start": 26.88,
+      "duration": 4.639
+    },
+    {
+      "text": "cost of debt",
+      "start": 30.4,
+      "duration": 4.88
+    },
+    {
+      "text": "and then these are the two lab exercises",
+      "start": 31.519,
+      "duration": 7.281
+    },
+    {
+      "text": "which test knowledge of that material",
+      "start": 35.28,
+      "duration": 6.24
+    },
+    {
+      "text": "so here in the first exercise we are",
+      "start": 38.8,
+      "duration": 3.439
+    },
+    {
+      "text": "given",
+      "start": 41.52,
+      "duration": 4.0
+    },
+    {
+      "text": "some details on a market bond the coupon",
+      "start": 42.239,
+      "duration": 4.241
+    },
+    {
+      "text": "rate",
+      "start": 45.52,
+      "duration": 4.64
+    },
+    {
+      "text": "the par value the price uh",
+      "start": 46.48,
+      "duration": 6.48
+    },
+    {
+      "text": "and then the maturity versus the current",
+      "start": 50.16,
+      "duration": 5.039
+    },
+    {
+      "text": "date",
+      "start": 52.96,
+      "duration": 5.68
+    },
+    {
+      "text": "um and we are",
+      "start": 55.199,
+      "duration": 6.641
+    },
+    {
+      "text": "coming up with um",
+      "start": 58.64,
+      "duration": 6.32
+    },
+    {
+      "text": "the cost of debt for",
+      "start": 61.84,
+      "duration": 6.8
+    },
+    {
+      "text": "this company so",
+      "start": 64.96,
+      "duration": 5.68
+    },
+    {
+      "text": "let's go over to a jupiter notebook to",
+      "start": 68.64,
+      "duration": 5.2
+    },
+    {
+      "text": "solve this",
+      "start": 70.64,
+      "duration": 3.2
+    },
+    {
+      "text": "so i'm going to use numpy's rate",
+      "start": 74.72,
+      "duration": 3.52
+    },
+    {
+      "text": "function",
+      "start": 77.6,
+      "duration": 3.92
+    },
+    {
+      "text": "in order to determine the",
+      "start": 78.24,
+      "duration": 5.76
+    },
+    {
+      "text": "cost of debt based on this bond",
+      "start": 81.52,
+      "duration": 3.599
+    },
+    {
+      "text": "information",
+      "start": 84.0,
+      "duration": 4.479
+    },
+    {
+      "text": "so i'm going to import numpy as mp as is",
+      "start": 85.119,
+      "duration": 4.561
+    },
+    {
+      "text": "the convention",
+      "start": 88.479,
+      "duration": 4.481
+    },
+    {
+      "text": "and then i'm going to add variables",
+      "start": 89.68,
+      "duration": 4.96
+    },
+    {
+      "text": "for these different quantities that we",
+      "start": 92.96,
+      "duration": 5.44
+    },
+    {
+      "text": "looked at so there's the coupon rate",
+      "start": 94.64,
+      "duration": 8.0
+    },
+    {
+      "text": "uh we have the price is equal to",
+      "start": 98.4,
+      "duration": 8.079
+    },
+    {
+      "text": "uh 10 42 12.",
+      "start": 102.64,
+      "duration": 3.839
+    },
+    {
+      "text": "we have the maturity",
+      "start": 108.0,
+      "duration": 6.799
+    },
+    {
+      "text": "is three years and then",
+      "start": 111.439,
+      "duration": 8.081
+    },
+    {
+      "text": "the face value is a thousand",
+      "start": 114.799,
+      "duration": 9.28
+    },
+    {
+      "text": "and the tax rate is 35",
+      "start": 119.52,
+      "duration": 4.559
+    },
+    {
+      "text": "so to calculate the",
+      "start": 124.799,
+      "duration": 5.52
+    },
+    {
+      "text": "cost of debt now we can use numpy's rate",
+      "start": 128.16,
+      "duration": 3.84
+    },
+    {
+      "text": "function",
+      "start": 130.319,
+      "duration": 3.761
+    },
+    {
+      "text": "and first we want to put the number of",
+      "start": 132.0,
+      "duration": 3.04
+    },
+    {
+      "text": "periods so that's",
+      "start": 134.08,
+      "duration": 4.239
+    },
+    {
+      "text": "n and second we need to put the payment",
+      "start": 135.04,
+      "duration": 5.919
+    },
+    {
+      "text": "so the payment we do need to calculate",
+      "start": 138.319,
+      "duration": 4.721
+    },
+    {
+      "text": "that as well",
+      "start": 140.959,
+      "duration": 5.761
+    },
+    {
+      "text": "so the payment is going to be equal to",
+      "start": 143.04,
+      "duration": 7.199
+    },
+    {
+      "text": "the face value or principal value",
+      "start": 146.72,
+      "duration": 6.48
+    },
+    {
+      "text": "multiplied by the coupon rate so that",
+      "start": 150.239,
+      "duration": 3.761
+    },
+    {
+      "text": "should be",
+      "start": 153.2,
+      "duration": 4.64
+    },
+    {
+      "text": "70 dollars yup",
+      "start": 154.0,
+      "duration": 6.72
+    },
+    {
+      "text": "so we can put that next in here and then",
+      "start": 157.84,
+      "duration": 3.679
+    },
+    {
+      "text": "after that",
+      "start": 160.72,
+      "duration": 3.04
+    },
+    {
+      "text": "we need the present value which is going",
+      "start": 161.519,
+      "duration": 3.44
+    },
+    {
+      "text": "to be negative",
+      "start": 163.76,
+      "duration": 4.88
+    },
+    {
+      "text": "price and then we put the future value",
+      "start": 164.959,
+      "duration": 7.28
+    },
+    {
+      "text": "last which is the face value",
+      "start": 168.64,
+      "duration": 6.64
+    },
+    {
+      "text": "of the bond so with that",
+      "start": 172.239,
+      "duration": 6.72
+    },
+    {
+      "text": "we get that there is a 5.4 percent",
+      "start": 175.28,
+      "duration": 7.2
+    },
+    {
+      "text": "cost of debt pre-tax",
+      "start": 178.959,
+      "duration": 5.841
+    },
+    {
+      "text": "and then in order to get the after tax",
+      "start": 182.48,
+      "duration": 5.44
+    },
+    {
+      "text": "uh cost of debt",
+      "start": 184.8,
+      "duration": 3.12
+    },
+    {
+      "text": "then that's going to be just taking the",
+      "start": 189.12,
+      "duration": 4.64
+    },
+    {
+      "text": "pre-tax",
+      "start": 192.239,
+      "duration": 4.601
+    },
+    {
+      "text": "and multiplying by one minus the tax",
+      "start": 193.76,
+      "duration": 6.08
+    },
+    {
+      "text": "rate",
+      "start": 196.84,
+      "duration": 3.0
+    },
+    {
+      "text": "then we can add a nice sentence here",
+      "start": 201.519,
+      "duration": 4.401
+    },
+    {
+      "text": "the pre-tax",
+      "start": 206.879,
+      "duration": 8.561
+    },
+    {
+      "text": "cost of debt is and then",
+      "start": 210.799,
+      "duration": 9.36
+    },
+    {
+      "text": "that with percentage formatting",
+      "start": 215.44,
+      "duration": 4.719
+    },
+    {
+      "text": "and the after tax",
+      "start": 220.959,
+      "duration": 3.521
+    },
+    {
+      "text": "is and then put the after tax",
+      "start": 224.879,
+      "duration": 8.961
+    },
+    {
+      "text": "uh with percentage formatting again",
+      "start": 228.239,
+      "duration": 5.601
+    },
+    {
+      "text": "um and then",
+      "start": 234.239,
+      "duration": 6.64
+    },
+    {
+      "text": "i know in the following problem",
+      "start": 237.76,
+      "duration": 4.479
+    },
+    {
+      "text": "let's look at the following problem real",
+      "start": 240.879,
+      "duration": 2.881
+    },
+    {
+      "text": "quickly because that was the first",
+      "start": 242.239,
+      "duration": 3.841
+    },
+    {
+      "text": "problem",
+      "start": 243.76,
+      "duration": 6.16
+    },
+    {
+      "text": "in the following problem we're going to",
+      "start": 246.08,
+      "duration": 6.48
+    },
+    {
+      "text": "get financial information for walmart",
+      "start": 249.92,
+      "duration": 4.64
+    },
+    {
+      "text": "from stockrow.com",
+      "start": 252.56,
+      "duration": 3.76
+    },
+    {
+      "text": "and calculate the cost of debt using the",
+      "start": 254.56,
+      "duration": 4.16
+    },
+    {
+      "text": "financial statements approach",
+      "start": 256.32,
+      "duration": 4.0
+    },
+    {
+      "text": "so again we're going to be calculating",
+      "start": 258.72,
+      "duration": 3.12
+    },
+    {
+      "text": "the cost of debt and we're going to want",
+      "start": 260.32,
+      "duration": 2.4
+    },
+    {
+      "text": "to show the pre",
+      "start": 261.84,
+      "duration": 4.24
+    },
+    {
+      "text": "and and post tax costs of debt so i'm",
+      "start": 262.72,
+      "duration": 5.6
+    },
+    {
+      "text": "going to go ahead and create a function",
+      "start": 266.08,
+      "duration": 6.0
+    },
+    {
+      "text": "which does these last couple of parts so",
+      "start": 268.32,
+      "duration": 7.28
+    },
+    {
+      "text": "um so i can",
+      "start": 272.08,
+      "duration": 5.09
+    },
+    {
+      "text": "say call this show",
+      "start": 275.6,
+      "duration": 4.56
+    },
+    {
+      "text": "[Music]",
+      "start": 277.17,
+      "duration": 6.51
+    },
+    {
+      "text": "cost of debt and it takes the pre-tax",
+      "start": 280.16,
+      "duration": 7.44
+    },
+    {
+      "text": "cost of debt and the tax rate",
+      "start": 283.68,
+      "duration": 5.6
+    },
+    {
+      "text": "and then it does this calculation of the",
+      "start": 287.6,
+      "duration": 4.56
+    },
+    {
+      "text": "astro tax and then it shows both",
+      "start": 289.28,
+      "duration": 6.16
+    },
+    {
+      "text": "so now i can use that again here in this",
+      "start": 292.16,
+      "duration": 5.68
+    },
+    {
+      "text": "problem",
+      "start": 295.44,
+      "duration": 2.4
+    },
+    {
+      "text": "and i see the same and it will help us",
+      "start": 299.68,
+      "duration": 5.519
+    },
+    {
+      "text": "out in the following problem",
+      "start": 302.0,
+      "duration": 3.199
+    },
+    {
+      "text": "so for the following problem now we need",
+      "start": 305.28,
+      "duration": 3.359
+    },
+    {
+      "text": "to",
+      "start": 307.6,
+      "duration": 3.84
+    },
+    {
+      "text": "get that information from stockro the",
+      "start": 308.639,
+      "duration": 4.4
+    },
+    {
+      "text": "financial information in order to",
+      "start": 311.44,
+      "duration": 4.24
+    },
+    {
+      "text": "calculate the cost of debt",
+      "start": 313.039,
+      "duration": 5.6
+    },
+    {
+      "text": "so i'm going to go ahead and click",
+      "start": 315.68,
+      "duration": 6.079
+    },
+    {
+      "text": "stockrow link here",
+      "start": 318.639,
+      "duration": 3.12
+    },
+    {
+      "text": "and it hits the home page there i can",
+      "start": 322.0,
+      "duration": 3.199
+    },
+    {
+      "text": "search for",
+      "start": 324.32,
+      "duration": 4.24
+    },
+    {
+      "text": "walmart comes up with walmart's page",
+      "start": 325.199,
+      "duration": 6.881
+    },
+    {
+      "text": "i can go to financials um and then here",
+      "start": 328.56,
+      "duration": 5.04
+    },
+    {
+      "text": "we're on the income statement",
+      "start": 332.08,
+      "duration": 3.679
+    },
+    {
+      "text": "we are going to need that so download",
+      "start": 333.6,
+      "duration": 3.039
+    },
+    {
+      "text": "that",
+      "start": 335.759,
+      "duration": 2.961
+    },
+    {
+      "text": "and you want to save it named as the",
+      "start": 336.639,
+      "duration": 3.84
+    },
+    {
+      "text": "income statement",
+      "start": 338.72,
+      "duration": 4.479
+    },
+    {
+      "text": "and then the balance sheet is going to",
+      "start": 340.479,
+      "duration": 4.081
+    },
+    {
+      "text": "be necessary as well",
+      "start": 343.199,
+      "duration": 4.321
+    },
+    {
+      "text": "so i'm also going to export that save",
+      "start": 344.56,
+      "duration": 7.52
+    },
+    {
+      "text": "that as the balance sheet",
+      "start": 347.52,
+      "duration": 8.88
+    },
+    {
+      "text": "so now i can import pandas",
+      "start": 352.08,
+      "duration": 4.32
+    },
+    {
+      "text": "so that i can load these data files into",
+      "start": 356.56,
+      "duration": 4.24
+    },
+    {
+      "text": "data frames",
+      "start": 359.28,
+      "duration": 4.8
+    },
+    {
+      "text": "so first i will uh",
+      "start": 360.8,
+      "duration": 7.04
+    },
+    {
+      "text": "get the income statement as data frame",
+      "start": 364.08,
+      "duration": 7.28
+    },
+    {
+      "text": "read excel on the walmart",
+      "start": 367.84,
+      "duration": 7.52
+    },
+    {
+      "text": "income statement and i'll do the same",
+      "start": 371.36,
+      "duration": 9.279
+    },
+    {
+      "text": "for the balance sheet read excel",
+      "start": 375.36,
+      "duration": 8.559
+    },
+    {
+      "text": "on walmart balance sheet",
+      "start": 380.639,
+      "duration": 5.68
+    },
+    {
+      "text": "okay so now let's look at the income",
+      "start": 383.919,
+      "duration": 3.921
+    },
+    {
+      "text": "statement",
+      "start": 386.319,
+      "duration": 4.401
+    },
+    {
+      "text": "and it looks like it loaded in correctly",
+      "start": 387.84,
+      "duration": 3.919
+    },
+    {
+      "text": "and we have the",
+      "start": 390.72,
+      "duration": 4.08
+    },
+    {
+      "text": "dates as the columns here",
+      "start": 391.759,
+      "duration": 5.921
+    },
+    {
+      "text": "and we have the statement line items as",
+      "start": 394.8,
+      "duration": 3.519
+    },
+    {
+      "text": "the first",
+      "start": 397.68,
+      "duration": 3.76
+    },
+    {
+      "text": "column so maybe what will be better to",
+      "start": 398.319,
+      "duration": 5.44
+    },
+    {
+      "text": "be able to pull items out is to have",
+      "start": 401.44,
+      "duration": 5.599
+    },
+    {
+      "text": "the line items as the index",
+      "start": 403.759,
+      "duration": 7.121
+    },
+    {
+      "text": "so i'm going to set the index column as",
+      "start": 407.039,
+      "duration": 6.241
+    },
+    {
+      "text": "column 0 when i load it in and that",
+      "start": 410.88,
+      "duration": 3.759
+    },
+    {
+      "text": "makes that happen",
+      "start": 413.28,
+      "duration": 4.08
+    },
+    {
+      "text": "automatically",
+      "start": 414.639,
+      "duration": 2.721
+    },
+    {
+      "text": "and then i imagine we have the same",
+      "start": 418.16,
+      "duration": 3.36
+    },
+    {
+      "text": "thing going on in the balance sheet data",
+      "start": 419.68,
+      "duration": 2.959
+    },
+    {
+      "text": "frame",
+      "start": 421.52,
+      "duration": 3.92
+    },
+    {
+      "text": "seems to be a similar structure so for",
+      "start": 422.639,
+      "duration": 4.161
+    },
+    {
+      "text": "that one as well",
+      "start": 425.44,
+      "duration": 4.319
+    },
+    {
+      "text": "i'm also going to set the index column",
+      "start": 426.8,
+      "duration": 5.6
+    },
+    {
+      "text": "as zero",
+      "start": 429.759,
+      "duration": 7.601
+    },
+    {
+      "text": "and now that looks better as well",
+      "start": 432.4,
+      "duration": 8.4
+    },
+    {
+      "text": "so we want to calculate the cost of debt",
+      "start": 437.36,
+      "duration": 6.48
+    },
+    {
+      "text": "free tax cost of debt first and to do",
+      "start": 440.8,
+      "duration": 4.799
+    },
+    {
+      "text": "that we're going to take the interest",
+      "start": 443.84,
+      "duration": 2.4
+    },
+    {
+      "text": "expense",
+      "start": 445.599,
+      "duration": 4.641
+    },
+    {
+      "text": "and divide it by the total debt",
+      "start": 446.24,
+      "duration": 7.359
+    },
+    {
+      "text": "so first thing we've got to do is pull",
+      "start": 450.24,
+      "duration": 6.799
+    },
+    {
+      "text": "out this interest expense",
+      "start": 453.599,
+      "duration": 5.201
+    },
+    {
+      "text": "so we can start by trying to pull out",
+      "start": 457.039,
+      "duration": 3.841
+    },
+    {
+      "text": "the appropriate column here the problem",
+      "start": 458.8,
+      "duration": 2.799
+    },
+    {
+      "text": "asked it",
+      "start": 460.88,
+      "duration": 5.12
+    },
+    {
+      "text": "use the july 31st of 2019 data",
+      "start": 461.599,
+      "duration": 8.88
+    },
+    {
+      "text": "so let's go ahead and pull that out",
+      "start": 466.0,
+      "duration": 4.479
+    },
+    {
+      "text": "okay july 31st but",
+      "start": 470.8,
+      "duration": 6.48
+    },
+    {
+      "text": "that did not work we got an error about",
+      "start": 474.16,
+      "duration": 4.159
+    },
+    {
+      "text": "that so let's",
+      "start": 477.28,
+      "duration": 4.639
+    },
+    {
+      "text": "look at what the columns are",
+      "start": 478.319,
+      "duration": 6.0
+    },
+    {
+      "text": "we can see that the columns are actually",
+      "start": 481.919,
+      "duration": 4.0
+    },
+    {
+      "text": "a date time",
+      "start": 484.319,
+      "duration": 4.801
+    },
+    {
+      "text": "type and not just a string and so we",
+      "start": 485.919,
+      "duration": 5.68
+    },
+    {
+      "text": "can't look it up by a string",
+      "start": 489.12,
+      "duration": 4.56
+    },
+    {
+      "text": "thankfully in pandas we do have this two",
+      "start": 491.599,
+      "duration": 3.521
+    },
+    {
+      "text": "date time",
+      "start": 493.68,
+      "duration": 4.88
+    },
+    {
+      "text": "uh that we can use on a string or on a",
+      "start": 495.12,
+      "duration": 5.6
+    },
+    {
+      "text": "series",
+      "start": 498.56,
+      "duration": 4.72
+    },
+    {
+      "text": "and that will convert that into a date",
+      "start": 500.72,
+      "duration": 4.4
+    },
+    {
+      "text": "so let's try putting that",
+      "start": 503.28,
+      "duration": 4.88
+    },
+    {
+      "text": "in here instead",
+      "start": 505.12,
+      "duration": 5.04
+    },
+    {
+      "text": "and that is able to pull the appropriate",
+      "start": 508.16,
+      "duration": 3.12
+    },
+    {
+      "text": "column",
+      "start": 510.16,
+      "duration": 2.64
+    },
+    {
+      "text": "so i'm going to go ahead and save this",
+      "start": 511.28,
+      "duration": 3.439
+    },
+    {
+      "text": "into a variable so that we don't have to",
+      "start": 512.8,
+      "duration": 3.76
+    },
+    {
+      "text": "keep typing that",
+      "start": 514.719,
+      "duration": 4.56
+    },
+    {
+      "text": "and so that we could easily change out",
+      "start": 516.56,
+      "duration": 3.68
+    },
+    {
+      "text": "the state later",
+      "start": 519.279,
+      "duration": 4.161
+    },
+    {
+      "text": "and have the analysis update for the new",
+      "start": 520.24,
+      "duration": 5.44
+    },
+    {
+      "text": "date",
+      "start": 523.44,
+      "duration": 2.24
+    },
+    {
+      "text": "now i can pull the appropriate",
+      "start": 525.76,
+      "duration": 7.68
+    },
+    {
+      "text": "date data out like that with date",
+      "start": 529.279,
+      "duration": 7.041
+    },
+    {
+      "text": "and now out of this we want to get the",
+      "start": 533.44,
+      "duration": 3.44
+    },
+    {
+      "text": "interest",
+      "start": 536.32,
+      "duration": 2.32
+    },
+    {
+      "text": "payment so that would be this",
+      "start": 536.88,
+      "duration": 4.16
+    },
+    {
+      "text": "non-operating interest expenses here",
+      "start": 538.64,
+      "duration": 6.0
+    },
+    {
+      "text": "so i'm going to copy that",
+      "start": 541.04,
+      "duration": 3.6
+    },
+    {
+      "text": "and there we got those interest expenses",
+      "start": 546.399,
+      "duration": 6.721
+    },
+    {
+      "text": "so i'm going to save that as interest",
+      "start": 550.72,
+      "duration": 4.799
+    },
+    {
+      "text": "expense",
+      "start": 553.12,
+      "duration": 6.96
+    },
+    {
+      "text": "and then next uh we are going to need",
+      "start": 555.519,
+      "duration": 7.601
+    },
+    {
+      "text": "the total debt so let's look",
+      "start": 560.08,
+      "duration": 6.72
+    },
+    {
+      "text": "at the balance sheet and we can pull out",
+      "start": 563.12,
+      "duration": 9.12
+    },
+    {
+      "text": "the um same date from the balance sheet",
+      "start": 566.8,
+      "duration": 8.56
+    },
+    {
+      "text": "and in here we have the total debt",
+      "start": 572.24,
+      "duration": 5.599
+    },
+    {
+      "text": "so we can just go ahead and use that if",
+      "start": 575.36,
+      "duration": 4.24
+    },
+    {
+      "text": "you didn't have the total debt",
+      "start": 577.839,
+      "duration": 5.12
+    },
+    {
+      "text": "then you could add up the long-term debt",
+      "start": 579.6,
+      "duration": 7.6
+    },
+    {
+      "text": "and the short-term debt in order to",
+      "start": 582.959,
+      "duration": 6.401
+    },
+    {
+      "text": "get the total debt but here we already",
+      "start": 587.2,
+      "duration": 3.28
+    },
+    {
+      "text": "have it as a line item",
+      "start": 589.36,
+      "duration": 4.56
+    },
+    {
+      "text": "so i'm just going to use that and so i'm",
+      "start": 590.48,
+      "duration": 5.68
+    },
+    {
+      "text": "pulling out total debt",
+      "start": 593.92,
+      "duration": 4.0
+    },
+    {
+      "text": "and we are able to get that so it",
+      "start": 596.16,
+      "duration": 4.4
+    },
+    {
+      "text": "totaled that",
+      "start": 597.92,
+      "duration": 2.64
+    },
+    {
+      "text": "and now in order to get the pre-tax cost",
+      "start": 600.959,
+      "duration": 3.201
+    },
+    {
+      "text": "of debt",
+      "start": 603.6,
+      "duration": 2.32
+    },
+    {
+      "text": "i can just take the interest expense",
+      "start": 604.16,
+      "duration": 5.359
+    },
+    {
+      "text": "divided by the total debt",
+      "start": 605.92,
+      "duration": 3.599
+    },
+    {
+      "text": "and that will get our pre-tax cost of",
+      "start": 609.6,
+      "duration": 3.2
+    },
+    {
+      "text": "debt so there it",
+      "start": 611.519,
+      "duration": 3.76
+    },
+    {
+      "text": "is 1.1 percent quite low but it's",
+      "start": 612.8,
+      "duration": 3.36
+    },
+    {
+      "text": "walmart so",
+      "start": 615.279,
+      "duration": 4.481
+    },
+    {
+      "text": "it makes sense",
+      "start": 616.16,
+      "duration": 6.96
+    },
+    {
+      "text": "and then next we are",
+      "start": 619.76,
+      "duration": 6.16
+    },
+    {
+      "text": "going to have to figure out the after",
+      "start": 623.12,
+      "duration": 4.32
+    },
+    {
+      "text": "tax cost of debt",
+      "start": 625.92,
+      "duration": 4.0
+    },
+    {
+      "text": "in order to do that we need the tax rate",
+      "start": 627.44,
+      "duration": 4.16
+    },
+    {
+      "text": "so the tax rate we also",
+      "start": 629.92,
+      "duration": 3.68
+    },
+    {
+      "text": "need to calculate from the financial",
+      "start": 631.6,
+      "duration": 3.359
+    },
+    {
+      "text": "information",
+      "start": 633.6,
+      "duration": 4.479
+    },
+    {
+      "text": "so we can go back to the income",
+      "start": 634.959,
+      "duration": 4.0
+    },
+    {
+      "text": "statement",
+      "start": 638.079,
+      "duration": 4.081
+    },
+    {
+      "text": "and look at the appropriate date um",
+      "start": 638.959,
+      "duration": 5.601
+    },
+    {
+      "text": "so in this income statement what we want",
+      "start": 642.16,
+      "duration": 3.2
+    },
+    {
+      "text": "to do is",
+      "start": 644.56,
+      "duration": 4.0
+    },
+    {
+      "text": "take the income taxes that were paid and",
+      "start": 645.36,
+      "duration": 4.159
+    },
+    {
+      "text": "divide those",
+      "start": 648.56,
+      "duration": 4.56
+    },
+    {
+      "text": "by the earnings before taxes",
+      "start": 649.519,
+      "duration": 6.641
+    },
+    {
+      "text": "from which the income tax payment is",
+      "start": 653.12,
+      "duration": 4.64
+    },
+    {
+      "text": "calculated",
+      "start": 656.16,
+      "duration": 5.919
+    },
+    {
+      "text": "so first we can pull out the income tax",
+      "start": 657.76,
+      "duration": 6.0
+    },
+    {
+      "text": "here it's called income tax provision",
+      "start": 662.079,
+      "duration": 4.32
+    },
+    {
+      "text": "that would be the amount of taxes that",
+      "start": 663.76,
+      "duration": 4.16
+    },
+    {
+      "text": "were actually paid",
+      "start": 666.399,
+      "duration": 4.721
+    },
+    {
+      "text": "so tax paid",
+      "start": 667.92,
+      "duration": 3.2
+    },
+    {
+      "text": "is going to be that",
+      "start": 671.36,
+      "duration": 6.96
+    },
+    {
+      "text": "and then we want to",
+      "start": 675.12,
+      "duration": 9.04
+    },
+    {
+      "text": "pull out the ebt as the other item",
+      "start": 678.32,
+      "duration": 5.84
+    },
+    {
+      "text": "okay so now we have the ebt",
+      "start": 685.04,
+      "duration": 7.359
+    },
+    {
+      "text": "and so when we take the tax paid",
+      "start": 689.2,
+      "duration": 4.96
+    },
+    {
+      "text": "and divide it by the ebt that should",
+      "start": 692.399,
+      "duration": 4.0
+    },
+    {
+      "text": "give us the tax rate and that's 25",
+      "start": 694.16,
+      "duration": 2.88
+    },
+    {
+      "text": "percent",
+      "start": 696.399,
+      "duration": 5.68
+    },
+    {
+      "text": "which sounds like a reasonable tax rate",
+      "start": 697.04,
+      "duration": 9.039
+    },
+    {
+      "text": "okay so now we can go ahead and um",
+      "start": 702.079,
+      "duration": 6.0
+    },
+    {
+      "text": "use the function that we already created",
+      "start": 706.079,
+      "duration": 4.88
+    },
+    {
+      "text": "in the last exercise show cost of debt",
+      "start": 708.079,
+      "duration": 4.961
+    },
+    {
+      "text": "uh and i can call that with the new",
+      "start": 710.959,
+      "duration": 3.841
+    },
+    {
+      "text": "pre-tax cost of debt",
+      "start": 713.04,
+      "duration": 4.799
+    },
+    {
+      "text": "and the tax rate",
+      "start": 714.8,
+      "duration": 3.039
+    },
+    {
+      "text": "and there we can see that the pre-tax",
+      "start": 719.6,
+      "duration": 3.039
+    },
+    {
+      "text": "cost of debt",
+      "start": 721.519,
+      "duration": 2.721
+    },
+    {
+      "text": "is one point one four percent and the",
+      "start": 722.639,
+      "duration": 3.44
+    },
+    {
+      "text": "after tax is a",
+      "start": 724.24,
+      "duration": 4.159
+    },
+    {
+      "text": "point eight five percent i'm just going",
+      "start": 726.079,
+      "duration": 3.76
+    },
+    {
+      "text": "to go quickly",
+      "start": 728.399,
+      "duration": 7.841
+    },
+    {
+      "text": "modify this to also print the tax rate",
+      "start": 729.839,
+      "duration": 6.401
+    },
+    {
+      "text": "okay and so then when i call this again",
+      "start": 742.8,
+      "duration": 4.08
+    },
+    {
+      "text": "it will also",
+      "start": 745.68,
+      "duration": 3.04
+    },
+    {
+      "text": "say that effective tax rate that we",
+      "start": 746.88,
+      "duration": 5.04
+    },
+    {
+      "text": "found as well",
+      "start": 748.72,
+      "duration": 7.04
+    },
+    {
+      "text": "so that wraps up these two lab exercises",
+      "start": 751.92,
+      "duration": 5.2
+    },
+    {
+      "text": "and the two approaches",
+      "start": 755.76,
+      "duration": 4.56
+    },
+    {
+      "text": "on how to calculate the cost of debt",
+      "start": 757.12,
+      "duration": 7.0
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 760.32,
+      "duration": 6.8
+    },
+    {
+      "text": "time",
+      "start": 764.12,
+      "duration": 3.0
+    }
+  ]
+}

@@ -1,0 +1,3134 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.639,
+      "duration": 2.481
+    },
+    {
+      "text": "this is nick dear burtis teaching you",
+      "start": 3.52,
+      "duration": 3.12
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.12,
+      "duration": 3.36
+    },
+    {
+      "text": "today we're going to be talking about",
+      "start": 6.64,
+      "duration": 4.079
+    },
+    {
+      "text": "how to calculate free cash flows",
+      "start": 8.48,
+      "duration": 6.319
+    },
+    {
+      "text": "in python using pandas and fin statement",
+      "start": 10.719,
+      "duration": 6.161
+    },
+    {
+      "text": "this is part of our lecture series on",
+      "start": 14.799,
+      "duration": 3.041
+    },
+    {
+      "text": "free cash flow",
+      "start": 16.88,
+      "duration": 3.76
+    },
+    {
+      "text": "estimation and forecasting as part of a",
+      "start": 17.84,
+      "duration": 3.68
+    },
+    {
+      "text": "larger goal",
+      "start": 20.64,
+      "duration": 3.36
+    },
+    {
+      "text": "of building out the discounted cash flow",
+      "start": 21.52,
+      "duration": 5.519
+    },
+    {
+      "text": "valuation of a stock",
+      "start": 24.0,
+      "duration": 6.32
+    },
+    {
+      "text": "so we already gave an introduction",
+      "start": 27.039,
+      "duration": 5.921
+    },
+    {
+      "text": "to the free cash flow side of the model",
+      "start": 30.32,
+      "duration": 3.28
+    },
+    {
+      "text": "and",
+      "start": 32.96,
+      "duration": 3.36
+    },
+    {
+      "text": "how to calculate free cash flows",
+      "start": 33.6,
+      "duration": 4.24
+    },
+    {
+      "text": "historically",
+      "start": 36.32,
+      "duration": 3.919
+    },
+    {
+      "text": "uh in prior videos so take a look at",
+      "start": 37.84,
+      "duration": 4.879
+    },
+    {
+      "text": "those if you haven't already",
+      "start": 40.239,
+      "duration": 4.561
+    },
+    {
+      "text": "and now we're going to actually just",
+      "start": 42.719,
+      "duration": 3.84
+    },
+    {
+      "text": "jump right into the calculation",
+      "start": 44.8,
+      "duration": 4.96
+    },
+    {
+      "text": "in python so let's go over",
+      "start": 46.559,
+      "duration": 6.801
+    },
+    {
+      "text": "to the jupiter notebook",
+      "start": 49.76,
+      "duration": 3.6
+    },
+    {
+      "text": "so at first we'll look at just using",
+      "start": 54.0,
+      "duration": 4.559
+    },
+    {
+      "text": "pennis and then we'll look",
+      "start": 57.039,
+      "duration": 4.801
+    },
+    {
+      "text": "at an additional tool that i",
+      "start": 58.559,
+      "duration": 5.841
+    },
+    {
+      "text": "developed called fin statement that",
+      "start": 61.84,
+      "duration": 3.2
+    },
+    {
+      "text": "makes",
+      "start": 64.4,
+      "duration": 4.16
+    },
+    {
+      "text": "some of this process quite a bit easier",
+      "start": 65.04,
+      "duration": 6.56
+    },
+    {
+      "text": "but first focusing just on panic so we",
+      "start": 68.56,
+      "duration": 3.76
+    },
+    {
+      "text": "have",
+      "start": 71.6,
+      "duration": 3.519
+    },
+    {
+      "text": "some financial statements in an external",
+      "start": 72.32,
+      "duration": 4.72
+    },
+    {
+      "text": "excel file and we want to get them",
+      "start": 75.119,
+      "duration": 5.521
+    },
+    {
+      "text": "into python so the first thing i'm going",
+      "start": 77.04,
+      "duration": 4.16
+    },
+    {
+      "text": "to do is",
+      "start": 80.64,
+      "duration": 4.2
+    },
+    {
+      "text": "import pandas and just set the name of",
+      "start": 81.2,
+      "duration": 6.0
+    },
+    {
+      "text": "that file which has the financial",
+      "start": 84.84,
+      "duration": 3.24
+    },
+    {
+      "text": "statements",
+      "start": 87.2,
+      "duration": 4.08
+    },
+    {
+      "text": "and i'm going to read that in with",
+      "start": 88.08,
+      "duration": 5.52
+    },
+    {
+      "text": "parents's read excel method",
+      "start": 91.28,
+      "duration": 4.479
+    },
+    {
+      "text": "and then we can just do dot head on the",
+      "start": 93.6,
+      "duration": 4.32
+    },
+    {
+      "text": "resulting data frame to check out what",
+      "start": 95.759,
+      "duration": 3.601
+    },
+    {
+      "text": "we got",
+      "start": 97.92,
+      "duration": 4.159
+    },
+    {
+      "text": "now we can immediately see this is maybe",
+      "start": 99.36,
+      "duration": 3.2
+    },
+    {
+      "text": "not",
+      "start": 102.079,
+      "duration": 3.921
+    },
+    {
+      "text": "100 percent what we expected to get uh",
+      "start": 102.56,
+      "duration": 6.32
+    },
+    {
+      "text": "it looks a little bit messy we have this",
+      "start": 106.0,
+      "duration": 4.079
+    },
+    {
+      "text": "unnamed thing",
+      "start": 108.88,
+      "duration": 4.8
+    },
+    {
+      "text": "we have these mans going on sometimes it",
+      "start": 110.079,
+      "duration": 7.201
+    },
+    {
+      "text": "snans sometimes it stashes",
+      "start": 113.68,
+      "duration": 6.96
+    },
+    {
+      "text": "so some cleanup is needed here in order",
+      "start": 117.28,
+      "duration": 4.0
+    },
+    {
+      "text": "to",
+      "start": 120.64,
+      "duration": 4.159
+    },
+    {
+      "text": "work with this one other thing",
+      "start": 121.28,
+      "duration": 7.759
+    },
+    {
+      "text": "is that these statement line items",
+      "start": 124.799,
+      "duration": 6.401
+    },
+    {
+      "text": "if we have them in the index we'll be",
+      "start": 129.039,
+      "duration": 3.92
+    },
+    {
+      "text": "able to look up",
+      "start": 131.2,
+      "duration": 4.64
+    },
+    {
+      "text": "uh the various line items but it's a",
+      "start": 132.959,
+      "duration": 4.241
+    },
+    {
+      "text": "little bit more difficult to do that",
+      "start": 135.84,
+      "duration": 3.28
+    },
+    {
+      "text": "when they're just in a column",
+      "start": 137.2,
+      "duration": 5.119
+    },
+    {
+      "text": "so we can",
+      "start": 139.12,
+      "duration": 5.92
+    },
+    {
+      "text": "um add this argument to the read excel",
+      "start": 142.319,
+      "duration": 3.121
+    },
+    {
+      "text": "method",
+      "start": 145.04,
+      "duration": 3.44
+    },
+    {
+      "text": "and index column equals zero",
+      "start": 145.44,
+      "duration": 4.879
+    },
+    {
+      "text": "and when we do that it's saying take the",
+      "start": 148.48,
+      "duration": 3.28
+    },
+    {
+      "text": "first column here",
+      "start": 150.319,
+      "duration": 3.92
+    },
+    {
+      "text": "and set that as the index and so that",
+      "start": 151.76,
+      "duration": 3.92
+    },
+    {
+      "text": "solves our unnamed",
+      "start": 154.239,
+      "duration": 3.201
+    },
+    {
+      "text": "issue because now that's the index it",
+      "start": 155.68,
+      "duration": 3.199
+    },
+    {
+      "text": "doesn't need a name",
+      "start": 157.44,
+      "duration": 3.68
+    },
+    {
+      "text": "and it solves this issue of these things",
+      "start": 158.879,
+      "duration": 3.841
+    },
+    {
+      "text": "should probably be in the index now they",
+      "start": 161.12,
+      "duration": 3.759
+    },
+    {
+      "text": "are",
+      "start": 162.72,
+      "duration": 2.159
+    },
+    {
+      "text": "so then next we have to deal with",
+      "start": 166.239,
+      "duration": 7.761
+    },
+    {
+      "text": "this nan versus dash issue",
+      "start": 169.84,
+      "duration": 7.36
+    },
+    {
+      "text": "nan is the representation for",
+      "start": 174.0,
+      "duration": 7.2
+    },
+    {
+      "text": "missing in pandas and dash",
+      "start": 177.2,
+      "duration": 7.52
+    },
+    {
+      "text": "were just some strings in the excel file",
+      "start": 181.2,
+      "duration": 4.48
+    },
+    {
+      "text": "that got loaded in",
+      "start": 184.72,
+      "duration": 3.84
+    },
+    {
+      "text": "where that's how the excel file is",
+      "start": 185.68,
+      "duration": 3.919
+    },
+    {
+      "text": "representing them as",
+      "start": 188.56,
+      "duration": 4.64
+    },
+    {
+      "text": "missing um but here they're coming in as",
+      "start": 189.599,
+      "duration": 6.64
+    },
+    {
+      "text": "the string dash",
+      "start": 193.2,
+      "duration": 5.28
+    },
+    {
+      "text": "so ultimately we want to clear out these",
+      "start": 196.239,
+      "duration": 3.601
+    },
+    {
+      "text": "empty rows",
+      "start": 198.48,
+      "duration": 3.6
+    },
+    {
+      "text": "and we want to make sure that when",
+      "start": 199.84,
+      "duration": 3.28
+    },
+    {
+      "text": "something is missing",
+      "start": 202.08,
+      "duration": 2.32
+    },
+    {
+      "text": "that we're actually getting it as",
+      "start": 203.12,
+      "duration": 3.839
+    },
+    {
+      "text": "missing and not as a string",
+      "start": 204.4,
+      "duration": 6.479
+    },
+    {
+      "text": "so what we can do is we want to replace",
+      "start": 206.959,
+      "duration": 7.2
+    },
+    {
+      "text": "uh this dash with",
+      "start": 210.879,
+      "duration": 7.041
+    },
+    {
+      "text": "the missing representation nam and you",
+      "start": 214.159,
+      "duration": 6.8
+    },
+    {
+      "text": "import uh once you import numpy then",
+      "start": 217.92,
+      "duration": 3.84
+    },
+    {
+      "text": "it's",
+      "start": 220.959,
+      "duration": 4.0
+    },
+    {
+      "text": "numpy dot nam that's",
+      "start": 221.76,
+      "duration": 6.399
+    },
+    {
+      "text": "the missing representation so we're just",
+      "start": 224.959,
+      "duration": 5.441
+    },
+    {
+      "text": "replacing everywhere in the data frame",
+      "start": 228.159,
+      "duration": 4.8
+    },
+    {
+      "text": "where there's the string dash with a",
+      "start": 230.4,
+      "duration": 3.52
+    },
+    {
+      "text": "missing",
+      "start": 232.959,
+      "duration": 3.121
+    },
+    {
+      "text": "and then we can see that what was a dash",
+      "start": 233.92,
+      "duration": 3.36
+    },
+    {
+      "text": "before now",
+      "start": 236.08,
+      "duration": 4.4
+    },
+    {
+      "text": "is the same nan not a number missing",
+      "start": 237.28,
+      "duration": 6.239
+    },
+    {
+      "text": "value so now that we",
+      "start": 240.48,
+      "duration": 7.36
+    },
+    {
+      "text": "have the missing values appropriately",
+      "start": 243.519,
+      "duration": 5.28
+    },
+    {
+      "text": "where they should be",
+      "start": 247.84,
+      "duration": 4.0
+    },
+    {
+      "text": "now we can go ahead and drop the missing",
+      "start": 248.799,
+      "duration": 4.561
+    },
+    {
+      "text": "values",
+      "start": 251.84,
+      "duration": 3.679
+    },
+    {
+      "text": "but we don't want to accidentally drop",
+      "start": 253.36,
+      "duration": 3.04
+    },
+    {
+      "text": "this this is",
+      "start": 255.519,
+      "duration": 2.801
+    },
+    {
+      "text": "important to keep this other revenue",
+      "start": 256.4,
+      "duration": 3.2
+    },
+    {
+      "text": "even though the others",
+      "start": 258.32,
+      "duration": 5.28
+    },
+    {
+      "text": "are not there and so",
+      "start": 259.6,
+      "duration": 7.36
+    },
+    {
+      "text": "we will pass to the drop n a method uh",
+      "start": 263.6,
+      "duration": 7.36
+    },
+    {
+      "text": "this how argument of how equals all",
+      "start": 266.96,
+      "duration": 6.64
+    },
+    {
+      "text": "saying that we only want to drop the row",
+      "start": 270.96,
+      "duration": 4.239
+    },
+    {
+      "text": "if every value in the row",
+      "start": 273.6,
+      "duration": 5.12
+    },
+    {
+      "text": "is missing so when we do that",
+      "start": 275.199,
+      "duration": 5.921
+    },
+    {
+      "text": "then we see that these totally blank",
+      "start": 278.72,
+      "duration": 4.4
+    },
+    {
+      "text": "rows that were there before",
+      "start": 281.12,
+      "duration": 4.799
+    },
+    {
+      "text": "are now gone but we're still left with",
+      "start": 283.12,
+      "duration": 5.68
+    },
+    {
+      "text": "the row that had some missings in it",
+      "start": 285.919,
+      "duration": 6.641
+    },
+    {
+      "text": "but at least one valid value",
+      "start": 288.8,
+      "duration": 5.36
+    },
+    {
+      "text": "so now this is looking quite a bit",
+      "start": 292.56,
+      "duration": 4.639
+    },
+    {
+      "text": "better than what we started with",
+      "start": 294.16,
+      "duration": 5.44
+    },
+    {
+      "text": "so we can go ahead and wrap these steps",
+      "start": 297.199,
+      "duration": 4.481
+    },
+    {
+      "text": "up into a function",
+      "start": 299.6,
+      "duration": 6.159
+    },
+    {
+      "text": "load and clean statement data frame",
+      "start": 301.68,
+      "duration": 4.079
+    },
+    {
+      "text": "give it the path of the statements and",
+      "start": 305.84,
+      "duration": 5.359
+    },
+    {
+      "text": "the name of the sheet and it does these",
+      "start": 308.16,
+      "duration": 6.56
+    },
+    {
+      "text": "three steps that we mentioned so then uh",
+      "start": 311.199,
+      "duration": 5.361
+    },
+    {
+      "text": "here i'm just starting in from scratch",
+      "start": 314.72,
+      "duration": 4.96
+    },
+    {
+      "text": "by using that function",
+      "start": 316.56,
+      "duration": 3.12
+    },
+    {
+      "text": "and we're loading in the income",
+      "start": 319.919,
+      "duration": 3.361
+    },
+    {
+      "text": "statement and now we can see it just",
+      "start": 321.44,
+      "duration": 2.56
+    },
+    {
+      "text": "looks like this",
+      "start": 323.28,
+      "duration": 3.84
+    },
+    {
+      "text": "already it was good to build out a",
+      "start": 324.0,
+      "duration": 4.4
+    },
+    {
+      "text": "function for this because we were going",
+      "start": 327.12,
+      "duration": 1.919
+    },
+    {
+      "text": "to have to do",
+      "start": 328.4,
+      "duration": 2.079
+    },
+    {
+      "text": "all the same things with the balance",
+      "start": 329.039,
+      "duration": 3.121
+    },
+    {
+      "text": "sheet um",
+      "start": 330.479,
+      "duration": 4.801
+    },
+    {
+      "text": "so now that just becomes a one-liner we",
+      "start": 332.16,
+      "duration": 4.4
+    },
+    {
+      "text": "can do the same thing with the balance",
+      "start": 335.28,
+      "duration": 1.759
+    },
+    {
+      "text": "sheet",
+      "start": 336.56,
+      "duration": 5.6
+    },
+    {
+      "text": "and that comes in nice and clean as well",
+      "start": 337.039,
+      "duration": 5.121
+    },
+    {
+      "text": "so that's the kind of initial loading",
+      "start": 343.36,
+      "duration": 5.92
+    },
+    {
+      "text": "process that you do with pandas and",
+      "start": 347.44,
+      "duration": 3.44
+    },
+    {
+      "text": "you'll need to do that",
+      "start": 349.28,
+      "duration": 3.919
+    },
+    {
+      "text": "regardless of whether you choose to do",
+      "start": 350.88,
+      "duration": 3.599
+    },
+    {
+      "text": "the actual",
+      "start": 353.199,
+      "duration": 3.12
+    },
+    {
+      "text": "uh free cash flow calculation with",
+      "start": 354.479,
+      "duration": 5.201
+    },
+    {
+      "text": "pandas or with fin statement",
+      "start": 356.319,
+      "duration": 5.921
+    },
+    {
+      "text": "but let's look at how we can do all this",
+      "start": 359.68,
+      "duration": 5.04
+    },
+    {
+      "text": "with just pandas first",
+      "start": 362.24,
+      "duration": 5.36
+    },
+    {
+      "text": "so as a reminder for what we're doing",
+      "start": 364.72,
+      "duration": 4.24
+    },
+    {
+      "text": "we're calculating these three",
+      "start": 367.6,
+      "duration": 2.719
+    },
+    {
+      "text": "adjustments to net income",
+      "start": 368.96,
+      "duration": 3.2
+    },
+    {
+      "text": "non-cash expenses increase in working",
+      "start": 370.319,
+      "duration": 4.961
+    },
+    {
+      "text": "capital and capital expenditures",
+      "start": 372.16,
+      "duration": 6.479
+    },
+    {
+      "text": "uh all explained in the prior videos um",
+      "start": 375.28,
+      "duration": 5.359
+    },
+    {
+      "text": "and then we're going to calculate the",
+      "start": 378.639,
+      "duration": 3.84
+    },
+    {
+      "text": "free cash flow from the net income and",
+      "start": 380.639,
+      "duration": 4.56
+    },
+    {
+      "text": "these items",
+      "start": 382.479,
+      "duration": 2.72
+    },
+    {
+      "text": "so um we",
+      "start": 386.08,
+      "duration": 4.239
+    },
+    {
+      "text": "are going to need to work with these",
+      "start": 389.12,
+      "duration": 3.28
+    },
+    {
+      "text": "statement items so let's look at",
+      "start": 390.319,
+      "duration": 3.841
+    },
+    {
+      "text": "everything that we've got we can do dot",
+      "start": 392.4,
+      "duration": 2.4
+    },
+    {
+      "text": "index",
+      "start": 394.16,
+      "duration": 3.36
+    },
+    {
+      "text": "to see everything that's in that index",
+      "start": 394.8,
+      "duration": 3.92
+    },
+    {
+      "text": "and you can see",
+      "start": 397.52,
+      "duration": 2.72
+    },
+    {
+      "text": "all the different items that we have",
+      "start": 398.72,
+      "duration": 3.84
+    },
+    {
+      "text": "here",
+      "start": 400.24,
+      "duration": 2.32
+    },
+    {
+      "text": "and then in order to look up a given",
+      "start": 403.28,
+      "duration": 4.56
+    },
+    {
+      "text": "item we can",
+      "start": 405.039,
+      "duration": 6.481
+    },
+    {
+      "text": "use dot look and then pass it the string",
+      "start": 407.84,
+      "duration": 6.56
+    },
+    {
+      "text": "of the index value in order to get that",
+      "start": 411.52,
+      "duration": 3.84
+    },
+    {
+      "text": "entire row",
+      "start": 414.4,
+      "duration": 4.0
+    },
+    {
+      "text": "of the data frame",
+      "start": 415.36,
+      "duration": 3.04
+    },
+    {
+      "text": "so we can get this asset write down",
+      "start": 418.56,
+      "duration": 8.32
+    },
+    {
+      "text": "expense by doing dot loc with asset",
+      "start": 422.479,
+      "duration": 5.921
+    },
+    {
+      "text": "write down and we can see it gets us",
+      "start": 426.88,
+      "duration": 2.319
+    },
+    {
+      "text": "each year",
+      "start": 428.4,
+      "duration": 4.96
+    },
+    {
+      "text": "of the expense as a panda series",
+      "start": 429.199,
+      "duration": 4.161
+    },
+    {
+      "text": "so um",
+      "start": 435.52,
+      "duration": 6.959
+    },
+    {
+      "text": "one other thing we have to consider is",
+      "start": 439.28,
+      "duration": 5.84
+    },
+    {
+      "text": "we've said in our calculation that uh",
+      "start": 442.479,
+      "duration": 3.601
+    },
+    {
+      "text": "we're going to",
+      "start": 445.12,
+      "duration": 4.079
+    },
+    {
+      "text": "add this but it's coming as a negative",
+      "start": 446.08,
+      "duration": 6.959
+    },
+    {
+      "text": "number here um so we need to think about",
+      "start": 449.199,
+      "duration": 6.961
+    },
+    {
+      "text": "basically the costs on the",
+      "start": 453.039,
+      "duration": 4.801
+    },
+    {
+      "text": "income statement are they being",
+      "start": 456.16,
+      "duration": 3.759
+    },
+    {
+      "text": "represented as negative or positive",
+      "start": 457.84,
+      "duration": 3.84
+    },
+    {
+      "text": "numbers different financial statements",
+      "start": 459.919,
+      "duration": 3.601
+    },
+    {
+      "text": "will show it differently",
+      "start": 461.68,
+      "duration": 4.48
+    },
+    {
+      "text": "um because you can say well it's a",
+      "start": 463.52,
+      "duration": 4.72
+    },
+    {
+      "text": "positive cost so it subtracts or you",
+      "start": 466.16,
+      "duration": 2.719
+    },
+    {
+      "text": "could say",
+      "start": 468.24,
+      "duration": 2.48
+    },
+    {
+      "text": "well the cost is subtracting and so it's",
+      "start": 468.879,
+      "duration": 3.121
+    },
+    {
+      "text": "negative",
+      "start": 470.72,
+      "duration": 4.24
+    },
+    {
+      "text": "um so you'll need to pay attention to",
+      "start": 472.0,
+      "duration": 3.44
+    },
+    {
+      "text": "that",
+      "start": 474.96,
+      "duration": 3.519
+    },
+    {
+      "text": "and handle that as you",
+      "start": 475.44,
+      "duration": 5.92
+    },
+    {
+      "text": "work with the line items so we want this",
+      "start": 478.479,
+      "duration": 4.641
+    },
+    {
+      "text": "to be a positive cost",
+      "start": 481.36,
+      "duration": 3.519
+    },
+    {
+      "text": "and so we're going to take the absolute",
+      "start": 483.12,
+      "duration": 3.12
+    },
+    {
+      "text": "value with",
+      "start": 484.879,
+      "duration": 4.88
+    },
+    {
+      "text": "the built-in ads function",
+      "start": 486.24,
+      "duration": 3.519
+    },
+    {
+      "text": "um so we're trying to calculate this",
+      "start": 490.84,
+      "duration": 7.4
+    },
+    {
+      "text": "non-cash uh expenses so we'll also need",
+      "start": 494.879,
+      "duration": 5.121
+    },
+    {
+      "text": "the depreciation",
+      "start": 498.24,
+      "duration": 4.72
+    },
+    {
+      "text": "so we can grab that and since we can do",
+      "start": 500.0,
+      "duration": 4.56
+    },
+    {
+      "text": "math directly with series",
+      "start": 502.96,
+      "duration": 3.12
+    },
+    {
+      "text": "we can just add these two things",
+      "start": 504.56,
+      "duration": 3.44
+    },
+    {
+      "text": "together",
+      "start": 506.08,
+      "duration": 5.04
+    },
+    {
+      "text": "and now we can see that we have",
+      "start": 508.0,
+      "duration": 4.8
+    },
+    {
+      "text": "these values added together",
+      "start": 511.12,
+      "duration": 3.44
+    },
+    {
+      "text": "appropriately",
+      "start": 512.8,
+      "duration": 3.2
+    },
+    {
+      "text": "but we'll notice that something strange",
+      "start": 514.56,
+      "duration": 3.919
+    },
+    {
+      "text": "here happened with the first two years",
+      "start": 516.0,
+      "duration": 4.959
+    },
+    {
+      "text": "even though we had depreciation numbers",
+      "start": 518.479,
+      "duration": 3.281
+    },
+    {
+      "text": "for that year",
+      "start": 520.959,
+      "duration": 2.64
+    },
+    {
+      "text": "we're now getting missing and that's",
+      "start": 521.76,
+      "duration": 4.0
+    },
+    {
+      "text": "because the numbers were missing",
+      "start": 523.599,
+      "duration": 4.881
+    },
+    {
+      "text": "in this uh other series of the",
+      "start": 525.76,
+      "duration": 5.199
+    },
+    {
+      "text": "impairment or asset write down",
+      "start": 528.48,
+      "duration": 5.6
+    },
+    {
+      "text": "so um whenever you uh do math with a",
+      "start": 530.959,
+      "duration": 4.32
+    },
+    {
+      "text": "missing number",
+      "start": 534.08,
+      "duration": 2.96
+    },
+    {
+      "text": "it's going to cause the k the whole",
+      "start": 535.279,
+      "duration": 4.161
+    },
+    {
+      "text": "calculation to become missing",
+      "start": 537.04,
+      "duration": 5.359
+    },
+    {
+      "text": "but really in this case uh it wasn't",
+      "start": 539.44,
+      "duration": 4.959
+    },
+    {
+      "text": "missing it should have been zero",
+      "start": 542.399,
+      "duration": 4.241
+    },
+    {
+      "text": "for these there just was no expense and",
+      "start": 544.399,
+      "duration": 3.681
+    },
+    {
+      "text": "so it ended up is missing",
+      "start": 546.64,
+      "duration": 4.56
+    },
+    {
+      "text": "but really it's zero",
+      "start": 548.08,
+      "duration": 3.12
+    },
+    {
+      "text": "so what we can do is fill in all those",
+      "start": 551.76,
+      "duration": 4.24
+    },
+    {
+      "text": "missing values",
+      "start": 555.04,
+      "duration": 4.08
+    },
+    {
+      "text": "in the data frames with a zero so that's",
+      "start": 556.0,
+      "duration": 3.76
+    },
+    {
+      "text": "what this",
+      "start": 559.12,
+      "duration": 2.399
+    },
+    {
+      "text": "fill and a is doing we're going to put a",
+      "start": 559.76,
+      "duration": 4.4
+    },
+    {
+      "text": "zero in for everywhere that had",
+      "start": 561.519,
+      "duration": 5.361
+    },
+    {
+      "text": "a missing number and then when we look",
+      "start": 564.16,
+      "duration": 3.2
+    },
+    {
+      "text": "again",
+      "start": 566.88,
+      "duration": 2.56
+    },
+    {
+      "text": "at this impairment charge we now see",
+      "start": 567.36,
+      "duration": 4.0
+    },
+    {
+      "text": "zeros coming there",
+      "start": 569.44,
+      "duration": 3.92
+    },
+    {
+      "text": "and that allows the calculation to go",
+      "start": 571.36,
+      "duration": 4.96
+    },
+    {
+      "text": "through as expected",
+      "start": 573.36,
+      "duration": 5.44
+    },
+    {
+      "text": "so then we can go ahead and do the full",
+      "start": 576.32,
+      "duration": 3.28
+    },
+    {
+      "text": "calculation",
+      "start": 578.8,
+      "duration": 5.2
+    },
+    {
+      "text": "of these four different line items",
+      "start": 579.6,
+      "duration": 7.44
+    },
+    {
+      "text": "and then we get our non-cash expenses",
+      "start": 584.0,
+      "duration": 7.44
+    },
+    {
+      "text": "here as a series",
+      "start": 587.04,
+      "duration": 7.44
+    },
+    {
+      "text": "next we go to calculating uh the change",
+      "start": 591.44,
+      "duration": 5.12
+    },
+    {
+      "text": "in working capital",
+      "start": 594.48,
+      "duration": 5.28
+    },
+    {
+      "text": "um so we need to pull the appropriate",
+      "start": 596.56,
+      "duration": 5.519
+    },
+    {
+      "text": "items so let's look at our index again",
+      "start": 599.76,
+      "duration": 4.319
+    },
+    {
+      "text": "we're gonna need to use uh accounts",
+      "start": 602.079,
+      "duration": 3.601
+    },
+    {
+      "text": "receivable",
+      "start": 604.079,
+      "duration": 4.961
+    },
+    {
+      "text": "uh inventory and accounts payable so",
+      "start": 605.68,
+      "duration": 6.56
+    },
+    {
+      "text": "we just put those things together and",
+      "start": 609.04,
+      "duration": 6.16
+    },
+    {
+      "text": "we get these uh connected together but",
+      "start": 612.24,
+      "duration": 3.839
+    },
+    {
+      "text": "now",
+      "start": 615.2,
+      "duration": 3.44
+    },
+    {
+      "text": "this is the current networking capital",
+      "start": 616.079,
+      "duration": 4.401
+    },
+    {
+      "text": "we need to calculate the change",
+      "start": 618.64,
+      "duration": 5.199
+    },
+    {
+      "text": "in networking capital so there is a way",
+      "start": 620.48,
+      "duration": 4.08
+    },
+    {
+      "text": "to do this",
+      "start": 623.839,
+      "duration": 3.68
+    },
+    {
+      "text": "uh change uh kind of concept and panzer",
+      "start": 624.56,
+      "duration": 4.48
+    },
+    {
+      "text": "and pandas",
+      "start": 627.519,
+      "duration": 5.121
+    },
+    {
+      "text": "if we use the dot shift",
+      "start": 629.04,
+      "duration": 3.6
+    },
+    {
+      "text": "method that allows us to move",
+      "start": 632.959,
+      "duration": 7.521
+    },
+    {
+      "text": "the the series values",
+      "start": 636.24,
+      "duration": 4.24
+    },
+    {
+      "text": "up or down by a certain number",
+      "start": 640.8,
+      "duration": 6.88
+    },
+    {
+      "text": "so here shift one is going to",
+      "start": 644.32,
+      "duration": 6.8
+    },
+    {
+      "text": "move all the values forward by",
+      "start": 647.68,
+      "duration": 7.279
+    },
+    {
+      "text": "one period um so that",
+      "start": 651.12,
+      "duration": 6.56
+    },
+    {
+      "text": "um when we look at the 2015 value what",
+      "start": 654.959,
+      "duration": 3.841
+    },
+    {
+      "text": "we have",
+      "start": 657.68,
+      "duration": 4.88
+    },
+    {
+      "text": "uh in the shifted is actually the 2014",
+      "start": 658.8,
+      "duration": 6.56
+    },
+    {
+      "text": "value um so that's what we want to",
+      "start": 662.56,
+      "duration": 4.16
+    },
+    {
+      "text": "calculate the change",
+      "start": 665.36,
+      "duration": 4.0
+    },
+    {
+      "text": "we want to do the original minus the",
+      "start": 666.72,
+      "duration": 4.88
+    },
+    {
+      "text": "shifted by one period",
+      "start": 669.36,
+      "duration": 4.56
+    },
+    {
+      "text": "and then of course we can't get the",
+      "start": 671.6,
+      "duration": 4.08
+    },
+    {
+      "text": "first period because we have no prior",
+      "start": 673.92,
+      "duration": 3.039
+    },
+    {
+      "text": "period",
+      "start": 675.68,
+      "duration": 2.48
+    },
+    {
+      "text": "but then looking at the second we're",
+      "start": 676.959,
+      "duration": 4.481
+    },
+    {
+      "text": "getting 1481 which appears to be",
+      "start": 678.16,
+      "duration": 7.2
+    },
+    {
+      "text": "uh the change between 15 and",
+      "start": 681.44,
+      "duration": 6.959
+    },
+    {
+      "text": "uh or yeah between 14 and",
+      "start": 685.36,
+      "duration": 6.719
+    },
+    {
+      "text": "15 so that looks like it's",
+      "start": 688.399,
+      "duration": 6.801
+    },
+    {
+      "text": "working appropriately",
+      "start": 692.079,
+      "duration": 3.121
+    },
+    {
+      "text": "then we need to calculate capital",
+      "start": 697.36,
+      "duration": 3.68
+    },
+    {
+      "text": "expenditures",
+      "start": 699.36,
+      "duration": 4.88
+    },
+    {
+      "text": "and you'll notice",
+      "start": 701.04,
+      "duration": 6.0
+    },
+    {
+      "text": "back when we look at this index that",
+      "start": 704.24,
+      "duration": 4.64
+    },
+    {
+      "text": "that property plant equipment",
+      "start": 707.04,
+      "duration": 4.96
+    },
+    {
+      "text": "came with a space on the beginning",
+      "start": 708.88,
+      "duration": 5.28
+    },
+    {
+      "text": "so unfortunately we do need to include",
+      "start": 712.0,
+      "duration": 4.0
+    },
+    {
+      "text": "that space unless we go and change",
+      "start": 714.16,
+      "duration": 4.0
+    },
+    {
+      "text": "the name of the column when we do it",
+      "start": 716.0,
+      "duration": 4.48
+    },
+    {
+      "text": "like that we're able to look it up",
+      "start": 718.16,
+      "duration": 4.799
+    },
+    {
+      "text": "but if we did it without the space we",
+      "start": 720.48,
+      "duration": 3.44
+    },
+    {
+      "text": "would get an",
+      "start": 722.959,
+      "duration": 3.761
+    },
+    {
+      "text": "error so you do need to be careful about",
+      "start": 723.92,
+      "duration": 4.0
+    },
+    {
+      "text": "your column names",
+      "start": 726.72,
+      "duration": 2.48
+    },
+    {
+      "text": "and they're not always going to be",
+      "start": 727.92,
+      "duration": 3.359
+    },
+    {
+      "text": "loaded in perfectly cleanly",
+      "start": 729.2,
+      "duration": 6.56
+    },
+    {
+      "text": "when you just pull in an excel sheet um",
+      "start": 731.279,
+      "duration": 8.721
+    },
+    {
+      "text": "so you may want to just rename the items",
+      "start": 735.76,
+      "duration": 7.12
+    },
+    {
+      "text": "or you can just work with them as is",
+      "start": 740.0,
+      "duration": 3.279
+    },
+    {
+      "text": "with",
+      "start": 742.88,
+      "duration": 2.8
+    },
+    {
+      "text": "the additional spacing or whatever else",
+      "start": 743.279,
+      "duration": 4.961
+    },
+    {
+      "text": "is coming in",
+      "start": 745.68,
+      "duration": 2.56
+    },
+    {
+      "text": "anyway we uh get our net ppe here",
+      "start": 748.48,
+      "duration": 8.64
+    },
+    {
+      "text": "without loc and then we want to",
+      "start": 751.92,
+      "duration": 7.919
+    },
+    {
+      "text": "get the change in that uh similarly to",
+      "start": 757.12,
+      "duration": 4.08
+    },
+    {
+      "text": "what we did",
+      "start": 759.839,
+      "duration": 5.68
+    },
+    {
+      "text": "for the networking capital",
+      "start": 761.2,
+      "duration": 5.92
+    },
+    {
+      "text": "and then to the change we add the",
+      "start": 765.519,
+      "duration": 3.44
+    },
+    {
+      "text": "current appreciation",
+      "start": 767.12,
+      "duration": 4.959
+    },
+    {
+      "text": "and amortization so here now",
+      "start": 768.959,
+      "duration": 6.241
+    },
+    {
+      "text": "we have the capital expenditures",
+      "start": 772.079,
+      "duration": 5.2
+    },
+    {
+      "text": "so then we just put all that together",
+      "start": 775.2,
+      "duration": 4.639
+    },
+    {
+      "text": "into the free cash flows",
+      "start": 777.279,
+      "duration": 5.36
+    },
+    {
+      "text": "um take the net income add the dot cash",
+      "start": 779.839,
+      "duration": 4.401
+    },
+    {
+      "text": "expenses subtract the change in net",
+      "start": 782.639,
+      "duration": 4.561
+    },
+    {
+      "text": "working capital and subtract the capex",
+      "start": 784.24,
+      "duration": 5.68
+    },
+    {
+      "text": "and there we are left with the free cash",
+      "start": 787.2,
+      "duration": 4.56
+    },
+    {
+      "text": "flows",
+      "start": 789.92,
+      "duration": 3.359
+    },
+    {
+      "text": "and of course we can't get them for the",
+      "start": 791.76,
+      "duration": 4.48
+    },
+    {
+      "text": "first year because we had no prior year",
+      "start": 793.279,
+      "duration": 7.441
+    },
+    {
+      "text": "for the changed items",
+      "start": 796.24,
+      "duration": 7.76
+    },
+    {
+      "text": "so then we can look",
+      "start": 800.72,
+      "duration": 5.6
+    },
+    {
+      "text": "at perhaps an easier way to go about",
+      "start": 804.0,
+      "duration": 3.2
+    },
+    {
+      "text": "this uh",
+      "start": 806.32,
+      "duration": 4.48
+    },
+    {
+      "text": "using the fan statement package so",
+      "start": 807.2,
+      "duration": 6.639
+    },
+    {
+      "text": "uh i actually created this package",
+      "start": 810.8,
+      "duration": 5.839
+    },
+    {
+      "text": "because i felt like this process that we",
+      "start": 813.839,
+      "duration": 4.321
+    },
+    {
+      "text": "just went through is a little bit",
+      "start": 816.639,
+      "duration": 5.041
+    },
+    {
+      "text": "arduous or something that should be",
+      "start": 818.16,
+      "duration": 4.64
+    },
+    {
+      "text": "pretty simple",
+      "start": 821.68,
+      "duration": 4.88
+    },
+    {
+      "text": "and that lots of people need to do",
+      "start": 822.8,
+      "duration": 3.76
+    },
+    {
+      "text": "and there were a number of things about",
+      "start": 827.36,
+      "duration": 3.52
+    },
+    {
+      "text": "this that make it",
+      "start": 829.519,
+      "duration": 4.721
+    },
+    {
+      "text": "difficult to repeat um",
+      "start": 830.88,
+      "duration": 6.0
+    },
+    {
+      "text": "and make it make the code just you know",
+      "start": 834.24,
+      "duration": 4.719
+    },
+    {
+      "text": "very tied to these specific financial",
+      "start": 836.88,
+      "duration": 3.36
+    },
+    {
+      "text": "statements",
+      "start": 838.959,
+      "duration": 3.361
+    },
+    {
+      "text": "rather than working for any given",
+      "start": 840.24,
+      "duration": 3.36
+    },
+    {
+      "text": "statements that you would want to work",
+      "start": 842.32,
+      "duration": 2.4
+    },
+    {
+      "text": "with",
+      "start": 843.6,
+      "duration": 4.56
+    },
+    {
+      "text": "um you're going to have different",
+      "start": 844.72,
+      "duration": 5.359
+    },
+    {
+      "text": "names in the financial statements from",
+      "start": 848.16,
+      "duration": 3.44
+    },
+    {
+      "text": "different data providers so you'd have",
+      "start": 850.079,
+      "duration": 4.481
+    },
+    {
+      "text": "to go back and switch out these names",
+      "start": 851.6,
+      "duration": 4.799
+    },
+    {
+      "text": "and we're getting extra spaces and stuff",
+      "start": 854.56,
+      "duration": 3.68
+    },
+    {
+      "text": "in there that would also be affected by",
+      "start": 856.399,
+      "duration": 2.721
+    },
+    {
+      "text": "where you're getting the",
+      "start": 858.24,
+      "duration": 4.48
+    },
+    {
+      "text": "statements from um and then",
+      "start": 859.12,
+      "duration": 5.36
+    },
+    {
+      "text": "we have this negative versus positive",
+      "start": 862.72,
+      "duration": 3.28
+    },
+    {
+      "text": "for cost issue",
+      "start": 864.48,
+      "duration": 3.28
+    },
+    {
+      "text": "um sometimes you might need to be taking",
+      "start": 866.0,
+      "duration": 4.32
+    },
+    {
+      "text": "the absolute value other times not",
+      "start": 867.76,
+      "duration": 5.68
+    },
+    {
+      "text": "um and it's",
+      "start": 870.32,
+      "duration": 5.6
+    },
+    {
+      "text": "you know the dot loc thing is a little",
+      "start": 873.44,
+      "duration": 3.839
+    },
+    {
+      "text": "bit annoying",
+      "start": 875.92,
+      "duration": 4.32
+    },
+    {
+      "text": "in order to look up items getting the",
+      "start": 877.279,
+      "duration": 3.601
+    },
+    {
+      "text": "change",
+      "start": 880.24,
+      "duration": 2.88
+    },
+    {
+      "text": "is also a little bit annoying it's not",
+      "start": 880.88,
+      "duration": 3.12
+    },
+    {
+      "text": "too bad but",
+      "start": 883.12,
+      "duration": 4.0
+    },
+    {
+      "text": "a little bit verbose",
+      "start": 884.0,
+      "duration": 3.12
+    },
+    {
+      "text": "and we also need to think about well is",
+      "start": 887.44,
+      "duration": 3.839
+    },
+    {
+      "text": "this item on the income statement is it",
+      "start": 889.6,
+      "duration": 3.12
+    },
+    {
+      "text": "on a balance sheet",
+      "start": 891.279,
+      "duration": 6.0
+    },
+    {
+      "text": "um and then find it and work with it",
+      "start": 892.72,
+      "duration": 8.0
+    },
+    {
+      "text": "we had to remember about this",
+      "start": 897.279,
+      "duration": 6.321
+    },
+    {
+      "text": "cleanup with the zeros filling in the",
+      "start": 900.72,
+      "duration": 5.04
+    },
+    {
+      "text": "zeros",
+      "start": 903.6,
+      "duration": 3.52
+    },
+    {
+      "text": "and of course we had to go through all",
+      "start": 905.76,
+      "duration": 2.879
+    },
+    {
+      "text": "these manual steps ourselves to",
+      "start": 907.12,
+      "duration": 4.159
+    },
+    {
+      "text": "calculate the free cash flow",
+      "start": 908.639,
+      "duration": 4.32
+    },
+    {
+      "text": "people calculate free cash flow all the",
+      "start": 911.279,
+      "duration": 3.12
+    },
+    {
+      "text": "time shouldn't uh",
+      "start": 912.959,
+      "duration": 4.801
+    },
+    {
+      "text": "there just be a simple way to do that",
+      "start": 914.399,
+      "duration": 5.12
+    },
+    {
+      "text": "so i created this fence statement",
+      "start": 917.76,
+      "duration": 3.439
+    },
+    {
+      "text": "package to solve all these kinds of",
+      "start": 919.519,
+      "duration": 2.961
+    },
+    {
+      "text": "issues",
+      "start": 921.199,
+      "duration": 4.801
+    },
+    {
+      "text": "um and the reason i think",
+      "start": 922.48,
+      "duration": 4.96
+    },
+    {
+      "text": "something like this was not out there",
+      "start": 926.0,
+      "duration": 3.6
+    },
+    {
+      "text": "already is most of",
+      "start": 927.44,
+      "duration": 5.92
+    },
+    {
+      "text": "the um python finance code which is out",
+      "start": 929.6,
+      "duration": 4.239
+    },
+    {
+      "text": "there",
+      "start": 933.36,
+      "duration": 3.839
+    },
+    {
+      "text": "just exists within uh",
+      "start": 933.839,
+      "duration": 5.201
+    },
+    {
+      "text": "large banks for the most part and so",
+      "start": 937.199,
+      "duration": 3.601
+    },
+    {
+      "text": "it's closed source they're not sharing",
+      "start": 939.04,
+      "duration": 3.76
+    },
+    {
+      "text": "it with anybody",
+      "start": 940.8,
+      "duration": 4.24
+    },
+    {
+      "text": "but i wanted to make this analysis",
+      "start": 942.8,
+      "duration": 4.64
+    },
+    {
+      "text": "easier for everyone and so i have open",
+      "start": 945.04,
+      "duration": 3.039
+    },
+    {
+      "text": "sourced",
+      "start": 947.44,
+      "duration": 3.6
+    },
+    {
+      "text": "all this code",
+      "start": 948.079,
+      "duration": 2.961
+    },
+    {
+      "text": "so you're going to need to install the",
+      "start": 952.839,
+      "duration": 4.041
+    },
+    {
+      "text": "pen statement package",
+      "start": 955.68,
+      "duration": 4.0
+    },
+    {
+      "text": "it does not come in anaconda because i",
+      "start": 956.88,
+      "duration": 5.759
+    },
+    {
+      "text": "only recently created it",
+      "start": 959.68,
+      "duration": 5.2
+    },
+    {
+      "text": "so you're going to need to do the",
+      "start": 962.639,
+      "duration": 4.161
+    },
+    {
+      "text": "install",
+      "start": 964.88,
+      "duration": 3.6
+    },
+    {
+      "text": "and we've covered installing packages",
+      "start": 966.8,
+      "duration": 4.64
+    },
+    {
+      "text": "and prior videos",
+      "start": 968.48,
+      "duration": 2.96
+    },
+    {
+      "text": "and since i already have it installed i",
+      "start": 972.16,
+      "duration": 4.88
+    },
+    {
+      "text": "can just go ahead and import it",
+      "start": 973.68,
+      "duration": 3.36
+    },
+    {
+      "text": "and for now the conventional import is",
+      "start": 977.68,
+      "duration": 4.48
+    },
+    {
+      "text": "to",
+      "start": 980.839,
+      "duration": 3.161
+    },
+    {
+      "text": "import the income statement balance",
+      "start": 982.16,
+      "duration": 3.359
+    },
+    {
+      "text": "sheet and financial statements",
+      "start": 984.0,
+      "duration": 5.199
+    },
+    {
+      "text": "from pin statement as of now it supports",
+      "start": 985.519,
+      "duration": 6.801
+    },
+    {
+      "text": "the income statement and balance sheet",
+      "start": 989.199,
+      "duration": 5.121
+    },
+    {
+      "text": "so we're going to use that same method",
+      "start": 992.32,
+      "duration": 3.92
+    },
+    {
+      "text": "we had from before because",
+      "start": 994.32,
+      "duration": 4.24
+    },
+    {
+      "text": "it is expecting to receive kind of this",
+      "start": 996.24,
+      "duration": 4.0
+    },
+    {
+      "text": "cleaned up structure",
+      "start": 998.56,
+      "duration": 4.639
+    },
+    {
+      "text": "you pass it data frames in order to",
+      "start": 1000.24,
+      "duration": 3.279
+    },
+    {
+      "text": "create",
+      "start": 1003.199,
+      "duration": 4.08
+    },
+    {
+      "text": "statements and it expects that your",
+      "start": 1003.519,
+      "duration": 5.921
+    },
+    {
+      "text": "line items are in the index and that you",
+      "start": 1007.279,
+      "duration": 5.441
+    },
+    {
+      "text": "have dates as the columns",
+      "start": 1009.44,
+      "duration": 5.199
+    },
+    {
+      "text": "which is the structure that we set up in",
+      "start": 1012.72,
+      "duration": 3.84
+    },
+    {
+      "text": "the beginning of the video",
+      "start": 1014.639,
+      "duration": 5.2
+    },
+    {
+      "text": "so then you know we have those data",
+      "start": 1016.56,
+      "duration": 3.839
+    },
+    {
+      "text": "frames",
+      "start": 1019.839,
+      "duration": 4.161
+    },
+    {
+      "text": "which are ready to go",
+      "start": 1020.399,
+      "duration": 6.961
+    },
+    {
+      "text": "and we can load in the",
+      "start": 1024.0,
+      "duration": 6.0
+    },
+    {
+      "text": "financial statement uh income statement",
+      "start": 1027.36,
+      "duration": 3.12
+    },
+    {
+      "text": "class",
+      "start": 1030.0,
+      "duration": 3.919
+    },
+    {
+      "text": "from that income data frame so we run",
+      "start": 1030.48,
+      "duration": 4.8
+    },
+    {
+      "text": "that and we do see some",
+      "start": 1033.919,
+      "duration": 4.721
+    },
+    {
+      "text": "output here which is just it",
+      "start": 1035.28,
+      "duration": 5.519
+    },
+    {
+      "text": "mentions the items which it saw in the",
+      "start": 1038.64,
+      "duration": 4.159
+    },
+    {
+      "text": "data frame which it was not able to",
+      "start": 1040.799,
+      "duration": 5.921
+    },
+    {
+      "text": "assign to a statement item um",
+      "start": 1042.799,
+      "duration": 6.24
+    },
+    {
+      "text": "so most of this stuff is just are things",
+      "start": 1046.72,
+      "duration": 4.4
+    },
+    {
+      "text": "that you don't really need",
+      "start": 1049.039,
+      "duration": 5.841
+    },
+    {
+      "text": "and that's why they're showing up here",
+      "start": 1051.12,
+      "duration": 5.2
+    },
+    {
+      "text": "so what does this look like when we",
+      "start": 1054.88,
+      "duration": 3.679
+    },
+    {
+      "text": "examine the data",
+      "start": 1056.32,
+      "duration": 5.2
+    },
+    {
+      "text": "um you'll notice a few things about this",
+      "start": 1058.559,
+      "duration": 4.721
+    },
+    {
+      "text": "versus",
+      "start": 1061.52,
+      "duration": 3.68
+    },
+    {
+      "text": "the data frame that we were just working",
+      "start": 1063.28,
+      "duration": 3.68
+    },
+    {
+      "text": "with one is that",
+      "start": 1065.2,
+      "duration": 4.08
+    },
+    {
+      "text": "it kind of just has the core items",
+      "start": 1066.96,
+      "duration": 3.68
+    },
+    {
+      "text": "displayed here",
+      "start": 1069.28,
+      "duration": 4.0
+    },
+    {
+      "text": "not all these extra things the dates",
+      "start": 1070.64,
+      "duration": 3.52
+    },
+    {
+      "text": "have been",
+      "start": 1073.28,
+      "duration": 4.56
+    },
+    {
+      "text": "reformatted and you'll notice that we",
+      "start": 1074.16,
+      "duration": 5.759
+    },
+    {
+      "text": "have the dollar formatting with commas",
+      "start": 1077.84,
+      "duration": 3.92
+    },
+    {
+      "text": "automatically everywhere",
+      "start": 1079.919,
+      "duration": 5.361
+    },
+    {
+      "text": "and that we have dashes now to represent",
+      "start": 1081.76,
+      "duration": 4.64
+    },
+    {
+      "text": "the",
+      "start": 1085.28,
+      "duration": 4.56
+    },
+    {
+      "text": "zero or missing values",
+      "start": 1086.4,
+      "duration": 3.44
+    },
+    {
+      "text": "um so",
+      "start": 1090.88,
+      "duration": 6.96
+    },
+    {
+      "text": "um and then",
+      "start": 1094.72,
+      "duration": 6.72
+    },
+    {
+      "text": "we can use tab completion on that",
+      "start": 1097.84,
+      "duration": 7.199
+    },
+    {
+      "text": "income statement data to be able to pull",
+      "start": 1101.44,
+      "duration": 7.119
+    },
+    {
+      "text": "uh whatever item that we want out of",
+      "start": 1105.039,
+      "duration": 6.961
+    },
+    {
+      "text": "the income statement so you can see all",
+      "start": 1108.559,
+      "duration": 5.841
+    },
+    {
+      "text": "these different options here",
+      "start": 1112.0,
+      "duration": 5.2
+    },
+    {
+      "text": "and then let's just think about getting",
+      "start": 1114.4,
+      "duration": 3.6
+    },
+    {
+      "text": "the revenue",
+      "start": 1117.2,
+      "duration": 3.92
+    },
+    {
+      "text": "all we do is is dot revenue and",
+      "start": 1118.0,
+      "duration": 5.6
+    },
+    {
+      "text": "we get the revenue series so just like",
+      "start": 1121.12,
+      "duration": 3.439
+    },
+    {
+      "text": "what we had to do",
+      "start": 1123.6,
+      "duration": 3.12
+    },
+    {
+      "text": "look for and pass it the specific name",
+      "start": 1124.559,
+      "duration": 3.281
+    },
+    {
+      "text": "however it's coming",
+      "start": 1126.72,
+      "duration": 3.6
+    },
+    {
+      "text": "in the original data now we just do dot",
+      "start": 1127.84,
+      "duration": 4.4
+    },
+    {
+      "text": "revenue regardless of",
+      "start": 1130.32,
+      "duration": 4.479
+    },
+    {
+      "text": "how the original name was and the",
+      "start": 1132.24,
+      "duration": 5.6
+    },
+    {
+      "text": "original data",
+      "start": 1134.799,
+      "duration": 3.041
+    },
+    {
+      "text": "um and then we can pull uh",
+      "start": 1138.08,
+      "duration": 6.24
+    },
+    {
+      "text": "periods out at the financial statements",
+      "start": 1141.36,
+      "duration": 5.439
+    },
+    {
+      "text": "so here i'm just pulling the",
+      "start": 1144.32,
+      "duration": 5.68
+    },
+    {
+      "text": "2014 period and we just get that",
+      "start": 1146.799,
+      "duration": 6.0
+    },
+    {
+      "text": "you can also pull out multiple periods",
+      "start": 1150.0,
+      "duration": 3.44
+    },
+    {
+      "text": "um",
+      "start": 1152.799,
+      "duration": 2.88
+    },
+    {
+      "text": "by giving a list of the periods that you",
+      "start": 1153.44,
+      "duration": 3.599
+    },
+    {
+      "text": "want",
+      "start": 1155.679,
+      "duration": 4.481
+    },
+    {
+      "text": "and you'll notice also that",
+      "start": 1157.039,
+      "duration": 5.281
+    },
+    {
+      "text": "these don't exactly match up in terms of",
+      "start": 1160.16,
+      "duration": 3.84
+    },
+    {
+      "text": "date format right this is with",
+      "start": 1162.32,
+      "duration": 4.88
+    },
+    {
+      "text": "dashes with the year first",
+      "start": 1164.0,
+      "duration": 6.4
+    },
+    {
+      "text": "this slashes with your last but",
+      "start": 1167.2,
+      "duration": 4.8
+    },
+    {
+      "text": "the package is smart enough to",
+      "start": 1170.4,
+      "duration": 3.36
+    },
+    {
+      "text": "understand that you're talking about the",
+      "start": 1172.0,
+      "duration": 2.72
+    },
+    {
+      "text": "same date",
+      "start": 1173.76,
+      "duration": 6.08
+    },
+    {
+      "text": "and grab the correct periods",
+      "start": 1174.72,
+      "duration": 9.12
+    },
+    {
+      "text": "um so we can go ahead and create the",
+      "start": 1179.84,
+      "duration": 5.28
+    },
+    {
+      "text": "balance sheet",
+      "start": 1183.84,
+      "duration": 4.16
+    },
+    {
+      "text": "as well so we see a similar message",
+      "start": 1185.12,
+      "duration": 4.32
+    },
+    {
+      "text": "coming up there about",
+      "start": 1188.0,
+      "duration": 2.88
+    },
+    {
+      "text": "you know things it wasn't able to",
+      "start": 1189.44,
+      "duration": 3.28
+    },
+    {
+      "text": "extract because a lot of them weren't",
+      "start": 1190.88,
+      "duration": 5.28
+    },
+    {
+      "text": "actually even balance sheet items",
+      "start": 1192.72,
+      "duration": 6.079
+    },
+    {
+      "text": "and we can look at the data there as",
+      "start": 1196.16,
+      "duration": 3.92
+    },
+    {
+      "text": "well",
+      "start": 1198.799,
+      "duration": 3.841
+    },
+    {
+      "text": "so seeing similar things in terms of the",
+      "start": 1200.08,
+      "duration": 3.2
+    },
+    {
+      "text": "structure",
+      "start": 1202.64,
+      "duration": 4.8
+    },
+    {
+      "text": "compared to the income statement",
+      "start": 1203.28,
+      "duration": 7.6
+    },
+    {
+      "text": "um so there's even one",
+      "start": 1207.44,
+      "duration": 5.68
+    },
+    {
+      "text": "even more high level ways to work with",
+      "start": 1210.88,
+      "duration": 3.44
+    },
+    {
+      "text": "package and that is",
+      "start": 1213.12,
+      "duration": 3.12
+    },
+    {
+      "text": "you can create a financial statements",
+      "start": 1214.32,
+      "duration": 3.2
+    },
+    {
+      "text": "class",
+      "start": 1216.24,
+      "duration": 4.96
+    },
+    {
+      "text": "out of both the income statement",
+      "start": 1217.52,
+      "duration": 6.399
+    },
+    {
+      "text": "and balance sheet so we create that",
+      "start": 1221.2,
+      "duration": 4.32
+    },
+    {
+      "text": "statements class",
+      "start": 1223.919,
+      "duration": 5.521
+    },
+    {
+      "text": "um and then what that",
+      "start": 1225.52,
+      "duration": 6.08
+    },
+    {
+      "text": "allows us to do is work with the whole",
+      "start": 1229.44,
+      "duration": 4.32
+    },
+    {
+      "text": "statements at once so if we just look at",
+      "start": 1231.6,
+      "duration": 2.72
+    },
+    {
+      "text": "statements",
+      "start": 1233.76,
+      "duration": 2.159
+    },
+    {
+      "text": "we'll see we get this header of the",
+      "start": 1234.32,
+      "duration": 3.2
+    },
+    {
+      "text": "income statement it shows the income",
+      "start": 1235.919,
+      "duration": 2.561
+    },
+    {
+      "text": "statement",
+      "start": 1237.52,
+      "duration": 2.08
+    },
+    {
+      "text": "and then we'll get this header of the",
+      "start": 1238.48,
+      "duration": 3.12
+    },
+    {
+      "text": "balance sheet and it shows the balance",
+      "start": 1239.6,
+      "duration": 2.64
+    },
+    {
+      "text": "sheet",
+      "start": 1241.6,
+      "duration": 3.84
+    },
+    {
+      "text": "so we can see everything",
+      "start": 1242.24,
+      "duration": 3.2
+    },
+    {
+      "text": "and then we have this same thing where",
+      "start": 1245.919,
+      "duration": 3.601
+    },
+    {
+      "text": "we can do the",
+      "start": 1248.0,
+      "duration": 4.64
+    },
+    {
+      "text": "tab completion but now it works across",
+      "start": 1249.52,
+      "duration": 4.72
+    },
+    {
+      "text": "both the income statement and the",
+      "start": 1252.64,
+      "duration": 3.039
+    },
+    {
+      "text": "balance sheet",
+      "start": 1254.24,
+      "duration": 3.52
+    },
+    {
+      "text": "so we have all those possible items",
+      "start": 1255.679,
+      "duration": 3.921
+    },
+    {
+      "text": "there",
+      "start": 1257.76,
+      "duration": 3.76
+    },
+    {
+      "text": "uh we can get the cash from the balance",
+      "start": 1259.6,
+      "duration": 3.6
+    },
+    {
+      "text": "sheet we can get the cost to get sold",
+      "start": 1261.52,
+      "duration": 3.2
+    },
+    {
+      "text": "from the income statement",
+      "start": 1263.2,
+      "duration": 3.12
+    },
+    {
+      "text": "and we don't have to think about where",
+      "start": 1264.72,
+      "duration": 4.48
+    },
+    {
+      "text": "that item actually comes from",
+      "start": 1266.32,
+      "duration": 6.16
+    },
+    {
+      "text": "um and we can do the same kind of",
+      "start": 1269.2,
+      "duration": 6.0
+    },
+    {
+      "text": "date access",
+      "start": 1272.48,
+      "duration": 2.72
+    },
+    {
+      "text": "as we can with the individual statements",
+      "start": 1275.6,
+      "duration": 4.079
+    },
+    {
+      "text": "um and this can be useful in order to",
+      "start": 1279.76,
+      "duration": 5.039
+    },
+    {
+      "text": "you know pull certain items for",
+      "start": 1283.44,
+      "duration": 3.119
+    },
+    {
+      "text": "different time ranges",
+      "start": 1284.799,
+      "duration": 4.081
+    },
+    {
+      "text": "here i'm just getting the total equity",
+      "start": 1286.559,
+      "duration": 3.6
+    },
+    {
+      "text": "for 14",
+      "start": 1288.88,
+      "duration": 4.08
+    },
+    {
+      "text": "and 15.",
+      "start": 1290.159,
+      "duration": 2.801
+    },
+    {
+      "text": "so then getting into uh calculating the",
+      "start": 1293.919,
+      "duration": 3.681
+    },
+    {
+      "text": "free cash flows",
+      "start": 1296.64,
+      "duration": 4.08
+    },
+    {
+      "text": "well there is a dot fcf and that gets",
+      "start": 1297.6,
+      "duration": 5.68
+    },
+    {
+      "text": "you the free cash flows so you're done",
+      "start": 1300.72,
+      "duration": 3.92
+    },
+    {
+      "text": "we didn't have to calculate all those",
+      "start": 1303.28,
+      "duration": 3.04
+    },
+    {
+      "text": "separate items and put them together",
+      "start": 1304.64,
+      "duration": 4.08
+    },
+    {
+      "text": "just fcf and you have the free cash",
+      "start": 1306.32,
+      "duration": 4.16
+    },
+    {
+      "text": "flows so",
+      "start": 1308.72,
+      "duration": 4.4
+    },
+    {
+      "text": "nice and straightforward but just to",
+      "start": 1310.48,
+      "duration": 3.76
+    },
+    {
+      "text": "show",
+      "start": 1313.12,
+      "duration": 4.16
+    },
+    {
+      "text": "some of the other convenient",
+      "start": 1314.24,
+      "duration": 5.28
+    },
+    {
+      "text": "methods that have uh been added to the",
+      "start": 1317.28,
+      "duration": 4.56
+    },
+    {
+      "text": "library to work with statement data",
+      "start": 1319.52,
+      "duration": 4.08
+    },
+    {
+      "text": "let's look at how we would go and",
+      "start": 1321.84,
+      "duration": 3.52
+    },
+    {
+      "text": "calculate those free cash flows",
+      "start": 1323.6,
+      "duration": 5.6
+    },
+    {
+      "text": "uh manually using fin statement",
+      "start": 1325.36,
+      "duration": 7.36
+    },
+    {
+      "text": "so we take the nat ppe",
+      "start": 1329.2,
+      "duration": 6.88
+    },
+    {
+      "text": "um and we have this",
+      "start": 1332.72,
+      "duration": 7.199
+    },
+    {
+      "text": "uh lag method um which",
+      "start": 1336.08,
+      "duration": 7.68
+    },
+    {
+      "text": "is able to do um the same thing as shift",
+      "start": 1339.919,
+      "duration": 7.281
+    },
+    {
+      "text": "and pandas",
+      "start": 1343.76,
+      "duration": 6.24
+    },
+    {
+      "text": "so we're going to lag it by one period",
+      "start": 1347.2,
+      "duration": 4.4
+    },
+    {
+      "text": "and",
+      "start": 1350.0,
+      "duration": 5.12
+    },
+    {
+      "text": "then we also have this change method",
+      "start": 1351.6,
+      "duration": 6.24
+    },
+    {
+      "text": "so the change is already doing just the",
+      "start": 1355.12,
+      "duration": 4.08
+    },
+    {
+      "text": "original minus the",
+      "start": 1357.84,
+      "duration": 3.04
+    },
+    {
+      "text": "lagged by one period but it's just a",
+      "start": 1359.2,
+      "duration": 3.04
+    },
+    {
+      "text": "more convenient way",
+      "start": 1360.88,
+      "duration": 3.12
+    },
+    {
+      "text": "to get to the change because the change",
+      "start": 1362.24,
+      "duration": 3.52
+    },
+    {
+      "text": "is often what we're concerned about",
+      "start": 1364.0,
+      "duration": 3.6
+    },
+    {
+      "text": "getting",
+      "start": 1365.76,
+      "duration": 4.24
+    },
+    {
+      "text": "so in order to calculate the free cash",
+      "start": 1367.6,
+      "duration": 3.12
+    },
+    {
+      "text": "flows",
+      "start": 1370.0,
+      "duration": 5.36
+    },
+    {
+      "text": "uh all these these uh parks are",
+      "start": 1370.72,
+      "duration": 6.88
+    },
+    {
+      "text": "calculated for you as well like the",
+      "start": 1375.36,
+      "duration": 3.679
+    },
+    {
+      "text": "networking",
+      "start": 1377.6,
+      "duration": 4.64
+    },
+    {
+      "text": "capital is already there the capex is",
+      "start": 1379.039,
+      "duration": 4.401
+    },
+    {
+      "text": "already there",
+      "start": 1382.24,
+      "duration": 4.559
+    },
+    {
+      "text": "the non-cash expenses is already there",
+      "start": 1383.44,
+      "duration": 6.8
+    },
+    {
+      "text": "and so you can just uh you know directly",
+      "start": 1386.799,
+      "duration": 4.801
+    },
+    {
+      "text": "go and add up those items",
+      "start": 1390.24,
+      "duration": 3.36
+    },
+    {
+      "text": "and use the change on the networking",
+      "start": 1391.6,
+      "duration": 4.24
+    },
+    {
+      "text": "capital",
+      "start": 1393.6,
+      "duration": 4.959
+    },
+    {
+      "text": "so definitely simplifies this process",
+      "start": 1395.84,
+      "duration": 3.68
+    },
+    {
+      "text": "quite a bit",
+      "start": 1398.559,
+      "duration": 3.36
+    },
+    {
+      "text": "and then the same exact code is going to",
+      "start": 1399.52,
+      "duration": 3.6
+    },
+    {
+      "text": "work no matter which",
+      "start": 1401.919,
+      "duration": 4.961
+    },
+    {
+      "text": "financial statements you're working with",
+      "start": 1403.12,
+      "duration": 3.76
+    },
+    {
+      "text": "and some other things i want to mention",
+      "start": 1408.08,
+      "duration": 5.839
+    },
+    {
+      "text": "about using the package",
+      "start": 1411.52,
+      "duration": 5.36
+    },
+    {
+      "text": "so i've gotten this working with uh",
+      "start": 1413.919,
+      "duration": 4.88
+    },
+    {
+      "text": "stock row and capital iq financial",
+      "start": 1416.88,
+      "duration": 2.64
+    },
+    {
+      "text": "statements",
+      "start": 1418.799,
+      "duration": 2.88
+    },
+    {
+      "text": "i think it will work for a lot of others",
+      "start": 1419.52,
+      "duration": 3.6
+    },
+    {
+      "text": "as well",
+      "start": 1421.679,
+      "duration": 4.801
+    },
+    {
+      "text": "um but if you load in your financial",
+      "start": 1423.12,
+      "duration": 4.0
+    },
+    {
+      "text": "statements",
+      "start": 1426.48,
+      "duration": 3.12
+    },
+    {
+      "text": "and something goes wrong just send them",
+      "start": 1427.12,
+      "duration": 4.799
+    },
+    {
+      "text": "to me and i'll make sure that they get",
+      "start": 1429.6,
+      "duration": 6.079
+    },
+    {
+      "text": "incorporated into the package as well",
+      "start": 1431.919,
+      "duration": 3.76
+    },
+    {
+      "text": "and there is basically a configuration",
+      "start": 1436.24,
+      "duration": 4.88
+    },
+    {
+      "text": "system within fin statement",
+      "start": 1438.48,
+      "duration": 4.799
+    },
+    {
+      "text": "which allows you to extend it to be able",
+      "start": 1441.12,
+      "duration": 3.919
+    },
+    {
+      "text": "to work with any custom",
+      "start": 1443.279,
+      "duration": 4.321
+    },
+    {
+      "text": "statements that you want to work with",
+      "start": 1445.039,
+      "duration": 3.841
+    },
+    {
+      "text": "but i'm still working on",
+      "start": 1447.6,
+      "duration": 2.88
+    },
+    {
+      "text": "filling out the documentation on all",
+      "start": 1448.88,
+      "duration": 4.24
+    },
+    {
+      "text": "that so if you are interested",
+      "start": 1450.48,
+      "duration": 6.0
+    },
+    {
+      "text": "in customizing how this works at all",
+      "start": 1453.12,
+      "duration": 6.64
+    },
+    {
+      "text": "just reach out and i'll give you some",
+      "start": 1456.48,
+      "duration": 5.679
+    },
+    {
+      "text": "guidance there",
+      "start": 1459.76,
+      "duration": 5.039
+    },
+    {
+      "text": "so uh and also if you see any other",
+      "start": 1462.159,
+      "duration": 3.921
+    },
+    {
+      "text": "issues with the library",
+      "start": 1464.799,
+      "duration": 2.88
+    },
+    {
+      "text": "or things are not working as you would",
+      "start": 1466.08,
+      "duration": 3.04
+    },
+    {
+      "text": "expect",
+      "start": 1467.679,
+      "duration": 4.24
+    },
+    {
+      "text": "also just reach out and i would be happy",
+      "start": 1469.12,
+      "duration": 3.84
+    },
+    {
+      "text": "to",
+      "start": 1471.919,
+      "duration": 4.801
+    },
+    {
+      "text": "look into whatever issues that you have",
+      "start": 1472.96,
+      "duration": 6.16
+    },
+    {
+      "text": "so that's an overview on how to",
+      "start": 1476.72,
+      "duration": 3.04
+    },
+    {
+      "text": "calculate",
+      "start": 1479.12,
+      "duration": 3.6
+    },
+    {
+      "text": "historical free cash flows in python",
+      "start": 1479.76,
+      "duration": 4.32
+    },
+    {
+      "text": "using both pandas",
+      "start": 1482.72,
+      "duration": 3.199
+    },
+    {
+      "text": "and fin statement so thanks for",
+      "start": 1484.08,
+      "duration": 9.52
+    },
+    {
+      "text": "listening and see you next time",
+      "start": 1485.919,
+      "duration": 7.681
+    }
+  ]
+}

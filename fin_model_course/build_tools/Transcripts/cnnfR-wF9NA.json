@@ -1,0 +1,2074 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick diabetis",
+      "start": 2.48,
+      "duration": 3.76
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 4.4,
+      "duration": 3.519
+    },
+    {
+      "text": "today we're going to be looking at how",
+      "start": 6.24,
+      "duration": 3.6
+    },
+    {
+      "text": "we can analyze the relationship",
+      "start": 7.919,
+      "duration": 4.8
+    },
+    {
+      "text": "between inputs and outputs in our models",
+      "start": 9.84,
+      "duration": 3.759
+    },
+    {
+      "text": "by using",
+      "start": 12.719,
+      "duration": 3.601
+    },
+    {
+      "text": "monte carlo simulation this is part of",
+      "start": 13.599,
+      "duration": 4.161
+    },
+    {
+      "text": "our lecture segment on",
+      "start": 16.32,
+      "duration": 5.039
+    },
+    {
+      "text": "monte carlo simulation so",
+      "start": 17.76,
+      "duration": 6.24
+    },
+    {
+      "text": "we've already covered an intro to monte",
+      "start": 21.359,
+      "duration": 4.08
+    },
+    {
+      "text": "carlo we've run",
+      "start": 24.0,
+      "duration": 4.48
+    },
+    {
+      "text": "monte carlo on a model and then we went",
+      "start": 25.439,
+      "duration": 4.16
+    },
+    {
+      "text": "through the",
+      "start": 28.48,
+      "duration": 4.239
+    },
+    {
+      "text": "formal introduction of what we're doing",
+      "start": 29.599,
+      "duration": 6.64
+    },
+    {
+      "text": "in monte carlo simulation so now we're",
+      "start": 32.719,
+      "duration": 5.201
+    },
+    {
+      "text": "going to",
+      "start": 36.239,
+      "duration": 5.121
+    },
+    {
+      "text": "dig into how we can",
+      "start": 37.92,
+      "duration": 5.84
+    },
+    {
+      "text": "establish relationships and quantify the",
+      "start": 41.36,
+      "duration": 3.76
+    },
+    {
+      "text": "relationships",
+      "start": 43.76,
+      "duration": 3.84
+    },
+    {
+      "text": "between our inputs and outputs using",
+      "start": 45.12,
+      "duration": 4.72
+    },
+    {
+      "text": "monte carlo simulation",
+      "start": 47.6,
+      "duration": 5.52
+    },
+    {
+      "text": "so we",
+      "start": 49.84,
+      "duration": 4.96
+    },
+    {
+      "text": "the monte carlo simulation is not the",
+      "start": 53.12,
+      "duration": 3.68
+    },
+    {
+      "text": "only tool that we can use",
+      "start": 54.8,
+      "duration": 4.88
+    },
+    {
+      "text": "to achieve this objective we've already",
+      "start": 56.8,
+      "duration": 3.599
+    },
+    {
+      "text": "looked at",
+      "start": 59.68,
+      "duration": 3.84
+    },
+    {
+      "text": "sensitivity analysis which can get at",
+      "start": 60.399,
+      "duration": 4.881
+    },
+    {
+      "text": "the same basic idea what is the",
+      "start": 63.52,
+      "duration": 2.88
+    },
+    {
+      "text": "relationship",
+      "start": 65.28,
+      "duration": 3.6
+    },
+    {
+      "text": "between the inputs and the outputs with",
+      "start": 66.4,
+      "duration": 4.32
+    },
+    {
+      "text": "sensitivity analysis we're changing one",
+      "start": 68.88,
+      "duration": 3.12
+    },
+    {
+      "text": "or two inputs at once",
+      "start": 70.72,
+      "duration": 5.36
+    },
+    {
+      "text": "and seeing what happens to the",
+      "start": 72.0,
+      "duration": 6.479
+    },
+    {
+      "text": "output of our model with those changing",
+      "start": 76.08,
+      "duration": 5.039
+    },
+    {
+      "text": "input values",
+      "start": 78.479,
+      "duration": 6.361
+    },
+    {
+      "text": "with monte carlo simulation then",
+      "start": 81.119,
+      "duration": 6.32
+    },
+    {
+      "text": "we're uh running the model a bunch of",
+      "start": 84.84,
+      "duration": 3.959
+    },
+    {
+      "text": "different times with all these",
+      "start": 87.439,
+      "duration": 3.521
+    },
+    {
+      "text": "randomized inputs",
+      "start": 88.799,
+      "duration": 5.601
+    },
+    {
+      "text": "and that allows us to get a more",
+      "start": 90.96,
+      "duration": 6.159
+    },
+    {
+      "text": "full picture of how the inputs relate to",
+      "start": 94.4,
+      "duration": 4.32
+    },
+    {
+      "text": "the outputs",
+      "start": 97.119,
+      "duration": 3.601
+    },
+    {
+      "text": "because when you change just one or two",
+      "start": 98.72,
+      "duration": 4.0
+    },
+    {
+      "text": "inputs at a time",
+      "start": 100.72,
+      "duration": 5.039
+    },
+    {
+      "text": "you may be leaving out that",
+      "start": 102.72,
+      "duration": 4.88
+    },
+    {
+      "text": "when other inputs are at different",
+      "start": 105.759,
+      "duration": 3.841
+    },
+    {
+      "text": "values",
+      "start": 107.6,
+      "duration": 3.68
+    },
+    {
+      "text": "these inputs that you're changing have",
+      "start": 109.6,
+      "duration": 4.08
+    },
+    {
+      "text": "different effects",
+      "start": 111.28,
+      "duration": 6.799
+    },
+    {
+      "text": "so thinking about the retirement model",
+      "start": 113.68,
+      "duration": 4.399
+    },
+    {
+      "text": "when we're changing the interest rate",
+      "start": 118.24,
+      "duration": 3.839
+    },
+    {
+      "text": "and seeing how that changes our years to",
+      "start": 119.84,
+      "duration": 4.0
+    },
+    {
+      "text": "retirement",
+      "start": 122.079,
+      "duration": 4.161
+    },
+    {
+      "text": "well the interest rate is going to have",
+      "start": 123.84,
+      "duration": 3.84
+    },
+    {
+      "text": "a bigger impact",
+      "start": 126.24,
+      "duration": 4.88
+    },
+    {
+      "text": "on the model if the initial salary",
+      "start": 127.68,
+      "duration": 7.12
+    },
+    {
+      "text": "was higher to begin with so you might",
+      "start": 131.12,
+      "duration": 5.28
+    },
+    {
+      "text": "you know thinking about this in advance",
+      "start": 134.8,
+      "duration": 3.439
+    },
+    {
+      "text": "you might do a sensitivity analysis",
+      "start": 136.4,
+      "duration": 4.479
+    },
+    {
+      "text": "of interest rate versus the initial",
+      "start": 138.239,
+      "duration": 4.561
+    },
+    {
+      "text": "salary so you can see how these two",
+      "start": 140.879,
+      "duration": 4.401
+    },
+    {
+      "text": "interplay together",
+      "start": 142.8,
+      "duration": 3.92
+    },
+    {
+      "text": "but you may not have thought about this",
+      "start": 145.28,
+      "duration": 3.12
+    },
+    {
+      "text": "relationship at the get-go",
+      "start": 146.72,
+      "duration": 4.08
+    },
+    {
+      "text": "or there may be other relationships",
+      "start": 148.4,
+      "duration": 3.28
+    },
+    {
+      "text": "which",
+      "start": 150.8,
+      "duration": 3.12
+    },
+    {
+      "text": "matter as well i mean with a higher",
+      "start": 151.68,
+      "duration": 3.199
+    },
+    {
+      "text": "savings rate",
+      "start": 153.92,
+      "duration": 2.959
+    },
+    {
+      "text": "also the interest rate is going to be",
+      "start": 154.879,
+      "duration": 3.681
+    },
+    {
+      "text": "more impactful",
+      "start": 156.879,
+      "duration": 5.44
+    },
+    {
+      "text": "so uh doing it the monte carlo",
+      "start": 158.56,
+      "duration": 5.36
+    },
+    {
+      "text": "simulation route to analyze the",
+      "start": 162.319,
+      "duration": 2.801
+    },
+    {
+      "text": "relationship",
+      "start": 163.92,
+      "duration": 2.56
+    },
+    {
+      "text": "you're kind of bringing all these",
+      "start": 165.12,
+      "duration": 3.759
+    },
+    {
+      "text": "different relationships together",
+      "start": 166.48,
+      "duration": 4.72
+    },
+    {
+      "text": "and not having to explicitly think about",
+      "start": 168.879,
+      "duration": 3.921
+    },
+    {
+      "text": "them as the modeler",
+      "start": 171.2,
+      "duration": 3.119
+    },
+    {
+      "text": "you just kind of throw everything in",
+      "start": 172.8,
+      "duration": 3.36
+    },
+    {
+      "text": "with random inputs",
+      "start": 174.319,
+      "duration": 5.28
+    },
+    {
+      "text": "and the simulation is going to reveal",
+      "start": 176.16,
+      "duration": 8.159
+    },
+    {
+      "text": "those relationships",
+      "start": 179.599,
+      "duration": 7.041
+    },
+    {
+      "text": "so by changing all the inputs each time",
+      "start": 184.319,
+      "duration": 4.161
+    },
+    {
+      "text": "that you run the model",
+      "start": 186.64,
+      "duration": 5.12
+    },
+    {
+      "text": "then you're going to get cases uh",
+      "start": 188.48,
+      "duration": 5.2
+    },
+    {
+      "text": "with each different values of the inputs",
+      "start": 191.76,
+      "duration": 3.759
+    },
+    {
+      "text": "so",
+      "start": 193.68,
+      "duration": 3.279
+    },
+    {
+      "text": "some cases you're going to have a high",
+      "start": 195.519,
+      "duration": 3.281
+    },
+    {
+      "text": "interest rate and within that in some",
+      "start": 196.959,
+      "duration": 3.36
+    },
+    {
+      "text": "cases you're going to have a high salary",
+      "start": 198.8,
+      "duration": 2.88
+    },
+    {
+      "text": "some cases you're going to have a low",
+      "start": 200.319,
+      "duration": 2.64
+    },
+    {
+      "text": "salary",
+      "start": 201.68,
+      "duration": 3.839
+    },
+    {
+      "text": "some uh simulations you're going to have",
+      "start": 202.959,
+      "duration": 4.241
+    },
+    {
+      "text": "a low interest rate and within that",
+      "start": 205.519,
+      "duration": 3.041
+    },
+    {
+      "text": "you're going to have some that have a",
+      "start": 207.2,
+      "duration": 2.88
+    },
+    {
+      "text": "high salary and some that have a low",
+      "start": 208.56,
+      "duration": 2.399
+    },
+    {
+      "text": "salary",
+      "start": 210.08,
+      "duration": 2.879
+    },
+    {
+      "text": "as well as different values of the other",
+      "start": 210.959,
+      "duration": 3.28
+    },
+    {
+      "text": "inputs as well",
+      "start": 212.959,
+      "duration": 3.36
+    },
+    {
+      "text": "so as long as you do enough simulations",
+      "start": 214.239,
+      "duration": 5.121
+    },
+    {
+      "text": "a high enough number of iterations",
+      "start": 216.319,
+      "duration": 5.601
+    },
+    {
+      "text": "then you're going to capture cases of",
+      "start": 219.36,
+      "duration": 4.879
+    },
+    {
+      "text": "all these different values of the inputs",
+      "start": 221.92,
+      "duration": 4.56
+    },
+    {
+      "text": "interplaying together and that gives you",
+      "start": 224.239,
+      "duration": 3.441
+    },
+    {
+      "text": "a much more",
+      "start": 226.48,
+      "duration": 4.399
+    },
+    {
+      "text": "fuller picture of the relationship",
+      "start": 227.68,
+      "duration": 6.479
+    },
+    {
+      "text": "between the inputs and outputs",
+      "start": 230.879,
+      "duration": 3.28
+    },
+    {
+      "text": "now the issue with this with sensitivity",
+      "start": 234.319,
+      "duration": 5.361
+    },
+    {
+      "text": "analysis it was fairly straightforward",
+      "start": 237.519,
+      "duration": 5.36
+    },
+    {
+      "text": "to understand uh how we can just look at",
+      "start": 239.68,
+      "duration": 4.8
+    },
+    {
+      "text": "those results we just see the result",
+      "start": 242.879,
+      "duration": 2.72
+    },
+    {
+      "text": "from the model",
+      "start": 244.48,
+      "duration": 3.679
+    },
+    {
+      "text": "we can visualize it using conditional",
+      "start": 245.599,
+      "duration": 4.241
+    },
+    {
+      "text": "formatting",
+      "start": 248.159,
+      "duration": 3.921
+    },
+    {
+      "text": "or a hexpin plot and it's fairly",
+      "start": 249.84,
+      "duration": 3.679
+    },
+    {
+      "text": "straightforward",
+      "start": 252.08,
+      "duration": 4.96
+    },
+    {
+      "text": "it's a little more complicated to take",
+      "start": 253.519,
+      "duration": 6.641
+    },
+    {
+      "text": "okay well now we've got 10 000 results",
+      "start": 257.04,
+      "duration": 4.64
+    },
+    {
+      "text": "from this model",
+      "start": 260.16,
+      "duration": 4.319
+    },
+    {
+      "text": "how do we get an understanding of the",
+      "start": 261.68,
+      "duration": 4.079
+    },
+    {
+      "text": "relationship between the inputs and",
+      "start": 264.479,
+      "duration": 2.72
+    },
+    {
+      "text": "outputs",
+      "start": 265.759,
+      "duration": 4.481
+    },
+    {
+      "text": "so i'll discuss two different approaches",
+      "start": 267.199,
+      "duration": 4.321
+    },
+    {
+      "text": "that we can use here",
+      "start": 270.24,
+      "duration": 4.88
+    },
+    {
+      "text": "to get an understanding the first is",
+      "start": 271.52,
+      "duration": 9.32
+    },
+    {
+      "text": "by visualizing uh via a scatter plot",
+      "start": 275.12,
+      "duration": 8.56
+    },
+    {
+      "text": "so the scatter plot",
+      "start": 280.84,
+      "duration": 4.76
+    },
+    {
+      "text": "shows the relationship between two",
+      "start": 283.68,
+      "duration": 3.6
+    },
+    {
+      "text": "variables one that gets plotted on the",
+      "start": 285.6,
+      "duration": 3.44
+    },
+    {
+      "text": "x-axis and one that gets plotted on the",
+      "start": 287.28,
+      "duration": 3.359
+    },
+    {
+      "text": "y-axis",
+      "start": 289.04,
+      "duration": 5.12
+    },
+    {
+      "text": "and each point is the values of the x",
+      "start": 290.639,
+      "duration": 5.761
+    },
+    {
+      "text": "and the y's together",
+      "start": 294.16,
+      "duration": 6.479
+    },
+    {
+      "text": "so this could be looking at that",
+      "start": 296.4,
+      "duration": 6.48
+    },
+    {
+      "text": "investment rate on the x and looking at",
+      "start": 300.639,
+      "duration": 3.601
+    },
+    {
+      "text": "the years to retirement",
+      "start": 302.88,
+      "duration": 3.039
+    },
+    {
+      "text": "on the y dimension and you would say",
+      "start": 304.24,
+      "duration": 3.28
+    },
+    {
+      "text": "well one time i ran it",
+      "start": 305.919,
+      "duration": 6.401
+    },
+    {
+      "text": "and i had a 2.2 interest rate and i got",
+      "start": 307.52,
+      "duration": 7.84
+    },
+    {
+      "text": "22 years to retirement uh",
+      "start": 312.32,
+      "duration": 6.719
+    },
+    {
+      "text": "et cetera and",
+      "start": 315.36,
+      "duration": 7.119
+    },
+    {
+      "text": "um the disadvantage of",
+      "start": 319.039,
+      "duration": 5.361
+    },
+    {
+      "text": "scatter plots is that it only does look",
+      "start": 322.479,
+      "duration": 3.921
+    },
+    {
+      "text": "at one variable at a time so you do have",
+      "start": 324.4,
+      "duration": 2.48
+    },
+    {
+      "text": "to have",
+      "start": 326.4,
+      "duration": 3.6
+    },
+    {
+      "text": "like one scatter plot for each variable",
+      "start": 326.88,
+      "duration": 6.879
+    },
+    {
+      "text": "but then each graph is is very focused",
+      "start": 330.0,
+      "duration": 6.24
+    },
+    {
+      "text": "on that variable",
+      "start": 333.759,
+      "duration": 4.561
+    },
+    {
+      "text": "and so what you're looking for when you",
+      "start": 336.24,
+      "duration": 4.399
+    },
+    {
+      "text": "look at these scatter plots",
+      "start": 338.32,
+      "duration": 5.76
+    },
+    {
+      "text": "is you want to see some kind of pattern",
+      "start": 340.639,
+      "duration": 6.56
+    },
+    {
+      "text": "um if the points are just kind of in a",
+      "start": 344.08,
+      "duration": 4.88
+    },
+    {
+      "text": "cloud",
+      "start": 347.199,
+      "duration": 4.321
+    },
+    {
+      "text": "as we see in the bottom picture here",
+      "start": 348.96,
+      "duration": 4.239
+    },
+    {
+      "text": "there's no kind of linear",
+      "start": 351.52,
+      "duration": 5.519
+    },
+    {
+      "text": "or shape in here it's just kind of an",
+      "start": 353.199,
+      "duration": 6.881
+    },
+    {
+      "text": "ambiguous cloud that",
+      "start": 357.039,
+      "duration": 5.681
+    },
+    {
+      "text": "is supportive of there not being a",
+      "start": 360.08,
+      "duration": 3.839
+    },
+    {
+      "text": "strong relationship",
+      "start": 362.72,
+      "duration": 4.479
+    },
+    {
+      "text": "between the variables whereas",
+      "start": 363.919,
+      "duration": 5.361
+    },
+    {
+      "text": "when the points seem to kind of fit",
+      "start": 367.199,
+      "duration": 3.44
+    },
+    {
+      "text": "along a line",
+      "start": 369.28,
+      "duration": 4.56
+    },
+    {
+      "text": "or like a u shape or some other kind of",
+      "start": 370.639,
+      "duration": 5.741
+    },
+    {
+      "text": "very defined shape",
+      "start": 373.84,
+      "duration": 3.919
+    },
+    {
+      "text": "[Music]",
+      "start": 376.38,
+      "duration": 4.58
+    },
+    {
+      "text": "then that's evidence in support",
+      "start": 377.759,
+      "duration": 6.16
+    },
+    {
+      "text": "of there being a relationship between",
+      "start": 380.96,
+      "duration": 6.0
+    },
+    {
+      "text": "the two variables",
+      "start": 383.919,
+      "duration": 3.041
+    },
+    {
+      "text": "so",
+      "start": 387.36,
+      "duration": 2.24
+    },
+    {
+      "text": "as far as quantifying this then we're",
+      "start": 391.52,
+      "duration": 3.76
+    },
+    {
+      "text": "going to",
+      "start": 394.24,
+      "duration": 4.16
+    },
+    {
+      "text": "look at regressions multivariate",
+      "start": 395.28,
+      "duration": 4.16
+    },
+    {
+      "text": "regressions",
+      "start": 398.4,
+      "duration": 2.96
+    },
+    {
+      "text": "to accomplish that the scatter plot just",
+      "start": 399.44,
+      "duration": 4.0
+    },
+    {
+      "text": "gives you a quick picture",
+      "start": 401.36,
+      "duration": 5.119
+    },
+    {
+      "text": "visualization that you can quickly see",
+      "start": 403.44,
+      "duration": 4.56
+    },
+    {
+      "text": "the relationship and",
+      "start": 406.479,
+      "duration": 3.44
+    },
+    {
+      "text": "how the relationship changes throughout",
+      "start": 408.0,
+      "duration": 5.36
+    },
+    {
+      "text": "the range of the input",
+      "start": 409.919,
+      "duration": 6.161
+    },
+    {
+      "text": "but the multivariate regression is going",
+      "start": 413.36,
+      "duration": 4.239
+    },
+    {
+      "text": "to be able to give you",
+      "start": 416.08,
+      "duration": 4.32
+    },
+    {
+      "text": "quantitatively what is the impact of the",
+      "start": 417.599,
+      "duration": 4.88
+    },
+    {
+      "text": "input on the output",
+      "start": 420.4,
+      "duration": 3.76
+    },
+    {
+      "text": "so that allows you to answer questions",
+      "start": 422.479,
+      "duration": 3.761
+    },
+    {
+      "text": "like if i earned",
+      "start": 424.16,
+      "duration": 3.68
+    },
+    {
+      "text": "ten thousand dollars more for my",
+      "start": 426.24,
+      "duration": 3.84
+    },
+    {
+      "text": "starting salary how much sooner",
+      "start": 427.84,
+      "duration": 5.6
+    },
+    {
+      "text": "would i be able to retire uh",
+      "start": 430.08,
+      "duration": 5.519
+    },
+    {
+      "text": "so of course in order to answer that",
+      "start": 433.44,
+      "duration": 3.12
+    },
+    {
+      "text": "question",
+      "start": 435.599,
+      "duration": 4.081
+    },
+    {
+      "text": "an easy attempt at it is to just go to",
+      "start": 436.56,
+      "duration": 4.079
+    },
+    {
+      "text": "your model inputs",
+      "start": 439.68,
+      "duration": 3.6
+    },
+    {
+      "text": "and increase the salary by 10 000 and",
+      "start": 440.639,
+      "duration": 3.521
+    },
+    {
+      "text": "see what happens",
+      "start": 443.28,
+      "duration": 3.6
+    },
+    {
+      "text": "to the years of retirement that's kind",
+      "start": 444.16,
+      "duration": 3.36
+    },
+    {
+      "text": "of",
+      "start": 446.88,
+      "duration": 2.0
+    },
+    {
+      "text": "that's you know basically the",
+      "start": 447.52,
+      "duration": 3.84
+    },
+    {
+      "text": "sensitivity analysis approach",
+      "start": 448.88,
+      "duration": 5.68
+    },
+    {
+      "text": "um but it is a simplistic way of looking",
+      "start": 451.36,
+      "duration": 4.239
+    },
+    {
+      "text": "at it",
+      "start": 454.56,
+      "duration": 4.079
+    },
+    {
+      "text": "it doesn't take into account how all the",
+      "start": 455.599,
+      "duration": 3.921
+    },
+    {
+      "text": "other inputs",
+      "start": 458.639,
+      "duration": 3.12
+    },
+    {
+      "text": "in the model could change you're still",
+      "start": 459.52,
+      "duration": 4.239
+    },
+    {
+      "text": "just assuming that those other inputs",
+      "start": 461.759,
+      "duration": 4.321
+    },
+    {
+      "text": "are at their baseline values",
+      "start": 463.759,
+      "duration": 4.481
+    },
+    {
+      "text": "so by doing the monte carlo simulation",
+      "start": 466.08,
+      "duration": 3.76
+    },
+    {
+      "text": "we take into account",
+      "start": 468.24,
+      "duration": 4.079
+    },
+    {
+      "text": "all these cases of all the other inputs",
+      "start": 469.84,
+      "duration": 5.68
+    },
+    {
+      "text": "being at different values",
+      "start": 472.319,
+      "duration": 3.201
+    },
+    {
+      "text": "so multivariate regression basically we",
+      "start": 475.759,
+      "duration": 4.081
+    },
+    {
+      "text": "put",
+      "start": 479.28,
+      "duration": 3.199
+    },
+    {
+      "text": "whatever output we're trying to analyze",
+      "start": 479.84,
+      "duration": 4.16
+    },
+    {
+      "text": "as our y variable",
+      "start": 482.479,
+      "duration": 3.44
+    },
+    {
+      "text": "and then each of our inputs as the x",
+      "start": 484.0,
+      "duration": 3.28
+    },
+    {
+      "text": "variables",
+      "start": 485.919,
+      "duration": 3.28
+    },
+    {
+      "text": "and this will be able to tell us",
+      "start": 487.28,
+      "duration": 3.44
+    },
+    {
+      "text": "quantitatively",
+      "start": 489.199,
+      "duration": 4.0
+    },
+    {
+      "text": "what is the relationship what's the",
+      "start": 490.72,
+      "duration": 3.199
+    },
+    {
+      "text": "strength",
+      "start": 493.199,
+      "duration": 2.641
+    },
+    {
+      "text": "magnitude of the relationship and",
+      "start": 493.919,
+      "duration": 3.28
+    },
+    {
+      "text": "direction",
+      "start": 495.84,
+      "duration": 5.44
+    },
+    {
+      "text": "uh between the input and the output",
+      "start": 497.199,
+      "duration": 4.081
+    },
+    {
+      "text": "so the process or how you interpret the",
+      "start": 502.479,
+      "duration": 7.041
+    },
+    {
+      "text": "uh results of that as we run a",
+      "start": 507.28,
+      "duration": 3.28
+    },
+    {
+      "text": "multivariate",
+      "start": 509.52,
+      "duration": 4.24
+    },
+    {
+      "text": "regression we get some fit statistics",
+      "start": 510.56,
+      "duration": 5.839
+    },
+    {
+      "text": "and then the part that really matters",
+      "start": 513.76,
+      "duration": 3.36
+    },
+    {
+      "text": "for this",
+      "start": 516.399,
+      "duration": 4.0
+    },
+    {
+      "text": "is the coefficients and the",
+      "start": 517.12,
+      "duration": 8.24
+    },
+    {
+      "text": "p-values and if the p-value is high",
+      "start": 520.399,
+      "duration": 7.44
+    },
+    {
+      "text": "that's evidence of there not being a",
+      "start": 525.36,
+      "duration": 4.159
+    },
+    {
+      "text": "relationship",
+      "start": 527.839,
+      "duration": 5.0
+    },
+    {
+      "text": "if it's low then there is at least some",
+      "start": 529.519,
+      "duration": 5.361
+    },
+    {
+      "text": "relationship it doesn't necessarily mean",
+      "start": 532.839,
+      "duration": 3.721
+    },
+    {
+      "text": "that the relationship is strong or",
+      "start": 534.88,
+      "duration": 3.84
+    },
+    {
+      "text": "even meaningful in your model but it",
+      "start": 536.56,
+      "duration": 3.68
+    },
+    {
+      "text": "does mean that there is evidence that",
+      "start": 538.72,
+      "duration": 3.28
+    },
+    {
+      "text": "there is a relationship",
+      "start": 540.24,
+      "duration": 4.8
+    },
+    {
+      "text": "and then you look at the coefficient to",
+      "start": 542.0,
+      "duration": 6.48
+    },
+    {
+      "text": "assess the strength or magnitude of that",
+      "start": 545.04,
+      "duration": 7.68
+    },
+    {
+      "text": "relationship so the coefficient",
+      "start": 548.48,
+      "duration": 7.76
+    },
+    {
+      "text": "in multivariate regression is",
+      "start": 552.72,
+      "duration": 5.28
+    },
+    {
+      "text": "how much does the outcome variable",
+      "start": 556.24,
+      "duration": 3.44
+    },
+    {
+      "text": "change when there",
+      "start": 558.0,
+      "duration": 4.72
+    },
+    {
+      "text": "is a one unit increase in",
+      "start": 559.68,
+      "duration": 6.8
+    },
+    {
+      "text": "the input variable or x variable",
+      "start": 562.72,
+      "duration": 6.64
+    },
+    {
+      "text": "so to give an example of that say we're",
+      "start": 566.48,
+      "duration": 4.72
+    },
+    {
+      "text": "working still with this",
+      "start": 569.36,
+      "duration": 3.84
+    },
+    {
+      "text": "retirement model and you get a",
+      "start": 571.2,
+      "duration": 5.92
+    },
+    {
+      "text": "coefficient of negative .0002",
+      "start": 573.2,
+      "duration": 7.12
+    },
+    {
+      "text": "on starting salary when years to",
+      "start": 577.12,
+      "duration": 6.0
+    },
+    {
+      "text": "retirement is your y variable",
+      "start": 580.32,
+      "duration": 4.639
+    },
+    {
+      "text": "so what that means is a one unit",
+      "start": 583.12,
+      "duration": 3.6
+    },
+    {
+      "text": "increase in our x",
+      "start": 584.959,
+      "duration": 4.241
+    },
+    {
+      "text": "is associated with a negative point zero",
+      "start": 586.72,
+      "duration": 3.2
+    },
+    {
+      "text": "zero zero",
+      "start": 589.2,
+      "duration": 5.12
+    },
+    {
+      "text": "two unit increase or decrease in the y",
+      "start": 589.92,
+      "duration": 8.479
+    },
+    {
+      "text": "um so our salary is in dollars and so",
+      "start": 594.32,
+      "duration": 5.92
+    },
+    {
+      "text": "that means that's a one dollar increase",
+      "start": 598.399,
+      "duration": 3.521
+    },
+    {
+      "text": "in salary",
+      "start": 600.24,
+      "duration": 4.56
+    },
+    {
+      "text": "and then our year's retirement is in",
+      "start": 601.92,
+      "duration": 3.68
+    },
+    {
+      "text": "years",
+      "start": 604.8,
+      "duration": 2.56
+    },
+    {
+      "text": "and so that's a one dollar increase in",
+      "start": 605.6,
+      "duration": 3.28
+    },
+    {
+      "text": "salary associated with a",
+      "start": 607.36,
+      "duration": 4.96
+    },
+    {
+      "text": "decrease in year's retirement of 0.0002",
+      "start": 608.88,
+      "duration": 5.04
+    },
+    {
+      "text": "years",
+      "start": 612.32,
+      "duration": 4.639
+    },
+    {
+      "text": "of course that's not",
+      "start": 613.92,
+      "duration": 5.28
+    },
+    {
+      "text": "a nice way to interpret it right like",
+      "start": 616.959,
+      "duration": 4.0
+    },
+    {
+      "text": "who cares about a one dollar increase in",
+      "start": 619.2,
+      "duration": 2.879
+    },
+    {
+      "text": "salary that's not",
+      "start": 620.959,
+      "duration": 3.601
+    },
+    {
+      "text": "gonna be a meaningful thing uh but the",
+      "start": 622.079,
+      "duration": 4.241
+    },
+    {
+      "text": "nice thing about these",
+      "start": 624.56,
+      "duration": 3.36
+    },
+    {
+      "text": "uh relationships is you can just",
+      "start": 626.32,
+      "duration": 3.28
+    },
+    {
+      "text": "multiply them up",
+      "start": 627.92,
+      "duration": 3.68
+    },
+    {
+      "text": "in order to get it in terms of something",
+      "start": 629.6,
+      "duration": 3.84
+    },
+    {
+      "text": "which is meaningful",
+      "start": 631.6,
+      "duration": 4.32
+    },
+    {
+      "text": "so we can multiply both sides here by",
+      "start": 633.44,
+      "duration": 3.28
+    },
+    {
+      "text": "ten thousand",
+      "start": 635.92,
+      "duration": 3.919
+    },
+    {
+      "text": "to now change it into a ten thousand",
+      "start": 636.72,
+      "duration": 5.119
+    },
+    {
+      "text": "dollar increase in salary",
+      "start": 639.839,
+      "duration": 4.401
+    },
+    {
+      "text": "is associated with a decrease in use to",
+      "start": 641.839,
+      "duration": 3.68
+    },
+    {
+      "text": "retirement by",
+      "start": 644.24,
+      "duration": 4.64
+    },
+    {
+      "text": "two years so whenever you interpret the",
+      "start": 645.519,
+      "duration": 4.641
+    },
+    {
+      "text": "coefficients",
+      "start": 648.88,
+      "duration": 3.68
+    },
+    {
+      "text": "you want to put them in terms of",
+      "start": 650.16,
+      "duration": 3.919
+    },
+    {
+      "text": "something which is meaningful",
+      "start": 652.56,
+      "duration": 4.399
+    },
+    {
+      "text": "for your model no one cares about a one",
+      "start": 654.079,
+      "duration": 4.641
+    },
+    {
+      "text": "dollar change in salary how about a ten",
+      "start": 656.959,
+      "duration": 3.281
+    },
+    {
+      "text": "thousand dollar change",
+      "start": 658.72,
+      "duration": 5.2
+    },
+    {
+      "text": "and let's interpret it in that context",
+      "start": 660.24,
+      "duration": 3.68
+    },
+    {
+      "text": "an important thing as you go to",
+      "start": 665.2,
+      "duration": 3.759
+    },
+    {
+      "text": "interpret the results from the",
+      "start": 667.279,
+      "duration": 3.281
+    },
+    {
+      "text": "regression",
+      "start": 668.959,
+      "duration": 4.241
+    },
+    {
+      "text": "um and this can definitely be a point of",
+      "start": 670.56,
+      "duration": 4.16
+    },
+    {
+      "text": "confusion",
+      "start": 673.2,
+      "duration": 4.72
+    },
+    {
+      "text": "is that these coefficients are",
+      "start": 674.72,
+      "duration": 7.44
+    },
+    {
+      "text": "all less all else constant so that means",
+      "start": 677.92,
+      "duration": 7.2
+    },
+    {
+      "text": "that this you know ten thousand dollar",
+      "start": 682.16,
+      "duration": 4.56
+    },
+    {
+      "text": "increase in salary decreases years to",
+      "start": 685.12,
+      "duration": 3.839
+    },
+    {
+      "text": "retirement by two years",
+      "start": 686.72,
+      "duration": 6.48
+    },
+    {
+      "text": "that is not taking into account um",
+      "start": 688.959,
+      "duration": 6.801
+    },
+    {
+      "text": "that you know when you're able to earn",
+      "start": 693.2,
+      "duration": 4.319
+    },
+    {
+      "text": "more money you're probably able to save",
+      "start": 695.76,
+      "duration": 3.519
+    },
+    {
+      "text": "more money as well and so the savings",
+      "start": 697.519,
+      "duration": 3.361
+    },
+    {
+      "text": "rate is going to be higher for an",
+      "start": 699.279,
+      "duration": 2.721
+    },
+    {
+      "text": "individual who makes",
+      "start": 700.88,
+      "duration": 4.72
+    },
+    {
+      "text": "more money that is not being captured",
+      "start": 702.0,
+      "duration": 7.44
+    },
+    {
+      "text": "in the coefficient now",
+      "start": 705.6,
+      "duration": 6.16
+    },
+    {
+      "text": "a big reason that i've been saying we",
+      "start": 709.44,
+      "duration": 3.839
+    },
+    {
+      "text": "should use this approach rather than",
+      "start": 711.76,
+      "duration": 1.84
+    },
+    {
+      "text": "just",
+      "start": 713.279,
+      "duration": 2.401
+    },
+    {
+      "text": "sensitivity analysis is because it takes",
+      "start": 713.6,
+      "duration": 3.28
+    },
+    {
+      "text": "into account that all the other",
+      "start": 715.68,
+      "duration": 2.8
+    },
+    {
+      "text": "variables are changing",
+      "start": 716.88,
+      "duration": 3.44
+    },
+    {
+      "text": "so that's where students can get",
+      "start": 718.48,
+      "duration": 4.159
+    },
+    {
+      "text": "confused by this",
+      "start": 720.32,
+      "duration": 4.8
+    },
+    {
+      "text": "because now here we're saying oh but",
+      "start": 722.639,
+      "duration": 4.161
+    },
+    {
+      "text": "we're basically treating all the other",
+      "start": 725.12,
+      "duration": 3.719
+    },
+    {
+      "text": "inputs as constant",
+      "start": 726.8,
+      "duration": 5.36
+    },
+    {
+      "text": "um but it's",
+      "start": 728.839,
+      "duration": 5.481
+    },
+    {
+      "text": "even though we're kind of isolating the",
+      "start": 732.16,
+      "duration": 4.239
+    },
+    {
+      "text": "effect to this one",
+      "start": 734.32,
+      "duration": 5.44
+    },
+    {
+      "text": "uh input with this coefficient",
+      "start": 736.399,
+      "duration": 5.041
+    },
+    {
+      "text": "the regression model is still",
+      "start": 739.76,
+      "duration": 3.92
+    },
+    {
+      "text": "considering all these different cases of",
+      "start": 741.44,
+      "duration": 3.839
+    },
+    {
+      "text": "the input values so you can kind of",
+      "start": 743.68,
+      "duration": 2.56
+    },
+    {
+      "text": "think of it as an",
+      "start": 745.279,
+      "duration": 4.641
+    },
+    {
+      "text": "average across you know thinking about",
+      "start": 746.24,
+      "duration": 6.8
+    },
+    {
+      "text": "um earning salary uh you can think of it",
+      "start": 749.92,
+      "duration": 4.32
+    },
+    {
+      "text": "as an average across",
+      "start": 753.04,
+      "duration": 2.88
+    },
+    {
+      "text": "like sometimes the investment rate was",
+      "start": 754.24,
+      "duration": 3.36
+    },
+    {
+      "text": "high sometimes the investment rate was",
+      "start": 755.92,
+      "duration": 2.479
+    },
+    {
+      "text": "low",
+      "start": 757.6,
+      "duration": 2.32
+    },
+    {
+      "text": "sometimes the saving rate was high",
+      "start": 758.399,
+      "duration": 3.841
+    },
+    {
+      "text": "sometimes the saving rate was low",
+      "start": 759.92,
+      "duration": 4.32
+    },
+    {
+      "text": "taking the average across all these",
+      "start": 762.24,
+      "duration": 3.36
+    },
+    {
+      "text": "different cases",
+      "start": 764.24,
+      "duration": 5.68
+    },
+    {
+      "text": "what was the overall effect of just the",
+      "start": 765.6,
+      "duration": 7.52
+    },
+    {
+      "text": "salary portion",
+      "start": 769.92,
+      "duration": 6.4
+    },
+    {
+      "text": "so if you know that two inputs in your",
+      "start": 773.12,
+      "duration": 4.08
+    },
+    {
+      "text": "model",
+      "start": 776.32,
+      "duration": 4.4
+    },
+    {
+      "text": "are linked as is the case",
+      "start": 777.2,
+      "duration": 5.439
+    },
+    {
+      "text": "uh potentially here with starting salary",
+      "start": 780.72,
+      "duration": 3.84
+    },
+    {
+      "text": "and savings rate you know that",
+      "start": 782.639,
+      "duration": 3.521
+    },
+    {
+      "text": "if you have a higher starting salary",
+      "start": 784.56,
+      "duration": 4.48
+    },
+    {
+      "text": "you're gonna have a higher savings rate",
+      "start": 786.16,
+      "duration": 6.08
+    },
+    {
+      "text": "then you can basically combine the",
+      "start": 789.04,
+      "duration": 6.479
+    },
+    {
+      "text": "coefficients and say well i know when",
+      "start": 792.24,
+      "duration": 3.599
+    },
+    {
+      "text": "the",
+      "start": 795.519,
+      "duration": 1.841
+    },
+    {
+      "text": "salary goes up at ten thousand the",
+      "start": 795.839,
+      "duration": 3.0
+    },
+    {
+      "text": "savings rate is going to go up by five",
+      "start": 797.36,
+      "duration": 3.84
+    },
+    {
+      "text": "percent and then you can add those two",
+      "start": 798.839,
+      "duration": 3.721
+    },
+    {
+      "text": "effects together",
+      "start": 801.2,
+      "duration": 3.6
+    },
+    {
+      "text": "to get the total effect on the years to",
+      "start": 802.56,
+      "duration": 4.48
+    },
+    {
+      "text": "retirement so you can still use these",
+      "start": 804.8,
+      "duration": 4.8
+    },
+    {
+      "text": "regression results to get at the full",
+      "start": 807.04,
+      "duration": 3.84
+    },
+    {
+      "text": "relationship",
+      "start": 809.6,
+      "duration": 4.0
+    },
+    {
+      "text": "it's just that each coefficient is",
+      "start": 810.88,
+      "duration": 3.44
+    },
+    {
+      "text": "interpreting",
+      "start": 813.6,
+      "duration": 4.72
+    },
+    {
+      "text": "just the effect of that variable",
+      "start": 814.32,
+      "duration": 4.0
+    },
+    {
+      "text": "and another thing to be careful about",
+      "start": 819.04,
+      "duration": 4.239
+    },
+    {
+      "text": "here is the units we already talked",
+      "start": 821.279,
+      "duration": 2.481
+    },
+    {
+      "text": "about",
+      "start": 823.279,
+      "duration": 2.56
+    },
+    {
+      "text": "you know how this is a one unit increase",
+      "start": 823.76,
+      "duration": 3.519
+    },
+    {
+      "text": "and you're probably",
+      "start": 825.839,
+      "duration": 3.041
+    },
+    {
+      "text": "in a lot of cases going to need to",
+      "start": 827.279,
+      "duration": 3.281
+    },
+    {
+      "text": "adjust the units",
+      "start": 828.88,
+      "duration": 4.16
+    },
+    {
+      "text": "in order to get that to a meaningful",
+      "start": 830.56,
+      "duration": 4.079
+    },
+    {
+      "text": "number",
+      "start": 833.04,
+      "duration": 3.599
+    },
+    {
+      "text": "uh and that's definitely the case when",
+      "start": 834.639,
+      "duration": 4.481
+    },
+    {
+      "text": "you think about decimals versus",
+      "start": 836.639,
+      "duration": 6.241
+    },
+    {
+      "text": "percentages so you know we're always",
+      "start": 839.12,
+      "duration": 5.839
+    },
+    {
+      "text": "representing our investment returns in",
+      "start": 842.88,
+      "duration": 3.12
+    },
+    {
+      "text": "decimal format",
+      "start": 844.959,
+      "duration": 4.081
+    },
+    {
+      "text": "in our python models and",
+      "start": 846.0,
+      "duration": 6.0
+    },
+    {
+      "text": "a one unit change in decimal format is",
+      "start": 849.04,
+      "duration": 4.56
+    },
+    {
+      "text": "actually a 100",
+      "start": 852.0,
+      "duration": 3.44
+    },
+    {
+      "text": "change it's going from zero to one which",
+      "start": 853.6,
+      "duration": 4.72
+    },
+    {
+      "text": "is zero to one hundred percent",
+      "start": 855.44,
+      "duration": 5.44
+    },
+    {
+      "text": "um and so the coefficient that you'll",
+      "start": 858.32,
+      "duration": 3.199
+    },
+    {
+      "text": "get",
+      "start": 860.88,
+      "duration": 3.04
+    },
+    {
+      "text": "for the investment rate or any other",
+      "start": 861.519,
+      "duration": 3.601
+    },
+    {
+      "text": "decimal",
+      "start": 863.92,
+      "duration": 4.0
+    },
+    {
+      "text": "um decimal number that is actually a",
+      "start": 865.12,
+      "duration": 4.159
+    },
+    {
+      "text": "percentage",
+      "start": 867.92,
+      "duration": 4.479
+    },
+    {
+      "text": "um then basically",
+      "start": 869.279,
+      "duration": 5.841
+    },
+    {
+      "text": "the coefficient is going to be much",
+      "start": 872.399,
+      "duration": 3.841
+    },
+    {
+      "text": "larger",
+      "start": 875.12,
+      "duration": 3.04
+    },
+    {
+      "text": "uh it's going to be a hundred times as",
+      "start": 876.24,
+      "duration": 3.52
+    },
+    {
+      "text": "large as",
+      "start": 878.16,
+      "duration": 4.4
+    },
+    {
+      "text": "the value would be for a 1 change so you",
+      "start": 879.76,
+      "duration": 4.72
+    },
+    {
+      "text": "have to divide by 100",
+      "start": 882.56,
+      "duration": 5.6
+    },
+    {
+      "text": "to get it to a one percent change",
+      "start": 884.48,
+      "duration": 7.2
+    },
+    {
+      "text": "um and if you you know have things in",
+      "start": 888.16,
+      "duration": 5.119
+    },
+    {
+      "text": "percentages it could go the other way",
+      "start": 891.68,
+      "duration": 3.68
+    },
+    {
+      "text": "around in the model",
+      "start": 893.279,
+      "duration": 3.601
+    },
+    {
+      "text": "and so you just need to be careful about",
+      "start": 895.36,
+      "duration": 3.599
+    },
+    {
+      "text": "the units and thinking through",
+      "start": 896.88,
+      "duration": 5.12
+    },
+    {
+      "text": "the coefficients and what",
+      "start": 898.959,
+      "duration": 5.44
+    },
+    {
+      "text": "makes sense to have everything in the",
+      "start": 902.0,
+      "duration": 5.12
+    },
+    {
+      "text": "proper units",
+      "start": 904.399,
+      "duration": 6.24
+    },
+    {
+      "text": "so that's an overview of theoretically",
+      "start": 907.12,
+      "duration": 6.48
+    },
+    {
+      "text": "how and why we're going to analyze the",
+      "start": 910.639,
+      "duration": 4.32
+    },
+    {
+      "text": "relationship",
+      "start": 913.6,
+      "duration": 3.12
+    },
+    {
+      "text": "of inputs and outputs through monte",
+      "start": 914.959,
+      "duration": 3.521
+    },
+    {
+      "text": "carlo simulations",
+      "start": 916.72,
+      "duration": 4.64
+    },
+    {
+      "text": "we'll come back next time to apply monte",
+      "start": 918.48,
+      "duration": 3.919
+    },
+    {
+      "text": "carlo simulation",
+      "start": 921.36,
+      "duration": 3.68
+    },
+    {
+      "text": "to the dynamic salary retirement model",
+      "start": 922.399,
+      "duration": 4.0
+    },
+    {
+      "text": "and within that we're going to see an",
+      "start": 925.04,
+      "duration": 2.4
+    },
+    {
+      "text": "example of",
+      "start": 926.399,
+      "duration": 3.281
+    },
+    {
+      "text": "how we can do all this analysis of",
+      "start": 927.44,
+      "duration": 4.319
+    },
+    {
+      "text": "relating inputs to outputs",
+      "start": 929.68,
+      "duration": 5.48
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 931.759,
+      "duration": 6.401
+    },
+    {
+      "text": "time",
+      "start": 935.16,
+      "duration": 3.0
+    }
+  ]
+}

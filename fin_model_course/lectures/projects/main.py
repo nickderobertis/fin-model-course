@@ -13,5 +13,6 @@ def get_projects_lecture() -> LectureGroup:
         notes.get_project_1_lecture(),
         notes.get_project_2_lecture(),
         notes.get_project_3_lecture(),
+        notes.get_project_4_lecture(),
     ]
     return LectureGroup(title, description, lectures, order=lecture_index, global_resources=resources)
