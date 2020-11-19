@@ -29,28 +29,87 @@
 \date{\today}
 \maketitle
 \begin{section}{Introduction to Free Cash Flows}
-
+\begin{itemize}
+\item As a recap, we are focusing on FCF calculation so that we can do the discounted cash flow (DCF) valuation of a stock
+\item We need to calculate historical FCFs and also forecast future FCFs
+\item Historical FCFs are a mechanical exercise that anyone could do, but forecasting is as much an art as it is a science
+\item FCFs accrue to all investors, debt and equity, and so they can be used to determine the value of the firm
+\item Net income is a measure which accountants have devised to smooth out the cash flows of the company, representing one time outlays which are used in multiple periods by splitting the cost across those periods
+\item As far as valuation is concerned, net income does not matter. FCFs are what matters as they are what is actually happening with the operations in that time period
+\item Unless the historical FCFs are very stable, you should almost always be forecasting the financial statements and calculating the future FCFs rather than forecasting them directly
+\item There is a lot of flexibility in forecasting as you can use dozens of different possible models, and three common forecast targets (levels, growth, percentage of another item)
+\end{itemize}
 \end{section}
 \begin{section}{Introduction to Calculating Historical Free Cash Flows}
-
+\begin{itemize}
+\item There are multiple sets of equations that can be used to calculate free cash flows
+\item Here we will focus on a set of equations that does not require the statement of cash flows, only the income statement and the balance sheet
+\item I usually recommend this approach because then only the income statement and balance sheet need to be forecasted rather than all three financial statements
+\item The philosophy of this approach is that we are starting with net income, undoing the adjustments which have accountants have done, and adding our own adjustments for cash items which are not included in net income to get back to FCFs
+\item Net working capital is not counted in net income, but can be a source or use of cash so it should be included
+\item Capital expenditures are usually spread across the usage of the asset in net income, but here we are adjusting it so the cost is realized in the period of the purchase
+\end{itemize}
 \end{section}
-\begin{section}{Historical Free Cash Flows in Python}
-
+\begin{section}{Historical Free Cash Flows in Python Using Pandas and finstmt}
+\begin{itemize}
+\item Most of the work in calculating historical free cash flows with Pandas is just getting the data loaded, cleaned up, and in the right structure
+\item We use .loc in Pandas to look up a statement item when it is in the index and the columns are the dates
+\item Be careful about the names of columns, they may have gotten loaded in with extra spaces or otherwise not exactly as you expected
+\item Be sure to think about the sign on your item. Are costs represented as positive or negative in the statement?
+\item I created the finstmt package to make all of these operations more convenient and repeatable, with the goal being that you should be able to quickly work with financial statements without all the cleanup operations, and you should be able to provide different statements and have the code work the same
+\item I have continued to add useful features to finstmt such as calculating free cash flows and forecasting
+\item It is easy to do lags and changes in the calculations with finstmt
+\end{itemize}
+\end{section}
+\begin{section}{Historical Free Cash Flows Lab Exercise Overview}
+\begin{itemize}
+\item The first exercise is just about going through the math of the FCF calculation
+\item The second exercise requires you to work with actual financial statements to do the calculations, similar to the example
+\end{itemize}
 \end{section}
 \begin{section}{Introduction to Forecasting}
-
+\begin{itemize}
+\item I could teach an entire course on forecasting. There is far too much material to cover in the time allowed
+\item There is so much complexity as there are multiple options on two dimensions: what to forecast and which model to use
+\item We will focus on only a few possible models in this course to keep things simple
+\item It is up to the modeler which models to use and what to forecast. It should generally be guided by knowledge of the company as well as understanding of the structure of financial statements
+\item The simple time-series models are easy to understand, but the advanced models quickly get into a confusing alphabet soup and are outside the scope of this course
+\item You could also use machine learning models for forecasting
+\item Regardless of the chosen model, the steps to forecasting are the same. So once you learn the steps in this course, you will be able to learn the more advanced models on your own and apply them in the same framework
+\end{itemize}
 \end{section}
 \begin{section}{Simple Time-Series Forecasting Models}
-
+\begin{itemize}
+\item Use the historical average approach when there is not a defined trend or growth in the historical data and when you think that the average will be more relevant than just looking at the most recent value
+\item Use the recent value approach in the same situation, but instead you think that the most recent data is more relevant than an average
+\item If the data are going up or down over time, as long as there is not a repeating pattern within that, use the trend or growth model. Use the trend model when the change seems linear/constant, and the growth model when the change seems exponential/changing over time. If there are repeating patterns within the data, a more complex model will be required
+\end{itemize}
 \end{section}
 \begin{section}{Simple Time-Series Forecasting in Excel}
-
+\begin{itemize}
+\item Most of the calculations are straightforward in Excel
+\item We can use the SLOPE and INTERCEPT functions to fit the trend model without using the Data Analysis Toolpak regression
+\end{itemize}
 \end{section}
 \begin{section}{Simple Time-Series Forecasting in Python}
-
+\begin{itemize}
+\item The calculations themselves are straightforward in Python, though we see a couple new tricks such as transposing a DataFrame and working with the DataFrame index
+\item This example also builds up some functions which could be taken and used in a project
+\end{itemize}
 \end{section}
 \begin{section}{Simple Time-Series Forecasting Lab Overview}
-
+\begin{itemize}
+\item This lab exercise follows closely the structure of the previous example
+\item Through this you should understand the different simple methods
+\end{itemize}
+\end{section}
+\begin{section}{Forecasting Simple Financial Statements in Python with finstmt}
+\begin{itemize}
+\item Forecasting financial statements can be overwhelming because there are so many different line items to think through
+\item finstmt allows you to forecast them all at once, conveniently, and with reasonable baseline assumptions. You can modify the forecast method or target (level, growth, \% of other item) for any item as desired by adjusting the configuration
+\item finstmt also automatically generates plots with confidence intervals for all the line items
+\item finstmt also allows you to make manual adjustments to an existing forecast, either by adjusting the existing forecasted values or by replacing them
+\end{itemize}
 \end{section}
 \begin{section}{Complex Time-Series Forecasting}
 

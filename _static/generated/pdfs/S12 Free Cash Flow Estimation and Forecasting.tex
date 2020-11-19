@@ -4,8 +4,8 @@
 \institute[UF]{\inst{1}
 University of Florida\\
 Department of Finance, Insurance, and Real Estate}
-\usepackage{booktabs}
 \definecolor{darkgreen}{RGB}{31,156,17}
+\usepackage{booktabs}
 \usepackage{xcolor}
 \setbeamertemplate{headline}{\begin{beamercolorbox}[ht=2.25ex, dp=3.75ex]{section in head/foot}
 \insertnavigation{\paperwidth}
@@ -83,10 +83,14 @@ and
 \vfill
 \item Forecasting FCFs is much easier but is not as accurate, both due to lack of granularity and due to typically uneven FCFs
 \vfill
-\item Then there are two main methods of forecasting
+\item We will use
 \underline{time-series methods}
-and
-\underline{\% of item methods}
+to forecast the financial statements, either in the
+\underline{levels}
+of the item, the
+\underline{growth}
+of the item, or as a
+\underline{percentage of another item}
 \end{itemize}
 \end{frame}
 \end{section}
@@ -159,6 +163,19 @@ $\text{Adjustments} = \text{depreciation} + \text{amortization} + \text{stock-ba
 \end{itemize}
 \end{frame}
 \begin{frame}
+\frametitle{Example for Calculating FCFs}
+{
+\setbeamercolor{block title}{bg=darkgreen}
+\begin{block}{Two Ways to Calculate FCFs in Python}
+\begin{itemize}
+\item Go to the course site and download the files in Historical FCF
+\item There should be a Jupyter notebook as well as a data file
+\item We will go through a couple approaches to calculating FCFs in Python.
+\end{itemize}
+\end{block}
+}
+\end{frame}
+\begin{frame}
 \frametitle{Calculate FCF Lab, Level 1}
 {
 \setbeamercolor{block title}{bg=violet}
@@ -177,33 +194,24 @@ $\text{Adjustments} = \text{depreciation} + \text{amortization} + \text{stock-ba
 }
 \label{labs:calculate-fcf-lab-1}
 \end{frame}
-\begin{frame}
-\frametitle{Example for Calculating FCFs}
-{
-\setbeamercolor{block title}{bg=darkgreen}
-\begin{block}{Two Ways to Calculate FCFs in Python}
-\begin{itemize}
-\item Go to Canvas and download the files in Examples > DCF > Historical FCF
-\item There shold be a Jupyter notebook as well as a data file
-\item We will go through a couple approaches to calculating FCFs in Python.
-\end{itemize}
-\end{block}
-}
-\end{frame}
 \end{section}
 \begin{section}[Forecasting Overview]{Approaches to Forecasting}
 \begin{frame}
 \frametitle{Overview of the Methods}
 \begin{itemize}
-\item As mentioned in the intro, we can generally use either time-series methods or \% of item methods.
+\small
+\vfill
+\item As mentioned in the intro, we will use time-series methods on the levels of the item, the growth of the item, or as a percentage of another item
 \vfill
 \item Time-series methods are about numerically estimating future values based on past values
 \vfill
-\item \% of item methods link an item to another item. E.g. setting cost of goods sold to 60\% of sales.
+\item Levels mean we forecast the numbers of the item itself, e.g. sales was 1M two years ago and 1.5M last year so we feed those numbers into our time-series model and predict 2M for the next year
 \vfill
-\item At least some time-series methods must be used, as \% of item methods link the forecast of this item to another item, they can not be the only method
+\item Growth means to first calculate the historical growth rate of the item, then forecast that. E.g. sales grew 10\% two years ago and 8\% last year so we expect it to grow 6\% this year
 \vfill
-\item Both methods can be adjusted by the analysts qualitative projections of the future
+\item Percentage of item methods link an item to another item. E.g. setting cost of goods sold to 60\% of sales. That percentage still needs to be forecasted
+\vfill
+\item Any forecast can be adjusted by the analyst's qualitative projections of the future. The forecast method may also have to be chosen with the qualitative analysis in mind
 \end{itemize}
 \end{frame}
 \begin{frame}
@@ -238,9 +246,9 @@ as the prediction for all future values
 \vfill
 \item A more realistic model will also include estimating the
 \underline{trend}
-or growth of the historical values and applying that to the future
+or \underline{growth} of the historical values and applying that to the future
 \vfill
-\item More advanced models use autoregressive terms (past values predict future values), moving average terms (past errors predict future values), or conditional heteroskedasticity terms (changing variance over time)
+\item More advanced models use autoregressive terms (recent values predict future values), moving average terms (recent errors predict future values), or conditional heteroskedasticity terms (changing variance over time)
 \vfill
 \item Examples of these advanced models include AR, MA, ARMA, ARCH, GAM, and many more
 \end{itemize}
@@ -252,7 +260,7 @@ or growth of the historical values and applying that to the future
 \vfill
 \item If the data is historically constant or expected to be constant in the future, using the average or most recent value should be enough
 \vfill
-\item If the data follows a defined trend and doesn't have historical patterns, then using the trend should be enough
+\item If the data follows a defined trend or growth and doesn't have historical patterns, then using the trend or growth models should be enough
 \vfill
 \item If there are historical patterns in the data, such as seasonality, then more advanced models are required.
 \end{itemize}
@@ -282,13 +290,13 @@ typically via a plot.
 \begin{frame}
 \frametitle{What to Forecast?}
 \begin{itemize}
-\item We also mentioned
-\underline{\% of item}
-methods as a general forecasting approach
+\item When we forecast levels, just use the forecasted values and you are done
 \vfill
-\item These methods still require a time-series forecast. Instead of directly forecasting the item, you will be forecasting future item percentages, then using these in combination with the forecast of the referenced item to generate the prediction
+\item When we forecast growth, calculate the historical growth, run the forecast on that, then apply the predicted future growth from the final historical period to generate the forecasted levels
 \vfill
-\item E.g. use the average approach to say historically COGS was 40\% of sales, and so estimate COGS as 40\% of sales going forward
+\item For percentage of item methods, calculate the historical percentage of the item, forecast future item percentages, then use these in combination with the forecast of the referenced item to generate the prediction
+\vfill
+\item E.g. use the average approach to say historically COGS was 40\% of sales, and so estimate COGS as 40\% of sales going forward. Multiply the forecasted sales by 40\% to get the COGS
 \end{itemize}
 \end{frame}
 \end{section}
@@ -343,22 +351,28 @@ To predict, use that latest value for all future values
 \vfill
 \begin{itemize}
 \item \textbf{Fit:}
-\begin{itemize}
-\item \underline{Method 1}
 Run an OLS regression with a constant and time as the independent variable, where time is measured in number of periods since the beginning
-\item \underline{Method 2}
-Calculate the compounded annual growth rate (CAGR) as
-$\frac{y_T}{y_0}^{\frac{1}{n}} - 1$
-\end{itemize}
 \vfill
 \item \textbf{Predict:}
-\begin{itemize}
-\item \underline{Method 1}
 For each $t$ you want to predict, calculate $a + \beta t$
-\item \underline{Method 2}
-Calculate future periods using the CAGR as
-$y_{T + n} = y_T * \text{CAGR}^n$
 \end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Using the CAGR Model}
+\begin{block}{CAGR}
+\begin{equation}
+	y_{{T + f}} = y_T * (\frac{y_T}{y_0}^{\frac{1}{n}})^f
+\end{equation}
+\end{block}
+\vfill
+\begin{itemize}
+\item \textbf{Fit:}
+Calculate the compounded annual growth rate (CAGR) as
+$\frac{y_T}{y_0}^{\frac{1}{n}} - 1$
+\vfill
+\item \textbf{Predict:}
+Calculate future periods by compounding CAGR on the latest historical period
+$y_{T + f} = y_T * (1 + \text{CAGR})^f$
 \end{itemize}
 \end{frame}
 \begin{frame}
@@ -367,8 +381,8 @@ $y_{T + n} = y_T * \text{CAGR}^n$
 \setbeamercolor{block title}{bg=darkgreen}
 \begin{block}{Example for Simple Time-Series Forecasting}
 \begin{itemize}
-\item Go to Canvas and download the files in Examples > DCF > Forecasting > Simple
-\item There shold be a Jupyter notebook as well as two Excel files. Place these all in the same folder
+\item Go to the course site and download the files in Examples > DCF > Forecasting > Simple
+\item There should be a Jupyter notebook as well as two Excel files. Place these all in the same folder
 \item We will walk through "Sales COGS Forecasted.xlsx" to show forecasting in Excel, and "Forecast Sales COGS Simple.ipynb" for forecasting in Python. "Sales COGS.xlsx" contains the source data
 \end{itemize}
 \end{block}
@@ -384,8 +398,8 @@ $y_{T + n} = y_T * \text{CAGR}^n$
 \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/}{the course site}}}
 and download "Debt Interest.xlsx"
 \item Forecast the next value of total debt using trend regression approach
-\item Forecast the next value of interest using the four approaches (average, recent, trend reg, trend CAGR)
-\item Forecast the next value of interest using the \% of total debt method, with the percentages forecasted using the four approaches (average, recent, trend reg, trend CAGR)
+\item Forecast the next value of interest using the four approaches (average, recent, trend, CAGR)
+\item Forecast the next value of interest using the \% of total debt method, with the percentages forecasted using the four approaches (average, recent, trend, CAGR)
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
@@ -396,6 +410,18 @@ and download "Debt Interest.xlsx"
 \end{block}
 }
 \label{labs:simple-forecast-lab-1}
+\end{frame}
+\begin{frame}
+\frametitle{Forecasting Financial Statements with Simple Time-Series in Python}
+{
+\setbeamercolor{block title}{bg=darkgreen}
+\begin{block}{Use finstmt for Financial Statement Forecasting}
+\begin{itemize}
+\item Go to the course site and download "Forecasting Financial Statements.ipynb"
+\item We will walk through using \texttt{finstmt} to forecast financial statements using simple time-series models
+\end{itemize}
+\end{block}
+}
 \end{frame}
 \end{section}
 \begin{section}[Complex Forecast]{Forecasting Complex Time-Series}
@@ -450,7 +476,7 @@ to Walmart's quarterly sales
 \begin{itemize}
 \item So you've determined a trend alone will not fit the historical data. What are next steps?
 \vfill
-\item Generally fitting the best time-series model is an involved process which requires subtantial knowledge of how the models work, see
+\item Generally fitting the best time-series model is an involved process which requires substantial knowledge of how the models work, see
 \textcolor{blue}{\underline{\href{https://www.seanabu.com/2016/03/22/time-series-seasonal-ARIMA-model-in-python/}{this blog post}}}
 for details
 \vfill
@@ -484,8 +510,8 @@ For each $t$ you want to predict, calculate $a + \beta t$ adding the appropriate
 \setbeamercolor{block title}{bg=darkgreen}
 \begin{block}{Example for Complex Time-Series Forecasting}
 \begin{itemize}
-\item Go to Canvas and download the files in Examples > DCF > Forecasting > Complex
-\item There shold be a Jupyter notebook as well as two Excel files. Place these all in the same folder
+\item Go to the course site and download the files in Examples > DCF > Forecasting > Complex
+\item There should be a Jupyter notebook as well as two Excel files. Place these all in the same folder
 \item We will walk through "Forecasting Quarterly Financial Statements.ipynb" to show forecasting in Python using both the Quarterly Seasonal Trend Model and the automated software approach.
 \end{itemize}
 \end{block}
@@ -652,10 +678,10 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/DCF/FCF/WMT Balance Sheet.xlsx}{WMT Balance Sheet}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Historical FCF/Calculating Historical FCF.ipynb}{Calculating Historical FCF}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Historical FCF/Exxon Mobil Corporation NYSE XOM Financials.xls}{Exxon-Mobil Financials}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/py-finstmt/}{finstmt Documentation}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Simple/Sales COGS.xlsx}{Sales COGS}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Simple/Sales COGS Forecasted.xlsx}{Sales COGS Forecasted}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Simple/Forecast Sales COGS Simple.ipynb}{Forecast Sales COGS Simple}}}
-\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Simple/Forecasting Financial Statements.ipynb}{Forecasting Financial Statements}}}
 \end{enumerate}
 \vfill
 \end{block}
@@ -668,9 +694,10 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \setbeamercolor{block title}{bg=teal}
 \begin{block}{Lecture Resources (2/2)}
 \begin{enumerate}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/DCF/Forecasting/Simple/Debt Interest.xlsx}{Debt Interest}}}
+\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Simple/Forecasting Financial Statements.ipynb}{Forecasting Financial Statements}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Simple/cat\_annual\_bs.csv}{CAT Balance Sheet}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Simple/cat\_annual\_income.csv}{CAT Income Statement}}}
-\item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Materials for Lab Exercises/DCF/Forecasting/Simple/Debt Interest.xlsx}{Debt Interest}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Complex/WMT Balance Sheet.xlsx}{WMT Balance Sheet}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Complex/WMT Balance Sheet.xlsx}{WMT Income Statement}}}
 \item \textcolor{blue}{\underline{\href{https://nickderobertis.github.io/fin-model-course/\_static/Examples/DCF/Forecasting/Complex/Forecasting Quarterly Financial Statements.ipynb}{Forecasting Quarterly Financial Statements}}}
@@ -769,8 +796,8 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \begin{block}{Forecasting Simple Time-Series, Answers}
 \begin{enumerate}
 \item The forecasted value of total debt should be \$6,867
-\item The directly forecasted values of interest should be \$1,600, \$1,900, \$2,300, and \$2,391, for average, recent, trend reg, trend CAGR, respectively
-\item The \% of debt forecasted values of interest should be \$2,072, \$2,139, \$2,379, and \$2,312, for average, recent, trend reg, trend CAGR, respectively
+\item The directly forecasted values of interest should be \$1,600, \$1,900, \$2,300, and \$2,391, for average, recent, trend, CAGR, respectively
+\item The \% of debt forecasted values of interest should be \$2,072, \$2,139, \$2,379, and \$2,312, for average, recent, trend, CAGR, respectively
 \end{enumerate}
 \vfill
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
