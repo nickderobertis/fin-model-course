@@ -897,8 +897,8 @@ Description
 Level 1
 ^^^^^^^^^^
 
-- A chemical manufacturer has a 7.0% coupon, annual pay 1000 par value bond outstanding, priced at \$1042.12 on 2020-11-19.
-- If the bond matures on 2023-11-19, what is the cost of debt for this company? The tax rate is 35%.
+- A chemical manufacturer has a 7.0% coupon, annual pay 1000 par value bond outstanding, priced at \$1042.12 on 2020-11-25.
+- If the bond matures on 2023-11-25, what is the cost of debt for this company? The tax rate is 35%.
 
 Level 2
 ^^^^^^^^^^
@@ -926,3 +926,93 @@ Level 2
 
 - The pre-tax cost of debt for Walmart in 2019-07-31 is 1.14%
 - The after-tax cost of debt for Walmart in 2019-07-31 is 0.85%
+
+Free Cash Flow Calculation
+=============================
+
+.. youtube:: zVTkT5p0SHs
+    :height: 315
+    :width: 80%
+    :align: center
+
+|
+            
+Description
+--------------
+
+Level 1
+^^^^^^^^^^
+
+- Calculate free cash flow from the following information:
+- Net income is 300, the total of non-cash expenditures is 100, the changes in accounts receivable, inventory, accounts payable, and PPE are 1000, 500, 800, and 2000, and depreciation & amortization is 200.
+
+Level 2
+^^^^^^^^^^
+
+- Load in the income statement and balance sheet data associated with Project 3, "WMT Balance Sheet.xlsx" and "WMT Income Statement.xlsx"
+- Calculate the free cash flows from these data. Note that some items are missing in these data such as depreciation. You will just need to exclude any missing items from your calculation
+- Get the FCFs for 2019-04-30 and 2019-07-31.
+
+Resources
+------------
+
+
+- :download:`Slides - Free Cash Flow Estimation and Forecasting </_static/generated/pdfs/S12 Free Cash Flow Estimation and Forecasting.pdf>`
+        
+
+- :download:`WMT Balance Sheet </_static/Materials for Lab Exercises/DCF/FCF/WMT Balance Sheet.xlsx>`
+        
+
+- :download:`WMT Income Statement </_static/Materials for Lab Exercises/DCF/FCF/WMT Income Statement.xlsx>`
+        
+
+Answers
+----------
+
+Level 1
+^^^^^^^^^^
+
+- The NWC is \$700
+- The CapEx is \$2,200
+- The FCF is \$-2,500
+
+Level 2
+^^^^^^^^^^
+
+- The FCF for 2019-04-30 is \$-11,495,000,000
+- The FCF for 2019-07-31 is \$4,327,000,000
+
+Forecasting Simple Time-Series
+=================================
+
+.. youtube:: 9td30aTGAN0
+    :height: 315
+    :width: 80%
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Go to `the course site <https://nickderobertis.github.io/fin-model-course/>`_ and download "Debt Interest.xlsx"
+- Forecast the next value of total debt using trend regression approach
+- Forecast the next value of interest using the four approaches (average, recent, trend, CAGR)
+- Forecast the next value of interest using the % of total debt method, with the percentages forecasted using the four approaches (average, recent, trend, CAGR)
+
+Resources
+------------
+
+
+- :download:`Slides - Free Cash Flow Estimation and Forecasting </_static/generated/pdfs/S12 Free Cash Flow Estimation and Forecasting.pdf>`
+        
+
+- :download:`Debt Interest </_static/Materials for Lab Exercises/DCF/Forecasting/Simple/Debt Interest.xlsx>`
+        
+
+Answers
+----------
+
+- The forecasted value of total debt should be \$6,867
+- The directly forecasted values of interest should be \$1,600, \$1,900, \$2,300, and \$2,391, for average, recent, trend, CAGR, respectively
+- The % of debt forecasted values of interest should be \$2,072, \$2,139, \$2,379, and \$2,312, for average, recent, trend, CAGR, respectively
