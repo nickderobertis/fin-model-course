@@ -112,21 +112,61 @@
 \end{itemize}
 \end{section}
 \begin{section}{Complex Time-Series Forecasting}
-
+\begin{itemize}
+\item Forecasts are simple when the data are just trending upwards or downwards without any repeating pattern
+\item Once there are repeating patterns in the data, more advanced models are needed
+\item Seasonality is a classic cause of these repeating patterns. A cruise line is going to have much higher sales in the summer than in the winter, and this pattern is going to repeat every year
+\item In general, these advanced models are outside of the scope of the course. Here we just cover the quarterly seasonal trend model which is specifically designed to deal with this seasonality in quarterly data, which should be sufficient for DCF financial statement forecasting
+\item Dummy variables are just those which take on a value of 1 for true and 0 for false
+\item If you need to forecast higher frequency data for other purposes, the quarterly seasonal trend model will not be a good fit. Other frequency seasonality models can be fit, but it would usually be better to go to the full model selection process
+\item Thankfully, we have software solutions to fit advanced models for us such as prophet, which is integrated into finstmt
+\end{itemize}
 \end{section}
 \begin{section}{Complex Time-Series Forecasting in Python - Manual Method}
-
+\begin{itemize}
+\item To estimate the quarterly seasonal trend model, most of the work is in setting up the data
+\item We need to create a t variable as well as dummies for the quarters
+\item While it would not be too difficult to manually calculate dummies, thankfully pandas has a get\_dummies method
+\item We still follow the same general forecasting process: fit the model on historical, use it to predict the future
+\item In contrast to the standard linear trend model, when fitting we just add the coefficient of the dummy variable which corresponds to the current month
+\item pandas date\_range is useful to generate our future dates for prediction
+\item We can use pandas concat to put together the historical and forecasted series to generate a single plot
+\end{itemize}
 \end{section}
 \begin{section}{Complex Time-Series Forecasting in Python - finstmt Method}
-
+\begin{itemize}
+\item We need to install fbprophet to work through this exercise
+\item This is the first package we have installed which needs to be installed by Anaconda rather than pip as there are additional non-Python dependencies
+\item You can change the default forecast method for your statements in finstmt with stmts.config.update\_all
+\item "auto" is the forecast method which uses fbprophet in the background to fit the model. fbprophet takes some time to do its work
+\item finstmt handles balancing the balance sheet for you. This also will take substantial time if you are forecasting many periods
+\item fcst\_stmts.plot can plot all the line items or just a subset, including the historical, forecasted, and confidence interval
+\end{itemize}
 \end{section}
 \begin{section}{Complex Time-Series Forecasting Lab Overview}
-
+\begin{itemize}
+\item The exercise here is very similar to the examples we just worked through
+\end{itemize}
 \end{section}
 \begin{section}{Applying Forecasting to Free Cash Flows}
-
+\begin{itemize}
+\item Everything we've learned on forecasting thus far is general to anything you want to forecast. Now let's see what matters for financial statements specically
+\item It is generally preferred to forecast statement line items rather than FCFs directly, as FCFs tend to be very noisy and hard to predict from the time-series
+\item Do not forecast calculated items. Forecast their components then calculate them
+\item Balancing the balance sheet is an additional step unique to financial statement forecasting
+\item Almost definitely after doing your initial forecasts, your balance sheet will be significantly off from balancing. But we know from accounting that it has to balance
+\item Usually cash or debt are adjusted as "plugs" through an optimization process
+\item finstmt makes this happen automatically, but also gives you full control over which line items are used as plugs and how closely to balance it. Balancing closer will take longer.
+\end{itemize}
 \end{section}
 \begin{section}{Calculating a Terminal Value}
-
+\begin{itemize}
+\item The last piece of the DCF model we have not covered is the terminal value
+\item Because it is not possible and certainly not accurate to forecast many years in the future, we use a terminal value to represent the enterprise value at some future date
+\item DCF models are extremely sensitive to the terminal value assumptions, so they should absolutely be included in sensitivity analysis and MC simulations
+\item In the exit multiple method, we use current valuation ratios with projected financials to estimate the terminal value
+\item In the perpetuity growth method, we assume that the FCFs will have constant growth after the forecast period and take the value of those constantly growing FCFs
+\item We include the TV in the final FCF year and take the present value to get the current enterprise value, which can then be converted into equity value and stock price
+\end{itemize}
 \end{section}
 \end{document}

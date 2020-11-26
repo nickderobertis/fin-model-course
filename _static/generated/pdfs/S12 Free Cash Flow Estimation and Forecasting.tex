@@ -561,6 +561,32 @@ and download "CAT Balance Sheet.xlsx" and "CAT Income Statement.xlsx"
 \item For example, sales, COGS, SG\&A should be forecasted, not operating profit
 \vfill
 \item You should set your model up so that these calculatable items are calculated in the historicals, then carry that through to the forecasted
+\vfill
+\item Set items as a percentage of other items when it is logical that they should scale together. For example, interest expense should be forecasted as a percentage of total debt, as if the company takes on more debt, interest expense should increase proportionally
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Don't Be Out of Balance}
+\begin{itemize}
+\item Despite forecasting line items individually, you must attempt to keep the balance sheet balanced in the future
+\vfill
+\item If your forecast shows assets growing to be much greater than liabilities and equity, that implies that the company will need to raise additional funds to finance the growth in the assets. Usually increasing debt is the solution.
+\vfill
+\item If your forecast shows assets lower than liabilities and equity, it means that the profits or other sources of funds are not being properly allocated to the assets side. Usually increasing cash is the solution
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Balancing the Balance Sheet}
+\begin{itemize}
+\small
+\vfill
+\item The general process is to run your forecasts, then use another approach to adjust either cash or debt to make the balance sheet balance. 
+\vfill
+\item These adjusted values are called "plugs" because we are "plugging" in whatever makes the forecast valid
+\vfill
+\item To make the adjustment in Excel, calculate the absolute value of the difference between assets and liabilities + equity, then use goal seek (single year forecast) or solver (multi-year forecast) to minimize the value
+\vfill
+\item In Python, the steps would be similar, only using scipy minimize instead of solver, but finstmt handles this automatically for you. When you run a forecast, it will balance the balance sheet without any further action from you. You can change how accurate it is by setting bs\_diff\_max and you can change which line items are used as plugs in the forecast config
 \end{itemize}
 \end{frame}
 \end{section}
@@ -603,7 +629,7 @@ and
 \vfill
 \item Each ratio will yield a different terminal value, leading to a different final stock price in your model. It is typical to report results with the different measures to get a range.
 \vfill
-\item For all the EV ratios, multiply the statement item by the ratio to get the EV, then adjust theEV using final forecasted values to get the equity value and stock price
+\item For all the EV ratios, multiply the statement item by the ratio to get the EV, then adjust the EV using final forecasted values to get the equity value and stock price
 \vfill
 \item For P/E, calculate final period earnings per share and multiply by the ratio to get the stock price
 \end{itemize}
@@ -643,10 +669,10 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \setbeamercolor{block title}{bg=violet}
 \begin{block}{DCF Stock Price using Terminal Values}
 \begin{enumerate}
-\item Calculate possible stock prices today for a hypothetical company. Use EV/EBITDA, EV/Sales, EV/FCF, and P/E and the perpetuity growth method to determine five different possible terminal values. You have already determined that the next 5 years FCFs will be \$1,324M. 
+\item Calculate possible stock prices today for a hypothetical company. Use EV/EBITDA, EV/Sales, EV/FCF, and P/E and the perpetuity growth method to determine five different possible terminal values. You have already determined that the next 5 years FCFs will be \$1,324M in each year. 
 \item EV/EBITDA is 18.58, EV/Sales is 1.92, EV/FCF is 11.82, and P/E is 39.30.
 \item Final period forecasted financial statement values are as follows: EBITDA is \$1,500M, sales is \$7,898M, and net income is \$232M
-\item Current period financial statement values are as follows: total debt is \$11,631M, and cash is \$4,867M
+\item Total debt is \$11,631M, and cash is \$4,867M, both current and final period forecasted
 \item Shares outstanding is \$561M and WACC is 10.0\% for the entire time period
 \item The terminal growth rate is 3.0\%
 \item You can assume the next free cash flow is one year away.
@@ -877,7 +903,7 @@ sensitive to the choice of terminal growth rate, so there should absolutely be s
 \item EV/EBITDA: \$27.74
 \item EV/Sales: \$13.67
 \item EV/FCF: \$14.21
-\item P/E: \$6.98
+\item P/E: \$14.47
 \item Perpetuity Growth: \$18.45
 \end{enumerate}
 \vfill
