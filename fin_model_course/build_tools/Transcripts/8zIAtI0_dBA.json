@@ -1,0 +1,1304 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 4.16,
+      "duration": 2.4
+    },
+    {
+      "text": "this is nick dear burtis teaching you",
+      "start": 4.96,
+      "duration": 3.44
+    },
+    {
+      "text": "financial modeling today",
+      "start": 6.56,
+      "duration": 3.68
+    },
+    {
+      "text": "we're going to be talking about",
+      "start": 8.4,
+      "duration": 3.359
+    },
+    {
+      "text": "forecasting complex",
+      "start": 10.24,
+      "duration": 3.92
+    },
+    {
+      "text": "time series this is part of our lecture",
+      "start": 11.759,
+      "duration": 3.121
+    },
+    {
+      "text": "segment",
+      "start": 14.16,
+      "duration": 2.959
+    },
+    {
+      "text": "on free cash flow estimation and",
+      "start": 14.88,
+      "duration": 4.72
+    },
+    {
+      "text": "forecasting",
+      "start": 17.119,
+      "duration": 6.08
+    },
+    {
+      "text": "so we already covered how to forecast",
+      "start": 19.6,
+      "duration": 7.36
+    },
+    {
+      "text": "more simple time series which is",
+      "start": 23.199,
+      "duration": 6.801
+    },
+    {
+      "text": "represented by basically it being",
+      "start": 26.96,
+      "duration": 6.16
+    },
+    {
+      "text": "flat or i'm just trending up or trending",
+      "start": 30.0,
+      "duration": 4.0
+    },
+    {
+      "text": "down",
+      "start": 33.12,
+      "duration": 5.2
+    },
+    {
+      "text": "and pretty clear simple way",
+      "start": 34.0,
+      "duration": 7.44
+    },
+    {
+      "text": "but it's the case that you have a more",
+      "start": 38.32,
+      "duration": 4.399
+    },
+    {
+      "text": "complex pattern",
+      "start": 41.44,
+      "duration": 5.84
+    },
+    {
+      "text": "going on in your financial statements",
+      "start": 42.719,
+      "duration": 7.68
+    },
+    {
+      "text": "so this kind of pattern",
+      "start": 47.28,
+      "duration": 7.759
+    },
+    {
+      "text": "is what i'm talking about where you see",
+      "start": 50.399,
+      "duration": 7.521
+    },
+    {
+      "text": "just repeating patterns over and over in",
+      "start": 55.039,
+      "duration": 3.601
+    },
+    {
+      "text": "the data",
+      "start": 57.92,
+      "duration": 2.72
+    },
+    {
+      "text": "we can see that there's also a trend",
+      "start": 58.64,
+      "duration": 3.52
+    },
+    {
+      "text": "going on here",
+      "start": 60.64,
+      "duration": 4.559
+    },
+    {
+      "text": "but there's this repeating pattern",
+      "start": 62.16,
+      "duration": 5.999
+    },
+    {
+      "text": "which makes this a complex time series",
+      "start": 65.199,
+      "duration": 4.881
+    },
+    {
+      "text": "and a simple trend or",
+      "start": 68.159,
+      "duration": 4.32
+    },
+    {
+      "text": "growth kind of model is not going to be",
+      "start": 70.08,
+      "duration": 4.0
+    },
+    {
+      "text": "able to represent",
+      "start": 72.479,
+      "duration": 5.841
+    },
+    {
+      "text": "these repeating spikes in the data",
+      "start": 74.08,
+      "duration": 7.039
+    },
+    {
+      "text": "this is uh walmart's quarterly sales",
+      "start": 78.32,
+      "duration": 3.92
+    },
+    {
+      "text": "that i've pulled here",
+      "start": 81.119,
+      "duration": 5.36
+    },
+    {
+      "text": "in order to show this plot",
+      "start": 82.24,
+      "duration": 8.32
+    },
+    {
+      "text": "and um basically",
+      "start": 86.479,
+      "duration": 6.801
+    },
+    {
+      "text": "what's going on is that there's a",
+      "start": 90.56,
+      "duration": 4.08
+    },
+    {
+      "text": "seasonality here",
+      "start": 93.28,
+      "duration": 4.96
+    },
+    {
+      "text": "in the data walmart is",
+      "start": 94.64,
+      "duration": 6.64
+    },
+    {
+      "text": "going to sell more around christmas time",
+      "start": 98.24,
+      "duration": 4.48
+    },
+    {
+      "text": "the holidays",
+      "start": 101.28,
+      "duration": 5.28
+    },
+    {
+      "text": "um and so we see those spikes happening",
+      "start": 102.72,
+      "duration": 5.6
+    },
+    {
+      "text": "year over year every year",
+      "start": 106.56,
+      "duration": 3.76
+    },
+    {
+      "text": "so if you want to forecast the quarterly",
+      "start": 108.32,
+      "duration": 4.159
+    },
+    {
+      "text": "sales you have to be able to account for",
+      "start": 110.32,
+      "duration": 2.56
+    },
+    {
+      "text": "that",
+      "start": 112.479,
+      "duration": 1.761
+    },
+    {
+      "text": "some quarters are going to be better",
+      "start": 112.88,
+      "duration": 5.44
+    },
+    {
+      "text": "than others year over year",
+      "start": 114.24,
+      "duration": 4.08
+    },
+    {
+      "text": "so we can kind of break down",
+      "start": 119.68,
+      "duration": 6.32
+    },
+    {
+      "text": "this uh plot",
+      "start": 122.88,
+      "duration": 5.999
+    },
+    {
+      "text": "into two separate plots one looking at",
+      "start": 126.0,
+      "duration": 4.72
+    },
+    {
+      "text": "the trend component",
+      "start": 128.879,
+      "duration": 3.841
+    },
+    {
+      "text": "and one looking at the seasonality",
+      "start": 130.72,
+      "duration": 3.2
+    },
+    {
+      "text": "component",
+      "start": 132.72,
+      "duration": 3.12
+    },
+    {
+      "text": "to better understand what's going on",
+      "start": 133.92,
+      "duration": 4.08
+    },
+    {
+      "text": "here as we had already seen it is",
+      "start": 135.84,
+      "duration": 3.92
+    },
+    {
+      "text": "turning upwards over time",
+      "start": 138.0,
+      "duration": 4.879
+    },
+    {
+      "text": "and so we see that trend effect going on",
+      "start": 139.76,
+      "duration": 4.08
+    },
+    {
+      "text": "here",
+      "start": 142.879,
+      "duration": 3.44
+    },
+    {
+      "text": "um and then this is representing",
+      "start": 143.84,
+      "duration": 3.68
+    },
+    {
+      "text": "throughout the year",
+      "start": 146.319,
+      "duration": 4.801
+    },
+    {
+      "text": "where are the spikes um so we see this",
+      "start": 147.52,
+      "duration": 7.76
+    },
+    {
+      "text": "spike in the december time frame",
+      "start": 151.12,
+      "duration": 6.399
+    },
+    {
+      "text": "and we also see that that sales tend to",
+      "start": 155.28,
+      "duration": 4.239
+    },
+    {
+      "text": "be low",
+      "start": 157.519,
+      "duration": 4.08
+    },
+    {
+      "text": "after after that initial time frame",
+      "start": 159.519,
+      "duration": 5.041
+    },
+    {
+      "text": "going into march",
+      "start": 161.599,
+      "duration": 2.961
+    },
+    {
+      "text": "so here a certain",
+      "start": 165.2,
+      "duration": 6.24
+    },
+    {
+      "text": "time series model was used that does",
+      "start": 169.04,
+      "duration": 3.44
+    },
+    {
+      "text": "allow to",
+      "start": 171.44,
+      "duration": 4.56
+    },
+    {
+      "text": "decompose these two different parts",
+      "start": 172.48,
+      "duration": 6.8
+    },
+    {
+      "text": "um and",
+      "start": 176.0,
+      "duration": 4.64
+    },
+    {
+      "text": "it's useful to do this kind of",
+      "start": 179.28,
+      "duration": 3.28
+    },
+    {
+      "text": "separation because then you can really",
+      "start": 180.64,
+      "duration": 2.8
+    },
+    {
+      "text": "understand",
+      "start": 182.56,
+      "duration": 5.28
+    },
+    {
+      "text": "the seasonality component in more detail",
+      "start": 183.44,
+      "duration": 7.2
+    },
+    {
+      "text": "which gives you an insight into what's",
+      "start": 187.84,
+      "duration": 3.6
+    },
+    {
+      "text": "going on",
+      "start": 190.64,
+      "duration": 3.599
+    },
+    {
+      "text": "in the business",
+      "start": 191.44,
+      "duration": 2.799
+    },
+    {
+      "text": "so you've got a complex time series",
+      "start": 196.84,
+      "duration": 5.72
+    },
+    {
+      "text": "you've looked at the historical plot",
+      "start": 200.159,
+      "duration": 4.561
+    },
+    {
+      "text": "and you say well this isn't just simply",
+      "start": 202.56,
+      "duration": 3.2
+    },
+    {
+      "text": "going up or",
+      "start": 204.72,
+      "duration": 4.72
+    },
+    {
+      "text": "or exponential or flat",
+      "start": 205.76,
+      "duration": 5.839
+    },
+    {
+      "text": "there is some kind of repeating pattern",
+      "start": 209.44,
+      "duration": 4.56
+    },
+    {
+      "text": "that i need to be able to predict",
+      "start": 211.599,
+      "duration": 5.92
+    },
+    {
+      "text": "so what do i do",
+      "start": 214.0,
+      "duration": 3.519
+    },
+    {
+      "text": "so in general it is a little more",
+      "start": 218.799,
+      "duration": 3.761
+    },
+    {
+      "text": "complicated",
+      "start": 221.599,
+      "duration": 3.28
+    },
+    {
+      "text": "or substantially more complicated than",
+      "start": 222.56,
+      "duration": 3.44
+    },
+    {
+      "text": "the simple",
+      "start": 224.879,
+      "duration": 4.481
+    },
+    {
+      "text": "forecasts still the overall process",
+      "start": 226.0,
+      "duration": 6.319
+    },
+    {
+      "text": "is the same you know you fit the model",
+      "start": 229.36,
+      "duration": 4.799
+    },
+    {
+      "text": "on the historical data and then you use",
+      "start": 232.319,
+      "duration": 5.601
+    },
+    {
+      "text": "that fitted model to predict the future",
+      "start": 234.159,
+      "duration": 3.761
+    },
+    {
+      "text": "but picking the model to use for your",
+      "start": 238.48,
+      "duration": 5.039
+    },
+    {
+      "text": "complex time series",
+      "start": 242.08,
+      "duration": 3.76
+    },
+    {
+      "text": "can be in a complicated and involved",
+      "start": 243.519,
+      "duration": 3.761
+    },
+    {
+      "text": "process",
+      "start": 245.84,
+      "duration": 4.8
+    },
+    {
+      "text": "so i've given a resource here that you",
+      "start": 247.28,
+      "duration": 4.8
+    },
+    {
+      "text": "can read more about that",
+      "start": 250.64,
+      "duration": 5.439
+    },
+    {
+      "text": "if you're interested um",
+      "start": 252.08,
+      "duration": 6.559
+    },
+    {
+      "text": "but there is a simple approach that we",
+      "start": 256.079,
+      "duration": 3.601
+    },
+    {
+      "text": "can do",
+      "start": 258.639,
+      "duration": 5.12
+    },
+    {
+      "text": "specifically for the case of um",
+      "start": 259.68,
+      "duration": 6.64
+    },
+    {
+      "text": "this seasonality issue if you're just",
+      "start": 263.759,
+      "duration": 3.761
+    },
+    {
+      "text": "trying to capture",
+      "start": 266.32,
+      "duration": 3.92
+    },
+    {
+      "text": "seasonality in your forecast then",
+      "start": 267.52,
+      "duration": 3.52
+    },
+    {
+      "text": "there's",
+      "start": 270.24,
+      "duration": 2.959
+    },
+    {
+      "text": "a fairly simple model we can use for",
+      "start": 271.04,
+      "duration": 4.159
+    },
+    {
+      "text": "that and we'll look at that",
+      "start": 273.199,
+      "duration": 4.881
+    },
+    {
+      "text": "explicitly and so when dealing with",
+      "start": 275.199,
+      "duration": 4.081
+    },
+    {
+      "text": "quarterly data we",
+      "start": 278.08,
+      "duration": 2.96
+    },
+    {
+      "text": "call that the quarterly seasonal trend",
+      "start": 279.28,
+      "duration": 4.56
+    },
+    {
+      "text": "model",
+      "start": 281.04,
+      "duration": 2.8
+    },
+    {
+      "text": "but that may not ultimately produce the",
+      "start": 284.639,
+      "duration": 3.201
+    },
+    {
+      "text": "best",
+      "start": 287.36,
+      "duration": 3.04
+    },
+    {
+      "text": "fitting forecast there may be other",
+      "start": 287.84,
+      "duration": 3.2
+    },
+    {
+      "text": "features",
+      "start": 290.4,
+      "duration": 3.519
+    },
+    {
+      "text": "of the data that you need to predict",
+      "start": 291.04,
+      "duration": 6.08
+    },
+    {
+      "text": "than just the seasonality",
+      "start": 293.919,
+      "duration": 7.361
+    },
+    {
+      "text": "and it's definitely outside of the",
+      "start": 297.12,
+      "duration": 7.359
+    },
+    {
+      "text": "scope of the course to discuss all the",
+      "start": 301.28,
+      "duration": 3.759
+    },
+    {
+      "text": "different",
+      "start": 304.479,
+      "duration": 2.321
+    },
+    {
+      "text": "models that you could possibly use for",
+      "start": 305.039,
+      "duration": 4.16
+    },
+    {
+      "text": "all different use cases",
+      "start": 306.8,
+      "duration": 4.88
+    },
+    {
+      "text": "but what i can recommend that you can do",
+      "start": 309.199,
+      "duration": 3.761
+    },
+    {
+      "text": "instead",
+      "start": 311.68,
+      "duration": 3.84
+    },
+    {
+      "text": "in the meantime until you you know want",
+      "start": 312.96,
+      "duration": 3.12
+    },
+    {
+      "text": "to go",
+      "start": 315.52,
+      "duration": 3.44
+    },
+    {
+      "text": "and learn all of that is there are",
+      "start": 316.08,
+      "duration": 4.08
+    },
+    {
+      "text": "software solutions",
+      "start": 318.96,
+      "duration": 3.88
+    },
+    {
+      "text": "which can help you pick the appropriate",
+      "start": 320.16,
+      "duration": 4.319
+    },
+    {
+      "text": "model",
+      "start": 322.84,
+      "duration": 4.68
+    },
+    {
+      "text": "so profit is one such",
+      "start": 324.479,
+      "duration": 5.761
+    },
+    {
+      "text": "uh software package which does this it's",
+      "start": 327.52,
+      "duration": 3.44
+    },
+    {
+      "text": "created by",
+      "start": 330.24,
+      "duration": 4.16
+    },
+    {
+      "text": "facebook they use it for their in-house",
+      "start": 330.96,
+      "duration": 6.0
+    },
+    {
+      "text": "uh forecasting of uses metrics and",
+      "start": 334.4,
+      "duration": 5.44
+    },
+    {
+      "text": "things like that",
+      "start": 336.96,
+      "duration": 2.88
+    },
+    {
+      "text": "and we can just use that in order to",
+      "start": 339.919,
+      "duration": 6.56
+    },
+    {
+      "text": "predict our complex time series without",
+      "start": 344.08,
+      "duration": 4.64
+    },
+    {
+      "text": "having a deep understanding",
+      "start": 346.479,
+      "duration": 5.601
+    },
+    {
+      "text": "of all the details of how you should go",
+      "start": 348.72,
+      "duration": 4.0
+    },
+    {
+      "text": "about",
+      "start": 352.08,
+      "duration": 5.119
+    },
+    {
+      "text": "uh selecting these more complex models",
+      "start": 352.72,
+      "duration": 4.479
+    },
+    {
+      "text": "and as we'll see um in a future video",
+      "start": 358.72,
+      "duration": 5.12
+    },
+    {
+      "text": "here soon",
+      "start": 362.08,
+      "duration": 4.399
+    },
+    {
+      "text": "into the fin statement package which",
+      "start": 363.84,
+      "duration": 3.359
+    },
+    {
+      "text": "i've created",
+      "start": 366.479,
+      "duration": 3.84
+    },
+    {
+      "text": "i've also built in an integration",
+      "start": 367.199,
+      "duration": 5.041
+    },
+    {
+      "text": "with profits so you can automatically",
+      "start": 370.319,
+      "duration": 3.121
+    },
+    {
+      "text": "use profit",
+      "start": 372.24,
+      "duration": 4.16
+    },
+    {
+      "text": "through if and statement",
+      "start": 373.44,
+      "duration": 2.96
+    },
+    {
+      "text": "so let's just uh go through the",
+      "start": 378.08,
+      "duration": 4.72
+    },
+    {
+      "text": "quarterly seasonal trend model",
+      "start": 381.12,
+      "duration": 4.48
+    },
+    {
+      "text": "that's going to be the one complex model",
+      "start": 382.8,
+      "duration": 4.48
+    },
+    {
+      "text": "that we're going to look at actually",
+      "start": 385.6,
+      "duration": 2.8
+    },
+    {
+      "text": "estimating",
+      "start": 387.28,
+      "duration": 2.56
+    },
+    {
+      "text": "and we're just going to say for",
+      "start": 388.4,
+      "duration": 3.12
+    },
+    {
+      "text": "everything else we can just",
+      "start": 389.84,
+      "duration": 5.04
+    },
+    {
+      "text": "use profit in order to automatically",
+      "start": 391.52,
+      "duration": 7.6
+    },
+    {
+      "text": "fit the model for us so the quarterly",
+      "start": 394.88,
+      "duration": 7.12
+    },
+    {
+      "text": "seasonal trend model uh it looks a",
+      "start": 399.12,
+      "duration": 4.4
+    },
+    {
+      "text": "little bit like the trend model",
+      "start": 402.0,
+      "duration": 4.639
+    },
+    {
+      "text": "all it is the trend model but then plus",
+      "start": 403.52,
+      "duration": 6.239
+    },
+    {
+      "text": "these additional components",
+      "start": 406.639,
+      "duration": 5.201
+    },
+    {
+      "text": "and these additional components are",
+      "start": 409.759,
+      "duration": 4.56
+    },
+    {
+      "text": "including dummy variables",
+      "start": 411.84,
+      "duration": 7.359
+    },
+    {
+      "text": "and one dummy variable for each quarter",
+      "start": 414.319,
+      "duration": 4.88
+    },
+    {
+      "text": "and so",
+      "start": 420.84,
+      "duration": 6.759
+    },
+    {
+      "text": "by that uh approach then you're going to",
+      "start": 423.36,
+      "duration": 7.52
+    },
+    {
+      "text": "um have a different uh",
+      "start": 427.599,
+      "duration": 6.561
+    },
+    {
+      "text": "coefficient fit for each quarter",
+      "start": 430.88,
+      "duration": 5.36
+    },
+    {
+      "text": "uh so that it's able to adjust and say",
+      "start": 434.16,
+      "duration": 4.08
+    },
+    {
+      "text": "some quarters should be higher",
+      "start": 436.24,
+      "duration": 6.239
+    },
+    {
+      "text": "than others um so these dummy variables",
+      "start": 438.24,
+      "duration": 7.92
+    },
+    {
+      "text": "are just going to represent uh",
+      "start": 442.479,
+      "duration": 6.361
+    },
+    {
+      "text": "that it is this quarter or it's not this",
+      "start": 446.16,
+      "duration": 3.92
+    },
+    {
+      "text": "quarter",
+      "start": 448.84,
+      "duration": 4.52
+    },
+    {
+      "text": "so if your sales",
+      "start": 450.08,
+      "duration": 6.48
+    },
+    {
+      "text": "or whatever observation is",
+      "start": 453.36,
+      "duration": 6.16
+    },
+    {
+      "text": "for first quarter then this variable is",
+      "start": 456.56,
+      "duration": 4.0
+    },
+    {
+      "text": "going to be one",
+      "start": 459.52,
+      "duration": 4.399
+    },
+    {
+      "text": "and all the others are going to be zero",
+      "start": 460.56,
+      "duration": 4.0
+    },
+    {
+      "text": "whereas",
+      "start": 463.919,
+      "duration": 2.4
+    },
+    {
+      "text": "if it's second quarter then this one's",
+      "start": 464.56,
+      "duration": 3.919
+    },
+    {
+      "text": "going to be one the others are zero",
+      "start": 466.319,
+      "duration": 4.241
+    },
+    {
+      "text": "and so on these dummy variables are just",
+      "start": 468.479,
+      "duration": 4.0
+    },
+    {
+      "text": "one or zero one to represent",
+      "start": 470.56,
+      "duration": 5.12
+    },
+    {
+      "text": "true zero to represent false",
+      "start": 472.479,
+      "duration": 5.361
+    },
+    {
+      "text": "and it's going to be true or one",
+      "start": 475.68,
+      "duration": 4.079
+    },
+    {
+      "text": "whenever",
+      "start": 477.84,
+      "duration": 6.0
+    },
+    {
+      "text": "this particular observation this",
+      "start": 479.759,
+      "duration": 8.0
+    },
+    {
+      "text": "time period is within",
+      "start": 483.84,
+      "duration": 7.359
+    },
+    {
+      "text": "that quarter of the year",
+      "start": 487.759,
+      "duration": 3.44
+    },
+    {
+      "text": "so to fit this basically we have to",
+      "start": 491.28,
+      "duration": 4.08
+    },
+    {
+      "text": "create these",
+      "start": 494.24,
+      "duration": 4.239
+    },
+    {
+      "text": "um dummy variables and then",
+      "start": 495.36,
+      "duration": 5.76
+    },
+    {
+      "text": "we just throw them in there in the trend",
+      "start": 498.479,
+      "duration": 3.921
+    },
+    {
+      "text": "regression model",
+      "start": 501.12,
+      "duration": 3.919
+    },
+    {
+      "text": "and that will fit this quarterly",
+      "start": 502.4,
+      "duration": 5.44
+    },
+    {
+      "text": "seasonal trend model",
+      "start": 505.039,
+      "duration": 2.801
+    },
+    {
+      "text": "as far as predicting it so",
+      "start": 508.879,
+      "duration": 6.561
+    },
+    {
+      "text": "you're just going to",
+      "start": 512.08,
+      "duration": 6.399
+    },
+    {
+      "text": "fit it like the trend model so this this",
+      "start": 515.44,
+      "duration": 5.279
+    },
+    {
+      "text": "constant plus the",
+      "start": 518.479,
+      "duration": 6.001
+    },
+    {
+      "text": "uh beta times the time period",
+      "start": 520.719,
+      "duration": 6.161
+    },
+    {
+      "text": "but you're also going to add on the",
+      "start": 524.48,
+      "duration": 3.12
+    },
+    {
+      "text": "dummy",
+      "start": 526.88,
+      "duration": 3.76
+    },
+    {
+      "text": "corresponding to the appropriate quarter",
+      "start": 527.6,
+      "duration": 4.4
+    },
+    {
+      "text": "so the next period that you're",
+      "start": 530.64,
+      "duration": 3.6
+    },
+    {
+      "text": "forecasting is first quarter",
+      "start": 532.0,
+      "duration": 4.16
+    },
+    {
+      "text": "then you're going to add the coefficient",
+      "start": 534.24,
+      "duration": 3.52
+    },
+    {
+      "text": "on the first",
+      "start": 536.16,
+      "duration": 3.679
+    },
+    {
+      "text": "quarter dummy if it's the second quarter",
+      "start": 537.76,
+      "duration": 3.84
+    },
+    {
+      "text": "then the second quarter coefficient",
+      "start": 539.839,
+      "duration": 4.161
+    },
+    {
+      "text": "third quarter third coefficient and so",
+      "start": 541.6,
+      "duration": 4.32
+    },
+    {
+      "text": "on",
+      "start": 544.0,
+      "duration": 3.04
+    },
+    {
+      "text": "and you're only adding one of them",
+      "start": 545.92,
+      "duration": 4.16
+    },
+    {
+      "text": "because again these are dummy variables",
+      "start": 547.04,
+      "duration": 3.84
+    },
+    {
+      "text": "only one of them",
+      "start": 550.08,
+      "duration": 3.52
+    },
+    {
+      "text": "is going to be uh taking a value of one",
+      "start": 550.88,
+      "duration": 4.16
+    },
+    {
+      "text": "at a given time and all the others are",
+      "start": 553.6,
+      "duration": 2.56
+    },
+    {
+      "text": "going to be zero",
+      "start": 555.04,
+      "duration": 3.359
+    },
+    {
+      "text": "corresponding to whichever is the active",
+      "start": 556.16,
+      "duration": 4.56
+    },
+    {
+      "text": "quarter",
+      "start": 558.399,
+      "duration": 2.321
+    },
+    {
+      "text": "um and then this is the quarterly",
+      "start": 560.959,
+      "duration": 3.921
+    },
+    {
+      "text": "version of the model",
+      "start": 563.68,
+      "duration": 4.0
+    },
+    {
+      "text": "but you could fit it for any kind of",
+      "start": 564.88,
+      "duration": 3.6
+    },
+    {
+      "text": "time horizon",
+      "start": 567.68,
+      "duration": 3.68
+    },
+    {
+      "text": "you could do a monthly seasonal trend",
+      "start": 568.48,
+      "duration": 4.72
+    },
+    {
+      "text": "model if you have monthly data then you",
+      "start": 571.36,
+      "duration": 2.8
+    },
+    {
+      "text": "would have 12",
+      "start": 573.2,
+      "duration": 2.8
+    },
+    {
+      "text": "different of these dummy variables",
+      "start": 574.16,
+      "duration": 4.0
+    },
+    {
+      "text": "corresponding to",
+      "start": 576.0,
+      "duration": 4.0
+    },
+    {
+      "text": "whether the observation is within that",
+      "start": 578.16,
+      "duration": 4.08
+    },
+    {
+      "text": "month",
+      "start": 580.0,
+      "duration": 2.24
+    },
+    {
+      "text": "and the dummies don't necessarily have",
+      "start": 582.399,
+      "duration": 5.12
+    },
+    {
+      "text": "to correspond to the frequency",
+      "start": 585.92,
+      "duration": 4.0
+    },
+    {
+      "text": "of your data either it could be that you",
+      "start": 587.519,
+      "duration": 4.401
+    },
+    {
+      "text": "have daily data",
+      "start": 589.92,
+      "duration": 4.08
+    },
+    {
+      "text": "but then you're still fitting a",
+      "start": 591.92,
+      "duration": 3.039
+    },
+    {
+      "text": "quarterly model",
+      "start": 594.0,
+      "duration": 3.519
+    },
+    {
+      "text": "if you think the seasonality itself is",
+      "start": 594.959,
+      "duration": 3.921
+    },
+    {
+      "text": "actually quarterly",
+      "start": 597.519,
+      "duration": 4.88
+    },
+    {
+      "text": "you want the frequency of the model to",
+      "start": 598.88,
+      "duration": 4.32
+    },
+    {
+      "text": "line up with",
+      "start": 602.399,
+      "duration": 3.761
+    },
+    {
+      "text": "the frequency of the seasonality rather",
+      "start": 603.2,
+      "duration": 3.68
+    },
+    {
+      "text": "than",
+      "start": 606.16,
+      "duration": 4.64
+    },
+    {
+      "text": "the frequency of the data",
+      "start": 606.88,
+      "duration": 3.92
+    },
+    {
+      "text": "so that's a quick overview of",
+      "start": 611.36,
+      "duration": 5.84
+    },
+    {
+      "text": "forecasting these more complex time",
+      "start": 615.04,
+      "duration": 3.2
+    },
+    {
+      "text": "series",
+      "start": 617.2,
+      "duration": 3.52
+    },
+    {
+      "text": "we'll come back in the following videos",
+      "start": 618.24,
+      "duration": 3.039
+    },
+    {
+      "text": "to look",
+      "start": 620.72,
+      "duration": 2.799
+    },
+    {
+      "text": "at estimating this quarterly seasonal",
+      "start": 621.279,
+      "duration": 3.281
+    },
+    {
+      "text": "trend model",
+      "start": 623.519,
+      "duration": 4.56
+    },
+    {
+      "text": "and then using the auto forecasting",
+      "start": 624.56,
+      "duration": 7.2
+    },
+    {
+      "text": "through a profit with fin statement",
+      "start": 628.079,
+      "duration": 7.681
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 631.76,
+      "duration": 4.0
+    },
+    {
+      "text": "time",
+      "start": 636.6,
+      "duration": 3.0
+    }
+  ]
+}

@@ -503,9 +503,45 @@ def get_content():
                         'forecast only line items which cannot be calculated from other line items',
                         'For example, sales, COGS, SG&A should be forecasted, not operating profit',
                         'You should set your model up so that these calculatable items are calculated '
-                        'in the historicals, then carry that through to the forecasted'
+                        'in the historicals, then carry that through to the forecasted',
+                        'Set items as a percentage of other items when it is logical that they should '
+                        'scale together. For example, interest expense should be forecasted as a percentage '
+                        'of total debt, as if the company takes on more debt, interest expense should increase '
+                        'proportionally',
                     ],
                     title='Which Line Items to Forecast?'
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        'Despite forecasting line items individually, you must attempt to keep the balance sheet '
+                        'balanced in the future',
+                        'If your forecast shows assets growing to be much greater than liabilities and equity, '
+                        'that implies that the company will need to raise additional funds to finance the '
+                        'growth in the assets. Usually increasing debt is the solution.',
+                        'If your forecast shows assets lower than liabilities and equity, it means that the profits '
+                        'or other sources of funds are not being properly allocated to the assets side. Usually '
+                        'increasing cash is the solution',
+                    ],
+                    title="Don't Be Out of Balance"
+                ),
+                lp.DimRevealListFrame(
+                    [
+                        pl.TextSize(-1),
+                        'The general process is to run your forecasts, then use another approach to adjust either '
+                        'cash or debt to make the balance sheet balance. ',
+                        'These adjusted values are called "plugs" because we are "plugging" in whatever makes the '
+                        'forecast valid',
+                        'To make the adjustment in Excel, calculate the absolute value of the '
+                        'difference between assets and liabilities + '
+                        'equity, then use goal seek (single year forecast) or solver (multi-year forecast) '
+                        'to minimize the value',
+                        'In Python, the steps would be similar, only using scipy minimize instead of solver, '
+                        'but finstmt handles this automatically for you. When you run a forecast, it will balance '
+                        'the balance sheet without any further action from you. You can change how accurate it '
+                        'is by setting bs_diff_max and you can change which line items are used as plugs '
+                        'in the forecast config',
+                    ],
+                    title='Balancing the Balance Sheet'
                 )
             ],
             title='Forecasting Free Cash Flows',
@@ -550,7 +586,7 @@ def get_content():
                         'financials.',
                         'Each ratio will yield a different terminal value, leading to a different final stock price '
                         'in your model. It is typical to report results with the different measures to get a range.',
-                        'For all the EV ratios, multiply the statement item by the ratio to get the EV, then adjust the'
+                        'For all the EV ratios, multiply the statement item by the ratio to get the EV, then adjust the '
                         'EV using final forecasted values to get the equity value and stock price',
                         'For P/E, calculate final period earnings per share and multiply by the ratio to get the '
                         'stock price'

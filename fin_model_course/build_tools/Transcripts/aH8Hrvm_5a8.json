@@ -1,0 +1,1874 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.8,
+      "duration": 2.4
+    },
+    {
+      "text": "this is nick dear burtis teaching you",
+      "start": 3.6,
+      "duration": 3.04
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.2,
+      "duration": 3.76
+    },
+    {
+      "text": "today i'm going to be talking about",
+      "start": 6.64,
+      "duration": 3.039
+    },
+    {
+      "text": "complex",
+      "start": 8.96,
+      "duration": 4.719
+    },
+    {
+      "text": "time series forecasting in python",
+      "start": 9.679,
+      "duration": 6.401
+    },
+    {
+      "text": "and this is going to be covering the",
+      "start": 13.679,
+      "duration": 3.44
+    },
+    {
+      "text": "manual method",
+      "start": 16.08,
+      "duration": 3.6
+    },
+    {
+      "text": "whereas we will look at a more automated",
+      "start": 17.119,
+      "duration": 3.361
+    },
+    {
+      "text": "approach",
+      "start": 19.68,
+      "duration": 3.759
+    },
+    {
+      "text": "in the following video this is part of",
+      "start": 20.48,
+      "duration": 5.039
+    },
+    {
+      "text": "our lecture series on free cash flow",
+      "start": 23.439,
+      "duration": 2.881
+    },
+    {
+      "text": "estimation",
+      "start": 25.519,
+      "duration": 3.84
+    },
+    {
+      "text": "and forecasting",
+      "start": 26.32,
+      "duration": 3.039
+    },
+    {
+      "text": "so we already covered uh basically what",
+      "start": 29.519,
+      "duration": 7.121
+    },
+    {
+      "text": "a complex time series is and um",
+      "start": 33.52,
+      "duration": 4.559
+    },
+    {
+      "text": "when you would want to use one of these",
+      "start": 36.64,
+      "duration": 4.32
+    },
+    {
+      "text": "more complex models to forecast it",
+      "start": 38.079,
+      "duration": 5.281
+    },
+    {
+      "text": "and now we're just going into the actual",
+      "start": 40.96,
+      "duration": 3.2
+    },
+    {
+      "text": "example",
+      "start": 43.36,
+      "duration": 3.92
+    },
+    {
+      "text": "of how to carry that out",
+      "start": 44.16,
+      "duration": 5.04
+    },
+    {
+      "text": "so we're going to look in this video at",
+      "start": 47.28,
+      "duration": 3.52
+    },
+    {
+      "text": "applying the quarterly",
+      "start": 49.2,
+      "duration": 4.4
+    },
+    {
+      "text": "seasonal trend model to be able to",
+      "start": 50.8,
+      "duration": 3.84
+    },
+    {
+      "text": "forecast",
+      "start": 53.6,
+      "duration": 3.599
+    },
+    {
+      "text": "quarterly data which has seasonal",
+      "start": 54.64,
+      "duration": 4.88
+    },
+    {
+      "text": "effects in it",
+      "start": 57.199,
+      "duration": 4.321
+    },
+    {
+      "text": "so let's go over to the jupiter notebook",
+      "start": 59.52,
+      "duration": 4.16
+    },
+    {
+      "text": "which is on the core site so i'd",
+      "start": 61.52,
+      "duration": 3.999
+    },
+    {
+      "text": "encourage you to go through it",
+      "start": 63.68,
+      "duration": 4.799
+    },
+    {
+      "text": "on your side as well",
+      "start": 65.519,
+      "duration": 2.96
+    },
+    {
+      "text": "so the first thing that we have to do is",
+      "start": 71.119,
+      "duration": 6.881
+    },
+    {
+      "text": "load in the data so that we can work",
+      "start": 74.88,
+      "duration": 3.84
+    },
+    {
+      "text": "with it",
+      "start": 78.0,
+      "duration": 3.6
+    },
+    {
+      "text": "so i'm going to use a fin statement here",
+      "start": 78.72,
+      "duration": 4.719
+    },
+    {
+      "text": "in order to",
+      "start": 81.6,
+      "duration": 4.64
+    },
+    {
+      "text": "load the data into the financial",
+      "start": 83.439,
+      "duration": 5.761
+    },
+    {
+      "text": "statement structure",
+      "start": 86.24,
+      "duration": 2.96
+    },
+    {
+      "text": "so it's taking a second to load",
+      "start": 89.68,
+      "duration": 3.6
+    },
+    {
+      "text": "everything in",
+      "start": 91.6,
+      "duration": 5.199
+    },
+    {
+      "text": "and then we should see the statements",
+      "start": 93.28,
+      "duration": 6.32
+    },
+    {
+      "text": "come up here when it's done",
+      "start": 96.799,
+      "duration": 4.801
+    },
+    {
+      "text": "now you'll see some other output coming",
+      "start": 99.6,
+      "duration": 3.519
+    },
+    {
+      "text": "out here um",
+      "start": 101.6,
+      "duration": 4.08
+    },
+    {
+      "text": "basically items which it wasn't able to",
+      "start": 103.119,
+      "duration": 5.28
+    },
+    {
+      "text": "load into statement items",
+      "start": 105.68,
+      "duration": 6.24
+    },
+    {
+      "text": "as long as you don't see anything",
+      "start": 108.399,
+      "duration": 8.641
+    },
+    {
+      "text": "important here then you should be fine",
+      "start": 111.92,
+      "duration": 5.12
+    },
+    {
+      "text": "and the other warning here is about",
+      "start": 118.56,
+      "duration": 6.0
+    },
+    {
+      "text": "both operating income and abbott were in",
+      "start": 121.68,
+      "duration": 3.759
+    },
+    {
+      "text": "the statement",
+      "start": 124.56,
+      "duration": 4.879
+    },
+    {
+      "text": "and so it used the value from ebit",
+      "start": 125.439,
+      "duration": 4.0
+    },
+    {
+      "text": "so then we see the statements here it's",
+      "start": 129.84,
+      "duration": 3.44
+    },
+    {
+      "text": "loaded them in",
+      "start": 132.56,
+      "duration": 4.319
+    },
+    {
+      "text": "properly and we see all the different",
+      "start": 133.28,
+      "duration": 9.84
+    },
+    {
+      "text": "line items on the statements",
+      "start": 136.879,
+      "duration": 8.561
+    },
+    {
+      "text": "and we're working with quarterly data",
+      "start": 143.12,
+      "duration": 3.199
+    },
+    {
+      "text": "here",
+      "start": 145.44,
+      "duration": 4.08
+    },
+    {
+      "text": "and we have um 39",
+      "start": 146.319,
+      "duration": 6.64
+    },
+    {
+      "text": "different periods here so this goes out",
+      "start": 149.52,
+      "duration": 5.359
+    },
+    {
+      "text": "quite far",
+      "start": 152.959,
+      "duration": 3.92
+    },
+    {
+      "text": "so plenty of data to work with the",
+      "start": 154.879,
+      "duration": 4.08
+    },
+    {
+      "text": "forecast",
+      "start": 156.879,
+      "duration": 6.161
+    },
+    {
+      "text": "so the first thing we can do is plot uh",
+      "start": 158.959,
+      "duration": 6.481
+    },
+    {
+      "text": "the item that we want to forecast so",
+      "start": 163.04,
+      "duration": 4.32
+    },
+    {
+      "text": "let's look at forecasting the revenue",
+      "start": 165.44,
+      "duration": 4.079
+    },
+    {
+      "text": "here",
+      "start": 167.36,
+      "duration": 5.76
+    },
+    {
+      "text": "and with in statement when you pull out",
+      "start": 169.519,
+      "duration": 7.841
+    },
+    {
+      "text": "um a line item from these statements",
+      "start": 173.12,
+      "duration": 8.24
+    },
+    {
+      "text": "um then it's going to be a pandas series",
+      "start": 177.36,
+      "duration": 6.239
+    },
+    {
+      "text": "and so that's why we can do.plot that",
+      "start": 181.36,
+      "duration": 4.799
+    },
+    {
+      "text": "line on that series in order to see it",
+      "start": 183.599,
+      "duration": 4.56
+    },
+    {
+      "text": "plotted over time",
+      "start": 186.159,
+      "duration": 5.921
+    },
+    {
+      "text": "so looking at the sales data here",
+      "start": 188.159,
+      "duration": 7.041
+    },
+    {
+      "text": "this is you know what we had seen in the",
+      "start": 192.08,
+      "duration": 3.84
+    },
+    {
+      "text": "prior",
+      "start": 195.2,
+      "duration": 4.319
+    },
+    {
+      "text": "video on the slides there is definitely",
+      "start": 195.92,
+      "duration": 4.88
+    },
+    {
+      "text": "a repeating pattern",
+      "start": 199.519,
+      "duration": 3.121
+    },
+    {
+      "text": "going on here in the data there seems to",
+      "start": 200.8,
+      "duration": 4.159
+    },
+    {
+      "text": "be a trend as well",
+      "start": 202.64,
+      "duration": 4.72
+    },
+    {
+      "text": "but we definitely need a more complex",
+      "start": 204.959,
+      "duration": 4.081
+    },
+    {
+      "text": "model in order to capture",
+      "start": 207.36,
+      "duration": 4.0
+    },
+    {
+      "text": "the seasonality shown here with the",
+      "start": 209.04,
+      "duration": 5.279
+    },
+    {
+      "text": "repeating patterns",
+      "start": 211.36,
+      "duration": 2.959
+    },
+    {
+      "text": "so let's look at using the",
+      "start": 214.799,
+      "duration": 5.36
+    },
+    {
+      "text": "quarterly seasonal trend model and in",
+      "start": 217.84,
+      "duration": 3.36
+    },
+    {
+      "text": "order to do that",
+      "start": 220.159,
+      "duration": 2.881
+    },
+    {
+      "text": "we're going to have to create these",
+      "start": 221.2,
+      "duration": 3.759
+    },
+    {
+      "text": "dummy variables as we",
+      "start": 223.04,
+      "duration": 4.8
+    },
+    {
+      "text": "explained in the prior video",
+      "start": 224.959,
+      "duration": 2.881
+    },
+    {
+      "text": "so again that's just uh data that we're",
+      "start": 228.879,
+      "duration": 3.121
+    },
+    {
+      "text": "working with",
+      "start": 231.12,
+      "duration": 5.119
+    },
+    {
+      "text": "a quick look at it and now we can make a",
+      "start": 232.0,
+      "duration": 5.2
+    },
+    {
+      "text": "data frame",
+      "start": 236.239,
+      "duration": 3.2
+    },
+    {
+      "text": "out of that because we're going to need",
+      "start": 237.2,
+      "duration": 5.84
+    },
+    {
+      "text": "to add additional columns here",
+      "start": 239.439,
+      "duration": 3.601
+    },
+    {
+      "text": "and so we can create a t variable",
+      "start": 244.08,
+      "duration": 6.4
+    },
+    {
+      "text": "and we looked in a",
+      "start": 247.12,
+      "duration": 5.759
+    },
+    {
+      "text": "prior video on simple time series",
+      "start": 250.48,
+      "duration": 5.039
+    },
+    {
+      "text": "forecasting with the",
+      "start": 252.879,
+      "duration": 5.04
+    },
+    {
+      "text": "linear trend model one way to do that",
+      "start": 255.519,
+      "duration": 3.44
+    },
+    {
+      "text": "with set index",
+      "start": 257.919,
+      "duration": 2.88
+    },
+    {
+      "text": "here's another way that we can create",
+      "start": 258.959,
+      "duration": 5.441
+    },
+    {
+      "text": "this t variable with with range",
+      "start": 260.799,
+      "duration": 8.4
+    },
+    {
+      "text": "so either way it works just fine",
+      "start": 264.4,
+      "duration": 7.6
+    },
+    {
+      "text": "um and here's just a look at the end of",
+      "start": 269.199,
+      "duration": 4.56
+    },
+    {
+      "text": "the data we can see it's going out to",
+      "start": 272.0,
+      "duration": 2.96
+    },
+    {
+      "text": "the 39th period",
+      "start": 273.759,
+      "duration": 6.321
+    },
+    {
+      "text": "with t equals 38 so it all looks correct",
+      "start": 274.96,
+      "duration": 5.12
+    },
+    {
+      "text": "so in order to get to four dummy",
+      "start": 280.8,
+      "duration": 4.16
+    },
+    {
+      "text": "variables which are",
+      "start": 283.759,
+      "duration": 4.401
+    },
+    {
+      "text": "one when this",
+      "start": 284.96,
+      "duration": 7.12
+    },
+    {
+      "text": "um certain period is within a certain",
+      "start": 288.16,
+      "duration": 4.88
+    },
+    {
+      "text": "quarter",
+      "start": 292.08,
+      "duration": 4.48
+    },
+    {
+      "text": "and zero otherwise first we need to get",
+      "start": 293.04,
+      "duration": 4.719
+    },
+    {
+      "text": "a variable which says",
+      "start": 296.56,
+      "duration": 6.479
+    },
+    {
+      "text": "what month is the observation in",
+      "start": 297.759,
+      "duration": 5.28
+    },
+    {
+      "text": "so thankfully um dates",
+      "start": 303.12,
+      "duration": 7.359
+    },
+    {
+      "text": "in heinous the pandas panda's timestamp",
+      "start": 307.44,
+      "duration": 6.479
+    },
+    {
+      "text": "datatype does have a dot month",
+      "start": 310.479,
+      "duration": 5.361
+    },
+    {
+      "text": "attribute so you can just directly pull",
+      "start": 313.919,
+      "duration": 5.28
+    },
+    {
+      "text": "out the month from the date",
+      "start": 315.84,
+      "duration": 7.6
+    },
+    {
+      "text": "so we can take the index basically",
+      "start": 319.199,
+      "duration": 8.72
+    },
+    {
+      "text": "which has all these states um",
+      "start": 323.44,
+      "duration": 7.12
+    },
+    {
+      "text": "and take take them out of there and take",
+      "start": 327.919,
+      "duration": 3.761
+    },
+    {
+      "text": "the month",
+      "start": 330.56,
+      "duration": 4.72
+    },
+    {
+      "text": "out of each one so that's what we're",
+      "start": 331.68,
+      "duration": 4.64
+    },
+    {
+      "text": "doing but we're just",
+      "start": 335.28,
+      "duration": 2.24
+    },
+    {
+      "text": "putting that all into a list",
+      "start": 336.32,
+      "duration": 3.04
+    },
+    {
+      "text": "comprehension to do them all",
+      "start": 337.52,
+      "duration": 4.88
+    },
+    {
+      "text": "at once and create a new variable the",
+      "start": 339.36,
+      "duration": 4.48
+    },
+    {
+      "text": "month variable",
+      "start": 342.4,
+      "duration": 5.76
+    },
+    {
+      "text": "column with those months",
+      "start": 343.84,
+      "duration": 7.359
+    },
+    {
+      "text": "so then we see here it's january and we",
+      "start": 348.16,
+      "duration": 4.24
+    },
+    {
+      "text": "get one of the month",
+      "start": 351.199,
+      "duration": 4.56
+    },
+    {
+      "text": "then april we get four july we get seven",
+      "start": 352.4,
+      "duration": 7.28
+    },
+    {
+      "text": "october we get 10 and then that pattern",
+      "start": 355.759,
+      "duration": 5.761
+    },
+    {
+      "text": "just keeps repeating even though we go",
+      "start": 359.68,
+      "duration": 3.84
+    },
+    {
+      "text": "into the next year we get those same",
+      "start": 361.52,
+      "duration": 6.32
+    },
+    {
+      "text": "values for the month variable",
+      "start": 363.52,
+      "duration": 4.32
+    },
+    {
+      "text": "so um you know certainly",
+      "start": 368.72,
+      "duration": 6.479
+    },
+    {
+      "text": "we could write some logic which creates",
+      "start": 371.84,
+      "duration": 4.24
+    },
+    {
+      "text": "these variables",
+      "start": 375.199,
+      "duration": 3.84
+    },
+    {
+      "text": "based off these values uh just i was",
+      "start": 376.08,
+      "duration": 3.92
+    },
+    {
+      "text": "saying",
+      "start": 379.039,
+      "duration": 2.481
+    },
+    {
+      "text": "is it equal to one well this one's gonna",
+      "start": 380.0,
+      "duration": 3.44
+    },
+    {
+      "text": "be one otherwise zero is equal to four",
+      "start": 381.52,
+      "duration": 3.28
+    },
+    {
+      "text": "well the second one is gonna be equal to",
+      "start": 383.44,
+      "duration": 3.68
+    },
+    {
+      "text": "one otherwise zero and so on",
+      "start": 384.8,
+      "duration": 4.72
+    },
+    {
+      "text": "but it's a little tedious and this is",
+      "start": 387.12,
+      "duration": 3.84
+    },
+    {
+      "text": "definitely a common thing that people",
+      "start": 389.52,
+      "duration": 3.44
+    },
+    {
+      "text": "have to do and so pandas has created",
+      "start": 390.96,
+      "duration": 2.4
+    },
+    {
+      "text": "this",
+      "start": 392.96,
+      "duration": 3.519
+    },
+    {
+      "text": "get dummies function",
+      "start": 393.36,
+      "duration": 5.279
+    },
+    {
+      "text": "which is going to be able to do this for",
+      "start": 396.479,
+      "duration": 3.921
+    },
+    {
+      "text": "us",
+      "start": 398.639,
+      "duration": 3.68
+    },
+    {
+      "text": "so you just pass it the data frame and",
+      "start": 400.4,
+      "duration": 3.76
+    },
+    {
+      "text": "then you pass it what columns you want",
+      "start": 402.319,
+      "duration": 2.88
+    },
+    {
+      "text": "to make the dummies on",
+      "start": 404.16,
+      "duration": 4.08
+    },
+    {
+      "text": "here it's just the month column and",
+      "start": 405.199,
+      "duration": 6.321
+    },
+    {
+      "text": "you can see in the created data frame",
+      "start": 408.24,
+      "duration": 6.72
+    },
+    {
+      "text": "that now it has dummies saying",
+      "start": 411.52,
+      "duration": 5.519
+    },
+    {
+      "text": "is this the first month is this the",
+      "start": 414.96,
+      "duration": 3.04
+    },
+    {
+      "text": "fourth month",
+      "start": 417.039,
+      "duration": 3.761
+    },
+    {
+      "text": "seventh and tenth month um so there we",
+      "start": 418.0,
+      "duration": 3.68
+    },
+    {
+      "text": "see",
+      "start": 420.8,
+      "duration": 2.64
+    },
+    {
+      "text": "now we have what we need for these",
+      "start": 421.68,
+      "duration": 3.44
+    },
+    {
+      "text": "quarterly dummies because",
+      "start": 423.44,
+      "duration": 3.36
+    },
+    {
+      "text": "every time it's first quarter we get a",
+      "start": 425.12,
+      "duration": 3.519
+    },
+    {
+      "text": "one here um",
+      "start": 426.8,
+      "duration": 4.56
+    },
+    {
+      "text": "and otherwise it's zero every time it's",
+      "start": 428.639,
+      "duration": 3.521
+    },
+    {
+      "text": "second quarter",
+      "start": 431.36,
+      "duration": 4.16
+    },
+    {
+      "text": "we get a one here otherwise it's zero",
+      "start": 432.16,
+      "duration": 6.56
+    },
+    {
+      "text": "and so on so this is what we need in",
+      "start": 435.52,
+      "duration": 7.04
+    },
+    {
+      "text": "order to pick up the seasonal effect",
+      "start": 438.72,
+      "duration": 3.84
+    },
+    {
+      "text": "so",
+      "start": 444.08,
+      "duration": 2.239
+    },
+    {
+      "text": "here is just putting those steps into",
+      "start": 447.28,
+      "duration": 6.24
+    },
+    {
+      "text": "a function so that it",
+      "start": 450.479,
+      "duration": 5.84
+    },
+    {
+      "text": "you can just immediately have the data",
+      "start": 453.52,
+      "duration": 4.799
+    },
+    {
+      "text": "frame that you need for forecasting",
+      "start": 456.319,
+      "duration": 5.28
+    },
+    {
+      "text": "from a series",
+      "start": 458.319,
+      "duration": 5.28
+    },
+    {
+      "text": "and so you can see here i'm passing it",
+      "start": 461.599,
+      "duration": 3.681
+    },
+    {
+      "text": "the cache",
+      "start": 463.599,
+      "duration": 4.32
+    },
+    {
+      "text": "and it's making a whole the full uh",
+      "start": 465.28,
+      "duration": 4.56
+    },
+    {
+      "text": "forecasting data frame",
+      "start": 467.919,
+      "duration": 5.12
+    },
+    {
+      "text": "for the cache as well so now um",
+      "start": 469.84,
+      "duration": 4.639
+    },
+    {
+      "text": "if you want to go forward with the",
+      "start": 473.039,
+      "duration": 3.201
+    },
+    {
+      "text": "quarterly seasonal trend model",
+      "start": 474.479,
+      "duration": 4.56
+    },
+    {
+      "text": "you can just use this function in your",
+      "start": 476.24,
+      "duration": 4.079
+    },
+    {
+      "text": "own model to prepare",
+      "start": 479.039,
+      "duration": 4.081
+    },
+    {
+      "text": "the data frame",
+      "start": 480.319,
+      "duration": 2.801
+    },
+    {
+      "text": "so now we're going to go and fit the",
+      "start": 485.44,
+      "duration": 4.319
+    },
+    {
+      "text": "model",
+      "start": 488.56,
+      "duration": 3.6
+    },
+    {
+      "text": "um and so we're going to go through the",
+      "start": 489.759,
+      "duration": 3.28
+    },
+    {
+      "text": "classic",
+      "start": 492.16,
+      "duration": 4.64
+    },
+    {
+      "text": "stats models ols approach",
+      "start": 493.039,
+      "duration": 3.761
+    },
+    {
+      "text": "um but we need to tell it that the t",
+      "start": 496.879,
+      "duration": 5.201
+    },
+    {
+      "text": "as well as each of these columns are",
+      "start": 500.319,
+      "duration": 3.841
+    },
+    {
+      "text": "going to be our variables",
+      "start": 502.08,
+      "duration": 5.6
+    },
+    {
+      "text": "and depending on your company",
+      "start": 504.16,
+      "duration": 5.599
+    },
+    {
+      "text": "it's gonna have the quarters uh in",
+      "start": 507.68,
+      "duration": 3.919
+    },
+    {
+      "text": "different months",
+      "start": 509.759,
+      "duration": 4.72
+    },
+    {
+      "text": "and so we certainly can explicitly say",
+      "start": 511.599,
+      "duration": 3.68
+    },
+    {
+      "text": "that the",
+      "start": 514.479,
+      "duration": 2.401
+    },
+    {
+      "text": "columns should be month one month four",
+      "start": 515.279,
+      "duration": 3.44
+    },
+    {
+      "text": "etc",
+      "start": 516.88,
+      "duration": 4.399
+    },
+    {
+      "text": "but then if you try to run a different",
+      "start": 518.719,
+      "duration": 3.281
+    },
+    {
+      "text": "company",
+      "start": 521.279,
+      "duration": 2.32
+    },
+    {
+      "text": "through the same code then it's not",
+      "start": 522.0,
+      "duration": 3.68
+    },
+    {
+      "text": "going to work necessarily because the",
+      "start": 523.599,
+      "duration": 4.081
+    },
+    {
+      "text": "quarters could be different",
+      "start": 525.68,
+      "duration": 3.68
+    },
+    {
+      "text": "so there is a general way we can do this",
+      "start": 527.68,
+      "duration": 3.279
+    },
+    {
+      "text": "that's going to work for",
+      "start": 529.36,
+      "duration": 4.64
+    },
+    {
+      "text": "any company is we can just",
+      "start": 530.959,
+      "duration": 5.361
+    },
+    {
+      "text": "grab the columns which have month and",
+      "start": 534.0,
+      "duration": 4.32
+    },
+    {
+      "text": "the name",
+      "start": 536.32,
+      "duration": 5.12
+    },
+    {
+      "text": "um so we can see",
+      "start": 538.32,
+      "duration": 6.32
+    },
+    {
+      "text": "um that if we just",
+      "start": 541.44,
+      "duration": 7.68
+    },
+    {
+      "text": "uh start from the columns",
+      "start": 544.64,
+      "duration": 7.12
+    },
+    {
+      "text": "which will tell us all the columns and",
+      "start": 549.12,
+      "duration": 4.24
+    },
+    {
+      "text": "we iterate through them with this list",
+      "start": 551.76,
+      "duration": 2.639
+    },
+    {
+      "text": "comprehension",
+      "start": 553.36,
+      "duration": 4.08
+    },
+    {
+      "text": "and we just say if the string month is",
+      "start": 554.399,
+      "duration": 4.0
+    },
+    {
+      "text": "in the column",
+      "start": 557.44,
+      "duration": 2.399
+    },
+    {
+      "text": "then we're going to include it in this",
+      "start": 558.399,
+      "duration": 4.56
+    },
+    {
+      "text": "list and so that's how we get",
+      "start": 559.839,
+      "duration": 5.44
+    },
+    {
+      "text": "uh these four different month columns",
+      "start": 562.959,
+      "duration": 4.401
+    },
+    {
+      "text": "automatically regardless of",
+      "start": 565.279,
+      "duration": 5.12
+    },
+    {
+      "text": "what the actual month was",
+      "start": 567.36,
+      "duration": 5.36
+    },
+    {
+      "text": "then all the x columns are going to be t",
+      "start": 570.399,
+      "duration": 3.921
+    },
+    {
+      "text": "plus those",
+      "start": 572.72,
+      "duration": 3.36
+    },
+    {
+      "text": "and so now we can go to rather",
+      "start": 574.32,
+      "duration": 3.04
+    },
+    {
+      "text": "regression",
+      "start": 576.08,
+      "duration": 4.48
+    },
+    {
+      "text": "so importing stats models as usual",
+      "start": 577.36,
+      "duration": 6.88
+    },
+    {
+      "text": "running the ols regression with the y",
+      "start": 580.56,
+      "duration": 7.12
+    },
+    {
+      "text": "is going to be uh whatever our",
+      "start": 584.24,
+      "duration": 6.32
+    },
+    {
+      "text": "variable of interest for forecasting um",
+      "start": 587.68,
+      "duration": 4.719
+    },
+    {
+      "text": "the revenue here",
+      "start": 590.56,
+      "duration": 3.92
+    },
+    {
+      "text": "and then the x we've already selected",
+      "start": 592.399,
+      "duration": 3.681
+    },
+    {
+      "text": "the x columns and we just want to add",
+      "start": 594.48,
+      "duration": 4.0
+    },
+    {
+      "text": "the constant to that",
+      "start": 596.08,
+      "duration": 5.92
+    },
+    {
+      "text": "and then we fit and see the summary",
+      "start": 598.48,
+      "duration": 7.039
+    },
+    {
+      "text": "and so here then we're able to see",
+      "start": 602.0,
+      "duration": 5.44
+    },
+    {
+      "text": "that we have the intercept and we have",
+      "start": 605.519,
+      "duration": 3.44
+    },
+    {
+      "text": "the t coefficient as well as the",
+      "start": 607.44,
+      "duration": 2.24
+    },
+    {
+      "text": "coefficient",
+      "start": 608.959,
+      "duration": 2.961
+    },
+    {
+      "text": "for each one of these monthly quarterly",
+      "start": 609.68,
+      "duration": 5.04
+    },
+    {
+      "text": "dummy variables",
+      "start": 611.92,
+      "duration": 2.8
+    },
+    {
+      "text": "so then we can go and predict the future",
+      "start": 615.68,
+      "duration": 7.36
+    },
+    {
+      "text": "also we can see that the r squared was",
+      "start": 620.88,
+      "duration": 4.56
+    },
+    {
+      "text": "quite high that's a good sign",
+      "start": 623.04,
+      "duration": 3.919
+    },
+    {
+      "text": "that we're going to have a decent",
+      "start": 625.44,
+      "duration": 4.079
+    },
+    {
+      "text": "forecast",
+      "start": 626.959,
+      "duration": 2.56
+    },
+    {
+      "text": "so we need to predict the next period",
+      "start": 631.12,
+      "duration": 6.48
+    },
+    {
+      "text": "in order to do that we need to know well",
+      "start": 634.64,
+      "duration": 3.28
+    },
+    {
+      "text": "what",
+      "start": 637.6,
+      "duration": 3.76
+    },
+    {
+      "text": "t uh is for the next period",
+      "start": 637.92,
+      "duration": 5.84
+    },
+    {
+      "text": "so we can just take the maximum of the t",
+      "start": 641.36,
+      "duration": 3.36
+    },
+    {
+      "text": "that's already there",
+      "start": 643.76,
+      "duration": 3.12
+    },
+    {
+      "text": "and then add one to it and that's going",
+      "start": 644.72,
+      "duration": 5.6
+    },
+    {
+      "text": "to get the next t",
+      "start": 646.88,
+      "duration": 3.44
+    },
+    {
+      "text": "and we want to do the same with the",
+      "start": 650.959,
+      "duration": 3.921
+    },
+    {
+      "text": "dummies we've got to be able to select",
+      "start": 653.36,
+      "duration": 7.039
+    },
+    {
+      "text": "the appropriate dummy",
+      "start": 654.88,
+      "duration": 8.88
+    },
+    {
+      "text": "and so we see that the last quarter was",
+      "start": 660.399,
+      "duration": 7.361
+    },
+    {
+      "text": "uh month seven and so the next one is",
+      "start": 663.76,
+      "duration": 6.24
+    },
+    {
+      "text": "going to be month 10.",
+      "start": 667.76,
+      "duration": 5.68
+    },
+    {
+      "text": "um so in order to get the forecast",
+      "start": 670.0,
+      "duration": 6.56
+    },
+    {
+      "text": "then we take the constant we add the t",
+      "start": 673.44,
+      "duration": 6.079
+    },
+    {
+      "text": "variable times uh this t that we",
+      "start": 676.56,
+      "duration": 4.16
+    },
+    {
+      "text": "calculated",
+      "start": 679.519,
+      "duration": 2.961
+    },
+    {
+      "text": "and then we add on the dummy",
+      "start": 680.72,
+      "duration": 4.48
+    },
+    {
+      "text": "corresponding to the month",
+      "start": 682.48,
+      "duration": 5.76
+    },
+    {
+      "text": "that this observation is in and we get",
+      "start": 685.2,
+      "duration": 5.84
+    },
+    {
+      "text": "our result there",
+      "start": 688.24,
+      "duration": 4.24
+    },
+    {
+      "text": "but it's a little hard to see you know",
+      "start": 691.04,
+      "duration": 3.359
+    },
+    {
+      "text": "especially with these seasonal patterns",
+      "start": 692.48,
+      "duration": 4.4
+    },
+    {
+      "text": "if just forecasting a single period is",
+      "start": 694.399,
+      "duration": 4.241
+    },
+    {
+      "text": "working correctly really you have to",
+      "start": 696.88,
+      "duration": 5.92
+    },
+    {
+      "text": "to bring it out further um and so let's",
+      "start": 698.64,
+      "duration": 6.4
+    },
+    {
+      "text": "look at how we can do that",
+      "start": 702.8,
+      "duration": 4.719
+    },
+    {
+      "text": "so we want to forecast for a number of",
+      "start": 705.04,
+      "duration": 4.32
+    },
+    {
+      "text": "dates in the future",
+      "start": 707.519,
+      "duration": 5.201
+    },
+    {
+      "text": "um and so",
+      "start": 709.36,
+      "duration": 6.56
+    },
+    {
+      "text": "we can use pandas date range",
+      "start": 712.72,
+      "duration": 4.88
+    },
+    {
+      "text": "function in order to create a range of",
+      "start": 715.92,
+      "duration": 4.4
+    },
+    {
+      "text": "dates that we want to forecast",
+      "start": 717.6,
+      "duration": 4.96
+    },
+    {
+      "text": "and so we're going to start from our",
+      "start": 720.32,
+      "duration": 3.68
+    },
+    {
+      "text": "last quarter",
+      "start": 722.56,
+      "duration": 3.839
+    },
+    {
+      "text": "we're going to have periods every three",
+      "start": 724.0,
+      "duration": 3.68
+    },
+    {
+      "text": "months",
+      "start": 726.399,
+      "duration": 3.68
+    },
+    {
+      "text": "and we're going to have 12 periods and",
+      "start": 727.68,
+      "duration": 3.599
+    },
+    {
+      "text": "that's what gets us",
+      "start": 730.079,
+      "duration": 4.721
+    },
+    {
+      "text": "to this here where",
+      "start": 731.279,
+      "duration": 7.521
+    },
+    {
+      "text": "the first period is",
+      "start": 734.8,
+      "duration": 7.44
+    },
+    {
+      "text": "the last one here and",
+      "start": 738.8,
+      "duration": 6.08
+    },
+    {
+      "text": "then we are going to every period in the",
+      "start": 742.24,
+      "duration": 3.839
+    },
+    {
+      "text": "future",
+      "start": 744.88,
+      "duration": 4.399
+    },
+    {
+      "text": "up to 12 periods",
+      "start": 746.079,
+      "duration": 3.2
+    },
+    {
+      "text": "so then we can create the forecast",
+      "start": 750.079,
+      "duration": 6.241
+    },
+    {
+      "text": "for all these different periods with a",
+      "start": 754.48,
+      "duration": 3.52
+    },
+    {
+      "text": "loop here so just going to loop through",
+      "start": 756.32,
+      "duration": 5.12
+    },
+    {
+      "text": "the forecast states and also",
+      "start": 758.0,
+      "duration": 6.16
+    },
+    {
+      "text": "use enumerate to get a counter variable",
+      "start": 761.44,
+      "duration": 4.0
+    },
+    {
+      "text": "so that we can",
+      "start": 764.16,
+      "duration": 4.32
+    },
+    {
+      "text": "adjust t appropriately",
+      "start": 765.44,
+      "duration": 5.399
+    },
+    {
+      "text": "and store all the forecasts in a",
+      "start": 768.48,
+      "duration": 4.4
+    },
+    {
+      "text": "dictionary um",
+      "start": 770.839,
+      "duration": 5.24
+    },
+    {
+      "text": "so we want the",
+      "start": 772.88,
+      "duration": 6.32
+    },
+    {
+      "text": "first uh forecasted period",
+      "start": 776.079,
+      "duration": 6.241
+    },
+    {
+      "text": "to be adding one",
+      "start": 779.2,
+      "duration": 7.12
+    },
+    {
+      "text": "on to the uh previous t and so",
+      "start": 782.32,
+      "duration": 6.4
+    },
+    {
+      "text": "we can call that the t offset and that's",
+      "start": 786.32,
+      "duration": 4.079
+    },
+    {
+      "text": "going to be the counter plus one so that",
+      "start": 788.72,
+      "duration": 4.4
+    },
+    {
+      "text": "it's one on the first loop",
+      "start": 790.399,
+      "duration": 5.761
+    },
+    {
+      "text": "and so then the t is going to be",
+      "start": 793.12,
+      "duration": 5.719
+    },
+    {
+      "text": "what the last t was plus this offset",
+      "start": 796.16,
+      "duration": 4.4
+    },
+    {
+      "text": "variable",
+      "start": 798.839,
+      "duration": 4.601
+    },
+    {
+      "text": "and then we can pull out the month of",
+      "start": 800.56,
+      "duration": 3.92
+    },
+    {
+      "text": "the",
+      "start": 803.44,
+      "duration": 3.519
+    },
+    {
+      "text": "specific date that we're working with",
+      "start": 804.48,
+      "duration": 4.4
+    },
+    {
+      "text": "and then assign into the forecast",
+      "start": 806.959,
+      "duration": 2.961
+    },
+    {
+      "text": "dictionary",
+      "start": 808.88,
+      "duration": 3.36
+    },
+    {
+      "text": "the result of our prediction same thing",
+      "start": 809.92,
+      "duration": 3.2
+    },
+    {
+      "text": "that we saw before",
+      "start": 812.24,
+      "duration": 2.88
+    },
+    {
+      "text": "constant plus the t times this t",
+      "start": 813.12,
+      "duration": 3.279
+    },
+    {
+      "text": "variable",
+      "start": 815.12,
+      "duration": 2.959
+    },
+    {
+      "text": "and now we're just pulling the",
+      "start": 816.399,
+      "duration": 3.601
+    },
+    {
+      "text": "appropriate month",
+      "start": 818.079,
+      "duration": 5.12
+    },
+    {
+      "text": "using string formatting so we do that",
+      "start": 820.0,
+      "duration": 6.839
+    },
+    {
+      "text": "and we see we get all these forecasts",
+      "start": 823.199,
+      "duration": 6.64
+    },
+    {
+      "text": "here",
+      "start": 826.839,
+      "duration": 3.0
+    },
+    {
+      "text": "so then we can create a series",
+      "start": 830.48,
+      "duration": 5.919
+    },
+    {
+      "text": "from the forecast because it's a",
+      "start": 834.16,
+      "duration": 3.44
+    },
+    {
+      "text": "dictionary",
+      "start": 836.399,
+      "duration": 2.721
+    },
+    {
+      "text": "we can just directly create a series",
+      "start": 837.6,
+      "duration": 3.919
+    },
+    {
+      "text": "from it",
+      "start": 839.12,
+      "duration": 5.6
+    },
+    {
+      "text": "and then we can plot that so",
+      "start": 841.519,
+      "duration": 5.68
+    },
+    {
+      "text": "uh this definitely looks like some of",
+      "start": 844.72,
+      "duration": 4.08
+    },
+    {
+      "text": "the patterns we have been seeing in the",
+      "start": 847.199,
+      "duration": 4.88
+    },
+    {
+      "text": "historical so that's already a good sign",
+      "start": 848.8,
+      "duration": 5.12
+    },
+    {
+      "text": "but it's really best to evaluate the",
+      "start": 852.079,
+      "duration": 3.76
+    },
+    {
+      "text": "forecast when also looking at it with",
+      "start": 853.92,
+      "duration": 3.68
+    },
+    {
+      "text": "the historical",
+      "start": 855.839,
+      "duration": 5.041
+    },
+    {
+      "text": "so we can use pandas's concatenate",
+      "start": 857.6,
+      "duration": 6.72
+    },
+    {
+      "text": "function concat um pass it a list of the",
+      "start": 860.88,
+      "duration": 4.639
+    },
+    {
+      "text": "two series",
+      "start": 864.32,
+      "duration": 5.04
+    },
+    {
+      "text": "the historical as well as the forecasted",
+      "start": 865.519,
+      "duration": 6.641
+    },
+    {
+      "text": "that creates the full uh series with all",
+      "start": 869.36,
+      "duration": 5.919
+    },
+    {
+      "text": "those values and then we can plot that",
+      "start": 872.16,
+      "duration": 6.16
+    },
+    {
+      "text": "and now we see the whole thing um",
+      "start": 875.279,
+      "duration": 4.961
+    },
+    {
+      "text": "so it looks like this turned out pretty",
+      "start": 878.32,
+      "duration": 4.0
+    },
+    {
+      "text": "well because our forecast here",
+      "start": 880.24,
+      "duration": 4.8
+    },
+    {
+      "text": "started around here and you can really",
+      "start": 882.32,
+      "duration": 4.079
+    },
+    {
+      "text": "barely tell",
+      "start": 885.04,
+      "duration": 4.08
+    },
+    {
+      "text": "where uh the historical stops and the",
+      "start": 886.399,
+      "duration": 4.081
+    },
+    {
+      "text": "forecast it starts",
+      "start": 889.12,
+      "duration": 4.56
+    },
+    {
+      "text": "it does get a little more regular here",
+      "start": 890.48,
+      "duration": 5.52
+    },
+    {
+      "text": "but basically it looks like we did a",
+      "start": 893.68,
+      "duration": 3.599
+    },
+    {
+      "text": "pretty good job",
+      "start": 896.0,
+      "duration": 4.0
+    },
+    {
+      "text": "of forecasting this time series even",
+      "start": 897.279,
+      "duration": 3.12
+    },
+    {
+      "text": "though",
+      "start": 900.0,
+      "duration": 4.56
+    },
+    {
+      "text": "it had this seasonality component",
+      "start": 900.399,
+      "duration": 4.161
+    },
+    {
+      "text": "so that is how we can",
+      "start": 904.959,
+      "duration": 6.481
+    },
+    {
+      "text": "deal with seasonality and time series",
+      "start": 908.48,
+      "duration": 4.08
+    },
+    {
+      "text": "forecasting",
+      "start": 911.44,
+      "duration": 4.24
+    },
+    {
+      "text": "and python with a more manual approach",
+      "start": 912.56,
+      "duration": 4.399
+    },
+    {
+      "text": "and then we'll come back in the",
+      "start": 915.68,
+      "duration": 2.64
+    },
+    {
+      "text": "following video",
+      "start": 916.959,
+      "duration": 4.961
+    },
+    {
+      "text": "to look at uh using fence statement",
+      "start": 918.32,
+      "duration": 6.16
+    },
+    {
+      "text": "to kind of do this automatically for us",
+      "start": 921.92,
+      "duration": 3.359
+    },
+    {
+      "text": "without",
+      "start": 924.48,
+      "duration": 3.68
+    },
+    {
+      "text": "so many steps so thanks for listening",
+      "start": 925.279,
+      "duration": 8.8
+    },
+    {
+      "text": "and see you next time",
+      "start": 928.16,
+      "duration": 5.919
+    }
+  ]
+}

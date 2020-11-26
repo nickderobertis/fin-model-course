@@ -1,0 +1,1794 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.6,
+      "duration": 2.48
+    },
+    {
+      "text": "this is nick dear vertis teaching you",
+      "start": 4.4,
+      "duration": 3.12
+    },
+    {
+      "text": "financial modeling",
+      "start": 6.08,
+      "duration": 3.599
+    },
+    {
+      "text": "today we're going to be solving the lab",
+      "start": 7.52,
+      "duration": 3.28
+    },
+    {
+      "text": "exercise on",
+      "start": 9.679,
+      "duration": 4.401
+    },
+    {
+      "text": "forecasting simple time series this is",
+      "start": 10.8,
+      "duration": 5.36
+    },
+    {
+      "text": "part of our lecture segment on free cash",
+      "start": 14.08,
+      "duration": 4.8
+    },
+    {
+      "text": "flow estimation and forecasting",
+      "start": 16.16,
+      "duration": 4.56
+    },
+    {
+      "text": "as part of a broader goal of building",
+      "start": 18.88,
+      "duration": 3.76
+    },
+    {
+      "text": "out the full discounted cash flow",
+      "start": 20.72,
+      "duration": 4.639
+    },
+    {
+      "text": "valuation of a stock",
+      "start": 22.64,
+      "duration": 5.84
+    },
+    {
+      "text": "so this lab exercise came",
+      "start": 25.359,
+      "duration": 5.84
+    },
+    {
+      "text": "at the end of the simple forecasting",
+      "start": 28.48,
+      "duration": 3.52
+    },
+    {
+      "text": "material",
+      "start": 31.199,
+      "duration": 4.88
+    },
+    {
+      "text": "uh just before the end before going to",
+      "start": 32.0,
+      "duration": 6.16
+    },
+    {
+      "text": "talking about using fin statement for",
+      "start": 36.079,
+      "duration": 4.64
+    },
+    {
+      "text": "forecasting",
+      "start": 38.16,
+      "duration": 6.16
+    },
+    {
+      "text": "um and this exercise is fairly similar",
+      "start": 40.719,
+      "duration": 5.201
+    },
+    {
+      "text": "to what we showed in the",
+      "start": 44.32,
+      "duration": 5.04
+    },
+    {
+      "text": "simple time series forecasting examples",
+      "start": 45.92,
+      "duration": 5.279
+    },
+    {
+      "text": "uh we're going to work with this excel",
+      "start": 49.36,
+      "duration": 3.839
+    },
+    {
+      "text": "file with a couple of statement line",
+      "start": 51.199,
+      "duration": 2.641
+    },
+    {
+      "text": "items",
+      "start": 53.199,
+      "duration": 4.721
+    },
+    {
+      "text": "and we're going to forecast total debt",
+      "start": 53.84,
+      "duration": 4.96
+    },
+    {
+      "text": "um",
+      "start": 57.92,
+      "duration": 2.72
+    },
+    {
+      "text": "using a trade regression we're gonna",
+      "start": 58.8,
+      "duration": 3.439
+    },
+    {
+      "text": "forecast interest using",
+      "start": 60.64,
+      "duration": 3.36
+    },
+    {
+      "text": "uh all four of the simple methods that",
+      "start": 62.239,
+      "duration": 4.081
+    },
+    {
+      "text": "we discuss in the course",
+      "start": 64.0,
+      "duration": 4.32
+    },
+    {
+      "text": "um and then we're also going to forecast",
+      "start": 66.32,
+      "duration": 3.36
+    },
+    {
+      "text": "interest as a percentage",
+      "start": 68.32,
+      "duration": 4.0
+    },
+    {
+      "text": "of total debt again with these four",
+      "start": 69.68,
+      "duration": 5.68
+    },
+    {
+      "text": "approaches being applied",
+      "start": 72.32,
+      "duration": 5.2
+    },
+    {
+      "text": "so let's go over to a jupiter notebook",
+      "start": 75.36,
+      "duration": 4.96
+    },
+    {
+      "text": "to complete this",
+      "start": 77.52,
+      "duration": 2.8
+    },
+    {
+      "text": "so we want to first",
+      "start": 82.799,
+      "duration": 5.041
+    },
+    {
+      "text": "get the forecast of",
+      "start": 88.4,
+      "duration": 6.719
+    },
+    {
+      "text": "the debt uh total debt but before we can",
+      "start": 91.52,
+      "duration": 6.239
+    },
+    {
+      "text": "get there we do need to",
+      "start": 95.119,
+      "duration": 5.68
+    },
+    {
+      "text": "import pandas so that we can load in",
+      "start": 97.759,
+      "duration": 6.961
+    },
+    {
+      "text": "this uh excel file so",
+      "start": 100.799,
+      "duration": 6.801
+    },
+    {
+      "text": "that interests",
+      "start": 104.72,
+      "duration": 2.88
+    },
+    {
+      "text": "and now we have that there now we can",
+      "start": 108.96,
+      "duration": 4.96
+    },
+    {
+      "text": "see the format it came in is maybe not",
+      "start": 111.84,
+      "duration": 3.44
+    },
+    {
+      "text": "great",
+      "start": 113.92,
+      "duration": 3.12
+    },
+    {
+      "text": "because we have this unnamed and these",
+      "start": 115.28,
+      "duration": 3.199
+    },
+    {
+      "text": "would be better as the index",
+      "start": 117.04,
+      "duration": 4.48
+    },
+    {
+      "text": "so let's add uh index call",
+      "start": 118.479,
+      "duration": 6.64
+    },
+    {
+      "text": "equals zero and now that's coming in",
+      "start": 121.52,
+      "duration": 5.36
+    },
+    {
+      "text": "appropriately",
+      "start": 125.119,
+      "duration": 5.2
+    },
+    {
+      "text": "so uh we want to forecast the",
+      "start": 126.88,
+      "duration": 6.56
+    },
+    {
+      "text": "total debt using the trend method",
+      "start": 130.319,
+      "duration": 5.441
+    },
+    {
+      "text": "uh as we showed in the example video we",
+      "start": 133.44,
+      "duration": 3.84
+    },
+    {
+      "text": "do need to",
+      "start": 135.76,
+      "duration": 4.0
+    },
+    {
+      "text": "uh modify this a little bit to get it in",
+      "start": 137.28,
+      "duration": 6.08
+    },
+    {
+      "text": "that format",
+      "start": 139.76,
+      "duration": 8.16
+    },
+    {
+      "text": "so if we transpose it",
+      "start": 143.36,
+      "duration": 6.64
+    },
+    {
+      "text": "then we",
+      "start": 147.92,
+      "duration": 3.679
+    },
+    {
+      "text": "[Music]",
+      "start": 150.0,
+      "duration": 4.16
+    },
+    {
+      "text": "have it set up in the structure that",
+      "start": 151.599,
+      "duration": 4.881
+    },
+    {
+      "text": "we're going to need",
+      "start": 154.16,
+      "duration": 4.799
+    },
+    {
+      "text": "and we can pull the total debt out of",
+      "start": 156.48,
+      "duration": 4.72
+    },
+    {
+      "text": "that",
+      "start": 158.959,
+      "duration": 2.241
+    },
+    {
+      "text": "or let's first take that",
+      "start": 165.04,
+      "duration": 6.64
+    },
+    {
+      "text": "and let's do the reset index",
+      "start": 168.319,
+      "duration": 5.761
+    },
+    {
+      "text": "drop that and then reset an x again and",
+      "start": 171.68,
+      "duration": 3.44
+    },
+    {
+      "text": "we should",
+      "start": 174.08,
+      "duration": 2.96
+    },
+    {
+      "text": "get an index column coming in there",
+      "start": 175.12,
+      "duration": 3.36
+    },
+    {
+      "text": "which this is going to represent",
+      "start": 177.04,
+      "duration": 6.0
+    },
+    {
+      "text": "our t every we can rename",
+      "start": 178.48,
+      "duration": 8.64
+    },
+    {
+      "text": "uh the index to t um",
+      "start": 183.04,
+      "duration": 7.919
+    },
+    {
+      "text": "or sorry columns equal",
+      "start": 187.12,
+      "duration": 3.839
+    },
+    {
+      "text": "there we go um and",
+      "start": 191.12,
+      "duration": 6.96
+    },
+    {
+      "text": "out of this we want the",
+      "start": 194.72,
+      "duration": 3.36
+    },
+    {
+      "text": "t t and",
+      "start": 198.4,
+      "duration": 6.479
+    },
+    {
+      "text": "or we don't even need to index it yet",
+      "start": 202.48,
+      "duration": 4.72
+    },
+    {
+      "text": "this can be our",
+      "start": 204.879,
+      "duration": 5.601
+    },
+    {
+      "text": "forecast data frame",
+      "start": 207.2,
+      "duration": 3.28
+    },
+    {
+      "text": "so uh we have",
+      "start": 211.36,
+      "duration": 5.519
+    },
+    {
+      "text": "what we need in here we have the total",
+      "start": 215.28,
+      "duration": 3.84
+    },
+    {
+      "text": "debt and we have the t",
+      "start": 216.879,
+      "duration": 5.761
+    },
+    {
+      "text": "um so let's also um",
+      "start": 219.12,
+      "duration": 6.72
+    },
+    {
+      "text": "import stats models",
+      "start": 222.64,
+      "duration": 6.56
+    },
+    {
+      "text": "sm first test models dot api",
+      "start": 225.84,
+      "duration": 7.119
+    },
+    {
+      "text": "as sm um",
+      "start": 229.2,
+      "duration": 8.48
+    },
+    {
+      "text": "and then uh our y is going to be",
+      "start": 232.959,
+      "duration": 7.84
+    },
+    {
+      "text": "the total debt",
+      "start": 237.68,
+      "duration": 7.68
+    },
+    {
+      "text": "the x is going to be",
+      "start": 240.799,
+      "duration": 4.561
+    },
+    {
+      "text": "the t column but we're also going to add",
+      "start": 246.48,
+      "duration": 9.36
+    },
+    {
+      "text": "a constant",
+      "start": 249.439,
+      "duration": 6.401
+    },
+    {
+      "text": "and then we can run the ols regression",
+      "start": 256.32,
+      "duration": 6.879
+    },
+    {
+      "text": "y on x uh with",
+      "start": 260.16,
+      "duration": 8.319
+    },
+    {
+      "text": "a constant",
+      "start": 263.199,
+      "duration": 8.321
+    },
+    {
+      "text": "we can fit the model",
+      "start": 268.479,
+      "duration": 3.041
+    },
+    {
+      "text": "and see the resulting summary",
+      "start": 272.08,
+      "duration": 6.44
+    },
+    {
+      "text": "there we're seeing the intercept of 44",
+      "start": 275.68,
+      "duration": 4.959
+    },
+    {
+      "text": "166",
+      "start": 278.52,
+      "duration": 5.32
+    },
+    {
+      "text": "and a coefficient on the t",
+      "start": 280.639,
+      "duration": 6.721
+    },
+    {
+      "text": "of 800 meaning it's increasing by 800",
+      "start": 283.84,
+      "duration": 6.24
+    },
+    {
+      "text": "each period",
+      "start": 287.36,
+      "duration": 2.72
+    },
+    {
+      "text": "um so then we have those results",
+      "start": 290.479,
+      "duration": 6.641
+    },
+    {
+      "text": "we can",
+      "start": 294.0,
+      "duration": 7.199
+    },
+    {
+      "text": "then extract the",
+      "start": 297.12,
+      "duration": 6.48
+    },
+    {
+      "text": "intercept and coefficient from that so",
+      "start": 301.199,
+      "duration": 3.761
+    },
+    {
+      "text": "the intercept",
+      "start": 303.6,
+      "duration": 6.8
+    },
+    {
+      "text": "is going to be uh",
+      "start": 304.96,
+      "duration": 10.56
+    },
+    {
+      "text": "result parameters uh cons",
+      "start": 310.4,
+      "duration": 5.12
+    },
+    {
+      "text": "and the coefficient",
+      "start": 315.68,
+      "duration": 8.48
+    },
+    {
+      "text": "is going to be on t so that way we have",
+      "start": 319.919,
+      "duration": 7.12
+    },
+    {
+      "text": "both of those there",
+      "start": 324.16,
+      "duration": 2.879
+    },
+    {
+      "text": "okay um so now in order to forecast the",
+      "start": 328.32,
+      "duration": 5.52
+    },
+    {
+      "text": "next period",
+      "start": 332.08,
+      "duration": 4.8
+    },
+    {
+      "text": "um for the",
+      "start": 333.84,
+      "duration": 7.199
+    },
+    {
+      "text": "uh total debt then we would do",
+      "start": 336.88,
+      "duration": 5.92
+    },
+    {
+      "text": "the next period is going to be t equals",
+      "start": 341.039,
+      "duration": 4.801
+    },
+    {
+      "text": "three so it would just be the intercept",
+      "start": 342.8,
+      "duration": 6.88
+    },
+    {
+      "text": "plus uh three times the beta",
+      "start": 345.84,
+      "duration": 5.68
+    },
+    {
+      "text": "and that would be our estimate of the",
+      "start": 349.68,
+      "duration": 5.12
+    },
+    {
+      "text": "value for the next period",
+      "start": 351.52,
+      "duration": 4.56
+    },
+    {
+      "text": "but we're going to need to do a trained",
+      "start": 354.8,
+      "duration": 3.2
+    },
+    {
+      "text": "regression again once we",
+      "start": 356.08,
+      "duration": 4.48
+    },
+    {
+      "text": "get into the interest expense and then",
+      "start": 358.0,
+      "duration": 3.28
+    },
+    {
+      "text": "again",
+      "start": 360.56,
+      "duration": 2.56
+    },
+    {
+      "text": "with uh interest expense has a",
+      "start": 361.28,
+      "duration": 3.84
+    },
+    {
+      "text": "percentage of revenue so let's wrap this",
+      "start": 363.12,
+      "duration": 2.72
+    },
+    {
+      "text": "up",
+      "start": 365.12,
+      "duration": 3.919
+    },
+    {
+      "text": "into a function",
+      "start": 365.84,
+      "duration": 3.199
+    },
+    {
+      "text": "so in the example i showed you know",
+      "start": 369.759,
+      "duration": 5.121
+    },
+    {
+      "text": "composing this into multiple functions",
+      "start": 373.039,
+      "duration": 5.28
+    },
+    {
+      "text": "which is a better approach but",
+      "start": 374.88,
+      "duration": 5.12
+    },
+    {
+      "text": "just in the interest of speed here i'm",
+      "start": 378.319,
+      "duration": 3.201
+    },
+    {
+      "text": "just gonna make one function which does",
+      "start": 380.0,
+      "duration": 3.12
+    },
+    {
+      "text": "this whole approach",
+      "start": 381.52,
+      "duration": 4.88
+    },
+    {
+      "text": "um so trend uh",
+      "start": 383.12,
+      "duration": 6.4
+    },
+    {
+      "text": "forecast uh for",
+      "start": 386.4,
+      "duration": 8.48
+    },
+    {
+      "text": "next period um",
+      "start": 389.52,
+      "duration": 7.28
+    },
+    {
+      "text": "or yeah i'm just trying to forecast and",
+      "start": 394.88,
+      "duration": 3.36
+    },
+    {
+      "text": "we'll be able to put the period",
+      "start": 396.8,
+      "duration": 5.36
+    },
+    {
+      "text": "so um we're going to get the data frame",
+      "start": 398.24,
+      "duration": 7.28
+    },
+    {
+      "text": "and the um",
+      "start": 402.16,
+      "duration": 6.56
+    },
+    {
+      "text": "line item and",
+      "start": 405.52,
+      "duration": 3.2
+    },
+    {
+      "text": "um so",
+      "start": 408.88,
+      "duration": 3.12
+    },
+    {
+      "text": "[Music]",
+      "start": 410.69,
+      "duration": 3.87
+    },
+    {
+      "text": "uh within that then we'll do this",
+      "start": 412.0,
+      "duration": 3.759
+    },
+    {
+      "text": "creating the forecast",
+      "start": 414.56,
+      "duration": 8.639
+    },
+    {
+      "text": "data frame fitting this regression",
+      "start": 415.759,
+      "duration": 12.241
+    },
+    {
+      "text": "um getting the intercept and the beta",
+      "start": 423.199,
+      "duration": 4.801
+    },
+    {
+      "text": "and then um",
+      "start": 430.24,
+      "duration": 4.079
+    },
+    {
+      "text": "returning this but with the t",
+      "start": 434.84,
+      "duration": 6.28
+    },
+    {
+      "text": "that we want to specify",
+      "start": 437.919,
+      "duration": 3.201
+    },
+    {
+      "text": "now we should be able to just do trend",
+      "start": 441.36,
+      "duration": 3.76
+    },
+    {
+      "text": "forecasts on the data frame",
+      "start": 443.28,
+      "duration": 5.52
+    },
+    {
+      "text": "with a total debt",
+      "start": 445.12,
+      "duration": 3.68
+    },
+    {
+      "text": "and three and we should get the same",
+      "start": 449.36,
+      "duration": 3.04
+    },
+    {
+      "text": "result which we do",
+      "start": 451.12,
+      "duration": 5.44
+    },
+    {
+      "text": "which is good um so now i can",
+      "start": 452.4,
+      "duration": 13.44
+    },
+    {
+      "text": "lead out uh these other pieces",
+      "start": 456.56,
+      "duration": 9.28
+    },
+    {
+      "text": "okay so now we've got the train forecast",
+      "start": 466.56,
+      "duration": 3.52
+    },
+    {
+      "text": "part",
+      "start": 469.52,
+      "duration": 4.56
+    },
+    {
+      "text": "and we're able to get the forecast for",
+      "start": 470.08,
+      "duration": 8.799
+    },
+    {
+      "text": "uh the total debt",
+      "start": 474.08,
+      "duration": 7.44
+    },
+    {
+      "text": "that was the first part now we need to",
+      "start": 478.879,
+      "duration": 3.6
+    },
+    {
+      "text": "then",
+      "start": 481.52,
+      "duration": 4.399
+    },
+    {
+      "text": "um do this forecast method for",
+      "start": 482.479,
+      "duration": 8.72
+    },
+    {
+      "text": "the um interest expense as well",
+      "start": 485.919,
+      "duration": 5.28
+    },
+    {
+      "text": "um as well as the other forecast methods",
+      "start": 491.36,
+      "duration": 6.0
+    },
+    {
+      "text": "so",
+      "start": 495.199,
+      "duration": 2.161
+    },
+    {
+      "text": "um in order to get the um trend estimate",
+      "start": 498.319,
+      "duration": 6.961
+    },
+    {
+      "text": "so we can do that on the interest",
+      "start": 502.319,
+      "duration": 5.521
+    },
+    {
+      "text": "expense",
+      "start": 505.28,
+      "duration": 2.56
+    },
+    {
+      "text": "so that did not",
+      "start": 509.759,
+      "duration": 5.52
+    },
+    {
+      "text": "get the interest expense estimate",
+      "start": 512.88,
+      "duration": 3.2
+    },
+    {
+      "text": "because this",
+      "start": 515.279,
+      "duration": 3.68
+    },
+    {
+      "text": "is explicitly looking at total debt i",
+      "start": 516.08,
+      "duration": 4.0
+    },
+    {
+      "text": "need to use line item",
+      "start": 518.959,
+      "duration": 3.361
+    },
+    {
+      "text": "here",
+      "start": 520.08,
+      "duration": 2.24
+    },
+    {
+      "text": "now that is working appropriately that",
+      "start": 524.159,
+      "duration": 3.041
+    },
+    {
+      "text": "number",
+      "start": 526.48,
+      "duration": 3.919
+    },
+    {
+      "text": "seems to follow the trend",
+      "start": 527.2,
+      "duration": 3.199
+    },
+    {
+      "text": "so then we can get the",
+      "start": 532.72,
+      "duration": 3.679
+    },
+    {
+      "text": "[Music]",
+      "start": 533.95,
+      "duration": 6.329
+    },
+    {
+      "text": "mean um by taking um",
+      "start": 536.399,
+      "duration": 9.041
+    },
+    {
+      "text": "bf.loc interest expense",
+      "start": 540.279,
+      "duration": 5.161
+    },
+    {
+      "text": "uh dot mean that would be the",
+      "start": 546.48,
+      "duration": 7.039
+    },
+    {
+      "text": "average approach um",
+      "start": 549.76,
+      "duration": 6.88
+    },
+    {
+      "text": "and to get the recent value we can",
+      "start": 553.519,
+      "duration": 7.201
+    },
+    {
+      "text": "um get the most recent date by taking",
+      "start": 556.64,
+      "duration": 5.84
+    },
+    {
+      "text": "the max of",
+      "start": 560.72,
+      "duration": 4.64
+    },
+    {
+      "text": "the columns",
+      "start": 562.48,
+      "duration": 2.88
+    },
+    {
+      "text": "and then we want to look up that dates",
+      "start": 565.76,
+      "duration": 7.36
+    },
+    {
+      "text": "value from the interest expense",
+      "start": 569.04,
+      "duration": 8.72
+    },
+    {
+      "text": "so that's with the recent value approach",
+      "start": 573.12,
+      "duration": 8.719
+    },
+    {
+      "text": "um and then the last approach is the",
+      "start": 577.76,
+      "duration": 6.32
+    },
+    {
+      "text": "compounded annual growth rate approach",
+      "start": 581.839,
+      "duration": 3.841
+    },
+    {
+      "text": "so there",
+      "start": 584.08,
+      "duration": 5.12
+    },
+    {
+      "text": "we're going to first calculate",
+      "start": 585.68,
+      "duration": 6.96
+    },
+    {
+      "text": "the compounded annual growth rate um",
+      "start": 589.2,
+      "duration": 5.04
+    },
+    {
+      "text": "in order to do that we have to get our",
+      "start": 592.64,
+      "duration": 3.28
+    },
+    {
+      "text": "ending and",
+      "start": 594.24,
+      "duration": 5.12
+    },
+    {
+      "text": "beginning value so",
+      "start": 595.92,
+      "duration": 7.039
+    },
+    {
+      "text": "our ending value i'm",
+      "start": 599.36,
+      "duration": 7.52
+    },
+    {
+      "text": "gonna use this last date again um",
+      "start": 602.959,
+      "duration": 5.44
+    },
+    {
+      "text": "the most recent value that's the ending",
+      "start": 606.88,
+      "duration": 3.28
+    },
+    {
+      "text": "value",
+      "start": 608.399,
+      "duration": 5.12
+    },
+    {
+      "text": "um and then to get the",
+      "start": 610.16,
+      "duration": 7.44
+    },
+    {
+      "text": "first one then",
+      "start": 613.519,
+      "duration": 4.081
+    },
+    {
+      "text": "we can do",
+      "start": 617.76,
+      "duration": 2.72
+    },
+    {
+      "text": "i love zero that should get the first",
+      "start": 620.88,
+      "duration": 5.44
+    },
+    {
+      "text": "which it does",
+      "start": 623.6,
+      "duration": 2.72
+    },
+    {
+      "text": "um and then",
+      "start": 629.279,
+      "duration": 6.641
+    },
+    {
+      "text": "the number of periods",
+      "start": 632.32,
+      "duration": 6.639
+    },
+    {
+      "text": "um we can",
+      "start": 635.92,
+      "duration": 8.24
+    },
+    {
+      "text": "look at the",
+      "start": 638.959,
+      "duration": 5.201
+    },
+    {
+      "text": "um",
+      "start": 644.839,
+      "duration": 5.801
+    },
+    {
+      "text": "we can see that it's two periods here",
+      "start": 646.88,
+      "duration": 7.04
+    },
+    {
+      "text": "um so then we're going to do",
+      "start": 650.64,
+      "duration": 7.68
+    },
+    {
+      "text": "um the beginning value divided by",
+      "start": 653.92,
+      "duration": 8.56
+    },
+    {
+      "text": "the beginning value take that",
+      "start": 658.32,
+      "duration": 7.6
+    },
+    {
+      "text": "to the power of one",
+      "start": 662.48,
+      "duration": 6.64
+    },
+    {
+      "text": "divided by the number of periods",
+      "start": 665.92,
+      "duration": 5.039
+    },
+    {
+      "text": "and then subtract one and that's going",
+      "start": 669.12,
+      "duration": 6.719
+    },
+    {
+      "text": "to get the compounded annual growth rate",
+      "start": 670.959,
+      "duration": 4.88
+    },
+    {
+      "text": "and then we can apply that growth rate",
+      "start": 677.04,
+      "duration": 5.68
+    },
+    {
+      "text": "to the ending value",
+      "start": 679.76,
+      "duration": 2.96
+    },
+    {
+      "text": "to get the forecast for the next period",
+      "start": 686.399,
+      "duration": 4.641
+    },
+    {
+      "text": "um so that's the four approaches for",
+      "start": 691.279,
+      "duration": 5.921
+    },
+    {
+      "text": "the interest expense and we're going to",
+      "start": 694.48,
+      "duration": 5.039
+    },
+    {
+      "text": "have to do the same thing again",
+      "start": 697.2,
+      "duration": 5.92
+    },
+    {
+      "text": "with um the percentage of",
+      "start": 699.519,
+      "duration": 7.76
+    },
+    {
+      "text": "um interest expense of total debt",
+      "start": 703.12,
+      "duration": 5.52
+    },
+    {
+      "text": "but before we can do that we have to",
+      "start": 707.279,
+      "duration": 3.12
+    },
+    {
+      "text": "calculate it",
+      "start": 708.64,
+      "duration": 5.36
+    },
+    {
+      "text": "so um we're going to calculate",
+      "start": 710.399,
+      "duration": 6.641
+    },
+    {
+      "text": "uh interest expense",
+      "start": 714.0,
+      "duration": 7.279
+    },
+    {
+      "text": "percent total debt",
+      "start": 717.04,
+      "duration": 4.239
+    },
+    {
+      "text": "as the interest expense",
+      "start": 721.92,
+      "duration": 9.919
+    },
+    {
+      "text": "divided by the total debt",
+      "start": 726.959,
+      "duration": 4.88
+    },
+    {
+      "text": "uh so we can see that came in there",
+      "start": 734.0,
+      "duration": 4.079
+    },
+    {
+      "text": "um and",
+      "start": 738.72,
+      "duration": 6.48
+    },
+    {
+      "text": "since we're going to need to go through",
+      "start": 742.079,
+      "duration": 6.721
+    },
+    {
+      "text": "these same approaches uh it makes sense",
+      "start": 745.2,
+      "duration": 3.92
+    },
+    {
+      "text": "to",
+      "start": 748.8,
+      "duration": 4.479
+    },
+    {
+      "text": "wrap this up in a function as well um",
+      "start": 749.12,
+      "duration": 8.159
+    },
+    {
+      "text": "so about we create",
+      "start": 753.279,
+      "duration": 8.401
+    },
+    {
+      "text": "um an all forecast method",
+      "start": 757.279,
+      "duration": 7.281
+    },
+    {
+      "text": "function which is going to take the data",
+      "start": 761.68,
+      "duration": 4.399
+    },
+    {
+      "text": "frame",
+      "start": 764.56,
+      "duration": 5.68
+    },
+    {
+      "text": "line item the period to forecast",
+      "start": 766.079,
+      "duration": 7.361
+    },
+    {
+      "text": "or we'll just uh",
+      "start": 770.24,
+      "duration": 6.24
+    },
+    {
+      "text": "keep it simple for this and let it just",
+      "start": 773.44,
+      "duration": 6.079
+    },
+    {
+      "text": "forecast the next period",
+      "start": 776.48,
+      "duration": 6.32
+    },
+    {
+      "text": "um so in that we'll do the trend",
+      "start": 779.519,
+      "duration": 4.641
+    },
+    {
+      "text": "forecast",
+      "start": 782.8,
+      "duration": 3.839
+    },
+    {
+      "text": "uh so trend equals and that will be with",
+      "start": 784.16,
+      "duration": 5.359
+    },
+    {
+      "text": "the line item",
+      "start": 786.639,
+      "duration": 2.88
+    },
+    {
+      "text": "eon3 um and then we can do the",
+      "start": 790.959,
+      "duration": 9.521
+    },
+    {
+      "text": "um the average approach",
+      "start": 795.44,
+      "duration": 8.0
+    },
+    {
+      "text": "with the line item",
+      "start": 800.48,
+      "duration": 2.96
+    },
+    {
+      "text": "and we can do the compounded annual",
+      "start": 803.76,
+      "duration": 3.84
+    },
+    {
+      "text": "growth rate approach",
+      "start": 806.639,
+      "duration": 2.241
+    },
+    {
+      "text": "it would again be better to make",
+      "start": 807.6,
+      "duration": 3.359
+    },
+    {
+      "text": "separate functions for",
+      "start": 808.88,
+      "duration": 4.639
+    },
+    {
+      "text": "all of these things but i'm just trying",
+      "start": 810.959,
+      "duration": 4.401
+    },
+    {
+      "text": "to do this quickly",
+      "start": 813.519,
+      "duration": 3.521
+    },
+    {
+      "text": "for the sake of the video you can see a",
+      "start": 815.36,
+      "duration": 3.279
+    },
+    {
+      "text": "better structure",
+      "start": 817.04,
+      "duration": 5.76
+    },
+    {
+      "text": "in the full on example video",
+      "start": 818.639,
+      "duration": 7.361
+    },
+    {
+      "text": "so this is going to be um",
+      "start": 822.8,
+      "duration": 7.039
+    },
+    {
+      "text": "the estimate from the category approach",
+      "start": 826.0,
+      "duration": 3.839
+    },
+    {
+      "text": "um and then finally we have the recent",
+      "start": 830.16,
+      "duration": 5.6
+    },
+    {
+      "text": "value approach",
+      "start": 832.959,
+      "duration": 2.801
+    },
+    {
+      "text": "uh so we can do recent equals again on",
+      "start": 837.6,
+      "duration": 6.72
+    },
+    {
+      "text": "the line item",
+      "start": 841.68,
+      "duration": 2.64
+    },
+    {
+      "text": "and then we can return all of these",
+      "start": 846.399,
+      "duration": 4.24
+    },
+    {
+      "text": "approaches",
+      "start": 854.839,
+      "duration": 4.241
+    },
+    {
+      "text": "[Music]",
+      "start": 856.03,
+      "duration": 3.05
+    },
+    {
+      "text": "so then we can run this",
+      "start": 860.88,
+      "duration": 6.639
+    },
+    {
+      "text": "all forecast method",
+      "start": 864.0,
+      "duration": 3.519
+    },
+    {
+      "text": "on the data frame and for the interest",
+      "start": 868.079,
+      "duration": 4.801
+    },
+    {
+      "text": "expense",
+      "start": 870.399,
+      "duration": 2.481
+    },
+    {
+      "text": "um this needs to come before that",
+      "start": 877.04,
+      "duration": 8.799
+    },
+    {
+      "text": "okay um and did we seem to get the same",
+      "start": 885.92,
+      "duration": 4.64
+    },
+    {
+      "text": "values",
+      "start": 889.6,
+      "duration": 4.96
+    },
+    {
+      "text": "um so trends 22.99",
+      "start": 890.56,
+      "duration": 8.16
+    },
+    {
+      "text": "um yep",
+      "start": 894.56,
+      "duration": 7.44
+    },
+    {
+      "text": "and then average 1600",
+      "start": 898.72,
+      "duration": 7.44
+    },
+    {
+      "text": "the annual growth rate 23.90",
+      "start": 902.0,
+      "duration": 7.519
+    },
+    {
+      "text": "and the recent value is 1900 so that's",
+      "start": 906.16,
+      "duration": 7.679
+    },
+    {
+      "text": "all working appropriately",
+      "start": 909.519,
+      "duration": 4.32
+    },
+    {
+      "text": "so then we can just",
+      "start": 914.959,
+      "duration": 7.361
+    },
+    {
+      "text": "do the same thing with",
+      "start": 918.88,
+      "duration": 6.399
+    },
+    {
+      "text": "the interest expense as a percentage of",
+      "start": 922.32,
+      "duration": 5.84
+    },
+    {
+      "text": "debt as well",
+      "start": 925.279,
+      "duration": 2.881
+    },
+    {
+      "text": "now that we've built a common function",
+      "start": 928.32,
+      "duration": 4.8
+    },
+    {
+      "text": "which does all this",
+      "start": 930.24,
+      "duration": 4.399
+    },
+    {
+      "text": "um so that's going to get us the",
+      "start": 933.12,
+      "duration": 3.279
+    },
+    {
+      "text": "percentages and then we can multiply",
+      "start": 934.639,
+      "duration": 2.481
+    },
+    {
+      "text": "that by",
+      "start": 936.399,
+      "duration": 4.161
+    },
+    {
+      "text": "the forecasted sales in order to",
+      "start": 937.12,
+      "duration": 6.639
+    },
+    {
+      "text": "get the estimates so let's finally put",
+      "start": 940.56,
+      "duration": 4.0
+    },
+    {
+      "text": "this all",
+      "start": 943.759,
+      "duration": 3.76
+    },
+    {
+      "text": "into one loop which is going to show all",
+      "start": 944.56,
+      "duration": 5.839
+    },
+    {
+      "text": "this information",
+      "start": 947.519,
+      "duration": 2.88
+    },
+    {
+      "text": "so first it's going to",
+      "start": 950.56,
+      "duration": 3.519
+    },
+    {
+      "text": "get the estimate of the sales by doing",
+      "start": 954.8,
+      "duration": 4.399
+    },
+    {
+      "text": "the",
+      "start": 958.16,
+      "duration": 4.72
+    },
+    {
+      "text": "trend forecast on the data frame",
+      "start": 959.199,
+      "duration": 6.401
+    },
+    {
+      "text": "or sorry not sales this would be the",
+      "start": 962.88,
+      "duration": 3.959
+    },
+    {
+      "text": "debt",
+      "start": 965.6,
+      "duration": 5.679
+    },
+    {
+      "text": "estimate on the total debt",
+      "start": 966.839,
+      "duration": 7.401
+    },
+    {
+      "text": "for period three",
+      "start": 971.279,
+      "duration": 2.961
+    },
+    {
+      "text": "and then we're going to have",
+      "start": 975.199,
+      "duration": 10.161
+    },
+    {
+      "text": "um you're calculating",
+      "start": 980.839,
+      "duration": 7.56
+    },
+    {
+      "text": "um those four approaches for the",
+      "start": 985.36,
+      "duration": 6.719
+    },
+    {
+      "text": "um interest expense um",
+      "start": 988.399,
+      "duration": 7.201
+    },
+    {
+      "text": "so um we can",
+      "start": 992.079,
+      "duration": 6.721
+    },
+    {
+      "text": "also print here uh the",
+      "start": 995.6,
+      "duration": 6.64
+    },
+    {
+      "text": "estimated total debt using the trend",
+      "start": 998.8,
+      "duration": 7.279
+    },
+    {
+      "text": "approach is",
+      "start": 1002.24,
+      "duration": 9.599
+    },
+    {
+      "text": "that estimate",
+      "start": 1006.079,
+      "duration": 5.76
+    },
+    {
+      "text": "um and then",
+      "start": 1013.279,
+      "duration": 9.601
+    },
+    {
+      "text": "um karma point",
+      "start": 1017.68,
+      "duration": 9.2
+    },
+    {
+      "text": "um and then we can",
+      "start": 1022.88,
+      "duration": 9.679
+    },
+    {
+      "text": "um say that the estimated",
+      "start": 1026.88,
+      "duration": 8.0
+    },
+    {
+      "text": "um",
+      "start": 1032.559,
+      "duration": 2.321
+    },
+    {
+      "text": "uh interest expense",
+      "start": 1037.12,
+      "duration": 3.12
+    },
+    {
+      "text": "using the trend method",
+      "start": 1041.439,
+      "duration": 5.281
+    },
+    {
+      "text": "is",
+      "start": 1050.84,
+      "duration": 3.0
+    },
+    {
+      "text": "um and then we can",
+      "start": 1054.16,
+      "duration": 4.72
+    },
+    {
+      "text": "do the average the",
+      "start": 1059.28,
+      "duration": 5.56
+    },
+    {
+      "text": "kind of our annual growth rate and the",
+      "start": 1062.559,
+      "duration": 5.281
+    },
+    {
+      "text": "recent",
+      "start": 1064.84,
+      "duration": 3.0
+    },
+    {
+      "text": "so average about our angle growth rate",
+      "start": 1068.48,
+      "duration": 8.8
+    },
+    {
+      "text": "and recent um",
+      "start": 1072.96,
+      "duration": 8.56
+    },
+    {
+      "text": "and then we can do the same thing",
+      "start": 1077.28,
+      "duration": 8.32
+    },
+    {
+      "text": "with the percentage of",
+      "start": 1081.52,
+      "duration": 4.08
+    },
+    {
+      "text": "and then it'll be the same thing",
+      "start": 1088.08,
+      "duration": 9.2
+    },
+    {
+      "text": "but for each of those um now it's",
+      "start": 1093.12,
+      "duration": 8.96
+    },
+    {
+      "text": "um estimated suspense",
+      "start": 1097.28,
+      "duration": 11.44
+    },
+    {
+      "text": "um using the trend method",
+      "start": 1102.08,
+      "duration": 10.24
+    },
+    {
+      "text": "and estimating",
+      "start": 1108.72,
+      "duration": 3.6
+    },
+    {
+      "text": "uh as a percentage",
+      "start": 1113.84,
+      "duration": 6.4
+    },
+    {
+      "text": "of that",
+      "start": 1117.28,
+      "duration": 2.96
+    },
+    {
+      "text": "um and then in each of these",
+      "start": 1120.96,
+      "duration": 7.12
+    },
+    {
+      "text": "we're just going to multiply that by the",
+      "start": 1124.32,
+      "duration": 13.52
+    },
+    {
+      "text": "um the data estimate",
+      "start": 1128.08,
+      "duration": 9.76
+    },
+    {
+      "text": "so there we go there we have it all of",
+      "start": 1139.2,
+      "duration": 3.2
+    },
+    {
+      "text": "our",
+      "start": 1142.0,
+      "duration": 2.64
+    },
+    {
+      "text": "results uh the total debt using the",
+      "start": 1142.4,
+      "duration": 3.44
+    },
+    {
+      "text": "trend approach",
+      "start": 1144.64,
+      "duration": 3.039
+    },
+    {
+      "text": "the interest expense using the four",
+      "start": 1145.84,
+      "duration": 4.079
+    },
+    {
+      "text": "methods and then the interest expense",
+      "start": 1147.679,
+      "duration": 4.561
+    },
+    {
+      "text": "using the four methods and forecasting",
+      "start": 1149.919,
+      "duration": 6.081
+    },
+    {
+      "text": "as a percentage of total debt",
+      "start": 1152.24,
+      "duration": 6.08
+    },
+    {
+      "text": "so that's everything involved in this",
+      "start": 1156.0,
+      "duration": 3.44
+    },
+    {
+      "text": "lab exercise",
+      "start": 1158.32,
+      "duration": 4.52
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 1159.44,
+      "duration": 6.4
+    },
+    {
+      "text": "time",
+      "start": 1162.84,
+      "duration": 3.0
+    }
+  ]
+}

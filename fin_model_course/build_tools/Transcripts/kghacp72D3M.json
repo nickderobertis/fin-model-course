@@ -1,0 +1,1759 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.8,
+      "duration": 2.24
+    },
+    {
+      "text": "this is nick durabartis teaching",
+      "start": 3.52,
+      "duration": 3.04
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.04,
+      "duration": 3.28
+    },
+    {
+      "text": "today we're going to be doing an",
+      "start": 6.56,
+      "duration": 3.76
+    },
+    {
+      "text": "introduction on how to calculate",
+      "start": 8.32,
+      "duration": 3.04
+    },
+    {
+      "text": "historical",
+      "start": 10.32,
+      "duration": 3.84
+    },
+    {
+      "text": "free cash flows this is part of our",
+      "start": 11.36,
+      "duration": 3.84
+    },
+    {
+      "text": "lecture segment",
+      "start": 14.16,
+      "duration": 3.76
+    },
+    {
+      "text": "on free cash flow estimation and",
+      "start": 15.2,
+      "duration": 4.239
+    },
+    {
+      "text": "forecasting",
+      "start": 17.92,
+      "duration": 4.08
+    },
+    {
+      "text": "which is part of our broader goal of",
+      "start": 19.439,
+      "duration": 4.321
+    },
+    {
+      "text": "building out the full discounted cash",
+      "start": 22.0,
+      "duration": 5.279
+    },
+    {
+      "text": "flow valuation of stock",
+      "start": 23.76,
+      "duration": 3.519
+    },
+    {
+      "text": "so when we think about historical free",
+      "start": 27.76,
+      "duration": 5.36
+    },
+    {
+      "text": "cash flows",
+      "start": 31.199,
+      "duration": 4.161
+    },
+    {
+      "text": "there are a number of different ways to",
+      "start": 33.12,
+      "duration": 3.36
+    },
+    {
+      "text": "calculate them",
+      "start": 35.36,
+      "duration": 4.16
+    },
+    {
+      "text": "uh several different formulas which",
+      "start": 36.48,
+      "duration": 5.2
+    },
+    {
+      "text": "use different parts of the financial",
+      "start": 39.52,
+      "duration": 3.76
+    },
+    {
+      "text": "statements",
+      "start": 41.68,
+      "duration": 3.359
+    },
+    {
+      "text": "what we're going to focus on here is",
+      "start": 43.28,
+      "duration": 3.119
+    },
+    {
+      "text": "this approach of",
+      "start": 45.039,
+      "duration": 3.601
+    },
+    {
+      "text": "basically taking that income and trying",
+      "start": 46.399,
+      "duration": 3.601
+    },
+    {
+      "text": "to adjust it",
+      "start": 48.64,
+      "duration": 4.8
+    },
+    {
+      "text": "back into free cash flows and the reason",
+      "start": 50.0,
+      "duration": 4.239
+    },
+    {
+      "text": "that i've",
+      "start": 53.44,
+      "duration": 4.0
+    },
+    {
+      "text": "chosen this approach in the course",
+      "start": 54.239,
+      "duration": 6.48
+    },
+    {
+      "text": "is because most of the other approaches",
+      "start": 57.44,
+      "duration": 5.84
+    },
+    {
+      "text": "require using the statement of cash",
+      "start": 60.719,
+      "duration": 3.601
+    },
+    {
+      "text": "flows",
+      "start": 63.28,
+      "duration": 3.36
+    },
+    {
+      "text": "this approach uses only the income",
+      "start": 64.32,
+      "duration": 3.119
+    },
+    {
+      "text": "statement and",
+      "start": 66.64,
+      "duration": 4.0
+    },
+    {
+      "text": "balance sheet and it definitely",
+      "start": 67.439,
+      "duration": 5.921
+    },
+    {
+      "text": "simplifies things in your model to only",
+      "start": 70.64,
+      "duration": 3.519
+    },
+    {
+      "text": "have to",
+      "start": 73.36,
+      "duration": 2.88
+    },
+    {
+      "text": "forecast two sets of financial",
+      "start": 74.159,
+      "duration": 3.6
+    },
+    {
+      "text": "statements rather than",
+      "start": 76.24,
+      "duration": 5.28
+    },
+    {
+      "text": "three so you can",
+      "start": 77.759,
+      "duration": 5.601
+    },
+    {
+      "text": "save some of the work in your model and",
+      "start": 81.52,
+      "duration": 3.84
+    },
+    {
+      "text": "get an equivalent result",
+      "start": 83.36,
+      "duration": 5.84
+    },
+    {
+      "text": "by going with this method now if you",
+      "start": 85.36,
+      "duration": 5.6
+    },
+    {
+      "text": "are just calculating historical free",
+      "start": 89.2,
+      "duration": 3.36
+    },
+    {
+      "text": "cash flows and you're not needing to",
+      "start": 90.96,
+      "duration": 3.44
+    },
+    {
+      "text": "project them in the future",
+      "start": 92.56,
+      "duration": 4.239
+    },
+    {
+      "text": "then using the statement of cash flows",
+      "start": 94.4,
+      "duration": 4.399
+    },
+    {
+      "text": "is usually easier",
+      "start": 96.799,
+      "duration": 5.68
+    },
+    {
+      "text": "there's fewer calculations to do but",
+      "start": 98.799,
+      "duration": 5.441
+    },
+    {
+      "text": "you don't need it to calculate the free",
+      "start": 102.479,
+      "duration": 3.68
+    },
+    {
+      "text": "cash flows and",
+      "start": 104.24,
+      "duration": 5.6
+    },
+    {
+      "text": "forecasting it is a good deal of effort",
+      "start": 106.159,
+      "duration": 6.681
+    },
+    {
+      "text": "so that's why we're going with this",
+      "start": 109.84,
+      "duration": 5.44
+    },
+    {
+      "text": "approach",
+      "start": 112.84,
+      "duration": 7.319
+    },
+    {
+      "text": "so as i mentioned in the introduction",
+      "start": 115.28,
+      "duration": 8.479
+    },
+    {
+      "text": "we are going to adjust the net income by",
+      "start": 120.159,
+      "duration": 5.28
+    },
+    {
+      "text": "these various components to get to the",
+      "start": 123.759,
+      "duration": 3.201
+    },
+    {
+      "text": "free cash flows",
+      "start": 125.439,
+      "duration": 4.24
+    },
+    {
+      "text": "but each of these components in another",
+      "start": 126.96,
+      "duration": 3.84
+    },
+    {
+      "text": "of themselves",
+      "start": 129.679,
+      "duration": 3.121
+    },
+    {
+      "text": "need to be calculated as well so let's",
+      "start": 130.8,
+      "duration": 3.36
+    },
+    {
+      "text": "look at the calculation",
+      "start": 132.8,
+      "duration": 3.92
+    },
+    {
+      "text": "of each of those items and then you",
+      "start": 134.16,
+      "duration": 4.24
+    },
+    {
+      "text": "basically just put them together to get",
+      "start": 136.72,
+      "duration": 4.72
+    },
+    {
+      "text": "the free cash flow",
+      "start": 138.4,
+      "duration": 3.04
+    },
+    {
+      "text": "so the first here is non-cash",
+      "start": 141.68,
+      "duration": 6.72
+    },
+    {
+      "text": "expenses and we're calculating non-cash",
+      "start": 144.879,
+      "duration": 6.161
+    },
+    {
+      "text": "expenses because",
+      "start": 148.4,
+      "duration": 4.24
+    },
+    {
+      "text": "net income is this measure which",
+      "start": 151.04,
+      "duration": 4.32
+    },
+    {
+      "text": "accountants have smoothed out",
+      "start": 152.64,
+      "duration": 5.92
+    },
+    {
+      "text": "and they want to include expenses even",
+      "start": 155.36,
+      "duration": 4.48
+    },
+    {
+      "text": "if they weren't",
+      "start": 158.56,
+      "duration": 4.16
+    },
+    {
+      "text": "made in cash this year because they're",
+      "start": 159.84,
+      "duration": 4.96
+    },
+    {
+      "text": "trying to smooth things out over",
+      "start": 162.72,
+      "duration": 4.879
+    },
+    {
+      "text": "multiple years",
+      "start": 164.8,
+      "duration": 2.799
+    },
+    {
+      "text": "but for free cash flows we",
+      "start": 168.16,
+      "duration": 4.88
+    },
+    {
+      "text": "don't want to consider that we want to",
+      "start": 171.44,
+      "duration": 3.36
+    },
+    {
+      "text": "reverse this adjustment that",
+      "start": 173.04,
+      "duration": 4.479
+    },
+    {
+      "text": "the accountants have made to net income",
+      "start": 174.8,
+      "duration": 4.64
+    },
+    {
+      "text": "so we can get back to what cash",
+      "start": 177.519,
+      "duration": 5.041
+    },
+    {
+      "text": "actually changed hands",
+      "start": 179.44,
+      "duration": 6.48
+    },
+    {
+      "text": "so looking here at the non-cash expenses",
+      "start": 182.56,
+      "duration": 4.48
+    },
+    {
+      "text": "we have a few different",
+      "start": 185.92,
+      "duration": 3.12
+    },
+    {
+      "text": "categories within that that we have to",
+      "start": 187.04,
+      "duration": 3.279
+    },
+    {
+      "text": "add up to",
+      "start": 189.04,
+      "duration": 4.96
+    },
+    {
+      "text": "get the total so we have",
+      "start": 190.319,
+      "duration": 6.961
+    },
+    {
+      "text": "uh depreciation and amortization",
+      "start": 194.0,
+      "duration": 6.48
+    },
+    {
+      "text": "that is representing uh basically when",
+      "start": 197.28,
+      "duration": 6.0
+    },
+    {
+      "text": "you buy a fixed asset",
+      "start": 200.48,
+      "duration": 6.399
+    },
+    {
+      "text": "say that a company just",
+      "start": 203.28,
+      "duration": 8.0
+    },
+    {
+      "text": "just bought a jet in order to",
+      "start": 206.879,
+      "duration": 8.0
+    },
+    {
+      "text": "ship things across countries",
+      "start": 211.28,
+      "duration": 6.879
+    },
+    {
+      "text": "and they are going to use this jet",
+      "start": 214.879,
+      "duration": 6.401
+    },
+    {
+      "text": "over the next 10 years",
+      "start": 218.159,
+      "duration": 6.16
+    },
+    {
+      "text": "so with depreciation and amortization we",
+      "start": 221.28,
+      "duration": 5.36
+    },
+    {
+      "text": "would basically say",
+      "start": 224.319,
+      "duration": 4.081
+    },
+    {
+      "text": "one tenth of that cost or there are",
+      "start": 226.64,
+      "duration": 3.76
+    },
+    {
+      "text": "other uh schedules but",
+      "start": 228.4,
+      "duration": 3.68
+    },
+    {
+      "text": "we can think of it as just you know one",
+      "start": 230.4,
+      "duration": 3.44
+    },
+    {
+      "text": "tenth of that cost",
+      "start": 232.08,
+      "duration": 4.159
+    },
+    {
+      "text": "per year over each of the ten years when",
+      "start": 233.84,
+      "duration": 4.959
+    },
+    {
+      "text": "going into net income and that's what",
+      "start": 236.239,
+      "duration": 4.801
+    },
+    {
+      "text": "the depreciation is is saying well let's",
+      "start": 238.799,
+      "duration": 3.041
+    },
+    {
+      "text": "count",
+      "start": 241.04,
+      "duration": 2.559
+    },
+    {
+      "text": "a little bit of that expense each year",
+      "start": 241.84,
+      "duration": 2.8
+    },
+    {
+      "text": "over the time that we're going to be",
+      "start": 243.599,
+      "duration": 3.36
+    },
+    {
+      "text": "using the asset",
+      "start": 244.64,
+      "duration": 4.319
+    },
+    {
+      "text": "that's not cash changing hands the cash",
+      "start": 246.959,
+      "duration": 4.321
+    },
+    {
+      "text": "only changed hands at the beginning",
+      "start": 248.959,
+      "duration": 5.761
+    },
+    {
+      "text": "when we bought the jet um and so we'll",
+      "start": 251.28,
+      "duration": 4.4
+    },
+    {
+      "text": "get to that",
+      "start": 254.72,
+      "duration": 3.6
+    },
+    {
+      "text": "jet purchase itself uh once we get to",
+      "start": 255.68,
+      "duration": 3.6
+    },
+    {
+      "text": "capex",
+      "start": 258.32,
+      "duration": 4.24
+    },
+    {
+      "text": "a little bit later uh but we've gotta",
+      "start": 259.28,
+      "duration": 5.919
+    },
+    {
+      "text": "adjust back this portion that's being",
+      "start": 262.56,
+      "duration": 4.639
+    },
+    {
+      "text": "taken out every year",
+      "start": 265.199,
+      "duration": 4.641
+    },
+    {
+      "text": "for something which was not purchased in",
+      "start": 267.199,
+      "duration": 3.201
+    },
+    {
+      "text": "this year",
+      "start": 269.84,
+      "duration": 3.359
+    },
+    {
+      "text": "so that's depreciation amortization we",
+      "start": 270.4,
+      "duration": 4.0
+    },
+    {
+      "text": "will reverse that",
+      "start": 273.199,
+      "duration": 4.801
+    },
+    {
+      "text": "in the calculation by adding in here",
+      "start": 274.4,
+      "duration": 7.28
+    },
+    {
+      "text": "then coming to stock-based compensation",
+      "start": 278.0,
+      "duration": 6.72
+    },
+    {
+      "text": "so that means that employees were",
+      "start": 281.68,
+      "duration": 5.28
+    },
+    {
+      "text": "compensated but they were compensated",
+      "start": 284.72,
+      "duration": 5.28
+    },
+    {
+      "text": "via stock instead of via cash",
+      "start": 286.96,
+      "duration": 5.92
+    },
+    {
+      "text": "um and so it is an expense for the",
+      "start": 290.0,
+      "duration": 4.0
+    },
+    {
+      "text": "company and it is",
+      "start": 292.88,
+      "duration": 3.599
+    },
+    {
+      "text": "valid to include that in net income and",
+      "start": 294.0,
+      "duration": 3.44
+    },
+    {
+      "text": "thinking about",
+      "start": 296.479,
+      "duration": 2.561
+    },
+    {
+      "text": "how much basically did they actually",
+      "start": 297.44,
+      "duration": 3.68
+    },
+    {
+      "text": "earn kind of on average",
+      "start": 299.04,
+      "duration": 5.04
+    },
+    {
+      "text": "but it wasn't a cash expense and so in",
+      "start": 301.12,
+      "duration": 4.72
+    },
+    {
+      "text": "order to get back to the actual cash",
+      "start": 304.08,
+      "duration": 3.44
+    },
+    {
+      "text": "that changed hands",
+      "start": 305.84,
+      "duration": 5.12
+    },
+    {
+      "text": "we need to add back in that stock based",
+      "start": 307.52,
+      "duration": 7.28
+    },
+    {
+      "text": "compensation that wasn't a cash expense",
+      "start": 310.96,
+      "duration": 5.76
+    },
+    {
+      "text": "and then the last two components here",
+      "start": 314.8,
+      "duration": 4.239
+    },
+    {
+      "text": "impairment charges and gains losses on",
+      "start": 316.72,
+      "duration": 3.039
+    },
+    {
+      "text": "investments",
+      "start": 319.039,
+      "duration": 3.681
+    },
+    {
+      "text": "these are basically the same thing but",
+      "start": 319.759,
+      "duration": 4.961
+    },
+    {
+      "text": "impairment is talking about",
+      "start": 322.72,
+      "duration": 5.36
+    },
+    {
+      "text": "uh longer term assets and gains and",
+      "start": 324.72,
+      "duration": 5.12
+    },
+    {
+      "text": "losses on investments is more about",
+      "start": 328.08,
+      "duration": 4.88
+    },
+    {
+      "text": "shorter term uh assets but it's",
+      "start": 329.84,
+      "duration": 4.079
+    },
+    {
+      "text": "basically",
+      "start": 332.96,
+      "duration": 3.519
+    },
+    {
+      "text": "an asset that the company holds has",
+      "start": 333.919,
+      "duration": 3.681
+    },
+    {
+      "text": "changed in value",
+      "start": 336.479,
+      "duration": 2.961
+    },
+    {
+      "text": "while they've been holding it they",
+      "start": 337.6,
+      "duration": 3.68
+    },
+    {
+      "text": "didn't sell it they didn't buy it",
+      "start": 339.44,
+      "duration": 3.68
+    },
+    {
+      "text": "it just changed in value while they were",
+      "start": 341.28,
+      "duration": 3.04
+    },
+    {
+      "text": "holding it",
+      "start": 343.12,
+      "duration": 4.4
+    },
+    {
+      "text": "um and so accountants will go ahead",
+      "start": 344.32,
+      "duration": 5.92
+    },
+    {
+      "text": "and take that as a gain or a loss in",
+      "start": 347.52,
+      "duration": 4.72
+    },
+    {
+      "text": "calculating that income",
+      "start": 350.24,
+      "duration": 4.399
+    },
+    {
+      "text": "but again no cash changed hands there",
+      "start": 352.24,
+      "duration": 3.92
+    },
+    {
+      "text": "because they didn't actually sell",
+      "start": 354.639,
+      "duration": 3.761
+    },
+    {
+      "text": "the asset and so we're going to reverse",
+      "start": 356.16,
+      "duration": 5.36
+    },
+    {
+      "text": "that as well",
+      "start": 358.4,
+      "duration": 3.12
+    },
+    {
+      "text": "and then coming to the next component we",
+      "start": 364.0,
+      "duration": 5.12
+    },
+    {
+      "text": "have the change in networking capital",
+      "start": 365.6,
+      "duration": 6.319
+    },
+    {
+      "text": "so networking capital basically",
+      "start": 369.12,
+      "duration": 3.84
+    },
+    {
+      "text": "represents",
+      "start": 371.919,
+      "duration": 4.641
+    },
+    {
+      "text": "how much cash does it take um in order",
+      "start": 372.96,
+      "duration": 4.72
+    },
+    {
+      "text": "to",
+      "start": 376.56,
+      "duration": 4.639
+    },
+    {
+      "text": "uh sell your product produce and sell",
+      "start": 377.68,
+      "duration": 6.959
+    },
+    {
+      "text": "your product uh the cash which is just",
+      "start": 381.199,
+      "duration": 4.241
+    },
+    {
+      "text": "tied up",
+      "start": 384.639,
+      "duration": 4.081
+    },
+    {
+      "text": "in the daily um transactions of",
+      "start": 385.44,
+      "duration": 6.4
+    },
+    {
+      "text": "the company so it's not going as far as",
+      "start": 388.72,
+      "duration": 6.08
+    },
+    {
+      "text": "saying uh you know the salaries of",
+      "start": 391.84,
+      "duration": 4.32
+    },
+    {
+      "text": "everyone involved in producing the",
+      "start": 394.8,
+      "duration": 2.48
+    },
+    {
+      "text": "product is just",
+      "start": 396.16,
+      "duration": 3.44
+    },
+    {
+      "text": "uh how much cash is tied up in this kind",
+      "start": 397.28,
+      "duration": 3.199
+    },
+    {
+      "text": "of",
+      "start": 399.6,
+      "duration": 3.12
+    },
+    {
+      "text": "work in progress of creating and selling",
+      "start": 400.479,
+      "duration": 5.121
+    },
+    {
+      "text": "the products",
+      "start": 402.72,
+      "duration": 2.88
+    },
+    {
+      "text": "um so",
+      "start": 405.84,
+      "duration": 6.079
+    },
+    {
+      "text": "we are going to adjust",
+      "start": 408.88,
+      "duration": 6.48
+    },
+    {
+      "text": "uh the net income by the change in",
+      "start": 411.919,
+      "duration": 6.0
+    },
+    {
+      "text": "networking capital",
+      "start": 415.36,
+      "duration": 7.76
+    },
+    {
+      "text": "because um if now this year compared to",
+      "start": 417.919,
+      "duration": 6.641
+    },
+    {
+      "text": "last year",
+      "start": 423.12,
+      "duration": 3.44
+    },
+    {
+      "text": "we need to tie up an additional million",
+      "start": 424.56,
+      "duration": 3.28
+    },
+    {
+      "text": "dollars in",
+      "start": 426.56,
+      "duration": 4.32
+    },
+    {
+      "text": "the uh process of selling",
+      "start": 427.84,
+      "duration": 6.88
+    },
+    {
+      "text": "our goods then that represents a use of",
+      "start": 430.88,
+      "duration": 4.4
+    },
+    {
+      "text": "cash",
+      "start": 434.72,
+      "duration": 2.56
+    },
+    {
+      "text": "we have taken a million dollars and",
+      "start": 435.28,
+      "duration": 4.08
+    },
+    {
+      "text": "invested it into",
+      "start": 437.28,
+      "duration": 4.8
+    },
+    {
+      "text": "the production process and so we need to",
+      "start": 439.36,
+      "duration": 3.6
+    },
+    {
+      "text": "consider that",
+      "start": 442.08,
+      "duration": 4.08
+    },
+    {
+      "text": "in the free cash flows whereas on the",
+      "start": 442.96,
+      "duration": 4.799
+    },
+    {
+      "text": "flip side we",
+      "start": 446.16,
+      "duration": 3.039
+    },
+    {
+      "text": "are able to reduce the networking",
+      "start": 447.759,
+      "duration": 3.521
+    },
+    {
+      "text": "capital by a million dollars because we",
+      "start": 449.199,
+      "duration": 2.4
+    },
+    {
+      "text": "have",
+      "start": 451.28,
+      "duration": 3.44
+    },
+    {
+      "text": "now a more efficient inventory system",
+      "start": 451.599,
+      "duration": 6.961
+    },
+    {
+      "text": "then that represents a source of cash",
+      "start": 454.72,
+      "duration": 5.759
+    },
+    {
+      "text": "now that's money which has been freed up",
+      "start": 458.56,
+      "duration": 4.16
+    },
+    {
+      "text": "from the process and it's available",
+      "start": 460.479,
+      "duration": 5.521
+    },
+    {
+      "text": "to the investors the company or for the",
+      "start": 462.72,
+      "duration": 4.56
+    },
+    {
+      "text": "company to reinvest",
+      "start": 466.0,
+      "duration": 4.879
+    },
+    {
+      "text": "in other operations so any change",
+      "start": 467.28,
+      "duration": 5.68
+    },
+    {
+      "text": "in the networking capital is something",
+      "start": 470.879,
+      "duration": 3.121
+    },
+    {
+      "text": "that we need to consider",
+      "start": 472.96,
+      "duration": 5.2
+    },
+    {
+      "text": "and free cash flows",
+      "start": 474.0,
+      "duration": 8.08
+    },
+    {
+      "text": "and then uh going about calculating it",
+      "start": 478.16,
+      "duration": 6.96
+    },
+    {
+      "text": "so we need to calculate the networking",
+      "start": 482.08,
+      "duration": 4.88
+    },
+    {
+      "text": "capital in the first place",
+      "start": 485.12,
+      "duration": 5.68
+    },
+    {
+      "text": "um and then we can calculate the change",
+      "start": 486.96,
+      "duration": 5.28
+    },
+    {
+      "text": "in networking capital",
+      "start": 490.8,
+      "duration": 4.799
+    },
+    {
+      "text": "so you're going to need these three uh",
+      "start": 492.24,
+      "duration": 6.16
+    },
+    {
+      "text": "line items from the financial statements",
+      "start": 495.599,
+      "duration": 3.201
+    },
+    {
+      "text": "uh",
+      "start": 498.4,
+      "duration": 4.0
+    },
+    {
+      "text": "all from the balance sheet",
+      "start": 498.8,
+      "duration": 3.6
+    },
+    {
+      "text": "and you're going to need it for the",
+      "start": 502.639,
+      "duration": 3.921
+    },
+    {
+      "text": "prior year as well in order to calculate",
+      "start": 504.08,
+      "duration": 3.04
+    },
+    {
+      "text": "the",
+      "start": 506.56,
+      "duration": 2.56
+    },
+    {
+      "text": "change in networking capital so you'll",
+      "start": 507.12,
+      "duration": 3.519
+    },
+    {
+      "text": "never be able to calculate this in the",
+      "start": 509.12,
+      "duration": 4.399
+    },
+    {
+      "text": "first year for which you have data",
+      "start": 510.639,
+      "duration": 4.481
+    },
+    {
+      "text": "but you'll be able to calculate it every",
+      "start": 513.519,
+      "duration": 5.32
+    },
+    {
+      "text": "year thereafter or every period",
+      "start": 515.12,
+      "duration": 4.96
+    },
+    {
+      "text": "thereafter",
+      "start": 518.839,
+      "duration": 4.281
+    },
+    {
+      "text": "so um we",
+      "start": 520.08,
+      "duration": 7.439
+    },
+    {
+      "text": "had accounts receivable and inventory",
+      "start": 523.12,
+      "duration": 7.6
+    },
+    {
+      "text": "because these are uses of",
+      "start": 527.519,
+      "duration": 7.281
+    },
+    {
+      "text": "cash um because",
+      "start": 530.72,
+      "duration": 7.36
+    },
+    {
+      "text": "accounts receivable means that we have",
+      "start": 534.8,
+      "duration": 6.159
+    },
+    {
+      "text": "uh sold some items on credit so that's",
+      "start": 538.08,
+      "duration": 4.72
+    },
+    {
+      "text": "money we're waiting to receive for a",
+      "start": 540.959,
+      "duration": 4.161
+    },
+    {
+      "text": "product we've already sold",
+      "start": 542.8,
+      "duration": 5.28
+    },
+    {
+      "text": "so that is using up cash basically to",
+      "start": 545.12,
+      "duration": 5.36
+    },
+    {
+      "text": "have money tied up in this credit",
+      "start": 548.08,
+      "duration": 5.04
+    },
+    {
+      "text": "um and then inventory represents that",
+      "start": 550.48,
+      "duration": 4.64
+    },
+    {
+      "text": "we've we've paid to produce these goods",
+      "start": 553.12,
+      "duration": 3.68
+    },
+    {
+      "text": "but we haven't sold them yet and so",
+      "start": 555.12,
+      "duration": 3.44
+    },
+    {
+      "text": "that's cash tied up just sitting in",
+      "start": 556.8,
+      "duration": 3.039
+    },
+    {
+      "text": "inventory",
+      "start": 558.56,
+      "duration": 3.04
+    },
+    {
+      "text": "and then we subtract the accounts",
+      "start": 559.839,
+      "duration": 4.56
+    },
+    {
+      "text": "payable because that's money that",
+      "start": 561.6,
+      "duration": 4.72
+    },
+    {
+      "text": "we have not paid to other people that we",
+      "start": 564.399,
+      "duration": 3.12
+    },
+    {
+      "text": "do owe to them",
+      "start": 566.32,
+      "duration": 4.24
+    },
+    {
+      "text": "for um you know just general",
+      "start": 567.519,
+      "duration": 6.32
+    },
+    {
+      "text": "goods and services in the production",
+      "start": 570.56,
+      "duration": 6.399
+    },
+    {
+      "text": "process so that is a source of cash",
+      "start": 573.839,
+      "duration": 5.68
+    },
+    {
+      "text": "and that we don't have to pay for it",
+      "start": 576.959,
+      "duration": 4.0
+    },
+    {
+      "text": "right away",
+      "start": 579.519,
+      "duration": 5.361
+    },
+    {
+      "text": "and so the cash is not tied up there",
+      "start": 580.959,
+      "duration": 3.921
+    },
+    {
+      "text": "so we calculate the net working capital",
+      "start": 585.279,
+      "duration": 4.401
+    },
+    {
+      "text": "following this formula",
+      "start": 588.56,
+      "duration": 3.04
+    },
+    {
+      "text": "and then you just take this year's value",
+      "start": 589.68,
+      "duration": 3.76
+    },
+    {
+      "text": "minus last year's value",
+      "start": 591.6,
+      "duration": 3.76
+    },
+    {
+      "text": "in order to get the change in networking",
+      "start": 593.44,
+      "duration": 3.12
+    },
+    {
+      "text": "capital that will come",
+      "start": 595.36,
+      "duration": 5.2
+    },
+    {
+      "text": "into the free cash flow calculation",
+      "start": 596.56,
+      "duration": 4.0
+    },
+    {
+      "text": "then moving on to the last component",
+      "start": 601.68,
+      "duration": 5.44
+    },
+    {
+      "text": "capital expenditures",
+      "start": 605.2,
+      "duration": 5.199
+    },
+    {
+      "text": "so capital expenditures represent",
+      "start": 607.12,
+      "duration": 5.68
+    },
+    {
+      "text": "these fixed assets which are getting",
+      "start": 610.399,
+      "duration": 3.68
+    },
+    {
+      "text": "used over",
+      "start": 612.8,
+      "duration": 4.4
+    },
+    {
+      "text": "multiple periods so buildings and",
+      "start": 614.079,
+      "duration": 5.44
+    },
+    {
+      "text": "machinery are kind of the most common",
+      "start": 617.2,
+      "duration": 6.24
+    },
+    {
+      "text": "examples of capital expenditures um",
+      "start": 619.519,
+      "duration": 6.241
+    },
+    {
+      "text": "you know buying a warehouse buying a jet",
+      "start": 623.44,
+      "duration": 4.16
+    },
+    {
+      "text": "will be given as examples it doesn't",
+      "start": 625.76,
+      "duration": 4.0
+    },
+    {
+      "text": "have to be huge assets",
+      "start": 627.6,
+      "duration": 4.96
+    },
+    {
+      "text": "buying a computer even can be considered",
+      "start": 629.76,
+      "duration": 4.16
+    },
+    {
+      "text": "a fixed asset because you're going to",
+      "start": 632.56,
+      "duration": 2.64
+    },
+    {
+      "text": "use that computer",
+      "start": 633.92,
+      "duration": 5.039
+    },
+    {
+      "text": "over multiple uh periods fiscal periods",
+      "start": 635.2,
+      "duration": 7.6
+    },
+    {
+      "text": "so basically any asset",
+      "start": 638.959,
+      "duration": 5.841
+    },
+    {
+      "text": "which is purchased and used over a",
+      "start": 642.8,
+      "duration": 4.479
+    },
+    {
+      "text": "longer period of time",
+      "start": 644.8,
+      "duration": 6.96
+    },
+    {
+      "text": "can count in these capital expenditures",
+      "start": 647.279,
+      "duration": 4.481
+    },
+    {
+      "text": "so as i mentioned accountants basically",
+      "start": 652.64,
+      "duration": 5.199
+    },
+    {
+      "text": "spread this cost across multiple periods",
+      "start": 655.12,
+      "duration": 4.64
+    },
+    {
+      "text": "but when we think about free cash flows",
+      "start": 657.839,
+      "duration": 3.601
+    },
+    {
+      "text": "we care about when was it actually",
+      "start": 659.76,
+      "duration": 4.48
+    },
+    {
+      "text": "paid for um and so we want to bring",
+      "start": 661.44,
+      "duration": 3.28
+    },
+    {
+      "text": "those",
+      "start": 664.24,
+      "duration": 3.039
+    },
+    {
+      "text": "capital expenditures into the",
+      "start": 664.72,
+      "duration": 6.239
+    },
+    {
+      "text": "calculation of free cash flows",
+      "start": 667.279,
+      "duration": 3.68
+    },
+    {
+      "text": "so how do we calculate that well we look",
+      "start": 671.2,
+      "duration": 6.4
+    },
+    {
+      "text": "at this other balance sheet item",
+      "start": 674.24,
+      "duration": 5.68
+    },
+    {
+      "text": "the property plant and equipment which",
+      "start": 677.6,
+      "duration": 3.12
+    },
+    {
+      "text": "represents",
+      "start": 679.92,
+      "duration": 4.08
+    },
+    {
+      "text": "basically the total fixed assets",
+      "start": 680.72,
+      "duration": 7.04
+    },
+    {
+      "text": "in the company so when we look at the",
+      "start": 684.0,
+      "duration": 4.48
+    },
+    {
+      "text": "change",
+      "start": 687.76,
+      "duration": 2.96
+    },
+    {
+      "text": "of that property plant and equipment",
+      "start": 688.48,
+      "duration": 3.76
+    },
+    {
+      "text": "that is you know",
+      "start": 690.72,
+      "duration": 3.359
+    },
+    {
+      "text": "how many new fixed assets did they",
+      "start": 692.24,
+      "duration": 4.0
+    },
+    {
+      "text": "acquire this year",
+      "start": 694.079,
+      "duration": 6.161
+    },
+    {
+      "text": "um so that's the basis for estimating",
+      "start": 696.24,
+      "duration": 4.64
+    },
+    {
+      "text": "capex",
+      "start": 700.24,
+      "duration": 4.0
+    },
+    {
+      "text": "but then we also need to add",
+      "start": 700.88,
+      "duration": 5.6
+    },
+    {
+      "text": "the depreciation and amortization for",
+      "start": 704.24,
+      "duration": 4.48
+    },
+    {
+      "text": "this year as well",
+      "start": 706.48,
+      "duration": 4.88
+    },
+    {
+      "text": "because remember with the with the jet",
+      "start": 708.72,
+      "duration": 5.84
+    },
+    {
+      "text": "example spreading that over 10 years",
+      "start": 711.36,
+      "duration": 5.039
+    },
+    {
+      "text": "the accountant has already taken out the",
+      "start": 714.56,
+      "duration": 3.839
+    },
+    {
+      "text": "first one-tenth of the cost",
+      "start": 716.399,
+      "duration": 5.041
+    },
+    {
+      "text": "and accrued it to this year um so we",
+      "start": 718.399,
+      "duration": 3.601
+    },
+    {
+      "text": "can't just",
+      "start": 721.44,
+      "duration": 3.04
+    },
+    {
+      "text": "add then all 10 years of cost back in",
+      "start": 722.0,
+      "duration": 5.36
+    },
+    {
+      "text": "that would be 11 years of cost",
+      "start": 724.48,
+      "duration": 5.2
+    },
+    {
+      "text": "and so we need to add back in that",
+      "start": 727.36,
+      "duration": 3.84
+    },
+    {
+      "text": "depreciation",
+      "start": 729.68,
+      "duration": 4.64
+    },
+    {
+      "text": "as well they actually uh accountants",
+      "start": 731.2,
+      "duration": 3.52
+    },
+    {
+      "text": "will",
+      "start": 734.32,
+      "duration": 3.12
+    },
+    {
+      "text": "decrease the level of property plan",
+      "start": 734.72,
+      "duration": 3.359
+    },
+    {
+      "text": "equipment",
+      "start": 737.44,
+      "duration": 3.04
+    },
+    {
+      "text": "by the amount of the depreciation so we",
+      "start": 738.079,
+      "duration": 4.081
+    },
+    {
+      "text": "need to add it back to get to",
+      "start": 740.48,
+      "duration": 5.28
+    },
+    {
+      "text": "the full price there it would be only",
+      "start": 742.16,
+      "duration": 6.16
+    },
+    {
+      "text": "nine tenths of the cost would be showing",
+      "start": 745.76,
+      "duration": 4.16
+    },
+    {
+      "text": "on the",
+      "start": 748.32,
+      "duration": 3.12
+    },
+    {
+      "text": "balance sheet for the property plant",
+      "start": 749.92,
+      "duration": 3.039
+    },
+    {
+      "text": "equipment for that jet",
+      "start": 751.44,
+      "duration": 5.28
+    },
+    {
+      "text": "assuming straight line depreciation",
+      "start": 752.959,
+      "duration": 3.761
+    },
+    {
+      "text": "so those are the three components uh",
+      "start": 757.36,
+      "duration": 5.279
+    },
+    {
+      "text": "that we need to adjust the net income to",
+      "start": 760.24,
+      "duration": 3.2
+    },
+    {
+      "text": "reverse it",
+      "start": 762.639,
+      "duration": 4.481
+    },
+    {
+      "text": "into free cash flows uh so then",
+      "start": 763.44,
+      "duration": 5.28
+    },
+    {
+      "text": "in order to calculate the free cash",
+      "start": 767.12,
+      "duration": 3.04
+    },
+    {
+      "text": "flows you're just putting these items",
+      "start": 768.72,
+      "duration": 3.04
+    },
+    {
+      "text": "together",
+      "start": 770.16,
+      "duration": 4.32
+    },
+    {
+      "text": "so net income plus non-cash expenses",
+      "start": 771.76,
+      "duration": 4.8
+    },
+    {
+      "text": "minus the change in net working capital",
+      "start": 774.48,
+      "duration": 5.28
+    },
+    {
+      "text": "minus the capital expenditures uh and",
+      "start": 776.56,
+      "duration": 4.959
+    },
+    {
+      "text": "you're adding the non-cash expenses",
+      "start": 779.76,
+      "duration": 2.56
+    },
+    {
+      "text": "because we're",
+      "start": 781.519,
+      "duration": 3.281
+    },
+    {
+      "text": "reversing what was already taken out but",
+      "start": 782.32,
+      "duration": 3.92
+    },
+    {
+      "text": "shouldn't have been taken out",
+      "start": 784.8,
+      "duration": 4.88
+    },
+    {
+      "text": "for thinking about free cash flows",
+      "start": 786.24,
+      "duration": 5.839
+    },
+    {
+      "text": "and then we subtract the other two",
+      "start": 789.68,
+      "duration": 4.719
+    },
+    {
+      "text": "components because they represent uses",
+      "start": 792.079,
+      "duration": 5.44
+    },
+    {
+      "text": "of cash if you uh",
+      "start": 794.399,
+      "duration": 4.961
+    },
+    {
+      "text": "tie up more money in your production",
+      "start": 797.519,
+      "duration": 3.921
+    },
+    {
+      "text": "process that's the use of cash",
+      "start": 799.36,
+      "duration": 5.279
+    },
+    {
+      "text": "and if you purchase a fixed asset",
+      "start": 801.44,
+      "duration": 6.32
+    },
+    {
+      "text": "then that's also a use of cash and so we",
+      "start": 804.639,
+      "duration": 4.081
+    },
+    {
+      "text": "need to reduce",
+      "start": 807.76,
+      "duration": 4.16
+    },
+    {
+      "text": "the free cash flows",
+      "start": 808.72,
+      "duration": 6.0
+    },
+    {
+      "text": "so that's an introduction on calculating",
+      "start": 811.92,
+      "duration": 3.599
+    },
+    {
+      "text": "historical",
+      "start": 814.72,
+      "duration": 4.08
+    },
+    {
+      "text": "free cash flows we're going to uh",
+      "start": 815.519,
+      "duration": 6.241
+    },
+    {
+      "text": "come back next time in order to look at",
+      "start": 818.8,
+      "duration": 3.68
+    },
+    {
+      "text": "how we can",
+      "start": 821.76,
+      "duration": 3.759
+    },
+    {
+      "text": "calculate those in python",
+      "start": 822.48,
+      "duration": 5.039
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 825.519,
+      "duration": 4.32
+    },
+    {
+      "text": "time",
+      "start": 827.519,
+      "duration": 2.32
+    }
+  ]
+}

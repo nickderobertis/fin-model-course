@@ -1,0 +1,2104 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick derbertus",
+      "start": 2.8,
+      "duration": 3.84
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 4.72,
+      "duration": 3.839
+    },
+    {
+      "text": "today we're going to be talking about",
+      "start": 6.64,
+      "duration": 3.6
+    },
+    {
+      "text": "calculating a terminal",
+      "start": 8.559,
+      "duration": 4.641
+    },
+    {
+      "text": "value this is part of our lecture series",
+      "start": 10.24,
+      "duration": 3.359
+    },
+    {
+      "text": "on",
+      "start": 13.2,
+      "duration": 2.319
+    },
+    {
+      "text": "free cash flow estimation and",
+      "start": 13.599,
+      "duration": 3.121
+    },
+    {
+      "text": "forecasting",
+      "start": 15.519,
+      "duration": 3.041
+    },
+    {
+      "text": "which is part of a broader goal to build",
+      "start": 16.72,
+      "duration": 3.68
+    },
+    {
+      "text": "out the full discounted cash flow",
+      "start": 18.56,
+      "duration": 5.28
+    },
+    {
+      "text": "valuation of a stock",
+      "start": 20.4,
+      "duration": 3.44
+    },
+    {
+      "text": "so this is the last video in the lecture",
+      "start": 24.08,
+      "duration": 7.92
+    },
+    {
+      "text": "series where after this video we'll have",
+      "start": 28.16,
+      "duration": 5.28
+    },
+    {
+      "text": "everything that we need to be able to",
+      "start": 32.0,
+      "duration": 4.64
+    },
+    {
+      "text": "build the full dcf model",
+      "start": 33.44,
+      "duration": 5.2
+    },
+    {
+      "text": "so the last part that we haven't talked",
+      "start": 36.64,
+      "duration": 3.759
+    },
+    {
+      "text": "about is well now we've",
+      "start": 38.64,
+      "duration": 5.04
+    },
+    {
+      "text": "forecasted all these uh future free cash",
+      "start": 40.399,
+      "duration": 4.401
+    },
+    {
+      "text": "flows",
+      "start": 43.68,
+      "duration": 3.6
+    },
+    {
+      "text": "um and from the previous lecture series",
+      "start": 44.8,
+      "duration": 3.84
+    },
+    {
+      "text": "we've we've got the whack",
+      "start": 47.28,
+      "duration": 4.64
+    },
+    {
+      "text": "as well um and we also know how to",
+      "start": 48.64,
+      "duration": 4.8
+    },
+    {
+      "text": "convert between",
+      "start": 51.92,
+      "duration": 3.44
+    },
+    {
+      "text": "uh enterprise value and equity value and",
+      "start": 53.44,
+      "duration": 3.68
+    },
+    {
+      "text": "what those concepts mean",
+      "start": 55.36,
+      "duration": 4.8
+    },
+    {
+      "text": "so the last thing is just how do we take",
+      "start": 57.12,
+      "duration": 3.599
+    },
+    {
+      "text": "these",
+      "start": 60.16,
+      "duration": 4.16
+    },
+    {
+      "text": "free cash flows and the whack and get to",
+      "start": 60.719,
+      "duration": 4.561
+    },
+    {
+      "text": "an enterprise",
+      "start": 64.32,
+      "duration": 5.119
+    },
+    {
+      "text": "value so",
+      "start": 65.28,
+      "duration": 7.6
+    },
+    {
+      "text": "as we mentioned at the beginning of the",
+      "start": 69.439,
+      "duration": 7.121
+    },
+    {
+      "text": "whack lecture series we can",
+      "start": 72.88,
+      "duration": 6.879
+    },
+    {
+      "text": "value any financial asset any ash",
+      "start": 76.56,
+      "duration": 6.239
+    },
+    {
+      "text": "asset that pays cash flows by taking the",
+      "start": 79.759,
+      "duration": 6.801
+    },
+    {
+      "text": "present value of future cash flows",
+      "start": 82.799,
+      "duration": 7.201
+    },
+    {
+      "text": "so in the dcf model for the company",
+      "start": 86.56,
+      "duration": 6.879
+    },
+    {
+      "text": "we have these free cash flows as the",
+      "start": 90.0,
+      "duration": 4.96
+    },
+    {
+      "text": "cash flows",
+      "start": 93.439,
+      "duration": 3.441
+    },
+    {
+      "text": "and the discount rate is going to be the",
+      "start": 94.96,
+      "duration": 6.88
+    },
+    {
+      "text": "whack that we already calculated",
+      "start": 96.88,
+      "duration": 4.96
+    },
+    {
+      "text": "and we",
+      "start": 102.32,
+      "duration": 6.159
+    },
+    {
+      "text": "can forecast out of the future for some",
+      "start": 105.6,
+      "duration": 4.559
+    },
+    {
+      "text": "number of years",
+      "start": 108.479,
+      "duration": 4.881
+    },
+    {
+      "text": "but forecasts",
+      "start": 110.159,
+      "duration": 6.081
+    },
+    {
+      "text": "get less and less accurate the further",
+      "start": 113.36,
+      "duration": 5.439
+    },
+    {
+      "text": "that you go into the future",
+      "start": 116.24,
+      "duration": 5.76
+    },
+    {
+      "text": "and so you really should be uh",
+      "start": 118.799,
+      "duration": 4.96
+    },
+    {
+      "text": "suspicious of any forecast",
+      "start": 122.0,
+      "duration": 3.759
+    },
+    {
+      "text": "which is going out further than five",
+      "start": 123.759,
+      "duration": 3.68
+    },
+    {
+      "text": "years for financial data",
+      "start": 125.759,
+      "duration": 6.001
+    },
+    {
+      "text": "i mean even even five years um",
+      "start": 127.439,
+      "duration": 6.481
+    },
+    {
+      "text": "unless it's a very stable company it's",
+      "start": 131.76,
+      "duration": 4.08
+    },
+    {
+      "text": "it's fairly unlikely you'll be anywhere",
+      "start": 133.92,
+      "duration": 3.52
+    },
+    {
+      "text": "close to the actual numbers",
+      "start": 135.84,
+      "duration": 4.399
+    },
+    {
+      "text": "by five years",
+      "start": 137.44,
+      "duration": 2.799
+    },
+    {
+      "text": "so what about after five years uh if",
+      "start": 140.64,
+      "duration": 4.319
+    },
+    {
+      "text": "even five years is",
+      "start": 143.76,
+      "duration": 4.24
+    },
+    {
+      "text": "suspect what about 15 20 years in the",
+      "start": 144.959,
+      "duration": 4.321
+    },
+    {
+      "text": "future",
+      "start": 148.0,
+      "duration": 2.8
+    },
+    {
+      "text": "the company's still around they're still",
+      "start": 149.28,
+      "duration": 3.12
+    },
+    {
+      "text": "earning free cash flows",
+      "start": 150.8,
+      "duration": 3.12
+    },
+    {
+      "text": "that should be factored into the",
+      "start": 152.4,
+      "duration": 4.4
+    },
+    {
+      "text": "valuation so how do we account for that",
+      "start": 153.92,
+      "duration": 5.36
+    },
+    {
+      "text": "when we know that our forecasts are not",
+      "start": 156.8,
+      "duration": 3.76
+    },
+    {
+      "text": "going to have",
+      "start": 159.28,
+      "duration": 5.12
+    },
+    {
+      "text": "any reasonable degree of accuracy",
+      "start": 160.56,
+      "duration": 6.88
+    },
+    {
+      "text": "what we can do is calculate a terminal",
+      "start": 164.4,
+      "duration": 3.839
+    },
+    {
+      "text": "value",
+      "start": 167.44,
+      "duration": 3.76
+    },
+    {
+      "text": "for the company and that terminal value",
+      "start": 168.239,
+      "duration": 4.241
+    },
+    {
+      "text": "is saying",
+      "start": 171.2,
+      "duration": 4.24
+    },
+    {
+      "text": "at the end of our forecast period how",
+      "start": 172.48,
+      "duration": 3.759
+    },
+    {
+      "text": "much could we",
+      "start": 175.44,
+      "duration": 4.56
+    },
+    {
+      "text": "sell the company for um basically it's",
+      "start": 176.239,
+      "duration": 7.201
+    },
+    {
+      "text": "it's the enterprise value of the company",
+      "start": 180.0,
+      "duration": 5.12
+    },
+    {
+      "text": "at the end of the forecast forecast",
+      "start": 183.44,
+      "duration": 3.76
+    },
+    {
+      "text": "period",
+      "start": 185.12,
+      "duration": 5.199
+    },
+    {
+      "text": "and we can use that instead of",
+      "start": 187.2,
+      "duration": 6.24
+    },
+    {
+      "text": "having to predict cash flows",
+      "start": 190.319,
+      "duration": 7.2
+    },
+    {
+      "text": "all the way out into infinity",
+      "start": 193.44,
+      "duration": 7.92
+    },
+    {
+      "text": "um instead we can have a forecast period",
+      "start": 197.519,
+      "duration": 5.521
+    },
+    {
+      "text": "where we actually have the forecasted",
+      "start": 201.36,
+      "duration": 4.0
+    },
+    {
+      "text": "values and then at the end of that",
+      "start": 203.04,
+      "duration": 4.8
+    },
+    {
+      "text": "we have the terminal value in order to",
+      "start": 205.36,
+      "duration": 3.439
+    },
+    {
+      "text": "say",
+      "start": 207.84,
+      "duration": 4.399
+    },
+    {
+      "text": "um well if we just sold the company then",
+      "start": 208.799,
+      "duration": 5.681
+    },
+    {
+      "text": "how much would we get and if we sell the",
+      "start": 212.239,
+      "duration": 3.041
+    },
+    {
+      "text": "company",
+      "start": 214.48,
+      "duration": 3.44
+    },
+    {
+      "text": "then that's at that point reflective of",
+      "start": 215.28,
+      "duration": 4.319
+    },
+    {
+      "text": "the present value of all",
+      "start": 217.92,
+      "duration": 3.76
+    },
+    {
+      "text": "further future free cash flows so that",
+      "start": 219.599,
+      "duration": 4.241
+    },
+    {
+      "text": "the free cash flows",
+      "start": 221.68,
+      "duration": 4.88
+    },
+    {
+      "text": "starting from year six in this example",
+      "start": 223.84,
+      "duration": 5.28
+    },
+    {
+      "text": "and going out into infinity",
+      "start": 226.56,
+      "duration": 5.44
+    },
+    {
+      "text": "all that is brought into the terminal",
+      "start": 229.12,
+      "duration": 4.08
+    },
+    {
+      "text": "value as",
+      "start": 232.0,
+      "duration": 4.64
+    },
+    {
+      "text": "present value at year five",
+      "start": 233.2,
+      "duration": 5.44
+    },
+    {
+      "text": "and then we have those five years of",
+      "start": 236.64,
+      "duration": 3.679
+    },
+    {
+      "text": "free cash flows along with this terminal",
+      "start": 238.64,
+      "duration": 4.08
+    },
+    {
+      "text": "value which represents the entire future",
+      "start": 240.319,
+      "duration": 4.961
+    },
+    {
+      "text": "and that allows us to have the entire",
+      "start": 242.72,
+      "duration": 3.12
+    },
+    {
+      "text": "feature",
+      "start": 245.28,
+      "duration": 5.2
+    },
+    {
+      "text": "in our present value calculation",
+      "start": 245.84,
+      "duration": 4.64
+    },
+    {
+      "text": "so now how do we get that terminal value",
+      "start": 252.84,
+      "duration": 4.679
+    },
+    {
+      "text": "because",
+      "start": 256.639,
+      "duration": 3.041
+    },
+    {
+      "text": "you just heard me mention that okay this",
+      "start": 257.519,
+      "duration": 4.161
+    },
+    {
+      "text": "is an enterprise value",
+      "start": 259.68,
+      "duration": 5.04
+    },
+    {
+      "text": "at the end of the forecast period but",
+      "start": 261.68,
+      "duration": 4.72
+    },
+    {
+      "text": "we're getting this terminal value in",
+      "start": 264.72,
+      "duration": 4.08
+    },
+    {
+      "text": "order to try to calculate the current",
+      "start": 266.4,
+      "duration": 5.76
+    },
+    {
+      "text": "enterprise value so that in order to get",
+      "start": 268.8,
+      "duration": 4.08
+    },
+    {
+      "text": "the terminal",
+      "start": 272.16,
+      "duration": 3.68
+    },
+    {
+      "text": "value don't we then need an even later",
+      "start": 272.88,
+      "duration": 4.0
+    },
+    {
+      "text": "enterprise value",
+      "start": 275.84,
+      "duration": 3.84
+    },
+    {
+      "text": "like a a terminal value of that terminal",
+      "start": 276.88,
+      "duration": 3.44
+    },
+    {
+      "text": "values",
+      "start": 279.68,
+      "duration": 2.959
+    },
+    {
+      "text": "time period and then in order to get",
+      "start": 280.32,
+      "duration": 3.52
+    },
+    {
+      "text": "that one we're going to do the same",
+      "start": 282.639,
+      "duration": 2.161
+    },
+    {
+      "text": "thing",
+      "start": 283.84,
+      "duration": 2.799
+    },
+    {
+      "text": "and so if we try to go with the same",
+      "start": 284.8,
+      "duration": 4.08
+    },
+    {
+      "text": "approach we would end up with this",
+      "start": 286.639,
+      "duration": 5.041
+    },
+    {
+      "text": "kind of infinitely nested dcf model and",
+      "start": 288.88,
+      "duration": 6.16
+    },
+    {
+      "text": "you would never have a solution",
+      "start": 291.68,
+      "duration": 3.36
+    },
+    {
+      "text": "for your ultimate stock price",
+      "start": 295.28,
+      "duration": 6.56
+    },
+    {
+      "text": "um also we know that basically any",
+      "start": 298.72,
+      "duration": 4.16
+    },
+    {
+      "text": "forecasts",
+      "start": 301.84,
+      "duration": 2.56
+    },
+    {
+      "text": "which are going out beyond this five",
+      "start": 302.88,
+      "duration": 3.28
+    },
+    {
+      "text": "year period are just gonna be junk",
+      "start": 304.4,
+      "duration": 2.32
+    },
+    {
+      "text": "anyway",
+      "start": 306.16,
+      "duration": 2.879
+    },
+    {
+      "text": "so why bother even trying to go through",
+      "start": 306.72,
+      "duration": 5.68
+    },
+    {
+      "text": "that process even if it was solvable",
+      "start": 309.039,
+      "duration": 4.561
+    },
+    {
+      "text": "so we've got to have a different",
+      "start": 312.4,
+      "duration": 6.0
+    },
+    {
+      "text": "approach to get the terminal value",
+      "start": 313.6,
+      "duration": 4.8
+    },
+    {
+      "text": "and there are two approaches which are",
+      "start": 318.639,
+      "duration": 3.921
+    },
+    {
+      "text": "commonly used",
+      "start": 320.88,
+      "duration": 4.8
+    },
+    {
+      "text": "and those are classified into",
+      "start": 322.56,
+      "duration": 5.28
+    },
+    {
+      "text": "x and multiple approaches and the",
+      "start": 325.68,
+      "duration": 3.44
+    },
+    {
+      "text": "perpetuity growth",
+      "start": 327.84,
+      "duration": 6.32
+    },
+    {
+      "text": "method so we'll look at both methods",
+      "start": 329.12,
+      "duration": 5.04
+    },
+    {
+      "text": "and the difference is that the exit",
+      "start": 334.4,
+      "duration": 3.359
+    },
+    {
+      "text": "multiple approach",
+      "start": 336.72,
+      "duration": 3.759
+    },
+    {
+      "text": "the concept there is well let's take",
+      "start": 337.759,
+      "duration": 3.28
+    },
+    {
+      "text": "some",
+      "start": 340.479,
+      "duration": 3.601
+    },
+    {
+      "text": "valuation ratio uh",
+      "start": 341.039,
+      "duration": 6.801
+    },
+    {
+      "text": "from the current data um",
+      "start": 344.08,
+      "duration": 5.28
+    },
+    {
+      "text": "you know price times earnings or",
+      "start": 347.84,
+      "duration": 3.44
+    },
+    {
+      "text": "something like that",
+      "start": 349.36,
+      "duration": 4.16
+    },
+    {
+      "text": "and then take our future forecasted",
+      "start": 351.28,
+      "duration": 3.359
+    },
+    {
+      "text": "financials",
+      "start": 353.52,
+      "duration": 4.08
+    },
+    {
+      "text": "apply that same current valuation ratio",
+      "start": 354.639,
+      "duration": 4.961
+    },
+    {
+      "text": "to the future financials",
+      "start": 357.6,
+      "duration": 5.52
+    },
+    {
+      "text": "and that will get us our future",
+      "start": 359.6,
+      "duration": 8.4
+    },
+    {
+      "text": "valuation or the terminal value",
+      "start": 363.12,
+      "duration": 8.0
+    },
+    {
+      "text": "whereas the perpetuity growth method um",
+      "start": 368.0,
+      "duration": 5.28
+    },
+    {
+      "text": "says well let's take the last free cash",
+      "start": 371.12,
+      "duration": 5.04
+    },
+    {
+      "text": "flow and apply a growth rate on it",
+      "start": 373.28,
+      "duration": 5.44
+    },
+    {
+      "text": "and say they're just going to grow at a",
+      "start": 376.16,
+      "duration": 4.64
+    },
+    {
+      "text": "constant rate after the forecast period",
+      "start": 378.72,
+      "duration": 2.56
+    },
+    {
+      "text": "and then",
+      "start": 380.8,
+      "duration": 3.92
+    },
+    {
+      "text": "take the present value of that",
+      "start": 381.28,
+      "duration": 3.44
+    },
+    {
+      "text": "so looking more specifically at the exit",
+      "start": 386.16,
+      "duration": 4.64
+    },
+    {
+      "text": "multiple approach",
+      "start": 389.28,
+      "duration": 5.12
+    },
+    {
+      "text": "so there are some common valuation",
+      "start": 390.8,
+      "duration": 7.04
+    },
+    {
+      "text": "ratios that are used for this",
+      "start": 394.4,
+      "duration": 3.44
+    },
+    {
+      "text": "so you do have to have",
+      "start": 397.919,
+      "duration": 6.56
+    },
+    {
+      "text": "some kind of price",
+      "start": 401.44,
+      "duration": 6.4
+    },
+    {
+      "text": "component in it in order to",
+      "start": 404.479,
+      "duration": 5.521
+    },
+    {
+      "text": "use this approach that can be either",
+      "start": 407.84,
+      "duration": 3.6
+    },
+    {
+      "text": "directly the price",
+      "start": 410.0,
+      "duration": 5.599
+    },
+    {
+      "text": "or it can be the enterprise value um",
+      "start": 411.44,
+      "duration": 7.039
+    },
+    {
+      "text": "and so we have four common ones here",
+      "start": 415.599,
+      "duration": 4.561
+    },
+    {
+      "text": "based off the enterprise value",
+      "start": 418.479,
+      "duration": 5.44
+    },
+    {
+      "text": "enterprise value to abbott to ebitda",
+      "start": 420.16,
+      "duration": 8.479
+    },
+    {
+      "text": "to sales uh to free cash flows",
+      "start": 423.919,
+      "duration": 8.161
+    },
+    {
+      "text": "um and then we also have this",
+      "start": 428.639,
+      "duration": 5.361
+    },
+    {
+      "text": "uh one common one which is based off the",
+      "start": 432.08,
+      "duration": 5.76
+    },
+    {
+      "text": "price the price to earnings ratio",
+      "start": 434.0,
+      "duration": 3.84
+    },
+    {
+      "text": "so again basic idea",
+      "start": 438.24,
+      "duration": 6.079
+    },
+    {
+      "text": "take the current ratio forecast the",
+      "start": 441.52,
+      "duration": 3.92
+    },
+    {
+      "text": "financials",
+      "start": 444.319,
+      "duration": 3.44
+    },
+    {
+      "text": "apply the current ratio to the future",
+      "start": 445.44,
+      "duration": 3.759
+    },
+    {
+      "text": "financials to get the future",
+      "start": 447.759,
+      "duration": 4.081
+    },
+    {
+      "text": "valuation",
+      "start": 449.199,
+      "duration": 2.641
+    },
+    {
+      "text": "and you're going to get different",
+      "start": 452.4,
+      "duration": 4.72
+    },
+    {
+      "text": "results depending on which ratio",
+      "start": 454.56,
+      "duration": 6.8
+    },
+    {
+      "text": "that you use so it's very common",
+      "start": 457.12,
+      "duration": 6.32
+    },
+    {
+      "text": "for people to not just report one stock",
+      "start": 461.36,
+      "duration": 4.72
+    },
+    {
+      "text": "price from a gcf model",
+      "start": 463.44,
+      "duration": 5.68
+    },
+    {
+      "text": "but to give a stock price range based on",
+      "start": 466.08,
+      "duration": 4.559
+    },
+    {
+      "text": "the different approaches for the",
+      "start": 469.12,
+      "duration": 3.359
+    },
+    {
+      "text": "terminal value",
+      "start": 470.639,
+      "duration": 3.441
+    },
+    {
+      "text": "so people will usually look at multiple",
+      "start": 472.479,
+      "duration": 3.361
+    },
+    {
+      "text": "different ratios as well",
+      "start": 474.08,
+      "duration": 4.32
+    },
+    {
+      "text": "as the perp-duty growth method and",
+      "start": 475.84,
+      "duration": 4.56
+    },
+    {
+      "text": "establish a valuation range",
+      "start": 478.4,
+      "duration": 5.04
+    },
+    {
+      "text": "based upon that",
+      "start": 480.4,
+      "duration": 3.04
+    },
+    {
+      "text": "so for these enterprise value based",
+      "start": 484.4,
+      "duration": 3.199
+    },
+    {
+      "text": "ratios",
+      "start": 486.479,
+      "duration": 3.921
+    },
+    {
+      "text": "you're going to",
+      "start": 487.599,
+      "duration": 2.801
+    },
+    {
+      "text": "take the um",
+      "start": 490.72,
+      "duration": 6.479
+    },
+    {
+      "text": "ratio and you're going to take the",
+      "start": 493.759,
+      "duration": 4.72
+    },
+    {
+      "text": "future",
+      "start": 497.199,
+      "duration": 4.321
+    },
+    {
+      "text": "um forecasted",
+      "start": 498.479,
+      "duration": 6.481
+    },
+    {
+      "text": "um value whatever",
+      "start": 501.52,
+      "duration": 5.04
+    },
+    {
+      "text": "value is there in the ratio let's say",
+      "start": 504.96,
+      "duration": 3.12
+    },
+    {
+      "text": "we're working with uh",
+      "start": 506.56,
+      "duration": 5.12
+    },
+    {
+      "text": "ev to ebbit so you're going to take your",
+      "start": 508.08,
+      "duration": 5.439
+    },
+    {
+      "text": "ev the ebbit ratio which you have from",
+      "start": 511.68,
+      "duration": 3.2
+    },
+    {
+      "text": "the current data",
+      "start": 513.519,
+      "duration": 4.241
+    },
+    {
+      "text": "and you're going to multiply that by",
+      "start": 514.88,
+      "duration": 3.599
+    },
+    {
+      "text": "your",
+      "start": 517.76,
+      "duration": 4.0
+    },
+    {
+      "text": "last forecasted periods ebit and that",
+      "start": 518.479,
+      "duration": 4.56
+    },
+    {
+      "text": "will get you",
+      "start": 521.76,
+      "duration": 5.68
+    },
+    {
+      "text": "the enterprise value",
+      "start": 523.039,
+      "duration": 7.441
+    },
+    {
+      "text": "for the final period",
+      "start": 527.44,
+      "duration": 3.04
+    },
+    {
+      "text": "and then for the um",
+      "start": 532.0,
+      "duration": 6.8
+    },
+    {
+      "text": "price to earnings then you need to go",
+      "start": 535.2,
+      "duration": 4.88
+    },
+    {
+      "text": "through a similar approach",
+      "start": 538.8,
+      "duration": 5.039
+    },
+    {
+      "text": "take the current ratio multiply it by",
+      "start": 540.08,
+      "duration": 7.28
+    },
+    {
+      "text": "the final forecasted period net income",
+      "start": 543.839,
+      "duration": 6.0
+    },
+    {
+      "text": "and that will get you instead of an",
+      "start": 547.36,
+      "duration": 4.32
+    },
+    {
+      "text": "enterprise value it will get an equity",
+      "start": 549.839,
+      "duration": 3.041
+    },
+    {
+      "text": "value",
+      "start": 551.68,
+      "duration": 2.8
+    },
+    {
+      "text": "and so then you just need to add that",
+      "start": 552.88,
+      "duration": 3.12
+    },
+    {
+      "text": "final periods uh",
+      "start": 554.48,
+      "duration": 4.32
+    },
+    {
+      "text": "forecasted debt onto that and subtract",
+      "start": 556.0,
+      "duration": 3.2
+    },
+    {
+      "text": "the",
+      "start": 558.8,
+      "duration": 2.24
+    },
+    {
+      "text": "cash and that's going to get you that",
+      "start": 559.2,
+      "duration": 4.0
+    },
+    {
+      "text": "final period enterprise value",
+      "start": 561.04,
+      "duration": 6.08
+    },
+    {
+      "text": "which you can use as the terminal value",
+      "start": 563.2,
+      "duration": 3.92
+    },
+    {
+      "text": "and looking at the perpetuity growth",
+      "start": 567.68,
+      "duration": 7.68
+    },
+    {
+      "text": "method so this perpetuity growth method",
+      "start": 571.04,
+      "duration": 7.52
+    },
+    {
+      "text": "actually uses the same math as",
+      "start": 575.36,
+      "duration": 6.0
+    },
+    {
+      "text": "the dividend discount model because",
+      "start": 578.56,
+      "duration": 4.32
+    },
+    {
+      "text": "conceptually",
+      "start": 581.36,
+      "duration": 4.24
+    },
+    {
+      "text": "what we're doing in both models is the",
+      "start": 582.88,
+      "duration": 4.16
+    },
+    {
+      "text": "same",
+      "start": 585.6,
+      "duration": 5.28
+    },
+    {
+      "text": "in the dividend discount model we say",
+      "start": 587.04,
+      "duration": 5.2
+    },
+    {
+      "text": "that the dividends are going to grow at",
+      "start": 590.88,
+      "duration": 3.04
+    },
+    {
+      "text": "a constant rate",
+      "start": 592.24,
+      "duration": 3.12
+    },
+    {
+      "text": "same here we're going to say that the",
+      "start": 593.92,
+      "duration": 2.96
+    },
+    {
+      "text": "free cash flows are going to grow at a",
+      "start": 595.36,
+      "duration": 3.2
+    },
+    {
+      "text": "constant rate and in both cases we're",
+      "start": 596.88,
+      "duration": 3.84
+    },
+    {
+      "text": "trying to find the present value",
+      "start": 598.56,
+      "duration": 5.519
+    },
+    {
+      "text": "um so the structure of the formula",
+      "start": 600.72,
+      "duration": 5.52
+    },
+    {
+      "text": "looks just like the structure of the",
+      "start": 604.079,
+      "duration": 3.841
+    },
+    {
+      "text": "dividend discount formula",
+      "start": 606.24,
+      "duration": 3.92
+    },
+    {
+      "text": "where there we have the last period",
+      "start": 607.92,
+      "duration": 4.64
+    },
+    {
+      "text": "dividend times one plus the growth rate",
+      "start": 610.16,
+      "duration": 4.48
+    },
+    {
+      "text": "over the rate of return on the stock",
+      "start": 612.56,
+      "duration": 3.68
+    },
+    {
+      "text": "minus the growth rate",
+      "start": 614.64,
+      "duration": 3.6
+    },
+    {
+      "text": "here it's the same thing just instead of",
+      "start": 616.24,
+      "duration": 4.32
+    },
+    {
+      "text": "the dividend we have the free cash flow",
+      "start": 618.24,
+      "duration": 5.92
+    },
+    {
+      "text": "and instead of the",
+      "start": 620.56,
+      "duration": 3.6
+    },
+    {
+      "text": "rate of return on the stock we have the",
+      "start": 624.24,
+      "duration": 3.76
+    },
+    {
+      "text": "weighted average cost of capital",
+      "start": 626.079,
+      "duration": 4.161
+    },
+    {
+      "text": "so you do that you do that with your",
+      "start": 628.0,
+      "duration": 3.279
+    },
+    {
+      "text": "final",
+      "start": 630.24,
+      "duration": 4.08
+    },
+    {
+      "text": "final period free cash flow",
+      "start": 631.279,
+      "duration": 6.401
+    },
+    {
+      "text": "and that will get you the terminal value",
+      "start": 634.32,
+      "duration": 5.519
+    },
+    {
+      "text": "now you do have to pick a growth rate",
+      "start": 637.68,
+      "duration": 5.839
+    },
+    {
+      "text": "which is going to go into that",
+      "start": 639.839,
+      "duration": 6.961
+    },
+    {
+      "text": "and the valuation is",
+      "start": 643.519,
+      "duration": 5.921
+    },
+    {
+      "text": "extremely sensitive to the choice of",
+      "start": 646.8,
+      "duration": 4.64
+    },
+    {
+      "text": "that growth rate",
+      "start": 649.44,
+      "duration": 3.68
+    },
+    {
+      "text": "so whenever you use the perpetuity",
+      "start": 651.44,
+      "duration": 3.12
+    },
+    {
+      "text": "growth method",
+      "start": 653.12,
+      "duration": 4.959
+    },
+    {
+      "text": "it is uh even standard to do at least a",
+      "start": 654.56,
+      "duration": 4.719
+    },
+    {
+      "text": "sensitivity analysis",
+      "start": 658.079,
+      "duration": 4.88
+    },
+    {
+      "text": "on it because that assumption matters so",
+      "start": 659.279,
+      "duration": 4.24
+    },
+    {
+      "text": "much",
+      "start": 662.959,
+      "duration": 3.281
+    },
+    {
+      "text": "for the final stock price people want to",
+      "start": 663.519,
+      "duration": 3.121
+    },
+    {
+      "text": "see",
+      "start": 666.24,
+      "duration": 2.4
+    },
+    {
+      "text": "well what does the stock price look with",
+      "start": 666.64,
+      "duration": 4.319
+    },
+    {
+      "text": "a range of different",
+      "start": 668.64,
+      "duration": 5.52
+    },
+    {
+      "text": "terminal growth rates and",
+      "start": 670.959,
+      "duration": 5.12
+    },
+    {
+      "text": "um it would be a good idea to do a monte",
+      "start": 674.16,
+      "duration": 4.64
+    },
+    {
+      "text": "carlo simulation as well to understand",
+      "start": 676.079,
+      "duration": 6.081
+    },
+    {
+      "text": "uh in more detail how much uh",
+      "start": 678.8,
+      "duration": 5.279
+    },
+    {
+      "text": "the stock price is going to move around",
+      "start": 682.16,
+      "duration": 3.04
+    },
+    {
+      "text": "based upon",
+      "start": 684.079,
+      "duration": 3.76
+    },
+    {
+      "text": "your uh assessment of the standard",
+      "start": 685.2,
+      "duration": 3.44
+    },
+    {
+      "text": "deviation",
+      "start": 687.839,
+      "duration": 4.24
+    },
+    {
+      "text": "of the growth rate",
+      "start": 688.64,
+      "duration": 3.439
+    },
+    {
+      "text": "and if you want to know what to plug in",
+      "start": 693.44,
+      "duration": 3.04
+    },
+    {
+      "text": "um",
+      "start": 695.68,
+      "duration": 4.24
+    },
+    {
+      "text": "so two three percent are you know maybe",
+      "start": 696.48,
+      "duration": 4.799
+    },
+    {
+      "text": "up to four like kind of two to four",
+      "start": 699.92,
+      "duration": 2.08
+    },
+    {
+      "text": "percent is",
+      "start": 701.279,
+      "duration": 4.0
+    },
+    {
+      "text": "the typical range here um",
+      "start": 702.0,
+      "duration": 7.04
+    },
+    {
+      "text": "you shouldn't have it be really",
+      "start": 705.279,
+      "duration": 7.68
+    },
+    {
+      "text": "much more than gdp at all",
+      "start": 709.04,
+      "duration": 6.479
+    },
+    {
+      "text": "because this is supposed to be a growth",
+      "start": 712.959,
+      "duration": 4.0
+    },
+    {
+      "text": "rate which is going to last",
+      "start": 715.519,
+      "duration": 5.521
+    },
+    {
+      "text": "forever and so if a company",
+      "start": 716.959,
+      "duration": 7.361
+    },
+    {
+      "text": "grew faster than the overall economy",
+      "start": 721.04,
+      "duration": 4.799
+    },
+    {
+      "text": "forever",
+      "start": 724.32,
+      "duration": 4.48
+    },
+    {
+      "text": "it would at some point become actually",
+      "start": 725.839,
+      "duration": 5.12
+    },
+    {
+      "text": "much much much larger than everything",
+      "start": 728.8,
+      "duration": 3.68
+    },
+    {
+      "text": "else in the economy",
+      "start": 730.959,
+      "duration": 4.32
+    },
+    {
+      "text": "such that this company would become the",
+      "start": 732.48,
+      "duration": 4.24
+    },
+    {
+      "text": "entire economy",
+      "start": 735.279,
+      "duration": 3.36
+    },
+    {
+      "text": "so you can't just throw a 10 terminal",
+      "start": 736.72,
+      "duration": 3.119
+    },
+    {
+      "text": "growth rate in there",
+      "start": 738.639,
+      "duration": 3.121
+    },
+    {
+      "text": "that makes absolutely no sense that",
+      "start": 739.839,
+      "duration": 3.281
+    },
+    {
+      "text": "would say you know",
+      "start": 741.76,
+      "duration": 4.4
+    },
+    {
+      "text": "maybe in 20 30 40 years that this",
+      "start": 743.12,
+      "duration": 3.68
+    },
+    {
+      "text": "company",
+      "start": 746.16,
+      "duration": 2.479
+    },
+    {
+      "text": "would be the entire economy which is",
+      "start": 746.8,
+      "duration": 3.279
+    },
+    {
+      "text": "probably not",
+      "start": 748.639,
+      "duration": 4.721
+    },
+    {
+      "text": "um what you're trying to model so",
+      "start": 750.079,
+      "duration": 6.401
+    },
+    {
+      "text": "because this is uh such a long-term",
+      "start": 753.36,
+      "duration": 4.88
+    },
+    {
+      "text": "growth rate uh",
+      "start": 756.48,
+      "duration": 4.08
+    },
+    {
+      "text": "you need to be fairly conservative here",
+      "start": 758.24,
+      "duration": 3.92
+    },
+    {
+      "text": "even if the last few years of growth",
+      "start": 760.56,
+      "duration": 3.44
+    },
+    {
+      "text": "have been seven ten percent",
+      "start": 762.16,
+      "duration": 3.28
+    },
+    {
+      "text": "you need to pick a much lower rate",
+      "start": 764.0,
+      "duration": 3.12
+    },
+    {
+      "text": "because this is supposed to last",
+      "start": 765.44,
+      "duration": 4.48
+    },
+    {
+      "text": "indefinitely",
+      "start": 767.12,
+      "duration": 2.8
+    },
+    {
+      "text": "um so now",
+      "start": 771.279,
+      "duration": 5.601
+    },
+    {
+      "text": "we have the terminal value we have the",
+      "start": 774.8,
+      "duration": 4.32
+    },
+    {
+      "text": "free cash flows we have the whack",
+      "start": 776.88,
+      "duration": 4.639
+    },
+    {
+      "text": "so what do we do to wrap up the dcf",
+      "start": 779.12,
+      "duration": 3.519
+    },
+    {
+      "text": "model",
+      "start": 781.519,
+      "duration": 4.241
+    },
+    {
+      "text": "um so we have to",
+      "start": 782.639,
+      "duration": 5.76
+    },
+    {
+      "text": "use those free cash flows in conjunction",
+      "start": 785.76,
+      "duration": 4.0
+    },
+    {
+      "text": "with the terminal value",
+      "start": 788.399,
+      "duration": 4.801
+    },
+    {
+      "text": "in order to get the current",
+      "start": 789.76,
+      "duration": 7.68
+    },
+    {
+      "text": "enterprise value so",
+      "start": 793.2,
+      "duration": 7.28
+    },
+    {
+      "text": "the terminal value is going to happen",
+      "start": 797.44,
+      "duration": 6.16
+    },
+    {
+      "text": "during the final forecast period",
+      "start": 800.48,
+      "duration": 4.799
+    },
+    {
+      "text": "so if you're forecasting out of five",
+      "start": 803.6,
+      "duration": 3.44
+    },
+    {
+      "text": "years then your year five",
+      "start": 805.279,
+      "duration": 4.641
+    },
+    {
+      "text": "uh free the year five cash flow that",
+      "start": 807.04,
+      "duration": 4.32
+    },
+    {
+      "text": "you're going to use in the present value",
+      "start": 809.92,
+      "duration": 2.24
+    },
+    {
+      "text": "calculation",
+      "start": 811.36,
+      "duration": 4.24
+    },
+    {
+      "text": "is your original free cash flow for that",
+      "start": 812.16,
+      "duration": 4.16
+    },
+    {
+      "text": "year",
+      "start": 815.6,
+      "duration": 5.12
+    },
+    {
+      "text": "plus the terminal value so you'll have",
+      "start": 816.32,
+      "duration": 6.879
+    },
+    {
+      "text": "you know all the preceding years in the",
+      "start": 820.72,
+      "duration": 4.4
+    },
+    {
+      "text": "five year example you have years one two",
+      "start": 823.199,
+      "duration": 3.2
+    },
+    {
+      "text": "three four",
+      "start": 825.12,
+      "duration": 4.719
+    },
+    {
+      "text": "um with their estimated free cash flow",
+      "start": 826.399,
+      "duration": 4.161
+    },
+    {
+      "text": "value",
+      "start": 829.839,
+      "duration": 2.641
+    },
+    {
+      "text": "and then you'll have year five with that",
+      "start": 830.56,
+      "duration": 3.12
+    },
+    {
+      "text": "free cash flow value",
+      "start": 832.48,
+      "duration": 3.76
+    },
+    {
+      "text": "plus the terminal value and then you're",
+      "start": 833.68,
+      "duration": 4.159
+    },
+    {
+      "text": "going to take the net present value",
+      "start": 836.24,
+      "duration": 4.959
+    },
+    {
+      "text": "of all of that using the whack as the",
+      "start": 837.839,
+      "duration": 7.44
+    },
+    {
+      "text": "discount rate um so that will yield you",
+      "start": 841.199,
+      "duration": 5.121
+    },
+    {
+      "text": "the current",
+      "start": 845.279,
+      "duration": 4.8
+    },
+    {
+      "text": "enterprise value and then we talked",
+      "start": 846.32,
+      "duration": 5.759
+    },
+    {
+      "text": "at the beginning of the prior electric",
+      "start": 850.079,
+      "duration": 4.0
+    },
+    {
+      "text": "series on the whack about how we can",
+      "start": 852.079,
+      "duration": 3.681
+    },
+    {
+      "text": "take an enterprise value",
+      "start": 854.079,
+      "duration": 3.521
+    },
+    {
+      "text": "and convert it into an equity value and",
+      "start": 855.76,
+      "duration": 3.68
+    },
+    {
+      "text": "convert that into a stock price",
+      "start": 857.6,
+      "duration": 3.84
+    },
+    {
+      "text": "which is ultimately what we want to get",
+      "start": 859.44,
+      "duration": 3.28
+    },
+    {
+      "text": "out of the dcf",
+      "start": 861.44,
+      "duration": 4.399
+    },
+    {
+      "text": "model so with that then",
+      "start": 862.72,
+      "duration": 5.6
+    },
+    {
+      "text": "we have everything that we need in order",
+      "start": 865.839,
+      "duration": 4.321
+    },
+    {
+      "text": "to do the entire dcf",
+      "start": 868.32,
+      "duration": 4.24
+    },
+    {
+      "text": "model",
+      "start": 870.16,
+      "duration": 2.4
+    },
+    {
+      "text": "so then in order just to test",
+      "start": 873.76,
+      "duration": 3.92
+    },
+    {
+      "text": "understanding",
+      "start": 876.959,
+      "duration": 3.761
+    },
+    {
+      "text": "of this terminal value material we have",
+      "start": 877.68,
+      "duration": 4.159
+    },
+    {
+      "text": "a lab exercise",
+      "start": 880.72,
+      "duration": 4.4
+    },
+    {
+      "text": "on that as well",
+      "start": 881.839,
+      "duration": 6.881
+    },
+    {
+      "text": "so here you have",
+      "start": 885.12,
+      "duration": 5.2
+    },
+    {
+      "text": "four different ratios that you want to",
+      "start": 888.72,
+      "duration": 3.44
+    },
+    {
+      "text": "use with the",
+      "start": 890.32,
+      "duration": 4.16
+    },
+    {
+      "text": "exit multiple approach and then you also",
+      "start": 892.16,
+      "duration": 5.039
+    },
+    {
+      "text": "want to use the perpetuity growth method",
+      "start": 894.48,
+      "duration": 4.96
+    },
+    {
+      "text": "um and the numbers are basically given",
+      "start": 897.199,
+      "duration": 3.841
+    },
+    {
+      "text": "to you for all these things",
+      "start": 899.44,
+      "duration": 4.32
+    },
+    {
+      "text": "um so you have you know constant free",
+      "start": 901.04,
+      "duration": 5.599
+    },
+    {
+      "text": "cash flow for the next five years",
+      "start": 903.76,
+      "duration": 6.0
+    },
+    {
+      "text": "you have the values of all the ratios uh",
+      "start": 906.639,
+      "duration": 6.241
+    },
+    {
+      "text": "you have these",
+      "start": 909.76,
+      "duration": 6.319
+    },
+    {
+      "text": "these values which you need to use for",
+      "start": 912.88,
+      "duration": 4.639
+    },
+    {
+      "text": "the x and multiple approach for the",
+      "start": 916.079,
+      "duration": 4.0
+    },
+    {
+      "text": "final forecasted period",
+      "start": 917.519,
+      "duration": 7.12
+    },
+    {
+      "text": "you have the current",
+      "start": 920.079,
+      "duration": 4.56
+    },
+    {
+      "text": "financial statement items that you uh",
+      "start": 924.72,
+      "duration": 3.6
+    },
+    {
+      "text": "will use to",
+      "start": 927.279,
+      "duration": 4.081
+    },
+    {
+      "text": "get to a stock price",
+      "start": 928.32,
+      "duration": 6.16
+    },
+    {
+      "text": "um and",
+      "start": 931.36,
+      "duration": 5.12
+    },
+    {
+      "text": "shares outstanding also the stock price",
+      "start": 934.48,
+      "duration": 3.919
+    },
+    {
+      "text": "whack for taking the present value",
+      "start": 936.48,
+      "duration": 3.76
+    },
+    {
+      "text": "terminal growth rate for the perpetrated",
+      "start": 938.399,
+      "duration": 3.44
+    },
+    {
+      "text": "growth method",
+      "start": 940.24,
+      "duration": 5.279
+    },
+    {
+      "text": "um and ultimately what you want to get",
+      "start": 941.839,
+      "duration": 4.881
+    },
+    {
+      "text": "is stock prices",
+      "start": 945.519,
+      "duration": 2.88
+    },
+    {
+      "text": "so you should have five different stock",
+      "start": 946.72,
+      "duration": 3.119
+    },
+    {
+      "text": "prices coming out of this one",
+      "start": 948.399,
+      "duration": 3.521
+    },
+    {
+      "text": "corresponding to each ratio",
+      "start": 949.839,
+      "duration": 4.161
+    },
+    {
+      "text": "and one corresponding to the perpetuity",
+      "start": 951.92,
+      "duration": 3.44
+    },
+    {
+      "text": "growth method",
+      "start": 954.0,
+      "duration": 3.92
+    },
+    {
+      "text": "and all those answers are there provided",
+      "start": 955.36,
+      "duration": 4.479
+    },
+    {
+      "text": "for you to ensure that",
+      "start": 957.92,
+      "duration": 3.44
+    },
+    {
+      "text": "you can get through this all",
+      "start": 959.839,
+      "duration": 4.161
+    },
+    {
+      "text": "appropriately",
+      "start": 961.36,
+      "duration": 2.64
+    },
+    {
+      "text": "so that wraps up our dual lecture series",
+      "start": 964.639,
+      "duration": 7.521
+    },
+    {
+      "text": "related to the discounted cash flow",
+      "start": 968.8,
+      "duration": 6.399
+    },
+    {
+      "text": "valuation of the stock which is",
+      "start": 972.16,
+      "duration": 6.239
+    },
+    {
+      "text": "the capstone model here in the",
+      "start": 975.199,
+      "duration": 6.961
+    },
+    {
+      "text": "basic financial modeling class um",
+      "start": 978.399,
+      "duration": 7.201
+    },
+    {
+      "text": "so i hope everyone enjoyed uh learning",
+      "start": 982.16,
+      "duration": 4.479
+    },
+    {
+      "text": "about this",
+      "start": 985.6,
+      "duration": 3.76
+    },
+    {
+      "text": "and we'll come back in the next lecture",
+      "start": 986.639,
+      "duration": 3.681
+    },
+    {
+      "text": "series",
+      "start": 989.36,
+      "duration": 4.399
+    },
+    {
+      "text": "to kind of give a road map on",
+      "start": 990.32,
+      "duration": 5.519
+    },
+    {
+      "text": "what else we can learn in this financial",
+      "start": 993.759,
+      "duration": 4.161
+    },
+    {
+      "text": "modeling space so we'll start to look at",
+      "start": 995.839,
+      "duration": 3.601
+    },
+    {
+      "text": "more advanced topics",
+      "start": 997.92,
+      "duration": 4.56
+    },
+    {
+      "text": "and do just a very brief rush on each",
+      "start": 999.44,
+      "duration": 4.88
+    },
+    {
+      "text": "topic area to discuss",
+      "start": 1002.48,
+      "duration": 4.0
+    },
+    {
+      "text": "what direction you can go in for future",
+      "start": 1004.32,
+      "duration": 3.439
+    },
+    {
+      "text": "learning",
+      "start": 1006.48,
+      "duration": 5.359
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 1007.759,
+      "duration": 4.08
+    },
+    {
+      "text": "time",
+      "start": 1011.959,
+      "duration": 3.0
+    }
+  ]
+}

@@ -207,10 +207,22 @@ def get_simple_forecasting_finstmt_python_lecture() -> Lecture:
 
 def get_complex_forecasting_lecture() -> Lecture:
     title = 'Complex Time-Series Forecasting'
-    youtube_id = ''
+    youtube_id = '8zIAtI0_dBA'
     week_covered = 13
     notes = LectureNotes([
-
+        'Forecasts are simple when the data are just trending upwards or downwards without any repeating pattern',
+        'Once there are repeating patterns in the data, more advanced models are needed',
+        'Seasonality is a classic cause of these repeating patterns. A cruise line is going to have much higher '
+        'sales in the summer than in the winter, and this pattern is going to repeat every year',
+        'In general, these advanced models are outside of the scope of the course. Here we just cover the quarterly '
+        'seasonal trend model which is specifically designed to deal with this seasonality in quarterly data, which '
+        'should be sufficient for DCF financial statement forecasting',
+        'Dummy variables are just those which take on a value of 1 for true and 0 for false',
+        'If you need to forecast higher frequency data for other purposes, the quarterly seasonal trend model will '
+        'not be a good fit. Other frequency seasonality models can be fit, but it would usually be better to go to '
+        'the full model selection process',
+        'Thankfully, we have software solutions to fit advanced models for us such as prophet, which is integrated '
+        'into finstmt'
     ], title=title)
     resources = [
 
@@ -220,10 +232,19 @@ def get_complex_forecasting_lecture() -> Lecture:
 
 def get_complex_forecasting_python_manual_lecture() -> Lecture:
     title = 'Complex Time-Series Forecasting in Python - Manual Method'
-    youtube_id = ''
+    youtube_id = 'aH8Hrvm_5a8'
     week_covered = 13
     notes = LectureNotes([
-
+        'To estimate the quarterly seasonal trend model, most of the work is in setting up the data',
+        'We need to create a t variable as well as dummies for the quarters',
+        'While it would not be too difficult to manually calculate dummies, thankfully pandas '
+        'has a get_dummies method',
+        'We still follow the same general forecasting process: fit the model on historical, use '
+        'it to predict the future',
+        'In contrast to the standard linear trend model, when fitting we just add the coefficient '
+        'of the dummy variable which corresponds to the current month',
+        'pandas date_range is useful to generate our future dates for prediction',
+        'We can use pandas concat to put together the historical and forecasted series to generate a single plot',
     ], title=title)
     resources = [
         *RESOURCES.examples.dcf.forecasting.complex.resources(),
@@ -233,10 +254,19 @@ def get_complex_forecasting_python_manual_lecture() -> Lecture:
 
 def get_complex_forecasting_python_finstmt_lecture() -> Lecture:
     title = 'Complex Time-Series Forecasting in Python - finstmt Method'
-    youtube_id = ''
+    youtube_id = 'ANhOUMWkD_8'
     week_covered = 13
     notes = LectureNotes([
-
+        'We need to install fbprophet to work through this exercise',
+        'This is the first package we have installed which needs to be installed by Anaconda rather than '
+        'pip as there are additional non-Python dependencies',
+        'You can change the default forecast method for your statements in finstmt with stmts.config.update_all',
+        '"auto" is the forecast method which uses fbprophet in the background to fit the model. fbprophet takes '
+        'some time to do its work',
+        'finstmt handles balancing the balance sheet for you. This also will take substantial time if you are '
+        'forecasting many periods',
+        'fcst_stmts.plot can plot all the line items or just a subset, including the historical, forecasted, '
+        'and confidence interval'
     ], title=title)
     resources = [
         *RESOURCES.examples.dcf.forecasting.complex.resources(),
@@ -247,10 +277,10 @@ def get_complex_forecasting_python_finstmt_lecture() -> Lecture:
 
 def get_complex_forecasting_lab_overview_lecture() -> Lecture:
     title = 'Complex Time-Series Forecasting Lab Overview'
-    youtube_id = ''
+    youtube_id = 'MTBgSH45yYg'
     week_covered = 13
     notes = LectureNotes([
-
+        'The exercise here is very similar to the examples we just worked through',
     ], title=title)
     resources = [
         *RESOURCES.labs.dcf.forecasting.complex.resources(),
@@ -260,10 +290,20 @@ def get_complex_forecasting_lab_overview_lecture() -> Lecture:
 
 def get_fcf_forecasting_lecture() -> Lecture:
     title = 'Applying Forecasting to Free Cash Flows'
-    youtube_id = ''
+    youtube_id = 'ISvxUdMeZgY'
     week_covered = 13
     notes = LectureNotes([
-
+        "Everything we've learned on forecasting thus far is general to anything you want to forecast. Now "
+        "let's see what matters for financial statements specically",
+        'It is generally preferred to forecast statement line items rather than FCFs directly, as FCFs tend '
+        'to be very noisy and hard to predict from the time-series',
+        "Do not forecast calculated items. Forecast their components then calculate them",
+        'Balancing the balance sheet is an additional step unique to financial statement forecasting',
+        'Almost definitely after doing your initial forecasts, your balance sheet will be significantly off '
+        'from balancing. But we know from accounting that it has to balance',
+        'Usually cash or debt are adjusted as "plugs" through an optimization process',
+        'finstmt makes this happen automatically, but also gives you full control over which line items are '
+        'used as plugs and how closely to balance it. Balancing closer will take longer.'
     ], title=title)
     resources = [
 
@@ -273,10 +313,20 @@ def get_fcf_forecasting_lecture() -> Lecture:
 
 def get_tv_lecture() -> Lecture:
     title = 'Calculating a Terminal Value'
-    youtube_id = ''
+    youtube_id = '9l20iL03fpw'
     week_covered = 13
     notes = LectureNotes([
-
+        'The last piece of the DCF model we have not covered is the terminal value',
+        'Because it is not possible and certainly not accurate to forecast many years in the future, we use '
+        'a terminal value to represent the enterprise value at some future date',
+        'DCF models are extremely sensitive to the terminal value assumptions, so they should absolutely be '
+        'included in sensitivity analysis and MC simulations',
+        'In the exit multiple method, we use current valuation ratios with projected financials to estimate '
+        'the terminal value',
+        'In the perpetuity growth method, we assume that the FCFs will have constant growth after the forecast '
+        'period and take the value of those constantly growing FCFs',
+        'We include the TV in the final FCF year and take the present value to get the current enterprise value, '
+        'which can then be converted into equity value and stock price'
     ], title=title)
     resources = [
 

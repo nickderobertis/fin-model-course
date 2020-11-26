@@ -1079,7 +1079,7 @@ def get_simple_forecast_lab_lecture() -> LabExerciseLecture:
 def get_complex_forecast_lab_lecture() -> LabExerciseLecture:
     title = 'Forecasting Complex Time-Series'
     short_title = 'Complex Forecast Lab'
-    youtube_id = ''
+    youtube_id = 'eX3GdQ530gE'
     week_covered = 13
 
     #  NOTE: to get answers, ran Forecast Quarterly Financial Statements.ipynb but loading in these data instead
@@ -1114,7 +1114,7 @@ def get_complex_forecast_lab_lecture() -> LabExerciseLecture:
 def get_dcf_tv_lab_lecture() -> LabExerciseLecture:
     title = 'DCF Stock Price using Terminal Values'
     short_title = 'Terminal Values Lab'
-    youtube_id = ''
+    youtube_id = 'KuI96M7Syqs'
     week_covered = 13
 
     ev_ebitda = 18.58
@@ -1146,7 +1146,8 @@ def get_dcf_tv_lab_lecture() -> LabExerciseLecture:
 
     eps = earnings / shrout
     tv_p_from_pe = pe * eps
-    ev_from_pe = tv_p_from_pe * shrout
+    eq_from_pe = tv_p_from_pe * shrout
+    ev_from_pe = eq_from_pe + debt - cash
     p_from_pe = p_from_ev(ev_from_pe)
 
     ev_from_perp = (fcf * (1 + growth)) / (wacc - growth)
@@ -1157,12 +1158,12 @@ def get_dcf_tv_lab_lecture() -> LabExerciseLecture:
             'Calculate possible stock prices today for a hypothetical company. Use EV/EBITDA, EV/Sales, EV/FCF, and P/E '
             'and the perpetuity growth method to determine five different possible terminal values. '
             'You have already determined that the next 5 years '
-            fr'FCFs will be \${fcf:,.0f}M. ',
+            fr'FCFs will be \${fcf:,.0f}M in each year. ',
             fr'EV/EBITDA is {ev_ebitda:.2f}, EV/Sales is {ev_sales:.2f}, EV/FCF is {ev_fcf:.2f}, and P/E is {pe:.2f}.',
             fr'Final period forecasted financial statement values are as follows: EBITDA is \${ebitda:,.0f}M, '
             fr'sales is \${sales:,.0f}M, and net income is \${earnings:,.0f}M',
-            fr'Current period financial statement values are as follows: total debt is \${debt:,.0f}M, and '
-            fr'cash is \${cash:,.0f}M',
+            fr'Total debt is \${debt:,.0f}M, and '
+            fr'cash is \${cash:,.0f}M, both current and final period forecasted',
             fr'Shares outstanding is \${shrout:,.0f}M and WACC is {wacc:.1%} for the entire time period',
             f'The terminal growth rate is {growth:.1%}',
             'You can assume the next free cash flow is one year away.'
