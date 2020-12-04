@@ -192,11 +192,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#applying-forecasting-to-free-cash-flows">Applying Forecasting to Free Cash Flows</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id41">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">Transcript</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#calculating-a-terminal-value">Calculating a Terminal Value</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id42">Notes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id43">Transcript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id43">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">Transcript</a></li>
 </ul>
 </li>
 </ul>
@@ -5048,14 +5049,353 @@
 <li><p>finstmt makes this happen automatically, but also gives you full control over which line items are used as plugs and how closely to balance it. Balancing closer will take longer.</p></li>
 </ul>
 </div>
+<div class="section" id="id42">
+<h3>Transcript<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<div class="transcript"><ul class="transcript-entries">
+            <li class="transcript-entry"><span class="transcript-timestamp">00:02: </span>hey everyone</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>this is nick dear burtis teaching you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:05: </span>financial modeling today</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:07: </span>we're going to be talking about applying</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:09: </span>forecasting</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:10: </span>to free cash flows specifically</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>this is part of our lecture series on</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:16: </span>free cash flow estimation</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:17: </span>and forecasting</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:20: </span>so we've had a number of videos going</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:24: </span>over</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:25: </span>general forecasting uh how to forecast</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:28: </span>basically any kind of time</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:29: </span>series whether that be statement line</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>items</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:33: </span>free cash flows or whatever else</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:38: </span>but here we're trying to take it to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:40: </span>specifically</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:42: </span>applying these general forecasting</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:44: </span>techniques</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:45: </span>in the context of future free cash flows</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:52: </span>so we have two general ways to go about</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:55: </span>forecasting these free cash flows one</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">00:59: </span>is to look at his the historical</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:02: </span>free cash flows and do the forecast on</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:05: </span>those</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:06: </span>and the other is to forecast</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:10: </span>the entire financial statements and then</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:12: </span>calculate</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:13: </span>the future free cash flows from those</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:16: </span>forecasted financial statements</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:21: </span>generally you're almost always going to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:24: </span>want to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:25: </span>forecast the financial statements</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:30: </span>with a big reason being that when you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:33: </span>just forecast the free cash flows you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:35: </span>don't really have any flexibility</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:37: </span>uh you know you can just adjust it up or</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:39: </span>down but it's not really clear</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:41: </span>um you know how the operations translate</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:44: </span>into the free cash flows directly</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>um whereas it's easier to say</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:50: </span>um well the the company is opening a new</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:53: </span>branch</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:55: </span>uh they have 20 branches now they're</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:58: </span>gonna have 21</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">01:59: </span>so maybe we'll see like up to an</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:00: </span>additional five percent sales bump</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:03: </span>um so you can't easily just</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:06: </span>put that into a free cash flow number</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:08: </span>without doing this</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:10: </span>full forecast of the full financial</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:12: </span>statements</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:15: </span>and the other reason that generally</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:19: </span>forecasting the statements is preferred</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:20: </span>is because free cash flows</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:22: </span>can be very noisy and irregular if you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:25: </span>look at the history</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:26: </span>it may be that in one year they bought a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:28: </span>big building and so that year</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:30: </span>has way lower free cash flows than all</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:32: </span>the other years</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:35: </span>and because these large capital</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:37: </span>expenditures can</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:38: </span>really shift the free cash flows it's</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:42: </span>uh a difficult exercise to try and get a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:45: </span>good look</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:45: </span>at future free cash flows only from</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:48: </span>the historical free cash flows now if</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:51: </span>it's</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:52: </span>been very stable in the past and the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:54: </span>company doesn't have any</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:56: </span>big plan capital expenditures then it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">02:58: </span>might be an okay approach</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:01: </span>um so under those conditions and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:04: </span>especially</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:05: </span>when you just need to quickly get</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:07: </span>together a model and you don't have time</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:09: </span>to go through this full financial</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:10: </span>statement</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:11: </span>forecasting approach um that can be</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:14: </span>another reason to go with it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:16: </span>but generally it's not preferred</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:19: </span>um where it is helpful to do that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:23: </span>free cash flow direct forecast is if</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:25: </span>you've already done your financial</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:26: </span>statement forecast you've already</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:28: </span>calculated</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:29: </span>future free cash flows from that then</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>you can just</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>also do this as a check on the side well</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:34: </span>what if i just directly forecasted the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:36: </span>historical free cash flows</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:38: </span>how similar does that look to my new</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:41: </span>calculated ones</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:46: </span>so uh the preferred approach</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:49: </span>as we said is to forecast the entire</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:51: </span>financial statements</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:52: </span>um what line items should you forecast</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:56: </span>out of that um</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">03:59: </span>so you want to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:02: </span>focus on items which are not</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:06: </span>calculated um</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:09: </span>so like sales</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:12: </span>should definitely be forecasted cost of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:14: </span>goods sold</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:15: </span>sg a but not operating profit because</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:19: </span>operating profit</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:20: </span>represents sales minus cogs minus sg</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:24: </span>a minus other operating expenses</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:27: </span>um and so it's completely calculated</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:31: </span>from other items</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:32: </span>and so you just fork forecast those</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:34: </span>component items</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:36: </span>and then you can calculate the operating</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:38: </span>profit</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:39: </span>and the forecast you don't have to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:40: </span>forecast it directly</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:46: </span>so that means that in your future</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:48: </span>financial statements you're going to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:49: </span>want to have these items</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:50: </span>calculated so</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:54: </span>you know if you're doing this in excel</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:56: </span>that's as simple as just calculating on</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:58: </span>the historical data having your</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">04:59: </span>forecasted right next to the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:01: </span>historical and then just dragging that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:02: </span>over</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:04: </span>um and then in python with the fin</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:07: </span>statement package</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:09: </span>this is going to be handled</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:10: </span>automatically for you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:16: </span>and thinking about should i just</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:19: </span>forecast the levels</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:21: </span>or should i forecast a percentage</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:25: </span>um so</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:30: </span>when the two items logically scale</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:32: </span>together</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:33: </span>that's when you want to use a percentage</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:38: </span>so we've talked already about this</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:40: </span>example of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:41: </span>cost of goods sold is typically a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:43: </span>percentage of sales</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:44: </span>in the forecast because</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:48: </span>uh if the company sells more they need</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:51: </span>to buy</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:52: </span>more inventory in order to sell it and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:55: </span>go through that whole um processing</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">05:58: </span>process of creating the inventory</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:00: </span>in order to sell it and that's the cost</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:03: </span>of goods sold</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:04: </span>so for each additional units sold they</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:06: </span>have to expend</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:07: </span>the cost of selling that and if they</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:11: </span>sell fewer units that's also going to be</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:12: </span>a lower associated cost and so</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:15: </span>those two logically scale directly</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:17: </span>together</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:18: </span>and so the cogs</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:22: </span>should be estimated as a percentage of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:24: </span>the sales</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:26: </span>here interest expense is another good</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:28: </span>example</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:29: </span>the company pays interest as a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:32: </span>percentage</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:33: </span>on an amount of debt and so it makes</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:36: </span>sense for the interest expense to be</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:37: </span>forecasted as a percentage</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:39: </span>of the total debt um a long-term debt</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:43: </span>could also be a reasonable</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:45: </span>option there for the percentage</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:50: </span>another thing that we have to think</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:52: </span>about which is really specific</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:54: </span>to financial statement forecasting</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:57: </span>is that we got to keep the balance sheet</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">06:59: </span>balanced</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:00: </span>we know from accounting that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:04: </span>we always want to have assets equal to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:07: </span>liabilities plus equity and we've got to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:10: </span>make sure that relationship</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:12: </span>stays at least close to true and are</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:16: </span>forecast</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:16: </span>for it to be somewhat accurate</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:20: </span>um and so basically the way that you can</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:24: </span>do this is do your initial forecast</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:27: </span>and then adjust a couple of line items</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:29: </span>to make the balance sheet balance</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:33: </span>and so if your asset side</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:37: </span>ends up much greater than your</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:38: </span>liabilities equity side</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:41: </span>that is um indicative</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:45: </span>of by the way that you've forecasted it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:48: </span>the company doesn't actually have enough</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:50: </span>funds to finance</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:52: </span>the the assets in the company</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:55: </span>so they need to raise those funds by</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:58: </span>some means and so usually</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>increasing debt is going to be the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:01: </span>solution there</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:02: </span>so you're saying in order to support the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:05: </span>operations</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:06: </span>in the forecast that i've made the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:09: </span>company needs to take on additional debt</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:11: </span>in order to finance those assets</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:15: </span>whereas if the reverse is true and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:17: </span>assets are lower</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:19: </span>than liabilities and equity</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:22: </span>that means that the profit the retained</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:24: </span>earnings that have come through</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:26: </span>or additional debt which is forecasted</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:29: </span>to be taken on</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:30: </span>has not been reflected over on the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:33: </span>assets side</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:34: </span>that hasn't been deployed into any</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:36: </span>assets</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:38: </span>which means that really cash should be</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:40: </span>increased to account for that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:42: </span>um so really there if your assets are</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:46: </span>lower you're going to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:48: </span>increase the cash</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:52: </span>so um to operationally</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:55: </span>make this happen um</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">08:58: </span>again first run your forecast then</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:01: </span>uh do this balancing adjustment</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:06: </span>and these values the cash and debt that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:09: </span>we just mentioned</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:10: </span>we usually refer to as plugs uh because</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:13: </span>we</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:14: </span>are uh just plugging in the values that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:17: </span>make the balance sheet balance so that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:19: </span>the forecast is valid</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:23: </span>so to go about this in excel</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:27: </span>you have all your forecasted financial</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:29: </span>statements</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:30: </span>and then look at the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:35: </span>total assets look at the total</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:36: </span>liabilities plus equity</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:38: </span>and take the absolute value of the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:40: </span>difference and have that as a new</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:41: </span>like a difference row</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:44: </span>and then if you're only forecasting a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:47: </span>single period in the future</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:48: </span>then you can use goal seek to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:52: </span>set that difference to zero</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:56: </span>and if you've got a multi-year forecast</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:58: </span>as you probably do</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">09:59: </span>then uh you want to use solver in order</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:03: </span>to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:04: </span>make that happen so there are plenty of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:07: </span>resources out there on solver you can</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:09: </span>feel free to google about that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:13: </span>but you you have to add that as an excel</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:15: </span>add-in which is built-in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:17: </span>but then you can use it and you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:18: </span>basically just say take this entire row</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:22: </span>of these difference values and i want to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:25: </span>minimize</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:26: </span>that so then it's going to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:30: </span>minimize the total of all of these uh</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:33: </span>values</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:34: </span>and that's going to and you're even</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:36: </span>going to say</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:37: </span>you know adjust cash adjust debt in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:40: </span>order to make this happen</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:42: </span>so that it should be able to balance the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:45: </span>balance sheet for you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:49: </span>um and in python</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:52: </span>um so it's a similar process only you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:56: </span>would use</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">10:56: </span>a scipy's minimize function instead of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:00: </span>solver but if you're using them</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:03: </span>statement</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:04: </span>then this actually is handled</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:05: </span>automatically for you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>so whenever you write a forecast it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:11: </span>first forecasts all the lambs and then</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:13: </span>it goes through this</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:14: </span>exact balance sheet balancing process</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:18: </span>and by default it's going to use cash</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:20: </span>and debt</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:21: </span>as the plugs but you actually can change</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:24: </span>what the plugs are</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:25: </span>as well if you just adjust the forecast</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:28: </span>configuration um you can change to have</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:31: </span>different</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:32: </span>line items be the plugs as well</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:35: </span>it also defaults to um</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:39: </span>making sure that the balance sheet is</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:40: </span>balanced within ten thousand</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:42: </span>um and you can pass this bs diff max</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:46: </span>um to the forecast method</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:49: </span>in order to change how accurate it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:51: </span>should be so if</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:52: </span>uh you know your your statements are in</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:55: </span>billions</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:56: </span>um then um</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">11:59: </span>10 000 isn't going to make sense there</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:01: </span>because that would be within 10 trillion</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:03: </span>that gives a ton of flexibility way too</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:06: </span>much flexibility</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:08: </span>in that case you may even want to set it</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:09: </span>to like point zero zero one or something</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:12: </span>um so it does matter what your units are</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:15: </span>um for setting that but if your units</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:18: </span>are in dollars</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:19: </span>um then the default of ten thousand is</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:22: </span>usually a pretty good choice</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:24: </span>um and the lower that you set this the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:27: </span>more closely it's going to balance the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:29: </span>balance sheet</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:30: </span>but the longer it's going to take to go</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:32: </span>through that process</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:33: </span>so that's another trade up there if you</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:35: </span>have plenty of time for your forecast</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:37: </span>maybe set it lower if you need to get</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:40: </span>this forecast done</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:41: </span>maybe especially as you're testing</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:42: </span>things out</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:44: </span>in development and you're running a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:45: </span>bunch of different forecasts maybe set a</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:47: </span>little bit higher</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:49: </span>so the forecast can run quicker</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:53: </span>so that's a quick overview of</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:57: </span>taking this forecasting knowledge that</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">12:59: </span>we already know and</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:00: </span>applying it specifically to free cash</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:03: </span>flows</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:05: </span>so in the next video we'll come back to</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:07: </span>just uh wrap up the dcf model with the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:10: </span>last portion about the</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:11: </span>terminal value so thanks for listening</li>
+            <li class="transcript-entry"><span class="transcript-timestamp">13:14: </span>and see you next time</li>
+    </ul></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
 </div>
 <div class="section" id="calculating-a-terminal-value">
 <h2>Calculating a Terminal Value<a class="headerlink" href="#calculating-a-terminal-value" title="Permalink to this headline">¶</a></h2>
 <iframe src="https://www.youtube.com/embed/9l20iL03fpw"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="section" id="id42">
-<h3>Notes<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id43">
+<h3>Notes<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>The last piece of the DCF model we have not covered is the terminal value</p></li>
 <li><p>Because it is not possible and certainly not accurate to forecast many years in the future, we use a terminal value to represent the enterprise value at some future date</p></li>
@@ -5065,8 +5405,8 @@
 <li><p>We include the TV in the final FCF year and take the present value to get the current enterprise value, which can then be converted into equity value and stock price</p></li>
 </ul>
 </div>
-<div class="section" id="id43">
-<h3>Transcript<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id44">
+<h3>Transcript<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
 <div class="transcript"><ul class="transcript-entries">
             <li class="transcript-entry"><span class="transcript-timestamp">00:02: </span>hey everyone this is nick derbertus</li>
             <li class="transcript-entry"><span class="transcript-timestamp">00:04: </span>teaching you financial modeling</li>

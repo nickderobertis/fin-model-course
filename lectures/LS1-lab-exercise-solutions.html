@@ -321,6 +321,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#id88">Answers</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#forecasting-complex-time-series">Forecasting Complex Time-Series</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id89">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id91">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id92">Answers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dcf-stock-price-using-terminal-values">DCF Stock Price using Terminal Values</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id93">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id94">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id95">Answers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1137,8 +1149,8 @@
 <div class="section" id="id73">
 <h4>Level 1<a class="headerlink" href="#id73" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>A chemical manufacturer has a 7.0% coupon, annual pay 1000 par value bond outstanding, priced at $1042.12 on 2020-11-26.</p></li>
-<li><p>If the bond matures on 2023-11-26, what is the cost of debt for this company? The tax rate is 35%.</p></li>
+<li><p>A chemical manufacturer has a 7.0% coupon, annual pay 1000 par value bond outstanding, priced at $1042.12 on 2020-12-04.</p></li>
+<li><p>If the bond matures on 2023-12-04, what is the cost of debt for this company? The tax rate is 35%.</p></li>
 </ul>
 </div>
 <div class="section" id="id74">
@@ -1249,6 +1261,70 @@
 <li><p>The forecasted value of total debt should be $6,867</p></li>
 <li><p>The directly forecasted values of interest should be $1,600, $1,900, $2,300, and $2,391, for average, recent, trend, CAGR, respectively</p></li>
 <li><p>The % of debt forecasted values of interest should be $2,072, $2,139, $2,379, and $2,312, for average, recent, trend, CAGR, respectively</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="forecasting-complex-time-series">
+<h2>Forecasting Complex Time-Series<a class="headerlink" href="#forecasting-complex-time-series" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/eX3GdQ530gE"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id89">
+<h3>Description<a class="headerlink" href="#id89" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Go to <a class="reference external" href="https://nickderobertis.github.io/fin-model-course/">the course site</a> and download “CAT Balance Sheet.xlsx” and “CAT Income Statement.xlsx”</p></li>
+<li><p>Forecast the next four periods (one year) of cash using both the Quarterly Seasonal Trend Model and the automated software approach.</p></li>
+<li><p>Plot both forecasts to see how they worked.</p></li>
+</ul>
+</div>
+<div class="section" id="id91">
+<h3>Resources<a class="headerlink" href="#id91" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/291bbc4ef87073ade70587dc438c0ac3/S12 Free Cash Flow Estimation and Forecasting.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Free</span> <span class="pre">Cash</span> <span class="pre">Flow</span> <span class="pre">Estimation</span> <span class="pre">and</span> <span class="pre">Forecasting</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/d9e2d68b1cd6d545ed94cace86fb057f/CAT Balance Sheet.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">CAT</span> <span class="pre">Balance</span> <span class="pre">Sheet</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/f5f5212579fb52657d04fb2c03a1d3e7/CAT Income Statement.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">CAT</span> <span class="pre">Income</span> <span class="pre">Statement</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="id92">
+<h3>Answers<a class="headerlink" href="#id92" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The forecasted values of cash using the Quarterly Seasonal Trend Model should be $8,454,920,455, $8,833,593,182, $8,869,693,182, and $10,251,393,182</p></li>
+<li><p>The forecasted values of cash using the automated approach should be $8,071,641,657, $8,185,822,286, $9,132,093,865, and $9,502,395,879</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="dcf-stock-price-using-terminal-values">
+<h2>DCF Stock Price using Terminal Values<a class="headerlink" href="#dcf-stock-price-using-terminal-values" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/KuI96M7Syqs"     width="80%" height="315" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id93">
+<h3>Description<a class="headerlink" href="#id93" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Calculate possible stock prices today for a hypothetical company. Use EV/EBITDA, EV/Sales, EV/FCF, and P/E and the perpetuity growth method to determine five different possible terminal values. You have already determined that the next 5 years FCFs will be $1,324M in each year.</p></li>
+<li><p>EV/EBITDA is 18.58, EV/Sales is 1.92, EV/FCF is 11.82, and P/E is 39.30.</p></li>
+<li><p>Final period forecasted financial statement values are as follows: EBITDA is $1,500M, sales is $7,898M, and net income is $232M</p></li>
+<li><p>Total debt is $11,631M, and cash is $4,867M, both current and final period forecasted</p></li>
+<li><p>Shares outstanding is $561M and WACC is 10.0% for the entire time period</p></li>
+<li><p>The terminal growth rate is 3.0%</p></li>
+<li><p>You can assume the next free cash flow is one year away.</p></li>
+</ul>
+</div>
+<div class="section" id="id94">
+<h3>Resources<a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/291bbc4ef87073ade70587dc438c0ac3/S12 Free Cash Flow Estimation and Forecasting.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Slides</span> <span class="pre">-</span> <span class="pre">Free</span> <span class="pre">Cash</span> <span class="pre">Flow</span> <span class="pre">Estimation</span> <span class="pre">and</span> <span class="pre">Forecasting</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="id95">
+<h3>Answers<a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The stock prices using the five methods are as follows:</p></li>
+<li><p>EV/EBITDA: $27.74</p></li>
+<li><p>EV/Sales: $13.67</p></li>
+<li><p>EV/FCF: $14.21</p></li>
+<li><p>P/E: $14.47</p></li>
+<li><p>Perpetuity Growth: $18.45</p></li>
 </ul>
 </div>
 </div>

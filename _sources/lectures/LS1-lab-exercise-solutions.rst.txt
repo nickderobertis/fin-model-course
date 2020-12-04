@@ -897,8 +897,8 @@ Description
 Level 1
 ^^^^^^^^^^
 
-- A chemical manufacturer has a 7.0% coupon, annual pay 1000 par value bond outstanding, priced at \$1042.12 on 2020-11-26.
-- If the bond matures on 2023-11-26, what is the cost of debt for this company? The tax rate is 35%.
+- A chemical manufacturer has a 7.0% coupon, annual pay 1000 par value bond outstanding, priced at \$1042.12 on 2020-12-04.
+- If the bond matures on 2023-12-04, what is the cost of debt for this company? The tax rate is 35%.
 
 Level 2
 ^^^^^^^^^^
@@ -1016,3 +1016,77 @@ Answers
 - The forecasted value of total debt should be \$6,867
 - The directly forecasted values of interest should be \$1,600, \$1,900, \$2,300, and \$2,391, for average, recent, trend, CAGR, respectively
 - The % of debt forecasted values of interest should be \$2,072, \$2,139, \$2,379, and \$2,312, for average, recent, trend, CAGR, respectively
+
+Forecasting Complex Time-Series
+==================================
+
+.. youtube:: eX3GdQ530gE
+    :height: 315
+    :width: 80%
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Go to `the course site <https://nickderobertis.github.io/fin-model-course/>`_ and download "CAT Balance Sheet.xlsx" and "CAT Income Statement.xlsx"
+- Forecast the next four periods (one year) of cash using both the Quarterly Seasonal Trend Model and the automated software approach.
+- Plot both forecasts to see how they worked.
+
+Resources
+------------
+
+
+- :download:`Slides - Free Cash Flow Estimation and Forecasting </_static/generated/pdfs/S12 Free Cash Flow Estimation and Forecasting.pdf>`
+        
+
+- :download:`CAT Balance Sheet </_static/Materials for Lab Exercises/DCF/Forecasting/Complex/CAT Balance Sheet.xlsx>`
+        
+
+- :download:`CAT Income Statement </_static/Materials for Lab Exercises/DCF/Forecasting/Complex/CAT Income Statement.xlsx>`
+        
+
+Answers
+----------
+
+- The forecasted values of cash using the Quarterly Seasonal Trend Model should be \$8,454,920,455, \$8,833,593,182, \$8,869,693,182, and \$10,251,393,182
+- The forecasted values of cash using the automated approach should be \$8,071,641,657, \$8,185,822,286, \$9,132,093,865, and \$9,502,395,879
+
+DCF Stock Price using Terminal Values
+========================================
+
+.. youtube:: KuI96M7Syqs
+    :height: 315
+    :width: 80%
+    :align: center
+
+|
+            
+Description
+--------------
+
+- Calculate possible stock prices today for a hypothetical company. Use EV/EBITDA, EV/Sales, EV/FCF, and P/E and the perpetuity growth method to determine five different possible terminal values. You have already determined that the next 5 years FCFs will be \$1,324M in each year. 
+- EV/EBITDA is 18.58, EV/Sales is 1.92, EV/FCF is 11.82, and P/E is 39.30.
+- Final period forecasted financial statement values are as follows: EBITDA is \$1,500M, sales is \$7,898M, and net income is \$232M
+- Total debt is \$11,631M, and cash is \$4,867M, both current and final period forecasted
+- Shares outstanding is \$561M and WACC is 10.0% for the entire time period
+- The terminal growth rate is 3.0%
+- You can assume the next free cash flow is one year away.
+
+Resources
+------------
+
+
+- :download:`Slides - Free Cash Flow Estimation and Forecasting </_static/generated/pdfs/S12 Free Cash Flow Estimation and Forecasting.pdf>`
+        
+
+Answers
+----------
+
+- The stock prices using the five methods are as follows:
+- EV/EBITDA: \$27.74
+- EV/Sales: \$13.67
+- EV/FCF: \$14.21
+- P/E: \$14.47
+- Perpetuity Growth: \$18.45
