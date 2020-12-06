@@ -1,0 +1,1214 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 3.04,
+      "duration": 2.4
+    },
+    {
+      "text": "this is nick duraburtis teaching you",
+      "start": 3.84,
+      "duration": 3.919
+    },
+    {
+      "text": "financial modeling today we're going to",
+      "start": 5.44,
+      "duration": 3.36
+    },
+    {
+      "text": "be taking a look",
+      "start": 7.759,
+      "duration": 4.721
+    },
+    {
+      "text": "at some more types of financial models",
+      "start": 8.8,
+      "duration": 6.719
+    },
+    {
+      "text": "that we did not cover in the",
+      "start": 12.48,
+      "duration": 4.799
+    },
+    {
+      "text": "financial modeling with python and excel",
+      "start": 15.519,
+      "duration": 3.52
+    },
+    {
+      "text": "course but that",
+      "start": 17.279,
+      "duration": 4.16
+    },
+    {
+      "text": "we may look at in the advanced financial",
+      "start": 19.039,
+      "duration": 5.121
+    },
+    {
+      "text": "modeling with python course",
+      "start": 21.439,
+      "duration": 6.241
+    },
+    {
+      "text": "um and so the point of this video is not",
+      "start": 24.16,
+      "duration": 6.64
+    },
+    {
+      "text": "to list every possible financial model",
+      "start": 27.68,
+      "duration": 5.44
+    },
+    {
+      "text": "but instead to look at what some of the",
+      "start": 30.8,
+      "duration": 3.68
+    },
+    {
+      "text": "most common",
+      "start": 33.12,
+      "duration": 4.72
+    },
+    {
+      "text": "models are and just briefly",
+      "start": 34.48,
+      "duration": 7.919
+    },
+    {
+      "text": "discuss them so",
+      "start": 37.84,
+      "duration": 4.559
+    },
+    {
+      "text": "um the first model that we're looking at",
+      "start": 42.84,
+      "duration": 4.36
+    },
+    {
+      "text": "here",
+      "start": 46.16,
+      "duration": 4.079
+    },
+    {
+      "text": "is uh portfolio models",
+      "start": 47.2,
+      "duration": 5.359
+    },
+    {
+      "text": "it's a general class of models portfolio",
+      "start": 50.239,
+      "duration": 5.201
+    },
+    {
+      "text": "evaluation portfolio optimization",
+      "start": 52.559,
+      "duration": 5.361
+    },
+    {
+      "text": "so these are all about putting together",
+      "start": 55.44,
+      "duration": 5.2
+    },
+    {
+      "text": "a portfolio of different assets",
+      "start": 57.92,
+      "duration": 5.76
+    },
+    {
+      "text": "and determining the risk and return on",
+      "start": 60.64,
+      "duration": 6.159
+    },
+    {
+      "text": "that portfolio",
+      "start": 63.68,
+      "duration": 3.119
+    },
+    {
+      "text": "and oftentimes you want to choose",
+      "start": 67.2,
+      "duration": 6.239
+    },
+    {
+      "text": "how to allocate the assets such that you",
+      "start": 70.72,
+      "duration": 3.439
+    },
+    {
+      "text": "will",
+      "start": 73.439,
+      "duration": 2.801
+    },
+    {
+      "text": "maximize the amount of return that",
+      "start": 74.159,
+      "duration": 3.6
+    },
+    {
+      "text": "you're getting for the amount of risk",
+      "start": 76.24,
+      "duration": 4.4
+    },
+    {
+      "text": "that you're taking on",
+      "start": 77.759,
+      "duration": 2.881
+    },
+    {
+      "text": "then we have additional funds needed",
+      "start": 82.159,
+      "duration": 3.28
+    },
+    {
+      "text": "models",
+      "start": 84.72,
+      "duration": 4.56
+    },
+    {
+      "text": "so this is about trying to forecast",
+      "start": 85.439,
+      "duration": 7.601
+    },
+    {
+      "text": "about uh how much money how much capital",
+      "start": 89.28,
+      "duration": 6.08
+    },
+    {
+      "text": "the company is going to need to raise",
+      "start": 93.04,
+      "duration": 6.24
+    },
+    {
+      "text": "in order to satisfy operations in the",
+      "start": 95.36,
+      "duration": 5.439
+    },
+    {
+      "text": "next period",
+      "start": 99.28,
+      "duration": 5.519
+    },
+    {
+      "text": "so we actually already in the",
+      "start": 100.799,
+      "duration": 6.881
+    },
+    {
+      "text": "original course covered a lot of what we",
+      "start": 104.799,
+      "duration": 4.32
+    },
+    {
+      "text": "need here",
+      "start": 107.68,
+      "duration": 5.119
+    },
+    {
+      "text": "because in order to do the dcf model",
+      "start": 109.119,
+      "duration": 5.761
+    },
+    {
+      "text": "we had to learn how to work with the",
+      "start": 112.799,
+      "duration": 3.92
+    },
+    {
+      "text": "financial statements and forecast the",
+      "start": 114.88,
+      "duration": 3.76
+    },
+    {
+      "text": "financial statements",
+      "start": 116.719,
+      "duration": 4.0
+    },
+    {
+      "text": "and that's exactly what you're doing",
+      "start": 118.64,
+      "duration": 3.519
+    },
+    {
+      "text": "here as well you're going to forecast",
+      "start": 120.719,
+      "duration": 3.36
+    },
+    {
+      "text": "the financial statements",
+      "start": 122.159,
+      "duration": 4.64
+    },
+    {
+      "text": "and then you are determining uh based",
+      "start": 124.079,
+      "duration": 3.601
+    },
+    {
+      "text": "upon that",
+      "start": 126.799,
+      "duration": 3.041
+    },
+    {
+      "text": "how much cash you're going to need to",
+      "start": 127.68,
+      "duration": 3.44
+    },
+    {
+      "text": "raise",
+      "start": 129.84,
+      "duration": 5.039
+    },
+    {
+      "text": "through either debt or equity so",
+      "start": 131.12,
+      "duration": 5.92
+    },
+    {
+      "text": "not too much of an extension beyond what",
+      "start": 134.879,
+      "duration": 3.681
+    },
+    {
+      "text": "we've already done there but it is a",
+      "start": 137.04,
+      "duration": 5.04
+    },
+    {
+      "text": "common class of models",
+      "start": 138.56,
+      "duration": 6.319
+    },
+    {
+      "text": "and then there are lease or owned models",
+      "start": 142.08,
+      "duration": 3.28
+    },
+    {
+      "text": "where",
+      "start": 144.879,
+      "duration": 3.44
+    },
+    {
+      "text": "you're evaluating some asset and the",
+      "start": 145.36,
+      "duration": 3.92
+    },
+    {
+      "text": "rental rate",
+      "start": 148.319,
+      "duration": 2.961
+    },
+    {
+      "text": "on that asset and how much it costs to",
+      "start": 149.28,
+      "duration": 3.76
+    },
+    {
+      "text": "purchase it and trying to make a",
+      "start": 151.28,
+      "duration": 6.16
+    },
+    {
+      "text": "decision about that um",
+      "start": 153.04,
+      "duration": 7.919
+    },
+    {
+      "text": "we have event studies um are looking at",
+      "start": 157.44,
+      "duration": 4.48
+    },
+    {
+      "text": "something that",
+      "start": 160.959,
+      "duration": 3.841
+    },
+    {
+      "text": "occurs at some point in time and then",
+      "start": 161.92,
+      "duration": 4.64
+    },
+    {
+      "text": "trying to understand",
+      "start": 164.8,
+      "duration": 4.24
+    },
+    {
+      "text": "what changed because of that event so",
+      "start": 166.56,
+      "duration": 4.56
+    },
+    {
+      "text": "it's kind of looking through",
+      "start": 169.04,
+      "duration": 5.199
+    },
+    {
+      "text": "historical data in order to",
+      "start": 171.12,
+      "duration": 5.68
+    },
+    {
+      "text": "look for a pattern that was caused by",
+      "start": 174.239,
+      "duration": 5.36
+    },
+    {
+      "text": "the event",
+      "start": 176.8,
+      "duration": 2.799
+    },
+    {
+      "text": "we have m a merger and acquisition",
+      "start": 180.239,
+      "duration": 6.481
+    },
+    {
+      "text": "models so this is",
+      "start": 183.36,
+      "duration": 7.12
+    },
+    {
+      "text": "looking at one company evaluating",
+      "start": 186.72,
+      "duration": 6.4
+    },
+    {
+      "text": "purchasing another company and how that",
+      "start": 190.48,
+      "duration": 4.24
+    },
+    {
+      "text": "is going to",
+      "start": 193.12,
+      "duration": 4.72
+    },
+    {
+      "text": "affect the financials of the combined",
+      "start": 194.72,
+      "duration": 4.4
+    },
+    {
+      "text": "company",
+      "start": 197.84,
+      "duration": 5.039
+    },
+    {
+      "text": "and so it's basically",
+      "start": 199.12,
+      "duration": 7.039
+    },
+    {
+      "text": "again the dcf model um",
+      "start": 202.879,
+      "duration": 5.92
+    },
+    {
+      "text": "got us a lot of the way towards building",
+      "start": 206.159,
+      "duration": 4.16
+    },
+    {
+      "text": "this out",
+      "start": 208.799,
+      "duration": 4.561
+    },
+    {
+      "text": "it's basically um",
+      "start": 210.319,
+      "duration": 6.321
+    },
+    {
+      "text": "you take the the parent company",
+      "start": 213.36,
+      "duration": 5.12
+    },
+    {
+      "text": "and the the company that's being",
+      "start": 216.64,
+      "duration": 4.0
+    },
+    {
+      "text": "purchased and you kind of combine their",
+      "start": 218.48,
+      "duration": 3.92
+    },
+    {
+      "text": "financials together",
+      "start": 220.64,
+      "duration": 5.92
+    },
+    {
+      "text": "and do a dcf on the combined financials",
+      "start": 222.4,
+      "duration": 7.44
+    },
+    {
+      "text": "um and that allows you to determine",
+      "start": 226.56,
+      "duration": 6.239
+    },
+    {
+      "text": "the value of the combined company and",
+      "start": 229.84,
+      "duration": 5.679
+    },
+    {
+      "text": "you compare that to the value of",
+      "start": 232.799,
+      "duration": 5.841
+    },
+    {
+      "text": "the parent company um and that",
+      "start": 235.519,
+      "duration": 4.241
+    },
+    {
+      "text": "difference there",
+      "start": 238.64,
+      "duration": 5.2
+    },
+    {
+      "text": "is going to be the value of the",
+      "start": 239.76,
+      "duration": 6.64
+    },
+    {
+      "text": "company that's going to be acquired to",
+      "start": 243.84,
+      "duration": 4.24
+    },
+    {
+      "text": "the acquirer",
+      "start": 246.4,
+      "duration": 4.96
+    },
+    {
+      "text": "um and so that can",
+      "start": 248.08,
+      "duration": 5.76
+    },
+    {
+      "text": "help in setting the price in an m a",
+      "start": 251.36,
+      "duration": 5.12
+    },
+    {
+      "text": "transaction",
+      "start": 253.84,
+      "duration": 2.64
+    },
+    {
+      "text": "then we have lbo leveraged buyout models",
+      "start": 257.359,
+      "duration": 8.081
+    },
+    {
+      "text": "so this is a",
+      "start": 262.079,
+      "duration": 6.721
+    },
+    {
+      "text": "particular type of m a model which is",
+      "start": 265.44,
+      "duration": 7.36
+    },
+    {
+      "text": "focused on uh taking out a large amount",
+      "start": 268.8,
+      "duration": 5.6
+    },
+    {
+      "text": "of debt and using that",
+      "start": 272.8,
+      "duration": 5.119
+    },
+    {
+      "text": "to purchase the firm so",
+      "start": 274.4,
+      "duration": 6.88
+    },
+    {
+      "text": "again the m a model is a dcf model",
+      "start": 277.919,
+      "duration": 7.28
+    },
+    {
+      "text": "with a little bit extra added to it",
+      "start": 281.28,
+      "duration": 6.56
+    },
+    {
+      "text": "the lbo is an m a model with a little",
+      "start": 285.199,
+      "duration": 6.0
+    },
+    {
+      "text": "bit extra added to it as well",
+      "start": 287.84,
+      "duration": 6.799
+    },
+    {
+      "text": "and so it's basically just",
+      "start": 291.199,
+      "duration": 6.161
+    },
+    {
+      "text": "modeling the debt side of this model in",
+      "start": 294.639,
+      "duration": 3.761
+    },
+    {
+      "text": "a lot more detail",
+      "start": 297.36,
+      "duration": 2.88
+    },
+    {
+      "text": "saying that you know you're going to",
+      "start": 298.4,
+      "duration": 3.76
+    },
+    {
+      "text": "have different tranches of debt",
+      "start": 300.24,
+      "duration": 3.6
+    },
+    {
+      "text": "with different seniority and what are",
+      "start": 302.16,
+      "duration": 4.72
+    },
+    {
+      "text": "going to be the cost of each of those",
+      "start": 303.84,
+      "duration": 6.88
+    },
+    {
+      "text": "and using that to evaluate",
+      "start": 306.88,
+      "duration": 7.2
+    },
+    {
+      "text": "the again purchase price of the",
+      "start": 310.72,
+      "duration": 6.16
+    },
+    {
+      "text": "targeted firm",
+      "start": 314.08,
+      "duration": 2.8
+    },
+    {
+      "text": "and ensuring that you're going to be",
+      "start": 317.12,
+      "duration": 2.799
+    },
+    {
+      "text": "able to pay back the debt and all of",
+      "start": 318.24,
+      "duration": 4.0
+    },
+    {
+      "text": "that",
+      "start": 319.919,
+      "duration": 2.321
+    },
+    {
+      "text": "um and there are lots of models",
+      "start": 322.88,
+      "duration": 7.28
+    },
+    {
+      "text": "around valuing derivatives",
+      "start": 326.8,
+      "duration": 7.679
+    },
+    {
+      "text": "um you know options swaps forwards",
+      "start": 330.16,
+      "duration": 8.56
+    },
+    {
+      "text": "uh any kind of derivative um",
+      "start": 334.479,
+      "duration": 6.641
+    },
+    {
+      "text": "forward and future models tend to be",
+      "start": 338.72,
+      "duration": 3.919
+    },
+    {
+      "text": "quite simple",
+      "start": 341.12,
+      "duration": 5.12
+    },
+    {
+      "text": "um swaps are not",
+      "start": 342.639,
+      "duration": 5.761
+    },
+    {
+      "text": "that complicated options are where",
+      "start": 346.24,
+      "duration": 3.12
+    },
+    {
+      "text": "things tend to get",
+      "start": 348.4,
+      "duration": 3.12
+    },
+    {
+      "text": "fairly complicated in the models with",
+      "start": 349.36,
+      "duration": 3.76
+    },
+    {
+      "text": "with quite a bit of math",
+      "start": 351.52,
+      "duration": 5.119
+    },
+    {
+      "text": "going on but",
+      "start": 353.12,
+      "duration": 5.44
+    },
+    {
+      "text": "if you're interested in going into",
+      "start": 356.639,
+      "duration": 3.761
+    },
+    {
+      "text": "derivatives it's definitely makes sense",
+      "start": 358.56,
+      "duration": 2.24
+    },
+    {
+      "text": "to",
+      "start": 360.4,
+      "duration": 3.12
+    },
+    {
+      "text": "check these out",
+      "start": 360.8,
+      "duration": 2.72
+    },
+    {
+      "text": "debt models we did cover um you know",
+      "start": 364.96,
+      "duration": 4.64
+    },
+    {
+      "text": "evaluating a loan",
+      "start": 367.68,
+      "duration": 5.519
+    },
+    {
+      "text": "uh from the perspective of a lender um",
+      "start": 369.6,
+      "duration": 5.68
+    },
+    {
+      "text": "in the in the first course but there are",
+      "start": 373.199,
+      "duration": 3.521
+    },
+    {
+      "text": "a lot of debt models that we didn't",
+      "start": 375.28,
+      "duration": 2.639
+    },
+    {
+      "text": "cover",
+      "start": 376.72,
+      "duration": 4.4
+    },
+    {
+      "text": "um so one example here is",
+      "start": 377.919,
+      "duration": 8.241
+    },
+    {
+      "text": "immunization models which uh are about",
+      "start": 381.12,
+      "duration": 8.24
+    },
+    {
+      "text": "saving about uh having the right amount",
+      "start": 386.16,
+      "duration": 4.8
+    },
+    {
+      "text": "of cash at the right time",
+      "start": 389.36,
+      "duration": 5.04
+    },
+    {
+      "text": "in the future uh such that you're gonna",
+      "start": 390.96,
+      "duration": 7.519
+    },
+    {
+      "text": "invest um in low enough for a securities",
+      "start": 394.4,
+      "duration": 7.12
+    },
+    {
+      "text": "in order to meet that objective",
+      "start": 398.479,
+      "duration": 4.801
+    },
+    {
+      "text": "uh but you wanna try to maximize your",
+      "start": 401.52,
+      "duration": 3.2
+    },
+    {
+      "text": "return",
+      "start": 403.28,
+      "duration": 2.72
+    },
+    {
+      "text": "while still ensuring that you're gonna",
+      "start": 404.72,
+      "duration": 5.039
+    },
+    {
+      "text": "meet that objective",
+      "start": 406.0,
+      "duration": 7.599
+    },
+    {
+      "text": "term structure models try to explain",
+      "start": 409.759,
+      "duration": 6.241
+    },
+    {
+      "text": "the yields on different maturities of",
+      "start": 413.599,
+      "duration": 3.841
+    },
+    {
+      "text": "bonds",
+      "start": 416.0,
+      "duration": 4.8
+    },
+    {
+      "text": "and default adjusted",
+      "start": 417.44,
+      "duration": 6.319
+    },
+    {
+      "text": "return models uh are for evaluating the",
+      "start": 420.8,
+      "duration": 5.04
+    },
+    {
+      "text": "returns on",
+      "start": 423.759,
+      "duration": 3.921
+    },
+    {
+      "text": "debt instruments once you consider the",
+      "start": 425.84,
+      "duration": 4.479
+    },
+    {
+      "text": "default as well so",
+      "start": 427.68,
+      "duration": 4.88
+    },
+    {
+      "text": "the the model that we looked at in the",
+      "start": 430.319,
+      "duration": 3.121
+    },
+    {
+      "text": "course is",
+      "start": 432.56,
+      "duration": 2.88
+    },
+    {
+      "text": "uh you know sort of in this regard of of",
+      "start": 433.44,
+      "duration": 4.159
+    },
+    {
+      "text": "trying to adjust for the default",
+      "start": 435.44,
+      "duration": 6.479
+    },
+    {
+      "text": "and the value of debt",
+      "start": 437.599,
+      "duration": 4.32
+    },
+    {
+      "text": "and then value at risk is another",
+      "start": 442.88,
+      "duration": 9.28
+    },
+    {
+      "text": "type of uh",
+      "start": 448.08,
+      "duration": 4.08
+    },
+    {
+      "text": "yeah i guess we can call it a model it's",
+      "start": 452.56,
+      "duration": 3.44
+    },
+    {
+      "text": "you know i don't know if it's much more",
+      "start": 454.4,
+      "duration": 3.519
+    },
+    {
+      "text": "than a calculation but",
+      "start": 456.0,
+      "duration": 6.0
+    },
+    {
+      "text": "um it's trying to quantify",
+      "start": 457.919,
+      "duration": 7.84
+    },
+    {
+      "text": "what's the maximum that you're going to",
+      "start": 462.0,
+      "duration": 5.44
+    },
+    {
+      "text": "lose",
+      "start": 465.759,
+      "duration": 5.28
+    },
+    {
+      "text": "with a certain probability like i'm 95",
+      "start": 467.44,
+      "duration": 5.52
+    },
+    {
+      "text": "confident i'm not going to lose more",
+      "start": 471.039,
+      "duration": 4.801
+    },
+    {
+      "text": "than a thousand dollars in one day",
+      "start": 472.96,
+      "duration": 4.639
+    },
+    {
+      "text": "are the kind of statements that you can",
+      "start": 475.84,
+      "duration": 3.359
+    },
+    {
+      "text": "make with the",
+      "start": 477.599,
+      "duration": 5.921
+    },
+    {
+      "text": "vir analysis we did actually look",
+      "start": 479.199,
+      "duration": 8.241
+    },
+    {
+      "text": "at monte carlo simulation and within",
+      "start": 483.52,
+      "duration": 7.28
+    },
+    {
+      "text": "monte carlo simulation we looked at",
+      "start": 487.44,
+      "duration": 5.759
+    },
+    {
+      "text": "evaluating the different quantiles of",
+      "start": 490.8,
+      "duration": 4.56
+    },
+    {
+      "text": "the distribution of the outcome and that",
+      "start": 493.199,
+      "duration": 3.921
+    },
+    {
+      "text": "actually will achieve",
+      "start": 495.36,
+      "duration": 5.6
+    },
+    {
+      "text": "this same value at risk concept",
+      "start": 497.12,
+      "duration": 5.6
+    },
+    {
+      "text": "but there are also ways to go about that",
+      "start": 500.96,
+      "duration": 4.0
+    },
+    {
+      "text": "without doing a monte carlo simulation",
+      "start": 502.72,
+      "duration": 5.12
+    },
+    {
+      "text": "in certain contexts such as portfolio",
+      "start": 504.96,
+      "duration": 5.28
+    },
+    {
+      "text": "settings",
+      "start": 507.84,
+      "duration": 2.4
+    },
+    {
+      "text": "and again that's not a comprehensive",
+      "start": 512.479,
+      "duration": 4.0
+    },
+    {
+      "text": "list of financial models that's just",
+      "start": 514.08,
+      "duration": 4.72
+    },
+    {
+      "text": "kind of the most main ones that you see",
+      "start": 516.479,
+      "duration": 3.841
+    },
+    {
+      "text": "commonly out there",
+      "start": 518.8,
+      "duration": 5.84
+    },
+    {
+      "text": "that we didn't cover in the first course",
+      "start": 520.32,
+      "duration": 8.079
+    },
+    {
+      "text": "um and so i'm giving some",
+      "start": 524.64,
+      "duration": 5.44
+    },
+    {
+      "text": "links here in the slides so definitely",
+      "start": 528.399,
+      "duration": 3.201
+    },
+    {
+      "text": "download the slides from the course",
+      "start": 530.08,
+      "duration": 3.28
+    },
+    {
+      "text": "website to look at",
+      "start": 531.6,
+      "duration": 6.32
+    },
+    {
+      "text": "these resources and we have a few here",
+      "start": 533.36,
+      "duration": 8.56
+    },
+    {
+      "text": "that are excel based resources",
+      "start": 537.92,
+      "duration": 7.039
+    },
+    {
+      "text": "so right now as far as free financial",
+      "start": 541.92,
+      "duration": 4.8
+    },
+    {
+      "text": "modeling resources out there",
+      "start": 544.959,
+      "duration": 4.721
+    },
+    {
+      "text": "the vast majority are focused on excel",
+      "start": 546.72,
+      "duration": 3.76
+    },
+    {
+      "text": "um",
+      "start": 549.68,
+      "duration": 2.96
+    },
+    {
+      "text": "so it can be useful just to get an idea",
+      "start": 550.48,
+      "duration": 3.919
+    },
+    {
+      "text": "about the models and learn about",
+      "start": 552.64,
+      "duration": 3.84
+    },
+    {
+      "text": "you know the the finance side of things",
+      "start": 554.399,
+      "duration": 3.761
+    },
+    {
+      "text": "that goes into the model",
+      "start": 556.48,
+      "duration": 3.44
+    },
+    {
+      "text": "and then you can try to go and recreate",
+      "start": 558.16,
+      "duration": 3.6
+    },
+    {
+      "text": "it in python if you're interested in",
+      "start": 559.92,
+      "duration": 3.76
+    },
+    {
+      "text": "that",
+      "start": 561.76,
+      "duration": 4.32
+    },
+    {
+      "text": "or wait for when i'll be releasing",
+      "start": 563.68,
+      "duration": 3.839
+    },
+    {
+      "text": "videos on doing some of these things in",
+      "start": 566.08,
+      "duration": 2.879
+    },
+    {
+      "text": "python",
+      "start": 567.519,
+      "duration": 4.961
+    },
+    {
+      "text": "um i also found a couple free python",
+      "start": 568.959,
+      "duration": 4.32
+    },
+    {
+      "text": "financial",
+      "start": 572.48,
+      "duration": 5.2
+    },
+    {
+      "text": "modeling related resources um",
+      "start": 573.279,
+      "duration": 4.401
+    },
+    {
+      "text": "what i've seen in these is that they",
+      "start": 578.399,
+      "duration": 3.841
+    },
+    {
+      "text": "don't tend to have very good",
+      "start": 579.92,
+      "duration": 5.52
+    },
+    {
+      "text": "coding standards um that",
+      "start": 582.24,
+      "duration": 6.599
+    },
+    {
+      "text": "the authors of these courses are",
+      "start": 585.44,
+      "duration": 5.44
+    },
+    {
+      "text": "certainly know what they're doing they",
+      "start": 588.839,
+      "duration": 2.601
+    },
+    {
+      "text": "certainly",
+      "start": 590.88,
+      "duration": 2.56
+    },
+    {
+      "text": "have good finance experience but they're",
+      "start": 591.44,
+      "duration": 4.399
+    },
+    {
+      "text": "maybe uh you know not as advanced",
+      "start": 593.44,
+      "duration": 3.92
+    },
+    {
+      "text": "working with python and so",
+      "start": 595.839,
+      "duration": 4.081
+    },
+    {
+      "text": "don't follow as as good of coding",
+      "start": 597.36,
+      "duration": 3.84
+    },
+    {
+      "text": "conventions",
+      "start": 599.92,
+      "duration": 5.44
+    },
+    {
+      "text": "as we do in this course",
+      "start": 601.2,
+      "duration": 6.96
+    },
+    {
+      "text": "so that's a quick overview of some of",
+      "start": 605.36,
+      "duration": 6.08
+    },
+    {
+      "text": "the main types of financial models that",
+      "start": 608.16,
+      "duration": 5.119
+    },
+    {
+      "text": "we didn't cover in the first course but",
+      "start": 611.44,
+      "duration": 3.04
+    },
+    {
+      "text": "i hope to cover",
+      "start": 613.279,
+      "duration": 4.721
+    },
+    {
+      "text": "in the advanced course",
+      "start": 614.48,
+      "duration": 5.68
+    },
+    {
+      "text": "and some resources for you to go out and",
+      "start": 618.0,
+      "duration": 4.8
+    },
+    {
+      "text": "learn these things on your own as well",
+      "start": 620.16,
+      "duration": 6.679
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 622.8,
+      "duration": 7.039
+    },
+    {
+      "text": "time",
+      "start": 626.839,
+      "duration": 3.0
+    }
+  ]
+}

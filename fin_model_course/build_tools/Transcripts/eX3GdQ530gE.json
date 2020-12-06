@@ -1,0 +1,1479 @@
+{
+  "entries": [
+    {
+      "text": "hi everyone",
+      "start": 3.679,
+      "duration": 2.481
+    },
+    {
+      "text": "this is nick dear vertis teaching you",
+      "start": 4.48,
+      "duration": 3.2
+    },
+    {
+      "text": "financial modeling",
+      "start": 6.16,
+      "duration": 3.84
+    },
+    {
+      "text": "today we're going to be solving the lab",
+      "start": 7.68,
+      "duration": 3.2
+    },
+    {
+      "text": "exercise",
+      "start": 10.0,
+      "duration": 4.48
+    },
+    {
+      "text": "on complex time series forecasting",
+      "start": 10.88,
+      "duration": 5.76
+    },
+    {
+      "text": "this is part of our lecture series on",
+      "start": 14.48,
+      "duration": 3.84
+    },
+    {
+      "text": "free cash flow estimation and",
+      "start": 16.64,
+      "duration": 2.96
+    },
+    {
+      "text": "forecasting",
+      "start": 18.32,
+      "duration": 3.119
+    },
+    {
+      "text": "as part of a broader goal of building",
+      "start": 19.6,
+      "duration": 3.519
+    },
+    {
+      "text": "out the full discounted cash flow",
+      "start": 21.439,
+      "duration": 4.961
+    },
+    {
+      "text": "valuation of stock",
+      "start": 23.119,
+      "duration": 3.281
+    },
+    {
+      "text": "so this lab exercise came at the end of",
+      "start": 26.48,
+      "duration": 3.68
+    },
+    {
+      "text": "the complex",
+      "start": 29.119,
+      "duration": 4.561
+    },
+    {
+      "text": "forecasting material and it's asking us",
+      "start": 30.16,
+      "duration": 4.399
+    },
+    {
+      "text": "to",
+      "start": 33.68,
+      "duration": 2.8
+    },
+    {
+      "text": "take caterpillars financials and",
+      "start": 34.559,
+      "duration": 3.281
+    },
+    {
+      "text": "forecast the next year",
+      "start": 36.48,
+      "duration": 4.399
+    },
+    {
+      "text": "of cash using both the",
+      "start": 37.84,
+      "duration": 5.12
+    },
+    {
+      "text": "quarterly seasonal trend model as well",
+      "start": 40.879,
+      "duration": 4.081
+    },
+    {
+      "text": "as the automated software approach and",
+      "start": 42.96,
+      "duration": 5.599
+    },
+    {
+      "text": "then plotting both of the forecasts",
+      "start": 44.96,
+      "duration": 3.599
+    },
+    {
+      "text": "so i'm going to go through this fairly",
+      "start": 48.64,
+      "duration": 4.64
+    },
+    {
+      "text": "quickly because",
+      "start": 50.399,
+      "duration": 5.121
+    },
+    {
+      "text": "it is very very similar to what i showed",
+      "start": 53.28,
+      "duration": 4.24
+    },
+    {
+      "text": "in the examples",
+      "start": 55.52,
+      "duration": 4.08
+    },
+    {
+      "text": "so from print statement i'm going to",
+      "start": 57.52,
+      "duration": 3.199
+    },
+    {
+      "text": "import",
+      "start": 59.6,
+      "duration": 3.68
+    },
+    {
+      "text": "the income statement balance sheet",
+      "start": 60.719,
+      "duration": 5.681
+    },
+    {
+      "text": "financial statements",
+      "start": 63.28,
+      "duration": 3.12
+    },
+    {
+      "text": "balance sheet financial statements",
+      "start": 67.04,
+      "duration": 8.56
+    },
+    {
+      "text": "the import panes as pd um",
+      "start": 70.4,
+      "duration": 9.2
+    },
+    {
+      "text": "i'm going to read the um excel files",
+      "start": 75.6,
+      "duration": 7.839
+    },
+    {
+      "text": "for the caterpillar",
+      "start": 79.6,
+      "duration": 8.24
+    },
+    {
+      "text": "um balance sheet",
+      "start": 83.439,
+      "duration": 4.401
+    },
+    {
+      "text": "and i know that we're going to want the",
+      "start": 89.759,
+      "duration": 4.161
+    },
+    {
+      "text": "index column to be 0 to pick up those",
+      "start": 91.52,
+      "duration": 5.52
+    },
+    {
+      "text": "statement line items",
+      "start": 93.92,
+      "duration": 3.12
+    },
+    {
+      "text": "and then do the same thing with the",
+      "start": 97.439,
+      "duration": 4.401
+    },
+    {
+      "text": "income statement",
+      "start": 99.04,
+      "duration": 2.8
+    },
+    {
+      "text": "and then i can create the balance sheet",
+      "start": 104.72,
+      "duration": 3.2
+    },
+    {
+      "text": "data",
+      "start": 107.36,
+      "duration": 4.48
+    },
+    {
+      "text": "with the balance sheets from data frame",
+      "start": 107.92,
+      "duration": 6.559
+    },
+    {
+      "text": "around the balance sheet data frame and",
+      "start": 111.84,
+      "duration": 3.84
+    },
+    {
+      "text": "then the",
+      "start": 114.479,
+      "duration": 3.441
+    },
+    {
+      "text": "income statement data as the income",
+      "start": 115.68,
+      "duration": 3.28
+    },
+    {
+      "text": "statements",
+      "start": 117.92,
+      "duration": 4.64
+    },
+    {
+      "text": "from the data frame of",
+      "start": 118.96,
+      "duration": 6.799
+    },
+    {
+      "text": "the income statement data frame and then",
+      "start": 122.56,
+      "duration": 5.12
+    },
+    {
+      "text": "i can make the statements as financial",
+      "start": 125.759,
+      "duration": 2.72
+    },
+    {
+      "text": "statements",
+      "start": 127.68,
+      "duration": 3.68
+    },
+    {
+      "text": "from the income statement data and the",
+      "start": 128.479,
+      "duration": 4.161
+    },
+    {
+      "text": "balance sheet",
+      "start": 131.36,
+      "duration": 5.12
+    },
+    {
+      "text": "data so it looks like that worked",
+      "start": 132.64,
+      "duration": 5.52
+    },
+    {
+      "text": "because now we're getting",
+      "start": 136.48,
+      "duration": 6.8
+    },
+    {
+      "text": "all the standard kind of messages here",
+      "start": 138.16,
+      "duration": 6.799
+    },
+    {
+      "text": "so it wasn't able to load in certain",
+      "start": 143.28,
+      "duration": 4.4
+    },
+    {
+      "text": "items because they didn't really matter",
+      "start": 144.959,
+      "duration": 4.561
+    },
+    {
+      "text": "for this",
+      "start": 147.68,
+      "duration": 5.44
+    },
+    {
+      "text": "and it's using abbott as the value for",
+      "start": 149.52,
+      "duration": 6.799
+    },
+    {
+      "text": "operating income",
+      "start": 153.12,
+      "duration": 6.399
+    },
+    {
+      "text": "so as that loads in we can talk about",
+      "start": 156.319,
+      "duration": 4.56
+    },
+    {
+      "text": "the next step",
+      "start": 159.519,
+      "duration": 4.561
+    },
+    {
+      "text": "which is going to be",
+      "start": 160.879,
+      "duration": 7.121
+    },
+    {
+      "text": "plotting the cache so that we can",
+      "start": 164.08,
+      "duration": 8.08
+    },
+    {
+      "text": "um see uh",
+      "start": 168.0,
+      "duration": 4.16
+    },
+    {
+      "text": "what uh kind of time series we're",
+      "start": 172.56,
+      "duration": 3.28
+    },
+    {
+      "text": "working with if",
+      "start": 174.879,
+      "duration": 3.841
+    },
+    {
+      "text": "uh we really need to do the quarterly",
+      "start": 175.84,
+      "duration": 4.64
+    },
+    {
+      "text": "seasonal trend model",
+      "start": 178.72,
+      "duration": 3.28
+    },
+    {
+      "text": "so now we can see the statements came",
+      "start": 180.48,
+      "duration": 4.24
+    },
+    {
+      "text": "through um",
+      "start": 182.0,
+      "duration": 5.84
+    },
+    {
+      "text": "and let's look at that plot um",
+      "start": 184.72,
+      "duration": 6.64
+    },
+    {
+      "text": "so it definitely looks weird um",
+      "start": 187.84,
+      "duration": 4.96
+    },
+    {
+      "text": "you know maybe a trend approach should",
+      "start": 191.36,
+      "duration": 3.2
+    },
+    {
+      "text": "be fine for this it doesn't seem to be a",
+      "start": 192.8,
+      "duration": 3.76
+    },
+    {
+      "text": "really regular pattern",
+      "start": 194.56,
+      "duration": 4.24
+    },
+    {
+      "text": "uh but there does seem to still maybe be",
+      "start": 196.56,
+      "duration": 4.24
+    },
+    {
+      "text": "some repeating kind of seasonality in",
+      "start": 198.8,
+      "duration": 2.96
+    },
+    {
+      "text": "here",
+      "start": 200.8,
+      "duration": 3.84
+    },
+    {
+      "text": "um so let's go ahead and go forward with",
+      "start": 201.76,
+      "duration": 3.839
+    },
+    {
+      "text": "the",
+      "start": 204.64,
+      "duration": 6.239
+    },
+    {
+      "text": "um quarterly seasonal trend model",
+      "start": 205.599,
+      "duration": 8.72
+    },
+    {
+      "text": "um so in order to uh work with that",
+      "start": 210.879,
+      "duration": 7.201
+    },
+    {
+      "text": "we looked at uh creating a data frame",
+      "start": 214.319,
+      "duration": 7.601
+    },
+    {
+      "text": "out of the um",
+      "start": 218.08,
+      "duration": 6.799
+    },
+    {
+      "text": "line item that we want to forecast and",
+      "start": 221.92,
+      "duration": 5.14
+    },
+    {
+      "text": "then setting the name of the column",
+      "start": 224.879,
+      "duration": 5.301
+    },
+    {
+      "text": "[Music]",
+      "start": 227.06,
+      "duration": 3.12
+    },
+    {
+      "text": "okay so now we have that cached out of",
+      "start": 231.76,
+      "duration": 3.36
+    },
+    {
+      "text": "frame",
+      "start": 234.0,
+      "duration": 3.36
+    },
+    {
+      "text": "um and then we talked about creating the",
+      "start": 235.12,
+      "duration": 3.28
+    },
+    {
+      "text": "t variable",
+      "start": 237.36,
+      "duration": 4.56
+    },
+    {
+      "text": "as this range length of the",
+      "start": 238.4,
+      "duration": 6.16
+    },
+    {
+      "text": "data frame",
+      "start": 241.92,
+      "duration": 2.64
+    },
+    {
+      "text": "sorry cache df",
+      "start": 247.84,
+      "duration": 3.2
+    },
+    {
+      "text": "and now we have that t variable in there",
+      "start": 253.36,
+      "duration": 3.279
+    },
+    {
+      "text": "as well",
+      "start": 255.36,
+      "duration": 4.24
+    },
+    {
+      "text": "um then we talked about creating the",
+      "start": 256.639,
+      "duration": 4.72
+    },
+    {
+      "text": "month variable",
+      "start": 259.6,
+      "duration": 5.68
+    },
+    {
+      "text": "by extracting the month from the date",
+      "start": 261.359,
+      "duration": 8.481
+    },
+    {
+      "text": "and the index",
+      "start": 265.28,
+      "duration": 4.56
+    },
+    {
+      "text": "okay that seems to have worked as well",
+      "start": 274.24,
+      "duration": 6.6
+    },
+    {
+      "text": "um and now we can use pandas's get",
+      "start": 278.16,
+      "duration": 4.16
+    },
+    {
+      "text": "dummies uh",
+      "start": 280.84,
+      "duration": 4.12
+    },
+    {
+      "text": "in order to",
+      "start": 282.32,
+      "duration": 2.64
+    },
+    {
+      "text": "convert those into dummy variables",
+      "start": 285.759,
+      "duration": 7.201
+    },
+    {
+      "text": "get dummies on the cache data frame",
+      "start": 288.88,
+      "duration": 6.56
+    },
+    {
+      "text": "and the column we want to do it on is",
+      "start": 292.96,
+      "duration": 4.88
+    },
+    {
+      "text": "month",
+      "start": 295.44,
+      "duration": 2.4
+    },
+    {
+      "text": "we can see that worked appropriately as",
+      "start": 300.56,
+      "duration": 4.639
+    },
+    {
+      "text": "well",
+      "start": 302.88,
+      "duration": 2.319
+    },
+    {
+      "text": "and so now we want to run the regression",
+      "start": 305.84,
+      "duration": 4.96
+    },
+    {
+      "text": "so we can get the",
+      "start": 309.12,
+      "duration": 5.81
+    },
+    {
+      "text": "month columns as each column",
+      "start": 310.8,
+      "duration": 5.76
+    },
+    {
+      "text": "[Music]",
+      "start": 314.93,
+      "duration": 5.95
+    },
+    {
+      "text": "in the data frame dash df.columns",
+      "start": 316.56,
+      "duration": 8.079
+    },
+    {
+      "text": "um if month",
+      "start": 320.88,
+      "duration": 6.8
+    },
+    {
+      "text": "is in the column and then the x columns",
+      "start": 324.639,
+      "duration": 4.961
+    },
+    {
+      "text": "is going to be t",
+      "start": 327.68,
+      "duration": 4.72
+    },
+    {
+      "text": "plus those",
+      "start": 329.6,
+      "duration": 2.8
+    },
+    {
+      "text": "okay so that's all our x columns we can",
+      "start": 335.199,
+      "duration": 9.761
+    },
+    {
+      "text": "then go to using stats models",
+      "start": 339.68,
+      "duration": 5.28
+    },
+    {
+      "text": "so we're going to have the y is going to",
+      "start": 345.6,
+      "duration": 4.72
+    },
+    {
+      "text": "be",
+      "start": 348.16,
+      "duration": 6.0
+    },
+    {
+      "text": "the hash we're going to have the x",
+      "start": 350.32,
+      "duration": 7.84
+    },
+    {
+      "text": "as adding a constant to",
+      "start": 354.16,
+      "duration": 8.24
+    },
+    {
+      "text": "the x columns",
+      "start": 358.16,
+      "duration": 4.24
+    },
+    {
+      "text": "and then we're going to use the ols",
+      "start": 363.84,
+      "duration": 3.68
+    },
+    {
+      "text": "model",
+      "start": 366.4,
+      "duration": 5.6
+    },
+    {
+      "text": "and tell it that it has a constant",
+      "start": 367.52,
+      "duration": 9.36
+    },
+    {
+      "text": "and then fit the model",
+      "start": 372.0,
+      "duration": 4.88
+    },
+    {
+      "text": "and look at the summary of the results",
+      "start": 379.44,
+      "duration": 5.36
+    },
+    {
+      "text": "so then we can see it does look like it",
+      "start": 382.8,
+      "duration": 3.36
+    },
+    {
+      "text": "was fit properly",
+      "start": 384.8,
+      "duration": 5.28
+    },
+    {
+      "text": "uh we have a decently high r squared",
+      "start": 386.16,
+      "duration": 7.039
+    },
+    {
+      "text": "uh we have a constant the t and the four",
+      "start": 390.08,
+      "duration": 4.559
+    },
+    {
+      "text": "different month dummies",
+      "start": 393.199,
+      "duration": 4.72
+    },
+    {
+      "text": "fitted so",
+      "start": 394.639,
+      "duration": 7.521
+    },
+    {
+      "text": "now we can go to predicting the future",
+      "start": 397.919,
+      "duration": 7.201
+    },
+    {
+      "text": "so we can",
+      "start": 402.16,
+      "duration": 2.96
+    },
+    {
+      "text": "look at the max of",
+      "start": 406.0,
+      "duration": 6.96
+    },
+    {
+      "text": "the t column let's see what was the last",
+      "start": 409.44,
+      "duration": 8.4
+    },
+    {
+      "text": "period in the data set that",
+      "start": 412.96,
+      "duration": 8.4
+    },
+    {
+      "text": "as the last t",
+      "start": 417.84,
+      "duration": 6.56
+    },
+    {
+      "text": "um and then t is is going to be the last",
+      "start": 421.36,
+      "duration": 6.72
+    },
+    {
+      "text": "t plus one okay",
+      "start": 424.4,
+      "duration": 6.48
+    },
+    {
+      "text": "um but really we just want to go forward",
+      "start": 428.08,
+      "duration": 3.44
+    },
+    {
+      "text": "and",
+      "start": 430.88,
+      "duration": 4.8
+    },
+    {
+      "text": "um do all the forecasts",
+      "start": 431.52,
+      "duration": 7.519
+    },
+    {
+      "text": "so we can set up a forecast dictionary",
+      "start": 435.68,
+      "duration": 6.88
+    },
+    {
+      "text": "um oh and first we want to make the",
+      "start": 439.039,
+      "duration": 5.521
+    },
+    {
+      "text": "date range that we want to forecast over",
+      "start": 442.56,
+      "duration": 4.079
+    },
+    {
+      "text": "so we can use",
+      "start": 444.56,
+      "duration": 5.919
+    },
+    {
+      "text": "date range um",
+      "start": 446.639,
+      "duration": 6.321
+    },
+    {
+      "text": "and",
+      "start": 450.479,
+      "duration": 2.481
+    },
+    {
+      "text": "uh here is the last period so it's going",
+      "start": 456.4,
+      "duration": 3.44
+    },
+    {
+      "text": "to be",
+      "start": 459.44,
+      "duration": 6.24
+    },
+    {
+      "text": "starting from",
+      "start": 459.84,
+      "duration": 8.96
+    },
+    {
+      "text": "the end of uh december",
+      "start": 465.68,
+      "duration": 5.919
+    },
+    {
+      "text": "and frequency is going to be every three",
+      "start": 468.8,
+      "duration": 3.839
+    },
+    {
+      "text": "months",
+      "start": 471.599,
+      "duration": 4.241
+    },
+    {
+      "text": "and the uh periods we're gonna do four",
+      "start": 472.639,
+      "duration": 4.481
+    },
+    {
+      "text": "periods",
+      "start": 475.84,
+      "duration": 6.0
+    },
+    {
+      "text": "um so yep that looks right",
+      "start": 477.12,
+      "duration": 4.72
+    },
+    {
+      "text": "um we can call these the forecasts",
+      "start": 482.08,
+      "duration": 5.679
+    },
+    {
+      "text": "dates",
+      "start": 485.36,
+      "duration": 2.399
+    },
+    {
+      "text": "then we can get a counter variable as",
+      "start": 491.44,
+      "duration": 3.439
+    },
+    {
+      "text": "well as",
+      "start": 494.08,
+      "duration": 4.239
+    },
+    {
+      "text": "the date in our loop here um",
+      "start": 494.879,
+      "duration": 6.801
+    },
+    {
+      "text": "and we can create our offset for t",
+      "start": 498.319,
+      "duration": 6.481
+    },
+    {
+      "text": "as i plus one and we can",
+      "start": 501.68,
+      "duration": 5.919
+    },
+    {
+      "text": "create the t as the last t plus the",
+      "start": 504.8,
+      "duration": 4.799
+    },
+    {
+      "text": "offset",
+      "start": 507.599,
+      "duration": 4.641
+    },
+    {
+      "text": "month is going to be the month of the",
+      "start": 509.599,
+      "duration": 4.961
+    },
+    {
+      "text": "date",
+      "start": 512.24,
+      "duration": 2.32
+    },
+    {
+      "text": "and then we can create a forecast",
+      "start": 514.719,
+      "duration": 6.641
+    },
+    {
+      "text": "in the dictionary",
+      "start": 518.159,
+      "duration": 8.321
+    },
+    {
+      "text": "as the um",
+      "start": 521.36,
+      "duration": 5.12
+    },
+    {
+      "text": "oh is it result yeah",
+      "start": 526.72,
+      "duration": 8.08
+    },
+    {
+      "text": "so as the constant",
+      "start": 530.32,
+      "duration": 6.8
+    },
+    {
+      "text": "plus",
+      "start": 534.8,
+      "duration": 2.32
+    },
+    {
+      "text": "the t times the t",
+      "start": 540.399,
+      "duration": 6.44
+    },
+    {
+      "text": "plus the appropriate months",
+      "start": 543.519,
+      "duration": 7.281
+    },
+    {
+      "text": "uh dummy variable coefficient",
+      "start": 546.839,
+      "duration": 7.721
+    },
+    {
+      "text": "so resolve params uh",
+      "start": 550.8,
+      "duration": 5.52
+    },
+    {
+      "text": "you will use the formatted string of",
+      "start": 554.56,
+      "duration": 3.2
+    },
+    {
+      "text": "month underscore",
+      "start": 556.32,
+      "duration": 5.76
+    },
+    {
+      "text": "and then the month",
+      "start": 557.76,
+      "duration": 6.32
+    },
+    {
+      "text": "okay so then that should give us our",
+      "start": 562.08,
+      "duration": 4.56
+    },
+    {
+      "text": "forecast",
+      "start": 564.08,
+      "duration": 2.56
+    },
+    {
+      "text": "okay forecasts",
+      "start": 568.56,
+      "duration": 4.16
+    },
+    {
+      "text": "uh forecast dates there we go and now we",
+      "start": 573.279,
+      "duration": 4.321
+    },
+    {
+      "text": "have our four",
+      "start": 576.8,
+      "duration": 3.76
+    },
+    {
+      "text": "forecasted periods",
+      "start": 577.6,
+      "duration": 2.96
+    },
+    {
+      "text": "um and we can make a series out of that",
+      "start": 581.2,
+      "duration": 4.639
+    },
+    {
+      "text": "let's do that a little more clearly and",
+      "start": 586.72,
+      "duration": 5.44
+    },
+    {
+      "text": "we can plot that as well",
+      "start": 588.56,
+      "duration": 3.6
+    },
+    {
+      "text": "i really want to plot it along with",
+      "start": 593.04,
+      "duration": 5.919
+    },
+    {
+      "text": "the",
+      "start": 596.8,
+      "duration": 2.159
+    },
+    {
+      "text": "along with the historical to see how it",
+      "start": 600.959,
+      "duration": 3.841
+    },
+    {
+      "text": "fits in",
+      "start": 602.56,
+      "duration": 5.04
+    },
+    {
+      "text": "so now we can do",
+      "start": 604.8,
+      "duration": 2.8
+    },
+    {
+      "text": "all cash is we want to concatenate",
+      "start": 608.079,
+      "duration": 5.361
+    },
+    {
+      "text": "the cash with the forecast um",
+      "start": 614.56,
+      "duration": 5.279
+    },
+    {
+      "text": "and then we can pop that um",
+      "start": 619.92,
+      "duration": 7.28
+    },
+    {
+      "text": "so now we see this forecasting period",
+      "start": 624.32,
+      "duration": 4.24
+    },
+    {
+      "text": "jumped on the end which",
+      "start": 627.2,
+      "duration": 3.199
+    },
+    {
+      "text": "seems like it fits pretty reasonably in",
+      "start": 628.56,
+      "duration": 4.24
+    },
+    {
+      "text": "so it seems like this was a decent job",
+      "start": 630.399,
+      "duration": 3.041
+    },
+    {
+      "text": "though it's",
+      "start": 632.8,
+      "duration": 2.159
+    },
+    {
+      "text": "you know not as clear as some of the",
+      "start": 633.44,
+      "duration": 4.959
+    },
+    {
+      "text": "patterns we have looked at before",
+      "start": 634.959,
+      "duration": 6.481
+    },
+    {
+      "text": "um so that's the",
+      "start": 638.399,
+      "duration": 5.201
+    },
+    {
+      "text": "quarterly seasonal trend model and then",
+      "start": 641.44,
+      "duration": 3.399
+    },
+    {
+      "text": "to look at",
+      "start": 643.6,
+      "duration": 5.52
+    },
+    {
+      "text": "the automated approach",
+      "start": 644.839,
+      "duration": 4.281
+    },
+    {
+      "text": "there we can look at the",
+      "start": 653.04,
+      "duration": 7.28
+    },
+    {
+      "text": "forecast assumptions so by default",
+      "start": 656.88,
+      "duration": 4.959
+    },
+    {
+      "text": "things use the compound and annual",
+      "start": 660.32,
+      "duration": 3.04
+    },
+    {
+      "text": "growth rate",
+      "start": 661.839,
+      "duration": 4.401
+    },
+    {
+      "text": "um but we want really right now we just",
+      "start": 663.36,
+      "duration": 4.96
+    },
+    {
+      "text": "care about cash for the purpose of this",
+      "start": 666.24,
+      "duration": 4.32
+    },
+    {
+      "text": "exercise and the auto method does take",
+      "start": 668.32,
+      "duration": 4.0
+    },
+    {
+      "text": "longer so i'm just going to adjust only",
+      "start": 670.56,
+      "duration": 5.12
+    },
+    {
+      "text": "that one to use the auto method",
+      "start": 672.32,
+      "duration": 7.759
+    },
+    {
+      "text": "so config.update",
+      "start": 675.68,
+      "duration": 4.399
+    },
+    {
+      "text": "the hash",
+      "start": 680.56,
+      "duration": 4.88
+    },
+    {
+      "text": "to use that method um",
+      "start": 686.88,
+      "duration": 8.079
+    },
+    {
+      "text": "forecast config um",
+      "start": 690.0,
+      "duration": 4.959
+    },
+    {
+      "text": "and it's going to the method",
+      "start": 695.04,
+      "duration": 8.799
+    },
+    {
+      "text": "now to auto",
+      "start": 698.8,
+      "duration": 5.039
+    },
+    {
+      "text": "and we will also have to",
+      "start": 706.56,
+      "duration": 4.8
+    },
+    {
+      "text": "turn the plug off for",
+      "start": 711.519,
+      "duration": 7.921
+    },
+    {
+      "text": "um because if it's a plug it's going to",
+      "start": 715.68,
+      "duration": 4.32
+    },
+    {
+      "text": "be",
+      "start": 719.44,
+      "duration": 3.12
+    },
+    {
+      "text": "adjusted manually after the forecast and",
+      "start": 720.0,
+      "duration": 4.0
+    },
+    {
+      "text": "we'll have to make something else the",
+      "start": 722.56,
+      "duration": 1.92
+    },
+    {
+      "text": "plug",
+      "start": 724.0,
+      "duration": 3.76
+    },
+    {
+      "text": "instead um so we can",
+      "start": 724.48,
+      "duration": 6.32
+    },
+    {
+      "text": "instead um",
+      "start": 727.76,
+      "duration": 7.28
+    },
+    {
+      "text": "say that we want to make um",
+      "start": 730.8,
+      "duration": 7.52
+    },
+    {
+      "text": "short-term um investments the plug",
+      "start": 735.04,
+      "duration": 6.56
+    },
+    {
+      "text": "which i believe is st invest yup st",
+      "start": 738.32,
+      "duration": 4.0
+    },
+    {
+      "text": "invest",
+      "start": 741.6,
+      "duration": 4.56
+    },
+    {
+      "text": "so we can make uh short term investments",
+      "start": 742.32,
+      "duration": 5.36
+    },
+    {
+      "text": "the plug instead",
+      "start": 746.16,
+      "duration": 3.679
+    },
+    {
+      "text": "and now we'll see cache is now auto and",
+      "start": 747.68,
+      "duration": 3.599
+    },
+    {
+      "text": "not a plug",
+      "start": 749.839,
+      "duration": 4.481
+    },
+    {
+      "text": "um um we have to set previously it was",
+      "start": 751.279,
+      "duration": 4.161
+    },
+    {
+      "text": "not",
+      "start": 754.32,
+      "duration": 4.0
+    },
+    {
+      "text": "um forecasting that so we have to set",
+      "start": 755.44,
+      "duration": 5.12
+    },
+    {
+      "text": "make forecast",
+      "start": 758.32,
+      "duration": 4.8
+    },
+    {
+      "text": "to true",
+      "start": 760.56,
+      "duration": 2.56
+    },
+    {
+      "text": "and yes now we see cash is set to auto",
+      "start": 763.76,
+      "duration": 8.56
+    },
+    {
+      "text": "short term investments is now",
+      "start": 768.8,
+      "duration": 7.839
+    },
+    {
+      "text": "the plug on the asset side",
+      "start": 772.32,
+      "duration": 4.319
+    },
+    {
+      "text": "so now we should be good to go ahead and",
+      "start": 778.16,
+      "duration": 7.2
+    },
+    {
+      "text": "view the forecast so statements",
+      "start": 781.76,
+      "duration": 6.8
+    },
+    {
+      "text": "forecast and we want to do a four period",
+      "start": 785.36,
+      "duration": 6.479
+    },
+    {
+      "text": "uh forecast so now that's happening",
+      "start": 788.56,
+      "duration": 4.88
+    },
+    {
+      "text": "forecast the income statement now it's",
+      "start": 791.839,
+      "duration": 4.8
+    },
+    {
+      "text": "working on the balance sheet",
+      "start": 793.44,
+      "duration": 3.199
+    },
+    {
+      "text": "and it does take a little bit of time",
+      "start": 798.839,
+      "duration": 4.44
+    },
+    {
+      "text": "now it's",
+      "start": 802.639,
+      "duration": 2.721
+    },
+    {
+      "text": "balancing the balance sheet that takes",
+      "start": 803.279,
+      "duration": 3.36
+    },
+    {
+      "text": "some time as well okay",
+      "start": 805.36,
+      "duration": 6.0
+    },
+    {
+      "text": "now it's done um so now we can",
+      "start": 806.639,
+      "duration": 8.32
+    },
+    {
+      "text": "uh plot uh",
+      "start": 811.36,
+      "duration": 7.279
+    },
+    {
+      "text": "cash and we see the cash",
+      "start": 814.959,
+      "duration": 6.721
+    },
+    {
+      "text": "forecast there",
+      "start": 818.639,
+      "duration": 5.2
+    },
+    {
+      "text": "so that seems to have been able to take",
+      "start": 821.68,
+      "duration": 3.44
+    },
+    {
+      "text": "into account the",
+      "start": 823.839,
+      "duration": 5.281
+    },
+    {
+      "text": "um the seasonality and the data",
+      "start": 825.12,
+      "duration": 6.88
+    },
+    {
+      "text": "and if we want to look at the actual",
+      "start": 829.12,
+      "duration": 4.88
+    },
+    {
+      "text": "values of the forecast",
+      "start": 832.0,
+      "duration": 5.199
+    },
+    {
+      "text": "uh then we can look at the cash and the",
+      "start": 834.0,
+      "duration": 5.6
+    },
+    {
+      "text": "forecast",
+      "start": 837.199,
+      "duration": 6.481
+    },
+    {
+      "text": "um so there then we have",
+      "start": 839.6,
+      "duration": 6.88
+    },
+    {
+      "text": "done both methods and when we look at",
+      "start": 843.68,
+      "duration": 3.12
+    },
+    {
+      "text": "the",
+      "start": 846.48,
+      "duration": 3.599
+    },
+    {
+      "text": "forecasted statements um we should also",
+      "start": 846.8,
+      "duration": 3.68
+    },
+    {
+      "text": "see",
+      "start": 850.079,
+      "duration": 5.76
+    },
+    {
+      "text": "that the balance sheet is remaining",
+      "start": 850.48,
+      "duration": 8.96
+    },
+    {
+      "text": "balance as well which it is um due to",
+      "start": 855.839,
+      "duration": 5.44
+    },
+    {
+      "text": "now having short-term investments",
+      "start": 859.44,
+      "duration": 5.12
+    },
+    {
+      "text": "as the plug in here",
+      "start": 861.279,
+      "duration": 3.281
+    },
+    {
+      "text": "so that's uh how you would",
+      "start": 864.88,
+      "duration": 6.56
+    },
+    {
+      "text": "do this complex time series forecasting",
+      "start": 868.399,
+      "duration": 5.041
+    },
+    {
+      "text": "lab of using both the quarterly seasonal",
+      "start": 871.44,
+      "duration": 3.04
+    },
+    {
+      "text": "trend model",
+      "start": 873.44,
+      "duration": 3.6
+    },
+    {
+      "text": "as well as the automated software",
+      "start": 874.48,
+      "duration": 3.68
+    },
+    {
+      "text": "approach",
+      "start": 877.04,
+      "duration": 5.52
+    },
+    {
+      "text": "so thanks for listening and see you next",
+      "start": 878.16,
+      "duration": 4.4
+    },
+    {
+      "text": "time",
+      "start": 882.76,
+      "duration": 3.0
+    }
+  ]
+}

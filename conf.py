@@ -17,7 +17,7 @@ REPO_MAINTAINERS = [
 ]
 
 # Package version in the format (major, minor, release)
-PACKAGE_VERSION_TUPLE = (0, 1, 14)
+PACKAGE_VERSION_TUPLE = (0, 1, 15)
 
 # Short description of the package
 PACKAGE_SHORT_DESCRIPTION = "A Python and Excel Financial Modeling Course"

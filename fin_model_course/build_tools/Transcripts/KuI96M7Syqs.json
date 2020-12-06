@@ -1,0 +1,1209 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.56,
+      "duration": 2.48
+    },
+    {
+      "text": "this is nick dear burtis teaching you",
+      "start": 3.36,
+      "duration": 3.12
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.04,
+      "duration": 4.0
+    },
+    {
+      "text": "today we're going to be solving the lab",
+      "start": 6.48,
+      "duration": 3.84
+    },
+    {
+      "text": "exercise",
+      "start": 9.04,
+      "duration": 4.479
+    },
+    {
+      "text": "on dcf stock prices with",
+      "start": 10.32,
+      "duration": 5.439
+    },
+    {
+      "text": "terminal values this is part of our",
+      "start": 13.519,
+      "duration": 3.201
+    },
+    {
+      "text": "lecture series",
+      "start": 15.759,
+      "duration": 3.201
+    },
+    {
+      "text": "on free cash flow estimation and",
+      "start": 16.72,
+      "duration": 3.68
+    },
+    {
+      "text": "forecasting",
+      "start": 18.96,
+      "duration": 3.6
+    },
+    {
+      "text": "as part of a broader goal in the course",
+      "start": 20.4,
+      "duration": 4.879
+    },
+    {
+      "text": "to develop the full discounted cash flow",
+      "start": 22.56,
+      "duration": 6.24
+    },
+    {
+      "text": "valuation of a stock",
+      "start": 25.279,
+      "duration": 3.521
+    },
+    {
+      "text": "so this lecture exercise came at the",
+      "start": 28.88,
+      "duration": 4.8
+    },
+    {
+      "text": "very end of the evaluation material",
+      "start": 30.96,
+      "duration": 5.92
+    },
+    {
+      "text": "at the end of slide deck um",
+      "start": 33.68,
+      "duration": 6.8
+    },
+    {
+      "text": "and it's basically um giving us uh",
+      "start": 36.88,
+      "duration": 6.48
+    },
+    {
+      "text": "four different ratios for the exit",
+      "start": 40.48,
+      "duration": 4.32
+    },
+    {
+      "text": "multiple approach",
+      "start": 43.36,
+      "duration": 3.359
+    },
+    {
+      "text": "and also a growth rate for the",
+      "start": 44.8,
+      "duration": 4.16
+    },
+    {
+      "text": "perpetuity growth method",
+      "start": 46.719,
+      "duration": 5.121
+    },
+    {
+      "text": "and is asking us to calculate uh five",
+      "start": 48.96,
+      "duration": 4.079
+    },
+    {
+      "text": "different stock prices",
+      "start": 51.84,
+      "duration": 3.28
+    },
+    {
+      "text": "based on these different approaches for",
+      "start": 53.039,
+      "duration": 6.0
+    },
+    {
+      "text": "the terminal value",
+      "start": 55.12,
+      "duration": 6.4
+    },
+    {
+      "text": "so i'm going to bring this over to my",
+      "start": 59.039,
+      "duration": 3.441
+    },
+    {
+      "text": "other",
+      "start": 61.52,
+      "duration": 4.08
+    },
+    {
+      "text": "screen so that i can see it",
+      "start": 62.48,
+      "duration": 4.639
+    },
+    {
+      "text": "because i have to bring over a lot of",
+      "start": 65.6,
+      "duration": 4.0
+    },
+    {
+      "text": "values",
+      "start": 67.119,
+      "duration": 2.481
+    },
+    {
+      "text": "so let's go ahead and start putting in",
+      "start": 70.32,
+      "duration": 3.44
+    },
+    {
+      "text": "all these values",
+      "start": 72.56,
+      "duration": 6.08
+    },
+    {
+      "text": "so we have ev to evada",
+      "start": 73.76,
+      "duration": 4.88
+    },
+    {
+      "text": "which has a value of 18.58",
+      "start": 80.4,
+      "duration": 8.16
+    },
+    {
+      "text": "we have ev to sales has a value",
+      "start": 84.72,
+      "duration": 7.84
+    },
+    {
+      "text": "of 1.92 e v to fcf",
+      "start": 88.56,
+      "duration": 8.08
+    },
+    {
+      "text": "has a value of 11.82",
+      "start": 92.56,
+      "duration": 10.96
+    },
+    {
+      "text": "we have the e has a value of 39.30",
+      "start": 96.64,
+      "duration": 6.88
+    },
+    {
+      "text": "we have uh each free cash flow",
+      "start": 103.6,
+      "duration": 9.36
+    },
+    {
+      "text": "is going to be uh one point",
+      "start": 108.0,
+      "duration": 9.439
+    },
+    {
+      "text": "uh three nine four",
+      "start": 112.96,
+      "duration": 7.68
+    },
+    {
+      "text": "three two four billion",
+      "start": 117.439,
+      "duration": 7.201
+    },
+    {
+      "text": "um we have what else",
+      "start": 120.64,
+      "duration": 8.239
+    },
+    {
+      "text": "um we have",
+      "start": 124.64,
+      "duration": 7.44
+    },
+    {
+      "text": "the final ebitda",
+      "start": 128.879,
+      "duration": 6.321
+    },
+    {
+      "text": "is of",
+      "start": 132.08,
+      "duration": 6.32
+    },
+    {
+      "text": "1.5 billion",
+      "start": 135.2,
+      "duration": 3.2
+    },
+    {
+      "text": "we have uh the final",
+      "start": 139.04,
+      "duration": 7.279
+    },
+    {
+      "text": "sales is um",
+      "start": 142.16,
+      "duration": 7.28
+    },
+    {
+      "text": "7.8 billion",
+      "start": 146.319,
+      "duration": 3.121
+    },
+    {
+      "text": "we have bought all that income",
+      "start": 149.52,
+      "duration": 5.52
+    },
+    {
+      "text": "is 232 million",
+      "start": 155.519,
+      "duration": 10.481
+    },
+    {
+      "text": "um and then we have",
+      "start": 160.959,
+      "duration": 5.041
+    },
+    {
+      "text": "um the",
+      "start": 166.08,
+      "duration": 7.68
+    },
+    {
+      "text": "current total debt um",
+      "start": 170.319,
+      "duration": 5.92
+    },
+    {
+      "text": "as",
+      "start": 173.76,
+      "duration": 2.479
+    },
+    {
+      "text": "um 11.6 billion",
+      "start": 177.28,
+      "duration": 5.039
+    },
+    {
+      "text": "we have a cash",
+      "start": 183.44,
+      "duration": 9.28
+    },
+    {
+      "text": "as 4.8 billion",
+      "start": 187.04,
+      "duration": 5.68
+    },
+    {
+      "text": "and uh shares outstanding",
+      "start": 195.12,
+      "duration": 10.479
+    },
+    {
+      "text": "is uh 561 million",
+      "start": 199.76,
+      "duration": 5.839
+    },
+    {
+      "text": "the whack is 10",
+      "start": 205.76,
+      "duration": 7.839
+    },
+    {
+      "text": "so growth is 3 percent",
+      "start": 208.879,
+      "duration": 7.761
+    },
+    {
+      "text": "and i believe i've managed to",
+      "start": 213.599,
+      "duration": 7.601
+    },
+    {
+      "text": "um grab all those values here",
+      "start": 216.64,
+      "duration": 7.76
+    },
+    {
+      "text": "yep so",
+      "start": 221.2,
+      "duration": 4.48
+    },
+    {
+      "text": "those are all the values we're working",
+      "start": 224.4,
+      "duration": 3.199
+    },
+    {
+      "text": "with",
+      "start": 225.68,
+      "duration": 4.8
+    },
+    {
+      "text": "now we need to look at calculating the",
+      "start": 227.599,
+      "duration": 5.601
+    },
+    {
+      "text": "terminal values so we're going to have",
+      "start": 230.48,
+      "duration": 6.72
+    },
+    {
+      "text": "five different terminal values here",
+      "start": 233.2,
+      "duration": 4.0
+    },
+    {
+      "text": "so um",
+      "start": 238.84,
+      "duration": 6.2
+    },
+    {
+      "text": "for those terminal values",
+      "start": 241.68,
+      "duration": 7.199
+    },
+    {
+      "text": "uh we have three coming from",
+      "start": 245.04,
+      "duration": 5.839
+    },
+    {
+      "text": "enterprise value ratios so let's deal",
+      "start": 248.879,
+      "duration": 4.321
+    },
+    {
+      "text": "with those first because for those",
+      "start": 250.879,
+      "duration": 4.961
+    },
+    {
+      "text": "we would just take",
+      "start": 253.2,
+      "duration": 2.64
+    },
+    {
+      "text": "you know the measure",
+      "start": 256.959,
+      "duration": 3.041
+    },
+    {
+      "text": "and multiply it by the corresponding",
+      "start": 261.68,
+      "duration": 8.4
+    },
+    {
+      "text": "um final",
+      "start": 267.04,
+      "duration": 5.12
+    },
+    {
+      "text": "uh value that is the denominator of the",
+      "start": 270.08,
+      "duration": 4.16
+    },
+    {
+      "text": "ratio so we can say",
+      "start": 272.16,
+      "duration": 6.24
+    },
+    {
+      "text": "terminal value ebitda",
+      "start": 274.24,
+      "duration": 4.16
+    },
+    {
+      "text": "then we're going to have the terminal",
+      "start": 278.56,
+      "duration": 4.0
+    },
+    {
+      "text": "value from sales multiple",
+      "start": 279.84,
+      "duration": 6.799
+    },
+    {
+      "text": "as tv sales times",
+      "start": 282.56,
+      "duration": 6.21
+    },
+    {
+      "text": "the final sales",
+      "start": 286.639,
+      "duration": 3.28
+    },
+    {
+      "text": "[Music]",
+      "start": 288.77,
+      "duration": 4.19
+    },
+    {
+      "text": "and we're going to have",
+      "start": 289.919,
+      "duration": 7.041
+    },
+    {
+      "text": "the same thing for the free cash flow",
+      "start": 292.96,
+      "duration": 6.56
+    },
+    {
+      "text": "as well",
+      "start": 296.96,
+      "duration": 2.56
+    },
+    {
+      "text": "okay um",
+      "start": 302.16,
+      "duration": 3.36
+    },
+    {
+      "text": "but we",
+      "start": 308.479,
+      "duration": 3.361
+    },
+    {
+      "text": "so there free cash flows the same in",
+      "start": 312.16,
+      "duration": 7.68
+    },
+    {
+      "text": "each year so there we just use the fcf",
+      "start": 315.52,
+      "duration": 4.32
+    },
+    {
+      "text": "okay and then um for",
+      "start": 320.16,
+      "duration": 7.28
+    },
+    {
+      "text": "the price earnings we multiply the",
+      "start": 323.68,
+      "duration": 6.72
+    },
+    {
+      "text": "price earnings times the final net",
+      "start": 327.44,
+      "duration": 3.759
+    },
+    {
+      "text": "income",
+      "start": 330.4,
+      "duration": 5.04
+    },
+    {
+      "text": "what that gets us is uh",
+      "start": 331.199,
+      "duration": 8.961
+    },
+    {
+      "text": "a final equity value",
+      "start": 335.44,
+      "duration": 4.72
+    },
+    {
+      "text": "and then",
+      "start": 341.12,
+      "duration": 2.56
+    },
+    {
+      "text": "the the final period",
+      "start": 344.32,
+      "duration": 6.4
+    },
+    {
+      "text": "debt is not provided we can just assume",
+      "start": 348.24,
+      "duration": 4.0
+    },
+    {
+      "text": "it's the same as the",
+      "start": 350.72,
+      "duration": 5.68
+    },
+    {
+      "text": "beginning debt and so",
+      "start": 352.24,
+      "duration": 7.04
+    },
+    {
+      "text": "the terminal value from the pe approach",
+      "start": 356.4,
+      "duration": 4.239
+    },
+    {
+      "text": "is going to be the final",
+      "start": 359.28,
+      "duration": 4.8
+    },
+    {
+      "text": "equity plus the",
+      "start": 360.639,
+      "duration": 8.0
+    },
+    {
+      "text": "total debt and minus the cash",
+      "start": 364.08,
+      "duration": 4.559
+    },
+    {
+      "text": "um so we can",
+      "start": 370.319,
+      "duration": 6.241
+    },
+    {
+      "text": "now we have all these four different",
+      "start": 374.4,
+      "duration": 4.4
+    },
+    {
+      "text": "rental values",
+      "start": 376.56,
+      "duration": 4.479
+    },
+    {
+      "text": "we can get the fifth possible terminal",
+      "start": 378.8,
+      "duration": 3.04
+    },
+    {
+      "text": "value",
+      "start": 381.039,
+      "duration": 4.801
+    },
+    {
+      "text": "with the um perpetuity growth",
+      "start": 381.84,
+      "duration": 6.72
+    },
+    {
+      "text": "method so for the perpetuity growth",
+      "start": 385.84,
+      "duration": 4.56
+    },
+    {
+      "text": "method",
+      "start": 388.56,
+      "duration": 5.52
+    },
+    {
+      "text": "we're going to take the free cash flow",
+      "start": 390.4,
+      "duration": 4.88
+    },
+    {
+      "text": "from the final period",
+      "start": 394.08,
+      "duration": 5.04
+    },
+    {
+      "text": "multiply it by one plus the growth rate",
+      "start": 395.28,
+      "duration": 6.639
+    },
+    {
+      "text": "we're going to take all that and divide",
+      "start": 399.12,
+      "duration": 4.24
+    },
+    {
+      "text": "it by",
+      "start": 401.919,
+      "duration": 4.921
+    },
+    {
+      "text": "um the uh",
+      "start": 403.36,
+      "duration": 7.119
+    },
+    {
+      "text": "whack minus the growth rate um so this",
+      "start": 406.84,
+      "duration": 4.359
+    },
+    {
+      "text": "gets us",
+      "start": 410.479,
+      "duration": 5.361
+    },
+    {
+      "text": "our terminal value from the perpetuity",
+      "start": 411.199,
+      "duration": 6.241
+    },
+    {
+      "text": "method",
+      "start": 415.84,
+      "duration": 5.68
+    },
+    {
+      "text": "and so now we have these five different",
+      "start": 417.44,
+      "duration": 7.84
+    },
+    {
+      "text": "terminal values um",
+      "start": 421.52,
+      "duration": 7.28
+    },
+    {
+      "text": "and so let's just",
+      "start": 425.28,
+      "duration": 7.039
+    },
+    {
+      "text": "um take the the evil one for now",
+      "start": 428.8,
+      "duration": 6.32
+    },
+    {
+      "text": "so we can work out the approach to get",
+      "start": 432.319,
+      "duration": 3.841
+    },
+    {
+      "text": "the stock price",
+      "start": 435.12,
+      "duration": 5.519
+    },
+    {
+      "text": "from the terminal value",
+      "start": 436.16,
+      "duration": 9.92
+    },
+    {
+      "text": "so the free cash flows are going to be",
+      "start": 440.639,
+      "duration": 5.441
+    },
+    {
+      "text": "the same free cash flow for four periods",
+      "start": 447.039,
+      "duration": 4.241
+    },
+    {
+      "text": "and then it's going to be",
+      "start": 449.199,
+      "duration": 4.4
+    },
+    {
+      "text": "the free cash flow plus the terminal",
+      "start": 451.28,
+      "duration": 3.84
+    },
+    {
+      "text": "value",
+      "start": 453.599,
+      "duration": 4.401
+    },
+    {
+      "text": "um so we get fame for four periods and",
+      "start": 455.12,
+      "duration": 5.919
+    },
+    {
+      "text": "then the sum of the two",
+      "start": 458.0,
+      "duration": 3.039
+    },
+    {
+      "text": "um and then",
+      "start": 461.199,
+      "duration": 7.361
+    },
+    {
+      "text": "we need to import numpy",
+      "start": 464.24,
+      "duration": 4.32
+    },
+    {
+      "text": "and we can use numpy to take the mpv",
+      "start": 473.52,
+      "duration": 6.88
+    },
+    {
+      "text": "uh which comes first the rate yep um the",
+      "start": 477.52,
+      "duration": 3.84
+    },
+    {
+      "text": "whack",
+      "start": 480.4,
+      "duration": 3.44
+    },
+    {
+      "text": "and then the free cash flows and",
+      "start": 481.36,
+      "duration": 3.279
+    },
+    {
+      "text": "remember that",
+      "start": 483.84,
+      "duration": 3.039
+    },
+    {
+      "text": "numpy's mpv assumes that the first",
+      "start": 484.639,
+      "duration": 4.0
+    },
+    {
+      "text": "period is period zero",
+      "start": 486.879,
+      "duration": 3.281
+    },
+    {
+      "text": "so we're going to want to put a zero",
+      "start": 488.639,
+      "duration": 4.96
+    },
+    {
+      "text": "there before that",
+      "start": 490.16,
+      "duration": 6.479
+    },
+    {
+      "text": "so then this gets us our present value",
+      "start": 493.599,
+      "duration": 5.121
+    },
+    {
+      "text": "of the cash flows so this would be our",
+      "start": 496.639,
+      "duration": 3.441
+    },
+    {
+      "text": "equity",
+      "start": 498.72,
+      "duration": 3.52
+    },
+    {
+      "text": "our enterprise value current enterprise",
+      "start": 500.08,
+      "duration": 4.32
+    },
+    {
+      "text": "value",
+      "start": 502.24,
+      "duration": 6.72
+    },
+    {
+      "text": "um and we can get our current equity",
+      "start": 504.4,
+      "duration": 7.68
+    },
+    {
+      "text": "as uh reversing the",
+      "start": 508.96,
+      "duration": 6.559
+    },
+    {
+      "text": "formula um so",
+      "start": 512.08,
+      "duration": 7.199
+    },
+    {
+      "text": "um it's you know enterprise value is",
+      "start": 515.519,
+      "duration": 5.601
+    },
+    {
+      "text": "equity plus debt minus cash so if we",
+      "start": 519.279,
+      "duration": 3.2
+    },
+    {
+      "text": "want to get the equity",
+      "start": 521.12,
+      "duration": 2.96
+    },
+    {
+      "text": "portion then it's going to be enterprise",
+      "start": 522.479,
+      "duration": 4.881
+    },
+    {
+      "text": "value minus debt plus cash",
+      "start": 524.08,
+      "duration": 8.08
+    },
+    {
+      "text": "um so enterprise value minus debt",
+      "start": 527.36,
+      "duration": 8.0
+    },
+    {
+      "text": "plus cash",
+      "start": 532.16,
+      "duration": 6.32
+    },
+    {
+      "text": "and then",
+      "start": 535.36,
+      "duration": 5.599
+    },
+    {
+      "text": "the price is going to be the equity",
+      "start": 538.48,
+      "duration": 3.84
+    },
+    {
+      "text": "divided by",
+      "start": 540.959,
+      "duration": 3.281
+    },
+    {
+      "text": "the number of shares so that should get",
+      "start": 542.32,
+      "duration": 3.04
+    },
+    {
+      "text": "us",
+      "start": 544.24,
+      "duration": 4.64
+    },
+    {
+      "text": "um what is it",
+      "start": 545.36,
+      "duration": 7.28
+    },
+    {
+      "text": "total debt not just at",
+      "start": 548.88,
+      "duration": 3.76
+    },
+    {
+      "text": "so that gets us to a final stock price",
+      "start": 553.12,
+      "duration": 8.08
+    },
+    {
+      "text": "um so we can make this a function",
+      "start": 557.92,
+      "duration": 6.32
+    },
+    {
+      "text": "um the stock price",
+      "start": 561.2,
+      "duration": 8.24
+    },
+    {
+      "text": "from uh tv",
+      "start": 564.24,
+      "duration": 5.2
+    },
+    {
+      "text": "so that we're going to pass the terminal",
+      "start": 570.0,
+      "duration": 5.519
+    },
+    {
+      "text": "value as well as the free cash flow",
+      "start": 571.839,
+      "duration": 6.241
+    },
+    {
+      "text": "the whack",
+      "start": 575.519,
+      "duration": 2.561
+    },
+    {
+      "text": "the total debt",
+      "start": 578.64,
+      "duration": 12.0
+    },
+    {
+      "text": "cash and the shares",
+      "start": 581.92,
+      "duration": 11.68
+    },
+    {
+      "text": "um and we can have this pretty nice",
+      "start": 590.64,
+      "duration": 4.319
+    },
+    {
+      "text": "string with the price as well",
+      "start": 593.6,
+      "duration": 5.28
+    },
+    {
+      "text": "though and we can",
+      "start": 594.959,
+      "duration": 8.081
+    },
+    {
+      "text": "maybe put a method name",
+      "start": 598.88,
+      "duration": 8.399
+    },
+    {
+      "text": "price with the method name",
+      "start": 603.04,
+      "duration": 7.6
+    },
+    {
+      "text": "method is uh",
+      "start": 607.279,
+      "duration": 8.56
+    },
+    {
+      "text": "price with dollar sign before it",
+      "start": 610.64,
+      "duration": 5.199
+    },
+    {
+      "text": "with commas two decimal places",
+      "start": 616.32,
+      "duration": 4.4
+    },
+    {
+      "text": "okay so that means that we could call",
+      "start": 621.12,
+      "duration": 4.0
+    },
+    {
+      "text": "this stock price from tv with that tv",
+      "start": 622.64,
+      "duration": 3.52
+    },
+    {
+      "text": "the free cash flow",
+      "start": 625.12,
+      "duration": 5.04
+    },
+    {
+      "text": "the whack total debt cash shares",
+      "start": 626.16,
+      "duration": 9.2
+    },
+    {
+      "text": "uh and this one was the ebitda",
+      "start": 630.16,
+      "duration": 8.48
+    },
+    {
+      "text": "uh exit multiple",
+      "start": 635.36,
+      "duration": 3.28
+    },
+    {
+      "text": "um so then we get price with the evd",
+      "start": 641.04,
+      "duration": 7.359
+    },
+    {
+      "text": "evita exit multiple method is 2774.",
+      "start": 643.279,
+      "duration": 7.041
+    },
+    {
+      "text": "so now that we have this nice function",
+      "start": 648.399,
+      "duration": 3.44
+    },
+    {
+      "text": "we can go apply it",
+      "start": 650.32,
+      "duration": 5.199
+    },
+    {
+      "text": "to the different different um",
+      "start": 651.839,
+      "duration": 5.201
+    },
+    {
+      "text": "different terminal values so i'm going",
+      "start": 655.519,
+      "duration": 3.041
+    },
+    {
+      "text": "to create",
+      "start": 657.04,
+      "duration": 4.32
+    },
+    {
+      "text": "a dictionary here um where the keys are",
+      "start": 658.56,
+      "duration": 4.719
+    },
+    {
+      "text": "going to be the name of the method",
+      "start": 661.36,
+      "duration": 6.0
+    },
+    {
+      "text": "so like eb to ebitda extra multiple",
+      "start": 663.279,
+      "duration": 7.361
+    },
+    {
+      "text": "um i'm going to put the tv",
+      "start": 667.36,
+      "duration": 6.719
+    },
+    {
+      "text": "even on then we have",
+      "start": 670.64,
+      "duration": 7.6
+    },
+    {
+      "text": "what are the others uh eb the sales",
+      "start": 674.079,
+      "duration": 4.161
+    },
+    {
+      "text": "act the multiple these sales",
+      "start": 679.279,
+      "duration": 8.401
+    },
+    {
+      "text": "we have eb to fcf exit multiple",
+      "start": 683.519,
+      "duration": 7.601
+    },
+    {
+      "text": "tv fcf we have uh",
+      "start": 687.68,
+      "duration": 7.36
+    },
+    {
+      "text": "pe exit multiple",
+      "start": 691.12,
+      "duration": 3.92
+    },
+    {
+      "text": "tbpe and we have the",
+      "start": 696.12,
+      "duration": 7.719
+    },
+    {
+      "text": "perpetuity growth",
+      "start": 699.279,
+      "duration": 4.56
+    },
+    {
+      "text": "uh to be perpetuity",
+      "start": 704.0,
+      "duration": 4.32
+    },
+    {
+      "text": "um and we can put in the",
+      "start": 708.72,
+      "duration": 9.119
+    },
+    {
+      "text": "percentage growth rate there as well",
+      "start": 711.839,
+      "duration": 6.0
+    },
+    {
+      "text": "um",
+      "start": 724.56,
+      "duration": 2.399
+    },
+    {
+      "text": "so now we have all those values in there",
+      "start": 727.6,
+      "duration": 4.4
+    },
+    {
+      "text": "and so now we can loop over the",
+      "start": 730.399,
+      "duration": 3.281
+    },
+    {
+      "text": "dictionary",
+      "start": 732.0,
+      "duration": 5.279
+    },
+    {
+      "text": "for method tv",
+      "start": 733.68,
+      "duration": 7.2
+    },
+    {
+      "text": "and dbdxpad items",
+      "start": 737.279,
+      "duration": 7.601
+    },
+    {
+      "text": "we're going to call this function",
+      "start": 740.88,
+      "duration": 7.519
+    },
+    {
+      "text": "with the tv fcf and here",
+      "start": 744.88,
+      "duration": 7.28
+    },
+    {
+      "text": "just put method now and so now we can",
+      "start": 748.399,
+      "duration": 5.12
+    },
+    {
+      "text": "see the result of",
+      "start": 752.16,
+      "duration": 5.84
+    },
+    {
+      "text": "all of these um so eb ebitda 2774 eva",
+      "start": 753.519,
+      "duration": 8.081
+    },
+    {
+      "text": "sales 1367 fcf",
+      "start": 758.0,
+      "duration": 6.72
+    },
+    {
+      "text": "and so on and we have all those",
+      "start": 761.6,
+      "duration": 7.2
+    },
+    {
+      "text": "displayed nicely for us",
+      "start": 764.72,
+      "duration": 4.08
+    },
+    {
+      "text": "so that's a quick overview of how you",
+      "start": 769.2,
+      "duration": 3.52
+    },
+    {
+      "text": "can",
+      "start": 771.6,
+      "duration": 5.52
+    },
+    {
+      "text": "get to the stock price from a variety of",
+      "start": 772.72,
+      "duration": 4.96
+    },
+    {
+      "text": "different",
+      "start": 777.12,
+      "duration": 3.76
+    },
+    {
+      "text": "terminal value approaches so thanks for",
+      "start": 777.68,
+      "duration": 3.92
+    },
+    {
+      "text": "listening",
+      "start": 780.88,
+      "duration": 6.24
+    },
+    {
+      "text": "and see you next time",
+      "start": 781.6,
+      "duration": 5.52
+    }
+  ]
+}

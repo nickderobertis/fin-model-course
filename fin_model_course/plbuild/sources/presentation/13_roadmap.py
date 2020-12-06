@@ -48,6 +48,7 @@ def get_content():
     shutil_mono = pl.Monospace('shutil')
     pathlib_mono = pl.Monospace('pathlib')
     git_mono = pl.Monospace('git')
+    sqlalchemy_mono = pl.Monospace('SQLAlchemy')
     fin_model_types = {
         'Portfolio valuation and optimization': 'Find the returns, value, and risk of a portfolio and select the best '
                                                 'asset allocation for the portfolio',
@@ -73,15 +74,20 @@ def get_content():
             [
                 lp.DimRevealListFrame(
                     [
-                        'Throughout this course, we have covered Python and Excel basics',
+                        pl.TextSize(-1),
+                        'Throughout the Financial Modeling with Python and Excel course, '
+                        'we have covered Python and Excel basics',
                         'We have also covered financial modeling specifics, such as how to structure a '
                         'financial model in both Python and Excel, cash flow and probability modeling, '
                         'sensitivity analysis, scenario analysis, and Monte Carlo simulations',
                         'As far as types of financial models, we covered a retirement model, a '
-                        'capital budgeting model, a lender profitiability model, and the discounted '
+                        'capital budgeting model, a lender profitability model, and the discounted '
                         'cash flow (DCF) valuation of a stock',
-                        "This could have been a two-semester course. There is a lot I didn't cover. Let's "
-                        "do a quick overview of it today."
+                        "There is a lot I didn't cover in that course. Let's "
+                        "do a quick overview of it today.",
+                        "This will serve as a roadmap to learn additional topics after completing the "
+                        "first course. This is also the beginning of a new "
+                        "Advanced Financial Modeling with Python course"
                     ],
                     title='What we Covered and What is Left'
                 )
@@ -127,7 +133,7 @@ def get_content():
                         'Data pipelines are about getting the input data into your model in a '
                         'standardized way',
                         'Within data pipelines, there are two main steps: data collection and '
-                        'data cleaning.',
+                        'data wrangling (cleaning + reformatting).',
                         'Either step can be automated, ideally both would be, but it always comes down '
                         'to a tradeoff with modeler time'
                     ],
@@ -137,32 +143,42 @@ def get_content():
                 ),
                 lp.DimRevealListFrame(
                     [
+                        pl.TextSize(-1),
                         'Data can come from many sources, but most typically it originates from the Internet',
                         'If you can manually download the data, you can automate it via web scraping',
                         'You can also extract different types of data with web scraping, even if it is not structured '
                         'as a dataset',
                         'Some data comes from an API, where you need to send requests to download the data',
                         [selenium_mono, 'uses Python code to drive a browser such as Chrome while', requests_mono,
-                         'is a more lightweight, text based way to make web requests (good for APIs).']
-
+                         'is a more lightweight, text based way to make web requests (good for APIs).'],
+                        ['Another common source of data is SQL databases. While you will still need to have a basic '
+                         'understanding of SQL to query them, Python can help with', sqlalchemy_mono, 'which allows',
+                         'you to write the queries in Python.', pd_mono, 'also has functionality to work with SQL']
                     ],
                     title='Data Collection'
                 ),
                 lp.DimRevealListFrame(
                     [
-                        ['We have already covered the best general-purpose tool for cleaning data:', pd_mono],
+                        pl.TextSize(-1),
+                        ['We have already covered the best general-purpose tool for wrangling data:', pd_mono],
                         'We did not cover it in enough detail to cover all data cleaning cases',
                         'The main material left is selecting, merging, grouping, and reshaping',
+                        'Even if your data is without issues, you may still need to change the format, combine '
+                        'sources, aggregate, etc.',
                         'Regular expressions are a way of matching any possible string and extracting parts of '
-                        'it, which useful for messy data'
+                        'it, which useful for messy data',
                     ],
-                    title='Data Cleaning'
+                    title='Data Wrangling'
                 ),
                 lp.DimRevealListFrame(
                     [
                         Hyperlink(
                             'https://stackabuse.com/getting-started-with-selenium-and-python/',
                             'Get Started Browser-Based Web Scraping with Selenium'
+                        ),
+                        Hyperlink(
+                            'https://github.com/mherrmann/selenium-python-helium',
+                            'Helium - A Higher-Level API to Selenium'
                         ),
                         Hyperlink(
                             'https://realpython.com/python-requests/',
@@ -183,7 +199,19 @@ def get_content():
                         Hyperlink(
                             'https://docs.python.org/3/library/re.html',
                             'Regular Expression Reference'
-                        )
+                        ),
+                        Hyperlink(
+                            'https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/',
+                            'SQLAlchemy Overview Tutorial'
+                        ),
+                        Hyperlink(
+                            'https://towardsdatascience.com/sqlalchemy-python-tutorial-79a577141a91',
+                            'SQLAlchemy Simple Tutorial and Examples'
+                        ),
+                        Hyperlink(
+                            'https://docs.sqlalchemy.org/en/13/intro.html',
+                            'SQLAlchemy Documentation'
+                        ),
                     ],
                     title='Data Pipelines Resources',
 
@@ -275,8 +303,12 @@ def get_content():
                             'General Introduction to Machine Learning'
                         ),
                         Hyperlink(
-                            'datacamp.com/community/tutorials/deep-learning-python',
+                            'https://datacamp.com/community/tutorials/deep-learning-python',
                             'Deep Learning (AI) in Python using Keras'
+                        ),
+                        Hyperlink(
+                            'https://github.com/automl/auto-sklearn/',
+                            'Automated Machine Learning with auto-sklearn'
                         ),
                     ],
                     title='Mathematical Tools Resources'
@@ -377,16 +409,20 @@ def get_content():
                             'Get started with Holoviews'
                         ),
                         Hyperlink(
-                            'https://towardsdatascience.com/bring-your-jupyter-notebook-to-life-with-interactive-widgets-bc12e03f0916',
-                            'Use ipywidgets to Build an App in Jupyter'
+                            'https://www.youtube.com/watch?v=L91rd1D6XTA&ab_channel=Enthought',
+                            'Introduction to Panel for Building Apps in Jupyter'
+                        ),
+                        Hyperlink(
+                            'https://panel.holoviz.org/getting_started/index.html',
+                            'Tutorial for Panel'
                         ),
                         Hyperlink(
                             'https://voila.readthedocs.io/en/stable/',
-                            'Convert a Jupyter Notebook to a Web App using Viola'
+                            'Convert a Jupyter Notebook to a Web App using Voila'
                         ),
                         Hyperlink(
                             'https://voila-gallery.org/services/gallery/',
-                            'Examples of Viola Web Apps'
+                            'Examples of Voila Web Apps'
                         ),
                         Hyperlink(
                             'https://scotch.io/tutorials/getting-started-with-flask-a-python-microframework',
@@ -450,8 +486,8 @@ def get_content():
                         'Get unique items, unions, intersections using sets',
                         'Override how objects work by overriding double-underscore (dunder) class methods',
                         'Modify existing functions using decorators',
-                        'Store Python objects by picking them',
-                        'Check yourself and make your code easier to understand using type annotations',
+                        'Store Python objects by pickling them',
+                        'Check yourself, make your code easier to understand, and power up your IDE using type annotations',
                         'Structure projects using packages and modules',
                         'Isolate project requirements using virtual environments',
                     ],
@@ -559,7 +595,7 @@ def get_content():
                     [
                         Hyperlink(
                             'https://docs.python-guide.org/',
-                            "The Hickhiker's Guide to Python"
+                            "The Hitchhiker's Guide to Python"
                         ),
                         Hyperlink(
                             'https://realpython.com/',

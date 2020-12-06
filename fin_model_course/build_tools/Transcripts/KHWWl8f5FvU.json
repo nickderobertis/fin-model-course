@@ -1,0 +1,2234 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone",
+      "start": 2.96,
+      "duration": 2.48
+    },
+    {
+      "text": "this is nick nirovertis teaching you",
+      "start": 3.76,
+      "duration": 3.039
+    },
+    {
+      "text": "financial modeling",
+      "start": 5.44,
+      "duration": 3.28
+    },
+    {
+      "text": "today we're going to be learning about",
+      "start": 6.799,
+      "duration": 3.121
+    },
+    {
+      "text": "data pipelines",
+      "start": 8.72,
+      "duration": 3.999
+    },
+    {
+      "text": "for financial modeling this is part of",
+      "start": 9.92,
+      "duration": 4.0
+    },
+    {
+      "text": "our introduction",
+      "start": 12.719,
+      "duration": 3.921
+    },
+    {
+      "text": "to the advanced financial modeling with",
+      "start": 13.92,
+      "duration": 5.199
+    },
+    {
+      "text": "python course",
+      "start": 16.64,
+      "duration": 6.879
+    },
+    {
+      "text": "so pipelines",
+      "start": 19.119,
+      "duration": 7.281
+    },
+    {
+      "text": "uh basically we can think of data",
+      "start": 23.519,
+      "duration": 3.92
+    },
+    {
+      "text": "pipeline",
+      "start": 26.4,
+      "duration": 5.44
+    },
+    {
+      "text": "as what gets the data into your model",
+      "start": 27.439,
+      "duration": 6.96
+    },
+    {
+      "text": "your model has all the logic on the",
+      "start": 31.84,
+      "duration": 4.559
+    },
+    {
+      "text": "inside but you still need",
+      "start": 34.399,
+      "duration": 4.48
+    },
+    {
+      "text": "the inputs into the model the data in",
+      "start": 36.399,
+      "duration": 4.0
+    },
+    {
+      "text": "order to",
+      "start": 38.879,
+      "duration": 3.121
+    },
+    {
+      "text": "get some kind of conclusion out of the",
+      "start": 40.399,
+      "duration": 4.0
+    },
+    {
+      "text": "model um",
+      "start": 42.0,
+      "duration": 5.52
+    },
+    {
+      "text": "and so sometimes your model is very",
+      "start": 44.399,
+      "duration": 5.68
+    },
+    {
+      "text": "hypothetical and you're just putting",
+      "start": 47.52,
+      "duration": 3.28
+    },
+    {
+      "text": "inputs in",
+      "start": 50.079,
+      "duration": 2.48
+    },
+    {
+      "text": "and then you don't really need a data",
+      "start": 50.8,
+      "duration": 3.919
+    },
+    {
+      "text": "pipeline but sometimes",
+      "start": 52.559,
+      "duration": 6.081
+    },
+    {
+      "text": "you are pulling in financial data",
+      "start": 54.719,
+      "duration": 7.281
+    },
+    {
+      "text": "stock prices uh you know other",
+      "start": 58.64,
+      "duration": 6.72
+    },
+    {
+      "text": "other sources of data and you need to",
+      "start": 62.0,
+      "duration": 5.119
+    },
+    {
+      "text": "process them",
+      "start": 65.36,
+      "duration": 4.32
+    },
+    {
+      "text": "maybe you need to put different sources",
+      "start": 67.119,
+      "duration": 4.401
+    },
+    {
+      "text": "together maybe you need to clean things",
+      "start": 69.68,
+      "duration": 2.56
+    },
+    {
+      "text": "up",
+      "start": 71.52,
+      "duration": 4.0
+    },
+    {
+      "text": "maybe you need to aggregate things in",
+      "start": 72.24,
+      "duration": 5.519
+    },
+    {
+      "text": "some way",
+      "start": 75.52,
+      "duration": 4.32
+    },
+    {
+      "text": "in order to actually work with your",
+      "start": 77.759,
+      "duration": 4.161
+    },
+    {
+      "text": "model",
+      "start": 79.84,
+      "duration": 6.8
+    },
+    {
+      "text": "and the data pipeline",
+      "start": 81.92,
+      "duration": 7.92
+    },
+    {
+      "text": "is there whether you automate it or not",
+      "start": 86.64,
+      "duration": 6.799
+    },
+    {
+      "text": "uh you can do a manual data pipeline",
+      "start": 89.84,
+      "duration": 6.639
+    },
+    {
+      "text": "um but there are definitely advantages",
+      "start": 93.439,
+      "duration": 3.36
+    },
+    {
+      "text": "to",
+      "start": 96.479,
+      "duration": 4.401
+    },
+    {
+      "text": "automating it so we we think about",
+      "start": 96.799,
+      "duration": 5.28
+    },
+    {
+      "text": "generally",
+      "start": 100.88,
+      "duration": 4.48
+    },
+    {
+      "text": "two main uh sections",
+      "start": 102.079,
+      "duration": 7.281
+    },
+    {
+      "text": "of a data pipeline one is the collection",
+      "start": 105.36,
+      "duration": 5.68
+    },
+    {
+      "text": "of the data how do you get it in the",
+      "start": 109.36,
+      "duration": 3.119
+    },
+    {
+      "text": "first place",
+      "start": 111.04,
+      "duration": 4.56
+    },
+    {
+      "text": "and the other is what we call",
+      "start": 112.479,
+      "duration": 6.161
+    },
+    {
+      "text": "wrangling the data which is a process of",
+      "start": 115.6,
+      "duration": 4.72
+    },
+    {
+      "text": "cleaning the data up",
+      "start": 118.64,
+      "duration": 5.28
+    },
+    {
+      "text": "and reformatting it in such a way that",
+      "start": 120.32,
+      "duration": 4.96
+    },
+    {
+      "text": "it's ready to be used",
+      "start": 123.92,
+      "duration": 5.36
+    },
+    {
+      "text": "by your model",
+      "start": 125.28,
+      "duration": 8.16
+    },
+    {
+      "text": "so again you can do all this manually",
+      "start": 129.28,
+      "duration": 7.28
+    },
+    {
+      "text": "um and that's what a lot of people are",
+      "start": 133.44,
+      "duration": 3.519
+    },
+    {
+      "text": "doing",
+      "start": 136.56,
+      "duration": 3.44
+    },
+    {
+      "text": "especially with excel models",
+      "start": 136.959,
+      "duration": 6.561
+    },
+    {
+      "text": "um but you can",
+      "start": 140.0,
+      "duration": 6.08
+    },
+    {
+      "text": "save yourself a lot of time by",
+      "start": 143.52,
+      "duration": 4.16
+    },
+    {
+      "text": "automating these steps",
+      "start": 146.08,
+      "duration": 5.04
+    },
+    {
+      "text": "um but you do have to consider how this",
+      "start": 147.68,
+      "duration": 5.839
+    },
+    {
+      "text": "model is being used",
+      "start": 151.12,
+      "duration": 5.52
+    },
+    {
+      "text": "if you're you know using this model",
+      "start": 153.519,
+      "duration": 6.641
+    },
+    {
+      "text": "to generate a report every single week",
+      "start": 156.64,
+      "duration": 6.8
+    },
+    {
+      "text": "and every week there's 30 minutes",
+      "start": 160.16,
+      "duration": 6.799
+    },
+    {
+      "text": "of manual work to do this data pipeline",
+      "start": 163.44,
+      "duration": 4.879
+    },
+    {
+      "text": "to go",
+      "start": 166.959,
+      "duration": 4.241
+    },
+    {
+      "text": "get the data that you need and then uh",
+      "start": 168.319,
+      "duration": 4.801
+    },
+    {
+      "text": "put things together and modify it in a",
+      "start": 171.2,
+      "duration": 2.48
+    },
+    {
+      "text": "way that's",
+      "start": 173.12,
+      "duration": 2.56
+    },
+    {
+      "text": "ready for your model you're spending a",
+      "start": 173.68,
+      "duration": 4.88
+    },
+    {
+      "text": "half an hour every week doing this",
+      "start": 175.68,
+      "duration": 6.08
+    },
+    {
+      "text": "um well maybe it makes sense to automate",
+      "start": 178.56,
+      "duration": 4.0
+    },
+    {
+      "text": "that",
+      "start": 181.76,
+      "duration": 3.199
+    },
+    {
+      "text": "maybe spend a few hours one time to",
+      "start": 182.56,
+      "duration": 3.84
+    },
+    {
+      "text": "automate it",
+      "start": 184.959,
+      "duration": 4.401
+    },
+    {
+      "text": "and the results of that are going to pay",
+      "start": 186.4,
+      "duration": 4.559
+    },
+    {
+      "text": "off over time because then you're not",
+      "start": 189.36,
+      "duration": 4.159
+    },
+    {
+      "text": "spending that 30 minutes every week",
+      "start": 190.959,
+      "duration": 4.881
+    },
+    {
+      "text": "you put the cost in one time to automate",
+      "start": 193.519,
+      "duration": 3.521
+    },
+    {
+      "text": "it and then",
+      "start": 195.84,
+      "duration": 3.2
+    },
+    {
+      "text": "it just goes and it runs on its own you",
+      "start": 197.04,
+      "duration": 4.0
+    },
+    {
+      "text": "click button and you've got the report",
+      "start": 199.04,
+      "duration": 4.72
+    },
+    {
+      "text": "you don't have to worry about the data",
+      "start": 201.04,
+      "duration": 6.479
+    },
+    {
+      "text": "um but uh",
+      "start": 203.76,
+      "duration": 5.44
+    },
+    {
+      "text": "you know if this is a model you're just",
+      "start": 207.519,
+      "duration": 3.28
+    },
+    {
+      "text": "going to use one time",
+      "start": 209.2,
+      "duration": 4.16
+    },
+    {
+      "text": "or you're not re-running it very often",
+      "start": 210.799,
+      "duration": 4.481
+    },
+    {
+      "text": "then maybe it doesn't make sense to go",
+      "start": 213.36,
+      "duration": 3.28
+    },
+    {
+      "text": "through and automate all this",
+      "start": 215.28,
+      "duration": 2.959
+    },
+    {
+      "text": "i mean if you want to do it for a",
+      "start": 216.64,
+      "duration": 3.599
+    },
+    {
+      "text": "learning exercise sure go ahead",
+      "start": 218.239,
+      "duration": 4.72
+    },
+    {
+      "text": "but ultimately the main the main thing",
+      "start": 220.239,
+      "duration": 4.0
+    },
+    {
+      "text": "with the automation here is you're",
+      "start": 222.959,
+      "duration": 2.401
+    },
+    {
+      "text": "trying to save time",
+      "start": 224.239,
+      "duration": 2.72
+    },
+    {
+      "text": "and so if you're going to spend way",
+      "start": 225.36,
+      "duration": 3.76
+    },
+    {
+      "text": "longer automating it than just doing it",
+      "start": 226.959,
+      "duration": 3.121
+    },
+    {
+      "text": "manually",
+      "start": 229.12,
+      "duration": 4.24
+    },
+    {
+      "text": "then probably just do it manually",
+      "start": 230.08,
+      "duration": 5.84
+    },
+    {
+      "text": "but there are other advantages to the",
+      "start": 233.36,
+      "duration": 3.599
+    },
+    {
+      "text": "automated approach",
+      "start": 235.92,
+      "duration": 4.64
+    },
+    {
+      "text": "beyond just saving time",
+      "start": 236.959,
+      "duration": 8.0
+    },
+    {
+      "text": "one is that you are going to eliminate",
+      "start": 240.56,
+      "duration": 6.319
+    },
+    {
+      "text": "the possibility for",
+      "start": 244.959,
+      "duration": 5.601
+    },
+    {
+      "text": "human error you know as long as you",
+      "start": 246.879,
+      "duration": 5.201
+    },
+    {
+      "text": "write the code correctly",
+      "start": 250.56,
+      "duration": 3.12
+    },
+    {
+      "text": "then it's going to do the exact same",
+      "start": 252.08,
+      "duration": 5.2
+    },
+    {
+      "text": "thing with your data every time",
+      "start": 253.68,
+      "duration": 4.959
+    },
+    {
+      "text": "and so you're not going to have to worry",
+      "start": 257.28,
+      "duration": 3.359
+    },
+    {
+      "text": "about accidentally missing a step in",
+      "start": 258.639,
+      "duration": 3.521
+    },
+    {
+      "text": "your process",
+      "start": 260.639,
+      "duration": 5.041
+    },
+    {
+      "text": "or you know handling one one row of the",
+      "start": 262.16,
+      "duration": 4.0
+    },
+    {
+      "text": "data",
+      "start": 265.68,
+      "duration": 1.84
+    },
+    {
+      "text": "accidentally differently than all the",
+      "start": 266.16,
+      "duration": 3.36
+    },
+    {
+      "text": "others or something like that",
+      "start": 267.52,
+      "duration": 4.08
+    },
+    {
+      "text": "which could cause a mistake in your your",
+      "start": 269.52,
+      "duration": 3.119
+    },
+    {
+      "text": "model and and",
+      "start": 271.6,
+      "duration": 4.08
+    },
+    {
+      "text": "the report from your model so if it's",
+      "start": 272.639,
+      "duration": 4.161
+    },
+    {
+      "text": "all automated",
+      "start": 275.68,
+      "duration": 2.56
+    },
+    {
+      "text": "you're gonna expect to get the same",
+      "start": 276.8,
+      "duration": 4.64
+    },
+    {
+      "text": "results every time",
+      "start": 278.24,
+      "duration": 6.399
+    },
+    {
+      "text": "and another uh good advantage is that it",
+      "start": 281.44,
+      "duration": 5.759
+    },
+    {
+      "text": "can open up new possibilities",
+      "start": 284.639,
+      "duration": 4.241
+    },
+    {
+      "text": "because maybe you know you're running",
+      "start": 287.199,
+      "duration": 3.521
+    },
+    {
+      "text": "this report every week and",
+      "start": 288.88,
+      "duration": 4.64
+    },
+    {
+      "text": "um you know everyone only considered",
+      "start": 290.72,
+      "duration": 4.56
+    },
+    {
+      "text": "ever doing it weekly because it does",
+      "start": 293.52,
+      "duration": 3.84
+    },
+    {
+      "text": "take 30 minutes of manual effort to put",
+      "start": 295.28,
+      "duration": 3.359
+    },
+    {
+      "text": "it together",
+      "start": 297.36,
+      "duration": 3.119
+    },
+    {
+      "text": "but now that you could click a button",
+      "start": 298.639,
+      "duration": 3.521
+    },
+    {
+      "text": "and you get the report",
+      "start": 300.479,
+      "duration": 3.521
+    },
+    {
+      "text": "well maybe you just set that up on a",
+      "start": 302.16,
+      "duration": 3.12
+    },
+    {
+      "text": "schedule and now",
+      "start": 304.0,
+      "duration": 3.84
+    },
+    {
+      "text": "every hour that report is generated and",
+      "start": 305.28,
+      "duration": 4.16
+    },
+    {
+      "text": "everyone always has",
+      "start": 307.84,
+      "duration": 5.199
+    },
+    {
+      "text": "the most timely information possible",
+      "start": 309.44,
+      "duration": 6.4
+    },
+    {
+      "text": "and nobody would have ever have dreamed",
+      "start": 313.039,
+      "duration": 4.561
+    },
+    {
+      "text": "of doing that before because",
+      "start": 315.84,
+      "duration": 2.96
+    },
+    {
+      "text": "you know basically it would become",
+      "start": 317.6,
+      "duration": 2.72
+    },
+    {
+      "text": "someone's full-time job to keep",
+      "start": 318.8,
+      "duration": 3.04
+    },
+    {
+      "text": "generating that report",
+      "start": 320.32,
+      "duration": 3.439
+    },
+    {
+      "text": "and now it's just automated it happens",
+      "start": 321.84,
+      "duration": 4.24
+    },
+    {
+      "text": "automatically in the background",
+      "start": 323.759,
+      "duration": 5.521
+    },
+    {
+      "text": "um so there's a lot of value",
+      "start": 326.08,
+      "duration": 7.04
+    },
+    {
+      "text": "in automating your data pipeline",
+      "start": 329.28,
+      "duration": 6.88
+    },
+    {
+      "text": "but again it there's trade-offs and if",
+      "start": 333.12,
+      "duration": 4.4
+    },
+    {
+      "text": "you're going to spend 10 hours to",
+      "start": 336.16,
+      "duration": 2.0
+    },
+    {
+      "text": "automate",
+      "start": 337.52,
+      "duration": 3.2
+    },
+    {
+      "text": "to save you know five minutes that",
+      "start": 338.16,
+      "duration": 4.24
+    },
+    {
+      "text": "you're going to do a few times",
+      "start": 340.72,
+      "duration": 4.88
+    },
+    {
+      "text": "it probably doesn't make sense",
+      "start": 342.4,
+      "duration": 3.2
+    },
+    {
+      "text": "so looking at the data collection side",
+      "start": 346.0,
+      "duration": 4.8
+    },
+    {
+      "text": "um",
+      "start": 348.88,
+      "duration": 4.879
+    },
+    {
+      "text": "we can get data into our models from a",
+      "start": 350.8,
+      "duration": 5.92
+    },
+    {
+      "text": "number of different ways",
+      "start": 353.759,
+      "duration": 5.361
+    },
+    {
+      "text": "usually you're going to be accessing the",
+      "start": 356.72,
+      "duration": 5.44
+    },
+    {
+      "text": "internet in some way to get the data",
+      "start": 359.12,
+      "duration": 4.96
+    },
+    {
+      "text": "whether that's from a website or it's",
+      "start": 362.16,
+      "duration": 3.12
+    },
+    {
+      "text": "from you know",
+      "start": 364.08,
+      "duration": 3.2
+    },
+    {
+      "text": "shared server where someone has an excel",
+      "start": 365.28,
+      "duration": 5.039
+    },
+    {
+      "text": "file or it's from a database or from an",
+      "start": 367.28,
+      "duration": 4.88
+    },
+    {
+      "text": "api",
+      "start": 370.319,
+      "duration": 3.681
+    },
+    {
+      "text": "you know all these are ultimately going",
+      "start": 372.16,
+      "duration": 3.36
+    },
+    {
+      "text": "over the internet at some point to get",
+      "start": 374.0,
+      "duration": 2.91
+    },
+    {
+      "text": "the data",
+      "start": 375.52,
+      "duration": 3.32
+    },
+    {
+      "text": "[Music]",
+      "start": 376.91,
+      "duration": 3.09
+    },
+    {
+      "text": "um",
+      "start": 378.84,
+      "duration": 6.359
+    },
+    {
+      "text": "and when we think about data which is on",
+      "start": 380.0,
+      "duration": 5.199
+    },
+    {
+      "text": "websites um if you can manually get that",
+      "start": 385.68,
+      "duration": 5.04
+    },
+    {
+      "text": "data somehow",
+      "start": 389.28,
+      "duration": 3.44
+    },
+    {
+      "text": "through a website then you can automate",
+      "start": 390.72,
+      "duration": 3.039
+    },
+    {
+      "text": "that process",
+      "start": 392.72,
+      "duration": 4.16
+    },
+    {
+      "text": "via web scraping so whether that's you",
+      "start": 393.759,
+      "duration": 3.361
+    },
+    {
+      "text": "know",
+      "start": 396.88,
+      "duration": 2.879
+    },
+    {
+      "text": "going to some site and downloading some",
+      "start": 397.12,
+      "duration": 3.12
+    },
+    {
+      "text": "file",
+      "start": 399.759,
+      "duration": 2.321
+    },
+    {
+      "text": "or it's actually you know there's a",
+      "start": 400.24,
+      "duration": 3.2
+    },
+    {
+      "text": "table on some site and you want to",
+      "start": 402.08,
+      "duration": 3.679
+    },
+    {
+      "text": "extract the data from that table",
+      "start": 403.44,
+      "duration": 4.879
+    },
+    {
+      "text": "um or even just you know random piece of",
+      "start": 405.759,
+      "duration": 4.401
+    },
+    {
+      "text": "information on a web page",
+      "start": 408.319,
+      "duration": 4.481
+    },
+    {
+      "text": "and you want to um you know look at 3",
+      "start": 410.16,
+      "duration": 3.12
+    },
+    {
+      "text": "000",
+      "start": 412.8,
+      "duration": 2.32
+    },
+    {
+      "text": "different of these similar web pages and",
+      "start": 413.28,
+      "duration": 3.52
+    },
+    {
+      "text": "get that same information out of each",
+      "start": 415.12,
+      "duration": 2.4
+    },
+    {
+      "text": "one",
+      "start": 416.8,
+      "duration": 3.0
+    },
+    {
+      "text": "you can do all these things with web",
+      "start": 417.52,
+      "duration": 3.44
+    },
+    {
+      "text": "scraping",
+      "start": 419.8,
+      "duration": 4.44
+    },
+    {
+      "text": "um so",
+      "start": 420.96,
+      "duration": 6.48
+    },
+    {
+      "text": "it doesn't even have to be structured um",
+      "start": 424.24,
+      "duration": 6.72
+    },
+    {
+      "text": "you know you could um",
+      "start": 427.44,
+      "duration": 7.039
+    },
+    {
+      "text": "go to say yahoo finance and just grab",
+      "start": 430.96,
+      "duration": 5.519
+    },
+    {
+      "text": "some of the key statistics",
+      "start": 434.479,
+      "duration": 4.72
+    },
+    {
+      "text": "and then do it for every every company",
+      "start": 436.479,
+      "duration": 4.241
+    },
+    {
+      "text": "that yahoo finance has and have",
+      "start": 439.199,
+      "duration": 3.12
+    },
+    {
+      "text": "thousands and thousands",
+      "start": 440.72,
+      "duration": 4.08
+    },
+    {
+      "text": "of companies in your data set all",
+      "start": 442.319,
+      "duration": 3.121
+    },
+    {
+      "text": "through this",
+      "start": 444.8,
+      "duration": 3.76
+    },
+    {
+      "text": "web scraping process though",
+      "start": 445.44,
+      "duration": 5.36
+    },
+    {
+      "text": "i'm not going to endorse specifically",
+      "start": 448.56,
+      "duration": 4.479
+    },
+    {
+      "text": "using yahoo finance they do have",
+      "start": 450.8,
+      "duration": 5.2
+    },
+    {
+      "text": "terms of service against this but i'm",
+      "start": 453.039,
+      "duration": 3.361
+    },
+    {
+      "text": "just",
+      "start": 456.0,
+      "duration": 4.16
+    },
+    {
+      "text": "giving that as a possible example",
+      "start": 456.4,
+      "duration": 3.76
+    },
+    {
+      "text": "um another source of",
+      "start": 460.4,
+      "duration": 7.28
+    },
+    {
+      "text": "common source of data is through apis",
+      "start": 464.319,
+      "duration": 6.0
+    },
+    {
+      "text": "so there you send a web request to the",
+      "start": 467.68,
+      "duration": 3.28
+    },
+    {
+      "text": "api",
+      "start": 470.319,
+      "duration": 4.081
+    },
+    {
+      "text": "and it responds with the data",
+      "start": 470.96,
+      "duration": 7.919
+    },
+    {
+      "text": "usually in either a json or an xml",
+      "start": 474.4,
+      "duration": 7.519
+    },
+    {
+      "text": "format and then you can bring that into",
+      "start": 478.879,
+      "duration": 5.681
+    },
+    {
+      "text": "your model",
+      "start": 481.919,
+      "duration": 2.641
+    },
+    {
+      "text": "um and for",
+      "start": 484.639,
+      "duration": 7.601
+    },
+    {
+      "text": "um both web scraping",
+      "start": 488.4,
+      "duration": 8.239
+    },
+    {
+      "text": "and or accessing apis",
+      "start": 492.24,
+      "duration": 7.04
+    },
+    {
+      "text": "you can use the request package in",
+      "start": 496.639,
+      "duration": 3.361
+    },
+    {
+      "text": "python",
+      "start": 499.28,
+      "duration": 4.0
+    },
+    {
+      "text": "it's an easy way to send web requests um",
+      "start": 500.0,
+      "duration": 6.16
+    },
+    {
+      "text": "so if you have a website that's very",
+      "start": 503.28,
+      "duration": 3.359
+    },
+    {
+      "text": "simple",
+      "start": 506.16,
+      "duration": 4.479
+    },
+    {
+      "text": "it doesn't uh use javascript in order to",
+      "start": 506.639,
+      "duration": 6.801
+    },
+    {
+      "text": "load and display the data then request",
+      "start": 510.639,
+      "duration": 5.601
+    },
+    {
+      "text": "is a good fit in order to",
+      "start": 513.44,
+      "duration": 5.399
+    },
+    {
+      "text": "get that web page and extract the",
+      "start": 516.24,
+      "duration": 4.32
+    },
+    {
+      "text": "information and",
+      "start": 518.839,
+      "duration": 4.44
+    },
+    {
+      "text": "if it's a site that does use a lot of",
+      "start": 520.56,
+      "duration": 5.36
+    },
+    {
+      "text": "javascript to display the data",
+      "start": 523.279,
+      "duration": 6.641
+    },
+    {
+      "text": "or you just really prefer to work",
+      "start": 525.92,
+      "duration": 6.88
+    },
+    {
+      "text": "with a browser instead of like the",
+      "start": 529.92,
+      "duration": 4.479
+    },
+    {
+      "text": "command line interface",
+      "start": 532.8,
+      "duration": 5.28
+    },
+    {
+      "text": "selenium is a package which is useful",
+      "start": 534.399,
+      "duration": 6.401
+    },
+    {
+      "text": "for that because",
+      "start": 538.08,
+      "duration": 2.72
+    },
+    {
+      "text": "it actually drives a web browser so you",
+      "start": 540.88,
+      "duration": 4.24
+    },
+    {
+      "text": "can have chrome or firefox",
+      "start": 542.959,
+      "duration": 4.401
+    },
+    {
+      "text": "just up on the screen and you run some",
+      "start": 545.12,
+      "duration": 4.0
+    },
+    {
+      "text": "code and you see",
+      "start": 547.36,
+      "duration": 4.08
+    },
+    {
+      "text": "uh that the page is changing in firefox",
+      "start": 549.12,
+      "duration": 4.48
+    },
+    {
+      "text": "or you're pulling information out",
+      "start": 551.44,
+      "duration": 4.64
+    },
+    {
+      "text": "etc and so it's a nice like kind of",
+      "start": 553.6,
+      "duration": 3.84
+    },
+    {
+      "text": "visual way to go through it you can",
+      "start": 556.08,
+      "duration": 3.04
+    },
+    {
+      "text": "actually see what happens in the browser",
+      "start": 557.44,
+      "duration": 5.21
+    },
+    {
+      "text": "as you run the code",
+      "start": 559.12,
+      "duration": 4.719
+    },
+    {
+      "text": "[Music]",
+      "start": 562.65,
+      "duration": 4.23
+    },
+    {
+      "text": "and then databases",
+      "start": 563.839,
+      "duration": 5.68
+    },
+    {
+      "text": "are another general way that you're",
+      "start": 566.88,
+      "duration": 3.2
+    },
+    {
+      "text": "going to get",
+      "start": 569.519,
+      "duration": 4.161
+    },
+    {
+      "text": "information into your model",
+      "start": 570.08,
+      "duration": 6.48
+    },
+    {
+      "text": "and typically sql databases are the most",
+      "start": 573.68,
+      "duration": 5.04
+    },
+    {
+      "text": "common",
+      "start": 576.56,
+      "duration": 5.52
+    },
+    {
+      "text": "business databases out there sometimes",
+      "start": 578.72,
+      "duration": 5.28
+    },
+    {
+      "text": "it's nosql databases and there",
+      "start": 582.08,
+      "duration": 4.48
+    },
+    {
+      "text": "are packages which help work with those",
+      "start": 584.0,
+      "duration": 3.6
+    },
+    {
+      "text": "as well",
+      "start": 586.56,
+      "duration": 4.32
+    },
+    {
+      "text": "depends on which database but sql",
+      "start": 587.6,
+      "duration": 7.12
+    },
+    {
+      "text": "is more general more common",
+      "start": 590.88,
+      "duration": 6.32
+    },
+    {
+      "text": "and you can use the same approaches",
+      "start": 594.72,
+      "duration": 3.52
+    },
+    {
+      "text": "regardless of",
+      "start": 597.2,
+      "duration": 4.88
+    },
+    {
+      "text": "what type of sql database it is",
+      "start": 598.24,
+      "duration": 3.84
+    },
+    {
+      "text": "so you're you're not going to get 100",
+      "start": 602.88,
+      "duration": 7.6
+    },
+    {
+      "text": "away from sql like sql",
+      "start": 606.959,
+      "duration": 7.681
+    },
+    {
+      "text": "is a query language",
+      "start": 610.48,
+      "duration": 7.359
+    },
+    {
+      "text": "that lets you write",
+      "start": 614.64,
+      "duration": 5.04
+    },
+    {
+      "text": "these queries which are going to extract",
+      "start": 617.839,
+      "duration": 3.761
+    },
+    {
+      "text": "information from a database",
+      "start": 619.68,
+      "duration": 4.159
+    },
+    {
+      "text": "um or update the database and things",
+      "start": 621.6,
+      "duration": 3.679
+    },
+    {
+      "text": "like that",
+      "start": 623.839,
+      "duration": 3.841
+    },
+    {
+      "text": "um so you are still going to have to",
+      "start": 625.279,
+      "duration": 4.321
+    },
+    {
+      "text": "know a little bit of sql",
+      "start": 627.68,
+      "duration": 5.68
+    },
+    {
+      "text": "or at least understand the basics",
+      "start": 629.6,
+      "duration": 8.799
+    },
+    {
+      "text": "but python can help you",
+      "start": 633.36,
+      "duration": 6.88
+    },
+    {
+      "text": "work with these sql databases such that",
+      "start": 638.399,
+      "duration": 3.601
+    },
+    {
+      "text": "you don't actually have to write",
+      "start": 640.24,
+      "duration": 6.24
+    },
+    {
+      "text": "sql code you can use python",
+      "start": 642.0,
+      "duration": 7.36
+    },
+    {
+      "text": "you can use sql alchemy which lets you",
+      "start": 646.48,
+      "duration": 4.0
+    },
+    {
+      "text": "create",
+      "start": 649.36,
+      "duration": 5.28
+    },
+    {
+      "text": "sql queries with python code",
+      "start": 650.48,
+      "duration": 8.0
+    },
+    {
+      "text": "and pandas also has a read sql",
+      "start": 654.64,
+      "duration": 8.24
+    },
+    {
+      "text": "function so if you just want to bring in",
+      "start": 658.48,
+      "duration": 7.039
+    },
+    {
+      "text": "one database table and bring it into",
+      "start": 662.88,
+      "duration": 4.24
+    },
+    {
+      "text": "your model",
+      "start": 665.519,
+      "duration": 3.601
+    },
+    {
+      "text": "then pandas is going to be a good",
+      "start": 667.12,
+      "duration": 3.36
+    },
+    {
+      "text": "approach for that you can just",
+      "start": 669.12,
+      "duration": 4.8
+    },
+    {
+      "text": "read it in and if you need to do more",
+      "start": 670.48,
+      "duration": 4.64
+    },
+    {
+      "text": "complex queries",
+      "start": 673.92,
+      "duration": 2.96
+    },
+    {
+      "text": "across multiple tables and things like",
+      "start": 675.12,
+      "duration": 3.2
+    },
+    {
+      "text": "that then",
+      "start": 676.88,
+      "duration": 3.68
+    },
+    {
+      "text": "sql alchemy can be a good choice to help",
+      "start": 678.32,
+      "duration": 4.72
+    },
+    {
+      "text": "you with that",
+      "start": 680.56,
+      "duration": 6.48
+    },
+    {
+      "text": "also if you um need to take the result",
+      "start": 683.04,
+      "duration": 5.68
+    },
+    {
+      "text": "of your model and store it into a",
+      "start": 687.04,
+      "duration": 3.52
+    },
+    {
+      "text": "database then",
+      "start": 688.72,
+      "duration": 4.799
+    },
+    {
+      "text": "sql alchemy is also more helpful for",
+      "start": 690.56,
+      "duration": 5.839
+    },
+    {
+      "text": "that than panas",
+      "start": 693.519,
+      "duration": 2.88
+    },
+    {
+      "text": "so that's the data cleaning side and",
+      "start": 699.92,
+      "duration": 3.76
+    },
+    {
+      "text": "then looking at the data wrangling side",
+      "start": 701.76,
+      "duration": 3.6
+    },
+    {
+      "text": "of data pipelines",
+      "start": 703.68,
+      "duration": 4.719
+    },
+    {
+      "text": "so we have already worked with pandas",
+      "start": 705.36,
+      "duration": 5.279
+    },
+    {
+      "text": "in the first course and that is going to",
+      "start": 708.399,
+      "duration": 3.44
+    },
+    {
+      "text": "be your best",
+      "start": 710.639,
+      "duration": 4.161
+    },
+    {
+      "text": "general purpose uh package to use for",
+      "start": 711.839,
+      "duration": 4.161
+    },
+    {
+      "text": "wrangling data because",
+      "start": 714.8,
+      "duration": 2.32
+    },
+    {
+      "text": "you can do so many different",
+      "start": 716.0,
+      "duration": 4.0
+    },
+    {
+      "text": "manipulations of the data with it",
+      "start": 717.12,
+      "duration": 5.12
+    },
+    {
+      "text": "um so that's kind of the gold standard",
+      "start": 720.0,
+      "duration": 5.44
+    },
+    {
+      "text": "in python for wrangling data",
+      "start": 722.24,
+      "duration": 6.48
+    },
+    {
+      "text": "but we didn't cover it in the necessary",
+      "start": 725.44,
+      "duration": 3.839
+    },
+    {
+      "text": "detail",
+      "start": 728.72,
+      "duration": 3.04
+    },
+    {
+      "text": "to cover you know everything that you",
+      "start": 729.279,
+      "duration": 3.921
+    },
+    {
+      "text": "would expect to run into in data",
+      "start": 731.76,
+      "duration": 3.68
+    },
+    {
+      "text": "cleaning",
+      "start": 733.2,
+      "duration": 4.4
+    },
+    {
+      "text": "so i'll give some resources on where you",
+      "start": 735.44,
+      "duration": 3.12
+    },
+    {
+      "text": "can learn more",
+      "start": 737.6,
+      "duration": 4.88
+    },
+    {
+      "text": "about pandas to cover all these cases",
+      "start": 738.56,
+      "duration": 6.079
+    },
+    {
+      "text": "some of the main areas we didn't cover",
+      "start": 742.48,
+      "duration": 3.599
+    },
+    {
+      "text": "but are useful",
+      "start": 744.639,
+      "duration": 4.88
+    },
+    {
+      "text": "for this are um",
+      "start": 746.079,
+      "duration": 4.961
+    },
+    {
+      "text": "we covered a little bit on selecting",
+      "start": 749.519,
+      "duration": 4.401
+    },
+    {
+      "text": "data but you know more advanced",
+      "start": 751.04,
+      "duration": 5.359
+    },
+    {
+      "text": "selecting of data merging different data",
+      "start": 753.92,
+      "duration": 4.96
+    },
+    {
+      "text": "sets together um",
+      "start": 756.399,
+      "duration": 5.601
+    },
+    {
+      "text": "grouping and doing aggregations within",
+      "start": 758.88,
+      "duration": 4.399
+    },
+    {
+      "text": "those groups",
+      "start": 762.0,
+      "duration": 4.079
+    },
+    {
+      "text": "like you know maybe you have sales for",
+      "start": 763.279,
+      "duration": 3.68
+    },
+    {
+      "text": "each",
+      "start": 766.079,
+      "duration": 3.76
+    },
+    {
+      "text": "uh you know store in your company and",
+      "start": 766.959,
+      "duration": 3.601
+    },
+    {
+      "text": "you want to get",
+      "start": 769.839,
+      "duration": 3.921
+    },
+    {
+      "text": "sales by region so group",
+      "start": 770.56,
+      "duration": 6.0
+    },
+    {
+      "text": "by the region and and some across the",
+      "start": 773.76,
+      "duration": 5.28
+    },
+    {
+      "text": "stores",
+      "start": 776.56,
+      "duration": 2.48
+    },
+    {
+      "text": "and reshaping the data in different ways",
+      "start": 779.279,
+      "duration": 4.881
+    },
+    {
+      "text": "and that includes",
+      "start": 782.88,
+      "duration": 4.88
+    },
+    {
+      "text": "resampling if you have some time series",
+      "start": 784.16,
+      "duration": 5.52
+    },
+    {
+      "text": "and you need to change the frequency of",
+      "start": 787.76,
+      "duration": 4.72
+    },
+    {
+      "text": "the time series",
+      "start": 789.68,
+      "duration": 2.8
+    },
+    {
+      "text": "um so the reason this is not called just",
+      "start": 792.639,
+      "duration": 4.481
+    },
+    {
+      "text": "data cleaning",
+      "start": 795.68,
+      "duration": 4.48
+    },
+    {
+      "text": "is because cleaning generally refers to",
+      "start": 797.12,
+      "duration": 5.519
+    },
+    {
+      "text": "well you know if there's missing values",
+      "start": 800.16,
+      "duration": 3.919
+    },
+    {
+      "text": "in there you need to remove",
+      "start": 802.639,
+      "duration": 4.481
+    },
+    {
+      "text": "or there's uh you know invalid data in",
+      "start": 804.079,
+      "duration": 3.521
+    },
+    {
+      "text": "there",
+      "start": 807.12,
+      "duration": 2.88
+    },
+    {
+      "text": "like errors or there's other outliers",
+      "start": 807.6,
+      "duration": 4.0
+    },
+    {
+      "text": "you want to remove",
+      "start": 810.0,
+      "duration": 3.519
+    },
+    {
+      "text": "that part is generally referred to as",
+      "start": 811.6,
+      "duration": 3.039
+    },
+    {
+      "text": "cleaning",
+      "start": 813.519,
+      "duration": 5.361
+    },
+    {
+      "text": "um whereas there's the other side which",
+      "start": 814.639,
+      "duration": 4.961
+    },
+    {
+      "text": "is",
+      "start": 818.88,
+      "duration": 2.8
+    },
+    {
+      "text": "you might have perfectly cleaned data",
+      "start": 819.6,
+      "duration": 3.44
+    },
+    {
+      "text": "but it's still not",
+      "start": 821.68,
+      "duration": 3.2
+    },
+    {
+      "text": "in the structure that you need for your",
+      "start": 823.04,
+      "duration": 3.359
+    },
+    {
+      "text": "model",
+      "start": 824.88,
+      "duration": 3.6
+    },
+    {
+      "text": "so then this kind of reformatting of the",
+      "start": 826.399,
+      "duration": 3.041
+    },
+    {
+      "text": "data",
+      "start": 828.48,
+      "duration": 3.44
+    },
+    {
+      "text": "um by combining it with other data",
+      "start": 829.44,
+      "duration": 3.519
+    },
+    {
+      "text": "aggregating",
+      "start": 831.92,
+      "duration": 4.64
+    },
+    {
+      "text": "um selecting different parts of it etc",
+      "start": 832.959,
+      "duration": 6.961
+    },
+    {
+      "text": "um that's kind of the data reformatting",
+      "start": 836.56,
+      "duration": 5.12
+    },
+    {
+      "text": "side of things and together they make up",
+      "start": 839.92,
+      "duration": 4.719
+    },
+    {
+      "text": "the data wrangling",
+      "start": 841.68,
+      "duration": 4.48
+    },
+    {
+      "text": "one other thing i just want to mention",
+      "start": 844.639,
+      "duration": 3.44
+    },
+    {
+      "text": "in here that helps with",
+      "start": 846.16,
+      "duration": 6.479
+    },
+    {
+      "text": "the data cleaning side of things",
+      "start": 848.079,
+      "duration": 6.721
+    },
+    {
+      "text": "is regular expressions so regular",
+      "start": 852.639,
+      "duration": 3.44
+    },
+    {
+      "text": "expressions are actually",
+      "start": 854.8,
+      "duration": 3.44
+    },
+    {
+      "text": "their own kind of mini programming",
+      "start": 856.079,
+      "duration": 4.081
+    },
+    {
+      "text": "language on their own",
+      "start": 858.24,
+      "duration": 4.32
+    },
+    {
+      "text": "uh exactly they're actually supported in",
+      "start": 860.16,
+      "duration": 3.28
+    },
+    {
+      "text": "a lot of different",
+      "start": 862.56,
+      "duration": 2.48
+    },
+    {
+      "text": "programming languages with the same",
+      "start": 863.44,
+      "duration": 3.04
+    },
+    {
+      "text": "syntax",
+      "start": 865.04,
+      "duration": 5.359
+    },
+    {
+      "text": "um and their ways of matching different",
+      "start": 866.48,
+      "duration": 6.0
+    },
+    {
+      "text": "strings and extracting parts out of",
+      "start": 870.399,
+      "duration": 3.281
+    },
+    {
+      "text": "those strings",
+      "start": 872.48,
+      "duration": 4.88
+    },
+    {
+      "text": "so especially in the context of",
+      "start": 873.68,
+      "duration": 5.36
+    },
+    {
+      "text": "web scraping where you're just pulling",
+      "start": 877.36,
+      "duration": 3.279
+    },
+    {
+      "text": "in a you know",
+      "start": 879.04,
+      "duration": 4.32
+    },
+    {
+      "text": "big html file and you want to extract",
+      "start": 880.639,
+      "duration": 4.161
+    },
+    {
+      "text": "certain parts of it",
+      "start": 883.36,
+      "duration": 4.08
+    },
+    {
+      "text": "these are really useful and also",
+      "start": 884.8,
+      "duration": 4.0
+    },
+    {
+      "text": "sometimes you just",
+      "start": 887.44,
+      "duration": 5.44
+    },
+    {
+      "text": "get you know choosing your data",
+      "start": 888.8,
+      "duration": 7.2
+    },
+    {
+      "text": "which this can help with like",
+      "start": 892.88,
+      "duration": 6.24
+    },
+    {
+      "text": "you know maybe there's a percent sign on",
+      "start": 896.0,
+      "duration": 5.279
+    },
+    {
+      "text": "the end you got to remove that and then",
+      "start": 899.12,
+      "duration": 5.279
+    },
+    {
+      "text": "um you know convert it into decimal",
+      "start": 901.279,
+      "duration": 5.521
+    },
+    {
+      "text": "um so this can help with things like",
+      "start": 904.399,
+      "duration": 4.641
+    },
+    {
+      "text": "that",
+      "start": 906.8,
+      "duration": 2.24
+    },
+    {
+      "text": "and so i'm giving you a number of",
+      "start": 910.0,
+      "duration": 3.04
+    },
+    {
+      "text": "different",
+      "start": 912.48,
+      "duration": 3.2
+    },
+    {
+      "text": "resources here to help you learn these",
+      "start": 913.04,
+      "duration": 3.44
+    },
+    {
+      "text": "topics",
+      "start": 915.68,
+      "duration": 3.839
+    },
+    {
+      "text": "in the meantime until i'm able to post",
+      "start": 916.48,
+      "duration": 4.4
+    },
+    {
+      "text": "additional lectures",
+      "start": 919.519,
+      "duration": 4.401
+    },
+    {
+      "text": "on uh focusing on these topics",
+      "start": 920.88,
+      "duration": 7.68
+    },
+    {
+      "text": "so um there's a couple resources which",
+      "start": 923.92,
+      "duration": 6.4
+    },
+    {
+      "text": "are related to the web scraping",
+      "start": 928.56,
+      "duration": 5.199
+    },
+    {
+      "text": "with browser um so just an introduction",
+      "start": 930.32,
+      "duration": 4.959
+    },
+    {
+      "text": "to selenium",
+      "start": 933.759,
+      "duration": 3.681
+    },
+    {
+      "text": "um and then there's this other python",
+      "start": 935.279,
+      "duration": 4.161
+    },
+    {
+      "text": "package called helium",
+      "start": 937.44,
+      "duration": 4.959
+    },
+    {
+      "text": "which makes a little bit easier to use",
+      "start": 939.44,
+      "duration": 3.68
+    },
+    {
+      "text": "selenium",
+      "start": 942.399,
+      "duration": 3.44
+    },
+    {
+      "text": "so i would kind of look at the first one",
+      "start": 943.12,
+      "duration": 4.639
+    },
+    {
+      "text": "just to get an understanding of",
+      "start": 945.839,
+      "duration": 4.0
+    },
+    {
+      "text": "what all this is and then look at the",
+      "start": 947.759,
+      "duration": 5.2
+    },
+    {
+      "text": "second for maybe an easier way to do it",
+      "start": 949.839,
+      "duration": 6.481
+    },
+    {
+      "text": "um and then also looking at",
+      "start": 952.959,
+      "duration": 6.161
+    },
+    {
+      "text": "um requests which which helps you with",
+      "start": 956.32,
+      "duration": 4.959
+    },
+    {
+      "text": "this kind of more basic web scraping as",
+      "start": 959.12,
+      "duration": 2.8
+    },
+    {
+      "text": "well as",
+      "start": 961.279,
+      "duration": 3.841
+    },
+    {
+      "text": "accessing apis",
+      "start": 961.92,
+      "duration": 3.2
+    },
+    {
+      "text": "and couple resources on pamus",
+      "start": 965.68,
+      "duration": 4.88
+    },
+    {
+      "text": "so the introduction to pandas which",
+      "start": 970.72,
+      "duration": 6.16
+    },
+    {
+      "text": "uh has a lot of stuff we've already",
+      "start": 974.32,
+      "duration": 4.48
+    },
+    {
+      "text": "covered with pandas but also",
+      "start": 976.88,
+      "duration": 4.0
+    },
+    {
+      "text": "gives quick intros on the remaining",
+      "start": 978.8,
+      "duration": 3.839
+    },
+    {
+      "text": "topics and then",
+      "start": 980.88,
+      "duration": 4.959
+    },
+    {
+      "text": "you know the full um",
+      "start": 982.639,
+      "duration": 5.2
+    },
+    {
+      "text": "uh cookbook in pandas which gives you",
+      "start": 985.839,
+      "duration": 4.8
+    },
+    {
+      "text": "strategies for for a bunch of more",
+      "start": 987.839,
+      "duration": 8.521
+    },
+    {
+      "text": "advanced uh data pipeline related tasks",
+      "start": 990.639,
+      "duration": 8.401
+    },
+    {
+      "text": "a couple resources on regular",
+      "start": 996.36,
+      "duration": 4.919
+    },
+    {
+      "text": "expressions",
+      "start": 999.04,
+      "duration": 4.159
+    },
+    {
+      "text": "i think it's useful to go through an",
+      "start": 1001.279,
+      "duration": 4.961
+    },
+    {
+      "text": "intro just to understand them",
+      "start": 1003.199,
+      "duration": 7.44
+    },
+    {
+      "text": "but then they are somewhat complicated",
+      "start": 1006.24,
+      "duration": 6.959
+    },
+    {
+      "text": "i myself even generally pull up the",
+      "start": 1010.639,
+      "duration": 3.281
+    },
+    {
+      "text": "reference",
+      "start": 1013.199,
+      "duration": 2.88
+    },
+    {
+      "text": "when i write regular expressions so it's",
+      "start": 1013.92,
+      "duration": 4.8
+    },
+    {
+      "text": "nice to have that",
+      "start": 1016.079,
+      "duration": 5.68
+    },
+    {
+      "text": "um and then",
+      "start": 1018.72,
+      "duration": 6.079
+    },
+    {
+      "text": "a few resources on sql alchemy",
+      "start": 1021.759,
+      "duration": 6.08
+    },
+    {
+      "text": "i'm giving an overview um",
+      "start": 1024.799,
+      "duration": 5.52
+    },
+    {
+      "text": "as uh you know getting started with it",
+      "start": 1027.839,
+      "duration": 3.441
+    },
+    {
+      "text": "and then the",
+      "start": 1030.319,
+      "duration": 4.48
+    },
+    {
+      "text": "full documentation as well",
+      "start": 1031.28,
+      "duration": 7.36
+    },
+    {
+      "text": "so that covers an introduction",
+      "start": 1034.799,
+      "duration": 8.16
+    },
+    {
+      "text": "to data pipelines and financial models",
+      "start": 1038.64,
+      "duration": 7.36
+    },
+    {
+      "text": "and i hope in the future to release",
+      "start": 1042.959,
+      "duration": 8.241
+    },
+    {
+      "text": "more dedicated videos on",
+      "start": 1046.0,
+      "duration": 8.96
+    },
+    {
+      "text": "both uh data collection and",
+      "start": 1051.2,
+      "duration": 6.32
+    },
+    {
+      "text": "uh wrangling and looking at web scraping",
+      "start": 1054.96,
+      "duration": 4.8
+    },
+    {
+      "text": "and all of these more individual topics",
+      "start": 1057.52,
+      "duration": 4.56
+    },
+    {
+      "text": "but you have these resources to go off",
+      "start": 1059.76,
+      "duration": 3.039
+    },
+    {
+      "text": "of",
+      "start": 1062.08,
+      "duration": 3.92
+    },
+    {
+      "text": "in the meantime so thanks for listening",
+      "start": 1062.799,
+      "duration": 9.12
+    },
+    {
+      "text": "and see you next time",
+      "start": 1066.0,
+      "duration": 5.919
+    }
+  ]
+}
