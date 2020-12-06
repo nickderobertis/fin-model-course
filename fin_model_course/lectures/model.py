@@ -12,6 +12,8 @@ from youtube_transcript_api import TranscriptsDisabled
 from build_tools.config import SITE_URL
 from build_tools.ext_rst import header_rst
 from build_tools.get_transcripts import Transcript, get_transcript
+from courses.config import COURSES
+from courses.model import CourseModel, CourseSelectors
 from pltemplates.frames.lab import LabFrame
 from pltemplates.hyperlink import Hyperlink
 
@@ -328,6 +330,7 @@ class LectureGroup:
     lectures: Sequence[Lecture]
     order: Union[int, str]
     global_resources: Sequence[LectureResource] = tuple()
+    course: CourseModel = COURSES[CourseSelectors.BASIC]
     show_aggregate_resources: bool = True
 
     def __getitem__(self, item):
@@ -336,7 +339,11 @@ class LectureGroup:
     @property
     def stub(self) -> str:
         lower = self.title.casefold()
-        parts = [str(self.order)] + lower.split()
+        parts: List[str] = []
+        if self.course.stub:
+            parts.append(self.course.stub)
+        parts.append(str(self.order))
+        parts.extend(lower.split())
         return "-".join(parts)
 
     @property

@@ -17,7 +17,15 @@
 }
 
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
+    /* For green theme, sidebar titles */
     color: #3aa83e;
+
+    /* Allow for multi-line sidebar titles */
+    line-height: unset;
+    display: inline-block;
+    white-space: unset;
+    height: unset;
+    margin: 12px 0 0.5rem;
 }
 
 /* Make copy code to clipboard button bigger */
