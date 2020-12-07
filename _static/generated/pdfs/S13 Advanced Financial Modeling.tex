@@ -25,13 +25,17 @@ Department of Finance, Insurance, and Real Estate}
 \begin{frame}
 \frametitle{What we Covered and What is Left}
 \begin{itemize}
-\item Throughout this course, we have covered Python and Excel basics
+\small
+\vfill
+\item Throughout the Financial Modeling with Python and Excel course, we have covered Python and Excel basics
 \vfill
 \item We have also covered financial modeling specifics, such as how to structure a financial model in both Python and Excel, cash flow and probability modeling, sensitivity analysis, scenario analysis, and Monte Carlo simulations
 \vfill
-\item As far as types of financial models, we covered a retirement model, a capital budgeting model, a lender profitiability model, and the discounted cash flow (DCF) valuation of a stock
+\item As far as types of financial models, we covered a retirement model, a capital budgeting model, a lender profitability model, and the discounted cash flow (DCF) valuation of a stock
 \vfill
-\item This could have been a two-semester course. There is a lot I didn't cover. Let's do a quick overview of it today.
+\item There is a lot I didn't cover in that course. Let's do a quick overview of it today.
+\vfill
+\item This will serve as a roadmap to learn additional topics after completing the first course. This is also the beginning of a new Advanced Financial Modeling with Python course
 \end{itemize}
 \end{frame}
 \end{section}
@@ -90,7 +94,7 @@ Department of Finance, Insurance, and Real Estate}
 \vbox to 0.8\textheight{\begin{itemize}
 \item Data pipelines are about getting the input data into your model in a standardized way
 \vfill
-\item Within data pipelines, there are two main steps: data collection and data cleaning.
+\item Within data pipelines, there are two main steps: data collection and data wrangling (cleaning + reformatting).
 \vfill
 \item Either step can be automated, ideally both would be, but it always comes down to a tradeoff with modeler time
 \end{itemize}}
@@ -107,6 +111,8 @@ Department of Finance, Insurance, and Real Estate}
 \begin{frame}
 \frametitle{Data Collection}
 \begin{itemize}
+\small
+\vfill
 \item Data can come from many sources, but most typically it originates from the Internet
 \vfill
 \item If you can manually download the data, you can automate it via web scraping
@@ -119,17 +125,28 @@ Department of Finance, Insurance, and Real Estate}
 uses Python code to drive a browser such as Chrome while
 \texttt{requests}
 is a more lightweight, text based way to make web requests (good for APIs).
+\vfill
+\item Another common source of data is SQL databases. While you will still need to have a basic understanding of SQL to query them, Python can help with
+\texttt{SQLAlchemy}
+which allows
+you to write the queries in Python.
+\texttt{pandas}
+also has functionality to work with SQL
 \end{itemize}
 \end{frame}
 \begin{frame}
-\frametitle{Data Cleaning}
+\frametitle{Data Wrangling}
 \begin{itemize}
-\item We have already covered the best general-purpose tool for cleaning data:
+\small
+\vfill
+\item We have already covered the best general-purpose tool for wrangling data:
 \texttt{pandas}
 \vfill
 \item We did not cover it in enough detail to cover all data cleaning cases
 \vfill
 \item The main material left is selecting, merging, grouping, and reshaping
+\vfill
+\item Even if your data is without issues, you may still need to change the format, combine sources, aggregate, etc.
 \vfill
 \item Regular expressions are a way of matching any possible string and extracting parts of it, which useful for messy data
 \end{itemize}
@@ -138,6 +155,8 @@ is a more lightweight, text based way to make web requests (good for APIs).
 \frametitle{Data Pipelines Resources}
 \begin{itemize}
 \item \textcolor{blue}{\underline{\href{https://stackabuse.com/getting-started-with-selenium-and-python/}{Get Started Browser-Based Web Scraping with Selenium}}}
+\vfill
+\item \textcolor{blue}{\underline{\href{https://github.com/mherrmann/selenium-python-helium}{Helium - A Higher-Level API to Selenium}}}
 \vfill
 \item \textcolor{blue}{\underline{\href{https://realpython.com/python-requests/}{Get Started Text-Based Web Scraping with Requests}}}
 \vfill
@@ -148,6 +167,12 @@ is a more lightweight, text based way to make web requests (good for APIs).
 \item \textcolor{blue}{\underline{\href{https://scotch.io/tutorials/an-introduction-to-regex-in-python}{Intro to Regular Expressions}}}
 \vfill
 \item \textcolor{blue}{\underline{\href{https://docs.python.org/3/library/re.html}{Regular Expression Reference}}}
+\vfill
+\item \textcolor{blue}{\underline{\href{https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/}{SQLAlchemy Overview Tutorial}}}
+\vfill
+\item \textcolor{blue}{\underline{\href{https://towardsdatascience.com/sqlalchemy-python-tutorial-79a577141a91}{SQLAlchemy Simple Tutorial and Examples}}}
+\vfill
+\item \textcolor{blue}{\underline{\href{https://docs.sqlalchemy.org/en/13/intro.html}{SQLAlchemy Documentation}}}
 \end{itemize}
 \end{frame}
 \end{section}
@@ -229,7 +254,9 @@ can be used to make classifications or predictions
 \vfill
 \item \textcolor{blue}{\underline{\href{https://machinelearningmastery.com/start-here/}{General Introduction to Machine Learning}}}
 \vfill
-\item \textcolor{blue}{\underline{\href{datacamp.com/community/tutorials/deep-learning-python}{Deep Learning (AI) in Python using Keras}}}
+\item \textcolor{blue}{\underline{\href{https://datacamp.com/community/tutorials/deep-learning-python}{Deep Learning (AI) in Python using Keras}}}
+\vfill
+\item \textcolor{blue}{\underline{\href{https://github.com/automl/auto-sklearn/}{Automated Machine Learning with auto-sklearn}}}
 \end{itemize}
 \end{frame}
 \end{section}
@@ -333,11 +360,13 @@ you just describe the data and it can generate interactive plots for you
 \vfill
 \item \textcolor{blue}{\underline{\href{https://holoviews.org/getting\_started/index.html}{Get started with Holoviews}}}
 \vfill
-\item \textcolor{blue}{\underline{\href{https://towardsdatascience.com/bring-your-jupyter-notebook-to-life-with-interactive-widgets-bc12e03f0916}{Use ipywidgets to Build an App in Jupyter}}}
+\item \textcolor{blue}{\underline{\href{https://www.youtube.com/watch?v=L91rd1D6XTA\&ab\_channel=Enthought}{Introduction to Panel for Building Apps in Jupyter}}}
 \vfill
-\item \textcolor{blue}{\underline{\href{https://voila.readthedocs.io/en/stable/}{Convert a Jupyter Notebook to a Web App using Viola}}}
+\item \textcolor{blue}{\underline{\href{https://panel.holoviz.org/getting\_started/index.html}{Tutorial for Panel}}}
 \vfill
-\item \textcolor{blue}{\underline{\href{https://voila-gallery.org/services/gallery/}{Examples of Viola Web Apps}}}
+\item \textcolor{blue}{\underline{\href{https://voila.readthedocs.io/en/stable/}{Convert a Jupyter Notebook to a Web App using Voila}}}
+\vfill
+\item \textcolor{blue}{\underline{\href{https://voila-gallery.org/services/gallery/}{Examples of Voila Web Apps}}}
 \vfill
 \item \textcolor{blue}{\underline{\href{https://scotch.io/tutorials/getting-started-with-flask-a-python-microframework}{Get Started Building Web Apps with Flask}}}
 \vfill
@@ -418,9 +447,9 @@ modules
 \vfill
 \item Modify existing functions using decorators
 \vfill
-\item Store Python objects by picking them
+\item Store Python objects by pickling them
 \vfill
-\item Check yourself and make your code easier to understand using type annotations
+\item Check yourself, make your code easier to understand, and power up your IDE using type annotations
 \vfill
 \item Structure projects using packages and modules
 \vfill
@@ -484,7 +513,7 @@ modules
 \begin{frame}
 \frametitle{General Resources}
 \begin{itemize}
-\item \textcolor{blue}{\underline{\href{https://docs.python-guide.org/}{The Hickhiker's Guide to Python}}}
+\item \textcolor{blue}{\underline{\href{https://docs.python-guide.org/}{The Hitchhiker's Guide to Python}}}
 \vfill
 \item \textcolor{blue}{\underline{\href{https://realpython.com/}{Real Python}}}
 \vfill
