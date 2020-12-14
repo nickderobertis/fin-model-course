@@ -1,0 +1,1196 @@
+
+Data Pipelines
+*****************
+
+Covers how to collect, clean, and structure the data for your model in an automated way, using Python.
+
+Resources
+============
+
+
+- :download:`Capital IQ Debt Details Module (capiq_debt.py) </_static/Examples/Data Pipelines/Debt Details/capiq_debt.py>`
+        
+
+- :download:`WMT Debt Details </_static/Project Materials/Project 3/WMT Debt Details.xls>`
+        
+
+- :download:`Pfizer Debt Details </_static/Examples/Data Pipelines/Debt Details/Pfizer Debt Details.xls>`
+        
+
+Creating a Data Loading Module for Capital IQ Debt Details
+=============================================================
+
+.. youtube:: mL4hDzrvxL0
+    :height: 315
+    :width: 80%
+    :align: center
+
+|
+            
+Notes
+--------
+
+- For the DCF model we have explored using the market value of individual debt instruments to estimate the market value of debt for the whole company
+- For Project 3, we looked at using Capital IQ as the source of those debt details
+- Here I examine how to automate the loading and cleaning of the debt details from Capital IQ, so they are ready to be worked with in the model
+- I also look at taking the resulting code and making a Python module, so it can be reused in future models
+- To clean up the data, I use a combination of Pandas methods, string methods, and regular expressions (regex)
+
+Resources
+------------
+
+
+- :download:`Capital IQ Debt Details Module (capiq_debt.py) </_static/Examples/Data Pipelines/Debt Details/capiq_debt.py>`
+        
+
+- :download:`WMT Debt Details </_static/Project Materials/Project 3/WMT Debt Details.xls>`
+        
+
+- :download:`Pfizer Debt Details </_static/Examples/Data Pipelines/Debt Details/Pfizer Debt Details.xls>`
+        
+
+Transcript
+-------------
+
+.. raw:: html
+    
+    <div class="transcript"><ul class="transcript-entries">
+		<li class="transcript-entry"><span class="transcript-timestamp">00:03: </span>hey everyone this is nick dear burtis</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:05: </span>teaching you financial modeling</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:07: </span>today we're going to be looking at how</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:09: </span>to load in capital iq</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:11: </span>details into python to work with them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:14: </span>and also how to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:16: </span>structure our code into a python module</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:19: </span>such that this code can be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:20: </span>reused anytime that we want to load in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:22: </span>debt details from capital iq</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:24: </span>regardless of the model this is part of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:27: </span>our lecture segment</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:28: </span>on data pipelines so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:32: </span>the data that we're looking at loading</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:33: </span>in here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:35: </span>comes in the form of this excel</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:37: </span>spreadsheet</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:38: </span>and within that spreadsheet we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:41: </span>basically some</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:42: </span>header area which doesn't really matter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:45: </span>to us</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:45: </span>we don't care about that what we want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:47: </span>get out of this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:49: </span>is this table which in which is in here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:53: </span>and there's a few things that we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:54: </span>going to have to do in order to clean up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:56: </span>this data so we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">00:58: </span>actually work with it in our model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:00: </span>before we get to that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:01: </span>just want to note that there is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:03: </span>typically a second table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:05: </span>in here that represents older data so we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:08: </span>don't want to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:08: </span>any of the data from that table only the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:11: </span>top table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:13: </span>and then some of the issues that we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:15: </span>going to have to deal with is the fact</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:17: </span>that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:19: </span>these coupon rates actually have the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:22: </span>percentage sign</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:23: </span>in the string it's not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:26: </span>just formatted as a percent it actually</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:28: </span>has the percent sign in there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:31: </span>uh so when we load it into python we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:33: </span>will also see that percent sign in there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:38: </span>and the um floating rates</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:42: </span>we have live or plus some rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:46: </span>so we're going to want to be able to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:47: </span>take that and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:49: </span>plug in a libor rate and get what the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:51: </span>resulting rate is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:54: </span>and then we also have these coupon rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:56: </span>ranges</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">01:58: </span>where for the purposes of our model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:00: </span>we'll just take the midpoint of that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:02: </span>range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:03: </span>and use that as the coupon for the bond</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:08: </span>then one other thing is that in order to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:13: </span>do value calculations with these bonds</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:15: </span>we're going to want to get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:17: </span>uh that into a number of years or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:20: </span>maturity</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:21: </span>and so we're going to be converting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:22: </span>these dates into a number of years</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:24: </span>from today um and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:27: </span>some of the maturities only give a year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:30: </span>and so we're going to assume those are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:32: </span>at the end of the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:33: </span>and handle those that way</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:37: </span>so that's an overview of all the issues</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:40: </span>that we face</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:41: </span>in loading this in so now let's look at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:44: </span>some python code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:46: </span>to make that happen and um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:50: </span>throughout doing this then we're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:52: </span>to try to make sure that it's standard</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:55: </span>and reusable such that even though this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">02:58: </span>is for walmart we can then do the same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:00: </span>thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:01: </span>or we can then use the same code to load</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:03: </span>any other company's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:05: </span>details and have them all cleaned up and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:06: </span>ready to use for our model</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:11: </span>so coming over to the jupiter notebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:15: </span>we've talked about two approaches in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:17: </span>course which will be useful</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:19: </span>to load this information in we can load</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:21: </span>it in using pandas</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:23: </span>or we can use excel wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:28: </span>i will generally go to pandas for any</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:31: </span>usage that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:32: </span>doesn't require back and forth between</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:34: </span>python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:35: </span>and excel wings for the most part unless</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:39: </span>i'm just trying to grab a single value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:41: </span>out of excel then sometimes i'll still</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:43: </span>use excel wings</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:45: </span>but pandas generally is a lot more</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:46: </span>compatible</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:48: </span>you can run the code on linux or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:50: </span>somewhere else that excel is not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:52: </span>installed</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:54: </span>and still get the same result so i</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:56: </span>generally will prefer pandas and that's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">03:57: </span>what i'll use here in this video</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:02: </span>so import pandas and then i'm going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:07: </span>load uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:10: </span>the file into a data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:14: </span>the walmart that details i have it here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:17: </span>in the same folder</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:19: </span>um and then we'll see what we get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:22: </span>so we can see right away that this does</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:25: </span>not look good right we got</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:27: </span>a bunch of junk in here this is not at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:29: </span>all the table that we wanted to get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:31: </span>we've got all these on names we got a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:33: </span>bunch of missing values in here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:35: </span>um basically what we're seeing here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:38: </span>corresponds to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:40: </span>this top part where indeed there are no</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:43: </span>column headers and we've just got some</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:44: </span>junk up here we don't care about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:46: </span>the actual table here starts in row</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:50: </span>13. so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:53: </span>one thing i can do to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">04:56: </span>cut off this entire top area is there a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:00: </span>lot of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:01: </span>options for the read excel command as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:04: </span>you can see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:05: </span>um one such of those options is skip</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:07: </span>rows</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:08: </span>so we can tell it we want to skip</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:11: </span>12 rows while loading it in and just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:13: </span>start from the 13th row which is where</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:15: </span>we know the data starts</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:18: </span>so now we can see that we got the actual</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:22: </span>names of the columns in that table that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:24: </span>looks good and it looks like we got the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:26: </span>values of that table as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:28: </span>um now what we can also see is we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:33: </span>you know these last two rows are junk so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:35: </span>let's say um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:37: </span>you know 127 rows counting the zero</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:41: </span>and then let's hop over and look at how</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:44: </span>many rows</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:46: </span>are in this top table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:49: </span>and we have 62 rows so clearly we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:52: </span>picking up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:53: </span>this bottom table as well which we don't</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:57: </span>want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">05:58: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:00: </span>so there's a number of ways that we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:02: </span>choose to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:04: </span>handle that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:05: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:07: </span>i one thing that we can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:11: </span>i see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:15: </span>that well let's look at how the data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:17: </span>frame looks</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:18: </span>in that middle area so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:22: </span>of course the with the data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:23: </span>display the middle gets cut out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:25: </span>so we can use iloke to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:28: </span>look at some range of rows so we know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:31: </span>that was</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:32: </span>63 rows so let's just look at row 60 to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:36: </span>70.</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:38: </span>um so now we can clearly see here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:41: </span>the table ending and then we can see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:46: </span>a number of um blank rows</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:50: </span>um and then we have the next table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:53: </span>starting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:56: </span>um so there's a number of ways</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">06:59: </span>we can deal with this to be able to say</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:03: </span>let's cut off everything after</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:07: </span>the table the first table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:10: </span>so ultimately it's really easy to drop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:13: </span>rows which have all missing values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:15: </span>so i'm not too worried about these ones</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:17: </span>once i drop the missing values these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:19: </span>will be gone</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:20: </span>um it's once we're getting to here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:27: </span>and we want to try and pick something</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:29: </span>that's going to be consistent</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:31: </span>as we load in data for different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:33: </span>companies or different time periods</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:36: </span>so you know this is the first kind of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:38: </span>distinctive marker that we see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:41: </span>for the second table but we can see this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:43: </span>is very specific to the date</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:45: </span>so perhaps not a good choice to try and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:47: </span>target</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:49: </span>now we do have this description here in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:51: </span>the next row</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:53: </span>signifying that we're starting the next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:54: </span>table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:56: </span>so that seems like an appropriate thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:58: </span>to target</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">07:59: </span>um because we can assume that that is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:02: </span>going to be the same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:03: </span>for other time periods and other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:05: </span>companies as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:07: </span>um so we can try to target</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:10: </span>that row</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:13: </span>so that row is going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:19: </span>what is going to be where the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:24: </span>description</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:26: </span>is equal to description</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:30: </span>right um so by that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:34: </span>we're now able to target this second</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:36: </span>header row</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:38: </span>um and that way we know we've gotten</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:40: </span>into the next table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:43: </span>but we don't want to cut off just that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:45: </span>we want to start cutting off</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:46: </span>from the row before um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:51: </span>so if we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:54: </span>take the index from that we get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">08:57: </span>row 67</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:00: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:02: </span>we pull the first value out of that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:04: </span>get actually the number 67</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:07: </span>and then if we subtract 1 now we get row</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:10: </span>66</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:12: </span>which is the first row that we don't</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:14: </span>want to keep</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:17: </span>so there then we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:19: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:21: </span>say that that's our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:24: </span>fiscal year row index</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:28: </span>because now we're talking about row 66</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:30: </span>here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:33: </span>um and now we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:35: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:37: </span>do we can get all of the data frame up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:40: </span>until</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:41: </span>that fiscal year row index</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:44: </span>so now we'll have those blanks on the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:46: </span>end but we do not have that fistful</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:48: </span>year row and we do not have the second</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:50: </span>table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:51: </span>at all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:55: </span>so that's a good step we've removed that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:57: </span>second table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">09:59: </span>but now we also want to remove these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:01: </span>blank rows thankfully pandas has</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:04: </span>a convenient method for this drop n a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:07: </span>um but we want to make sure that we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:09: </span>still keeping</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:10: </span>these even if there's no floating rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:12: </span>it can still be a valid</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:14: </span>row so we only want to um drop</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:18: </span>when all are missing so we put how</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:20: </span>equals all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:23: </span>and now we can see that those other rows</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:26: </span>get dropped as well and yet we are</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:27: </span>keeping the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:28: </span>rows which just have some missing values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:33: </span>so we can do df equals</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:37: </span>that in order to save it back into the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:39: </span>result</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:42: </span>um and that way we've got</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:46: </span>now just the first table</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:53: </span>so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">10:56: </span>just kind of looking through um one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:00: </span>other issue that we see in here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:02: </span>is we have these dashes um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:05: </span>and pandas this nan represents a missing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:08: </span>a dash represents that's actually the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:11: </span>string dash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:12: </span>and so if we try and do any math with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:15: </span>these columns which have the dash in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:17: </span>them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:18: </span>it is not going to work for example</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:24: </span>so this is the principal do usd column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:32: </span>so if we try to sum that we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:34: </span>get an error</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:36: </span>and it's actually going to say you can't</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:38: </span>add a float in a string and that string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:40: </span>that it's talking about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:41: </span>is that dash which is in there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:46: </span>so in order to fix that we can use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:48: </span>replace</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:49: </span>on the data frame so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:52: </span>with this same look at the data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:55: </span>if we do a replace of dash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">11:59: </span>with uh we do have to go import numpy as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:03: </span>mp</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:06: </span>and have to uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:09: </span>run that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:13: </span>um then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:17: </span>uh the missing value that pandas uses is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:21: </span>numpy dot nan</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:24: </span>so we're replacing the dash which we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:26: </span>seeing here in row</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:27: </span>16 with a nand let's see how that looks</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:31: </span>now row 16 we have a man in each of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:34: </span>those spots which previously had dashes</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:38: </span>so let's save that back into the data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:41: </span>frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:46: </span>so df equals df.replace</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:50: </span>um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:53: </span>let me just load it and then clean it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:56: </span>again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">12:58: </span>so now um that looks good we have the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:00: </span>right number of rows</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:02: </span>and now let's try to do this sum again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:05: </span>now the sum actually</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:06: </span>works because we replace the dash with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:08: </span>the missing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:10: </span>um so i think</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:14: </span>this represents a nice concrete step</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:18: </span>in the process um so let's go ahead and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:21: </span>wrap that up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:22: </span>into a function so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:26: </span>um load details</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:30: </span>we can give that a file path</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:34: </span>um and it's going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:37: </span>use read excel and do all these other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:40: </span>things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:40: </span>which we just did</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:43: </span>and ultimately return the data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:46: </span>instead of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:47: </span>that specific file we're going to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:49: </span>the file path</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:51: </span>um so now we can do df equals load</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:54: </span>that details on that file path</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:57: </span>and we should have the same thing which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">13:59: </span>we do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:02: </span>great so now we have to start tackling</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:06: </span>some of those other cleanup pieces that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:08: </span>i mentioned</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:10: </span>so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:15: </span>let's next tackle um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:20: </span>the um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:24: </span>coupons so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:27: </span>for the coupons we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:30: </span>a couple things to deal with let's look</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:34: </span>back at the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:35: </span>sheet over here so we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:39: </span>the fact that we have this percent sign</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:40: </span>on everything and then we also have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:42: </span>these</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:43: </span>ranges to deal with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:48: </span>so there's a lot of different ways to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:50: </span>tackle</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:51: </span>this problem um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:56: </span>you know you could just uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">14:59: </span>use like string methods like we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:03: </span>um we have a string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:06: </span>4.0 percent we can do a strip</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:10: </span>and strip off the percent sign and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:12: </span>you're left without it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:14: </span>and then you can take float of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:18: </span>all that and we get back to the number</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:21: </span>and then divide by 100</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:24: </span>and we get that actual um percentage</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:29: </span>so we can use this kind of approach but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:30: </span>this is not going to work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:32: </span>for the range uh where we have the range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:36: </span>like 4.5 percent to 5.5 percent</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:41: </span>um so we could use similar</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:44: </span>approaches along with split split</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:48: </span>will let us take this string and split</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:51: </span>it into a list</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:53: </span>on a delimitator so here we're putting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:55: </span>the space dash space as a delimiter and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">15:58: </span>now we have these two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:00: </span>uh coupon rates which we can do that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:01: </span>kind of approach with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:03: </span>and then um take the midpoint</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:06: </span>of the range um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:11: </span>so that works perfectly fine but then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:13: </span>you have to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:14: </span>come up with a way to detect which of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:17: </span>these two styles of strings you got</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:19: </span>um you could do a split and then check</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:22: </span>the length</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:23: </span>uh because if you just split that you're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:26: </span>gonna</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:26: </span>get a list of length one if you split</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:28: </span>that you have a list of length two so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:30: </span>you could</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:30: </span>compare off that to make the distinction</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:34: </span>um so that's one possible approach</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:37: </span>um the approach that i'm going to look</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:40: </span>at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:40: </span>in this video is actually using regular</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:42: </span>expressions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:44: </span>so regular expressions are kind of a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:46: </span>mini language within python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:48: </span>and they also exist in many other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:51: </span>programming languages</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:52: </span>and actually have nearly the same syntax</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:54: </span>across</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:55: </span>different programming languages and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">16:58: </span>they're a way of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:00: </span>parsing strings they sleela you match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:04: </span>any kind of pattern and strings and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:06: </span>extract any parts out of them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:08: </span>that you want the downside being that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:11: </span>they do tend to be a little bit</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:12: </span>complicated to write</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:14: </span>and read because they're their own</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:17: </span>little mini language um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:20: </span>but they're extremely powerful so i do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:23: </span>recommend</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:23: </span>um taking some time to try and learn</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:25: </span>them</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:28: </span>and i think i will be releasing at some</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:30: </span>point in the future a video</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:32: </span>dedicated to a regular expression so i'm</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:34: </span>not going to spend a whole lot of time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:35: </span>on them here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:38: </span>but we want to write a regular</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:39: </span>expression to be able to match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:41: </span>this pattern of a percent</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:44: </span>and a dash another percent and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:47: </span>extract the two numbers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:48: </span>out of that um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:52: </span>so in order to write regular expressions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:54: </span>i like to use</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:55: </span>a little tool to help me in that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">17:58: </span>tool so reg x is is the abbreviation for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:02: </span>regular expressions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:04: </span>and regexpal is the tool</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:07: </span>that i like to use to help out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:10: </span>so this tool is nice because you put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:14: </span>your whatever string you're trying to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:17: </span>match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:17: </span>down here and then you start typing your</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:20: </span>regular expression</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:21: </span>up here and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:25: </span>it will show what you're matching so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:27: </span>again this is not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:28: </span>a video to teach you regular expressions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:30: </span>so the syntax is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:32: </span>um you know not going to make any sense</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:34: </span>to you but</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:35: </span>you'll see kind of how this works um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:38: </span>so backslash d will match numbers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:42: </span>and so now you can see it's highlighting</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:43: </span>the numbers here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:45: </span>and if i put a dot</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:48: </span>then you can see it's matching the dots</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:50: </span>as well number</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:51: </span>and then dot</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:55: </span>well actually uh dot means any single</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:58: </span>character</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">18:59: </span>if i escape it with a backslash then it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:01: </span>means the literal dot</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:03: </span>um and when you highlight um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:06: </span>over this and regexpal it also explains</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:09: </span>to you what you have here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:13: </span>and so we then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:16: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:20: </span>can make a character group out of this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:24: </span>and then say that it repeats one or more</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:26: </span>times</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:27: </span>and now we're matching uh you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:31: </span>any number here regardless of how many</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:33: </span>decimal places are there on it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:36: </span>and then we're going to have a percent</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:38: </span>sign and then space dash space</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:42: </span>and then uh you know basically the same</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:44: </span>thing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:45: </span>over here yeah entire same thing over</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:48: </span>here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:50: </span>um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:52: </span>so what am i missing here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">19:59: </span>there we go and then percent and now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:01: </span>it's matching clearly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:03: </span>so this is our regular expression</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:08: </span>and then one more thing that we want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:10: </span>do is put groups in here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:12: </span>and groups are going to allow us to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:13: </span>extract certain parts</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:15: </span>of that string so ultimately you want to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:17: </span>extract</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:18: </span>this here and this here so let's put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:21: </span>those into groups with parentheses</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:24: </span>um so that whole thing is grouped not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:27: </span>the percent sign</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:28: </span>and over here uh same thing not the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:31: </span>percent sign so now we have our regular</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:35: </span>expression and we can bring that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:36: </span>back over into python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:41: </span>so this would be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:44: </span>the range pattern</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:48: </span>um and i'm going to import re for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:51: </span>regular expressions</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:53: </span>and it's going to be re.compile is what</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:55: </span>we're going to do here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:57: </span>again i'm really glossing over the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">20:58: </span>regular expression stuff i plan to do a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:00: </span>whole video on that later</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:04: </span>but you're just seeing quickly how it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:05: </span>can be used here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:08: </span>so then we have uh our string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:12: </span>so let's just find that as a and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:16: </span>uh or let's say that's coupon string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:19: </span>give it a better name</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:21: </span>um so then we can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:24: </span>uh range pattern dot match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:28: </span>on the coupon string and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:32: </span>when we get a match we're gonna see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:33: </span>something like that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:35: </span>um when we don't</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:40: </span>uh then you're going to get none</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:44: </span>as your result um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:48: </span>so what you can do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:52: </span>is then say that's the match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:55: </span>um and then if there's a match um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">21:59: </span>then we can extract the result from it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:02: </span>so then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:03: </span>um the bottom percent uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:06: </span>is going to be match.group uh one group</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:09: </span>zero is the entire thing group one is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:12: </span>the first spot you put parentheses</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:14: </span>um and then the top percent is going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:17: </span>be match.group</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:19: </span>two um and let's just make sure that we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:23: </span>have those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:24: </span>uh correct yep we got those</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:28: </span>and we can then take the float</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:32: </span>of each yep so now we have the numbers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:38: </span>and then the midpoint is going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:40: </span>equal to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:42: </span>the top percent plus the bottom uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:45: </span>percent divided by two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:49: </span>so the midpoint we should get uh five</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:51: </span>for that which we do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:55: </span>so now we can make this into a function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">22:59: </span>um so we can call this standardized</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:02: </span>fixed</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:03: </span>coupons fix the coupon string as an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:06: </span>argument</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:10: </span>okay</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:14: </span>and so we're going to return the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:15: </span>midpoint in that case</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:17: </span>but what about in the case where we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:18: </span>don't have a match so we basically have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:21: </span>two alternatives here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:22: </span>and the other alternative is this where</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:25: </span>um we already looked at</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:30: </span>um for that we just do this kind of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:32: </span>approach so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:34: </span>um if it's not a match then we're going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:37: </span>to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:38: </span>turn this on the coupon string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:44: </span>let's just save the divided by 100 for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:46: </span>later</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:49: </span>so now we have a function where we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:53: </span>give it say 2.5 it gets the 2.5 out of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:57: </span>that or we can give it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">23:59: </span>a range and it's going to get the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:01: </span>midpoint</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:02: </span>of that range</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:06: </span>so now we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:08: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:09: </span>apply this to the correct column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:13: </span>so that's the coupon base right column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:20: </span>so we're going to apply standardizing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:23: </span>the fixed coupons and we get an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:32: </span>error um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:34: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:35: </span>expected string or bytes like object</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:39: </span>um so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:40: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:43: </span>i'm just going to quickly look at what</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:45: </span>that error was</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:47: </span>using the built-in debugger uh and we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:50: </span>can see it's because we're getting a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:52: </span>nand here there is a missing value so we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:55: </span>do have to handle that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">24:56: </span>in here as well if pd dot</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:00: </span>is null coupon string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:03: </span>then we want to return the coupon string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:08: </span>okay now this is working appropriately</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:13: </span>okay um so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:17: </span>we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:18: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:20: </span>um then have this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:24: </span>um as part of our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:28: </span>cleanup the coupon base rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:33: </span>we're going to apply this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:38: </span>okay so um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:47: </span>now we want to handle next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:51: </span>um let's look at the floating rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:55: </span>coupons next so for the floating rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">25:59: </span>we have a similar thing here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:05: </span>where for the floating rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:09: </span>most the time here we just have this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:12: </span>um n a and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:16: </span>that has been converted to nam over here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:18: </span>so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:20: </span>it already has missing values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:22: </span>appropriately</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:26: </span>but what we're going to need to handle</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:27: </span>is these libor plus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:31: </span>so we can use a similar regular</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:34: </span>expression</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:34: </span>approach so i'll bring that over to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:38: </span>regex pal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:40: </span>um let's now put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:44: </span>that as our test string and so what</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:46: </span>we're looking for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:47: </span>is the string libor plus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:50: </span>but plus is a special character in regex</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:53: </span>so you gotta put a backslash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:55: </span>um and then we're going to have numbers</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">26:59: </span>as well as uh decimals and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:02: </span>uh one or more of those and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:06: </span>then a percent sign so that's our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:08: </span>regular expression</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:10: </span>for that um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:14: </span>so that's going to be the libor pattern</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:23: </span>okay and i'll move this up here as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:26: </span>since it's also done</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:29: </span>um and now we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:33: </span>can use a similar approach so libor</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:35: </span>let's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:37: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:40: </span>give that example coupon string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:43: </span>live or plus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:47: </span>and try a similar approach so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:50: </span>we have the libor pattern that match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:55: </span>the coupon string we can see that's a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:57: </span>match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">27:58: </span>um so that's the match and then if match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:03: </span>um and we got to add our group in here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:06: </span>so here the group is is going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:08: </span>around the number again</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:12: </span>um so if match</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:15: </span>then the percentage</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:19: </span>is going to be the float of match.group</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:22: </span>one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:25: </span>and then let's just say that libor</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:30: </span>was one percent</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:33: </span>um then we're going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:38: </span>return</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:42: </span>the library rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:46: </span>times 100 because this is in whole</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:48: </span>percentage points</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:50: </span>plus the percentage and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:53: </span>not quite returning yet we're not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:55: </span>writing our function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">28:56: </span>um so this would be the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:00: </span>you know the overall rate and then we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:03: </span>can look at that rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:07: </span>libor just libor</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:11: </span>and we get 1.75 so that appears to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:13: </span>working correctly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:16: </span>so let's uh wrap that into a function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:20: </span>so standardize</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:24: </span>loading coupons</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:27: </span>takes the coupon spring as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:30: </span>as libor um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:34: </span>and it does this and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:38: </span>you know just in case there are just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:41: </span>normal rates in there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:42: </span>we can throw this in there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:45: </span>and we'll also throw our catch for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:48: </span>missing values</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:49: </span>as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:55: </span>okay so now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">29:58: </span>we should be able to take our floating</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:00: </span>rate column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:05: </span>and apply standardized floating coupons</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:14: </span>and pass the libor rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:19: </span>and it seems it did not work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:22: </span>appropriately um for some reason</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:27: </span>our string was getting through without a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:28: </span>match oh because we never returned</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:31: </span>okay so then we want to return the rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:33: </span>and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:34: </span>now it seems to be working uh let's just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:37: </span>drop an a in there so we can see the two</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:40: </span>yeah they're both live or plus</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:42: </span>uh 0.75 and so that's correct if we put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:46: </span>a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:46: </span>two percent rate now we're getting 2.75</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:49: </span>percent so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:50: </span>everything looks correct</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:54: </span>um so we can now add this into our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:57: </span>cleaning approach</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">30:58: </span>so yeah floating rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:02: </span>he pulls that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:06: </span>um so now this is starting to get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:10: </span>fairly cleaned up we have the coupon and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:12: </span>the floating rates</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:13: </span>both handled well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:18: </span>now we want to um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:21: </span>combine the two um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:24: </span>so we can create a coupon column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:29: </span>so that's going to be equal to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:33: </span>the coupon base rate column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:36: </span>and then we can say well wherever that's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:38: </span>missing we can fill it in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:40: </span>with the floating rate column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:47: </span>so now we have the coupon right here um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">31:51: </span>and it should be taking the values um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:04: </span>yeah so i got the rose or floating rates</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:06: </span>not missing and we can see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:07: </span>it is indeed getting filled in for the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:09: </span>coupon um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:11: </span>so everything is working appropriately</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:15: </span>um and then in order to do calculations</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:18: </span>with it we want to get it to decimal</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:20: </span>so df coupon equals df coupon</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:25: </span>divided by 100.</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:30: </span>and now that looks good</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:34: </span>so now the coupons are cleaned up and we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:37: </span>just have the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:38: </span>maturities to deal with now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:41: </span>um let me just get all this group</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:44: </span>together</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:47: </span>and uh bring this up with my other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:50: </span>functions that are now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:51: </span>working well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:56: </span>okay um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">32:57: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:05: </span>so now we've got to deal with the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:09: </span>maturities</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:11: </span>um and so with the maturities uh we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:14: </span>talked about</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:15: </span>how um well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:19: </span>one we got to get it to date time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:22: </span>instead of just a string is that how it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:25: </span>is now let me look at the data types</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:28: </span>maturities object so yes it's coming as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:30: </span>a string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:32: </span>um and not a date time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:35: </span>um and then we've got to deal with this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:38: </span>year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:38: </span>issue as well um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:42: </span>so let's see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:47: </span>um what is the column name</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:52: </span>so maturity</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">33:58: </span>um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:04: </span>so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:07: </span>trying to look for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:11: </span>where one of these years</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:14: </span>so let's grab 20 that's where we have a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:18: </span>year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:18: </span>so what is the type of that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:22: </span>that's actually coming as an integer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:26: </span>and then one that's a date</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:29: </span>is actually that is actually coming as a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:32: </span>date time not as a string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:36: </span>so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:40: </span>we want to let these basically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:44: </span>pass through as they are they're already</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:47: </span>in date formats that's what we want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:50: </span>um but if we're getting an integer that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:53: </span>means we have just the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:54: </span>and then we've got to convert it um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">34:58: </span>so we can use pandas's two date time to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:01: </span>do that conversion</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:02: </span>for us um so if we just say you know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:05: </span>december 31st</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:07: </span>of may 20 it will be able to take that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:10: </span>and turn it into</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:12: </span>a timestamp which will work for the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:14: </span>daytime purposes</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:17: </span>and so if we you know just have our year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:23: </span>then we can just format the string to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:25: </span>drop in the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:27: </span>and it will do that conversion for us</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:32: </span>so we can do that along with some type</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:35: </span>checking</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:36: </span>in order to standardize the maturities</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:40: </span>so um you know if</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:44: </span>is instance that's a way we can check</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:46: </span>the type</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:47: </span>of um and here let's make this the more</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:51: </span>general maturity because we're not going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:53: </span>to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:54: </span>um know coming in whether it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">35:58: </span>a year or a date time so if it's an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:01: </span>integer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:03: </span>then um that's going to be our result</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:08: </span>um and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:11: </span>otherwise basically it's passing through</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:13: </span>let's just go ahead and make the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:14: </span>function for that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:16: </span>standardized maturity dates</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:22: </span>um so if it's an editor then return the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:26: </span>date time of the end of the year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:28: </span>there needs to be maturity there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:31: </span>um if it's not</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:38: </span>uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:40: </span>you know i guess it could conceivably</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:42: </span>conceivably get loaded</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:43: </span>as a string so if it's not a string or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:45: </span>an integer then we're just going to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:46: </span>return the maturity so if it's a date</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:48: </span>time or if it's missing then just return</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:50: </span>it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:51: </span>um and then basically we get here if</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:55: </span>it's just a regular string</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">36:56: </span>and then we can just return it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:00: </span>um so now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:06: </span>we give it a year that will give us the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:08: </span>end of that year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:09: </span>um if we give it a date time</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:13: </span>then well let's just throw it at the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:15: </span>data frame and see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:17: </span>um so df maturity</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:22: </span>dot apply standardized maturity dates</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:26: </span>and we can see this indeed has worked</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:28: </span>for us</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:29: </span>so we didn't get any errors uh we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:32: </span>remember row 20</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:33: </span>had that year we can see now we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:35: </span>getting the end of the year for that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:38: </span>um and the missing values are passing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:40: </span>through just fine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:43: </span>so that becomes the next step here in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:45: </span>our cleanup process</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:48: </span>we're going to overwrite the maturity</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:49: </span>column with that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">37:55: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:00: </span>and that has allowed it to become a date</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:01: </span>time type as well now that everything is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:03: </span>date</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:06: </span>um so then we just have to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:11: </span>um convert that i'll just you know put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:14: </span>this over here because we're done with</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:16: </span>it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:18: </span>then we have to convert the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:22: </span>um year</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:25: </span>or the the maturity date into a number</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:29: </span>of years from today</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:31: </span>so i'm going to import date time and i</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:33: </span>already covered this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:34: </span>um in a prior video</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:38: </span>um on on handling the market value of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:41: </span>debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:43: </span>in python so i'm just going to copy the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:46: </span>function that we had</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:47: </span>from that this uh year until from date</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:51: </span>so it gets today's date and then looks</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:53: </span>the difference between</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:55: </span>the date we're passing to it and today</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:57: </span>and ultimately gives you a number of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">38:58: </span>years</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:01: </span>so then we can just apply that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:05: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:07: </span>so we take maturity now that it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:10: </span>been all cleaned up and we apply the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:14: </span>year until from date um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:18: </span>then we get the number of years so we</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:20: </span>can add that in here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:22: </span>as df maturity</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:25: </span>years equals that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:31: </span>and now we should have that coming into</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:33: </span>the data frame as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:36: </span>so one last step is to determine</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:41: </span>whether we have enough uh information to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:44: </span>be able to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:45: </span>value the bond um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:49: </span>so there's a few things that will make</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:51: </span>it invalid</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:53: </span>um so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">39:57: </span>um if</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:01: </span>um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:05: </span>uh if the coupon</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:10: </span>is missing um which</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:15: </span>here we can see the rows that have a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:16: </span>missing coupon then we're not able to do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:18: </span>anything</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:19: </span>um if the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:22: </span>maturity years is missing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:28: </span>that also is invalid we have no way to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:31: </span>know</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:32: </span>the value if we don't know how long it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:33: </span>outstanding</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:35: </span>um and then uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:38: </span>if the maturity years is less than</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:41: </span>zero that means the bond is already um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:44: </span>expired and so those are going to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:48: </span>invalid as well so we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:52: </span>um use loc in order to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:54: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">40:55: </span>catch all these three things at once um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:00: </span>so if we just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:05: </span>wrap this in parentheses and then put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:07: </span>this pipe</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:09: </span>operator for or and then we can put</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:11: </span>these other conditions in there as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:19: </span>wrap it in parentheses pipe</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:24: </span>and then if the coupon is null</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:31: </span>so now that should catch all three of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:34: </span>those cases</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:37: </span>um so then we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:41: </span>use that to create a column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:44: </span>which represents whether the row is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:47: </span>valid</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:48: </span>um so yeah we can see we've got the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:50: </span>negative maturities we can see we've got</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:52: </span>the missing coupons</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:54: </span>and we can see we've got the missing</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">41:55: </span>maturities all caught here in one filter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:01: </span>so what we can do is we can say um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:05: </span>create a validity column and just set it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:07: </span>to true</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:08: </span>but wherever any of those things uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:11: </span>conditions are meant for it to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:12: </span>invalid then we set it to false</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:18: </span>so then we have this validity column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:22: </span>and you can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:25: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:28: </span>oh i accidentally had it set</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:31: </span>the entire row of false we want to then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:33: </span>put a comma</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:35: </span>um and then i've just said only the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:38: </span>valid column</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:38: </span>let me get a new data frame and then do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:40: </span>this again and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:42: </span>yes now it was false the rest of the row</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:45: </span>still stays there so we can do other</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:46: </span>things with it like just take it out as</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:48: </span>principle instead of doing an evaluation</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:52: </span>but now we can differentiate between the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:54: </span>two so let's just create a function out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:56: </span>of this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">42:58: </span>so we can call this a sine validity</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:01: </span>of bonds</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:04: </span>and this is going to just work in place</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:07: </span>so we don't even have to return anything</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:10: </span>um i'm going to put this up there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:16: </span>um and now we can just call this on the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:19: </span>data frame add in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:22: </span>um and now we have that in there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:25: </span>as well so this is all working</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:28: </span>everything is all cleaned up now it's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:30: </span>ready for you to go do evaluation from</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:32: </span>here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:34: </span>but let's just wrap all these steps into</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:37: </span>one further function</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:39: </span>so we can call this load and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:43: </span>clean uh statement or</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:46: </span>that details and that's going to take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:49: </span>the file path it's also going to take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:51: </span>the libor rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:53: </span>and it's going to do all these things</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">43:58: </span>and this is going to be the file path</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:02: </span>and it's already using a library in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:03: </span>there and then we're going to return the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:06: </span>data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:07: </span>at the end so now we can just do load</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:10: </span>and clean.details</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:13: </span>on the file path and give it a library</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:15: </span>rate</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:18: </span>and we'll have the data frame all</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:20: </span>cleaned up and ready to go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:24: </span>so now we have our code working</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:28: </span>to be able to do all this cleanup</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:32: </span>but it's kind of you know a decent</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:35: </span>number of lines of code here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:37: </span>it's definitely not ideal to to copy</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:39: </span>paste this into every project and if you</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:41: </span>did</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:43: </span>and you needed to make some updates to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:44: </span>it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:46: </span>that could cause some issues because</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:49: </span>then you've got to go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:50: </span>back and update it and every place that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:52: </span>you've copy pasted it so really you just</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:53: </span>want to have it once</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:54: </span>and be able to use it everywhere so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:57: </span>that's the perfect application</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">44:59: </span>of a python module um so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:04: </span>we can create a module</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:08: </span>um in order to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:11: </span>use this very easily in any of our</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:14: </span>models</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:15: </span>but real quick before we do that i do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:18: </span>want to try</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:18: </span>just loading in different dead details</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:21: </span>to make sure it works with pfizer's</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:23: </span>details as well to see if anything is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:26: </span>different there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:28: </span>so let's give that a try</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:32: </span>um and there did not work so what is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:35: </span>going on here</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:36: </span>you can see you got a key error for the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:38: </span>floating rate um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:40: </span>so that suggests maybe that the um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:43: </span>floating rate column is not there</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:49: </span>but let's see let me open these up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:55: </span>so we can take a look</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">45:59: </span>and we can see in the pfizer data that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:01: </span>the floating rate column is there so why</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:03: </span>are we getting an</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:04: </span>error so let's go back over to python</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:08: </span>and we can use the built-in debugger</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:12: </span>in order to check this out so let's get</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:14: </span>back up to our code</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:16: </span>uh so let's look at the columns of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:19: </span>data frame</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:20: </span>loading rate is right there isn't that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:23: </span>weird</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:24: </span>um so this is definitely</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:27: </span>a gotcha that you may face and loading</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:29: </span>in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:29: </span>[Music]</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:30: </span>um data from uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:34: </span>different sources now let me um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:37: </span>look at that directly oh it looks a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:39: </span>little bit different now that i pull it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:41: </span>out</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:42: </span>um it's floating backslash xaoxa zero</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:46: </span>rate what does that mean so uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:50: </span>it's uh you know a little outside of the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:53: </span>score outside of the scope of the course</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:55: </span>to talk in detail about what's going on</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:57: </span>here but basically</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">46:58: </span>this is another way that white space can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:01: </span>be represented</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:02: </span>in a file and so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:05: </span>what looks to us like a space is being</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:07: </span>represented by this backslash</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:09: </span>xa0 so what we can do here while we're</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:13: </span>loading in the columns</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:14: </span>is just replace any of these xa zeros</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:18: </span>with a space and then we shouldn't have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:21: </span>to worry about it</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:23: </span>so i'm just going to try adding that in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:24: </span>here uh df.columns</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:28: </span>equals um column.replace</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:32: </span>uh this oh uh backslash xa0</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:36: </span>with a space or call in the update</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:40: </span>columns</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:42: </span>and hopefully that will allow it to work</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:45: </span>awesome</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:45: </span>this time it loaded it and now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:48: </span>everything seems to be working properly</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:51: </span>here as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:54: </span>and then let's just check we can go back</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:55: </span>to walmart and everything is still</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:58: </span>working there as well</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">47:59: </span>awesome so this is ready to go um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:03: </span>so now let's let's take this over and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:05: </span>put it into a python module</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:07: </span>so that we can reuse this in multiple</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:10: </span>different</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:10: </span>models so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:14: </span>we can go and create a text file</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:17: </span>and then i'm going to rename this file</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:20: </span>uh you want to pick a name without</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:22: </span>spaces</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:23: </span>so i'm going to call this cap iq debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:25: </span>and you want the file extension to be</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:27: </span>py that's what makes it a python module</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:32: </span>and then we can just uh take</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:36: </span>all of this that's why it was good to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:39: </span>gather it all in one cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:42: </span>and put it over here um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:45: </span>and now save this and so now this is</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:48: </span>just a text file</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:50: </span>or the dot py extension which is in the</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:52: </span>same folder</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">48:56: </span>and now let me totally</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:00: </span>let me just totally start a new jupiter</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:02: </span>notebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:03: </span>um so over here we've never</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:07: </span>defined anything um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:10: </span>and so we don't have any of those that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:12: </span>loading functions ready</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:14: </span>um but let's try import app iq dat</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:20: </span>so we do that and we can see it was</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:22: </span>successful</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:23: </span>and now when we do cap iq dot we can see</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:27: </span>that we have</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:28: </span>all these functions that we defined</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:31: </span>in what was previously the jupiter cell</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:33: </span>and we brought over to the python module</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:36: </span>so now we can do load and clean debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:37: </span>details um</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:39: </span>so df equals and we're going to do that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:43: </span>on the pfizer</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:45: </span>um that details</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:50: </span>and say our libor rate let's just say</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:52: </span>it's two percent now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:54: </span>um that's the live one</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">49:58: </span>and there we go now we have our data</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:00: </span>frame cleaned up ready to go</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:02: </span>and we don't have all that code in this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:05: </span>jupyter notebook</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:06: </span>so now um we're able to take all this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:09: </span>detail</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:10: </span>of all this loading cleaning process for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:13: </span>the data pipeline</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:15: </span>and just offload that so that the reader</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:17: </span>of our model does not have to care</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:19: </span>about how all this works it happens in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:22: </span>the background</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:24: </span>through this cap iq depth module and now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:27: </span>this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:27: </span>module can be reused in as many uh</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:30: </span>different um notebooks as you want</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:34: </span>and if you go and make some changes like</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:37: </span>we had to do</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:38: </span>to be able to handle the father details</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:41: </span>then that's going to go and apply for</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:43: </span>all your different models</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:46: </span>so maybe you decide okay well i'm going</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:48: </span>to add some functionality which prints</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:50: </span>out some summary statistics and</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:53: </span>totals up the principle to make sure</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:55: </span>that you have the right amount of</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:56: </span>principle</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:57: </span>well you just go and change it in this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">50:59: </span>module and then</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:00: </span>all your different models which use this</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:02: </span>module are going to get that</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:04: </span>functionality</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:05: </span>so there's a lot of power in</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:08: </span>restructuring</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:09: </span>your code to use modules</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:13: </span>so that's an overview of how we can</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:16: </span>clean up</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:16: </span>capital iq debt details</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:20: </span>100 percent automated in python so now</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:23: </span>it's ready to use to value</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:25: </span>all the bonds and calculate the total</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:27: </span>market value of debt</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:29: </span>um and we also covered how to</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:32: </span>take that code and offload it into a</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:35: </span>module such that it can be easily reused</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:37: </span>in multiple different projects so</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:41: </span>thanks for listening and see you next</li>
+		<li class="transcript-entry"><span class="transcript-timestamp">51:48: </span>time</li>
+	</ul></div>
+
+|
