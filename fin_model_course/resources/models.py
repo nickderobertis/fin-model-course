@@ -837,4 +837,3 @@ class FinancialModelingResources(ResourceCollection):
 
 
 RESOURCES = FinancialModelingResources()
-RESOURCES.validate_locations()

@@ -16,6 +16,7 @@ from models.content import (
     CollectionMetadata,
     StaticCollectionMetadata,
 )
+from resources.models import RESOURCES
 
 
 def generate_content_metadata_json(
@@ -45,6 +46,7 @@ def generate_content_metadata_json(
 
 if __name__ == "__main__":
     generate_content_metadata_json(drop_unique_old=True)
+
     for path in EXAMPLE_PATHS:
         for ext in ['xlsx', 'xls', 'ipynb', 'py', 'rst', 'csv', 'pdf', 'pptx']:
             generate_content_metadata_json(
@@ -54,3 +56,5 @@ if __name__ == "__main__":
                 hashed_extension=ext,
                 output_extension=ext,
             )
+
+    RESOURCES.validate_locations()
