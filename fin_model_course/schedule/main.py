@@ -25,6 +25,8 @@ LECTURE_11_NAME = 'Introduction to DCF Valuation and Cost of Capital Estimation'
 LECTURE_12_NAME = 'Free Cash Flow Estimation and Forecasting'
 LECTURE_13_NAME = 'Advanced Financial Modeling'
 
+LECTURE_ADV_2_NAME = 'Data Pipelines'
+
 SCHEDULE: Optional[CourseSchedule] = None
 
 

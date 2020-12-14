@@ -1,0 +1,5684 @@
+{
+  "entries": [
+    {
+      "text": "hey everyone this is nick dear burtis",
+      "start": 3.439,
+      "duration": 3.92
+    },
+    {
+      "text": "teaching you financial modeling",
+      "start": 5.44,
+      "duration": 3.76
+    },
+    {
+      "text": "today we're going to be looking at how",
+      "start": 7.359,
+      "duration": 4.32
+    },
+    {
+      "text": "to load in capital iq",
+      "start": 9.2,
+      "duration": 5.439
+    },
+    {
+      "text": "details into python to work with them",
+      "start": 11.679,
+      "duration": 4.481
+    },
+    {
+      "text": "and also how to",
+      "start": 14.639,
+      "duration": 4.4
+    },
+    {
+      "text": "structure our code into a python module",
+      "start": 16.16,
+      "duration": 4.32
+    },
+    {
+      "text": "such that this code can be",
+      "start": 19.039,
+      "duration": 3.521
+    },
+    {
+      "text": "reused anytime that we want to load in",
+      "start": 20.48,
+      "duration": 4.08
+    },
+    {
+      "text": "debt details from capital iq",
+      "start": 22.56,
+      "duration": 4.879
+    },
+    {
+      "text": "regardless of the model this is part of",
+      "start": 24.56,
+      "duration": 4.0
+    },
+    {
+      "text": "our lecture segment",
+      "start": 27.439,
+      "duration": 4.561
+    },
+    {
+      "text": "on data pipelines so",
+      "start": 28.56,
+      "duration": 5.04
+    },
+    {
+      "text": "the data that we're looking at loading",
+      "start": 32.0,
+      "duration": 3.68
+    },
+    {
+      "text": "in here",
+      "start": 33.6,
+      "duration": 3.68
+    },
+    {
+      "text": "comes in the form of this excel",
+      "start": 35.68,
+      "duration": 3.28
+    },
+    {
+      "text": "spreadsheet",
+      "start": 37.28,
+      "duration": 4.0
+    },
+    {
+      "text": "and within that spreadsheet we have",
+      "start": 38.96,
+      "duration": 3.759
+    },
+    {
+      "text": "basically some",
+      "start": 41.28,
+      "duration": 4.0
+    },
+    {
+      "text": "header area which doesn't really matter",
+      "start": 42.719,
+      "duration": 3.121
+    },
+    {
+      "text": "to us",
+      "start": 45.28,
+      "duration": 2.56
+    },
+    {
+      "text": "we don't care about that what we want to",
+      "start": 45.84,
+      "duration": 3.36
+    },
+    {
+      "text": "get out of this",
+      "start": 47.84,
+      "duration": 5.52
+    },
+    {
+      "text": "is this table which in which is in here",
+      "start": 49.2,
+      "duration": 5.519
+    },
+    {
+      "text": "and there's a few things that we're",
+      "start": 53.36,
+      "duration": 3.6
+    },
+    {
+      "text": "going to have to do in order to clean up",
+      "start": 54.719,
+      "duration": 3.281
+    },
+    {
+      "text": "this data so we can",
+      "start": 56.96,
+      "duration": 3.599
+    },
+    {
+      "text": "actually work with it in our model",
+      "start": 58.0,
+      "duration": 3.52
+    },
+    {
+      "text": "before we get to that",
+      "start": 60.559,
+      "duration": 3.041
+    },
+    {
+      "text": "just want to note that there is",
+      "start": 61.52,
+      "duration": 3.52
+    },
+    {
+      "text": "typically a second table",
+      "start": 63.6,
+      "duration": 4.4
+    },
+    {
+      "text": "in here that represents older data so we",
+      "start": 65.04,
+      "duration": 3.84
+    },
+    {
+      "text": "don't want to use",
+      "start": 68.0,
+      "duration": 3.04
+    },
+    {
+      "text": "any of the data from that table only the",
+      "start": 68.88,
+      "duration": 4.96
+    },
+    {
+      "text": "top table",
+      "start": 71.04,
+      "duration": 4.24
+    },
+    {
+      "text": "and then some of the issues that we're",
+      "start": 73.84,
+      "duration": 3.52
+    },
+    {
+      "text": "going to have to deal with is the fact",
+      "start": 75.28,
+      "duration": 3.92
+    },
+    {
+      "text": "that",
+      "start": 77.36,
+      "duration": 4.799
+    },
+    {
+      "text": "these coupon rates actually have the",
+      "start": 79.2,
+      "duration": 4.48
+    },
+    {
+      "text": "percentage sign",
+      "start": 82.159,
+      "duration": 4.64
+    },
+    {
+      "text": "in the string it's not",
+      "start": 83.68,
+      "duration": 5.28
+    },
+    {
+      "text": "just formatted as a percent it actually",
+      "start": 86.799,
+      "duration": 4.401
+    },
+    {
+      "text": "has the percent sign in there",
+      "start": 88.96,
+      "duration": 4.4
+    },
+    {
+      "text": "uh so when we load it into python we",
+      "start": 91.2,
+      "duration": 6.16
+    },
+    {
+      "text": "will also see that percent sign in there",
+      "start": 93.36,
+      "duration": 4.0
+    },
+    {
+      "text": "and the um floating rates",
+      "start": 98.24,
+      "duration": 8.239
+    },
+    {
+      "text": "we have live or plus some rate",
+      "start": 102.399,
+      "duration": 5.441
+    },
+    {
+      "text": "so we're going to want to be able to",
+      "start": 106.479,
+      "duration": 3.121
+    },
+    {
+      "text": "take that and",
+      "start": 107.84,
+      "duration": 4.0
+    },
+    {
+      "text": "plug in a libor rate and get what the",
+      "start": 109.6,
+      "duration": 5.12
+    },
+    {
+      "text": "resulting rate is",
+      "start": 111.84,
+      "duration": 4.959
+    },
+    {
+      "text": "and then we also have these coupon rate",
+      "start": 114.72,
+      "duration": 3.28
+    },
+    {
+      "text": "ranges",
+      "start": 116.799,
+      "duration": 4.081
+    },
+    {
+      "text": "where for the purposes of our model",
+      "start": 118.0,
+      "duration": 4.719
+    },
+    {
+      "text": "we'll just take the midpoint of that",
+      "start": 120.88,
+      "duration": 2.559
+    },
+    {
+      "text": "range",
+      "start": 122.719,
+      "duration": 6.16
+    },
+    {
+      "text": "and use that as the coupon for the bond",
+      "start": 123.439,
+      "duration": 9.681
+    },
+    {
+      "text": "then one other thing is that in order to",
+      "start": 128.879,
+      "duration": 6.481
+    },
+    {
+      "text": "do value calculations with these bonds",
+      "start": 133.12,
+      "duration": 4.08
+    },
+    {
+      "text": "we're going to want to get",
+      "start": 135.36,
+      "duration": 4.959
+    },
+    {
+      "text": "uh that into a number of years or",
+      "start": 137.2,
+      "duration": 4.16
+    },
+    {
+      "text": "maturity",
+      "start": 140.319,
+      "duration": 2.481
+    },
+    {
+      "text": "and so we're going to be converting",
+      "start": 141.36,
+      "duration": 3.519
+    },
+    {
+      "text": "these dates into a number of years",
+      "start": 142.8,
+      "duration": 5.12
+    },
+    {
+      "text": "from today um and then",
+      "start": 144.879,
+      "duration": 5.921
+    },
+    {
+      "text": "some of the maturities only give a year",
+      "start": 147.92,
+      "duration": 4.48
+    },
+    {
+      "text": "and so we're going to assume those are",
+      "start": 150.8,
+      "duration": 3.12
+    },
+    {
+      "text": "at the end of the year",
+      "start": 152.4,
+      "duration": 5.119
+    },
+    {
+      "text": "and handle those that way",
+      "start": 153.92,
+      "duration": 6.48
+    },
+    {
+      "text": "so that's an overview of all the issues",
+      "start": 157.519,
+      "duration": 3.761
+    },
+    {
+      "text": "that we face",
+      "start": 160.4,
+      "duration": 4.16
+    },
+    {
+      "text": "in loading this in so now let's look at",
+      "start": 161.28,
+      "duration": 5.039
+    },
+    {
+      "text": "some python code",
+      "start": 164.56,
+      "duration": 5.759
+    },
+    {
+      "text": "to make that happen and um",
+      "start": 166.319,
+      "duration": 6.081
+    },
+    {
+      "text": "throughout doing this then we're going",
+      "start": 170.319,
+      "duration": 5.041
+    },
+    {
+      "text": "to try to make sure that it's standard",
+      "start": 172.4,
+      "duration": 5.919
+    },
+    {
+      "text": "and reusable such that even though this",
+      "start": 175.36,
+      "duration": 5.28
+    },
+    {
+      "text": "is for walmart we can then do the same",
+      "start": 178.319,
+      "duration": 3.121
+    },
+    {
+      "text": "thing",
+      "start": 180.64,
+      "duration": 3.12
+    },
+    {
+      "text": "or we can then use the same code to load",
+      "start": 181.44,
+      "duration": 3.68
+    },
+    {
+      "text": "any other company's",
+      "start": 183.76,
+      "duration": 3.119
+    },
+    {
+      "text": "details and have them all cleaned up and",
+      "start": 185.12,
+      "duration": 5.119
+    },
+    {
+      "text": "ready to use for our model",
+      "start": 186.879,
+      "duration": 3.36
+    },
+    {
+      "text": "so coming over to the jupiter notebook",
+      "start": 191.76,
+      "duration": 5.759
+    },
+    {
+      "text": "we've talked about two approaches in the",
+      "start": 195.68,
+      "duration": 3.36
+    },
+    {
+      "text": "course which will be useful",
+      "start": 197.519,
+      "duration": 4.0
+    },
+    {
+      "text": "to load this information in we can load",
+      "start": 199.04,
+      "duration": 4.4
+    },
+    {
+      "text": "it in using pandas",
+      "start": 201.519,
+      "duration": 6.561
+    },
+    {
+      "text": "or we can use excel wings",
+      "start": 203.44,
+      "duration": 7.84
+    },
+    {
+      "text": "i will generally go to pandas for any",
+      "start": 208.08,
+      "duration": 3.92
+    },
+    {
+      "text": "usage that",
+      "start": 211.28,
+      "duration": 3.519
+    },
+    {
+      "text": "doesn't require back and forth between",
+      "start": 212.0,
+      "duration": 3.92
+    },
+    {
+      "text": "python",
+      "start": 214.799,
+      "duration": 4.8
+    },
+    {
+      "text": "and excel wings for the most part unless",
+      "start": 215.92,
+      "duration": 5.52
+    },
+    {
+      "text": "i'm just trying to grab a single value",
+      "start": 219.599,
+      "duration": 3.761
+    },
+    {
+      "text": "out of excel then sometimes i'll still",
+      "start": 221.44,
+      "duration": 3.6
+    },
+    {
+      "text": "use excel wings",
+      "start": 223.36,
+      "duration": 3.519
+    },
+    {
+      "text": "but pandas generally is a lot more",
+      "start": 225.04,
+      "duration": 3.36
+    },
+    {
+      "text": "compatible",
+      "start": 226.879,
+      "duration": 4.08
+    },
+    {
+      "text": "you can run the code on linux or",
+      "start": 228.4,
+      "duration": 4.16
+    },
+    {
+      "text": "somewhere else that excel is not",
+      "start": 230.959,
+      "duration": 3.121
+    },
+    {
+      "text": "installed",
+      "start": 232.56,
+      "duration": 3.44
+    },
+    {
+      "text": "and still get the same result so i",
+      "start": 234.08,
+      "duration": 3.84
+    },
+    {
+      "text": "generally will prefer pandas and that's",
+      "start": 236.0,
+      "duration": 5.84
+    },
+    {
+      "text": "what i'll use here in this video",
+      "start": 237.92,
+      "duration": 3.92
+    },
+    {
+      "text": "so import pandas and then i'm going to",
+      "start": 242.159,
+      "duration": 8.401
+    },
+    {
+      "text": "load uh",
+      "start": 247.439,
+      "duration": 7.121
+    },
+    {
+      "text": "the file into a data frame",
+      "start": 250.56,
+      "duration": 6.56
+    },
+    {
+      "text": "the walmart that details i have it here",
+      "start": 254.56,
+      "duration": 4.56
+    },
+    {
+      "text": "in the same folder",
+      "start": 257.12,
+      "duration": 5.76
+    },
+    {
+      "text": "um and then we'll see what we get",
+      "start": 259.12,
+      "duration": 6.4
+    },
+    {
+      "text": "so we can see right away that this does",
+      "start": 262.88,
+      "duration": 4.48
+    },
+    {
+      "text": "not look good right we got",
+      "start": 265.52,
+      "duration": 3.679
+    },
+    {
+      "text": "a bunch of junk in here this is not at",
+      "start": 267.36,
+      "duration": 4.559
+    },
+    {
+      "text": "all the table that we wanted to get",
+      "start": 269.199,
+      "duration": 4.401
+    },
+    {
+      "text": "we've got all these on names we got a",
+      "start": 271.919,
+      "duration": 3.921
+    },
+    {
+      "text": "bunch of missing values in here",
+      "start": 273.6,
+      "duration": 5.039
+    },
+    {
+      "text": "um basically what we're seeing here",
+      "start": 275.84,
+      "duration": 4.799
+    },
+    {
+      "text": "corresponds to",
+      "start": 278.639,
+      "duration": 4.481
+    },
+    {
+      "text": "this top part where indeed there are no",
+      "start": 280.639,
+      "duration": 4.081
+    },
+    {
+      "text": "column headers and we've just got some",
+      "start": 283.12,
+      "duration": 3.68
+    },
+    {
+      "text": "junk up here we don't care about",
+      "start": 284.72,
+      "duration": 5.28
+    },
+    {
+      "text": "the actual table here starts in row",
+      "start": 286.8,
+      "duration": 6.399
+    },
+    {
+      "text": "13. so",
+      "start": 290.0,
+      "duration": 6.96
+    },
+    {
+      "text": "one thing i can do to",
+      "start": 293.199,
+      "duration": 7.041
+    },
+    {
+      "text": "cut off this entire top area is there a",
+      "start": 296.96,
+      "duration": 4.239
+    },
+    {
+      "text": "lot of",
+      "start": 300.24,
+      "duration": 3.92
+    },
+    {
+      "text": "options for the read excel command as",
+      "start": 301.199,
+      "duration": 4.241
+    },
+    {
+      "text": "you can see",
+      "start": 304.16,
+      "duration": 3.68
+    },
+    {
+      "text": "um one such of those options is skip",
+      "start": 305.44,
+      "duration": 3.039
+    },
+    {
+      "text": "rows",
+      "start": 307.84,
+      "duration": 3.76
+    },
+    {
+      "text": "so we can tell it we want to skip",
+      "start": 308.479,
+      "duration": 5.361
+    },
+    {
+      "text": "12 rows while loading it in and just",
+      "start": 311.6,
+      "duration": 4.24
+    },
+    {
+      "text": "start from the 13th row which is where",
+      "start": 313.84,
+      "duration": 4.4
+    },
+    {
+      "text": "we know the data starts",
+      "start": 315.84,
+      "duration": 6.72
+    },
+    {
+      "text": "so now we can see that we got the actual",
+      "start": 318.24,
+      "duration": 6.0
+    },
+    {
+      "text": "names of the columns in that table that",
+      "start": 322.56,
+      "duration": 3.76
+    },
+    {
+      "text": "looks good and it looks like we got the",
+      "start": 324.24,
+      "duration": 4.64
+    },
+    {
+      "text": "values of that table as well",
+      "start": 326.32,
+      "duration": 7.52
+    },
+    {
+      "text": "um now what we can also see is we have",
+      "start": 328.88,
+      "duration": 6.879
+    },
+    {
+      "text": "you know these last two rows are junk so",
+      "start": 333.84,
+      "duration": 3.52
+    },
+    {
+      "text": "let's say um",
+      "start": 335.759,
+      "duration": 5.761
+    },
+    {
+      "text": "you know 127 rows counting the zero",
+      "start": 337.36,
+      "duration": 7.04
+    },
+    {
+      "text": "and then let's hop over and look at how",
+      "start": 341.52,
+      "duration": 4.88
+    },
+    {
+      "text": "many rows",
+      "start": 344.4,
+      "duration": 5.28
+    },
+    {
+      "text": "are in this top table",
+      "start": 346.4,
+      "duration": 6.0
+    },
+    {
+      "text": "and we have 62 rows so clearly we're",
+      "start": 349.68,
+      "duration": 3.84
+    },
+    {
+      "text": "picking up",
+      "start": 352.4,
+      "duration": 4.72
+    },
+    {
+      "text": "this bottom table as well which we don't",
+      "start": 353.52,
+      "duration": 5.22
+    },
+    {
+      "text": "want",
+      "start": 357.12,
+      "duration": 2.88
+    },
+    {
+      "text": "[Music]",
+      "start": 358.74,
+      "duration": 4.22
+    },
+    {
+      "text": "so there's a number of ways that we can",
+      "start": 360.0,
+      "duration": 4.0
+    },
+    {
+      "text": "choose to",
+      "start": 362.96,
+      "duration": 3.03
+    },
+    {
+      "text": "handle that",
+      "start": 364.0,
+      "duration": 3.44
+    },
+    {
+      "text": "[Music]",
+      "start": 365.99,
+      "duration": 5.45
+    },
+    {
+      "text": "i one thing that we can do",
+      "start": 367.44,
+      "duration": 6.4
+    },
+    {
+      "text": "i see",
+      "start": 371.44,
+      "duration": 2.4
+    },
+    {
+      "text": "that well let's look at how the data",
+      "start": 375.039,
+      "duration": 3.921
+    },
+    {
+      "text": "frame looks",
+      "start": 377.199,
+      "duration": 4.961
+    },
+    {
+      "text": "in that middle area so",
+      "start": 378.96,
+      "duration": 4.88
+    },
+    {
+      "text": "of course the with the data frame",
+      "start": 382.16,
+      "duration": 3.2
+    },
+    {
+      "text": "display the middle gets cut out",
+      "start": 383.84,
+      "duration": 4.72
+    },
+    {
+      "text": "so we can use iloke to",
+      "start": 385.36,
+      "duration": 6.08
+    },
+    {
+      "text": "look at some range of rows so we know",
+      "start": 388.56,
+      "duration": 3.759
+    },
+    {
+      "text": "that was",
+      "start": 391.44,
+      "duration": 4.56
+    },
+    {
+      "text": "63 rows so let's just look at row 60 to",
+      "start": 392.319,
+      "duration": 6.16
+    },
+    {
+      "text": "70.",
+      "start": 396.0,
+      "duration": 2.479
+    },
+    {
+      "text": "um so now we can clearly see here",
+      "start": 398.56,
+      "duration": 7.52
+    },
+    {
+      "text": "the table ending and then we can see",
+      "start": 401.919,
+      "duration": 8.321
+    },
+    {
+      "text": "a number of um blank rows",
+      "start": 406.08,
+      "duration": 7.519
+    },
+    {
+      "text": "um and then we have the next table",
+      "start": 410.24,
+      "duration": 5.84
+    },
+    {
+      "text": "starting",
+      "start": 413.599,
+      "duration": 6.32
+    },
+    {
+      "text": "um so there's a number of ways",
+      "start": 416.08,
+      "duration": 7.28
+    },
+    {
+      "text": "we can deal with this to be able to say",
+      "start": 419.919,
+      "duration": 7.361
+    },
+    {
+      "text": "let's cut off everything after",
+      "start": 423.36,
+      "duration": 7.44
+    },
+    {
+      "text": "the table the first table",
+      "start": 427.28,
+      "duration": 6.319
+    },
+    {
+      "text": "so ultimately it's really easy to drop",
+      "start": 430.8,
+      "duration": 4.48
+    },
+    {
+      "text": "rows which have all missing values",
+      "start": 433.599,
+      "duration": 3.921
+    },
+    {
+      "text": "so i'm not too worried about these ones",
+      "start": 435.28,
+      "duration": 4.0
+    },
+    {
+      "text": "once i drop the missing values these",
+      "start": 437.52,
+      "duration": 3.28
+    },
+    {
+      "text": "will be gone",
+      "start": 439.28,
+      "duration": 6.56
+    },
+    {
+      "text": "um it's once we're getting to here",
+      "start": 440.8,
+      "duration": 5.04
+    },
+    {
+      "text": "and we want to try and pick something",
+      "start": 447.68,
+      "duration": 3.84
+    },
+    {
+      "text": "that's going to be consistent",
+      "start": 449.039,
+      "duration": 4.72
+    },
+    {
+      "text": "as we load in data for different",
+      "start": 451.52,
+      "duration": 4.88
+    },
+    {
+      "text": "companies or different time periods",
+      "start": 453.759,
+      "duration": 5.201
+    },
+    {
+      "text": "so you know this is the first kind of",
+      "start": 456.4,
+      "duration": 4.639
+    },
+    {
+      "text": "distinctive marker that we see",
+      "start": 458.96,
+      "duration": 4.079
+    },
+    {
+      "text": "for the second table but we can see this",
+      "start": 461.039,
+      "duration": 4.481
+    },
+    {
+      "text": "is very specific to the date",
+      "start": 463.039,
+      "duration": 4.401
+    },
+    {
+      "text": "so perhaps not a good choice to try and",
+      "start": 465.52,
+      "duration": 3.92
+    },
+    {
+      "text": "target",
+      "start": 467.44,
+      "duration": 4.24
+    },
+    {
+      "text": "now we do have this description here in",
+      "start": 469.44,
+      "duration": 3.68
+    },
+    {
+      "text": "the next row",
+      "start": 471.68,
+      "duration": 3.04
+    },
+    {
+      "text": "signifying that we're starting the next",
+      "start": 473.12,
+      "duration": 3.359
+    },
+    {
+      "text": "table",
+      "start": 474.72,
+      "duration": 3.68
+    },
+    {
+      "text": "so that seems like an appropriate thing",
+      "start": 476.479,
+      "duration": 3.201
+    },
+    {
+      "text": "to target",
+      "start": 478.4,
+      "duration": 4.079
+    },
+    {
+      "text": "um because we can assume that that is",
+      "start": 479.68,
+      "duration": 3.919
+    },
+    {
+      "text": "going to be the same",
+      "start": 482.479,
+      "duration": 3.28
+    },
+    {
+      "text": "for other time periods and other",
+      "start": 483.599,
+      "duration": 4.241
+    },
+    {
+      "text": "companies as well",
+      "start": 485.759,
+      "duration": 5.12
+    },
+    {
+      "text": "um so we can try to target",
+      "start": 487.84,
+      "duration": 6.0
+    },
+    {
+      "text": "that row",
+      "start": 490.879,
+      "duration": 2.961
+    },
+    {
+      "text": "so that row is going to be",
+      "start": 493.919,
+      "duration": 5.201
+    },
+    {
+      "text": "what is going to be where the",
+      "start": 499.84,
+      "duration": 4.16
+    },
+    {
+      "text": "description",
+      "start": 504.84,
+      "duration": 5.079
+    },
+    {
+      "text": "is equal to description",
+      "start": 506.319,
+      "duration": 3.6
+    },
+    {
+      "text": "right um so by that",
+      "start": 510.8,
+      "duration": 6.08
+    },
+    {
+      "text": "we're now able to target this second",
+      "start": 514.24,
+      "duration": 3.919
+    },
+    {
+      "text": "header row",
+      "start": 516.88,
+      "duration": 3.2
+    },
+    {
+      "text": "um and that way we know we've gotten",
+      "start": 518.159,
+      "duration": 4.8
+    },
+    {
+      "text": "into the next table",
+      "start": 520.08,
+      "duration": 2.879
+    },
+    {
+      "text": "but we don't want to cut off just that",
+      "start": 523.44,
+      "duration": 3.28
+    },
+    {
+      "text": "we want to start cutting off",
+      "start": 525.12,
+      "duration": 6.399
+    },
+    {
+      "text": "from the row before um",
+      "start": 526.72,
+      "duration": 7.36
+    },
+    {
+      "text": "so if we",
+      "start": 531.519,
+      "duration": 2.561
+    },
+    {
+      "text": "take the index from that we get",
+      "start": 534.8,
+      "duration": 5.99
+    },
+    {
+      "text": "row 67",
+      "start": 537.92,
+      "duration": 4.8
+    },
+    {
+      "text": "[Music]",
+      "start": 540.79,
+      "duration": 3.85
+    },
+    {
+      "text": "we pull the first value out of that we",
+      "start": 542.72,
+      "duration": 4.559
+    },
+    {
+      "text": "get actually the number 67",
+      "start": 544.64,
+      "duration": 5.36
+    },
+    {
+      "text": "and then if we subtract 1 now we get row",
+      "start": 547.279,
+      "duration": 4.961
+    },
+    {
+      "text": "66",
+      "start": 550.0,
+      "duration": 4.56
+    },
+    {
+      "text": "which is the first row that we don't",
+      "start": 552.24,
+      "duration": 5.039
+    },
+    {
+      "text": "want to keep",
+      "start": 554.56,
+      "duration": 2.719
+    },
+    {
+      "text": "so there then we can",
+      "start": 557.519,
+      "duration": 3.76
+    },
+    {
+      "text": "[Music]",
+      "start": 559.14,
+      "duration": 5.42
+    },
+    {
+      "text": "say that that's our",
+      "start": 561.279,
+      "duration": 7.12
+    },
+    {
+      "text": "fiscal year row index",
+      "start": 564.56,
+      "duration": 3.839
+    },
+    {
+      "text": "because now we're talking about row 66",
+      "start": 568.64,
+      "duration": 4.24
+    },
+    {
+      "text": "here",
+      "start": 570.64,
+      "duration": 2.24
+    },
+    {
+      "text": "um and now we can",
+      "start": 573.2,
+      "duration": 4.0
+    },
+    {
+      "text": "[Music]",
+      "start": 575.86,
+      "duration": 4.22
+    },
+    {
+      "text": "do we can get all of the data frame up",
+      "start": 577.2,
+      "duration": 4.4
+    },
+    {
+      "text": "until",
+      "start": 580.08,
+      "duration": 4.8
+    },
+    {
+      "text": "that fiscal year row index",
+      "start": 581.6,
+      "duration": 4.88
+    },
+    {
+      "text": "so now we'll have those blanks on the",
+      "start": 584.88,
+      "duration": 3.84
+    },
+    {
+      "text": "end but we do not have that fistful",
+      "start": 586.48,
+      "duration": 4.4
+    },
+    {
+      "text": "year row and we do not have the second",
+      "start": 588.72,
+      "duration": 3.119
+    },
+    {
+      "text": "table",
+      "start": 590.88,
+      "duration": 3.36
+    },
+    {
+      "text": "at all",
+      "start": 591.839,
+      "duration": 2.401
+    },
+    {
+      "text": "so that's a good step we've removed that",
+      "start": 595.44,
+      "duration": 4.079
+    },
+    {
+      "text": "second table",
+      "start": 597.44,
+      "duration": 3.68
+    },
+    {
+      "text": "but now we also want to remove these",
+      "start": 599.519,
+      "duration": 4.481
+    },
+    {
+      "text": "blank rows thankfully pandas has",
+      "start": 601.12,
+      "duration": 6.159
+    },
+    {
+      "text": "a convenient method for this drop n a",
+      "start": 604.0,
+      "duration": 5.6
+    },
+    {
+      "text": "um but we want to make sure that we're",
+      "start": 607.279,
+      "duration": 3.361
+    },
+    {
+      "text": "still keeping",
+      "start": 609.6,
+      "duration": 3.04
+    },
+    {
+      "text": "these even if there's no floating rate",
+      "start": 610.64,
+      "duration": 3.759
+    },
+    {
+      "text": "it can still be a valid",
+      "start": 612.64,
+      "duration": 5.439
+    },
+    {
+      "text": "row so we only want to um drop",
+      "start": 614.399,
+      "duration": 6.321
+    },
+    {
+      "text": "when all are missing so we put how",
+      "start": 618.079,
+      "duration": 5.361
+    },
+    {
+      "text": "equals all",
+      "start": 620.72,
+      "duration": 5.44
+    },
+    {
+      "text": "and now we can see that those other rows",
+      "start": 623.44,
+      "duration": 4.24
+    },
+    {
+      "text": "get dropped as well and yet we are",
+      "start": 626.16,
+      "duration": 2.799
+    },
+    {
+      "text": "keeping the",
+      "start": 627.68,
+      "duration": 5.76
+    },
+    {
+      "text": "rows which just have some missing values",
+      "start": 628.959,
+      "duration": 8.161
+    },
+    {
+      "text": "so we can do df equals",
+      "start": 633.44,
+      "duration": 6.48
+    },
+    {
+      "text": "that in order to save it back into the",
+      "start": 637.12,
+      "duration": 4.88
+    },
+    {
+      "text": "result",
+      "start": 639.92,
+      "duration": 6.56
+    },
+    {
+      "text": "um and that way we've got",
+      "start": 642.0,
+      "duration": 9.36
+    },
+    {
+      "text": "now just the first table",
+      "start": 646.48,
+      "duration": 4.88
+    },
+    {
+      "text": "so",
+      "start": 653.44,
+      "duration": 2.24
+    },
+    {
+      "text": "just kind of looking through um one",
+      "start": 656.959,
+      "duration": 5.44
+    },
+    {
+      "text": "other issue that we see in here",
+      "start": 660.079,
+      "duration": 5.521
+    },
+    {
+      "text": "is we have these dashes um",
+      "start": 662.399,
+      "duration": 6.0
+    },
+    {
+      "text": "and pandas this nan represents a missing",
+      "start": 665.6,
+      "duration": 3.28
+    },
+    {
+      "text": "value",
+      "start": 668.399,
+      "duration": 2.801
+    },
+    {
+      "text": "a dash represents that's actually the",
+      "start": 668.88,
+      "duration": 3.92
+    },
+    {
+      "text": "string dash",
+      "start": 671.2,
+      "duration": 4.48
+    },
+    {
+      "text": "and so if we try and do any math with",
+      "start": 672.8,
+      "duration": 4.64
+    },
+    {
+      "text": "these columns which have the dash in",
+      "start": 675.68,
+      "duration": 2.64
+    },
+    {
+      "text": "them",
+      "start": 677.44,
+      "duration": 6.079
+    },
+    {
+      "text": "it is not going to work for example",
+      "start": 678.32,
+      "duration": 5.199
+    },
+    {
+      "text": "so this is the principal do usd column",
+      "start": 684.959,
+      "duration": 5.281
+    },
+    {
+      "text": "so if we try to sum that we're going to",
+      "start": 692.399,
+      "duration": 3.601
+    },
+    {
+      "text": "get an error",
+      "start": 694.72,
+      "duration": 3.44
+    },
+    {
+      "text": "and it's actually going to say you can't",
+      "start": 696.0,
+      "duration": 4.16
+    },
+    {
+      "text": "add a float in a string and that string",
+      "start": 698.16,
+      "duration": 3.44
+    },
+    {
+      "text": "that it's talking about",
+      "start": 700.16,
+      "duration": 5.359
+    },
+    {
+      "text": "is that dash which is in there",
+      "start": 701.6,
+      "duration": 3.919
+    },
+    {
+      "text": "so in order to fix that we can use",
+      "start": 706.0,
+      "duration": 3.12
+    },
+    {
+      "text": "replace",
+      "start": 708.32,
+      "duration": 4.24
+    },
+    {
+      "text": "on the data frame so",
+      "start": 709.12,
+      "duration": 6.48
+    },
+    {
+      "text": "with this same look at the data",
+      "start": 712.56,
+      "duration": 7.04
+    },
+    {
+      "text": "if we do a replace of dash",
+      "start": 715.6,
+      "duration": 7.6
+    },
+    {
+      "text": "with uh we do have to go import numpy as",
+      "start": 719.6,
+      "duration": 6.0
+    },
+    {
+      "text": "mp",
+      "start": 723.2,
+      "duration": 2.4
+    },
+    {
+      "text": "and have to uh",
+      "start": 726.72,
+      "duration": 5.6
+    },
+    {
+      "text": "run that",
+      "start": 729.92,
+      "duration": 2.4
+    },
+    {
+      "text": "um then",
+      "start": 733.839,
+      "duration": 7.521
+    },
+    {
+      "text": "uh the missing value that pandas uses is",
+      "start": 737.6,
+      "duration": 6.799
+    },
+    {
+      "text": "numpy dot nan",
+      "start": 741.36,
+      "duration": 4.96
+    },
+    {
+      "text": "so we're replacing the dash which we're",
+      "start": 744.399,
+      "duration": 3.041
+    },
+    {
+      "text": "seeing here in row",
+      "start": 746.32,
+      "duration": 5.199
+    },
+    {
+      "text": "16 with a nand let's see how that looks",
+      "start": 747.44,
+      "duration": 7.28
+    },
+    {
+      "text": "now row 16 we have a man in each of",
+      "start": 751.519,
+      "duration": 6.88
+    },
+    {
+      "text": "those spots which previously had dashes",
+      "start": 754.72,
+      "duration": 7.119
+    },
+    {
+      "text": "so let's save that back into the data",
+      "start": 758.399,
+      "duration": 5.761
+    },
+    {
+      "text": "frame",
+      "start": 761.839,
+      "duration": 2.321
+    },
+    {
+      "text": "so df equals df.replace",
+      "start": 766.079,
+      "duration": 4.32
+    },
+    {
+      "text": "um",
+      "start": 770.839,
+      "duration": 5.641
+    },
+    {
+      "text": "let me just load it and then clean it",
+      "start": 773.36,
+      "duration": 4.719
+    },
+    {
+      "text": "again",
+      "start": 776.48,
+      "duration": 4.4
+    },
+    {
+      "text": "so now um that looks good we have the",
+      "start": 778.079,
+      "duration": 4.88
+    },
+    {
+      "text": "right number of rows",
+      "start": 780.88,
+      "duration": 4.16
+    },
+    {
+      "text": "and now let's try to do this sum again",
+      "start": 782.959,
+      "duration": 3.12
+    },
+    {
+      "text": "now the sum actually",
+      "start": 785.04,
+      "duration": 3.84
+    },
+    {
+      "text": "works because we replace the dash with",
+      "start": 786.079,
+      "duration": 4.401
+    },
+    {
+      "text": "the missing",
+      "start": 788.88,
+      "duration": 5.28
+    },
+    {
+      "text": "um so i think",
+      "start": 790.48,
+      "duration": 8.24
+    },
+    {
+      "text": "this represents a nice concrete step",
+      "start": 794.16,
+      "duration": 7.28
+    },
+    {
+      "text": "in the process um so let's go ahead and",
+      "start": 798.72,
+      "duration": 3.44
+    },
+    {
+      "text": "wrap that up",
+      "start": 801.44,
+      "duration": 4.56
+    },
+    {
+      "text": "into a function so",
+      "start": 802.16,
+      "duration": 7.84
+    },
+    {
+      "text": "um load details",
+      "start": 806.0,
+      "duration": 8.079
+    },
+    {
+      "text": "we can give that a file path",
+      "start": 810.0,
+      "duration": 7.519
+    },
+    {
+      "text": "um and it's going to",
+      "start": 814.079,
+      "duration": 6.0
+    },
+    {
+      "text": "use read excel and do all these other",
+      "start": 817.519,
+      "duration": 3.12
+    },
+    {
+      "text": "things",
+      "start": 820.079,
+      "duration": 3.361
+    },
+    {
+      "text": "which we just did",
+      "start": 820.639,
+      "duration": 2.801
+    },
+    {
+      "text": "and ultimately return the data frame",
+      "start": 823.92,
+      "duration": 3.279
+    },
+    {
+      "text": "instead of",
+      "start": 826.399,
+      "duration": 2.721
+    },
+    {
+      "text": "that specific file we're going to use",
+      "start": 827.199,
+      "duration": 3.921
+    },
+    {
+      "text": "the file path",
+      "start": 829.12,
+      "duration": 5.04
+    },
+    {
+      "text": "um so now we can do df equals load",
+      "start": 831.12,
+      "duration": 6.64
+    },
+    {
+      "text": "that details on that file path",
+      "start": 834.16,
+      "duration": 5.76
+    },
+    {
+      "text": "and we should have the same thing which",
+      "start": 837.76,
+      "duration": 4.319
+    },
+    {
+      "text": "we do",
+      "start": 839.92,
+      "duration": 6.24
+    },
+    {
+      "text": "great so now we have to start tackling",
+      "start": 842.079,
+      "duration": 6.721
+    },
+    {
+      "text": "some of those other cleanup pieces that",
+      "start": 846.16,
+      "duration": 4.32
+    },
+    {
+      "text": "i mentioned",
+      "start": 848.8,
+      "duration": 3.92
+    },
+    {
+      "text": "so",
+      "start": 850.48,
+      "duration": 2.24
+    },
+    {
+      "text": "let's next tackle um",
+      "start": 855.76,
+      "duration": 8.56
+    },
+    {
+      "text": "the um",
+      "start": 860.079,
+      "duration": 7.44
+    },
+    {
+      "text": "coupons so",
+      "start": 864.32,
+      "duration": 6.639
+    },
+    {
+      "text": "for the coupons we have",
+      "start": 867.519,
+      "duration": 6.961
+    },
+    {
+      "text": "a couple things to deal with let's look",
+      "start": 870.959,
+      "duration": 4.481
+    },
+    {
+      "text": "back at the",
+      "start": 874.48,
+      "duration": 4.719
+    },
+    {
+      "text": "sheet over here so we have",
+      "start": 875.44,
+      "duration": 5.28
+    },
+    {
+      "text": "the fact that we have this percent sign",
+      "start": 879.199,
+      "duration": 3.44
+    },
+    {
+      "text": "on everything and then we also have",
+      "start": 880.72,
+      "duration": 2.4
+    },
+    {
+      "text": "these",
+      "start": 882.639,
+      "duration": 3.681
+    },
+    {
+      "text": "ranges to deal with",
+      "start": 883.12,
+      "duration": 3.2
+    },
+    {
+      "text": "so there's a lot of different ways to",
+      "start": 888.079,
+      "duration": 3.44
+    },
+    {
+      "text": "tackle",
+      "start": 890.639,
+      "duration": 5.44
+    },
+    {
+      "text": "this problem um",
+      "start": 891.519,
+      "duration": 4.56
+    },
+    {
+      "text": "you know you could just uh",
+      "start": 896.399,
+      "duration": 7.041
+    },
+    {
+      "text": "use like string methods like we can",
+      "start": 899.6,
+      "duration": 6.88
+    },
+    {
+      "text": "um we have a string",
+      "start": 903.44,
+      "duration": 7.199
+    },
+    {
+      "text": "4.0 percent we can do a strip",
+      "start": 906.48,
+      "duration": 6.479
+    },
+    {
+      "text": "and strip off the percent sign and then",
+      "start": 910.639,
+      "duration": 3.921
+    },
+    {
+      "text": "you're left without it",
+      "start": 912.959,
+      "duration": 5.041
+    },
+    {
+      "text": "and then you can take float of",
+      "start": 914.56,
+      "duration": 6.719
+    },
+    {
+      "text": "all that and we get back to the number",
+      "start": 918.0,
+      "duration": 6.399
+    },
+    {
+      "text": "and then divide by 100",
+      "start": 921.279,
+      "duration": 7.761
+    },
+    {
+      "text": "and we get that actual um percentage",
+      "start": 924.399,
+      "duration": 6.161
+    },
+    {
+      "text": "so we can use this kind of approach but",
+      "start": 929.04,
+      "duration": 3.52
+    },
+    {
+      "text": "this is not going to work",
+      "start": 930.56,
+      "duration": 5.6
+    },
+    {
+      "text": "for the range uh where we have the range",
+      "start": 932.56,
+      "duration": 8.639
+    },
+    {
+      "text": "like 4.5 percent to 5.5 percent",
+      "start": 936.16,
+      "duration": 8.479
+    },
+    {
+      "text": "um so we could use similar",
+      "start": 941.199,
+      "duration": 6.88
+    },
+    {
+      "text": "approaches along with split split",
+      "start": 944.639,
+      "duration": 6.801
+    },
+    {
+      "text": "will let us take this string and split",
+      "start": 948.079,
+      "duration": 4.961
+    },
+    {
+      "text": "it into a list",
+      "start": 951.44,
+      "duration": 3.839
+    },
+    {
+      "text": "on a delimitator so here we're putting",
+      "start": 953.04,
+      "duration": 4.96
+    },
+    {
+      "text": "the space dash space as a delimiter and",
+      "start": 955.279,
+      "duration": 4.721
+    },
+    {
+      "text": "now we have these two",
+      "start": 958.0,
+      "duration": 3.839
+    },
+    {
+      "text": "uh coupon rates which we can do that",
+      "start": 960.0,
+      "duration": 3.36
+    },
+    {
+      "text": "kind of approach with",
+      "start": 961.839,
+      "duration": 5.041
+    },
+    {
+      "text": "and then um take the midpoint",
+      "start": 963.36,
+      "duration": 7.68
+    },
+    {
+      "text": "of the range um",
+      "start": 966.88,
+      "duration": 6.959
+    },
+    {
+      "text": "so that works perfectly fine but then",
+      "start": 971.04,
+      "duration": 3.599
+    },
+    {
+      "text": "you have to",
+      "start": 973.839,
+      "duration": 3.201
+    },
+    {
+      "text": "come up with a way to detect which of",
+      "start": 974.639,
+      "duration": 4.801
+    },
+    {
+      "text": "these two styles of strings you got",
+      "start": 977.04,
+      "duration": 5.12
+    },
+    {
+      "text": "um you could do a split and then check",
+      "start": 979.44,
+      "duration": 3.6
+    },
+    {
+      "text": "the length",
+      "start": 982.16,
+      "duration": 3.84
+    },
+    {
+      "text": "uh because if you just split that you're",
+      "start": 983.04,
+      "duration": 3.359
+    },
+    {
+      "text": "gonna",
+      "start": 986.0,
+      "duration": 2.48
+    },
+    {
+      "text": "get a list of length one if you split",
+      "start": 986.399,
+      "duration": 3.68
+    },
+    {
+      "text": "that you have a list of length two so",
+      "start": 988.48,
+      "duration": 2.159
+    },
+    {
+      "text": "you could",
+      "start": 990.079,
+      "duration": 4.0
+    },
+    {
+      "text": "compare off that to make the distinction",
+      "start": 990.639,
+      "duration": 6.481
+    },
+    {
+      "text": "um so that's one possible approach",
+      "start": 994.079,
+      "duration": 6.0
+    },
+    {
+      "text": "um the approach that i'm going to look",
+      "start": 997.12,
+      "duration": 3.279
+    },
+    {
+      "text": "at",
+      "start": 1000.079,
+      "duration": 2.88
+    },
+    {
+      "text": "in this video is actually using regular",
+      "start": 1000.399,
+      "duration": 3.761
+    },
+    {
+      "text": "expressions",
+      "start": 1002.959,
+      "duration": 3.201
+    },
+    {
+      "text": "so regular expressions are kind of a",
+      "start": 1004.16,
+      "duration": 4.16
+    },
+    {
+      "text": "mini language within python",
+      "start": 1006.16,
+      "duration": 4.88
+    },
+    {
+      "text": "and they also exist in many other",
+      "start": 1008.32,
+      "duration": 4.16
+    },
+    {
+      "text": "programming languages",
+      "start": 1011.04,
+      "duration": 3.919
+    },
+    {
+      "text": "and actually have nearly the same syntax",
+      "start": 1012.48,
+      "duration": 3.12
+    },
+    {
+      "text": "across",
+      "start": 1014.959,
+      "duration": 3.12
+    },
+    {
+      "text": "different programming languages and",
+      "start": 1015.6,
+      "duration": 4.96
+    },
+    {
+      "text": "they're a way of",
+      "start": 1018.079,
+      "duration": 6.0
+    },
+    {
+      "text": "parsing strings they sleela you match",
+      "start": 1020.56,
+      "duration": 6.16
+    },
+    {
+      "text": "any kind of pattern and strings and",
+      "start": 1024.079,
+      "duration": 4.24
+    },
+    {
+      "text": "extract any parts out of them",
+      "start": 1026.72,
+      "duration": 4.88
+    },
+    {
+      "text": "that you want the downside being that",
+      "start": 1028.319,
+      "duration": 4.64
+    },
+    {
+      "text": "they do tend to be a little bit",
+      "start": 1031.6,
+      "duration": 2.959
+    },
+    {
+      "text": "complicated to write",
+      "start": 1032.959,
+      "duration": 4.641
+    },
+    {
+      "text": "and read because they're their own",
+      "start": 1034.559,
+      "duration": 6.321
+    },
+    {
+      "text": "little mini language um",
+      "start": 1037.6,
+      "duration": 5.439
+    },
+    {
+      "text": "but they're extremely powerful so i do",
+      "start": 1040.88,
+      "duration": 3.039
+    },
+    {
+      "text": "recommend",
+      "start": 1043.039,
+      "duration": 2.8
+    },
+    {
+      "text": "um taking some time to try and learn",
+      "start": 1043.919,
+      "duration": 4.081
+    },
+    {
+      "text": "them",
+      "start": 1045.839,
+      "duration": 2.161
+    },
+    {
+      "text": "and i think i will be releasing at some",
+      "start": 1048.64,
+      "duration": 3.36
+    },
+    {
+      "text": "point in the future a video",
+      "start": 1050.64,
+      "duration": 3.919
+    },
+    {
+      "text": "dedicated to a regular expression so i'm",
+      "start": 1052.0,
+      "duration": 3.84
+    },
+    {
+      "text": "not going to spend a whole lot of time",
+      "start": 1054.559,
+      "duration": 3.761
+    },
+    {
+      "text": "on them here",
+      "start": 1055.84,
+      "duration": 2.48
+    },
+    {
+      "text": "but we want to write a regular",
+      "start": 1058.4,
+      "duration": 3.04
+    },
+    {
+      "text": "expression to be able to match",
+      "start": 1059.679,
+      "duration": 4.961
+    },
+    {
+      "text": "this pattern of a percent",
+      "start": 1061.44,
+      "duration": 5.76
+    },
+    {
+      "text": "and a dash another percent and then",
+      "start": 1064.64,
+      "duration": 4.159
+    },
+    {
+      "text": "extract the two numbers",
+      "start": 1067.2,
+      "duration": 4.88
+    },
+    {
+      "text": "out of that um",
+      "start": 1068.799,
+      "duration": 5.361
+    },
+    {
+      "text": "so in order to write regular expressions",
+      "start": 1072.08,
+      "duration": 3.68
+    },
+    {
+      "text": "i like to use",
+      "start": 1074.16,
+      "duration": 4.8
+    },
+    {
+      "text": "a little tool to help me in that",
+      "start": 1075.76,
+      "duration": 7.2
+    },
+    {
+      "text": "tool so reg x is is the abbreviation for",
+      "start": 1078.96,
+      "duration": 5.44
+    },
+    {
+      "text": "regular expressions",
+      "start": 1082.96,
+      "duration": 4.48
+    },
+    {
+      "text": "and regexpal is the tool",
+      "start": 1084.4,
+      "duration": 6.48
+    },
+    {
+      "text": "that i like to use to help out",
+      "start": 1087.44,
+      "duration": 3.44
+    },
+    {
+      "text": "so this tool is nice because you put",
+      "start": 1090.96,
+      "duration": 6.24
+    },
+    {
+      "text": "your whatever string you're trying to",
+      "start": 1094.4,
+      "duration": 3.279
+    },
+    {
+      "text": "match",
+      "start": 1097.2,
+      "duration": 3.04
+    },
+    {
+      "text": "down here and then you start typing your",
+      "start": 1097.679,
+      "duration": 3.841
+    },
+    {
+      "text": "regular expression",
+      "start": 1100.24,
+      "duration": 4.799
+    },
+    {
+      "text": "up here and",
+      "start": 1101.52,
+      "duration": 5.92
+    },
+    {
+      "text": "it will show what you're matching so",
+      "start": 1105.039,
+      "duration": 3.921
+    },
+    {
+      "text": "again this is not",
+      "start": 1107.44,
+      "duration": 3.28
+    },
+    {
+      "text": "a video to teach you regular expressions",
+      "start": 1108.96,
+      "duration": 3.36
+    },
+    {
+      "text": "so the syntax is",
+      "start": 1110.72,
+      "duration": 3.36
+    },
+    {
+      "text": "um you know not going to make any sense",
+      "start": 1112.32,
+      "duration": 3.44
+    },
+    {
+      "text": "to you but",
+      "start": 1114.08,
+      "duration": 4.8
+    },
+    {
+      "text": "you'll see kind of how this works um",
+      "start": 1115.76,
+      "duration": 6.32
+    },
+    {
+      "text": "so backslash d will match numbers",
+      "start": 1118.88,
+      "duration": 4.96
+    },
+    {
+      "text": "and so now you can see it's highlighting",
+      "start": 1122.08,
+      "duration": 3.04
+    },
+    {
+      "text": "the numbers here",
+      "start": 1123.84,
+      "duration": 4.56
+    },
+    {
+      "text": "and if i put a dot",
+      "start": 1125.12,
+      "duration": 5.439
+    },
+    {
+      "text": "then you can see it's matching the dots",
+      "start": 1128.4,
+      "duration": 3.36
+    },
+    {
+      "text": "as well number",
+      "start": 1130.559,
+      "duration": 3.841
+    },
+    {
+      "text": "and then dot",
+      "start": 1131.76,
+      "duration": 2.64
+    },
+    {
+      "text": "well actually uh dot means any single",
+      "start": 1135.2,
+      "duration": 4.08
+    },
+    {
+      "text": "character",
+      "start": 1138.32,
+      "duration": 3.44
+    },
+    {
+      "text": "if i escape it with a backslash then it",
+      "start": 1139.28,
+      "duration": 4.399
+    },
+    {
+      "text": "means the literal dot",
+      "start": 1141.76,
+      "duration": 5.039
+    },
+    {
+      "text": "um and when you highlight um",
+      "start": 1143.679,
+      "duration": 6.161
+    },
+    {
+      "text": "over this and regexpal it also explains",
+      "start": 1146.799,
+      "duration": 6.081
+    },
+    {
+      "text": "to you what you have here",
+      "start": 1149.84,
+      "duration": 3.04
+    },
+    {
+      "text": "and so we then",
+      "start": 1153.6,
+      "duration": 6.019
+    },
+    {
+      "text": "[Music]",
+      "start": 1156.56,
+      "duration": 3.059
+    },
+    {
+      "text": "can make a character group out of this",
+      "start": 1160.72,
+      "duration": 5.52
+    },
+    {
+      "text": "and then say that it repeats one or more",
+      "start": 1164.32,
+      "duration": 3.04
+    },
+    {
+      "text": "times",
+      "start": 1166.24,
+      "duration": 4.799
+    },
+    {
+      "text": "and now we're matching uh you know",
+      "start": 1167.36,
+      "duration": 5.679
+    },
+    {
+      "text": "any number here regardless of how many",
+      "start": 1171.039,
+      "duration": 5.601
+    },
+    {
+      "text": "decimal places are there on it",
+      "start": 1173.039,
+      "duration": 3.601
+    },
+    {
+      "text": "and then we're going to have a percent",
+      "start": 1176.88,
+      "duration": 5.2
+    },
+    {
+      "text": "sign and then space dash space",
+      "start": 1178.16,
+      "duration": 6.72
+    },
+    {
+      "text": "and then uh you know basically the same",
+      "start": 1182.08,
+      "duration": 3.68
+    },
+    {
+      "text": "thing",
+      "start": 1184.88,
+      "duration": 3.76
+    },
+    {
+      "text": "over here yeah entire same thing over",
+      "start": 1185.76,
+      "duration": 5.039
+    },
+    {
+      "text": "here",
+      "start": 1188.64,
+      "duration": 2.159
+    },
+    {
+      "text": "um",
+      "start": 1190.84,
+      "duration": 6.36
+    },
+    {
+      "text": "so what am i missing here",
+      "start": 1192.96,
+      "duration": 4.24
+    },
+    {
+      "text": "there we go and then percent and now",
+      "start": 1199.2,
+      "duration": 4.24
+    },
+    {
+      "text": "it's matching clearly",
+      "start": 1201.919,
+      "duration": 5.921
+    },
+    {
+      "text": "so this is our regular expression",
+      "start": 1203.44,
+      "duration": 4.4
+    },
+    {
+      "text": "and then one more thing that we want to",
+      "start": 1208.4,
+      "duration": 4.0
+    },
+    {
+      "text": "do is put groups in here",
+      "start": 1210.4,
+      "duration": 3.519
+    },
+    {
+      "text": "and groups are going to allow us to",
+      "start": 1212.4,
+      "duration": 3.04
+    },
+    {
+      "text": "extract certain parts",
+      "start": 1213.919,
+      "duration": 3.76
+    },
+    {
+      "text": "of that string so ultimately you want to",
+      "start": 1215.44,
+      "duration": 3.28
+    },
+    {
+      "text": "extract",
+      "start": 1217.679,
+      "duration": 3.921
+    },
+    {
+      "text": "this here and this here so let's put",
+      "start": 1218.72,
+      "duration": 5.36
+    },
+    {
+      "text": "those into groups with parentheses",
+      "start": 1221.6,
+      "duration": 5.439
+    },
+    {
+      "text": "um so that whole thing is grouped not",
+      "start": 1224.08,
+      "duration": 4.4
+    },
+    {
+      "text": "the percent sign",
+      "start": 1227.039,
+      "duration": 4.801
+    },
+    {
+      "text": "and over here uh same thing not the",
+      "start": 1228.48,
+      "duration": 6.72
+    },
+    {
+      "text": "percent sign so now we have our regular",
+      "start": 1231.84,
+      "duration": 4.959
+    },
+    {
+      "text": "expression and we can bring that",
+      "start": 1235.2,
+      "duration": 5.359
+    },
+    {
+      "text": "back over into python",
+      "start": 1236.799,
+      "duration": 3.76
+    },
+    {
+      "text": "so this would be",
+      "start": 1241.12,
+      "duration": 3.039
+    },
+    {
+      "text": "the range pattern",
+      "start": 1244.24,
+      "duration": 7.04
+    },
+    {
+      "text": "um and i'm going to import re for",
+      "start": 1248.64,
+      "duration": 4.48
+    },
+    {
+      "text": "regular expressions",
+      "start": 1251.28,
+      "duration": 4.56
+    },
+    {
+      "text": "and it's going to be re.compile is what",
+      "start": 1253.12,
+      "duration": 4.16
+    },
+    {
+      "text": "we're going to do here",
+      "start": 1255.84,
+      "duration": 3.04
+    },
+    {
+      "text": "again i'm really glossing over the",
+      "start": 1257.28,
+      "duration": 3.44
+    },
+    {
+      "text": "regular expression stuff i plan to do a",
+      "start": 1258.88,
+      "duration": 4.96
+    },
+    {
+      "text": "whole video on that later",
+      "start": 1260.72,
+      "duration": 3.12
+    },
+    {
+      "text": "but you're just seeing quickly how it",
+      "start": 1264.559,
+      "duration": 3.521
+    },
+    {
+      "text": "can be used here",
+      "start": 1265.84,
+      "duration": 6.719
+    },
+    {
+      "text": "so then we have uh our string",
+      "start": 1268.08,
+      "duration": 8.4
+    },
+    {
+      "text": "so let's just find that as a and then",
+      "start": 1272.559,
+      "duration": 7.36
+    },
+    {
+      "text": "uh or let's say that's coupon string",
+      "start": 1276.48,
+      "duration": 5.28
+    },
+    {
+      "text": "give it a better name",
+      "start": 1279.919,
+      "duration": 4.961
+    },
+    {
+      "text": "um so then we can do",
+      "start": 1281.76,
+      "duration": 6.64
+    },
+    {
+      "text": "uh range pattern dot match",
+      "start": 1284.88,
+      "duration": 7.52
+    },
+    {
+      "text": "on the coupon string and",
+      "start": 1288.4,
+      "duration": 5.36
+    },
+    {
+      "text": "when we get a match we're gonna see",
+      "start": 1292.4,
+      "duration": 3.04
+    },
+    {
+      "text": "something like that",
+      "start": 1293.76,
+      "duration": 6.96
+    },
+    {
+      "text": "um when we don't",
+      "start": 1295.44,
+      "duration": 5.28
+    },
+    {
+      "text": "uh then you're going to get none",
+      "start": 1300.96,
+      "duration": 7.76
+    },
+    {
+      "text": "as your result um",
+      "start": 1304.48,
+      "duration": 7.52
+    },
+    {
+      "text": "so what you can do",
+      "start": 1308.72,
+      "duration": 6.8
+    },
+    {
+      "text": "is then say that's the match",
+      "start": 1312.0,
+      "duration": 7.6
+    },
+    {
+      "text": "um and then if there's a match um",
+      "start": 1315.52,
+      "duration": 6.48
+    },
+    {
+      "text": "then we can extract the result from it",
+      "start": 1319.6,
+      "duration": 3.52
+    },
+    {
+      "text": "so then",
+      "start": 1322.0,
+      "duration": 4.32
+    },
+    {
+      "text": "um the bottom percent uh",
+      "start": 1323.12,
+      "duration": 6.64
+    },
+    {
+      "text": "is going to be match.group uh one group",
+      "start": 1326.32,
+      "duration": 6.0
+    },
+    {
+      "text": "zero is the entire thing group one is",
+      "start": 1329.76,
+      "duration": 5.12
+    },
+    {
+      "text": "the first spot you put parentheses",
+      "start": 1332.32,
+      "duration": 5.44
+    },
+    {
+      "text": "um and then the top percent is going to",
+      "start": 1334.88,
+      "duration": 4.48
+    },
+    {
+      "text": "be match.group",
+      "start": 1337.76,
+      "duration": 5.84
+    },
+    {
+      "text": "two um and let's just make sure that we",
+      "start": 1339.36,
+      "duration": 5.04
+    },
+    {
+      "text": "have those",
+      "start": 1343.6,
+      "duration": 4.88
+    },
+    {
+      "text": "uh correct yep we got those",
+      "start": 1344.4,
+      "duration": 7.68
+    },
+    {
+      "text": "and we can then take the float",
+      "start": 1348.48,
+      "duration": 9.679
+    },
+    {
+      "text": "of each yep so now we have the numbers",
+      "start": 1352.08,
+      "duration": 8.32
+    },
+    {
+      "text": "and then the midpoint is going to be",
+      "start": 1358.159,
+      "duration": 3.841
+    },
+    {
+      "text": "equal to",
+      "start": 1360.4,
+      "duration": 4.88
+    },
+    {
+      "text": "the top percent plus the bottom uh",
+      "start": 1362.0,
+      "duration": 6.88
+    },
+    {
+      "text": "percent divided by two",
+      "start": 1365.28,
+      "duration": 3.6
+    },
+    {
+      "text": "so the midpoint we should get uh five",
+      "start": 1369.6,
+      "duration": 5.68
+    },
+    {
+      "text": "for that which we do",
+      "start": 1371.76,
+      "duration": 7.52
+    },
+    {
+      "text": "so now we can make this into a function",
+      "start": 1375.28,
+      "duration": 6.879
+    },
+    {
+      "text": "um so we can call this standardized",
+      "start": 1379.28,
+      "duration": 4.24
+    },
+    {
+      "text": "fixed",
+      "start": 1382.159,
+      "duration": 4.681
+    },
+    {
+      "text": "coupons fix the coupon string as an",
+      "start": 1383.52,
+      "duration": 6.32
+    },
+    {
+      "text": "argument",
+      "start": 1386.84,
+      "duration": 3.0
+    },
+    {
+      "text": "okay",
+      "start": 1390.64,
+      "duration": 2.32
+    },
+    {
+      "text": "and so we're going to return the",
+      "start": 1394.08,
+      "duration": 3.36
+    },
+    {
+      "text": "midpoint in that case",
+      "start": 1395.36,
+      "duration": 3.439
+    },
+    {
+      "text": "but what about in the case where we",
+      "start": 1397.44,
+      "duration": 3.92
+    },
+    {
+      "text": "don't have a match so we basically have",
+      "start": 1398.799,
+      "duration": 3.76
+    },
+    {
+      "text": "two alternatives here",
+      "start": 1401.36,
+      "duration": 4.24
+    },
+    {
+      "text": "and the other alternative is this where",
+      "start": 1402.559,
+      "duration": 7.841
+    },
+    {
+      "text": "um we already looked at",
+      "start": 1405.6,
+      "duration": 4.8
+    },
+    {
+      "text": "um for that we just do this kind of",
+      "start": 1410.72,
+      "duration": 3.76
+    },
+    {
+      "text": "approach so",
+      "start": 1412.88,
+      "duration": 4.24
+    },
+    {
+      "text": "um if it's not a match then we're going",
+      "start": 1414.48,
+      "duration": 3.6
+    },
+    {
+      "text": "to",
+      "start": 1417.12,
+      "duration": 5.919
+    },
+    {
+      "text": "turn this on the coupon string",
+      "start": 1418.08,
+      "duration": 4.959
+    },
+    {
+      "text": "let's just save the divided by 100 for",
+      "start": 1424.08,
+      "duration": 4.719
+    },
+    {
+      "text": "later",
+      "start": 1426.48,
+      "duration": 2.319
+    },
+    {
+      "text": "so now we have a function where we can",
+      "start": 1429.279,
+      "duration": 7.921
+    },
+    {
+      "text": "give it say 2.5 it gets the 2.5 out of",
+      "start": 1433.76,
+      "duration": 5.279
+    },
+    {
+      "text": "that or we can give it",
+      "start": 1437.2,
+      "duration": 4.56
+    },
+    {
+      "text": "a range and it's going to get the",
+      "start": 1439.039,
+      "duration": 3.361
+    },
+    {
+      "text": "midpoint",
+      "start": 1441.76,
+      "duration": 4.08
+    },
+    {
+      "text": "of that range",
+      "start": 1442.4,
+      "duration": 3.44
+    },
+    {
+      "text": "so now we can",
+      "start": 1446.32,
+      "duration": 3.52
+    },
+    {
+      "text": "[Music]",
+      "start": 1448.21,
+      "duration": 5.709
+    },
+    {
+      "text": "apply this to the correct column",
+      "start": 1449.84,
+      "duration": 10.0
+    },
+    {
+      "text": "so that's the coupon base right column",
+      "start": 1453.919,
+      "duration": 5.921
+    },
+    {
+      "text": "so we're going to apply standardizing",
+      "start": 1460.96,
+      "duration": 11.839
+    },
+    {
+      "text": "the fixed coupons and we get an",
+      "start": 1463.279,
+      "duration": 11.001
+    },
+    {
+      "text": "error um",
+      "start": 1472.799,
+      "duration": 3.12
+    },
+    {
+      "text": "[Music]",
+      "start": 1474.28,
+      "duration": 5.08
+    },
+    {
+      "text": "expected string or bytes like object",
+      "start": 1475.919,
+      "duration": 5.061
+    },
+    {
+      "text": "um so",
+      "start": 1479.36,
+      "duration": 4.0
+    },
+    {
+      "text": "[Music]",
+      "start": 1480.98,
+      "duration": 4.62
+    },
+    {
+      "text": "i'm just going to quickly look at what",
+      "start": 1483.36,
+      "duration": 4.48
+    },
+    {
+      "text": "that error was",
+      "start": 1485.6,
+      "duration": 4.959
+    },
+    {
+      "text": "using the built-in debugger uh and we",
+      "start": 1487.84,
+      "duration": 4.8
+    },
+    {
+      "text": "can see it's because we're getting a",
+      "start": 1490.559,
+      "duration": 5.041
+    },
+    {
+      "text": "nand here there is a missing value so we",
+      "start": 1492.64,
+      "duration": 4.32
+    },
+    {
+      "text": "do have to handle that",
+      "start": 1495.6,
+      "duration": 4.4
+    },
+    {
+      "text": "in here as well if pd dot",
+      "start": 1496.96,
+      "duration": 6.959
+    },
+    {
+      "text": "is null coupon string",
+      "start": 1500.0,
+      "duration": 8.159
+    },
+    {
+      "text": "then we want to return the coupon string",
+      "start": 1503.919,
+      "duration": 9.521
+    },
+    {
+      "text": "okay now this is working appropriately",
+      "start": 1508.159,
+      "duration": 5.281
+    },
+    {
+      "text": "okay um so",
+      "start": 1513.52,
+      "duration": 5.24
+    },
+    {
+      "text": "we can",
+      "start": 1517.919,
+      "duration": 3.041
+    },
+    {
+      "text": "[Music]",
+      "start": 1518.76,
+      "duration": 5.24
+    },
+    {
+      "text": "um then have this",
+      "start": 1520.96,
+      "duration": 7.44
+    },
+    {
+      "text": "um as part of our",
+      "start": 1524.0,
+      "duration": 9.12
+    },
+    {
+      "text": "cleanup the coupon base rate",
+      "start": 1528.4,
+      "duration": 8.639
+    },
+    {
+      "text": "we're going to apply this",
+      "start": 1533.12,
+      "duration": 3.919
+    },
+    {
+      "text": "okay so um",
+      "start": 1538.64,
+      "duration": 5.519
+    },
+    {
+      "text": "now we want to handle next",
+      "start": 1547.6,
+      "duration": 7.679
+    },
+    {
+      "text": "um let's look at the floating rate",
+      "start": 1551.279,
+      "duration": 8.241
+    },
+    {
+      "text": "coupons next so for the floating rate",
+      "start": 1555.279,
+      "duration": 7.921
+    },
+    {
+      "text": "we have a similar thing here",
+      "start": 1559.52,
+      "duration": 3.68
+    },
+    {
+      "text": "where for the floating rate",
+      "start": 1565.039,
+      "duration": 3.12
+    },
+    {
+      "text": "most the time here we just have this",
+      "start": 1569.039,
+      "duration": 7.041
+    },
+    {
+      "text": "um n a and",
+      "start": 1572.64,
+      "duration": 6.32
+    },
+    {
+      "text": "that has been converted to nam over here",
+      "start": 1576.08,
+      "duration": 4.8
+    },
+    {
+      "text": "so",
+      "start": 1578.96,
+      "duration": 3.88
+    },
+    {
+      "text": "it already has missing values",
+      "start": 1580.88,
+      "duration": 4.96
+    },
+    {
+      "text": "appropriately",
+      "start": 1582.84,
+      "duration": 3.0
+    },
+    {
+      "text": "but what we're going to need to handle",
+      "start": 1586.08,
+      "duration": 4.88
+    },
+    {
+      "text": "is these libor plus",
+      "start": 1587.52,
+      "duration": 3.44
+    },
+    {
+      "text": "so we can use a similar regular",
+      "start": 1591.6,
+      "duration": 3.36
+    },
+    {
+      "text": "expression",
+      "start": 1594.08,
+      "duration": 4.32
+    },
+    {
+      "text": "approach so i'll bring that over to",
+      "start": 1594.96,
+      "duration": 5.28
+    },
+    {
+      "text": "regex pal",
+      "start": 1598.4,
+      "duration": 5.92
+    },
+    {
+      "text": "um let's now put",
+      "start": 1600.24,
+      "duration": 6.72
+    },
+    {
+      "text": "that as our test string and so what",
+      "start": 1604.32,
+      "duration": 3.52
+    },
+    {
+      "text": "we're looking for",
+      "start": 1606.96,
+      "duration": 4.0
+    },
+    {
+      "text": "is the string libor plus",
+      "start": 1607.84,
+      "duration": 5.36
+    },
+    {
+      "text": "but plus is a special character in regex",
+      "start": 1610.96,
+      "duration": 4.319
+    },
+    {
+      "text": "so you gotta put a backslash",
+      "start": 1613.2,
+      "duration": 6.079
+    },
+    {
+      "text": "um and then we're going to have numbers",
+      "start": 1615.279,
+      "duration": 7.361
+    },
+    {
+      "text": "as well as uh decimals and",
+      "start": 1619.279,
+      "duration": 6.801
+    },
+    {
+      "text": "uh one or more of those and",
+      "start": 1622.64,
+      "duration": 6.32
+    },
+    {
+      "text": "then a percent sign so that's our",
+      "start": 1626.08,
+      "duration": 3.92
+    },
+    {
+      "text": "regular expression",
+      "start": 1628.96,
+      "duration": 5.36
+    },
+    {
+      "text": "for that um",
+      "start": 1630.0,
+      "duration": 11.84
+    },
+    {
+      "text": "so that's going to be the libor pattern",
+      "start": 1634.32,
+      "duration": 7.52
+    },
+    {
+      "text": "okay and i'll move this up here as well",
+      "start": 1643.36,
+      "duration": 6.0
+    },
+    {
+      "text": "since it's also done",
+      "start": 1646.32,
+      "duration": 3.04
+    },
+    {
+      "text": "um and now we",
+      "start": 1649.52,
+      "duration": 6.32
+    },
+    {
+      "text": "can use a similar approach so libor",
+      "start": 1653.12,
+      "duration": 4.4
+    },
+    {
+      "text": "let's",
+      "start": 1655.84,
+      "duration": 4.24
+    },
+    {
+      "text": "[Music]",
+      "start": 1657.52,
+      "duration": 6.08
+    },
+    {
+      "text": "give that example coupon string",
+      "start": 1660.08,
+      "duration": 6.4
+    },
+    {
+      "text": "live or plus",
+      "start": 1663.6,
+      "duration": 2.88
+    },
+    {
+      "text": "and try a similar approach so",
+      "start": 1667.279,
+      "duration": 7.76
+    },
+    {
+      "text": "we have the libor pattern that match",
+      "start": 1670.88,
+      "duration": 6.159
+    },
+    {
+      "text": "the coupon string we can see that's a",
+      "start": 1675.039,
+      "duration": 3.201
+    },
+    {
+      "text": "match",
+      "start": 1677.039,
+      "duration": 6.401
+    },
+    {
+      "text": "um so that's the match and then if match",
+      "start": 1678.24,
+      "duration": 8.559
+    },
+    {
+      "text": "um and we got to add our group in here",
+      "start": 1683.44,
+      "duration": 5.359
+    },
+    {
+      "text": "so here the group is is going to be",
+      "start": 1686.799,
+      "duration": 5.12
+    },
+    {
+      "text": "around the number again",
+      "start": 1688.799,
+      "duration": 3.12
+    },
+    {
+      "text": "um so if match",
+      "start": 1692.799,
+      "duration": 6.48
+    },
+    {
+      "text": "then the percentage",
+      "start": 1695.919,
+      "duration": 6.24
+    },
+    {
+      "text": "is going to be the float of match.group",
+      "start": 1699.279,
+      "duration": 5.201
+    },
+    {
+      "text": "one",
+      "start": 1702.159,
+      "duration": 2.321
+    },
+    {
+      "text": "and then let's just say that libor",
+      "start": 1705.52,
+      "duration": 7.68
+    },
+    {
+      "text": "was one percent",
+      "start": 1710.08,
+      "duration": 8.56
+    },
+    {
+      "text": "um then we're going to",
+      "start": 1713.2,
+      "duration": 5.44
+    },
+    {
+      "text": "return",
+      "start": 1718.96,
+      "duration": 2.48
+    },
+    {
+      "text": "the library rate",
+      "start": 1722.84,
+      "duration": 6.12
+    },
+    {
+      "text": "times 100 because this is in whole",
+      "start": 1726.88,
+      "duration": 3.919
+    },
+    {
+      "text": "percentage points",
+      "start": 1728.96,
+      "duration": 4.959
+    },
+    {
+      "text": "plus the percentage and",
+      "start": 1730.799,
+      "duration": 4.401
+    },
+    {
+      "text": "not quite returning yet we're not",
+      "start": 1733.919,
+      "duration": 3.041
+    },
+    {
+      "text": "writing our function",
+      "start": 1735.2,
+      "duration": 4.8
+    },
+    {
+      "text": "um so this would be the",
+      "start": 1736.96,
+      "duration": 6.319
+    },
+    {
+      "text": "you know the overall rate and then we",
+      "start": 1740.0,
+      "duration": 6.159
+    },
+    {
+      "text": "can look at that rate",
+      "start": 1743.279,
+      "duration": 2.88
+    },
+    {
+      "text": "libor just libor",
+      "start": 1747.6,
+      "duration": 6.319
+    },
+    {
+      "text": "and we get 1.75 so that appears to be",
+      "start": 1751.12,
+      "duration": 5.36
+    },
+    {
+      "text": "working correctly",
+      "start": 1753.919,
+      "duration": 6.64
+    },
+    {
+      "text": "so let's uh wrap that into a function",
+      "start": 1756.48,
+      "duration": 4.079
+    },
+    {
+      "text": "so standardize",
+      "start": 1760.88,
+      "duration": 6.88
+    },
+    {
+      "text": "loading coupons",
+      "start": 1764.32,
+      "duration": 6.64
+    },
+    {
+      "text": "takes the coupon spring as well",
+      "start": 1767.76,
+      "duration": 7.2
+    },
+    {
+      "text": "as libor um",
+      "start": 1770.96,
+      "duration": 7.36
+    },
+    {
+      "text": "and it does this and",
+      "start": 1774.96,
+      "duration": 6.079
+    },
+    {
+      "text": "you know just in case there are just",
+      "start": 1778.32,
+      "duration": 3.76
+    },
+    {
+      "text": "normal rates in there",
+      "start": 1781.039,
+      "duration": 4.321
+    },
+    {
+      "text": "we can throw this in there",
+      "start": 1782.08,
+      "duration": 3.28
+    },
+    {
+      "text": "and we'll also throw our catch for",
+      "start": 1785.679,
+      "duration": 4.161
+    },
+    {
+      "text": "missing values",
+      "start": 1788.88,
+      "duration": 6.32
+    },
+    {
+      "text": "as well",
+      "start": 1789.84,
+      "duration": 8.559
+    },
+    {
+      "text": "okay so now",
+      "start": 1795.2,
+      "duration": 4.88
+    },
+    {
+      "text": "we should be able to take our floating",
+      "start": 1798.399,
+      "duration": 4.321
+    },
+    {
+      "text": "rate column",
+      "start": 1800.08,
+      "duration": 2.64
+    },
+    {
+      "text": "and apply standardized floating coupons",
+      "start": 1805.6,
+      "duration": 6.24
+    },
+    {
+      "text": "and pass the libor rate",
+      "start": 1814.32,
+      "duration": 3.359
+    },
+    {
+      "text": "and it seems it did not work",
+      "start": 1819.52,
+      "duration": 7.68
+    },
+    {
+      "text": "appropriately um for some reason",
+      "start": 1822.799,
+      "duration": 6.081
+    },
+    {
+      "text": "our string was getting through without a",
+      "start": 1827.2,
+      "duration": 4.0
+    },
+    {
+      "text": "match oh because we never returned",
+      "start": 1828.88,
+      "duration": 5.039
+    },
+    {
+      "text": "okay so then we want to return the rate",
+      "start": 1831.2,
+      "duration": 3.44
+    },
+    {
+      "text": "and",
+      "start": 1833.919,
+      "duration": 3.921
+    },
+    {
+      "text": "now it seems to be working uh let's just",
+      "start": 1834.64,
+      "duration": 5.919
+    },
+    {
+      "text": "drop an a in there so we can see the two",
+      "start": 1837.84,
+      "duration": 4.559
+    },
+    {
+      "text": "yeah they're both live or plus",
+      "start": 1840.559,
+      "duration": 5.84
+    },
+    {
+      "text": "uh 0.75 and so that's correct if we put",
+      "start": 1842.399,
+      "duration": 4.321
+    },
+    {
+      "text": "a",
+      "start": 1846.399,
+      "duration": 2.961
+    },
+    {
+      "text": "two percent rate now we're getting 2.75",
+      "start": 1846.72,
+      "duration": 3.28
+    },
+    {
+      "text": "percent so",
+      "start": 1849.36,
+      "duration": 3.679
+    },
+    {
+      "text": "everything looks correct",
+      "start": 1850.0,
+      "duration": 3.039
+    },
+    {
+      "text": "um so we can now add this into our",
+      "start": 1854.72,
+      "duration": 4.16
+    },
+    {
+      "text": "cleaning approach",
+      "start": 1857.36,
+      "duration": 4.88
+    },
+    {
+      "text": "so yeah floating rate",
+      "start": 1858.88,
+      "duration": 6.96
+    },
+    {
+      "text": "he pulls that",
+      "start": 1862.24,
+      "duration": 3.6
+    },
+    {
+      "text": "um so now this is starting to get",
+      "start": 1866.64,
+      "duration": 6.08
+    },
+    {
+      "text": "fairly cleaned up we have the coupon and",
+      "start": 1870.08,
+      "duration": 3.68
+    },
+    {
+      "text": "the floating rates",
+      "start": 1872.72,
+      "duration": 5.36
+    },
+    {
+      "text": "both handled well",
+      "start": 1873.76,
+      "duration": 7.519
+    },
+    {
+      "text": "now we want to um",
+      "start": 1878.08,
+      "duration": 6.719
+    },
+    {
+      "text": "combine the two um",
+      "start": 1881.279,
+      "duration": 8.4
+    },
+    {
+      "text": "so we can create a coupon column",
+      "start": 1884.799,
+      "duration": 4.88
+    },
+    {
+      "text": "so that's going to be equal to",
+      "start": 1889.76,
+      "duration": 6.96
+    },
+    {
+      "text": "the coupon base rate column",
+      "start": 1893.12,
+      "duration": 5.52
+    },
+    {
+      "text": "and then we can say well wherever that's",
+      "start": 1896.72,
+      "duration": 4.16
+    },
+    {
+      "text": "missing we can fill it in",
+      "start": 1898.64,
+      "duration": 9.12
+    },
+    {
+      "text": "with the floating rate column",
+      "start": 1900.88,
+      "duration": 10.24
+    },
+    {
+      "text": "so now we have the coupon right here um",
+      "start": 1907.76,
+      "duration": 14.08
+    },
+    {
+      "text": "and it should be taking the values um",
+      "start": 1911.12,
+      "duration": 10.72
+    },
+    {
+      "text": "yeah so i got the rose or floating rates",
+      "start": 1924.72,
+      "duration": 3.12
+    },
+    {
+      "text": "not missing and we can see",
+      "start": 1926.559,
+      "duration": 2.881
+    },
+    {
+      "text": "it is indeed getting filled in for the",
+      "start": 1927.84,
+      "duration": 3.92
+    },
+    {
+      "text": "coupon um",
+      "start": 1929.44,
+      "duration": 6.239
+    },
+    {
+      "text": "so everything is working appropriately",
+      "start": 1931.76,
+      "duration": 6.88
+    },
+    {
+      "text": "um and then in order to do calculations",
+      "start": 1935.679,
+      "duration": 4.641
+    },
+    {
+      "text": "with it we want to get it to decimal",
+      "start": 1938.64,
+      "duration": 6.879
+    },
+    {
+      "text": "so df coupon equals df coupon",
+      "start": 1940.32,
+      "duration": 9.52
+    },
+    {
+      "text": "divided by 100.",
+      "start": 1945.519,
+      "duration": 4.321
+    },
+    {
+      "text": "and now that looks good",
+      "start": 1950.0,
+      "duration": 3.44
+    },
+    {
+      "text": "so now the coupons are cleaned up and we",
+      "start": 1954.08,
+      "duration": 4.16
+    },
+    {
+      "text": "just have the",
+      "start": 1957.36,
+      "duration": 3.919
+    },
+    {
+      "text": "maturities to deal with now",
+      "start": 1958.24,
+      "duration": 6.159
+    },
+    {
+      "text": "um let me just get all this group",
+      "start": 1961.279,
+      "duration": 5.441
+    },
+    {
+      "text": "together",
+      "start": 1964.399,
+      "duration": 2.321
+    },
+    {
+      "text": "and uh bring this up with my other",
+      "start": 1967.279,
+      "duration": 4.24
+    },
+    {
+      "text": "functions that are now",
+      "start": 1970.08,
+      "duration": 5.92
+    },
+    {
+      "text": "working well",
+      "start": 1971.519,
+      "duration": 5.701
+    },
+    {
+      "text": "okay um",
+      "start": 1976.0,
+      "duration": 4.239
+    },
+    {
+      "text": "[Music]",
+      "start": 1977.22,
+      "duration": 3.019
+    },
+    {
+      "text": "so now we've got to deal with the",
+      "start": 1985.919,
+      "duration": 5.201
+    },
+    {
+      "text": "maturities",
+      "start": 1989.919,
+      "duration": 4.721
+    },
+    {
+      "text": "um and so with the maturities uh we",
+      "start": 1991.12,
+      "duration": 4.48
+    },
+    {
+      "text": "talked about",
+      "start": 1994.64,
+      "duration": 4.399
+    },
+    {
+      "text": "how um well",
+      "start": 1995.6,
+      "duration": 6.64
+    },
+    {
+      "text": "one we got to get it to date time",
+      "start": 1999.039,
+      "duration": 6.401
+    },
+    {
+      "text": "instead of just a string is that how it",
+      "start": 2002.24,
+      "duration": 6.24
+    },
+    {
+      "text": "is now let me look at the data types",
+      "start": 2005.44,
+      "duration": 5.52
+    },
+    {
+      "text": "maturities object so yes it's coming as",
+      "start": 2008.48,
+      "duration": 3.679
+    },
+    {
+      "text": "a string",
+      "start": 2010.96,
+      "duration": 4.559
+    },
+    {
+      "text": "um and not a date time",
+      "start": 2012.159,
+      "duration": 5.841
+    },
+    {
+      "text": "um and then we've got to deal with this",
+      "start": 2015.519,
+      "duration": 3.201
+    },
+    {
+      "text": "year",
+      "start": 2018.0,
+      "duration": 4.72
+    },
+    {
+      "text": "issue as well um",
+      "start": 2018.72,
+      "duration": 8.319
+    },
+    {
+      "text": "so let's see",
+      "start": 2022.72,
+      "duration": 4.319
+    },
+    {
+      "text": "um what is the column name",
+      "start": 2027.44,
+      "duration": 8.16
+    },
+    {
+      "text": "so maturity",
+      "start": 2032.72,
+      "duration": 2.88
+    },
+    {
+      "text": "um",
+      "start": 2038.88,
+      "duration": 2.56
+    },
+    {
+      "text": "so",
+      "start": 2044.84,
+      "duration": 5.559
+    },
+    {
+      "text": "trying to look for",
+      "start": 2047.6,
+      "duration": 2.799
+    },
+    {
+      "text": "where one of these years",
+      "start": 2051.52,
+      "duration": 6.639
+    },
+    {
+      "text": "so let's grab 20 that's where we have a",
+      "start": 2054.639,
+      "duration": 4.0
+    },
+    {
+      "text": "year",
+      "start": 2058.159,
+      "duration": 4.0
+    },
+    {
+      "text": "so what is the type of that",
+      "start": 2058.639,
+      "duration": 3.52
+    },
+    {
+      "text": "that's actually coming as an integer",
+      "start": 2062.399,
+      "duration": 3.76
+    },
+    {
+      "text": "and then one that's a date",
+      "start": 2066.399,
+      "duration": 5.601
+    },
+    {
+      "text": "is actually that is actually coming as a",
+      "start": 2069.919,
+      "duration": 5.92
+    },
+    {
+      "text": "date time not as a string",
+      "start": 2072.0,
+      "duration": 3.839
+    },
+    {
+      "text": "so",
+      "start": 2076.24,
+      "duration": 2.24
+    },
+    {
+      "text": "we want to let these basically",
+      "start": 2080.639,
+      "duration": 6.561
+    },
+    {
+      "text": "pass through as they are they're already",
+      "start": 2084.0,
+      "duration": 6.0
+    },
+    {
+      "text": "in date formats that's what we want",
+      "start": 2087.2,
+      "duration": 5.84
+    },
+    {
+      "text": "um but if we're getting an integer that",
+      "start": 2090.0,
+      "duration": 4.56
+    },
+    {
+      "text": "means we have just the year",
+      "start": 2093.04,
+      "duration": 5.68
+    },
+    {
+      "text": "and then we've got to convert it um",
+      "start": 2094.56,
+      "duration": 6.559
+    },
+    {
+      "text": "so we can use pandas's two date time to",
+      "start": 2098.72,
+      "duration": 3.28
+    },
+    {
+      "text": "do that conversion",
+      "start": 2101.119,
+      "duration": 4.641
+    },
+    {
+      "text": "for us um so if we just say you know",
+      "start": 2102.0,
+      "duration": 5.119
+    },
+    {
+      "text": "december 31st",
+      "start": 2105.76,
+      "duration": 4.96
+    },
+    {
+      "text": "of may 20 it will be able to take that",
+      "start": 2107.119,
+      "duration": 5.201
+    },
+    {
+      "text": "and turn it into",
+      "start": 2110.72,
+      "duration": 3.52
+    },
+    {
+      "text": "a timestamp which will work for the",
+      "start": 2112.32,
+      "duration": 4.799
+    },
+    {
+      "text": "daytime purposes",
+      "start": 2114.24,
+      "duration": 8.879
+    },
+    {
+      "text": "and so if we you know just have our year",
+      "start": 2117.119,
+      "duration": 6.0
+    },
+    {
+      "text": "then we can just format the string to",
+      "start": 2123.599,
+      "duration": 4.24
+    },
+    {
+      "text": "drop in the year",
+      "start": 2125.28,
+      "duration": 7.12
+    },
+    {
+      "text": "and it will do that conversion for us",
+      "start": 2127.839,
+      "duration": 7.441
+    },
+    {
+      "text": "so we can do that along with some type",
+      "start": 2132.4,
+      "duration": 3.76
+    },
+    {
+      "text": "checking",
+      "start": 2135.28,
+      "duration": 5.2
+    },
+    {
+      "text": "in order to standardize the maturities",
+      "start": 2136.16,
+      "duration": 8.08
+    },
+    {
+      "text": "so um you know if",
+      "start": 2140.48,
+      "duration": 5.68
+    },
+    {
+      "text": "is instance that's a way we can check",
+      "start": 2144.24,
+      "duration": 3.119
+    },
+    {
+      "text": "the type",
+      "start": 2146.16,
+      "duration": 5.28
+    },
+    {
+      "text": "of um and here let's make this the more",
+      "start": 2147.359,
+      "duration": 6.161
+    },
+    {
+      "text": "general maturity because we're not going",
+      "start": 2151.44,
+      "duration": 3.52
+    },
+    {
+      "text": "to",
+      "start": 2153.52,
+      "duration": 4.559
+    },
+    {
+      "text": "um know coming in whether it's",
+      "start": 2154.96,
+      "duration": 6.56
+    },
+    {
+      "text": "a year or a date time so if it's an",
+      "start": 2158.079,
+      "duration": 5.201
+    },
+    {
+      "text": "integer",
+      "start": 2161.52,
+      "duration": 6.72
+    },
+    {
+      "text": "then um that's going to be our result",
+      "start": 2163.28,
+      "duration": 8.24
+    },
+    {
+      "text": "um and",
+      "start": 2168.24,
+      "duration": 5.2
+    },
+    {
+      "text": "otherwise basically it's passing through",
+      "start": 2171.52,
+      "duration": 3.12
+    },
+    {
+      "text": "let's just go ahead and make the",
+      "start": 2173.44,
+      "duration": 2.639
+    },
+    {
+      "text": "function for that",
+      "start": 2174.64,
+      "duration": 6.08
+    },
+    {
+      "text": "standardized maturity dates",
+      "start": 2176.079,
+      "duration": 4.641
+    },
+    {
+      "text": "um so if it's an editor then return the",
+      "start": 2182.88,
+      "duration": 5.68
+    },
+    {
+      "text": "date time of the end of the year",
+      "start": 2186.32,
+      "duration": 5.279
+    },
+    {
+      "text": "there needs to be maturity there",
+      "start": 2188.56,
+      "duration": 7.6
+    },
+    {
+      "text": "um if it's not",
+      "start": 2191.599,
+      "duration": 4.561
+    },
+    {
+      "text": "uh",
+      "start": 2198.839,
+      "duration": 3.401
+    },
+    {
+      "text": "you know i guess it could conceivably",
+      "start": 2200.4,
+      "duration": 3.04
+    },
+    {
+      "text": "conceivably get loaded",
+      "start": 2202.24,
+      "duration": 2.8
+    },
+    {
+      "text": "as a string so if it's not a string or",
+      "start": 2203.44,
+      "duration": 3.44
+    },
+    {
+      "text": "an integer then we're just going to",
+      "start": 2205.04,
+      "duration": 3.52
+    },
+    {
+      "text": "return the maturity so if it's a date",
+      "start": 2206.88,
+      "duration": 3.84
+    },
+    {
+      "text": "time or if it's missing then just return",
+      "start": 2208.56,
+      "duration": 3.279
+    },
+    {
+      "text": "it",
+      "start": 2210.72,
+      "duration": 4.48
+    },
+    {
+      "text": "um and then basically we get here if",
+      "start": 2211.839,
+      "duration": 4.801
+    },
+    {
+      "text": "it's just a regular string",
+      "start": 2215.2,
+      "duration": 5.04
+    },
+    {
+      "text": "and then we can just return it",
+      "start": 2216.64,
+      "duration": 3.6
+    },
+    {
+      "text": "um so now",
+      "start": 2220.72,
+      "duration": 4.56
+    },
+    {
+      "text": "we give it a year that will give us the",
+      "start": 2226.32,
+      "duration": 3.36
+    },
+    {
+      "text": "end of that year",
+      "start": 2228.0,
+      "duration": 5.2
+    },
+    {
+      "text": "um if we give it a date time",
+      "start": 2229.68,
+      "duration": 6.0
+    },
+    {
+      "text": "then well let's just throw it at the",
+      "start": 2233.2,
+      "duration": 4.24
+    },
+    {
+      "text": "data frame and see",
+      "start": 2235.68,
+      "duration": 6.72
+    },
+    {
+      "text": "um so df maturity",
+      "start": 2237.44,
+      "duration": 9.2
+    },
+    {
+      "text": "dot apply standardized maturity dates",
+      "start": 2242.4,
+      "duration": 6.48
+    },
+    {
+      "text": "and we can see this indeed has worked",
+      "start": 2246.64,
+      "duration": 3.12
+    },
+    {
+      "text": "for us",
+      "start": 2248.88,
+      "duration": 3.12
+    },
+    {
+      "text": "so we didn't get any errors uh we",
+      "start": 2249.76,
+      "duration": 4.0
+    },
+    {
+      "text": "remember row 20",
+      "start": 2252.0,
+      "duration": 3.599
+    },
+    {
+      "text": "had that year we can see now we're",
+      "start": 2253.76,
+      "duration": 4.24
+    },
+    {
+      "text": "getting the end of the year for that",
+      "start": 2255.599,
+      "duration": 4.48
+    },
+    {
+      "text": "um and the missing values are passing",
+      "start": 2258.0,
+      "duration": 4.96
+    },
+    {
+      "text": "through just fine",
+      "start": 2260.079,
+      "duration": 2.881
+    },
+    {
+      "text": "so that becomes the next step here in",
+      "start": 2263.04,
+      "duration": 5.039
+    },
+    {
+      "text": "our cleanup process",
+      "start": 2265.839,
+      "duration": 3.76
+    },
+    {
+      "text": "we're going to overwrite the maturity",
+      "start": 2268.079,
+      "duration": 4.321
+    },
+    {
+      "text": "column with that",
+      "start": 2269.599,
+      "duration": 2.801
+    },
+    {
+      "text": "[Music]",
+      "start": 2275.44,
+      "duration": 3.139
+    },
+    {
+      "text": "and that has allowed it to become a date",
+      "start": 2280.16,
+      "duration": 3.6
+    },
+    {
+      "text": "time type as well now that everything is",
+      "start": 2281.839,
+      "duration": 4.161
+    },
+    {
+      "text": "date",
+      "start": 2283.76,
+      "duration": 2.24
+    },
+    {
+      "text": "um so then we just have to",
+      "start": 2286.32,
+      "duration": 8.24
+    },
+    {
+      "text": "um convert that i'll just you know put",
+      "start": 2291.52,
+      "duration": 5.319
+    },
+    {
+      "text": "this over here because we're done with",
+      "start": 2294.56,
+      "duration": 3.76
+    },
+    {
+      "text": "it",
+      "start": 2296.839,
+      "duration": 5.321
+    },
+    {
+      "text": "then we have to convert the",
+      "start": 2298.32,
+      "duration": 7.44
+    },
+    {
+      "text": "um year",
+      "start": 2302.16,
+      "duration": 7.04
+    },
+    {
+      "text": "or the the maturity date into a number",
+      "start": 2305.76,
+      "duration": 5.599
+    },
+    {
+      "text": "of years from today",
+      "start": 2309.2,
+      "duration": 4.48
+    },
+    {
+      "text": "so i'm going to import date time and i",
+      "start": 2311.359,
+      "duration": 3.601
+    },
+    {
+      "text": "already covered this",
+      "start": 2313.68,
+      "duration": 4.96
+    },
+    {
+      "text": "um in a prior video",
+      "start": 2314.96,
+      "duration": 6.8
+    },
+    {
+      "text": "um on on handling the market value of",
+      "start": 2318.64,
+      "duration": 4.56
+    },
+    {
+      "text": "debt",
+      "start": 2321.76,
+      "duration": 4.4
+    },
+    {
+      "text": "in python so i'm just going to copy the",
+      "start": 2323.2,
+      "duration": 4.08
+    },
+    {
+      "text": "function that we had",
+      "start": 2326.16,
+      "duration": 5.76
+    },
+    {
+      "text": "from that this uh year until from date",
+      "start": 2327.28,
+      "duration": 6.64
+    },
+    {
+      "text": "so it gets today's date and then looks",
+      "start": 2331.92,
+      "duration": 3.439
+    },
+    {
+      "text": "the difference between",
+      "start": 2333.92,
+      "duration": 3.199
+    },
+    {
+      "text": "the date we're passing to it and today",
+      "start": 2335.359,
+      "duration": 3.48
+    },
+    {
+      "text": "and ultimately gives you a number of",
+      "start": 2337.119,
+      "duration": 4.72
+    },
+    {
+      "text": "years",
+      "start": 2338.839,
+      "duration": 3.0
+    },
+    {
+      "text": "so then we can just apply that",
+      "start": 2341.92,
+      "duration": 5.28
+    },
+    {
+      "text": "[Music]",
+      "start": 2345.72,
+      "duration": 5.0
+    },
+    {
+      "text": "so we take maturity now that it's",
+      "start": 2347.2,
+      "duration": 7.04
+    },
+    {
+      "text": "been all cleaned up and we apply the",
+      "start": 2350.72,
+      "duration": 7.28
+    },
+    {
+      "text": "year until from date um",
+      "start": 2354.24,
+      "duration": 6.48
+    },
+    {
+      "text": "then we get the number of years so we",
+      "start": 2358.0,
+      "duration": 4.0
+    },
+    {
+      "text": "can add that in here",
+      "start": 2360.72,
+      "duration": 4.72
+    },
+    {
+      "text": "as df maturity",
+      "start": 2362.0,
+      "duration": 7.839
+    },
+    {
+      "text": "years equals that",
+      "start": 2365.44,
+      "duration": 4.399
+    },
+    {
+      "text": "and now we should have that coming into",
+      "start": 2371.359,
+      "duration": 5.121
+    },
+    {
+      "text": "the data frame as well",
+      "start": 2373.359,
+      "duration": 3.121
+    },
+    {
+      "text": "so one last step is to determine",
+      "start": 2376.96,
+      "duration": 7.44
+    },
+    {
+      "text": "whether we have enough uh information to",
+      "start": 2381.68,
+      "duration": 4.159
+    },
+    {
+      "text": "be able to",
+      "start": 2384.4,
+      "duration": 4.719
+    },
+    {
+      "text": "value the bond um",
+      "start": 2385.839,
+      "duration": 5.601
+    },
+    {
+      "text": "so there's a few things that will make",
+      "start": 2389.119,
+      "duration": 3.921
+    },
+    {
+      "text": "it invalid",
+      "start": 2391.44,
+      "duration": 5.6
+    },
+    {
+      "text": "um so",
+      "start": 2393.04,
+      "duration": 8.0
+    },
+    {
+      "text": "um if",
+      "start": 2397.04,
+      "duration": 6.319
+    },
+    {
+      "text": "um",
+      "start": 2401.04,
+      "duration": 2.319
+    },
+    {
+      "text": "uh if the coupon",
+      "start": 2405.52,
+      "duration": 9.68
+    },
+    {
+      "text": "is missing um which",
+      "start": 2410.72,
+      "duration": 5.84
+    },
+    {
+      "text": "here we can see the rows that have a",
+      "start": 2415.2,
+      "duration": 3.119
+    },
+    {
+      "text": "missing coupon then we're not able to do",
+      "start": 2416.56,
+      "duration": 3.2
+    },
+    {
+      "text": "anything",
+      "start": 2418.319,
+      "duration": 4.561
+    },
+    {
+      "text": "um if the",
+      "start": 2419.76,
+      "duration": 6.48
+    },
+    {
+      "text": "maturity years is missing",
+      "start": 2422.88,
+      "duration": 3.36
+    },
+    {
+      "text": "that also is invalid we have no way to",
+      "start": 2428.8,
+      "duration": 3.2
+    },
+    {
+      "text": "know",
+      "start": 2431.2,
+      "duration": 2.24
+    },
+    {
+      "text": "the value if we don't know how long it's",
+      "start": 2432.0,
+      "duration": 3.04
+    },
+    {
+      "text": "outstanding",
+      "start": 2433.44,
+      "duration": 5.04
+    },
+    {
+      "text": "um and then uh",
+      "start": 2435.04,
+      "duration": 6.72
+    },
+    {
+      "text": "if the maturity years is less than",
+      "start": 2438.48,
+      "duration": 6.4
+    },
+    {
+      "text": "zero that means the bond is already um",
+      "start": 2441.76,
+      "duration": 6.4
+    },
+    {
+      "text": "expired and so those are going to be",
+      "start": 2444.88,
+      "duration": 7.12
+    },
+    {
+      "text": "invalid as well so we can",
+      "start": 2448.16,
+      "duration": 6.36
+    },
+    {
+      "text": "um use loc in order to",
+      "start": 2452.0,
+      "duration": 3.599
+    },
+    {
+      "text": "[Music]",
+      "start": 2454.52,
+      "duration": 6.28
+    },
+    {
+      "text": "catch all these three things at once um",
+      "start": 2455.599,
+      "duration": 5.201
+    },
+    {
+      "text": "so if we just",
+      "start": 2460.96,
+      "duration": 2.8
+    },
+    {
+      "text": "wrap this in parentheses and then put",
+      "start": 2465.52,
+      "duration": 3.599
+    },
+    {
+      "text": "this pipe",
+      "start": 2467.839,
+      "duration": 4.0
+    },
+    {
+      "text": "operator for or and then we can put",
+      "start": 2469.119,
+      "duration": 6.561
+    },
+    {
+      "text": "these other conditions in there as well",
+      "start": 2471.839,
+      "duration": 3.841
+    },
+    {
+      "text": "wrap it in parentheses pipe",
+      "start": 2479.04,
+      "duration": 3.68
+    },
+    {
+      "text": "and then if the coupon is null",
+      "start": 2484.48,
+      "duration": 4.32
+    },
+    {
+      "text": "so now that should catch all three of",
+      "start": 2491.839,
+      "duration": 5.681
+    },
+    {
+      "text": "those cases",
+      "start": 2494.8,
+      "duration": 2.72
+    },
+    {
+      "text": "um so then we can",
+      "start": 2497.76,
+      "duration": 6.48
+    },
+    {
+      "text": "use that to create a column",
+      "start": 2501.04,
+      "duration": 6.24
+    },
+    {
+      "text": "which represents whether the row is",
+      "start": 2504.24,
+      "duration": 4.24
+    },
+    {
+      "text": "valid",
+      "start": 2507.28,
+      "duration": 3.68
+    },
+    {
+      "text": "um so yeah we can see we've got the",
+      "start": 2508.48,
+      "duration": 4.16
+    },
+    {
+      "text": "negative maturities we can see we've got",
+      "start": 2510.96,
+      "duration": 3.359
+    },
+    {
+      "text": "the missing coupons",
+      "start": 2512.64,
+      "duration": 3.12
+    },
+    {
+      "text": "and we can see we've got the missing",
+      "start": 2514.319,
+      "duration": 6.321
+    },
+    {
+      "text": "maturities all caught here in one filter",
+      "start": 2515.76,
+      "duration": 4.88
+    },
+    {
+      "text": "so what we can do is we can say um",
+      "start": 2521.28,
+      "duration": 6.4
+    },
+    {
+      "text": "create a validity column and just set it",
+      "start": 2525.599,
+      "duration": 3.041
+    },
+    {
+      "text": "to true",
+      "start": 2527.68,
+      "duration": 3.919
+    },
+    {
+      "text": "but wherever any of those things uh",
+      "start": 2528.64,
+      "duration": 4.24
+    },
+    {
+      "text": "conditions are meant for it to be",
+      "start": 2531.599,
+      "duration": 4.801
+    },
+    {
+      "text": "invalid then we set it to false",
+      "start": 2532.88,
+      "duration": 3.52
+    },
+    {
+      "text": "so then we have this validity column",
+      "start": 2538.24,
+      "duration": 4.079
+    },
+    {
+      "text": "and you can",
+      "start": 2542.96,
+      "duration": 5.2
+    },
+    {
+      "text": "[Music]",
+      "start": 2545.07,
+      "duration": 6.13
+    },
+    {
+      "text": "oh i accidentally had it set",
+      "start": 2548.16,
+      "duration": 5.52
+    },
+    {
+      "text": "the entire row of false we want to then",
+      "start": 2551.2,
+      "duration": 3.919
+    },
+    {
+      "text": "put a comma",
+      "start": 2553.68,
+      "duration": 4.399
+    },
+    {
+      "text": "um and then i've just said only the",
+      "start": 2555.119,
+      "duration": 3.761
+    },
+    {
+      "text": "valid column",
+      "start": 2558.079,
+      "duration": 2.401
+    },
+    {
+      "text": "let me get a new data frame and then do",
+      "start": 2558.88,
+      "duration": 4.0
+    },
+    {
+      "text": "this again and",
+      "start": 2560.48,
+      "duration": 4.8
+    },
+    {
+      "text": "yes now it was false the rest of the row",
+      "start": 2562.88,
+      "duration": 4.08
+    },
+    {
+      "text": "still stays there so we can do other",
+      "start": 2565.28,
+      "duration": 3.2
+    },
+    {
+      "text": "things with it like just take it out as",
+      "start": 2566.96,
+      "duration": 5.359
+    },
+    {
+      "text": "principle instead of doing an evaluation",
+      "start": 2568.48,
+      "duration": 5.76
+    },
+    {
+      "text": "but now we can differentiate between the",
+      "start": 2572.319,
+      "duration": 4.161
+    },
+    {
+      "text": "two so let's just create a function out",
+      "start": 2574.24,
+      "duration": 3.839
+    },
+    {
+      "text": "of this",
+      "start": 2576.48,
+      "duration": 5.28
+    },
+    {
+      "text": "so we can call this a sine validity",
+      "start": 2578.079,
+      "duration": 6.481
+    },
+    {
+      "text": "of bonds",
+      "start": 2581.76,
+      "duration": 2.8
+    },
+    {
+      "text": "and this is going to just work in place",
+      "start": 2584.96,
+      "duration": 5.879
+    },
+    {
+      "text": "so we don't even have to return anything",
+      "start": 2587.359,
+      "duration": 8.48
+    },
+    {
+      "text": "um i'm going to put this up there",
+      "start": 2590.839,
+      "duration": 5.0
+    },
+    {
+      "text": "um and now we can just call this on the",
+      "start": 2596.88,
+      "duration": 5.12
+    },
+    {
+      "text": "data frame add in",
+      "start": 2599.44,
+      "duration": 5.6
+    },
+    {
+      "text": "um and now we have that in there",
+      "start": 2602.0,
+      "duration": 6.48
+    },
+    {
+      "text": "as well so this is all working",
+      "start": 2605.04,
+      "duration": 5.44
+    },
+    {
+      "text": "everything is all cleaned up now it's",
+      "start": 2608.48,
+      "duration": 4.4
+    },
+    {
+      "text": "ready for you to go do evaluation from",
+      "start": 2610.48,
+      "duration": 4.4
+    },
+    {
+      "text": "here",
+      "start": 2612.88,
+      "duration": 4.4
+    },
+    {
+      "text": "but let's just wrap all these steps into",
+      "start": 2614.88,
+      "duration": 4.88
+    },
+    {
+      "text": "one further function",
+      "start": 2617.28,
+      "duration": 5.76
+    },
+    {
+      "text": "so we can call this load and",
+      "start": 2619.76,
+      "duration": 6.72
+    },
+    {
+      "text": "clean uh statement or",
+      "start": 2623.04,
+      "duration": 6.72
+    },
+    {
+      "text": "that details and that's going to take",
+      "start": 2626.48,
+      "duration": 4.72
+    },
+    {
+      "text": "the file path it's also going to take",
+      "start": 2629.76,
+      "duration": 3.52
+    },
+    {
+      "text": "the libor rate",
+      "start": 2631.2,
+      "duration": 6.399
+    },
+    {
+      "text": "and it's going to do all these things",
+      "start": 2633.28,
+      "duration": 4.319
+    },
+    {
+      "text": "and this is going to be the file path",
+      "start": 2638.72,
+      "duration": 5.04
+    },
+    {
+      "text": "and it's already using a library in",
+      "start": 2642.24,
+      "duration": 3.92
+    },
+    {
+      "text": "there and then we're going to return the",
+      "start": 2643.76,
+      "duration": 3.28
+    },
+    {
+      "text": "data frame",
+      "start": 2646.16,
+      "duration": 4.72
+    },
+    {
+      "text": "at the end so now we can just do load",
+      "start": 2647.04,
+      "duration": 6.0
+    },
+    {
+      "text": "and clean.details",
+      "start": 2650.88,
+      "duration": 4.64
+    },
+    {
+      "text": "on the file path and give it a library",
+      "start": 2653.04,
+      "duration": 4.799
+    },
+    {
+      "text": "rate",
+      "start": 2655.52,
+      "duration": 2.319
+    },
+    {
+      "text": "and we'll have the data frame all",
+      "start": 2658.16,
+      "duration": 5.679
+    },
+    {
+      "text": "cleaned up and ready to go",
+      "start": 2660.24,
+      "duration": 3.599
+    },
+    {
+      "text": "so now we have our code working",
+      "start": 2664.56,
+      "duration": 8.32
+    },
+    {
+      "text": "to be able to do all this cleanup",
+      "start": 2668.319,
+      "duration": 7.121
+    },
+    {
+      "text": "but it's kind of you know a decent",
+      "start": 2672.88,
+      "duration": 4.4
+    },
+    {
+      "text": "number of lines of code here",
+      "start": 2675.44,
+      "duration": 4.399
+    },
+    {
+      "text": "it's definitely not ideal to to copy",
+      "start": 2677.28,
+      "duration": 4.559
+    },
+    {
+      "text": "paste this into every project and if you",
+      "start": 2679.839,
+      "duration": 3.361
+    },
+    {
+      "text": "did",
+      "start": 2681.839,
+      "duration": 3.121
+    },
+    {
+      "text": "and you needed to make some updates to",
+      "start": 2683.2,
+      "duration": 3.36
+    },
+    {
+      "text": "it",
+      "start": 2684.96,
+      "duration": 4.32
+    },
+    {
+      "text": "that could cause some issues because",
+      "start": 2686.56,
+      "duration": 3.44
+    },
+    {
+      "text": "then you've got to go",
+      "start": 2689.28,
+      "duration": 2.72
+    },
+    {
+      "text": "back and update it and every place that",
+      "start": 2690.0,
+      "duration": 3.839
+    },
+    {
+      "text": "you've copy pasted it so really you just",
+      "start": 2692.0,
+      "duration": 2.8
+    },
+    {
+      "text": "want to have it once",
+      "start": 2693.839,
+      "duration": 3.76
+    },
+    {
+      "text": "and be able to use it everywhere so",
+      "start": 2694.8,
+      "duration": 4.48
+    },
+    {
+      "text": "that's the perfect application",
+      "start": 2697.599,
+      "duration": 7.361
+    },
+    {
+      "text": "of a python module um so",
+      "start": 2699.28,
+      "duration": 9.36
+    },
+    {
+      "text": "we can create a module",
+      "start": 2704.96,
+      "duration": 6.8
+    },
+    {
+      "text": "um in order to",
+      "start": 2708.64,
+      "duration": 5.679
+    },
+    {
+      "text": "use this very easily in any of our",
+      "start": 2711.76,
+      "duration": 4.0
+    },
+    {
+      "text": "models",
+      "start": 2714.319,
+      "duration": 3.841
+    },
+    {
+      "text": "but real quick before we do that i do",
+      "start": 2715.76,
+      "duration": 3.2
+    },
+    {
+      "text": "want to try",
+      "start": 2718.16,
+      "duration": 2.959
+    },
+    {
+      "text": "just loading in different dead details",
+      "start": 2718.96,
+      "duration": 4.399
+    },
+    {
+      "text": "to make sure it works with pfizer's",
+      "start": 2721.119,
+      "duration": 5.441
+    },
+    {
+      "text": "details as well to see if anything is",
+      "start": 2723.359,
+      "duration": 5.041
+    },
+    {
+      "text": "different there",
+      "start": 2726.56,
+      "duration": 5.68
+    },
+    {
+      "text": "so let's give that a try",
+      "start": 2728.4,
+      "duration": 7.04
+    },
+    {
+      "text": "um and there did not work so what is",
+      "start": 2732.24,
+      "duration": 4.64
+    },
+    {
+      "text": "going on here",
+      "start": 2735.44,
+      "duration": 2.879
+    },
+    {
+      "text": "you can see you got a key error for the",
+      "start": 2736.88,
+      "duration": 3.52
+    },
+    {
+      "text": "floating rate um",
+      "start": 2738.319,
+      "duration": 5.121
+    },
+    {
+      "text": "so that suggests maybe that the um",
+      "start": 2740.4,
+      "duration": 8.24
+    },
+    {
+      "text": "floating rate column is not there",
+      "start": 2743.44,
+      "duration": 5.2
+    },
+    {
+      "text": "but let's see let me open these up",
+      "start": 2749.599,
+      "duration": 8.881
+    },
+    {
+      "text": "so we can take a look",
+      "start": 2755.44,
+      "duration": 3.04
+    },
+    {
+      "text": "and we can see in the pfizer data that",
+      "start": 2759.04,
+      "duration": 4.4
+    },
+    {
+      "text": "the floating rate column is there so why",
+      "start": 2761.68,
+      "duration": 2.399
+    },
+    {
+      "text": "are we getting an",
+      "start": 2763.44,
+      "duration": 4.879
+    },
+    {
+      "text": "error so let's go back over to python",
+      "start": 2764.079,
+      "duration": 8.24
+    },
+    {
+      "text": "and we can use the built-in debugger",
+      "start": 2768.319,
+      "duration": 6.641
+    },
+    {
+      "text": "in order to check this out so let's get",
+      "start": 2772.319,
+      "duration": 4.561
+    },
+    {
+      "text": "back up to our code",
+      "start": 2774.96,
+      "duration": 4.08
+    },
+    {
+      "text": "uh so let's look at the columns of the",
+      "start": 2776.88,
+      "duration": 3.68
+    },
+    {
+      "text": "data frame",
+      "start": 2779.04,
+      "duration": 4.16
+    },
+    {
+      "text": "loading rate is right there isn't that",
+      "start": 2780.56,
+      "duration": 3.759
+    },
+    {
+      "text": "weird",
+      "start": 2783.2,
+      "duration": 4.159
+    },
+    {
+      "text": "um so this is definitely",
+      "start": 2784.319,
+      "duration": 5.04
+    },
+    {
+      "text": "a gotcha that you may face and loading",
+      "start": 2787.359,
+      "duration": 2.231
+    },
+    {
+      "text": "in",
+      "start": 2789.359,
+      "duration": 1.441
+    },
+    {
+      "text": "[Music]",
+      "start": 2789.59,
+      "duration": 4.65
+    },
+    {
+      "text": "um data from uh",
+      "start": 2790.8,
+      "duration": 6.559
+    },
+    {
+      "text": "different sources now let me um",
+      "start": 2794.24,
+      "duration": 5.52
+    },
+    {
+      "text": "look at that directly oh it looks a",
+      "start": 2797.359,
+      "duration": 4.0
+    },
+    {
+      "text": "little bit different now that i pull it",
+      "start": 2799.76,
+      "duration": 2.319
+    },
+    {
+      "text": "out",
+      "start": 2801.359,
+      "duration": 5.121
+    },
+    {
+      "text": "um it's floating backslash xaoxa zero",
+      "start": 2802.079,
+      "duration": 8.881
+    },
+    {
+      "text": "rate what does that mean so uh",
+      "start": 2806.48,
+      "duration": 6.639
+    },
+    {
+      "text": "it's uh you know a little outside of the",
+      "start": 2810.96,
+      "duration": 4.32
+    },
+    {
+      "text": "score outside of the scope of the course",
+      "start": 2813.119,
+      "duration": 4.24
+    },
+    {
+      "text": "to talk in detail about what's going on",
+      "start": 2815.28,
+      "duration": 3.6
+    },
+    {
+      "text": "here but basically",
+      "start": 2817.359,
+      "duration": 3.681
+    },
+    {
+      "text": "this is another way that white space can",
+      "start": 2818.88,
+      "duration": 3.439
+    },
+    {
+      "text": "be represented",
+      "start": 2821.04,
+      "duration": 4.4
+    },
+    {
+      "text": "in a file and so",
+      "start": 2822.319,
+      "duration": 5.121
+    },
+    {
+      "text": "what looks to us like a space is being",
+      "start": 2825.44,
+      "duration": 4.0
+    },
+    {
+      "text": "represented by this backslash",
+      "start": 2827.44,
+      "duration": 6.24
+    },
+    {
+      "text": "xa0 so what we can do here while we're",
+      "start": 2829.44,
+      "duration": 5.44
+    },
+    {
+      "text": "loading in the columns",
+      "start": 2833.68,
+      "duration": 5.2
+    },
+    {
+      "text": "is just replace any of these xa zeros",
+      "start": 2834.88,
+      "duration": 6.239
+    },
+    {
+      "text": "with a space and then we shouldn't have",
+      "start": 2838.88,
+      "duration": 4.16
+    },
+    {
+      "text": "to worry about it",
+      "start": 2841.119,
+      "duration": 3.681
+    },
+    {
+      "text": "so i'm just going to try adding that in",
+      "start": 2843.04,
+      "duration": 5.12
+    },
+    {
+      "text": "here uh df.columns",
+      "start": 2844.8,
+      "duration": 7.6
+    },
+    {
+      "text": "equals um column.replace",
+      "start": 2848.16,
+      "duration": 8.72
+    },
+    {
+      "text": "uh this oh uh backslash xa0",
+      "start": 2852.4,
+      "duration": 8.32
+    },
+    {
+      "text": "with a space or call in the update",
+      "start": 2856.88,
+      "duration": 5.36
+    },
+    {
+      "text": "columns",
+      "start": 2860.72,
+      "duration": 4.32
+    },
+    {
+      "text": "and hopefully that will allow it to work",
+      "start": 2862.24,
+      "duration": 3.359
+    },
+    {
+      "text": "awesome",
+      "start": 2865.04,
+      "duration": 3.68
+    },
+    {
+      "text": "this time it loaded it and now",
+      "start": 2865.599,
+      "duration": 5.681
+    },
+    {
+      "text": "everything seems to be working properly",
+      "start": 2868.72,
+      "duration": 5.44
+    },
+    {
+      "text": "here as well",
+      "start": 2871.28,
+      "duration": 4.319
+    },
+    {
+      "text": "and then let's just check we can go back",
+      "start": 2874.16,
+      "duration": 4.08
+    },
+    {
+      "text": "to walmart and everything is still",
+      "start": 2875.599,
+      "duration": 4.321
+    },
+    {
+      "text": "working there as well",
+      "start": 2878.24,
+      "duration": 4.8
+    },
+    {
+      "text": "awesome so this is ready to go um",
+      "start": 2879.92,
+      "duration": 5.6
+    },
+    {
+      "text": "so now let's let's take this over and",
+      "start": 2883.04,
+      "duration": 4.319
+    },
+    {
+      "text": "put it into a python module",
+      "start": 2885.52,
+      "duration": 4.559
+    },
+    {
+      "text": "so that we can reuse this in multiple",
+      "start": 2887.359,
+      "duration": 3.441
+    },
+    {
+      "text": "different",
+      "start": 2890.079,
+      "duration": 4.721
+    },
+    {
+      "text": "models so",
+      "start": 2890.8,
+      "duration": 7.039
+    },
+    {
+      "text": "we can go and create a text file",
+      "start": 2894.8,
+      "duration": 5.92
+    },
+    {
+      "text": "and then i'm going to rename this file",
+      "start": 2897.839,
+      "duration": 4.48
+    },
+    {
+      "text": "uh you want to pick a name without",
+      "start": 2900.72,
+      "duration": 2.32
+    },
+    {
+      "text": "spaces",
+      "start": 2902.319,
+      "duration": 3.28
+    },
+    {
+      "text": "so i'm going to call this cap iq debt",
+      "start": 2903.04,
+      "duration": 4.4
+    },
+    {
+      "text": "and you want the file extension to be",
+      "start": 2905.599,
+      "duration": 6.24
+    },
+    {
+      "text": "py that's what makes it a python module",
+      "start": 2907.44,
+      "duration": 4.399
+    },
+    {
+      "text": "and then we can just uh take",
+      "start": 2912.559,
+      "duration": 6.641
+    },
+    {
+      "text": "all of this that's why it was good to",
+      "start": 2916.16,
+      "duration": 6.08
+    },
+    {
+      "text": "gather it all in one cell",
+      "start": 2919.2,
+      "duration": 6.399
+    },
+    {
+      "text": "and put it over here um",
+      "start": 2922.24,
+      "duration": 6.24
+    },
+    {
+      "text": "and now save this and so now this is",
+      "start": 2925.599,
+      "duration": 4.48
+    },
+    {
+      "text": "just a text file",
+      "start": 2928.48,
+      "duration": 3.76
+    },
+    {
+      "text": "or the dot py extension which is in the",
+      "start": 2930.079,
+      "duration": 4.801
+    },
+    {
+      "text": "same folder",
+      "start": 2932.24,
+      "duration": 2.64
+    },
+    {
+      "text": "and now let me totally",
+      "start": 2936.24,
+      "duration": 6.24
+    },
+    {
+      "text": "let me just totally start a new jupiter",
+      "start": 2940.24,
+      "duration": 3.359
+    },
+    {
+      "text": "notebook",
+      "start": 2942.48,
+      "duration": 4.96
+    },
+    {
+      "text": "um so over here we've never",
+      "start": 2943.599,
+      "duration": 7.201
+    },
+    {
+      "text": "defined anything um",
+      "start": 2947.44,
+      "duration": 5.04
+    },
+    {
+      "text": "and so we don't have any of those that",
+      "start": 2950.8,
+      "duration": 4.0
+    },
+    {
+      "text": "loading functions ready",
+      "start": 2952.48,
+      "duration": 7.68
+    },
+    {
+      "text": "um but let's try import app iq dat",
+      "start": 2954.8,
+      "duration": 7.36
+    },
+    {
+      "text": "so we do that and we can see it was",
+      "start": 2960.16,
+      "duration": 3.52
+    },
+    {
+      "text": "successful",
+      "start": 2962.16,
+      "duration": 4.959
+    },
+    {
+      "text": "and now when we do cap iq dot we can see",
+      "start": 2963.68,
+      "duration": 4.8
+    },
+    {
+      "text": "that we have",
+      "start": 2967.119,
+      "duration": 4.48
+    },
+    {
+      "text": "all these functions that we defined",
+      "start": 2968.48,
+      "duration": 5.359
+    },
+    {
+      "text": "in what was previously the jupiter cell",
+      "start": 2971.599,
+      "duration": 4.641
+    },
+    {
+      "text": "and we brought over to the python module",
+      "start": 2973.839,
+      "duration": 4.081
+    },
+    {
+      "text": "so now we can do load and clean debt",
+      "start": 2976.24,
+      "duration": 3.68
+    },
+    {
+      "text": "details um",
+      "start": 2977.92,
+      "duration": 5.76
+    },
+    {
+      "text": "so df equals and we're going to do that",
+      "start": 2979.92,
+      "duration": 5.679
+    },
+    {
+      "text": "on the pfizer",
+      "start": 2983.68,
+      "duration": 5.6
+    },
+    {
+      "text": "um that details",
+      "start": 2985.599,
+      "duration": 3.681
+    },
+    {
+      "text": "and say our libor rate let's just say",
+      "start": 2990.079,
+      "duration": 4.641
+    },
+    {
+      "text": "it's two percent now",
+      "start": 2992.88,
+      "duration": 5.52
+    },
+    {
+      "text": "um that's the live one",
+      "start": 2994.72,
+      "duration": 6.24
+    },
+    {
+      "text": "and there we go now we have our data",
+      "start": 2998.4,
+      "duration": 4.56
+    },
+    {
+      "text": "frame cleaned up ready to go",
+      "start": 3000.96,
+      "duration": 4.48
+    },
+    {
+      "text": "and we don't have all that code in this",
+      "start": 3002.96,
+      "duration": 3.84
+    },
+    {
+      "text": "jupyter notebook",
+      "start": 3005.44,
+      "duration": 4.48
+    },
+    {
+      "text": "so now um we're able to take all this",
+      "start": 3006.8,
+      "duration": 3.84
+    },
+    {
+      "text": "detail",
+      "start": 3009.92,
+      "duration": 3.919
+    },
+    {
+      "text": "of all this loading cleaning process for",
+      "start": 3010.64,
+      "duration": 4.56
+    },
+    {
+      "text": "the data pipeline",
+      "start": 3013.839,
+      "duration": 3.841
+    },
+    {
+      "text": "and just offload that so that the reader",
+      "start": 3015.2,
+      "duration": 4.399
+    },
+    {
+      "text": "of our model does not have to care",
+      "start": 3017.68,
+      "duration": 4.639
+    },
+    {
+      "text": "about how all this works it happens in",
+      "start": 3019.599,
+      "duration": 4.72
+    },
+    {
+      "text": "the background",
+      "start": 3022.319,
+      "duration": 5.04
+    },
+    {
+      "text": "through this cap iq depth module and now",
+      "start": 3024.319,
+      "duration": 3.361
+    },
+    {
+      "text": "this",
+      "start": 3027.359,
+      "duration": 3.521
+    },
+    {
+      "text": "module can be reused in as many uh",
+      "start": 3027.68,
+      "duration": 7.28
+    },
+    {
+      "text": "different um notebooks as you want",
+      "start": 3030.88,
+      "duration": 6.479
+    },
+    {
+      "text": "and if you go and make some changes like",
+      "start": 3034.96,
+      "duration": 3.28
+    },
+    {
+      "text": "we had to do",
+      "start": 3037.359,
+      "duration": 4.561
+    },
+    {
+      "text": "to be able to handle the father details",
+      "start": 3038.24,
+      "duration": 5.599
+    },
+    {
+      "text": "then that's going to go and apply for",
+      "start": 3041.92,
+      "duration": 4.08
+    },
+    {
+      "text": "all your different models",
+      "start": 3043.839,
+      "duration": 4.321
+    },
+    {
+      "text": "so maybe you decide okay well i'm going",
+      "start": 3046.0,
+      "duration": 4.319
+    },
+    {
+      "text": "to add some functionality which prints",
+      "start": 3048.16,
+      "duration": 5.12
+    },
+    {
+      "text": "out some summary statistics and",
+      "start": 3050.319,
+      "duration": 5.28
+    },
+    {
+      "text": "totals up the principle to make sure",
+      "start": 3053.28,
+      "duration": 3.279
+    },
+    {
+      "text": "that you have the right amount of",
+      "start": 3055.599,
+      "duration": 1.921
+    },
+    {
+      "text": "principle",
+      "start": 3056.559,
+      "duration": 2.721
+    },
+    {
+      "text": "well you just go and change it in this",
+      "start": 3057.52,
+      "duration": 3.36
+    },
+    {
+      "text": "module and then",
+      "start": 3059.28,
+      "duration": 3.68
+    },
+    {
+      "text": "all your different models which use this",
+      "start": 3060.88,
+      "duration": 3.679
+    },
+    {
+      "text": "module are going to get that",
+      "start": 3062.96,
+      "duration": 2.48
+    },
+    {
+      "text": "functionality",
+      "start": 3064.559,
+      "duration": 3.441
+    },
+    {
+      "text": "so there's a lot of power in",
+      "start": 3065.44,
+      "duration": 3.919
+    },
+    {
+      "text": "restructuring",
+      "start": 3068.0,
+      "duration": 5.52
+    },
+    {
+      "text": "your code to use modules",
+      "start": 3069.359,
+      "duration": 7.041
+    },
+    {
+      "text": "so that's an overview of how we can",
+      "start": 3073.52,
+      "duration": 3.44
+    },
+    {
+      "text": "clean up",
+      "start": 3076.4,
+      "duration": 3.76
+    },
+    {
+      "text": "capital iq debt details",
+      "start": 3076.96,
+      "duration": 6.639
+    },
+    {
+      "text": "100 percent automated in python so now",
+      "start": 3080.16,
+      "duration": 5.439
+    },
+    {
+      "text": "it's ready to use to value",
+      "start": 3083.599,
+      "duration": 3.921
+    },
+    {
+      "text": "all the bonds and calculate the total",
+      "start": 3085.599,
+      "duration": 4.081
+    },
+    {
+      "text": "market value of debt",
+      "start": 3087.52,
+      "duration": 5.36
+    },
+    {
+      "text": "um and we also covered how to",
+      "start": 3089.68,
+      "duration": 5.36
+    },
+    {
+      "text": "take that code and offload it into a",
+      "start": 3092.88,
+      "duration": 5.04
+    },
+    {
+      "text": "module such that it can be easily reused",
+      "start": 3095.04,
+      "duration": 6.559
+    },
+    {
+      "text": "in multiple different projects so",
+      "start": 3097.92,
+      "duration": 7.6
+    },
+    {
+      "text": "thanks for listening and see you next",
+      "start": 3101.599,
+      "duration": 3.921
+    },
+    {
+      "text": "time",
+      "start": 3108.76,
+      "duration": 3.0
+    }
+  ]
+}

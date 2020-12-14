@@ -29,7 +29,7 @@ from schedule.main import (
     LECTURE_10_NAME,
     LECTURE_11_NAME,
     LECTURE_12_NAME,
-    LECTURE_13_NAME,
+    LECTURE_13_NAME, LECTURE_ADV_2_NAME,
 )
 
 
@@ -511,6 +511,18 @@ class DCFExampleResources(ResourceCollection):
     historical_fcf: DCFHistoricalFCFExampleResources = DCFHistoricalFCFExampleResources()
 
 
+class DataPipelineExampleResources(ResourceCollection):
+    title: str = 'Data Pipelines'
+    load_capiq_debt_module: LectureResource = LectureResource(
+        "Capital IQ Debt Details Module (capiq_debt.py)",
+        static_url="Examples/Data Pipelines/Debt Details/capiq_debt.py",
+    )
+    pfizer_debt_details: LectureResource = LectureResource(
+        'Pfizer Debt Details',
+        static_url="Examples/Data Pipelines/Debt Details/Pfizer Debt Details.xls",
+    )
+
+
 class ExampleResources(ResourceCollection):
     title: str = "Examples"
     intro: IntroductionExampleResources = IntroductionExampleResources()
@@ -521,6 +533,7 @@ class ExampleResources(ResourceCollection):
     connecting_python_excel: ConnectingPythonExcelExampleResources = ConnectingPythonExcelExampleResources()
     monte_carlo: MonteCarloExampleResources = MonteCarloExampleResources()
     dcf: DCFExampleResources = DCFExampleResources()
+    data_pipeline: DataPipelineExampleResources = DataPipelineExampleResources()
 
 
 class Project1Resources(ResourceCollection):
@@ -775,6 +788,10 @@ class AdvancedLectureResources(ResourceCollection):
     )
 
 
+class DataPipelineLectureResources(ResourceCollection):
+    title: str = LECTURE_ADV_2_NAME
+
+
 class LectureResources(ResourceCollection):
     title: str = "Lectures"
     intro: IntroLectureResources = IntroLectureResources()
@@ -790,6 +807,7 @@ class LectureResources(ResourceCollection):
     dcf_cost_capital: DCFCostCapitalLectureResources = DCFCostCapitalLectureResources()
     dcf_fcf: DCFFCFLectureResources = DCFFCFLectureResources()
     advanced: AdvancedLectureResources = AdvancedLectureResources()
+    data_pipelines: DataPipelineLectureResources = DataPipelineLectureResources()
 
 
 class VisualizationExternalResources(ResourceCollection):
