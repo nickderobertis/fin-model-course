@@ -237,6 +237,7 @@ class Lecture:
     youtube_id: Optional[str] = None
     resources: Optional[Sequence[LectureResource]] = None
     _transcript: Optional[Transcript] = None
+    notes_section_name: str = 'Notes'
 
     def to_rst(self) -> str:
         out_str = header_rst(self.title, 3)
@@ -269,7 +270,7 @@ class Lecture:
 
     @property
     def _notes_rst(self) -> str:
-        out_str = header_rst('Notes', 4)
+        out_str = header_rst(self.notes_section_name, 4)
         out_str += self.notes.to_rst()
         return out_str
 

@@ -16,7 +16,7 @@ from pltemplates.frames.model_flowchart import (
 from pltemplates.blocks import LabBlock, InClassExampleBlock
 from pltemplates.eq_with_variable_defs import EquationWithVariableDefinitions
 from pltemplates.hyperlink import Hyperlink
-from schedule.main import LECTURE_13_NAME
+from schedule.main import LECTURE_ADV_1_NAME
 
 AUTHORS = ['Nick DeRobertis']
 SHORT_TITLE = 'Modeling Road-map'
@@ -31,8 +31,8 @@ SHORT_INSTITUTION = 'UF'
 DOCUMENT_CLASS = lp.Presentation
 OUTPUT_LOCATION = plbuild.paths.SLIDES_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = plbuild.paths.HANDOUTS_BUILD_PATH
-TITLE = LECTURE_13_NAME
-ORDER = 'S13'
+TITLE = LECTURE_ADV_1_NAME
+ORDER = 'SA1'
 
 
 def get_content():

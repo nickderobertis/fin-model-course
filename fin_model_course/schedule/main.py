@@ -23,8 +23,9 @@ LECTURE_9_NAME = 'Combining Excel and Python'
 LECTURE_10_NAME = 'Monte Carlo Simulation'
 LECTURE_11_NAME = 'Introduction to DCF Valuation and Cost of Capital Estimation'
 LECTURE_12_NAME = 'Free Cash Flow Estimation and Forecasting'
-LECTURE_13_NAME = 'Advanced Financial Modeling'
+LECTURE_13_NAME = 'Q&A'
 
+LECTURE_ADV_1_NAME = 'Advanced Financial Modeling'
 LECTURE_ADV_2_NAME = 'Data Pipelines'
 
 SCHEDULE: Optional[CourseSchedule] = None
@@ -57,7 +58,7 @@ def get_course_schedule(use_cache: bool = True, overwrite_cache: bool = True) ->
     lecture_10 = ScheduleLecture(name=LECTURE_10_NAME, index=10)
     lecture_11 = ScheduleLecture(name=LECTURE_11_NAME, index=11)
     lecture_12 = ScheduleLecture(name=LECTURE_12_NAME, index=12)
-    lecture_13 = ScheduleLecture(name=LECTURE_13_NAME, index=13)
+    lecture_13 = ScheduleLecture(name=LECTURE_ADV_1_NAME, index=13)
 
     weeks = [
         ClassContent(  # week 1
