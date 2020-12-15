@@ -29,7 +29,7 @@ from schedule.main import (
     LECTURE_10_NAME,
     LECTURE_11_NAME,
     LECTURE_12_NAME,
-    LECTURE_13_NAME, LECTURE_ADV_2_NAME,
+    LECTURE_ADV_1_NAME, LECTURE_ADV_2_NAME, LECTURE_13_NAME,
 )
 
 
@@ -776,15 +776,23 @@ class DCFFCFLectureResources(ResourceCollection):
     )
 
 
-class AdvancedLectureResources(ResourceCollection):
+class BasicQALectureResources(ResourceCollection):
     title: str = LECTURE_13_NAME
+    notes: LectureResource = LectureResource(
+        f"All Questions",
+        static_url=f"generated/pdfs/LN13 {LECTURE_13_NAME}.pdf",
+    )
+
+
+class AdvancedLectureResources(ResourceCollection):
+    title: str = LECTURE_ADV_1_NAME
     slides: LectureResource = LectureResource(
-        f"Slides - {LECTURE_13_NAME}",
-        static_url=f"generated/pdfs/S13 {LECTURE_13_NAME}.pdf",
+        f"Slides - {LECTURE_ADV_1_NAME}",
+        static_url=f"generated/pdfs/SA1 {LECTURE_ADV_1_NAME}.pdf",
     )
     notes: LectureResource = LectureResource(
-        f"Lecture Notes - {LECTURE_13_NAME}",
-        static_url=f"generated/pdfs/LN13 {LECTURE_13_NAME}.pdf",
+        f"Lecture Notes - {LECTURE_ADV_1_NAME}",
+        static_url=f"generated/pdfs/LNA1 {LECTURE_ADV_1_NAME}.pdf",
     )
 
 
@@ -806,6 +814,7 @@ class LectureResources(ResourceCollection):
     monte_carlo: MonteCarloLectureResources = MonteCarloLectureResources()
     dcf_cost_capital: DCFCostCapitalLectureResources = DCFCostCapitalLectureResources()
     dcf_fcf: DCFFCFLectureResources = DCFFCFLectureResources()
+    basic_qa: BasicQALectureResources = BasicQALectureResources()
     advanced: AdvancedLectureResources = AdvancedLectureResources()
     data_pipelines: DataPipelineLectureResources = DataPipelineLectureResources()
 

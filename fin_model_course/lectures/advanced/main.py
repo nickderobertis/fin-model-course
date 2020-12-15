@@ -3,12 +3,12 @@ from courses.model import CourseSelectors
 from lectures.advanced import notes
 from lectures.model import LectureGroup
 from resources.models import RESOURCES
-from schedule.main import LECTURE_13_NAME
+from schedule.main import LECTURE_ADV_1_NAME
 
 
 def get_advanced_modeling_lecture() -> LectureGroup:
     lecture_index = 1
-    title = LECTURE_13_NAME
+    title = LECTURE_ADV_1_NAME
     course = COURSES[CourseSelectors.ADVANCED]
     description = "Gives a quick overview of more advanced material that we didn't have time to cover. " \
                   "Includes resources to go out an learn the advanced material, so this lecture can be " \

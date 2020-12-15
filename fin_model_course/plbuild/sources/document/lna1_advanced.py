@@ -7,7 +7,7 @@ import pyexlatex.layouts as ll
 import plbuild
 from lectures.advanced.main import get_advanced_modeling_lecture
 from plbuild.paths import images_path
-from schedule.main import LECTURE_13_NAME
+from schedule.main import LECTURE_ADV_1_NAME
 
 AUTHORS = ['Nick DeRobertis']
 
@@ -15,8 +15,8 @@ DOCUMENT_CLASS = pl.Document
 OUTPUT_LOCATION = plbuild.paths.DOCUMENTS_BUILD_PATH
 HANDOUTS_OUTPUT_LOCATION = None
 
-TITLE = LECTURE_13_NAME
-ORDER = 'LN13'
+TITLE = LECTURE_ADV_1_NAME
+ORDER = 'LNA1'
 
 
 def get_content():

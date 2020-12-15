@@ -13,7 +13,9 @@ from lectures.model import LectureResource
 CONTENT_TYPE_CODES_TO_NAMES = {
     "C": "Course Materials",
     "S": "Slides",
+    "SA": "Slides",
     "LN": "Lecture Notes",
+    "LNA": "Lecture Notes",
     "PR": "Practice Problems",
     "PJ": "Project Descriptions",
 }
