@@ -67,7 +67,12 @@ class LectureYouTubeDescriptionMetadata(ContentMetadata):
             raise ValueError(f'lecture must be assigned to a group to generate appropriate metadata: {lecture}')
         if not lecture.youtube_id:
             raise ValueError(f'lecture must have a youtube ID to generate appropriate metadata: {lecture}')
-        content = lecture.youtube_description.encode('utf8')
+        all_content = (
+            lecture.youtube_title(include_group=True, include_course=True) +
+            lecture.youtube_description +
+            str(lecture.tags)
+        )
+        content = all_content.encode('utf8')
         hashed = hashlib.md5(content).hexdigest()
         return cls(name=lecture.youtube_id, hash_value=hashed)
 

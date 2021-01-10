@@ -279,6 +279,7 @@ class Lecture:
     notes: Optional[LectureNotes] = None
     youtube_id: Optional[str] = None
     resources: Optional[Sequence[LectureResource]] = None
+    custom_tags: Sequence[str] = tuple()
     _transcript: Optional[Transcript] = None
     notes_section_name: str = 'Notes'
     _group_ref: Optional[ReferenceType] = None
@@ -318,6 +319,15 @@ class Lecture:
             desc += self._notes_youtube
         desc += self._resources_youtube
         return desc
+
+    @property
+    def tags(self) -> List[str]:
+        tags = list(self.custom_tags)
+        group = self.group
+        if group is not None:
+            tags.extend(group.custom_tags)
+            tags.extend(group.course.tags)
+        return tags
 
     def register_group(self, group: 'LectureGroup'):
         self._group_ref = ref(group)
@@ -424,6 +434,7 @@ class LectureGroup:
     global_resources: Sequence[LectureResource] = tuple()
     course: CourseModel = COURSES[CourseSelectors.BASIC]
     show_aggregate_resources: bool = True
+    custom_tags: Sequence[str] = tuple()
 
     def __post_init__(self):
         for lect in self.lectures:
