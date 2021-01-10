@@ -1,5 +1,6 @@
 import datetime
 import itertools
+import warnings
 from abc import ABC, abstractmethod
 from weakref import ref, ReferenceType
 from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List, Any
@@ -10,16 +11,18 @@ from pydantic import BaseModel, AnyHttpUrl
 from pydantic.dataclasses import dataclass
 from youtube_transcript_api import TranscriptsDisabled
 
-from build_tools.config import SITE_URL
+from build_tools import yt_api
+from build_tools.config import SITE_URL, LECTURE_YOUTUBE_DESCRIPTIONS_METADATA_PATH
 from build_tools.ext_rst import header_rst
 from build_tools.get_transcripts import Transcript, get_transcript
+from build_tools.yt_api import YouTubeDescriptionIsCurrentException
 from courses.config import COURSES
 from courses.model import CourseModel, CourseSelectors
 from pltemplates.frames.lab import LabFrame
 from pltemplates.hyperlink import Hyperlink
 
 if TYPE_CHECKING:
-    from models.content import FileContentMetadata
+    from models.content import FileContentMetadata, LectureYouTubeDescriptionMetadata
 
 import pyexlatex as pl
 
@@ -269,7 +272,7 @@ class LectureResource:
     def to_youtube(self) -> str:
         return f"""
 - {self.display_name}: {self.full_quoted_url}
-        """
+        """.strip()
 
 
 @dataclass
@@ -313,12 +316,50 @@ class Lecture:
         desc = self.youtube_title(include_group=False, include_course=False) + '\n\n'
         group = self.group
         if group is not None:
-            desc += f'Part of the lecture series "{group.title}": {group.url}\n\n'
-            desc += f'Full Course Website: {SITE_URL}\n\n'
+            desc += f'Part of the lecture series "{group.title}":\n{group.url}\n\n'
+            desc += f'Full Course Website:\n{SITE_URL}\n\n'
         if self.notes:
             desc += self._notes_youtube
         desc += self._resources_youtube
         return desc
+
+    @property
+    def youtube_description_has_changed(self) -> bool:
+        from models.content import LectureYouTubeDescriptionCollectionMetadata, LectureYouTubeDescriptionMetadata
+        metadata_path = LECTURE_YOUTUBE_DESCRIPTIONS_METADATA_PATH
+        if not metadata_path.exists():
+            return True
+
+        all_existing_metadata = LectureYouTubeDescriptionCollectionMetadata.parse_raw(metadata_path.read_text())
+        existing_metadata = all_existing_metadata.items[self.youtube_id]
+        current_metadata = LectureYouTubeDescriptionMetadata.generate_from_lecture(self)
+        return existing_metadata != current_metadata
+
+    def upload_youtube_description(self, youtube: Optional = None):
+        if self.youtube_id is None:
+            raise ValueError(f'cannot update youtube video with id: {self}')
+        if self.group is None:
+            raise ValueError(f'cannot update youtube video without lecture group: {self}')
+        if not self.youtube_description_has_changed:
+            raise YouTubeDescriptionIsCurrentException(
+                f'{self.youtube_id} - {self.title} already has newest description, will not update'
+            )
+        if youtube is None:
+            youtube = yt_api.get_authenticated_service()
+        self._upload_youtube_description(youtube)
+
+    def _upload_youtube_description(self, youtube):
+        title = self.youtube_title(include_group=True, include_course=False)
+        if len(title) > 100:
+            warnings.warn(f'Not updating title {title} as it is too long')
+            title = None
+        yt_api.update_video(
+            self.youtube_id,
+            title=title,
+            description=self.youtube_description,
+            tags=self.tags,
+            youtube=youtube
+        )
 
     @property
     def tags(self) -> List[str]:
@@ -387,6 +428,7 @@ class Lecture:
         if self.resources:
             out_str += (
                     header_rst('Resources', 4)
+                    + '\n'
                     + "\n".join([res.to_youtube() for res in self.resources])
             )
         return out_str
