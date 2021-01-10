@@ -2,7 +2,10 @@ import datetime
 import hashlib
 import os
 import pathlib
-from typing import Optional, Dict, List, Type, cast, Callable
+from typing import Optional, Dict, List, Type, cast, Callable, TYPE_CHECKING, Sequence
+
+if TYPE_CHECKING:
+    from fin_model_course.lectures.model import Lecture, LectureGroup
 
 from pydantic import BaseModel, Field
 
@@ -44,18 +47,34 @@ CONTENT_BASE_PATH = DOCSRC_STATIC_PATH
 
 class ContentMetadata(BaseModel):
     name: str
-    file_hash: str
-    hashed_extension: str = "tex"
-    output_extension: str = "pdf"
+    hash_value: str
     last_modified: datetime.datetime = Field(
         default_factory=lambda: datetime.datetime.now()
     )
 
     def __eq__(self, other):
         try:
-            return all([self.file_hash == other.file_hash, self.name == other.name,])
+            return all([self.hash_value == other.hash_value, self.name == other.name, ])
         except AttributeError:
             return False
+
+
+class LectureYouTubeDescriptionMetadata(ContentMetadata):
+
+    @classmethod
+    def generate_from_lecture(cls, lecture: 'Lecture') -> 'LectureYouTubeDescriptionMetadata':
+        if lecture.group is None:
+            raise ValueError(f'lecture must be assigned to a group to generate appropriate metadata: {lecture}')
+        if not lecture.youtube_id:
+            raise ValueError(f'lecture must have a youtube ID to generate appropriate metadata: {lecture}')
+        content = lecture.youtube_description.encode('utf8')
+        hashed = hashlib.md5(content).hexdigest()
+        return cls(name=lecture.youtube_id, hash_value=hashed)
+
+
+class FileContentMetadata(ContentMetadata):
+    hashed_extension: str = "tex"
+    output_extension: str = "pdf"
 
     @classmethod
     def generate_from_file(
@@ -64,11 +83,11 @@ class ContentMetadata(BaseModel):
         file_name: str,
         hashed_extension: str = "tex",
         output_extension: str = "pdf",
-    ) -> "ContentMetadata":
+    ) -> "FileContentMetadata":
         raise NotImplementedError
 
 
-class GeneratedContentMetadata(ContentMetadata):
+class GeneratedContentMetadata(FileContentMetadata):
     content_type_code: Optional[str] = None
     content_index: Optional[int] = None
 
@@ -76,7 +95,7 @@ class GeneratedContentMetadata(ContentMetadata):
         try:
             return all(
                 [
-                    self.file_hash == other.file_hash,
+                    self.hash_value == other.hash_value,
                     self.name == other.name,
                     self.content_type_code == other.content_type_code,
                     self.content_index == other.content_index,
@@ -110,7 +129,7 @@ class GeneratedContentMetadata(ContentMetadata):
         hashed = hashlib.md5(contents).hexdigest()
         return cls(
             name=name,
-            file_hash=hashed,
+            hash_value=hashed,
             hashed_extension=hashed_extension,
             output_extension=output_extension,
             content_type_code=content_type,
@@ -118,7 +137,7 @@ class GeneratedContentMetadata(ContentMetadata):
         )
 
 
-class StaticContentMetadata(ContentMetadata):
+class StaticContentMetadata(FileContentMetadata):
     @classmethod
     def generate_from_file(
         cls,
@@ -132,7 +151,7 @@ class StaticContentMetadata(ContentMetadata):
         hashed = hashlib.md5(contents).hexdigest()
         return cls(
             name=name,
-            file_hash=hashed,
+            hash_value=hashed,
             hashed_extension=hashed_extension,
             output_extension=output_extension,
         )
@@ -141,29 +160,6 @@ class StaticContentMetadata(ContentMetadata):
 class CollectionMetadata(BaseModel):
     items: Dict[str, ContentMetadata]
     _metadata_cls: Type[ContentMetadata] = ContentMetadata
-
-    @classmethod
-    def generate_from_folder(
-        cls,
-        folder: pathlib.Path,
-        hashed_extension: str = "tex",
-        output_extension: str = "pdf",
-        base_path: pathlib.Path = CONTENT_BASE_PATH,
-    ) -> "CollectionMetadata":
-        items: Dict[str, ContentMetadata] = {}
-        for file in folder.rglob(f"*.{hashed_extension}"):
-            if ".ipynb_checkpoints" in str(file):
-                continue
-            file_name = file.stem
-            metadata = cls._metadata_cls.generate_from_file(
-                file,
-                file_name,
-                hashed_extension=hashed_extension,
-                output_extension=output_extension,
-            )
-            relative_path = file.relative_to(base_path)
-            items[str(relative_path)] = metadata
-        return cls(items=items)
 
     def merge(
         self, other: "CollectionMetadata", drop_unique_old: bool = False
@@ -195,13 +191,54 @@ class CollectionMetadata(BaseModel):
         valid_lms = [lm for lm in lms if lm is not None]
         return max(valid_lms)
 
+
+class LectureYouTubeDescriptionCollectionMetadata(CollectionMetadata):
+    items: Dict[str, LectureYouTubeDescriptionMetadata]
+    _metadata_cls: Type[ContentMetadata] = LectureYouTubeDescriptionMetadata
+
+    @classmethod
+    def generate_from_lecture_groups(cls, lecture_groups: Sequence['LectureGroup']):
+        items: Dict[str, LectureYouTubeDescriptionMetadata] = {}
+        for lg in lecture_groups:
+            for lect in lg.lectures:
+                items[lect.youtube_id] = LectureYouTubeDescriptionMetadata.generate_from_lecture(lect)
+        return cls(items=items)
+
+
+class FileCollectionMetadata(CollectionMetadata):
+    items: Dict[str, FileContentMetadata]
+    _metadata_cls: Type[FileContentMetadata] = FileContentMetadata
+
+    @classmethod
+    def generate_from_folder(
+        cls,
+        folder: pathlib.Path,
+        hashed_extension: str = "tex",
+        output_extension: str = "pdf",
+        base_path: pathlib.Path = CONTENT_BASE_PATH,
+    ) -> "FileCollectionMetadata":
+        items: Dict[str, FileContentMetadata] = {}
+        for file in folder.rglob(f"*.{hashed_extension}"):
+            if ".ipynb_checkpoints" in str(file):
+                continue
+            file_name = file.stem
+            metadata = cls._metadata_cls.generate_from_file(
+                file,
+                file_name,
+                hashed_extension=hashed_extension,
+                output_extension=output_extension,
+            )
+            relative_path = file.relative_to(base_path)
+            items[str(relative_path)] = metadata
+        return cls(items=items)
+
     def to_rst(self) -> str:
         raise NotImplementedError
 
 
-class GeneratedCollectionMetadata(CollectionMetadata):
+class GeneratedCollectionMetadata(FileCollectionMetadata):
     items: Dict[str, GeneratedContentMetadata]
-    _metadata_cls: Type[ContentMetadata] = GeneratedContentMetadata
+    _metadata_cls: Type[FileContentMetadata] = GeneratedContentMetadata
 
     def to_rst(self) -> str:
         out_str = ""
@@ -227,9 +264,9 @@ class GeneratedCollectionMetadata(CollectionMetadata):
         return out_str
 
 
-class StaticCollectionMetadata(CollectionMetadata):
+class StaticCollectionMetadata(FileCollectionMetadata):
     items: Dict[str, GeneratedContentMetadata]
-    _metadata_cls: Type[ContentMetadata] = StaticContentMetadata
+    _metadata_cls: Type[FileContentMetadata] = StaticContentMetadata
 
     def to_rst(self) -> str:
         sections_dict = {"_items": [], "_description": ""}

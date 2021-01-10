@@ -19,7 +19,7 @@ from pltemplates.frames.lab import LabFrame
 from pltemplates.hyperlink import Hyperlink
 
 if TYPE_CHECKING:
-    from models.content import ContentMetadata
+    from models.content import FileContentMetadata
 
 import pyexlatex as pl
 
@@ -194,7 +194,7 @@ class LectureResource:
             return False
 
     @classmethod
-    def from_metadata(cls, md: "ContentMetadata", url: Optional[str] = None) -> "LectureResource":
+    def from_metadata(cls, md: "FileContentMetadata", url: Optional[str] = None) -> "LectureResource":
         from models.content import GeneratedContentMetadata
         if url is None:
             generated_content_subfolder = md.output_extension + "s"

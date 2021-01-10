@@ -17,7 +17,7 @@ from build_tools.config import (
 from build_tools.ext_rst import header_rst
 from lectures.model import LectureResource
 from models.content import (
-    CollectionMetadata,
+    FileCollectionMetadata,
     GeneratedCollectionMetadata,
     StaticCollectionMetadata,
 )
