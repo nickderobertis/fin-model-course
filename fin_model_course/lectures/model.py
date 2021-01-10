@@ -354,7 +354,7 @@ class Lecture:
         if len(title) > 100:
             warnings.warn(f'Not updating title {title} as it is too long')
             title = None
-        yt_api.update_video(
+        yt_api.update_video_description(
             self.youtube_id,
             title=title,
             description=self.youtube_description,

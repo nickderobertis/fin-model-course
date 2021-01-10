@@ -1,4 +1,5 @@
 import sys
+from enum import Enum
 from pathlib import Path
 from typing import Optional, Sequence, TypedDict, List
 
@@ -43,29 +44,38 @@ def get_authenticated_service():
     return build(API_SERVICE_NAME, API_VERSION, credentials=credentials)
 
 
-class VideosSnippet(TypedDict):
+class VideoVisibility(str, Enum):
+    PUBLIC = 'public'
+    UNLISTED = 'unlisted'
+    PRIVATE = 'private'
+
+
+class VideoSnippet(TypedDict):
     title: str
     description: str
     tags: List[str]
 
 
+class VideoStatus(TypedDict):
+    privacyStatus: VideoVisibility
+
+
 class VideoResponse(TypedDict):
-    snippet: VideosSnippet
+    snippet: Optional[VideoSnippet]
+    status: Optional[VideoStatus]
 
 
 class VideosListResponse(TypedDict):
     items: List[VideoResponse]
 
 
-def update_video(video_id: str, title: Optional[str] = None, description: Optional[str] = None,
-                 tags: Optional[Sequence[str]] = None, youtube: Optional = None,
-                 print_output: bool = True):
+def _get_video_response(video_id: str, part: str, youtube: Optional = None) -> VideosListResponse:
     if youtube is None:
         youtube = get_authenticated_service()
 
     # Call the API's videos.list method to retrieve the video resource.
     videos_list_response: VideosListResponse = (
-        youtube.videos().list(id=video_id, part="snippet").execute()
+        youtube.videos().list(id=video_id, part=part).execute()
     )
 
     # If the response does not contain an array of 'items' then the video was
@@ -73,9 +83,20 @@ def update_video(video_id: str, title: Optional[str] = None, description: Option
     if not videos_list_response["items"]:
         raise YouTubeIDDoesNotExistException('Video "%s" was not found.' % video_id)
 
+    return videos_list_response
+
+
+def update_video_description(video_id: str, title: Optional[str] = None, description: Optional[str] = None,
+                             tags: Optional[Sequence[str]] = None, youtube: Optional = None,
+                             print_output: bool = True):
+    if youtube is None:
+        youtube = get_authenticated_service()
+
+    videos_list_response = _get_video_response(video_id, 'snippet', youtube=youtube)
+
     # Since the request specified a video ID, the response only contains one
     # video resource. This code extracts the snippet from that resource.
-    videos_list_snippet: VideosSnippet = videos_list_response["items"][0]["snippet"]
+    videos_list_snippet: VideoSnippet = videos_list_response["items"][0]["snippet"]
 
     # Set video title, description, default language if specified in args.
     if title:
@@ -113,3 +134,27 @@ def update_video(video_id: str, title: Optional[str] = None, description: Option
             print("Tags: " + ",".join(videos_update_response["snippet"]["tags"]) + "\n")
 
 
+def update_video_visibility(video_id: str, visibility: VideoVisibility, youtube: Optional = None,
+                            print_output: bool = True):
+    if youtube is None:
+        youtube = get_authenticated_service()
+
+    videos_list_response = _get_video_response(video_id, 'status', youtube=youtube)
+
+    # Since the request specified a video ID, the response only contains one
+    # video resource. This code extracts the snippet from that resource.
+    video_status: VideoStatus = videos_list_response["items"][0]["status"]
+
+    video_status['privacyStatus'] = visibility.value
+
+    # Update the video resource by calling the videos.update() method.
+    videos_update_response = (
+        youtube.videos()
+        .update(
+            part="status", body=dict(status=video_status, id=video_id)
+        )
+        .execute()
+    )
+
+    if print_output:
+        print(videos_update_response)
