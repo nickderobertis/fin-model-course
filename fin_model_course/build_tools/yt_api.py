@@ -29,6 +29,10 @@ class YouTubeDescriptionIsCurrentException(Exception):
     pass
 
 
+class YouTubeIDDoesNotExistException(Exception):
+    pass
+
+
 def get_authenticated_service():
     """
     Authorize the request and store authorization credentials.
@@ -54,7 +58,8 @@ class VideosListResponse(TypedDict):
 
 
 def update_video(video_id: str, title: Optional[str] = None, description: Optional[str] = None,
-                 tags: Optional[Sequence[str]] = None, youtube: Optional = None):
+                 tags: Optional[Sequence[str]] = None, youtube: Optional = None,
+                 print_output: bool = True):
     if youtube is None:
         youtube = get_authenticated_service()
 
@@ -66,8 +71,7 @@ def update_video(video_id: str, title: Optional[str] = None, description: Option
     # If the response does not contain an array of 'items' then the video was
     # not found.
     if not videos_list_response["items"]:
-        print('Video "%s" was not found.' % video_id)
-        sys.exit(1)
+        raise YouTubeIDDoesNotExistException('Video "%s" was not found.' % video_id)
 
     # Since the request specified a video ID, the response only contains one
     # video resource. This code extracts the snippet from that resource.
@@ -96,15 +100,16 @@ def update_video(video_id: str, title: Optional[str] = None, description: Option
         .execute()
     )
 
-    print(
-        "The updated video metadata is:\n"
-        + "Title: "
-        + videos_update_response["snippet"]["title"]
-        + "\n"
-    )
-    if "description" in videos_update_response['snippet'] and videos_update_response["snippet"]["description"]:
-        print("Description: " + videos_update_response["snippet"]["description"] + "\n")
-    if 'tags' in videos_update_response["snippet"] and videos_update_response["snippet"]["tags"]:
-        print("Tags: " + ",".join(videos_update_response["snippet"]["tags"]) + "\n")
+    if print_output:
+        print(
+            "The updated video metadata is:\n"
+            + "Title: "
+            + videos_update_response["snippet"]["title"]
+            + "\n"
+        )
+        if "description" in videos_update_response['snippet'] and videos_update_response["snippet"]["description"]:
+            print("Description: " + videos_update_response["snippet"]["description"] + "\n")
+        if 'tags' in videos_update_response["snippet"] and videos_update_response["snippet"]["tags"]:
+            print("Tags: " + ",".join(videos_update_response["snippet"]["tags"]) + "\n")
 
 

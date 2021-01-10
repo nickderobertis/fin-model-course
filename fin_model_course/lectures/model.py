@@ -349,6 +349,7 @@ class Lecture:
         self._upload_youtube_description(youtube)
 
     def _upload_youtube_description(self, youtube):
+        print(f'Uploading description for {self.youtube_id} - {self.title}')
         title = self.youtube_title(include_group=True, include_course=False)
         if len(title) > 100:
             warnings.warn(f'Not updating title {title} as it is too long')
@@ -358,7 +359,8 @@ class Lecture:
             title=title,
             description=self.youtube_description,
             tags=self.tags,
-            youtube=youtube
+            youtube=youtube,
+            print_output=False
         )
 
     @property
