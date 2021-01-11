@@ -34,6 +34,10 @@ class YouTubeIDDoesNotExistException(Exception):
     pass
 
 
+class YouTubePlaylistExistsException(Exception):
+    pass
+
+
 def get_authenticated_service():
     """
     Authorize the request and store authorization credentials.
@@ -158,3 +162,78 @@ def update_video_visibility(video_id: str, visibility: VideoVisibility, youtube:
 
     if print_output:
         print(videos_update_response)
+
+
+class PlaylistSnippet(TypedDict):
+    title: str
+    description: str
+
+
+class PlaylistResponse(TypedDict):
+    id: str
+    snippet: PlaylistSnippet
+
+
+class PlaylistListResponse(TypedDict):
+    items: List[PlaylistResponse]
+
+
+def add_playlist(title: str, description: str, visibility: VideoVisibility = VideoVisibility.PUBLIC,
+                 youtube: Optional = None, print_output: bool = True):
+    if youtube is None:
+        youtube = get_authenticated_service()
+
+    body = dict(
+        snippet=dict(
+            title=title,
+            description=description
+        ),
+        status=dict(
+            privacyStatus=visibility.value
+        )
+    )
+
+    playlists_insert_response = youtube.playlists().insert(
+        part='snippet,status',
+        body=body
+    ).execute()
+
+    if print_output:
+        print('New playlist ID: %s' % playlists_insert_response['id'])
+
+
+def get_all_playlists(youtube: Optional = None, print_output: bool = True) -> PlaylistListResponse:
+    if youtube is None:
+        youtube = get_authenticated_service()
+
+    response: PlaylistListResponse = youtube.playlists().list(
+        part="snippet,contentDetails",
+        maxResults=25,
+        mine=True
+    ).execute()
+
+    if print_output:
+        print(f'Got {len(response["items"])} playlists:')
+        for playlist in response['items']:
+            print(playlist['snippet']['title'])
+
+    return response
+
+
+def add_playlist_if_needed(
+    title: str, description: str, visibility: VideoVisibility = VideoVisibility.PUBLIC,
+    existing_playlists: Optional[PlaylistListResponse] = None,
+    youtube: Optional = None, print_output: bool = True
+):
+    if youtube is None:
+        youtube = get_authenticated_service()
+
+    if existing_playlists is None:
+        existing_playlists = get_all_playlists(youtube=youtube, print_output=print_output)
+
+    for playlist in existing_playlists['items']:
+        match_title = playlist['snippet']['title']
+        if match_title == title:
+            raise YouTubePlaylistExistsException(title)
+
+    add_playlist(title, description, visibility=visibility, youtube=youtube, print_output=print_output)
