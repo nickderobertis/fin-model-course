@@ -26,15 +26,23 @@ API_SERVICE_NAME = "youtube"
 API_VERSION = "v3"
 
 
-class YouTubeDescriptionIsCurrentException(Exception):
+class YouTubeAPIException(Exception):
     pass
 
 
-class YouTubeIDDoesNotExistException(Exception):
+class YouTubeDescriptionIsCurrentException(YouTubeAPIException):
     pass
 
 
-class YouTubePlaylistExistsException(Exception):
+class YouTubeIDDoesNotExistException(YouTubeAPIException):
+    pass
+
+
+class YouTubePlaylistExistsException(YouTubeAPIException):
+    pass
+
+
+class NoYouTubePlaylistMatchingTitleException(YouTubeAPIException):
     pass
 
 
@@ -237,3 +245,70 @@ def add_playlist_if_needed(
             raise YouTubePlaylistExistsException(title)
 
     add_playlist(title, description, visibility=visibility, youtube=youtube, print_output=print_output)
+
+
+def get_playlist_id_by_title(title: str, existing_playlists: Optional[PlaylistListResponse] = None,
+                             youtube: Optional = None, print_output: bool = True) -> str:
+    if youtube is None:
+        youtube = get_authenticated_service()
+
+    if existing_playlists is None:
+        existing_playlists = get_all_playlists(youtube=youtube, print_output=print_output)
+
+    for playlist in existing_playlists['items']:
+        match_title = playlist['snippet']['title']
+        if match_title == title:
+            playlist_id = playlist['id']
+            if print_output:
+                print(f'Playlist {title} has id {playlist_id}')
+            return playlist_id
+
+    raise NoYouTubePlaylistMatchingTitleException(title)
+
+
+class PlaylistItemResource(TypedDict):
+    kind: str
+    videoId: str
+
+
+class PlaylistItemSnippet(TypedDict):
+    playlistId: str
+    position: int
+    resourceId: PlaylistItemResource
+
+
+class PlaylistItem(TypedDict):
+    snippet: PlaylistItemSnippet
+
+
+def add_video_to_playlist(video_id: str, playlist_title: str, position: int,
+                          existing_playlists: Optional[PlaylistListResponse] = None,
+                          youtube: Optional = None, print_output: bool = True):
+    if youtube is None:
+        youtube = get_authenticated_service()
+
+    if existing_playlists is None:
+        existing_playlists = get_all_playlists(youtube=youtube, print_output=print_output)
+
+    playlist_id = get_playlist_id_by_title(
+        playlist_title, existing_playlists=existing_playlists, youtube=youtube, print_output=print_output
+    )
+
+    request_body = PlaylistItem(
+        snippet=PlaylistItemSnippet(
+            playlistId=playlist_id,
+            position=position,
+            resourceId=PlaylistItemResource(
+                kind='youtube#video',
+                videoId=video_id
+            )
+        )
+    )
+
+    response: PlaylistResponse = youtube.playlistItems().insert(
+        part="snippet",
+        body=request_body
+    ).execute()
+
+    if print_output:
+        print(f'Updated playlist {response["snippet"]["title"]} with video {video_id}')
