@@ -191,7 +191,7 @@ class PlaylistListResponse(TypedDict):
 
 
 def add_playlist(title: str, description: str, visibility: VideoVisibility = VideoVisibility.PUBLIC,
-                 youtube: Optional = None, print_output: bool = True):
+                 youtube: Optional = None, print_output: bool = True) -> PlaylistResponse:
     if youtube is None:
         youtube = get_authenticated_service()
 
@@ -205,13 +205,15 @@ def add_playlist(title: str, description: str, visibility: VideoVisibility = Vid
         )
     )
 
-    playlists_insert_response = youtube.playlists().insert(
+    playlists_insert_response: PlaylistResponse = youtube.playlists().insert(
         part='snippet,status',
         body=body
     ).execute()
 
     if print_output:
         print('New playlist ID: %s' % playlists_insert_response['id'])
+
+    return playlists_insert_response
 
 
 def get_all_playlists(youtube: Optional = None, print_output: bool = True) -> PlaylistListResponse:
@@ -236,7 +238,7 @@ def add_playlist_if_needed(
     title: str, description: str, visibility: VideoVisibility = VideoVisibility.PUBLIC,
     existing_playlists: Optional[PlaylistListResponse] = None,
     youtube: Optional = None, print_output: bool = True
-):
+) -> PlaylistResponse:
     if youtube is None:
         youtube = get_authenticated_service()
 
@@ -248,7 +250,7 @@ def add_playlist_if_needed(
         if match_title == title:
             raise YouTubePlaylistExistsException(title)
 
-    add_playlist(title, description, visibility=visibility, youtube=youtube, print_output=print_output)
+    return add_playlist(title, description, visibility=visibility, youtube=youtube, print_output=print_output)
 
 
 def get_playlist_id_by_title(title: str, existing_playlists: Optional[PlaylistListResponse] = None,
