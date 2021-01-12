@@ -1,5 +1,6 @@
 import datetime
 import itertools
+import time
 import warnings
 from abc import ABC, abstractmethod
 from weakref import ref, ReferenceType
@@ -580,3 +581,48 @@ class LectureGroup:
                     color='teal',
                 )
             ]
+
+    @property
+    def youtube_playlist_description(self) -> str:
+        return f'Lecture videos - {self.title}: \n\n{self.description}'
+
+    @property
+    def youtube_playlist_title(self) -> str:
+        return f'{self.title} - {self.course.title}'
+
+    def update_youtube_playlist(self, existing_playlists: Optional[yt_api.PlaylistListResponse] = None,
+                                youtube: Optional = None, print_output: bool = True):
+        if youtube is None:
+            youtube = yt_api.get_authenticated_service()
+
+        if existing_playlists is None:
+            existing_playlists = yt_api.get_all_playlists(youtube=youtube, print_output=print_output)
+
+        try:
+            new_playlist = yt_api.add_playlist_if_needed(
+                self.youtube_playlist_title,
+                self.youtube_playlist_description,
+                existing_playlists=existing_playlists,
+                youtube=youtube,
+                print_output=print_output
+            )
+            existing_playlists['items'].append(new_playlist)
+        except yt_api.YouTubePlaylistExistsException:
+            if print_output:
+                print(f'Playlist {self.youtube_playlist_title} exists, will not create')
+
+        for i, lect in enumerate(self.lectures):
+            try:
+                yt_api.add_video_to_playlist_if_needed(
+                    lect.youtube_id,
+                    self.youtube_playlist_title,
+                    i,
+                    existing_playlists=existing_playlists,
+                    youtube=youtube,
+                    print_output=False
+                )
+                if print_output:
+                    print(f'Added lecture {lect.title} to playlist {self.youtube_playlist_title}')
+            except yt_api.YouTubeVideoExistsOnPlaylistException:
+                if print_output:
+                    print(f'Lecture {lect.title} exists on playlist {self.youtube_playlist_title} exists, will not add')
