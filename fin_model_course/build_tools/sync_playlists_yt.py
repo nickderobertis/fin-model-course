@@ -16,6 +16,5 @@ if __name__ == "__main__":
 
     lecture_groups = get_lecture_groups()
     for lg in lecture_groups:
-        breakpoint()
         lg.update_youtube_playlist(existing_playlists=existing_playlists, youtube=youtube)
 
