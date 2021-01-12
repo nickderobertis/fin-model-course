@@ -11,7 +11,7 @@ PROJECT_2_NAME = 'Probabilistic Loan Pricing'
 PROJECT_3_NAME = 'Monte Carlo Cost of Capital'
 PROJECT_4_NAME = 'Full DCF Valuation'
 
-LECTURE_1_NAME = 'Financial Modeling with Python and Excel'
+LECTURE_1_NAME = 'Introduction'
 LECTURE_2_NAME = 'Getting Started with Python and Excel'
 LECTURE_3_NAME = 'The Depth of a Financial Model'
 LECTURE_4_NAME = 'Going Beyond an Initial Python Script'
