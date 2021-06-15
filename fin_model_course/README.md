@@ -1,1 +1,0 @@
-fin-model-course
