@@ -1,24 +1,29 @@
 import datetime
 import itertools
+import time
+import warnings
 from abc import ABC, abstractmethod
-from string import ascii_lowercase
+from weakref import ref, ReferenceType
 from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List, Any
+import urllib.parse
 
 import more_itertools
 from pydantic import BaseModel, AnyHttpUrl
 from pydantic.dataclasses import dataclass
 from youtube_transcript_api import TranscriptsDisabled
 
-from build_tools.config import SITE_URL
+from build_tools import yt_api
+from build_tools.config import SITE_URL, LECTURE_YOUTUBE_DESCRIPTIONS_METADATA_PATH
 from build_tools.ext_rst import header_rst
 from build_tools.get_transcripts import Transcript, get_transcript
+from build_tools.yt_api import YouTubeDescriptionIsCurrentException
 from courses.config import COURSES
 from courses.model import CourseModel, CourseSelectors
 from pltemplates.frames.lab import LabFrame
 from pltemplates.hyperlink import Hyperlink
 
 if TYPE_CHECKING:
-    from models.content import ContentMetadata
+    from models.content import FileContentMetadata, LectureYouTubeDescriptionMetadata
 
 import pyexlatex as pl
 
@@ -94,6 +99,12 @@ class LectureNotes:
             lines.extend(to_rst_bullet_content(note))
         return "\n" + "\n".join([f'- {line}' for line in lines]) + "\n"
 
+    def to_youtube(self) -> str:
+        lines = []
+        for note in self:
+            lines.extend(to_youtube_bullet_content(note))
+        return "\n" + "\n".join([f'- {line}' for line in lines]) + "\n"
+
 
 def to_pyexlatex_content(item: Any):
     if isinstance(item, str):
@@ -120,6 +131,17 @@ def to_rst_bullet_content(item: Any) -> list:
         raise ValueError(f'could not serialize {item} of type {type(item)} to rst')
 
 
+def to_youtube_bullet_content(item: Any) -> list:
+    if isinstance(item, str):
+        return [item]
+    elif isinstance(item, (list, tuple)):
+        return [' '.join(itertools.chain(*[to_youtube_bullet_content(sub_item) for sub_item in item]))]
+    elif hasattr(item, 'to_youtube'):
+        return [item.to_youtube()]
+    else:
+        raise ValueError(f'could not serialize {item} of type {type(item)} to youtube')
+
+
 class Equation(Serializable):
     latex: str
 
@@ -128,6 +150,9 @@ class Equation(Serializable):
 
     def to_rst(self) -> str:
         return f':math:`{self.latex}`'
+
+    def to_youtube(self) -> str:
+        return str(self.latex)
 
 
 class Link(Serializable):
@@ -144,6 +169,13 @@ class Link(Serializable):
 
         # No display text
         return f'`<{self.href}>`_'
+
+    def to_youtube(self) -> str:
+        if self.display_text:
+            return f'{self.display_text} ({self.href})'
+
+        # No display text
+        return f'{self.href}'
 
 
 @dataclass
@@ -166,7 +198,7 @@ class LectureResource:
             return False
 
     @classmethod
-    def from_metadata(cls, md: "ContentMetadata", url: Optional[str] = None) -> "LectureResource":
+    def from_metadata(cls, md: "FileContentMetadata", url: Optional[str] = None) -> "LectureResource":
         from models.content import GeneratedContentMetadata
         if url is None:
             generated_content_subfolder = md.output_extension + "s"
@@ -199,6 +231,16 @@ class LectureResource:
         return None
 
     @property
+    def full_quoted_url(self) -> Optional[str]:
+        url = self.full_url
+        if url is None:
+            return None
+        parts: List[str] = list(urllib.parse.urlparse(url))
+        parts[2] = urllib.parse.quote(parts[2])
+        quoted_url = urllib.parse.urlunparse(parts)
+        return quoted_url
+
+    @property
     def display_name(self) -> str:
         name = ""
         if self.index is not None:
@@ -228,6 +270,11 @@ class LectureResource:
 - `{self.display_name} <{self.url}>`_
         """
 
+    def to_youtube(self) -> str:
+        return f"""
+- {self.display_name}: {self.full_quoted_url}
+        """.strip()
+
 
 @dataclass
 class Lecture:
@@ -236,8 +283,10 @@ class Lecture:
     notes: Optional[LectureNotes] = None
     youtube_id: Optional[str] = None
     resources: Optional[Sequence[LectureResource]] = None
+    custom_tags: Sequence[str] = tuple()
     _transcript: Optional[Transcript] = None
     notes_section_name: str = 'Notes'
+    _group_ref: Optional[ReferenceType] = None
 
     def to_rst(self) -> str:
         out_str = header_rst(self.title, 3)
@@ -252,6 +301,86 @@ class Lecture:
         out_str += self._resources_rst
         out_str += self._transcript_rst
         return out_str
+
+    def youtube_title(self, include_group: bool = True, include_course: bool = False) -> str:
+        title = self.title
+        group = self.group
+        if group is not None:
+            if include_group:
+                title += f' - {group.title}'
+            if include_course:
+                title += f' - {group.course.title}'
+        return title
+
+    @property
+    def youtube_description(self) -> str:
+        desc = self.youtube_title(include_group=False, include_course=False) + '\n\n'
+        group = self.group
+        if group is not None:
+            desc += f'Part of the lecture series "{group.title}":\n{group.url}\n\n'
+            desc += f'Full Course Website:\n{SITE_URL}\n\n'
+        if self.notes:
+            desc += self._notes_youtube
+        desc += self._resources_youtube
+        return desc
+
+    @property
+    def youtube_description_has_changed(self) -> bool:
+        from models.content import LectureYouTubeDescriptionCollectionMetadata, LectureYouTubeDescriptionMetadata
+        metadata_path = LECTURE_YOUTUBE_DESCRIPTIONS_METADATA_PATH
+        if not metadata_path.exists():
+            return True
+
+        all_existing_metadata = LectureYouTubeDescriptionCollectionMetadata.parse_raw(metadata_path.read_text())
+        existing_metadata = all_existing_metadata.items[self.youtube_id]
+        current_metadata = LectureYouTubeDescriptionMetadata.generate_from_lecture(self)
+        return existing_metadata != current_metadata
+
+    def upload_youtube_description(self, youtube: Optional = None):
+        if self.youtube_id is None:
+            raise ValueError(f'cannot update youtube video with id: {self}')
+        if self.group is None:
+            raise ValueError(f'cannot update youtube video without lecture group: {self}')
+        if not self.youtube_description_has_changed:
+            raise YouTubeDescriptionIsCurrentException(
+                f'{self.youtube_id} - {self.title} already has newest description, will not update'
+            )
+        if youtube is None:
+            youtube = yt_api.get_authenticated_service()
+        self._upload_youtube_description(youtube)
+
+    def _upload_youtube_description(self, youtube):
+        print(f'Uploading description for {self.youtube_id} - {self.title}')
+        title = self.youtube_title(include_group=True, include_course=False)
+        if len(title) > 100:
+            warnings.warn(f'Not updating title {title} as it is too long')
+            title = None
+        yt_api.update_video_description(
+            self.youtube_id,
+            title=title,
+            description=self.youtube_description,
+            tags=self.tags,
+            youtube=youtube,
+            print_output=False
+        )
+
+    @property
+    def tags(self) -> List[str]:
+        tags = list(self.custom_tags)
+        group = self.group
+        if group is not None:
+            tags.extend(group.custom_tags)
+            tags.extend(group.course.tags)
+        return tags
+
+    def register_group(self, group: 'LectureGroup'):
+        self._group_ref = ref(group)
+
+    @property
+    def group(self) -> Optional['LectureGroup']:
+        if self._group_ref is None:
+            return None
+        return self._group_ref()
 
     @property
     def _youtube_rst(self) -> str:
@@ -279,6 +408,12 @@ class Lecture:
         return '\n**Notes coming soon**\n'
 
     @property
+    def _notes_youtube(self) -> str:
+        out_str = header_rst(self.notes_section_name, 4)
+        out_str += self.notes.to_youtube()
+        return out_str
+
+    @property
     def _resources_rst(self) -> str:
         out_str = ''
         if self.resources:
@@ -287,6 +422,17 @@ class Lecture:
                 + "\n"
                 + "\n".join([res.to_rst() for res in self.resources])
                 + "\n"
+            )
+        return out_str
+
+    @property
+    def _resources_youtube(self) -> str:
+        out_str = ''
+        if self.resources:
+            out_str += (
+                    header_rst('Resources', 4)
+                    + '\n'
+                    + "\n".join([res.to_youtube() for res in self.resources])
             )
         return out_str
 
@@ -333,6 +479,11 @@ class LectureGroup:
     global_resources: Sequence[LectureResource] = tuple()
     course: CourseModel = COURSES[CourseSelectors.BASIC]
     show_aggregate_resources: bool = True
+    custom_tags: Sequence[str] = tuple()
+
+    def __post_init__(self):
+        for lect in self.lectures:
+            lect.register_group(self)
 
     def __getitem__(self, item):
         return self.lectures[item]
@@ -430,3 +581,48 @@ class LectureGroup:
                     color='teal',
                 )
             ]
+
+    @property
+    def youtube_playlist_description(self) -> str:
+        return f'Lecture videos - {self.title}: \n\n{self.description}'
+
+    @property
+    def youtube_playlist_title(self) -> str:
+        return f'{self.title} - {self.course.title}'
+
+    def update_youtube_playlist(self, existing_playlists: Optional[yt_api.PlaylistListResponse] = None,
+                                youtube: Optional = None, print_output: bool = True):
+        if youtube is None:
+            youtube = yt_api.get_authenticated_service()
+
+        if existing_playlists is None:
+            existing_playlists = yt_api.get_all_playlists(youtube=youtube, print_output=print_output)
+
+        try:
+            new_playlist = yt_api.add_playlist_if_needed(
+                self.youtube_playlist_title,
+                self.youtube_playlist_description,
+                existing_playlists=existing_playlists,
+                youtube=youtube,
+                print_output=print_output
+            )
+            existing_playlists['items'].append(new_playlist)
+        except yt_api.YouTubePlaylistExistsException:
+            if print_output:
+                print(f'Playlist {self.youtube_playlist_title} exists, will not create')
+
+        for i, lect in enumerate(self.lectures):
+            try:
+                yt_api.add_video_to_playlist_if_needed(
+                    lect.youtube_id,
+                    self.youtube_playlist_title,
+                    i,
+                    existing_playlists=existing_playlists,
+                    youtube=youtube,
+                    print_output=False
+                )
+                if print_output:
+                    print(f'Added lecture {lect.title} to playlist {self.youtube_playlist_title}')
+            except yt_api.YouTubeVideoExistsOnPlaylistException:
+                if print_output:
+                    print(f'Lecture {lect.title} exists on playlist {self.youtube_playlist_title} exists, will not add')

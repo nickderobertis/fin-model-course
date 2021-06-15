@@ -1,5 +1,6 @@
 from enum import Enum
-from typing import List, TYPE_CHECKING
+from typing import List, TYPE_CHECKING, Sequence
+
 if TYPE_CHECKING:
     from lectures.model import LectureGroup
 
@@ -15,6 +16,7 @@ class CourseModel(BaseModel):
     title: str
     order: int
     stub: str = ''
+    tags: Sequence[str] = tuple()
 
     @property
     def lecture_groups(self) -> List['LectureGroup']:

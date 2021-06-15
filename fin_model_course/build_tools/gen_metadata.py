@@ -9,12 +9,14 @@ from build_tools.config import (
     GENERATED_PDFS_OUT_PATH,
     GENERATED_CONTENT_METADATA_PATH,
     EXAMPLE_PATHS,
-    STATIC_CONTENT_METADATA_PATH,
+    STATIC_CONTENT_METADATA_PATH, LECTURE_YOUTUBE_DESCRIPTIONS_METADATA_PATH,
 )
+from lectures.config import get_lecture_groups
 from models.content import (
     GeneratedCollectionMetadata,
-    CollectionMetadata,
+    FileCollectionMetadata,
     StaticCollectionMetadata,
+    LectureYouTubeDescriptionCollectionMetadata
 )
 from resources.models import RESOURCES
 
@@ -22,7 +24,7 @@ from resources.models import RESOURCES
 def generate_content_metadata_json(
     in_folder: pathlib.Path = GENERATED_PDFS_OUT_PATH,
     out_path: pathlib.Path = GENERATED_CONTENT_METADATA_PATH,
-    collection_cls: Type[CollectionMetadata] = GeneratedCollectionMetadata,
+    collection_cls: Type[FileCollectionMetadata] = GeneratedCollectionMetadata,
     hashed_extension: str = "tex",
     output_extension: str = "pdf",
     drop_unique_old: bool = False,
@@ -44,6 +46,27 @@ def generate_content_metadata_json(
     out_path.write_text(metadata.json(indent=2))
 
 
+def generate_lecture_youtube_description_metadata_json(
+    out_path: pathlib.Path = LECTURE_YOUTUBE_DESCRIPTIONS_METADATA_PATH
+):
+    print(f"Analyzing metadata for lecture YouTube descriptions")
+    current_metadata: Optional[LectureYouTubeDescriptionCollectionMetadata] = None
+    if out_path.exists():
+        current_metadata = LectureYouTubeDescriptionCollectionMetadata.parse_raw(out_path.read_text())
+        print(f"Got existing metadata with {len(current_metadata.items)} items")
+    print(f"Generating new metadata for lecture YouTube descriptions")
+    lecture_groups = get_lecture_groups()
+    metadata = LectureYouTubeDescriptionCollectionMetadata.generate_from_lecture_groups(
+        lecture_groups
+    )
+    if current_metadata is not None:
+        print(f"Merging metadata")
+        metadata = current_metadata.merge(metadata, drop_unique_old=True)
+    metadata.sort()
+    print(f"Writing content metadata to {out_path}")
+    out_path.write_text(metadata.json(indent=2))
+
+
 if __name__ == "__main__":
     generate_content_metadata_json(drop_unique_old=True)
 
@@ -56,5 +79,7 @@ if __name__ == "__main__":
                 hashed_extension=ext,
                 output_extension=ext,
             )
+
+    generate_lecture_youtube_description_metadata_json()
 
     RESOURCES.validate_locations()
