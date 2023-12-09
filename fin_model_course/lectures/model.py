@@ -45,7 +45,7 @@ class Serializable(BaseModel, ABC):
 
 @dataclass
 class LectureNotes:
-    items: "Sequence[Union[str, LectureNotes]]"
+    items: "Sequence[Union[str, Serializable, LectureNotes]]"
     title: str
 
     model_config = ConfigDict(arbitrary_types_allowed=True)
