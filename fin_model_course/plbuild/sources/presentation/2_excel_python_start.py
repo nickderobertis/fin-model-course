@@ -75,7 +75,7 @@ def get_content():
     list_ = Monospace('list')
     for_ = Monospace('for')
     append = Monospace('append')
-    numpy = Monospace('numpy')
+    numpy_financial = Monospace('numpy_financial')
     cmd = Monospace('cmd')
     terminal = Monospace('terminal')
     in_block = Monospace('In [ ]:')
@@ -237,8 +237,8 @@ for item in inputs:
                                     Python('6 - 2 = 4'),
                                     Python('2 * 3 = 6'),
                                     Python('5 / 2 = 2.5'),
-                                    f'A lot more is available using the {numpy} package',
-                                    Python("np.pv, np.nper,\nnp.fv, np.pmt"),
+                                    f'A lot more is available using the {numpy_financial} package',
+                                    Python("npf.pv, npf.nper,\nnpf.fv, npf.pmt"),
                                     Hyperlink(
                                         'https://numpy.org/doc/stable/reference/routines.financial.html',
                                         f'All numpy financial functions')

@@ -1,5 +1,6 @@
 import math
 import numpy as np
+import numpy_financial as npf
 import pandas as pd
 
 
@@ -42,7 +43,7 @@ class RetirementModel:
 
     @property
     def desired_cash(self):
-        return np.pv(self.interest, self.years_in_retire, -self.annual_spend_retire, 0)
+        return npf.pv(self.interest, self.years_in_retire, -self.annual_spend_retire, 0)
 
     def get_df(self, num_years: int):
         df = pd.DataFrame()
