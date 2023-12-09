@@ -41,11 +41,11 @@ class Serializable(BaseModel, ABC):
     def to_rst(self) -> str:
         ...
 
-
+LectureNoteItem = "Union[str, Serializable, LectureNotes]"
 
 @dataclass
 class LectureNotes:
-    items: "Sequence[Union[str, Serializable, LectureNotes]]"
+    items: "Sequence[Union[LectureNoteItem, Sequence[LectureNoteItem]]]"
     title: str
 
     model_config = ConfigDict(arbitrary_types_allowed=True)
