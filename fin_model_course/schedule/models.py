@@ -1,7 +1,7 @@
 import datetime
 from typing import Sequence, Optional, Tuple, List, Dict
 
-from pydantic import BaseModel
+from pydantic import ConfigDict, BaseModel
 import pyexlatex as pl
 from pyexlatex.models.landscape import Landscape
 
@@ -97,9 +97,7 @@ class CourseSchedule(BaseModel):
     lab_exercises: LabExerciseGroup
     lectures: Sequence[LectureGroup]
     date_fmt: str = '%m/%d'
-
-    class Config:
-        arbitrary_types_allowed = True
+    model_config = ConfigDict(arbitrary_types_allowed=True)
 
     def dates_for_week(self, week_num: int) -> Tuple[datetime.date, datetime.date]:
         begin_date = self.start_date

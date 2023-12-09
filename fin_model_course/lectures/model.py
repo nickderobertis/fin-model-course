@@ -8,7 +8,7 @@ from typing import Union, Sequence, Type, Optional, TYPE_CHECKING, TypeVar, List
 import urllib.parse
 
 import more_itertools
-from pydantic import BaseModel, AnyHttpUrl
+from pydantic import BaseModel, AnyHttpUrl, ConfigDict
 from pydantic.dataclasses import dataclass
 from youtube_transcript_api import TranscriptsDisabled
 
@@ -45,8 +45,10 @@ class Serializable(BaseModel, ABC):
 
 @dataclass
 class LectureNotes:
-    items: Sequence[Union[str, "LectureNotes"]]
+    items: "Sequence[Union[str, LectureNotes]]"
     title: str
+
+    model_config = ConfigDict(arbitrary_types_allowed=True)
 
     def __getitem__(self, item):
         return self.items[item]
@@ -157,7 +159,7 @@ class Equation(Serializable):
 
 class Link(Serializable):
     href: AnyHttpUrl
-    display_text: Optional[str]
+    display_text: Optional[str] = None
 
     def to_pyexlatex(self) -> Hyperlink:
         return Hyperlink(str(self.href), self.display_text)
@@ -276,7 +278,7 @@ class LectureResource:
         """.strip()
 
 
-@dataclass
+@dataclass(config=ConfigDict(arbitrary_types_allowed=True))
 class Lecture:
     title: str
     week_covered: int

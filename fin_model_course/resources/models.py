@@ -42,11 +42,11 @@ class ResourceCollection(BaseModel):
 
     def resources(self, nested: bool = True) -> List[LectureResource]:
         resources: List[LectureResource] = []
-        for field_name, field in self.__fields__.items():
-            if issubclass(field.type_, LectureResource):
+        for field_name, field in self.model_fields.items():
+            if issubclass(field.annotation, LectureResource):
                 value: LectureResource = getattr(self, field_name)
                 resources.append(value)
-            if nested and issubclass(field.type_, ResourceCollection):
+            if nested and issubclass(field.annotation, ResourceCollection):
                 value: ResourceCollection = getattr(self, field_name)
                 resources.extend(value.resources(nested=True))
         return resources
@@ -837,7 +837,7 @@ class VisualizationExternalResources(ResourceCollection):
 
 class GeneralPythonExternalResources(ResourceCollection):
     title: str = 'Python External Resources'
-    imports_guide = LectureResource(
+    imports_guide: LectureResource = LectureResource(
         'Guide to Python Imports',
         external_url='https://realpython.com/absolute-vs-relative-python-imports/'
     )
