@@ -2,7 +2,7 @@ import datetime
 import os
 import random
 
-import numpy as np
+import numpy_financial as npf
 import pandas as pd
 import statsmodels.api as sm
 import pyexlatex as pl
@@ -134,7 +134,7 @@ def get_dcf_cost_debt_exercise() -> LabExercise:
     ]
 
     # Levels 1 exercise
-    l1_pretax_cost_of_debt = np.irr([-bond_price] +  [coupon_rate * par_value for _ in range(3 - 1)] + [(1 + coupon_rate) * par_value])
+    l1_pretax_cost_of_debt = npf.irr([-bond_price] +  [coupon_rate * par_value for _ in range(3 - 1)] + [(1 + coupon_rate) * par_value])
     l1_aftertax_cost_of_debt = l1_pretax_cost_of_debt * (1 - tax_rate)
 
     # Level 2 exercise

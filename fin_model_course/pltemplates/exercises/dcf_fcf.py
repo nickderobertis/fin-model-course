@@ -2,7 +2,7 @@ import datetime
 import os
 import random
 
-import numpy as np
+import numpy_financial as npf
 import pandas as pd
 import pyexlatex as pl
 import pyexlatex.table as lt
@@ -168,7 +168,7 @@ def get_dcf_fcf_tv_exercise() -> LabExercise:
     growth = 0.03
 
     def p_from_ev(ev):
-        current_ev = np.npv(wacc, [0] + [fcf] * 4 + [fcf + ev])
+        current_ev = npf.npv(wacc, [0] + [fcf] * 4 + [fcf + ev])
         equity_value = current_ev - debt + cash
         return equity_value/shrout
 

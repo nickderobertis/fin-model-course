@@ -3,7 +3,7 @@ import os
 
 import pandas as pd
 import statsmodels.api as sm
-import numpy as np
+import numpy_financial as npf
 from finstmt import BalanceSheets, IncomeStatements, FinancialStatements
 
 from build_tools.config import LAB_FOLDER_NAME, LAB_EXERCISES_PATH, SITE_URL
@@ -921,7 +921,7 @@ def get_dcf_cost_debt_lab_lecture() -> LabExerciseLecture:
     tax_rate = 0.35
 
     # Levels 1 exercise
-    l1_pretax_cost_of_debt = np.irr(
+    l1_pretax_cost_of_debt = npf.irr(
         [-bond_price] + [coupon_rate * par_value for _ in range(3 - 1)] + [(1 + coupon_rate) * par_value])
     l1_aftertax_cost_of_debt = l1_pretax_cost_of_debt * (1 - tax_rate)
 
@@ -1133,7 +1133,7 @@ def get_dcf_tv_lab_lecture() -> LabExerciseLecture:
     growth = 0.03
 
     def p_from_ev(ev):
-        current_ev = np.npv(wacc, [0] + [fcf] * 4 + [fcf + ev])
+        current_ev = npf.npv(wacc, [0] + [fcf] * 4 + [fcf + ev])
         equity_value = current_ev - debt + cash
         return equity_value / shrout
 

@@ -1,4 +1,4 @@
-import numpy as np
+import numpy_financial as npf
 from scipy.optimize import minimize_scalar
 
 # For bonus problem
@@ -133,7 +133,7 @@ class PhoneManufacturingModel:
 
     @property
     def pv(self):
-        return np.npv(self.interest, [0] + self.cash_flows)
+        return npf.npv(self.interest, [0] + self.cash_flows)
 
     @property
     def output_lines(self):
