@@ -1,5 +1,5 @@
 import datetime
-from typing import Sequence, Optional, Tuple, List, Dict
+from typing import Sequence, Optional, Tuple, List, Dict, Union
 
 from pydantic import ConfigDict, BaseModel
 import pyexlatex as pl
@@ -7,6 +7,10 @@ from pyexlatex.models.landscape import Landscape
 
 from lectures.lab_exercise import LabExerciseGroup, LabExerciseLecture
 from lectures.model import Lecture, LectureGroup
+
+# TODO: For some reason these imports are required along with CourseSchedule.model_rebuild() below
+from typing import Union  # noqa: F401
+from lectures.model import Serializable, LectureNotes  # noqa: F401
 
 
 class ScheduleProject(BaseModel):
@@ -203,3 +207,6 @@ class CourseSchedule(BaseModel):
                 week.to_pyexlatex(lectures, lab_exercises, week_num, begin_date, end_date, **kwargs)
             )
         return sections
+
+
+CourseSchedule.model_rebuild()

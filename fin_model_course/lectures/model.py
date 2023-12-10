@@ -9,7 +9,7 @@ import urllib.parse
 
 import more_itertools
 from pydantic import BaseModel, AnyHttpUrl, ConfigDict
-from pydantic.dataclasses import dataclass
+from pydantic.dataclasses import dataclass, rebuild_dataclass
 from youtube_transcript_api import TranscriptsDisabled
 
 from build_tools import yt_api
@@ -143,6 +143,7 @@ def to_youtube_bullet_content(item: Any) -> list:
     else:
         raise ValueError(f'could not serialize {item} of type {type(item)} to youtube')
 
+rebuild_dataclass(LectureNotes)
 
 class Equation(Serializable):
     latex: str
