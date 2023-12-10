@@ -8,7 +8,7 @@ from pyexlatex.models.landscape import Landscape
 from lectures.lab_exercise import LabExerciseGroup, LabExerciseLecture
 from lectures.model import Lecture, LectureGroup
 
-# TODO: For some reason these imports are required along with CourseSchedule.model_rebuild() below
+# TODO [$6575dee87392f500093e4c16]: For some reason these imports are required along with CourseSchedule.model_rebuild() below
 from typing import Union  # noqa: F401
 from lectures.model import Serializable, LectureNotes  # noqa: F401
 
